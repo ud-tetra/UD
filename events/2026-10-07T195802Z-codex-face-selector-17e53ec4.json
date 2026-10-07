@@ -1,0 +1,67 @@
+{
+  "event_id": "2026-10-07T195802Z-codex-face-selector-17e53ec4",
+  "capture_id": "2026-10-07T195802Z-codex-face-selector-17e53ec4",
+  "type": "face_selector_scope_audit",
+  "constructor": "Codex",
+  "reviewers": [],
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "base_commit": "a315a9c90b80055f58fc425096565854f09d24d9",
+  "summary": "Recover default face-sharing interpretation and symmetric face-weight proof; verify conditional boundary-growth recurrence; retain dense-selector source gap",
+  "supplements": "2026-10-07T194758Z-codex-coefficient-audit-227594ae; PR #1 remains separate",
+  "supersedes": [],
+  "verification": {
+    "status": "PASS",
+    "face_count": 4,
+    "permutations": 24,
+    "face_orbit_sizes": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "conditional_symmetric_face_weight": "1/4",
+    "rounds": [
+      {
+        "round": 0,
+        "cells": 1,
+        "boundary_faces": 4,
+        "interior_faces": 0
+      },
+      {
+        "round": 1,
+        "cells": 5,
+        "boundary_faces": 12,
+        "interior_faces": 4
+      },
+      {
+        "round": 2,
+        "cells": 17,
+        "boundary_faces": 36,
+        "interior_faces": 16
+      },
+      {
+        "round": 3,
+        "cells": 53,
+        "boundary_faces": 108,
+        "interior_faces": 52
+      },
+      {
+        "round": 4,
+        "cells": 161,
+        "boundary_faces": 324,
+        "interior_faces": 160
+      }
+    ],
+    "controls": [
+      "interior face rejected",
+      "nonfresh apex rejected"
+    ],
+    "verified_scope": "finite abstract fresh-vertex boundary gluing; no dense-selector replay or physical model",
+    "independent_review": "pending",
+    "physical_promotion": 0
+  },
+  "missing_sources": [
+    "Gap2_FINAL_Finite_Genesis.png"
+  ]
+}
