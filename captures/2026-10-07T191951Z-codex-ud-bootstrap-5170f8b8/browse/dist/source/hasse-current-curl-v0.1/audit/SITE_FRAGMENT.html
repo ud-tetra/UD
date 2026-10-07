@@ -1,0 +1,513 @@
+<header><h1>UD Hasse current/curl audit: antisymmetry, continuity and invisible circulation</h1><p>5 October 2026 · Development addendum 0.1 · Independent review pending · Physical promotion 0</p><p>Fresh checks: 125 exact algebra checks; no floating-point tests. Exact current, curl, Smith-form and identifiability audit; native open-system laws remain open.</p></header><p><strong>Development — no registry entry. Independent review pending.
+Physical promotion 0.</strong> This investigates whether the
+antisymmetric-tensor snippet supplies a useful UD closure. It yields an
+exact representation and identifiability audit, not a Maxwell derivation
+or a solution of open-system recursive support. Anchors Q169–Q179 are
+taken from the attached v0.39 ledger; that attachment is preserved
+rather than treated as a replacement for later portal records. The
+ledger, controller WBS and manuscript papers are not revised by this
+branch.</p>
+<h2
+id="correct-the-continuum-identity-and-type-the-proposed-correspondence">1.
+Correct the continuum identity and type the proposed correspondence</h2>
+<p>For a sufficiently differentiable antisymmetric tensor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msup><mo>=</mo><mo>−</mo><msup><mi>F</mi><mrow><mi>ν</mi><mi>μ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">F^{\mu\nu}=-F^{\nu\mu}</annotation></semantics></math>
+and commuting coordinate partial derivatives,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>∂</mi><mi>ν</mi></msub><msub><mi>∂</mi><mi>μ</mi></msub><msup><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msup><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\partial_\nu\partial_\mu F^{\mu\nu}=0.
+</annotation></semantics></math> The single divergence
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>J</mi><mi>ν</mi></msup><mo>=</mo><msub><mi>∂</mi><mi>μ</mi></msub><msup><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msup></mrow><annotation encoding="application/x-tex">J^\nu=\partial_\mu F^{\mu\nu}</annotation></semantics></math>
+need not vanish. For example
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>F</mi><mn>01</mn></msup><mo>=</mo><msup><mi>x</mi><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">F^{01}=x^0</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>F</mi><mn>10</mn></msup><mo>=</mo><mo>−</mo><msup><mi>x</mi><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">F^{10}=-x^0</annotation></semantics></math>
+and all other entries zero give
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>J</mi><mn>1</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">J^1=1</annotation></semantics></math>.
+The double-divergence identity holds in any coordinate dimension, not
+only four. It cannot select physical four-dimensional spacetime from
+UD’s chain counts.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Index/domain</th>
+<th>Identity</th>
+<th>What it does not establish</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Continuum antisymmetric field F</td>
+<td>Two spacetime coordinate indices</td>
+<td>Double partial divergence is zero</td>
+<td>Single divergence zero, field equations, metric or physical
+charge</td>
+</tr>
+<tr class="even">
+<td>Original simplicial boundaries B_k</td>
+<td>Oriented UD simplices of adjacent degree</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><msub><mi>B</mi><mn>2</mn></msub><msub><mi>B</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">B_1B_2=B_2B_3=0</annotation></semantics></math></td>
+<td>Physical currents or calibrated spacetime</td>
+</tr>
+<tr class="odd">
+<td>UD skew generator A</td>
+<td>All chain-register basis addresses</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>=</mo><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A^T=-A</annotation></semantics></math>,
+conserved quadratic support</td>
+<td>Zero local stock derivative</td>
+</tr>
+<tr class="even">
+<td>Hasse graph boundary D</td>
+<td>Incidence currents to simplex-address stocks</td>
+<td>Column sums zero</td>
+<td>Actual current is divergence-free</td>
+</tr>
+<tr class="odd">
+<td>Diamond boundary C</td>
+<td>Oriented Hasse squares to incidence currents</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>C</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">DC=0</annotation></semantics></math></td>
+<td>Every actual current is a curl</td>
+</tr>
+</tbody>
+</table>
+<p>These are different typed maps. In particular,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mrow><mi>σ</mi><mi>η</mi></mrow></msub><annotation encoding="application/x-tex">A_{\sigma\eta}</annotation></semantics></math>
+has simplex-address indices, not spacetime indices. Calling A
+antisymmetric does not turn it into an electromagnetic tensor. Discrete
+exterior calculus is prior mathematical context, not a native UD source
+law: see Desbrun, Hirani, Leok and Marsden, <a
+href="https://arxiv.org/abs/math/0508341">Discrete Exterior
+Calculus</a>. The specific matrices and claims here are independently
+rederived below.</p>
+<h2
+id="retained-skew-dynamics-give-local-throughput-not-zero-divergence">2.
+Retained skew dynamics give local throughput, not zero divergence</h2>
+<p>Use the unit-incidence convention with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>η</mi><mi>σ</mi></mrow></msub><mo>=</mo><msub><mi>B</mi><mrow><mi>σ</mi><mi>η</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{\eta\sigma}=B_{\sigma\eta}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>σ</mi><mi>η</mi></mrow></msub><mo>=</mo><mo>−</mo><msub><mi>B</mi><mrow><mi>σ</mi><mi>η</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{\sigma\eta}=-B_{\sigma\eta}</annotation></semantics></math>
+for adjacent degrees, where sigma is a facet of eta. Orient each Hasse
+edge from lower sigma to upper eta. D has -1 at sigma and +1 at eta. For
+real amplitudes evolving under
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>c</mi><mo accent="true">̇</mo></mover><mo>=</mo><mi>A</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\dot c=Ac</annotation></semantics></math>,
+define
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>σ</mi></msub><mo>=</mo><msubsup><mi>c</mi><mi>σ</mi><mn>2</mn></msubsup><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>j</mi><mrow><mi>σ</mi><mo>→</mo><mi>η</mi></mrow></msub><mo>=</mo><mn>2</mn><msub><mi>B</mi><mrow><mi>σ</mi><mi>η</mi></mrow></msub><msub><mi>c</mi><mi>σ</mi></msub><msub><mi>c</mi><mi>η</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\rho_\sigma=c_\sigma^2,\qquad
+j_{\sigma\to\eta}=2B_{\sigma\eta}c_\sigma c_\eta.
+</annotation></semantics></math> Then direct differentiation gives
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>ρ</mi><mo accent="true">̇</mo></mover><mo>=</mo><mi>D</mi><mi>j</mi><mo>,</mo><mspace width="2.0em"></mspace><msup><mn>𝟏</mn><mi>T</mi></msup><mi>D</mi><mi>j</mi><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\dot\rho=Dj,\qquad \mathbf1^TDj=0.
+</annotation></semantics></math> This is the retained Q170–Q172
+throughput convention: local stocks may change while their total stays
+fixed. For complex amplitudes and the same real skew A, use
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>σ</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>c</mi><mi>σ</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\rho_\sigma=|c_\sigma|^2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>2</mn><msub><mi>B</mi><mrow><mi>σ</mi><mi>η</mi></mrow></msub><mo>Re</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mover><mi>c</mi><mo accent="true">¯</mo></mover><mi>η</mi></msub><msub><mi>c</mi><mi>σ</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">j=2B_{\sigma\eta}\operatorname{Re}(\overline c_\eta c_\sigma)</annotation></semantics></math>.
+This is the real part of the complex PSR bilinear receipt; the full
+complex receipt’s phase is a separate datum, not silently identified
+with a real support flux.</p>
+<p><strong>Exact dynamic counterexample.</strong> On the filled
+tetrahedron put equal normalized amplitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mn>2</mn></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt2</annotation></semantics></math>
+on vertex 1 and edge 01, with all others zero. Since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mrow><mn>1</mn><mo>,</mo><mn>01</mn></mrow></msub><mo>=</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">B_{1,01}=+1</annotation></semantics></math>,
+the only nonzero current is one unit along
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>→</mo><mn>01</mn></mrow><annotation encoding="application/x-tex">1\to01</annotation></semantics></math>.
+Thus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>ρ</mi><mo accent="true">̇</mo></mover><mn>1</mn></msub><mo>=</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\dot\rho_1=-1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>ρ</mi><mo accent="true">̇</mo></mover><mn>01</mn></msub><mo>=</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\dot\rho_{01}=+1</annotation></semantics></math>.
+The generator is skew and total support is conserved, yet
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>j</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Dj\ne0</annotation></semantics></math>.</p>
+<p>Likewise, equal normalized amplitudes on face 013 and tetrahedron
+0123 give unit current
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>013</mn><mo>→</mo><mn>0123</mn></mrow><annotation encoding="application/x-tex">013\to0123</annotation></semantics></math>,
+with face-stock derivative -1 and core-stock derivative +1. Antisymmetry
+cannot eliminate Q172’s interface reservoir. Its elimination would
+require an additional approximation and debit.</p>
+<p><strong>Pure-curl exclusion.</strong> If one imposed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mi>C</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">j=Cq</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>C</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">DC=0</annotation></semantics></math>
+as the entire closed-system current law, then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>ρ</mi><mo accent="true">̇</mo></mover><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\dot\rho=0</annotation></semantics></math>
+at every address. Both legitimate witnesses above would be excluded.
+This forces stationary stocks, not necessarily stationary amplitudes or
+phases. A continuum conservation identity therefore cannot be imported
+as a universal zero-throughput constraint.</p>
+<h2 id="construct-the-correctly-typed-discrete-curl">3. Construct the
+correctly typed discrete curl</h2>
+<p>The auxiliary Hasse complex has one vertex for each nonempty simplex
+of K, an edge for every cover incidence, and a square for every interval
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>⊂</mo><mi>τ</mi></mrow><annotation encoding="application/x-tex">\sigma\subset\tau</annotation></semantics></math>
+differing by two vertices a,b. With
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a&lt;b</annotation></semantics></math>,
+its oriented square boundary is
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>→</mo><mi>σ</mi><mi>a</mi><mo>→</mo><mi>σ</mi><mi>a</mi><mi>b</mi><mo>→</mo><mi>σ</mi><mi>b</mi><mo>→</mo><mi>σ</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\sigma\to\sigma a\to\sigma ab\to\sigma b\to\sigma.
+</annotation></semantics></math> C is the matrix of these four-edge
+boundaries. Every square has two incoming and two outgoing endpoints, so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>C</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">DC=0</annotation></semantics></math>
+exactly. There are also cubes for intervals differing by three vertices;
+their boundary matrix Q obeys
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>Q</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">CQ=0</annotation></semantics></math>
+by cancellation of paired square faces. Q here is a matrix name, not a
+ledger coefficient identifier.</p>
+<p>The Hasse squares are not the original triangular C_2 faces. For one
+filled tetrahedron the original f-vector is (4,6,4,1), while the
+auxiliary current complex has counts (15,28,18,4). It is used to
+represent transport on the incidence graph; it does not replace the
+carrier or add physical dimensions.</p>
+<p>Exact integer ranks give the following finite audit:</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Carrier / control</th>
+<th>Hasse vertices, edges, squares, cubes</th>
+<th style="text-align: right;">rank D</th>
+<th style="text-align: right;">rank C</th>
+<th style="text-align: right;">Current directions invisible to
+divergence</th>
+<th style="text-align: right;">Noncurl cycle directions</th>
+<th style="text-align: right;">Potential ambiguity dim ker C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Filled tetrahedron</td>
+<td>15,28,18,4</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td>Two tetrahedra sharing face</td>
+<td>23,47,33,8</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td>Three tetrahedra sharing edge</td>
+<td>27,59,45,12</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td>Pentachoron boundary U</td>
+<td>30,70,60,20</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="odd">
+<td>Hollow tetrahedron boundary</td>
+<td>14,24,12,0</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td>Unfilled triangle loop</td>
+<td>6,6,0,0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>For the first five rows, equality
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>rank</mo><mi>C</mi><mo>=</mo><mo>dim</mo><mo>ker</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}C=\dim\ker D</annotation></semantics></math>
+together with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>C</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">DC=0</annotation></semantics></math>
+proves
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ker</mo><mi>D</mi><mo>=</mo><mo>im</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">\ker D=\operatorname{im}C</annotation></semantics></math>
+over the real or rational field. Smith normal form strengthens this
+result: every nonzero invariant of C is 1 in all six cases. Therefore
+its image is a primitive integer sublattice of the full current lattice.
+For the five rows with no noncurl directions, every integer graph cycle
+consequently has an integer square potential; rational and real cycles
+also have rational and real potentials. To see the integer conclusion,
+equal rank and DC=0 give equality of rational spans; saturation then
+places every integer vector in that span inside the integer image of C.
+In the loop control there is no square potential and a nonzero
+divergence-free circulation remains. Thus topology can obstruct a global
+curl representation; antisymmetry alone does not remove that
+obstruction.</p>
+<p>For the filled tetrahedron, two-tet and three-tet cases, the
+square-potential ambiguity equals the cube-boundary image dimensions
+4,8,12. For U the cube image has dimension 19 despite 20 cubes. Nonzero
+cube-boundary Smith invariants are likewise all 1; where its rank
+exhausts ker C, the cube image accounts for the integer potential
+ambiguity as well. The hollow tetrahedron has a one-dimensional
+closed-square ambiguity without any cubes. No statement about arbitrary
+larger carriers is inferred just from these six replays.</p>
+<h2 id="decompose-dynamic-currents-and-expose-the-transport-gap">4.
+Decompose dynamic currents and expose the transport gap</h2>
+<p><strong>Theorem (continuity identifiability on the audited connected
+graphs).</strong> Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>D</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">s=Dj</annotation></semantics></math>
+be the complete stock derivative. Because
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>𝟏</mn><mi>T</mi></msup><mi>s</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf1^Ts=0</annotation></semantics></math>,
+the graph Laplacian equation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><msup><mi>D</mi><mi>T</mi></msup><mi>ϕ</mi><mo>=</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">DD^T\phi=s</annotation></semantics></math>
+has a solution, unique after imposing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>𝟏</mn><mi>T</mi></msup><mi>ϕ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf1^T\phi=0</annotation></semantics></math>.
+Set
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mrow><mi mathvariant="normal">g</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">d</mi></mrow></msub><mo>=</mo><msup><mi>D</mi><mi>T</mi></msup><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">j_{\mathrm{grad}}=D^T\phi</annotation></semantics></math>.
+Then
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><msub><mi>j</mi><mrow><mi mathvariant="normal">g</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">d</mi></mrow></msub><mo>+</mo><mi>z</mi><mo>,</mo><mspace width="2.0em"></mspace><mi>D</mi><mi>z</mi><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><msubsup><mi>j</mi><mrow><mi mathvariant="normal">g</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">d</mi></mrow><mi>T</mi></msubsup><mi>z</mi><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+j=j_{\mathrm{grad}}+z,\qquad Dz=0,
+\qquad j_{\mathrm{grad}}^Tz=0.
+</annotation></semantics></math> For the rows with no noncurl cycle
+directions, write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>C</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">z=Cq</annotation></semantics></math>;
+q is nonunique by ker C. For the loop control a noncurl residual may
+remain.</p>
+<p><em>Proof.</em> Connected graph incidence has rank V-1 and image
+equal to the zero-sum vectors. The Laplacian has the same image and only
+the constant kernel. Subtracting the constructed gradient gives a
+zero-divergence residual. Orthogonality follows from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>ϕ</mi><mi>T</mi></msup><mi>D</mi><mi>z</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\phi^TDz=0</annotation></semantics></math>.
+The rank equality in the table supplies the square-potential assertion.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
+<p>The replay gives an explicit rational decomposition of the unit-edge
+dynamic witness. Its circulation residual is nonzero: even that simple
+stock-changing current is not equal to the Euclidean minimum-norm
+gradient current.</p>
+<p>This construction does not select a native transport law. With a
+chosen symmetric positive-definite edge metric R, a different
+minimum-norm representative is
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mi>R</mi></msub><mo>=</mo><msup><mi>R</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msup><mi>D</mi><mi>T</mi></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>D</mi><msup><mi>R</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msup><mi>D</mi><mi>T</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo></msup><mi>s</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">
+j_R=R^{-1}D^T(DR^{-1}D^T)^+s,
+</annotation></semantics></math> where plus denotes the Moore–Penrose
+inverse. The metric is a declared reconstruction choice, not a newly
+derived UD coupling. Actual j is fixed when A and the full admitted c
+are supplied; the ambiguity concerns inference from stock continuity
+alone.</p>
+<p>On a filled tetrahedron, complete node-stock derivatives leave
+<strong>14</strong> independent circulation directions undetermined. The
+glued two- and three-tet cases leave <strong>25</strong> and
+<strong>33</strong>. Currents
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>+</mo><mi>C</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">j+Cq</annotation></semantics></math>
+produce identical s. If only fixed owned stocks
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>W</mi><mi>ρ</mi></mrow><annotation encoding="application/x-tex">S=W\rho</annotation></semantics></math>
+are observed, they also produce identical
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>S</mi><mo accent="true">̇</mo></mover><mo>=</mo><mi>W</mi><mi>D</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">\dot S=WDj</annotation></semantics></math>.</p>
+<p>For the retained equal-top-star weights of Q177–Q179,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mrow><mi>σ</mi><mo>,</mo><mi>τ</mi></mrow></msub><mo>=</mo><mn>1</mn><mi>/</mi><msub><mi>n</mi><mn>3</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>σ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="1.0em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mi>σ</mi><mo>⊂</mo><mi>τ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><msub><mover><mi>S</mi><mo accent="true">̇</mo></mover><mi>τ</mi></msub><mo>=</mo><munder><mo>∑</mo><mrow><mi>σ</mi><mo>→</mo><mi>η</mi></mrow></munder><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>w</mi><mrow><mi>η</mi><mo>,</mo><mi>τ</mi></mrow></msub><mo>−</mo><msub><mi>w</mi><mrow><mi>σ</mi><mo>,</mo><mi>τ</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>j</mi><mrow><mi>σ</mi><mo>→</mo><mi>η</mi></mrow></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+w_{\sigma,\tau}=1/n_3(\sigma)\quad(\sigma\subset\tau),
+\qquad
+\dot S_\tau=\sum_{\sigma\to\eta}
+(w_{\eta,\tau}-w_{\sigma,\tau})j_{\sigma\to\eta}.
+</annotation></semantics></math> The replay rederives this formula and
+verifies column ownership sums to one on the four filled 3D carriers.
+Added square circulation is invisible to every such fixed owned-stock
+derivative. Time-dependent ownership has the additional
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>W</mi><mo accent="true">̇</mo></mover><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\dot W\rho</annotation></semantics></math>
+term and requires its own reassignment receipt.</p>
+<p>The useful closure is therefore a <strong>conditional identifiability
+result</strong>: at a fixed instant, continuity by itself cannot
+determine an otherwise unrestricted incidence-current vector. Closing
+recursive transport requires an admitted generator/current law or
+additional current-sensitive observations; further fixed owned-stock
+equations at that instant cannot resolve the circulation kernel. A known
+constitutive law or additional temporal dynamics can restrict the
+unknown class and must be audited separately. This does not reopen or
+demote the retained exact micro-continuity results.</p>
+<p><strong>Theorem (minimal additional linear current probes).</strong>
+Suppose the only initial information at an instant is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>D</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">s=Dj</annotation></semantics></math>,
+with no additional constitutive constraint on the real current vector.
+Let Z have independent columns spanning ker D. Exactly
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>dim</mo><mo>ker</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">\dim\ker D</annotation></semantics></math>
+additional linear probes suffice: observe
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Z</mi><mi>T</mi></msup><mi>j</mi></mrow><annotation encoding="application/x-tex">Z^Tj</annotation></semantics></math>.
+They are also the minimum possible count for uniform current
+identifiability. If two currents share both sets of data, their
+difference z lies in ker D and is orthogonal to its entire basis, so
+z=0. Fewer probes cannot injectively map a vector space of that
+dimension. On rows with no noncurl cycles, independent square-curl
+columns can serve as the probes; the loop control requires its nonlocal
+cycle direction too. These are mathematical observables, not a claim of
+an available measurement channel.</p>
+<p>If only equal-share cell-stock derivatives are available, let m be
+the number of tetrahedra. Their derivative map WD has rank m-1 on the
+four filled carriers. Rows of W are independent because each top simplex
+is owned only by its own cell. A combination of rows annihilates D only
+when it is constant over the connected Hasse graph; the top-simplex
+entries then force all coefficients equal. Unrestricted current
+reconstruction consequently requires E-(m-1) additional independent
+linear probes, potentially including missing stock-changing directions
+as well as circulation.</p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Available stock derivative data</th>
+<th style="text-align: right;">Filled tetrahedron</th>
+<th style="text-align: right;">Two tetrahedra</th>
+<th style="text-align: right;">Three tetrahedra</th>
+<th style="text-align: right;">U boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All simplex-address derivatives: minimum extra probes</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">41</td>
+</tr>
+<tr class="even">
+<td>Equal-share cell derivatives only: map rank</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td>Equal-share cell derivatives only: minimum extra probes</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">66</td>
+</tr>
+</tbody>
+</table>
+<p>One cell’s owned total is constant and reveals none of its 28
+individual incidence currents. Replay verifies the displayed ranks and
+supplies exact reconstruction-rank witnesses modulo prime 101. A full
+modular column-rank witness certifies full rational column rank; the
+proven rational upper bound supplies equality where needed. The modulus
+is a computational check, not a physical coefficient. This gives an
+exact, scoped requirement for additional transport observations.</p>
+<h2 id="weighted-divergence-and-open-system-bookkeeping">5. Weighted
+divergence and open-system bookkeeping</h2>
+<p>For the auxiliary cochain maps
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>0</mn></msub><mo>=</mo><msup><mi>D</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">d_0=D^T</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>=</mo><msup><mi>C</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">d_1=C^T</annotation></semantics></math>,
+choose positive diagonal inner-product matrices
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>0</mn></msub><mo>,</mo><msub><mi>M</mi><mn>1</mn></msub><mo>,</mo><msub><mi>M</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">M_0,M_1,M_2</annotation></semantics></math>.
+Their matched adjoints are
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>δ</mi><mn>1</mn></msub><mo>=</mo><msubsup><mi>M</mi><mn>0</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mi>D</mi><msub><mi>M</mi><mn>1</mn></msub><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>δ</mi><mn>2</mn></msub><mo>=</mo><msubsup><mi>M</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mi>C</mi><msub><mi>M</mi><mn>2</mn></msub><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>δ</mi><mn>1</mn></msub><msub><mi>δ</mi><mn>2</mn></msub><mo>=</mo><msubsup><mi>M</mi><mn>0</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mi>D</mi><mi>C</mi><msub><mi>M</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\delta_1=M_0^{-1}DM_1,\qquad
+\delta_2=M_1^{-1}CM_2,
+\qquad \delta_1\delta_2=M_0^{-1}DCM_2=0.
+</annotation></semantics></math> The intermediate metric cancels. Mixing
+a weighted divergence with an unmatched raw curl can instead give a
+nonzero result. Replay includes a rational positive-metric
+counterexample to that mismatch. An apparent failure of double
+divergence may therefore be a typing or metric inconsistency, rather
+than a broken topology.</p>
+<p>For an explicitly supplied amplitude source
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>c</mi><mo accent="true">̇</mo></mover><mo>=</mo><mi>A</mi><mi>c</mi><mo>+</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">\dot c=Ac+r</annotation></semantics></math>,
+the complete local relation is
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>ρ</mi><mo accent="true">̇</mo></mover><mo>=</mo><mi>D</mi><mi>j</mi><mo>+</mo><msub><mi>q</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">c</mi></mrow></msub><mo>,</mo><mspace width="2.0em"></mspace><msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>q</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">c</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>σ</mi></msub><mo>=</mo><mn>2</mn><mo>Re</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mover><mi>c</mi><mo accent="true">¯</mo></mover><mi>σ</mi></msub><msub><mi>r</mi><mi>σ</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><munder><mo>∑</mo><mi>σ</mi></munder><msub><mi>ρ</mi><mi>σ</mi></msub><mo>=</mo><munder><mo>∑</mo><mi>σ</mi></munder><msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>q</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">c</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>σ</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\dot\rho=Dj+q_{\mathrm{src}},\qquad
+(q_{\mathrm{src}})_\sigma=2\operatorname{Re}(\overline c_\sigma r_\sigma),
+\qquad \frac{d}{dt}\sum_\sigma\rho_\sigma=\sum_\sigma(q_{\mathrm{src}})_\sigma.
+</annotation></semantics></math> The internal incidence cut still
+cancels globally; the source is not cancelled by it. This is bookkeeping
+for an admitted r, not a derivation of native r, environmental
+dissipation, donor renewal or coarse breathing stocks. Those source laws
+remain open. No four-dimensional spacetime, electromagnetic field
+identification, calibration or experimental conservation claim is
+obtained.</p>
+<h2 id="gap-dispositions-and-next-evidence">6. Gap dispositions and next
+evidence</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Result of this exploration</th>
+<th>Remaining gate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Does antisymmetry force zero local UD flow?</td>
+<td>No; two exact normalized dynamic witnesses reject it</td>
+<td>None for the stated counterexamples</td>
+</tr>
+<tr class="even">
+<td>Is there a typed divergence-of-curl identity?</td>
+<td>Yes, DC=0 on the explicitly constructed Hasse squares</td>
+<td>Larger complexes and any physical interpretation</td>
+</tr>
+<tr class="odd">
+<td>Can conservative residual currents be represented locally?</td>
+<td>All graph cycles are square curls on five audited carriers</td>
+<td>Arbitrary topology beyond the six exact rank/Smith audits</td>
+</tr>
+<tr class="even">
+<td>Does continuity determine native transport?</td>
+<td>No; exact undetermined dimensions, rational decomposition and
+minimum linear-probe counts are supplied</td>
+<td>Current law or current-sensitive evidence</td>
+</tr>
+<tr class="odd">
+<td>Can weighted continuity be checked consistently?</td>
+<td>Matched adjoint cancellation and mismatch witness supplied</td>
+<td>Independently sourced metric/physical units</td>
+</tr>
+<tr class="even">
+<td>Are Q168/open-system support gaps closed?</td>
+<td>No; admitted source bookkeeping only</td>
+<td>Native environment, source/sink, renewal and coarse-stock laws</td>
+</tr>
+</tbody>
+</table>
+<p>Next useful effort: source a candidate current law or an
+implementable version of the minimal cycle probes, then test it against
+the supplied generator and finite preparation/observation defects;
+extend the exact rank and Smith-form audit to a named larger or
+nontrivial-topology carrier. Neither a zero-divergence slogan nor a
+metric chosen for convenient reconstruction can replace that work.</p>
+<p>All replay checks use exact rational/Gaussian-integer algebra. The
+archive includes complete matrices, the dynamic witnesses and their
+rational decomposition, attached source copies and a hash manifest.
+Constructor checking is not independent review. Placeholder
+packet-field/seam attachments supply no usable field equation and were
+not filled in by guesswork. Missing Gap2_FINAL_Finite_Genesis.png was
+unavailable and not used.</p>

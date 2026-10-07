@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UD transport noise margin</title><style>body{max-width:980px;margin:2rem auto;padding:0 1rem;font:18px/1.6 system-ui;color:#182230}h1,h2{line-height:1.25}math[display=block],table{display:block;overflow-x:auto}td,th{padding:.5rem;border:1px solid #b6c3d2}table{border-collapse:collapse;font-size:16px}code{overflow-wrap:anywhere}</style></head><body><h1 id="ud-transport-reconstruction-under-stock-and-readout-uncertainty-v0.1">UD transport reconstruction under stock and readout uncertainty — v0.1</h1>
+<p>5 October 2026. Development addendum. Constructor: Codex for Benjamin Walker Mayes. Independent review pending; physical promotion 0. No registry or physical bridge level advances.</p>
+<h2 id="source-contract-and-scope">1. Source contract and scope</h2>
+<p>Sources: <strong>UD_CONSTITUTIVE_CURRENT_IDENTIFIABILITY_v0.1</strong>, sections 2–5; <strong>UD_HASSE_CURRENT_CURL_AUDIT_v0.1</strong>, sections 2–4 and its exact <code>MATRICES.json</code>; attached <strong>UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md</strong>, Q169–Q172; <strong>UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md</strong>, sections 5–6. Source copies and hashes accompany this release. The historical ledger is not substituted for later portal state. Repository version 176 was checked before extending its transport addendum.</p>
+<p>Domain: one filled tetrahedron, its 15 real amplitude addresses and 28 incidence currents, known unit-incidence real skew generator A, one instant, and positive normalized stocks. The sign ray x is unknown; nominal magnitudes a_i and normalization Q define c_i<em>=x_i a_i/sqrt(Q), rho_i</em>=a_i²/Q. The nominal stock derivative is d_i<em>=2 c_i</em>(A c*)_i. Time units are the declared mathematical generator parameter, with no physical calibration.</p>
+<p>This is design optimization and exact inference analysis. It is not a sensor benchmark, a native preparation law, a complex-phase reconstruction theorem, or global profile optimization. Papers I–IV and the controller WBS are unchanged.</p>
+<h2 id="exact-four-magnitude-classes-suffice">2. EXACT: four magnitude classes suffice</h2>
+<p>Number the original tetrahedron vertices 0,1,2,3. Assign a simplex sigma the color chi(sigma)=XOR of its vertex labels, including label 0 as the ordinary integer zero. The four colors are 0,1,2,3. Neighbors of any Hasse address are obtained by toggling one original vertex i; their colors are chi(sigma) XOR i. Thus all neighbors of a given address have distinct colors. No claim that adjacent addresses must have different colors is made.</p>
+<p>The 15 nonempty simplices have color multiplicities (3,4,4,4). Assign magnitudes</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mrow><mi>χ</mi><mo>=</mo><mn>0</mn></mrow></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>χ</mi><mo>=</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>χ</mi><mo>=</mo><mn>2</mn></mrow></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>χ</mi><mo>=</mo><mn>3</mn></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>8</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>Q</mi><mo>=</mo><mn>500</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+(a_{\chi=0},a_{\chi=1},a_{\chi=2},a_{\chi=3})=(8,4,5,6),\qquad Q=500.
+</annotation></semantics></math></p>
+<p>The stocks are respectively 64/500,16/500,25/500,36/500, with total one. Their maximum/minimum ratio is exactly 4. The subset sums of (4,5,6,8) are distinct, with minimum gap 1.</p>
+<p>For distinct sign rays, at least one changed edge product occurs. At an endpoint i, a derivative difference equals 4 a_i/Q times a nonzero signed sum of neighbor magnitudes with coefficients 0 or ±1. Distinct subset sums prevent cancellation. With minimum amplitude 4 and subset gap 1,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><mo>=</mo><munder><mo>min</mo><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mi>x</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>≠</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>y</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow></munder><mo stretchy="false" form="postfix">∥</mo><msubsup><mi>d</mi><mi>x</mi><mo>*</mo></msubsup><mo>−</mo><msubsup><mi>d</mi><mi>y</mi><mo>*</mo></msubsup><msub><mo stretchy="false" form="postfix">∥</mo><mi>∞</mi></msub><mspace width="0.222em"></mspace><mo>≥</mo><mspace width="0.222em"></mspace><mfrac><mn>16</mn><mn>500</mn></mfrac><mo>=</mo><mfrac><mn>4</mn><mn>125</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\Delta=\min_{[x]\ne[y]}\|d_x^*-d_y^*\|_\infty\ \ge\ \frac{16}{500}=\frac4{125}.
+</annotation></semantics></math></p>
+<p>This supplies a direct positive margin without the previous powers-of-two stock range 4^14. It does not claim that the mathematical profile can be prepared natively.</p>
+<h2 id="exact-finite-family-optimization-and-full-separation">3. EXACT: finite-family optimization and full separation</h2>
+<p>The declared search family consists of four distinct positive integer magnitudes from 1 through 32 with largest/smallest ratio at most 2. The objective is the <strong>local lower bound</strong> 4 m delta_sub/Q, where m is the smallest magnitude and delta_sub is the minimum subset-sum gap. Repeated subset sums exclude a profile from this certificate family. This exclusion does not prove global derivative non-identifiability.</p>
+<p>For each unordered weight set, placing its largest magnitude on color 0 minimizes Q, because color 0 occurs three times and the other colors four times. Other permutations cannot improve this lower-bound objective. The replay tests 4,200 sets, of which 3,640 have distinct subset sums. The maximum bound is 4/125, attained by (4,5,6,8) and its integer multiples up to the search limit. These multiples give the same normalized stock profile. This is a finite-family optimum of a sufficient bound, not an optimum of actual separation, all real profiles, or all encodings.</p>
+<p>An independent exhaustive integer comparison of every pair of 16,384 global-sign-fixed rays gives</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><menclose notation="box"><mrow><mi>Δ</mi><mo>=</mo><mfrac><mn>40</mn><mn>500</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>25</mn></mfrac></mrow></menclose><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\boxed{\Delta=\frac{40}{500}=\frac2{25}}.
+</annotation></semantics></math></p>
+<p>The receipt preserves a closest pair, the two sign rays and their nominal derivative vectors. Diagonal pairs are excluded. Each unordered pair is covered (the implementation also checks the reverse order). It uses signed 64-bit integer operations at values far below overflow, not floating-point nearest-neighbor estimates. The local subset proof independently supplies the weaker lower bound, and the explicit closest pair supplies the sharp upper bound.</p>
+<h2 id="exact-stock-and-derivative-uncertainty-contract">4. EXACT: stock and derivative uncertainty contract</h2>
+<p>Let true normalized stocks satisfy</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>ρ</mi><mi>i</mi></msub><mo>−</mo><msubsup><mi>ρ</mi><mi>i</mi><mo>*</mo></msubsup><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mi>u</mi><msubsup><mi>ρ</mi><mi>i</mi><mo>*</mo></msubsup><mo>,</mo><mspace width="2.0em"></mspace><mn>0</mn><mo>≤</mo><mi>u</mi><mo>&lt;</mo><mn>1</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">
+|\rho_i-\rho_i^*|\le u\rho_i^*,\qquad 0\le u&lt;1,
+</annotation></semantics></math></p>
+<p>and true amplitudes be real with sign ray x. Then each true positive magnitude differs from its nominal value by at most relative u: sqrt(1−u)≥1−u and sqrt(1+u)≤1+u. Products differ by at most relative 2u+u². For the exact supplied generator,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">∥</mo><msub><mi>d</mi><mi>x</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ρ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><msubsup><mi>d</mi><mi>x</mi><mo>*</mo></msubsup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>ρ</mi><mo>*</mo></msup><mo stretchy="true" form="postfix">)</mo></mrow><msub><mo stretchy="false" form="postfix">∥</mo><mi>∞</mi></msub><mo>≤</mo><mi>K</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>u</mi><mo>+</mo><msup><mi>u</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>K</mi><mo>=</mo><munder><mo>max</mo><mi>i</mi></munder><mfrac><mrow><mn>2</mn><msub><mi>a</mi><mi>i</mi></msub><munder><mo>∑</mo><mrow><mi>j</mi><mo>∼</mo><mi>i</mi></mrow></munder><msub><mi>a</mi><mi>j</mi></msub></mrow><mi>Q</mi></mfrac><mo>=</mo><mfrac><mn>92</mn><mn>125</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\|d_x(\rho)-d_x^*(\rho^*)\|_\infty
+\le K(2u+u^2),\qquad
+K=\max_i\frac{2a_i\sum_{j\sim i}a_j}{Q}=\frac{92}{125}.
+</annotation></semantics></math></p>
+<p>If a measured derivative vector y has error at most epsilon in infinity norm relative to the true derivative, nearest nominal sign-ray decoding is unique whenever</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><menclose notation="box"><mrow><mi>ϵ</mi><mo>+</mo><mfrac><mn>92</mn><mn>125</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>u</mi><mo>+</mo><msup><mi>u</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>&lt;</mo><mfrac><mn>1</mn><mn>25</mn></mfrac></mrow></menclose><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\boxed{\epsilon+\frac{92}{125}(2u+u^2)&lt;\frac1{25}}.
+</annotation></semantics></math></p>
+<p>Proof: y is within epsilon+K(2u+u²) of the correct nominal signature. Every incorrect signature is at least Delta minus that radius away. A radius strictly below Delta/2 separates them. At equality no uniqueness guarantee follows. This proves recovery of the sign ray. Actual current magnitudes remain uncertain; nominal currents have edgewise product-error bound (2u+u²)|j_e*|.</p>
+<p>For u=1/100 and epsilon=1/50, the total error bound is</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>10873</mn><mn>312500</mn></mfrac><mo>&lt;</mo><mfrac><mn>1</mn><mn>25</mn></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mtext mathvariant="normal">slack</mtext><mo>=</mo><mfrac><mn>1627</mn><mn>312500</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\frac{10873}{312500}&lt;\frac1{25},\qquad
+\text{slack}=\frac{1627}{312500}.
+</annotation></semantics></math></p>
+<p>Thus a 1% relative stock allocation and 1/50 absolute derivative allocation satisfy the declared mathematical decoding test. Percent refers only to the relative stock interval. Derivative error has generator-time units; it is not a 2% sensor claim. The first conservative allocation u=1/1000, epsilon=1/100 also passes the local lower-bound test with half-margin 2/125.</p>
+<p>All inequalities concern worst-case admitted errors, not Gaussian error models. They presuppose the exact generator, all address derivatives, known address correspondence, real amplitudes, and the retained instantaneous law. Unknown generator coefficients, derivative-estimation bias beyond epsilon, missing addresses, uncertain units, and complex phases require separate error contracts. No physical readout accuracy is asserted.</p>
+<h2 id="exact-compare-derivative-only-and-tree-current-observation-routes">5. EXACT: compare derivative-only and tree-current observation routes</h2>
+<p>With signed current probes, all positive equal stocks rho=1/15 yield tree edge magnitude 2/15. Any spanning tree then reconstructs the real sign ray if its additive current error is strictly less than (1−u)2/15 under the same relative stock interval. This sign recovery does not require exact magnitudes; numerical current recovery does.</p>
+<p>For the selected derivative profile, a maximum-bottleneck spanning tree has nominal minimum current 12/125. Descending Kruskal constructs the tree. A cut witness shows that the graph with only edges strictly above this value is disconnected, proving optimality for this fixed profile. Its sign tolerance is correspondingly (1−u)12/125.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Observation route</th>
+<th>Profile</th>
+<th>Certified nominal discrimination</th>
+<th>Limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All 15 stock derivatives</td>
+<td>Equal stocks</td>
+<td>Zero global sign-ray separation</td>
+<td>Explicit collisions remain</td>
+</tr>
+<tr class="even">
+<td>All 15 stock derivatives</td>
+<td>Four-class 4:1 profile</td>
+<td>Exact pair separation 2/25</td>
+<td>Generator and real-state law supplied</td>
+</tr>
+<tr class="odd">
+<td>14 signed tree currents</td>
+<td>Equal stocks</td>
+<td>Sign threshold 2/15</td>
+<td>Current-sensitive probes must exist</td>
+</tr>
+<tr class="even">
+<td>14 signed tree currents</td>
+<td>Four-class 4:1 profile</td>
+<td>Optimal tree sign threshold 12/125</td>
+<td>Weaker tree tolerance than equal stocks</td>
+</tr>
+</tbody>
+</table>
+<p>The current thresholds and derivative signature separation refer to different observables; they are not interchangeable tolerances. Equal stocks favor tree-current sign sensing, while the four-class profile removes the derivative-only degeneracy. Probe realizability decides which design matters.</p>
+<h2 id="reproduction-dispositions-and-next-action">6. Reproduction, dispositions and next action</h2>
+<p>Run <code>python3 replay.py</code> from the unpacked release directory with NumPy available. The replay performs 15 grouped exact checks: XOR labeling, multiplicities, finite optimum, complete signature uniqueness, all-pair integer separation, independent local bound, two uncertainty budgets, optimal tree/cut witnesses, and equal-stock negative control. No physical dataset is used. The finite search is exploratory design work; all 16,384 rays are exhaustively tested, with no held-out empirical validation claim.</p>
+<p><strong>Closed within scope:</strong> a useful bounded-range real-stock profile, a sharp finite separation certificate, and a combined stock/readout error inequality. <strong>Narrowed:</strong> robust transport inference under a supplied generator. <strong>Open:</strong> physical stock/readout channels, native preparation, generator defects, complex receipt recovery, and independent review. Physical promotion remains 0.</p>
+<p>Recommended next action: extend the frozen inference contract to a source-bound non-unit generator perturbation and partial observations, using rank/counterexample tests before proposing apparatus. Priority judgment 91/100. This removes the exact-generator and complete-observation dependencies without inventing measurement capability.</p>
+<p><code>Gap2_FINAL_Finite_Genesis.png</code> remains unavailable and excluded; please retry its upload if needed.</p>
+</body></html>

@@ -1,0 +1,405 @@
+{
+  "status": "PASS",
+  "exact_checks": 11,
+  "numerical_checks": 56,
+  "tolerance": 3e-11,
+  "exact": [
+    "every complete candidate term has binary support <=2",
+    "clock and work generators commute exactly",
+    "two clock anticommute coefficient pairs",
+    "structured coefficient C/kappa^2 equals1",
+    "literal Pauli basis action coefficient15/2",
+    "grouped pair norm below 3kappa/2",
+    "sum grouped norms below4kappa",
+    "uniform half-error fails11/100",
+    "clock dimension3 prime and capacity4=2^2",
+    "full encoded dimension8=2^3",
+    "valid6=2*3 and padding2"
+  ],
+  "numerical": [
+    {
+      "name": "encoded free clock equals three-address spin clock",
+      "residual": 3.1401849173675503e-16
+    },
+    {
+      "name": "candidate spectrum",
+      "residual": 2.434909185329438e-15
+    },
+    {
+      "name": "constant generator norm",
+      "residual": 0.0
+    },
+    {
+      "name": "valid clock code invariant",
+      "residual": 0.0
+    },
+    {
+      "name": "padding block has work precession not zero",
+      "residual": 0.0
+    },
+    {
+      "name": "pair endpoint arbitrary entangled work kappa=1/2",
+      "residual": 2.752781665166691e-16
+    },
+    {
+      "name": "pair return is global minus identity kappa=1/2",
+      "residual": 4.263146450547384e-16
+    },
+    {
+      "name": "full error kappa=1/2 t/T=2/3",
+      "residual": 1.1102230246251565e-16
+    },
+    {
+      "name": "final padding leakage kappa=1/2 t/T=2/3",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=1/2 t/T=5/6",
+      "residual": 1.6653345369377348e-16
+    },
+    {
+      "name": "final padding leakage kappa=1/2 t/T=5/6",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=1/2 t/T=1",
+      "residual": 1.8357367701675579e-16
+    },
+    {
+      "name": "final padding leakage kappa=1/2 t/T=1",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=1/2 t/T=7/6",
+      "residual": 2.220446049250313e-16
+    },
+    {
+      "name": "final padding leakage kappa=1/2 t/T=7/6",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=1/2 t/T=4/3",
+      "residual": 5.551115123125783e-17
+    },
+    {
+      "name": "final padding leakage kappa=1/2 t/T=4/3",
+      "residual": 0.0
+    },
+    {
+      "name": "pair endpoint arbitrary entangled work kappa=1",
+      "residual": 2.752781665166691e-16
+    },
+    {
+      "name": "pair return is global minus identity kappa=1",
+      "residual": 4.263146450547384e-16
+    },
+    {
+      "name": "full error kappa=1 t/T=2/3",
+      "residual": 1.1102230246251565e-16
+    },
+    {
+      "name": "final padding leakage kappa=1 t/T=2/3",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=1 t/T=5/6",
+      "residual": 1.6653345369377348e-16
+    },
+    {
+      "name": "final padding leakage kappa=1 t/T=5/6",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=1 t/T=1",
+      "residual": 1.8357367701675579e-16
+    },
+    {
+      "name": "final padding leakage kappa=1 t/T=1",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=1 t/T=7/6",
+      "residual": 2.220446049250313e-16
+    },
+    {
+      "name": "final padding leakage kappa=1 t/T=7/6",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=1 t/T=4/3",
+      "residual": 5.551115123125783e-17
+    },
+    {
+      "name": "final padding leakage kappa=1 t/T=4/3",
+      "residual": 0.0
+    },
+    {
+      "name": "pair endpoint arbitrary entangled work kappa=4",
+      "residual": 2.752781665166691e-16
+    },
+    {
+      "name": "pair return is global minus identity kappa=4",
+      "residual": 4.263146450547384e-16
+    },
+    {
+      "name": "full error kappa=4 t/T=2/3",
+      "residual": 1.1102230246251565e-16
+    },
+    {
+      "name": "final padding leakage kappa=4 t/T=2/3",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=4 t/T=5/6",
+      "residual": 1.6653345369377348e-16
+    },
+    {
+      "name": "final padding leakage kappa=4 t/T=5/6",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=4 t/T=1",
+      "residual": 1.8357367701675579e-16
+    },
+    {
+      "name": "final padding leakage kappa=4 t/T=1",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=4 t/T=7/6",
+      "residual": 2.220446049250313e-16
+    },
+    {
+      "name": "final padding leakage kappa=4 t/T=7/6",
+      "residual": 0.0
+    },
+    {
+      "name": "full error kappa=4 t/T=4/3",
+      "residual": 5.551115123125783e-17
+    },
+    {
+      "name": "final padding leakage kappa=4 t/T=4/3",
+      "residual": 0.0
+    },
+    {
+      "name": "pair state factorizes at midpoint",
+      "residual": 2.830524433501838e-16
+    },
+    {
+      "name": "candidate differs from M11 midpoint prefix trajectory",
+      "observed_difference": 1.4142135623730951,
+      "lower": 0.1
+    },
+    {
+      "name": "initial energy variance for zero work",
+      "residual": 4.440892098500626e-16
+    },
+    {
+      "name": "odd winding endpoint channel n=-5",
+      "residual": 3.363896349075124e-16
+    },
+    {
+      "name": "odd winding supremum witness n=-5",
+      "residual": 0.0
+    },
+    {
+      "name": "odd winding endpoint channel n=-3",
+      "residual": 3.363896349075124e-16
+    },
+    {
+      "name": "odd winding supremum witness n=-3",
+      "residual": 0.0
+    },
+    {
+      "name": "odd winding endpoint channel n=-1",
+      "residual": 0.0
+    },
+    {
+      "name": "odd winding supremum witness n=-1",
+      "residual": 5.551115123125783e-17
+    },
+    {
+      "name": "odd winding endpoint channel n=1",
+      "residual": 0.0
+    },
+    {
+      "name": "odd winding supremum witness n=1",
+      "residual": 5.551115123125783e-17
+    },
+    {
+      "name": "odd winding endpoint channel n=3",
+      "residual": 3.363896349075124e-16
+    },
+    {
+      "name": "odd winding supremum witness n=3",
+      "residual": 0.0
+    },
+    {
+      "name": "odd winding endpoint channel n=5",
+      "residual": 3.363896349075124e-16
+    },
+    {
+      "name": "odd winding supremum witness n=5",
+      "residual": 0.0
+    }
+  ],
+  "candidate": {
+    "qubits": 3,
+    "clock_encoding": [
+      "00",
+      "01",
+      "11"
+    ],
+    "padding": "10",
+    "additional_ancillas": 0,
+    "generator": "kappa/sqrt(2)*(IXI+ZXI+XII-XZI)-kappa*IIY",
+    "generator_norm": "3*kappa",
+    "max_grouped_term_norm": "sqrt(2)*kappa",
+    "sum_grouped_term_norms": "(2*sqrt(2)+1)*kappa",
+    "declared_small_instance_caps": {
+      "N_max": 3,
+      "h_max": "3*kappa/2",
+      "J_max": "4*kappa"
+    },
+    "initial_zero_work_variance": "3*kappa^2",
+    "completion": "pi/(2*kappa)",
+    "return_channel": "identity at pi/kappa, unitary global phase minus one",
+    "worst_joint_retention_error": "1/2",
+    "scope": "independent clock plus compressed onsite work evolution; not chronological prefix gate execution"
+  },
+  "structured_toy": {
+    "L": 5,
+    "Lambda": "(2*sqrt(2)+1)*kappa",
+    "C": "kappa^2",
+    "B": "15*pi/2",
+    "scope": "toy only; full 380-qubit operator and synthesis costs still open"
+  },
+  "window_samples": [
+    {
+      "kappa": "1/2",
+      "t_over_T": "2/3",
+      "full_error": 0.5000000000000001,
+      "analytic_error": 0.5
+    },
+    {
+      "kappa": "1/2",
+      "t_over_T": "5/6",
+      "full_error": 0.2588190451025205,
+      "analytic_error": 0.2588190451025207
+    },
+    {
+      "kappa": "1/2",
+      "t_over_T": "1",
+      "full_error": 1.8357367701675579e-16,
+      "analytic_error": 0.0
+    },
+    {
+      "kappa": "1/2",
+      "t_over_T": "7/6",
+      "full_error": 0.25881904510252113,
+      "analytic_error": 0.2588190451025209
+    },
+    {
+      "kappa": "1/2",
+      "t_over_T": "4/3",
+      "full_error": 0.4999999999999998,
+      "analytic_error": 0.49999999999999983
+    },
+    {
+      "kappa": "1",
+      "t_over_T": "2/3",
+      "full_error": 0.5000000000000001,
+      "analytic_error": 0.5
+    },
+    {
+      "kappa": "1",
+      "t_over_T": "5/6",
+      "full_error": 0.2588190451025205,
+      "analytic_error": 0.2588190451025207
+    },
+    {
+      "kappa": "1",
+      "t_over_T": "1",
+      "full_error": 1.8357367701675579e-16,
+      "analytic_error": 0.0
+    },
+    {
+      "kappa": "1",
+      "t_over_T": "7/6",
+      "full_error": 0.25881904510252113,
+      "analytic_error": 0.2588190451025209
+    },
+    {
+      "kappa": "1",
+      "t_over_T": "4/3",
+      "full_error": 0.4999999999999998,
+      "analytic_error": 0.49999999999999983
+    },
+    {
+      "kappa": "4",
+      "t_over_T": "2/3",
+      "full_error": 0.5000000000000001,
+      "analytic_error": 0.5
+    },
+    {
+      "kappa": "4",
+      "t_over_T": "5/6",
+      "full_error": 0.2588190451025205,
+      "analytic_error": 0.2588190451025207
+    },
+    {
+      "kappa": "4",
+      "t_over_T": "1",
+      "full_error": 1.8357367701675579e-16,
+      "analytic_error": 0.0
+    },
+    {
+      "kappa": "4",
+      "t_over_T": "7/6",
+      "full_error": 0.25881904510252113,
+      "analytic_error": 0.2588190451025209
+    },
+    {
+      "kappa": "4",
+      "t_over_T": "4/3",
+      "full_error": 0.4999999999999998,
+      "analytic_error": 0.49999999999999983
+    }
+  ],
+  "independent_qubit_family": [
+    {
+      "odd_winding": -5,
+      "uniform_window_error": "1"
+    },
+    {
+      "odd_winding": -3,
+      "uniform_window_error": "1"
+    },
+    {
+      "odd_winding": -1,
+      "uniform_window_error": "1/2"
+    },
+    {
+      "odd_winding": 1,
+      "uniform_window_error": "1/2"
+    },
+    {
+      "odd_winding": 3,
+      "uniform_window_error": "1"
+    },
+    {
+      "odd_winding": 5,
+      "uniform_window_error": "1"
+    }
+  ],
+  "wbs_status": {
+    "5.2": "explicit pair-only endpoint candidate constructed; selected window rejected",
+    "5.3": "exact small-instance channel and support audited; accepted full window remains open",
+    "4.3": "independent-work qubit family retention limit proved; outside-family architectures open",
+    "3.1": "toy structured operator complete; full controller open",
+    "3.2": "toy L/Lambda/C/B evaluated; full controller open",
+    "1.3": "toy finite caps specified; full controller resource envelope remains open"
+  },
+  "independent_review": "PENDING",
+  "physical_promotion": 0
+}

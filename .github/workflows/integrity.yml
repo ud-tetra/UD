@@ -1,0 +1,24 @@
+name: UD capture integrity
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  integrity:
+    name: UD capture integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify append-only capture and hashes
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python3 scripts/verify_repository.py --base "$BASE"
+      - name: Check integrity rejection controls
+        run: python3 scripts/test_capture_integrity.py

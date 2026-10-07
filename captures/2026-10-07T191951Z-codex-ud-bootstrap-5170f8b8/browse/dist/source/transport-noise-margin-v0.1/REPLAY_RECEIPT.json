@@ -1,0 +1,251 @@
+{
+  "status": "PASS",
+  "exact_checks": 15,
+  "checks": [
+    "XOR labels are distinct in every neighbor set",
+    "color multiplicities 3 4 4 4",
+    "finite profile optimum 4/125 with 4200 tested 3640 admitted",
+    "retained minimal representative among tied optima",
+    "normalized profile has stock ratio 4 and denominator 500",
+    "all 16384 derivative signatures distinct",
+    "exhaustive full-state derivative separation meets local lower bound",
+    "independent local certificate 4/125",
+    "source-independent perturbation coefficient 92/125",
+    "declared relative-stock and derivative errors fit proved lower margin",
+    "one-percent stock and 1/50 derivative allocation fit exact half gap",
+    "bottleneck tree spans every address",
+    "strictly better tree bottleneck is obstructed by a cut",
+    "equal-stock tree margin 2/15 exceeds selected tree bottleneck",
+    "equal-stock derivative collisions retained"
+  ],
+  "finite_search": {
+    "range": "four distinct integers 1..32; max/min <=2",
+    "tested": 4200,
+    "admitted": 3640,
+    "best_certified_margin": "4/125",
+    "tied_weights": [
+      [
+        4,
+        5,
+        6,
+        8
+      ],
+      [
+        8,
+        10,
+        12,
+        16
+      ],
+      [
+        12,
+        15,
+        18,
+        24
+      ],
+      [
+        16,
+        20,
+        24,
+        32
+      ]
+    ]
+  },
+  "profile": {
+    "color_weights": [
+      8,
+      4,
+      5,
+      6
+    ],
+    "address_weights": [
+      8,
+      4,
+      5,
+      6,
+      4,
+      5,
+      6,
+      6,
+      5,
+      4,
+      6,
+      5,
+      4,
+      8,
+      8
+    ],
+    "Q": 500,
+    "stock_range": 4
+  },
+  "exact_derivative_gap": "2/25",
+  "integer_gap": 40,
+  "closest_ray_indices": [
+    72,
+    183
+  ],
+  "closest_sign_rays": [
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "closest_derivatives": [
+    [
+      -240,
+      -24,
+      -70,
+      -60,
+      88,
+      150,
+      156,
+      -156,
+      -150,
+      -88,
+      156,
+      150,
+      88,
+      112,
+      -112
+    ],
+    [
+      -240,
+      -40,
+      -30,
+      -84,
+      104,
+      110,
+      180,
+      -180,
+      -110,
+      -104,
+      180,
+      110,
+      104,
+      112,
+      -112
+    ]
+  ],
+  "local_lower_bound": "4/125",
+  "K": "92/125",
+  "uncertainty_contract": {
+    "relative_stock_error": "1/1000",
+    "derivative_error": "1/100",
+    "stock_debit": "46023/31250000",
+    "total_error": "358523/31250000",
+    "proved_half_margin": "2/125"
+  },
+  "expanded_contract": {
+    "relative_stock_error": "1/100",
+    "derivative_error": "1/50",
+    "stock_debit": "4623/312500",
+    "total_error": "10873/312500",
+    "exact_half_margin": "1/25",
+    "slack": "1627/312500"
+  },
+  "tree_bottleneck": "12/125",
+  "tree": [
+    [
+      "32/125",
+      13,
+      14
+    ],
+    [
+      "24/125",
+      10,
+      14
+    ],
+    [
+      "24/125",
+      7,
+      13
+    ],
+    [
+      "24/125",
+      0,
+      6
+    ],
+    [
+      "4/25",
+      11,
+      14
+    ],
+    [
+      "4/25",
+      8,
+      13
+    ],
+    [
+      "4/25",
+      0,
+      5
+    ],
+    [
+      "18/125",
+      3,
+      6
+    ],
+    [
+      "16/125",
+      12,
+      14
+    ],
+    [
+      "16/125",
+      9,
+      13
+    ],
+    [
+      "16/125",
+      0,
+      4
+    ],
+    [
+      "3/25",
+      6,
+      11
+    ],
+    [
+      "3/25",
+      2,
+      7
+    ],
+    [
+      "12/125",
+      1,
+      7
+    ]
+  ],
+  "physical_promotion": 0,
+  "independent_review": "PENDING",
+  "matrix_sha256": "cac0d13f9af6dccf47ede049131816b3d0154adb79ab48f5f69f24fef6d4651f"
+}

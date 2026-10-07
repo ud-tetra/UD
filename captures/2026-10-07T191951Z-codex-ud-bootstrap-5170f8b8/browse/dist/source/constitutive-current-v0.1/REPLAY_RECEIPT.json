@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "exact_checks": 8,
+  "checks": [
+    "equal-stock derivative ambiguity has a distinct-current witness",
+    "powers-of-two real stocks identify all 16384 sign rays",
+    "superincreasing strict inequalities",
+    "equal-stock witness difference is nonzero circulation",
+    "tree has 14 edges and covers all addresses",
+    "tree sign propagation reconstructs all 16384 sign rays",
+    "unit magnitudes collision source stocks normalize to 1/15",
+    "imaginary phase invisible to real flux"
+  ],
+  "equal_stock_enumeration": {
+    "rays": 16384,
+    "distinct_derivatives": 16256,
+    "collisions": 128,
+    "different_current_collisions": 128,
+    "witness": {
+      "signs_1": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "signs_2": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "current_1": [
+        2,
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2,
+        2,
+        -2,
+        2,
+        -2,
+        2,
+        -2,
+        2,
+        2,
+        -2,
+        -2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        2
+      ],
+      "current_2": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        -2,
+        2,
+        -2,
+        2,
+        2,
+        2,
+        -2,
+        2,
+        -2,
+        -2,
+        2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        2
+      ],
+      "stock_derivative": [
+        -6,
+        -2,
+        -2,
+        -2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        -8,
+        -4
+      ],
+      "stock_denominator": 15
+    }
+  },
+  "superincreasing_stock_enumeration": {
+    "rays": 16384,
+    "distinct_derivatives": 16384,
+    "collisions": 0,
+    "different_current_collisions": 0,
+    "witness": null
+  },
+  "tree": [
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      12
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      10,
+      14
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      7,
+      13
+    ]
+  ],
+  "physical_promotion": 0,
+  "independent_review": "PENDING",
+  "source_sha256": "cac0d13f9af6dccf47ede049131816b3d0154adb79ab48f5f69f24fef6d4651f"
+}

@@ -1,0 +1,441 @@
+<header><h1>UD M13: coupled pointer and finite retention certificate</h1><p>5 October 2026 · Development addendum 0.1 · Independent review pending · Physical promotion 0</p><p>Fresh checks: 68 exact and 57 numerical. Coupled pair-qubit toy window certified analytically; enormous finite clocks, full controller open.</p></header><p><strong>Development — no registry entry. Independent review pending.
+Physical promotion 0.</strong> This continues WBS 5.2 after M12. The
+result is a finite, constant, pair-qubit generator for the same
+completed toy work operation ZX, with a certified full
+clock/work/spectator window. The resource upper bounds are enormous. It
+does not implement the retained 380-qubit production/capture/renewal
+word, chronological X-then-Z gates, native clock formation, or an
+efficient realization. No ledger coefficient is added or altered.</p>
+<h2 id="owned-factors-fixed-reference-and-constant-pair-generator">1.
+Owned factors, fixed reference, and constant pair generator</h2>
+<p>Name one pointer qubit P, N clock qubits C_j, and one work qubit B.
+All clocks start in the supplied product state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="true" form="postfix">|</mo></mrow><mn>0</mn><msub><mo stretchy="false" form="postfix">⟩</mo><mi>P</mi></msub><mo stretchy="false" form="prefix">|</mo><mn>0</mn><msubsup><mo stretchy="false" form="postfix">⟩</mo><mi>C</mi><mrow><mo>⊗</mo><mi>N</mi></mrow></msubsup></mrow><annotation encoding="application/x-tex">|c_0\rangle=|0\rangle_P|0\rangle^{\otimes N}_C</annotation></semantics></math>.
+Work B may be entangled with arbitrary spectators R. There is no
+external action after launch. Positive engineered scales are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>,</mo><mi>Ω</mi><mo>,</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">\kappa,\Omega,G</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mi>G</mi><mi>/</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">g=G/N</annotation></semantics></math>.
+This kappa is the toy comparison scale, distinct from the retained
+full-controller kappa_0.</p>
+<p>Predeclare the independent auxiliary reference by its clock-only
+generator
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>C</mi></msub><mo>=</mo><mi>Ω</mi><msub><mi>X</mi><mi>P</mi></msub><mo>+</mo><mi>κ</mi><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>X</mi><mi>j</mi></msub><mo>+</mo><mi>g</mi><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>Z</mi><mi>P</mi></msub><msub><mi>Z</mi><mi>j</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>χ</mi><mi>C</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>i</mi><mi>t</mi><msub><mi>H</mi><mi>C</mi></msub></mrow></msup><mo stretchy="true" form="postfix">|</mo></mrow><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+H_C=\Omega X_P+\kappa\sum_{j=1}^N X_j+g\sum_{j=1}^N Z_PZ_j,
+\qquad |\chi_C(t)\rangle=e^{-itH_C}|c_0\rangle.
+</annotation></semantics></math> This is a reference evolution specified
+before constructing or executing the work propagator; it is not the
+actual work-coupled clock marginal. Define
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>Z</mi><mi>X</mi><mo>=</mo><mi>i</mi><msub><mi>Y</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">V=ZX=iY_B</annotation></semantics></math>
+and the mathematical dressing
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><msub><mrow><mo stretchy="true" form="prefix">|</mo><mn>0</mn><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">⟨</mo><mn>0</mn><mo stretchy="true" form="postfix">|</mo></mrow><mi>P</mi></msub><mo>⊗</mo><msub><mi>I</mi><mi>B</mi></msub><mo>+</mo><msub><mrow><mo stretchy="true" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">⟨</mo><mn>1</mn><mo stretchy="true" form="postfix">|</mo></mrow><mi>P</mi></msub><mo>⊗</mo><mi>V</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">
+W=|0\rangle\langle0|_P\otimes I_B+|1\rangle\langle1|_P\otimes V,
+</annotation></semantics></math> with identity on every C_j and R. The
+proposed complete generator is
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mi>W</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>H</mi><mi>C</mi></msub><mo>⊗</mo><msub><mi>I</mi><mi>B</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>W</mi><mo>†</mo></msup><mo>=</mo><mi>Ω</mi><msub><mi>Y</mi><mi>P</mi></msub><msub><mi>Y</mi><mi>B</mi></msub><mo>+</mo><mi>κ</mi><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>X</mi><mi>j</mi></msub><mo>+</mo><mi>g</mi><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>Z</mi><mi>P</mi></msub><msub><mi>Z</mi><mi>j</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+H=W(H_C\otimes I_B)W^\dagger
+=\Omega Y_PY_B+\kappa\sum_{j=1}^N X_j+g\sum_{j=1}^N Z_PZ_j.
+</annotation></semantics></math> The identity follows by multiplying the
+two pointer off-diagonal blocks:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><msub><mi>X</mi><mi>P</mi></msub><msup><mi>W</mi><mo>†</mo></msup><mo>=</mo><msub><mi>Y</mi><mi>P</mi></msub><msub><mi>Y</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">WX_PW^\dagger=Y_PY_B</annotation></semantics></math>;
+every other clock term commutes with W. W is used to prove the
+propagator, not as an uncharged launch circuit. Every physical generator
+term is onsite or two-qubit; the work and pointer genuinely interact.
+Connectivity is a star, with degree N at P; geometric locality is not
+established. Each qubit’s full space is retained, with no encoded
+padding or discarded reservoir.</p>
+<p>The target at the same actual elapsed t is the predeclared pure clock
+reference tensor the completed work/spectator state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>V</mi><mo>⊗</mo><msub><mi>I</mi><mi>R</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>ρ</mi><mrow><mi>B</mi><mi>R</mi></mrow></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>V</mi><mo>†</mo></msup><mo>⊗</mo><msub><mi>I</mi><mi>R</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(V\otimes I_R)\rho_{BR}(V^\dagger\otimes I_R)</annotation></semantics></math>.
+This circuit compresses the known product ZX; it does not claim an
+ordered noncommuting gate history. We use the unchanged toy interval
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mi>π</mi><mrow><mn>2</mn><mi>κ</mi></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mi>ℐ</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>2</mn><mi>T</mi><mi>/</mi><mn>3</mn><mo>,</mo><mn>4</mn><mi>T</mi><mi>/</mi><mn>3</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mi>κ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mn>2</mn><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mi>κ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+T=\frac{\pi}{2\kappa},\qquad \mathcal I=[2T/3,4T/3]=[\pi/(3\kappa),2\pi/(3\kappa)].
+</annotation></semantics></math></p>
+<h2 id="exact-full-state-reduction-to-a-pointer-probability">2. Exact
+full-state reduction to a pointer probability</h2>
+<p><strong>Theorem M13.1.</strong> Write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>χ</mi><mi>C</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="true" form="postfix">|</mo></mrow><mn>0</mn><msub><mo stretchy="false" form="postfix">⟩</mo><mi>P</mi></msub><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">⟩</mo><mo>+</mo><mo stretchy="true" form="postfix">|</mo></mrow><mn>1</mn><msub><mo stretchy="false" form="postfix">⟩</mo><mi>P</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\chi_C(t)\rangle=|0\rangle_P|a(t)\rangle+|1\rangle_P|b(t)\rangle</annotation></semantics></math>,
+and set
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo stretchy="false" form="postfix">∥</mo><mi>a</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">p_0(t)=\|a(t)\|^2</annotation></semantics></math>.
+For supplied ready clocks, the supremum of complete trace distance over
+work inputs and arbitrary spectators is exactly
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msqrt><mrow><mn>2</mn><msub><mi>p</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><msub><mi>p</mi><mn>0</mn></msub><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow></msqrt><mo>≤</mo><msqrt><mn>2</mn></msqrt><msqrt><mrow><msub><mi>p</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msqrt><mi>.</mi></mrow><annotation encoding="application/x-tex">
+E(t)=\sqrt{2p_0(t)-p_0(t)^2}\le\sqrt2\sqrt{p_0(t)}.
+</annotation></semantics></math></p>
+<p><em>Proof.</em> W is the identity on the supplied initial pointer.
+Thus the actual pure state is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>χ</mi><mi>C</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="true" form="postfix">|</mo></mrow><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">W(|\chi_C(t)\rangle|\psi\rangle)</annotation></semantics></math>
+for every purified work/spectator input. Its overlap with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>χ</mi><mi>C</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">⟩</mo><mi>V</mi><mo stretchy="true" form="postfix">|</mo></mrow><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\chi_C(t)\rangle V|\psi\rangle</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><msub><mi>p</mi><mn>0</mn></msub><mo>+</mo><msub><mi>p</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">⟨</mo><mi>ψ</mi><mrow><mo stretchy="true" form="prefix">|</mo><msup><mi>V</mi><mo>†</mo></msup><mo stretchy="true" form="postfix">|</mo></mrow><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">1-p_0+p_0\langle\psi|V^\dagger|\psi\rangle</annotation></semantics></math>.
+Since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>V</mi><mo>†</mo></msup><mo>=</mo><mo>−</mo><mi>i</mi><mi>Y</mi></mrow><annotation encoding="application/x-tex">V^\dagger=-iY</annotation></semantics></math>,
+the latter expectation is purely imaginary. The squared overlap is at
+least
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>p</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">(1-p_0)^2</annotation></semantics></math>,
+attained by work |0&gt;, including the case with no spectator.
+Pure-state trace distance gives the formula. Purification and
+contractivity give the mixed-input upper bound. No marginal is
+substituted for the joint comparison. In particular the actual clock can
+depend on work; the reference clock does not.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
+<p>An exact endpoint is not promised. The certificate will bound the
+full interval, including T. This avoids treating a correct endpoint as a
+plateau.</p>
+<h2 id="finite-clock-fluctuation-and-pointer-following-estimates">3.
+Finite-clock fluctuation and pointer-following estimates</h2>
+<p>For analysis only, introduce the time-dependent product reference:
+each C_j evolves freely under kappa X, and the pointer follows
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>P</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>Ω</mi><msub><mi>X</mi><mi>P</mi></msub><mo>+</mo><mi>G</mi><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>κ</mi><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>Z</mi><mi>P</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+K_P(t)=\Omega X_P+G\cos(2\kappa t)Z_P.
+</annotation></semantics></math> This time-dependent generator is
+<strong>not</strong> an implemented control schedule. It is used only to
+estimate the constant H_C. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\varphi(t)\rangle</annotation></semantics></math>
+be this product evolution from the same supplied initial state.</p>
+<p><strong>Lemma M13.2 (finite-clock fluctuation).</strong> For every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>4</mn><mi>T</mi><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">0\le t\le4T/3</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">∥</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>i</mi><mi>t</mi><msub><mi>H</mi><mi>C</mi></msub></mrow></msup><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>−</mo><mo stretchy="true" form="postfix">|</mo></mrow><mi>φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">∥</mo><mo>≤</mo><mfrac><mi>G</mi><msqrt><mi>N</mi></msqrt></mfrac><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mo stretchy="true" form="prefix">|</mo><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>κ</mi><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mspace width="0.167em"></mspace><mi>d</mi><mi>s</mi><mo>≤</mo><mfrac><mrow><mn>5</mn><mi>G</mi></mrow><mrow><mn>4</mn><mi>κ</mi><msqrt><mi>N</mi></msqrt></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\|e^{-itH_C}|c_0\rangle-|\varphi(t)\rangle\|
+\le \frac{G}{\sqrt N}\int_0^t|\sin(2\kappa s)|\,ds
+\le\frac{5G}{4\kappa\sqrt N}.
+</annotation></semantics></math></p>
+<p><em>Proof.</em> The generator difference acting on the product
+reference is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><msub><mi>Z</mi><mi>P</mi></msub><msub><mo>∑</mo><mi>j</mi></msub><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>Z</mi><mi>j</mi></msub><mo>−</mo><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>κ</mi><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">gZ_P\sum_j[Z_j-\cos(2\kappa t)]</annotation></semantics></math>.
+Its squared norm is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mn>2</mn></msup><mi>N</mi><msup><mo>sin</mo><mn>2</mn></msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>κ</mi><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">g^2N\sin^2(2\kappa t)</annotation></semantics></math>:
+independent product spins have zero cross covariances, and pointer Z has
+norm one on every pointer state. State-dependent Duhamel integration
+uses unitary propagation of this residual. At the upper time the
+integral is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mn>2</mn><mo>+</mo><mn>1</mn><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">]</mo></mrow><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>κ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>5</mn><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mi>κ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">[2+1/2]/(2\kappa)=5/(4\kappa)</annotation></semantics></math>;
+the integral is monotone before that. This owns back-reaction as a
+finite joint-state error rather than replacing the clock by an infinite
+classical field.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
+<p><strong>Lemma M13.3 (elementary following bound).</strong> Over the
+entire observation interval, the product-reference pointer has
+wrong-pointer amplitude at most
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>P</mi></msub><mo>=</mo><mfrac><mrow><mn>3</mn><mi>Ω</mi></mrow><mrow><mn>2</mn><mi>G</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>4</mn><mi>κ</mi><mi>G</mi></mrow><msup><mi>Ω</mi><mn>2</mn></msup></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+A_P=\frac{3\Omega}{2G}+\frac{4\kappa G}{\Omega^2}.
+</annotation></semantics></math></p>
+<p><em>Proof.</em> Put
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>G</mi><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>κ</mi><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">D(t)=G\cos(2\kappa t)</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>P</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msqrt><mrow><msup><mi>Ω</mi><mn>2</mn></msup><mo>+</mo><mi>D</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">E_P(t)=\sqrt{\Omega^2+D(t)^2}</annotation></semantics></math>,
+and choose a continuous angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>∈</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mi>π</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\theta\in(0,\pi)</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mi>θ</mi><mo>=</mo><mi>Ω</mi><mi>/</mi><msub><mi>E</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">\sin\theta=\Omega/E_P</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mi>θ</mi><mo>=</mo><mi>D</mi><mi>/</mi><msub><mi>E</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">\cos\theta=D/E_P</annotation></semantics></math>.
+The initial upper eigenvector differs from pointer |0&gt; by Euclidean
+norm at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Ω</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>G</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\Omega/(2G)</annotation></semantics></math>.
+During the window
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>≤</mo><mo>−</mo><mi>G</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">D\le-G/2</annotation></semantics></math>,
+so its wrong-pointer component is at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Ω</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mrow><mo stretchy="true" form="prefix">|</mo><mi>D</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mi>Ω</mi><mi>/</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">\Omega/(2|D|)\le\Omega/G</annotation></semantics></math>.</p>
+<p>It remains to bound transition from the upper instantaneous
+eigenvector. In the eigenbasis with dynamical phases removed, the
+off-diagonal coupling has magnitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">|</mo><mi>f</mi><mo stretchy="true" form="postfix">|</mo></mrow><annotation encoding="application/x-tex">|f|</annotation></semantics></math>,
+where
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mover><mi>θ</mi><mo accent="true">̇</mo></mover><mi>/</mi><mn>2</mn><mo>=</mo><mfrac><mrow><mi>κ</mi><mi>Ω</mi><mi>G</mi><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>κ</mi><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><msubsup><mi>E</mi><mi>P</mi><mn>2</mn></msubsup></mfrac><mo>,</mo><mspace width="1.0em"></mspace><mover><mi>ϕ</mi><mo accent="true">̇</mo></mover><mo>=</mo><mn>2</mn><msub><mi>E</mi><mi>P</mi></msub><mo>,</mo><mspace width="1.0em"></mspace><mi>a</mi><mo>=</mo><mi>f</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><msub><mi>E</mi><mi>P</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="1.0em"></mspace><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><msub><mi>a</mi><mo>max</mo></msub><mo>=</mo><mfrac><mrow><mi>κ</mi><mi>G</mi></mrow><mrow><mn>2</mn><msup><mi>Ω</mi><mn>2</mn></msup></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+f=\dot\theta/2=\frac{\kappa\Omega G\sin(2\kappa t)}{E_P^2},
+\quad \dot\phi=2E_P,
+\quad a=f/(2E_P),
+\quad |a|\le a_{\max}=\frac{\kappa G}{2\Omega^2}.
+</annotation></semantics></math> Integration by parts in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mo>−</mo></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>±</mo><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>e</mi><mrow><mo>±</mo><mi>i</mi><mi>ϕ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msup><msub><mi>c</mi><mo>+</mo></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">c_-(t)=\pm\int_0^t f(s)e^{\pm i\phi(s)}c_+(s)ds</annotation></semantics></math>
+gives
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>c</mi><mo>−</mo></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mo>+</mo><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mo stretchy="true" form="prefix">|</mo><mover><mi>a</mi><mo accent="true">̇</mo></mover><mo stretchy="true" form="postfix">|</mo></mrow><mi>d</mi><mi>s</mi><mo>+</mo><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mo stretchy="true" form="postfix">|</mo></mrow><mspace width="0.167em"></mspace><mrow><mo stretchy="true" form="prefix">|</mo><mi>f</mi><mo stretchy="true" form="postfix">|</mo></mrow><mi>d</mi><mi>s</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">
+|c_-(t)|\le |a(t)|+|a(0)|+\int_0^t|\dot a|ds
++\int_0^t|a|\,|f|ds.
+</annotation></semantics></math> Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a(0)=0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mover><mi>c</mi><mo accent="true">̇</mo></mover><mo>+</mo></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>f</mi><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">|\dot c_+|\le|f|</annotation></semantics></math>.
+On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mn>2</mn><mi>κ</mi><mi>t</mi><mo>≤</mo><mn>4</mn><mi>π</mi><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">0\le2\kappa t\le4\pi/3</annotation></semantics></math>,
+a has one positive maximum, returns to zero at pi, and then decreases to
+a negative value. Indeed its derivative with respect to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>2</mn><mi>κ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">x=2\kappa t</annotation></semantics></math>
+has the sign of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\cos x</annotation></semantics></math>,
+since the positive numerator factor is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Ω</mi><mn>2</mn></msup><mo>+</mo><msup><mi>G</mi><mn>2</mn></msup><msup><mo>cos</mo><mn>2</mn></msup><mi>x</mi><mo>+</mo><mn>3</mn><msup><mi>G</mi><mn>2</mn></msup><msup><mo>sin</mo><mn>2</mn></msup><mi>x</mi></mrow><annotation encoding="application/x-tex">\Omega^2+G^2\cos^2x+3G^2\sin^2x</annotation></semantics></math>.
+Hence
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mo>+</mo><mo>∫</mo><mrow><mo stretchy="true" form="prefix">|</mo><mover><mi>a</mi><mo accent="true">̇</mo></mover><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mn>4</mn><msub><mi>a</mi><mo>max</mo></msub></mrow><annotation encoding="application/x-tex">|a(t)|+\int|\dot a|\le4a_{\max}</annotation></semantics></math>,
+also for any earlier t. The total variation of theta is at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">2\pi</annotation></semantics></math>,
+giving
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>f</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">\int|f|\le\pi</annotation></semantics></math>.
+Thus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>c</mi><mo>−</mo></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo>+</mo><mi>π</mi><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>a</mi><mo>max</mo></msub><mo>&lt;</mo><mn>8</mn><msub><mi>a</mi><mo>max</mo></msub><mo>=</mo><mn>4</mn><mi>κ</mi><mi>G</mi><mi>/</mi><msup><mi>Ω</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|c_-|\le(4+\pi)a_{\max}&lt;8a_{\max}=4\kappa G/\Omega^2</annotation></semantics></math>.
+The initial-state discrepancy, upper-vector wrong component and
+lower-vector amplitude add to the displayed bound. No infinite-time
+Landau–Zener formula or unproved adiabatic slogan is used.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
+<p><strong>Theorem M13.4 (uniform joint certificate).</strong> Combining
+projection contractivity with the two lemmas yields
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>sup</mo><mrow><mi>t</mi><mo>∈</mo><mi>ℐ</mi></mrow></munder><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><msqrt><mn>2</mn></msqrt><mrow><mo stretchy="true" form="prefix">[</mo><mfrac><mrow><mn>3</mn><mi>Ω</mi></mrow><mrow><mn>2</mn><mi>G</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>4</mn><mi>κ</mi><mi>G</mi></mrow><msup><mi>Ω</mi><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><mrow><mn>5</mn><mi>G</mi></mrow><mrow><mn>4</mn><mi>κ</mi><msqrt><mi>N</mi></msqrt></mrow></mfrac><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\sup_{t\in\mathcal I}E(t)\le\sqrt2\left[
+\frac{3\Omega}{2G}+\frac{4\kappa G}{\Omega^2}
++\frac{5G}{4\kappa\sqrt N}\right].
+</annotation></semantics></math> The bound is uniform on every admitted
+work/spectator input, with the explicitly supplied pure clocks. This is
+a sufficient analytical certificate; its value is not the actual optimum
+error. The finite-clock proof is symbolic and does not require dense
+propagation of the enormous admitted instances.</p>
+<h2
+id="two-explicit-finite-envelopes-and-an-arbitrary-accuracy-family">4.
+Two explicit finite envelopes and an arbitrary-accuracy family</h2>
+<p>The parameters below are predeclared finite design instances. N is
+the count of binary clock factors, not their Hilbert dimension. All
+scales are engineered; no native UD coefficient or measured capability
+is asserted. Use
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>2</mn></msqrt><mo>&lt;</mo><mn>3</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\sqrt2&lt;3/2</annotation></semantics></math>
+for outward rational certificates.</p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Instance</th>
+<th>N</th>
+<th>G/kappa</th>
+<th>Omega/kappa</th>
+<th>g/kappa</th>
+<th>Wrong-pointer amplitude bound</th>
+<th>Outward joint bound</th>
+<th>Gate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Toy-window example</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mn>52</mn></msup><annotation encoding="application/x-tex">2^{52}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mn>20</mn></msup><annotation encoding="application/x-tex">2^{20}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mn>14</mn></msup><annotation encoding="application/x-tex">2^{14}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mrow><mo>−</mo><mn>32</mn></mrow></msup><annotation encoding="application/x-tex">2^{-32}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>/</mi><mn>256</mn></mrow><annotation encoding="application/x-tex">15/256</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>45</mn><mi>/</mi><mn>512</mn><mo>&lt;</mo><mn>11</mn><mi>/</mi><mn>100</mn></mrow><annotation encoding="application/x-tex">45/512&lt;11/100</annotation></semantics></math></td>
+<td>Toy window certified</td>
+</tr>
+<tr class="even">
+<td>Provisional timer-debit example</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mn>134</mn></msup><annotation encoding="application/x-tex">2^{134}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mn>50</mn></msup><annotation encoding="application/x-tex">2^{50}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mn>34</mn></msup><annotation encoding="application/x-tex">2^{34}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mrow><mo>−</mo><mn>84</mn></mrow></msup><annotation encoding="application/x-tex">2^{-84}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mi>/</mi><msup><mn>2</mn><mn>19</mn></msup></mrow><annotation encoding="application/x-tex">25/2^{19}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>75</mn><mi>/</mi><msup><mn>2</mn><mn>20</mn></msup><mo>&lt;</mo><mn>1</mn><mi>/</mi><mn>5000</mn></mrow><annotation encoding="application/x-tex">75/2^{20}&lt;1/5000</annotation></semantics></math></td>
+<td>This toy’s ideal joint timer error fits that allocation</td>
+</tr>
+</tbody>
+</table>
+<p>The latter meets only the M11 timer/correlation allocation for this
+operation under ideal preparation and exact couplings. It does not
+certify the inherited full semantic bank, other four allocations, a
+generic gate word, native preparation or the unsized full-controller
+resource envelope. The clock state differs from a reusable fresh clock;
+every C_j and P remains in the reference and actual domains.</p>
+<p>The two instances have total binary-factor count
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">N+2</annotation></semantics></math>,
+clock dimension
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">2^{N+1}</annotation></semantics></math>
+and complete clock/work dimension
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mrow><mi>N</mi><mo>+</mo><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">2^{N+2}</annotation></semantics></math>;
+dimension prime factorizations have sole prime 2. For even exponents q,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><msup><mn>2</mn><mi>q</mi></msup></mrow><annotation encoding="application/x-tex">N=2^q</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mi>N</mi></msqrt><mo>=</mo><msup><mn>2</mn><mrow><mi>q</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\sqrt N=2^{q/2}</annotation></semantics></math>
+are exact. Time arithmetic stays
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>κ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">T=\pi/(2\kappa)</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℐ</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mi>κ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mn>2</mn><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mi>κ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal I=[\pi/(3\kappa),2\pi/(3\kappa)]</annotation></semantics></math>,
+with denominators 2 and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>=</mo><msup><mn>3</mn><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">3=3^1</annotation></semantics></math>
+retained explicitly. Taking kappa equal to kappa_0 would align this
+toy’s interval with M11, but would not implement M11’s full
+semantics.</p>
+<p>For any requested ideal joint error
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>ϵ</mi><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0&lt;\epsilon\le1</annotation></semantics></math>,
+a finite member follows directly: set
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>Ω</mi><mi>/</mi><mi>G</mi><mo>=</mo><mi>ϵ</mi><mi>/</mi><mn>8</mn></mrow><annotation encoding="application/x-tex">r=\Omega/G=\epsilon/8</annotation></semantics></math>,
+choose
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mi>/</mi><mi>κ</mi><mo>≥</mo><mn>2048</mn><mi>/</mi><msup><mi>ϵ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">G/\kappa\ge2048/\epsilon^3</annotation></semantics></math>,
+and choose integer
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>≥</mo><msup><mrow><mo stretchy="true" form="prefix">[</mo><mn>10</mn><mi>G</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>κ</mi><mi>ϵ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">N\ge[10G/(\kappa\epsilon)]^2</annotation></semantics></math>.
+The three amplitude terms are then at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>ϵ</mi><mi>/</mi><mn>16</mn><mo>,</mo><mi>ϵ</mi><mi>/</mi><mn>8</mn><mo>,</mo><mi>ϵ</mi><mi>/</mi><mn>8</mn></mrow><annotation encoding="application/x-tex">3\epsilon/16,\epsilon/8,\epsilon/8</annotation></semantics></math>,
+respectively. Their sum is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mi>ϵ</mi><mi>/</mi><mn>16</mn></mrow><annotation encoding="application/x-tex">7\epsilon/16</annotation></semantics></math>
+and the joint error is less than
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>21</mn><mi>ϵ</mi><mi>/</mi><mn>32</mn><mo>&lt;</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">21\epsilon/32&lt;\epsilon</annotation></semantics></math>.
+This existence bound scales at most as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mi>O</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>ϵ</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">G=O(\epsilon^{-3})</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Ω</mi><mo>=</mo><mi>O</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>ϵ</mi><mrow><mo>−</mo><mn>2</mn></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\Omega=O(\epsilon^{-2})</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>O</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>ϵ</mi><mrow><mo>−</mo><mn>8</mn></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">N=O(\epsilon^{-8})</annotation></semantics></math>.
+It is not a lower bound, an optimal scaling, or an efficiency claim.</p>
+<h2 id="resources-structured-costs-defects-and-recurrence">5. Resources,
+structured costs, defects and recurrence</h2>
+<p>Group each support once. There is one PB pair of norm Omega, N
+distinct P–C_j pairs of norm g, and N onsite clock terms of norm kappa.
+Predeclare
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mo>max</mo></msub><mo>=</mo><mi>N</mi><mo>+</mo><mn>2</mn><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>h</mi><mo>max</mo></msub><mo>=</mo><mo>max</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>Ω</mi><mo>,</mo><mi>κ</mi><mo>,</mo><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>J</mi><mo>max</mo></msub><mo>=</mo><mi>Ω</mi><mo>+</mo><mi>N</mi><mi>κ</mi><mo>+</mo><mi>G</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">
+N_{\max}=N+2,\quad h_{\max}=\max(\Omega,\kappa,g),
+\quad J_{\max}=\Omega+N\kappa+G.
+</annotation></semantics></math> All caps are met by construction. No
+splitting trick changes a support’s norm. The total generator norm is at
+most J_max; no equality is claimed. For the supplied clocks and
+arbitrary work state, mean energy is G and variance is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Ω</mi><mn>2</mn></msup><mo>+</mo><mi>N</mi><msup><mi>κ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Omega^2+N\kappa^2</annotation></semantics></math>,
+because the off-diagonal PB and individual spin-flip images are mutually
+orthogonal. Energy spread is their square root. State preparation is
+supplied, with zero ideal defect in this mathematical instance;
+thermodynamic preparation work, native readiness and launch precision
+are unresolved. These caps admit huge costs rather than proving
+acceptable full-controller costs.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Structured quantity</th>
+<th>Exact value</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pauli count L</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>N</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2N+1</annotation></semantics></math></td>
+<td>N onsite X, N pointer/clock ZZ, one pointer/work YY</td>
+</tr>
+<tr class="even">
+<td>Coefficient sum Lambda</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Ω</mi><mo>+</mo><mi>N</mi><mi>κ</mi><mo>+</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">\Omega+N\kappa+G</annotation></semantics></math></td>
+<td>All coefficients positive</td>
+</tr>
+<tr class="odd">
+<td>Anticommute coefficient C</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>Ω</mi><mo>+</mo><mi>κ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">G(\Omega+\kappa)</annotation></semantics></math></td>
+<td>PB YY anticommutes with every P–C ZZ; each clock X anticommutes only
+with its own ZZ</td>
+</tr>
+<tr class="even">
+<td>Literal M10 parity basis action B</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>N</mi><mo>+</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">(2N+4)\pi</annotation></semantics></math></td>
+<td>X onsite contributes pi; ZZ pair pi; YY pair four pi</td>
+</tr>
+</tbody>
+</table>
+<p>If an external digital simulation is chosen, its inherited sufficient
+bound is <span class="math inline">$t^2G(\Omega+\kappa)/r_{\rm
+dig}$</span> with literal action <span class="math inline">$r_{\rm
+dig}(2N+4)\pi+t\Lambda$</span>. This is an optional comparison;
+implementing that schedule would change the autonomous-generator claim.
+No dense exponential in dimension
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mrow><mi>N</mi><mo>+</mo><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">2^{N+2}</annotation></semantics></math>
+was executed.</p>
+<p>For implementation generator defect delta and full initial
+preparation trace-distance defect eta, add at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>δ</mi><mo>+</mo><mi>η</mi></mrow><annotation encoding="application/x-tex">t\delta+\eta</annotation></semantics></math>
+to the ideal joint certificate. For errors only in the star couplings,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>≤</mo><mi>N</mi><msub><mo>max</mo><mi>j</mi></msub><mrow><mo stretchy="true" form="prefix">|</mo><mi>Δ</mi><msub><mi>g</mi><mi>j</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">\delta\le N\max_j|\Delta g_j|</annotation></semantics></math>
+is a valid worst-case sufficient bound; small g does not eliminate
+aggregate calibration cost. All clock terms and backgrounds are
+included. A modified actual generator is still compared against the same
+frozen H_C reference. No measured defect budget is available.</p>
+<p>This is a finite observation window, not an absorbing record. The
+complete finite-dimensional constant Hermitian propagator has
+arbitrarily close returns to identity by simultaneous eigenphase
+approximation. Work |0&gt; then approaches its initial state and is far
+from the completed V|0&gt; target. The clocks are not reset, discarded
+or renewed. No permanent exhaustion, exact periodic recurrence time or
+reusable launch is claimed.</p>
+<h2 id="wbs-dispositions-replay-and-research-context">6. WBS
+dispositions, replay and research context</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>WBS</th>
+<th>Executed here</th>
+<th>Still open</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5.2</td>
+<td>Explicit coupled pair-qubit architecture and finite full-state toy
+window certificate</td>
+<td>Full retained program and useful resource envelope</td>
+</tr>
+<tr class="even">
+<td>4.3 / 5.3</td>
+<td>Uniform joint theorem with spectators and finite back-reaction
+cost</td>
+<td>Full-bank correlations, failure and exhaustion semantics</td>
+</tr>
+<tr class="odd">
+<td>1.3 / 4.1</td>
+<td>Explicit two-instance N/h/J/energy and supplied-clock
+requirements</td>
+<td>Native preparation, practical bounds and full-controller sizing</td>
+</tr>
+<tr class="even">
+<td>3.1–3.2</td>
+<td>General-N structured operator and exact L/Lambda/C/B</td>
+<td>Complete retained 380-qubit source-word realization</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Authored source, constructor checks, hashes and preserved
+prerequisites</td>
+<td>Non-constructor review; no registry promotion</td>
+</tr>
+</tbody>
+</table>
+<p>M11’s fixed direct-encoding obstruction and M12’s independent
+single-work-qubit theorem remain valid. This design leaves M12’s failed
+family through genuine PB coupling and additional owned factors. The
+next effort should reduce these upper bounds and test smaller N through
+the permutation-symmetric clock representation before scaling the source
+word. A finite existence certificate is a different gate from an
+efficient full controller.</p>
+<p>Replay checks finite small-N dressing, work/spectator propagation and
+the exact joint distance, clock residual variance, structured costs and
+exact Fraction inequalities for the enormous instances. Small-N checks
+do not pretend to simulate the large clock. The written
+integration-by-parts and Duhamel proofs supply the dimension-independent
+guarantee.</p>
+<p>Research context: finite autonomous clock back-reaction is a prior
+research subject; see Woods, Silva and Oppenheim, <a
+href="https://arxiv.org/abs/1607.04591">Autonomous quantum machines and
+the finite sized Quasi-Ideal clock</a>. Explicit adiabatic error
+estimates likewise have prior literature; see Jansen, Ruskai and Seiler,
+<a href="https://arxiv.org/abs/quant-ph/0603175">Bounds for the
+adiabatic approximation with applications to quantum computation</a>.
+Those papers are context, not substitutions for the self-contained
+bounds above. No novelty or priority claim is made. The attached ledger
+and governance remain unchanged; missing Gap2_FINAL_Finite_Genesis.png
+was unavailable and not used.</p>

@@ -1,9 +1,13 @@
 # Unified Dynamics (UD)
 
-Append-only research and artifact mirror for Unified Dynamics.
+Collaborative research record and append-only artifact mirror.
 
-Bootstrap capture in progress. Scientific status: independent review pending; physical promotion 0.
+Start with [the artifact index](INDEX.md), [contribution workflow](CONTRIBUTING.md), and [capture instructions](AGENTS.md).
+
+The bootstrap mirrors 13,269 source files from the UD portal, current UD-named Library artifacts and supplied project sources. Original bytes, versions, hashes and limitations are recorded in the capture manifest. Browseable papers and recent replay sources are linked from the index.
+
+Physical promotion: **0**. Independent review pending. Importing an artifact does not promote its claims.
 
 Live portal: https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/
 
-Contributions use unique capture directories and append-only event records. Existing artifacts are never overwritten; corrections are new versions with explicit supersession receipts. Detailed governance and mirror inventory follow in the bootstrap capture.
+Multiple contributors use unique branches, capture directories and event files; prior scientific artifacts are never overwritten. Owner branch-protection setup remains listed in [administrative setup](docs/ADMIN_SETUP.md).
