@@ -1,0 +1,106 @@
+{
+  "candidate_face_lift": "AND of its three edge gates used only for two-branch witness; Q173 face decision remains unsourced",
+  "carrier": "<0123,0124>, f=(5,9,7,2), A=B^T-B",
+  "checks": {
+    "16_independent_mask_generators_preserve_kernel": true,
+    "512_candidate_modes_preserve_hidden_vertex": true,
+    "closed_mask_has_three_hidden_factor_states": true,
+    "exact_quotient_intertwining_witness": true,
+    "four_distinct_one_event_signatures": true,
+    "identity_state_reset_at_pure_mask_switch": true,
+    "record_dimension": true,
+    "register_5_9_7_2": true,
+    "repair_C_ambiguous_given_closed_mask": true,
+    "repair_T_ambiguous_given_closed_mask": true,
+    "right_inverse": true,
+    "same_record_and_mask_different_next_derivative": true,
+    "same_record_and_mask_different_next_mask": true,
+    "switch_changes_quotient_generator": true,
+    "uniform_vertex_quotient": true
+  },
+  "factor_signatures": {
+    "(0, 0)": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "(0, 1)": [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "(1, 0)": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "(1, 1)": [
+      1,
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  "hybrid_memory": "for declared independent repair_C/repair_T/fail_C/fail_T grammar, four distinguishable (C,T) states per edge require at least two binary state bits; this is not an unconditional UD memory lower bound",
+  "operator_scope": "all independent whole-edge Q167 extensions and Q173 per-face masks; fixed edge-face incidences; prescribed piecewise modes",
+  "passed": 15,
+  "quotient": "four vertex differences against vertex 4, then all nine edges, seven faces, two cells; kernel span(uniform vertex)",
+  "status": "EXACT CONDITIONAL; independent repair/failure event grammar is a diagnostic candidate; autonomous UD trigger OPEN; physical promotion 0",
+  "witness": {
+    "edge": [
+      0,
+      1
+    ],
+    "event": "repair_C",
+    "post_edge_01_derivatives": [
+      "-2",
+      "-1"
+    ],
+    "post_masks": [
+      1,
+      0
+    ],
+    "pre_factor_states": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "same_pre_mask": 0,
+    "same_z": [
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  }
+}
