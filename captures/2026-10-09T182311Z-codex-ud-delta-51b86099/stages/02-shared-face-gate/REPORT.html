@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>UD Shared-Face Gate Closure v0.1</title>
+<style>body{font:17px/1.6 system-ui;max-width:940px;margin:48px auto;padding:0 24px;color:#192c3e}h1,h2{line-height:1.2}pre{white-space:pre-wrap;padding:18px;background:#eef3f7}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd5df;padding:10px;text-align:left}</style>
+<h1>UD Shared-Face Gate Closure v0.1</h1>
+<p>9 October 2026 · Development lane · Constructor-checked · Physical promotion 0.</p>
+<p><strong>Result:</strong> the previous six-coordinate quotient survives arbitrary prescribed switching of the two face–cell incidence couplings at face 012. Gate eligibility is also retained exactly when its decision rule factors through the reduced record. Eligibility depending on omitted information can destroy closure.</p>
+<h2>Specified candidate interaction</h2>
+<p>Use the same oriented two-tetrahedron complex &lt;0123,0124&gt; and A=Bᵀ−B. Let Li be its skew incidence rotation between shared face 012 and cell i. Set A(g)=A+(g−1)(L1+L2). Binary g closes or opens both couplings; all other incidences remain unchanged. This is a candidate dynamic mask, motivated by the ledger's hard-gating structure, not a source-derived eligibility law. Removing only these coefficients does not create a new chain boundary: the masked boundary generally no longer squares to zero. The original topology and boundary remain fixed.</p>
+<h2>Switch-independent retained coordinates</h2>
+<pre>q1=c0123,  q2=c0124,  f=c012
+p1=c013−c023+c123
+p2=c014−c024+c124
+r=c01−c02+c12
+z=(q1,q2,p1,p2,f,r).</pre>
+<p>This is an invertible change of coordinates from the previous record: p_i=v_i+f and r=w−q1−q2. Under a gate, the previous v and w remain defined reference aggregates; they are no longer the actual q and f derivatives. The new coordinates avoid that ambiguity.</p>
+<pre>q_i′ = p_i − g f
+p_i′ = −3 q_i + r
+f′   = r + g(q1+q2)
+r′   = −p1−p2−3f.</pre>
+<p>The exact matrix identities R A(0)=H0 R and R(L1+L2)=D R prove R A(g)=(H0+gD)R for every real g, not just sampled binary settings. Separate gates gi also close: replace gf in the ith equation by gi f, and g(q1+q2) by g1 q1+g2 q2. The remaining equations are unchanged.</p>
+<h2>Switching and gate eligibility</h2>
+<p>For a prescribed piecewise-constant gate schedule with locally finite switching times, the quotient intertwines each exponential propagator and therefore their chronological product. The full state and z remain continuous at a switch; only the derivative changes. This audit assumes no impulsive reset. Arbitrary reset maps require their own compatibility check. The six continuous coordinates plus the currently held gate mode form the reduced hybrid state; externally prescribed decision times remain inputs.</p>
+<p>Explicit candidate rule: at nominated decision times, set g=1 when −f(q1+q2)&gt;0, otherwise set g=0, and hold that mode until the next decision. This uses the sign of the instantaneous shared-face contribution to total cell support, J=−2gf(q1+q2). The reduced record determines both eligibility and subsequent evolution exactly. The rule does not guarantee that J stays positive until the next decision, nor that total cell support grows: other faces also contribute. Decision times and the rule itself are assumptions, not UD-derived physical laws. No claim of absence of chattering is needed because decision times are stipulated to have no finite accumulation.</p>
+<h2>Exact hidden-eligibility counterexample</h2>
+<pre>x+ = e0123+e012+e01−e12
+x− = e0123+e012−e01+e12
+R x+ = R x− = (1,0,0,0,1,0).</pre>
+<p>A different candidate rule g=1 when c01&gt;0 chooses modes 1 and 0, respectively. The retained derivatives become (−1,−1,−3,0,1,−3) and (0,0,−3,0,0,−3). Thus the record is sufficient for the dynamics under a supplied mode but insufficient for this hidden-variable decision rule. This is not a no-go for all admissibility laws.</p>
+<h2>Invariant and ordering</h2>
+<p>The rows of R are orthogonal with squared norms (1,1,3,3,1,3). A common positive invariant for all gate settings is:</p>
+<pre>E = q1²+q2²+f²+(p1²+p2²+r²)/3.</pre>
+<p>E is the full squared norm of the orthogonal projection into the retained six-dimensional invariant sector, not generally the full 23-dimensional norm. Full norm is also conserved because A(g) remains skew. With continuous switching and no resets, E is continuous and constant across the entire schedule. This is a mathematical support invariant, not an identified physical energy. The closed and gate generators do not commute, so chronological ordering cannot be dropped.</p>
+<h2>Delta correction under feedback</h2>
+<p>If the baseline b and actual retained state z use the same supplied gate schedule, d=z−b obeys d′=H(g)d. If their states choose different gates, instead:</p>
+<pre>d′ = H(g_z)d + (g_z−g_b)D b.</pre>
+<p>The extra baseline-dependent term is required. Feedback-controlled deltas generally do not evolve in isolation. The record can remain compact and sufficient without being a homogeneous delta-only system.</p>
+<h2>Scope and validation</h2>
+<p>21 new exact rational assertions pass, alongside the 18 baseline assertions. Identities cover both coefficients of the gate parameter, both independently gated incidences, the common positive metric, failure of hidden eligibility, and the feedback-delta correction. Python standard library only; run <code>python verify_gate.py</code>. No numerical integration is needed for the exact intertwining proof. No independent reproduction, physical calibration, cost benchmark, or registry promotion is claimed.</p>
+<p>Source context: prior UD_TWO_TET_DELTA_CLOSURE_v0.1_RELEASE.zip; supplied historical ledger v0.39 Q145/Q153/Q172/Q173 and governance proposal. The latest public repository was not refreshed in this audit. MQM supplied motivation, not imported coefficients. The unavailable Gap2_FINAL_Finite_Genesis.png was not used.</p>
+<p><strong>Next trajectory:</strong> test a gate on an outer face, whose amplitude is not individually retained, and determine the minimum common record for both interface and outer-face gates. This distinguishes robust reduction from a specially aligned interaction.</p>
+</html>
