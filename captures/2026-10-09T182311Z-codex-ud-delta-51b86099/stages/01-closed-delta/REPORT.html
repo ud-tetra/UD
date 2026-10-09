@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>UD Two-Tetrahedron Delta Closure Audit v0.1</title>
+<style>body{font:17px/1.6 system-ui;max-width:960px;margin:48px auto;padding:0 24px;color:#192c3e}h1,h2{line-height:1.2}table{border-collapse:collapse;width:100%}td,th{padding:10px;border:1px solid #cbd6df;text-align:left}pre{white-space:pre-wrap;background:#eef3f7;padding:18px}small{color:#526473}</style>
+<h1>UD Two-Tetrahedron Delta Closure Audit v0.1</h1>
+<p>9 October 2026. Development lane — no registry entry. Physical promotion: 0.</p>
+<p><strong>Result:</strong> cell amplitudes and a shared-face snapshot do not form a predictive state. Adding three derivative coordinates yields an exact six-dimensional autonomous description of those observables under the fixed closed unit-incidence Hodge dynamics. A four-dimensional description suffices for the cell amplitudes alone.</p>
+<h2>Scope and provenance</h2>
+<p>Carrier K = &lt;0123,0124&gt;, including each simplex once, f=(5,9,7,2), register dimension 23. Increasing vertex order fixes orientation. B is the full boundary operator; A=Bᵀ−B, and c′=Ac. Parameter s is the model evolution parameter; this audit supplies no physical clock calibration, event scheduler, gate law, source law, topology transition, or measured hardware claim. MQM motivates the question but none of its coefficients or codes are imported.</p>
+<p>The attached ledger v0.39 provides historical context: Q145 records defect-to-breathing nonidentifiability, Q153 distinguishes balance structure from constitutive laws, and Q172 cautions against unproved removal of the interface reservoir. This audit does not assert that v0.39 is the latest repository state. The attached CRL-2 governance file is marked a proposal; this result is constructor-checked mathematics, without independent review or promotion.</p>
+<h2>Exact counterexample</h2>
+<p>Retain R₀c=(c0123,c0124,c012). Let x₊=e0123+e013 and x₋=e0123−e013. Both have retained record (1,0,0), squared full norm 2, and identical coordinatewise squared amplitudes. Nevertheless:</p>
+<pre>R₀ A x₊ = ( 1,0,1)
+R₀ A x₋ = (−1,0,1)
+d(c0123²)/ds = +2 versus −2.</pre>
+<p>Thus even supplementing these snapshots with the full total norm does not close their evolution. These are admissible arbitrary real initial data for the stated linear model; further nonlinear UD restrictions have not been asserted or tested.</p>
+<h2>Exact repair</h2>
+<p>Write c=(c0,c1,c2,c3), q=c3, and v=B3ᵀc2. Boundary-of-boundary gives B3ᵀB2ᵀ=0. Therefore:</p>
+<pre>q′ = v
+v′ = −Kq,       K = B3ᵀB3 = [[4,1],[1,4]].</pre>
+<p>Explicitly, v1=−c012+c013−c023+c123 and v2=−c012+c014−c024+c124. These aggregate signed boundary amplitudes are derivatives of cell amplitudes, not identified physical velocities or the ledger's burden flux.</p>
+<p>For the shared face f=c012, define w=c01−c02+c12+q1+q2. Direct incidence algebra gives:</p>
+<pre>f′ = w
+w′ = −5f.</pre>
+<p>The record z=(q1,q2,v1,v2,f,w) therefore closes exactly. The replay checks R6 A=H6 R6 and rank(R6)=6. Consequently R6 exp(sA)=exp(sH6)R6 for every real s. This determines the selected amplitudes and their squared stocks, but does not reconstruct the entire 23-dimensional state or every individual boundary current.</p>
+<h2>Minimal linear closure</h2>
+<p>Starting from a requested readout R, repeatedly append rows of RA and retain a row-space basis. The terminal space is the smallest A-invariant row space containing the readout. Any autonomous linear record containing that readout must contain it. The exact rank sequences are:</p>
+<table><tr><th>Requested readout</th><th>Rank sequence</th><th>Minimum linear state dimension</th></tr><tr><td>Two cell amplitudes</td><td>2 → 4</td><td>4</td></tr><tr><td>Two cells and shared face</td><td>3 → 6</td><td>6</td></tr><tr><td>All seven faces and two cells</td><td>9 → 14</td><td>14</td></tr></table>
+<p>Minimality is restricted to exact autonomous linear representations of these specified outputs for arbitrary real initial states. No claim is made about arbitrary nonlinear encodings or other observables.</p>
+<h2>Baseline and delta interpretation</h2>
+<p>If a known baseline b obeys the same fixed dynamics, δ=c−b obeys δ′=Aδ. Its six-coordinate projection d=R6δ obeys d′=H6d. For any chosen interval h, d(s+h)=exp(hH6)d(s), while R6c(s)=R6b(s)+d(s). This is exact for the selected outputs. Delta sparsity, lower total computational cost, and adequacy after adding interactions remain unproved.</p>
+<p>After normalizing q±=(q1±q2)/√2 and v±=(v1±v2)/√2, the three oscillator blocks have frequencies √5, √3, √5. Each is analytically propagated using cos(ωh) and sin(ωh)/ω. Arbitrary h is permitted mathematically for this fixed flow; geometric event intervals have not been derived. The irrational √5/√3 ratio precludes a nonzero common period for the full reduced propagator.</p>
+<h2>Update ordering</h2>
+<p>Let L1 and L2 be the individual skew incidence rotations coupling face 012 to cells 0123 and 0124. They share a coordinate and do not commute: (L2L1−L1L2)e0123=−e0124. Hence reversing sequential exponential updates changes the result at order h². Neither split sequence should be silently identified with exp(h(L1+L2)). This is an algebraic ordering witness, not a proposed UD event scheduler.</p>
+<h2>Validation and next gate</h2>
+<p>verify.py uses Python's standard-library Fraction arithmetic only. Eighteen assertions cover incidence identities, closure ranks and intertwiners, the same-record counterexample, and noncommuting updates. results.json retains matrices and receipts. No floating-point fit, sampled approximation, external review, timing benchmark, or physical experiment is used.</p>
+<p><strong>Next:</strong> introduce one explicitly specified interface gate and test whether the same six-coordinate record remains closed and can decide gate eligibility. If it fails, exhibit the missing information before enlarging the record. A gate chosen for this test must be labeled a candidate law unless independently supplied by UD sources.</p>
+</html>
