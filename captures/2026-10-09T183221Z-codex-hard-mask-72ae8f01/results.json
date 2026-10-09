@@ -1,0 +1,69 @@
+{
+  "candidate_face_lift": "h_f=AND of its three edge gates; not Q173-sourced mask decision",
+  "checks": {
+    "12_carrier_automorphisms": true,
+    "all_edge_masks_reachable": true,
+    "chain_register_5_9_7_2": true,
+    "closed_topology_identity_no_transition": true,
+    "complete_identity_context_open": true,
+    "different_cell_derivative": true,
+    "different_edge_01_derivative": true,
+    "each_edge_has_required_faces": true,
+    "exhaustive_65536": true,
+    "face_012_rule_changes": true,
+    "face_lift_deterministic_from_edges": true,
+    "factor_transition_truth_table": true,
+    "nonflat_lawful_loop_remains_open": true,
+    "same_amplitudes_different_edge_mask": true
+  },
+  "claim_class": "exact conditional Boolean audit; no autonomous switch prediction; physical promotion 0",
+  "counts": {
+    "automorphisms": 12,
+    "face_receipt_assignments": 128,
+    "factor_transition_table": {
+      "both_restored": 3,
+      "closure_failure": 1,
+      "joint_failure": 1,
+      "no_mask_change": 10,
+      "transport_failure": 1
+    },
+    "reachable_edge_masks": 512,
+    "reachable_face_masks": 62,
+    "reachable_joint_masks": 512,
+    "total": 65536,
+    "transport_bit_assignments": 512
+  },
+  "declared_context": "two-tetrahedron <0123,0124>; Req_cl(e)=all incident triangles; one-dimensional real transport U_e in {-1,0,1} with T_e=1 iff U_e in {-1,1}",
+  "source_rule": "h_e=C_cl,e^hard*T_int,e^hard; C_cl,e^hard=AND of declared required binary closure receipts",
+  "witness": {
+    "blocked_cell_0123_derivative": "0",
+    "blocked_edge_01_derivative": "-1",
+    "blocked_face_mask": {
+      "012": 0,
+      "013": 0,
+      "014": 0,
+      "023": 1,
+      "024": 1,
+      "123": 1,
+      "124": 1
+    },
+    "changed_transport_edge": "01",
+    "open_cell_0123_derivative": "-1",
+    "open_edge_01_derivative": "-2",
+    "open_face_mask": {
+      "012": 1,
+      "013": 1,
+      "014": 1,
+      "023": 1,
+      "024": 1,
+      "123": 1,
+      "124": 1
+    },
+    "state_nonzero_simplexes": [
+      "0",
+      "01",
+      "012",
+      "0123"
+    ]
+  }
+}
