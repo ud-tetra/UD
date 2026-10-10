@@ -1,0 +1,35 @@
+{
+  "schema": "UD-OP03-TARGET-STATUS-v0.1",
+  "date_utc": "2026-10-10",
+  "carrier": "K4/C1/opposite-pair/Theta",
+  "independent_target_available": false,
+  "held_out_run": "NOT_RUN",
+  "qualified_new_sources": [],
+  "screened_sources": [
+    {
+      "name": "UD_GENERATED_HISTORY_v0.1_RELEASE.zip",
+      "library_file_id": "libfile_133d326804648191bec6931ed6744b81",
+      "verdict": "INELIGIBLE",
+      "reason": "candidate selector generated the target labels; see repository event-eligibility capture"
+    },
+    {
+      "name": "UD_FINITE_ADMISSION_FEEDBACK_AUDIT_v0.1.md",
+      "library_file_id": "libfile_60c09498a2208191a896154f1c9fe8d8",
+      "verdict": "WRONG_CARRIER",
+      "reason": "two-tetrahedron amplitude crossing/slot traces, not independent K4/Theta endpoint records"
+    },
+    {
+      "name": "recent Library search after prior capture",
+      "verdict": "NO_QUALIFYING_OP03_TARGET",
+      "reason": "new files returned by Theta/event history search were MQM-specific"
+    },
+    {
+      "name": "Gap2_FINAL_Finite_Genesis.png",
+      "verdict": "UNAVAILABLE",
+      "reason": "user attachment failed to materialize; neither read nor used"
+    }
+  ],
+  "required_next_input": "Source-authenticated independent K4/Theta event producer or dataset with raw pre-event cochains, ordered null windows, eligibility frozen before target, producer hash, and sealed post-event Theta receipts",
+  "frozen_protocol_library_file_id": "libfile_30fb9c2688f08191acb9119bfdb6a2f4",
+  "physical_promotion": 0
+}
