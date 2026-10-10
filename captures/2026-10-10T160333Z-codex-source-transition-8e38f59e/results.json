@@ -1,0 +1,95 @@
+{
+  "checks": {
+    "Q162_unit_gradient_evaluates_quarter_h": true,
+    "Q164_unit_difference_evaluates_quarter_h": true,
+    "Q167_unit_product_evaluates_two_h": true,
+    "closure_set_changes_mask_only_with_transport_one": true,
+    "four_boolean_factor_states": true,
+    "hard_mask_one_iff_both_factors_one": true,
+    "open_state_signature_distinct": true,
+    "source_signature_cannot_predict_closure_set": true,
+    "source_signature_cannot_predict_transport_set": true,
+    "three_closed_states_same_product_gated_signature": true,
+    "transport_set_changes_mask_only_with_closure_one": true,
+    "two_diagnostic_intervention_responses_separate_all_states": true
+  },
+  "claim_class": "EXACT finite Boolean audit of sourced product-gated expressions; interventions diagnostic only; predictive transition OPEN",
+  "diagnostic_interventions": "set_C and set_T are hypothetical counterfactuals, not UD-admitted events",
+  "lane": "development \u2014 no registry entry; non-constructor review pending",
+  "normalizations": "Q156 one addressed boundary edge; Q162 gradient=1; Q164 difference=1; Q167 D*x*y=1; Q173 face mask held fixed",
+  "passed": 12,
+  "physical_promotion": 0,
+  "source_ids": [
+    "Q156",
+    "Q158",
+    "Q160",
+    "Q162",
+    "Q164",
+    "Q167",
+    "Q173"
+  ],
+  "source_observation_partition": {
+    "closed": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "open": [
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "states": [
+    {
+      "C": 0,
+      "Q162_unit_gradient": "0",
+      "Q164_unit_difference": "0",
+      "Q167_unit_product": "0",
+      "T": 0,
+      "diagnostic_h_after_set_C": 0,
+      "diagnostic_h_after_set_T": 0,
+      "h": 0
+    },
+    {
+      "C": 0,
+      "Q162_unit_gradient": "0",
+      "Q164_unit_difference": "0",
+      "Q167_unit_product": "0",
+      "T": 1,
+      "diagnostic_h_after_set_C": 1,
+      "diagnostic_h_after_set_T": 0,
+      "h": 0
+    },
+    {
+      "C": 1,
+      "Q162_unit_gradient": "0",
+      "Q164_unit_difference": "0",
+      "Q167_unit_product": "0",
+      "T": 0,
+      "diagnostic_h_after_set_C": 0,
+      "diagnostic_h_after_set_T": 1,
+      "h": 0
+    },
+    {
+      "C": 1,
+      "Q162_unit_gradient": "-1/4",
+      "Q164_unit_difference": "1/4",
+      "Q167_unit_product": "2",
+      "T": 1,
+      "diagnostic_h_after_set_C": 1,
+      "diagnostic_h_after_set_T": 1,
+      "h": 1
+    }
+  ]
+}
