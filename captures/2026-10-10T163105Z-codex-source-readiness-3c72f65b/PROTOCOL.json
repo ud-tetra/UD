@@ -1,0 +1,41 @@
+{
+  "version": "0.1",
+  "date_utc": "2026-10-10",
+  "status": "CRL-2a development contract; source-blocked; target blind",
+  "physical_promotion": 0,
+  "carriers": {
+    "edge": {
+      "input": "primitive pre-event packet and typed closure/transport state plus pre-known event descriptor",
+      "candidate_output": "post-event C_e,T_e on declared edges",
+      "derived_output": "h_e=C_e*T_e",
+      "target": "source-authenticated post-event hard factors and mask",
+      "forbidden_input": "post-event receipts, factors, mask, outcome-derived event subtype"
+    },
+    "pair": {
+      "input": "pre-event pair state plus source-authenticated sink descriptor available before gate response (possibly after event)",
+      "candidate_output": "q_next in {0,1}",
+      "decisive_stratum": "(T_prev,L_prev,q_prev)=(1,1,1), (T_next,L_next)=(1,0)",
+      "target": "independently read post-event pair gate q_next",
+      "forbidden_input": "post-event gate response or label inferred from it",
+      "timing_scope": "conditional response only unless a separate pre-event sink-occurrence law is supplied"
+    }
+  },
+  "candidate_freeze_requires": [
+    "source section, version and hash for each primitive update",
+    "state space, domain, codomain, factor conventions and event order",
+    "complete code and precommitted output for each source-authenticated held-out event",
+    "S4 relabeling covariance and null/reduction behavior",
+    "declared pair-to-edge map if any joint claim is attempted",
+    "exclusions, missing-data handling, baseline outputs and interpretation rules before target exposure"
+  ],
+  "outcomes": {
+    "SOURCE_BLOCKED": "No source-complete candidate before target exposure",
+    "FAIL": "One mismatch in a claimed universal deterministic rule within its frozen domain",
+    "INCONCLUSIVE": "No discriminating edge switch or intact-sink readout for the corresponding branch",
+    "SCOPED_PASS": "All frozen in-domain predictions exact, including at least one discriminating event; baselines reported; constructor-only until independent review",
+    "EXPLORATORY": "Candidate or exclusions changed after target exposure"
+  },
+  "baseline": ["edge-mask persistence", "pair close", "pair hold"],
+  "independent_review": "PENDING",
+  "physical_bridge": "NONE; event index has no calibrated time unit"
+}
