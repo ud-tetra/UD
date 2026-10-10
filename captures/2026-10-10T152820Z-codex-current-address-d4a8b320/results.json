@@ -1,0 +1,75 @@
+{
+  "blind_mode": {
+    "c2_B3e": [
+      "0",
+      "1",
+      "-1",
+      "-1",
+      "1",
+      "1",
+      "-1"
+    ],
+    "c3": [
+      "1",
+      "-1"
+    ],
+    "directed_J23": {
+      "012:0123": "0",
+      "012:0124": "0",
+      "013:0123": "2",
+      "014:0124": "2",
+      "023:0123": "2",
+      "024:0124": "2",
+      "123:0123": "2",
+      "124:0124": "2"
+    },
+    "edge_scores": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "gram": [
+      [
+        "4",
+        "1"
+      ],
+      [
+        "1",
+        "4"
+      ]
+    ],
+    "vertex_edge_zero_all_time": true
+  },
+  "checks": {
+    "108_generic_address_covariance_cases": true,
+    "all_nine_edge_scores_zero_on_active_mode": true,
+    "antisymmetric_cell_mode_eigenvalue_3": true,
+    "automorphism_count": true,
+    "boundary_squared_zero": true,
+    "carrier_5_9_7_2": true,
+    "cell_pair_gram": true,
+    "face_state_closed_to_edges": true,
+    "gated_self_probe_deadlock": true,
+    "native_mode_nonstationary": true,
+    "orientation_signs": true,
+    "private_face_current_tie": true,
+    "shared_face_blind": true,
+    "six_nonzero_directed_face_currents": true,
+    "six_private_faces_active": true,
+    "zero_state_returns_no_address": true
+  },
+  "claim_class": "EXACT native blind mode; CANDIDATE ungated score/argmax observer; no source-selected switch; physical promotion 0",
+  "generic_example": {
+    "addresses_tested": 9,
+    "covariance_cases": 108,
+    "score": 180
+  },
+  "passed": 16,
+  "score": "s_e=sum_{i in e}(2 D_ie x_i y_e)^2=4 y_e^2 (x_a^2+x_b^2); select unique positive maximum, ties return set"
+}
