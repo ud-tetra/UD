@@ -1,0 +1,36 @@
+{
+  "test_scope": "synthetic method checks only; no UD event or held-out target",
+  "runs": [
+    {
+      "mode": "precommitted_file",
+      "prepare_status": "FROZEN_PREDICTIONS_TARGET_UNOPENED",
+      "score_counts": {
+        "eligible": 1,
+        "aligned_match": 1,
+        "anti_aligned_match": 0,
+        "persistence_match": 0,
+        "non_event_or_swap": 0,
+        "invalid_multi_pair": 0,
+        "excluded_precommitted": 0
+      },
+      "target_tamper_blocked": true
+    },
+    {
+      "mode": "future_acquisition",
+      "prepare_status": "FROZEN_PREDICTIONS_TARGET_UNOPENED",
+      "score_counts": {
+        "eligible": 1,
+        "aligned_match": 1,
+        "anti_aligned_match": 0,
+        "persistence_match": 0,
+        "non_event_or_swap": 0,
+        "invalid_multi_pair": 0,
+        "excluded_precommitted": 0
+      },
+      "target_tamper_blocked": false
+    }
+  ],
+  "future_mode_limit": "target bytes are hashed at scoring and require external custody review",
+  "prepare_does_not_open_outcomes": true,
+  "physical_promotion": 0
+}
