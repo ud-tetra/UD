@@ -1,0 +1,50 @@
+{
+  "carrier": "<0123,0124>",
+  "checks": {
+    "47_native_incidences": true,
+    "all_other_derivative_differences_zero": true,
+    "all_replayed_amplitude_jets_0_through_8_equal": true,
+    "all_replayed_native_current_jets_0_through_5_equal": true,
+    "distinct_factor_states_same_hard_mask": true,
+    "identical_pre_event_generator": true,
+    "post_repair_edge_derivatives_diverge": true,
+    "post_repair_other_endpoint_derivative_diverges": true,
+    "post_repair_vertex_derivatives_diverge": true,
+    "register_5_9_7_2": true,
+    "same_closure_repair_divergent_hard_masks": true,
+    "skew_pre_event_generator": true
+  },
+  "claim_class": "EXACT conditional factor-through-product nonidentifiability; event law OPEN; physical promotion 0",
+  "factor_premise": "pre-event generator and observations factor only through h_e=C_cl,e*T_int,e; all face masks fixed",
+  "finite_replay": {
+    "amplitude_jet_max_order": 8,
+    "current_jet_max_order": 5
+  },
+  "intervention": "hypothetical repair_C sets C_01=1, leaves T_01 fixed",
+  "passed": 12,
+  "post_derivative_difference_A_minus_B": {
+    "edge_01": "-1",
+    "vertex_0": "1",
+    "vertex_1": "-1"
+  },
+  "post_edge_mask": {
+    "A": 1,
+    "B": 0
+  },
+  "register": [
+    5,
+    9,
+    7,
+    2
+  ],
+  "states": {
+    "A": {
+      "C": 0,
+      "T": 1
+    },
+    "B": {
+      "C": 0,
+      "T": 0
+    }
+  }
+}
