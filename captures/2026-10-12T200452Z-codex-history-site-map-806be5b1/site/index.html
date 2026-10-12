@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071826">
+  <meta name="description" content="Visual primer and scholarly web edition of Tetrahedral Packet Complexes, with protocols, audits, provenance, and exact-verification records.">
+  <title>Tetrahedral Packet Complexes — Web Edition</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <button class="icon-button mobile-only" id="menuButton" aria-label="Open contents" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="#/primer" aria-label="Tetrahedral Packet Complexes home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 44 44"><path d="M22 4 5 34h34L22 4Zm0 0v30M5 34l17-12 17 12" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="22" cy="4" r="2.2"/><circle cx="5" cy="34" r="2.2"/><circle cx="39" cy="34" r="2.2"/><circle cx="22" cy="22" r="2.2"/></svg>
+      </span>
+      <span><strong>Tetrahedral Packet Complexes</strong><small>Scholarly web edition</small></span>
+    </a>
+    <nav class="topnav" aria-label="Edition sections">
+      <a href="#/primer" data-route="primer">Primer</a>
+      <a href="#/manuscript" data-route="manuscript">Manuscript</a>
+      <a href="#/protocols" data-route="protocols">Protocols</a>
+      <a href="#/evidence" data-route="evidence">Evidence</a>
+      <a href="#/archive" data-route="archive">Archive</a>
+    </nav>
+    <button class="search-button" id="searchButton" aria-label="Search this edition">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+      <span>Search</span><kbd>/</kbd>
+    </button>
+  </header>
+
+  <div class="app-shell">
+    <aside class="toc-panel" id="tocPanel" aria-label="Contents">
+      <div class="toc-heading">
+        <span>Contents</span>
+        <button class="close-button mobile-only" id="closeMenu" aria-label="Close contents">×</button>
+      </div>
+      <nav id="toc"></nav>
+      <div class="toc-footer">
+        <span class="status-dot"></span>
+        <span>Physical promotion: 0</span>
+      </div>
+    </aside>
+
+    <main id="main" tabindex="-1">
+      <div class="loading">
+        <span class="tetra-loader"></span>
+        <p>Preparing the edition…</p>
+      </div>
+    </main>
+
+    <aside class="context-panel" id="contextPanel">
+      <div class="context-card">
+        <p class="eyebrow">Current edition</p>
+        <strong id="editionLabel">v2.3 · POC-1 corpus no-go</strong>
+        <p id="editionNote">Exact discrete mathematics is separated from physical interpretation.</p>
+      </div>
+      <div class="context-card compact">
+        <p class="eyebrow">Package</p>
+        <dl>
+          <div><dt>Primary</dt><dd>v2.3</dd></div>
+          <div><dt>Artifacts</dt><dd>8</dd></div>
+          <div><dt>Format</dt><dd>MathML</dd></div>
+        </dl>
+      </div>
+      <a class="source-link" id="sourceLink" href="./source/TETRAHEDRAL_PACKET_COMPLEXES_JOP_LEAN_MANUSCRIPT_v2.3_POC1_CORPUS_NO_GO.md" download>
+        Download current source <span>↓</span>
+      </a>
+    </aside>
+  </div>
+
+  <dialog id="searchDialog" class="search-dialog">
+    <form method="dialog" class="search-shell">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+        <input id="searchInput" type="search" placeholder="Search the current document" autocomplete="off" aria-label="Search the current document">
+        <button value="close" aria-label="Close search">Esc</button>
+      </div>
+      <div id="searchResults" class="search-results"><p>Type a term, theorem, symbol, or section title.</p></div>
+    </form>
+  </dialog>
+  <div class="scrim" id="scrim"></div>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
