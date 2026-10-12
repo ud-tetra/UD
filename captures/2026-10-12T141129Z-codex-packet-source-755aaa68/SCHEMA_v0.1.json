@@ -1,0 +1,58 @@
+{
+  "schema": "UD-OP03-INDEPENDENT-FULL-ENDPOINT-RETURN-v0.1",
+  "status": "EMPTY_TEMPLATE_NO_COHORT",
+  "serialization": "UTF-8 JSONL, exactly one canonical serialized record per declared window; SHA-256 over raw bytes; rational strings n/d in lowest terms with positive denominator",
+  "hold_object": {"status": "HOLD", "reason": "specific missing input", "requested_from": "named owner"},
+  "producer_manifest_required": {
+    "cohort_id": "stable identifier",
+    "carrier": "K4/C1/opposite-pair/Theta",
+    "vertices_edges_pairs_orientation": "labeled and oriented bases plus A=(01,23), B=(02,13), C=(03,12)",
+    "producer": "name, organization, independence declaration, authorship/access history, kind independent_model|measurement",
+    "custodian": "identity, access control and trusted receipt method",
+    "source_version_and_sha256": "code/protocol, dependencies, raw source and signed-G computation",
+    "endpoint_producer_version_and_sha256": "separate code/protocol and raw endpoint evidence",
+    "clock": "native dimensionless interval definition or separate calibrated physical mapping",
+    "initial_boundary_and_domain": "all conditions fixed prospectively",
+    "window_range_and_sampling": "first/last consecutive index, acquisition cadence, handling of skipped/missing windows",
+    "eligibility_exclusion_tie_simultaneity": "rules and code hash fixed without outcomes",
+    "transport_route": "source-complete ordered six-edge or certified observed/co-moving 12D",
+    "source_and_target_file_sha256": "separate hex SHA-256 seals",
+    "claim_scope": "finite same-carrier comparison; no automatic physical promotion"
+  },
+  "pre_event_row_required": {
+    "cohort_id_window_id_sequence_index": "stable IDs and consecutive integer index",
+    "s_start_s_end": "exact rationals and complete exposure window",
+    "carrier_and_source_output_basis": "orientation, explicit basis maps, labels",
+    "raw_c0_c1_c2": "ordered exact cochain values with raw acquisition hash; c3 if model uses it",
+    "theta_minus_raw": "three binary values in source pair basis",
+    "prior_completed_theta_switch_boundary": "index/interval or declared initial boundary",
+    "frame_pre_receipt": "signed S4 action, S3 pair projection and exact certificate or typed HOLD",
+    "transport_pre_receipt": "ordered six-edge maps or certified 12D M,O,residual; typed HOLD if unavailable",
+    "lineage_and_seat_pre_receipt": "independently frozen F,A_src,A_ren, domain/codomain, L+ and rank/support; typed HOLD if unavailable",
+    "viability_pair_integrity_burden": "separate pre-outcome receipts in both relevant bases",
+    "signed_G_by_pair": "exact values and raw c0,c1,c2 formula/integration/normalization provenance; typed HOLD if unavailable",
+    "eligible_before_outcome": "boolean plus frozen rule/version and reason, never derived from endpoint",
+    "state_receipt_sha256": "hex digest of raw state and pre-event record"
+  },
+  "hidden_endpoint_row_required": {
+    "cohort_id_window_id_sequence_index": "identical ordered identity as pre_event",
+    "s_start_s_end": "same interval; independent instant or explicit NO_SWITCH receipt",
+    "output_frame_full": "signed oriented frame and exact observation/generation receipt",
+    "theta_plus_full": "three binary values in named output pair basis",
+    "producer_observed_event_tag": "SWITCH|NO_SWITCH|FRAME_ONLY|UNRESOLVED with independent evidence",
+    "event_instant_or_null_receipt": "exact instant/uncertainty or entire observed no-event interval",
+    "closure_transport_post_receipts": "primitive typed edge U_e/closure evidence if six-edge claims; otherwise OUT_OF_SCOPE",
+    "uncertainty_and_measurement_method": "instrument/model limitations and raw evidence location",
+    "target_receipt_sha256": "hex digest for raw independent endpoint evidence",
+    "producer_artifact_sha256": "must match manifest"
+  },
+  "custody_ledger_row_required": {
+    "action": "PROTOCOL_FREEZE|TARGET_SEAL|PRE_EVENT_SEAL|PREDICTION_SEAL|TARGET_RELEASE|CORRECTION",
+    "artifact_sha256": "hex SHA-256 over raw bytes",
+    "actor_and_role": "attributable identity",
+    "trusted_utc_receipt": "external timestamp/signature and provenance, not sole local clock",
+    "parent_action_digest": "hash link to preceding custody receipt",
+    "access_policy_and_version": "who could read the plaintext at this step"
+  },
+  "blocking_rule": "HOLD is neither null nor zero. Any missing row blocks cohort completeness; required field HOLD blocks full endpoint score for that row and is enumerated in denominators. No labels released before prediction seal."
+}
