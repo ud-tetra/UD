@@ -1,0 +1,89 @@
+{
+  "lane": "development \u2014 no registry entry",
+  "constructor": "Codex",
+  "reviewers": [],
+  "physical_promotion": 0,
+  "scientific_promotion": false,
+  "claims": [
+    {
+      "id": "T1",
+      "claim": "two-orbit diagonal response family",
+      "assumptions": "Unsigned S4 action; diagonal response",
+      "class": "EXACT_CONDITIONAL",
+      "proof": {
+        "file": "THEOREMS.md",
+        "section": "T1"
+      },
+      "verification": "RESULTS.json",
+      "status": "constructor_checked; independent review pending"
+    },
+    {
+      "id": "T2",
+      "claim": "6D commutant / 5D self-adjoint part",
+      "assumptions": "Unsigned seven-channel permutation carrier; standard metric",
+      "class": "EXACT_CONDITIONAL",
+      "proof": {
+        "file": "THEOREMS.md",
+        "section": "T2"
+      },
+      "verification": "RESULTS.json",
+      "status": "constructor_checked; independent review pending"
+    },
+    {
+      "id": "T3",
+      "claim": "equal burden does not force uniform response",
+      "assumptions": "Burden bookkeeping without split-blind response law",
+      "class": "EXACT_CONDITIONAL",
+      "proof": {
+        "file": "THEOREMS.md",
+        "section": "T3"
+      },
+      "verification": "RESULTS.json",
+      "status": "constructor_checked; independent review pending"
+    },
+    {
+      "id": "T4",
+      "claim": "determinant functional conditionality",
+      "assumptions": "Declared selected linear operator/functional",
+      "class": "EXACT_CONDITIONAL",
+      "proof": {
+        "file": "THEOREMS.md",
+        "section": "T4"
+      },
+      "verification": "RESULTS.json",
+      "status": "constructor_checked; independent review pending"
+    },
+    {
+      "id": "T5",
+      "claim": "scale nonidentifiability",
+      "assumptions": "Formal candidate response with free positive source scale",
+      "class": "EXACT_CONDITIONAL",
+      "proof": {
+        "file": "THEOREMS.md",
+        "section": "T5"
+      },
+      "verification": "RESULTS.json",
+      "status": "constructor_checked; independent review pending"
+    },
+    {
+      "id": "A1",
+      "claim": "decimal fraction/prime factors",
+      "assumptions": "Literal finite decimal arithmetic only",
+      "class": "EXACT",
+      "proof": {
+        "file": "THEOREMS.md",
+        "section": "A1"
+      },
+      "verification": "RESULTS.json",
+      "status": "constructor_checked; independent review pending"
+    }
+  ],
+  "not_derived": "A native or physical quantity equal to 238.14",
+  "open_source_contract": [
+    "carrier/topology",
+    "operator/coarse map",
+    "output functional",
+    "inputs/units/scale/depth",
+    "uniqueness/branch selection"
+  ]
+}
