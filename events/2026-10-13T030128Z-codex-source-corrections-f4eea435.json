@@ -1,0 +1,38 @@
+{
+  "event_id": "2026-10-13T030128Z-codex-source-corrections-f4eea435",
+  "capture_id": "2026-10-13T030128Z-codex-source-corrections-f4eea435",
+  "type": "scoped_source_claim_correction",
+  "base_commit": "3e8dde45acc583e83dca010539af663696759330",
+  "constructor": "Codex",
+  "reviewers": [],
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "numerical_target_evaluated": false,
+  "summary": "Correct native generator and loss signs; withdraw dimensional and signature inferences; reconstruct boundary-derived edge spectra; withdraw invalid scattering outcome and dependent physical claims",
+  "retractions": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09"
+  ],
+  "supersedes": [
+    {
+      "source": "sources/PASTED_TEXT_ORIGINAL.txt",
+      "scope": "passages named by RETRACTIONS.json",
+      "replacement": "UD_SOURCE_CLAIMS_CORRECTED_v0.1.md",
+      "reason": "generator/sign/type errors, unsupported dimensional identification and inconsistent matrix/spectrum"
+    }
+  ],
+  "supplements": [
+    "PR #51"
+  ],
+  "missing_sources": [
+    "Gap2_FINAL_Finite_Genesis.png"
+  ],
+  "reviewed_base_commit": "f2c935479aee4dd5abbe2ba2545452f91532f7ea"
+}
