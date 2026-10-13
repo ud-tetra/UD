@@ -1,0 +1,88 @@
+{
+  "status": "PASS conditional declared apparatus",
+  "physical_promotion": 0,
+  "independent_review": "OPEN",
+  "G_input": false,
+  "clock": "one primitive gate or complete collision/refresh round per declared slot; post-readout reset excluded",
+  "beta_Delta_p": 4.59511985013459,
+  "beta_Delta_q": 9.21024036697585,
+  "rows": [
+    {
+      "storage_updates": 10,
+      "write_slots": 34,
+      "total_slots": 44,
+      "ideal_storage_error_exact": "52558746991948411/852851705982687903744",
+      "ideal_storage_error": 6.162706438089169e-05,
+      "seed_ceiling_exact": "211898957820873265661/21318664712217600173050",
+      "robust_c_ceiling_exact": "39395178504464189107973/12535374850783948901753400",
+      "exact_c_ceiling_exact": "25130888851478194319968737283762867639/2715423358898856087839937474567525735278",
+      "robust_c_ceiling": 0.0031427204190866663,
+      "exact_c_ceiling": 0.00925486951017065,
+      "robust_beta_Delta_c_min": 5.7595188095073855,
+      "exact_beta_Delta_c_min": 4.673307470546013,
+      "cases": [
+        {
+          "c_exact": "1/100000",
+          "final_error_exact": "104589586042223232045483104549140380917639/135977631693668352000000000000000000000000000",
+          "final_error": 0.0007691675810168808,
+          "exact_pass": true,
+          "robust_bound": 0.0007909371628193728,
+          "robust_pass": true,
+          "beta_Delta_c": 11.512915464920228
+        },
+        {
+          "c_exact": "1/10000",
+          "final_error_exact": "11680899115726808444076282318469424672639/13597763169366835200000000000000000000000000",
+          "final_error": 0.0008590309281192398,
+          "exact_pass": true,
+          "robust_bound": 0.0010555045497769025,
+          "robust_pass": true,
+          "beta_Delta_c": 9.21024036697585
+        }
+      ]
+    },
+    {
+      "storage_updates": 32,
+      "write_slots": 34,
+      "total_slots": 66,
+      "ideal_storage_error_exact": "142667407452278850011976341897555194065643964818836504074733666585995/15442148201677783373453968155366812636198619229935602766137764255629312",
+      "ideal_storage_error": 0.009238831643694372,
+      "seed_ceiling_exact": "293851864112474593064083491402823307408555687012988089666099399257453/378920334669330641835750386789292556201683282507448243949707423061433050",
+      "robust_c_ceiling_exact": "5721525968788628755811644130063703613475477851554863780260840622889973/222805156785566417399421227432104023046589770114379567442427964760122633400",
+      "exact_c_ceiling_exact": "3762913571688258012101085723828166140957733044149081789971016341931854983770806162439/48264238957386449558067852656968945820402600559637056807760455331525463709967541612324878",
+      "robust_c_ceiling": 2.567950424188421e-05,
+      "exact_c_ceiling": 7.796483800377783e-05,
+      "robust_beta_Delta_c_min": 10.569791704717474,
+      "exact_beta_Delta_c_min": 9.459174659859157,
+      "cases": [
+        {
+          "c_exact": "1/100000",
+          "final_error_exact": "24456758446120337998686046214382632027148378471311527012466815787529169982666443462684212439/2462077200522605767451206657424555586128606382323916257356148637696000000000000000000000000000",
+          "final_error": 0.009933384071356128,
+          "exact_pass": true,
+          "robust_bound": 0.00995475403609255,
+          "robust_pass": true,
+          "beta_Delta_c": 11.512915464920228
+        },
+        {
+          "c_exact": "1/10000",
+          "final_error_exact": "2467394752142857702169735155133899228334019017382989376810173783652103456936129739993967439/246207720052260576745120665742455558612860638232391625735614863769600000000000000000000000000",
+          "final_error": 0.010021597826498386,
+          "exact_pass": false,
+          "robust_bound": 0.010214464846386708,
+          "robust_pass": false,
+          "beta_Delta_c": 9.21024036697585
+        }
+      ]
+    }
+  ],
+  "incoming_flags": {
+    "count": 8,
+    "beta_mean_energy": 0.14165282080547723,
+    "entropy_nats": 0.17221384841731527,
+    "log_partition": 0.03056102761183803,
+    "interpretation": "incoming equilibrium inventory, not dissipated work or complete cycle cost"
+  },
+  "native_gap_selection": "OPEN",
+  "dimensional_normalization": "OPEN"
+}
