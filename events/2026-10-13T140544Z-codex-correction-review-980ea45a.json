@@ -1,0 +1,36 @@
+{
+  "event_id": "2026-10-13T140544Z-codex-correction-review-980ea45a",
+  "capture_id": "2026-10-13T140544Z-codex-correction-review-980ea45a",
+  "type": "source_correction_constructor_review",
+  "base_commit": "765b0200c83363de64b216cfd9b4a3ca183e6e23",
+  "constructor": "Codex",
+  "reviewers": [],
+  "review_kind": "constructor self-review",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "numerical_target_evaluated": false,
+  "summary": "Correct v0.1 cell labels to one oriented-boundary-preserving 2-to-3 pair; distinguish projector line from signed PSR ray; verify unchanged spectra and ambient rank 18/nullity 12",
+  "new_findings": [
+    "R10",
+    "R11"
+  ],
+  "supersedes": [
+    {
+      "repository_path": "captures/2026-10-13T030128Z-codex-source-corrections-f4eea435/UD_SOURCE_CLAIMS_CORRECTED_v0.1.md",
+      "reason": "labeled-pair mismatch and line/ray terminology",
+      "replacement": "UD_SOURCE_CLAIMS_CORRECTED_v0.2.md"
+    },
+    {
+      "repository_path": "captures/2026-10-13T030128Z-codex-source-corrections-f4eea435/CORRECTED_OPERATORS.json",
+      "reason": "K_minus relabeled consistently with K_plus; spectral claims unchanged",
+      "replacement": "CORRECTED_OPERATORS.json"
+    }
+  ],
+  "supplements": [
+    "PR #57",
+    "PR #51"
+  ],
+  "missing_sources": [
+    "Gap2_FINAL_Finite_Genesis.png"
+  ]
+}
