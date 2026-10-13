@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "lane": "development \u2014 no registry entry",
+  "numerical_target_evaluated": false,
+  "sampling_fixture": {
+    "cos_2h": "3/5",
+    "sin_2h": "4/5",
+    "physical_clock": "OPEN"
+  },
+  "coordinate_averaging": {
+    "one_step_diagonal_input": "PASS",
+    "repeated_native_equivalence": "FAIL_AS_EXPECTED",
+    "second_step_L1_difference": "1197/1250",
+    "paired_plus_body_strong_lumpability": "FAIL_AS_EXPECTED",
+    "same_lump_vertex_output": [
+      "49/100",
+      "1/100",
+      "1/100",
+      "1/100",
+      "4/25",
+      "4/25",
+      "4/25",
+      "0"
+    ],
+    "same_lump_face_output": [
+      "9/25",
+      "0",
+      "0",
+      "0",
+      "4/25",
+      "4/25",
+      "4/25",
+      "4/25"
+    ]
+  },
+  "stronger_averaging": {
+    "rule": "discard correlations and reset every two-coordinate lump to equal diagonal allocation after every sample",
+    "closed_state_dimension": 8,
+    "response": "K8=C8 (U elementwise squared) L8",
+    "source_formula_points_checked": 5,
+    "stationary_weights": [
+      "2/15",
+      "2/15",
+      "2/15",
+      "2/15",
+      "2/15",
+      "2/15",
+      "2/15",
+      "1/15"
+    ],
+    "fixture_sector_factors": [
+      "21/50",
+      "9/25",
+      "-1/5"
+    ],
+    "sector_multiplicities": [
+      3,
+      3,
+      1
+    ],
+    "quadratic_discrepancy_ceiling_per_step": "441/2500",
+    "native_mechanism": "OPEN; averaging/redistribution is an additional operation"
+  },
+  "native_memory": {
+    "paired_stock_history_order": 5,
+    "individual_signed_currents_checked": 28,
+    "individual_currents_with_possible_stationary_component": 28,
+    "signed_aggregate_response_history_order": 4,
+    "operator_identity_checked_sensors": 8,
+    "single_VF_scalar_minimal_orders": [
+      5,
+      4
+    ],
+    "seven_sensor_observable_span_ranks": [
+      7,
+      14,
+      21,
+      24,
+      27
+    ],
+    "retains_coherent_dynamics": true,
+    "admissibility": "history must be compatible with a PSD native moment; unchanged A and uniform declared h",
+    "scalar_history_order_is_not_joint_minimal_packet_size": true,
+    "changed_sample_step": "REJECTED_AS_EXPECTED",
+    "observable_memory_dimension_at_fixture": 27,
+    "observable_memory_dimension_including_body": 28
+  }
+}
