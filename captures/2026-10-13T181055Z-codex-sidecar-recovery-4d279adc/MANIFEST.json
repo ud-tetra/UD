@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "capture_id": "2026-10-13T181055Z-codex-sidecar-recovery-4d279adc",
+  "captured_at": "2026-10-13T181055Z",
+  "repository": "ud-tetra/UD",
+  "base_commit": "af789664732b174ab70d50a31d62d0b76624fabb",
+  "contributor": "Codex for Benjamin Walker Mayes",
+  "physical_promotion": 0,
+  "independent_review": "PENDING; source comparison and constructor check only",
+  "lane": "POC1 sidecar source recovery and O45 status amendment",
+  "claim_status": "EXACT source comparison / OPEN frozen archive bytes and target-hidden fixture / SOURCE_INCOMPLETE_NO_SCORE",
+  "supersedes": [],
+  "amends": [
+    "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.58_SIDECAR_EXTERNAL_DISTRIBUTION.json/O45",
+    "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.65_C3_7_CLOSURE_N1_N2.json/O45"
+  ],
+  "provenance": [
+    "THREE_LAB_SIDECAR_DISTRIBUTION_RECEIPT_v0.1.json, 2026-09-06, sidecar/transmissions/scientific_firewall",
+    "Three 2026-09-06 sent supplement messages, attachment metadata and body",
+    "POC1_INDEPENDENT_CORPUS_ADMISSION_PROTOCOL_v0.2.md, admission fields and verdicts",
+    "captures/2026-10-13T180349Z-codex-polarity-audit-b799f988/UD_POLARITY_PIPELINE_SYNTHETIC_AUDIT_v0.1.md"
+  ],
+  "verification_scope": "Source status comparison only; archive SHA-256 and blinded endpoint scoring not performed",
+  "files": [
+    {
+      "path": "captures/2026-10-13T181055Z-codex-sidecar-recovery-4d279adc/O45_DISTRIBUTION_STATUS_AMENDMENT_v0.1.json",
+      "size_bytes": 1105,
+      "sha256": "343f56247d881f4f875cf82640f819cd6f8ecc68b7e36120909bd07bf41d52bb",
+      "status": "versioned source conflict amendment"
+    },
+    {
+      "path": "captures/2026-10-13T181055Z-codex-sidecar-recovery-4d279adc/UD_POC1_SIDECAR_RECOVERY_GATE_v0.1.md",
+      "size_bytes": 4500,
+      "sha256": "7924f1d2acc7a8419ae1a70ef3a44e8d776fea32e4ca9141f857ef9b06bc331a",
+      "status": "bounded source recovery and NO_SCORE gate"
+    }
+  ]
+}
