@@ -1,0 +1,4447 @@
+{
+  "edition": "0.6",
+  "date": "2026-10-14",
+  "status": "SCOPED_DEPENDENCY_REGISTER_COMPLETE__GLOBAL_PROOF_DAG_OPEN",
+  "physical_promotion": 0,
+  "review": "Constructor source audit; independent human proof review pending",
+  "scope": "Explicit premises and evaluation gates for the displayed polarity and single-cell action/clock targets. Completeness is by target declaration, not the full 448-row research ledger. Edition 0.4 adds the finite response-source refinement; no native response law is supplied. Edition 0.5 adds RSP-1 prepared candidate results; native identification remains open. Edition0.6 adds explicit realization assumptions and no-go classes; the overall native bridge stays open.",
+  "propagation_policy": "Hypothetical premise-change drill. Descendants are PENDING_REDERIVATION for reuse; stored scientific statuses are unchanged. Conditional theorem statements retain their explicitly declared premises.",
+  "source_baseline_site_commit": "68adf7c3af8dcb218c09cb9ebb6dd1d4c49af546",
+  "repository_freshness_commit": "4b9c1f7ba03f76324b792f389517161d2bc47e05",
+  "nodes": [
+    {
+      "id": "P-DEF",
+      "branch": "polarity",
+      "title": "Typed pair variables",
+      "status": "SOURCE_DECLARED",
+      "objects": "Theta,q,T,L,omega on three pair addresses",
+      "conclusion": "q=1−Theta; omega=T AND L. These binary response and viability masks are different objects.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§2",
+          "anchor_text": "omega",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-ADM",
+      "branch": "polarity",
+      "title": "Admissible response domain",
+      "status": "SOURCE_DECLARED",
+      "objects": "Binary masks",
+      "conclusion": "omega ≤ q ≤ T coordinatewise; five admissible triples per address.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§2",
+          "anchor_text": "admissible",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ],
+      "dependencies": [
+        "P-DEF"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-IDLE",
+      "branch": "polarity",
+      "title": "Idle-response decomposition",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "h=q−omega",
+      "conclusion": "h is binary, nonnegative and supported on intact-null addresses; q=omega+h with disjoint support.",
+      "citations": [
+        {
+          "source_id": "C0963",
+          "section": "declared_source_variables / exact_response_form",
+          "anchor_text": "q = omega OR h",
+          "snapshot_sha256": "6da081eec3922f361d4e616673b0f994eed9471c050e818e8b98b80b46e9d2bc"
+        }
+      ],
+      "dependencies": [
+        "P-ADM"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-RANK",
+      "branch": "polarity",
+      "title": "Finite continuation spaces",
+      "status": "SOURCE_DECLARED",
+      "objects": "F: L− → L+",
+      "conclusion": "Declare finite spaces with dimensions |omega−| and |omega+|. No causal source is inferred from their dimensions.",
+      "citations": [
+        {
+          "source_id": "C0884",
+          "section": "§2",
+          "anchor_text": "finite-dimensional continuation map",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-INDEX",
+      "branch": "polarity",
+      "title": "Rank-nullity index",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "ind Fomega",
+      "conclusion": "ind Fomega=|omega−|−|omega+| for any linear map on the declared spaces. The rank cancels.",
+      "citations": [
+        {
+          "source_id": "C0884",
+          "section": "§2",
+          "anchor_text": "Rank-nullity",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ],
+      "dependencies": [
+        "P-RANK"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-BUDGET",
+      "branch": "polarity",
+      "title": "Full Hamming budget",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "muTheta",
+      "conclusion": "muTheta=|Theta+|−|Theta−|=|q−|−|q+|. Cardinalities are invariant under pair-frame permutations.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem",
+          "anchor_text": "Hamming event budget",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ],
+      "dependencies": [
+        "P-DEF"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-CORRECT",
+      "branch": "polarity",
+      "title": "Idle-corrected identity",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "muTheta,ind Fomega,nu_h",
+      "conclusion": "muTheta=ind Fomega+|h−|−|h+|. This is an identity on ordered admissible states, not an endpoint predictor.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem",
+          "anchor_text": "residual idle-response index",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ],
+      "dependencies": [
+        "P-IDLE",
+        "P-INDEX",
+        "P-BUDGET"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-EQUAL",
+      "branch": "polarity",
+      "title": "Index equals full budget iff idle totals match",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "Equal idle cardinalities",
+      "conclusion": "muTheta=ind Fomega iff |h−|=|h+|. Equal idle totals need not mean either mask is zero.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem / decomposition",
+          "anchor_text": "mu_\\Theta=\\operatorname{ind}F_\\omega+\\nu_h",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ],
+      "dependencies": [
+        "P-CORRECT"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-PRIOR",
+      "branch": "polarity",
+      "title": "Saturated prior premise",
+      "status": "CONSTITUTIVE_PREMISE",
+      "objects": "h−=000",
+      "conclusion": "This is an additional premise for the saturated-prior corollary, not a consequence of rank-nullity.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Saturated-prior corollary",
+          "anchor_text": "h^-=0",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-SAT",
+      "branch": "polarity",
+      "title": "Saturated-prior corollary",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "muTheta=ind Fomega−|h+|",
+      "conclusion": "With h−=0, index-only equality holds iff h+=0. Using that equality to prove no-idle response is circular.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Saturated-prior corollary",
+          "anchor_text": "circularity firewall",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ],
+      "dependencies": [
+        "P-CORRECT",
+        "P-PRIOR"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-NOIDLE",
+      "branch": "polarity",
+      "title": "POC-1 no-idle response",
+      "status": "CANDIDATE",
+      "objects": "h+=000; q+=omega+",
+      "conclusion": "A candidate constitutive law needing an independent source; it is not proved by demanding index-only equality.",
+      "citations": [
+        {
+          "source_id": "C0963",
+          "section": "minimum_missing_object / admissible_reopen_routes",
+          "anchor_text": "h=000",
+          "snapshot_sha256": "6da081eec3922f361d4e616673b0f994eed9471c050e818e8b98b80b46e9d2bc"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-ADDRESS",
+      "branch": "polarity",
+      "title": "Binding no-idle address",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "Theta+=1−omega+",
+      "conclusion": "If POC-1 binds the response, the final address is fixed. A competing burden minimizer cannot freely choose a different final address.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "address-selector",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ],
+      "dependencies": [
+        "P-DEF",
+        "P-NOIDLE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-BURDEN",
+      "branch": "polarity",
+      "title": "Burden and integrity inputs",
+      "status": "SOURCE_DECLARED",
+      "objects": "T,W,k",
+      "conclusion": "A supplied burden selector optimizes a target Hamming shell subject to integrity; it must also respect the chosen viability/idle-response contract.",
+      "citations": [
+        {
+          "source_id": "C0884",
+          "section": "§5",
+          "anchor_text": "three-pair address selector",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-SHELL",
+      "branch": "polarity",
+      "title": "Conditional shell optimizer",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "argmin on a declared finite shell",
+      "conclusion": "An empty admissible shell returns infeasible; a tied optimum holds unresolved symmetry. The historical integrity-only shell is not automatically compatible with binding POC-1.",
+      "citations": [
+        {
+          "source_id": "C0884",
+          "section": "§5",
+          "anchor_text": "HOLD_UNRESOLVED_SYMMETRY",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ],
+      "dependencies": [
+        "P-BURDEN"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-CONFLICT",
+      "branch": "polarity",
+      "title": "Two final selectors can conflict",
+      "status": "EXACT_NO_GO",
+      "objects": "T=111,L=100,W=(2,8,10)",
+      "conclusion": "POC-1 gives Theta=011 (cost 18); integrity-only k=2 minimization gives 110 (cost 10), violating omega≤q. Adding viability fixes this example.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "18",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ],
+      "dependencies": [
+        "P-ADM",
+        "P-ADDRESS",
+        "P-SHELL"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-FRAME",
+      "branch": "polarity",
+      "title": "Frame-alignment receipt",
+      "status": "OPEN",
+      "objects": "Oriented C1 transport; old Theta and omega",
+      "conclusion": "A native address prediction requires an independently obtained relative-frame receipt and aligned prior address masks. Count identities alone do not provide this receipt.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§5",
+          "anchor_text": "frame",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-SOURCE",
+      "branch": "polarity",
+      "title": "Native pre-event viability source",
+      "status": "OPEN",
+      "objects": "L−,L+,T from target-hidden pre-state",
+      "conclusion": "Finite rank-nullity does not construct independently sourced obligation spaces from native evolution.",
+      "citations": [
+        {
+          "source_id": "C0884",
+          "section": "§9",
+          "anchor_text": "native pre-event mechanism",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-HSOURCE",
+      "branch": "polarity",
+      "title": "Independent idle-response source",
+      "status": "OPEN",
+      "objects": "h before endpoint release",
+      "conclusion": "Supply typed gate dynamics, an independent silence theorem, an authenticated pre-event receipt or blinded response discrimination. Endpoint-inferred h is forbidden.",
+      "citations": [
+        {
+          "source_id": "C0963",
+          "section": "minimum_missing_object",
+          "anchor_text": "before endpoint release",
+          "snapshot_sha256": "6da081eec3922f361d4e616673b0f994eed9471c050e818e8b98b80b46e9d2bc"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-PREDICT",
+      "branch": "polarity",
+      "title": "Native address/polarity prediction",
+      "status": "OPEN",
+      "objects": "Declared complete pre-event packet",
+      "conclusion": "A predictive model needs independently generated viable and idle response data, the address-frame receipt, and a consistent final selector. Exact endpoint identities do not close these gates.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§§2–5",
+          "anchor_text": "pre-event",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ],
+      "dependencies": [
+        "P-SOURCE",
+        "P-HSOURCE",
+        "P-FRAME",
+        "P-CORRECT",
+        "P-SHELL"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-SCORE",
+      "branch": "polarity",
+      "title": "Eligible independent score",
+      "status": "SOURCE_BLOCKED",
+      "objects": "Frozen scorer + target-hidden native episode",
+      "conclusion": "No new empirical score is issued by this graph. Original scorer custody, source admission and eligible target-hidden episodes remain required.",
+      "citations": [
+        {
+          "source_id": "R35",
+          "section": "Object and scope / scoring gate",
+          "anchor_text": "SOURCE_INCOMPLETE_NO_SCORE",
+          "snapshot_sha256": "7924f1d2acc7a8419ae1a70ef3a44e8d776fea32e4ca9141f857ef9b06bc331a"
+        }
+      ],
+      "dependencies": [
+        "P-PREDICT"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-FLUX",
+      "branch": "polarity",
+      "title": "Fixed-K flux witness",
+      "status": "SOURCE_DECLARED",
+      "objects": "s_a=pi/12,s_b=pi/6",
+      "conclusion": "Unchanged viable obligation gives zero index/budget; edge support rises by 3/8 (one pair 1/8).",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§4",
+          "anchor_text": "EXACT fixed-K counterexample",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "P-FLUX-NOGO",
+      "branch": "polarity",
+      "title": "Universal flux-index equality fails",
+      "status": "EXACT_NO_GO",
+      "objects": "signed support diagnostic versus integer index",
+      "conclusion": "The witness disproves universal equality on this admitted domain. A diagnostic under a new restricted contract remains a separate possibility.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§4",
+          "anchor_text": "counterexample",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ],
+      "dependencies": [
+        "P-FLUX"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-UNIT",
+      "branch": "action-scale",
+      "title": "Typed action unit",
+      "status": "SOURCE_DECLARED",
+      "objects": "B0 masslike; a0 length; tau0 time",
+      "conclusion": "A0=B0 a0²/tau0 has action dimensions. This definition supplies no measured value.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§2",
+          "anchor_text": "B_0",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-METRIC",
+      "branch": "action-scale",
+      "title": "Unit chain metric and active sector",
+      "status": "SOURCE_DECLARED",
+      "objects": "Filled K4, Euclidean norm, P2",
+      "conclusion": "Fix the declared unit metric and active nonharmonic sector. Changing this carrier or metric requires rederiving its generator and action geometry.",
+      "citations": [
+        {
+          "source_id": "C0579",
+          "section": "Theorem / source anchors",
+          "anchor_text": "Euclidean chain norm",
+          "snapshot_sha256": "ef3bb744995b2cca8087c7ae1718a40a0526cbae314254b2a9ebc5ba6dce2fae"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-CARRIER",
+      "branch": "action-scale",
+      "title": "Single-cell spectral identity",
+      "status": "SOURCE_DECLARED",
+      "objects": "A^T=−A; A²=−4P2",
+      "conclusion": "The active frequency is 2 in native parameter s; the harmonic component is static. This source-supplied finite identity is not independently reproofed here.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§1",
+          "anchor_text": "Exact carrier",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ],
+      "dependencies": [
+        "A-METRIC"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-J",
+      "branch": "action-scale",
+      "title": "Active complex structure",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "J=A/2; J²=−I",
+      "conclusion": "The active restriction is an orthogonal complex structure; the induced symplectic convention is fixed by this norm.",
+      "citations": [
+        {
+          "source_id": "C0579",
+          "section": "Theorem",
+          "anchor_text": "orthogonal complex structure",
+          "snapshot_sha256": "ef3bb744995b2cca8087c7ae1718a40a0526cbae314254b2a9ebc5ba6dce2fae"
+        }
+      ],
+      "dependencies": [
+        "A-CARRIER"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-PHASE",
+      "branch": "action-scale",
+      "title": "Lifted phase history",
+      "status": "SOURCE_DECLARED",
+      "objects": "a=||x||²; Delta phi tilde",
+      "conclusion": "Retain winding in lifted phase, with phase rate 2 in native parameter. Endpoint phase modulo 2pi discards this history.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§§1,3",
+          "anchor_text": "Endpoint phase alone",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-ACTION",
+      "branch": "action-scale",
+      "title": "Single-sector lifted action",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "I_Hodge=(a/2) Delta phi tilde",
+      "conclusion": "With the declared symplectic normalization, accumulated native action is S=A0(a/2)Delta phi tilde. It varies continuously with support a.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§1",
+          "anchor_text": "lifted Hodge action",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ],
+      "dependencies": [
+        "A-J",
+        "A-PHASE",
+        "A-UNIT"
+      ],
+      "ledger_ids": [
+        "O09"
+      ]
+    },
+    {
+      "id": "A-SCALE",
+      "branch": "action-scale",
+      "title": "Specific action-phase scale",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "S/(a Delta phi tilde)=A0/2",
+      "conclusion": "For a>0 and nonzero lifted phase, the ratio is independent of amplitude. It is not yet physical hbar.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§2",
+          "anchor_text": "amplitude-independent",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ],
+      "dependencies": [
+        "A-ACTION"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-NORM",
+      "branch": "action-scale",
+      "title": "Normalized representative",
+      "status": "CONVENTION",
+      "objects": "a=1 on an explicitly normalized ray",
+      "conclusion": "Normalizing a representative does not prove native support quantization or physical quantum identity.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§5",
+          "anchor_text": "normalized representative",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-REC",
+      "branch": "action-scale",
+      "title": "Normalized recurrence action",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "Delta phi tilde=2pi; S=pi A0",
+      "conclusion": "One single-cell recurrence has native interval pi; its normalized circulation is pi A0. This is not a universal glued-carrier recurrence.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§§3,5",
+          "anchor_text": "One recurrence",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ],
+      "dependencies": [
+        "A-ACTION",
+        "A-NORM",
+        "A-CARRIER"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-END",
+      "branch": "action-scale",
+      "title": "Endpoint versus history comparison",
+      "status": "SOURCE_DECLARED",
+      "objects": "Same endpoint: zero winding and one winding",
+      "conclusion": "Admit both a zero-duration history and a nonzero full-cycle active orbit at the same endpoint with a>0.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§3",
+          "anchor_text": "2\\pi n\\equiv0",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-END-NOGO",
+      "branch": "action-scale",
+      "title": "Endpoint-only accumulated action no-go",
+      "status": "EXACT_NO_GO",
+      "objects": "Endpoint defect delta(U) versus lifted action",
+      "conclusion": "Zero winding has action 0; one full active winding has pi a A0 at the same endpoint. An endpoint-only scalar cannot encode both.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§3",
+          "anchor_text": "generally nonzero",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ],
+      "dependencies": [
+        "A-END",
+        "A-ACTION"
+      ],
+      "ledger_ids": [
+        "G05",
+        "O09"
+      ]
+    },
+    {
+      "id": "A-G05",
+      "branch": "action-scale",
+      "title": "Universal scalar alias retired",
+      "status": "RETIRED",
+      "objects": "kappa_loop^master",
+      "conclusion": "The ledger retires a universal scalar alias. A restricted alias needs a new sufficiency/proportionality and carrier-stability certificate.",
+      "citations": [
+        {
+          "source_id": "L65",
+          "section": "G05",
+          "anchor_text": "RETIRED FROM MAINLINE AS UNIVERSAL SCALAR",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": [
+        "G05"
+      ]
+    },
+    {
+      "id": "A-ALG",
+      "branch": "action-scale",
+      "title": "Conditional scalar-family algebra",
+      "status": "PRESERVED_CONDITIONAL",
+      "objects": "Supplied scalar on a declared operator family",
+      "conclusion": "Retiring a universal native alias does not invalidate algebra conditional on a supplied scalar. No specific scalar-family operator is reproofed in this graph.",
+      "citations": [
+        {
+          "source_id": "REC02",
+          "section": "ARA01",
+          "anchor_text": "Conditional scalar-family algebra survives",
+          "snapshot_sha256": "fc74e96093e5892a56e148e13fc4735fa3c49b206096282ada73d32e8e996cd9"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-CERT",
+      "branch": "action-scale",
+      "title": "Restricted scalar sufficiency certificate",
+      "status": "OPEN",
+      "objects": "Sufficient history compression; stable proportionality",
+      "conclusion": "A declared compression must retain O09 history and have carrier-stable proportionality before any restricted native scalar identification.",
+      "citations": [
+        {
+          "source_id": "L65",
+          "section": "G05 next_gate",
+          "anchor_text": "sufficient for O09",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": [
+        "G05",
+        "O09"
+      ]
+    },
+    {
+      "id": "A-ALIAS",
+      "branch": "action-scale",
+      "title": "Restricted native scalar identification",
+      "status": "OPEN",
+      "objects": "Declared restricted domain only",
+      "conclusion": "This conditional reopening route needs both valid scalar-family algebra and the separate sufficiency certificate. It does not revive the universal alias.",
+      "citations": [
+        {
+          "source_id": "L65",
+          "section": "G05",
+          "anchor_text": "restricted scalar aliases",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ],
+      "dependencies": [
+        "A-ALG",
+        "A-CERT"
+      ],
+      "ledger_ids": [
+        "G05"
+      ]
+    },
+    {
+      "id": "A-ETA",
+      "branch": "action-scale",
+      "title": "Unambiguous current ratio",
+      "status": "SOURCE_DECLARED",
+      "objects": "eta_A=A0/hbar",
+      "conclusion": "Current ratio direction is A0/hbar. Historical bare xi_hbar used reciprocal conventions and must remain typed.",
+      "citations": [
+        {
+          "source_id": "L65",
+          "section": "G06",
+          "anchor_text": "current canonical ratio is eta_A=A0/hbar",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ],
+      "dependencies": [
+        "A-UNIT"
+      ],
+      "ledger_ids": [
+        "G06"
+      ]
+    },
+    {
+      "id": "A-QPB",
+      "branch": "action-scale",
+      "title": "QPB-1 physical correspondence candidate",
+      "status": "CANDIDATE",
+      "objects": "Physical hbar=A0/2; eta_A=2",
+      "conclusion": "Identifying the specific native action-phase scale with physical hbar is a candidate correspondence, not a theorem from internal geometry.",
+      "citations": [
+        {
+          "source_id": "C0883",
+          "section": "Frozen prediction",
+          "anchor_text": "Frozen prediction",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ],
+      "dependencies": [
+        "A-SCALE",
+        "A-ETA"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-ANCHOR",
+      "branch": "action-scale",
+      "title": "Independent physical A0 anchor",
+      "status": "OPEN",
+      "objects": "Physical A0, source-derived uncertainty",
+      "conclusion": "Freeze an independently constructed action anchor excluding hbar, h, Planck units, known action targets and fitting to 2. No such data is supplied here.",
+      "citations": [
+        {
+          "source_id": "C0883",
+          "section": "Lawful future test",
+          "anchor_text": "independently constructed physical",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-QPB-TEST",
+      "branch": "action-scale",
+      "title": "Prospective QPB-1 comparison",
+      "status": "OPEN",
+      "objects": "eta_obs=A0_indep/hbar",
+      "conclusion": "Only after freezing the independent anchor compare with 2 under source-derived uncertainty; PASS, FAIL, indeterminate and invalid-source are distinct verdicts.",
+      "citations": [
+        {
+          "source_id": "C0883",
+          "section": "Verdicts",
+          "anchor_text": "QPB1_FAIL",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ],
+      "dependencies": [
+        "A-QPB",
+        "A-ANCHOR"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-SPEED",
+      "branch": "action-scale",
+      "title": "Speed/action identities",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "c_speed=a0/tau0; A0=B0 c_speed² tau0",
+      "conclusion": "Even fixed A0 and c_speed determine B0 tau0, not B0 and tau0 separately.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§2",
+          "anchor_text": "c",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ],
+      "dependencies": [
+        "A-UNIT"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-GAUGE",
+      "branch": "action-scale",
+      "title": "Physical clock scale gauge",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "lambda>0",
+      "conclusion": "(a0,tau0,B0)→(lambda a0,lambda tau0,B0/lambda) fixes speed and action, while physical frequency scales as 1/lambda and G_SI as lambda².",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§§3–4",
+          "anchor_text": "Scale-gauge theorem",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ],
+      "dependencies": [
+        "A-SPEED"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-ANCHOR-NOGO",
+      "branch": "action-scale",
+      "title": "Action anchor alone cannot set seconds",
+      "status": "EXACT_NO_GO",
+      "objects": "A0 invariant under lambda",
+      "conclusion": "An independent action anchor can test eta_A but is invariant under the residual clock gauge. It cannot alone identify absolute tau0. This is an explicit algebraic consequence of E11.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§§3,9",
+          "anchor_text": "What can break the scale gauge?",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ],
+      "dependencies": [
+        "A-GAUGE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-CLOCK-ANCHOR",
+      "branch": "action-scale",
+      "title": "Independent scale-sensitive anchor",
+      "status": "OPEN",
+      "objects": "Identified mass, length or time observable",
+      "conclusion": "Supply a lawful physical observable that changes under lambda, an independently identified carrier and a unique map to native units. Merely supplying A0 or a dimensionless ratio is insufficient.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§9",
+          "anchor_text": "What can break the scale gauge?",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "A-CLOCK",
+      "branch": "action-scale",
+      "title": "Absolute physical clock",
+      "status": "OPEN",
+      "objects": "tau0 in seconds",
+      "conclusion": "Absolute seconds require a source-complete, scale-sensitive physical correspondence. Native period pi or event coordinate 3/4 is not that anchor.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§§5,8–9",
+          "anchor_text": "Strongest lawful clock bridge",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ],
+      "dependencies": [
+        "A-CLOCK-ANCHOR",
+        "A-GAUGE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "G-HISTORY",
+      "branch": "action-scale",
+      "title": "Same local canonical history",
+      "status": "CONSTITUTIVE_PREMISE",
+      "objects": "Genesis and Hodge active local plane",
+      "conclusion": "Assume the typed GH-1 balanced coordinate map represents the same local canonical history. c_bridge is a coordinate normalization, distinct from c_speed.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§§4–5",
+          "anchor_text": "same local canonical history",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "G-STATIONARY",
+      "branch": "action-scale",
+      "title": "Stationary Genesis local carrier",
+      "status": "CONSTITUTIVE_PREMISE",
+      "objects": "omega_G constant locally",
+      "conclusion": "Use a locally stationary harmonic Genesis mode and its declared historical action/time units hbar_d,tau_d; neither is identified with physical hbar or seconds.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§§1–3",
+          "anchor_text": "locally stationary Genesis",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "G-EVENT",
+      "branch": "action-scale",
+      "title": "GH-2 active event geometry",
+      "status": "SOURCE_DECLARED",
+      "objects": "delta_H²=(3/4)c_bridge² Delta a_G²",
+      "conclusion": "The active event length is a typed source object, not an independently fixed physical length.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§6",
+          "anchor_text": "exact GH-2 event geometry",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "G-LOCAL",
+      "branch": "action-scale",
+      "title": "Conditional Genesis–Hodge ratios",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "A0/hbar_d=3omega_G/(4delta_H²); tau0/tau_d=2/omega_G",
+      "conclusion": "The product is 3/(2delta_H²). Local harmonic action areas and recurrence periods match under the same-history canonical intertwiner. No absolute units follow.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§§5–11",
+          "anchor_text": "Conditional canonical identity theorem",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ],
+      "dependencies": [
+        "G-HISTORY",
+        "G-STATIONARY",
+        "G-EVENT",
+        "A-J",
+        "A-UNIT"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "G-VARY",
+      "branch": "action-scale",
+      "title": "Nonstationary history domain",
+      "status": "DOMAIN_PREMISE",
+      "objects": "omega_G(t) assumes unequal values",
+      "conclusion": "The no-go is conditional on a history with varying local frequency; it does not assert every Genesis history is nonstationary.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§12",
+          "anchor_text": "omega_G(t)",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "G-CONST",
+      "branch": "action-scale",
+      "title": "Constant unit-ratio requirement",
+      "status": "DOMAIN_PREMISE",
+      "objects": "One constant tau0/tau_d across the whole history",
+      "conclusion": "A proposed global identification uses one constant ratio rather than a newly supplied varying clock law.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§12",
+          "anchor_text": "single constant ratio",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "G-GLOBAL-NOGO",
+      "branch": "action-scale",
+      "title": "Nonstationary global clock no-go",
+      "status": "EXACT_NO_GO",
+      "objects": "omega_G(t) varying; constant unit ratio",
+      "conclusion": "One constant tau0/tau_d cannot equal 2/omega_G(t) at all times if the historical frequency varies. A new stationary/effective-clock theorem would be needed.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§12",
+          "anchor_text": "single constant ratio",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ],
+      "dependencies": [
+        "G-VARY",
+        "G-CONST"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "R-I",
+      "branch": "polarity",
+      "title": "Intact-null potential domain",
+      "status": "SOURCE_DECLARED",
+      "objects": "I=T AND NOT L; i=|I|",
+      "conclusion": "I marks potential idle response addresses; h is the actual response. Prospective T,L must be independently sourced.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§1",
+          "anchor_text": "I is the intact-null potential mask",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ],
+      "dependencies": [
+        "P-ADM"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "R-FIBER",
+      "branch": "polarity",
+      "title": "Exact response fiber",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "q=omega+h; h≤I",
+      "conclusion": "Every admitted response corresponds to one subset of I. There are exactly 2^i responses.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§2",
+          "anchor_text": "response fiber has exactly 2^i",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ],
+      "dependencies": [
+        "R-I",
+        "P-IDLE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "R-COUNT",
+      "branch": "polarity",
+      "title": "Count-conditioned address fiber",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "|h|=j; binomial(i,j)",
+      "conclusion": "An independently sourced idle count fixes a budget but generally leaves binomial(i,j) address masks.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§§2–3",
+          "anchor_text": "binomial(i,j)",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ],
+      "dependencies": [
+        "R-FIBER",
+        "P-CORRECT"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "R-REDUCED",
+      "branch": "polarity",
+      "title": "Reduced equivariant rule domain",
+      "status": "DOMAIN_PREMISE",
+      "objects": "Only (T,L); all pair-permutation equivariance",
+      "conclusion": "These symmetry conclusions apply to a rule with no additional distinguishing pre-event state. Extra burdens, memory or source receipts require a larger declared carrier.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§4",
+          "anchor_text": "using only (T,L)",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ],
+      "dependencies": [
+        "R-I"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "R-DETERMINISTIC",
+      "branch": "polarity",
+      "title": "Reduced deterministic selector restriction",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "h=0 or h=I",
+      "conclusion": "For a deterministic equivariant selector based only on (T,L), the intact-null stabilizer forces a constant mask. Intermediate j cannot be selected for i≥2.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§4",
+          "anchor_text": "must be constant",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ],
+      "dependencies": [
+        "R-FIBER",
+        "R-REDUCED"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "R-KERNEL",
+      "branch": "polarity",
+      "title": "Invariant stochastic response kernels",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "P(h)=p_j/binomial(i,j), j=|h|",
+      "conclusion": "Invariant kernels have i+1 cardinality-orbit weights summing to 1. Symmetry leaves i free probability parameters. It does not set an event rate.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§4",
+          "anchor_text": "one probability p_j",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ],
+      "dependencies": [
+        "R-FIBER",
+        "R-REDUCED"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "R-UNIQUE-NOGO",
+      "branch": "polarity",
+      "title": "Admission does not select a response law",
+      "status": "EXACT_NO_GO",
+      "objects": "i>0; h=0 versus h=I",
+      "conclusion": "Two admitted equivariant responses share the same reduced (T,L) but have budgets differing by i. This is finite-domain underidentification, not a physical realization claim.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§3",
+          "anchor_text": "both h=000 and h=I",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ],
+      "dependencies": [
+        "R-FIBER",
+        "P-CORRECT"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "R-PACKET",
+      "branch": "polarity",
+      "title": "Source-complete prospective packet",
+      "status": "OPEN",
+      "objects": "Independent prospective viability, idle choice, frame and event/null program",
+      "conclusion": "The contract narrows the missing source objects and supplies a structural validator. It does not generate a native packet or establish eligible scorer custody.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§5",
+          "anchor_text": "complete prospective packet",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ],
+      "dependencies": [
+        "R-COUNT",
+        "P-SOURCE",
+        "P-HSOURCE",
+        "P-FRAME"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-STATE",
+      "branch": "polarity",
+      "title": "RSP-1 prepared finite carrier",
+      "status": "CANDIDATE",
+      "objects": "T,L_cache,q,r,finite bank,cursor,frozen branch",
+      "conclusion": "Fixed integrity and labeled identity frame; admitted prior cache independent of current stock. Tokens have no HD/physical identification.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§2",
+          "anchor_text": "Complete prepared state",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-DRIVE",
+      "branch": "polarity",
+      "title": "Demand-inhibited stock source",
+      "status": "CANDIDATE",
+      "objects": "L+=T 1[r>0](1−q_old), r+=r−omega+",
+      "conclusion": "The chosen generator produces prospective source masks from the complete prepared state. It is a new source-interface completion.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§3",
+          "anchor_text": "demand-inhibited",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-STATE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-CLOSE",
+      "branch": "polarity",
+      "title": "Close-on-idle candidate branch",
+      "status": "CANDIDATE",
+      "objects": "q+=T+L+, h+=0",
+      "conclusion": "The source C map is lawful on supplied prospective masks; its adoption in RSP-1 is a frozen candidate choice.",
+      "citations": [
+        {
+          "source_id": "C0593",
+          "section": "Close-vs-Hold theorem",
+          "anchor_text": "C(q^-,T^+,L^+)",
+          "snapshot_sha256": "a6843a3c799ea1b408f13fe5c2a594c906778c60a28de756fe2a1658890a3163"
+        }
+      ],
+      "dependencies": [
+        "SP-DRIVE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-HOLD",
+      "branch": "polarity",
+      "title": "Hold-open candidate branch",
+      "status": "CANDIDATE",
+      "objects": "q+=omega+ OR(T q_old); h+=I+ q_old",
+      "conclusion": "The source H map is lawful and uses the current intact-null domain. It is not selected natively.",
+      "citations": [
+        {
+          "source_id": "C0593",
+          "section": "Close-vs-Hold theorem",
+          "anchor_text": "H(q^-,T^+,L^+)",
+          "snapshot_sha256": "a6843a3c799ea1b408f13fe5c2a594c906778c60a28de756fe2a1658890a3163"
+        }
+      ],
+      "dependencies": [
+        "SP-DRIVE",
+        "SP-STATE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-BANK",
+      "branch": "polarity",
+      "title": "Finite preloaded renewal rule",
+      "status": "CANDIDATE",
+      "objects": "quiescent load + cursor advance",
+      "conclusion": "At r=q=L_cache=0 load one prepared packet. Zero packets advance the cursor. This is prepared supply, not endogenous production.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§3",
+          "anchor_text": "RENEWAL_ONLY",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-STATE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-STOP",
+      "branch": "polarity",
+      "title": "Full-state commit and stopping rule",
+      "status": "CANDIDATE",
+      "objects": "Commit hidden null changes; HALT iff X+=X",
+      "conclusion": "Response-null and zero net budget do not justify stopping. Exhaustion and latching/stranding are separate model outcomes.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§4",
+          "anchor_text": "complete successor X+ equals X",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-STATE",
+        "SP-BANK"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-STOCK",
+      "branch": "polarity",
+      "title": "Exact token-accounting law",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "S=active stock + unspent bank",
+      "conclusion": "Renewal preserves S and inspection consumes exactly |omega+|. This counts prepared tokens, not joules or chain support.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§5",
+          "anchor_text": "Renewal preserves S",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-DRIVE",
+        "SP-BANK"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-TERM",
+      "branch": "polarity",
+      "title": "Strict potential and finite termination",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "V=4S+2|q|+|L_cache|+(B−k)",
+      "conclusion": "Every committed tick strictly reduces the integer potential for either frozen branch. The episode reaches a full model fixed point within V_initial changes.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§5",
+          "anchor_text": "Every committed tick strictly decreases V",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-STOCK",
+        "SP-CLOSE",
+        "SP-HOLD",
+        "SP-STOP"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-C-DURATION",
+      "branch": "polarity",
+      "title": "Exact close duration and pulse balance",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "D_C=D0+(B−k)+2sum max b",
+      "conclusion": "C spends all prepared stock; openings=S_initial and closures=S_initial+|q_initial|. Includes broken-cache cleanup and zero refills.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§6",
+          "anchor_text": "exact number of committed C ticks",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-CLOSE",
+        "SP-DRIVE",
+        "SP-BANK",
+        "SP-STOP"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-H-LATCH",
+      "branch": "polarity",
+      "title": "Hold-branch finite latch bound",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "D_H≤(B−k)+2+delta",
+      "conclusion": "H can latch with unused active and queued stock. The C exhaustion theorem cannot be reused for H.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "H never closes",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-HOLD",
+        "SP-DRIVE",
+        "SP-BANK",
+        "SP-STOP"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-PROJECTION",
+      "branch": "polarity",
+      "title": "Theta-only RSP source no-go",
+      "status": "EXACT_NO_GO",
+      "objects": "Same q,L,T; different hidden r",
+      "conclusion": "The candidate is deterministic on its complete state; its Theta-only projection can give different next endpoints. This does not identify native hidden variables.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "projection onto Theta alone",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-STATE",
+        "SP-DRIVE",
+        "SP-CLOSE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "SP-HD-BRIDGE",
+      "branch": "polarity",
+      "title": "HD-to-RSP realization",
+      "status": "OPEN",
+      "objects": "R^(HD), edge transport versus R^(RSP), fixed flags",
+      "conclusion": "A source-authenticated carrier/observable map or obstruction theorem is needed before attributing programme outputs to native UD.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§8",
+          "anchor_text": "no proved identification",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ],
+      "dependencies": [
+        "SP-STATE",
+        "SP-DRIVE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-EXACT",
+      "branch": "polarity",
+      "title": "Exact complete-state realization contract",
+      "status": "DOMAIN_PREMISE",
+      "objects": "phi U=F phi on declared D",
+      "conclusion": "A state-only decoder includes resource, cache, bank/cursor and branch. Theta-only agreement is weaker.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§1",
+          "anchor_text": "complete RSP successor",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-SURJ",
+      "branch": "polarity",
+      "title": "Two-sided invariant source domain",
+      "status": "DOMAIN_PREMISE",
+      "objects": "U:D→D surjective",
+      "conclusion": "A closed Hodge step is invertible on a two-sided invariant carrier or norm sphere. A forward initialization restriction can fail surjectivity.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§2",
+          "anchor_text": "U is surjective",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-FINITE",
+      "branch": "polarity",
+      "title": "Finite decoded preparation",
+      "status": "DOMAIN_PREMISE",
+      "objects": "phi(D) finite",
+      "conclusion": "Fix a bounded finite RSP prepared register family; arbitrary unbounded preparations need a separate contract.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§§2–3",
+          "anchor_text": "decoded image M=phi(D) is finite",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "SP-STATE"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-FINITE-NOGO",
+      "branch": "polarity",
+      "title": "Reversible finite-factor obstruction",
+      "status": "EXACT_NO_GO",
+      "objects": "phi(D)⊂Fix F",
+      "conclusion": "A surjective source makes F surjective on its finite image; strict target descent permits only fixed cycles. No continuity or common period is required.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§2",
+          "anchor_text": "A surjective map on a finite set",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "HR-EXACT",
+        "HR-SURJ",
+        "HR-FINITE",
+        "SP-TERM"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-UNIFORM",
+      "branch": "polarity",
+      "title": "Common finite settling bound",
+      "status": "DOMAIN_PREMISE",
+      "objects": "One N across phi(D)",
+      "conclusion": "This may replace finite image, but unbounded stock/bank preparations do not necessarily have one common bound.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§3",
+          "anchor_text": "common finite settling bound",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-UNIFORM-NOGO",
+      "branch": "polarity",
+      "title": "Uniform-settling factor obstruction",
+      "status": "EXACT_NO_GO",
+      "objects": "Every decoded state is fixed",
+      "conclusion": "Surjectivity and F^N(phi(D))=phi(D) force fixed image when the whole image settles uniformly.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§3",
+          "anchor_text": "Finite image can be replaced",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "HR-EXACT",
+        "HR-SURJ",
+        "HR-UNIFORM"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-PERIOD",
+      "branch": "polarity",
+      "title": "Finite-order source sample",
+      "status": "DOMAIN_PREMISE",
+      "objects": "U^m=id",
+      "conclusion": "Rational delta/pi gives finite order on unit-metric filled K4. The sampling interval remains a declared internal choice.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§4",
+          "anchor_text": "U^m=id",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-PERIOD-NOGO",
+      "branch": "polarity",
+      "title": "Finite-order absorbing-factor obstruction",
+      "status": "EXACT_NO_GO",
+      "objects": "Periodic decoded target states must be fixed",
+      "conclusion": "This needs neither finite image nor continuity: exact periodicity plus strict descent excludes all nonfixed decoded points.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§4",
+          "anchor_text": "F^m(phi(x))=phi(x)",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "HR-EXACT",
+        "HR-PERIOD",
+        "SP-TERM"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-SKEW",
+      "branch": "polarity",
+      "title": "Declared closed skew Hodge flow",
+      "status": "SOURCE_DECLARED",
+      "objects": "U_delta=exp(delta A), A^T=−A",
+      "conclusion": "The fixed-complex finite generator conserves norm and gives reversible orthogonal samples. No physical energy or native event clock follows.",
+      "citations": [
+        {
+          "source_id": "PI",
+          "section": "T4.3",
+          "anchor_text": "standard skew-flow conservation",
+          "snapshot_sha256": "23a62d17d88076589e4904973c166e086c03352629e620913e4bb3897eb275ab"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-RECURRENCE",
+      "branch": "polarity",
+      "title": "Forward recurrence of closed samples",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "Arbitrarily late U^n x→x",
+      "conclusion": "A finite spectral torus has simultaneous phase returns. Irrational glued frequencies remove a common exact period, not approximate recurrence.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§5",
+          "anchor_text": "Simultaneous phase approximation",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "HR-SKEW"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-STABLE",
+      "branch": "polarity",
+      "title": "Stable complete-state decoding",
+      "status": "DOMAIN_PREMISE",
+      "objects": "Near returns decode to the same complete state",
+      "conclusion": "Local constancy or continuity into a discrete register carrier suffices. Exact-zero positivity gates need not satisfy this at boundary points.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§5",
+          "anchor_text": "return-stable at x",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-ROBUST-NOGO",
+      "branch": "polarity",
+      "title": "Recurrent robust-factor obstruction",
+      "status": "EXACT_NO_GO",
+      "objects": "Only fixed decoded initial state",
+      "conclusion": "Exact intertwining and stable recurrence conflict with any irreversible drop of the RSP ranking potential.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§5",
+          "anchor_text": "contradicting exact intertwining",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "HR-EXACT",
+        "HR-RECURRENCE",
+        "HR-STABLE",
+        "SP-TERM"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-NORM-ID",
+      "branch": "polarity",
+      "title": "Stock/total-norm identification",
+      "status": "DOMAIN_PREMISE",
+      "objects": "S_RSP=g(c^T c)",
+      "conclusion": "This is an additional proposed bridge, not a source theorem; local readouts can vary even when total norm does not.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§6",
+          "anchor_text": "specifically identified",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-NORM-NOGO",
+      "branch": "polarity",
+      "title": "Conserved-stock alias excludes consumption",
+      "status": "EXACT_NO_GO",
+      "objects": "No change of a conserved total-norm stock alias",
+      "conclusion": "Only the stated conserved-observable identification is blocked on consuming ticks. No universal decoder impossibility follows from norm alone.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§6",
+          "anchor_text": "forbids a token-consuming inspection",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "HR-NORM-ID",
+        "HR-SKEW",
+        "SP-STOCK",
+        "HR-EXACT"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-WINDOW",
+      "branch": "polarity",
+      "title": "Prepared finite lookup window",
+      "status": "CANDIDATE",
+      "objects": "Distinct native samples; lookup chosen from RSP trace",
+      "conclusion": "A selected trajectory can be encoded before wrap. Decoder selection, preparation, clock and capture are additional source debts.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "PREPARED lookup",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-WRAP",
+      "branch": "polarity",
+      "title": "Exact quarter-turn wrap failure",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "v→u→−v→−u→v; decoded s0,s1,s2,s2",
+      "conclusion": "Both branch lookups match three edges and fail at the fourth. This validates a window encoding and refutes its global absorbing-factor extension.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "The first three native transitions",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "HR-WINDOW",
+        "HR-SKEW",
+        "A-CARRIER",
+        "SP-DRIVE",
+        "SP-TERM"
+      ],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-LATENT",
+      "branch": "polarity",
+      "title": "Original HD instantaneous latent witness",
+      "status": "SOURCE_DECLARED",
+      "objects": "R_e=c1,e²(c0,i²+c0,j²); L_p=1[sum R_e>0]",
+      "conclusion": "This chain-polynomial positivity receipt is distinct from the prepared RSP stock/cache source.",
+      "citations": [
+        {
+          "source_id": "C0926",
+          "section": "§4.6",
+          "anchor_text": "R_e=c_{1,e}^2",
+          "snapshot_sha256": "6927d2f2871f280bcf6f5740e7cc8407225f0e21f734f809c97bdc32846e514c"
+        }
+      ],
+      "dependencies": [],
+      "ledger_ids": []
+    },
+    {
+      "id": "HR-LATENT-MISMATCH",
+      "branch": "polarity",
+      "title": "Direct HD latent alias fails in the lookup",
+      "status": "EXACT_CONDITIONAL",
+      "objects": "All quarter samples have L_HD=000; phi(u) cache L=100",
+      "conclusion": "Directly identifying cached L with the instantaneous original HD witness does not reproduce this prepared first update. This says nothing about a separately sourced history/coupling map.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "lookup is also distinct",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ],
+      "dependencies": [
+        "HR-LATENT",
+        "HR-WINDOW",
+        "A-CARRIER"
+      ],
+      "ledger_ids": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "P-DEF",
+      "to": "P-ADM",
+      "kind": "proof_premise",
+      "reason": "Defines the masks in the inequalities.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§2",
+          "anchor_text": "admissible",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-ADM",
+      "to": "P-IDLE",
+      "kind": "proof_premise",
+      "reason": "The inequalities make h an admissible residual mask.",
+      "citations": [
+        {
+          "source_id": "C0963",
+          "section": "declared_source_variables / exact_response_form",
+          "anchor_text": "q = omega OR h",
+          "snapshot_sha256": "6da081eec3922f361d4e616673b0f994eed9471c050e818e8b98b80b46e9d2bc"
+        }
+      ]
+    },
+    {
+      "from": "P-RANK",
+      "to": "P-INDEX",
+      "kind": "proof_premise",
+      "reason": "Finite domain and codomain dimensions determine the index.",
+      "citations": [
+        {
+          "source_id": "C0884",
+          "section": "§2",
+          "anchor_text": "Rank-nullity",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ]
+    },
+    {
+      "from": "P-DEF",
+      "to": "P-BUDGET",
+      "kind": "proof_premise",
+      "reason": "Uses Theta=1−q on both three-seat states.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem",
+          "anchor_text": "Hamming event budget",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    {
+      "from": "P-IDLE",
+      "to": "P-CORRECT",
+      "kind": "proof_premise",
+      "reason": "Separates viable and idle counts.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem",
+          "anchor_text": "residual idle-response index",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    {
+      "from": "P-INDEX",
+      "to": "P-CORRECT",
+      "kind": "proof_premise",
+      "reason": "Supplies the viable count difference.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem",
+          "anchor_text": "residual idle-response index",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    {
+      "from": "P-BUDGET",
+      "to": "P-CORRECT",
+      "kind": "proof_premise",
+      "reason": "Identifies the full response count difference.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem",
+          "anchor_text": "residual idle-response index",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    {
+      "from": "P-CORRECT",
+      "to": "P-EQUAL",
+      "kind": "proof_premise",
+      "reason": "The difference equals the idle count difference.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem / decomposition",
+          "anchor_text": "mu_\\Theta=\\operatorname{ind}F_\\omega+\\nu_h",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    {
+      "from": "P-CORRECT",
+      "to": "P-SAT",
+      "kind": "proof_premise",
+      "reason": "Starts from the corrected identity.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Saturated-prior corollary",
+          "anchor_text": "circularity firewall",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    {
+      "from": "P-PRIOR",
+      "to": "P-SAT",
+      "kind": "constitutive_assumption",
+      "reason": "Sets only the previous idle mask to zero.",
+      "citations": [
+        {
+          "source_id": "C0957",
+          "section": "Saturated-prior corollary",
+          "anchor_text": "circularity firewall",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    {
+      "from": "P-DEF",
+      "to": "P-ADDRESS",
+      "kind": "proof_premise",
+      "reason": "Relates the response and Theta masks.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "address-selector",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-NOIDLE",
+      "to": "P-ADDRESS",
+      "kind": "constitutive_assumption",
+      "reason": "Supplies the no-idle final response law.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "address-selector",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-BURDEN",
+      "to": "P-SHELL",
+      "kind": "proof_premise",
+      "reason": "Requires supplied weights, integrity and shell count.",
+      "citations": [
+        {
+          "source_id": "C0884",
+          "section": "§5",
+          "anchor_text": "HOLD_UNRESOLVED_SYMMETRY",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ]
+    },
+    {
+      "from": "P-ADM",
+      "to": "P-CONFLICT",
+      "kind": "proof_premise",
+      "reason": "Defines viability admissibility.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "18",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-ADDRESS",
+      "to": "P-CONFLICT",
+      "kind": "proof_premise",
+      "reason": "Supplies the binding no-idle response.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "18",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-SHELL",
+      "to": "P-CONFLICT",
+      "kind": "proof_premise",
+      "reason": "Supplies the alternative historical optimization.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "18",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-SOURCE",
+      "to": "P-PREDICT",
+      "kind": "evaluation_requirement",
+      "reason": "Native viability inputs must precede the endpoint.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§§2–5",
+          "anchor_text": "pre-event",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-HSOURCE",
+      "to": "P-PREDICT",
+      "kind": "evaluation_requirement",
+      "reason": "The residual budget requires an independent response law/receipt.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§§2–5",
+          "anchor_text": "pre-event",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-FRAME",
+      "to": "P-PREDICT",
+      "kind": "evaluation_requirement",
+      "reason": "Address comparison requires relative-frame alignment.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§§2–5",
+          "anchor_text": "pre-event",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-CORRECT",
+      "to": "P-PREDICT",
+      "kind": "proof_premise",
+      "reason": "The full budget must include the idle term.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§§2–5",
+          "anchor_text": "pre-event",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-SHELL",
+      "to": "P-PREDICT",
+      "kind": "proof_premise",
+      "reason": "An optimizer used by the model must declare admissibility and tie behavior.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§§2–5",
+          "anchor_text": "pre-event",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "P-PREDICT",
+      "to": "P-SCORE",
+      "kind": "evaluation_requirement",
+      "reason": "The tested model must supply lawful pre-event outputs.",
+      "citations": [
+        {
+          "source_id": "R35",
+          "section": "Object and scope / scoring gate",
+          "anchor_text": "SOURCE_INCOMPLETE_NO_SCORE",
+          "snapshot_sha256": "7924f1d2acc7a8419ae1a70ef3a44e8d776fea32e4ca9141f857ef9b06bc331a"
+        }
+      ]
+    },
+    {
+      "from": "P-FLUX",
+      "to": "P-FLUX-NOGO",
+      "kind": "proof_premise",
+      "reason": "Nonzero signed flux coexists with zero index.",
+      "citations": [
+        {
+          "source_id": "E04",
+          "section": "§4",
+          "anchor_text": "counterexample",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    {
+      "from": "A-METRIC",
+      "to": "A-CARRIER",
+      "kind": "proof_premise",
+      "reason": "The carrier and norm fix the declared spectral identity.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§1",
+          "anchor_text": "Exact carrier",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-CARRIER",
+      "to": "A-J",
+      "kind": "proof_premise",
+      "reason": "Skewness and A²=−4I imply J²=−I and orthogonality.",
+      "citations": [
+        {
+          "source_id": "C0579",
+          "section": "Theorem",
+          "anchor_text": "orthogonal complex structure",
+          "snapshot_sha256": "ef3bb744995b2cca8087c7ae1718a40a0526cbae314254b2a9ebc5ba6dce2fae"
+        }
+      ]
+    },
+    {
+      "from": "A-J",
+      "to": "A-ACTION",
+      "kind": "proof_premise",
+      "reason": "Provides the source symplectic normalization.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§1",
+          "anchor_text": "lifted Hodge action",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-PHASE",
+      "to": "A-ACTION",
+      "kind": "proof_premise",
+      "reason": "Provides support and accumulated phase.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§1",
+          "anchor_text": "lifted Hodge action",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-UNIT",
+      "to": "A-ACTION",
+      "kind": "proof_premise",
+      "reason": "Dimensionalizes the internal action.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§1",
+          "anchor_text": "lifted Hodge action",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-ACTION",
+      "to": "A-SCALE",
+      "kind": "proof_premise",
+      "reason": "Cancel the nonzero support and lifted phase.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§2",
+          "anchor_text": "amplitude-independent",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-ACTION",
+      "to": "A-REC",
+      "kind": "proof_premise",
+      "reason": "Integrates the lifted phase over the recurrence.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§§3,5",
+          "anchor_text": "One recurrence",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-NORM",
+      "to": "A-REC",
+      "kind": "constitutive_assumption",
+      "reason": "Uses the normalized representative.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§§3,5",
+          "anchor_text": "One recurrence",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-CARRIER",
+      "to": "A-REC",
+      "kind": "proof_premise",
+      "reason": "Fixes native frequency 2 and recurrence pi.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§§3,5",
+          "anchor_text": "One recurrence",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-END",
+      "to": "A-END-NOGO",
+      "kind": "proof_premise",
+      "reason": "The domain contains histories sharing the endpoint.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§3",
+          "anchor_text": "generally nonzero",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-ACTION",
+      "to": "A-END-NOGO",
+      "kind": "proof_premise",
+      "reason": "Their accumulated actions differ.",
+      "citations": [
+        {
+          "source_id": "C0906",
+          "section": "§3",
+          "anchor_text": "generally nonzero",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    {
+      "from": "A-ALG",
+      "to": "A-ALIAS",
+      "kind": "proof_premise",
+      "reason": "Keeps any supplied scalar-family calculation conditional.",
+      "citations": [
+        {
+          "source_id": "L65",
+          "section": "G05",
+          "anchor_text": "restricted scalar aliases",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ]
+    },
+    {
+      "from": "A-CERT",
+      "to": "A-ALIAS",
+      "kind": "evaluation_requirement",
+      "reason": "Native identification requires independent sufficiency/proportionality.",
+      "citations": [
+        {
+          "source_id": "L65",
+          "section": "G05",
+          "anchor_text": "restricted scalar aliases",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ]
+    },
+    {
+      "from": "A-UNIT",
+      "to": "A-ETA",
+      "kind": "proof_premise",
+      "reason": "Declares the native dimensional numerator.",
+      "citations": [
+        {
+          "source_id": "L65",
+          "section": "G06",
+          "anchor_text": "current canonical ratio is eta_A=A0/hbar",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ]
+    },
+    {
+      "from": "A-SCALE",
+      "to": "A-QPB",
+      "kind": "proof_premise",
+      "reason": "The exact internal ratio motivates, but does not prove, the correspondence.",
+      "citations": [
+        {
+          "source_id": "C0883",
+          "section": "Frozen prediction",
+          "anchor_text": "Frozen prediction",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ]
+    },
+    {
+      "from": "A-ETA",
+      "to": "A-QPB",
+      "kind": "proof_premise",
+      "reason": "Fixes the ratio convention.",
+      "citations": [
+        {
+          "source_id": "C0883",
+          "section": "Frozen prediction",
+          "anchor_text": "Frozen prediction",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ]
+    },
+    {
+      "from": "A-QPB",
+      "to": "A-QPB-TEST",
+      "kind": "constitutive_assumption",
+      "reason": "Freezes the candidate prediction before comparison.",
+      "citations": [
+        {
+          "source_id": "C0883",
+          "section": "Verdicts",
+          "anchor_text": "QPB1_FAIL",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ]
+    },
+    {
+      "from": "A-ANCHOR",
+      "to": "A-QPB-TEST",
+      "kind": "evaluation_requirement",
+      "reason": "The independent physical numerator is required.",
+      "citations": [
+        {
+          "source_id": "C0883",
+          "section": "Verdicts",
+          "anchor_text": "QPB1_FAIL",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ]
+    },
+    {
+      "from": "A-UNIT",
+      "to": "A-SPEED",
+      "kind": "proof_premise",
+      "reason": "Substitute a0=c_speed tau0 into the action unit.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§2",
+          "anchor_text": "c",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    {
+      "from": "A-SPEED",
+      "to": "A-GAUGE",
+      "kind": "proof_premise",
+      "reason": "Defines the invariants of the transformation.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§§3–4",
+          "anchor_text": "Scale-gauge theorem",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    {
+      "from": "A-GAUGE",
+      "to": "A-ANCHOR-NOGO",
+      "kind": "proof_premise",
+      "reason": "The gauge leaves A0 unchanged for every lambda.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§§3,9",
+          "anchor_text": "What can break the scale gauge?",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    {
+      "from": "A-CLOCK-ANCHOR",
+      "to": "A-CLOCK",
+      "kind": "evaluation_requirement",
+      "reason": "A gauge-breaking measurement and correspondence is necessary.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§§5,8–9",
+          "anchor_text": "Strongest lawful clock bridge",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    {
+      "from": "A-GAUGE",
+      "to": "A-CLOCK",
+      "kind": "proof_premise",
+      "reason": "The current unit identities otherwise admit a free positive lambda.",
+      "citations": [
+        {
+          "source_id": "E11",
+          "section": "§§5,8–9",
+          "anchor_text": "Strongest lawful clock bridge",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    {
+      "from": "G-HISTORY",
+      "to": "G-LOCAL",
+      "kind": "constitutive_assumption",
+      "reason": "Requires equality of local canonical histories.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§§5–11",
+          "anchor_text": "Conditional canonical identity theorem",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    {
+      "from": "G-STATIONARY",
+      "to": "G-LOCAL",
+      "kind": "constitutive_assumption",
+      "reason": "Requires the stationary harmonic symplectic form and frequency.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§§5–11",
+          "anchor_text": "Conditional canonical identity theorem",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    {
+      "from": "G-EVENT",
+      "to": "G-LOCAL",
+      "kind": "proof_premise",
+      "reason": "Eliminates the balanced coordinate normalization.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§§5–11",
+          "anchor_text": "Conditional canonical identity theorem",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    {
+      "from": "A-J",
+      "to": "G-LOCAL",
+      "kind": "proof_premise",
+      "reason": "Supplies the Hodge local canonical plane.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§§5–11",
+          "anchor_text": "Conditional canonical identity theorem",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    {
+      "from": "A-UNIT",
+      "to": "G-LOCAL",
+      "kind": "proof_premise",
+      "reason": "Supplies the native dimensional action scale.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§§5–11",
+          "anchor_text": "Conditional canonical identity theorem",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    {
+      "from": "G-VARY",
+      "to": "G-GLOBAL-NOGO",
+      "kind": "proof_premise",
+      "reason": "Requires at least two distinct local frequencies.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§12",
+          "anchor_text": "single constant ratio",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    {
+      "from": "G-CONST",
+      "to": "G-GLOBAL-NOGO",
+      "kind": "constitutive_assumption",
+      "reason": "Requires one unchanged ratio over the history.",
+      "citations": [
+        {
+          "source_id": "E13",
+          "section": "§12",
+          "anchor_text": "single constant ratio",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    {
+      "from": "P-ADM",
+      "to": "R-I",
+      "kind": "proof_premise",
+      "reason": "Uses the admitted binary response inequalities.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§1",
+          "anchor_text": "I is the intact-null potential mask",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-I",
+      "to": "R-FIBER",
+      "kind": "proof_premise",
+      "reason": "Defines the intact-null positions.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§2",
+          "anchor_text": "response fiber has exactly 2^i",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "P-IDLE",
+      "to": "R-FIBER",
+      "kind": "proof_premise",
+      "reason": "Supplies the unique disjoint mask decomposition.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§2",
+          "anchor_text": "response fiber has exactly 2^i",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-FIBER",
+      "to": "R-COUNT",
+      "kind": "proof_premise",
+      "reason": "Counts the size-j subsets of the idle domain.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§§2–3",
+          "anchor_text": "binomial(i,j)",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "P-CORRECT",
+      "to": "R-COUNT",
+      "kind": "proof_premise",
+      "reason": "Relates idle count to full Hamming budget.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§§2–3",
+          "anchor_text": "binomial(i,j)",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-I",
+      "to": "R-REDUCED",
+      "kind": "proof_premise",
+      "reason": "Identifies equivalent intact-null addresses.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§4",
+          "anchor_text": "using only (T,L)",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-FIBER",
+      "to": "R-DETERMINISTIC",
+      "kind": "proof_premise",
+      "reason": "Provides the allowed response masks.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§4",
+          "anchor_text": "must be constant",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-REDUCED",
+      "to": "R-DETERMINISTIC",
+      "kind": "proof_premise",
+      "reason": "Fixes the symmetry and limited information domain.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§4",
+          "anchor_text": "must be constant",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-FIBER",
+      "to": "R-KERNEL",
+      "kind": "proof_premise",
+      "reason": "Provides the response support and cardinality orbits.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§4",
+          "anchor_text": "one probability p_j",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-REDUCED",
+      "to": "R-KERNEL",
+      "kind": "proof_premise",
+      "reason": "Requires invariance on equivalent idle addresses.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§4",
+          "anchor_text": "one probability p_j",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-FIBER",
+      "to": "R-UNIQUE-NOGO",
+      "kind": "proof_premise",
+      "reason": "Provides both masks and their distinct responses.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§3",
+          "anchor_text": "both h=000 and h=I",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "P-CORRECT",
+      "to": "R-UNIQUE-NOGO",
+      "kind": "proof_premise",
+      "reason": "Their budgets differ by the idle-count difference.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§3",
+          "anchor_text": "both h=000 and h=I",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "R-COUNT",
+      "to": "R-PACKET",
+      "kind": "proof_premise",
+      "reason": "Distinguishes the count and address routes.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§5",
+          "anchor_text": "complete prospective packet",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "P-SOURCE",
+      "to": "R-PACKET",
+      "kind": "evaluation_requirement",
+      "reason": "Prospective viability must have an independently frozen source.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§5",
+          "anchor_text": "complete prospective packet",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "P-HSOURCE",
+      "to": "R-PACKET",
+      "kind": "evaluation_requirement",
+      "reason": "An actual idle law or receipt must be acquired before endpoint exposure.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§5",
+          "anchor_text": "complete prospective packet",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "P-FRAME",
+      "to": "R-PACKET",
+      "kind": "evaluation_requirement",
+      "reason": "Directed addresses require the frame receipt.",
+      "citations": [
+        {
+          "source_id": "RESPONSE01",
+          "section": "§5",
+          "anchor_text": "complete prospective packet",
+          "snapshot_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+        }
+      ]
+    },
+    {
+      "from": "SP-STATE",
+      "to": "SP-DRIVE",
+      "kind": "constitutive_assumption",
+      "reason": "Requires prepared source registers and fixed integrity.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§3",
+          "anchor_text": "demand-inhibited",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-DRIVE",
+      "to": "SP-CLOSE",
+      "kind": "constitutive_assumption",
+      "reason": "Supplies the prospective masks for this candidate episode.",
+      "citations": [
+        {
+          "source_id": "C0593",
+          "section": "Close-vs-Hold theorem",
+          "anchor_text": "C(q^-,T^+,L^+)",
+          "snapshot_sha256": "a6843a3c799ea1b408f13fe5c2a594c906778c60a28de756fe2a1658890a3163"
+        }
+      ]
+    },
+    {
+      "from": "SP-DRIVE",
+      "to": "SP-HOLD",
+      "kind": "constitutive_assumption",
+      "reason": "Supplies prospective masks.",
+      "citations": [
+        {
+          "source_id": "C0593",
+          "section": "Close-vs-Hold theorem",
+          "anchor_text": "H(q^-,T^+,L^+)",
+          "snapshot_sha256": "a6843a3c799ea1b408f13fe5c2a594c906778c60a28de756fe2a1658890a3163"
+        }
+      ]
+    },
+    {
+      "from": "SP-STATE",
+      "to": "SP-HOLD",
+      "kind": "proof_premise",
+      "reason": "Supplies cached prior response.",
+      "citations": [
+        {
+          "source_id": "C0593",
+          "section": "Close-vs-Hold theorem",
+          "anchor_text": "H(q^-,T^+,L^+)",
+          "snapshot_sha256": "a6843a3c799ea1b408f13fe5c2a594c906778c60a28de756fe2a1658890a3163"
+        }
+      ]
+    },
+    {
+      "from": "SP-STATE",
+      "to": "SP-BANK",
+      "kind": "constitutive_assumption",
+      "reason": "Requires a frozen finite queue and cursor.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§3",
+          "anchor_text": "RENEWAL_ONLY",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STATE",
+      "to": "SP-STOP",
+      "kind": "constitutive_assumption",
+      "reason": "All dynamical registers must be included.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§4",
+          "anchor_text": "complete successor X+ equals X",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-BANK",
+      "to": "SP-STOP",
+      "kind": "constitutive_assumption",
+      "reason": "Cursor-only renewals are real state changes.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§4",
+          "anchor_text": "complete successor X+ equals X",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-DRIVE",
+      "to": "SP-STOCK",
+      "kind": "proof_premise",
+      "reason": "Defines inspection consumption.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§5",
+          "anchor_text": "Renewal preserves S",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-BANK",
+      "to": "SP-STOCK",
+      "kind": "proof_premise",
+      "reason": "Defines transfer from unspent bank to active stock.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§5",
+          "anchor_text": "Renewal preserves S",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STOCK",
+      "to": "SP-TERM",
+      "kind": "proof_premise",
+      "reason": "Accounts for stock across inspection and renewal.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§5",
+          "anchor_text": "Every committed tick strictly decreases V",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-CLOSE",
+      "to": "SP-TERM",
+      "kind": "constitutive_assumption",
+      "reason": "Supplies the close response branch.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§5",
+          "anchor_text": "Every committed tick strictly decreases V",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-HOLD",
+      "to": "SP-TERM",
+      "kind": "constitutive_assumption",
+      "reason": "Supplies the alternative hold branch.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§5",
+          "anchor_text": "Every committed tick strictly decreases V",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STOP",
+      "to": "SP-TERM",
+      "kind": "constitutive_assumption",
+      "reason": "Defines committed changes and the full terminal test.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§5",
+          "anchor_text": "Every committed tick strictly decreases V",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-CLOSE",
+      "to": "SP-C-DURATION",
+      "kind": "constitutive_assumption",
+      "reason": "The formula is branch-specific.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§6",
+          "anchor_text": "exact number of committed C ticks",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-DRIVE",
+      "to": "SP-C-DURATION",
+      "kind": "proof_premise",
+      "reason": "Defines pulse/closure feedback.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§6",
+          "anchor_text": "exact number of committed C ticks",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-BANK",
+      "to": "SP-C-DURATION",
+      "kind": "constitutive_assumption",
+      "reason": "Serializes finite refill stages.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§6",
+          "anchor_text": "exact number of committed C ticks",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STOP",
+      "to": "SP-C-DURATION",
+      "kind": "constitutive_assumption",
+      "reason": "Excludes terminal unchanged inspection from duration.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§6",
+          "anchor_text": "exact number of committed C ticks",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-HOLD",
+      "to": "SP-H-LATCH",
+      "kind": "constitutive_assumption",
+      "reason": "Makes prior open responses persistent.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "H never closes",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-DRIVE",
+      "to": "SP-H-LATCH",
+      "kind": "proof_premise",
+      "reason": "An open response inhibits later stock pulses.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "H never closes",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-BANK",
+      "to": "SP-H-LATCH",
+      "kind": "constitutive_assumption",
+      "reason": "Only quiescent states can load further packets.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "H never closes",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STOP",
+      "to": "SP-H-LATCH",
+      "kind": "constitutive_assumption",
+      "reason": "A full fixed point is a model halt, not physical no-event.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "H never closes",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STATE",
+      "to": "SP-PROJECTION",
+      "kind": "proof_premise",
+      "reason": "The domain includes different stock at the same visible response.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "projection onto Theta alone",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-DRIVE",
+      "to": "SP-PROJECTION",
+      "kind": "proof_premise",
+      "reason": "The next viability depends on stock.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "projection onto Theta alone",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-CLOSE",
+      "to": "SP-PROJECTION",
+      "kind": "constitutive_assumption",
+      "reason": "The witness uses the close branch.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§7",
+          "anchor_text": "projection onto Theta alone",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STATE",
+      "to": "SP-HD-BRIDGE",
+      "kind": "proof_premise",
+      "reason": "Marks prepared variables requiring realization.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§8",
+          "anchor_text": "no proved identification",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-DRIVE",
+      "to": "SP-HD-BRIDGE",
+      "kind": "constitutive_assumption",
+      "reason": "Marks the new source rule requiring justification.",
+      "citations": [
+        {
+          "source_id": "RSP01",
+          "section": "§8",
+          "anchor_text": "no proved identification",
+          "snapshot_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STATE",
+      "to": "HR-FINITE",
+      "kind": "proof_premise",
+      "reason": "Defines the finite prepared carrier whose image is requested.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§§2–3",
+          "anchor_text": "decoded image M=phi(D) is finite",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-EXACT",
+      "to": "HR-FINITE-NOGO",
+      "kind": "proof_premise",
+      "reason": "Assumes exact state-only intertwining.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§2",
+          "anchor_text": "A surjective map on a finite set",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-SURJ",
+      "to": "HR-FINITE-NOGO",
+      "kind": "proof_premise",
+      "reason": "Makes the decoded image invariant and surjective under F.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§2",
+          "anchor_text": "A surjective map on a finite set",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-FINITE",
+      "to": "HR-FINITE-NOGO",
+      "kind": "proof_premise",
+      "reason": "Turns surjectivity into a permutation.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§2",
+          "anchor_text": "A surjective map on a finite set",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "SP-TERM",
+      "to": "HR-FINITE-NOGO",
+      "kind": "proof_premise",
+      "reason": "Excludes nonfixed target cycles.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§2",
+          "anchor_text": "A surjective map on a finite set",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-EXACT",
+      "to": "HR-UNIFORM-NOGO",
+      "kind": "proof_premise",
+      "reason": "Preserves the exact successor law.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§3",
+          "anchor_text": "Finite image can be replaced",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-SURJ",
+      "to": "HR-UNIFORM-NOGO",
+      "kind": "proof_premise",
+      "reason": "Makes every decoded state have source predecessors.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§3",
+          "anchor_text": "Finite image can be replaced",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-UNIFORM",
+      "to": "HR-UNIFORM-NOGO",
+      "kind": "proof_premise",
+      "reason": "Bounds settlement across the complete decoded family.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§3",
+          "anchor_text": "Finite image can be replaced",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-EXACT",
+      "to": "HR-PERIOD-NOGO",
+      "kind": "proof_premise",
+      "reason": "Transfers source iteration to target iteration.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§4",
+          "anchor_text": "F^m(phi(x))=phi(x)",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-PERIOD",
+      "to": "HR-PERIOD-NOGO",
+      "kind": "proof_premise",
+      "reason": "Returns the source point exactly.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§4",
+          "anchor_text": "F^m(phi(x))=phi(x)",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "SP-TERM",
+      "to": "HR-PERIOD-NOGO",
+      "kind": "proof_premise",
+      "reason": "Excludes nonfixed periodic target points.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§4",
+          "anchor_text": "F^m(phi(x))=phi(x)",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-SKEW",
+      "to": "HR-RECURRENCE",
+      "kind": "proof_premise",
+      "reason": "Supplies a finite-dimensional orthogonal spectral flow.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§5",
+          "anchor_text": "Simultaneous phase approximation",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-EXACT",
+      "to": "HR-ROBUST-NOGO",
+      "kind": "proof_premise",
+      "reason": "Relates native returns to target iterates.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§5",
+          "anchor_text": "contradicting exact intertwining",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-RECURRENCE",
+      "to": "HR-ROBUST-NOGO",
+      "kind": "proof_premise",
+      "reason": "Supplies arbitrarily late source returns.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§5",
+          "anchor_text": "contradicting exact intertwining",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-STABLE",
+      "to": "HR-ROBUST-NOGO",
+      "kind": "proof_premise",
+      "reason": "Returns the whole decoded state, including hidden stock.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§5",
+          "anchor_text": "contradicting exact intertwining",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "SP-TERM",
+      "to": "HR-ROBUST-NOGO",
+      "kind": "proof_premise",
+      "reason": "Prevents target potential from recovering its initial value.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§5",
+          "anchor_text": "contradicting exact intertwining",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-NORM-ID",
+      "to": "HR-NORM-NOGO",
+      "kind": "proof_premise",
+      "reason": "Identifies stock with a conserved total observable.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§6",
+          "anchor_text": "forbids a token-consuming inspection",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-SKEW",
+      "to": "HR-NORM-NOGO",
+      "kind": "proof_premise",
+      "reason": "Conserves the source total norm.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§6",
+          "anchor_text": "forbids a token-consuming inspection",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "SP-STOCK",
+      "to": "HR-NORM-NOGO",
+      "kind": "proof_premise",
+      "reason": "Specifies which target ticks consume stock.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§6",
+          "anchor_text": "forbids a token-consuming inspection",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-EXACT",
+      "to": "HR-NORM-NOGO",
+      "kind": "proof_premise",
+      "reason": "Requires the identified readout to follow the successor.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§6",
+          "anchor_text": "forbids a token-consuming inspection",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-WINDOW",
+      "to": "HR-WRAP",
+      "kind": "proof_premise",
+      "reason": "Supplies the prepared lookup and restricted window.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "The first three native transitions",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-SKEW",
+      "to": "HR-WRAP",
+      "kind": "proof_premise",
+      "reason": "Supplies the closed skew flow convention.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "The first three native transitions",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "A-CARRIER",
+      "to": "HR-WRAP",
+      "kind": "proof_premise",
+      "reason": "Supplies the filled K4 active frequency-2 spectral identity.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "The first three native transitions",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "SP-DRIVE",
+      "to": "HR-WRAP",
+      "kind": "proof_premise",
+      "reason": "Supplies the target trajectory.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "The first three native transitions",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "SP-TERM",
+      "to": "HR-WRAP",
+      "kind": "proof_premise",
+      "reason": "Makes its final target state fixed.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "The first three native transitions",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-LATENT",
+      "to": "HR-LATENT-MISMATCH",
+      "kind": "proof_premise",
+      "reason": "Supplies the polynomial latent readout.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "lookup is also distinct",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "HR-WINDOW",
+      "to": "HR-LATENT-MISMATCH",
+      "kind": "proof_premise",
+      "reason": "Supplies the prepared decoded source states.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "lookup is also distinct",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    },
+    {
+      "from": "A-CARRIER",
+      "to": "HR-LATENT-MISMATCH",
+      "kind": "proof_premise",
+      "reason": "Fixes the declared K4 active plane used by the witness.",
+      "citations": [
+        {
+          "source_id": "HR01",
+          "section": "§7",
+          "anchor_text": "lookup is also distinct",
+          "snapshot_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "E04",
+      "title": "UD polarity pipeline synthetic consistency audit v0.1",
+      "path": "/sources/dependency-snapshots-v0.3/E04.txt",
+      "sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "/sources/review-E04-UD_POLARITY_PIPELINE_SYNTHETIC_AUDIT_v0.1.md",
+      "original_url": "https://github.com/ud-tetra/UD/blob/47121c4b2d8f472c4eaa977b475d20cc267eed3d/captures/2026-10-13T180349Z-codex-polarity-audit-b799f988/UD_POLARITY_PIPELINE_SYNTHETIC_AUDIT_v0.1.md",
+      "original_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+    },
+    {
+      "id": "C0963",
+      "title": "Idle-Open Response Source Contract",
+      "path": "/sources/dependency-snapshots-v0.3/C0963.txt",
+      "sha256": "6da081eec3922f361d4e616673b0f994eed9471c050e818e8b98b80b46e9d2bc",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/idleResponseSourceContract",
+      "original_sha256": ""
+    },
+    {
+      "id": "C0884",
+      "title": "Constitutive Receipt-Index Event Operator",
+      "path": "/sources/dependency-snapshots-v0.3/C0884.txt",
+      "sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/event",
+      "original_sha256": ""
+    },
+    {
+      "id": "C0957",
+      "title": "Viable-Lane Plus Idle-Response Index",
+      "path": "/sources/dependency-snapshots-v0.3/C0957.txt",
+      "sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/idleIndexTheorem",
+      "original_sha256": ""
+    },
+    {
+      "id": "R35",
+      "title": "POC-1 frozen sidecar recovery and scoring gate v0.1",
+      "path": "/sources/dependency-snapshots-v0.3/R35.txt",
+      "sha256": "7924f1d2acc7a8419ae1a70ef3a44e8d776fea32e4ca9141f857ef9b06bc331a",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "/sources/repo-35-UD_POC1_SIDECAR_RECOVERY_GATE_v0.1.md",
+      "original_url": "https://github.com/ud-tetra/UD/blob/47121c4b2d8f472c4eaa977b475d20cc267eed3d/captures/2026-10-13T181055Z-codex-sidecar-recovery-4d279adc/UD_POC1_SIDECAR_RECOVERY_GATE_v0.1.md",
+      "original_sha256": "7924f1d2acc7a8419ae1a70ef3a44e8d776fea32e4ca9141f857ef9b06bc331a"
+    },
+    {
+      "id": "E11",
+      "title": "UD_SUBSTRATE_PHYSICAL_CLOCK_SCALE_GAUGE_THEOREM_v0.1",
+      "path": "/sources/dependency-snapshots-v0.3/E11.txt",
+      "sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "/sources/review-E11-UD_SUBSTRATE_PHYSICAL_CLOCK_SCALE_GAUGE_THEOREM_v0.1.md",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/source/UD_SUBSTRATE_PHYSICAL_CLOCK_SCALE_GAUGE_THEOREM_v0.1.md",
+      "original_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+    },
+    {
+      "id": "C0579",
+      "title": "Xi-Hbar and Hodge–Dirac Action Recovery",
+      "path": "/sources/dependency-snapshots-v0.3/C0579.txt",
+      "sha256": "ef3bb744995b2cca8087c7ae1718a40a0526cbae314254b2a9ebc5ba6dce2fae",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/xiHbar",
+      "original_sha256": ""
+    },
+    {
+      "id": "C0906",
+      "title": "Native Hodge Action–Phase Specific Scale Theorem",
+      "path": "/sources/dependency-snapshots-v0.3/C0906.txt",
+      "sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/hodgeAction",
+      "original_sha256": ""
+    },
+    {
+      "id": "L65",
+      "title": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.65_C3_7_CLOSURE_N1_N2.json",
+      "path": "/sources/dependency-snapshots-v0.3/L65.txt",
+      "sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "/sources/UD_COEFFICIENT_PROVENANCE_LEDGER_v0.65_C3_7_CLOSURE_N1_N2.json",
+      "original_url": "",
+      "original_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+    },
+    {
+      "id": "REC02",
+      "title": "Presentation reconciliation and versioned dispositions v0.2",
+      "path": "/sources/dependency-snapshots-v0.3/REC02.txt",
+      "sha256": "fc74e96093e5892a56e148e13fc4735fa3c49b206096282ada73d32e8e996cd9",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "/sources/UD_PRESENTATION_RECONCILIATION_v0.2.md",
+      "original_url": "",
+      "original_sha256": "fc74e96093e5892a56e148e13fc4735fa3c49b206096282ada73d32e8e996cd9"
+    },
+    {
+      "id": "C0883",
+      "title": "QPB-1 Independent Action-Ratio Test",
+      "path": "/sources/dependency-snapshots-v0.3/C0883.txt",
+      "sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/qpb1Prereg",
+      "original_sha256": ""
+    },
+    {
+      "id": "E13",
+      "title": "UD_GENESIS_HODGE_CANONICAL_ACTION_CLOCK_INTERTWINER_v0.1",
+      "path": "/sources/dependency-snapshots-v0.3/E13.txt",
+      "sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082",
+      "representation": "atlas source-text snapshot; portal extracted text is not original package bytes",
+      "original_local": "/sources/review-E13-UD_GENESIS_HODGE_CANONICAL_ACTION_CLOCK_INTERTWINER_v0.1.md",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/releases/files/genesisActionClock/UD_GENESIS_HODGE_CANONICAL_ACTION_CLOCK_INTERTWINER_v0.1.md",
+      "original_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+    },
+    {
+      "id": "RESPONSE01",
+      "title": "Minimal pre-event response source theorem and contract v0.1",
+      "path": "/sources/response-contract-v0.1/UD_MINIMAL_PRE_EVENT_RESPONSE_SOURCE_THEOREM_v0.1.md",
+      "sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4",
+      "representation": "New authored development theorem and contract; constructor verification only.",
+      "original_local": "/sources/response-contract-v0.1/UD_MINIMAL_PRE_EVENT_RESPONSE_SOURCE_THEOREM_v0.1.md",
+      "original_url": "/source-contract/",
+      "original_sha256": "5337a05b7ead54cada83df5e51adf6cb9ff7213cc5aaf3c844988adf39f946e4"
+    },
+    {
+      "id": "RSP01",
+      "title": "RSP-1 finite prepared pre-event source programme v0.1",
+      "path": "/sources/rsp1-v0.1/UD_RSP1_FINITE_PRE_EVENT_SOURCE_PROGRAMME_v0.1.md",
+      "sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e",
+      "representation": "New authored finite candidate programme; constructor-team and separate AI checks, no human review or registry promotion.",
+      "original_local": "/sources/rsp1-v0.1/UD_RSP1_FINITE_PRE_EVENT_SOURCE_PROGRAMME_v0.1.md",
+      "original_url": "/source-programme/",
+      "original_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e"
+    },
+    {
+      "id": "C0593",
+      "title": "Idle-Response Lineage and Gate-History Boundary",
+      "path": "/sources/rsp1-v0.1/C0593.txt",
+      "sha256": "a6843a3c799ea1b408f13fe5c2a594c906778c60a28de756fe2a1658890a3163",
+      "representation": "Original public atlas extracted source text; not recovered original release-package bytes.",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/idleResponseLineage",
+      "original_sha256": ""
+    },
+    {
+      "id": "C0926",
+      "title": "Response Frontier Manuscript",
+      "path": "/sources/rsp1-v0.1/C0926.txt",
+      "sha256": "6927d2f2871f280bcf6f5740e7cc8407225f0e21f734f809c97bdc32846e514c",
+      "representation": "Original public atlas extracted source text; not recovered original release-package bytes.",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/archive213",
+      "original_sha256": ""
+    },
+    {
+      "id": "C0635",
+      "title": "Facet-Frame Transport and Yale Response Shell",
+      "path": "/sources/rsp1-v0.1/C0635.txt",
+      "sha256": "8d6b27573c40f2991c7a167812fcfff20fbf7ea8dde0d55975f980740d51ddee",
+      "representation": "Original public atlas extracted source text; not recovered original release-package bytes.",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/facetFrame",
+      "original_sha256": ""
+    },
+    {
+      "id": "C0621",
+      "title": "Latent Crossing and O09 Selection",
+      "path": "/sources/rsp1-v0.1/C0621.txt",
+      "sha256": "33b059be7512a3ea12f36e37ecfd8266b1ffff5520927d51b49dec2cd7fdf458",
+      "representation": "Original public atlas extracted source text; not recovered original release-package bytes.",
+      "original_local": "",
+      "original_url": "https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/#/doc/latentCrossing",
+      "original_sha256": ""
+    },
+    {
+      "id": "E01",
+      "title": "UD native pre-event projection obstruction v0.1",
+      "path": "/sources/rsp1-v0.1/E01.txt",
+      "sha256": "a209775f57992290b0db6dcb7609b68ffdf14bc8d106f3e8bcb3c9f1d69978ae",
+      "representation": "Original public atlas extracted source text; not recovered original release-package bytes.",
+      "original_local": "/sources/review-E01-THEOREM.md",
+      "original_url": "https://github.com/ud-tetra/UD/blob/47121c4b2d8f472c4eaa977b475d20cc267eed3d/captures/2026-10-12T014919Z-codex-native-source-97c0393f/THEOREM.md",
+      "original_sha256": "a209775f57992290b0db6dcb7609b68ffdf14bc8d106f3e8bcb3c9f1d69978ae"
+    },
+    {
+      "id": "E03",
+      "title": "UD packet-to-switch source recovery v0.2",
+      "path": "/sources/rsp1-v0.1/E03.txt",
+      "sha256": "12a7118f42dcabec7822d338f64fa031fa6f27e5b35925289bdbddb7ccde115e",
+      "representation": "Original public atlas extracted source text; not recovered original release-package bytes.",
+      "original_local": "/sources/review-E03-SOURCE_RECOVERY_v0.2.md",
+      "original_url": "https://github.com/ud-tetra/UD/blob/47121c4b2d8f472c4eaa977b475d20cc267eed3d/captures/2026-10-12T184337Z-codex-source-recovery-82f948a4/SOURCE_RECOVERY_v0.2.md",
+      "original_sha256": "12a7118f42dcabec7822d338f64fa031fa6f27e5b35925289bdbddb7ccde115e"
+    },
+    {
+      "id": "HR01",
+      "title": "Hodge-to-RSP realization obstruction and prepared-window witness v0.1",
+      "path": "/sources/hodge-rsp-v0.1/UD_HODGE_RSP_REALIZATION_OBSTRUCTION_v0.1.md",
+      "sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e",
+      "representation": "New authored development proof/audit, constructor-team and separate AI reasoning checks; no human or physical promotion.",
+      "original_local": "/sources/hodge-rsp-v0.1/UD_HODGE_RSP_REALIZATION_OBSTRUCTION_v0.1.md",
+      "original_url": "/realization/",
+      "original_sha256": "150be4a8437edf0d60d1536a3baedd282686c1e163e13ca7c975427f4c4c730e"
+    },
+    {
+      "id": "PI",
+      "title": "Finite Tetrahedral Complexes, Skew Support Flow and Contact Readiness",
+      "path": "/sources/hodge-rsp-v0.1/PI.txt",
+      "sha256": "23a62d17d88076589e4904973c166e086c03352629e620913e4bb3897eb275ab",
+      "representation": "Original public paper text snapshot.",
+      "original_local": "/sources/repo-03-UD_PAPER_I_REVIEW_DRAFT_v1.1.1.md",
+      "original_url": "https://github.com/ud-tetra/UD/blob/47121c4b2d8f472c4eaa977b475d20cc267eed3d/captures/2026-10-07T191951Z-codex-ud-bootstrap-5170f8b8/browse/dist/papers/UD_PAPER_I_REVIEW_DRAFT_v1.1.1.md",
+      "original_sha256": "23a62d17d88076589e4904973c166e086c03352629e620913e4bb3897eb275ab"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "idle-law",
+      "title": "Withdraw binding POC-1",
+      "changes": [
+        "P-NOIDLE"
+      ],
+      "must_affect": [
+        "P-ADDRESS",
+        "P-CONFLICT"
+      ],
+      "must_preserve": [
+        "P-CORRECT",
+        "P-EQUAL",
+        "P-INDEX",
+        "P-SAT"
+      ],
+      "note": "The saturated-prior conditional theorem survives with its stated h−=0 premise. The binding final-address application needs rederivation."
+    },
+    {
+      "id": "prior",
+      "title": "Remove the saturated prior premise",
+      "changes": [
+        "P-PRIOR"
+      ],
+      "must_affect": [
+        "P-SAT"
+      ],
+      "must_preserve": [
+        "P-CORRECT",
+        "P-EQUAL",
+        "P-INDEX"
+      ]
+    },
+    {
+      "id": "frame",
+      "title": "Change the address-frame receipt",
+      "changes": [
+        "P-FRAME"
+      ],
+      "must_affect": [
+        "P-PREDICT",
+        "P-SCORE"
+      ],
+      "must_preserve": [
+        "P-BUDGET",
+        "P-CORRECT",
+        "P-INDEX"
+      ],
+      "note": "Permutation-invariant cardinality identities survive; address predictions require rechecking."
+    },
+    {
+      "id": "g05",
+      "title": "Revisit the retired universal scalar",
+      "changes": [
+        "A-G05"
+      ],
+      "must_affect": [],
+      "must_preserve": [
+        "A-ALG",
+        "A-ACTION",
+        "A-ALIAS"
+      ],
+      "note": "No proof edge from a retired universal alias to conditional supplied-scalar algebra is licensed."
+    },
+    {
+      "id": "metric",
+      "title": "Change the single-cell chain metric",
+      "changes": [
+        "A-METRIC"
+      ],
+      "must_affect": [
+        "A-CARRIER",
+        "A-ACTION",
+        "A-SCALE",
+        "A-REC",
+        "G-LOCAL"
+      ],
+      "must_preserve": [
+        "A-GAUGE",
+        "P-CORRECT"
+      ]
+    },
+    {
+      "id": "action-anchor",
+      "title": "Withdraw the independent A0 anchor",
+      "changes": [
+        "A-ANCHOR"
+      ],
+      "must_affect": [
+        "A-QPB-TEST"
+      ],
+      "must_preserve": [
+        "A-ACTION",
+        "A-SCALE",
+        "A-GAUGE",
+        "A-CLOCK"
+      ],
+      "note": "An action anchor is not a clock anchor. The clock remains open under its separate scale-sensitive gate."
+    },
+    {
+      "id": "clock-anchor",
+      "title": "Withdraw the scale-sensitive clock anchor",
+      "changes": [
+        "A-CLOCK-ANCHOR"
+      ],
+      "must_affect": [
+        "A-CLOCK"
+      ],
+      "must_preserve": [
+        "A-QPB-TEST",
+        "A-GAUGE",
+        "A-SCALE"
+      ]
+    },
+    {
+      "id": "same-history",
+      "title": "Withdraw same-history identification",
+      "changes": [
+        "G-HISTORY"
+      ],
+      "must_affect": [
+        "G-LOCAL"
+      ],
+      "must_preserve": [
+        "A-ACTION",
+        "A-GAUGE",
+        "G-GLOBAL-NOGO"
+      ]
+    },
+    {
+      "id": "reduced-carrier",
+      "title": "Add distinguishing state to the reduced selector",
+      "changes": [
+        "R-REDUCED"
+      ],
+      "must_affect": [
+        "R-DETERMINISTIC",
+        "R-KERNEL"
+      ],
+      "must_preserve": [
+        "R-FIBER",
+        "R-COUNT",
+        "P-CORRECT"
+      ],
+      "note": "Changing the information carrier requires rederiving the restricted symmetry result; finite response algebra survives."
+    },
+    {
+      "id": "rsp-bank",
+      "title": "Change the finite preloaded renewal rule",
+      "changes": [
+        "SP-BANK"
+      ],
+      "must_affect": [
+        "SP-STOCK",
+        "SP-TERM",
+        "SP-C-DURATION",
+        "SP-H-LATCH"
+      ],
+      "must_preserve": [
+        "P-CORRECT",
+        "R-FIBER"
+      ],
+      "note": "Resource and duration claims require a new derivation; the admitted response algebra survives."
+    },
+    {
+      "id": "rsp-close",
+      "title": "Withdraw the close response candidate",
+      "changes": [
+        "SP-CLOSE"
+      ],
+      "must_affect": [
+        "SP-C-DURATION",
+        "SP-PROJECTION"
+      ],
+      "must_preserve": [
+        "SP-H-LATCH",
+        "SP-STOCK",
+        "P-INDEX"
+      ],
+      "note": "A close pulse/exhaustion theorem is branch-specific and cannot be transferred to the hold branch."
+    },
+    {
+      "id": "rsp-stop",
+      "title": "Use response-only stopping",
+      "changes": [
+        "SP-STOP"
+      ],
+      "must_affect": [
+        "SP-TERM",
+        "SP-C-DURATION",
+        "SP-H-LATCH"
+      ],
+      "must_preserve": [
+        "P-CORRECT",
+        "SP-STOCK"
+      ],
+      "note": "Source-null and cursor changes can be lost. Original full-state duration guarantees need rederivation."
+    },
+    {
+      "id": "two-sided",
+      "title": "Restrict source to a forward initialization domain",
+      "changes": [
+        "HR-SURJ"
+      ],
+      "must_affect": [
+        "HR-FINITE-NOGO",
+        "HR-UNIFORM-NOGO"
+      ],
+      "must_preserve": [
+        "HR-PERIOD-NOGO",
+        "HR-ROBUST-NOGO",
+        "SP-C-DURATION"
+      ],
+      "note": "Finite-order or robust-recurrence obstructions can still apply under their own assumptions."
+    },
+    {
+      "id": "unstable",
+      "title": "Allow a discontinuous boundary decoder",
+      "changes": [
+        "HR-STABLE"
+      ],
+      "must_affect": [
+        "HR-ROBUST-NOGO"
+      ],
+      "must_preserve": [
+        "HR-FINITE-NOGO",
+        "HR-PERIOD-NOGO",
+        "SP-STOCK"
+      ],
+      "note": "This relaxes the robust-return route; it does not evade a total two-sided finite-image theorem."
+    },
+    {
+      "id": "norm-alias",
+      "title": "Remove the stock/total-norm identification",
+      "changes": [
+        "HR-NORM-ID"
+      ],
+      "must_affect": [
+        "HR-NORM-NOGO"
+      ],
+      "must_preserve": [
+        "HR-FINITE-NOGO",
+        "HR-ROBUST-NOGO",
+        "SP-STOCK"
+      ],
+      "note": "Conservation no longer fixes the proposed stock readout; the factor theorems have separate assumptions."
+    }
+  ],
+  "excluded_inferences": [
+    {
+      "from": "P-INDEX",
+      "to": "P-NOIDLE",
+      "reason": "Index-only equality cannot independently prove no-idle response; the idle correction must be sourced."
+    },
+    {
+      "from": "P-INDEX",
+      "to": "P-SOURCE",
+      "reason": "Rank-nullity does not generate target-hidden obligation spaces."
+    },
+    {
+      "from": "P-FLUX",
+      "to": "P-PREDICT",
+      "reason": "Signed support is a diagnostic; universal flux-index equality has a counterexample."
+    },
+    {
+      "from": "A-G05",
+      "to": "A-ALG",
+      "reason": "Retiring a universal native alias does not retract supplied-scalar conditional algebra."
+    },
+    {
+      "from": "A-SCALE",
+      "to": "A-ETA",
+      "reason": "An exact internal factor 1/2 does not supply a measured physical action correspondence."
+    },
+    {
+      "from": "A-ANCHOR",
+      "to": "A-CLOCK",
+      "reason": "A0 is invariant under lambda. A separate scale-sensitive anchor is needed."
+    },
+    {
+      "from": "G-LOCAL",
+      "to": "A-CLOCK",
+      "reason": "A local ratio of historically typed units gives no absolute seconds."
+    },
+    {
+      "from": "A-REC",
+      "to": "A-NORM",
+      "reason": "A normalized recurrence does not prove support quantization."
+    },
+    {
+      "from": "R-FIBER",
+      "to": "P-NOIDLE",
+      "reason": "Counting admissible responses does not select the no-idle law."
+    },
+    {
+      "from": "R-PACKET",
+      "to": "P-SCORE",
+      "reason": "Structural receipt validation does not establish native truth, chronology authentication or empirical score eligibility."
+    },
+    {
+      "from": "SP-TERM",
+      "to": "P-PREDICT",
+      "reason": "Finite prepared-register termination does not identify native Hodge/transport source laws."
+    },
+    {
+      "from": "SP-C-DURATION",
+      "to": "SP-H-LATCH",
+      "reason": "Close exhaustion and pulse-duration conclusions do not apply to hold latching."
+    },
+    {
+      "from": "SP-STOCK",
+      "to": "A-ANCHOR",
+      "reason": "Counting prepared tokens does not supply a physical action anchor."
+    },
+    {
+      "from": "SP-STATE",
+      "to": "P-FRAME",
+      "reason": "Fixing the identity frame is a candidate restriction, not a native frame receipt."
+    },
+    {
+      "from": "HR-WRAP",
+      "to": "SP-HD-BRIDGE",
+      "reason": "Matching a prepared finite trace does not supply a native predictive realization."
+    },
+    {
+      "from": "HR-RECURRENCE",
+      "to": "HR-STABLE",
+      "reason": "Native recurrence does not establish complete-state decoder stability at exact positivity boundaries."
+    },
+    {
+      "from": "HR-NORM-NOGO",
+      "to": "HR-FINITE-NOGO",
+      "reason": "Norm alias obstruction is separate from the reversible finite-factor theorem."
+    }
+  ],
+  "target_closure": [
+    {
+      "target": "P-IDLE",
+      "direct_premises": [
+        "P-ADM"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-INDEX",
+      "direct_premises": [
+        "P-RANK"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-BUDGET",
+      "direct_premises": [
+        "P-DEF"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-CORRECT",
+      "direct_premises": [
+        "P-IDLE",
+        "P-INDEX",
+        "P-BUDGET"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-EQUAL",
+      "direct_premises": [
+        "P-CORRECT"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-SAT",
+      "direct_premises": [
+        "P-CORRECT",
+        "P-PRIOR"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-ADDRESS",
+      "direct_premises": [
+        "P-DEF",
+        "P-NOIDLE"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-SHELL",
+      "direct_premises": [
+        "P-BURDEN"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-CONFLICT",
+      "direct_premises": [
+        "P-ADM",
+        "P-ADDRESS",
+        "P-SHELL"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "P-FLUX-NOGO",
+      "direct_premises": [
+        "P-FLUX"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "A-J",
+      "direct_premises": [
+        "A-CARRIER"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "A-ACTION",
+      "direct_premises": [
+        "A-J",
+        "A-PHASE",
+        "A-UNIT"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "A-SCALE",
+      "direct_premises": [
+        "A-ACTION"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "A-REC",
+      "direct_premises": [
+        "A-ACTION",
+        "A-NORM",
+        "A-CARRIER"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "A-END-NOGO",
+      "direct_premises": [
+        "A-END",
+        "A-ACTION"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "A-SPEED",
+      "direct_premises": [
+        "A-UNIT"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "A-GAUGE",
+      "direct_premises": [
+        "A-SPEED"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "A-ANCHOR-NOGO",
+      "direct_premises": [
+        "A-GAUGE"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "G-LOCAL",
+      "direct_premises": [
+        "G-HISTORY",
+        "G-STATIONARY",
+        "G-EVENT",
+        "A-J",
+        "A-UNIT"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "G-GLOBAL-NOGO",
+      "direct_premises": [
+        "G-VARY",
+        "G-CONST"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "R-FIBER",
+      "direct_premises": [
+        "R-I",
+        "P-IDLE"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "R-COUNT",
+      "direct_premises": [
+        "R-FIBER",
+        "P-CORRECT"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "R-DETERMINISTIC",
+      "direct_premises": [
+        "R-FIBER",
+        "R-REDUCED"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "R-KERNEL",
+      "direct_premises": [
+        "R-FIBER",
+        "R-REDUCED"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "R-UNIQUE-NOGO",
+      "direct_premises": [
+        "R-FIBER",
+        "P-CORRECT"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "SP-STOCK",
+      "direct_premises": [
+        "SP-DRIVE",
+        "SP-BANK"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "SP-TERM",
+      "direct_premises": [
+        "SP-STOCK",
+        "SP-CLOSE",
+        "SP-HOLD",
+        "SP-STOP"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "SP-C-DURATION",
+      "direct_premises": [
+        "SP-CLOSE",
+        "SP-DRIVE",
+        "SP-BANK",
+        "SP-STOP"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "SP-H-LATCH",
+      "direct_premises": [
+        "SP-HOLD",
+        "SP-DRIVE",
+        "SP-BANK",
+        "SP-STOP"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "SP-PROJECTION",
+      "direct_premises": [
+        "SP-STATE",
+        "SP-DRIVE",
+        "SP-CLOSE"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "HR-FINITE-NOGO",
+      "direct_premises": [
+        "HR-EXACT",
+        "HR-SURJ",
+        "HR-FINITE",
+        "SP-TERM"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "HR-UNIFORM-NOGO",
+      "direct_premises": [
+        "HR-EXACT",
+        "HR-SURJ",
+        "HR-UNIFORM"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "HR-PERIOD-NOGO",
+      "direct_premises": [
+        "HR-EXACT",
+        "HR-PERIOD",
+        "SP-TERM"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "HR-RECURRENCE",
+      "direct_premises": [
+        "HR-SKEW"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "HR-ROBUST-NOGO",
+      "direct_premises": [
+        "HR-EXACT",
+        "HR-RECURRENCE",
+        "HR-STABLE",
+        "SP-TERM"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "HR-NORM-NOGO",
+      "direct_premises": [
+        "HR-NORM-ID",
+        "HR-SKEW",
+        "SP-STOCK",
+        "HR-EXACT"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "HR-WRAP",
+      "direct_premises": [
+        "HR-WINDOW",
+        "HR-SKEW",
+        "A-CARRIER",
+        "SP-DRIVE",
+        "SP-TERM"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    },
+    {
+      "target": "HR-LATENT-MISMATCH",
+      "direct_premises": [
+        "HR-LATENT",
+        "HR-WINDOW",
+        "A-CARRIER"
+      ],
+      "completeness": "Declared finite/realization target only; assumptions and decoder domain explicit. Constructor/AI proof audit; human review and native physical realization open."
+    }
+  ]
+}
