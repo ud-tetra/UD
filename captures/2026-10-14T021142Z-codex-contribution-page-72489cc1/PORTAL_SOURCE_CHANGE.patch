@@ -1,0 +1,145 @@
+diff --git a/dist/app.js b/dist/app.js
+index 0fae877..2c380f1 100644
+--- a/dist/app.js
++++ b/dist/app.js
+@@ -53,3 +53,3 @@ const docs = {
+-  fundingReplay:{title:"Funding review replay — exact spectra and continuity",label:"Finite replay · 2 October 2026",note:"Recovered source, exact A/B/C checks, 128 frozen masks and three deliberate-error controls. Constructor/self-check only; independent review outstanding.",kind:"html",file:"./content/funding-replay.html",source:"./releases/UD_REVIEW_REPLAY_v0.1.zip"},
+-  fundingReplayResults:{title:"Funding review replay — exact result receipt",label:"Exact-arithmetic receipt · v0.1",note:"Scoped computational checks, not independent review or physical evidence.",kind:"json",file:"./source/funding/replay/results/replay_results.json",source:"./source/funding/replay/results/replay_results.json"},
+-  fundingReplayCode:{title:"Funding review replay — supplemental verifier",label:"Python standard library · v0.1",note:"Run from the complete release package; imports its preserved historical verifier.",kind:"code",file:"./source/funding/replay/replay.py",source:"./source/funding/replay/replay.py"},
++  fundingReplay:{title:"Contribution review replay — exact spectra and continuity",label:"Finite replay · 2 October 2026",note:"Recovered source, exact A/B/C checks, 128 frozen masks and three deliberate-error controls. Constructor/self-check only; independent review outstanding.",kind:"html",file:"./content/funding-replay.html",source:"./releases/UD_REVIEW_REPLAY_v0.1.zip"},
++  fundingReplayResults:{title:"Contribution review replay — exact result receipt",label:"Exact-arithmetic receipt · v0.1",note:"Scoped computational checks, not independent review or physical evidence.",kind:"json",file:"./source/funding/replay/results/replay_results.json",source:"./source/funding/replay/results/replay_results.json"},
++  fundingReplayCode:{title:"Contribution review replay — supplemental verifier",label:"Python standard library · v0.1",note:"Run from the complete release package; imports its preserved historical verifier.",kind:"code",file:"./source/funding/replay/replay.py",source:"./source/funding/replay/replay.py"},
+@@ -517 +517 @@ async function showUpdates(epoch){
+-async function showFunding(section,epoch){
++async function showContribution(section,epoch){
+@@ -519 +519 @@ async function showFunding(section,epoch){
+-    const response=await fetch('./content/funding.html');if(!response.ok)throw Error(response.status);
++    const response=await fetch('./content/contribution.html');if(!response.ok)throw Error(response.status);
+@@ -522,2 +522,2 @@ async function showFunding(section,epoch){
+-    updateEdition('Research support · 3 October 2026','Proposed resources, research milestones and a runnable external-review package. No award or independent review is implied.','./source/funding/UD_RESEARCH_SUPPORT_BRIEF_v0.1.md');
+-    document.title='Support UD Research — Unified Dynamics';
++    updateEdition('Contribution · Volunteer expertise and practical support','Bounded tasks for mathematicians, scientists, independent reviewers and code contributors. Reviews retain scope-specific status.','./source/contribution/UD_CONTRIBUTION_GUIDE_v0.1.md');
++    document.title='Contribution — Unified Dynamics';
+@@ -527 +527 @@ async function showFunding(section,epoch){
+-    main.innerHTML='<section class="collection-header"><h1>Funding page unavailable</h1><p>Please reload, or <a href="#/home">return home</a>.</p></section>';
++    main.innerHTML='<section class="collection-header"><h1>Contribution page unavailable</h1><p>Please reload, or <a href="#/home">return home</a>.</p></section>';
+@@ -591,2 +591 @@ function activeRouteFor(s){
+-  if(s==="funding")return "funding";
+-  if(s==="funding")return "funding";
++  if(s==="contribution"||s==="funding")return "contribution";
+@@ -598 +597 @@ function activeRouteFor(s){
+-function route(){const epoch=++routeEpoch;const [s,query=""]=slug().split("?");const section=new URLSearchParams(query).get("section"),active=activeRouteFor(s);document.documentElement.dataset.page=active||"home";document.title='Unified Dynamics — Tetrahedral Packet Complexes';setActive(active);if(s==="home")showHome(section,epoch);else if(s==="updates")showUpdates(epoch);else if(s==="primer")showPrimer(section,epoch);else if(s==="advanced")showAdvanced(section,epoch);else if(s==="what-if")showWhatIf(section,epoch);else if(s==="applications")showApplications(section,epoch);else if(s==="funding")showFunding(section,epoch);else if(s==="funding")showFunding(section,epoch);else if(s==="record")showRecord();else if(s==="manuscript")showDocument("manuscript",section,epoch);else if(s.startsWith("doc/"))showDocument(s.slice(4),section,epoch);else if(collections[s])showCollection(s);else showHome(section,epoch)}
++function route(){const epoch=++routeEpoch;const [s,query=""]=slug().split("?");const section=new URLSearchParams(query).get("section"),active=activeRouteFor(s);document.documentElement.dataset.page=active||"home";document.title='Unified Dynamics — Tetrahedral Packet Complexes';setActive(active);if(s==="home")showHome(section,epoch);else if(s==="updates")showUpdates(epoch);else if(s==="primer")showPrimer(section,epoch);else if(s==="advanced")showAdvanced(section,epoch);else if(s==="what-if")showWhatIf(section,epoch);else if(s==="applications")showApplications(section,epoch);else if(s==="contribution"||s==="funding")showContribution(section,epoch);else if(s==="record")showRecord();else if(s==="manuscript")showDocument("manuscript",section,epoch);else if(s.startsWith("doc/"))showDocument(s.slice(4),section,epoch);else if(collections[s])showCollection(s);else showHome(section,epoch)}
+diff --git a/dist/content/funding.html b/dist/content/funding.html
+index 55cd637..f7c2dbb 100644
+--- a/dist/content/funding.html
++++ b/dist/content/funding.html
+@@ -2,6 +2,6 @@
+-  <p class="eyebrow">Funding · Independent theoretical research</p>
+-  <h1>Support UD Research</h1>
+-  <p class="funding-lead">Support independent mathematical review and the computing resources needed for reproducible research.</p>
+-  <p>Unified Dynamics explores how geometric constraints and admissible dynamics on finite tetrahedral structures can support a mathematical framework with testable connections to physics. Funding would advance explicit calculations, simulations and independent review, with proposed physical interpretations assessed separately.</p>
+-  <div class="funding-actions"><a class="home-button primary" href="./source/funding/UD_RESEARCH_SUPPORT_BRIEF_v0.1.md" download>Download the funding brief</a><a class="home-button secondary" href="#/funding?section=review-evidence">Inspect the review package</a></div>
+-  <p class="funding-status">As of 3 October 2026 · Independent and unaffiliated · No funding received</p>
++  <p class="eyebrow">Contribution · Independent theoretical research</p>
++  <h1>Contribution</h1>
++  <p class="funding-lead">Help strengthen Unified Dynamics through mathematical scrutiny, scientific analysis, reproducible code and practical support.</p>
++  <p>Mathematicians, scientists, research software contributors and independent peer reviewers are invited to volunteer their time on a clearly defined task. A checked proof, a counterexample, a corrected calculation or a sharper statement of an open question can all move the work forward.</p>
++  <div class="funding-actions"><a class="home-button primary" href="https://github.com/ud-tetra/UD/issues/new?title=Contribution%20offer&amp;body=Area%20of%20expertise%3A%0A%0AArtifact%20or%20task%20of%20interest%3A%0A%0AProposed%20scope%20and%20availability%3A%0A%0APreferred%20acknowledgment%3A%0A" target="_blank" rel="noopener noreferrer">Offer a contribution</a><a class="home-button secondary" href="#/contribution?section=first-task">Choose a first task</a></div>
++  <p class="funding-status">Benjamin Walker Mayes · Independent research · Physical promotion remains 0</p>
+@@ -10,3 +10,20 @@
+-<section id="research-purpose">
+-  <h2>What support makes possible</h2>
+-  <p>Benjamin Walker Mayes began UD in March 2026. The immediate aim is to turn selected results into a compact body of mathematics and code that qualified researchers can reproduce, challenge and extend.</p>
++<section id="ways-to-contribute">
++  <h2>Ways to contribute</h2>
++  <div class="funding-options">
++    <article class="funding-option"><p class="eyebrow">Mathematics</p><h3>Check, challenge or extend a result</h3><p>Review definitions, proofs and assumptions in discrete geometry, algebraic topology, spectral operators or dynamical systems. Find counterexamples, repair gaps, simplify arguments or compare a construction with established mathematics.</p></article>
++    <article class="funding-option"><p class="eyebrow">Science</p><h3>Assess a proposed physical bridge</h3><p>Examine observables, units, source equations and measurement assumptions. Help define a falsifiable correspondence or review a proposed protocol against the evidence it would actually provide.</p></article>
++    <article class="funding-option"><p class="eyebrow">Reproducibility</p><h3>Replay and improve the code</h3><p>Independently run a frozen calculation, check exact arithmetic and failure controls, document dependencies, or submit a small code improvement with a reproducible result receipt.</p></article>
++    <article class="funding-option"><p class="eyebrow">Clarity and context</p><h3>Improve the research record</h3><p>Clarify notation, identify related work, supply an exact paper or source equation, review a manuscript section, or help make a bounded result easier for another researcher to inspect.</p></article>
++  </div>
++</section>
++
++<section id="volunteer-review">
++  <h2>Volunteer independent peer review</h2>
++  <p>If you are a mathematician or scientist willing to scrutinize one defined claim, your help is welcome. Start with a specific artifact and version, agree a manageable scope, then assess the reasoning on its own merits.</p>
++  <ul><li><strong>Proof review:</strong> identify the hypotheses, check each inference and report missing steps or counterexamples.</li><li><strong>Independent reproduction:</strong> record the source version, environment, commands, results and any discrepancy.</li><li><strong>Scientific assessment:</strong> separate established mathematics from a proposed physical interpretation; examine testability, dimensional consistency and the required evidence.</li></ul>
++  <p>A useful review states what was checked, what remains unresolved and whether a correction is needed. Favorable and unfavorable findings are both valuable. Each review is recorded against its specific scope; the review summary and reviewer attribution are published with the reviewer's agreement. Constructor checks and independent reviews retain separate status.</p>
++  <p><a href="https://github.com/ud-tetra/UD/issues/new?title=Volunteer%20review%20offer&amp;body=Relevant%20background%3A%0A%0AClaim%20and%20artifact%20version%3A%0A%0AProposed%20review%20scope%3A%0A%0AAvailability%3A%0A%0APreferred%20attribution%3A%0A" target="_blank" rel="noopener noreferrer">Offer a volunteer review</a> or <a href="https://github.com/ud-tetra/UD/issues" target="_blank" rel="noopener noreferrer">join the repository discussion</a>.</p>
++</section>
++
++<section id="first-task">
++  <h2>Choose a bounded first task</h2>
+@@ -14,4 +31,4 @@
+-    <li><strong>Reproduce a bounded result.</strong><span>Publish complete definitions, executable calculations and failure checks. A finite spectral and continuity replay is now available below.</span></li>
+-    <li><strong>Obtain independent review.</strong><span>Commission mathematical scrutiny and, for a proposed experiment, a separate measurement review. Record corrections and limitations, including unfavorable findings.</span></li>
+-    <li><strong>Prepare a controlled test.</strong><span>Only after review, finalize an apparatus-specific protocol, instrument-access plan and fixed scoring rules. Run an initial circuit analogue if its feasibility and measurement requirements pass.</span></li>
+-    <li><strong>Release the evidence.</strong><span>Share methods, code, data and an agreed review summary. Distinguish mathematical results, analogue measurements and unresolved physical questions.</span></li>
++    <li><strong>Review a finite operator calculation.</strong><span>Inspect the exact spectra and continuity package below. Check one declared A/B/C spectrum, a proof step or a frozen face-mask case, and return a short review with the artifact version.</span></li>
++    <li><strong>Audit the receipt and entropy assumptions.</strong><span><a href="#/doc/receiptGapFrontier20261013">Review the receipt thermal-gap frontier</a>: check the corrected write/storage clock, the exact error bound or the physical-scale non-identifiability argument. Native gap selection and complete cyclic resource cost remain open.</span></li>
++    <li><strong>Recover a source equation.</strong><span>Connect one proposed correspondence to an exact paper, equation and stated assumptions. Distinguish the source result from the additional assumptions needed by UD.</span></li>
++    <li><strong>Return a small correction.</strong><span>Open an issue with a reproducible discrepancy or submit a focused pull request. Preserve the original record and explain the correction, its scope and how it was checked.</span></li>
+@@ -21,9 +38,6 @@
+-<section id="funding-needs">
+-  <h2>Equipment and independent review</h2>
+-  <p>The current support request is <strong>$10,500</strong> for two defined research needs. All amounts are preliminary US-dollar estimates, subject to quotations and agreed terms.</p>
+-  <div class="funding-options">
+-    <article class="funding-option"><p class="eyebrow">Research computing</p><h3>Dedicated laptop package</h3><p class="funding-amount">$6,500</p><p>Numerical simulations, symbolic calculations and reproducible code development, including configuration, support and backup storage.</p></article>
+-    <article class="funding-option"><p class="eyebrow">External scrutiny</p><h3>Independent mathematical review</h3><p class="funding-amount">$4,000</p><p>A bounded assessment of one defined result, its assumptions, executable reproduction and relationship to established mathematics.</p></article>
+-  </div>
+-  <p>Support may cover either item separately. Suitable in-kind equipment or resources would reduce the corresponding cash need.</p>
+-  <p><strong>Equipment justification:</strong> the planning baseline is a capable, expandable laptop with 64 GB RAM and 2 TB storage. The final CPU/GPU configuration needs representative simulation measurements and a dated quote. The small exact replay below does not itself require a GPU.</p>
++<section id="review-evidence">
++  <h2>Evidence you can inspect now</h2>
++  <p>The finite review package includes a recovered September mathematical note and exact-arithmetic verifier. Its supplemental replay checks the declared A/B/C spectra, all 128 frozen face-gate masks and three deliberately introduced errors.</p>
++  <div class="funding-evidence"><p class="eyebrow">Finite replay · v0.1</p><h3>Exact spectra and continuity on tetrahedral complexes</h3><p>Source snapshots, Python code, exact matrices, result receipts, reviewer questions and a SHA-256 manifest. Python standard library only.</p><div class="funding-actions"><a class="home-button primary" href="./releases/UD_REVIEW_REPLAY_v0.1.zip" download>Download the replay package</a><a class="home-button secondary" href="#/doc/fundingReplay">Read the scope and results</a></div></div>
++  <p><strong>Review status:</strong> the existing replay is constructor-checked. Independent proof review, novelty assessment and proof-assistant verification remain outstanding. Frozen-mask continuity does not establish a gate-transition law or a physical result.</p>
++  <p><a href="#/doc/fundingReplayResults">Exact result receipt</a> · <a href="#/doc/fundingReplayCode">Supplemental verifier</a> · <a href="#/manuscript">Research papers</a> · <a href="#/record">Living research record</a> · <a href="https://github.com/ud-tetra/UD" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+@@ -32,6 +46,5 @@
+-<section id="review-evidence">
+-  <h2>Review-ready evidence</h2>
+-  <p>The first funding-related evidence package recovers a September mathematical note and its exact-arithmetic verifier. A supplemental replay reproduces the declared A/B/C spectra and continuity checks, tests all 128 frozen face-gate masks, and detects three deliberately introduced errors.</p>
+-  <div class="funding-evidence"><p class="eyebrow">Finite replay · v0.1</p><h3>Exact spectra and continuity on tetrahedral complexes</h3><p>Includes source snapshots, Python code, exact matrices, result receipts, reviewer questions and a SHA-256 manifest. Python standard library only.</p><div class="funding-actions"><a class="home-button primary" href="./releases/UD_REVIEW_REPLAY_v0.1.zip" download>Download the replay package</a><a class="home-button secondary" href="#/doc/fundingReplay">Read the scope and results</a></div></div>
+-  <p><strong>Review status:</strong> these are constructor/self-checks. Independent peer review, novelty assessment and proof-assistant verification remain outstanding. The face-mask checks establish frozen-mask continuity, not a gate-transition law or a physical result.</p>
+-  <p><a href="#/doc/fundingReplayResults">Exact result receipt</a> · <a href="#/doc/fundingReplayCode">Supplemental verifier</a> · <a href="#/manuscript">Research papers</a> · <a href="#/record">Living research record</a></p>
++<section id="getting-started">
++  <h2>How to get involved</h2>
++  <ol><li>Choose an artifact or propose a bounded task.</li><li>Open a contribution offer with your relevant background, proposed scope and availability.</li><li>Agree the scope, deliverable and attribution before beginning a coordinated review.</li><li>Return your proof notes, code, result receipt or review report with clear assumptions and limitations.</li></ol>
++  <p>Contributions can be small and self-contained. Attribution, acknowledgments and any coauthorship are agreed according to the contribution. Referrals to suitable researchers or reviewers are welcome.</p>
++  <div class="funding-actions"><a class="home-button primary" href="./source/contribution/UD_CONTRIBUTION_GUIDE_v0.1.md" download>Download the contribution guide</a><a class="home-button secondary" href="https://orcid.org/0009-0002-5813-0724" target="_blank" rel="noopener noreferrer">Researcher profile</a></div>
+@@ -40,5 +53,5 @@
+-<section id="support-options">
+-  <h2>Ways to contribute</h2>
+-  <ul><li><strong>Project support:</strong> fund computing equipment or a scoped independent review.</li><li><strong>Independent expertise:</strong> offer a review or a referral in discrete geometry, spectral operators, mathematical physics or experimental metrology.</li><li><strong>In-kind resources:</strong> provide suitable computing equipment, compute access or calibrated laboratory access.</li><li><strong>Research hosting:</strong> explore an appropriate institutional or fiscal arrangement where a specific funding program requires one.</li></ul>
+-  <p>Prospective supporters can use the downloadable brief to discuss scope, resources and timing with Benjamin Walker Mayes. <a href="https://orcid.org/0009-0002-5813-0724" target="_blank" rel="noopener noreferrer">Researcher identity and public profile</a>.</p>
+-  <p>No payments are collected on this site. An award, review engagement or equipment contribution would require an agreed arrangement; no tax-deductibility or charitable status is represented.</p>
++<section id="practical-support">
++  <h2>Computing, equipment and financial support</h2>
++  <p>Practical contributions may include suitable computing equipment, compute access, research hosting or support for a separately agreed independent review. These are additional ways to help alongside volunteer expertise.</p>
++  <details class="funding-details"><summary>Equipment and paid-review planning estimates</summary><p>The 3 October 2026 planning brief proposed <strong>$6,500</strong> for a research laptop package and <strong>$4,000</strong> for a scoped independent mathematical review: <strong>$10,500</strong> total. These are preliminary US-dollar estimates, subject to quotations and agreed terms. Suitable in-kind resources reduce the corresponding cash need.</p><p>The computing baseline was 64 GB RAM and 2 TB storage; final configuration requires representative workload measurements and a dated quote. The small exact replay does not itself require a GPU.</p><p><a href="./source/funding/UD_RESEARCH_SUPPORT_BRIEF_v0.1.md" download>Download the historical equipment and review brief</a>.</p></details>
++  <p>No payments are collected on this site. Financial, equipment and paid-review arrangements require agreed terms. No charitable status or tax-deductibility is represented; reviewer payment is for careful work regardless of conclusion.</p>
+@@ -48,4 +61,3 @@
+-  <h2>Support pays for investigation</h2>
+-  <p>Reviewers are paid for their work regardless of their conclusion. Funding does not confer scientific endorsement, and a result that exposes an error or rules out a proposed construction is useful progress.</p>
+-  <p>Mathematical correspondence is assessed within its stated assumptions. A successful engineered analogue would support the tested correspondence, not establish UD as a theory of nature. <strong>Physical promotion remains 0.</strong></p>
+-  <p class="funding-status">Funding and research status snapshot: 3 October 2026. Scope-specific results do not replace the project's current theory record.</p>
++  <h2>Contribution and research accountability</h2>
++  <p>UD is an independent program exploring geometric constraints and admissible dynamics on finite tetrahedral structures. Contributions should make a defined claim clearer, more reproducible or better tested. Supporting the project or reviewing one artifact does not confer endorsement of the whole framework.</p>
++  <p>Mathematical results, candidate physical correspondences and empirical evidence retain distinct status. Corrections and unfavorable findings remain in the research record. <strong>Physical promotion remains 0.</strong></p>
+diff --git a/dist/content/updates.html b/dist/content/updates.html
+index 783e3cd..16424da 100644
+--- a/dist/content/updates.html
++++ b/dist/content/updates.html
+@@ -0,0 +1 @@
++<aside class="reading-rule"><h2>Contribution page · 13 October 2026</h2><p>The former Funding tab is now Contribution: volunteer mathematics, scientific analysis, independent peer review, reproducible code and practical support. Includes bounded starter tasks, a contribution guide and a GitHub intake link. <a href="#/contribution">Explore ways to contribute</a>.</p></aside>
+diff --git a/dist/index.html b/dist/index.html
+index 676c1a8..8ab0bee 100644
+--- a/dist/index.html
++++ b/dist/index.html
+@@ -68 +68 @@
+-<a href="#/funding" data-route="funding">Funding</a>
++<a href="#/contribution" data-route="contribution">Contribution</a>
+@@ -85 +85 @@
+-<a href="#/funding" data-route="funding">Funding</a>
++<a href="#/contribution" data-route="contribution">Contribution</a>
