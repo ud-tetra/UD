@@ -1,0 +1,37 @@
+{
+  "program": "RSP-1",
+  "version": "0.1",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "state_fields": [
+    "T",
+    "L_cache (code L)",
+    "q",
+    "r",
+    "finite_bank",
+    "cursor",
+    "frozen_branch"
+  ],
+  "frame": "fixed labeled identity",
+  "attempt_unit": "ordinal only; no seconds",
+  "status": "CANDIDATE_PREPARED_REGISTER_SOURCE_INTERFACE_COMPLETION",
+  "choices": {
+    "integrity": "T+=T (fixed prepared restriction)",
+    "latent_source": "L+=T*1[r>0]*(1-q_old)",
+    "consumption": "r+=r-omega+",
+    "close_response": "h+=0, q+=omega+",
+    "hold_response": "h+=I+*q_old, q+=omega+ OR (T*q_old)",
+    "renewal": "only at r=q=L_cache=0; load one prepared bank tuple and advance cursor; inspect next tick",
+    "commit": "every complete-state change",
+    "stop": "complete-state fixed point; exhaustion versus latch/strand distinguished"
+  },
+  "not_identified_with": [
+    "native Hodge latent support",
+    "physical energy",
+    "action unit",
+    "native clock",
+    "native repair/frame/renewal law"
+  ],
+  "native_source_status": "OPEN",
+  "scoring": "synthetic only; no physical score"
+}
