@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UD pre-event full-mask response receipt v1.0",
+  "type": "object",
+  "description": "Structural shape only. Passing does not authenticate native laws, chronology or score eligibility.",
+  "required": [
+    "schema_version",
+    "domain",
+    "source_class",
+    "target_exposed",
+    "update_index",
+    "prior_theta",
+    "prior_T",
+    "prior_L",
+    "frame_old_to_current",
+    "prospective_T",
+    "prospective_L",
+    "idle_h",
+    "input_sealed_at",
+    "prediction_frozen_at",
+    "endpoint_release_at",
+    "time_semantics",
+    "null_event_policy",
+    "tie_policy",
+    "artifacts"
+  ],
+  "properties": {
+    "prior_theta": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "prior_T": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "prior_L": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "prospective_T": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "prospective_L": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "idle_h": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "frame_old_to_current": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "description": "Entry old\u2192current; transport out[permutation[old]]=mask[old]."
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "domain": {
+      "const": "three_opposite_pairs"
+    },
+    "time_semantics": {
+      "const": "ordinal_update_index"
+    },
+    "target_exposed": {
+      "const": false
+    },
+    "source_class": {
+      "enum": [
+        "synthetic",
+        "native_candidate"
+      ]
+    },
+    "update_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "null_event_policy": {
+      "enum": [
+        "hold",
+        "source_defined"
+      ]
+    },
+    "tie_policy": {
+      "enum": [
+        "hold",
+        "source_defined"
+      ]
+    },
+    "source_program": {
+      "type": "object"
+    },
+    "input_sealed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Declared custody time only; no authentication implied."
+    },
+    "prediction_frozen_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Declared custody time only; no authentication implied."
+    },
+    "endpoint_release_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Declared custody time only; no authentication implied."
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "source_class": {
+            "const": "native_candidate"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "source_program"
+        ],
+        "properties": {
+          "source_program": {
+            "required": [
+              "complete_state",
+              "viability_update",
+              "idle_response",
+              "event_and_null_rule",
+              "frame_rule",
+              "state_feedback",
+              "renewal_rule",
+              "collision_ties"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
