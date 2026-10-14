@@ -1,0 +1,234 @@
+{
+  "status": "PASS scoped conditional reconstruction and write family",
+  "physical_promotion": 0,
+  "independent_review": "OPEN",
+  "original_matrix_recovered": false,
+  "candidate_matrix": [
+    [
+      "3/7",
+      "1/21",
+      "1/21",
+      "1/21",
+      "1/7",
+      "1/7",
+      "1/7"
+    ],
+    [
+      "1/21",
+      "3/7",
+      "1/21",
+      "1/21",
+      "1/7",
+      "1/7",
+      "1/7"
+    ],
+    [
+      "1/21",
+      "1/21",
+      "3/7",
+      "1/21",
+      "1/7",
+      "1/7",
+      "1/7"
+    ],
+    [
+      "1/21",
+      "1/21",
+      "1/21",
+      "3/7",
+      "1/7",
+      "1/7",
+      "1/7"
+    ],
+    [
+      "1/7",
+      "1/7",
+      "1/7",
+      "1/7",
+      "3/7",
+      "0",
+      "0"
+    ],
+    [
+      "1/7",
+      "1/7",
+      "1/7",
+      "1/7",
+      "0",
+      "3/7",
+      "0"
+    ],
+    [
+      "1/7",
+      "1/7",
+      "1/7",
+      "1/7",
+      "0",
+      "0",
+      "3/7"
+    ]
+  ],
+  "candidate_assumptions": [
+    "S4 action on four VF and three EE channels",
+    "real self-adjoint operator",
+    "uniform stationary PF vector",
+    "reported sector eigenvalues; signed invariant residue kernel"
+  ],
+  "rank": 6,
+  "charpoly_at_3over4": "-268119/275365888",
+  "support_nonzeros": 43,
+  "support_mean": "43/7",
+  "same_spectrum_counterexample": {
+    "matrix": [
+      [
+        "11/28",
+        "1/84",
+        "1/84",
+        "1/84",
+        "1/7",
+        "1/7",
+        "1/7"
+      ],
+      [
+        "1/84",
+        "11/28",
+        "1/84",
+        "1/84",
+        "1/7",
+        "1/7",
+        "1/7"
+      ],
+      [
+        "1/84",
+        "1/84",
+        "11/28",
+        "1/84",
+        "1/7",
+        "1/7",
+        "1/7"
+      ],
+      [
+        "1/84",
+        "1/84",
+        "1/84",
+        "11/28",
+        "1/7",
+        "1/7",
+        "1/7"
+      ],
+      [
+        "1/7",
+        "1/7",
+        "1/7",
+        "1/7",
+        "10/21",
+        "1/21",
+        "1/21"
+      ],
+      [
+        "1/7",
+        "1/7",
+        "1/7",
+        "1/7",
+        "1/21",
+        "10/21",
+        "1/21"
+      ],
+      [
+        "1/7",
+        "1/7",
+        "1/7",
+        "1/7",
+        "1/21",
+        "1/21",
+        "10/21"
+      ]
+    ],
+    "PF_vector_ratio": "VF/EE=3/4",
+    "nonnegative": true,
+    "unit_metric_selfadjoint": true,
+    "row_stochastic": false,
+    "support_nonzeros": 49
+  },
+  "support_identity_warning": "43/7 equals C07 number only under candidate assumptions; no source identity inferred",
+  "native_q_selection": "OPEN; q=cos^2(g tau/hbar) for arbitrary coupling/time",
+  "finite_memory_reuse": "coherent recurrence; six writes restore carrier for theta=pi/6",
+  "rows": [
+    {
+      "q": "3/4",
+      "writes": 0,
+      "fresh_carrier_energy_fraction": "1",
+      "fresh_memory_energy_fraction": "0",
+      "reused_carrier_energy_fraction": "1",
+      "history_entropy_conditional_active_nats": -0.0,
+      "retained_source_information_nats": 0.0,
+      "optimal_input_error_exact": "1/2",
+      "information_per_n_cell_area_coefficient": null,
+      "fresh_blank_cells": 0
+    },
+    {
+      "q": "3/4",
+      "writes": 1,
+      "fresh_carrier_energy_fraction": "3/4",
+      "fresh_memory_energy_fraction": "1/4",
+      "reused_carrier_energy_fraction": "3/4",
+      "history_entropy_conditional_active_nats": 0.5623351446188083,
+      "retained_source_information_nats": 0.09560258894703261,
+      "optimal_input_error_exact": "3/8",
+      "information_per_n_cell_area_coefficient": 0.09560258894703261,
+      "fresh_blank_cells": 1
+    },
+    {
+      "q": "3/4",
+      "writes": 3,
+      "fresh_carrier_energy_fraction": "27/64",
+      "fresh_memory_energy_fraction": "37/64",
+      "reused_carrier_energy_fraction": "0",
+      "history_entropy_conditional_active_nats": 1.3004000219309944,
+      "retained_source_information_nats": 0.26086513074824624,
+      "optimal_input_error_exact": "27/128",
+      "information_per_n_cell_area_coefficient": 0.08695504358274875,
+      "fresh_blank_cells": 3
+    },
+    {
+      "q": "3/4",
+      "writes": 6,
+      "fresh_carrier_energy_fraction": "729/4096",
+      "fresh_memory_energy_fraction": "3367/4096",
+      "reused_carrier_energy_fraction": "1",
+      "history_entropy_conditional_active_nats": 1.8490062811831325,
+      "retained_source_information_nats": 0.4430671455332853,
+      "optimal_input_error_exact": "729/8192",
+      "information_per_n_cell_area_coefficient": 0.07384452425554755,
+      "fresh_blank_cells": 6
+    },
+    {
+      "q": "3/4",
+      "writes": 7,
+      "fresh_carrier_energy_fraction": "2187/16384",
+      "fresh_memory_energy_fraction": "14197/16384",
+      "reused_carrier_energy_fraction": "3/4",
+      "history_entropy_conditional_active_nats": 1.9490898555061578,
+      "retained_source_information_nats": 0.48773347189722305,
+      "optimal_input_error_exact": "2187/32768",
+      "information_per_n_cell_area_coefficient": 0.06967621027103187,
+      "fresh_blank_cells": 7
+    },
+    {
+      "q": "3/4",
+      "writes": 16,
+      "fresh_carrier_energy_fraction": "43046721/4294967296",
+      "fresh_memory_energy_fraction": "4251920575/4294967296",
+      "reused_carrier_energy_fraction": "1/4",
+      "history_entropy_conditional_active_nats": 2.226796347135968,
+      "retained_source_information_nats": 0.6650442841050916,
+      "optimal_input_error_exact": "43046721/8589934592",
+      "information_per_n_cell_area_coefficient": 0.04156526775656823,
+      "fresh_blank_cells": 16
+    }
+  ],
+  "history_entropy_limit_q_3over4_nats": 2.249340578475233,
+  "full_controller_reset_cost": "OPEN",
+  "boundary_area_law": "NOT DERIVED",
+  "G_input": false
+}
