@@ -1,0 +1,590 @@
+{
+  "status": "PASS",
+  "lane": "development - no registry entry",
+  "physical_promotion": 0,
+  "independent_review": false,
+  "fine_graph": {
+    "states": 8,
+    "action_distinct_edges": 192,
+    "actions_per_state": 24,
+    "active_receipts": 44,
+    "null_symbols": 1,
+    "null_distinguished_receipts_total": 45,
+    "active_receipt_fiber_histogram": {
+      "3": 26,
+      "2": 2,
+      "6": 14,
+      "9": 2
+    },
+    "null_fiber_size": 8,
+    "unflagged_codes": 44,
+    "null_conflation_is_word_coarsening_given_initial_weight": true,
+    "unflagged_fiber_histogram": {
+      "3": 28,
+      "9": 4,
+      "6": 12
+    },
+    "same_initial_weight_all_active_receipts_lift": true,
+    "scope": "all-open declared permutation/one-bit graph, not native move admission"
+  },
+  "reference_kernel": {
+    "fine_rows_sum_one": true,
+    "fine_symmetric": true,
+    "coarse_matrix": [
+      [
+        "1/4",
+        "3/4",
+        "0",
+        "0"
+      ],
+      [
+        "1/4",
+        "1/4",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2",
+        "1/4",
+        "1/4"
+      ],
+      [
+        "0",
+        "0",
+        "3/4",
+        "1/4"
+      ]
+    ],
+    "coarse_stationary": [
+      "1/8",
+      "3/8",
+      "3/8",
+      "1/8"
+    ],
+    "coarse_eigenvalues": [
+      "1",
+      "1/2",
+      "0",
+      "-1/2"
+    ],
+    "alternative_stationary_target": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "alternative_up_probabilities": [
+      "1/8",
+      "1/8",
+      "1/8",
+      "0"
+    ],
+    "alternative_down_probabilities": [
+      "0",
+      "1/8",
+      "1/8",
+      "1/8"
+    ],
+    "native_rate_selection": false
+  },
+  "winding_counterexample": {
+    "receipt": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "same_initial_and_final_state": 0,
+    "one_step_hidden_values_null_distinguished": [
+      -1,
+      1
+    ],
+    "one_step_hidden_values_unflagged": [
+      -1,
+      0,
+      1
+    ],
+    "reverse_antisymmetry": true,
+    "frame_composition_compatibility": false,
+    "full_S3_scalar_covariance": false,
+    "finite_horizons_null_distinguished": [
+      {
+        "N": 1,
+        "winding_values": 2,
+        "required_fixed_length_bits": 1,
+        "conditional_distribution_numerators": {
+          "-1": 1,
+          "1": 1
+        },
+        "denominator": 2
+      },
+      {
+        "N": 2,
+        "winding_values": 3,
+        "required_fixed_length_bits": 2,
+        "conditional_distribution_numerators": {
+          "-2": 1,
+          "0": 2,
+          "2": 1
+        },
+        "denominator": 4
+      },
+      {
+        "N": 3,
+        "winding_values": 4,
+        "required_fixed_length_bits": 2,
+        "conditional_distribution_numerators": {
+          "-3": 1,
+          "-1": 3,
+          "1": 3,
+          "3": 1
+        },
+        "denominator": 8
+      },
+      {
+        "N": 4,
+        "winding_values": 5,
+        "required_fixed_length_bits": 3,
+        "conditional_distribution_numerators": {
+          "-4": 1,
+          "-2": 4,
+          "0": 6,
+          "2": 4,
+          "4": 1
+        },
+        "denominator": 16
+      },
+      {
+        "N": 5,
+        "winding_values": 6,
+        "required_fixed_length_bits": 3,
+        "conditional_distribution_numerators": {
+          "-5": 1,
+          "-3": 5,
+          "-1": 10,
+          "1": 10,
+          "3": 5,
+          "5": 1
+        },
+        "denominator": 32
+      },
+      {
+        "N": 6,
+        "winding_values": 7,
+        "required_fixed_length_bits": 3,
+        "conditional_distribution_numerators": {
+          "-6": 1,
+          "-4": 6,
+          "-2": 15,
+          "0": 20,
+          "2": 15,
+          "4": 6,
+          "6": 1
+        },
+        "denominator": 64
+      },
+      {
+        "N": 7,
+        "winding_values": 8,
+        "required_fixed_length_bits": 3,
+        "conditional_distribution_numerators": {
+          "-7": 1,
+          "-5": 7,
+          "-3": 21,
+          "-1": 35,
+          "1": 35,
+          "3": 21,
+          "5": 7,
+          "7": 1
+        },
+        "denominator": 128
+      },
+      {
+        "N": 8,
+        "winding_values": 9,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-8": 1,
+          "-6": 8,
+          "-4": 28,
+          "-2": 56,
+          "0": 70,
+          "2": 56,
+          "4": 28,
+          "6": 8,
+          "8": 1
+        },
+        "denominator": 256
+      },
+      {
+        "N": 9,
+        "winding_values": 10,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-9": 1,
+          "-7": 9,
+          "-5": 36,
+          "-3": 84,
+          "-1": 126,
+          "1": 126,
+          "3": 84,
+          "5": 36,
+          "7": 9,
+          "9": 1
+        },
+        "denominator": 512
+      },
+      {
+        "N": 10,
+        "winding_values": 11,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-10": 1,
+          "-8": 10,
+          "-6": 45,
+          "-4": 120,
+          "-2": 210,
+          "0": 252,
+          "2": 210,
+          "4": 120,
+          "6": 45,
+          "8": 10,
+          "10": 1
+        },
+        "denominator": 1024
+      },
+      {
+        "N": 11,
+        "winding_values": 12,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-11": 1,
+          "-9": 11,
+          "-7": 55,
+          "-5": 165,
+          "-3": 330,
+          "-1": 462,
+          "1": 462,
+          "3": 330,
+          "5": 165,
+          "7": 55,
+          "9": 11,
+          "11": 1
+        },
+        "denominator": 2048
+      },
+      {
+        "N": 12,
+        "winding_values": 13,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-12": 1,
+          "-10": 12,
+          "-8": 66,
+          "-6": 220,
+          "-4": 495,
+          "-2": 792,
+          "0": 924,
+          "2": 792,
+          "4": 495,
+          "6": 220,
+          "8": 66,
+          "10": 12,
+          "12": 1
+        },
+        "denominator": 4096
+      }
+    ],
+    "finite_horizons_unflagged": [
+      {
+        "N": 1,
+        "winding_values": 3,
+        "required_fixed_length_bits": 2,
+        "conditional_distribution_numerators": {
+          "-1": 1,
+          "0": 1,
+          "1": 1
+        },
+        "denominator": 3
+      },
+      {
+        "N": 2,
+        "winding_values": 5,
+        "required_fixed_length_bits": 3,
+        "conditional_distribution_numerators": {
+          "-2": 1,
+          "-1": 2,
+          "0": 3,
+          "1": 2,
+          "2": 1
+        },
+        "denominator": 9
+      },
+      {
+        "N": 3,
+        "winding_values": 7,
+        "required_fixed_length_bits": 3,
+        "conditional_distribution_numerators": {
+          "-3": 1,
+          "-2": 3,
+          "-1": 6,
+          "0": 7,
+          "1": 6,
+          "2": 3,
+          "3": 1
+        },
+        "denominator": 27
+      },
+      {
+        "N": 4,
+        "winding_values": 9,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-4": 1,
+          "-3": 4,
+          "-2": 10,
+          "-1": 16,
+          "0": 19,
+          "1": 16,
+          "2": 10,
+          "3": 4,
+          "4": 1
+        },
+        "denominator": 81
+      },
+      {
+        "N": 5,
+        "winding_values": 11,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-5": 1,
+          "-4": 5,
+          "-3": 15,
+          "-2": 30,
+          "-1": 45,
+          "0": 51,
+          "1": 45,
+          "2": 30,
+          "3": 15,
+          "4": 5,
+          "5": 1
+        },
+        "denominator": 243
+      },
+      {
+        "N": 6,
+        "winding_values": 13,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-6": 1,
+          "-5": 6,
+          "-4": 21,
+          "-3": 50,
+          "-2": 90,
+          "-1": 126,
+          "0": 141,
+          "1": 126,
+          "2": 90,
+          "3": 50,
+          "4": 21,
+          "5": 6,
+          "6": 1
+        },
+        "denominator": 729
+      },
+      {
+        "N": 7,
+        "winding_values": 15,
+        "required_fixed_length_bits": 4,
+        "conditional_distribution_numerators": {
+          "-7": 1,
+          "-6": 7,
+          "-5": 28,
+          "-4": 77,
+          "-3": 161,
+          "-2": 266,
+          "-1": 357,
+          "0": 393,
+          "1": 357,
+          "2": 266,
+          "3": 161,
+          "4": 77,
+          "5": 28,
+          "6": 7,
+          "7": 1
+        },
+        "denominator": 2187
+      },
+      {
+        "N": 8,
+        "winding_values": 17,
+        "required_fixed_length_bits": 5,
+        "conditional_distribution_numerators": {
+          "-8": 1,
+          "-7": 8,
+          "-6": 36,
+          "-5": 112,
+          "-4": 266,
+          "-3": 504,
+          "-2": 784,
+          "-1": 1016,
+          "0": 1107,
+          "1": 1016,
+          "2": 784,
+          "3": 504,
+          "4": 266,
+          "5": 112,
+          "6": 36,
+          "7": 8,
+          "8": 1
+        },
+        "denominator": 6561
+      },
+      {
+        "N": 9,
+        "winding_values": 19,
+        "required_fixed_length_bits": 5,
+        "conditional_distribution_numerators": {
+          "-9": 1,
+          "-8": 9,
+          "-7": 45,
+          "-6": 156,
+          "-5": 414,
+          "-4": 882,
+          "-3": 1554,
+          "-2": 2304,
+          "-1": 2907,
+          "0": 3139,
+          "1": 2907,
+          "2": 2304,
+          "3": 1554,
+          "4": 882,
+          "5": 414,
+          "6": 156,
+          "7": 45,
+          "8": 9,
+          "9": 1
+        },
+        "denominator": 19683
+      },
+      {
+        "N": 10,
+        "winding_values": 21,
+        "required_fixed_length_bits": 5,
+        "conditional_distribution_numerators": {
+          "-10": 1,
+          "-9": 10,
+          "-8": 55,
+          "-7": 210,
+          "-6": 615,
+          "-5": 1452,
+          "-4": 2850,
+          "-3": 4740,
+          "-2": 6765,
+          "-1": 8350,
+          "0": 8953,
+          "1": 8350,
+          "2": 6765,
+          "3": 4740,
+          "4": 2850,
+          "5": 1452,
+          "6": 615,
+          "7": 210,
+          "8": 55,
+          "9": 10,
+          "10": 1
+        },
+        "denominator": 59049
+      },
+      {
+        "N": 11,
+        "winding_values": 23,
+        "required_fixed_length_bits": 5,
+        "conditional_distribution_numerators": {
+          "-11": 1,
+          "-10": 11,
+          "-9": 66,
+          "-8": 275,
+          "-7": 880,
+          "-6": 2277,
+          "-5": 4917,
+          "-4": 9042,
+          "-3": 14355,
+          "-2": 19855,
+          "-1": 24068,
+          "0": 25653,
+          "1": 24068,
+          "2": 19855,
+          "3": 14355,
+          "4": 9042,
+          "5": 4917,
+          "6": 2277,
+          "7": 880,
+          "8": 275,
+          "9": 66,
+          "10": 11,
+          "11": 1
+        },
+        "denominator": 177147
+      },
+      {
+        "N": 12,
+        "winding_values": 25,
+        "required_fixed_length_bits": 5,
+        "conditional_distribution_numerators": {
+          "-12": 1,
+          "-11": 12,
+          "-10": 78,
+          "-9": 352,
+          "-8": 1221,
+          "-7": 3432,
+          "-6": 8074,
+          "-5": 16236,
+          "-4": 28314,
+          "-3": 43252,
+          "-2": 58278,
+          "-1": 69576,
+          "0": 73789,
+          "1": 69576,
+          "2": 58278,
+          "3": 43252,
+          "4": 28314,
+          "5": 16236,
+          "6": 8074,
+          "7": 3432,
+          "8": 1221,
+          "9": 352,
+          "10": 78,
+          "11": 12,
+          "12": 1
+        },
+        "denominator": 531441
+      }
+    ],
+    "resource_bound_null_distinguished": "N+1 supplemental symbols, ceil(log2(N+1)) fixed-length bits for exact total winding on this repeated active receipt word",
+    "resource_bound_unflagged": "2N+1 supplemental symbols, ceil(log2(2N+1)) fixed-length bits when the same code also hides null events"
+  },
+  "scalar_no_loop": {
+    "unknowns": 72,
+    "constraint_rows": 462,
+    "exact_rank": 69,
+    "nullity": 3,
+    "basis": "three Hamming-shell potential differences",
+    "hypotheses": [
+      "real scalar increments",
+      "frame composition cocycle",
+      "full S3 scalar covariance",
+      "flip reversal antisymmetry",
+      "composite event equals frame then flip"
+    ],
+    "conclusion": "W=F(w_final)-F(w_initial); closed histories have zero W"
+  },
+  "not_derived": [
+    "native admission masks and rates",
+    "physical winding interpretation",
+    "burden scale kappa",
+    "physical event time",
+    "apparatus acquisition, energy and area costs"
+  ]
+}
