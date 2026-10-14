@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "version": "0.1",
+  "physical_promotion": 0,
+  "exact_weighted_path_metric_spectra": 10,
+  "exact_squared_edge_identities": 110,
+  "exact_spin_clock_characteristic_polynomials": 25,
+  "complete_word_padding_cases": 32,
+  "floating_timing_diagnostics": 861,
+  "floating_tolerance": 2e-14,
+  "rational_protocol_example_bound": "288107/7000000",
+  "checks": [
+    "positive rational metrics",
+    "metric-skew Hodge adjoint",
+    "harmonic kernel vector",
+    "exact rational determinant/spectrum",
+    "odd/full-carrier kernel obstruction",
+    "identity padding preserves complete terminal payload",
+    "unit-metric tetrahedron spectral class excluded",
+    "rate/norm/variance/dimension accounting",
+    "jitter bound arithmetic"
+  ],
+  "source_sha256": {
+    "programmed_clock.py": "ab4dfcee24da59bb9d8f22e46411963a77dc30428d2338698a0b735caa06f7d6",
+    "joint_carrier.py": "29f1685df53432edcf2662b07d6fefe81abcc3a35552ebe664f3bc9f2611da71",
+    "rsp1.py": "8e9db2e432d9defb78dde206ac8c39714f291c0d9ecb8dc63279d0496e9f7ca8",
+    "response_contract.py": "79a7c61580a423604c7c7b2c72d30ee069a54f33fbba386ee3ce8b11eeaa9c3b"
+  },
+  "scope": "Exact rational/integer constructor checks; timing plots are numerical formula diagnostics. General operator/mixed-state/native-residual theorems use supplied proofs. No dense default matrix, native source, physical experiment, CRL promotion or human review."
+}

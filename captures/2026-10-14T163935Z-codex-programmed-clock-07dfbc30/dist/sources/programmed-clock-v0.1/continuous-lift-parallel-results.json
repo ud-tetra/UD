@@ -1,0 +1,404 @@
+{
+  "cases": [
+    {
+      "B": 0,
+      "K": 1,
+      "N": 1,
+      "T_in_alpha_units": "pi/2",
+      "bare_clock_endpoint_joint_trace_distance": 1.0,
+      "d": 2,
+      "dressed_vs_bare_operator_norm_gap": 2.0000000000000004,
+      "endpoint_phase": "-1j",
+      "endpoint_vector_error": 0.0,
+      "exact_algebra_scope": "Entire dirty-register payload and all clock addresses; integer metric-adjoint and permutation identities.",
+      "full_return_in_alpha_units": "pi",
+      "full_return_is_projective_not_necessarily_identity": true,
+      "full_return_phase": -1,
+      "full_return_vector_error": 2.1901529220207316e-16,
+      "gateword": [
+        "COMPUTE"
+      ],
+      "joint_dimension": 16,
+      "m": 2,
+      "midpoint_best_single_clock_branch_joint_trace_distance": 0.7071067811865476,
+      "midpoint_clock_probabilities": [
+        0.5,
+        0.4999999999999998
+      ],
+      "midpoint_expected_binomial_probabilities": [
+        0.5,
+        0.5
+      ],
+      "midpoint_history_branch_max_vector_error": 7.850462293418876e-17,
+      "normalized_hamiltonian_hermitian": true,
+      "numeric_scope": "Dense normalized Hamiltonian spectrum and correlated two-reference input evolution, alpha=1.",
+      "operator_gap_exact_alpha_coefficient": 2,
+      "operator_gap_exact_justification": "An exact nonzero common-minus payload vector makes H_p=-H_bare on its clock sector; the clock top eigenvalue K attains gap 2K. Triangle norm bound supplies matching upper bound.",
+      "payload_dimension": 8,
+      "restart_resource_claim": "None. Payload resets export records; full clock recurrence returns the entire coherent joint state including donor/outgoing registers.",
+      "spectrum_max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "B": 1,
+      "K": 3,
+      "N": 1,
+      "T_in_alpha_units": "pi/2",
+      "bare_clock_endpoint_joint_trace_distance": 1.0,
+      "d": 2,
+      "dressed_vs_bare_operator_norm_gap": 6.000000000000008,
+      "endpoint_phase": "1j",
+      "endpoint_vector_error": 1.4036249603322952e-16,
+      "exact_algebra_scope": "Entire dirty-register payload and all clock addresses; integer metric-adjoint and permutation identities.",
+      "full_return_in_alpha_units": "pi",
+      "full_return_is_projective_not_necessarily_identity": true,
+      "full_return_phase": -1,
+      "full_return_vector_error": 2.639360243127857e-16,
+      "gateword": [
+        "COMPUTE",
+        "RESET_SWAP",
+        "COMPUTE"
+      ],
+      "joint_dimension": 256,
+      "m": 2,
+      "midpoint_best_single_clock_branch_joint_trace_distance": 0.7905694150420947,
+      "midpoint_clock_probabilities": [
+        0.12499999999999994,
+        0.37500000000000017,
+        0.37499999999999994,
+        0.12499999999999992
+      ],
+      "midpoint_expected_binomial_probabilities": [
+        0.125,
+        0.375,
+        0.375,
+        0.125
+      ],
+      "midpoint_history_branch_max_vector_error": 2.3551386880256624e-16,
+      "normalized_hamiltonian_hermitian": true,
+      "numeric_scope": "Dense normalized Hamiltonian spectrum and correlated two-reference input evolution, alpha=1.",
+      "operator_gap_exact_alpha_coefficient": 6,
+      "operator_gap_exact_justification": "An exact nonzero common-minus payload vector makes H_p=-H_bare on its clock sector; the clock top eigenvalue K attains gap 2K. Triangle norm bound supplies matching upper bound.",
+      "payload_dimension": 64,
+      "restart_resource_claim": "None. Payload resets export records; full clock recurrence returns the entire coherent joint state including donor/outgoing registers.",
+      "spectrum_max_abs_error": 8.992806499463768e-15,
+      "status": "PASS"
+    }
+  ],
+  "checker_sha256": "71924ae467e4ee870693a83f2468187ea0761a4cb44d235ca367aa92603356ad",
+  "clock_exact_checks": [
+    {
+      "K": 1,
+      "dimension": 2,
+      "exact_checks": "PASS",
+      "metric": [
+        1,
+        1
+      ],
+      "spectrum": [
+        1,
+        -1
+      ]
+    },
+    {
+      "K": 2,
+      "dimension": 3,
+      "exact_checks": "PASS",
+      "metric": [
+        1,
+        2,
+        1
+      ],
+      "spectrum": [
+        2,
+        0,
+        -2
+      ]
+    },
+    {
+      "K": 3,
+      "dimension": 4,
+      "exact_checks": "PASS",
+      "metric": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "spectrum": [
+        3,
+        1,
+        -1,
+        -3
+      ]
+    },
+    {
+      "K": 4,
+      "dimension": 5,
+      "exact_checks": "PASS",
+      "metric": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "spectrum": [
+        4,
+        2,
+        0,
+        -2,
+        -4
+      ]
+    },
+    {
+      "K": 5,
+      "dimension": 6,
+      "exact_checks": "PASS",
+      "metric": [
+        1,
+        5,
+        10,
+        10,
+        5,
+        1
+      ],
+      "spectrum": [
+        5,
+        3,
+        1,
+        -1,
+        -3,
+        -5
+      ]
+    },
+    {
+      "K": 6,
+      "dimension": 7,
+      "exact_checks": "PASS",
+      "metric": [
+        1,
+        6,
+        15,
+        20,
+        15,
+        6,
+        1
+      ],
+      "spectrum": [
+        6,
+        4,
+        2,
+        0,
+        -2,
+        -4,
+        -6
+      ]
+    },
+    {
+      "K": 7,
+      "dimension": 8,
+      "exact_checks": "PASS",
+      "metric": [
+        1,
+        7,
+        21,
+        35,
+        35,
+        21,
+        7,
+        1
+      ],
+      "spectrum": [
+        7,
+        5,
+        3,
+        1,
+        -1,
+        -3,
+        -5,
+        -7
+      ]
+    },
+    {
+      "K": 8,
+      "dimension": 9,
+      "exact_checks": "PASS",
+      "metric": [
+        1,
+        8,
+        28,
+        56,
+        70,
+        56,
+        28,
+        8,
+        1
+      ],
+      "spectrum": [
+        8,
+        6,
+        4,
+        2,
+        0,
+        -2,
+        -4,
+        -6,
+        -8
+      ]
+    }
+  ],
+  "exact_check_counts": {
+    "clock_characteristic_polynomials": 8,
+    "clock_endpoint_identities": 8,
+    "clock_metric_identities": 8,
+    "common_minus_eigenvectors": 4,
+    "dressed_metric_entries": 400,
+    "dressing_permutations": 2,
+    "gate_permutations": 4,
+    "numeric_hermiticity_checks": 2,
+    "odd_clock_invertibility_checks": 4,
+    "path_characteristic_polynomials": 4,
+    "path_clock_phase_identities": 22,
+    "path_edge_square_identities": 22,
+    "path_kernel_dimensions": 4,
+    "path_kernel_vectors": 4,
+    "payload_inverse_checks": 136,
+    "payload_swap_inverse_checks": 64,
+    "prefix_edge_identities": 4,
+    "spin_commutation_actions": 11260,
+    "spin_embedding_coefficients": 4096,
+    "spin_endpoint_basis_actions": 510,
+    "spin_involution_actions": 3586
+  },
+  "independent_human_review": "PENDING",
+  "limitations": [
+    "No native UD incidence/Hodge derivation, coupling locality, SI timing, energy source, error robustness, or measurement/Born bridge is established.",
+    "Finite numerical diagnostics validate only the two explicit d=m=2,N=1,B=0 or 1 examples.",
+    "Endpoint exactness is conditional on the prepared gate-dressed Hamiltonian and clock-zero state.",
+    "Outgoing registers are retained in the closed joint system; a full recurrence reverses exports as well as computation.",
+    "Any resource optimality or permanent absorbing/capture behavior remains unproved."
+  ],
+  "overall_status": "PASS",
+  "physical_promotion": 0,
+  "proof_scope": [
+    "All finite payload gates are permutations; D=sum_j |j><j| tensor Q_j is unitary.",
+    "H_p=D(H_C tensor I)D-adjoint is Hermitian and isospectral to bare clock.",
+    "The K commuting binary-spin X_i give exp(-i pi sum_i X_i/2)=(-i)^K X_1...X_K on the symmetric sector.",
+    "Clock-zero input evolves at T=pi/(2 alpha) to clock-K with gateword Q_K, and at 2T returns projectively to the complete initial state.",
+    "Intermediate clock positions are coherent superpositions of complete payload prefixes, not a succession of definite observed states."
+  ],
+  "role": "Independent constructor-team AI algebra/code check; not independent human review.",
+  "version": "0.1",
+  "weighted_path_exact_checks": {
+    "even_hop_cases": [
+      {
+        "edge_metric": [
+          "1/2"
+        ],
+        "edges": 1,
+        "hops": 2,
+        "kernel_dimension": 1,
+        "skew_spectrum": [
+          "i*2",
+          "i*0",
+          "i*-2"
+        ],
+        "status": "PASS",
+        "vertex_metric": [
+          "1",
+          "1"
+        ],
+        "vertices": 2
+      },
+      {
+        "edge_metric": [
+          "1/4",
+          "1/4"
+        ],
+        "edges": 2,
+        "hops": 4,
+        "kernel_dimension": 1,
+        "skew_spectrum": [
+          "i*4",
+          "i*2",
+          "i*0",
+          "i*-2",
+          "i*-4"
+        ],
+        "status": "PASS",
+        "vertex_metric": [
+          "1",
+          "3/2",
+          "1"
+        ],
+        "vertices": 3
+      },
+      {
+        "edge_metric": [
+          "1/6",
+          "5/36",
+          "1/6"
+        ],
+        "edges": 3,
+        "hops": 6,
+        "kernel_dimension": 1,
+        "skew_spectrum": [
+          "i*6",
+          "i*4",
+          "i*2",
+          "i*0",
+          "i*-2",
+          "i*-4",
+          "i*-6"
+        ],
+        "status": "PASS",
+        "vertex_metric": [
+          "1",
+          "5/3",
+          "5/3",
+          "1"
+        ],
+        "vertices": 4
+      },
+      {
+        "edge_metric": [
+          "1/10",
+          "3/40",
+          "7/100",
+          "3/40",
+          "1/10"
+        ],
+        "edges": 5,
+        "hops": 10,
+        "kernel_dimension": 1,
+        "skew_spectrum": [
+          "i*10",
+          "i*8",
+          "i*6",
+          "i*4",
+          "i*2",
+          "i*0",
+          "i*-2",
+          "i*-4",
+          "i*-6",
+          "i*-8",
+          "i*-10"
+        ],
+        "status": "PASS",
+        "vertex_metric": [
+          "1",
+          "9/5",
+          "21/10",
+          "21/10",
+          "9/5",
+          "1"
+        ],
+        "vertices": 6
+      }
+    ],
+    "odd_hop_full_space_obstruction": "Odd n gives no clock zero mode. A nonempty ordinary finite graph/simplicial Hodge generator has an H0 kernel, so full-space unitary equivalence is excluded; restrictions/relative/coefficient variants are not addressed.",
+    "phase_convention": "S=diag(i^j), S H_C S-adjoint=i A; A upper diagonal is -sqrt((j+1)(n-j)).",
+    "scope": "New engineered weighted one-dimensional path only, per payload label. Does not derive native unit-metric Delta3 or a sourced UD coupling."
+  }
+}
