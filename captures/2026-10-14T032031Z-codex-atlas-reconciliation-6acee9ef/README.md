@@ -1,0 +1,11 @@
+# Unified Dynamics public research atlas
+
+Public reading edition 0.2. This project is a presentation layer with preserved source status. Physical promotion 0. Independent human review pending. Version 0.2 adds a 448-row source/status reconciliation, ten scoped dispositions and 65 substantive former-stub source views. Missing historical originals remain explicit recovery gaps.
+
+Static entry point: dist/index.html. Routes are ordinary HTML directories. No visitor sign-in, tracking, external scripts or service integrations are needed. Source search indexes the current public portal records, GitHub file metadata, attached source intake and a scientific memory crosswalk. The coefficient view retains original source status and next gates. Raw internal/patent notebooks are not published.
+
+Source baselines: portal commit 44228e7eb906cd230ba3f0989dd73ffff8812da8 and ud-tetra/UD commit 47121c4b2d8f472c4eaa977b475d20cc267eed3d. See dist/assets/coverage.json for intake scope, missing files and limitations.
+
+Verification: run python verify_reconciliation.py, node --check dist/assets/app.js, then python check_site.py. No Python dependencies are required. The v0.1 core receipt remains preserved; no unchanged core rerun is needed. The reconciliation checks all source-row copies, version comparisons, preservation hashes and source links, and independently enumerates the stated conditional polarity domain and historical running-sign witness. It does not reprove every ledger row or infer a complete proof DAG. Rendered browser QA was unavailable in this managed runtime.
+
+build.py documents the original intake pipeline and requires the declared source snapshots and attachment intake. reconcile.py builds the v0.2 overlay from the preserved v0.1 Git commit plus the named current sources. It restores baseline HTML before applying amendments so the rewrite is repeatable. After changing source content, run its checks and rebuild a versioned release package. The built dist directory is preserved in the source repository so deployment does not depend on scratch paths. Do not execute imported archived scripts merely to ingest a source. Copy prior input versions when reconciling a new scientific amendment; never alter their original statements silently.
