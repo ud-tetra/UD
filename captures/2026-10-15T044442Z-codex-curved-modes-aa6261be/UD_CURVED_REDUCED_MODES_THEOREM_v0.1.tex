@@ -1,0 +1,316 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Curved reduced modes}\rhead{CRM v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\id}{\mathbf1}\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Reduced modes and the sharp scalar stability boundary}\\[8pt]
+{\large The negative-holonomy curved matter branch}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+We reduce Gauss law, both fixed species norms and their phase symmetries around the nonzero curved scalar branch of the unchanged tetrahedral link--matter Hamiltonian. The resulting 84-dimensional phase space splits linearly into 14 neutral matter oscillator pairs and 28 coupled link--charge pairs. The latter have positive mass matrix and stiffness $4NW-\kappa K$. An exact weighted-curl calculation gives the first zero stiffness at a threefold standard representation and improves the prior sufficient bound by about 29 percent. Below it all reduced modes are oscillatory and the orbit is nonlinearly stable. Above it real growing modes imply nonlinear instability. At equality the linear system has three length-two zero Jordan chains, but an exact outward-rounded integer interval certificate proves a strictly positive critical quartic. The endpoint is consequently nonlinearly stable. This closes the scalar stability boundary, conditional on the declared action and fixed norms. It makes no higher-rank color or physical-identification claim.
+\end{abstract}
+\textbf{Typing.} \textsc{Derived conditional mathematics}; exact constructor algebra and rigorous finite integer interval certificate; separately typed numerical diagnostics. Independent review pending. Development lane, no registry entry; physical promotion $0$.
+
+\section{Closed scalar boundary}
+Put
+\[
+d=\sqrt{10},\quad \rho=\sqrt{8+2d},\quad
+w_0=\frac{\rho(10-d)}{480},\quad
+\Lambda_+=\frac{28+17d+\sqrt{866-128d}}{18}.
+\]
+For each fixed $a>0$ and species norm $N>0$, the sharp boundary proved here is
+\[
+\boxed{\kappa_*(N)=\frac{4Nw_0}{\Lambda_+},\qquad
+\text{stable for }0\leq\kappa\leq\kappa_*;
+\quad\text{unstable for }\kappa>\kappa_*.}
+\]
+In internal units $\kappa_*/N\simeq0.03760248457$, versus the preceding conservative $0.02908745325$. Neither number is a physical coupling.
+
+\newpage
+\section{Frozen model and background}
+Let $B$ be the signed simplex boundary on the 15 nonempty simplices of the filled tetrahedron, $e=(i\leftarrow j)$ its 28 incidence links, $b_e=B_{ij}$, $R$ ordinary incidence, $C$ the 18-diamond curl and $K=C^TC$. At scalar rank the unchanged Hamiltonian is
+\[
+H=\frac a2\|E\|^2+\kappa\sum_d(1-\Rea W_d)
++\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi,
+\quad h_U=i(D_U^\dagger-D_U),\quad D_U[i,j]=b_eU_e.
+\]
+Gauss law is $RE=|\psi|^2-|\chi|^2$. Each species has its canonical classical complex bracket. The norm level is $N_\psi=N_\chi=N>0$.
+
+Let $T=|B|+|B|^T$ and $v>0$, $\|v\|=1$, $Tv=\rho v$. Explicitly,
+\[
+\ell=\frac{16(10+d)}9,\qquad
+v_\sigma=\ell^{-1/2}q_{|\sigma|},\qquad
+(q_1,q_2,q_3,q_4)=\left(1,\rho/3,(1+d)/3,4(1+d)/(3\rho)\right).
+\]
+The branch is $U_e^*=-ib_e$, $E^*=0$, $\psi^*=\chi^*=\sqrt N\,v$; all diamond holonomies equal $-1$. Work in its common $(\mu-\rho)$ rotating frame. Set
+\[
+L=\rho\id-T,\quad V=\diag(v),\quad
+W=\diag(v_iv_j)=w_0D,
+\]
+where $D$ takes values $1,(1+d)/3,(8-d)/3$ on the three incidence layers. Then $L\geq0$, $\ker L=\mathbb Rv$, and $RWR^T=VLV$.
+
+\section{Exact local reduction, before linearizing}
+Write $U=U^*e^{i\theta}$, $\psi_i=\sqrt{n_i}e^{i\beta_i}$ and $\chi_i=\sqrt{m_i}e^{i\gamma_i}$ near the positive background. Define
+\[
+\eta=(\beta-\gamma)/2,\quad\zeta=(\beta+\gamma)/2,\quad
+X=\theta-R^T\eta,\quad \sigma=n+m.
+\]
+Gauss law solves $n=(\sigma+RE)/2$, $m=(\sigma-RE)/2$. The exact canonical one-form restricts to
+\[
+E^T\,d\theta-n^T\,d\beta-m^T\,d\gamma
+=E^T\,dX-\sigma^T\,d\zeta.
+\]
+The norm constraint is $\sum_i\sigma_i=2N$; quotient the constant common phase of $\zeta$. Positivity of $n,m$ makes this a smooth local reduced chart with 28 link pairs and 14 density--phase pairs: dimension $84$. This chart justifies using reduced smooth dynamics at the nonlinear instability boundary. If the common norm and its phase are retained, one additional neutral zero pair gives dimension $86$.
+
+\newpage
+\section{Linear reduction and all neutral modes}
+Write $\delta\psi=x+iy$, $\delta\chi=z+iw$. Put
+\[
+p=(x+z)/\sqrt2,\quad q=(y+w)/\sqrt2,\quad
+u=(x-z)/\sqrt2,\quad t=(y-w)/\sqrt2,
+\quad F=\sqrt N\,V^{-1}RW.
+\]
+The fixed-norm tangents and common-phase quotient leave $p,q\in v^\perp$. Linear temporal-gauge equations are
+\begin{align*}
+\dot\theta&=aE,&\dot E&=(\kappa K-4NW)\theta+2\sqrt2 F^Tt,\\
+\dot p&=Lq,&\dot q&=-Lp,\\
+\dot u&=Lt-\sqrt2 F\theta,&\dot t&=-Lu.
+\end{align*}
+Gauss law and the gauge-invariant link angle give
+\[
+u=\frac{V^{-1}RE}{2\sqrt{2N}},\qquad
+X=\theta-\frac{R^TV^{-1}t}{\sqrt{2N}}.
+\]
+Hence the reduced charged block is exactly
+\begin{equation}
+\boxed{\dot X=\mathsf M E,\quad\dot E=-\mathsf S X,\qquad
+\mathsf M=a\id+\frac1{4N}R^TV^{-1}LV^{-1}R>0,\quad
+\mathsf S=4NW-\kappa K.}\label{eq:charged}
+\end{equation}
+For example differentiating $X$ and using $\dot t=-Lu$ produces the additional positive mass term; omitting it would discard Gauss backreaction. The charged quadratic Hamiltonian is
+$E^T\mathsf M E/2+X^T\mathsf S X/2$.
+
+The neutral matter frequencies are the positive eigenvalues of $L$:
+\begin{center}
+\begin{tabular}{lrrrrrr}
+\toprule
+Frequency & $\rho-\tau$ & $\rho+\tau$ & $2\rho$ & $\rho-2$ & $\rho+2$ & $\rho$\\
+Multiplicity & 1 & 1 & 1 & 3 & 3 & 5\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here $\tau=\sqrt{8-2\sqrt{10}}$. All 14 pairs are nonzero and independent of $a,\kappa,N$. A real $L\phi=\omega\phi$ gives $p=\phi\cos\omega s$, $q=-\phi\sin\omega s$.
+
+For charged modes, let $\nu_j$ be the eigenvalues of the symmetric matrix
+$\mathsf M^{1/2}\mathsf S\mathsf M^{1/2}$. Then growth exponents satisfy $\lambda^2=-\nu_j$. No off-axis complex quartet is possible in this reduced linear model. Positive $\nu_j$ gives an oscillatory pair, negative $\nu_j$ a real growing/decaying pair.
+
+\newpage
+\section{Exact mode blocks and multiplicities}
+The ordinary $S_4$ link permutation module decomposes as
+\[
+\mathbb R^{28}\simeq\mathbf1^{\oplus3}\oplus
+\mathcal V^{\oplus5}\oplus\mathcal E^{\oplus2}\oplus
+(\mathcal V\otimes\mathrm{sgn})^{\oplus2},
+\]
+with irrep dimensions $1,3,2,3$. In the $U=U^*e^{i\theta}$ coordinates this is the original simplicial permutation symmetry compensated by node orientation signs; the reference operator $h_{U^*}=-T$ and all reduced matrices have ordinary covariance.
+
+Let $P_0$ be the full-group link Reynolds projector, $P_3$ the average over the vertex-$0$ stabilizer $S_3$, $P_8$ the average over the order-eight subgroup preserving the pairing $\{02,13\}$, and $P_3^-$ the sign-weighted $S_3$ average. The four rational section projectors are
+\[
+P_0,\qquad P_3-P_0,\qquad P_8-P_0,\qquad P_3^-.
+\]
+Take a column-space basis $Z_j$ of each, and $Z_j^+=(Z_j^TZ_j)^{-1}Z_j^T$. Define
+\[
+D_j=Z_j^+DZ_j,\quad K_j=Z_j^+KZ_j,\quad
+G_j=Z_j^+\frac{R^TV^{-1}LV^{-1}R}{4\rho}Z_j.
+\]
+With $b=aN/\rho$, $r_\kappa=\kappa/(4Nw_0)$ and $y=\omega^2/(4\rho w_0)$, the complete charged dispersion relations are
+\begin{equation}
+\boxed{P_j(y)=\det\left[y\id-(b\id+G_j)(D_j-r_\kappa K_j)\right]=0.}\label{eq:blocks}
+\end{equation}
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Irrep & Polynomial degree & Copies of each root & Charged pairs\\
+\midrule
+Trivial & 3 & 1 & 3\\
+Standard $\mathcal V$ & 5 & 3 & 15\\
+Two-dimensional $\mathcal E$ & 2 & 2 & 4\\
+Sign-standard & 2 & 3 & 6\\
+\bottomrule
+\end{tabular}
+\end{center}
+All exact section matrices and bases are supplied in \texttt{MODE\_BLOCKS\_v0.1.json}. Their entries belong to $\mathbb Q(\sqrt{10})$. Formula \eqref{eq:blocks} specifies every mode at arbitrary parameters without numerical diagonalization or pretending the generic quintic has a simpler radical form. The small blocks are also given in the appendix. A charged eigenvector satisfies $\mathsf M\mathsf S x=\nu x$; its physical mode has $X=x e^{\lambda s}$ and $E=\lambda\mathsf M^{-1}x e^{\lambda s}$. Reconstruct $u$ by Gauss and choose relative-phase gauge $t=0$. Neutral amplitudes vanish for this charged mode.
+
+\newpage
+\section{Weighted curl, the sharp threshold and linear classification}
+The exact characteristic polynomial of $D^{-1}K$ is
+\begin{align*}
+z^{14}(z-2-d)^2
+\left[z^2-\frac{28+17d}{9}z+\frac{26+10d}{3}\right]^3
+\left[z^2-\frac{4+5d}{3}z+\frac{14(d-1)}3\right]^3.
+\end{align*}
+Its positive roots, in descending order, are
+\[
+\Lambda_+>2+d>\Xi_+>\Lambda_->\Xi_->0,
+\]
+where
+\[
+\Lambda_\pm=\frac{28+17d\pm\sqrt{866-128d}}{18},\qquad
+\Xi_\pm=\frac{4+5d\pm\sqrt{434-128d}}6.
+\]
+The first root has multiplicity three in the standard representation. These eigenvalues have the same positive spectrum as $D^{-1/2}KD^{-1/2}$. Since
+\[
+\mathsf S=4Nw_0D^{1/2}
+\left[\id-\frac{\kappa}{4Nw_0}D^{-1/2}KD^{-1/2}\right]D^{1/2},
+\]
+its positivity ends exactly at $\kappa_*=4Nw_0/\Lambda_+$. The ordering is certified by exact integer intervals, independently of floating-point root ordering.
+
+\begin{theorem}[Complete scalar boundary]\label{th:main}
+For the stated background, every $a>0$, $N>0$ and common phase coefficient $\mu\geq0$:
+\begin{itemize}
+\item If $0\leq\kappa<\kappa_*$, all 42 reduced pairs are nonzero imaginary and semisimple, and the orbit is nonlinearly Lyapunov stable on fixed species norms and zero Gauss.
+\item At $\kappa=\kappa_*$, there are 39 nonzero imaginary pairs and three length-two zero Jordan chains. Nevertheless the orbit is nonlinearly Lyapunov stable, by the critical quartic proved below.
+\item If $\kappa>\kappa_*$, real growing reduced modes exist and the orbit is nonlinearly orbitally unstable on the same constrained norm level.
+\end{itemize}
+\end{theorem}
+Below threshold the positive quadratic Hamiltonian supplies the energy barrier. At a zero stiffness vector $x$, $(x,0)$ is a zero eigenvector and $(0,\mathsf M^{-1}x)$ is a generalized vector, proving the stated zero chains. All nonzero pairs are semisimple because the squared-frequency problem is symmetric.
+
+Above threshold, a positive real exponent $\gamma$ exists. In the smooth exact reduced chart, the vector field is $\dot z=Az+O(\|z\|^2)$. Choose a fastest growing real mode. Variation of constants bounds its nonlinear correction by $O(\varepsilon^2e^{2\gamma s})$ while the leading amplitude is $\varepsilon e^{\gamma s}$. For a fixed small exit amplitude, bootstrap closes through $s=\gamma^{-1}\log(\delta/\varepsilon)$ and gives a fixed orbital departure. Zero chains at later crossings do not affect this bound: their polynomial growth is dominated by $e^{\gamma s}$.
+
+\newpage
+\section{The critical quartic: reducing the nonlinear endpoint}
+For a fixed scalar connection $\theta$, let $\lambda_0(\theta)$ be the simple lowest eigenvalue of $h(\theta)$, whose upper edge entries are $-e^{i\theta_e}$. It is analytic near zero, with gap at least a fixed positive number there. On the norm level the full energy obeys
+\[
+H_0\geq \mathcal F(\theta)+\frac a2\|E\|^2,
+\qquad
+\mathcal F(\theta)=2N\lambda_0(\theta)+
+\kappa\sum_d[1+\cos(C\theta)_d].
+\]
+Equality in the matter bound is attainable by the lowest eigenvector and its conjugate; with $E=0$ this is Gauss-admissible. The excess controls squared distance of each species to its lowest eigenspace by the spectral gap.
+
+Fix the weighted Coulomb slice $RW\theta=0$. The remaining constant gauge acts only on species phases. Since $h(-\theta)=\overline{h(\theta)}$, $\mathcal F$ is even. In particular no cubic Taylor term remains after minimizing the matter shape. On this slice the linear perturbation $h_1(\theta)v=-iV^{-1}RW\theta$ vanishes.
+
+For a slice direction $x$ define
+\[
+g_i(x)=\frac12\sum_{j\sim i}x_{ij}^2v_j,
+\qquad L^+=(L+vv^T)^{-1}-vv^T.
+\]
+Second-order eigenvector correction is $-L^+g$. Fourth-order eigenvalue perturbation therefore gives the coefficient of $t^4$ in
+$\mathcal F(tx)-\mathcal F(0)$ at the critical parameter:
+\begin{equation}
+Q_4(x)=-\frac N6\sum_e v_iv_jx_e^4
+-2N g(x)^TL^+g(x)
++\frac{\kappa_*}{24}\sum_d(Cx)_d^4.\label{eq:quartic}
+\end{equation}
+Indeed $\langle v,h_4v\rangle=-\sum_e v_iv_jx_e^4/12$ and the relaxation term is $-g^TL^+g$. Terms with $h_1$ vanish at this order because $h_1v=0$. This accounts for matter relaxation; checking only a fixed-matter cosine expansion would miss the middle negative term.
+
+The critical kernel has an equivariant parametrization by $a=(a_0,a_1,a_2,a_3)$, $\sum a_i=0$. Set
+\[
+c=(1+d)/3,\quad h=(8-d)/3,\quad
+\Gamma=-\Lambda_++(5+4d)/3.
+\]
+For a link with lower simplex $\sigma$ and added vertex $j$, let
+\[
+x_{\sigma,\sigma\cup j}(a)=
+\begin{cases}
+a_i+3a_j,&\sigma=\{i\},\\
+\Gamma\sum_{i\in\sigma}a_i+(2\Gamma-4/c)a_j,&|\sigma|=2,\\
+4(1-c\Gamma)a_j/h,&|\sigma|=3.
+\end{cases}
+\]
+Direct algebra gives $RDx=0$, $Kx=\Lambda_+Dx$ and injectivity. The map therefore parametrizes the entire three-dimensional critical kernel.
+
+\newpage
+\section{A finite exact certificate and endpoint stability}
+The critical polynomial is $S_4$ invariant. Every symmetric degree-four polynomial on $\sum a_i=0$ is a combination of $(\sum a_i^2)^2$ and $\sum a_i^4$. Hence
+\[
+Q_4(x(a))=N\left[A_4\left(\sum_i a_i^2\right)^2+B_4\sum_i a_i^4\right].
+\]
+These coefficients are defined exactly by \eqref{eq:quartic}. With $N=1$, put
+$q_1=Q_4(x(1,-1,0,0))$ and
+$q_2=Q_4(x(1,1,-1,-1))$. Then
+\[
+A_4=(q_2-2q_1)/8,\qquad B_4=q_1/2-2A_4.
+\]
+The included integer interval certificate proves
+\[
+\boxed{11<A_4<12,\qquad12<B_4<13.}
+\]
+For orientation only, ordinary numerical evaluation gives about $11.4144$ and $12.1856$; the positivity proof uses exact rational enclosures instead.
+
+\textbf{Certificate construction.} Every interval endpoint is an integer multiple of $10^{-60}$. Addition, multiplication, division and square root round outward using integer arithmetic. The algebraic constants are enclosed from their defining positive radicals. The calculation evaluates \eqref{eq:quartic} using unnormalized $q=\sqrt\ell\,v$, avoiding square-root normalization in linear algebra. The quadratic form $g^TL^+g$ is evaluated by Gaussian elimination of $L+qq^T/\ell$ with every pivot certified positive. Explicit enclosures for $A_4,B_4$, the threshold and root ordering are stored. The code uses no floating-point operation in this certificate. The certificate is finite constructor verification, with independent implementation and review still pending.
+
+Thus $Q_4$ is uniformly positive on the critical unit sphere. In the weighted Coulomb slice, write $\theta=x+y$ with $x$ critical and $y$ in a fixed complementary subspace. At $\kappa_*$ the quadratic energy is strictly positive in $y$ and zero in $x$. Evenness removes the entire cubic. Quartic cross terms, such as $|x|^3|y|$, are absorbed by a portion of $|y|^2$ and an $O(|x|^6)$ remainder. The sixth-order remainder is smaller than the positive critical quartic in a sufficiently small neighborhood. Consequently
+\[
+\mathcal F(\theta)-\mathcal F(0)\geq c_2\|y\|^2+c_4\|x\|^4
+\]
+for fixed positive constants in a sufficiently small slice neighborhood. The matter spectral gap and electric energy give a strict transverse local minimum of the full constrained energy. Compactness of the gauge/species-phase orbit and energy conservation provide the same local barrier argument as in the preceding stability theorem. This proves the endpoint part of Theorem \ref{th:main}.
+
+The zero Jordan chains are therefore compatible with nonlinear stability: the missing quadratic restoring energy is supplied at fourth order. Unbounded tangent motion alone would have given the wrong nonlinear verdict at this endpoint.
+
+\newpage
+\section{Verification, scope and next work}
+The constructor verifier passes 47 exact checks: graph and mass identities, symmetry generators, representation multiplicities, closed rational sections, weighted characteristic factors, the complete 28-pair charged count, critical patterns and the exact interval certificate. The latter supplies positive quartic bounds and rigorous root ordering. Written arguments establish reduction, the energy barrier and the nonlinear exit estimate.
+
+Separate numerical diagnostics check the ambient constrained linearization against the 84-dimensional reduction and the full charged spectrum against the small-block reconstruction at four parameter values. Three full nonlinear temporal-gauge campaigns use $a=N=1$:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Preparation & Parameter & Diagnostic\\
+\midrule
+Enlarged stable interval & $0.95\kappa_*$ & Departure shrinks with seed\\
+Critical phase direction & $\kappa_*$ & Departure shrinks with seed\\
+Real growing mode & $1.1\kappa_*$ & Fixed exit at logarithmic times\\
+\bottomrule
+\end{tabular}
+\end{center}
+Perturbation amplitudes are $0.005,0.0025,0.00125$. In the growing campaign, a fixed invariant diagnostic reaches $0.04$ at times approximately $12.2000,16.4387,20.6773$, consistent with growth rate $0.163532$. Stable and critical diagnostic horizons are $120$. Exact initial Gauss constraints are enforced by setting the species densities to $v_i^2\pm(RE)_i/2$, with equal total norms. The integration right-hand side projects neither Gauss nor symmetry. These are finite numerical diagnostics, not the nonlinear theorem and not experimental data.
+
+\textbf{Supersession.} The prior scalar sufficient interval remains true and is strengthened to the sharp closed interval $[0,\kappa_*]$, with instability above it. Its all-rank stable-minimizing-set theorem remains a separate valid assertion. No higher-rank orbital-stability conclusion follows from the present scalar reduction. The completed nonzero flat-family instability theorem and positive-stiffness empty-vacuum theorem are unchanged.
+
+\textbf{Remaining mathematical tasks.} Independently review the Gauss reduction and critical quartic certificate, then calculate the additional color slice modes at $r>1$. Near-threshold bifurcation shapes, persistence across refinement, and which stable branch a sourced evolution selects remain separate questions.
+
+\textbf{Physical boundary.} The action, opposite-charge species and internal units retain their candidate status; ledger G05 normalization and a measurement dictionary remain open. No experimental data, physical force identification, monopole charge or proton-decay prediction is claimed. Physical promotion remains $0$.
+
+\section{Dependency record}
+The candidate action and Gauss law are inherited from the joint Hamiltonian theorem v0.1; the explicit curved branch and its energy transform from curved-ground stability v0.1. Their exact source hashes, the supplied ledger v0.39 and governance proposal v1.0 are recorded in the provenance receipt. Frozen predecessor artifacts are preserved. All new threshold constants are derived from these graph matrices, not fitted to a target.
+
+\newpage
+\appendix
+\section{Small mode blocks and every stiffness crossing}
+Let $c=(1+d)/3$ and $g=20-4d$. In the supplied rational section bases the two small blocks are
+\[
+D_{\mathcal E}=D_{\rm sgn\mathcal V}=\begin{pmatrix}1&0\\0&c\end{pmatrix},
+\quad K_{\mathcal E}=\begin{pmatrix}3&3\\3&3\end{pmatrix},
+\quad G_{\mathcal E}=g\begin{pmatrix}1&-1\\-1&1\end{pmatrix},
+\]
+\[
+K_{\rm sgn\mathcal V}=\begin{pmatrix}3&-1\\-1&5\end{pmatrix},
+\qquad G_{\rm sgn\mathcal V}=0.
+\]
+For example the sign-standard squared frequencies are the two eigenvalues of
+$a[4Nw_0D_{\rm sgn\mathcal V}-\kappa K_{\rm sgn\mathcal V}]$, each repeated three times. The two-dimensional irrep uses the corresponding $2\times2$ product in \eqref{eq:blocks}, with each root repeated twice. The trivial block has $K=0$, so its three frequencies do not depend on $\kappa$. The standard block is a quintic pencil. Its exact five-dimensional matrices and all reconstruction bases are in the mode-block receipt; section bases need not be orthonormal, so their restricted matrices can appear nonsymmetric while representing symmetric operators in the induced Gram metric.
+
+At any positive weighted root $\lambda_j$, precisely its multiplicity of charged squared frequencies passes through zero when $\kappa=4Nw_0/\lambda_j$:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Descending weighted root & Multiplicity & Representation\\
+\midrule
+$\Lambda_+$ & 3 & Standard\\
+$2+d$ & 2 & Two-dimensional\\
+$\Xi_+$ & 3 & Sign-standard\\
+$\Lambda_-$ & 3 & Standard\\
+$\Xi_-$ & 3 & Sign-standard\\
+\bottomrule
+\end{tabular}
+\end{center}
+Away from a crossing, the number of real growing/decaying pairs equals the sum of multiplicities of roots for which $\kappa>4Nw_0/\lambda_j$. There are no other linear stability changes. Fourteen charged squared frequencies remain positive even as $\kappa$ becomes arbitrarily large, because $K$ has rank fourteen. All 14 neutral matter pairs remain imaginary. At the first crossing nonlinear stability survives through quartic coercivity; every later crossing already lies in the unstable domain.
+\end{document}
