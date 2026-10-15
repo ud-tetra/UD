@@ -1,0 +1,7 @@
+# Result
+
+The curved branch's final residual U(r-1) constraint is explicit: a difference of two color Gram matrices plus the unused vacuum self-commutators must vanish. An isolated circular color oscillator fails the trace condition. Equal total amplitudes of opposite oscillator orientations are necessary and sufficient for completion by unused vacuum modes; a weighted shift constructs one-matrix completion at every finite rank. Quadratic completion energy bounds are sharp at r=3.
+
+At r=2 the color quotient is homeomorphic to the cone of rank-at-most-one complex 28x28 matrices, with its inherited reduced Poisson structure retained. Its open color stratum has 110 real dimensions. The full principal stratum has 222 dimensions and the maximal-stabilizer stratum112. At general finite rank the principal real dimension is26r^2+60r-2; selected additional strata are computed without claiming an exhaustive list.
+
+The full local constraint quotient follows from the standard Hamiltonian symplectic slice theorem with hypotheses checked. Quadratic observable frequencies are sums and differences of the color frequencies; no nonlinear periodic-mode theorem is asserted. Seventy exact constructor checks and numerical full matrix Gauss expansion diagnostics passed. The preceding nonlinear stability interval is unchanged. Independent review and physical bridge work remain open; physical promotion0.

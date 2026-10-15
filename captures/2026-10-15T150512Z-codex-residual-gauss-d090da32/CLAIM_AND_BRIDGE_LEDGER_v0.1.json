@@ -1,0 +1,223 @@
+{
+  "status": "DERIVED CONDITIONAL; INDEPENDENT REVIEW PENDING",
+  "lane": "development; no registry entry",
+  "physical_promotion": 0,
+  "claims": [
+    {
+      "id": "RGC-D1",
+      "type": "DERIVED",
+      "statement": "Effective gauge group U(r)^15/U(1); background stabilizer U(r-1) after species-phase reduction.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "Frozen action",
+          "Equal positive fixed species norms",
+          "Nonzero Perron amplitudes"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-D2",
+      "type": "DERIVED",
+      "statement": "Residual moment J=i(Xe^dagger-eX^dagger)+i sum[A,Pi]=C+C+^dagger-C-C-^dagger+sum[Z,Z^dagger].",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "Frozen symplectic signs",
+          "Inherited slice",
+          "Canonical contraction and full Gauss expansion"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-D3",
+      "type": "DERIVED",
+      "statement": "The exact local constraint quotient is the zero-moment slice quotient; J=0 characterizes locally integrable constraint directions in normal-form coordinates.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "RGC-D1",
+          "RGC-D2",
+          "Sjamaar-Lerman Theorem 5.1 / Hamiltonian local normal form"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-NG1",
+      "type": "NO-GO",
+      "statement": "Nonzero color preparations of only one oscillator orientation cannot be zero-Gauss, even with vacuum completion.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "RGC-D2",
+          "Trace of commutator vanishes"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-D4",
+      "type": "DERIVED",
+      "statement": "Equal total orientation amplitudes are necessary and sufficient for a vacuum completion; one vacuum matrix suffices at every finite rank.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "RGC-D2",
+          "Weighted-shift self-commutator construction"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-D5",
+      "type": "DERIVED",
+      "statement": "Vacuum quadratic completion energy lies between nu_min||Jc||_1/2 and nu_min(s-1)||Jc||_1/2; exact minimum for s=2.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "RGC-D4",
+          "Trace norm triangle bound",
+          "Positive vacuum frequencies"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-D6",
+      "type": "DERIVED",
+      "statement": "At rank two the color quotient is homeomorphic to the rank<=1 complex 28x28 matrix cone; color open dimension110, full open dimension222, full maximal-stabilizer dimension112.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "RGC-D3",
+          "Balanced factorization proof",
+          "Inherited active84 and vacuum14 counts"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-D7",
+      "type": "DERIVED",
+      "statement": "At every finite rank the principal real dimension is 26r^2+60r-2; maximal-stabilizer dimension112; selected spectator and commuting-vacuum strata computed.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "RGC-D3",
+          "Explicit free zero-moment witness",
+          "Sjamaar-Lerman Remark5.10 and connected cone"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-D8",
+      "type": "DERIVED QUADRATIC",
+      "statement": "Rank-two neutral mixed-orientation invariant Mjk has sum frequency omega_j+omega_k; standing single-mode quotient period pi/omega_j.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "RGC-D2",
+          "Inherited color frequencies",
+          "Quadratic Hamiltonian only"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-E1",
+      "type": "EXACT",
+      "statement": "Seventy exact constructor identities passed; finite rank fixtures support universal written proofs.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "verify_residual_reduction.py"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-N1",
+      "type": "NUMERICAL",
+      "statement": "Canonical matrix transforms and full rank-three Gauss expansion passed; residual after second-order correction scales cubically.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "RESIDUAL_NUMERICAL_DIAGNOSTIC_v0.1.json"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-C1",
+      "type": "CANDIDATE",
+      "statement": "Action, gauge rank, species and physical units retain candidate provenance.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "Frozen Hamiltonian contract"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "RGC-O1",
+      "type": "OPEN",
+      "statement": "Independent review; exhaustive higher-rank orbit types; nonlinear mode persistence/interactions; branch selection/refinement; physical normalization and observable dictionary.",
+      "provenance": {
+        "origin": "Source-bound derivation and explicit imported local reduction theorem",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "No promotion receipt"
+        ],
+        "lane": "development"
+      }
+    }
+  ],
+  "supersedes": [
+    {
+      "claim": "HRC-O1",
+      "scope": "Resolves residual moment, exact local constraint model, full rank-two strata and principal dimensions. Exhaustive higher-rank orbit types and nonlinear interactions remain open."
+    }
+  ],
+  "scope_limits": [
+    "Fixed norm equality, finite rank and positive magnetic coefficient",
+    "Matrix-cone identification is topological with inherited reduced Poisson smooth structure",
+    "Mode dynamics and completion costs are quadratic, not exact full nonlinear motions/costs",
+    "No independent review, physical evidence or registry promotion"
+  ],
+  "unaffected": [
+    "Sharp higher-rank orbital stability interval",
+    "Scalar zero-stiffness endpoint",
+    "All-rank minimizing-set distinction",
+    "Physical promotion0"
+  ]
+}

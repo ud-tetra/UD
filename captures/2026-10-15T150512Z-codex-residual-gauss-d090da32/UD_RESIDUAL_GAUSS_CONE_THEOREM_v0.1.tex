@@ -1,0 +1,229 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Residual Gauss reduction}\rhead{RGC v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\id}{\mathbf1}\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Residual Gauss reduction of the embedded curved branch}\\[8pt]
+{\large Admissible color modes, a rank-two cone,\\and constructive vacuum charge completion}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+The additional-color modes of the finite unitary link--matter model form a symplectic slice, rather than a final reduced phase space. We compute its remaining global $\mathrm U(r-1)$ moment map directly from the original matrix Gauss law. In oscillator variables it is a difference of color Gram matrices plus vacuum self-commutators. Its trace excludes any nonzero single-orientation circular color preparation. At rank two the exact local constraint quotient is homeomorphic in its color factor to the cone of complex $28\times28$ matrices of rank at most one. Its open stratum has 110 real color dimensions; the full principal stratum has 222 real dimensions. At every higher finite rank we construct a zero-moment point with trivial stabilizer and obtain the principal dimension. Any trace-balanced color preparation can be completed by a single vacuum oscillator, with explicit energy bounds, using a weighted-shift self-commutator. The local constraint model is exact by the standard symplectic slice theorem; the displayed mode evolution is only its quadratic Hamiltonian. No physical gauge identification or experimental result is asserted.
+\end{abstract}
+\textbf{Status.} \textsc{Derived conditional mathematics}; 70 exact constructor checks and separately typed numerical diagnostics. Independent review pending. Development lane, no registry entry; physical promotion $0$. Frozen action, coefficient normalization and species are unchanged.
+
+\textbf{Scope.} Finite $r\ge2$, $s=r-1$, $a>0$, $\kappa>0$, and equal fixed species norms $N>0$. The preceding nonlinear stability interval remains $0<\kappa\le r\kappa_*(N)$ for this branch; this manuscript resolves the remaining local constraint and mode-admissibility question. It does not extend that interval.
+
+\newpage
+\section{Frozen phase space and the effective stabilizer}
+The filled tetrahedron has 15 nonempty simplex nodes, 28 incidence links and 18 diamonds. For $e=(i\leftarrow j)$ with boundary sign $b_e$, let $D_U[i,j]=b_eU_e$ and $h_U=i(D_U^\dagger-D_U)$. The frozen model is
+\begin{align*}
+H={}&\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi,\\
+\mathcal G_i={}&\sum_{\mathrm{head}=i}E_e-\sum_{\mathrm{tail}=i}U_e^\dagger E_eU_e
+-\psi_i\psi_i^\dagger+\bar\chi_i\chi_i^T=0.
+\end{align*}
+The left-cotangent convention is $\Theta_{\rm link}=-i\sum\tr(E\,dU\,U^\dagger)$, $\omega=-d\Theta$. Both matter species have the canonical complex one-form specified in the joint Hamiltonian theorem. Conjugating $\chi$ reverses its symplectic sign; it is not a second ordinary fundamental field.
+
+Let $\rho=\sqrt{8+2\sqrt{10}}$, $Tv=\rho v$, $T=|B|+|B|^T$, $v>0$, $\|v\|=1$, and $u_e=-ib_e$. The background is
+\[
+U_e^*=\diag(u_e,\id_s),\quad E_e^*=0,\qquad
+\psi_i^*=\chi_i^*=\sqrt N\,v_i e_1.
+\]
+Independent species-phase reduction at positive fixed norms gives the smooth symplectic manifold
+\[
+\mathcal M_N=T^*\mathrm U(r)^{28}\times
+\mathbb {CP}^{15r-1}\times\mathbb {CP}^{15r-1},
+\qquad \dim_{\mathbb R}\mathcal M_N=56r^2+60r-4.
+\]
+The projective symplectic forms retain their inherited norm scale. The global scalar gauge center acts trivially on this manifold. Its Gauss component is $-N+N=0$. The effective gauge group is therefore
+\[
+G_{\rm eff}=\mathrm U(r)^{15}/\mathrm U(1)_{\rm global},
+\qquad \dim G_{\rm eff}=15r^2-1.
+\]
+Because every $v_i$ is nonzero, projective matter invariance forces the active line at every node to have one common phase. Background link invariance then forces a common unused-color unitary. Dividing the common scalar center leaves exactly
+\[
+H=\mathrm U(s).
+\]
+Thus the background has nontrivial isotropy even after ordinary Gauss directions and both species phases have been removed.
+
+\newpage
+\section{The residual matrix moment map}
+The inherited symplectic slice splits into the 84-real-dimensional active scalar slice $S_{\rm act}$, 28 complex cotangent color vectors, and 14 Hermitian vacuum cotangent modes:
+\[
+S=S_{\rm act}\oplus (\mathbb C^s\oplus\mathbb C^s)^{28}
+\oplus(\operatorname{Herm}_s\oplus\operatorname{Herm}_s)^{14}.
+\]
+Write color position and momentum matrices $X,e\in\mathbb C^{s\times28}$ and vacuum coordinates $A_\ell,\Pi_\ell\in\operatorname{Herm}_s$. Its canonical one-form in these factors is
+\[
+\Theta_S=2\Rea\tr(e^\dagger dX)+\sum_{\ell=1}^{14}\tr(\Pi_\ell\,dA_\ell).
+\]
+The group $H$ acts trivially on $S_{\rm act}$, by $X\mapsto gX$, $e\mapsto ge$, and by simultaneous conjugation on $A_\ell,\Pi_\ell$.
+
+\begin{theorem}[Residual Gauss cone]\label{th:cone}
+The remaining moment map, with Hermitian generators and the frozen sign convention, is
+\begin{equation}
+\boxed{J_S=i(Xe^\dagger-eX^\dagger)+i\sum_{\ell=1}^{14}[A_\ell,\Pi_\ell].}\label{eq:raw}
+\end{equation}
+The germ of the full fixed-norm, species-phase and zero-Gauss quotient at the embedded orbit is the germ at zero of $J_S^{-1}(0)/\mathrm U(s)$, as a stratified Poisson space. Consequently $J_S(z)=0$ is the exact cone criterion for locally integrable constraint directions in symplectic normal-form coordinates.
+\end{theorem}
+\begin{proof}
+For $g(t)=e^{it\xi}$, contraction of $\Theta_S$ with $\delta X=i\xi X$, $\delta A=i[\xi,A]$ gives $\tr(\xi J_S)$. There is no constant or linear term because $H$ fixes the origin.
+
+One can also read the coefficient directly from the original Gauss law. In the matter-aligned slice, unused components obey $\bar\chi^a=-\psi^a$ and their charge cancels. For one link set $U=e^{i\varepsilon H_e}U^*$, $E=\varepsilon E_1$, with lower-left entries $X_e,e_e$ and unused blocks $A_e,\Pi_e$. The order-two tail term is $iU^{*\dagger}[H_e,E_1]U^*$. Its unused block is
+\[
+i(X_e e_e^\dagger-e_eX_e^\dagger)+i[A_e,\Pi_e].
+\]
+Summing nodes cancels the linear ordinary divergence. An orthonormal basis of the 14-dimensional ordinary link-cycle space converts the vacuum sum into \eqref{eq:raw}.
+
+The compact effective gauge action is Hamiltonian, the background lies at zero momentum, and $S$ is its symplectic normal representation. The standard local reduction theorem, Sjamaar--Lerman \cite[Theorem 5.1]{SL}, identifies the quotient germ with the zero-momentum slice quotient. This imports a general theorem; the representation and its moment map above are computed for the present action. Homogeneity gives rays $\varepsilon z$ in the zero set, which lift locally through the normal form. Conversely the leading term of any differentiable zero-Gauss arc must satisfy this quadratic obstruction.
+\end{proof}
+
+\newpage
+\section{Oscillator form and admissible preparations}
+The positive color operator inherited from the preceding theorem is
+\[
+\dot X=M_\perp e,\quad \dot e=-2NWX,\qquad
+M_\perp=a\id+\frac1{2N}\mathcal R^\dagger V^{-1}L_0V^{-1}\mathcal R>0.
+\]
+Here $V=\diag(v)$, $L_0=\rho\id+i(B^T-B)>0$, and $W_{ee}=v_iv_j$. In this display link-index vectors are columns; for $s\times28$ arrays use the corresponding transposed right actions. A canonical link-space transformation diagonalizes $M_\perp^{1/2}(2NW)M_\perp^{1/2}$ into positive $\omega_j^2$, $j=1,\ldots,28$. Let $q_j,p_j\in\mathbb C^s$ denote the resulting cotangent modes. Define
+\[
+c_{+,j}=\frac{\sqrt{\omega_j}q_j-i p_j/\sqrt{\omega_j}}{\sqrt2},\qquad
+c_{-,j}=\frac{\sqrt{\omega_j}q_j+i p_j/\sqrt{\omega_j}}{\sqrt2}.
+\]
+Both transform in the fundamental of $\mathrm U(s)$. Their oscillator orientations are opposite: $\dot c_{\pm,j}=\pm i\omega_jc_{\pm,j}$. This label is not a physical helicity or particle identification.
+
+For the vacuum stiffnesses $k_\ell\in\{6,6\pm\sqrt2,4\pm\sqrt2\}$ with multiplicities $2,3,3,3,3$, put $\nu_\ell=\sqrt{a\kappa k_\ell/r}>0$ and
+\[
+Z_\ell=\frac{\sqrt{\nu_\ell/a}\,A_\ell-i\sqrt{a/\nu_\ell}\,\Pi_\ell}{\sqrt2},
+\qquad \dot Z_\ell=i\nu_\ell Z_\ell.
+\]
+With $C_\pm=(c_{\pm,1},\ldots,c_{\pm,28})$, the moment map and quadratic Hamiltonian are
+\begin{equation}
+\boxed{J_S=C_+C_+^\dagger-C_-C_-^\dagger+\sum_\ell[Z_\ell,Z_\ell^\dagger],}\label{eq:circular}
+\end{equation}
+\[
+H_2=H_{2,\rm act}+\sum_j\omega_j(\|c_{+,j}\|^2+\|c_{-,j}\|^2)
++\sum_\ell\nu_\ell\tr(Z_\ell^\dagger Z_\ell).
+\]
+Each term in \eqref{eq:circular} is constant under this quadratic flow. In particular the constraint is invariant. Taking the trace yields the necessary scalar condition
+\begin{equation}
+\boxed{\|C_+\|_F^2=\|C_-\|_F^2.}\label{eq:trace}
+\end{equation}
+No vacuum commutator can cancel a trace imbalance. Thus any nonzero preparation using only one oscillator orientation is inadmissible at zero Gauss momentum. A standing color oscillator, for which $c_+$ and $c_-$ occupy the same color line with equal amplitudes, is admissible without vacuum charge. At $s>1$, equal total amplitudes alone do not guarantee matrix neutrality.
+
+\newpage
+\section{Constructive vacuum completion and its energy cost}
+\begin{theorem}[Trace balance is sufficient for completion]\label{th:completion}
+For any finite $s\ge1$, a color preparation $C_\pm$ admits vacuum coordinates satisfying \eqref{eq:circular} if and only if \eqref{eq:trace} holds. For $s\ge2$, at most one of the 14 vacuum oscillator matrices is needed. Let
+\[
+J_c=C_+C_+^\dagger-C_-C_-^\dagger,\qquad
+\nu_{\min}=\sqrt{a\kappa(4-\sqrt2)/r}.
+\]
+The minimum vacuum quadratic energy $E_{\rm comp}$ required to cancel a trace-zero $J_c$ obeys
+\begin{equation}
+\frac{\nu_{\min}}2\|J_c\|_1\ \le E_{\rm comp}\ \le
+\frac{\nu_{\min}(s-1)}2\|J_c\|_1,\quad s\ge2.\label{eq:cost}
+\end{equation}
+For $s=2$ the two bounds coincide, so the exact minimum is $\nu_{\min}\|J_c\|_1/2$. At $s=1$ trace balance already gives $J_c=0$ and no completion energy is required.
+\end{theorem}
+\begin{proof}
+Necessity is the trace of \eqref{eq:circular}. For sufficiency diagonalize $-J_c=U\diag(\lambda_1,\ldots,\lambda_s)U^\dagger$, with descending real eigenvalues and zero sum. Every partial sum $p_k=\sum_{i\le k}\lambda_i$ is nonnegative: otherwise the remaining eigenvalues, all no larger than $\lambda_k<0$, could not restore the total to zero. Set
+\[
+S=\sum_{k=1}^{s-1}\sqrt{p_k}\,|k\rangle\langle k+1|.
+\]
+Then $[S,S^\dagger]=\diag(\lambda_1,\ldots,\lambda_s)$. Choose a minimum-frequency vacuum index $\ell_0$ and set $Z_{\ell_0}=USU^\dagger$, all other $Z_\ell=0$. This solves the full matrix equation.
+
+The chosen energy is $\nu_{\min}\sum_{k=1}^{s-1}p_k$. Each $p_k\le\sum_{\lambda_i>0}\lambda_i=\|J_c\|_1/2$, giving the upper bound. For every completion,
+\[
+\|J_c\|_1\le\sum_\ell\|[Z_\ell,Z_\ell^\dagger]\|_1
+\le2\sum_\ell\tr(Z_\ell^\dagger Z_\ell),
+\]
+which gives the lower bound. At $s=2$, $p_1=\|J_c\|_1/2$, and the construction attains it.
+\end{proof}
+For example, at $s=2$ let $C_+$ contain $e_1$ and $C_-$ contain $e_2$. Total amplitudes agree, but $J_c=\diag(1,-1)$. The single vacuum matrix $Z=|2\rangle\langle1|$ supplies $[Z,Z^\dagger]=\diag(-1,1)$. Color and vacuum sectors are separately charged although their combined preparation is admissible.
+
+All costs here are quadratic internal energies. They are not a claimed exact nonlinear preparation cost. Scaling color amplitudes by $\varepsilon$ scales this construction's vacuum amplitudes by $\varepsilon$, so it provides arbitrarily small admissible cone directions and hence local constraint lifts through Theorem \ref{th:cone}.
+
+\newpage
+\section{Rank two: the reduced color cone and observable frequencies}
+For $r=2$, $s=1$ and all vacuum commutators vanish. Write $a=C_+^T$, $b=C_-^T\in\mathbb C^{28}$. The entire remaining color reduction is
+\[
+\mathcal C_{28}=\{(a,b):\|a\|^2=\|b\|^2\}/\mathrm U(1),
+\qquad (a,b)\mapsto(e^{i\theta}a,e^{i\theta}b).
+\]
+\begin{theorem}[Rank-two local quotient]\label{th:r2}
+The invariant matrix $M=ab^\dagger$ induces a homeomorphism
+\[
+\mathcal C_{28}\ \cong\ \{M\in\mathbb C^{28\times28}:\operatorname{rank}M\le1\}.
+\]
+It is smooth on the nonzero stratum. This stratum has 110 real dimensions; its link is $(S^{55}\times S^{55})/S^1$ of dimension 109. Locally the full reduced phase space has the product form
+\[
+S_{\rm act}\times\mathbb C^{14}\times\mathcal C_{28}.
+\]
+There are exactly two orbit types in this slice: a 222-real-dimensional open stratum $M\ne0$ and a 112-real-dimensional stratum $M=0$ with full residual $\mathrm U(1)$ stabilizer.
+\end{theorem}
+\begin{proof}
+Every nonzero rank-one matrix has a factorization $M=ab^\dagger$. Rescale the factors reciprocally until their norms agree. The only remaining freedom is a common phase. At $M=0$, balance forces $a=b=0$. The quotient map is continuous and proper: $\|M\|_F=\|a\|\|b\|=\|a\|^2=\|b\|^2$ controls both factors. Hence the bijection is a homeomorphism. Nonzero rank-one matrices have complex dimension $28+28-1=55$. Fixing the common norm gives the stated sphere quotient. Adding the active 84 and vacuum 28 dimensions proves the two full dimensions.
+\end{proof}
+\textbf{Smooth-structure qualification.} The theorem gives a topological matrix-cone model and a smooth nonzero stratum. Its inherited reduced Poisson smooth structure is not automatically the ordinary analytic smooth structure of a determinantal variety. For example, the smooth invariant $\|a\|^2$ becomes $\|M\|_F$, which is not ordinarily smooth at the matrix origin. We retain the inherited reduced structure.
+
+In the quadratic model,
+\[
+\dot M_{jk}=i(\omega_j+\omega_k)M_{jk}.
+\]
+The same-orientation Gram observables $a_ja_k^*$ and $b_jb_k^*$ carry differences $\omega_j-\omega_k$ with opposite signs. A single neutral standing mode has the quotient period $\pi/\omega_j$: after half the unreduced oscillator period, both cotangent vectors change sign, which is residual gauge. These are quadratic observable statements. Neither exact full-system periodicity nor nonlinear persistence of a pure normal mode follows without a separate dynamical theorem.
+
+\newpage
+\section{Every finite rank: principal dimension and selected strata}
+For arbitrary $s$, the complete residual stabilizer at a slice point is
+\[
+H_z=\{g\in\mathrm U(s):gC_\pm=C_\pm,\quad gZ_\ell=Z_\ell g\ \hbox{for all }\ell\}.
+\]
+This formula, together with \eqref{eq:circular}, specifies the local orbit-type problem without assuming freeness.
+
+\begin{proposition}[A free zero-moment stratum at every finite rank]
+The local reduction has a free stratum of real dimension
+\begin{equation}
+\boxed{d_{\rm free}=84+112s+26s^2=26r^2+60r-2.}\label{eq:dimension}
+\end{equation}
+It is the principal stratum of this zero-moment slice quotient. The maximal-stabilizer stratum has dimension 112 for all $s\ge1$.
+\end{proposition}
+\begin{proof}
+Place $e_1$ in one column of both $C_+$ and $C_-$. Choose two Hermitian vacuum matrices: $Z_1=\diag(1,\ldots,s)$ and $Z_2$ with ones on both nearest off-diagonals. All charge terms cancel. A unitary stabilizer commutes with the simple-spectrum $Z_1$, hence is diagonal. Commutation with the connected $Z_2$ forces one common phase, and fixing $e_1$ forces that phase to one. This also excludes discrete stabilizers. Arbitrary small multiples give free zero-moment points arbitrarily near the origin.
+
+At such a point the moment-map differential has rank $s^2$, by symplectic nondegeneracy and the trivial infinitesimal stabilizer. Constraint and quotient each remove $s^2$ dimensions from $\dim S=84+112s+28s^2$, giving \eqref{eq:dimension}. The zero set is star-shaped, so its quotient is connected. Sjamaar--Lerman \cite[Remark 5.10]{SL} gives a unique connected open dense stratum on each connected component, including when the moment map is not proper. The free points exhibited here form an open orbit type and identify it. Finally $H$ fixes precisely $C_\pm=0$ and $Z_\ell=z_\ell\id_s$, as well as the active factor. This fixed space lies at zero momentum and has dimension $84+28=112$.
+\end{proof}
+
+Two useful additional families follow directly. If $s=k+t$, $t\ge1$, consider stabilizer $\mathrm U(t)$ acting only on an unframed spectator block. Its fixed vectors are $C_\pm=(C_{\pm,k},0)^T$ and $Z_\ell=\diag(Z_{\ell,k},z_\ell\id_t)$. On the open set with exactly this stabilizer, the effective normalizer quotient is $\mathrm U(k)$. Its stratum dimension is
+\[
+112+112k+26k^2,\qquad 0\le k<s.
+\]
+These are examples, not an exhaustive stabilizer classification.
+
+If $C_\pm=0$ and all $Z_\ell$ are simultaneously diagonal, each color carries a tuple in $\mathbb C^{14}$. Distinct joint tuples give stabilizer $\mathrm U(1)^s$ and reduced dimension $84+28s$, with tuple permutations identified. Coincident tuples enlarge the stabilizer to products of unitary groups. Noncommuting vacuum tuples allow other orbit types; no exhaustive list is asserted.
+
+\newpage
+\section{Verification, provenance and next mathematical gate}
+\textbf{Exact constructor checks.} Seventy checks verify canonical contraction, Hermiticity, both signs of the background link phase in the original Gauss expansion, matter cancellation in the aligned slice, circular-coordinate energy and moment identities, equivariance, the trace obstruction, constructive nonabelian compensation, the weighted-shift identity and energy bounds, free-point stabilizers and moment-map ranks through $s=6$, matrix-cone invariants, dimension identities, and the original graph's cycle count and vacuum stiffness polynomial. Finite examples support the written all-rank proofs; they do not replace them or constitute independent review.
+
+\textbf{Numerical diagnostics.} A canonical transformation built from the actual 28-link color matrices preserves the moment map to about $7.2\times10^{-14}$ and quadratic energy to about $4.6\times10^{-13}$ at the diagnostic parameter values. An explicit rank-three color/vacuum compensated direction is prepared in the original full matrix variables. A second-order correction solves all linear Gauss equations at the next order while holding both species norms exactly. On successive amplitude halvings the remaining full Gauss residual decreases by factors approximately $8.0058$, $8.0014$, $8.0004$, consistent with cubic error. This is a check of the constraint expansion, not an exact numerical Gauss lift. The exact local lift is an existence consequence of the normal form.
+
+The diagnostic also checks the rank-two sum-frequency law in the quadratic model. No nonlinear trajectory campaign or experimental data is added in this milestone. Previously passed higher-rank nonlinear stability checks retain their original scope.
+
+\textbf{Dependency and source typing.} The graph, action and symplectic sign convention are frozen inputs from the joint Hamiltonian and curved-mode manuscripts. The active scalar slice, positive additional-color operator and vacuum stiffnesses come from the preceding reduced-mode and higher-rank theorems. Source hashes are recorded. The supplied coefficient ledger v0.39 and CRL-2 subdivision governance are retained as source/governance records, without changing the current site's ledger. The general local reduction theorem and stratification are imported mathematical results \cite{SL}; their use is explicit and does not source the candidate action.
+
+\textbf{Closed scope.} The final local residual constraint now has an explicit matrix formula, a necessary-and-sufficient completion criterion, a full rank-two cone description, principal dimensions and selected higher-rank strata. Isolated circular color modes cannot be treated as independently Gauss-admissible. Existing nonlinear orbital stability remains valid and unchanged.
+
+\textbf{Open.} Independent proof/code review; a full classification of higher-rank orbit types; nonlinear interactions and periodic-mode persistence; branch selection and near-threshold bifurcation; refinement compatibility; physical gauge group, action normalization, units and observable dictionary. In particular this does not prove gauge-coupling unification, proton decay or monopoles. No physical promotion or registry advancement occurs.
+
+\begin{thebibliography}{1}
+\bibitem{SL} R. Sjamaar and E. Lerman, \emph{Stratified symplectic spaces and reduction}, Annals of Mathematics \textbf{134} (1991), 375--422, especially Theorem 5.1. \href{https://doi.org/10.2307/2944350}{doi:10.2307/2944350}. Author manuscript inspected at \href{https://people.maths.ox.ac.uk/beem/papers/symplectic_stratified_spaces.pdf}{Oxford-hosted primary manuscript}.
+\end{thebibliography}
+\end{document}
