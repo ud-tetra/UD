@@ -1,0 +1,88 @@
+{
+  "version": "0.1",
+  "physical_promotion": 0,
+  "supersedes": [],
+  "relation_to_previous": "Addendum to gauge-transport v0.1; preserves prior frozen files and fixed-operator/flatness hypotheses. Chosen selfconsistent action closes only a conditional dynamics branch.",
+  "claims": [
+    {
+      "id": "GHT-A1",
+      "type": "CANDIDATE",
+      "statement": "Canonical cotangent U(r) links plus two independent canonical complex matter species and Hamiltonian as specified.",
+      "dependencies": []
+    },
+    {
+      "id": "GHT-T1",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "The displayed matrix Gauss law is the equivariant moment map; constraints are first class and preserved.",
+      "dependencies": [
+        "GHT-A1"
+      ]
+    },
+    {
+      "id": "GHT-N1",
+      "type": "NO-GO SCOPED",
+      "statement": "Without chi, closed full-U(r) zero-source Gauss law forces the canonical fundamental matter field to vanish.",
+      "dependencies": [
+        "canonical phase space",
+        "closed graph",
+        "central U(1)",
+        "no external source"
+      ]
+    },
+    {
+      "id": "GHT-T2",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Nonzero Gauss-admissible data exist with chi=bar(psi), E=0 and arbitrary U.",
+      "dependencies": [
+        "GHT-T1"
+      ]
+    },
+    {
+      "id": "GHT-T3",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Reciprocal field force, H and species-norm conservation, and unique global temporal-gauge flow.",
+      "dependencies": [
+        "GHT-A1",
+        "a>0",
+        "kappa>=0",
+        "mu>=0",
+        "finite graph maximum degree four"
+      ]
+    },
+    {
+      "id": "GHT-C1",
+      "type": "EXACT CONDITIONAL",
+      "statement": "Neutral real scalar two-node preparation seeds two diamond curvatures: phi=2a s^2+O(s^3), defect=2a^2 s^4+O(s^5).",
+      "dependencies": [
+        "GHT-A1",
+        "r=1",
+        "specified initial preparation",
+        "source boundary sign -1"
+      ]
+    },
+    {
+      "id": "GHT-V1",
+      "type": "EXACT CONSTRUCTOR CHECK",
+      "statement": "28 symbolic fixture checks support written proofs; not exhaustive arbitrary-rank verification.",
+      "dependencies": [
+        "verify_joint_hamiltonian.py"
+      ]
+    },
+    {
+      "id": "GHT-V2",
+      "type": "NUMERICAL",
+      "statement": "Full scalar constrained-flow cross-check; no empirical interpretation.",
+      "dependencies": [
+        "HAMILTONIAN_NUMERICAL_CROSSCHECK_v0.1.json"
+      ]
+    },
+    {
+      "id": "GHT-O1",
+      "type": "OPEN",
+      "statement": "Source-selected action/species/group/units, independent review, stationary modes, continuum, quantization, chiral matter, running couplings, proton and monopole predictions.",
+      "dependencies": []
+    }
+  ],
+  "review": "Constructor; independent review pending",
+  "experimental_data_used": false
+}
