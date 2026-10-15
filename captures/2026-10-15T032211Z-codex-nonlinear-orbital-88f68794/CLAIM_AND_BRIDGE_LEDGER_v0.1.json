@@ -1,0 +1,127 @@
+{
+  "version": "0.1",
+  "lane": "development; no registry entry",
+  "physical_promotion": 0,
+  "review": "constructor only; independent review pending",
+  "claims": [
+    {
+      "id": "NOI-T1",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "After w=Gamma bar(chi), both matter vectors co-move and their full Gram matrix is conserved.",
+      "dependencies": [
+        "candidate joint action",
+        "bipartite incidence parity",
+        "common mu-rotating frame"
+      ],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "NOI-T2",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "chi=Gamma bar(psi) is an exact force-canceling invariant sector; this differs from chi=bar(psi) off the even-grade support.",
+      "dependencies": [
+        "NOI-T1"
+      ],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "NOI-T3",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Exact Abelian Coulomb dynamics and a finite-Fourier averaging comparison yield slow matter drift 2 i a alpha^2 f_j(t) D_j.",
+      "dependencies": [
+        "NOI-T1",
+        "full Gauss reconstruction",
+        "positive stiffness",
+        "t k_j !=4,16",
+        "finite-Fourier lemma proved in manuscript"
+      ],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "NOI-T4",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Fixed-norm, exactly Gauss-admissible seeds approach each nonzero flat stationary background while exact nonlinear trajectories acquire fixed positive higher-simplex matter stock in O(1/epsilon) time.",
+      "dependencies": [
+        "NOI-T3",
+        "nonzero gradient or cycle residue",
+        "stroboscopic native period pi"
+      ],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "NOI-T5",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Four coupled frequency-two field resonances are nonlinearly orbitally unstable by a force-canceling, small-field construction.",
+      "dependencies": [
+        "NOI-T2",
+        "nonzero M projection of four resonant eigenspaces",
+        "periodic averaging with bounded remainder"
+      ],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "NOI-T6",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Zero stiffness gives nonlinear orbital instability via exact force-canceling cycle drift; the witness is holonomy rather than necessarily matter stock.",
+      "dependencies": [
+        "NOI-T2",
+        "nonzero curl cycle"
+      ],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "NOI-T7",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "The nonlinear obstruction embeds at every finite rank with t=a kappa/r, while fields and matter mismatch can remain uniformly small.",
+      "dependencies": [
+        "NOI-T4",
+        "NOI-T5",
+        "NOI-T6",
+        "invariant active-color embedding",
+        "energy and conserved Q trace norm"
+      ],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "NOI-O1",
+      "type": "OPEN",
+      "statement": "Nonlinear conclusion at t in {2/3,8/3,16/(6-sqrt(2)),16/(6+sqrt(2)),16/(4-sqrt(2)),16/(4+sqrt(2))}.",
+      "dependencies": [
+        "dedicated resonant analysis required"
+      ],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "NOI-O2",
+      "type": "OPEN",
+      "statement": "Independent proof review; source action/group/species/units; other stationary branches and physical correspondence.",
+      "dependencies": [],
+      "origin": "current derivation under inherited GHT candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    }
+  ],
+  "supersedes": [
+    {
+      "claim": "GRM-O1",
+      "scope": "Partially resolves the prior nonlinear question for the nonzero flat family, with the six explicit positive resonance values still OPEN. Frozen prior files retained."
+    }
+  ],
+  "action_changes": []
+}

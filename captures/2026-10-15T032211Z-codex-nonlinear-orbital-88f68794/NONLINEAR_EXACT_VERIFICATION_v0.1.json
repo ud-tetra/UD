@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "type": "EXACT constructor algebra supporting written universal and averaging proofs",
+  "check_count": 42,
+  "checks": [
+    "bipartite_parity_anticommutes",
+    "stationary_vertex_mode",
+    "Gauss_and_gauge_identities",
+    "matter_force_field_support",
+    "exact_bilinear_charge_current_balance",
+    "rank_two_curved_parity_identity",
+    "co_moving_Gram_overlap_conserved",
+    "co_moving_norms_conserved",
+    "conjugate_matter_Hamiltonian_is_difference",
+    "dark_force_cancels_each_incidence",
+    "full_edge_spectral_moment_0",
+    "full_edge_spectral_moment_1",
+    "full_edge_spectral_moment_2",
+    "full_edge_spectral_moment_3",
+    "full_edge_spectral_moment_4",
+    "full_edge_spectral_moment_5",
+    "gradient_residue_from_spectral_weights",
+    "cycle_residue_from_spectral_weights",
+    "residue_zeros_disjoint",
+    "Coulomb_corrected_average_1/2",
+    "averaged_matter_drift_gradient_1/2",
+    "averaged_matter_drift_cycle_1/2",
+    "Coulomb_corrected_average_1",
+    "averaged_matter_drift_gradient_1",
+    "averaged_matter_drift_cycle_1",
+    "Coulomb_corrected_average_4/5",
+    "averaged_matter_drift_gradient_4/5",
+    "averaged_matter_drift_cycle_4/5",
+    "Coulomb_corrected_average_4/7",
+    "averaged_matter_drift_gradient_4/7",
+    "averaged_matter_drift_cycle_4/7",
+    "fixed_species_norm_seed",
+    "initial_disjoint_vertex_edge_charge_zero",
+    "native_stroboscopic_period",
+    "dark_resonant_eigenfield_6 - sqrt(2)",
+    "dark_resonant_drift_nonzero_6 - sqrt(2)",
+    "dark_resonant_eigenfield_sqrt(2) + 6",
+    "dark_resonant_drift_nonzero_sqrt(2) + 6",
+    "dark_resonant_eigenfield_4 - sqrt(2)",
+    "dark_resonant_drift_nonzero_4 - sqrt(2)",
+    "dark_resonant_eigenfield_sqrt(2) + 4",
+    "dark_resonant_drift_nonzero_sqrt(2) + 4"
+  ],
+  "new_invariant": "In mu-rotating frame, w=Gamma bar(chi), both psi,w evolve by the same anti-Hermitian generator; their full 2x2 Gram matrix is conserved.",
+  "nonlinear_orbital_instability_domain": "all a>0, alpha>0 and kappa>=0, except the six positive values of t=a*kappa/r explicitly left open",
+  "unresolved_positive_t": [
+    "2/3",
+    "8/3",
+    "16/(6-sqrt(2))",
+    "16/(6+sqrt(2))",
+    "16/(4-sqrt(2))",
+    "16/(4+sqrt(2))"
+  ],
+  "generic_drift": "d f_bar/d tau at (alpha k,D_j) = 2 i a alpha^2 f_j(t) D_j",
+  "resonant_dark_cases": [
+    {
+      "stiffness": "6 - sqrt(2)",
+      "t": "4/(6 - sqrt(2))",
+      "drift": "i M v / 2 !=0"
+    },
+    {
+      "stiffness": "sqrt(2) + 6",
+      "t": "4/(sqrt(2) + 6)",
+      "drift": "i M v / 2 !=0"
+    },
+    {
+      "stiffness": "4 - sqrt(2)",
+      "t": "4/(4 - sqrt(2))",
+      "drift": "i M v / 2 !=0"
+    },
+    {
+      "stiffness": "sqrt(2) + 4",
+      "t": "4/(sqrt(2) + 4)",
+      "drift": "i M v / 2 !=0"
+    }
+  ],
+  "proof_scope": "A finite-Fourier averaging lemma, parameter domain, fixed-norm admissible seeds and gauge-invariant departure observable are proved in the manuscript. Finite checks are not a computer verification of a long-time nonlinear theorem.",
+  "review": "Constructor only; no independent review",
+  "physical_promotion": 0,
+  "verifier_sha256": "d60355c530b89e564f8b8c0b930dfc12995df59a6c7afef456b24b05453d831f",
+  "graph_model_sha256": "1801d4683e6647cb62f16cec322c203457979bf16aff54f3af196971566488e6"
+}
