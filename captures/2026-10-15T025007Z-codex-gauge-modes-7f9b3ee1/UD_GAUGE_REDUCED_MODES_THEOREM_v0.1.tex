@@ -1,0 +1,329 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\setlist{nosep,leftmargin=18pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Conditional mode theorem}\rhead{GRM v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\U}{\mathrm U}
+\newcommand{\id}{\mathbf1}\newcommand{\dd}{\mathrm d}\newcommand{\diag}{\operatorname{diag}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Gauge-reduced modes and stability\\of neutral flat backgrounds}\\[7pt]
+{\large A finite tetrahedral link--matter theorem}\\[9pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+For the declared classical joint link--matter Hamiltonian, we classify its zero-frequency flat stationary family, perform regular Abelian Gauss reduction, and compute its exact characteristic polynomial. The 14 link oscillators have five stiffness eigenvalues. Every nonzero member of the neutral family has imaginary spectrum but an unbounded reduced linear flow: matter-frequency Jordan chains survive gauge removal at every positive diamond stiffness, including isolated cancellation parameters and field resonances. A rank-one embedding extends this obstruction to all ranks. We also derive the full higher-rank symplectic-slice polynomial, with its residual stabilizer stated explicitly. In contrast, a conserved positive functional proves nonlinear Lyapunov stability of the zero-matter vacuum gauge orbit at positive stiffness. All results are conditional on the previous candidate action; no physical coupling or experimental claim is made.
+\end{abstract}
+\textbf{Status.} \textsc{Derived conditional finite mathematics}; exact constructor checks and a separately typed numerical diagnostic. Development lane, no registry promotion, independent review pending, physical promotion $0$. The additional opposite-charge species, action coefficients and internal-time units remain declared inputs.
+
+\section{Hamiltonian and scope}
+Use the 15-node, 28-link incidence graph of the filled oriented tetrahedron. With signed boundary $B$, $D_U$ has blocks $B_{ij}U_{ij}$, $A_U=D_U^\dagger-D_U$, and $h_U=iA_U$. The inherited Hamiltonian is
+\begin{align*}
+H={}&\frac a2\sum_e\tr E_e^2+
+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)\\
+&+\psi^\dagger(\mu\id+h_U)\psi+
+\chi^\dagger(\mu\id+\bar h_U)\chi,
+\quad a>0,\ \kappa\geq0,\ \mu\geq0.
+\end{align*}
+Links are unitary, momenta Hermitian; $\psi$ and $\chi$ are independent canonical complex fields in conjugate gauge representations. All equations use internal time $s$. We analyze the flat zero-mode family, not every curved or excited stationary solution of this Hamiltonian.
+
+\newpage
+\section{Admissible stationary backgrounds}
+In temporal gauge, strict stationarity requires
+\[
+E=0,\qquad(\mu\id+h_U)\psi=0,\qquad
+(\mu\id+\bar h_U)\chi=0,\qquad \mathcal F(U,\psi,\chi)=0,
+\]
+together with the full Gauss constraints. Norm equality alone is insufficient. Here $\mathcal F$ is the Hermitian left derivative of the magnetic and matter Hamiltonians.
+
+Let $k=(1,1,1,1,0,\ldots,0)^T\in\mathbb R^{15}$ and $A=B^T-B$. The native identities are
+\[
+Ak=0,\qquad A^2=-4\left(\id-\frac{kk^T}{4}\right).
+\]
+\begin{proposition}[Complete flat family at $\mu=0$]
+Up to local gauge and constant species phases, every flat-link, strictly stationary temporal-gauge solution at $\mu=0$ is represented by
+\begin{equation}
+U_e=\id_r,\quad E_e=0,\quad
+\psi_i=\chi_i=\alpha k_i e_1,\qquad \alpha\geq0.\label{eq:background}
+\end{equation}
+Each species has norm $4\alpha^2$. For $\mu>0$, multiplying both fields by $e^{-i\mu s}$ gives a relative equilibrium under the two global species phase symmetries. It is stationary in the common rotating frame, not generally in temporal gauge itself.
+\end{proposition}
+\begin{proof}
+The flat-transport theorem on the filled tetrahedron gives $U_{ij}=P_iP_j^\dagger$; a gauge transformation sets all links to identity. The kernel identity then forces $\psi=k\otimes v$, $\chi=k\otimes w$. At $E=0$, Gauss law reads $vv^\dagger=\bar w w^T$. If nonzero, this rank-one equality implies $\bar w=e^{i\beta}v$. A common frame and the independent global species phases give \eqref{eq:background}. Every incidence pair has $k_ik_j=0$, so its matter force vanishes. Flat links also annul the magnetic force. Conversely all displayed equations and constraints hold. The on-site term generates the stated common phase rotation and changes no link force.
+\end{proof}
+The global species symmetries are used to choose a representative, not silently quotiented in the mode count. They leave two physical neutral zero directions in the Abelian reduced linearization.
+
+For $r=1$, $\alpha>0$ the local gauge action is free at this background: identity links force a stabilizing gauge to be spatially constant, and the nonzero vertex matter then forces that constant to be identity. The phase space has $116$ real dimensions. Fifteen independent Gauss constraints and fifteen gauge directions leave $86$ real dimensions, or $43$ canonical pairs. The vacuum $\alpha=0$ is singular and is treated separately.
+
+\newpage
+\section{Linearization and its gauge directions}
+First take $r=1$, $\alpha>0$ in the common rotating frame. Write
+\[
+U_e=e^{i\theta_e},\quad \delta\psi=x+iy,\quad
+\delta\chi=u+iv,\qquad x,y,u,v\in\mathbb R^{15}.
+\]
+Let $R$ be ordinary incidence, with head $+1$ and tail $-1$. Let $C$ record the signed difference of the two paths of each of the 18 diamonds; $K=C^TC$. Set
+\begin{equation}
+S=\alpha\diag(k),\qquad
+M_{\ell e}=-B_{ij}\alpha(k_j\delta_{\ell i}+k_i\delta_{\ell j}),
+\quad e=(i\leftarrow j).
+\end{equation}
+Only the six edge-coordinate rows of $M$ are nonzero. Direct differentiation gives
+\begin{align}
+\dot\theta&=aE,&\dot E&=-\kappa K\theta+2M^T(x+u),\notag\\
+\dot x&=Ax,&\dot u&=-Au,\label{eq:linear}\\
+\dot y&=Ay+M\theta,&\dot v&=-Av+M\theta.\notag
+\end{align}
+The linearized Gauss constraints and infinitesimal gauge directions are
+\begin{align}
+RE-2S(x-u)&=0,\label{eq:linGauss}\\
+(\delta\theta,\delta E,\delta x,\delta u,\delta y,\delta v)
+&=(R^T\lambda,0,0,0,S\lambda,-S\lambda).\label{eq:gauge}
+\end{align}
+The sparse identities
+\begin{equation}
+RC^T=0,\qquad RM^T=SA,\qquad MR^T=-AS\label{eq:identities}
+\end{equation}
+prove preservation of \eqref{eq:linGauss} and stationarity of every pure gauge vector in \eqref{eq:gauge}. They also identify which zero eigenvalues must be removed. Removing arbitrary zero eigenvectors would incorrectly discard physical neutral directions.
+
+For later use define
+\[
+p=x+u,\quad q=x-u,\quad\eta=y+v,\quad\zeta=y-v.
+\]
+Then
+\begin{align*}
+\dot p=Aq,\quad &\dot q=Ap,\\
+\dot\eta=A\zeta+2M\theta,\quad &\dot\zeta=A\eta.
+\end{align*}
+The real-amplitude subsystem is autonomous at first order. Its backreaction drives the links and then the phase subsystem. This structure is why eigenvalues alone miss the secular response.
+
+\newpage
+\section{An explicit regular gauge reduction}
+Write $L_R=RR^T$, $L_R^+$ for its Moore--Penrose inverse, and
+\[
+P_T=\id-R^TL_R^+R,\qquad P_0=\id-\frac{kk^T}{4}.
+\]
+Thus $P_T$ projects onto the 14-dimensional link cycle space $\ker R$. Fix Coulomb gauge $R\theta=0$, and fix the remaining constant gauge by $k^T\zeta=0$. Gauss law determines
+\begin{equation}
+E=E_T+2R^TL_R^+S q,\quad E_T\in\ker R,\qquad k^Tq=0.
+\end{equation}
+The last scalar condition is the linearized total neutrality condition; it must not be lost when solving the graph divergence equation.
+
+\begin{theorem}[Reduced equations]
+On the constrained coordinate space
+\[
+\theta_T,E_T\in\ker R,\quad p,\eta\in\mathbb R^{15},\quad
+q,\zeta\in k^\perp,
+\]
+the gauge-reduced linear equations are
+\begin{align}
+\dot\theta_T&=aE_T,&
+\dot E_T&=-\kappa K\theta_T+2P_TM^Tp,\notag\\
+\dot p&=Aq,&\dot q&=Ap,\label{eq:reduced}\\
+\dot\eta&=A\zeta+2M\theta_T,&
+\dot\zeta&=P_0\left(A\eta-4aS L_R^+S q\right).\notag
+\end{align}
+Their real dimension is $28+15+14+15+14=86$.
+\end{theorem}
+\begin{proof}
+A temporal multiplier $\Lambda$ adds $R^T\Lambda$ to $\dot\theta$ and $2S\Lambda$ to $\dot\zeta$. Preserving $R\theta=0$ gives
+$\Lambda=-2aL_R^+Sq+\lambda_0\boldsymbol1_{15}$. Its constant part is uniquely fixed by $k^T\dot\zeta=0$. Substitution gives the last equation with $P_0$. Applying $P_T$ to the electric equation gives the second equation. All remaining equations follow directly from \eqref{eq:linear}. The identities \eqref{eq:identities} ensure that the eliminated longitudinal electric equation still holds. These conditions define a local slice at a free gauge orbit, so this is a regular symplectic reduction, not merely deletion of selected eigenvalues.
+\end{proof}
+The Coulomb term in $\dot\zeta$ is required. Discarding longitudinal electric momentum before using Gauss law would omit it and generally change the Jordan structure.
+
+The components of $p$ and $\eta$ along $k$ are constant and decoupled. They describe changing the common neutral amplitude and the common species phase. They supply a semisimple zero pair.
+
+\newpage
+\section{Exact mode polynomial}
+The exact finite stiffness calculation gives
+\begin{equation}
+\det(z\id-K)=z^{14}(z-6)^2[(z-6)^2-2]^3[(z-4)^2-2]^3.\label{eq:Kpoly}
+\end{equation}
+This is an exact sparse-matrix result from the specified 28 links and 18 diamond rows, not a numerical eigensolver fit. The accompanying code constructs every entry from oriented vertex tuples and checks the polynomial symbolically. Since $K$ is symmetric and $\ker K=\operatorname{im}R^T$, the fourteen zero directions are precisely spatial gauge gradients.
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Squared link frequency & Multiplicity & Positive frequency\\\midrule
+$6a\kappa$ & 2 & $\sqrt{6a\kappa}$\\
+$(6-\sqrt2)a\kappa$ & 3 & $\sqrt{(6-\sqrt2)a\kappa}$\\
+$(6+\sqrt2)a\kappa$ & 3 & $\sqrt{(6+\sqrt2)a\kappa}$\\
+$(4-\sqrt2)a\kappa$ & 3 & $\sqrt{(4-\sqrt2)a\kappa}$\\
+$(4+\sqrt2)a\kappa$ & 3 & $\sqrt{(4+\sqrt2)a\kappa}$\\\bottomrule
+\end{tabular}
+\end{center}
+Let $t=a\kappa$ and
+\[
+F_t(\lambda)=(\lambda^2+6t)^2
+[(\lambda^2+6t)^2-2t^2]^3
+[(\lambda^2+4t)^2-2t^2]^3.
+\]
+\begin{theorem}[Regular Abelian characteristic polynomial]
+For every $\alpha>0$, the $86$-dimensional reduced linearization has
+\begin{equation}
+\boxed{\det(\lambda\id-L_{\rm red})=
+\lambda^2(\lambda^2+4)^{28}F_t(\lambda).}\label{eq:redpoly}
+\end{equation}
+For $\kappa>0$, all eigenvalues are zero or purely imaginary. Generically there are 28 algebraic matter-mode pairs at frequency $2$, 14 link-mode pairs at the frequencies above, and one neutral zero pair. The word ``algebraic'' matters: many of these pairs do not have independent normal-mode eigenvectors.
+\end{theorem}
+\begin{proof}
+Order the unreduced equations as amplitudes $(x,u)$, link variables $(\theta,E)$ and phases $(y,v)$. The operator is block triangular. The native identity gives amplitude and phase determinants $\lambda^2(\lambda^2+4)^{14}$ each. The link block gives $\lambda^{28}F_t$. Hence the full $116$-dimensional determinant is $\lambda^{32}(\lambda^2+4)^{28}F_t$.
+
+The fifteen constraints are constant under the linear flow, so passing to their kernel removes fifteen zero eigenvalues. Quotienting its fifteen-dimensional stationary gauge subspace removes fifteen more. This leaves \eqref{eq:redpoly}. This determinant argument alone does not establish diagonalizability; the next section resolves it.
+\end{proof}
+
+\newpage
+\section{Jordan chains and linear instability}
+Assume $t>0$ and first exclude $t=4/k_j$, where $k_j$ is a nonzero stiffness eigenvalue. At $\lambda=\pm2i$, eliminating the nonresonant link block shows that the resonant amplitude-to-phase forcing has rank equal to
+\[
+M(tK-4\id)^{-1}M^T.
+\]
+Only its six edge rows matter. On these rows let $P_g=B_1^TB_1/4$ and $P_c=\id_6-P_g$, the rank-three gradient and cycle projectors of the oriented tetrahedral edge space. Exact evaluation gives
+\begin{equation}
+M(tK-4\id)^{-1}M^T\big|_{C_1}
+=\alpha^2\left[f_g(t)P_g+f_c(t)P_c\right],\label{eq:resolvent}
+\end{equation}
+where
+\begin{align}
+f_g(t)&=\frac{-2(t-1)(7t-4)}{34t^2-48t+16},&
+f_c(t)&=\frac{2(5t-4)}{14t^2-32t+16}.\label{eq:residuefunctions}
+\end{align}
+The verifier checks these as full matrix identities through exact spectral projectors, not only their traces. Their zeros are $\{4/7,1\}$ and $\{4/5\}$, respectively, and never coincide.
+
+\begin{theorem}[The nonzero neutral family is linearly unbounded]
+For every $\alpha>0$, $a>0$ and $\kappa>0$, the regular Abelian reduced flow has a nontrivial imaginary-frequency Jordan chain. It is spectrally stable but not linearly stable, where linear stability means bounded tangent flow. For nonresonant $t$ the Jordan blocks at each of $\lambda=\pm2i$ are
+\[
+\begin{array}{c|c}
+t\notin\{4/7,4/5,1\}&6J_2+16J_1\\
+t\in\{4/7,4/5,1\}&3J_2+22J_1.
+\end{array}
+\]
+Here $J_m$ denotes a Jordan block of size $m$ at the indicated eigenvalue.
+\end{theorem}
+\begin{proof}
+For an amplitude eigenvector, $\lambda p=Aq$, $\lambda q=Ap$. Its $p$ component ranges freely over $k^\perp$. Eliminating links gives $\theta=2a(\lambda^2+tK)^{-1}M^Tp$. The phase equations imply
+$(\lambda^2-A^2)\eta=2\lambda M\theta$. Therefore the effective resonant coupling is a nonzero scalar times \eqref{eq:resolvent}. Its rank is six except at the three specified zeros, where it is three. With a nonresonant intermediate link block, each rank-one resonant coupling joins two otherwise simple equal-frequency matter eigenvectors into one size-two block. At each sign, the algebraic multiplicity is 28, yielding the displayed counts. The two residue functions cannot both vanish.
+\end{proof}
+
+\newpage
+\section{Resonant parameters and a physical tangent witness}
+The exceptional field resonances do not restore bounded flow. Their exact classification at each of $\lambda=\pm2i$ is
+\begin{center}
+\begin{tabular}{p{72mm}l}
+\toprule
+Parameter & Jordan blocks at each sign\\\midrule
+$t=2/3$ (stiffness $6$, uncoupled multiplicity 2)&$6J_2+18J_1$\\
+$t=4/(6\pm\sqrt2)$ (coupled multiplicity 3)&$3J_3+3J_2+16J_1$\\
+$t=4/(4\pm\sqrt2)$ (coupled multiplicity 3)&$3J_3+3J_2+16J_1$\\\bottomrule
+\end{tabular}
+\end{center}
+To see this, resolve the link stiffness into its orthogonal eigenspaces. The stiffness-$6$ sector has $M$-projection zero, so its two oscillators simply add two size-one blocks at each sign. Each of the other four resonant eigenspaces has dimension three and nonzero rank-three coupling to the relevant edge projector. The amplitude-to-link and link-to-phase arrows then form three length-three chains. The other rank-three edge sector still has nonzero residue and gives three length-two chains; the sixteen uncoupled matter eigenvectors remain. The exact spectral-projector weights in the replay establish these ranks and their nonzero signs. The length-three chains produce terms proportional to $s^2e^{\pm2is}$.
+
+These are genuine constrained perturbations. Let $G$ be the linear Gauss matrix and $L$ the full linearization. Since $GL=0$, every generalized eigenspace with nonzero eigenvalue lies in $\ker G$. Pure gauge vectors lie in $\ker L$, so none of these chains disappears in the gauge quotient. The same conservation argument places them tangent to both fixed-species-norm levels; changing total matter norm is not responsible for their growth.
+
+The package also supplies a rational real witness at $a=\kappa=\alpha=1$. With $P=L^2+4\id$, it satisfies
+\[
+P^2w=0,\qquad Pw\ne0,\qquad Gw=0.
+\]
+Its exact stroboscopic evolution is
+\begin{equation}
+e^{n\pi L}w=w-\frac{n\pi}{8}LPw,\qquad n\in\mathbb Z.\label{eq:witness}
+\end{equation}
+Indeed, on this subspace $L_0=L(\id+P/8)$ squares to $-4\id$, and $N=-LP/8$ is commuting and nilpotent of order two. Thus $L=L_0+N$ and $e^{n\pi L_0}=\id$. The replay checks that the growth vector has a nonzero component orthogonal to all gauge vectors. A separate numerical matrix-exponential check corroborates \eqref{eq:witness}; it is not the proof.
+
+At $\kappa=0$, the two stiffness-$6$ cycle directions remain matter-decoupled at first order and obey $\dot\theta=aE$, $\dot E=0$. Their gauge-invariant curl drifts, so this case also has unbounded reduced linear flow.
+
+\textbf{Limit of the conclusion.} Unbounded linearized flow with imaginary eigenvalues does not by itself decide nonlinear Lyapunov or orbital stability of the nonzero family. Those nonlinear questions remain open. No exponential instability has been established here.
+
+\newpage
+\section{Higher rank: the symplectic slice and its stabilizer}
+For $r>1$, \eqref{eq:background} has stabilizer $\U(r-1)$, acting as a spatially constant frame on the unoccupied colors. Hence a regular quotient dimension must not be assigned by subtracting $30r^2$ directions at this point. The gauge orbit and Gauss derivative both have real rank
+\[
+15r^2-(r-1)^2=14r^2+2r-1.
+\]
+The symplectic slice, meaning the linear Gauss kernel modulo orbit directions, has real dimension
+\begin{equation}
+56r^2+60r-2(14r^2+2r-1)=28r^2+56r+2.
+\end{equation}
+It still carries the stabilizer action and its quadratic momentum constraint. The local nonlinear reduced space is a further singular reduction of this slice \cite{OrtegaRatiu}; it is not asserted to be a smooth space of this dimension.
+
+Set $t=a\kappa/r$, because the magnetic trace normalization contributes $1/r$. The slice separates into:
+\begin{itemize}
+\item One active diagonal color: the $86$-real-dimensional Abelian sector, with $\kappa$ replaced by $\kappa/r$.
+\item $r-1$ off-diagonal colors, each giving $56$ complex slice dimensions.
+\item $(r-1)^2$ spectator Hermitian color components, each giving $28$ real link-cycle dimensions.
+\end{itemize}
+For one off-diagonal color write $\beta=\delta\Theta_{a1}$, $\epsilon=\delta E_{a1}$, $z=\bar\chi$, $p=\delta\psi_a+\delta z_a$, $q=\delta\psi_a-\delta z_a$. Its unreduced complex equations are
+\begin{align*}
+\dot\beta=a\epsilon,\quad&\dot\epsilon=-(\kappa/r)K\beta+M^Tp,\\
+\dot p=Aq,\quad&\dot q=Ap+2iM\beta,
+\end{align*}
+with $R\epsilon-Sq=0$ and gauge $(\beta,p)\mapsto(\beta+R^T\lambda,p+2iS\lambda)$.
+The identity $M^TAM=0$, and $A^2M=-4M$, annul the Schur feedback determinant. After the fifteen complex constraints and gauge directions are removed, its polynomial is $(\lambda^2+4)^{14}F_t$. Its realification squares that polynomial. Spectator components each contribute $F_t$.
+
+Thus the complete slice polynomial is
+\begin{equation}
+\boxed{\det(\lambda\id-L_{\rm slice})=
+\lambda^2(\lambda^2+4)^{28r}F_{a\kappa/r}(\lambda)^{r^2}.}
+\end{equation}
+The active scalar submodel is exactly invariant: use $U=\diag(u,\id_{r-1})$, $E=\diag(E_{\rm scalar},0)$, and matter only in color one. The residual stabilizer acts trivially on it. Its secular modes therefore survive as admissible nongauge directions of the full theory at every rank. This conclusion does not require treating spectator slice coordinates as an already regular physical quotient.
+
+\newpage
+\section{Nonlinear vacuum stability and the zero-stiffness boundary}
+\begin{theorem}[Vacuum gauge-orbit stability]
+For every finite rank $r$, $a>0$, $\kappa>0$ and $\mu\geq0$, the gauge orbit of
+\[
+U_e=\id_r,\quad E_e=0,\quad\psi=\chi=0
+\]
+is nonlinearly Lyapunov stable within the Gauss-admissible phase space. It is not claimed to attract nearby solutions. At $\kappa=0$ this vacuum gauge orbit is Lyapunov unstable.
+\end{theorem}
+\begin{proof}
+Let $N=N_\psi+N_\chi$. The unitary-hop, maximum-degree-four bound gives $\|h_U\|\leq4$ uniformly. Since $H$ and $N$ are conserved, so is
+\begin{align*}
+\mathcal V&=H+(5-\mu)N\\
+&=\frac a2\sum_e\tr E_e^2+V(U)
++\psi^\dagger(5\id+h_U)\psi
++\chi^\dagger(5\id+\bar h_U)\chi\\
+&\geq\frac a2\sum_e\tr E_e^2+V(U)+N\geq0.
+\end{align*}
+When $\kappa>0$, $V=0$ implies every unitary $W_d=\id_r$: each real trace attains its maximal value only at identity. On the filled tetrahedron all such flat connections are pure gauge. Therefore the zero set of $\mathcal V$ is exactly the stated vacuum gauge orbit.
+
+The link manifold is compact and the gauge group is compact. The displayed bound controls the momenta and matter norms. Consequently sufficiently small sublevel sets of $\mathcal V$ lie in any prescribed neighborhood of its zero orbit: otherwise a bounded sequence with $\mathcal V\to0$ outside that neighborhood would have a convergent subsequence to another zero. Continuity makes $\mathcal V$ initially small for data close to the orbit; conservation keeps the entire trajectory in the corresponding sublevel set. This proves gauge-orbit Lyapunov stability, including at its singular reduction point.
+
+For $\kappa=0$, take zero matter and an arbitrarily small nonzero scalar cycle momentum $E=\varepsilon e$ with $Re=0$, $Ce\ne0$. Identity initial links evolve exactly as $U_e(s)=e^{ia\varepsilon e_es}$, with constant momenta and zero Gauss law. At time of order $1/\varepsilon$, a diamond holonomy reaches a fixed nonidentity value, outside a fixed neighborhood of the flat vacuum orbit. Embed this scalar solution into one diagonal color for arbitrary rank. Thus arbitrarily nearby admissible data leave that neighborhood.
+\end{proof}
+
+At the vacuum, the unconstrained matter tangent equations are skew-Hermitian and bounded; the field-cycle frequencies are $\sqrt{(a\kappa/r)k_j}$. But the global stabilizer is now $\U(r)$ and neutrality first appears quadratically in matter perturbations. One must retain the residual momentum constraint and quotient rather than identify the naive linear Gauss kernel with a regular reduced manifold. The nonlinear proof above avoids that error.
+
+\newpage
+\section{Verification, provenance and next gate}
+The release constructs the graph anew and checks its exact boundary, gauge and Gauss identities, the full stiffness polynomial, regular constraint ranks, both color-sector characteristic polynomials, rational resolvent functions, spectral-projector weights and representative Jordan-primary nullities. The explicit Jordan vector is rational and satisfies linear Gauss law. Its secular growth is checked to be nongauge. Universal parameter conclusions use the written residue and resonance arguments; finite fixtures are supporting constructor checks, not independent review.
+
+\begin{center}\small
+\begin{tabular}{p{39mm}p{44mm}p{51mm}}
+\toprule
+Background or conclusion & Established status & Remaining limit\\\midrule
+Zero matter, $\kappa>0$ & Nonlinear Lyapunov stability of its gauge orbit & No attraction or physical identification\\
+Zero matter, $\kappa=0$ & Exact nonlinear drift instability & Internal time only\\
+Nonzero neutral flat family & Imaginary spectrum; unbounded reduced linear flow & Nonlinear Lyapunov and orbital status open\\
+Higher rank & Full slice polynomial; active instability survives & Residual $\U(r-1)$ singular reduction retained\\
+Other stationary branches & General stationarity equations stated & Curved and excited branches not classified\\
+Action and physical mapping & Inherited candidate premises & Source derivation, units, continuum and experiments open\\\bottomrule
+\end{tabular}
+\end{center}
+
+The exact substrate is the oriented filled tetrahedron. The joint Hamiltonian and conjugate species are inherited from \emph{A constrained joint link--matter Hamiltonian} v0.1, published as UD site version 16 and captured through repository PR 101. This manuscript does not rewrite that frozen release. Its global-existence theorem remains valid: bounded nonlinear solutions and unbounded variational flow are compatible statements.
+
+The supplied coefficient ledger v0.39 is historical provenance. In particular its G05 action-normalization gap remains open; none of the frequencies derived here identifies that coefficient, a Standard Model force strength, or a renormalization-group trajectory. The supplied CRL-2 governance document is labeled a proposal; this work retains the development-lane distinction and does not claim non-constructor review or promotion. No experimental dataset was used. The missing image \texttt{Gap2\_FINAL\_Finite\_Genesis.png} was unavailable and was not used.
+
+\textbf{Recommended next mathematical task.} Determine nonlinear orbital stability of the nonzero family, or prove a scoped obstruction, using its constrained normal form and conserved quantities. The Jordan calculation shows that adding positive magnetic stiffness alone cannot yield bounded linear modes about this family. Modifying the action to remove the resonance would be a separate candidate branch with fresh assumptions, not a silent repair of this theorem.
+
+\begin{thebibliography}{9}
+\bibitem{OrtegaRatiu} J.-P. Ortega and T. S. Ratiu, \emph{A symplectic slice theorem}, Lett. Math. Phys. \textbf{59}, 81--93 (2002), arXiv:math/0110084. \url{https://arxiv.org/abs/math/0110084}. Primary abstract inspected for the geometric slice context. The finite linear reductions and spectra are derived explicitly here; the abstract is not used as a proof of the displayed polynomial.
+\end{thebibliography}
+\end{document}
