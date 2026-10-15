@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,numpy as np
+from bifurcation_model import critical_algebra,numerical_model,HADAMARD
+p=Path(__file__).resolve().parent;g,Z,z,red,G,_=critical_algebra();nm=numerical_model(g);L=nm['C']@nm['critical_basis'];Gamma=float(G.subs(z,g['lambda_plus']))
+o={'status':'DERIVED model-coordinate readout; not laboratory calibration','physical_promotion':0,'index_convention':'zero-based nodes, links, diamonds; vertices 0..3; e=(i<-j)','nodes':[list(t) for t in g['simplices']],'edges':[list(e) for e in g['edges']],'diamonds':[list(d) for d in g['diamonds']],'W_convention':'d=(i,j,h,k); P=U_ij U_jk, Q=U_ih U_hk; W=Q^dagger P based at k','C':np.array(g['C']).astype(int).tolist(),'D':np.array(g['D']).astype(float).tolist(),'Hadamard':np.array(HADAMARD).astype(float).tolist(),'critical_basis_Z':nm['critical_basis'].tolist(),'critical_curl_L':L.tolist(),'phase_to_critical_map':(L.T/Gamma).tolist(),'Gamma':Gamma,'Lambda_plus':float(g['lambda_plus']),'k_star':nm['kc'],'exact_Z_root_field':[[str(t) for t in Z.row(i)] for i in range(28)],'exact_Gamma':str(G),'exact_Lambda_plus':str(g['lambda_plus']),'basis_definition':'Z[:,j]=x(Hadamard[:,j]), critical_pattern in curved_mode_model.py; Lambda denotes lambda_plus'}
+(p/'READOUT_GEOMETRY_v0.1.json').write_text(json.dumps(o,indent=2)+'\n')
