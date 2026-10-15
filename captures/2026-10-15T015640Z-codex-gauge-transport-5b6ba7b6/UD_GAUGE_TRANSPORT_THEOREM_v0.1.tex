@@ -1,0 +1,465 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,enumitem,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\U}{\mathrm U}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Id}{I}
+\newcommand{\ad}{\dagger}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{UD gauge transport / development v0.1}
+\fancyhead[R]{15 October 2026 UTC}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\setlist{itemsep=3pt,topsep=4pt}
+\title{Gauge-Covariant Incidence Transport on a Filled Tetrahedron\\
+\large A flatness theorem and an exact phase-controlled spectrum}
+\author{Benjamin Walker Mayes\\\small AI-assisted development manuscript}
+\date{15 October 2026 UTC / version 0.1}
+\begin{document}
+\maketitle
+\begin{center}\small
+\textbf{EXACT CONDITIONAL mathematics. CANDIDATE gauge extension.}\\
+Constructor verification passed; independent review pending. Physical promotion: \textbf{0}.
+\end{center}
+\begin{abstract}
+We construct a finite unitary transport extension of the declared tetrahedral
+incidence flow. A rank-$r$ complex fiber is assigned to each simplex and an
+independent unitary map to each adjacent incidence. The resulting generator is
+skew-Hermitian, has gauge-invariant support currents, and is covariant under
+local frame changes and signed tetrahedral relabelings. Its degree-two square
+is the signed difference of transport along the two sides of an incidence
+diamond. On the filled tetrahedron, preserving the chain identity forces all
+such curvature to vanish and the connection to be pure gauge. Curved
+transport remains norm conserving but changes the original Hodge-square
+identity. A single phase on one vertex--edge incidence gives an exactly
+solvable spectral splitting, providing a finite analogue test contract.
+The construction supplies a precise candidate interface, not a derivation
+of the Standard Model, a gauge-field action, a continuum limit, running
+couplings or physical unification. The underlying connection/curvature
+principles are established mathematics; no general novelty claim is made.
+\end{abstract}
+
+\section{Source commitments and added objects}
+The source carrier is the downward-closed filled tetrahedron $\Delta^3$,
+with increasingly oriented simplices and graded dimensions $(4,6,4,1)$.
+Let $B$ be the total boundary, acting downward on the direct sum of all
+15 coordinates. The native real flow is
+\[
+ B^2=0,\qquad A_0=B^T-B,\qquad \dot c=A_0c .
+\]
+Its complexification and unit simplex metric are mathematical choices,
+not a physical quantization. Papers I--III, review drafts 1.1.1, retain
+their source identities \cite{UD1,UD2,UD3}. In particular, the finite
+$S_4$ symmetry is not itself a continuous physical gauge group.
+
+The Hasse graph has one node per nonempty simplex and one link for each
+adjacent containment. It has 15 nodes and 28 links. We add the following:
+\begin{center}\small
+\begin{tabular}{p{.24\linewidth}p{.67\linewidth}}
+\toprule
+Object & Type and status\\ \midrule
+$E_\sigma=\C^r$ & Added internal fiber at simplex $\sigma$; $r$ is supplied.\\
+$c_\sigma\in E_\sigma$ & Complex amplitude vector, with support $q_\sigma=\|c_\sigma\|^2$.\\
+$U_{\sigma\tau}$ & Unitary map $E_\tau\to E_\sigma$ for $\sigma\subset\tau$ of codimension one. Reverse transport is its adjoint.\\
+$s$ & Internal evolution parameter; no laboratory clock is assigned.\\
+$\Omega_\sigma(s)$ & Optional local skew-Hermitian temporal connection.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The fibers are indexed by simplices, not merely by the four geometric
+vertices. Thus the local frame group is $\prod_\sigma\U(r)$.
+This is an explicit extension with additional state data. It is not a
+discovery that the original scalar coordinate already carries color,
+weak isospin or hypercharge.
+
+Define a downward block operator by
+\[
+ (D_U)_{\sigma\tau}=B_{\sigma\tau}U_{\sigma\tau},\qquad
+ A_U=D_U^\ad-D_U,\qquad
+ L_U=D_U^\ad D_U+D_UD_U^\ad.                         \tag{1}
+\]
+Unlisted blocks vanish. For identity transport, $D_U=B\otimes I_r$.
+The original topological boundary $B$ remains defined even when the
+new transport operator $D_U$ is not nilpotent.
+
+\section{The transport and flatness theorem}
+A codimension-two containment $\sigma\subset\eta$ has exactly two
+intermediate simplices $\tau,\tau'$. Write
+$\epsilon=B_{\sigma\tau}B_{\tau\eta}$; the other path has sign $-\epsilon$.
+Its transport defect and based diamond holonomy are
+\[
+ F_{\sigma\eta}
+ =U_{\sigma\tau}U_{\tau\eta}
+  -U_{\sigma\tau'}U_{\tau'\eta},\qquad
+ W=(U_{\sigma\tau'}U_{\tau'\eta})^\ad
+       U_{\sigma\tau}U_{\tau\eta}.                   \tag{2}
+\]
+Both are independent of the matter state. $F$ maps $E_\eta$ to $E_\sigma$;
+$W$ is an endomorphism of $E_\eta$.
+
+\begin{theorem}[Finite gauge-transport admissibility]\label{th:main}
+On the filled tetrahedron, for every integer $r\geq1$ and every assignment
+of unitary incidence transports, the following statements hold.
+\begin{enumerate}
+\item $A_U^\ad=-A_U$. For continuous prescribed links, the equation
+$\dot c=(A_U+\Omega)c$ preserves total support when
+$\Omega=\bigoplus_\sigma\Omega_\sigma$ is skew-Hermitian.
+\item Under $c'_\sigma=g_\sigma c_\sigma$ and
+$U'_{\sigma\tau}=g_\sigma U_{\sigma\tau}g_\tau^\ad$,
+$D_{U'}=GD_UG^\ad$ and $A_{U'}=GA_UG^\ad$.
+For differentiable time-dependent frames, full evolution covariance
+requires $\Omega'=G\Omega G^\ad+\dot G G^\ad$.
+\item Every codimension-two block is
+$(D_U^2)_{\sigma\eta}=\epsilon F_{\sigma\eta}$.
+Consequently $D_U^2=0$ if and only if every diamond holonomy is identity.
+\item If $D_U^2=0$, there are unitary $P_\sigma$ such that
+$U_{\sigma\tau}=P_\sigma P_\tau^\ad$. Therefore $A_U$ is unitarily
+conjugate to $A_0\otimes I_r$ and
+\[
+ \det(\lambda I-A_U)=\lambda^r(\lambda^2+4)^{7r}.     \tag{3}
+\]
+\item For arbitrary links,
+\[
+ -A_U^2=L_U-D_U^2-(D_U^\ad)^2.                     \tag{4}
+\]
+Thus the unchanged degree-diagonal Hodge-square identity $-A_U^2=L_U$
+holds if and only if the connection is flat in the sense of item 3.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Adjoint transposition of (1) proves skew-Hermiticity. With
+$Q=\sum_\sigma c_\sigma^\ad c_\sigma$, differentiation gives
+$\dot Q=c^\ad[(A_U+\Omega)^\ad+(A_U+\Omega)]c=0$.
+Each nonzero block transforms by the stated left/right frame factors;
+summing proves covariance. Differentiating $c'=Gc$ supplies the
+inhomogeneous $\dot GG^\ad$ term. Omitting it is valid only for
+time-independent frames, or a separately fixed temporal gauge.
+
+For item 3, a two-step downward path from $\eta$ to $\sigma$ removes
+two distinct vertices. Exactly two orders are possible, and the
+ordinary incidence signs are opposite. Their two transport products
+are therefore precisely $\epsilon F_{\sigma\eta}$. All other blocks
+of $D_U^2$ vanish by degree. Since the second path product is unitary,
+$F=0$ is equivalent to $W=I$.
+
+For item 4 let $t$ denote the unique top tetrahedron. Choose
+$P_t=I$ and define $P_\sigma:E_t\to E_\sigma$ by transport along a
+downward path from $t$ to $\sigma$, without its incidence signs.
+Such paths correspond to orders of deleting the vertices absent
+from $\sigma$. Adjacent transpositions generate all changes of order;
+each transposition is exactly a diamond. Flatness makes the path
+product independent of the order. In particular
+$P_\sigma=U_{\sigma\tau}P_\tau$ for each incidence. All $P_\sigma$
+are unitary, so
+\[
+ D_U=P(B\otimes I_r)P^\ad,\qquad
+ P=\bigoplus_\sigma P_\sigma .
+\]
+This proves the conjugacy and (3), using the native spectrum.
+The unique top cell is substantive: flat connections on a
+non-simply-connected base need not be globally pure gauge.
+
+Finally expand $(D_U^\ad-D_U)^2$ to obtain (4). The two correction
+terms lower and raise degree by two respectively. They occupy
+disjoint graded blocks, so their sum vanishes only when each vanishes.
+This proves item 5.
+\end{proof}
+
+The flatness conclusion concerns incidence transport at each fixed $s$.
+It does not exclude mixed temporal curvature
+\[
+ \mathcal E_{\sigma\tau}
+ =\dot U_{\sigma\tau}-\Omega_\sigma U_{\sigma\tau}
+                    +U_{\sigma\tau}\Omega_\tau ,
+\]
+which transforms as $g_\sigma\mathcal E_{\sigma\tau}g_\tau^\ad$.
+For example, identity links with unequal local scalar temporal blocks
+can have $\mathcal E\ne0$ while $D_U^2=0$.
+Instantaneous conjugacy of $A_U$ therefore does not establish equality
+of the complete time-dependent propagators. The spectral corollary
+below fixes $\Omega=0$ and constant links.
+
+\subsection{Support currents and full tetrahedral covariance}
+For each adjacent incidence put
+\[
+ J_{\sigma\tau}
+ =2\operatorname{Re}
+     (c_\sigma^\ad B_{\sigma\tau}U_{\sigma\tau}c_\tau).       \tag{5}
+\]
+Its contribution is $-J_{\sigma\tau}$ to $\dot q_\sigma$ and
+$+J_{\sigma\tau}$ to $\dot q_\tau$. Local temporal blocks contribute
+zero to each $q_\sigma$. Thus for any coordinate region $R$,
+\[
+ \frac{d}{ds}\sum_{\sigma\in R}q_\sigma
+ =J_{\rm in}(R)-J_{\rm out}(R).
+\]
+Equation (5) is gauge invariant because both endpoint frame factors
+cancel. It is a model support current, not an electrical-current
+identification.
+
+For $\pi\in S_4$ let $S_\pi$ be the signed permutation of oriented
+simplices. Move the independent link data by
+$U^\pi_{\pi\sigma,\pi\tau}=U_{\sigma\tau}$.
+Incidence equivariance gives
+\[
+ D_{U^\pi}=(S_\pi\otimes I_r)D_U(S_\pi^T\otimes I_r).       \tag{6}
+\]
+This is covariance of the whole connection family. A particular
+nonuniform connection need not commute with $S_\pi$. No curved
+configuration is declared tetrahedrally invariant merely because
+the law is covariant.
+
+For a diamond a dimensionless gauge-invariant curvature diagnostic is
+\[
+ \chi_W=1-\frac1r\operatorname{Re}\tr W
+       =\frac{\|F_{\sigma\eta}\|_F^2}{2r}\in[0,2].           \tag{7}
+\]
+This follows by expanding the Frobenius norm of the difference of
+the two unitary path products. On the scalar graph, a spanning tree
+removes 14 of the 28 link phases, leaving 14 independent loop
+coordinates. The 18 diamond equations generate all loop constraints
+here by the path proof above. The replay also checks their
+linearized scalar rank, 14. These are model coordinate counts,
+not physical particle or spacetime dimensions.
+
+\section{An exact, phase-controlled spectral prediction}
+Set $r=1$, $\Omega=0$, all links to one except
+$U_{\{0\},\{0,1\}}=u=e^{i\phi}$. Keep every link magnitude and every
+incidence sign fixed.
+
+\begin{corollary}[One-incidence phase spectrum]\label{cor:phase}
+For this declared family,
+\[
+ \det(\lambda I-A_U)
+ =\lambda(\lambda^2+4)^5
+   \left[(\lambda^2+4)^2-4(1-\cos\phi)\right].              \tag{8}
+\]
+The positive squared frequencies are $4$ five times and
+$4\pm2\sqrt{1-\cos\phi}$ once each, with multiplicities combined
+at $\phi=0$. At $u=i$,
+\[
+ \det(\lambda I-A_U)
+ =\lambda(\lambda^2+2)(\lambda^2+4)^5(\lambda^2+6).         \tag{9}
+\]
+The connection is curved for $u\ne1$ even though all support balances
+remain exact. At $u=i$, $\rank D_U^2=1$ and
+$\rank(-A_U^2-L_U)=2$.
+\end{corollary}
+
+\begin{proof}
+Partition the 15 coordinates into eight even-degree and seven
+odd-degree coordinates. In this order write
+$A_U=\left(\begin{smallmatrix}0&C\\-C^\ad&0\end{smallmatrix}\right)$.
+For the identity-link matrix $C_0$, the native identity gives
+$C_0^\ad C_0=4I_7$. The vertex-0 row has three unit entries.
+Let $e$ select odd coordinate edge 01 and let
+$v=C_0^\ad e_{\text{vertex }0}=e+w$, so $w^\ad e=0$ and
+$\|w\|^2=2$. With $\delta=u-1$,
+\[
+ C=C_0+\delta e_{\text{vertex }0}e^\ad,\qquad
+ C^\ad C=4I_7+\delta we^\ad+\bar\delta ew^\ad .
+\]
+The diagonal $ee^\ad$ correction cancels since
+$\delta+\bar\delta+|\delta|^2=0$. On the plane spanned by
+$e,w/\sqrt2$, the added Hermitian matrix has eigenvalues
+$\pm\sqrt2|\delta|=\pm2\sqrt{1-\cos\phi}$.
+It is zero on the other five directions. The nonzero eigenvalues
+of the bipartite skew matrix are the signed imaginary singular
+values of $C$, with one additional zero direction. This proves (8).
+For $u\ne1$, $D_U^2$ has only the row at vertex 0, with nonzero
+entries from faces 012 and 013, so its rank is one. Its adjoint
+occupies the opposite graded block, proving the defect rank.
+\end{proof}
+
+The corollary is a finite-model testable prediction, not an
+electroweak or strong-coupling spectrum. Frequencies and their ratios
+are insensitive to a common positive clock multiplier, but an
+actual sensor must still be calibrated.
+
+\section{What the native symmetries do and do not select}
+\begin{proposition}[Global symmetry versus local gauge data]
+The real orthogonal centralizer of the canonical native $A_0$ is
+$O(1)\times\U(7)$. Its subgroup also commuting with the full signed
+$S_4$ action is $O(1)\times\U(1)^3$. Consequently the connected
+$S_4$-compatible global symmetry has no nontrivial continuous
+homomorphism from $SU(2)$ or $SU(3)$.
+\end{proposition}
+\begin{proof}
+The harmonic line is $\ker A_0$ and must be preserved. On its
+orthogonal complement $J=A_0/2$ is an orthogonal complex structure.
+Orthogonal maps commuting with $J$ are exactly $\U(7)$.
+As a complex $S_4$ representation this space is the sum of one
+copy each of the inequivalent real-type irreducibles of complex
+dimensions $1,3,3$. Schur's lemma gives one unit phase per summand.
+A homomorphism from either connected simple group to the abelian
+torus has zero Lie algebra map, hence trivial image.
+\end{proof}
+This result does not exclude differently embedded, noncommuting
+or enlarged gauge branches. In particular $\U(7)$ contains
+non-Abelian subgroups if the simultaneous $S_4$-commuting restriction
+is dropped. It supplies neither a chosen embedding nor local
+parallel transport. The requirement of commuting with $S_4$ is
+an explicit branch assumption, not a universal law.
+
+For a separate comparison, exact scalar state phases
+$z_\sigma=c_\sigma/|c_\sigma|$ on nonzero support produce receipts
+$u_{\sigma\tau}=\bar z_\sigma z_\tau$. Their product around every
+closed support-graph path is one by telescoping, with conjugation
+on reversed edges. Zeros remove links and require separate
+components. Therefore these relative-state receipts cannot alone
+instantiate an independent nonflat connection. They remain valid
+reconstruction data as in Paper II; no source result is withdrawn.
+
+\section{Coupling selection remains a separate theorem target}
+Even after \emph{assuming} the Standard Model Lie algebra
+$\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$, gauge
+invariance does not impose a common kinetic coefficient.
+Every positive invariant symmetric bilinear form is
+\[
+ h=a_3h_3\oplus a_2h_2\oplus a_1h_1,\qquad a_i>0,          \tag{10}
+\]
+once generator normalizations are fixed.
+On each compact simple ideal the adjoint representation and
+Schur's lemma give one scalar multiple of a fixed invariant form.
+Cross terms vanish because each simple ideal is perfect and
+commutes with the other ideals and the center. The one-dimensional
+center has its independent positive coefficient. This proves
+the three-parameter freedom without fitting a numerical target.
+
+A chosen compact simple algebra instead has one such form up
+to scale. Conditional $SU(5)$ illustrates the normalization
+obligation: if one supplies
+\[
+ Y=\operatorname{diag}(-1/3,-1/3,-1/3,1/2,1/2),\quad
+ \tr Y^2=5/6,\quad T_Y=\sqrt{3/5}\,Y ,
+\]
+then $\tr T_Y^2=1/2$ and a common $g_5T_Y=g_YY$ gives
+$g_1=\sqrt{5/3}\,g_Y=g_5$ at tree-level matching.
+This is standard conditional group theory \cite{PDG}, not selection
+of $SU(5)$ by UD and not a running-coupling calculation. A
+renormalization scheme, matter spectrum, thresholds, action and
+quantization remain required for scale evolution.
+
+\section{A positive candidate contract and its exit gates}
+The candidate branch has complete finite \emph{matter} kinematics:
+choose a fixed tetrahedron, rank $r$, unitary links $U(s)$, local
+temporal blocks $\Omega(s)$, initial $c(0)$ and readouts (5),(7).
+It has well-defined norm-preserving linear evolution and full
+family relabeling covariance. On the curved branch $D_U$ is a
+covariant transport operator, not the original topological boundary.
+
+The independent link variables currently have no source-selected
+evolution. A nonnegative gauge-invariant potential can, for example,
+be \emph{proposed} as
+$V=\sum_d\kappa_d[1-\operatorname{Re}\tr W_d/r]$, $\kappa_d>0$.
+This is a supplied Wilson-type choice, not a derived gauge action.
+A potential alone does not define a link clock, canonical momenta,
+Gauss constraint, feedback or quantum measure. Symmetry may constrain
+some coefficient classes without fixing their values.
+
+\begin{center}\small
+\begin{tabular}{p{.35\linewidth}p{.56\linewidth}}
+\toprule
+Admissibility requirement & Outcome for this branch\\ \midrule
+Explicit states, fibers and transport & Defined, conditional on supplied $r,U,\Omega$.\\
+Local gauge and signed $S_4$ family covariance & Proved; configuration invariance is distinct.\\
+Conserved support and regional current law & Proved, including curved transport.\\
+Original chain identity and Hodge square & Preserved only on the flat branch; proved scope.\\
+Independent curvature readout & Defined; acquisition and physical interpretation open.\\
+Closed gauge-field dynamics and Gauss law & Open; needs a joint action or phase-space law.\\
+Continuum/Lorentz and chiral matter limit & Open; no convergence transferred from algebra.\\
+SM group, charges, anomalies, normalization & Open; no native selection is supplied.\\
+RG running, proton channels, monopole sector & Downstream of the missing field/action bridge.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Discrete connections and the curvature/nilpotency relationship are
+established \cite{BEHS}. Algebraic covariance alone is not a convergence
+theorem: other discretizations specifically investigate convergence
+\cite{Braune}. Our Hasse-link construction is not identified with
+their smooth discretizations or their continuum limit.
+
+\subsection{Conditional analogue experiment specification}
+A bounded operator analogue of Corollary \ref{cor:phase} would require:
+15 calibrated complex modes, the 28 prescribed signed incidence
+couplings, matched coupling magnitudes, a controlled phase on the
+chosen incidence and a known common rate $\eta>0$. In a proposed
+Schrodinger-type realization use $H_{\rm phys}=i\hbar\eta A_U$;
+then the evolution is $\dot c=\eta A_Uc$ in laboratory time.
+At phases $0$ and $\pi/2$, the predicted nonzero frequency sets are
+respectively $\{2\eta\}$ and
+$\{\sqrt2\eta,2\eta,\sqrt6\eta\}$ with the multiplicities in (9).
+Measured complex transfer matrices or several calibrated preparations
+are preferable to a single power-spectrum trace that may miss modes.
+
+Before testing, freeze the mapping, phase uncertainty, hopping errors,
+readout noise/covariance, frequency estimator, time window, null model,
+acceptance threshold, exclusions and retained data. Gauge-related
+rephasings are the equivalence control; uniform magnitude changes
+are a distinct confound. This is a model-to-engineered-operator
+candidate, not a test of GUT unification or proton/monopole physics.
+No physical experiment or dataset fit has been performed.
+
+\section{Verification, provenance and review}
+The fresh primary replay \texttt{verify\_hasse\_transport.py} constructs
+all simplices and incidence signs, enumerates 18 diamonds, checks
+the 14-dimensional scalar cycle constraint, tests non-Abelian
+rank-two covariance, all 24 signed relabelings, temporal covariance,
+local support balance and the phase-dependent characteristic polynomial
+on five exact phases. The spectral proof above uses a separate
+two-plane Gram reduction, not the computed polynomial as a universal
+proof. The companion \texttt{verify\_gauge\_bridge.py} independently
+checks native centralizer dimensions, state-phase flatness, conditional
+$SU(5)$ trace normalization and an ordered-vertex transport comparison.
+That comparison is an additional convention, not the Hasse-link
+model and not a claim of its full permutation covariance.
+
+The receipts record exact rational, Gaussian-rational and algebraic
+arithmetic. They are constructor checks, not independent review.
+No source script was executed merely to ingest an archive.
+Source baseline: Public Atlas commit
+\texttt{84d6636cbf7d5dcb3c8c9e8abbe7b43350908499};
+UD repository baseline
+\texttt{2a6d3fda46dd4724aeba73329b605e6533d68d5d}.
+The historical v0.39 ledger is preserved alongside later source
+amendments. The new objects and conditional conclusions do not
+change frozen physical status or claim confidence by citation.
+The unavailable Genesis image is not used.
+
+Author responsibility and independent mathematical review remain
+submission tasks. AI assistance includes proof drafting, exact
+fixtures, source comparison and document preparation. No claim
+of new general gauge theory, funding status, experimental discovery
+or physical promotion is made.
+
+\begin{thebibliography}{9}
+\bibitem{UD1} B. W. Mayes, \emph{Finite Tetrahedral Complexes, Skew Support
+Flow and Contact Readiness}, Paper I, review draft 1.1.1, 4 October 2026,
+Sections 4--6, Public Research Atlas.
+\bibitem{UD2} B. W. Mayes, \emph{Projective Reconstruction, Complex Phase
+Receipts and Frozen-Tree Validation}, Paper II, review draft 1.1.1,
+4 October 2026, Sections 4 and 6.
+\bibitem{UD3} B. W. Mayes, \emph{Tetrahedral Symmetry, Radial Spectra and
+Finite Collective Mechanisms}, Paper III, review draft 1.1.1,
+4 October 2026, Section 2.3.
+\bibitem{BEHS} D. Berwick-Evans, A. N. Hirani and M. D. Schubel,
+\emph{Discrete Vector Bundles with Connection},
+\href{https://arxiv.org/html/2104.10277v3}{arXiv:2104.10277v3},
+Sections 4--6; inspected 15 October 2026 UTC.
+\bibitem{Braune} T. Braune, Y. Tong, F. Gay-Balmaz and M. Desbrun,
+\emph{A Discrete Exterior Calculus of Bundle-valued Forms},
+\href{https://arxiv.org/html/2406.05383v1}{arXiv:2406.05383v1},
+Sections 4--5; inspected 15 October 2026 UTC.
+\bibitem{PDG} N. Nagata, A. Hebecker and J. Hisano,
+\emph{Grand Unified Theories}, 2025 Review of Particle Physics,
+Sections 92.2.2 and 92.5,
+\href{https://pdg.lbl.gov/2025/reviews/rpp2025-rev-guts.pdf}{PDG review}.
+\end{thebibliography}
+\end{document}

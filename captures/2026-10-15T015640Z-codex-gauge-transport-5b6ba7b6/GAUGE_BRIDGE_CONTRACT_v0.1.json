@@ -1,0 +1,48 @@
+{
+  "version": "0.1",
+  "state_space": "direct sum over nonempty tetrahedral simplices of C^r, plus independent unitary incidence links and local temporal connections",
+  "native_reduction": "r=1, real states, identity links, zero temporal connection recovers original real flow",
+  "evolution": "dc/ds=(D_U^dagger-D_U+Omega)c; link evolution currently prescribed, not source-derived",
+  "initial_data": [
+    "c(0)",
+    "r",
+    "all 28 U links as functions of internal s",
+    "local temporal blocks Omega"
+  ],
+  "readouts": [
+    "simplex squared norms",
+    "signed gauge-invariant support currents",
+    "diamond holonomy conjugacy classes and chi_W"
+  ],
+  "exact_admissibility": [
+    "unitarity",
+    "local frame covariance including temporal connection",
+    "signed S4 family covariance",
+    "norm and regional continuity"
+  ],
+  "branch_change": "Curvature requires D_U^2 != 0 and a curvature term in the Hodge-square relation. Original geometric boundary B remains nilpotent.",
+  "physical_requirements": [
+    "joint link-matter action/phase space and Gauss law",
+    "source of group and representations",
+    "calibrated scale/clock",
+    "chiral anomaly-free matter and continuum validation",
+    "renormalization scheme, thresholds and predictions",
+    "target-blind test and independent review"
+  ],
+  "analogue_candidate": {
+    "modes": 15,
+    "links": 28,
+    "mapping": "H_phys=i hbar eta A_U",
+    "control": "phase u on vertex0 <- edge01; other link phases identity; common unit magnitude",
+    "prediction": "phase0: active frequency2eta multiplicity7; phase pi/2: sqrt2eta multiplicity1,2eta multiplicity5,sqrt6eta multiplicity1; harmonic zero1",
+    "measurement": "complex transfer reconstruction or sufficient calibrated mode-exciting preparations",
+    "null_controls": [
+      "gauge-related rephasings",
+      "phase0 native operator",
+      "separately calibrated coupling magnitude errors"
+    ],
+    "status": "CANDIDATE protocol outline; instrument, error budget and thresholds OPEN"
+  },
+  "physical_promotion": 0,
+  "flatness_scope": "incidence/spatial transport only, pointwise in internal s; mixed temporal curvature can remain nonzero; instantaneous spectrum does not fix the full time-dependent propagator"
+}
