@@ -1,0 +1,251 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Critical branch bifurcation}\rhead{CBF v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\id}{\mathbf1}\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Supercritical branches of the curved matter equilibrium}\\[8pt]
+{\large Balanced phase minima, two saddle families,\\and their small-mode spectra}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+At the first curved-branch instability, the fixed tetrahedral link--matter model has a three-dimensional critical standard representation. Its inherited matter-relaxed quartic is strictly positive, with positive cubic anisotropy. We reduce the exact analytic stationary energy onto this critical space and prove a complete local scalar bifurcation diagram. Just above threshold, 26 labeled, gauge-inequivalent nonzero branches occur: six balanced phase minima, twelve index-one saddles, and eight index-two saddles. Their amplitudes scale as the square root of the coefficient excess, their energy shifts as its square. A reversing symmetry makes the exact reduced linearization mechanical at these equilibria, giving their instability counts and leading soft frequencies. The six minima remain nonlinearly orbitally stable under every finite-rank embedding by the existing positive color-normal estimate; both saddle families remain unstable through the scalar subsystem. This does not classify all higher-rank equilibria. Energy conservation excludes interpreting the new minima as attractors. All conclusions are conditional on the unchanged candidate action.
+\end{abstract}
+\textbf{Status.} \textsc{Derived conditional mathematics}; 66 exact constructor checks, inherited directed integer certificate, and separately typed numerical diagnostics. Independent review pending. Development lane, no registry entry; physical promotion $0$.
+
+\textbf{Pattern meaning.} The four-component labels below describe critical phase amplitudes on a fixed carrier. They are not deformations of the tetrahedron or identifications of physical fields.
+
+\begin{center}
+\begin{tabular}{lrrl}
+\toprule
+Critical amplitude pattern & Branches & Scalar index & Nonlinear verdict\\
+\midrule
+$(1,1,-1,-1)$ & 6 & 0 & Stable minima\\
+$(1,-1,0,0)$ & 12 & 1 & Unstable saddles\\
+$(3,-1,-1,-1)$ and negatives & 8 & 2 & Unstable saddles\\
+\bottomrule
+\end{tabular}
+\end{center}
+Counts retain vertex labels and quotient local gauge/species phases, not spatial automorphisms. The three rows are symmetry classes under $S_4$ and overall phase reversal.
+
+\newpage
+\section{Frozen model and the critical amplitude coordinates}
+Use the 15 nonempty simplex nodes, 28 incidence links and 18 diamonds of the filled tetrahedron. Let $R$ be ordinary incidence, $C$ diamond curl, $K=C^TC$, $b_e=B_{ij}$ for $e=(i\leftarrow j)$, and $D_U[i,j]=b_eU_e$. The unchanged action has
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi,
+\]
+where $h_U=i(D_U^\dagger-D_U)$ and the matrix Gauss law is
+\[
+\mathcal G_i=\sum_{\mathrm{head}=i}E_e-\sum_{\mathrm{tail}=i}U_e^\dagger E_eU_e
+-\psi_i\psi_i^\dagger+\bar\chi_i\chi_i^T=0.
+\]
+Fix $a>0$, $N_\psi=N_\chi=N>0$, $\mu\ge0$ and finite $r$. The one-active-color branch has $U_e^*=\diag(-ib_e,\id_{r-1})$, $E^*=0$, and $\psi_i^*=\chi_i^*=\sqrt N\,v_i e_1$, where $v>0$ is the unit Perron vector of $T=|B|+|B|^T$ with eigenvalue $\rho=\sqrt{8+2\sqrt{10}}$.
+
+Write $d=\sqrt{10}$, $W=\diag(v_iv_j)=w_0D$ and
+\[
+w_0=\frac{\rho(10-d)}{480},\quad
+\Lambda_+=\frac{28+17d+\sqrt{866-128d}}{18},\quad
+k_* =\frac{4w_0}{\Lambda_+}=\frac{\kappa_*(N)}N.
+\]
+The parameter for bifurcation is
+\begin{equation}
+\boxed{\epsilon=\frac{\kappa}{rN}-k_*.}\label{eq:epsilon}
+\end{equation}
+The scalar case has $r=1$. For embedded branches the active scalar magnetic coefficient is exactly $\kappa/r$.
+
+On the weighted Coulomb slice $RD\theta=0$, the critical link map is $x(a)$, $\sum_i a_i=0$. With $c=(1+d)/3$, $h=(8-d)/3$ and $g=-\Lambda_++(5+4d)/3$, a link from lower simplex $\sigma$ to $\sigma\cup j$ has
+\[
+x_{\sigma,\sigma\cup j}(a)=
+\begin{cases}
+a_i+3a_j,&\sigma=\{i\},\\
+g\sum_{i\in\sigma}a_i+(2g-4/c)a_j,&|\sigma|=2,\\
+4(1-cg)a_j/h,&|\sigma|=3.
+\end{cases}
+\]
+It satisfies $RDx=0$ and $Kx=\Lambda_+Dx$. The inherited quartic is
+$N[A_4(\sum a_i^2)^2+B_4\sum a_i^4]$, with the exact integer certificate $11<A_4<12$, $12<B_4<13$.
+
+\newpage
+\section{Exact stationary energy and critical reduction}
+For a scalar connection $U_e=-ib_e e^{i\theta_e}$, the upper edge entries of $h(\theta)$ are $-e^{i\theta_e}$. Its simple lowest eigenvalue $\lambda_0(\theta)$ is analytic near zero. On the two fixed norms, minimizing matter gives the exact stationary energy
+\[
+\mathcal F(\theta;\epsilon)=N\left[2\lambda_0(\theta)
++(k_*+\epsilon)\sum_d(1+\cos(C\theta)_d)\right].
+\]
+The lowest normalized eigenvector $f(\theta)$ and its conjugate realize this energy, with $E=0$, $\psi=\sqrt N f$, $\chi=\sqrt N\bar f$, and exact zero Gauss charge. Stationarity of $\mathcal F$ gives the link equations by eigenvalue differentiation. In temporal gauge, each species has common phase $e^{-i(\mu+\lambda_0)t}$.
+
+No nearby scalar stationary shape is lost by this matter elimination. The simple ground eigenvalue has a positive gap, so its Rayleigh stationary state is locally unique modulo phase. The reversible-chart argument below forces every sufficiently close reduced equilibrium to have zero momentum; its remaining matter stationary equation is precisely this Rayleigh equation.
+
+Since $h(-\theta)=\bar h(\theta)$, $\mathcal F$ is even and $S_4$ invariant. Its quadratic form on the slice is
+\[
+\frac N2\theta^T[4w_0D-(k_*+\epsilon)K]\theta.
+\]
+Split $\theta=x(a)+y$, with $y$ in the $D$-orthogonal complementary weighted-curl eigenspaces. This complement is 11-dimensional, and its Hessian at $\epsilon=0$ is positive. The implicit function theorem solves its stationary equation uniquely as an analytic $y(a,\epsilon)$.
+
+Quadratic cross terms vanish for every $\epsilon$: $x^TDy=0$ and $x^TKy=\Lambda_+x^TDy=0$. Evenness then gives $y(-a,\epsilon)=-y(a,\epsilon)$ and $y=O(\|a\|^3)$ uniformly for small $\epsilon$. Therefore the exact reduced stationary energy is
+\begin{equation}
+\frac{\Phi(a,\epsilon)-\Phi(0,\epsilon)}N
+=-\frac{\Gamma\epsilon}{2}\|a\|^2+A_4\|a\|^4+B_4\sum_i a_i^4
++O(\epsilon\|a\|^4+\|a\|^6).\label{eq:potential}
+\end{equation}
+Here $\|Cx(a)\|^2=\Gamma\|a\|^2$, by symmetry and direct algebra, and
+\begin{equation}
+\Gamma=\frac{(536d-2624)\Lambda_++4848d+18048}{81}>0.
+\label{eq:Gamma}
+\end{equation}
+The included directed integer evaluation encloses $\Gamma$; its numerical value is approximately $346.3029832$.
+
+Use the isometry
+\[
+a=\frac12\begin{pmatrix}1&1&1\\1&-1&-1\\-1&1&-1\\-1&-1&1\end{pmatrix}b,
+\qquad b\in\mathbb R^3.
+\]
+Then $\|a\|=\|b\|$, $S_4$ together with $a\mapsto-a$ acts as all 48 signed coordinate permutations, and
+\[
+\sum_i a_i^4=\frac34\|b\|^4-\frac12\sum_{j=1}^3b_j^4.
+\]
+The leading energy becomes $-\Gamma\epsilon\|b\|^2/2+\alpha\|b\|^4-\beta\sum b_j^4$, with $\alpha=A_4+3B_4/4$, $\beta=B_4/2>0$.
+
+\newpage
+\section{A complete local scalar branch diagram}
+For $k=1,2,3$ define
+\[
+q_k=A_4+\frac{3B_4}{4}-\frac{B_4}{2k},\qquad
+q_1=A_4+B_4/4<q_2=A_4+B_4/2<q_3=A_4+7B_4/12.
+\]
+\begin{theorem}[Supercritical branch classification]\label{th:branches}
+For every fixed $a,N>0$, there is $\epsilon_0>0$ such that the scalar fixed-norm, zero-Gauss reduced system near the original curved orbit has the following stationary states.
+For $-\epsilon_0<\epsilon\le0$ only the original branch occurs. For $0<\epsilon<\epsilon_0$, it and exactly 26 additional labeled gauge-inequivalent branches occur. The latter have $k$ occupied Hadamard coordinates of equal absolute value, with $\binom3k2^k=6,12,8$ branches respectively. On each branch,
+\begin{align}
+R_k^2:=\|a\|^2&=\frac{\Gamma\epsilon}{4q_k}+O(\epsilon^2),\label{eq:radius}\\
+\mathcal F_k-\mathcal F_0&=-\frac{N\Gamma^2\epsilon^2}{16q_k}+O(N\epsilon^3),\label{eq:energy}\\
+\theta_k&=x(a_k)+O(\epsilon^{3/2}).\nonumber
+\end{align}
+The $k=1$ family is a strict energy minimum modulo gauge and species phases and is nonlinearly orbitally stable. The $k=2$ family has one real growing/decaying pair and 41 nonzero imaginary pairs; the $k=3$ family has two real pairs and 40 nonzero imaginary pairs. Both saddle families are nonlinearly orbitally unstable. The three rows have configuration Morse index $k-1$.
+\end{theorem}
+\begin{proof}[Existence and completeness]
+The leading stationary equations in Hadamard coordinates are
+\[
+b_j[-\Gamma\epsilon+4\alpha\|b\|^2-4\beta b_j^2]=0.
+\]
+Every nonzero occupied component therefore has the same square. This gives precisely the stated 26 directions. Their leading radial equation gives \eqref{eq:radius}. Their radial Hessian eigenvalue is $2N\Gamma\epsilon$; the two angular eigenvalues are $2NB_4R_k^2/k$ with multiplicity $3-k$ and $-4NB_4R_k^2/k$ with multiplicity $k-1$. They are all nonzero, so each root persists after substituting $b=\sqrt\epsilon\,\widehat b$ in the exact stationary equation. Its divided equation is analytic in $\widehat b,\epsilon$; the implicit function theorem gives analytic $\widehat b(\epsilon)$. Each direction's stabilizer has a one-dimensional fixed space, so the exact critical coordinate remains on the same ray.
+
+There are no missing local roots. Contracting the reduced gradient with $a$ in \eqref{eq:potential} shows that every nonzero stationary solution has $\|a\|^2$ bounded above and below by positive multiples of $\epsilon$. For $\epsilon\le0$ its radial derivative is strictly positive away from zero. For $\epsilon>0$ the rescaled solutions lie in a compact annulus. Every limit as $\epsilon\downarrow0$ is one of the 26 nondegenerate leading roots, all covered by the implicit-function neighborhoods. This proves completeness and \eqref{eq:energy}. The stable/unstable dynamics are justified in the next section.
+\end{proof}
+
+\newpage
+\section{Reversibility, instability counts and soft frequencies}
+The scalar exact reduced chart is $X=\theta-R^T\eta$, $E$, $\sigma=n+m$ and $\zeta$, with $\sum\sigma_i=2N$, and canonical one-form $E^T dX-\sigma^Td\zeta$. Up to an exact differential, use position $q=(X,\sigma)$ and momentum $p=(E,\zeta)$, removing the constant density/phase pair. This is a 42-pair smooth symplectic chart.
+
+The original action has the reversing involution
+\[
+\mathcal T:(U,E,\psi,\chi)\longmapsto(U,-E,\bar\chi,\bar\psi).
+\]
+It reverses the symplectic form, preserves the Hamiltonian and preserves zero Gauss. In the chart it fixes $X,\sigma$ and negates $E,\zeta$. The exact Hamiltonian is consequently even under $p\mapsto-p$. Its momentum Hessian is positive at the critical background: the $E$ block is the inherited $\mathsf M>0$ and the phase block is a positive weighted graph Laplacian after its constant mode is removed. Positivity persists nearby. The equation $\partial_pH=0$ has the unique local solution $p=0$.
+
+At each new equilibrium the linearized Hamiltonian matrix is thus
+\[
+\begin{pmatrix}0&H_{pp}\\-H_{qq}&0\end{pmatrix},\qquad H_{pp}>0,
+\quad\lambda^2=-\operatorname{eig}(H_{pp}^{1/2}H_{qq}H_{pp}^{1/2}).
+\]
+The configuration Hessian has the three critical signs calculated above and 39 positive fast directions, from the matter gap and the connection complement. Congruence preserves these signs, proving the exact pair counts in Theorem \ref{th:branches}; no oscillatory quartet can appear here. Positive definite energy gives the stable local barrier. A real growing mode in the smooth reduced chart gives nonlinear orbital exit by the standard variation-of-constants estimate through time $O(\log(1/\delta))$ for seed $\delta$. This proves both saddle instabilities.
+
+For explicit leading rates let $Z:\mathbb R^3\to\mathbb R^{28}$ be the critical map in orthonormal Hadamard coordinates. Define the positive scalar mass by
+\[
+Z^T\mathsf M^{-1}Z=m_c\id_3,\qquad
+\mathsf M=a\id+\frac1{4N}R^TV^{-1}(\rho\id-T)V^{-1}R.
+\]
+The scalar form follows from $S_4$ symmetry. For each $k$ the three soft squared frequencies are
+\begin{align*}
+\omega_{\rm rad}^2&=\frac{2N\Gamma}{m_c}\epsilon+o(\epsilon),\\
+\omega_{\rm ang,+}^2&=\frac{NB_4\Gamma}{2kq_km_c}\epsilon+o(\epsilon)
+&&\text{($3-k$ copies)},\\
+\omega_{\rm ang,-}^2&=-\frac{NB_4\Gamma}{kq_km_c}\epsilon+o(\epsilon)
+&&\text{($k-1$ copies)}.
+\end{align*}
+Negative squared frequencies mean real growth, not physical negative-frequency particles. At $a=N=1$, numerical evaluation gives $m_c\simeq48.846745$.
+
+\newpage
+\section{Exact reduced Hessians used for the diagnostics}
+For completeness the reduced Hamiltonian, apart from the fixed on-site term, is
+\begin{align*}
+H={}&\frac a2\|E\|^2+\kappa\sum_d[1+\cos(CX)_d]\\
+&-2\sum_{e=(i,j)}\left[
+\sqrt{n_in_j}\cos(X_e-(R^T\zeta)_e)
++\sqrt{m_im_j}\cos(X_e+(R^T\zeta)_e)\right],\\
+n={}&(\sigma+RE)/2,\qquad m=(\sigma-RE)/2.
+\end{align*}
+This explicitly verifies the reversing symmetry. Let $Q$ be any orthonormal basis of $\id^\perp\subset\mathbb R^{15}$ for density variations and their conjugate phases. At $E=\zeta=0$ set $s=\sigma/2$, $S=\diag(s)$, let $A=|R|$, and put
+\[
+(W_c)_{ee}=\sqrt{s_is_j}\cos X_e,\quad
+(W_s)_{ee}=\sqrt{s_is_j}\sin X_e,\quad
+J=R^TS^{-1}R,\quad J_+=A^TS^{-1}R.
+\]
+Direct differentiation gives the following 42-dimensional configuration and momentum blocks:
+\begin{align*}
+H_{XX}&=4W_c-\kappa C^T\diag(\cos CX)C,\\
+H_{X\sigma}&=W_sA^TS^{-1}Q,\\
+H_{\sigma\sigma}&=\frac14Q^TS^{-1}RW_cR^TS^{-1}Q,\\[3pt]
+H_{EE}&=a\id+\frac14J^TW_cJ,\\
+H_{E\zeta}&=-J_+^TW_sR^TQ,\\
+H_{\zeta\zeta}&=4Q^TRW_cR^TQ.
+\end{align*}
+The opposite mixed blocks are transposes; position--momentum Hessian blocks vanish at the reversing fixed set. These formulas include Gauss backreaction. In particular the kinetic block is not replaced by $a\id$ when the soft frequencies are calculated.
+
+To use them on a ground-eigenvector preparation, transform from weighted Coulomb coordinates to the matter-phase gauge:
+\[
+X=\theta-R^T\arg f(\theta),\qquad \sigma_i=2N|f_i(\theta)|^2.
+\]
+The phase is chosen continuously near the positive background. The given single-edge symbolic checks recover both Hessians independently from the exact square-root/cosine Hamiltonian. Numerical directional differences check the full kinetic block separately. These formulas support the scalar pair counts; no complete higher-rank oscillation spectrum about the new branches is asserted.
+
+\newpage
+\section{Finite-rank embedding and the absence of attraction}
+\begin{theorem}[Stability of the embedded balanced branches]\label{th:rank}
+For each fixed finite $r\ge2$ and $a,N>0$, the six $k=1$ scalar branches embed as
+\[
+U_e=\diag(-ib_e e^{i\theta_e},\id_{r-1}),\quad E_e=0,
+\qquad\psi_i=\sqrt N f_i e_1,\quad\chi_i=\sqrt N\bar f_i e_1,
+\]
+and are nonlinearly orbitally stable for sufficiently small positive \eqref{eq:epsilon}, under the full fixed-norm, zero-Gauss dynamics. The embedded $k=2$ and $k=3$ branches are unstable. This is an embedding result, not an exhaustive classification of higher-rank equilibria.
+\end{theorem}
+\begin{proof}
+The block subsystem is exactly invariant and has coefficient $\kappa/r$. The unused identity block has no force and matter remains active, so the embeddings are exact neutral relative equilibria.
+
+For stability use the same full-norm energy coordinates as the higher-rank curved theorem. Align $\psi_i+\bar\chi_i$ with the active line; it is nonzero at every nearby node. Let $A$ be active scalar variables, $B$ unused-block variables, and $Y$ off-diagonal color variables. At $Y=0$ the energy splits exactly into active scalar and vacuum energies. Its derivative in $Y$ vanishes along every such block-diagonal point. The positive off-diagonal normal Hessian at the original critical orbit persists uniformly nearby. Thus
+\[
+H(A,B,Y)\ge H_{\rm scalar}(A;\kappa/r)+H_{\rm vac}(B;\kappa/r)+c\|Y\|^2.
+\]
+For the balanced branch, the scalar factor has a strict local energy minimum by Theorem \ref{th:branches}. Positive $\kappa/r$ gives a transverse vacuum minimum modulo gauge. Compactness of the gauge/species-phase orbit and conservation of energy provide the barrier under arbitrary fixed-norm perturbations, hence also on zero Gauss. This does not assume a smooth residual $\mathrm U(r-1)$ quotient.
+
+For either saddle family, the scalar growing mode gives an exact invariant-subsystem instability. Nonzero active matter at every node fixes the active line; the intersection of a full gauge orbit with this embedded subsystem induces precisely the scalar phase gauges on that line. The scalar orbital departure cannot be removed by rotating unused colors.
+\end{proof}
+
+The original embedded orbit remains stable exactly for $0<\kappa\le r\kappa_*(N)$ at $r\ge2$, and unstable above. The new stable branches lie on the other side of that threshold. There is no contradiction: these are different stationary orbits.
+
+\begin{proposition}[No conservative attraction]
+A strict local energy-minimizing gauge/species-phase orbit of this closed fixed-norm model cannot attract any other sufficiently close orbit that remains in its local minimum neighborhood.
+\end{proposition}
+Indeed convergence would force the conserved energy to equal the minimum energy. Strict local minimality then places the initial state on that same orbit. Thus the leading energy ranking $k=1$ below $k=2$ below $k=3$ does not provide a rule for settling onto a branch. Preparation, additional sourced dynamics or an independently declared open-system mechanism remains necessary for such a claim.
+
+\newpage
+\section{Verification, provenance and next questions}
+\textbf{Exact constructor record.} The verifier passes 66 checks: the Hadamard isometry and quartic identity, critical Coulomb/eigen identities and scalar curl Gram, the 48-element action, critical-link intertwiners, inherited integer coefficient certificate, all branch counts and fixed-ray spaces, radial/angular Hessians, the positive curl coefficient interval, reversing chart identities, independently differentiated exact edge Hessians, and the leading energy/radius formulas. Finite algebra supports the written local existence/completeness and all-rank energy proofs. It is not independent review.
+
+\textbf{Full stationary-energy diagnostics.} At $a=N=1$ the numerical calculation solves the lowest eigenvalue problem and all fourteen physical scalar connection directions. It uses the exact ground-state energy, not a quartic-truncated stationary model. Each of the three representative families is continued at $\epsilon=10^{-4},5\times10^{-5},2.5\times10^{-5},1.25\times10^{-5}$. Full link-force residuals at the smallest excess are below $3\times10^{-17}$, and preparations have exact opposite-species neutrality. The configuration indices are $0,1,2$ as predicted.
+
+The exact 42-pair reduced Hessian blocks give positive kinetic forms and the expected $0,1,2$ real-pair counts. Their three soft squared frequencies converge to the formulas above. At the smallest excess, relative errors against the leading soft-frequency formulas are approximately $1.48\times10^{-4},2.50\times10^{-4},1.45\times10^{-4}$. Full energy directional differences check the eigenvalue derivatives and kinetic Hessian. These are floating-point corroborations; they neither certify a numerical value of $\epsilon_0$ nor establish a dynamical trajectory or empirical result.
+
+\textbf{Scope of the theorem.} A positive but unquantified $\epsilon_0$ exists for each fixed parameter set. No numerical campaign point is claimed to have an independently certified neighborhood radius. The scalar local branch diagram is complete; the higher-rank statement covers its embeddings only. The kinetic proof uses the action's reversing symmetry and fixed equal norms. Pattern labels refer to phase amplitudes, not carrier shape changes.
+
+\textbf{Dependencies.} The source graph, opposite-charge species, canonical one-form and Hamiltonian are frozen inputs. The critical map, scalar reduction, weighted threshold and relaxed quartic come from \emph{Reduced modes and the sharp scalar stability boundary} v0.1. The full-rank normal positivity and block-energy estimate come from \emph{Full-rank orbital stability of the embedded curved branch} v0.1. The residual-quotient distinction remains as established by \emph{Residual Gauss reduction of the embedded curved branch} v0.1. Exact source hashes, opening repository/site commits, coefficient ledger v0.39 and CRL-2 governance are retained in the provenance receipt. No earlier artifact is replaced.
+
+\textbf{Next mathematical gates.} Independent proof/code review and a quantitative bifurcation neighborhood bound; higher-order soft-mode interactions and resonance; continuation beyond the local neighborhood; refinement compatibility; a sourced preparation or branch-selection mechanism. The conservative no-attraction result prevents silently upgrading energy preference into dynamical selection.
+
+\textbf{Physical boundary.} Gauge group selection, ledger G05 action normalization, physical units and an observable/experiment dictionary remain open. The coefficient here is the declared finite-action magnetic stiffness, not an identified electromagnetic, weak or strong coupling. No published experimental corpus is analyzed in this milestone, and no unification, proton-decay or monopole result is asserted. Independent review pending; development lane; physical promotion $0$.
+\end{document}
