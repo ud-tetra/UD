@@ -1,0 +1,238 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Higher-rank curved branch}\rhead{HRC v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\id}{\mathbf1}\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Full-rank orbital stability of the embedded curved branch}\\[8pt]
+{\large Color modes and residual Gauss constraints,\\with a zero-stiffness exception}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+We extend the scalar negative-holonomy branch to a single active color of the unchanged finite $\mathrm U(r)$ link--matter Hamiltonian. Each additional color has a positive active-to-empty quadratic matter form. Its magnetic Hessian vanishes exactly: within the relevant two-color plane, each Wilson matrix has determinant $-1$ and purely imaginary trace. Gauss reduction gives a positive-mass, positive-stiffness complex oscillator system whose frequencies are independent of the magnetic coefficient. The unused block is a vacuum link system with positive cycle stiffness when $\kappa>0$. A local energy estimate then extends the sharp scalar orbital stability interval, including its quartic endpoint, to full-rank perturbations. For every finite $r\ge2$, the embedded orbit is stable precisely for $0<\kappa\le r\kappa_*(N)$. At zero stiffness an exact unused-color holonomy drift proves instability; above the upper boundary the invariant active scalar subsystem proves instability. The nonfree residual gauge symmetry is retained explicitly. These are conditional mathematical results with no physical promotion.
+\end{abstract}
+\textbf{Typing.} \textsc{Derived conditional mathematics}; constructor exact checks and separately typed numerical diagnostics. Independent review pending. Development lane, no registry entry; physical promotion $0$. The candidate action, species, coefficients and internal units are unchanged.
+
+\section{Statement and parameter domain}
+Let
+\[
+\rho=\sqrt{8+2\sqrt{10}},\quad w_0=\frac{\rho(10-\sqrt{10})}{480},\quad \kappa_*(N)=\frac{4Nw_0}{\Lambda_+}.
+\]\[
+\Lambda_+=\frac{28+17\sqrt{10}+\sqrt{866-128\sqrt{10}}}{18}.
+\]
+Here $N=\|\psi\|^2=\|\chi\|^2>0$ is each species norm. The scalar value $\kappa_*/N\simeq0.03760248457$ is inherited from the exact reduced-mode theorem; it is not a physical coupling.
+
+\newpage
+\section{Frozen model, equilibrium and complete boundary}
+The filled tetrahedron has 15 nonempty simplex nodes and 28 incidence links, with signs $b_e=B_{ij}$ for $e=(i\leftarrow j)$. Set $D_U[i,j]=b_eU_e$, $h_U=i(D_U^\dagger-D_U)$ and use the existing Hamiltonian
+\begin{align*}
+H={}&\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi,\\
+\mathcal G_i={}&\sum_{\mathrm{head}=i}E_e-\sum_{\mathrm{tail}=i}U_e^\dagger E_eU_e
+-\psi_i\psi_i^\dagger+\bar\chi_i\chi_i^T=0.
+\end{align*}
+Take $a>0$, $\kappa\ge0$, $\mu\ge0$ and finite rank $r$. Let $T=|B|+|B|^T$ and let $v>0$ be the unit eigenvector $Tv=\rho v$ specified in the preceding curved-branch theorem. With $s=r-1$, the embedded branch is
+\[
+U_e^*=\diag(u_e,\id_s),\quad u_e=-ib_e,\quad E_e^*=0,
+\qquad\psi_i^*=\chi_i^*=\sqrt N\,v_i e_1.
+\]
+It is exactly Gauss neutral. The active matter operator is $-T$; the unused operator is $h_0=i(B^T-B)$. Matter evolves only by the common phase $e^{-i(\mu-\rho)t}$. All diamonds have $W_d^*=\diag(-1,\id_s)$.
+
+Every magnetic gradient vanishes because these Wilson matrices are Hermitian. The matter force has only an active diagonal entry, proportional to the real part of a purely imaginary number, hence is zero. This proves exact relative stationarity at all parameters, including off-diagonal color variations.
+
+\begin{theorem}[Sharp finite-rank orbital boundary]\label{th:main}
+On the fixed species-norm level and zero Gauss surface, for every finite $r\ge2$ and $a>0$, the embedded orbit under local $\mathrm U(r)$ gauge and independent species phases is nonlinearly Lyapunov stable exactly when
+\[
+\boxed{0<\kappa\le r\kappa_*(N).}
+\]
+At $\kappa=0$ it is unstable by an exact unused-color holonomy drift. At $\kappa>r\kappa_*$ it is unstable through the invariant active scalar subsystem. The positive-stiffness stability proof holds on the larger fixed-norm surface and consequently covers every Gauss-admissible perturbation.
+\end{theorem}
+For $r=1$, the preceding theorem remains $0\le\kappa\le\kappa_*(N)$, including zero. Thus zero stiffness distinguishes a scalar orbit from its higher-rank embedding. Stability of the entire global minimizing set at zero stiffness is a separate earlier result; it does not imply stability of this individual embedded orbit.
+
+\newpage
+\section{One active-to-empty color and its linear Gauss law}
+Fix one unused color. Let the Hermitian left link perturbation have entry $H_{a1}=\beta_e$ and let $E_{a1}=e_e$, both complex. Write $p=\delta\psi^a$ and $z=\overline{\delta\chi^a}$. Work in the common $(\mu-\rho)$ rotating frame. Define
+\[
+V=\diag(v),\quad W=\diag(v_iv_j),\quad L_0=\rho\id+h_0>0,
+\]
+\[
+(\mathcal R)_{ie}=1,\qquad (\mathcal R)_{je}=-u_e,
+\qquad F=-i\sqrt N\,V^{-1}\mathcal R W.
+\]
+The inactive flat operator has spectrum $0,\pm2$, so $L_0$ has positive eigenvalues $\rho$ once and $\rho\pm2$ seven times each. The twisted incidence satisfies
+\begin{equation}
+\mathcal R W\mathcal R^\dagger=VL_0V,
+\qquad F\mathcal R^\dagger=-i\sqrt N L_0V.
+\label{eq:twisted}
+\end{equation}
+In particular $\mathcal R$ has rank 15, rather than ordinary incidence rank 14.
+
+Put $P=(p+z)/\sqrt2$, $Q=(p-z)/\sqrt2$ and $C_N=\sqrt N V$. The equations and linear Gauss constraint are
+\begin{align*}
+\dot\beta&=ae,&\dot e&=-2NW\beta-\sqrt2F^\dagger P,\\
+i\dot P&=L_0Q,&i\dot Q&=L_0P+\sqrt2F\beta,\\
+0&=\mathcal R e-\sqrt2C_NQ.
+\end{align*}
+For a complex node gauge parameter $\lambda$,
+\[
+\delta\beta=\mathcal R^\dagger\lambda,\quad
+\delta P=i\sqrt2C_N\lambda,\quad\delta Q=0.
+\]
+Thus
+\[
+X=\beta+\frac i{\sqrt2}\mathcal R^\dagger C_N^{-1}P
+\]
+is gauge invariant to first order, and Gauss solves
+$Q=C_N^{-1}\mathcal R e/\sqrt2$. Differentiation gives
+\begin{equation}
+\boxed{\dot X=M_\perp e,\quad\dot e=-2NWX,\qquad
+M_\perp=a\id+\frac1{2N}\mathcal R^\dagger V^{-1}L_0V^{-1}\mathcal R>0.}
+\label{eq:color}
+\end{equation}
+The squared frequencies are the 28 positive eigenvalues of
+$M_\perp^{1/2}(2NW)M_\perp^{1/2}$. Each complex oscillator corresponds to two real oscillator pairs in the linear symplectic slice per unused color. These frequencies are independent of $\kappa$.
+
+\newpage
+\section{Why the color magnetic Hessian vanishes}
+\begin{lemma}[Two-color determinant identity]\label{lem:det}
+For a unitary $2\times2$ matrix $Z$ with $\det Z=-1$, one has $\Rea\tr Z=0$.
+\end{lemma}
+\begin{proof}
+$\tr Z^\dagger=\tr Z^{-1}=(\tr Z)/\det Z=-\tr Z$, since the trace of the adjugate of a $2\times2$ matrix is its trace. Thus the trace is purely imaginary.
+\end{proof}
+Vary any four links of a diamond in one active/unused two-color plane by left exponentials of traceless Hermitian matrices. Their determinants stay fixed. The Wilson determinant in that plane remains the ratio of the two active path products, namely $-1$. Its real trace is therefore constant by the lemma. Other colors are unchanged. In particular every off-diagonal color Hessian of the magnetic potential vanishes. Residual $\mathrm U(s)$ covariance excludes cross terms between distinct unused-color components, so this proves the assertion for all $s$ simultaneously.
+
+This is a Hessian statement about the full unconstrained link system. The fixed-determinant two-color path need not be dynamically invariant: diagonal forces can appear beyond linear order. The proof below retains those nonlinear couplings.
+
+The fixed-norm matter quadratic form for one color is
+\[
+\mathcal Q_\perp=a\|e\|^2+P^\dagger L_0P+Q^\dagger L_0Q
++2\sqrt2\Rea(P^\dagger F\beta)+2N\beta^\dagger W\beta.
+\]
+Using \eqref{eq:twisted}, it completes exactly to
+\begin{equation}
+\boxed{\mathcal Q_\perp=a\|e\|^2+Q^\dagger L_0Q+2NX^\dagger WX.}
+\label{eq:completion}
+\end{equation}
+Its only zero directions are gauge directions. After solving Gauss it is
+$e^\dagger M_\perp e+2NX^\dagger WX$, which yields \eqref{eq:color} with the complex cotangent convention $2\Rea(\bar e\,d\beta)$.
+
+The completion already proves positivity on the full fixed-norm normal directions before Gauss is imposed. This stronger fact is what allows the nonlinear proof to avoid assuming a smooth final gauge quotient.
+
+\newpage
+\section{Exact color mode pencils and the residual stabilizer}
+The off-diagonal link representation is twisted by the orientation sign of the lower simplex: for a vertex permutation $p$, $\beta_e$ is relabeled with that lower-simplex sign. Its decomposition is
+\[
+\mathbf1\oplus\mathcal V^{\oplus3}\oplus\mathcal E^{\oplus2}
+\oplus(\mathcal V\otimes\mathrm{sgn})^{\oplus4}
+\oplus\mathrm{sgn}^{\oplus2}.
+\]
+Let $P_0,P_\varepsilon$ be the trivial and sign full-group Reynolds projectors in this twisted representation. Let $P_3,P_3^-$ be the ordinary and sign-weighted averages over the vertex stabilizer $S_3$, and $P_8$ the average over the order-eight subgroup preserving $\{02,13\}$. Rational sections are
+\[
+P_0,\quad P_3-P_0,\quad P_8-P_0,\quad P_3^--P_\varepsilon,\quad P_\varepsilon.
+\]
+For a column-space basis $Z_j$ and left inverse $Z_j^+$ define
+\[
+D_j=Z_j^+(W/w_0)Z_j,\qquad
+G_j=Z_j^+\frac{\mathcal R^\dagger V^{-1}L_0V^{-1}\mathcal R}{2\rho}Z_j.
+\]
+The complete complex color dispersion relations are
+\[
+\det[y\id-(b\id+G_j)D_j]=0,\qquad
+b=aN/\rho,\qquad \omega^2=2\rho w_0y.
+\]
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Representation & Pencil degree & Irrep multiplicity per root\\
+\midrule
+Trivial & 1 & 1\\
+Standard & 3 & 3\\
+Two-dimensional & 2 & 2\\
+Sign-standard & 4 & 3\\
+Sign & 2 & 1\\
+\bottomrule
+\end{tabular}
+\end{center}
+All section matrices and reconstruction bases are supplied with the exact verification receipt. Degrees times multiplicities sum to 28 complex modes for each unused color.
+
+The unused $\mathrm U(s)$ block is a vacuum link system. On its ordinary cycle space the squared frequencies are $a\kappa k_j/r$, with stiffnesses $k_j=6$ twice, $6\pm\sqrt2$ three times each and $4\pm\sqrt2$ three times each, for every Hermitian color generator.
+
+\textbf{Residual Gauss condition.} The background stabilizer is global $\mathrm U(s)$. The above oscillator list is a linear symplectic slice before its residual zero-moment constraint and quotient. That moment map starts at quadratic order. No assertion that all slice oscillators are independently admissible nonlinear modes, or that the final reduced space is a smooth manifold of their summed dimension, is made. The active scalar slice, color slice and vacuum slice are sufficient for the energy estimate on the larger norm surface.
+
+\newpage
+\section{Nonlinear positive-stiffness stability, including equality}
+We prove the stable part of Theorem \ref{th:main} without discarding the residual moment map. Near the branch, each node vector $\psi_i+\bar\chi_i$ is nonzero. Choose local unitary frames that align this vector with the first color and choose its first component positive. This fixes the active-to-empty gauge directions, leaving $\mathrm U(s)$ frames. Fix those along a spanning tree of unused links; a global $\mathrm U(s)$ stabilizer remains. These are local coordinates for an energy estimate, not a claim of a free global quotient.
+
+On this gauge slice, the off-diagonal linear condition is $P=0$. Equation \eqref{eq:completion} becomes
+$a\|e\|^2+Q^\dagger L_0Q+2N\beta^\dagger W\beta$, strictly positive. This holds for all unused colors. Norms can be held exactly fixed in a smooth chart by adjusting the nonzero active amplitudes as transverse matter is added.
+
+Write $A$ for active scalar variables, $B$ for unused-block variables and $Y$ for all off-diagonal color variables in this chart. At $Y=0$ the Hamiltonian separates exactly:
+\begin{equation}
+H_0(A,B,0)=H_{0,\mathrm{scalar}}(A;\kappa/r)
++H_{\mathrm{vacuum}}(B;\kappa/r),\label{eq:split}
+\end{equation}
+where
+\[
+H_{\mathrm{vacuum}}=\frac a2\sum_e\tr E_{B,e}^2
++\frac\kappa r\sum_d\left(s-\Rea\tr W_{B,d}\right)\ge0.
+\]
+The first derivative in $Y$ vanishes at \emph{every} nearby block-diagonal point: traces of one off-diagonal insertion vanish, matter stays in the active block and electric cross traces vanish. This remains true in the norm-preserving chart. Continuity of the positive off-diagonal Hessian then gives, in a sufficiently small neighborhood,
+\begin{equation}
+H_0(A,B,Y)\ge H_0(A,B,0)+c\|Y\|^2\qquad(c>0).
+\label{eq:normal}
+\end{equation}
+For $\kappa>0$, the vacuum energy is a strict transverse quadratic minimum at identity links and zero momenta, after its tree gauge fixing. Its curl kernel is exactly the gauge gradient space. The active scalar energy is a strict transverse quadratic minimum when $\kappa/r<\kappa_*$.
+
+At $\kappa/r=\kappa_*$, the inherited scalar theorem replaces three missing quadratic directions by a strictly positive quartic after matter relaxation. Its two symmetric coefficients obey the exact integer enclosures $11<A_4<12$, $12<B_4<13$. The accompanying verifier replays this integer certificate. Equation \eqref{eq:split} has no active--unused block coupling, and the derivative in $Y$ vanishes identically along that submanifold. Thus no critical-squared term linear in a new color variable can relax away the scalar quartic. Inequality \eqref{eq:normal} preserves the same strict minimum with quadratic restoring energy in all new normal directions.
+
+Energy and norms are conserved. The gauge/species-phase orbit is compact, even with a stabilizer. A local positive energy gap on each fixed-distance boundary around that orbit prevents exit for sufficiently close initial data. This proves nonlinear orbital stability, including equality, for $0<\kappa\le r\kappa_*$ on the full norm surface. The invariant zero-Gauss subset inherits it. Constants can depend on the fixed positive $\kappa$; no uniform coercivity as $\kappa\downarrow0$ is asserted.
+
+\newpage
+\section{Exact instability at zero and above the upper boundary}
+For $r\ge2$, choose one unused color projector $P_2$ and a real cycle vector $\zeta$ with $R\zeta=0$, $C\zeta\ne0$. At $\kappa=0$ prepare
+\[
+E_e(0)=\varepsilon\zeta_eP_2,\qquad U_e(0)=U_e^*,
+\qquad\psi(0)=\chi(0)=\sqrt N\,v e_1.
+\]
+The exact solution is
+\[
+E_e(t)=\varepsilon\zeta_eP_2,\qquad
+U_e(t)=\diag\left(u_e,e^{ia\varepsilon\zeta_et},1,\ldots,1\right),
+\]
+with the unchanged common matter phase. No magnetic force exists and the active matter force remains zero. All Gauss equations hold exactly: unused fields commute with their momenta and $R\zeta=0$, while the active charge matrices cancel. Norms stay fixed.
+
+A selected diamond becomes
+\[
+W_d(t)=\diag\left(-1,e^{ia\varepsilon(C\zeta)_dt},1,\ldots,1\right).
+\]
+At $t_\varepsilon=\vartheta/[a\varepsilon(C\zeta)_d]$, choose a fixed nonzero phase $\vartheta$ with positive time. Its Wilson trace differs from the background by the fixed amount $e^{i\vartheta}-1$. Trace is invariant under the full gauge group, proving orbital departure from initial states approaching the orbit. This is an exact $O(1/\varepsilon)$ drift, not an extrapolated tangent mode.
+
+For $\kappa>r\kappa_*$, the block subsystem
+\[
+U=\diag(u,\id_s),\quad E=\diag(E_1,0),\quad
+\psi,\chi\text{ in the first color}
+\]
+is exactly invariant and has scalar magnetic coefficient $\kappa/r$. The preceding scalar real-mode construction gives nonlinear departure. Full-rank gauge rotations cannot remove it: the nonzero node matter determines the active line, and a non-gradient growing phase has nonzero diamond curl, visible in the Wilson trace. Thus the upper instability statement is also fully Gauss-admissible.
+
+The earlier all-rank global minimizing-set theorem is consistent with the zero-stiffness drift. The unused connection can move along a family of minimizing configurations while its electric energy is arbitrarily small. Stability of that set permits motion between its members; this theorem tests distance from one compact gauge/species-phase orbit.
+
+\newpage
+\section{Verification, dependencies and remaining scope}
+The exact verifier reconstructs the twisted incidence, positive inactive spectrum, force/gauge identities, Hermitian color mass, twisted symmetry sections and all color mode pencils. It checks the off-diagonal magnetic Hessian on all 18 diamonds with independent symbolic complex link perturbations, and replays the inherited critical quartic integer certificate. Finite algebra supports the written universal argument; no independent proof review is claimed.
+
+Separate numerical diagnostics compare the complex constrained linear system against its Gauss-reduced 56-complex-dimensional color block and reconstruct the squared spectrum from the small sections. Rank-two and rank-three full matrix fixtures test exact equilibrium and off-diagonal energy Hessians at a magnetic coefficient far outside the stability interval, confirming the claimed coefficient independence.
+
+Two rank-two nonlinear campaigns integrate the full matrix Hamiltonian equations inside and at the rank-scaled upper threshold, with decreasing initial color/unused-link perturbations. The right-hand side does not project onto a color sector, Gauss surface or unitary group. Energy, species norms, Gauss and unitarity residuals are recorded separately. The initial preparation $\chi=\bar\psi$, $E=0$ is exactly Gauss neutral and is used only as initial data. Finite invariant diagnostics corroborate the energy proof; they are not infinite-time or empirical evidence.
+
+\textbf{Dependency record.} The action, matrix Gauss law and cotangent conventions come from the joint Hamiltonian theorem v0.1. The curved scalar branch and all-rank minimizing-set distinction come from curved-ground stability v0.1. The sharp scalar boundary and its matter-relaxed quartic come from curved reduced modes v0.1. Their source hashes and the supplied coefficient ledger v0.39 and governance proposal v1.0 are recorded in the provenance receipt. Frozen predecessors are preserved. The residual gauge condition is retained, and the new stability proof avoids any assumption that its final quotient is smooth.
+
+\textbf{Closed scope.} The specified one-active-color embedded family now has an exact finite-rank orbital stability interval. The new color slice has positive frequencies for all magnetic coefficients, while the active and unused blocks determine the two boundaries. No classification of all other stationary states or all minimizing configurations follows.
+
+\textbf{Next gates.} Independent proof review and independent implementation remain pending. The next mathematical questions concern branch selection, near-threshold bifurcation and robustness under refinement or changes in the sourced carrier. Physical group selection, ledger G05 action normalization, units, measurement dictionary and experiment requirements remain open. No experimental data, force-unification proof, proton-decay prediction or monopole identification is claimed. Physical promotion remains $0$.
+\end{document}
