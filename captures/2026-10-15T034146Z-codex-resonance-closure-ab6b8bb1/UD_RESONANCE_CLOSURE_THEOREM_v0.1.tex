@@ -1,0 +1,249 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Resonance closure}\rhead{RSC v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\id}{\mathbf1}\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Fix}{\operatorname{Fix}}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Closure of the six resonant cases}\\[8pt]
+{\large Exact invariant sectors and nonlinear orbital instability\\of the nonzero neutral flat family}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+The preceding nonlinear instability manuscript left six positive parameter values unresolved because a field oscillator resonated with the matter source. We construct two exactly invariant nonlinear symmetry sectors. The vertex stabilizer $S_3$ retains only gradient field stiffnesses $6\pm\sqrt2$; a cyclic $C_4$ sector retains only $6,4\pm\sqrt2$. At each formerly excluded parameter, one sector has no resonant retained field frequency and has a nonzero Coulomb-corrected averaged matter drift. Fixed-norm, exactly Gauss-admissible initial states then undergo fixed orbital departure under the full nonlinear flow. Combined with the preceding cases, this proves instability of the specified nonzero flat family for every positive electric coefficient and every nonnegative magnetic coefficient at finite rank. This conclusion is conditional on the unchanged candidate action. It does not identify a physical interaction or classify other backgrounds.
+\end{abstract}
+\textbf{Typing.} \textsc{Derived conditional mathematics}. Finite exact constructor checks support the proof; numerical trajectories are diagnostics. Independent review pending; development lane; physical promotion $0$. No action term, species, coefficient normalization or physical unit is added.
+
+\section{Precisely what is closed}
+Set $t=a\kappa/r$, with electric coefficient $a>0$, magnetic coefficient $\kappa\geq0$ and finite gauge rank $r\geq1$. The previously unresolved set was
+\[
+\mathcal E=\left\{\frac23,\frac83,\frac{16}{6-\sqrt2},\frac{16}{6+\sqrt2},
+\frac{16}{4-\sqrt2},\frac{16}{4+\sqrt2}\right\}.
+\]
+We settle every member exactly at its stated value, without detuning. The resonant modes remain present in the full phase space; the instability witnesses lie in exact invariant sectors that exclude those modes.
+
+\newpage
+\section{Frozen action, background and theorem}
+The filled oriented tetrahedron has 15 nonempty simplices and 28 adjacent incidence links. Let $B$ be its signed boundary matrix, $D_U[i,j]=B_{ij}U_{ij}$ for a lower simplex $i$ and upper simplex $j$, $A_U=D_U^\dagger-D_U$, and $h_U=iA_U$. The candidate Hamiltonian and its Gauss law are
+\begin{align*}
+H={}&\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi,\\
+\mathcal G_i={}&\sum_{\mathrm{head}=i}E_e-\sum_{\mathrm{tail}=i}U_e^\dagger E_eU_e
+-\psi_i\psi_i^\dagger+\bar\chi_i\chi_i^T=0.
+\end{align*}
+The fields have the canonical classical complex brackets of the preceding joint Hamiltonian theorem. The magnetic sum is over all 18 two-path diamonds, each once. Work in the common $\mu$-rotating frame, $\mu\geq0$. Put $k=(1,1,1,1,0,\ldots,0)^T$. The background is
+\[
+U_e=\id_r,\qquad E_e=0,\qquad \psi_i=\chi_i=\alpha k_i e_1,
+\qquad \alpha>0.
+\]
+Its orbit includes local gauge transformations and independent constant species phases. For $\mu=0$ it is stationary; for $\mu>0$ it is a relative equilibrium in the original frame.
+
+\begin{theorem}[Six-case closure]\label{th:six}
+For each $t\in\mathcal E$, every fixed $a>0$, finite $r$, $\alpha>0$, and $\mu\geq0$ as above, the nonzero neutral flat background is nonlinearly orbitally unstable, even on the fixed species-norm level $N_\psi=N_\chi=4\alpha^2$.
+
+There are exact Gauss-admissible initial states approaching the background and a fixed $\delta_*>0$ whose full nonlinear trajectories satisfy, at times $s_\varepsilon=O(1/\varepsilon)$,
+\[
+X(s_\varepsilon)=\sum_{\dim\sigma>0}
+\left(\|\psi_\sigma\|^2+\|\chi_\sigma\|^2\right)\geq\delta_*.
+\]
+The observable $X$ is gauge and species-phase invariant and vanishes on the entire background orbit. Thus this is a nonlinear orbital departure on the constraint surface.
+\end{theorem}
+\begin{corollary}[Parameter-wide obstruction for this family]\label{cor:all}
+Together with the preceding nonlinear theorem \cite{NOI}, Theorem \ref{th:six} implies nonlinear orbital instability of this nonzero family for every $a>0$, $\kappa\geq0$ and finite rank $r$. At $\kappa=0$ the earlier witness is an exact holonomy drift. The positive-stiffness empty vacuum stability theorem is unchanged. Other stationary or relative-equilibrium backgrounds are not classified.
+\end{corollary}
+
+\newpage
+\section{Exact permutation sectors of the nonlinear flow}
+For a vertex permutation $p\in S_4$, write $\rho_p$ for its signed action on oriented simplex matter coordinates: the sorting sign of the permuted simplex multiplies the coordinate. Write $P_p$ for its ordinary permutation on nodes and $T_p$ for its ordinary permutation on incidence links. A link is always directed from upper to lower dimension, so its head and tail are not interchanged. Signed simplicial covariance gives
+\[
+\rho_p B=B\rho_p,\quad P_p R=RT_p,\quad T_p K=KT_p,
+\quad \rho_p k=k,
+\]
+where $R$ is the ordinary head-minus-tail incidence, $C$ the diamond curl and $K=C^TC$.
+
+\begin{lemma}[Exact fixed-point invariance]\label{lem:equiv}
+The transformation $(\psi,\chi)\mapsto(\rho_p\psi,\rho_p\chi)$, with links and momenta permuted by $T_p$, is canonical, preserves $H$, and permutes the Gauss equations by $P_p$. For every subgroup $G\leq S_4$, its fixed-point set is invariant under the full nonlinear flow.
+\end{lemma}
+\begin{proof}
+The real signed permutation is unitary on each canonical matter species, and permutation of cotangent link factors is canonical. If $b_{ij}$ transforms to $b_{p(i)p(j)}$, simplicial covariance gives $b_{p(i)p(j)}=s_i s_j b_{ij}$ with orientation signs $s_i,s_j$. Thus $D_U$, $A_U$ and $h_U$ transform by signed conjugation. The two matter energies, including the conjugate-charge term, are preserved. The electric sum is permuted. Each diamond's two routes are relabeled; their exchange replaces its Wilson product by the inverse, up to changing the basepoint. Real trace is invariant under inversion and unitary conjugation. Hence the magnetic sum is preserved, including at finite link phases. Matter signs square to one in charge bilinears, giving the ordinary node action on Gauss law. Equivariance of the Hamiltonian vector field and uniqueness of solutions imply fixed-point invariance.
+\end{proof}
+Restricting a witness to this invariant set adds no premise to instability: one admissible sequence is sufficient. We claim neither attraction to the sector nor stability against symmetry-breaking noise.
+
+For scalar rank define $L^+=(RR^T)^+$, $P_T=\id-R^TL^+R$ and the Reynolds projectors
+\[
+\Pi_G=|G|^{-1}\sum_{p\in G}\rho_p,\quad
+Q_G=|G|^{-1}\sum_{p\in G}T_p,\quad W_G=P_TQ_G.
+\]
+The ordinary node Reynolds projector commutes with $L^+$. Therefore Coulomb reconstruction, the transverse projection and the Coulomb gauge compensator all preserve the sectors. In particular $W_G$ is the orthogonal projector onto $\ker R\cap\Fix(T_G)$ and commutes with $K$. These identities prove nonlinear invariance in the reduced equations too.
+
+\newpage
+\section{Two finite sector spectra}
+List oriented tetrahedral edges as $(01,02,03,12,13,23)$. Let $A=B^T-B$, so $Ak=0$ and $A^2=-4(\id-kk^T/4)$. Define real unit matter vectors supported on these six edge nodes by
+\[
+D_g=\frac{(1,1,1,0,0,0)}{\sqrt3},\qquad
+D_c=\frac{(1,0,-1,1,0,1)}2.
+\]
+Here $D_g$ is in the gradient image of the edge boundary $B_1^T$ and $B_1D_c=0$.
+
+\begin{proposition}[Exact restricted spectra]\label{prop:spec}
+For $G_g=S_3$ fixing vertex $0$ and permuting $1,2,3$, and $G_c=C_4=\langle(0123)\rangle$, one has
+\[
+\Fix(\rho_{G_j})=\operatorname{span}_{\mathbb C}\{k,D_j,AD_j\}.
+\]
+Their transverse link spaces have the following stiffness spectra, each listed eigenvalue having multiplicity one within the sector:
+\begin{center}
+\begin{tabular}{lrrl}
+\toprule
+Sector & Link fixed dim. & Cycle dim. & Restricted $K$ spectrum\\
+\midrule
+$S_3$ vertex stabilizer & 8 & 2 & $6-\sqrt2,6+\sqrt2$\\
+$C_4$ vertex cycle & 7 & 3 & $6,4-\sqrt2,4+\sqrt2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{proposition}
+\begin{proof}
+Average the explicitly defined finite signed and ordinary permutation matrices. The matter projectors have rank three and fix $k,D_j,AD_j$, which are independent. The transverse projectors have ranks two and three. To reproduce the eigenvalue assertion without choosing an orthonormal basis, take any column-space basis $Z_j$ of $W_{G_j}$ and set
+\[
+K_j=(Z_j^TZ_j)^{-1}Z_j^TKZ_j.
+\]
+Exact rational elimination gives
+\[
+\det(z\id-K_g)=z^2-12z+34,\qquad
+\det(z\id-K_c)=(z-6)(z^2-8z+14).
+\]
+The accompanying code constructs all matrices from simplex incidences and verifies these characteristic polynomials and projector ranks. The normalized basis $k/2,D_j,AD_j/2$ has $AD_j=2(AD_j/2)$ and $A(AD_j/2)=-2D_j$, confirming the retained native frequencies $0,\pm2$.
+\end{proof}
+The spectral exclusion persists exactly because of Lemma \ref{lem:equiv}. It is stronger than a linear source orthogonality calculation: nonlinear products cannot generate a mode outside the fixed-point space along these solutions.
+
+\newpage
+\section{Nonlinear reduction and restricted averaging}
+We give the argument at $r=1$ first. Define $\Gamma_\sigma=(-1)^{\dim\sigma}$ and, in the rotating frame,
+\[
+w=\Gamma\bar\chi,\qquad f=(\psi+w)/2,\qquad d=(\psi-w)/2.
+\]
+Both $f,d$ co-move under the same anti-Hermitian matter operator. In scalar Coulomb coordinates the exact equations are
+\begin{align*}
+q&=4\Rea(\bar f\odot d),& E&=E_T+R^TL^+q,&\Lambda&=-aL^+q,\\
+\dot\theta&=aE_T,&\dot E_T&=-\kappa C^T\sin(C\theta)-P_TJ,\\
+\dot f&=A_{e^{i\theta}}f+i\diag(\Lambda)f,&
+\dot d&=A_{e^{i\theta}}d+i\diag(\Lambda)d,\\
+J_e&=4b_e\Rea(\bar f_i e^{i\theta_e}d_j+\bar d_i e^{i\theta_e}f_j),
+\end{align*}
+with $R\theta=RE_T=0$ and $\sum_iq_i=0$. The full two-vector Gram matrix is conserved. Permutations preserve dimension, so $\Gamma$ commutes with their signed actions. Each sector above is therefore an exact sector of these equations.
+
+Scale $d=\varepsilon D$, $\theta=\varepsilon\vartheta$, $E_T=\varepsilon e$. At $\varepsilon=0$,
+\[
+\dot f=Af,\quad\dot D=AD,\quad
+\dot\vartheta=ae,\quad\dot e=-\kappa K\vartheta-P_TJ_0(f,D).
+\]
+All variables are restricted to the selected invariant sector. The source has harmonics $0,\pm2,\pm4$:
+\[
+J_0(e^{As}f,e^{As}D)=\sum_{n=-2}^{2}J_n(f,D)e^{2ins}.
+\]
+If $tk\ne4,16$ for every \emph{retained} stiffness $k$, the particular field is the bounded quadratic polynomial
+\[
+Z(f,D)=-a\sum_{n=-2}^{2}(tK-4n^2\id)^{-1}_{\operatorname{im}W_G}P_TJ_n(f,D),
+\qquad e_p=a^{-1}\mathcal L_AZ.
+\]
+No full-space singular inverse is used. Subtraction of $(Z,e_p)$ conjugates the leading field equations to bounded oscillators. The first correction is a polynomial with finitely many rotation weights. A homogeneous field oscillation has frequency $\sqrt{tk}\notin\{0,2,4\}$; its contribution to the first averaged matter equation is zero. All other zero-frequency terms, including any field combination resonances, are retained.
+
+\newpage
+\begin{lemma}[Finite-frequency comparison]\label{lem:avg}
+For a fixed parameter and sector satisfying the preceding inverse conditions, the exact scaled flow in interaction coordinates differs by $O(\varepsilon)$ from its first averaged slow flow, uniformly for $0\leq s\leq T/\varepsilon$ and sufficiently small fixed $T>0$ on bounded scaled-coordinate neighborhoods.
+\end{lemma}
+\begin{proof}
+After the particular-field change the leading flow is a product of bounded rotations. Its first correction pulls back to a finite sum
+$\bar F(z)+\sum_{\sigma\ne0}F_\sigma(z)e^{i\sigma s}$.
+On a compact neighborhood the primitive
+\[
+u(s,z)=\sum_{\sigma\ne0}\frac{F_\sigma(z)}{i\sigma}e^{i\sigma s}
+\]
+and its needed derivatives are bounded. The change $z=v+\varepsilon u(s,v)$ gives $\dot v=\varepsilon\bar F(v)+O(\varepsilon^2)$ with bounded remainder. Smooth angle expansions have uniform derivative bounds on the same scaled neighborhood. Variation of constants and Gronwall give an $O(\varepsilon)e^{LT}$ error through $T/\varepsilon$. Choose $T$ small enough that the averaged solution stays inside a smaller neighborhood; this error then closes continuation of the exact solution in the larger one. The finite nonzero denominators are fixed at the parameter under consideration. No uniform assertion near a resonance and no infinite small-divisor premise is used. This also allows $O(\varepsilon)$ initial-coordinate changes.
+\end{proof}
+For $c=\alpha k$ define $S=\diag(c)$ and $M_{\ell e}=-b_e(c_j\delta_{\ell i}+c_i\delta_{\ell j})$. Then $J_0(c,e^{As}D_j)=-4M^Te^{As}D_j$, $M^TAD_j=0$ and
+\[
+\bar F_f(c,D_j)=4ia\left\langle e^{-As}
+\left[M(tK-4\id)^{-1}_{\operatorname{im}W_G}P_TM^T-SL^+S\right]e^{As}\right\rangle D_j.
+\]
+The Coulomb term must be retained. Evaluating this finite average on the three-dimensional matter space gives
+\begin{align*}
+\bar F_f(\alpha k,D_g)&=2ia\alpha^2 f_g(t)D_g,
+& f_g(t)&=\frac{-2(t-1)(7t-4)}{34t^2-48t+16},\\
+\bar F_f(\alpha k,D_c)&=2ia\alpha^2 f_c(t)D_c,
+& f_c(t)&=\frac{2(5t-4)}{14t^2-32t+16}.
+\end{align*}
+These are sector resolvent identities, not substitutions into a singular full-space inverse. They also follow by the exact finite averaging formula: for $P=\id-kk^T/4$ and $V=M(tK-4\id)^{-1}_{\operatorname{im}W_G}P_TM^T-SL^+S$, its average on $k^\perp$ is $(PVP-AVA/4)/2$. The verifier checks the displayed drift directly at each of the six parameters.
+
+\newpage
+\section{All six assignments and nonzero drifts}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Exact $t$ & Exact sector & Residue in $2ia\alpha^2 f_j(t)D_j$\\
+\midrule
+$2/3$ & $S_3$, $D_g$ & $-1/2$\\[3pt]
+$8/3$ & $S_3$, $D_g$ & $-55/146$\\[3pt]
+$16/(4\pm\sqrt2)$ & $S_3$, $D_g$ & $(-5221\pm86\sqrt2)/13370$\\[3pt]
+$16/(6\pm\sqrt2)$ & $C_4$, $D_c$ & $(303\pm110\sqrt2)/410$\\
+\bottomrule
+\end{tabular}
+\end{center}
+In each $\pm$ row the signs correspond to the same sign in the denominator. All residues are nonzero. At the first four values, neither retained stiffness $6\pm\sqrt2$ gives $tk=4$ or $16$. At the last two values, none of the retained $6,4\pm\sqrt2$ gives $tk=4$ or $16$. Positivity also excludes $tk=0$. The exact receipt separately records the nonzero determinants of $tK_j-\omega^2\id$ at $\omega=0,2,4$ for every row.
+
+\section{Exactly admissible seeds and orbital departure}
+Select the sector and its real unit $D_j$ from the table. For small $\varepsilon>0$, put
+\begin{align*}
+\alpha_\varepsilon&=\sqrt{\alpha^2-\varepsilon^2/4},
+&f(0)&=\alpha_\varepsilon k,&d(0)&=\varepsilon D_j,\\
+\theta(0)&=4a\varepsilon(tK-4\id)^{-1}_{\operatorname{im}W_G}P_TM_\varepsilon^TD_j,
+&E(0)&=0.
+\end{align*}
+Here $M_\varepsilon$ is constructed from $\alpha_\varepsilon k$. All data are fixed by the subgroup. The vertex and edge supports are disjoint, so $q(0)=0$ pointwise and every Gauss equation holds exactly. The species norms both equal $4\alpha_\varepsilon^2+\varepsilon^2=4\alpha^2$. The particular momentum is zero because $M_\varepsilon^TAD_j=0$. Thus the scaled seeds have zero leading homogeneous field and approach the data used in the averaged drift computation.
+
+For the averaged flow,
+\[
+\bar f(\tau)=\alpha k+2ia\alpha^2f_j(t)\tau D_j+O(\tau^2).
+\]
+Choose a small fixed $\tau_*>0$ so the edge component has positive norm. Apply Lemma \ref{lem:avg} on a slightly longer fixed slow interval. Take $s_\varepsilon=n_\varepsilon\pi$ nearest to $\tau_*/\varepsilon$. Since $e^{As_\varepsilon}=\id$ and $\varepsilon s_\varepsilon=\tau_*+O(\varepsilon)$, the exact $f$ has a positive edge norm bounded below independently of $\varepsilon$. Also $\|d\|=\varepsilon$ exactly. Therefore
+\[
+X=2\bigl(\|f_{\dim>0}\|^2+\|d_{\dim>0}\|^2\bigr)\geq\delta_*>0,
+\qquad X(0)=2\varepsilon^2\longrightarrow0.
+\]
+This proves scalar Theorem \ref{th:six}. Embed it at rank $r$ by $U=\diag(u,\id_{r-1})$, $E=\diag(E_s,0)$ and matter in color $e_1$. This is an invariant subsystem with magnetic coefficient $\kappa/r$. Full gauge transformations preserve $X$, so residual color gauge directions cannot remove the departure. This proves the theorem at all finite ranks.
+
+\newpage
+\section{Verification, provenance and remaining scope}
+\textbf{Exact constructor receipt.} The accompanying verifier passes 104 exact checks. These include signed boundary covariance, ordinary Gauss incidence covariance, stiffness equivariance, matter-current intertwining, sector ranks and characteristic polynomials, rational nonlinear tangent fixtures, six restricted resolvent domains and averaged drifts, seed support, zero initial particular momentum and norm normalization. Rational fixtures test implementations; the universal nonlinear invariance statement is proved in Lemma \ref{lem:equiv}, not inferred from a finite sample.
+
+\textbf{Separate numerical receipt.} Six campaigns integrate the full nonlinear Coulomb equations with no subgroup projection in the right-hand side, $a=r=\alpha=1$, slow time $0.02$, and $\varepsilon=0.02/(n\pi)$ for $n=1,2,4,8,16$. The smallest-$\varepsilon$ runs yield:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Parameter & Final excited stock $X$\\
+\midrule
+$2/3$ & $0.000800289$\\
+$8/3$ & $0.000454427$\\
+$16/(4-\sqrt2)$ & $0.000511276$\\
+$16/(4+\sqrt2)$ & $0.000465809$\\
+$16/(6-\sqrt2)$ & $0.000414111$\\
+$16/(6+\sqrt2)$ & $0.004002608$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each initial stock is approximately $3.1663\times10^{-7}$. The receipt records conservation residuals, reconstructed Gauss residuals and sector leakage separately. Finite runs corroborate the implementation and scaling; they do not prove asymptotic instability and use no experimental data.
+
+\textbf{Dependency and supersession.} This manuscript closes the six-case exception in NOI v0.1. Its generic, four force-canceling resonance, zero-stiffness and scalar-embedding arguments remain inherited. Frozen earlier manuscripts are retained as historical artifacts; this is an additive successor, not a silent replacement. The parameter-wide corollary depends on those earlier proofs in addition to the six-case proof given here. Gauge reduction, the empty vacuum result and the joint action remain unchanged.
+
+\textbf{Remaining scope.} Independent proof review and independent implementation are pending. Other flat or curved backgrounds with excited matter, coefficient and unit provenance, a measurement dictionary, continuum or refinement compatibility and physical identification remain open. In particular this theorem proves neither force unification nor proton decay nor a monopole prediction. It supplies a mathematically specified obstruction to using this nonzero flat family as a stable ground state under the candidate action. The next useful mathematical task is independent review of this obstruction, followed by classifying other admissible backgrounds if the action is retained.
+
+\begin{thebibliography}{9}
+\bibitem{NOI} Unified Dynamics workstream, \emph{Nonlinear orbital instability of the neutral flat stationary family}, v0.1, 15 October 2026 UTC. Conditional constructor manuscript, independent review pending. \url{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/nonlinear-orbital-v0.1/UD_NONLINEAR_ORBITAL_INSTABILITY_v0.1.pdf}.
+\bibitem{GRM} Unified Dynamics workstream, \emph{Gauge-reduced modes and stability around the neutral flat stationary family}, v0.1, 15 October 2026 UTC. Graph, action and linear-reduction dependency; see source provenance receipt for exact local hashes.
+\end{thebibliography}
+\end{document}
