@@ -1,0 +1,108 @@
+{
+  "version": "0.1",
+  "lane": "development; no registry entry",
+  "physical_promotion": 0,
+  "review": "constructor checked; no independent review",
+  "claims": [
+    {
+      "id": "GRM-T1",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Complete flat strictly stationary family at mu=0, up to gauge and constant species phases; mu>0 common-phase relative equilibrium.",
+      "dependencies": [
+        "GHT candidate action",
+        "flatness trivialization",
+        "native one-dimensional kernel"
+      ],
+      "origin": "current derivation under GHT v0.1 candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "GRM-T2",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Regular scalar Gauss reduction gives 86 real dimensions and the explicit Coulomb equations including longitudinal electric response.",
+      "dependencies": [
+        "alpha>0",
+        "r=1",
+        "GRM-T1"
+      ],
+      "origin": "current derivation under GHT v0.1 candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "GRM-T3",
+      "type": "EXACT CONDITIONAL",
+      "statement": "K stiffness eigenvalues and reduced characteristic polynomial lambda^2(lambda^2+4)^28 F_(a kappa).",
+      "dependencies": [
+        "specified finite graph",
+        "GRM-T2"
+      ],
+      "origin": "current derivation under GHT v0.1 candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "GRM-T4",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Every nonzero neutral flat family member has imaginary spectrum but unbounded reduced linear flow for a>0,kappa>=0; nonzero-frequency Jordan chains are Gauss admissible and nongauge.",
+      "dependencies": [
+        "GRM-T1",
+        "GRM-T2",
+        "residue functions and resonance projector ranks"
+      ],
+      "origin": "current derivation under GHT v0.1 candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "GRM-T5",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Higher-rank symplectic slice polynomial lambda^2(lambda^2+4)^(28r) F_(a kappa/r)^(r^2), with residual U(r-1) reduction still required. Active scalar secular modes survive.",
+      "dependencies": [
+        "candidate U(r) action",
+        "rank-one background"
+      ],
+      "origin": "current derivation under GHT v0.1 candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "GRM-T6",
+      "type": "DERIVED CONDITIONAL",
+      "statement": "Zero-matter vacuum gauge orbit is nonlinearly Lyapunov stable for kappa>0 at every finite rank.",
+      "dependencies": [
+        "uniform operator norm bound four",
+        "conserved H and species norms",
+        "positive stiffness",
+        "flatness theorem"
+      ],
+      "origin": "current derivation under GHT v0.1 candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "GRM-N1",
+      "type": "DERIVED CONDITIONAL COUNTEREXAMPLE",
+      "statement": "At kappa=0 exact matter-free cycle drift makes the vacuum gauge orbit nonlinearly Lyapunov unstable.",
+      "dependencies": [
+        "candidate action",
+        "nonzero graph cycle curl"
+      ],
+      "origin": "current derivation under GHT v0.1 candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    },
+    {
+      "id": "GRM-O1",
+      "type": "OPEN",
+      "statement": "Nonlinear Lyapunov or orbital stability of the nonzero neutral family; other curved/excited backgrounds; source-selected action/group/units; physical correspondence.",
+      "dependencies": [],
+      "origin": "current derivation under GHT v0.1 candidate action",
+      "constructor": "Codex",
+      "reviewers": []
+    }
+  ],
+  "supersedes": [],
+  "relation_to_GHT": "Additive mode and stability theorem; global existence and conserved quantities remain valid. No assumed source-selected action is promoted."
+}

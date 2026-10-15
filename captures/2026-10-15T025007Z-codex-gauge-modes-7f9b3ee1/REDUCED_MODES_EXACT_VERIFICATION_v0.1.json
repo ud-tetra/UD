@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "type": "EXACT constructor checks supporting written universal proofs",
+  "check_count": 50,
+  "checks": [
+    "source_boundary_nilpotence",
+    "native_kernel_and_square",
+    "closed_graph_ranks",
+    "diamond_divergence_identity",
+    "background_stationary_and_neutral",
+    "linear_Gauss_identity",
+    "linear_gauge_identity",
+    "matter_parity_feedback_vanishes",
+    "full_exact_diamond_stiffness_characteristic",
+    "edge_projectors_rank_three",
+    "gradient_full_matrix_spectral_moment_0",
+    "gradient_full_matrix_spectral_moment_1",
+    "gradient_full_matrix_spectral_moment_2",
+    "gradient_full_matrix_spectral_moment_3",
+    "gradient_full_matrix_spectral_moment_4",
+    "gradient_full_matrix_spectral_moment_5",
+    "cycle_full_matrix_spectral_moment_0",
+    "cycle_full_matrix_spectral_moment_1",
+    "cycle_full_matrix_spectral_moment_2",
+    "cycle_full_matrix_spectral_moment_3",
+    "cycle_full_matrix_spectral_moment_4",
+    "cycle_full_matrix_spectral_moment_5",
+    "gradient_resolvent_closed_form",
+    "cycle_resolvent_closed_form",
+    "no_shared_residue_zero",
+    "coupled_resonance_weights_positive",
+    "six_eigenvalue_field_sector_uncoupled",
+    "scalar_Gauss_constraint_and_gauge_ranks_15",
+    "scalar_Gauss_preservation",
+    "scalar_pure_gauge_stationary",
+    "Coulomb_projector_exact",
+    "global_phase_projector_exact",
+    "explicit_Coulomb_map_annuls_all_gauge_directions",
+    "explicit_reduced_equations_modulo_Gauss",
+    "full_116_dimensional_characteristic_crosscheck",
+    "transverse_color_Gauss_and_gauge_ranks_15",
+    "transverse_color_Gauss_preservation",
+    "transverse_color_pure_gauge",
+    "full_86_complex_transverse_characteristic",
+    "Jordan_primary_nullities_generic",
+    "Jordan_primary_nullities_gradient_zero",
+    "Jordan_primary_nullities_gradient_zero_4over7",
+    "Jordan_primary_nullities_cycle_zero",
+    "Jordan_primary_nullities_uncoupled_resonance",
+    "Jordan_primary_nullities_coupled_resonance",
+    "exact_real_Jordan_witness",
+    "witness_satisfies_linear_Gauss",
+    "witness_fixed_species_norm_tangent",
+    "witness_growth_not_gauge",
+    "witness_neutral_phase_sum_grows"
+  ],
+  "stiffness_spectrum": {
+    "6": 2,
+    "6-sqrt(2)": 3,
+    "6+sqrt(2)": 3,
+    "4-sqrt(2)": 3,
+    "4+sqrt(2)": 3,
+    "0_removed_as_gradients": 14
+  },
+  "scalar_regular_reduced_real_dimension": 86,
+  "general_rank_symplectic_slice_real_dimension": "28 r^2 + 56 r + 2; residual U(r-1) reduction remains for r>1",
+  "residue_functions": {
+    "gradient": "(2 - 2*t)*(7*t - 4)/(34*t**2 - 48*t + 16)",
+    "cycle": "(10*t - 8)/(14*t**2 - 32*t + 16)"
+  },
+  "Jordan_primary_fixtures": [
+    {
+      "fixture": "generic",
+      "a": 1,
+      "effective_kappa": "1/2",
+      "nullities_L_squared_plus_four_powers": [
+        44,
+        56,
+        56
+      ]
+    },
+    {
+      "fixture": "gradient_zero",
+      "a": 1,
+      "effective_kappa": "1",
+      "nullities_L_squared_plus_four_powers": [
+        50,
+        56,
+        56
+      ]
+    },
+    {
+      "fixture": "gradient_zero_4over7",
+      "a": 1,
+      "effective_kappa": "4/7",
+      "nullities_L_squared_plus_four_powers": [
+        50,
+        56,
+        56
+      ]
+    },
+    {
+      "fixture": "cycle_zero",
+      "a": 1,
+      "effective_kappa": "4/5",
+      "nullities_L_squared_plus_four_powers": [
+        50,
+        56,
+        56
+      ]
+    },
+    {
+      "fixture": "uncoupled_resonance",
+      "a": 1,
+      "effective_kappa": "2/3",
+      "nullities_L_squared_plus_four_powers": [
+        48,
+        60,
+        60
+      ]
+    },
+    {
+      "fixture": "coupled_resonance",
+      "a": 1,
+      "effective_kappa": "4/(sqrt(2) + 4)",
+      "nullities_L_squared_plus_four_powers": [
+        44,
+        56,
+        62
+      ]
+    }
+  ],
+  "vacuum_nonlinear_stability": "written conserved-functional proof for kappa>0; kappa=0 exact drift counterexample",
+  "nonzero_family": "spectrally stable but linearly unbounded for all a>0, kappa>=0, alpha>0; nonlinear Lyapunov status OPEN",
+  "review": "Constructor only, no independent review",
+  "physical_promotion": 0,
+  "verifier_sha256": "739d66da935c12a1bfe04f24a3f1c5a7f5ec1854cc1b0afda753519a1a62df36",
+  "model_sha256": "1801d4683e6647cb62f16cec322c203457979bf16aff54f3af196971566488e6"
+}
