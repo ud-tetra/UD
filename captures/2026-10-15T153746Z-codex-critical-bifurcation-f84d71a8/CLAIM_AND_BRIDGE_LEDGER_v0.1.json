@@ -1,0 +1,180 @@
+{
+  "status": "DERIVED CONDITIONAL; INDEPENDENT REVIEW PENDING",
+  "physical_promotion": 0,
+  "lane": "development; no registry entry",
+  "claims": [
+    {
+      "id": "CBF-D1",
+      "type": "DERIVED",
+      "statement": "Complete local scalar bifurcation: only the old branch at epsilon<=0; exactly 26 additional labeled branches for sufficiently small positive epsilon.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "Frozen action",
+          "Simple ground-state gap",
+          "Critical scalar representation",
+          "Positive inherited quartic",
+          "Analytic implicit function argument"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-D2",
+      "type": "DERIVED",
+      "statement": "Six balanced 2+2 critical-amplitude branches are strict minima; twelve 2+1+1 branches have index one; eight 3+1 branches have index two.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "CBF-D1",
+          "Exact cubic anisotropy and Hessian identities"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-D3",
+      "type": "DERIVED",
+      "statement": "Branch radius scales as sqrt(epsilon), energy shift as epsilon^2; Gamma=((536sqrt10-2624)Lambda_plus+4848sqrt10+18048)/81.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "Critical link map",
+          "Full stationary energy",
+          "Directed integer coefficient certificate"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-D4",
+      "type": "DERIVED",
+      "statement": "Reversing symmetry gives positive momentum block and no mixed Hessian at the new scalar equilibria; exact scalar growing-pair counts are 0,1,2 and leading soft spectra are derived.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "Frozen symplectic signs",
+          "Exact reduced square-root/cosine Hamiltonian",
+          "CBF-D2"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-D5",
+      "type": "DERIVED",
+      "statement": "Balanced branch embeddings are nonlinearly orbitally stable at every fixed finite rank for sufficiently small positive epsilon; both saddle embeddings are unstable.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "CBF-D2",
+          "CBF-D4",
+          "Inherited positive color-normal Hessian",
+          "Exact block-energy splitting"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-NG1",
+      "type": "NO-GO",
+      "statement": "A strict local energy-minimizing orbit in this closed fixed-norm Hamiltonian model cannot attract a distinct sufficiently close orbit; energy ranking is not a branch-selection mechanism.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "Energy conservation",
+          "Strict local minimum"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-E1",
+      "type": "EXACT",
+      "statement": "66 constructor checks passed, including exact critical algebra, branch counts, Hessians, reversing identities and inherited integer interval certificate.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "verify_bifurcation.py"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-N1",
+      "type": "NUMERICAL",
+      "statement": "Twelve full stationary-energy solutions and 42-pair Hessian spectra corroborate three branch types, force residuals and leading scaling. No empirical data or new nonlinear trajectories.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "BIFURCATION_NUMERICAL_DIAGNOSTIC_v0.1.json"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-C1",
+      "type": "CANDIDATE",
+      "statement": "Finite action, species, gauge rank, action units and physical interpretation retain their declared candidate provenance.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "Frozen Hamiltonian contract"
+        ],
+        "lane": "development"
+      }
+    },
+    {
+      "id": "CBF-O1",
+      "type": "OPEN",
+      "statement": "Independent review, quantitative epsilon0 bound, full higher-rank stationary classification, further continuation/interactions/refinement, sourced preparation, physical normalization and observable dictionary.",
+      "provenance": {
+        "origin": "Source-bound local bifurcation derivation",
+        "constructor": "Codex",
+        "reviewers": [],
+        "dependencies": [
+          "No promotion receipt"
+        ],
+        "lane": "development"
+      }
+    }
+  ],
+  "supersedes": [
+    {
+      "claim": "HRC-O1 / RGC-O1",
+      "scope": "Resolves local scalar near-threshold branch shapes and embedded stability; not global dynamical selection or exhaustive full-rank classification."
+    }
+  ],
+  "scope_limits": [
+    "There exists an unquantified sufficiently small epsilon0 at each fixed parameter set",
+    "Counts preserve labels and quotient gauge/species phases only",
+    "Patterns are critical phase amplitudes, not carrier geometric deformations",
+    "Full scalar classification; higher rank embeddings only",
+    "Stable new branches do not enlarge stability interval of original orbit",
+    "Constructor verification is not independent review or empirical evidence"
+  ],
+  "unaffected": [
+    "Original sharp curved-orbit stability interval",
+    "Residual nonfree quotient structure",
+    "Global minimizing-set distinction",
+    "Ledger G05 normalization and physical promotion0"
+  ]
+}
