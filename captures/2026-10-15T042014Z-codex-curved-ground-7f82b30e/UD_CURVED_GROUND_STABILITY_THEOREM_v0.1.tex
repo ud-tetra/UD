@@ -1,0 +1,215 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Curved matter stability}\rhead{CGS v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\id}{\mathbf1}\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries A stable nonzero curved relative equilibrium}\\[8pt]
+{\large Constrained energy coercivity in the unchanged\\tetrahedral link--matter action}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+The completed nonlinear obstruction concerns the neutral flat vertex-supported family, rather than every matter background. We now construct a different exact branch: scalar links $U_e^*=-ib_e$ have diamond holonomy $-1$, and the matter fields occupy the strictly positive lowest mode of the resulting real Hermitian operator. This branch is an exact relative equilibrium for every magnetic coefficient. At zero stiffness it is the unique constrained global minimizing orbit. For an explicit positive range of magnetic stiffness, the constrained energy has a positive quadratic form transverse to gauge and species phases, proving nonlinear orbital stability at fixed nonzero species norms. Separately, compactness and electric coercivity guarantee a stable global minimizing set at every finite rank and coefficient; a trial-energy comparison forces all its members to be nonflat in a stated small-stiffness range. The scalar orbit theorem does not imply stability against additional color directions. All statements are conditional on the existing candidate action.
+\end{abstract}
+\textbf{Typing.} \textsc{Derived conditional mathematics}; exact constructor checks and separately typed numerical diagnostics. Development lane, no registry entry; independent review pending; physical promotion $0$. Coefficients, classical matter species and internal-time units are unchanged and retain their unresolved physical provenance.
+
+\section{Main scalar theorem}
+Let $N=\|\psi\|^2=\|\chi\|^2>0$ and define
+\[
+\rho=\sqrt{8+2\sqrt{10}},\qquad
+\boxed{\kappa_{\rm safe}(N)=
+\frac{N\rho(10-\sqrt{10})}{120(6+\sqrt2)}.}
+\]
+The dimensionless ratio $\kappa_{\rm safe}/N\simeq0.02908745$ is a conservative sufficient bound derived below. It is not a measured coupling or a claimed sharp transition.
+
+\newpage
+\section{Frozen model and exact statement}
+Use the filled oriented tetrahedron, its 15 nonempty simplices, 28 signed incidence links $e=(i\leftarrow j)$, signs $b_e=B_{ij}$, ordinary incidence $R$, and 18-diamond curl $C$. Put $K=C^TC$. The already declared Hamiltonian is
+\begin{align*}
+H={}&\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)\\
+&+\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi,
+\qquad h_U=i(D_U^\dagger-D_U),\quad D_U[i,j]=b_eU_e,
+\end{align*}
+where $a>0$, $\kappa\geq0$, $\mu\geq0$, and the canonical fundamental and conjugate-representation fields have the preceding complex brackets. The Gauss equations remain
+\[
+\mathcal G_i=\sum_{\mathrm{head}=i}E_e-
+\sum_{\mathrm{tail}=i}U_e^\dagger E_eU_e
+-\psi_i\psi_i^\dagger+\bar\chi_i\chi_i^T=0.
+\]
+Write $H_0=H-\mu(N_\psi+N_\chi)$. On a fixed species-norm surface this subtracts a constant. All stability statements use distances to the orbit under local gauge and independent global species phases.
+
+\begin{theorem}[Scalar curved orbit]\label{th:scalar}
+At rank $r=1$, let $T$ be the unsigned adjacency matrix of the Hasse incidence graph and let $v>0$ be the unit vector specified on the next page, satisfying $Tv=\rho v$. The configuration
+\[
+U_e^*=-ib_e,\quad E_e^*=0,\quad
+\psi^*=\chi^*=\sqrt N\,v
+\]
+is exactly Gauss neutral and evolves only by the common phase
+$e^{-i(\mu-\rho)s}$, for every $\kappa\geq0$. Each diamond has $W_d^*=-1$.
+
+For every $a>0$ and $0\leq\kappa<\kappa_{\rm safe}(N)$, this orbit is nonlinearly Lyapunov stable on the fixed norm surface, hence also on its Gauss-admissible subset. At $\kappa=0$ it is the unique global minimizing orbit on that surface, with $H_0=-2\rho N$.
+\end{theorem}
+We prove stability of the full scalar orbit, rather than stability only inside a symmetry-restricted perturbation sector. Additional color perturbations at $r>1$ are outside this orbit theorem. Equality at $\kappa_{\rm safe}$ and the larger-stiffness domain are not settled by the bound.
+
+\section{Sharper uniform operator bound}
+For any finite rank, set $x_i=\|z_i\|$. Since every nonzero off-diagonal block of $h_U$ is unitary up to phase,
+\[
+|z^\dagger h_Uz|\leq2\sum_{e=(i,j)}x_ix_j
+\leq\sum_{e=(i,j)}\left(\frac{v_j}{v_i}x_i^2+\frac{v_i}{v_j}x_j^2\right)
+=\rho\|z\|^2.
+\]
+Thus $\|h_U\|\leq\rho<4$ uniformly. The explicit scalar connection above attains this bound. This strengthens the earlier degree-four estimate without invalidating it.
+
+\newpage
+\section{Constructing the exact curved branch}
+The adjacency graph is connected. Set $s_{10}=\sqrt{10}$ and
+\[
+L=\frac{16(10+s_{10})}{9},\qquad
+v_\sigma=\frac{q_{|\sigma|}}{\sqrt L},\qquad
+(q_1,q_2,q_3,q_4)=
+\left(1,\frac\rho3,\frac{1+s_{10}}3,
+\frac{4(1+s_{10})}{3\rho}\right).
+\]
+The four layer equations are
+\[
+\rho q_1=3q_2,\quad\rho q_2=2q_1+2q_3,\quad
+\rho q_3=3q_2+q_4,\quad\rho q_4=4q_3.
+\]
+They follow from $\rho^4-16\rho^2+24=0$. Also
+$4q_1^2+6q_2^2+4q_3^2+q_4^2=L$, so $\|v\|=1$.
+For reference the full unsigned characteristic polynomial is
+\[
+\det(\lambda\id-T)=\lambda^5(\lambda-2)^3(\lambda+2)^3
+(\lambda^4-16\lambda^2+24).
+\]
+At $U_e^*=-ib_e$, one has $D_U[i,j]=-i$ for every incidence, hence $h_{U^*}=-T$, a real symmetric matrix. Both species therefore have eigenvalue $-\rho$. Their densities coincide pointwise, so $E=0$ satisfies every Gauss equation.
+
+The two signed boundary products around a diamond have opposite signs because $B^2=0$. Multiplication by $(-i)^2$ on either length-two path preserves this opposition, so their relative holonomy is exactly $-1$. The magnetic derivative is proportional to $\sin(\pi)=0$. The scalar matter force is
+\[
+\mathcal F_e^{\rm m}=2b_e\Rea\left(
+\bar\psi_iU_e\psi_j+\chi_iU_e\bar\chi_j\right),
+\]
+which vanishes because $v$ is real and $U_e^*$ is purely imaginary. Thus $\dot E=0$, $\dot U=0$, and both matter fields acquire the claimed common phase. This proves exact relative stationarity for all $\kappa$.
+
+\textbf{Curvature meaning.} Here ``curved'' means nonidentity diamond holonomy, specifically $-1$. It is an internal compact-link observable. No monopole charge, spacetime curvature or physical magnetic field is inferred.
+
+\newpage
+\section{Exact ground-state transform and zero-stiffness stability}
+Write a nearby or arbitrary scalar connection as $U_e=U_e^*u_e$, $|u_e|=1$. Then the upper off-diagonal block of $h_U$ is $-u_e$ and the lower one is $-\bar u_e$. For any complex vector $f$,
+\begin{equation}
+f^\dagger(h_U+\rho\id)f
+=\sum_{e=(i,j)}v_iv_j\left|\frac{f_i}{v_i}-u_e\frac{f_j}{v_j}\right|^2.
+\label{eq:transform}
+\end{equation}
+The diagonal coefficient at node $i$ is
+$\sum_{j\sim i}v_j/v_i=\rho$; expanding the off-diagonal cross terms proves the identity. For the conjugate species replace $u_e$ by $\bar u_e$.
+
+Consequently, on $N_\psi=N_\chi=N$,
+\begin{align}
+H_0+2\rho N={}&\frac a2\|E\|^2+
+\sum_e v_iv_j\left(\left|\frac{\psi_i}{v_i}-u_e\frac{\psi_j}{v_j}\right|^2
++\left|\frac{\chi_i}{v_i}-\bar u_e\frac{\chi_j}{v_j}\right|^2\right)
++\kappa\sum_d(1-\Rea W_d).
+\label{eq:energy}
+\end{align}
+At $\kappa=0$, every term on the right is nonnegative and the displayed branch makes it zero. Equality requires $E=0$. Connectedness and the vanishing edge squares require
+\[
+\psi_i=\sqrt N\,v_i e^{i\phi_i+i c_\psi},\quad
+\chi_i=\sqrt N\,v_i e^{-i\phi_i+i c_\chi},\quad
+u_e=e^{i(\phi_i-\phi_j)}.
+\]
+These states are exactly the local gauge and species-phase orbit of the branch. They are all Gauss neutral. The zero-stiffness minimum is therefore one compact orbit.
+
+\begin{lemma}[Energy barrier stability]\label{lem:barrier}
+A compact orbit of relative equilibria that is a strict transverse local minimum of a conserved energy on a conserved finite-dimensional norm surface is orbitally Lyapunov stable, provided its quadratic form is positive on the normal tangent directions. The same conclusion holds for a compact global minimizing set when energy sublevels are compact.
+\end{lemma}
+\begin{proof}
+For the local case, a tubular neighborhood and the positive normal quadratic form give a positive energy gap on every sufficiently small fixed-distance boundary around the orbit. Initial data sufficiently close to the orbit have smaller energy excess and cannot cross that boundary under an energy-conserving trajectory. For the global-set case, compactness of an energy sublevel and exclusion of every minimizer from a fixed-distance closed subset give a strictly positive energy gap there. The same conservation argument applies. Any invariant Gauss subset inherits the conclusion. No dissipation or convergence to the orbit is asserted.
+\end{proof}
+The next calculation establishes the required transverse quadratic coercivity, including at $\kappa=0$.
+
+\newpage
+\section{Positive magnetic stiffness: the coercivity calculation}
+Let $W=\diag(v_iv_j)$ on links. Its least entry is
+\[
+w_{\min}=\frac{\rho(10-\sqrt{10})}{480}>0,
+\]
+attained on vertex--edge incidences. The four $q$ values exceed or equal one, with $q_1=1$, $q_2>1$, $q_3>q_2$ and $q_4>1$, and direct layer products give the stated minimum.
+
+Use $u_e=e^{i\theta_e}$ and tangent perturbations
+\[
+\delta\psi_i=x_i+i\sqrt N\,v_i\beta_i,\qquad
+\delta\chi_i=z_i+i\sqrt N\,v_i\gamma_i,
+\qquad v^Tx=v^Tz=0.
+\]
+Put $\eta=(\beta-\gamma)/2$, $\zeta=(\beta+\gamma)/2$ and
+$X=\theta-R^T\eta$. Expanding the exact transform gives the quadratic Taylor term of the constrained energy relative to the branch:
+\begin{align}
+Q={}&\frac a2\|\delta E\|^2+
+\sum_{e=(i,j)}v_iv_j\left[
+\left(\frac{x_i}{v_i}-\frac{x_j}{v_j}\right)^2+
+\left(\frac{z_i}{v_i}-\frac{z_j}{v_j}\right)^2\right]\notag\\
+&+2N X^TWX+2N(R^T\zeta)^TW(R^T\zeta)
+-\frac\kappa2\|C\theta\|^2.\label{eq:Q}
+\end{align}
+The negative magnetic term occurs because each reference holonomy is $-1$:
+$1-\Rea W_d=1+\cos(C\theta)_d=2-(C\theta)_d^2/2+O(\|\theta\|^4)$.
+
+Since $CR^T=0$, $C\theta=CX$. The known exact stiffness spectrum gives
+$\|CX\|^2\leq(6+\sqrt2)\|X\|^2$. Hence
+\[
+2NX^TWX-\frac\kappa2\|CX\|^2
+\geq\left(2Nw_{\min}-\frac\kappa2(6+\sqrt2)\right)\|X\|^2.
+\]
+The coefficient is positive precisely in our sufficient interval. The amplitude forms vanish only when $x,z$ are proportional to $v$; the fixed-norm tangent conditions force both to be zero. The remaining zero directions are $\delta E=0$, $X=0$ and $R^T\zeta=0$. They give exactly local gauge variations plus the two constant species phases. The stabilizer redundancy removes one duplicate global gauge/phase direction; the orbit has dimension $15+2-1=16$.
+
+Thus $Q$ is positive on every normal tangent direction. The constrained energy is analytic in these local coordinates. Compactness of the orbit yields a uniform positive normal quadratic lower bound; cubic remainders are dominated in a sufficiently small tube. Lemma \ref{lem:barrier} proves Theorem \ref{th:scalar}. This proof uses the full scalar norm surface, so it covers every scalar Gauss-admissible perturbation. It imposes no permutation symmetry on perturbations. The sufficient threshold contains no $a$ because the only electric contribution needed is its strict positivity for each fixed $a>0$.
+
+\newpage
+\section{All finite ranks: what minimization does guarantee}
+Let $\mathcal A_{r,N}$ be the nonempty zero-Gauss set with fixed norms $N_\psi=N_\chi=N$. It is nonempty by the earlier neutral preparations. Define
+\[
+m_{r,N}=\inf_{\mathcal A_{r,N}}H_0,\qquad
+\mathcal M_{r,N}=\{x\in\mathcal A_{r,N}:H_0(x)=m_{r,N}\}.
+\]
+\begin{theorem}[Stable minimizing set and a nonflatness certificate]\label{th:set}
+For every finite $r$, $a>0$, $N>0$ and $\kappa\geq0$, the set $\mathcal M_{r,N}$ is nonempty, compact, invariant and Lyapunov stable as a set on $\mathcal A_{r,N}$. If
+\begin{equation}
+0\leq\frac\kappa{rN}<\frac{\rho-2}{18},\label{eq:nonflat}
+\end{equation}
+none of its members is diamond-flat. At $r=1,\kappa=0$ it is exactly the explicit orbit above. At other parameters this theorem by itself does not locate individual minimizers or prove individual-orbit stability.
+\end{theorem}
+\begin{proof}
+The uniform bound gives
+$H_0\geq a\sum_e\tr E_e^2/2-2\rho N$. Link configurations lie in a compact product of unitary groups, matter in two compact spheres, and every energy sublevel bounds all Hermitian momenta. The zero-Gauss condition is closed. Thus a minimizing sequence has a convergent admissible subsequence; the minimum is attained and its set is compact. Conserved energy, norms and Gauss law make the entire minimizing set invariant. Compact sublevel gaps and Lemma \ref{lem:barrier} establish set stability. This remains valid on singular gauge strata and does not assume a smooth reduced phase space.
+
+For nonflatness, embed the scalar trial in one active color:
+$U_e=\diag(-ib_e,\id_{r-1})$, $E=0$, and
+$\psi=\chi=\sqrt N\,v e_1$. It is Gauss-admissible, with
+\[
+H_0^{\rm trial}=-2\rho N+\frac{36\kappa}{r}.
+\]
+Every diamond-flat connection is pure gauge: choose transport from the top tetrahedron to each face. Any two saturated descending paths differ by adjacent swaps, each represented by a diamond. Identity diamond holonomies make these paths agree, yielding $U_{ij}=g_ig_j^\dagger$. Therefore a flat connection has $\|h_U\|=2$, the identity-connection value. Its nonnegative electric energy and matter bound imply $H_0\geq-4N$. Condition \eqref{eq:nonflat} is exactly $H_0^{\rm trial}<-4N$, so a global minimizer cannot be flat.
+\end{proof}
+The set result permits motion among minimizers. It supplies neither attraction nor an identification of all minima with the explicit scalar branch. In particular active-color embedding alone would not justify a higher-rank orbital stability claim.
+
+\newpage
+\section{Verification and implications for the research programme}
+The exact verifier reconstructs the graph, unsigned characteristic polynomial, positive normalized eigenvector, $h_{U^*}=-T$, all 18 negative diamond holonomies, force cancellation, the ground-transform matrix, least link weight, amplitude and phase kernels, stiffness maximum and coefficient identities. Finite fixtures check implementation; the written sums, inequalities and compactness arguments establish the universal conclusions. These checks are constructor work, not independent review.
+
+A separate numerical receipt integrates the full temporal-gauge scalar equations in the $(\mu-\rho)$ rotating frame. It uses $a=N=1$, $\kappa=0$ and $\kappa=\kappa_{\rm safe}(1)/2$, three decreasing perturbation amplitudes, and horizon $120$. The initial preparations satisfy Gauss exactly; the integration right-hand side does not project Gauss or any symmetry. Energy, norms and Gauss residuals are recorded. Gauge-invariant density, electric and diamond-phase diagnostics shrink with perturbation size. Finite trajectories are diagnostics and do not prove stability for infinite time.
+
+\textbf{What changed.} The previous theorem closed nonlinear instability for the vertex-supported flat family at all parameters. This theorem exhibits a stable matter-bearing \emph{different} family in the same action: all simplex layers have nonzero density and every diamond has holonomy $-1$. At zero stiffness the new branch is the global minimizing orbit; a rigorously positive stiffness interval retains local orbital stability. No previous flat-family or empty-vacuum theorem is retracted.
+
+\textbf{Next mathematical gate.} Independently review the ground transform, Gauss admissibility and normal-energy kernel. Then calculate the actual constrained stability boundary and modes around this curved branch, and analyze transverse-color directions before generalizing orbit stability to $r>1$. The conservative threshold is sufficient and may be sharpened using the weighted curl form; its failure is not evidence of dynamical instability. Minimizer bifurcations and the location of the general stable minimizing set remain open.
+
+\textbf{Physical boundary.} No laboratory data were used. The ledger's G05 action normalization, physical units, gauge-group identification and measurement dictionary remain unresolved. Diamond holonomy $-1$ supplies no proton-decay, monopole or gauge-unification prediction. Experimental requirements should be frozen only after a sourced observable and dimensional bridge exist. This milestone improves the mathematical background catalogue while physical promotion remains $0$.
+
+\section{Source-bound dependencies}
+The graph, canonical action, Gauss law and global existence come from the joint Hamiltonian theorem v0.1. The unweighted $K$ spectrum and flat pure-gauge characterization come from the gauge-reduced modes theorem v0.1 and are reconstructed in the accompanying code. The completed flat-family nonlinear obstruction is retained from resonance closure v0.1. Their exact TeX hashes are recorded in the source-provenance receipt. The supplied ledger v0.39 and governance proposal v1.0 retain their historical statuses; this development result makes no registry promotion. No external theorem or physical datum is imported to select an action coefficient.
+\end{document}
