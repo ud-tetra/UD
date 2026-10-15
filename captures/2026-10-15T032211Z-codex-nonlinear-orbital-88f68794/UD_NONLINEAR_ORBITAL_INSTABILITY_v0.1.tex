@@ -1,0 +1,330 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\setlist{nosep,leftmargin=18pt}\pagestyle{fancy}\fancyhf{}
+\lhead{Unified Dynamics | Conditional nonlinear theorem}\rhead{NOI v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\U}{\mathrm U}
+\newcommand{\id}{\mathbf1}\newcommand{\dd}{\mathrm d}\newcommand{\diag}{\operatorname{diag}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Nonlinear orbital instability\\of the neutral flat stationary family}\\[8pt]
+{\large Conserved matter coherence, constrained averaging,\\and six unresolved resonant parameters}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+For the candidate joint tetrahedral link--matter Hamiltonian, a parity-conjugation transform makes both matter vectors co-move under the same anti-Hermitian operator. Their full Gram matrix is conserved, and an exactly force-canceling sector follows. These identities reduce the nonlinear stability problem to a controlled weak-source limit. A first-order finite-Fourier averaging argument constructs fixed-norm, Gauss-admissible perturbations whose size tends to zero but whose higher-simplex matter population reaches a positive value at internal times of order $1/\varepsilon$. Four field resonances are treated separately in the force-canceling sector. The nonzero flat family is therefore nonlinearly orbitally unstable at every finite rank except for six explicitly listed positive parameter values not settled here. The zero-stiffness case is also unstable by exact field drift. This is an obstruction within a declared action, not a claim about physical forces.
+\end{abstract}
+\textbf{Typing.} \textsc{Derived conditional mathematics}; constructor verified; independent review pending; development lane, no registry promotion; physical promotion $0$. The preceding action, opposite-charge species and internal-time units are unchanged. Numerical trajectories are diagnostic and are not the nonlinear proof.
+
+\section{Parameter domain and statement}
+Let
+\[
+\mathcal K=\{6,6-\sqrt2,6+\sqrt2,4-\sqrt2,4+\sqrt2\},\qquad t=\frac{a\kappa}{r}.
+\]
+The unresolved set in this manuscript is exactly
+\begin{equation}
+\boxed{\mathcal E=\{2/3\}\ \cup\ \{16/k_j:k_j\in\mathcal K\}.}\label{eq:exceptions}
+\end{equation}
+It has six distinct positive elements. No stability conclusion for the nonzero family at those parameters is inferred from omission. Earlier linear Jordan results remain valid there.
+
+\newpage
+\section{Background, action and nonlinear conclusion}
+The filled oriented tetrahedron has 15 nonempty simplex coordinates and 28 incidence links. With $D_U$ carrying signed blocks $B_{ij}U_{ij}$, set $A_U=D_U^\dagger-D_U$ and $h_U=iA_U$. The declared Hamiltonian is
+\begin{align*}
+H={}&\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)\\
+&+\psi^\dagger(\mu\id+h_U)\psi+
+\chi^\dagger(\mu\id+\bar h_U)\chi,
+\quad a>0,\ \kappa\geq0.
+\end{align*}
+Its canonical Gauss constraints are
+\[
+\mathcal G_i=\sum_{\mathrm{head}=i}E_e-\sum_{\mathrm{tail}=i}U_e^\dagger E_eU_e
+-\psi_i\psi_i^\dagger+\bar\chi_i\chi_i^T=0.
+\]
+Work in the common $\mu$-rotating species frame; this sets the matter phase-rate term to zero without changing link dynamics or matter stocks. With $k=(1,1,1,1,0,\ldots,0)^T$, the family is
+\begin{equation}
+U_e=\id_r,\quad E_e=0,\quad \psi_i=\chi_i=\alpha k_i e_1,\qquad\alpha>0.
+\end{equation}
+Local gauge transformations and independent global species phases generate the orbit to be tested. Each species norm is fixed to $4\alpha^2$.
+
+\begin{theorem}[Scoped nonlinear orbital instability]\label{th:main}
+For every fixed finite rank $r$, $a>0$, $\alpha>0$, $\mu\geq0$ and $\kappa\geq0$ with $t\notin\mathcal E$, the nonzero neutral flat family is nonlinearly orbitally unstable, even on the level $N_\psi=N_\chi=4\alpha^2$.
+
+For $\kappa>0$, there are admissible initial states tending to the background and a fixed $\delta_*>0$ such that their exact solutions reach
+\begin{equation}
+X=\sum_{\dim\sigma>0}\bigl(\|\psi_\sigma\|^2+\|\chi_\sigma\|^2\bigr)\geq\delta_*\label{eq:observable}
+\end{equation}
+at some times $s_\varepsilon=O(1/\varepsilon)$. Every point of the entire stationary orbit has $X=0$; $X$ is invariant under both local gauge and species phases. At $\kappa=0$, a diamond holonomy instead certifies the fixed orbital departure. Thus the conclusions are orbital and nonlinear, rather than a choice of gauge or an inference from an unbounded tangent solution.
+\end{theorem}
+The proof for positive stiffness has two parts: a weak-source averaging construction away from field frequencies $2,4$, and a separate force-canceling construction at four coupled frequency-$2$ resonances. Zero stiffness is handled by exact drift. Higher rank follows by an invariant scalar embedding.
+
+\newpage
+\section{An additional exact conserved Gram matrix}
+Let $\Gamma$ act by $(-1)^{\dim\sigma}$ on each simplex fiber. All incidence hops change dimension by one, so
+\[
+\Gamma A_U\Gamma=-A_U.
+\]
+Define
+\begin{equation}
+w=\Gamma\bar\chi,\qquad f=\frac{\psi+w}{2},\qquad d=\frac{\psi-w}{2}.
+\end{equation}
+Both $\psi$ and $w$ transform in the fundamental local representation. In the common rotating frame, including any temporal connection $\Omega=\diag(\Omega_i)$ with $\Omega_i^\dagger=-\Omega_i$,
+\begin{equation}
+\dot\psi=(A_U+\Omega)\psi,\quad
+\dot w=(A_U+\Omega)w,\quad
+\dot f=(A_U+\Omega)f,\quad\dot d=(A_U+\Omega)d.\label{eq:comove}
+\end{equation}
+Hence the Gram matrix of either pair $(\psi,w)$ or $(f,d)$ is exactly conserved. In particular
+\[
+\|f\|^2,\quad\|d\|^2,\quad f^\dagger d,\quad
+\psi^\dagger\Gamma\bar\chi
+\]
+are constant. In the unrotated frame the last complex quantity has a known phase factor; its modulus remains constant. The sign change in the symplectic structure of $w$ must be retained: co-motion does not turn it into a second canonical fundamental species.
+
+Define the global Hermitian difference
+\[
+Q=\psi\psi^\dagger-ww^\dagger=2(fd^\dagger+df^\dagger).
+\]
+It obeys $\dot Q=[A_U+\Omega,Q]$; all its eigenvalues and its trace norm are conserved. Since $\Gamma h_U\Gamma=-h_U$, the matter Hamiltonian in this frame is $\tr(h_UQ)$.
+
+The relation $d=0$, equivalently $\chi=\Gamma\bar\psi$, is exactly invariant and cancels every matter force on every link. Adjacent parity signs are opposite, so the two species' force matrices cancel term by term. Pointwise charge also vanishes. The links then follow the pure field Hamiltonian independently of matter. With identity links and zero momentum, a small matter perturbation within this restricted sector simply follows the bounded native skew flow. This restricted fact does not imply stability against perturbations outside the sector.
+
+The earlier preparation $\chi=\bar\psi$ is different. They agree on the vertex-only background but differ on odd-dimensional simplices. The new invariant does not retract the earlier neutral curvature seed.
+
+\newpage
+\section{Exact Abelian Coulomb equations}
+It suffices first to take $r=1$ and $\mu=0$. Let $R$ be ordinary node--link incidence, $C$ the 18-row diamond curl, and $K=C^TC$. The previous exact spectrum is $\ker K=\operatorname{im}R^T$ and positive spectrum $\mathcal K$ with multiplicities $2,3,3,3,3$.
+
+Use local link angles $\theta\in\ker R$, transverse momentum $E_T\in\ker R$, and set
+\[
+L^+=(RR^T)^+,\qquad P_T=\id-R^TL^+R,
+\qquad q_i=4\Rea(\bar f_i d_i).
+\]
+Total neutrality is $\sum_iq_i=0$. Gauss law and a mean-zero temporal multiplier give
+\begin{equation}
+E=E_T+R^TL^+q,\qquad\Lambda=-aL^+q.
+\end{equation}
+The exact reduced equations, before any expansion, are
+\begin{align}
+\dot\theta&=aE_T,\notag\\
+\dot E_T&=-\kappa C^T\sin(C\theta)-P_TJ(\theta;f,d),\label{eq:exactred}\\
+\dot f&=A_{e^{i\theta}}f+i\diag(\Lambda)f,\qquad
+\dot d=A_{e^{i\theta}}d+i\diag(\Lambda)d,\notag
+\end{align}
+where for $e=(i\leftarrow j)$ and $b_e=B_{ij}$,
+\begin{equation}
+J_e=4b_e\Rea(\bar f_i e^{i\theta_e}d_j+\bar d_i e^{i\theta_e}f_j).
+\end{equation}
+The bilinear continuity identity is $\dot q=-RJ$; it verifies that reconstruction of longitudinal momentum preserves the full Gauss equation. These equations fix the spatial gauge and keep its electric response. A constant residual gauge phase may be fixed separately; it has no effect on \eqref{eq:observable}.
+
+Set $d=\varepsilon D$, $\theta=\varepsilon\vartheta$, $E_T=\varepsilon e$. The scaled vector field extends smoothly to $\varepsilon=0$ because $\sin(\varepsilon C\vartheta)/\varepsilon$ has a removable limit. Its leading system is
+\begin{align}
+\dot f=Af,\quad\dot D=AD,\quad
+\dot\vartheta=ae,\quad\dot e=-\kappa K\vartheta-P_TJ_0(f,D),\label{eq:leading}
+\end{align}
+where $A=B^T-B$ and $J_0$ is $J$ with unit links and $d$ replaced by $D$. The first matter correction is
+\begin{equation}
+\dot f=Af+\varepsilon\left[iT(\vartheta)f
+-4ia\diag\bigl(L^+\Rea(\bar f\odot D)\bigr)f\right]+O(\varepsilon^2),\label{eq:firstf}
+\end{equation}
+and similarly for $D$. Here $T(\vartheta)_{ij}=T(\vartheta)_{ji}=-b_e\vartheta_e$, and $\odot$ means entrywise product. The remainder is uniform with derivatives on every fixed bounded scaled-coordinate domain.
+
+\newpage
+\section{Removing the bounded forced field response}
+Since $Ak=0$ and $A^2=-4(\id-kk^T/4)$, the free matter flow has frequencies $0,\pm2$ and period $\pi$. The real bilinear source therefore has the finite expansion
+\[
+J_0(e^{As}f,e^{As}D)=\sum_{n=-2}^{2}J_n(f,D)e^{2ins},
+\quad
+J_n=\frac1\pi\int_0^\pi J_0(e^{As}f,e^{As}D)e^{-2ins}\,\dd s.
+\]
+For this section assume
+\begin{equation}
+tk_j\ne4,16\quad\hbox{for every }k_j\in\mathcal K,
+\qquad t=a\kappa>0.\label{eq:nonres}
+\end{equation}
+All inverses below are on the cycle space $\ker R$. A bounded particular field solution of \eqref{eq:leading} is represented by
+\begin{equation}
+Z(f,D)=-a\sum_{n=-2}^{2}(tK-4n^2\id)^{-1}P_TJ_n(f,D),\qquad
+e_{\rm p}=\frac1a\mathcal L_AZ.\label{eq:particular}
+\end{equation}
+The derivative $\mathcal L_A$ acts along $(\dot f,\dot D)=(Af,AD)$. Thus
+\[
+(\mathcal L_A^2+tK)Z=-aP_TJ_0.
+\]
+The change $\vartheta=Z(f,D)+\xi$, $e=e_{\rm p}(f,D)+\eta$ makes the leading field equations homogeneous: $\dot\xi=a\eta$, $\dot\eta=-\kappa K\xi$. Its leading flow is conjugate to a product of bounded linear rotations. The coefficients $Z,e_{\rm p}$ are quadratic real polynomials in the matter coordinates, with parameter-dependent finite denominators.
+
+After this change the full scaled field is $Y_0+\varepsilon Y_1+O(\varepsilon^2)$. The first correction $Y_1$ is polynomial of finite degree. Pulling it back along the leading rotations gives finitely many Fourier frequencies. This is the finite, rather than infinite, homological problem used here.
+
+In the averaged matter component, the homogeneous field $\xi$ contributes zero. A single field oscillation has frequency $\omega_j=\sqrt{tk_j}$, while a matter operator matrix element has frequency difference $0,\pm2,\pm4$. Condition \eqref{eq:nonres} excludes every zero-frequency product between them. The matter average is therefore independent of homogeneous field amplitudes. Other resonances in the first-order field correction may be retained; no global rational-independence or Diophantine assumption is used.
+
+\newpage
+\section{The finite-Fourier averaging estimate}
+\begin{lemma}[Fixed-parameter, first-order comparison]\label{lem:average}
+Suppose a smooth family on a bounded coordinate neighborhood has the form
+$\dot y=By+\varepsilon F(y)+O(\varepsilon^2)$, where $e^{Bs}$ and its inverse are bounded rotations. Suppose $e^{-Bs}F(e^{Bs}z)$ has finitely many Fourier frequencies. Retain all zero-frequency terms in $\bar F$. For sufficiently small fixed $T>0$, the exact solution in the rotating coordinates is within $O(\varepsilon)$ of the solution of $z'=\bar F(z)$ at slow time $\tau=\varepsilon s$, uniformly for $0\leq s\leq T/\varepsilon$, allowing $O(\varepsilon)$ initial-coordinate changes.
+\end{lemma}
+\begin{proof}
+Write the finite pullback as $\bar F(z)+\sum_{\sigma\ne0}F_\sigma(z)e^{i\sigma s}$. The bounded primitive
+\[
+u(s,z)=\sum_{\sigma\ne0}\frac{F_\sigma(z)}{i\sigma}e^{i\sigma s}
+\]
+has bounded derivatives on a slightly smaller neighborhood. The near-identity change $z=v+\varepsilon u(s,v)$ cancels precisely the nonzero-frequency first-order terms and leaves
+$\dot v=\varepsilon\bar F(v)+\varepsilon^2R(s,v,\varepsilon)$ with bounded $R$ and local Lipschitz constant for $\bar F$.
+
+On $s\leq T/\varepsilon$, variation of constants and Gronwall bound the discrepancy from the slow averaged solution by $C\varepsilon e^{LT}$. Choose $T$ small enough that the averaged trajectory stays in the smaller neighborhood. This estimate then keeps the exact solution inside the larger neighborhood and proves continuation throughout the comparison interval. Because the Fourier set is finite, each nonzero denominator is a fixed positive distance from zero for the fixed parameter under consideration. Exact resonances are retained in $\bar F$, not divided out. Constants need not be uniform as parameters approach excluded values.
+\end{proof}
+Apply the lemma after \eqref{eq:particular}. The leading flow is a product of rotations; the source-removing change is a smooth polynomial diffeomorphism in the field coordinates. The analytic angle expansions give the required bounded remainder. The first correction has only finitely many polynomial rotation weights. These facts verify the hypotheses directly, including any resonances among the homogeneous field frequencies.
+
+The matter part of the averaged field is explicitly
+\begin{align}
+\bar F_f(f,D)=\frac1\pi\int_0^\pi e^{-As}\Bigl[
+iT(Z(f_s,D_s))f_s
+-4ia\diag\bigl(L^+\Rea(\bar f_s\odot D_s)\bigr)f_s\Bigr]\dd s,\label{eq:avgmatter}
+\end{align}
+where $f_s=e^{As}f$, $D_s=e^{As}D$. The analogous formula replaces the last $f_s$ factors by $D_s$. They define a smooth autonomous averaged matter system. General averaging is established background \cite{Dumas}; the finite-Fourier estimate needed here is proved above rather than imported from an infinite-series theorem.
+
+\newpage
+\section{Nonzero averaged drift from the stationary family}
+Set $f=c=\alpha k$ and choose real $D$ supported on edge coordinates. Write $S=\diag(c)$ and
+\[
+M_{\ell e}=-B_{ij}(c_j\delta_{\ell i}+c_i\delta_{\ell j}).
+\]
+Then $J_0(c,e^{As}D)=-4M^Te^{As}D$ and $M^TAD=0$. Consequently the bounded field response is
+\[
+Z(c,e^{As}D)=4a(tK-4\id)^{-1}_{\ker R}P_TM^Te^{As}D.
+\]
+Using \eqref{eq:avgmatter}, the averaged initial drift is
+\begin{equation}
+\bar F_f(c,D)=4ia\left\langle e^{-As}
+\left[M(tK-4\id)^{-1}_{\ker R}P_TM^T-SL^+S\right]e^{As}\right\rangle D.
+\end{equation}
+The Coulomb term is essential. The identities $MR^T=-AS$, $RM^T=SA$ show that its average precisely completes the full-link resolvent average. If $P=\id-kk^T/4$ and $W=M(tK-4\id)^{-1}M^T$, that average on $k^\perp$ is
+\[
+\frac12\left(PWP-\frac14AWA\right).
+\]
+Only the six edge rows of $W$ are nonzero. With oriented tetrahedral edge projectors $P_g=B_1^TB_1/4$ and $P_c=\id_6-P_g$, exact evaluation gives
+\begin{align}
+W\big|_{C_1}&=\alpha^2[f_g(t)P_g+f_c(t)P_c],\\
+f_g(t)&=\frac{-2(t-1)(7t-4)}{34t^2-48t+16},\qquad
+f_c(t)=\frac{2(5t-4)}{14t^2-32t+16}.
+\end{align}
+These are the previously derived linear residue functions; here they enter a nonlinear slow vector field. The accompanying exact moment checks reproduce the resolvent identity. Since $AD$ has no edge component, for $D_j\in\operatorname{im}P_j$, $j=g,c$,
+\begin{equation}
+\boxed{\bar F_f(\alpha k,D_j)=2ia\alpha^2 f_j(t)D_j.}\label{eq:drift}
+\end{equation}
+The numerator zeros $\{4/7,1\}$ and $\{4/5\}$ are disjoint. Therefore under \eqref{eq:nonres} at least one choice has nonzero drift. It points into edge matter coordinates, transverse to every stationary gauge orbit and every common phase direction.
+
+\newpage
+\section{Admissible seeds and finite orbital departure}
+Fix a real unit edge vector $D_j$ with $f_j(t)\ne0$. For small $\varepsilon>0$ set
+\[
+\alpha_\varepsilon=\sqrt{\alpha^2-\varepsilon^2/4},\quad
+f(0)=\alpha_\varepsilon k,\quad d(0)=\varepsilon D_j,
+\quad E(0)=0,
+\]
+and choose initial cycle angle
+\begin{equation}
+\theta(0)=4a\varepsilon(tK-4\id)^{-1}_{\ker R}P_TM_\varepsilon^TD_j,
+\end{equation}
+where $M_\varepsilon$ is built from $\alpha_\varepsilon k$. This is exactly the particular response at $s=0$; its transverse momentum is zero because $M_\varepsilon^TAD_j=0$.
+
+The initial vertex and edge supports are disjoint, so $q(0)=0$. Thus $E(0)=0$ satisfies every Gauss constraint exactly, independently of the initial phases. Also
+\[
+\|\psi(0)\|^2=\|\chi(0)\|^2
+=4\alpha_\varepsilon^2+\varepsilon^2=4\alpha^2.
+\]
+The states approach the fixed background in the full phase space. Their scaled initial variables approach $(\alpha k,D_j,Z,0)$ with zero homogeneous field component.
+
+The averaged matter solution has, by \eqref{eq:drift},
+\[
+\bar f(\tau)=\alpha k+2ia\alpha^2f_j(t)\tau D_j+O(\tau^2).
+\]
+Choose a fixed sufficiently small $\tau_*>0$ so that its edge component has a strictly positive norm. Lemma \ref{lem:average} gives $O(\varepsilon)$ closeness in the interaction frame up to $\tau_*/\varepsilon$. Let $n_\varepsilon$ be an integer nearest $\tau_*/(\pi\varepsilon)$ and set $s_\varepsilon=n_\varepsilon\pi$. Then $e^{As_\varepsilon}=\id$ and $\varepsilon s_\varepsilon=\tau_*+O(\varepsilon)$, so the exact $f$ has an edge component bounded below independently of $\varepsilon$ at that time. The $d$ norm remains $\varepsilon$ exactly.
+
+For every state, the observable \eqref{eq:observable} satisfies
+\[
+X=2\bigl(\|f_{\dim>0}\|^2+\|d_{\dim>0}\|^2\bigr).
+\]
+It therefore has a fixed positive lower bound along this sequence of exact solutions. Initially $X=2\varepsilon^2\to0$. This proves the nonlinear orbital departure on fixed species-norm levels throughout the nonresonant domain \eqref{eq:nonres}. The use of integer multiples of $\pi$ prevents fast native oscillations from obscuring the edge-population witness.
+
+This is an averaging comparison for exact nonlinear solutions. It does not extrapolate the old tangent Jordan vector to arbitrarily long time without controlling the nonlinear remainder.
+
+\newpage
+\section{Four resonant cases and zero stiffness}
+Consider $t=4/k_j$ with $k_j\in\mathcal K\setminus\{6\}$. The positive eigenspace projector $\Pi_j$ obeys $M\Pi_j\ne0$. Choose a real cycle eigenvector $v$ with $Kv=k_jv$ and $Mv\ne0$.
+
+Use exactly force-canceling matter $d=0$, $f(0)=\alpha k$, and initial field $\theta(0)=\varepsilon v$, $E(0)=0$. Gauss law holds exactly and both norms remain $4\alpha^2$. Matter never backreacts on the links. The pure field equation is
+\[
+\ddot\theta=-a\kappa C^T\sin(C\theta)
+=-tK\theta+O(\|\theta\|^3).
+\]
+On $0\leq s\leq T/\varepsilon$, small-energy bounds give $\theta=O(\varepsilon)$, and Duhamel's formula gives
+\begin{equation}
+\theta(s)=\varepsilon v\cos(2s)+O(\varepsilon^2).
+\end{equation}
+The estimate follows by integrating the $O(\varepsilon^3)$ forcing against bounded cycle-space oscillators for $O(1/\varepsilon)$ time. In the matter interaction frame the first slow drift is
+\begin{equation}
+\left\langle i e^{-As}T(v)e^{As}\cos(2s)\right\rangle\alpha k
+=\frac i2Mv\ne0.
+\end{equation}
+Periodic first-order averaging, or Lemma \ref{lem:average} with one fast frequency, therefore yields fixed higher-simplex population at some $s_\varepsilon=n_\varepsilon\pi=O(1/\varepsilon)$. The $O(\varepsilon^2)$ field approximation error integrates to only $O(\varepsilon)$ in matter. This proves nonlinear orbital instability at all four coupled frequency-$2$ field resonances.
+
+At $t=2/3$ the resonant stiffness-$6$ eigenspace has $M\Pi_6=0$, so this particular argument gives no initial drift. At any $t=16/k_j$, the source-removing map of the generic argument has a frequency-$4$ pole. These six values form \eqref{eq:exceptions}; no conclusion at them is claimed here.
+
+For $\kappa=0$, retain $d=0$ and choose an arbitrarily small scalar cycle momentum $E(0)=\varepsilon e$, with $Re=0$, $Ce\ne0$, starting at identity links. Exact force cancellation gives constant momenta and $\theta(s)=a\varepsilon es$. A diamond holonomy reaches a fixed nonidentity value at time $O(1/\varepsilon)$. This is a gauge-invariant field departure regardless of the matter evolution, and proves the zero-stiffness case.
+
+\newpage
+\section{Higher rank and a uniform weak-field bound}
+The scalar submodel is exactly invariant in the full rank-$r$ action:
+\[
+U_e=\diag(u_e,\id_{r-1}),\quad E_e=\diag(E_e^{(1)},0),
+\quad\psi,\chi\hbox{ supported in color one}.
+\]
+Its magnetic coefficient is $\kappa/r$, while its electric coefficient is $a$. This proves Theorem \ref{th:main} for all finite ranks with $t=a\kappa/r$. The higher-simplex stock $X$ is invariant under full $\U(r)$ frame changes, so extra color gauge directions do not remove the departure. No regular quotient assumption at the residual $\U(r-1)$ stabilizer is needed for this embedded nonlinear counterexample.
+
+There is also an exact uniform field bound. Let $H_0=H-\mu(N_\psi+N_\chi)$ and $\mathcal E_{\rm fld}=a\sum_e\tr E_e^2/2+V(U)$. The degree-four operator estimate gives $\|h_U\|\leq4$, hence
+\begin{equation}
+0\leq\mathcal E_{\rm fld}(s)
+\leq H_0(0)+4\|Q(0)\|_1,\qquad
+\|Q(0)\|_1\leq4\|f(0)\|\|d(0)\|.\label{eq:fieldbound}
+\end{equation}
+This follows from conservation of $H_0$ and the eigenvalues of $Q$ and from
+$|\tr(h_UQ)|\leq4\|Q\|_1$.
+
+For the generic instability seeds, $H_0(0)=O(\varepsilon^2)$ and $\|Q(0)\|_1=O(\varepsilon)$, so field energy is $O(\varepsilon)$ for all time. The mismatch remains $O(\varepsilon)$ exactly. At positive stiffness, compactness of the link manifold and the pure-gauge characterization of zero potential imply that the links remain uniformly close to the flat gauge orbit as $\varepsilon\to0$; momenta also remain small. Nevertheless common matter can redistribute by a fixed amount on long times. Small field energy and preserved mutual coherence are therefore not a stability certificate for this stationary matter shape.
+
+The force-canceling resonant seeds are stronger in this respect: $Q=0$ and pure field energy is $O(\varepsilon^2)$ exactly. The matter departure does not require a large field excursion.
+
+The previous nonlinear stability theorem for the \emph{zero-matter} vacuum gauge orbit is preserved. Its conserved positive functional controls the entire matter norm, which is small near that vacuum. Here the common matter norm is fixed and nonzero. Completeness of the Hamiltonian flow is also preserved; orbital instability does not mean finite-time blowup.
+
+\newpage
+\section{Verification, scope and remaining work}
+The exact verifier checks parity, co-moving Gram identities, bilinear continuity, spectral moments, both residue functions, the Coulomb-corrected averaged drift, fixed-norm seed normalization, the native period and four nonzero resonant field drifts. Written arguments establish the finite-Fourier comparison hypotheses and transfer of averaged departure to exact nonlinear solutions. Constructor algebra checks are not an automated proof of a nonlinear long-time theorem or an independent review.
+
+The numerical receipt integrates the full nonlinear Coulomb equations for generic cycle seeds, the isolated cycle-residue cancellation using a gradient seed, and a force-canceling field-resonant seed. Each campaign keeps slow time $\tau=0.02$ fixed while reducing $\varepsilon=0.02/(n\pi)$. Initial data approach the background while final higher-simplex stock approaches a nonzero value. Energy, Gram quantities and reconstructed Gauss residuals are recorded separately. These are finite diagnostics, with no empirical or physical status.
+
+\begin{center}\small
+\begin{tabular}{p{42mm}p{43mm}p{49mm}}
+\toprule
+Scope & Current result & Remaining gate\\\midrule
+Nonzero flat family, $t\notin\mathcal E$ & Nonlinear orbital instability within the candidate action & Non-constructor proof review\\
+Six values in $\mathcal E$ & Linear secular modes known; nonlinear conclusion open & Dedicated resonant normal forms\\
+Zero-matter vacuum, $\kappa>0$ & Prior nonlinear orbital stability retained & Physical interpretation open\\
+Other stationary branches & No classification or stability conclusion here & Curved/excited background analysis\\
+Source-selected dynamics & No action change or coefficient selection & Derive action, species and physical units\\\bottomrule
+\end{tabular}
+\end{center}
+
+This release partially resolves the earlier GRM-O1 nonlinear question. Frozen earlier manuscripts remain historical records of what was open at their release. The supplied coefficient ledger v0.39 retains its historical status; G05 action normalization is still open. The supplied CRL-2 governance document is a proposal; this development result claims no non-constructor review or registry promotion. The unavailable image \texttt{Gap2\_FINAL\_Finite\_Genesis.png} was not used. No experimental data were analyzed.
+
+\textbf{Next task.} Resolve $t=2/3$ and the five frequency-$4$ resonances before declaring a parameter-wide nonlinear obstruction. Any action modification intended to remove this family instability must be a separate candidate branch with a source rationale and fresh checks. This theorem does not exclude a different stable background or establish any Standard Model force, proton-decay rate or monopole prediction.
+
+\begin{thebibliography}{9}
+\bibitem{Dumas} H. S. Dumas, J. Ellison and K. Heinemann, \emph{Averaging for Quasiperiodic Systems with Applications}, author-hosted draft, 23 January 2014, especially secs. 2--4. \url{https://math.unm.edu/~ellison/GWpapers/GWDraft3.pdf}. Primary draft inspected for comparison and averaging context. Its draft status is retained; the finite-Fourier estimate used here is proved explicitly in Lemma \ref{lem:average}.
+\end{thebibliography}
+\end{document}
