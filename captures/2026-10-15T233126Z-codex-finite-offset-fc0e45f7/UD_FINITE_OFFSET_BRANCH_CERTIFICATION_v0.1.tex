@@ -1,0 +1,250 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Finite-offset certification}\rhead{FOC v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\Arg}{\operatorname{Arg}}\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\id}{\mathbf1}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Finite-offset certification of the curved phase branches}\\[8pt]
+{\large A regularized stationary system, explicit observable errors,\\and bounded soft-mode ratios}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Computer-assisted conditional theorem
+\end{center}
+\begin{abstract}
+The prior curved-branch theorem established a local bifurcation without a numerical neighborhood radius. We regularize the full neutral stationary equations by factoring out their threshold powers. A 44-variable analytic system remains nonsingular at zero offset. Rigorous ball arithmetic certifies three analytic representative families over the closed regularized interval $0\le\epsilon\le10^{-5}$, corresponding to all 26 nonzero labeled branches for $0<\epsilon\le10^{-5}$. We bound amplitude error, fast-loop corrections and the bias of the six-real-loop classifier. Both oriented and real-channel error budgets now have explicit sufficient guarantees. Symmetry sectors and scaled Schur complements certify finite-offset radial and angular frequency brackets in the unit scalar dynamical normalization. These are constructor certificates under the unchanged candidate action, not independent review or physical validation.
+\end{abstract}
+\[
+\boxed{0<\epsilon\le\frac1{100000},\qquad\epsilon=\frac\kappa{rN}-k_*.}
+\]
+\begin{center}\begin{tabular}{lrrr}
+\toprule
+Quantity & \multicolumn{3}{c}{Uniform bound on this interval}\\\midrule
+Relative radius-squared error & \multicolumn{3}{c}{$\le25\epsilon$}\\
+Fast-loop norm & \multicolumn{3}{c}{$\le297\epsilon^{3/2}$}\\
+Real-classifier model bias & \multicolumn{3}{c}{$\le41\epsilon$}\\
+Oriented phase noise, sufficient & \multicolumn{3}{c}{$\|\delta\phi\|_2\le5\sqrt\epsilon$}\\
+Six real-channel errors, sufficient & \multicolumn{3}{c}{$\max_d|\delta\Rea z_d|\le\epsilon/40$}\\\bottomrule
+\end{tabular}\end{center}
+\textbf{Status.} Derived conditional mathematics; development, no registry entry. Independent review pending. Physical promotion $0$. The certificate uses 3 global solution boxes, 1,536 validated parameter boxes and 2,048 spectral cut tests.
+
+Stationary embeddings and readout errors apply at every finite rank. The explicit frequency brackets fix $a=N=r=1$. Full-rank finite-offset orbital stability is not certified here.
+\newpage
+\section{Frozen model and precise scope}
+The carrier has 15 nonempty tetrahedral simplex nodes, 28 incidence links and 18 diamonds. Let $R$ denote node incidence, $C$ diamond curl and $K=C^TC$. For a link $e=(i\leftarrow j)$ let $b_e=B_{ij}$. On $d=(i,j,h,k)$ use $W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk}$, based at $k$.
+
+The unchanged candidate Hamiltonian is
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi,
+\]
+with $D_U[i,j]=b_eU_e$, $h_U=i(D_U^\dagger-D_U)$, equal norms $N>0$, $a>0$ and the frozen matrix Gauss law. No coefficient is identified with a measured force coupling.
+
+Write $T=|B|+|B|^T$, $d=\sqrt{10}$, $\rho=\sqrt{8+2d}$ and let $v>0$ be its unit Perron vector. Define
+\[
+w_0=\frac{\rho(10-d)}{480},\quad
+\Lambda_+=\frac{28+17d+\sqrt{866-128d}}{18},\quad k_* =4w_0/\Lambda_+.
+\]
+The inherited critical matrix $Z:\mathbb R^3\to\mathbb R^{28}$ satisfies
+\[
+(4\diag(v_iv_j)-k_*K)Z=0,\quad L=CZ,\quad L^TL=\Gamma I_3,
+\quad\Gamma\simeq346.30298315533705.
+\]
+The three coordinates are the orthonormal Hadamard coordinates of CBF v0.1 and GBR v0.1. Their quartic constants obey the inherited directed-integer enclosures $11<A_4<12$, $12<B_4<13$. Put
+\[
+q_k=A_4+\frac34B_4-\frac{B_4}{2k},\qquad r_{0,k}^2=\frac\Gamma{4q_k},\quad k=1,2,3.
+\]
+The six, twelve and eight labeled branches have $k$ equally sized occupied critical coordinates and scalar indices $k-1$.
+
+\begin{theorem}[Certified interval]
+For every $0<\epsilon\le10^{-5}$ these three families have exact neutral stationary scalar representatives, with positive ground-state matter. Their one-active-color block embeddings are stationary for each finite $r$, using $\kappa/(rN)=k_*+\epsilon$. Scalar Morse indices are $0,1,2$ throughout the interval. In rank one, the balanced family is nonlinearly orbitally stable and the two saddle families are unstable for every fixed $a,N>0$.
+\end{theorem}
+The interval is sufficient, not maximal. Uniqueness is certified inside the supplied solution tubes. No assertion that these tubes exhaust all finite-offset stationary states is made. The original orbit's stability boundary is unchanged.
+\newpage
+\section{Removing the threshold singularity}
+Gauge the scalar ground-state matter to positive real components $f_i$. Let $X$ be the resulting 28 link phases. The full stationary equations are
+\[
+4f_if_j\sin X_e-(k_*+\epsilon)\sum_d C_{de}\sin(CX)_d=0,
+\]
+\[
+-\sum_{j\sim i}\cos X_{ij}\,f_j=\lambda f_i,\qquad \sum_i f_i^2=1.
+\]
+The imaginary eigen-equation follows from applying $R$ to the link equations: $RC^T=0$ and $f_i\ne0$ give the vanishing current divergence. No ground-eigenvalue approximation is substituted for these equations.
+
+Let $H_0=4\diag(v_iv_j)-k_*K$. Choose a full-rank 28-by-25 matrix $Y$ spanning the Euclidean orthogonal complement of $Z$. Its explicit algebraic construction is in the replay. For $t=\epsilon$ set
+\[
+X=\sqrt t\,u,\quad u=Zb+tYc,\quad f=v+ts,\quad\lambda=-\rho+t\ell.
+\]
+There are $3+25+15+1=44$ unknowns $x=(b,c,s,\ell)$. Define the entire functions
+\[
+S(z)=\sum_{n\ge0}\frac{(-1)^{n+1}z^n}{(2n+3)!},\qquad
+Q(z)=\sum_{n\ge0}\frac{(-1)^{n+1}z^n}{(2n+2)!}.
+\]
+They encode $\sin(\sqrt t u)=\sqrt t u+t^{3/2}u^3S(tu^2)$ and
+$\cos(\sqrt t u)=1+tu^2Q(tu^2)$ without division by zero.
+
+Writing $p=Cu$ and $a_e=v_is_j+s_iv_j+ts_is_j$, the exact regularized system $G(x,t)=0$ is
+\begin{align*}
+G_e={}&(H_0Yc)_e-(Ku)_e+4a_eu_e+4f_if_ju_e^3S(tu_e^2)\\
+&-(k_*+t)\sum_d C_{de}p_d^3S(tp_d^2),\\
+G_i^{\rm m}={}&\rho s_i-\sum_{j\sim i}s_j-\ell f_i
+-\sum_{j\sim i}u_{ij}^2Q(tu_{ij}^2)f_j,\\
+G^{\rm n}={}&2v^Ts+t\sum_i s_i^2.
+\end{align*}
+For $t>0$, multiplying the first equation by $t^{3/2}$ and the last 16 by $t$ recovers the full stationary system. Every entry is analytic at $t=0$.
+
+At $t=0$, eliminating $s,\ell,c$ leaves exactly the inherited critical quartic stationary equation. Its nonzero roots are $b=r_{0,k}n_k$ and their signed coordinate permutations. The certified boxes isolate the three indicated representatives and exclude zero and the other critical rays.
+\newpage
+\section{Interval contraction and branch continuation}
+\begin{lemma}[Uniform parameter contraction]
+Let $x_0$ be a rational center, $\mathcal B=x_0+[-r,r]$ a weighted box, $I$ a parameter interval, and $A$ a fixed rational approximate inverse. If
+\[
+q=\sup_{x\in\mathcal B,t\in I}\|I-AG_x(x,t)\|_r<1
+\]
+and $\|AG(x_0,t)\|_r+q<1$ uniformly, then each $t\in I$ has a unique zero in $\mathcal B$. Its Jacobian is nonsingular and the zero varies analytically in $t$.
+\end{lemma}
+\begin{proof}
+The map $x\mapsto x-AG(x,t)$ is a contraction mapping the box into itself. Banach's theorem gives its unique fixed point. Since $AG_x$ is within norm one of identity, both $A$ and $G_x$ are invertible; a fixed point is a zero. The analytic implicit function theorem then applies, with uniqueness patching the local solutions.
+\end{proof}
+The replay uses 192-bit Arb balls, rational center data and strict inequalities. Floating eigensolvers select candidate congruences only. Each such congruence is accepted by rigorous ball tests; small floating residuals are never a certificate.
+
+Three global boxes certify the regularized solution on $I=[0,10^{-5}]$. The maximum weighted Jacobian contraction factors are below $0.1$, and self-map ratios below $0.57$. The parameter is also divided into 512 rational closed cells per family. Every child solution box lies inside its global box, so it encloses that same unique solution. All intervals are covered, including their shared endpoints.
+
+The zero-offset solution is the isolated quartic root described above. The previously proved local branch must therefore agree with this regularized solution near zero. Analytic continuation and uniqueness extend its exact symmetry identities over the whole certified interval. In particular, the critical ray and its orbit size persist: $6+12+8=26$ labeled branches. Analytic identities holding on the initial open interval hold throughout this continuation.
+
+\textbf{Ground-state and chart checks.} The exact integer characteristic polynomial is
+\[
+\det(\lambda I-T)=\lambda^5(\lambda-2)^3(\lambda+2)^3
+(\lambda^4-16\lambda^2+24).
+\]
+The baseline has one eigenvalue above 3, namely $\rho>3.7$. The boxes certify $f_i>1/5$, $\lambda<-3.7$ and a hopping perturbation norm below $1/10$ by the maximum row sum. All other hopping eigenvalues exceed $-3.1$, hence the certified eigenstate is the simple ground state with gap greater than $3/5$. Also
+\[
+\max_d|(CX)_d|<1/16<\pi.
+\]
+The complex loop phase chart and the matter dressing denominator therefore remain valid throughout the region.
+\newpage
+\section{Amplitude, fast-loop and real-readout errors}
+Let $z_d=-\psi_k^\dagger W_d\psi_k/\|\psi_k\|^2$, $\phi_d=\Arg z_d$ and define the physical critical readout
+\[
+\widehat b_{\rm true}=\Gamma^{-1}L^T\phi=\sqrt t\,h(t),\qquad
+h(t)=b(t)+t\,\Gamma^{-1}L^TCYc(t),\quad R=\|\widehat b_{\rm true}\|.
+\]
+This notation distinguishes the readout coordinate from the intermediate regularized coordinate $b$. The reconstructed vector lies on its exact symmetry ray.
+
+Differentiate $G(x(t),t)=0$ to obtain $x'=-G_x^{-1}G_t$. Preconditioned ball inversion encloses this derivative on every global box. It yields the following sufficient integer bounds:
+\begin{center}\begin{tabular}{lrrr}
+\toprule
+Family $k$ & 1 & 2 & 3\\\midrule
+$\sup\|h'(t)\|_2$ & 28 & 15 & 27\\
+Radius-squared relative error coefficient $C_R$ & 23 & 14 & 25\\
+Fast-loop coefficient $C_F$ & 56 & 297 & 191\\
+Real-fingerprint bias coefficient $C_\eta$ & 27 & 35 & 41\\\bottomrule
+\end{tabular}\end{center}
+Thus, with $q_k$ from page 2,
+\[
+\left|\frac{R^2}{\Gamma t/(4q_k)}-1\right|\le C_Rt\le25t,
+\qquad 2\sqrt t<R<\frac52\sqrt t.
+\]
+Indeed $\|h(t)-h(0)\|\le Lt$, so the relative squared-norm error is at most
+$[2L/r_{0,k}+L^2t/r_{0,k}^2]t$. The displayed integers round this expression outward on $I$.
+
+Let $\Pi_L=LL^T/\Gamma$. The fast-loop remainder obeys the exact identity
+\[
+(I-\Pi_L)\phi=t^{3/2}(I-\Pi_L)CYc,
+\qquad\|(I-\Pi_L)\phi\|_2\le C_Ft^{3/2}.
+\]
+For the six-real-loop construction, select one vertex diamond per added pair. In the phase chart set $\Delta_{ij}=[\arccos(\Rea z_d)/\Lambda_+]^2$, $\Delta_{ii}=0$ and $G_a=-J\Delta J/2$, where $J=I_4-\id\id^T/4$. Normalize $\widetilde G=G_a/t$. Its trace is certified greater than 4. For
+\[
+\eta=\frac{\sum_i\widetilde G_{ii}^2}{(\tr\widetilde G)^2},\qquad
+\eta_k\in\{1/4,1/2,7/12\},
+\]
+the chain-rule derivative enclosed by the same $x'$ gives $|\eta'|\le C_\eta$. Since $\eta(0)=\eta_k$, this proves $|\eta-\eta_k|\le41t$. The earlier asymptotic fallback now has an explicit finite-offset model-bias bound.
+\newpage
+\section{Two explicit measurement error budgets}
+\begin{theorem}[Finite-offset discrimination]
+Throughout $0<t\le10^{-5}$, either of the following is sufficient to classify the three branch families correctly:
+\begin{enumerate}
+\item Oriented phases with $\|\delta\phi\|_2\le5\sqrt t$, using the nearest value of $P_4=\sum b_j^4/\|b\|^4$ among $1,1/2,1/3$.
+\item Six labeled real loop channels with $\max|\delta\Rea z_d|\le t/40$, clipped to $[-1,1]$, using the nearest $\eta_k$ among $1/4,1/2,7/12$.
+\end{enumerate}
+Both statements presume the declared branch model, calibration and stated deterministic total-error bounds. The second cannot identify the overall phase sign.
+\end{theorem}
+\begin{proof}
+For oriented phases, $L^TL=\Gamma I$ gives coordinate error at most $\delta/\sqrt\Gamma$. Since $\sqrt\Gamma>18$ and $R>2\sqrt t$, the proposed budget gives
+\[
+\frac{\|\delta b\|}{R}<\frac5{36}<\frac17.
+\]
+The GBR v0.1 bound then ensures fingerprint error at most $97/1296<1/12$, less than half the smallest class separation.
+
+For real channels let $\nu=t/40$. In the certified chart, true phases have magnitude below $1/16$. On the nearby observed real-value range, the function $F(r)=\arccos(r)^2$ has derivative magnitude below 3: writing $r=\cos\alpha$ with $0\le\alpha\le1/4$, $2\alpha/\sin\alpha<3$. The phase bound and $\nu\le1/4{,}000{,}000$ ensure this domain; clipping cannot increase error.
+
+Since $\Lambda_+>5$, each entry error of the normalized squared-distance matrix is at most $3\nu/(25t)$. Its six symmetric off-diagonal pairs give Frobenius norm less than four times that value. Double centering therefore gives
+\[
+\|\delta\widetilde G\|_F\le e_G:=6\nu/(25t)\le3/500.
+\]
+Let $p=\diag\widetilde G/\tr\widetilde G$. The model bound gives $\|p\|^2=\eta<1$, while $\tr\widetilde G>4$. Then
+\[
+\|\widehat p-p\|\le\frac{e_G+2e_G\|p\|}{4-2e_G}\le e_G,
+\quad |\widehat\eta-\eta|\le3e_G\le9/500.
+\]
+Adding model bias yields $|\widehat\eta-\eta_k|\le9/500+41/100000<1/24$, less than half the minimum real-classifier separation.
+\end{proof}
+The budgets shrink as $\sqrt t$ and $t$, respectively. They are sufficient bounds, not inferred instrument performance. At $t=10^{-5}$ the amplitude-squared relative error is at most $0.025\%$ and the real-classifier model bias at most $0.00041$. Arbitrary fixed noise is not controlled as $t\downarrow0$.
+\newpage
+\section{Finite-offset stability and soft-mode bounds}
+At the neutral equilibria, the exact reversing Hamiltonian has no mixed position--momentum Hessian. In the 42-pair scalar chart use $H_q,H_p$ from CBF v0.1. Positivity of $H_p$ also follows directly from the simple ground state: with links fixed, matter variations have nonnegative Rayleigh Hessians with a gap off their species phases; electric energy has positive Hessian for $a>0$. Restriction to the norm and Gauss tangent conditions preserves positivity after removing the common phase. Configuration inertia is certified to be $k-1$ on every child box. Thus the rank-one minima are orbitally stable, and the saddles have respectively one and two real growing pairs.
+
+For explicit frequencies fix $a=N=r=1$. The parity of the exact blocks gives analytic matrices in $t$:
+\[
+H_q=\begin{pmatrix}H_0+tA&\sqrt t B\\\sqrt t B^T&D\end{pmatrix},\qquad
+H_p=\begin{pmatrix}P&\sqrt t Q\\\sqrt t Q^T&T\end{pmatrix}.
+\]
+To count squared frequencies below $tw$, use the inertia of $H_q-twH_p^{-1}$. Write
+\[
+W=(T-tQ^TP^{-1}Q)^{-1},\quad U=P^{-1}+tP^{-1}QWQ^TP^{-1},\quad V=-P^{-1}QW.
+\]
+After eliminating density variables, its link block is $H_0+t\mathcal T$, where
+\[
+\mathcal T=A-wU-(B-twV)(D-twW)^{-1}(B^T-twV^T).
+\]
+The critical block is factored by $t$ before interval evaluation. For a critical phase column $z$ and fast columns $Y_s$, the remaining scalar Schur factor is
+\[
+z^T\mathcal Tz-tz^T\mathcal TY_s
+[Y_s^T(H_0+t\mathcal T)Y_s]^{-1}Y_s^T\mathcal Tz.
+\]
+There is no numerical division by $t$ at the endpoint.
+
+Exact rational symmetry projectors select a radial sector of dimension $5+4=9$ and an angular sector of dimension $7+3=10$. The second angular sector is symmetry equivalent, so the angular frequency occurs twice. Canonical dual bases are used for momenta. On all 512 cells, positive fast factors and strict sign changes at the chosen spectral cuts certify
+\[
+\boxed{\frac{1417}{100}<\frac{\omega_{\rm rad}^2}{t}<\frac{71}{5},\qquad
+\frac{149}{50}<\frac{\omega_{\rm ang}^2}{t}<\frac{1499}{500}.}
+\]
+Consequently
+\[
+\frac{7085}{1499}<\frac{\omega_{\rm rad}^2}{\omega_{\rm ang}^2}<\frac{710}{149},\qquad
+\left|\frac{\omega_{\rm rad}}{\omega_{\rm ang}}-\sqrt{1+4A_4/B_4}\right|<\frac1{200}.
+\]
+These are bounds for the symmetry-identified soft modes, with no new global ordering claim for the other modes.
+\newpage
+\section{Replay, provenance and remaining boundaries}
+\textbf{Replay contract.} Run \texttt{certify\_finite\_offset.py} with Python, python-flint 0.9.0, NumPy, SciPy and SymPy. The release includes fixed rational center inputs, exact rational symmetry-sector bases, model geometry and the inherited quartic interval certificate. The constructor report records every interval family, coverage count, error coefficient and strict contraction margin. Regeneration of the rational projectors is available separately.
+
+The regular entire functions are evaluated with 18 polynomial terms. For $|z|<4$, the omitted tail and its first derivative are bounded by
+\[
+\frac{2\,4^{18}}{(36+s)!},\qquad
+\frac{36\,4^{17}}{(36+s)!},\quad s=2\ \text{or}\ 3.
+\]
+Term ratios are below one half, so these geometric bounds suffice. Signed interval powers are evaluated by repeated multiplication; no logarithmic power operation across zero is used. Arb arithmetic encloses transcendental and algebraic constants. See the primary \href{https://python-flint.readthedocs.io/en/latest/arb.html}{python-flint Arb documentation} for its ball representation and outward bounds.
+
+For a proposed congruence $S$, the replay checks strict Gershgorin dominance of $S^TMS$ with diagonals bounded away from zero. Homotopy to its diagonal certifies inertia. Nonsingularity of the congruence follows from nonsingularity of this product. Floating spectral calculations propose $S$ and never determine an accepted sign.
+
+\textbf{Inherited anchors.} CBF v0.1 supplies the exact action, analytic local branches, reduced Hessians and quartic constants. GBR v0.1 supplies the dressed Wilson observable, critical reconstruction, exact fingerprints and the oriented-noise lemma. Both are preserved in the append-only repository. The new rescaled equations are derived directly from the full stationary force, eigenvector and norm equations. The coefficient ledger v0.39 and CRL-2 subdivision governance are unchanged.
+
+\textbf{What is certified.} A sufficient normalized offset interval; all 26 continued labeled stationary branches; the scalar Morse verdict; explicit amplitude, loop and classifier errors; two sufficient measurement budgets; and finite scalar soft-mode brackets in the stated unit normalization. The endpoint $t=0$ is a regularized limiting profile, not a nonzero physical branch amplitude.
+
+\textbf{What remains open.} Independent non-constructor review and a separate implementation; a maximal interval; exhaustive finite-offset classification outside the certified tubes; a quantitative full-rank normal-stability neighborhood for the new minima; frequency bounds uniform in arbitrary $a,N,r$; physical action and observable correspondence; sourced preparation and actual instrument uncertainty. No experimental data are analyzed here. Coupling unification, proton decay and monopoles are not established by this result.
+
+The source image \texttt{Gap2\_FINAL\_Finite\_Genesis.png} was unavailable and was not used. No registry promotion is requested. Physical promotion remains $0$.
+\end{document}
