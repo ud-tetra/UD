@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "type": "NUMERICAL only; not empirical; finite horizon not proof of stability",
+  "method": "Full temporal-gauge dynamics in common (mu-rho) rotating frame; no Gauss or symmetry projection in RHS; two campaigns and three perturbation sizes",
+  "campaigns": [
+    {
+      "kappa": 0,
+      "N": 1,
+      "a": 1,
+      "runs": [
+        {
+          "epsilon": 0.01,
+          "time": 120,
+          "max_diagnostic": 0.009352593547966064,
+          "diagnostic_over_epsilon": 0.9352593547966064,
+          "max_energy_absolute_drift": 8.646505733622689e-11,
+          "max_norm_absolute_drift": 2.111077979094489e-11,
+          "max_Gauss_absolute_residual": 2.1898038937706588e-12
+        },
+        {
+          "epsilon": 0.005,
+          "time": 120,
+          "max_diagnostic": 0.004636232249077796,
+          "diagnostic_over_epsilon": 0.9272464498155593,
+          "max_energy_absolute_drift": 4.072564507850984e-11,
+          "max_norm_absolute_drift": 9.95237225964729e-12,
+          "max_Gauss_absolute_residual": 8.754663660681672e-13
+        },
+        {
+          "epsilon": 0.0025,
+          "time": 120,
+          "max_diagnostic": 0.002308034674477192,
+          "diagnostic_over_epsilon": 0.9232138697908768,
+          "max_energy_absolute_drift": 1.6217249765304587e-11,
+          "max_norm_absolute_drift": 3.91853216541449e-12,
+          "max_Gauss_absolute_residual": 3.4436342666310793e-13
+        }
+      ]
+    },
+    {
+      "kappa": 0.014543726626125957,
+      "N": 1,
+      "a": 1,
+      "runs": [
+        {
+          "epsilon": 0.01,
+          "time": 120,
+          "max_diagnostic": 0.009986718572216313,
+          "diagnostic_over_epsilon": 0.9986718572216313,
+          "max_energy_absolute_drift": 7.438050175778699e-11,
+          "max_norm_absolute_drift": 1.8098522680531914e-11,
+          "max_Gauss_absolute_residual": 1.7689738562864932e-12
+        },
+        {
+          "epsilon": 0.005,
+          "time": 120,
+          "max_diagnostic": 0.004954017965851042,
+          "diagnostic_over_epsilon": 0.9908035931702084,
+          "max_energy_absolute_drift": 4.0744296825323545e-11,
+          "max_norm_absolute_drift": 9.957146218653179e-12,
+          "max_Gauss_absolute_residual": 1.053795939398583e-12
+        },
+        {
+          "epsilon": 0.0025,
+          "time": 120,
+          "max_diagnostic": 0.0024671756946493323,
+          "diagnostic_over_epsilon": 0.9868702778597329,
+          "max_energy_absolute_drift": 1.6282974968362396e-11,
+          "max_norm_absolute_drift": 3.935185510783867e-12,
+          "max_Gauss_absolute_residual": 3.271410919936102e-13
+        }
+      ]
+    }
+  ],
+  "physical_promotion": 0
+}
