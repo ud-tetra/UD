@@ -1,0 +1,194 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Gauge-invariant branch readout}\rhead{GBR v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\Arg}{\operatorname{Arg}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\id}{\mathbf1}
+\begin{document}
+\begin{center}
+{\Large\bfseries Gauge-invariant reconstruction of critical phase branches}\\[8pt]
+{\large Exact fingerprints, a deterministic noise margin,\\and a conditional measurement contract}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+The curved-branch bifurcation theorem supplies 26 nearby scalar equilibria and their finite-rank embeddings. We construct a matter-dressed Wilson observable invariant under the full local gauge group. Its oriented phases reconstruct the three critical amplitudes exactly on the nonlinear stationary sheet: the fast correction cancels by weighted orthogonality. A scale-free fourth moment takes the exact values $1$, $1/2$ and $1/3$ on the three branch types. A signed cubic distinguishes the two body-diagonal orbits under vertex permutations. We prove a sufficient deterministic phase-error margin for class discrimination. Real-only loop and matter-density data are exactly blind to overall phase conjugation; six labeled real loop channels nevertheless give asymptotic class fingerprints by distance reconstruction. The inherited soft spectrum gives a clock-independent limiting frequency ratio. A proposed measurement contract and two-study primary-source screen delimit what would be needed for a physical test. No experimental result or physical correspondence is asserted.
+\end{abstract}
+\textbf{Status.} Derived conditional mathematics on the unchanged candidate action. Development lane; no registry entry. Independent review pending; physical promotion $0$. Constructor verification is not independent review.
+
+\begin{center}\begin{tabular}{lrrl}
+\toprule
+Branch family & Count & Exact $P_4$ & Signed $C_3$\\\midrule
+Balanced stable minima & 6 & $1$ & $0$\\
+Index-one saddles & 12 & $1/2$ & $0$\\
+Index-two saddles & 8 & $1/3$ & $+1$ or $-1$\\\bottomrule
+\end{tabular}\end{center}
+Counts retain vertex labels. Local gauge and species phases are quotiented; spatial permutations are not. Patterns describe phase amplitudes on the fixed carrier.
+
+\textbf{New result.} Exact critical readout and class/noise theorems. Branch existence, stability and soft-frequency expansions are inherited from CBF v0.1.
+\newpage
+\section{Frozen model and critical coordinates}
+The carrier has 15 nonempty tetrahedral simplex nodes, 28 incidence links and 18 diamonds. For $e=(i\leftarrow j)$, $b_e=B_{ij}\in\{\pm1\}$. Let $R$ denote node incidence, $C$ diamond curl and $K=C^TC$. For $d=(i,j,h,k)$,
+\[
+P_d=U_{ij}U_{jk},\quad Q_d=U_{ih}U_{hk},\quad W_d=Q_d^\dagger P_d,
+\]
+with basepoint $k$. The unchanged candidate Hamiltonian is
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi,
+\]
+where $D_U[i,j]=b_eU_e$, $h_U=i(D_U^\dagger-D_U)$. Assume $a>0$, $N_\psi=N_\chi=N>0$, $\mu\ge0$ and finite rank $r$, with the inherited Gauss constraint and canonical structure.
+
+The scalar stationary sheet and its one-active-color embeddings have
+\[
+U_e=\diag(-ib_e e^{i\theta_e},\id_{r-1}),\quad E_e=0,\quad
+\psi_i=\sqrt N f_i(\theta)e_1,\quad\chi_i=\sqrt N\bar f_i(\theta)e_1.
+\]
+Here $f$ is the simple normalized ground eigenvector of scalar hopping, whose upper edge entries are $-e^{i\theta_e}$. It remains nonzero at every node near $\theta=0$ because $f(0)=v>0$. All quantities are in internal model units.
+
+Put $d=\sqrt{10}$, $\rho=\sqrt{8+2d}$, $w_0=\rho(10-d)/480$, and $\diag(v_iv_j)=w_0D$. Then
+\[
+\Lambda_+=\frac{28+17d+\sqrt{866-128d}}{18},\quad k_*=4w_0/\Lambda_+,
+\qquad \epsilon=\frac\kappa{rN}-k_*.
+\]
+On the weighted Coulomb slice $RD\theta=0$, CBF v0.1 gives
+\[
+\theta=Zb+y(b,\epsilon),\quad Z^TDy=0,\quad y=O(\|b\|^3),
+\quad KZ=\Lambda_+DZ,\quad Z^TKZ=\Gamma I_3.
+\]
+Here $\Gamma\simeq346.30298315533705>0$. Set $a=\mathsf H b$ with
+\[
+\mathsf H=\frac12\begin{pmatrix}1&1&1\\1&-1&-1\\-1&1&-1\\-1&-1&1\end{pmatrix},\qquad Zb=x(\mathsf H b).
+\]
+Explicit $x$ is included in the replay helper and geometry export. For sufficiently small $\epsilon>0$, the 26 inherited branches lie exactly on the symmetry rays with $k=1,2,3$ occupied $b$ coordinates of equal magnitude. Their scalar indices are $k-1$. The scalar local classification is complete; higher-rank claims here concern embeddings only.
+\newpage
+\section{Exact gauge-invariant reconstruction}
+\begin{theorem}[Dressed Wilson readout]\label{th:readout}
+For $\psi_k\ne0$, define
+\[
+z_d=-\frac{\psi_k^\dagger W_d\psi_k}{\psi_k^\dagger\psi_k}.
+\]
+This complex scalar is invariant under the full local $U(r)$ gauge group and common matter phase, with $|z_d|\le1$. On the embedded stationary sheet, $z_d=e^{i(C\theta)_d}$. In the chart $|(C\theta)_d|<\pi$, put $\phi_d=\Arg z_d$ and $L=CZ$. Then
+\begin{equation}\boxed{b=\Gamma^{-1}L^T\phi.}\label{eq:readout}\end{equation}
+This is exact on the nonlinear stationary sheet at every finite rank for these embeddings.
+\end{theorem}
+\begin{proof}
+Under $U_{ij}\mapsto g_iU_{ij}g_j^\dagger$, one has $W_d\mapsto g_kW_dg_k^\dagger$ and $\psi_k\mapsto g_k\psi_k$. Both numerator and denominator are invariant, including under species phase. Unitarity and Cauchy--Schwarz give the modulus bound.
+
+The signed incidence products on the two diamond paths are opposite. Thus the active eigenvalue of $W_d$ is $-e^{i(C\theta)_d}$ and its unused block is identity. Matter occupies the active direction, proving the formula for $z_d$. The phase chart gives $\phi=C\theta$, and
+\[
+L^T\phi=Z^TC^TC(Zb+y)=\Gamma b+\Lambda_+Z^TDy=\Gamma b.
+\]
+No fast-correction truncation is used.
+\end{proof}
+Modulus saturation holds exactly when $W_d\psi_k$ is proportional to $\psi_k$, by equality in Cauchy--Schwarz. A nonzero $1-|z_d|^2$ can therefore diagnose failure of an ideal embedded-loop condition after accounting for errors. Saturation alone does not identify the embedding or action.
+
+The rank of $C$ is 14 and $CR^T=0$. With Moore--Penrose inverse $C^+$, define $\Pi_C=CC^+$ and $\Pi_L=LL^T/\Gamma$. Four independent closure residuals are $(I-\Pi_C)\phi$. The fast loop component is
+\[
+(\Pi_C-\Pi_L)\phi=Cy=O(\|b\|^3),
+\]
+with dimension 11. These are necessary consistency tests. Fourteen independent phases determine the entire local scalar connection modulo gauge; using 18 provides redundancy. No minimal channel count for discriminating a finite branch list is claimed.
+
+\begin{theorem}[Exact branch fingerprints]
+For $b\ne0$, let $R_b=\|b\|$ and
+\[
+P_4=\frac{\sum_jb_j^4}{R_b^4},\qquad C_3=\frac{3\sqrt3 b_1b_2b_3}{R_b^3}.
+\]
+On family $k$, $P_4=1/k$. The signed cubic is zero for $k<3$ and $\pm1$ for $k=3$. It is invariant under $S_4$ vertex permutations and changes sign under $b\mapsto-b$.
+\end{theorem}
+\newpage
+\section{Orientation information and its loss}
+\begin{proof}[Proof of the fingerprint theorem]
+A unit branch ray has $k$ nonzero coordinates equal to $\pm1/\sqrt k$. Substitution gives both values. The inherited exact symmetry-ray property makes them full-branch identities.
+
+An $S_4$ permutation acts on $b$ by $\mathsf H^TP\mathsf H$, a signed coordinate permutation whose three coordinate signs have product $+1$. Equivalently,
+\[
+\sum_i a_i^3=3b_1b_2b_3,\qquad
+\sum_i a_i^4=\frac34R_b^4-\frac12\sum_jb_j^4.
+\]
+Thus $C_3$ is permutation invariant. The eight body-diagonal branches split into two four-element $S_4$ orbits, joined by overall phase reversal. Equation~\eqref{eq:readout} distinguishes all 26 labeled critical vectors and hence their local gauge classes.
+\end{proof}
+\begin{proposition}[Blindness of real and density channels]
+The opposite phase branches $\theta$ and $-\theta$ have identical $\Rea z_d$, $|z_d|$ and matter densities at every labeled node. Any function of only these channels fails to distinguish the opposite pair. Modulus-only loop readout is constant on the ideal embeddings.
+\end{proposition}
+\begin{proof}
+$z_d(-\theta)=\bar z_d(\theta)$ and $|z_d|=1$. Also $h(-\theta)=\bar h(\theta)$; simplicity of the ground state implies $f(-\theta)=e^{i\alpha}\bar f(\theta)$. Its densities coincide. Functions of identical inputs have identical outputs.
+\end{proof}
+This is an information limit for specified channels, not gauge equivalence of the two branches. Complex oriented phases distinguish them. Orientation must be calibrated to assign a reproducible sign to $C_3$. The mathematical conjugation label is not identified here with physical charge conjugation, parity, time reversal or particle chirality.
+
+\textbf{Six real-channel fallback.} For each unordered vertex pair $\{j,k\}$, two vertex-based diamonds satisfy, on the critical subspace,
+\[
+(CZb)_d=\pm\Lambda_+(a_j-a_k).
+\]
+Choose one per pair. In the local chart set
+\[
+\Delta_{jk}=\left[\arccos(\Rea z_d)/\Lambda_+\right]^2,\quad\Delta_{jj}=0,
+\quad J=I_4-\id\id^T/4,\quad G_a=-J\Delta J/2.
+\]
+For pure critical data, $\arccos(\cos\phi)=|\phi|$, so $\Delta_{jk}=(a_j-a_k)^2$. Direct double centering gives $G_a=aa^T$ since $\sum a_i=0$. Hence these labeled real channels recover $a$ up to overall sign.
+
+On the full stationary sheet, $y=O(R_b^3)$ changes squared phases by $O(R_b^4)$, including where the leading phase vanishes. Consequently $G_a=aa^T+O(R_b^4)$ and
+\[
+\eta_a=\frac{\sum_i(G_a)_{ii}^2}{(\tr G_a)^2}
+=\left\{\frac14,\frac12,\frac7{12}\right\}+O(\epsilon).
+\]
+The equality $P_4=3/2-2\eta_a$ is exact only in the critical truncation. No finite-error guarantee is supplied for this fallback. Inverse cosine amplifies error near zero; real signals scale as $\epsilon$, oriented phases as $\sqrt\epsilon$.
+\newpage
+\section{A deterministic discrimination margin}
+\begin{theorem}[Bounded phase error]
+Assume the embedded branch and correct local phase chart. If $\|\widehat\phi-\phi\|_2\le\delta$, then $\widehat b=\Gamma^{-1}L^T\widehat\phi$ obeys
+\[
+\|\widehat b-b\|_2\le e:=\delta/\sqrt\Gamma.
+\]
+If $e\le R_b/7$, nearest-value classification of $P_4(\widehat b)$ among $1,1/2,1/3$ is correct. A measurable sufficient guard is $8e\le\|\widehat b\|$. In this case
+\[
+\left|P_4(\widehat b)-1/k\right|\le97/1296<1/12.
+\]
+\end{theorem}
+\begin{proof}
+$L^TL=\Gamma I$ gives operator norm $\|L^T/\Gamma\|=1/\sqrt\Gamma$. Write $b=R_bn$ and $(\widehat b-b)/R_b=t n+u$, where $u\perp n$ and $|t|,\|u\|\le\eta=e/R_b\le1/7$. Scale invariance gives $P_4(\widehat b)=P_4(n+w)$ with $w=u/(1+t)\perp n$ and $s=\|w\|\le1/6$.
+
+Since $n_j^3=n_j/k$, the linear term vanishes. The difference is
+\[
+\frac{6\sum n_j^2w_j^2-2s^2/k+4\sum n_jw_j^3+\sum w_j^4-s^4/k}{(1+s^2)^2}.
+\]
+The quadratic term has absolute value at most $2s^2$: for $k=1$, orthogonality makes the occupied $w$ component zero, leaving $-2s^2$; for $k=2$, coefficients on occupied and unoccupied components are $2,-1$; for $k=3$, it is $4s^2/3$. Cauchy--Schwarz gives $|\sum n_jw_j^3|\le s^3$, and $|\sum w_j^4-s^4/k|\le s^4$. Thus
+\[
+|P_4(n+w)-1/k|\le2s^2+4s^3+s^4\le97/1296.
+\]
+The minimum class separation is $1/6$. Finally, $8e\le\|\widehat b\|$ implies $R_b\ge\|\widehat b\|-e\ge7e$.
+\end{proof}
+The bound is sufficient and conservative. All relevant phase errors, including systematic calibration, must be bounded by $\delta$. A common nonzero amplitude gain cancels in $P_4$, but its sign affects orientation. Since $R_b=O(\sqrt\epsilon)$, fixed phase uncertainty cannot guarantee discrimination arbitrarily close to threshold.
+
+\textbf{Stable-mode ratio.} The inherited soft squared frequencies on the balanced family satisfy
+\[
+\omega_{\rm rad}^2=\frac{2N\Gamma}{m_c}\epsilon+o(\epsilon),\qquad
+\omega_{\rm ang}^2=\frac{NB_4\Gamma}{2q_1m_c}\epsilon+o(\epsilon),\quad q_1=A_4+B_4/4.
+\]
+Here $m_c>0$ includes Gauss backreaction. Hence
+\[
+\boxed{\omega_{\rm rad}^2/\omega_{\rm ang}^2\to1+4A_4/B_4\simeq4.746844460896146,}
+\]
+with frequency ratio $2.178725421180041\ldots$. Common clock scaling, $N$, $\Gamma$ and $m_c$ cancel. Directed integer intervals are in the exact report. This is an asymptotic model prediction, not an exact finite-$\epsilon$ ratio.
+\newpage
+\section{Measurement contract and evidence scope}
+A physical test needs a sourced map from laboratory degrees of freedom to this action: carrier, gauge representation, conjugate matter species, neutral sector, coefficient normalization and time/energy scales. A common gauge-group name or a measured Wilson loop does not supply that map. Loss, forcing or feedback used for preparation must be modeled; closed-system minima are not attractors.
+
+The proposed design contract is exported as \texttt{MEASUREMENT\_REQUIREMENTS\_v0.1.json}. It calls for complex dressed loop amplitudes with calibrated orientation and uncertainty; matter norms/profile and Gauss checks; and branch-aligned response time series if the spectral ratio is tested. The geometry export fixes all node, link and diamond labels, $Z$, $L$ and the readout map. Closure and modulus tests precede classification but do not establish physical validity.
+
+A meaningful comparison would freeze the correspondence and uncertainty model, retain all preparation trials, and test $R_b^2\propto\epsilon$, the cubic fast-loop residual, exact $P_4$ values and an extrapolated spectral ratio. No numerical neighborhood radius or finite-$\epsilon$ remainder bound is certified yet. The real-only fallback needs its own noise analysis before use.
+
+\textbf{Published-data screen.} Yang et al. [1] study a 1D spin-$1/2$ U(1) quantum-link model with occupation and Gauss-violation readouts; [2] is its data locator. Sugawa et al. [3] study engineered SU(2) geometric holonomy, process tomography and Wilson-loop magnitude; data availability specifies reasonable request. These offer measurement precedents. Our compatibility inference is that neither currently supplies the mapped tetrahedral dynamical action and branch observables. No samples were reanalyzed. The screen is limited to these two studies.
+
+\textbf{Verification.} The replay has 64 exact constructor checks of curl geometry, pair-distance reconstruction, symmetry fingerprints and noise algebra, plus inherited outward-rounded $10^{-60}$ integer intervals. Separately, 12 full ground-state stationary solves in all 14 connection directions reproduce the readout with error below $4\times10^{-18}$ in these fixtures. There are 32 full-$U(r)$ gauge fixtures and 600 bounded-phase-noise fixtures. Numerical diagnostics are synthetic, not analytic proof or empirical evidence.
+
+\textbf{Open work.} Independent review; quantified validity neighborhood and remainders; laboratory action/readout mapping; sourced preparation; instrument uncertainty and sample design. Coupling unification, proton decay and monopole claims are outside this result. The upstream missing image \texttt{Gap2\_FINAL\_Finite\_Genesis.png} was not used.
+
+\begin{thebibliography}{9}\small
+\bibitem{yang} B. Yang et al., Nature \textbf{587}, 392--396 (2020), \href{https://doi.org/10.1038/s41586-020-2910-8}{10.1038/s41586-020-2910-8}; primary preprint \href{https://arxiv.org/html/2003.08945v2}{arXiv:2003.08945v2}.
+\bibitem{data} Yang et al., Harvard Dataverse, \href{https://doi.org/10.7910/DVN/3RXD5F}{10.7910/DVN/3RXD5F}; dataset description screened, no samples ingested.
+\bibitem{sugawa} S. Sugawa et al., npj Quantum Information \textbf{7}, 144 (2021), \href{https://doi.org/10.1038/s41534-021-00483-2}{10.1038/s41534-021-00483-2}.
+\end{thebibliography}
+\end{document}
