@@ -1,0 +1,51 @@
+{
+  "status": "CANDIDATE physical measurement contract, supported by conditional mathematical interval certificate; not preregistered or executed",
+  "region": "0<epsilon<=1/100000, epsilon=kappa/(r*N)-k_star",
+  "stationary_scope": "any N>0,a>0,finite r one-active-color embeddings",
+  "frequency_bound_scope": "a=N=r=1; symmetry-identified soft modes",
+  "required_mapping": [
+    "frozen Hamiltonian and neutral sector",
+    "node/link/diamond and matter projector readout",
+    "coefficient, norm, rank and clock calibration",
+    "bounded systematic and statistical readout errors",
+    "preparation and any dissipation modeled"
+  ],
+  "model_errors": {
+    "relative_amplitude_squared": "<=25 epsilon",
+    "fast_loop_L2": "<=297 epsilon^(3/2)",
+    "real_fingerprint_bias": "<=41 epsilon"
+  },
+  "classification_options": [
+    {
+      "channels": "18 oriented matter-dressed Wilson phases, in local chart",
+      "sufficient_error_budget": "L2 total phase error <=5 sqrt(epsilon)",
+      "estimator": "b_readout=(CZ)^T phi/Gamma; nearest P4 to {1,1/2,1/3}"
+    },
+    {
+      "channels": "six labeled vertex-diamond real amplitudes, one per added pair",
+      "sufficient_error_budget": "each absolute real-channel error <=epsilon/40",
+      "estimator": "clip to [-1,1]; squared acos distances; centered Gram; nearest eta to {1/4,1/2,7/12}",
+      "information_limit": "overall phase sign cannot be recovered"
+    }
+  ],
+  "mode_squared_slopes": {
+    "radial": [
+      "1417/100",
+      "71/5"
+    ],
+    "angular": [
+      "149/50",
+      "1499/500"
+    ],
+    "scope": "a=N=r=1; same interval; angular mode twice by exact symmetry"
+  },
+  "frequency_ratio_absolute_error": "<1/200 from sqrt(1+4*A4/B4), only in stated dynamical normalization",
+  "consistency_conditions": [
+    "matter component >1/5 in normalized model gauge",
+    "diamond phases <1/16",
+    "Gauss and fixed norms",
+    "unit modulus, loop closure and fast-loop residual"
+  ],
+  "caveat": "Passing readout consistency checks is not a physical identification. Independent non-constructor review required before promotion. No samples analyzed.",
+  "physical_promotion": 0
+}
