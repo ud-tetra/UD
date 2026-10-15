@@ -1,0 +1,3 @@
+# UD admission package v0.13
+
+Read the narrative manuscript and UD_Carrier_Driven_Admission_v0.1.md. Run `python verify_admission.py` with SymPy to regenerate ADMISSION_CHECKS.json. Written proofs establish the general dwell and noise bounds; the replay checks carrier constants, exact fixtures, symmetries and counterexamples. One numerical corollary is explicitly marked. Prior v0.12 evidence is pinned in SOURCE_REGISTER.json, with its manuscript and selected historical source/audit bytes preserved in baseline/. This candidate is a passive readout, not a native geometry-changing interaction or implemented apparatus. Development; no registry entry; physical promotion 0.
