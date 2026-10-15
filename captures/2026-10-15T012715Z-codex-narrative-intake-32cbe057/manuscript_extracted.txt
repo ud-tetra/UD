@@ -1,0 +1,3013 @@
+     Unified Dynamics: Distinction, Interaction and Persistence
+   A theoretical account of tetrahedral carriers, information access and finite records
+
+
+                                     Benjamin Walker Mayes
+
+                      15 October 2026 (UTC) — Review candidate 0.15
+
+
+Contents
+   Abstract . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    3
+
+1. The problem: how does change produce things that last?                                             3
+   1.1 Object, representation and observation . . . . . . . . . . . . . . . . . . . . . . . . .       4
+   1.2 Exact representation and controlled approximation . . . . . . . . . . . . . . . . . .          4
+   1.3 Scope, contribution and relation to prior work . . . . . . . . . . . . . . . . . . . .         5
+   1.4 Assumptions and mathematical domains . . . . . . . . . . . . . . . . . . . . . . . .           5
+
+2. Distinction: specify the alternatives before explaining their evolution                            6
+   2.1 State, observation and resolvability . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+   2.2 A finite binary label register . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   7
+   2.3 Comparing event labels and composing a history . . . . . . . . . . . . . . . . . . .           7
+   2.4 A reference kernel exposes what counting cannot select . . . . . . . . . . . . . . . .         7
+   2.5 When does continuous change count as an event? . . . . . . . . . . . . . . . . . . .           7
+
+3. Why tetrahedral structure enters                                                                   8
+   3.1 Relationships before metric . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      8
+   3.2 Chain conventions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      8
+
+4. Interaction: what the architecture actually does                                                    9
+   4.1 The declared coherent flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        9
+   4.2 A local account of exchange . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       9
+   4.3 Single-cell recurrence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   10
+
+5. Symmetry: organize interactions without inventing coeﬀicients                                10
+   5.1 Symbolic strengths and invariant exchange sectors . . . . . . . . . . . . . . . . . . 11
+   5.2 Quadratic context and its limits . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+6. Shapes change function; topology changes require another rule                                   12
+   6.1 Glued spectra . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+   6.2 Shared interfaces and ownership . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+   6.3 Equal exterior boundary is insuﬀicient for dynamical equivalence . . . . . . . . . . 12
+   6.4 A transfer contract that retains the interface residual . . . . . . . . . . . . . . . . . 13
+   6.5 A family law for gluing and dynamic memory . . . . . . . . . . . . . . . . . . . . . 13
+   6.6 Exact access and reliable readout are different requirements . . . . . . . . . . . . . 14
+
+7. Persistence and formation                                                                    15
+   7.1 State preservation does not imply attraction . . . . . . . . . . . . . . . . . . . . . . 15
+
+
+                                                   1
+   7.2 An explicit prepared growth construction . . . . . . . . . . . . . . . . . . . . . . .      15
+   7.3 What a preference claim must specify . . . . . . . . . . . . . . . . . . . . . . . . .      16
+   7.4 What the five-cell calculation adds . . . . . . . . . . . . . . . . . . . . . . . . . . .   16
+
+8. A distinction can survive while a readout loses access                                     17
+   8.1 Readout error under a declared noise law . . . . . . . . . . . . . . . . . . . . . . . 18
+
+9. Reconstruction: what must a receipt contain?                                                   18
+   9.1 Why stocks and currents may be insuﬀicient . . . . . . . . . . . . . . . . . . . . . . 18
+   9.2 A suﬀicient real receipt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+   9.3 Complex phase receipts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+   9.4 Prediction and uncertainty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+   9.5 A readable history functional also needs record capacity . . . . . . . . . . . . . . . 20
+
+10. From readable state to finite record apparatus                                             20
+   10.1 Prepared history propagation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+   10.2 Timed protection and static retention differ . . . . . . . . . . . . . . . . . . . . . 21
+   10.3 Why permanent capture needs another mechanism . . . . . . . . . . . . . . . . . 22
+
+11. Renewal, preparation and complete resource cost                                             22
+   11.1 Renewal moves correlations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+   11.2 Coherent supply is a resource . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+   11.3 What a complete cost comparison includes . . . . . . . . . . . . . . . . . . . . . . 23
+   11.4 What a prepared stationary ratio does and does not explain . . . . . . . . . . . . 23
+
+12. Entropy, area and the physical bridge                                                          23
+
+13. What the theory currently explains, and what it must explain next                         24
+   13.1 Reconciled native event-source boundary . . . . . . . . . . . . . . . . . . . . . . . 24
+
+Appendix A. Source crosswalk                                                                       25
+
+Appendix B. Comparison contracts                                                                   26
+
+Appendix C. Provenance and review boundaries                                                       26
+
+Appendix D. Proofs and exact certificate conventions                                           27
+  D.1 Skew flow and the harmonic obstruction . . . . . . . . . . . . . . . . . . . . . . . 27
+  D.2 Visible closure and the retained interface . . . . . . . . . . . . . . . . . . . . . . . 27
+  D.3 Orientation and reproducible spectra . . . . . . . . . . . . . . . . . . . . . . . . . 28
+  D.4 Reconstruction and static-storage qualifications . . . . . . . . . . . . . . . . . . . 28
+  D.6 Refined static joint error under an explicit input contract . . . . . . . . . . . . . . 28
+  D.7 Signed characters, channel completeness and the standard Dirac relation . . . . . 29
+  D.8 General gluing and minimal dynamic memory . . . . . . . . . . . . . . . . . . . . 30
+  D.9 Conditioning, noise and sampled acquisition . . . . . . . . . . . . . . . . . . . . . 32
+  D.10 Recurrence and transfer under explicit metric contracts . . . . . . . . . . . . . . 37
+  D.11 A prepared channel: retained coherence, fixed ratios and branching . . . . . . . . 39
+  D.12 Event comparisons, composable histories and winding observability . . . . . . . . 40
+  D.13 A declared history graph and exact receipt requirements . . . . . . . . . . . . . . 42
+  D.14 Composition of controls and the limits of phase extensions . . . . . . . . . . . . . 45
+  D.15 A carrier-driven admission candidate with finite activity . . . . . . . . . . . . . . 46
+  D.16 Sampled acquisition and receipts of uncertain event times . . . . . . . . . . . . . 49
+  D.17 Receipt consistency, covariance and errors it cannot reveal . . . . . . . . . . . . . 51
+
+
+                                                 2
+Appendix E. Data, code and development declarations                                              53
+
+References                                                                                       54
+
+Abstract
+Finite coherent dynamics can preserve a state difference while a restricted observation loses
+access to it. We study this distinction on oriented tetrahedral chain carriers and separate re-
+construction from finite record retention. A family-level gluing theorem shows that t tetrahedra
+formed by fresh-vertex face attachment have a 15t-dimensional copied state and an (8t+7)-
+dimensional normalized unique-simplex view. Under separate skew incidence dynamics with
+nonzero exchange weights in each cell, snapshot and derivative together distinguish every copied
+state. Any exact autonomous linear realization of the complete visible trajectory for arbitrary
+initial states therefore needs 7(t-1) extra state coordinates. This requirement differs from lossless
+residual storage for general gluings. We also derive conditioning and noise bounds, including
+sharp two-cell and core-star gains, a fixed-norm ill-conditioning family, and an exact sampled-
+readout contract. Exact spectra, observation examples and a closed-gluing control support the
+argument, which is integrated with conditional reconstruction, capture and renewal contracts.
+Standard Hodge, observability, projection-memory, synchronization and transfer methods are
+credited. The result concerns declared finite models: it derives neither native configuration selec-
+tion nor a calibrated physical metric, universal entropy-area density or gravitational equation.
+Keywords: tetrahedral complexes; incidence dynamics; persistence; projective reconstruction;
+finite memory; capture; renewal.
+Source and scope. The technical baseline is the recovered four-paper M5 release dated 4
+October 2026: Papers I–III review drafts 1.1.1 and Paper IV development draft 0.1 [1–4]. This
+is a separate synthesis manuscript. The four source papers retain their identities and theorem
+numbering. The first closure package reconciles the four paper bytes against repository commit
+4b9c1f7ba03f76324b792f389517161d2bc47e05 and integrates selected later source/interface
+results. It is not a complete audit of every subsequent development. All results retain their
+stated assumptions. Review candidate; no independent review or registry promotion is claimed.
+Physical promotion: 0.
+
+
+1. The problem: how does change produce things that last?
+The world changes, yet it contains things we can recognize again. Signals travel, structures
+survive encounters, and interactions leave traces. A theoretical account should explain how
+these processes connect: how a structure is generated, how it preserves identifiable properties,
+and how its behaviour becomes available to another process.
+These are related questions with different mathematical requirements. Existence in a state space
+is not a formation mechanism. Conservation of a full-state quantity is not guaranteed access
+through a restricted readout. A successful transfer is not permanent memory. The purpose of
+this manuscript is to make those distinctions part of one explanatory argument.
+The organizing question is:
+      Can constrained interactions explain the formation of persistent structures and read-
+      able records within a common dynamical framework?
+UD investigates tetrahedral packet complexes as a candidate architecture for that framework.
+The word packet denotes a declared carrier and its state; it does not independently establish a
+particle, a material substance or an isolated unit of physical energy. The theory must earn each
+of those interpretations through a further map to observables.
+
+                                                 3
+The approach begins with a finite setting because its relationships and consequences can be
+inspected exactly. A small carrier permits an explicit boundary matrix, an exact spectrum, a
+complete observation map and a finite apparatus state. Larger claims should remain accountable
+to these constructions.
+Our narrative progresses through five questions. What can differ? What can interact? What
+survives that interaction? What can a readout recover? What mechanism preserves the recov-
+ered difference as a record? Formation and the physical bridge then become precise obligations
+rather than unexplained transitions between equations.
+
+1.1 Object, representation and observation
+UD distinguishes the system being described from the mathematical model, numerical encoding,
+and observation used to describe it. An exact expression and a finite approximation may refer
+to the same intended quantity while carrying different information. Likewise, a complete state
+and a restricted readout can support different conclusions about distinguishability.
+The programme therefore asks which relationships survive changes of representation, which
+distinctions remain accessible after coarse-graining, and what mechanisms make that access
+persistent. Numerical convenience is a methodological choice whose consequences must be ac-
+counted for. Continuity, discreteness, dimensionality, and scale invariance remain properties to
+be established within a justified physical description.
+This is the philosophical role of distinction in the present account: it makes access and persis-
+tence explicit without equating the description with its physical referent. The methodological
+governance addition [10] operationalizes this separation through exact specifications, transported
+observables, and declared approximation errors.
+
+1.2 Exact representation and controlled approximation
+                                                                                                 √
+The two-tetrahedron model in §6.1 has a squared frequency 3, hence the exact frequency 3,
+defined by 𝑥2 = 3 and 𝑥 > 0. This is a model-derived example, not a universal physical constant.
+It is irrational: if 𝑥 = 𝑎/𝑏 in lowest terms, 𝑎2 = 3𝑏2 gives an even exponent of the prime 3 on
+the left and an odd exponent on the right, a contradiction. Its nonterminating, non-eventually-
+periodic expansion occurs in every integer positional base. A finite expansion is rational, as is an
+eventually periodic expansion by a geometric-series sum. Thus changing numeral base cannot
+make this irrational quantity a finite fraction.
+                                                                           √                     √
+A radical must also retain its declared meaning. For example, √4/3 = 2/ 3 is distinct from 2;
+taking the square root of a supplied ratio does not derive a carrier frequency or physical law. A
+numerical match between quantities with different definitions requires an explicit correspondence.
+An exact expression, including 1/3 = 0.3, need not discard information. A finite truncation is a
+different object. The reduced rational 𝑎/𝑏 terminates in base 𝐵 precisely when 𝑏 divides 𝐵𝑛 for
+some 𝑛, equivalently when all denominator primes divide 𝐵. This is an arithmetic property of
+encoding. It establishes no physical fractality or fundamental discreteness.
+For an invertible coordinate change 𝑦 = 𝑇 𝑥, equivalent dynamics and observations obey
+
+
+                             𝐴𝑦 = 𝑇 𝐴𝑥 𝑇 −1 ,     𝑂𝑦 (𝑦) = 𝑂𝑥 (𝑇 −1 𝑦).
+
+If squared norm is 𝑥𝑇 𝐻𝑥 𝑥, its metric transforms as
+
+
+                                      𝐻𝑦 = (𝑇 −1 )𝑇 𝐻𝑥 𝑇 −1 .
+
+
+
+                                                 4
+Transporting the state while keeping an incompatible generator, metric or noise model changes
+the calculation. An information-losing projection is another operation: it needs a closure crite-
+rion and an account of the distinctions it forgets.
+                                                                              √        √
+This discipline has a direct application to recurrence. The exact frequencies 3 and 5 have
+no positive common period. If operative frequencies are instead replaced by the finite decimals
+
+                                           433                   559
+                                 1.732 =       ,       2.236 =       ,
+                                           250                   250
+
+the rounded-frequency model has a common period 500𝜋, since its phase advances are 2𝜋⋅433 and
+2𝜋 ⋅ 559. Display rounding alone creates no such change when the exact quantities are retained
+internally. The artefact arises when the approximations are promoted into the dynamics.
+The example does not prohibit numerical modelling. It requires the numerical model’s error and
+intended domain to accompany its predictions. Exact algebra also remains conditional on the
+chosen model; it cannot establish the physical interpretation of that model by itself.
+
+1.3 Scope, contribution and relation to prior work
+The paper studies finite models of distinction, access and retention. Its reviewable claim is that
+these are separate mathematical obligations, illustrated by concrete tetrahedral calculations. It
+does not establish that tetrahedra are the unique architecture of nature. The narrative motivates
+the models; the declared assumptions determine their consequences.
+Combinatorial Laplacians on simplicial complexes are established objects [11]. Discrete Dirac
+constructions likewise predate this manuscript [12]. Knill gives the complete-graph Dirac spec-
+trum, including the filled tetrahedron [18, §9.3]. The phase equivalence in Appendix D.7 iden-
+tifies its spectrum with ours. The single-cell spectrum is established background. Weighted
+simplicial Dirac constructions also predate this manuscript [19]. Norm conservation is a stan-
+dard consequence of skew-adjointness.
+Phase recovery from relative offsets belongs to the established synchronization problem [13].
+The noiseless support-tree receipt in §9 gives a suﬀicient reconstruction under supplied nonzero-
+support data and component references. It is not a new general synchronization algorithm. The
+clock in §10 uses engineered perfect state transfer [14]; prefix dressing adds a supplied gate word,
+not a new origin for the clock.
+The main added result is the stacked-family memory theorem in §6.5, supported by a structural
+rank proof. The selected glued spectra, five-cell comparison, two-cell observation obstruction
+and retained interface provide concrete examples. General observability and projection-memory
+principles are established background [20,21]. Results inherited from Papers I-IV are cited as
+such. The present synthesis explains how their assumptions connect and where they do not.
+We make no priority claim that these finite examples are absent from all prior literature; a
+comprehensive novelty assessment remains a submission task.
+
+1.4 Assumptions and mathematical domains
+
+
+
+
+                                                   5
+Domain                           Declared premises                Limit on interpretation
+Real carrier                     Finite downward-closed           Coordinate stocks are model
+                                 complex; one coordinate per      quantities
+                                 nonempty simplex; increasing
+                                 orientation; Euclidean
+                                 simplex metric
+Fixed flow                       Constant real skew generator;    Full-state conservation does
+                                 no supplied switching during     not imply attraction or
+                                 the interval                     retention
+Observation                      Named map, preparation           A readout is not
+                                 alternatives, known time;        automatically an apparatus
+                                 noise only where stipulated      or record
+Complex receipts                 Nonzero-support forest and       Relative phases require
+                                 one supplied root phase per      references and acquisition
+                                 component
+Quantum apparatus                Separate finite complex          No derivation of quantum
+                                 Hilbert spaces; declared joint   theory from the real carrier
+                                 inputs, Hamiltonians and
+                                 comparator
+Resources                        Count supplied donors,           A subsystem energy or
+                                 references, clocks, switching    marginal error is not total
+                                 and exhaustion on the same       cost
+                                 domain
+Physical bridge                  No calibrated length,            Physical entropy-area
+                                 laboratory time, action scale    normalization remains open
+                                 or geometric metric is
+                                 supplied
+
+
+The symbol 𝒳 in §2.1 denotes a general state space; the binary register Θ in §2.2 is a separate
+label space. Model parameter 𝑠 and apparatus time 𝑡 are not identified. Entropies use natural
+logarithms and are dimensionless unless a physical conversion is separately declared.
+
+
+2. Distinction: specify the alternatives before explaining their
+evolution
+2.1 State, observation and resolvability
+Let a declared state space be 𝒳 and an observation map be 𝑂 ∶ 𝒳 → 𝒴. Two states 𝑥, 𝑦 are dis-
+tinguishable under this exact observation when 𝑂(𝑥) ≠ 𝑂(𝑦). Under a noisy or finite-resolution
+observation, distinguishability additionally depends on the output distributions, permitted de-
+cisions and error criterion.
+This operational definition makes the model’s alternatives explicit. It does not imply that phys-
+ical existence depends on observation, nor that every state difference is already an irreversible
+record. Distinction under a readout is relative to a specified map.
+For real chain states, the observation might retain signed coordinates or only their squares.
+For complex states, it might retain amplitudes, phases or bilinear receipts. These alternatives
+preserve different information. A narrative that calls them all “information” without naming
+the map would conceal the central problem.
+
+
+
+                                               6
+2.2 A finite binary label register
+On four vertices, the tetrahedral edge graph has three opposite-edge matchings:
+
+
+                       𝑀1 = {01, 23},    𝑀2 = {02, 13},    𝑀3 = {03, 12}.
+
+Assigning one bit to each defines Θ = 𝔽32 . Its eight labels separate into Hamming-weight sectors
+of dimensions 1, 3, 3, 1. Vertex permutations induce an onto action 𝑆4 → 𝑆3 on the matchings,
+with Klein-four kernel [1, §3].
+The labeled product set 𝑆4 × Θ has 24 ⋅ 8 = 192 elements. Under the specified reference-edge
+projection, its six edge fibers each have 32 elements. These are exact counts of declared objects.
+They do not establish a physical coupling, a 32-stage history or a clock period. On the same
+fiber one can supply an identity update, a transposition or a 32-cycle.
+The binary register and the amplitude carrier below therefore have different roles. The first
+organizes labels; the second supports continuous state evolution. A source law relating them
+must be supplied or derived. Counting their coordinates does not provide that law.
+
+2.3 Comparing event labels and composing a history
+A receipt alphabet can distinguish event types without specifying which events can follow each
+other. The additional working notes [24] motivate a conditional 44-label alphabet: eight fixed-
+weight labels, eighteen onset labels and eighteen extinction labels, including address and parity.
+It has 946 unordered comparisons of distinct labels. Only 400 pairs have even one ordering with
+compatible incoming and outgoing Hamming weights. Full bit, frame and transport rules may
+reduce this set further. These counts organize possible comparisons; an admissible event graph
+and its update kernel remain separate obligations.
+The onset/extinction block illustrates why numerical matches need typed provenance. Both
+its same-address subset and its reverse-weight-step subset have 108 pairs, yet their intersection
+contains only 36. They are different subsets. Neither their count ratio nor an assigned address
+cost determines a winding increment. Appendix D.12 derives the counts and shows that a
+winding or cost is recoverable from a receipt precisely when it is constant on each receipt fiber.
+
+2.4 A reference kernel exposes what counting cannot select
+Appendix D.13 supplies a declared fine-history model for that alphabet: a permutation of the
+three pair addresses followed by no flip or one addressed flip. Its eight Boolean vertices admit
+192 action-distinct edges. Separating the identity/no-flip null gives 44 active receipt labels plus
+one null symbol. This all-open graph realizes every weight-compatible active receipt word, but
+its admission rule is supplied rather than derived from the continuous carrier.
+A complete normalized kernel can be written on this graph. Uniform primitive controls give
+stationary weight populations (1, 3, 3, 1)/8. Other kernels with the same permutation symmetry
+and positive action support realize every positive stationary weight distribution. Thus a valid
+event alphabet and its symmetry do not determine formation preferences. The kernel’s source
+and physical clock remain additional obligations; this is a prepared classical model, not the skew
+flow of §4 [25].
+
+2.5 When does continuous change count as an event?
+A changing stock does not name its own event. A response rule must specify which change
+matters and what persists after it. Appendix D.15 tests one explicit candidate: each opposite-
+edge stock drives a memory bit with distinct on and off thresholds. Once those thresholds
+
+                                                7
+and an initial memory are supplied, the carrier trajectory determines a unique sequence of
+simultaneous update batches. The gap between thresholds gives finite activity and a bound that
+survives specified observation error.
+The construction also reveals a constraint on the narrative. A symmetric vertex preparation
+can drive all three pair addresses across a threshold together. Choosing exactly one address
+then requires an additional reference, asymmetric state or stochastic mechanism; the coherent
+trajectory alone does not distinguish one. The natural covariant batch is outside the reference
+graph’s one-flip primitive alphabet, although its endpoint belongs to the composition group. This
+candidate connects a carrier signal to explicit event semantics without deriving that semantics,
+a native geometry update or a free physical measurement [27].
+Reading an event requires another contract. Finite-rate threshold polling can miss a guard touch
+even when the ideal response has a positive dwell time. Appendix D.16 supplies conservative
+sampled guards and an explicit excursion/persistence condition under which every address-wise
+event is confirmed within a bounded delay. Cross-address order needs additional timing sepa-
+ration or uncertainty receipts: one simultaneous carrier batch can split across several detection
+ticks. The distinction matters before a recorded order is used to compute a history-dependent
+quantity [29].
+
+
+3. Why tetrahedral structure enters
+3.1 Relationships before metric
+A state list does not determine which parts interact. A simplicial complex makes those rela-
+tionships explicit through containment and shared boundaries. A filled tetrahedron includes
+vertices, edges, faces and a cell. Its chain dimensions are
+
+
+                           𝑓(Δ3 ) = (4, 6, 4, 1),       dim 𝒞(Δ3 ) = 15.
+
+It is the smallest three-dimensional simplex. This supplies a compact architecture with a closed
+two-dimensional boundary and several incidence levels. It provides a tractable setting for ex-
+change within a cell and coupling between cells.
+This explains why it is useful to investigate tetrahedra. It does not prove uniqueness among
+candidate architectures or derive the dimension of physical space. A topological cell dimension,
+a chain-register dimension and an apparatus Hilbert-space dimension are distinct objects.
+
+3.2 Chain conventions
+Let 𝐾 be a finite oriented tetrahedral simplicial complex, downward closed under faces. Each
+nonempty simplex occurs once. Increasing vertex order fixes the basis orientation. Set
+
+                                                   3
+                                     𝒞(𝐾) = ⨁ 𝐶𝑘 (𝐾; ℝ).
+                                               𝑘=0
+
+
+For an oriented simplex,
+
+                                              𝑘
+                              𝜕𝑘 [𝑣0 … 𝑣𝑘 ] = ∑(−1)𝑗 [𝑣0 … 𝑣𝑗̂ … 𝑣𝑘 ].
+                                             𝑗=0
+
+
+
+
+                                                    8
+Write 𝐵𝑘 for its matrix. Every codimension-two face appears twice with opposite signs, giving
+𝐵𝑘−1 𝐵𝑘 = 0. The simplex basis is orthonormal in the present model. This is a declared
+Euclidean inner product on coordinates, not a derived physical spacetime metric.
+The filled tetrahedron, its boundary sphere and its edge graph are different carriers. Replac-
+ing one by another changes the chain spaces, homology and operators. Their shared visual
+vocabulary cannot make their equations interchangeable.
+
+
+4. Interaction: what the architecture actually does
+4.1 The declared coherent flow
+On the direct-sum chain space define [1, §4]
+
+                             0           −𝐵1  0   0
+                           ⎛
+                           ⎜𝐵1𝑇           0  −𝐵2  0 ⎞⎟                 𝑑𝑐
+                      𝒜𝐾 = ⎜
+                           ⎜                         ⎟,                   = 𝒜𝐾 𝑐.
+                           ⎜ 0           𝐵2𝑇
+                                              0  −𝐵3 ⎟
+                                                     ⎟                 𝑑𝑠
+                                ⎝ 0       0  𝐵3𝑇  0 ⎠
+
+The parameter 𝑠 has no laboratory unit assigned. The operator is skew, so
+
+                                 𝑑 𝑇
+                                    (𝑐 𝑐) = 0,       𝑒𝑠𝒜𝐾 ∈ 𝑂(𝒞(𝐾)).
+                                 𝑑𝑠
+
+More strongly, every pair of solutions preserves its Euclidean separation:
+
+
+                                      ‖𝑐(𝑠) − 𝑐(𝑠)‖
+                                               ̃    = ‖𝑐(0) − 𝑐(0)‖.
+                                                               ̃
+
+This tells us what the model protects: full-state norm and distance. It does not yet tell us what
+a particular readout retains or how disturbances affect the model.
+The chain identity also gives
+
+
+                         −𝒜2𝐾 = 𝐿𝐾 ,           (𝐿𝐾 )𝑘 = 𝐵𝑘𝑇 𝐵𝑘 + 𝐵𝑘+1 𝐵𝑘+1
+                                                                       𝑇
+                                                                           ,
+
+with missing endpoint terms zero. Thus the flow’s frequencies follow from the declared combina-
+torial Laplacian. These are conventional incidence/adjoint constructions [11,12]; the theoretical
+work lies in their specified carriers and consequences, not in presenting skew norm conservation
+as a new principle.
+
+4.2 A local account of exchange
+For adjacent simplices 𝜎 ⊂ 𝜏 , define
+
+
+                                            𝐽𝜎𝜏 = 2𝐵𝜎𝜏 𝑐𝜎 𝑐𝜏 .
+
+The incidence contributes −𝐽𝜎𝜏 to the lower coordinate’s stock derivative and +𝐽𝜎𝜏 to the upper
+coordinate’s. For any coordinate set 𝑅,
+
+                                      𝑑
+                                         ∑ 𝑐2 = 𝐽in (𝑅) − 𝐽out (𝑅).
+                                      𝑑𝑠 𝜎∈𝑅 𝜎
+
+
+                                                    9
+Internal contributions cancel. A change in the selected stock is therefore accounted for by
+crossing incidences. This makes “exchange” a defined balance statement. Identifying this bilinear
+quantity with an electrical current or physical energy flux needs an independent observation map.
+
+4.3 Single-cell recurrence
+For the filled tetrahedron, let 𝑃0 project onto the uniform vertex mode and vanish on higher
+degrees. Direct boundary multiplication gives
+
+
+                         𝒜2 = −4(𝐼 − 𝑃0 ),    det(𝜆𝐼 − 𝒜) = 𝜆(𝜆2 + 4)7 ,
+
+
+                            𝑒𝑠𝒜 = 𝑃0 + cos(2𝑠)(𝐼 − 𝑃0 ) + 12 sin(2𝑠)𝒜.
+
+The single-cell operator has period 𝜋. This is a property of the chosen flow, not the identification
+of a universal tick of nature.
+
+
+5. Symmetry: organize interactions without inventing coeﬀi-
+cients
+We use the full vertex-permutation group 𝑆4 , including odd permutations, with orientation signs
+on simplex chains. The standard representation 𝑇2 is the sum-zero subspace of the four-vertex
+permutation representation; 𝐴2 is the sign representation and 𝑇1 = 𝑇2 ⊗ 𝐴2 . These definitions
+remove label ambiguity. Finite-group reduction uses standard character theory [17]. This is the
+signed chain action, distinct from the unsigned permutation action on six edge labels.
+The natural signed 𝑆4 action decomposes the chain carrier as [3, §2]
+
+                                  𝐶0 = 𝐴1 ⊕ 𝑇2 , 𝐶1 = 𝑇2 ⊕ 𝑇1 ,
+                                  𝐶2 = 𝑇1 ⊕ 𝐴2 , 𝐶3 = 𝐴2 .
+
+Consequently,
+
+
+                                   𝒞 = 𝐴1 ⊕ 2𝐴2 ⊕ 2𝑇1 ⊕ 2𝑇2 .
+
+Equivariance permits adjacent exchange only between common irreducible types: 𝑇2 between
+vertices and edges, 𝑇1 between edges and faces, and 𝐴2 between faces and cell. The harmonic
+𝐴1 mode is isolated.
+The real commutant has dimension 1 + 4 + 4 + 4 = 13. Its skew-adjoint part has dimension three.
+In orthonormal multiplicity bases an equivariant skew family consists of three blocks
+
+                               0 −𝜔𝑟
+                             (       ) ⊗ 𝐼 𝑑𝑟 ,       (𝑑𝑟 ) = (1, 3, 3),
+                              𝜔𝑟  0
+
+plus zero on 𝐴1 . This restates the source symmetry result: three scalar channels are available.
+The canonical unit-weight incidence generator selects their magnitudes to be 2. Symmetry and
+norm conservation alone do not force that selection.
+
+
+
+
+                                                10
+5.1 Symbolic strengths and invariant exchange sectors
+Let 𝐺𝑘 contain only the degree-𝑘 − 1/𝑘 exchange blocks of §4.1. On the filled tetrahedron,
+
+
+                          𝐴(𝑎, 𝑏, 𝑐) = 𝑎𝐺1 + 𝑏𝐺2 + 𝑐𝐺3 ,          𝑎, 𝑏, 𝑐 ∈ ℝ,
+
+
+                    det(𝑧𝐼 − 𝐴(𝑎, 𝑏, 𝑐)) = 𝑧(𝑧 2 + 4𝑎2 )3 (𝑧2 + 4𝑏2 )3 (𝑧 2 + 4𝑐2 ).
+
+The mutually orthogonal invariant sector projectors are Π𝑘 = −𝐺2𝑘 /4, of ranks 6, 6 and 2.
+Together with the harmonic rank-one projector they sum to identity. For nonzero weights the
+active frequencies are 2|𝑎|, 2|𝑏|, 2|𝑐|, with positive-frequency multiplicities 3, 3 and 1; a zero
+weight makes that entire sector stationary. Coeﬀicient signs select the sense of rotation in an
+oriented channel, while the spectrum alone retains only their magnitudes. Equal frequency does
+not mix inequivalent irreducible channels.
+The projectors follow from the incidence matrices and 𝐵𝑘−1 𝐵𝑘 = 0. They organize exchange
+within the declared carrier; the free strengths are constitutive choices, not derived constants. The
+canonical unit-weight case is 𝑎 = 𝑏 = 𝑐 = 1. This weighted boundary construction is standard
+in kind [19]; the exact convention and calculation are supplied here for review. Appendix D.7
+proves the sector and character statements.
+The dimensions above require full 𝑆4 . Restricting to proper tetrahedral rotations 𝐴4 identifies
+the two three-dimensional types and trivializes the sign type. The full carrier becomes 31 ⊕ 43,
+so its real commutant dimension is 25 and its skew dimension is 9. One cannot replace 𝑆4 by 𝐴4
+while retaining the 13/3 counts. The coeﬀicient field is also part of the model. Auxiliary finite-
+field modules require a declared action and an observable bridge before they can describe the
+real carrier. For example, the additional notes correctly exclude a surjection from the order-26
+group 𝐷13 onto 𝑆3 ; an extension by the order-four Klein group has order 104 and still cannot
+supply that quotient. Valid arithmetic on a chosen group or field does not select it as the native
+frame symmetry [24].
+
+5.2 Quadratic context and its limits
+The quadratic carrier also matters. For the standard three-dimensional representation,
+
+                               2
+                           Sym0 (𝑇2 ) = 𝐸 ⊕ 𝑇2 ,        Hom𝑆4 (𝐸, 𝑇2 ) = 0.
+
+The two sectors share a quadratic parent but admit no nonzero equivariant linear identification.
+A context permitting 𝑅 ⊗ 𝐸 → 𝑇2 needs 𝑅 = 𝑇1 or 𝑇2 among irreducible contexts; its minimum
+dimension is three [3, §10]. Each permitted irreducible context has a one-dimensional intertwiner
+space. A three-dimensional carrier of type 𝐴1 ⊕𝐸 fails this criterion despite having the minimum
+numerical dimension. The representation type, not dimension alone, makes the channel available.
+The source constructs a compatible tensor basis, while its scalar strength remains a separate
+choice.
+Symmetry therefore answers which interactions are possible and which are excluded. A constitu-
+tive rule must answer how strongly the permitted interactions occur. A finite symmetry group
+is not, by itself, a derived physical gauge group.
+
+
+
+
+                                                   11
+6. Shapes change function; topology changes require another rule
+6.1 Glued spectra
+Use the downward-closed complexes
+
+
+          𝐾𝐴 = ⟨0123, 0124⟩,     𝐾𝐵 = ⟨0123, 0124, 0134⟩,     𝐾𝐶 = ⟨0134, 0234, 1234⟩.
+
+Their chain dimensions are 23, 27 and 27. Exact incidence certificates give [1, §6]
+
+
+                                 𝜒𝐴 (𝜆) = 𝜆(𝜆2 + 3)4 (𝜆2 + 5)7 ,
+
+
+                            𝜒𝐵 (𝜆) = 𝜒𝐶 (𝜆) = 𝜆(𝜆2 + 2)2 (𝜆2 + 5)11 .
+
+The arrangement changes the available frequencies. Since √5/3 and √5/2 are irrational, none
+of these complete flows has a positive full-operator period. Selected single-frequency states
+remain periodic. More generally, every finite skew flow has uniformly close operator returns;
+Appendix D.10.1 gives a quantitative bound. Lack of a common exact period is not dissipation
+or irreversible history production.
+
+6.2 Shared interfaces and ownership
+In a unique-simplex complex a shared face is one coordinate, not one copy per cell. For a pure
+tetrahedral complex, attributing 1/𝑛3 (𝜎) of each stock to each containing cell gives
+
+                                        𝑐𝜎2
+                              𝑆𝜏eq = ∑       ,        ∑ 𝑆𝜏eq = ‖𝑐‖2 .
+                                       𝑛 (𝜎)
+                                    𝜎⊆𝜏 3              𝜏
+
+
+The equality is accounting, not a physical constitutive law. Independent copies of cells have
+separate coordinates and require an explicit identification map before this formula describes
+their assembly.
+
+6.3 Equal exterior boundary is insuﬀicient for dynamical equivalence
+The oriented 2-to-3 move has equal exterior boundary because its difference is the boundary
+of [01234]. Its two sides nevertheless have different carrier dimensions and spectra. A norm-
+preserving coordinate inclusion need not intertwine their continuous flows.
+The source also gives a concise incompatibility witness. Boundary fixation and chain compati-
+bility force a top chain of squared norm 2 to map to a filling of squared norm 3. An isometry
+cannot implement that forced image [1, §6.5]. Thus boundary preservation, chain compatibility
+and Euclidean isometry cannot all be imposed under that linear contract.
+A related inclusion has a useful positive result. The coordinate inclusion of the subcomplex 𝐾𝐴
+into 𝐾𝐵 preserves
+               √ precisely the 15-dimensional full-trajectory sector consisting of the harmonic
+mode and the 5 sector. The other eight dimensions are vulnerable even though the instanta-
+neous generator defect has rank four. This is a stipulated subcomplex insertion, distinct from
+the boundary-fixing replacement above. Appendix D.10.2 gives the projectors, exact ranks and
+spectral-projection weights [23].
+Subdivision also shows why the metric class belongs in a no-go statement. For the boundary-
+fixing 1-to-4 stellar map, unit-metric isometry fails and no positive diagonal simplex metric
+
+
+                                                 12
+gives adjoint intertwining. A general non-diagonal positive metric can do so: Appendix D.10.3
+constructs one exactly. Its weighted generator is an added model, not the native unit-metric
+flow. Thus an unrestricted positive-metric obstruction would be false.
+Geometry creation needs its own state-transfer law. Equality of boundary chains does not select
+it.
+
+6.4 A transfer contract that retains the interface residual
+The following finite contract and checks are developed in the first closure package [9].
+Two independent tetrahedron carriers have 30 coordinates. The unique-simplex face-glued car-
+rier has 23; the shared face contributes seven duplicate coordinates (three vertices, three edges,
+one face). For every consistently oriented pair of shared coordinates x,y, define
+
+                                          √                      √
+                              𝑧 = (𝑥 + 𝑦)/ 2,        𝑟 = (𝑥 − 𝑦)/ 2.
+
+Carry unshared coordinates unchanged. This defines 𝑄 ∶ ℝ30 → ℝ23 and 𝑅 ∶ ℝ30 → ℝ7 with
+orthogonal completion 𝑈 = (𝑄; 𝑅), so
+
+
+                                     ‖𝑄𝑣‖2 + ‖𝑅𝑣‖2 = ‖𝑣‖2 .
+
+The √
+    transfer is invertible
+                         √ when residuals are retained. Agreement 𝑥 = 𝑦 sets 𝑟 = 0 but gives
+𝑧 = 2𝑥. A decoder 𝑧/ 2 restores the shared amplitude convention. Simply calling z the old
+amplitude silently changes calibration.
+This is a conditional linear interface/state-transfer contract. It does not claim chain-map com-
+patibility or native move admission. For the direct-sum old generator, 𝐺 = 𝑈 (𝒜Δ3 ⊕ 𝒜Δ3 )𝑈 𝑇 ,
+exact arithmetic gives visible/residual coupling rank 7. The visible block differs from the na-
+tive glued generator with rank 14; 𝑄𝒜old − 𝒜glued 𝑄 has rank 21. Keeping residuals closes the
+transformed old dynamics; discarding them does not create the native glued flow.
+Choosing post-event generator 𝒜glued ⊕ 𝒜residual is an additional intervention, even though it
+preserves total norm when both blocks are skew. Its source, locality and physical cost are
+unclosed. This exposes the event-local generator obligation rather than hiding it inside geometric
+identification.
+                                                                   √
+The existing subdivision results give a second contract: 𝑇 = 𝑆/ 24 is a bounded chain map with
+residual (𝐼 −𝑇 𝑇 𝑇 )1/2 , but attenuates vertex readout and fails unweighted flow intertwining. The
+stricter requirement of contraction, unit singleton vertex coeﬀicient and unweighted intertwining
+is already excluded by the exact 7-versus-3 incidence norm witness. These are different contracts;
+neither selects native geometry change.
+
+6.5 A family law for gluing and dynamic memory
+The interface problem extends beyond two cells. Keep one complete local register per tetrahedron
+before identifying shared simplex labels. For 𝑡 cells the copied state has 𝑛 = 15𝑡 coordinates.
+Let the union have 𝑚 unique simplex coordinates. For each simplex 𝜎 appearing in 𝜈𝜎 copies,
+define
+
+                                     1
+                            (𝑄𝑥)𝜎 = √     ∑ 𝑥 ,           𝑄𝑄𝑇 = 𝐼𝑚 ,
+                                      𝜈𝜎 𝑗∶𝜎⊂𝜏 𝑗,𝜎
+                                                𝑗
+
+
+
+
+                                                13
+with orientation signs aligned first. An orthogonal completion adds 𝑛 − 𝑚 residual coordinates,
+giving exact norm balance. These coordinates retain copied distinctions discarded by the nor-
+malized view; they are not physical memory bits or an energy estimate.
+Predictive memory has a sharper definition. Let 𝐴 be the copied generator and
+
+
+                                  𝑑 = rank(𝑄; 𝑄𝐴; … ; 𝑄𝐴𝑛−1 ).
+
+Under exact autonomous linear evolution, linear initial encoding, arbitrary copied initial states
+and retention of 𝑄𝑥 as the visible coordinates, the minimum additional state dimension is 𝑑 − 𝑚.
+The observability criterion is standard [20]; Appendix D.8 gives the precise skew realization and
+lower bound.
+Theorem 6.5 (stacked-family memory). Start from one tetrahedron and repeatedly attach
+a tetrahedron along one boundary face using a fresh vertex. Give each copied cell its own
+constant, nonzero real weights for all three adjacent-degree exchange channels. Then
+
+
+                   𝑚 = 8𝑡 + 7,       rank(𝑄; 𝑄𝐴) = 15𝑡,       ℎmin = 7(𝑡 − 1).
+
+Proof idea. The newest cell has eight private coordinates containing its fresh vertex. Zero
+visible state and zero visible derivative force these coordinates and their derivatives to vanish.
+The seven attachment-face coordinates feed them through an injective block when all three
+weights are nonzero. The newest copy is therefore zero. Repeating backwards eliminates every
+copy. Appendix D.8 supplies the full argument and its limits.
+For both five-cell star and chain, this yields 75 copied coordinates, 47 visible coordinates and 28
+necessary hidden state coordinates. This is inherited independent-copy dynamics, distinct from
+the native 47-dimensional incidence law in §7.4. Snapshot/derivative injectivity explains why
+the apparently redundant copied information can matter to future observations. It supplies no
+free derivative sensor or uniform noise robustness.
+The five-cell boundary of a 4-simplex is a different gluing. Under canonical copied dynamics it
+has 𝑛 = 75, 𝑚 = 30, 𝑑 = 55: 45 coordinates retain all copied information, but only 25 extra
+coordinates are needed for its visible dynamics. Twenty directions remain unobservable. Thus
+the stacked theorem’s attachment condition is substantive.
+Eliminating hidden coordinates instead of retaining them gives a history-dependent visible equa-
+tion with an initial-residual term. This linear projection mechanism is standard in kind [21].
+Neither reduced dynamics nor a memory kernel establishes irreversible record formation. The
+mathematical reduction identifies the information that must be retained, encoded in a history
+or restricted by preparation.
+
+6.6 Exact access and reliable readout are different requirements
+The rank theorem establishes uniqueness in exact arithmetic. Noise sensitivity depends on the
+declared observation metric. With scale 𝜏 > 0, write 𝑀𝜏 = (𝑄; 𝜏 𝑄𝐴) and 𝐻𝜏 = 𝑀𝜏𝑇 𝑀𝜏 . If
+𝛾𝜏 = √𝜆min (𝐻𝜏 ) > 0, least-squares reconstruction gives the sharp combined-error bound
+
+
+                                        ‖𝑥̂ − 𝑥‖ ≤ ‖𝑒‖/𝛾𝜏 .
+                                                                   √
+For√canonical
+      √    √  copies and 𝜏 = 1/2, the two-cell gain is exactly 1 +   3, the five-cell star gain
+is 2( 5 + 3), and the five-cell chain gain is approximately 6.43292, with an exact rational
+
+
+
+                                                14
+eigenvalue certificate. These compare the same declared copied dynamics and coordinate-noise
+convention, not measured physical expenditure.
+If a derivative is acquired from endpoint samples separated by 2ℎ, endpoint errors at most 𝜖
+give derivative error at most 𝜖/ℎ + ‖𝐴‖3 𝑅ℎ2 /6 for state norm at most 𝑅. Shrinking ℎ removes
+Taylor bias while amplifying noise. For canonical copies the exact sampled matrix instead uses
+sin(2ℎ)/(2ℎ) 𝑄𝐴, removing approximation bias. Sampling at its zeros destroys this two-block
+readout’s active information.
+Known correlated Gaussian noise is handled by 𝐼 = 𝑀 𝑇 Σ−1 𝑀 , not by treating repeated obser-
+vations as independent. Its inverse is the exact reconstruction covariance under the stated linear
+Gaussian model. Rescaling the observation and covariance consistently leaves 𝐼 unchanged. Ex-
+act recovery can therefore coexist with poor operational performance, and changing a numerical
+normalization cannot manufacture information.
+Appendix D.9 supplies complete proofs, uncertainty and confidence bounds, exact spectral certifi-
+cates, the sampled acquisition contract and a fixed-norm counterexample to uniform robustness.
+Standard least-squares background is credited [22]. None supplies a physical noise law or the
+energy cost of sensors, references and storage.
+
+
+7. Persistence and formation
+7.1 State preservation does not imply attraction
+Under the fixed skew flow, different initial states keep their separation. In particular, a state
+cannot converge to a different fixed point: its distance from that point remains constant. Dis-
+tance to an invariant linear subspace is also preserved, because orthogonal evolution preserves
+both the subspace and its orthogonal complement.
+This permits persistent modes and recurrence. It excludes attracting convergence to those tar-
+gets in that particular full-state model. A projected observable can show apparent concentration
+without establishing full-state attraction. Open or nonlinear dynamics requires a separate anal-
+ysis.
+
+7.2 An explicit prepared growth construction
+The source contains a useful assembly rule [3, §11.2]: begin with one tetrahedron and attach
+each new cell to a boundary face using a fresh vertex. Each step adds one vertex, three edges,
+three faces and one cell. It removes one boundary face and creates three. Therefore after 𝑚
+cells,
+
+
+                      𝑓 = (𝑚 + 3, 3𝑚 + 3, 3𝑚 + 1, 𝑚),         𝑓2,𝜕 = 2𝑚 + 2.
+
+Its dual graph is a tree. Chain and star arrangements both satisfy the rule, so it supplies
+assembly grammar without a unique shape selector.
+The earlier five-cell configuration—a core tetrahedron with one cell attached to each of its four
+faces—is a member of this class when all four attachments use distinct fresh vertices. It has
+
+
+                          𝑓 = (8, 18, 16, 5),   dim 𝒞 = 47,   𝑓2,𝜕 = 12.
+
+These counts describe a prepared abstract complex. They do not select a physical embedding,
+a frequency spectrum, a formation probability or a stability advantage.
+
+
+                                                 15
+7.3 What a preference claim must specify
+A structure may form rarely and survive well, or form frequently and fail quickly. Its occur-
+rence depends on both processes. Comparing candidates requires a common initial ensemble,
+configuration-changing rules, state transfers, disturbances and resources.
+A persistence criterion should name the retained property, tolerance and duration. Possible prop-
+erties include bounded leakage, retained distinguishability or valid receipt consistency. These
+are different criteria. Coherent agreement explains selection only when a stated interaction
+makes that agreement alter formation or survival.
+The source’s four-coordinate averaging law provides a warning [3, §12.1]:
+
+
+                                   𝑇 (𝑠) = 𝑃0 + 𝑒−4𝑠/3 (𝐼 − 𝑃0 ).
+
+It preserves the uniform component but suppresses contrast. Retaining total stock through av-
+eraging does not establish a localized bound structure. Formation, localization and information
+retention must remain separately tested.
+
+7.4 What the five-cell calculation adds
+The exact incidence certificates and comparison protocol accompany this revision [9].
+The core-star has 𝑓 = (8, 18, 16, 5), chain dimension 47 and 12 exposed faces. Exact signed
+incidence construction, boundary cancellation and characteristic-polynomial factorization give
+
+                    𝜒⋆ (𝑥) = 𝑥(𝑥2 + 2)(𝑥2 + 3)2 (𝑥2 + 4)3 (𝑥2 + 5)3 (𝑥2 + 6)2
+                              × (𝑥4 + 9𝑥2 + 16)3 (𝑥4 + 10𝑥2 + 20)3 .
+
+The positive squared frequencies and each sign’s multiplicities are
+
+                    Squared frequency      Multiplicity of each ±i frequency
+                    2                                                       1
+                    3                                                       2
+                    4                                                       3
+                    5                                                       3
+                    6 √      √
+                                                                            2
+                     9− 17 9+ 17
+                       2 √,  2 √                                       3 each
+                    5−    5, 5 +    5                                  3 each
+
+                                                  √
+There is one zero mode. The exact norm is √5 + 5. The squared-frequency multiplicities sum
+to 23, accounting for 46 active dimensions plus the zero mode.
+With the stated cell ordering, the top-cell Gram matrix is
+
+                                       4       1 −1 1 −1
+                                     ⎛
+                                     ⎜ 1       4 0 0 0⎞  ⎟
+                                     ⎜
+                                     ⎜                   ⎟
+                                𝐻3 = ⎜−1       0 4 0 0⎟  ⎟ .
+                                     ⎜
+                                     ⎜1                  ⎟
+                                               0 0 4 0⎟
+                                     ⎝−1       0 0 0 4⎠
+
+
+
+
+                                                16
+Let 𝑏 = (1, −1, 1, −1) in the four leaf coordinates. Every leaf vector orthogonal to b has eigen-
+value 4; this is a three-dimensional cell sector. On the core and normalized collective leaf 𝑏/2,
+                 4 2
+the matrix is (      ), giving eigenvalues 2 and 6. Thus cell motion splits into three frequency-2
+                 2 4
+                                                  √ √
+modes and two collective modes of frequencies 2, 6. This is an invariant top-cell oscillator
+decomposition, not a complete claim that all full-chain modes live on cells.
+                                                  √             √
+The chain’s top-cell squared frequencies are 4 − 3, 3, 4, 5, 4 + 3. Its full characteristic polyno-
+mial is recorded exactly in results.json; it differs from the core-star despite identical f-vectors.
+The full norm is approximately 2.69936488629, compared with approximately 2.68999404786 for
+the star before common scaling.
+                                                                                       √        √
+No complete exact period exists for the core-star because it includes frequencies 2 and 3
+with irrational ratio. The frequency-2 cell sector can be periodic. Lack of a global period is not
+dissipation, stability or formation preference.
+The numerical C2 comparison is illustrative only. A distance grid can be supplemented by √      the
+analytic Lipschitz estimate: since the
+                                   √ generator ceiling is 1 and the initial difference norm is 2,
+the cell distance changes at most 2 per unit time. A nearest-grid cover gives a whole-interval
+error envelope from the sampled minimum. Floating evaluations have not been interval-certified,
+so the recorded envelope is not an exact numerical certificate. It cannot establish universal shape
+preference.
+
+
+8. A distinction can survive while a readout loses access
+Consider 𝐾𝐴 , with two cell amplitudes 𝑞 = (𝑞1 , 𝑞2 )𝑇 . Boundary cancellation gives
+
+                                                                4 1
+                                     𝑞 ″ = −𝐵3𝑇 𝐵3 𝑞 = − (          ) 𝑞.
+                                                                1 4
+
+Prepare either 𝐿 with 𝑞(0) = (1, 0)√or 𝑅 with 𝑞(0) = (0,
+                                                       √ 1); set all other coordinates initially to
+zero, so 𝑞 ′ (0) = 0. Write 𝑐5 = cos( 5𝑠) and 𝑐3 = cos( 3𝑠). Then
+
+
+                   𝑞𝐿 (𝑠) = 12 (𝑐5 + 𝑐3 , 𝑐5 − 𝑐3 ),        𝑞𝑅 (𝑠) = 12 (𝑐5 − 𝑐3 , 𝑐5 + 𝑐3 ).
+                              √                   √
+The cell-only separation is 2|𝑐3 |. At 𝑠∗ = 𝜋/(2 3) the snapshots coincide. An observer
+receiving only those exact cell coordinates cannot recover the initial alternative; with equal
+priors its best error is 1/2.
+                                       √
+The complete state separation remains 2, and
+
+                                                           √
+                                     ′          ′
+                                    𝑞𝐿 (𝑠∗ ) − 𝑞𝑅 (𝑠∗ ) = − 3(1, −1).
+
+Retaining the derivatives restores this distinction. The apparent loss belongs to the observation
+restriction, not to closed-state erasure.
+Away from the zeros, exact noiseless cell coordinates separate these preparations perfectly.
+Shrinking separation becomes a gradual information-loss curve only after noise or finite reso-
+lution is specified. This example extends the source carrier calculation as an explicitly derived
+illustration; it does not introduce a new physical measurement claim.
+More generally, a linear visible law 𝑃 𝐴 = 𝐹 𝑃 exists exactly when ker 𝑃 is invariant under 𝐴 [2,
+Theorem II.M1]. If hidden states with equal visible outputs have different visible derivatives, no
+
+                                                       17
+autonomous visible law can describe both. Memory of the omitted coordinates or a larger state
+description is needed.
+
+8.1 Readout error under a declared noise law
+For two Gaussian output laws with known means mu_L, mu_R, common positive-definite co-
+variance Σ and equal priors, let 𝛿 = 𝜇𝐿 − 𝜇𝑅 . The likelihood-ratio statistic is linear, and its
+exact Bayes error is
+
+                                                √
+                                     𝑃𝑒 = Φ(− 21 𝛿 𝑇 Σ−1 𝛿) .
+
+Proof: center at (𝜇𝐿 + 𝜇𝑅 )/2 and project with Σ−1 𝛿. The score has means ±𝛿 𝑇 Σ−1 𝛿/2 and
+variance 𝛿 𝑇 Σ−1 𝛿; threshold zero gives the expression. At delta=0 the outputs coincide and error
+is 1/2. Singular covariance requires a different support-sensitive statement.
+For C1 cell-only observation,
+
+                                                                  √
+                              √                             | cos( 3𝑠)|
+                     𝛿𝑞 = cos( 3𝑠)(1, −1),      𝑃𝑒 (𝑠) = Φ(− √          ).
+                                                                  2𝜎
+                                              √
+For the augmented observation, 𝛿𝑞′/√3 = − sin( 3𝑠)(1, −1). Consequently its separation squared
+is exactly 2 for every s, and
+
+                                                   √
+                                     𝑃𝑒aug = Φ(−1/( 2𝜎)).
+
+At sigma=1/4 this is approximately 0.00233886749, while the cell-only error is 1/2 at its blind
+instants. The augmented receiver observes four channels rather than two, and this gain cannot
+be called free. No physical derivative-acquisition or retained-memory cost is closed here.
+                                                                        ̂ = ln 2−ℎ(𝑃𝑒 ). This
+The symmetric optimal hard decision defines a binary channel with 𝐼(𝑍 ∶ 𝑍)
+is decision information, not the full continuous-output mutual information, irreversible record
+entropy or information already stored in a memory. Data processing bounds it above by the full
+analog information.
+For correlated multiple observations, stack the entire mean difference and use the complete Σ.
+                                                 1 1/2
+An exact stipulated witness 𝛿 = (1, 1), Σ = (           ) gives squared Mahalanobis distance
+                                               1/2 1
+4/3 rather than the incorrect independent value 2. Repeated observations with shared noise are
+not independent confirmations.
+For m declared Gaussian residual coordinates with known marginal deviations sigma_i, Bon-
+ferroni gives simultaneous residual coverage at least 1 − 𝛼 using thresholds 𝜎𝑖 Φ−1 (1 − 𝛼/(2𝑚)),
+without independence. This is coverage under the declared Gaussian law, not coverage inferred
+from covariance alone. Unknown covariance estimation needs its own uncertainty contract. Un-
+certain measurement time can mix the output laws and invalidate the known-time formula; no
+jitter law is assumed here.
+
+
+9. Reconstruction: what must a receipt contain?
+9.1 Why stocks and currents may be insuﬀicient
+Squared coeﬀicients lose signs. On the bipartite incidence graph, adjacent products also allow
+opposite rescaling of even and odd degrees. If their initial norm contributions are 𝑎, 𝑏 > 0,
+
+                                               18
+rescaling by 𝜆 and 𝜆−1 preserves currents and changes total norm to
+
+
+                                           𝑎𝜆2 + 𝑏𝜆−2 .
+
+When 𝑎 ≠ 𝑏, the same original norm is obtained at both 𝜆2 = 1 and 𝜆2 = 𝑏/𝑎. The states (2, 1)
+and (1, 2) on one incident vertex-edge pair provide a rational witness [2, §2]. Thus all adjacent
+products plus total norm do not generally recover the signed state.
+
+9.2 A suﬀicient real receipt
+Let 𝑆 = ∑ 𝑐𝜎2 > 0 and 𝜌𝜎 = 𝑐𝜎2 /𝑆. On each connected component of nonzero support choose a
+root and spanning tree. Supply the root sign and relative signs 𝜒𝑢𝑣 = sgn(𝑐𝑢 𝑐𝑣 ) on tree edges.
+Propagate signs by 𝑠𝑣 = 𝑠𝑢 𝜒𝑢𝑣 . Then
+
+                                              √         √
+                                      𝑐𝜎̂ = 𝑠𝜎 𝜌𝜎 = 𝑐𝜎 / 𝑆.
+
+This reconstructs the positive ray, with explicit zeros, independently of forest choice. Root signs
+remain necessary because simultaneous sign reversal of a support component leaves its stocks
+and pair products unchanged. The receipt’s suﬀiciency is deterministic identifiability under the
+supplied data, not an authentication or acquisition theorem.
+
+9.3 Complex phase receipts
+For complex coeﬀicients define [2, §6]
+
+                                                                𝐵𝜎𝜏 𝒥𝜎𝜏
+                              𝒥𝜎𝜏 = 2𝐵𝜎𝜏 𝑐𝜎 𝑐𝜏 ,        𝑢𝜎𝜏 =           .
+                                                                 |𝒥𝜎𝜏 |
+
+On nonzero support, 𝑢𝜎𝜏 = 𝑧𝜎 𝑧𝜏 , where 𝑧𝜎 = 𝑐𝜎 /|𝑐𝜎 |. As in noiseless synchronization [13], supply
+one root phase per component and propagate forward by 𝑧𝜏 √= 𝑧𝜎 𝑢𝜎𝜏 , using the conjugate ratio
+backward. Together with normalized stocks this recovers 𝑐/ 𝑆.
+The oriented cycle products must equal one. Real-part currents alone do not recover these phases:
+conjugation preserves stocks and real parts while generally changing the declared positive ray.
+References are part of the receipt’s required resources.
+
+9.4 Prediction and uncertainty
+On the full-support filled tetrahedron, the incidence graph has 15 nodes and 28 edges. A frozen
+tree uses 14 edges and leaves 14 chords. For log amplitudes, tree observations are endpoint sums.
+Alternating path sums give an exact integer matrix 𝐶 satisfying 𝐻 = 𝐶𝑆 and 𝑧𝐻 = 𝐶𝑧𝑇 [2, §5].
+Prediction covariance follows as Σ𝐻 = 𝐶Σ𝑇 𝐶 𝑇 . The identity does not certify coverage without a
+probability model, and shared measurement noise requires residual cross-covariances. Algebraic
+consistency, statistical uncertainty and physical acquisition are separate claims.
+The explicit split audited in Appendix D.17 sharpens this distinction. The noiseless chord
+residual vanishes for every latent history because H=CS, including histories generated by a wrong
+dynamics model. For independently acquired noisy channels, its covariance instead includes
+the complete training/held-out error blocks. Consistent common-field errors remain invisible,
+and zero residual covariance can conceal a constant bias. The residual is a receipt-consistency
+diagnostic; interpreting it as a prediction test requires separate state or temporal evidence [30].
+
+
+
+                                                   19
+9.5 A readable history functional also needs record capacity
+A history receipt can identify endpoints while hiding an accumulated quantity. Appendix D.13
+gives an explicit graph-cycle diagnostic whose repeated active receipt word has 𝑁 + 1 possible
+total increments despite known initial and final Boolean states. Exact recovery of that total
+needs at least 𝑁 + 1 supplemental symbols, or ⌈log2 (𝑁 + 1)⌉ fixed-length bits. Merging nulls
+into that code increases the requirement to 2𝑁 + 1 symbols. These are conditional worst-case
+bounds for a declared functional and known receipt word and length, not universal physical
+winding laws.
+The same appendix proves a complementary boundary: a scalar additive increment with full pair-
+permutation covariance, frame-composition consistency and flip reversal must be a difference
+of a function of Hamming weight. Every closed history then has zero total. The diagnostic
+deliberately lies outside those assumptions. Nontrivial winding needs a separately justified state
+and transport rule; a finite record apparatus must then acquire the required information and
+account for its resource cost [25].
+
+
+10. From readable state to finite record apparatus
+Reconstruction tells us what information is suﬀicient if supplied. Record formation asks what
+interaction produces and retains it. Paper IV makes this apparatus question explicit in finite
+complex Hilbert spaces [4]. This changes the mathematical description; it is not a derivation of
+quantum theory from real chain amplitudes.
+For a declared quantum encoding and equal-prior alternatives, optimal readout error can be
+expressed through trace distance. Every apparatus claim must name that encoding, its joint
+state and its readout. We use
+
+
+                                      𝐷tr (𝜌, 𝜎) = 12 ‖𝜌 − 𝜎‖1
+
+for state comparisons, and operator norm for generator mismatch. No physical unit follows from
+the convention ℏ = 1.
+The apparatus includes work registers, reference, fuel, production clock, output, capture flag,
+records, renewal donor and retained spectators. A complete comparison includes their correla-
+tions. Good marginals cannot certify a good joint state: equal weights on 110, 101, 011 give each
+bit success probability 2/3 and zero probability of all three succeeding.
+
+10.1 Prepared history propagation
+For a supplied gate word 𝑈1 , … , 𝑈𝑛 , prefix dressing of the clock
+
+                                𝑛−1
+                       𝐻𝐶 = 𝜅 ∑ √(𝑗 + 1)(𝑛 − 𝑗)(|𝑗 + 1⟩⟨𝑗| + |𝑗⟩⟨𝑗 + 1|)
+                                𝑗=0
+
+
+uses the engineered transfer chain of [14]. Explicitly, supply 𝑛 ≥ 1, 𝜅 > 0, work generators
+𝐻𝑊 , 𝐻̄𝑊 , and unitary gates satisfying [𝑈𝑗 , 𝐻̄𝑊 ] = 0. With prefixes 𝑃0 = 𝐼, 𝑃𝑗 = 𝑈𝑗 ⋯ 𝑈1 , let
+
+                                 𝑛
+                          𝒲 = ∑ |𝑗⟩⟨𝑗| ⊗ 𝑃𝑗 ,     𝐻𝑝 = 𝒲(𝐻𝐶 ⊗ 𝐼)𝒲† .
+                                𝑗=0
+
+
+
+
+                                                20
+Actual and comparison generators are 𝐼𝐶 ⊗ 𝐻𝑊 + 𝐻𝑝 and 𝐼𝐶 ⊗ 𝐻̄𝑊 + 𝐻𝑝 , with ‖𝐻𝑊 − 𝐻̄𝑊 ‖ ≤ 𝑑
+on the full admitted domain. Prepare address 0 independently of the work/spectator state. At
+the endpoint the comparator applies 𝑃𝑛 up to a common phase and the retained free evolution
+      ̄
+𝑒−𝑖𝑡𝐻𝑊 . Its clock norm is 𝜅𝑛. This specifies the comparison contract of [4, Theorem IV.4]. Its
+endpoint probability is sin2𝑛 (𝜅𝑡), transfer occurs at 𝑇 = 𝜋/(2𝜅), and the address returns at
+2𝑇 . The prefixes and preparation are supplied; the gate-dependent address edges do not prove
+locality on the work registers.
+If actual and comparison generators differ by at most 𝑑, Duhamel’s identity gives propagator
+difference at most 𝑡𝑑 and full-joint trace distance at most min{1, 𝑡𝑑}. This includes the entire
+interval; a successful endpoint does not erase propagation error.
+
+10.2 Timed protection and static retention differ
+Timed capture supplies a terminal exchange, a fresh flag, an off-switch and a factorized guarded
+background. Under those premises the output is protected after pulse-off, with its stated free
+evolution retained [4, §5].
+For timed capture, output protection follows from the factorization 𝐻bg = 𝐻𝑂 + 𝐻rest , with no
+background interaction on output 𝑂 or record 𝑀 , after the supplied contacts are off. It holds
+for correlated actual inputs, including failures. It preserves whatever output was captured; it
+does not turn an incorrect capture into a correct one [4, Theorems IV.6-IV.7].
+A separate static post-launch construction provides a finite window [4, Theorem IV.10]. Sup-
+ply matched source/output energies, blank flag and records 𝐿, 𝑀 , 𝐸, and terminal production
+projector 𝑃𝑛 . Define the involution
+
+
+                       𝐽∗ = 𝑃𝑛 ⊗ SWAP𝑆𝑂 ⊗ 𝑋𝐿 𝑋𝑀 𝑋𝐸 + (𝐼 − 𝑃𝑛 ) ⊗ 𝐼.
+
+The body free generator 𝐻𝑓 satisfies [𝐽∗ , 𝐻𝑓 ] = 0. A fresh independent clock 𝑄 starts at address
+0, has 𝑁 + 1 addresses (𝑁 ≥ 1) and rate 𝜆 > 0. Dress its first edge with 𝐽∗ and later edges
+with identity: 𝑊0 = 𝐼, 𝑊𝑗 = 𝐽∗ for 𝑗 ≥ 1, 𝒱 = ∑𝑗 |𝑗⟩⟨𝑗| ⊗ 𝑊𝑗 and 𝐻𝑑 = 𝒱(𝐻𝑄 ⊗ 𝐼)𝒱† . Actual
+and comparison generators are 𝐼𝑄 ⊗ (𝐻𝑓 + 𝑉𝑝 ) + 𝐻𝑑 and 𝐼𝑄 ⊗ 𝐻𝑓 + 𝐻𝑑 , with ‖𝑉𝑝 ‖ ≤ ℎ𝑝 . The
+complete target is the evolving clock state tensor the freely evolved body 𝐽∗ 𝜌𝐽∗ , including its
+retained spectator. Distance to this target need not mean successful capture if the incoming
+production state is nonterminal.
+Under these premises, the complete joint bound is
+
+
+                                𝜖(𝑡) ≤ min{1, 𝑡ℎ𝑝 + 2| cos(𝜆𝑡)|𝑁 }.
+
+For 𝜋/(4𝜆) ≤ 𝑡 ≤ 3𝜋/(4𝜆),
+
+
+                              𝜖(𝑡) ≤ min{1, 3𝜋ℎ𝑝 /(4𝜆) + 2 2−𝑁/2 }.
+
+Writing 𝑟 = | cos(𝜆𝑡)|2𝑁 , the comparison reduced-body distance is at most 𝑟. For incoming
+nonterminal probability 𝑝 and fresh records, its NO_CAPTURE probability is 𝑝 + (1 − 𝑝)𝑟.
+The smaller reduced-body tail cannot replace the full joint term when clock correlations remain
+relevant. Appendix D.6 gives a tighter joint bound under explicitly stated fresh-record conditions.
+The comparator transfers exactly halfway through its cycle and undoes the transfer at a full
+cycle. These are pointwise bounds, not continuously monitored survival probabilities.
+
+
+
+                                                21
+10.3 Why permanent capture needs another mechanism
+For finite time-independent Hermitian 𝐻, an invariant subspace is reducing. Its projector com-
+mutes with 𝐻, so population cannot first enter it from its orthogonal complement. Fixed-
+observable expectations are finite sums of exponentials; if exactly constant on an open interval,
+analyticity makes them constant for all time [4, Theorem IV.9].
+This excludes exact permanent first-entry storage under that closed static contract. It permits
+finite-window approximation, supplied switching and open-system mechanisms with their own
+resources. The theorem explains why protection cannot simply be inferred from successful
+coherent transfer.
+
+
+11. Renewal, preparation and complete resource cost
+11.1 Renewal moves correlations
+Supply a donor 𝐷 independent of the old active module 𝐴 and its history 𝑌 , with matched
+carrier and bare energy operators. Then [4, Theorem IV.12]
+
+
+                         SWAP𝐴𝐷 (𝜌𝐴𝑌 ⊗ 𝜎𝐷 )SWAP𝐴𝐷 = 𝜎𝐴 ⊗ 𝜌𝐷𝑌 .
+
+Independence means the exact product input written above, including the whole history; equal
+donor marginals are insuﬀicient. For static renewal the active module includes its capture clock.
+The identity is kinematic; an implemented exchange requires a generator and a comparison
+against running contacts [4, §8.1]. The active module is refreshed; all old correlations are
+exported to donor and history. They are not destroyed. Repetition consumes fresh donor and
+output slots, and failures consume resources too.
+On matching full joint domains, admitted bank error 𝜖𝐹 and operation comparisons 𝜖𝑗 compose
+unconditionally as
+
+
+                                  𝜖total ≤ min{1, 𝜖𝐹 + ∑ 𝜖𝑗 }.
+                                                        𝑗
+
+
+This requires uniform operation bounds on the admitted joint states. Isolated-input results do
+not automatically meet that requirement. The bank error is charged once; diagnostics already
+covered by it are not charged again as independent errors.
+
+11.2 Coherent supply is a resource
+The source constructs a uniform reference packet of length 𝐿 = 2𝑞 from a seed and supplied
+coherent binary fuel [4, Theorem IV.2]. Here Δ > 0, fuel qubit 𝑗 has Hamiltonian Δ2𝑗 |1⟩⟨1|
+and state |+⟩, and the independent reference begins at seed |𝑛0 ⟩ on a suﬀiciently long finite
+ladder. The seed energy 𝑛0 Δ is additional to fuel energy. Matched disjoint exchanges transfer
+the supplied coherence into the reference. Ideal independent fuel has
+
+
+                      ⟨𝐻𝐹 ⟩ = Δ(𝐿 − 1)/2,       Var 𝐻𝐹 = Δ2 (𝐿2 − 1)/12.
+
+The exchanges conserve the declared sum of bare energies while transferring the supplied coher-
+ence. They do not create that coherence from an unspecified reservoir.
+For a complete stationary input processed covariantly under the declared additive free-energy
+generators, the reference remains stationary. With nondegenerate packet energies, its distance
+
+                                               22
+from the pure uniform packet is at least 1 − 1/𝐿 [4, Theorem IV.3]. Nonstationary supply can
+evade that particular obstruction, but must enter the ledger.
+
+11.3 What a complete cost comparison includes
+Cost requires declared energy operators, initial states, interaction and switching conventions,
+clock preparation, write and readout, retention, renewal, and finite exhaustion. Mean energy,
+variance, signed switching work, peak demands, time and consumed blank capacity are different
+quantities.
+A zero signed mean switching work under one convention does not establish a free record. Ther-
+mal erasure bounds require additional reservoir and initial-state premises; finite-reservoir cor-
+rections are treated in [15]. A fresh-donor SWAP by itself supplies no thermal bath model. Nor
+does a matched swap establish an autonomous router. A static machine interval conserves its
+total energy; subsystem bare energies can change against the interaction term.
+These distinctions explain why a theory of records needs the apparatus’s joint state and full re-
+source account. Without them, information-per-cost comparisons can omit the very mechanism
+producing the information.
+
+11.4 What a prepared stationary ratio does and does not explain
+A supplied dissipative channel can have a stable population ratio while retaining coherence
+much longer than a population readout suggests. Appendix D.11 examines a two-state channel
+motivated by the partner working notes [23]. Its stationary
+                                                  √ √ state is diag(4/7, 3/7), but its sharp
+trace-distance contraction per application is (1 + 2)/ 6 ≃ 0.985599, rather than the proposed
+5/7. Population polarization instead relaxes at magnitude 1/6. The whole state must accompany
+a retained-distinguishability claim.
+The ratio 4/3 is reverse-rate divided by forward-rate for the chosen rates 2/3 and 1/2. An
+explicit third-state branch changes it to (4/3)𝛼. This is a conditional formation mechanism, not a
+derivation of a coframe ratio from incidence geometry. A channel can be dilated using a supplied
+environment, but its mathematical operators specify neither the environment’s Hamiltonian nor
+renewal and switching costs. Those resources remain required before making an information-
+per-cost comparison.
+
+
+12. Entropy, area and the physical bridge
+Entropy must follow from a declared state and coarse-graining. In an illustrative symmetric
+binary retention channel, a uniform source bit flipped with probability 𝑝 leaves a uniform memory
+marginal. Its marginal entropy stays ln 2, while retained source information is
+
+
+                  𝐼(𝑍 ∶ 𝑀 ) = ln 2 − ℎ(𝑝),   ℎ(𝑝) = −𝑝 ln 𝑝 − (1 − 𝑝) ln(1 − 𝑝).
+
+This elementary example is an additional operational illustration, not a thermodynamic entropy-
+production theorem. It shows why memory entropy alone is an inadequate record-quality mea-
+sure.
+A boundary-face count is a combinatorial quantity. Physical boundary area requires a geometric
+map and units. To derive retained information per area, a capacity or scaling mechanism must
+link the declared records to that boundary under complete resource constraints. None of the
+preceding conservation or reconstruction results supplies this automatically.
+
+
+
+                                               23
+Likewise, the four-paper baseline does not derive a universal gravitational entropy density, New-
+ton’s constant or Einstein’s equations. The narrative identifies what such a bridge would have to
+connect: finite state and records, controlled coarse-graining, physical geometry, thermodynamic
+quantities and independently normalized couplings. Supplying the target normalization would
+not constitute deriving it. Jacobson’s local-horizon construction [16] assumes an entropy-area
+relation and a Clausius condition; citing it does not derive those inputs from the UD carrier. No
+Bochner-flat Kähler reduction is used or established here.
+Counting events can order histories and track resources. It does not calibrate proper time. A
+metric, an action scale and a clock map remain additional physical obligations. This manuscript
+makes no claim that all these bridges are already closed.
+
+
+13. What the theory currently explains, and what it must explain
+next
+The finite account already gives a coherent explanatory sequence. Incidence specifies possible
+exchange. A generator calculates its consequences. Symmetry organizes channels while exposing
+free choices. A restricted readout can conceal a preserved distinction. Suﬀicient receipts restore
+identifiability when acquired. Prepared capture and renewal specify finite record mechanisms
+and their limits.
+Formation remains partly supplied: boundary attachment is an explicit grammar, but the source
+must still determine which attachment occurs and how its state and resources transfer. A
+stability or occurrence preference needs the same preparation and disturbance conditions across
+candidates.
+The next theoretical targets therefore have a dependency order:
+  1. Specify a native configuration-changing rule and complete state transfer.
+  2. Connect compatibility to formation or survival through that rule.
+  3. Derive a complete production-to-capture trigger and finite router on one joint domain.
+  4. Include reference and clock preparation, failure histories and exhaustion.
+  5. Establish calibrated observable and coarse-graining maps before physical identification.
+Each step answers a question opened by the previous one. That is the manuscript’s organiz-
+ing logic: every equation earns its place by explaining a mechanism or delimiting what the
+mechanism can do.
+
+13.1 Reconciled native event-source boundary
+Later source audits qualify the positive interfaces and their limitations [6–8].
+Later sources already provide
+
+
+                                         Θ+ = 𝑃𝑔 Θ− ⊕ 𝜉
+
+and an exact closure/hard-mask pushforward when the receipt xi and relevant local transport
+gates are supplied. The package rechecks 24,576 fixed-gate cases. This closes a conditional map,
+not the source of xi, gate updates or event occurrence.
+At identical native pre-state, formal receipt completions xi=000 and xi=111 give different end-
+points. Both identity and complementation commute with pair permutations. Hence symmetry
+and the fixed pre-event chain trajectory do not uniquely select the endpoint under that interface.
+
+
+
+                                                24
+The positive repair must make the set of admitted next outputs a singleton, or specify a com-
+plete normalized stochastic kernel with receipt availability, null windows and timing separately
+typed.
+The balance observable 𝐸3 − 𝐸2 supplies a pre-event signal; treating its crossing as a subdivision
+command is a candidate constitutive rule. The historical action/Metropolis acceptance likewise
+fails to select proposal frequency or admissible moves. The later polarity audit shows that uni-
+versal signed-flux/index agreement and simultaneous nontrivial burden selection under binding
+saturation fail on stated counterexamples.
+The additional receipt audit sharpens this requirement. A collection of labels with zero individual
+Hamming change is not itself a composable history, and the zero change does not determine an
+unobserved winding. To assign a winding-dependent cost, specify the fine-history domain, its
+admissible composition, the winding functional and what the receipt retains. Appendix D.12
+gives a counterexample to inferring winding from fixed-weight labels alone. This is a source-law
+gap, not an argument against possible laws that supply the missing information.
+The declared model in Appendix D.13 now closes a narrower development contract: it provides
+a complete reference kernel, a scalar no-loop theorem and sharp supplemental-receipt require-
+ments for a specified graph-cycle diagnostic. It also proves that symmetry permits any positive
+stationary weight law in the kernel family. None of these statements selects native event prob-
+abilities, a physical winding or its acquisition mechanism. A positive next step is to source the
+additional orientation, phase, context or reservoir state and its transported increment, then test
+the enriched receipt fibers.
+Therefore G05/G06/G09 remain source-open. The next positive task is an explicit joint state
+(𝐾, 𝑐, Θ, transport, source, reservoir) with lawful pre-event generator, move eligibility, transfer,
+generator change and resource update. Supplying one such rule establishes a candidate model; a
+uniqueness or native-source theorem needs additional justified restrictions. There is no derivation
+of that rule from the reconciled fixed-flow equations alone.
+
+
+Appendix A. Source crosswalk
+
+Manuscript topic                  Four-paper source                 Treatment here
+Binary labels and                 I §3                              Selected definitions and
+cardinalities                                                       counting boundary
+Chains, skew flow, local          I §§4–5                           Definitions and explanatory
+balance                                                             derivations
+Glued spectra and jump            I §6                              Exact source results with
+limits                                                              assumptions
+Signed contact and admission      I §§7–8                           Retained as formation-source
+                                                                    obligations; detailed contact
+                                                                    family deferred
+Real and complex                  II §§2–6                          Main identifiability argument
+reconstruction
+Covariance and visible closure    II §§7–8                          Selected results and scope
+Symmetry and commutant            III §2                            Interaction typing and scalar
+                                                                    freedom
+Confining radial refinement       III §§3–8                         Outside the main argument;
+                                                                    source retained for a later
+                                                                    spectral chapter
+
+
+
+                                                25
+Manuscript topic                 Four-paper source                Treatment here
+Quadratic context                III §§9–10                       Symmetry obstruction and
+                                                                  minimum context
+Prepared growth and              III §§11–12                      Formation grammar and
+retention                                                         persistence distinction
+Controllers and preparation      IV §§2–4                         Joint-state and supply
+                                                                  requirements
+Capture and obstruction          IV §§5–7                         Timed/static distinction and
+                                                                  finite limits
+Renewal and resources            IV §§8–9                         Correlation export and
+                                                                  accounting
+Two-cell observation example     I §6 plus direct derivation      New expository calculation,
+                                                                  not physical promotion
+Binary retention entropy         Declared illustrative channel    Additional operational
+                                                                  example, not a sourced UD
+                                                                  entropy law
+
+
+This is a selective theoretical synthesis, not a concatenation or exhaustive replacement of the
+four papers. The radial and full contact results remain available in their source locations. No
+omitted source result is withdrawn by this manuscript.
+
+
+Appendix B. Comparison contracts
+C1 — noisy two-cell observation. Carrier is 0123,0124, with increasing-order simplex
+orientations and unit-metric skew incidence flow. Source label Z is equiprobable L/R, prepared in
+the two unit cell states with every
+                               √    other coordinate zero. Observe either the two cell amplitudes,
+or the four coordinates (𝑞, 𝑞′/ 3). Measurement time is known. Add independent Gaussian noise
+of covariance sigma² I in the declared observation coordinates. This is a mathematical readout
+model, not measured/native noise. Units are model amplitude units; derivative normalization
+fixes an observation scale, not a free physical sensor.
+C2 — five-cell architecture comparison. Compare the core-star cells 0123,1234,0235,0136,0127
+with the chain 0123,1234,2345,3456,4567.
+                           √                      Both have 47 coordinates and 12 boundary faces.
+Use the same scale 𝒜/ 8, admitted operator-norm ceiling 1, initial norm 1, equal-prior
+alternatives in the first and last listed cells, cell-only readout, sigma=1/4, and horizon [0,pi]
+in the scaled model parameter. Exact rational LDL proves 8𝐼 − 𝐿 positive definite for both, so
+both satisfy the ceiling. Their actual norms differ; the comparison matches a resource ceiling,
+not identical expenditure. Their preparation sites have different structural roles, so this single
+preparation does not establish architecture-wide superiority.
+The reported 129-point comparison is NUMERICAL under C2. The finite horizon, noise and
+scale are protocol choices, not theory constants. A general worst-time or preference theorem
+needs additional certification or preparation averaging.
+
+
+Appendix C. Provenance and review boundaries
+The recovered release contains corrected editable papers, PDFs, source records and replay re-
+ceipts. Its M5 corrections supersede identified passages in the preserved prior editions. This
+draft uses those corrected sources rather than the older reconstructed Markdown placeholders.
+
+
+
+                                               26
+The four-paper release was retrieved as UD_FOUR_PAPER_M5_v1.0_RELEASE.zip. Its internal
+README dates it 4 October 2026 and states the source versions used here. A targeted first-
+package reconciliation checked all four source paper blobs and selected October 9–13 interface,
+event-source and record-entropy captures against the current repository. Uninspected develop-
+ments remain outside this reconciliation. Release hashes and the selected source hashes are
+recorded in the companion source register.
+Constructor replay is not independent review. General statements depend on their written
+assumptions and proofs, not on fixture counts. This draft performs editorial integration and
+exact checks of the two-cell and five-cell constructions, the orthogonal interface and its generator
+defects, and 24,576 conditional closure cases; it does not claim to rerun every historical audit.
+The version-0.9 partner ingestion preserves the complete supplied working-note file and audits
+selected material claim families. It does not certify every imported formula or image. Important
+corrections include a general-metric counterexample to an overbroad subdivision obstruction
+and the sharp two-state contraction factor. Reference [23] identifies the source and independent
+replay. Constructor checks are not independent review.
+The version-0.10 ingestion audits three additional partner working-note documents against
+the supplied v0.39 coeﬀicient ledger and CRL-2 governance proposal. It integrates the re-
+ceipt/history and cost-inference repairs, while preserving disconnected finite-group results and
+transport counterexamples in the companion audit [24]. Imported status labels do not constitute
+promotion receipts.
+Version 0.11 adds a declared finite-history model and receipt-capacity analysis [25]. Its kernel
+and graph-cycle increment are supplied development choices. The scalar no-loop theorem and
+nonselection result are conditional mathematical statements, not physical promotion.
+The unavailable Gap2_FINAL_Finite_Genesis.png was not read or used. Historical genesis fits
+and domain-only references are not used to substantiate physical formation, cosmological or
+gravitational claims. Physical promotion remains 0.
+
+
+Appendix D. Proofs and exact certificate conventions
+D.1 Skew flow and the harmonic obstruction
+Proposition D1. Under §3.2, 𝒜𝑇 = −𝒜 and −𝒜2 = 𝐿 with the degree blocks in §4.1.
+Consequently the flow preserves distances and admits no attracting fixed state with a basin
+containing two distinct initial states.
+Proof. Transposition reverses the two adjacent blocks. Squaring leaves diagonal blocks
+−(𝐵𝑘𝑇 𝐵𝑘 + 𝐵𝑘+1 𝐵𝑘+1𝑇
+                       ); nonadjacent blocks vanish by 𝐵𝑘 𝐵𝑘+1 = 0. For a difference 𝑑 of
+solutions, (𝑑 𝑑) = 𝑑 (𝒜𝑇 + 𝒜)𝑑 = 0. If two distinct trajectories converged to the same fixed
+              𝑇   ′   𝑇
+
+state, their distance would tend to zero, contradicting its positive constant value. This concerns
+fixed closed flow, not switched or open dynamics.
+
+D.2 Visible closure and the retained interface
+Proposition D2. Let 𝑃 ∶ 𝑉 → 𝑊 be a surjective linear observation and 𝐴 ∶ 𝑉 → 𝑉 . A linear
+𝐹 ∶ 𝑊 → 𝑊 satisfying 𝑃 𝐴 = 𝐹 𝑃 exists if and only if 𝐴(ker 𝑃 ) ⊆ ker 𝑃 .
+Proof. Necessity follows by applying 𝑃 𝐴 = 𝐹 𝑃 to a vector in the kernel. Conversely define
+𝐹 (𝑃 𝑥) = 𝑃 𝐴𝑥. If 𝑃 𝑥 = 𝑃 𝑦, kernel invariance gives 𝑃 𝐴(𝑥 − 𝑦) = 0, so this definition is
+independent of the representative. Surjectivity makes it a linear operator on all of 𝑊 . For a
+
+
+
+                                                27
+nonsurjective observation the same construction is on its image, with an arbitrary extension
+outside that image.
+Corollary D2a. For the §6.4 interface, the exact rank-seven block 𝐺𝑣𝑟 obstructs closure of the
+retained visible coordinates for arbitrary residual states.
+Proof. In transformed coordinates the projection is (𝑧, 𝑟) ↦ 𝑧. Its kernel consists of (0, 𝑟),
+while 𝐺(0, 𝑟) has visible part 𝐺𝑣𝑟 𝑟. Kernel invariance is therefore equivalent to 𝐺𝑣𝑟 = 0. The
+exact rank certificate rules this out. Retaining 𝑟 closes the inherited 30-dimensional description;
+it does not change it into the native 23-dimensional glued dynamics.
+
+D.3 Orientation and reproducible spectra
+Proposition D3. Reversing any subset of simplex basis orientations leaves the spectrum of the
+unit-metric incidence generator unchanged.
+Proof. Write the degree-wise sign matrices as 𝑆𝑘 and their direct sum as 𝑆. Boundary matrices
+transform as 𝐵𝑘′ = 𝑆𝑘−1 𝐵𝑘 𝑆𝑘 . Hence 𝒜′ = 𝑆𝒜𝑆, with 𝑆 −1 = 𝑆. Characteristic polynomials
+and Euclidean norms are unchanged. Observations and prepared coordinates must also be
+transported when comparing state-dependent predictions.
+The reproducible certificates use sorted simplex tuples grouped by degree and the alternating
+boundary formula of §3.2. Constructing the integer boundaries fixes the entire operator. Sym-
+bolic characteristic polynomials certify finite spectra; multiplicity and degree checks account for
+every coordinate. The star top-cell decomposition follows by splitting leaf space into 𝑏⟂ and
+span(𝑏) as in §7.4. The full-chain spectrum is independently obtained from its characteristic
+polynomial, not inferred from the top-cell block alone. The package stores both exact polyno-
+mials and matrices. Floating norms and the 129-point comparison remain numerical outputs.
+
+D.4 Reconstruction and static-storage qualifications
+Proposition D4. The stock and rooted-tree receipt of §9 reconstructs the normalized state on
+its declared support.
+Proof. Each nonzero stock fixes the positive magnitude. The supplied root fixes a sign or unit
+phase. The unique tree path fixes every remaining sign or phase by multiplication of edge ratios,
+with conjugation for reversed complex edges. For receipts generated by one state, every cycle
+product is one, so all admissible paths agree. Without a root, multiplying a component by a
+common sign or phase leaves all relative receipts unchanged. This is a suﬀiciency result, not an
+optimal acquisition-cost theorem.
+Proposition D5. A finite-dimensional time-independent Hermitian generator cannot produce
+exact permanent first-entry into an invariant subspace from its orthogonal complement.
+Proof. If 𝑊 is invariant, Hermiticity gives ⟨𝐻𝑤, 𝑣⟩ = ⟨𝑤, 𝐻𝑣⟩ = 0 for 𝑤 ∈ 𝑊 ⟂ and 𝑣 ∈ 𝑊 , so
+𝑊 ⟂ is invariant too. The projector onto 𝑊 commutes with the propagator, and its population is
+constant. More generally, a fixed-observable expectation is a finite sum of exponential functions
+of time. Constancy on an open interval forces constancy everywhere by analyticity. Approximate
+finite-window capture, supplied time dependence and open dynamics have different premises.
+
+D.6 Refined static joint error under an explicit input contract
+Proposition D6 (conditional refinement). Use the §10.2 static comparator and a fresh
+independent clock at address 0. Put 𝑟 = cos2𝑁 (𝜆𝑡) and 𝑥 = Tr(𝜌𝐽∗ ) ∈ [−1, 1]. Its complete
+body/clock/spectator trace distance from the fully transferred product target is at most
+
+
+
+                                                28
+                                      √1 − (1 − 𝑟 + 𝑟𝑥)2 .
+
+For an arbitrary admitted body input a uniform bound is
+
+
+                                         2√𝑟(1 − 𝑟), 0 ≤ 𝑟 ≤ 1/2,
+                              𝑔(𝑟) = {
+                                         1,          1/2 ≤ 𝑟 ≤ 1.
+
+If 𝐿, 𝑀 , 𝐸 are exactly blank and independent of the incoming body/history, then 𝑥 = 𝑝, the
+incoming production nonterminal
+                         √         probability. In particular, a wholly terminal input (𝑝 = 0)
+                                2
+gives joint error at most 2𝑟 − 𝑟 . Actual evolution adds at most 𝑡ℎ𝑝 to each applicable bound,
+capped at one. Input preparation error is a separate additive distance, not an amplitude-square
+term.
+Proof. Purify the body and its spectator as |𝜓⟩. The comparator vector uses |𝜓⟩ at clock
+address 0 and 𝐽∗ |𝜓⟩ at every other address, with common free evolution. The target uses 𝐽∗ |𝜓⟩
+at every address. Their inner product is 1 − 𝑟 + 𝑟𝑥, since the address-0 probability is 𝑟 and
+𝐽∗ is Hermitian. Pure-state trace distance gives the first expression; discarding a purification
+register contracts distance. Minimizing |1 − 𝑟 + 𝑟𝑥| over 𝑥 ∈ [−1, 1] gives 𝑔. With fresh records
+the terminal summand flips their blank state to an orthogonal state, while the nonterminal
+summand is identity, so 𝑥 = 𝑝. Lemma IV.1 supplies the actual/comparator debit.
+                                                                 √
+For a pure terminal input with fresh records the joint value 2𝑟 − 𝑟2 is exact, whereas the
+reduced-body distance is exactly 𝑟 because the two branches have orthogonal record states.
+Thus the joint/marginal distinction persists even after tightening. A small distance to a target
+constructed from nonterminal inputs does not certify that a record was written. These bounds
+are an additional finite derivation in this manuscript, not an amendment to the preserved Paper
+IV theorem or an independent-review receipt.
+
+D.7 Signed characters, channel completeness and the standard Dirac relation
+Proposition D7. Under the signed full-𝑆4 action and unit simplex metric, the decomposition
+and commutant counts in §5 follow from the character table below. The three generator channels
+span the full equivariant skew family.
+Conjugacy classes are ordered as identity, transposition, double transposition, 3-cycle and 4-
+cycle, with sizes (1, 6, 3, 8, 6).
+
+                    Character    Identity    (12)    (12)(34)   (123)   (1234)
+                    𝐴1                   1      1           1       1        1
+                    𝐴2                   1     -1           1       1       -1
+                    𝐸                    2      0           2      -1        0
+                    𝑇1                   3     -1          -1       0        1
+                    𝑇2                   3      1          -1       0       -1
+                    𝐶0                   4      2           0       1        0
+                    𝐶1                   6      0          -2       0        0
+                    𝐶2                   4     -2           0       1        0
+                    𝐶3                   1     -1           1       1       -1
+
+
+Proof. Signed oriented 𝑘-chains are Λ𝑘+1 𝑃 , with 𝑃 the four-vertex permutation representation.
+Traces of these exterior-power actions give the four chain rows. Taking the weighted charac-
+                            1
+ter inner product ⟨𝜒, 𝜓⟩ = 24 ∑𝑗 𝑛𝑗 𝜒𝑗 𝜓𝑗 gives the §5 multiplicities. The five real irreducibles
+
+                                                29
+have irreducible complexifications, so their real endomorphism algebra is scalar. Multiplicities
+(1, 2, 2, 2) therefore give full, self-adjoint and skew-adjoint commutant dimensions 13, 10, 3.
+Each 𝐺𝑘 is nonzero, skew and equivariant; their adjacent blocks have disjoint positions, so
+they are independent and span the three-dimensional skew family. Boundary multiplication
+gives 𝐺𝑖 𝐺𝑗 = 0 for 𝑖 ≠ 𝑗, and 𝐺2𝑘 = −4Π𝑘 with symmetric idempotent projectors of ranks
+(6, 6, 2). The rank-one remainder is the uniform vertex mode. On each image, 𝐺𝑘 /2 squares to
+minus identity; hence the weighted characteristic polynomial in §5.1 follows. This proves sector
+completeness even at zero or coincident weights.
+The symmetric-square character (𝜒(𝑔)2 +𝜒(𝑔2 ))/2 reduces to 𝐴1 +𝐸 +𝑇2 . Likewise the multiplic-
+ity of 𝑇2 in 𝐸⊗𝑅 is zero for 𝑅 = 𝐴1 , 𝐴2 , 𝐸 and one for 𝑅 = 𝑇1 , 𝑇2 . Complete reducibility extends
+the minimum-dimension conclusion to reducible contexts: a contributing three-dimensional ir-
+reducible summand is required.
+Finally, let 𝐵 be the block upper-triangular boundary operator, 𝐷 = 𝐵 + 𝐵𝑇 and 𝑈 =
+  3
+⨁𝑘=0 𝑖𝑘 𝐼𝐶𝑘 . Then
+
+
+                                    𝑈 𝐷𝑈 † = 𝑖(𝐵𝑇 − 𝐵) = 𝑖𝒜.
+
+This complex unitary phase change identifies the Hermitian spectrum with the standard sim-
+plicial Dirac spectrum. It is a mathematical comparison, not a physical identification of the
+real carrier with a quantum state. For a filled tetrahedron it recovers the established single-cell
+spectrum [18].
+The replay constructs all 24 signed actions, checks 576 group compositions and 72 boundary
+equivariance identities, and verifies the weighted polynomial and projectors exactly. It also
+reconstructs the Paper III §10.1 compatible context tensor and checks 72 covariance identities.
+These are constructor certificates for the written argument; they do not establish novelty or
+physical coupling strength.
+
+D.8 General gluing and minimal dynamic memory
+D.8.1 lossless normalized gluing
+There is an orthogonal completion 𝑈 = (𝑄; 𝑅), with 𝑛 − 𝑚 residual rows, such that
+
+
+                                      ‖𝑥‖2 = ‖𝑄𝑥‖2 + ‖𝑅𝑥‖2 .
+
+Among linear lossless encodings retaining these m visible coordinates, at least n-m additional
+real coordinates are required. This is a state-dimension theorem, not a physical bit or energy
+cost.
+Proof. Different visible rows have disjoint copied-simplex supports, and each row has squared
+norm 𝜈𝜎 /𝜈𝜎 = 1. Complete the rows by an orthonormal basis of ker 𝑄. Orthogonality proves
+the identity. An injective linear encoding of an n-dimensional state has rank n, so m+r output
+                                                                              √
+coordinates require 𝑟 ≥ 𝑛 − 𝑚. If the copies all equal 𝑐𝜎 on a simplex, 𝑄𝑥 = 𝜈𝜎 𝑐𝜎 ; recovering
+                                           √
+the native coordinate requires division by 𝜈𝜎 . Native and copied norm conventions differ.
+
+D.8.2 minimal autonomous linear memory
+For any real skew 𝐴 on ℝ𝑛 and 𝑄 with 𝑚 orthonormal rows, define
+
+
+                            𝒪 = (𝑄; 𝑄𝐴; … ; 𝑄𝐴𝑛−1 ),       𝑑 = rank 𝒪.
+
+                                                30
+To reproduce 𝑄𝑒𝑠𝐴 𝑥0 exactly for every 𝑥0 and 𝑠 ≥ 0 using a time-independent autonomous linear
+state model, initialized by a linear encoding of 𝑥0 and retaining 𝑄𝑥 as its first 𝑚 coordinates,
+the minimum number of additional state coordinates is 𝑑 − 𝑚.
+Proof. The observable subspace 𝑊 = im 𝒪𝑇 is 𝐴-invariant by Cayley-Hamilton and skew-
+ness. Its orthogonal complement is also invariant. The subspace 𝑊 contains im 𝑄𝑇 . Choose
+an orthonormal basis for W starting with the rows of Q and extend them by d-m rows H in W
+intersect ker 𝑄. With 𝑇 = (𝑄; 𝐻), 𝐹 = 𝑇 𝐴𝑇 𝑇 is skew and 𝑇 𝐴 = 𝐹 𝑇 , so the d-dimensional
+model reproduces the visible trajectory exactly. Conversely, any linear initial encoding C sup-
+porting exact future outputs has ker 𝐶 ⊆ ker 𝒪: a state encoded as zero must have every visible
+derivative zero. Hence rank 𝐶 ≥ 𝑑 and at least d-m extra coordinates are required. This lower
+bound concerns exact finite autonomous linear realizations for arbitrary initial states; it is not
+a bound for one fixed preparation, a nonlinear encoding or an apparatus with external stored
+history.
+The underlying observability construction is established control theory. The skew case permits
+an orthogonal reducing realization. The gluing-specific contribution is the concrete observation,
+its dimension and the structural rank argument below. No priority claim is made for the general
+observability principle.
+
+D.8.3 fresh-vertex stacked tetrahedra require all residuals
+Start with one tetrahedron and attach each later tetrahedron along one boundary face using a
+new vertex. In each copied cell let all three adjacent-degree weights 𝑎𝑗 , 𝑏𝑗 , 𝑐𝑗 be nonzero real
+constants; they need not agree between cells.
+Then
+
+
+                        𝑛 = 15𝑡,        𝑚 = 8𝑡 + 7,               rank(𝑄; 𝑄𝐴) = 15𝑡.
+
+Consequently 𝑑 = 𝑛, and exactly 7(𝑡 − 1) additional coordinates are required by §D.8.2. The
+visible/residual derivative coupling has rank 7(𝑡 − 1). For 𝑡 = 1 this count is zero.
+Proof. Attachment adds 1 vertex, 3 edges, 3 faces and 1 cell, so the unique register grows by 8
+from its initial 15 coordinates. Consider the last attached tetrahedron, with fresh vertex v. Its
+eight simplex coordinates containing v occur in no earlier cell. If 𝑄𝑥 = 0 they vanish in this
+last copy. If 𝑄𝐴𝑥 = 0 their local derivatives also vanish, because the copied generator is block
+diagonal.
+The remaining seven coordinates belong to the attachment face. The map from these face
+coordinates to derivatives of the eight private coordinates has Gram matrix
+
+
+                               𝐶 𝑇 𝐶 = diag(𝑎2𝑗 , 𝑎2𝑗 , 𝑎2𝑗 , 𝑏𝑗2 , 𝑏𝑗2 , 𝑏𝑗2 , 𝑐𝑗2 ).
+
+Indeed each face vertex contributes through its new edge to v, each face edge through its new
+face containing v, and the attachment face through the new cell; orientation signs disappear in
+the Gram matrix. Nonzero weights make this map injective. Thus the last copied cell is zero.
+Remove it and repeat backwards: contributions of already-zero later copies vanish in both 𝑄𝑥
+and 𝑄𝐴𝑥, and every remaining row normalization is nonzero. Finally the original copy is zero.
+Therefore ker 𝑄 ∩ ker(𝑄𝐴) = {0}, proving the rank claim. On ker 𝑄, 𝑄𝐴 is injective, so its rank
+is 𝑛 − 𝑚, which is the visible/residual coupling rank under any orthogonal residual basis.
+This proves a family result, not just a rank observation on the two-cell fixture. It also identifies
+the hypotheses: fresh-vertex attachment, separate copied generators, nonzero exchange weights,
+
+
+                                                        31
+and unrestricted copied initial states. Cyclic gluing or a zero channel need not satisfy the
+conclusion.
+
+D.8.4 Exact projected dynamics
+In orthogonal visible/residual coordinates, write 𝑈 𝐴𝑈 𝑇 as blocks 𝐺𝑣𝑣 , 𝐺𝑣𝑟 , 𝐺𝑟𝑣 , 𝐺𝑟𝑟 . Eliminat-
+ing the residual gives
+
+                                                                 𝑠
+                  𝑧′ (𝑠) = 𝐺𝑣𝑣 𝑧(𝑠) + 𝐺𝑣𝑟 𝑒𝑠𝐺𝑟𝑟 𝑟0 + ∫ 𝐺𝑣𝑟 𝑒(𝑠−𝑢)𝐺𝑟𝑟 𝐺𝑟𝑣 𝑧(𝑢) 𝑑𝑢.
+                                                             0
+
+This follows directly from variation of constants in 𝑟′ = 𝐺𝑟𝑣 𝑧 + 𝐺𝑟𝑟 𝑟. The initial residual term
+cannot be discarded for arbitrary preparation. The kernel is a deterministic memory term; it is
+not automatically physical noise or dissipation. Skewness gives 𝐺𝑟𝑣 = −𝐺𝑇𝑣𝑟 , so its instantaneous
+value is −𝐺𝑣𝑟 𝐺𝑇𝑣𝑟 , but its time dependence and initial term retain the underlying reversible dy-
+namics. This is the linear projection/memory mechanism familiar from Mori-Zwanzig reduction,
+not a new irreversible entropy law.
+
+D.9 Conditioning, noise and sampled acquisition
+D.9.1 Declared readout and its conditioning
+Use the copied-state generator 𝐴𝑇 = −𝐴 and normalized gluing observation 𝑄, with 𝑄𝑄𝑇 =
+𝐼𝑚 , from the stacked-family theorem. The copied state has 𝑛 real coordinates. Declare an
+observation scale 𝜏 > 0 and
+
+                                                              𝑄                𝑒
+                        𝑦 = 𝑀𝜏 𝑥 + 𝑒,         𝑀𝜏 = (             ),      𝑒 = ( 0 ).
+                                                            𝜏 𝑄𝐴              𝜏 𝑒1
+
+Here 𝑒1 is raw derivative error; its acquisition is not assumed free. The scale makes the two
+blocks commensurate in the chosen model units. It is not a new dynamical coeﬀicient or a
+physical clock calibration. Assume full column rank when reconstructing the complete state.
+Define
+
+
+              𝐻𝜏 = 𝑀𝜏𝑇 𝑀𝜏 = 𝑃 + 𝜏 2 𝐴𝑇 𝑃 𝐴,            𝑃 = 𝑄𝑇 𝑄,         𝛾𝜏 = √𝜆min (𝐻𝜏 ) > 0.
+
+The absolute noise gain is 1/𝛾𝜏 . The relative matrix condition number is 𝜅2 (𝑀𝜏 ) = 𝜎max (𝑀𝜏 )/𝛾𝜏 .
+These are different quantities.
+Theorem C1 (sharp deterministic error). The least-squares reconstruction 𝑥̂ = 𝑀𝜏† 𝑦
+satisfies
+
+
+                                      √𝜖20 + 𝜏 2 𝜖21
+                         ‖𝑥̂ − 𝑥‖ ≤                         if ‖𝑒0 ‖ ≤ 𝜖0 , ‖𝑒1 ‖ ≤ 𝜖1 .
+                                           𝛾𝜏
+
+As a bound in the combined error norm ‖𝑒‖, the factor 1/𝛾𝜏 is attained by error along a least
+singular left vector. Separate block budgets need not attain this combined bound simultaneously.
+Proof. Full rank gives 𝑀𝜏† 𝑀𝜏 = 𝐼. Hence 𝑥̂ − 𝑥 = 𝑀𝜏† 𝑒, and the pseudoinverse norm is 1/𝛾𝜏 . A
+singular-vector error attains the norm. This is standard SVD-based least-squares conditioning,
+specialized to the declared observation.
+
+
+                                                       32
+If 𝑀𝜏 is rank deficient, no finite bound recovers arbitrary full states even at zero noise. The
+pseudoinverse recovers only the projection onto its row space. That space need not equal the
+full time-observable subspace when higher derivatives are required.
+
+D.9.2 Generator uncertainty and usable certificates
+Let 𝐴 ̄ be the reconstruction model, ‖𝐴 − 𝐴‖̄ ≤ 𝛿, with the same exact 𝑄. Set 𝑀̄ 𝜏 = (𝑄; 𝜏 𝑄𝐴)̄
+and 𝛾𝜏̄ = 𝜎min (𝑀̄ 𝜏 ). For ‖𝑥‖ ≤ 𝑅,
+
+
+                                                  √𝜖20 + 𝜏 2 𝜖21 + 𝜏 𝛿𝑅
+                                ‖𝑀̄ 𝜏† 𝑦 − 𝑥‖ ≤                         .
+                                                          𝛾𝜏̄
+
+This assumes 𝛾𝜏̄ > 0. It owns model mismatch separately from measurement noise. Since
+‖𝑀𝜏 − 𝑀̄ 𝜏 ‖ ≤ 𝜏 𝛿, minimization over unit vectors gives
+
+
+                                           |𝛾𝜏 − 𝛾𝜏̄ | ≤ 𝜏 𝛿.
+
+Thus a certified true lower bound 𝛾𝜏 ≥ Γ guarantees reconstruction-model injectivity when
+𝜏 𝛿 < Γ, with denominator at least Γ − 𝜏 𝛿.
+Proof. Write 𝑦 = 𝑀̄ 𝜏 𝑥 + 𝑒 + (𝑀𝜏 − 𝑀̄ 𝜏 )𝑥 and apply C1. The singular-value inequality follows
+from ‖𝑀̄ 𝑣‖ ≥ ‖𝑀 𝑣‖ − ‖(𝑀̄ − 𝑀 )𝑣‖ for unit 𝑣, and then interchange the matrices. No small-error
+expansion is used.
+For exact rational 𝐻𝜏 , a rational LDL factorization of 𝐻𝜏 − 𝑞𝐼 with positive pivots certifies 𝛾𝜏 >
+√
+  𝑞. Floating eigenvalues may suggest 𝑞 but do not certify it. A general, usually conservative,
+bound is
+
+                                                √det 𝐻𝜏
+                                    𝛾𝜏 ≥                          ,
+                                           (1 + 𝜏 2 ‖𝐴‖2 )(𝑛−1)/2
+
+because every Gram eigenvalue is at most 1 + 𝜏 2 ‖𝐴‖2 . Positivity of the determinant is available
+only after full rank is established. Unknown errors in 𝑄 require an additional observation-model
+term and are not included in 𝛿.
+
+D.9.3 Gaussian noise, correlations and representation invariance
+Assume the complete error 𝑒 is zero-mean Gaussian with known positive-definite covariance Σ,
+independent of the unknown fixed state. The generalized least-squares estimate and information
+matrix are
+
+
+                            𝑥̂ = 𝐼Σ−1 𝑀𝜏𝑇 Σ−1 𝑦,         𝐼Σ = 𝑀𝜏𝑇 Σ−1 𝑀𝜏 .
+
+Theorem C2 (exact covariance and confidence region). Under full column rank and the
+exact measurement model,
+
+
+                          Cov(𝑥̂ − 𝑥) = 𝐼Σ−1 ,          𝔼‖𝑥̂ − 𝑥‖2 = tr(𝐼Σ−1 ),
+
+
+                           Pr[(𝑥̂ − 𝑥)𝑇 𝐼Σ (𝑥̂ − 𝑥) ≤ 𝜒2𝑛,1−𝛼 ] = 1 − 𝛼.
+
+
+                                                   33
+In particular, a Euclidean confidence radius is
+
+
+                                  ‖𝑥̂ − 𝑥‖ ≤ √𝜒2𝑛,1−𝛼 /𝜆min (𝐼Σ ).
+
+Proof. The estimator error is the displayed linear map applied to 𝑒. Multiplying its covariance
+gives 𝐼Σ−1 . Whiten this 𝑛-dimensional Gaussian error to obtain the chi-square statement. The
+radius follows from the smallest information eigenvalue. Gaussianity is needed for this exact
+coverage, not for the covariance identity. Bias, covariance estimation and non-Gaussian tails
+need separate bounds.
+For equal-prior alternatives separated by Δ𝑥 under the same covariance, the exact optimal
+decision error is
+
+
+                      𝑃𝑒 = Φ(− 12 √Δ𝑥𝑇 𝐼Σ Δ𝑥) ≤ Φ(− 12 √𝜆min (𝐼Σ )‖Δ𝑥‖) .
+
+This follows by the likelihood-ratio projection onto Σ−1 𝑀𝜏 Δ𝑥. It is distinguishability of the
+readout distributions, not information already written into a retained physical memory.
+For an invertible output rescaling 𝑆, transport all three objects:
+
+
+                               𝑦 ↦ 𝑆𝑦,    𝑀 ↦ 𝑆𝑀 ,       Σ ↦ 𝑆Σ𝑆 𝑇 .
+
+Then 𝐼Σ is unchanged. Increasing 𝜏 on paper cannot improve statistical information while leaving
+the raw noise physics fixed. An unweighted singular value can change under this rescaling; a
+consistent whitened calculation cannot. Correlated observations require the full covariance,
+including cross-block terms.
+
+D.9.4 Derivative acquisition from three snapshots
+Observe 𝑦− , 𝑦0 , 𝑦+ at 𝑠0 − ℎ, 𝑠0 , 𝑠0 + ℎ, with ℎ > 0 and 𝑠0 ≥ ℎ. Prepare the state and retain its
+history under the same constant generator throughout. Define
+
+                                                  𝑦+ − 𝑦−
+                                          𝐷ℎ =            .
+                                                    2ℎ
+
+If each endpoint has norm error at most 𝜖, ‖𝐴‖ ≤ 𝐿 and ‖𝑥(𝑠0 )‖ ≤ 𝑅, then
+
+
+                                                       𝜖   𝐿3 𝑅ℎ2
+                                 ‖𝐷ℎ − 𝑄𝐴𝑥(𝑠0 )‖ ≤       +        .
+                                                       ℎ      6
+
+Proof. Endpoint errors contribute at most 2𝜖/(2ℎ). The third derivative of 𝑄𝑥 is 𝑄𝐴3 𝑥, whose
+norm is at most 𝐿3 𝑅 by skew-flow norm preservation. The centered Taylor remainder gives the
+second term. No noiseless derivative is assumed.
+Finite precision and timing fit the same budget. Suppose each 𝑚-coordinate snapshot has
+additional detector error at most 𝜖det , componentwise rounding to nearest with step 𝑞 and no
+saturation, and timestamp error at most 𝑗. Its total deterministic error is at most
+
+                                                  √
+                                                   𝑚𝑞
+                                    𝜖eff = 𝜖det +     + 𝐿𝑅𝑗.
+                                                    2
+
+
+
+                                                  34
+The rounding vector has at most 𝑞/2 in each component, and integrating ‖𝑄𝑥′ ‖ ≤ 𝐿𝑅 over the
+timing offset gives the last term. Use the appropriate effective budget for each center/endpoint in
+C1 and the difference formula. Correlated or stochastic timing errors are not thereby independent
+Gaussian noise.
+Substitute this derivative error into C1. For this conservative derivative-approximation bound
+alone, the unconstrained minimizing step is
+
+
+                                       ℎ∗ = (3𝜖/(𝐿3 𝑅))1/3 ,
+
+when 𝐿, 𝑅, 𝜖 > 0. Actual latency or admissible-time restrictions may exclude it. This is a
+minimum of the bound, not a universal sampling optimum.
+For independent endpoint Gaussian errors with covariance 𝜎2 𝐼𝑚 , derivative-noise covariance is
+𝜎2 𝐼𝑚 /(2ℎ2 ). With an independent center snapshot of the same noise, the cross covariance with
+𝑦0 is zero. The derivative mean-square error obeys
+
+                                                  𝑚𝜎2 𝐿6 𝑅2 ℎ4
+                               𝔼‖𝐷ℎ − 𝑄𝐴𝑥‖2 ≤         +        .
+                                                  2ℎ2    36
+
+Its unconstrained bound-minimizing step satisfies ℎ6∗ = 9𝑚𝜎2 /(𝐿6 𝑅2 ). Shared temporal noise
+changes these formulas. A three-snapshot acquisition uses 3𝑚 scalar readout channels over a
+span 2ℎ, plus clock alignment, bandwidth and storage resources; this is not a complete energy
+cost.
+
+D.9.5 Exact canonical sampling avoids truncation bias
+For the canonical independent-copy generator, 𝐴3 = −4𝐴. Consequently
+
+                           𝑒ℎ𝐴 − 𝑒−ℎ𝐴                           sin(2ℎ)
+                                      = 𝑓(ℎ)𝐴,         𝑓(ℎ) =           .
+                               2ℎ                                  2ℎ
+This can be used as the exact measurement matrix rather than approximating the derivative.
+The retained statistic (𝑦0 , 𝐷ℎ ) has
+
+                                  𝑄
+                      𝑀ℎ = (         ),        Σℎ = 𝜎2 diag(𝐼𝑚 , 𝐼𝑚 /(2ℎ2 ))
+                               𝑓(ℎ)𝑄𝐴
+
+under the independent equal-noise three-snapshot contract. Its information matrix is exactly
+
+
+                                                sin2 (2ℎ) 𝑇
+                                𝐼ℎ = 𝜎−2 [𝑃 +            𝐴 𝑃 𝐴] .
+                                                    2
+
+Thus ℎ = 𝜋/4 maximizes this information matrix in Loewner order over 0 < ℎ < 𝜋/2. It is a
+model-unit optimum for this retained statistic under fixed snapshot noise; it is not an optimum
+over every sensor, time budget or the full three-snapshot record. The symmetric endpoint sum
+has been discarded. At ℎ = 𝑘𝜋/2, 𝑘 ≠ 0, the derivative statistic loses its active signal, so this
+two-block readout is rank deficient for a nontrivial stack.
+Proof. On harmonic modes both sides of the first identity vanish; on every active mode 𝐴 has
+frequency 2, giving the sine factor. The covariance inverse contributes 2ℎ2 /𝜎2 , which cancels
+the factor 1/(4ℎ2 ) in 𝑓(ℎ)2 . The remaining coeﬀicient is maximized when sin2 (2ℎ) = 1. At its
+
+                                                35
+zeros, only the snapshot remains. Calibrating the exact matrix removes Taylor bias, not noise
+amplification or acquisition cost.
+
+D.9.6 Exact two-cell and five-cell conditioning
+The following values concern independent copied dynamics and the normalized union observation,
+with 𝜏 = 1/2 and canonical weights. They are not the native union-generator frequencies. All
+copied generators have norm 2.
+
+                                                              Minimum Gram         Absolute error
+Configuration                        𝑛                   𝑚    eigenvalue           gain 1/𝛾
+                                                                  √                   √
+Two cells, shared                   30                   23   1 − 3/2              1 + 3 ≈ 2.73205
+face                                                               √               √ √     √
+Five-cell                           75                   47   1−       15/4          2( 5 + 3) ≈
+core-star                                                                          5.61177
+Five-cell chain                     75                   47   Smallest root of     Approximately
+                                                              64𝑧4 − 256𝑧 3 +      6.43292
+                                                              280𝑧2 − 48𝑧 + 1
+
+
+For the chain, exact LDL and Sturm checks place the minimum Gram eigenvalue               √ in
+(241/10000, 243/10000). Hence an entirely rational certificate gives error gain below 100/ 241.
+The decimal estimate is more precise but is not itself the certificate.
+                                                           √            All three maximum Gram
+eigenvalues are 2, so their relative condition numbers are 2 times the listed absolute gains.
+Proof for two cells. The exact Gram polynomial factors as
+
+                               (𝑧 − 2)14 (𝑧 − 1)(4𝑧 − 7)(4𝑧 2 − 8𝑧 + 1)7
+                                                                         .
+                                                  216
+                         √          √                                                 √
+Its smallest root is 1 − 3/2 = (( 3 − 1)/2)2 . Inverting its square root gives 1 + 3. The star’s
+exact factorization, stored in the certificate, has its smallest root in 16𝑧2 − 32𝑧 + 1. All its other
+factor roots are at least this value. For the chain, the full characteristic polynomial’s square-free
+part has exactly one root in the certified interval and none between zero and its lower endpoint;
+that root belongs to the displayed quartic. These statements are checked in exact arithmetic.
+For the same combined output error budget 0.01, worst-case state errors are at most approx-
+imately 0.02732, 0.05612 and 0.06433 respectively. These are worst-direction readout compar-
+isons. They do not establish universal architecture superiority or equal physical expenditure.
+
+D.9.7 Exact recoverability has no uniform robustness guarantee
+Even keeping the copied-generator norm equal to 2 does not give a positive uniform 𝛾 over all
+nonzero weights. In the two-cell example set 𝑎 = 𝑏 = 1, 𝑐 = 𝜀 > 0 in each cell. Let 𝑣 be the unit
+difference of their shared-face coordinates. Then
+
+
+                              𝑄𝑣 = 0,       ‖𝑄𝐴𝑣‖ = 𝜀,        𝛾𝜏 ≤ 𝜏 𝜀.
+
+Therefore the snapshot/derivative noise gain is at least 1/(𝜏 𝜀) and diverges as 𝜀 ↓ 0, although
+exact rank remains full for every positive 𝜀. The other channels keep ‖𝐴‖ = 2. At 𝑐 = 0 a higher
+derivative can restore time observability, so this is specifically a failure of uniform robustness of
+the declared two-block readout, not a theorem that all possible observation histories fail.
+
+
+                                                 36
+For full-state reconstruction on the closed five-cell boundary, the two-block matrix has a 20-
+dimensional kernel even before noise. Restricting to its certified observable subspace permits
+positive singular-value bounds there; adding a finite noise budget cannot identify the discarded
+directions.
+
+D.9.8 Scope, verification and references
+The pseudoinverse, whitening and Gaussian arguments are standard statistical linear algebra.
+The specialized results here are their application to the declared gluing observation, its exact
+spectra, the fixed-norm degenerating family and the exact canonical sampling contract. Con-
+structor replay supplies exact characteristic-polynomial/LDL/Sturm certificates plus separately
+labelled floating fixtures. It does not estimate a physical noise covariance, establish independent
+review, certify measured bandwidth or prove a physical entropy-area relation.
+Primary background: LAPACK Users’ Guide, Linear Least Squares Problems, and How to
+Measure Errors. General perturbation literature includes G. W. Stewart, On the Perturbation
+of Pseudo-Inverses, Projections and Linear Least Squares Problems; only its abstract/metadata
+were inspected, so no specific theorem from its paywalled text is invoked here. The displayed
+bounds have self-contained proofs.
+Next requirements for operational use are calibrated joint covariance, acquisition and clock-error
+models, admissible sampling windows, generator uncertainty and a complete resource ledger.
+The derivation closes a mathematical conditioning gap while leaving those physical inputs ex-
+plicit.
+
+D.10 Recurrence and transfer under explicit metric contracts
+D.10.1 Incommensurability permits uniformly close returns
+Let 𝐴 be a finite real skew matrix with 𝑟 ≥ 1 distinct positive frequencies 𝜔1 , … , 𝜔𝑟 . For every
+integer 𝑁 ≥ 1 there is 1 ≤ 𝑞 ≤ 𝑁 𝑟−1 such that, at 𝑠 = 2𝜋𝑞/𝜔1 ,
+
+                                                       2𝜋
+                                        ‖𝑒𝑠𝐴 − 𝐼‖2 ≤      .
+                                                       𝑁
+
+For 𝑟 > 1, partition the (𝑟 − 1)-torus into 𝑁 𝑟−1 cubes of side 1/𝑁 . Among the 𝑁 𝑟−1 + 1
+points with coordinates {𝑗𝜔𝑘 /𝜔1 }, 𝑗 = 0, … , 𝑁 𝑟−1 and 𝑘 = 2, … , 𝑟, two share a cube. Their
+index difference is the required 𝑞, with each phase within 2𝜋/𝑁 of an integer multiple of 2𝜋.
+Orthogonal block diagonalization of 𝐴 reduces the operator error to the largest rotation-block
+error, bounded by the phase error. Zero modes contribute zero error. For 𝑟 = 1, choose 𝑞 = 1
+and the return is exact. If 𝑟 = 0, the flow is the identity.
+Consequently, irrational frequency ratios exclude an exact common period but do not exclude
+approximate recurrence. If there is no exact period, the approximating times have an unbounded
+subsequence; otherwise a bounded subsequence would yield an exact return as 𝑁 → ∞. In the
+periodic case, arbitrarily late exact returns exist. This is a finite-flow statement; no thermody-
+namic limit, mixing, dissipation or record formation follows from it.
+
+D.10.2 A protected sector for a specified inclusion
+Use the complexes 𝐾𝐴 , 𝐾𝐵 of §6.1 and the coordinate inclusion 𝑇 ∶ ℝ23 → ℝ27 that fixes every
+simplex of 𝐾𝐴 . This is an inclusion of subcomplexes, not a boundary-fixing 2-to-3 replacement.
+Write 𝐴 = 𝒜𝐾𝐴 , 𝐵 = 𝒜𝐾𝐵 and 𝐿 = −𝐴2 . With unit metrics,
+
+
+
+
+                                                37
+                              𝑇 𝑇 𝑇 = 𝐼,   𝑑𝐵 𝑇 = 𝑇 𝑑 𝐴 ,       𝑅 = 𝐵𝑇 − 𝑇 𝐴,
+
+where 𝑑 is the total boundary. Exact signed incidence gives
+
+                                                                       𝑅
+                         rank 𝑅 = 4,       𝑅𝑅𝑇 𝑅 = 2𝑅,          rank (   ) = 8.
+                                                                      𝑅𝐴
+                                                    √
+Thus the four nonzero singular values of 𝑅 are       2. The polynomial projectors are
+
+                        (𝐿 − 3𝐼)(𝐿 − 5𝐼)              𝐿(5𝐼 − 𝐿)                𝐿(𝐿 − 3𝐼)
+                 𝑃0 =                    ,     𝑃3 =             ,       𝑃5 =             .
+                               15                         6                       10
+
+They are mutually orthogonal and sum to 𝐼. Direct incidence identities give 𝑅(𝑃0 + 𝑃5 ) = 0
+and rank(𝑃0 + 𝑃5 ) = 15. Since this projector commutes with 𝐴, its image lies in the kernel
+of every 𝑅𝐴𝑗 . The displayed rank-eight two-block matrix shows that no larger protected space
+exists. Therefore
+
+
+                         ⋂ ker(𝑅𝐴𝑗 ) = im(𝑃0 + 𝑃5 ),              𝑒𝑠𝐵 𝑇 𝑥 = 𝑇 𝑒𝑠𝐴 𝑥
+                        𝑗≥0
+
+
+for precisely these initial states. A zero instantaneous residual alone would give a larger, insuf-
+ficient kernel.
+The remaining eight-dimensional sector admits a more detailed description. Put 𝐿𝐵 = −𝐵2 and
+𝑃2𝐵 = 𝐿𝐵 (5𝐼 − 𝐿𝐵 )/6. The positive compression
+
+
+                                           𝑊 = 𝑃3 𝑇 𝑇 𝑃2𝐵 𝑇 𝑃3
+
+has rank four and satisfies 𝑊 2 = (2/3)𝑊 . On im 𝑃3 its eigenvalues are 2/3 and 0, each fourfold.
+Corresponding normalized states have squared spectral-projection weights (2/3, 1/3) or (0, 1) in
+the 𝐿𝐵 = 2, 5 sectors. These are instantaneous spectral weights after a stipulated inclusion, not
+transmission probabilities of a derived scattering experiment. Their exact matrices and ranks
+are replayed in [23].
+
+D.10.3 Stellar subdivision: diagonal obstruction and a general-metric counterexam-
+ple
+Subdivide [0123] using interior vertex 4 into 0124, 0134, 0234, 1234. Let 𝑑𝑐 , 𝑑𝑓 be the coarse and
+fine total boundaries. The map 𝑆 fixes the old boundary and sends the oriented top cell to
+
+
+                              𝑆[0123] = [0124] − [0134] + [0234] − [1234].
+
+Then 𝑑𝑓 𝑆 = 𝑆𝑑𝑐 and 𝑆 𝑇 𝑆 = 𝐼14 ⊕ [4]. Boundary fixation and the unique filling force this image:
+the fine 𝑑3 is injective. Hence this map cannot be an isometry for unit simplex metrics.
+                                                            †
+For a positive diagonal fine metric 𝐻, the adjoint is 𝑑𝑓𝐻 = 𝐻 −1 𝑑𝑓𝑇 𝐻. Adjoint intertwining on the
+old four boundary faces would require a matrix with four separate nonzero face-to-cell entries
+                                  𝑇
+to equal the rank-one matrix 𝑆3 𝑑𝑐,3 . Positive diagonal weights cannot change these ranks. Thus
+diagonal weighting alone cannot provide this stronger intertwining contract.
+
+
+
+                                                   38
+That argument does not exclude all positive metrics. Define the simplicial chain retraction Π
+by sending vertex 4 to 0 and fixing 0,1,2,3; a simplex with repeated image vertices maps to zero,
+and other images carry their permutation sign. It obeys
+
+
+                                         Π𝑆 = 𝐼,      Π𝑑𝑓 = 𝑑𝑐 Π.
+
+Put 𝑁 = 𝐼 − 𝑆Π and choose the degree-preserving, generally non-diagonal metric
+
+
+                                            𝐻 = Π𝑇 Π + 𝑁 𝑇 𝑁 .
+
+For any 𝑣, 𝑣𝑇 𝐻𝑣 = ‖Π𝑣‖2 + ‖𝑁 𝑣‖2 > 0 unless 𝑣 = 0, since 𝑣 = 𝑆Π𝑣 + 𝑁 𝑣. Also 𝑆 𝑇 𝐻𝑆 = 𝐼. The
+decomposition im 𝑆 ⊕ ker Π is 𝐻-orthogonal and each summand is 𝑑𝑓 -invariant. Therefore the
+weighted adjoint preserves the same summands and restricts on im 𝑆 to the coarse Euclidean
+adjoint. It follows that
+
+
+             𝐴𝐻 = 𝐻 −1 𝑑𝑓𝑇 𝐻 − 𝑑𝑓 ,          𝐴𝐻 𝑆 = 𝑆(𝑑𝑐𝑇 − 𝑑𝑐 ),       𝐴𝑇𝐻 𝐻 + 𝐻𝐴𝐻 = 0.
+
+This explicitly refutes an unrestricted positive-metric no-go. It does not supply unit-metric
+intertwining or a native choice of 𝐻. The weighted generator is an added model, with correlated
+simplex coordinates; its locality and physical admissibility require a separate contract. The
+supplied certificate verifies all identities exactly and gives positive rational LDL pivots [23].
+
+D.11 A prepared channel: retained coherence, fixed ratios and branching
+The following operators are declared mathematical channels, motivated by the partner working
+notes [23]. They are not derived from a UD carrier-to-bath interaction. For a two-state Hilbert
+space, take
+
+                   √                                                               1
+                 1/ 2   0√                            0√ √2/3
+          𝐾0 = (           ),              𝐾1 = (             ),           ℰ(𝜌) = ∑ 𝐾𝑗 𝜌𝐾𝑗† .
+                   0  1/ 3                          1/ 2  0                       𝑗=0
+
+
+Completeness is ∑𝑗 𝐾𝑗† 𝐾𝑗 = 𝐼. In Bloch coordinates 𝜌 = (𝐼 + 𝑟𝑥 𝜎𝑥 + 𝑟𝑦 𝜎𝑦 + 𝑟𝑧 𝜎𝑧 )/2, direct
+multiplication gives
+
+                                                                       √               √
+                                                                     1+ 2            1− 2
+        𝑟𝑥′ = 𝑎𝑥 𝑟𝑥 ,   𝑟𝑦′ = 𝑎𝑦 𝑟𝑦 ,   𝑟𝑧′ = −𝑟𝑧 /6 + 1/6,      𝑎𝑥 = √ ,        𝑎𝑦 = √ .
+                                                                       6               6
+
+All linear eigenvalues have modulus less than one, so the unique fixed point is 𝜌∗ = diag(4/7, 3/7).
+The repeated channel has 𝑟𝑥 (𝑘) = 𝑎𝑘𝑥 𝑟𝑥 (0), 𝑟𝑦 (𝑘) = 𝑎𝑘𝑦 𝑟𝑦 (0) and 𝑟𝑧 (𝑘) − 1/7 = (−1/6)𝑘 (𝑟𝑧 (0) −
+1/7). Coherences decay asymptotically; they are not erased in one step.
+For qubit states, trace distance is half the Euclidean distance of their Bloch vectors. The sharp
+one-step contraction coeﬀicient, and its 𝑘-step counterpart, are consequently
+
+
+                                𝜂(ℰ) = 𝑎𝑥 ≃ 0.985599,         𝜂(ℰ𝑘 ) = 𝑎𝑘𝑥 .
+
+Opposite 𝜎𝑥 eigenstates attain the bound. The same sharp factor applies to distance from 𝜌∗
+by taking suﬀiciently small 𝑥-axis perturbations around that full-rank state. Thus (5/7)𝑘 is not
+a valid universal bound for this channel. An additional projection could change a contracted
+readout, but requires its own defined action and comparison domain.
+
+                                                    39
+The population transition rates are 𝑢 = 1/2 from state 1 to √   2 and 𝑣 √= 2/3 from 2 to 1. For
+arbitrary 0 < 𝑢, 𝑣 < 1, the same construction with 𝐾0 = diag( 1 − 𝑢, 1 − 𝑣) and off-diagonal
+𝐾1 yields stationary populations (𝑣, 𝑢)/(𝑢 + 𝑣). Therefore 𝑝1∗ /𝑝2∗ = 𝑣/𝑢. The value 4/3 follows
+from the chosen rates; its numerical agreement with a separately stated geometric ratio does
+not derive those rates or identify the populations with that geometry. At some other rates
+the population fixed point need not be the unique full-state fixed point; uniqueness above was
+proved for the displayed channel.
+A three-state extension makes the dependence explicit. For 0 ≤ 𝛼 ≤ 1, let
+
+                                              √     √     √
+                                  𝐾0 = diag(1/ 2, 1/ 3, 1/ 7),
+                      0√ √2𝛼/3 0                         0      0       0
+              𝐾1 = ⎛
+                   ⎜
+                   ⎜1/ 2   0   0⎟
+                                 ⎞,
+                                 ⎟                 𝐾2 = ⎛
+                                                        ⎜
+                                                        ⎜0      0      √6/7 ⎞
+                                                                            ⎟
+                                                                            ⎟.
+                   ⎝ 0     0   0⎠                       ⎝0 √2(1 − 𝛼)/3  0 ⎠
+
+Their products sum to 𝐼3 and diagonal states remain diagonal. Their stationary population
+vector is
+
+                                     (12𝛼, 9, 7(1 − 𝛼))     𝑝1∗  4
+                              𝑝∗ =                      ,     ∗ = 𝛼.
+                                         16 + 5𝛼            𝑝2   3
+
+At 𝛼 = 7/9, it is (84, 81, 14)/179, not (28, 27, 6)/61; the latter is not stationary for the declared
+channel. At 𝛼 = 1, state 3 receives no input from state 2 but can still decay into it: this is
+absence of incoming branching, not full dynamical decoupling of state 3. No general full-state
+convergence theorem for this three-state family is asserted here.
+Finally, a channel alone fixes no energy cost. An explicit Stinespring isometry 𝑉 |𝜓⟩ =
+∑𝑗 𝐾𝑗 |𝜓⟩ ⊗ |𝑗⟩𝐸 shows that its implementation requires a supplied environment input and that
+discarded correlations reside in the environment. It does not fix Hamiltonians, switching work,
+bath renewal, clock cost or temperature. Those are additional entries in §11’s resource account;
+no entropy-area or gravitational normalization follows from these fixed populations.
+
+D.12 Event comparisons, composable histories and winding observability
+D.12.1 A declared receipt alphabet does not specify its transition graph
+The additional working notes [24] motivate the following conditional alphabet. A label contains
+incoming and outgoing Hamming weights 𝑤, 𝑤′ ∈ {0, 1, 2, 3} and parity 𝜖 ∈ {0, 1}. Fixed-weight
+labels have 𝑤′ = 𝑤 and no address, giving |𝐹 | = 8. One-step labels have 𝑤′ − 𝑤 = +1 or
+−1, three possible adjacent weight steps in each direction and address 𝑎 ∈ {0, 1, 2}. Thus
+|𝑂| = |𝐸| = 3 ⋅ 3 ⋅ 2 = 18. These are coarse labels, not a count of underlying microstates or
+independently generated events. Their parity/address interpretation remains conditional on a
+supplied receipt map.
+There are (44
+            2 ) = 946 unordered pairs of distinct labels. Pair comparison differs from history
+composition: the ordered history ℓ1 then ℓ2 requires at least 𝑤1′ = 𝑤2 . Applying that necessary
+weight condition yields:
+
+                                                                                      At least one
+Comparison block                     All distinct unordered pairs       weight-compatible ordering
+𝐹,𝐹                                                            28                                  4
+𝑂, 𝑂                                                          153                                 72
+
+
+                                                  40
+                                                                                     At least one
+Comparison block                    All distinct unordered pairs       weight-compatible ordering
+𝐸, 𝐸                                                          153                                72
+𝐹,𝑂                                                           144                                72
+𝐹,𝐸                                                           144                                72
+𝑂, 𝐸                                                          324                               108
+Total                                                         946                               400
+
+
+For 𝐹 , 𝐹 , weights must agree; only the two opposite-parity labels at each of four weights can
+form such a distinct pair. For 𝑂, 𝑂, the first weight step must end where the second starts: two
+successive step positions, each with 6⋅6 address/parity choices, give 72. Extinctions give the same
+count. Each onset or extinction label can compose with the two fixed labels at either endpoint,
+giving 72 in each mixed fixed block. For 𝑂, 𝐸, the two weight steps must be reverses: three
+step positions with 6 ⋅ 6 choices give 108. There are 520 ordered weight-compatible pairs when
+repetition is included. This last number is also 82 + 142 + 142 + 82 , from the incoming/outgoing
+label counts at each weight.
+These are combinatorial compatibility results. Full bit patterns, address histories, transport
+gates, null events and frame consistency may impose further constraints. Neither the 946 com-
+parisons nor all 400 weight-compatible pairs constitute a derived native transition graph. A
+partition by label type also need not be an invariant sector of an unspecified evolution operator.
+The 𝑂, 𝐸 block demonstrates a useful collision of equal counts. Its same-address subset has
+3 ⋅ 62 = 108 pairs. Its reverse-weight-step subset also has 3 ⋅ 62 = 108 pairs, but the intersection
+contains only 3 ⋅ 3 ⋅ 22 = 36. The address and weight-step predicates are independent restrictions
+in this declared product alphabet. Equality of their cardinalities does not identify the subsets,
+their admissibility or their dynamics.
+
+D.12.2 When a receipt determines a winding or cost
+Let ℋ be a declared set of fine histories, 𝑞 ∶ ℋ → ℛ a receipt, and 𝑊 ∶ ℋ → ℤ a winding
+increment. There exists a receipt-level function 𝑊̄ on 𝑞(ℋ) with 𝑊 = 𝑊̄ ∘ 𝑞 if and only if 𝑊 is
+constant on each fiber of 𝑞. Necessity follows by evaluating 𝑊̄ on equal receipts. For suﬀiciency,
+define 𝑊̄ (𝑟) using any history in that fiber; the assumption makes the definition independent of
+the representative. The same criterion applies to any proposed cost functional.
+A fixed-weight receipt alone does not satisfy this criterion for an unspecified winding. For a
+counterexample to the inference, extend the state to (𝑤, 𝜖, 𝑛), 𝑛 ∈ ℤ, and consider two candidate
+lifts that fix 𝑤, 𝜖 but update 𝑛 to 𝑛 or 𝑛 + 1. Both project to the same fixed-weight receipt;
+their winding increments differ. This proves underdetermination from the label premises alone.
+It does not declare either lift admissible under a future complete UD source law.
+Even when a winding increment 𝜈 is independently known, a quadratic burden 𝐵(𝑛) = 𝜅𝑛2 gives
+
+
+                                       Δ𝐵 = 𝜅(2𝑛𝜈 + 𝜈 2 ).
+
+The first and second positive unit steps cost 𝜅 and 3𝜅 because their initial windings are 0 and
+1. A cardinality ratio 324/108 = 3 does not supply either winding, 𝜈, 𝜅, a probability law or
+an address-to-winding map. If 𝜈 = 0 is separately established, then Δ𝐵 = 0; a zero Hamming
+change alone does not establish that premise. A zero change of this burden stock also does not
+establish zero complete apparatus cost.
+
+
+
+                                                41
+For example, the notes propose the cross-block cost 𝑐(ℓ𝑂 , ℓ𝐸 ) = 1 + 21𝑎𝑂 ≠𝑎𝐸 . This is an assigned
+pair cost, not a consequence of the pair counts. Replacing 2 by any nonnegative constant
+preserves the alphabet and all its counts. If the expression is asserted to be a metric on the
+whole label set, its nonzero diagonal first requires correction; the given formula is defined here
+only on the disjoint 𝑂, 𝐸 block. Under an additional uniform distribution on those 324 pairs,
+the proposed mean is
+
+                                         108 ⋅ 1 + 216 ⋅ 3  7
+                                                           = ,
+                                                324         3
+
+which is a different object from the count ratio 3. Thus label counting, history eligibility, winding
+inference, signed burden change and complete resource cost require separate maps. The new
+exact replay enumerates the declared alphabet and checks these counts [24]; the fiber criterion
+and counterexample supply the general logical boundary.
+
+D.13 A declared history graph and exact receipt requirements
+D.13.1 Fine events, active receipts and nulls
+This development model supplies an explicit graph for the one-pair alphabet of D.12; it is not a
+native admission law [25]. Let 𝜃 ∈ {0, 1}3 and 𝑔 ∈ 𝑆3 act by permuting the three pair addresses.
+A primitive action has 𝜉 = 0 or 𝑒𝑎 , 𝑎 ∈ {0, 1, 2}, and updates
+
+
+                                             𝜃′ = 𝑃𝑔 𝜃 ⊕ 𝜉.
+
+All these actions are admitted in this reference graph. There are eight vertices and 8 ⋅ 6 ⋅
+4 = 192 action-distinct directed edges, including loops and parallel edges. This count is not
+an identification with the different 𝑆4 × Θ product counted in §2.2. Repeated action choices
+define the fine-history space. Eligibility gates, geometry changes, control sources and resource
+exhaustion are not supplied by this declaration.
+For an edge other than (𝑔, 𝜉) = (1, 0), record
+
+
+                    𝜌(𝑒) = (𝑤, 𝑤′ , 𝑎, 𝜖),   𝑤 = |𝜃|,   𝑤′ = |𝜃′ |,   𝜖 = parity(𝑔),
+
+using 𝑎 = ∅ when 𝜉 = 0. Record the identity/no-flip action as a distinct null symbol ⊥. This
+gives 44 active receipt labels plus one null, not 44 total labels. The active receipt fibers have
+sizes 2, 3, 6 and 9 with multiplicities 2, 26, 14 and 2; the null fiber has eight edges. Counts refer
+to varying fine initial states as well as controls. They are not probabilities without a measure.
+For any fixed 𝜃 of incoming weight 𝑤, every active receipt with that weight can be realized by
+some admitted action. For weights 1 and 2, the three even permutations and the three odd
+permutations each move the exceptional bit to every address. Weights 0 and 3 are fixed by
+all permutations. Thus every weight-compatible active receipt word lifts to a path from every
+initial configuration of its first weight in this all-open graph. The 400-pair count in D.12 is
+consequently attained at this coarse level here; more restrictive native gates could reduce it. A
+null retains the state and does not remove the need for weight compatibility across it.
+
+D.13.2 A normalized kernel family does not select a preference
+For each weight choose probabilities 𝑏𝑤 , 𝑑𝑤 ≥ 0 with 𝑏𝑤 + 𝑑𝑤 ≤ 1, 𝑏3 = 𝑑0 = 0, and put
+ℎ𝑤 = 1 − 𝑏𝑤 − 𝑑𝑤 . Draw 𝑔 uniformly from 𝑆3 . With 𝑦 = 𝑃𝑔 𝜃, define the complete action kernel
+
+
+
+                                                   42
+                                        ⎧ℎ𝑤 ,         𝜉 = 0,
+                                       1{
+                         𝐾(𝑔, 𝜉 ∣ 𝜃) =   𝑏𝑤 /(3 − 𝑤), 𝜉 = 𝑒𝑎 , 𝑦𝑎 = 0,
+                                       6⎨
+                                        {𝑑 /𝑤,
+                                        ⎩ 𝑤           𝜉 = 𝑒𝑎 , 𝑦𝑎 = 1.
+
+Only existing zero or one bits enter the respective branches; the boundary cases have zero total
+probability and no division by zero. Summing all actions gives one. Each initial state of weight
+𝑤 has the same next-weight law
+
+
+                           𝑄𝑤,𝑤+1 = 𝑏𝑤 ,    𝑄𝑤,𝑤−1 = 𝑑𝑤 ,        𝑄𝑤,𝑤 = ℎ𝑤 .
+
+The null probability is ℎ𝑤 /6. It differs from the no-flip probability ℎ𝑤 and from the probability
+that the Boolean endpoint is unchanged: ℎ𝑤 /(𝑤3 ). Frame actions can occur without changing that
+endpoint. One model tick is supplied; no physical waiting-time distribution or clock calibration
+is derived.
+For the reference choice ℎ𝑤 = 1/4, 𝑏𝑤 = (3−𝑤)/4 and 𝑑𝑤 = 𝑤/4, all 24 controls have probability
+1/24. The coarse matrix and stationary row vector are
+
+                                1       3   0    0
+                             1⎛
+                              ⎜1        1   2    0⎞⎟           1
+                           𝑄= ⎜                    ⎟,       𝜋 = (1, 3, 3, 1),
+                             4⎜
+                              ⎜0        2   1    1⎟⎟           8
+                              ⎝0        0   3    1⎠
+
+with eigenvalues 1, 1/2, 0, −1/2. This is a prepared classical stochastic model, distinct from the
+coherent skew flow.
+There is no symmetry-selected stationary preference in this family. Given any strictly positive
+probability vector 𝜋,̃ choose positive adjacent fluxes 𝐽0 , 𝐽1 , 𝐽2 small enough that 𝐽𝑤−1 +𝐽𝑤 < 𝜋𝑤
+                                                                                                  ̃ ,
+with 𝐽−1 = 𝐽3 = 0, and set
+
+
+                                 𝑏𝑤 = 𝐽𝑤 /𝜋𝑤
+                                           ̃ ,          𝑑𝑤 = 𝐽𝑤−1 /𝜋𝑤
+                                                                    ̃ .
+
+These probabilities give detailed balance 𝜋𝑤 ̃ 𝑏𝑤 = 𝜋𝑤+1
+                                                       ̃  𝑑𝑤+1 and positive holding probabilities.
+                                          3
+The fine stationary distribution is 𝜋|𝜃|
+                                     ̃ /(|𝜃|), since the uniform frame draw makes the endpoint
+uniform within each outgoing weight orbit. Thus the same all-open graph and permutation
+symmetry admit every positive coarse stationary law. The construction proves nonselection; it
+does not recommend these freely chosen rates as native UD dynamics.
+
+D.13.3 Scalar frame consistency excludes loop winding
+An additive integer or real edge functional is additional data. A useful restricted class can
+nevertheless be characterized. Let 𝑓(𝜃, 𝑔) be its increment for a frame move and 𝑡(𝜃, 𝑎) its
+increment for a single flip. Assume:
+   1. Frame composition obeys 𝑓(𝜃, ℎ𝑔) = 𝑓(𝜃, 𝑔) + 𝑓(𝑃𝑔 𝜃, ℎ).
+   2. Both increments are scalars invariant under simultaneous relabeling: 𝑓(𝑃𝑘 𝜃, 𝑘𝑔𝑘−1 ) =
+      𝑓(𝜃, 𝑔) and 𝑡(𝑃𝑘 𝜃, 𝑘(𝑎)) = 𝑡(𝜃, 𝑎) for every 𝑘 ∈ 𝑆3 .
+   3. Flip reversal changes the sign: 𝑡(𝜃 ⊕ 𝑒𝑎 , 𝑎) = −𝑡(𝜃, 𝑎).
+   4. A composite frame-then-flip action has increment 𝑓(𝜃, 𝑔) + 𝑡(𝑃𝑔 𝜃, 𝑎); no extra composite
+      increment is introduced.
+
+
+
+                                                   43
+Then there is a function 𝐹 of Hamming weight such that every history has total increment
+
+
+                                  𝑊 (𝛾) = 𝐹 (𝑤final ) − 𝐹 (𝑤initial ).
+
+In particular every closed history has zero increment. These hypotheses define the class being
+excluded from nontrivial scalar loop winding; they are not established premises for every possible
+UD winding law.
+To prove the frame statement, define 𝑚(𝜃) = 16 ∑𝑔 𝑓(𝜃, 𝑔). The composition identity gives
+𝑚(𝑃ℎ 𝜃) = 𝑚(𝜃) − 𝑓(𝜃, ℎ), while scalar relabeling invariance gives 𝑚(𝑃ℎ 𝜃) = 𝑚(𝜃). Hence 𝑓 = 0.
+Upward flip edges have three relabeling orbits, indexed by incoming weights 0, 1 and 2. Call their
+increments 𝑎0 , 𝑎1 , 𝑎2 ; reversal fixes the downward increments. Set 𝐹 (0) = 0 and 𝐹 (𝑤) = ∑𝑗<𝑤 𝑎𝑗 .
+Each elementary increment is the difference of this potential, and the composite rule preserves
+it. Summing telescopes. There are exactly three free parameters, with integer parameters for
+integer increments. The finite certificate independently verifies rank 69 for 462 constraints on
+72 frame/flip values, leaving precisely this three-dimensional space [25].
+
+D.13.4 A graph-cycle diagnostic and its finite record size
+To test receipt suﬀiciency outside that restricted class, declare a different edge functional. At
+𝜃 = 000, assign +1 to the no-flip frame action 𝑐 = (012) and −1 to 𝑐−1 ; assign zero to other edges.
+This functional is antisymmetric under edge reversal, but deliberately fails the frame-composition
+identity and full 𝑆3 scalar covariance. It is a chosen graph-cycle counter, not a derived physical
+winding. Treating different frame words as the same group action would invalidate this choice.
+Both nonzero actions begin and end at 000 and emit the same active receipt 𝑟 = (0, 0, ∅, 0). For
+the word 𝑟𝑁 , the possible totals are
+
+
+                                   𝑊𝑁 ∈ {−𝑁 , −𝑁 + 2, … , 𝑁 }.
+
+All 𝑁 + 1 values occur. Even when the initial and final Boolean states, full receipt word and
+length 𝑁 are known, exact recovery of total 𝑊𝑁 therefore requires a supplement with at least
+𝑁 + 1 distinct values. A fixed-length binary supplement needs
+
+
+                                       𝐵min = ⌈log2 (𝑁 + 1)⌉
+
+bits; emitting 𝑊𝑁 attains the cardinality bound. This is aggregate recovery, not recovery of
+the full frame history. Under the reference kernel, conditional on this word, the two actions are
+equiprobable independently, giving binomial probabilities for these totals. The word itself has
+probability (1/12)𝑁 from initial 000. The support bound is a worst-case exact requirement, not
+an assertion about average cost.
+If a receiver, supplied with the known incoming weight, merges the null action with 𝑟, the
+same code word instead hides increments −1, 0, +1. It then permits every total from −𝑁 to 𝑁 ,
+requiring 2𝑁 + 1 supplemental values and ⌈log2 (2𝑁 + 1)⌉ fixed-length bits. This is a separate
+44-code observation that conflates nulls with active events. It is not the 44-active-plus-null
+contract above. The unflagged word can be reconstructed from the flagged word and initial
+weight by carrying the weight across nulls; the two standalone symbol maps are not globally
+ordered because ⊥ alone omits that weight. Exact winding over unbounded horizons cannot fit
+into a fixed finite supplemental alphabet under either observation.
+For a supplied burden 𝐵(𝑛) = 𝜅𝐵 𝑛2 , known initial counter 𝑛0 and recovered total 𝑊𝑁 suﬀice
+to compute
+
+                                                  44
+                                                         2
+                                      Δ𝐵 = 𝜅𝐵 (2𝑛0 𝑊𝑁 + 𝑊𝑁 ).
+
+This is a suﬀicient receipt for the signed stock change, not necessarily a minimal one for that
+change alone; different windings can give the same value. The counter is distinct from the
+orientation sign called 𝑛seam→chain in the source ledger. Neither 𝜅𝐵 , physical winding, readout
+acquisition, work, renewal cost nor a boundary-area density is derived. The capacity bounds are
+conditional on the receipt word and its known length; those side-information resources cannot
+be omitted from an apparatus ledger. The result identifies what a specified history functional
+needs recorded before a resource comparison can be completed.
+
+D.14 Composition of controls and the limits of phase extensions
+D.14.1 Primitive controls generate an aﬀine action group
+The 24 primitive controls of D.13.1 are not closed under composition. Their closure is
+
+
+                 𝐺aff = 𝔽32 ⋊ 𝑆3 ,     (𝑣, 𝑔)(𝑢, ℎ) = (𝑣 ⊕ 𝑃𝑔 𝑢, 𝑔ℎ),       |𝐺aff | = 48.
+
+Indeed, the primitive set contains all coordinate permutations and each single-bit translation.
+Composing the latter generates every translation in 𝔽32 ; conversely, aﬀine composition never
+leaves the displayed set. Its action on the eight configurations is faithful: evaluation at zero
+recovers 𝑣, and evaluation at the three unit vectors recovers 𝑃𝑔 . This identifies a consequence
+of repeated controls in the declared graph, not a new native admission or rate law [26].
+There is also an explicit abstract isomorphism 𝐺aff ≅ 𝐶2 ×𝑆4 . Center the Boolean cube: an aﬀine
+action becomes a signed permutation matrix 𝑀 = diag((−1)𝑣𝑗 )𝑃𝑔 . Its determinant sign gives
+𝛿 ∈ 𝐶2 , and its permutation of the four opposite-vertex pairs gives 𝜎 ∈ 𝑆4 . A signed permutation
+fixing all four pairs is ±𝐼. To see this, the four diagonal lines are in general position: three span
+the space and the fourth has all three coordinates nonzero in that basis, forcing a common
+eigenvalue. The determinant distinguishes 𝐼 and −𝐼. Hence (𝛿, 𝜎) is injective and, since both
+groups have 48 elements, bijective.
+An endpoint transformation does not identify the intervening word. In particular, twice applying
+a single flip acts as the identity while using two primitive steps. Neither the 48-element closure
+nor a receipt of the final transformation determines a history cost or the graph-cycle counter of
+D.13.4. Thus the state-action group, event word and retained history functional remain separate
+objects.
+
+D.14.2 A finite phase label does not establish physical winding
+Appending a central 𝐶13 factor produces a mathematically admissible group of order 624 with
+quotient 𝑆3 after removing 𝔽32 × 𝐶13 . This does not identify its 104-element kernel with the four-
+element Klein kernel of 𝑆4 → 𝑆3 . No native connection, parallel transport or integer winding
+follows from the appended label. A 𝐶13 character can distinguish a declared counter only modulo
+13; an unbounded integer counter still requires a lift and its acquisition contract.
+Nor does the aﬀine group force projective phases to be trivial. With the preceding coordinates
+let 𝑝(𝑔) be the parity of 𝜎(𝑔). For the Pauli matrices 𝑋, 𝑍, define
+
+
+          𝑅(𝑔) = 𝑋 𝛿(𝑔) 𝑍 𝑝(𝑔) ,     𝑅(𝑔)𝑅(ℎ) = 𝛼(𝑔, ℎ)𝑅(𝑔ℎ),           𝛼(𝑔, ℎ) = (−1)𝑝(𝑔)𝛿(ℎ) .
+
+The additive characters 𝑝, 𝛿 make 𝛼 a normalized two-cocycle. Choose a central element with
+(𝛿, 𝜎) = (1, 1) and an element with 𝛿 = 0 and odd 𝜎. They commute in the group, but their lifts
+
+                                                  45
+𝑋, 𝑍 anticommute. Rephasing either lift cannot change this commutator, so the projective class
+is nontrivial. Letting 𝐶13 act trivially preserves this counterexample for the extended group.
+This disproves the imported assertion that all projective classes vanish; it does not assert a
+physical anomaly. A physical gauge-anomaly calculation requires a specified physical action and
+field content, neither supplied here. The exact replay checks the aﬀine isomorphism, all 483
+cocycle triples and this witness [26].
+
+D.15 A carrier-driven admission candidate with finite activity
+D.15.1 Declare the response rule rather than infer it from a stock identity
+Keep a single filled tetrahedron, the signed 𝑆4 action and the constant generator 𝐴(𝑎, 𝑏, 𝑐) of
+§5.1. Write its real state as 𝑥(𝑠), with ‖𝑥‖ = 𝑅 > 0. For each opposite-edge pair 𝑝, let 𝐷𝑝
+project onto its two edge coordinates and define
+
+
+                                 𝑞𝑝 = 𝑥𝑇 𝐷𝑝 𝑥,        0 ≤ 𝑞𝑝 ≤ 𝑅 2 .
+
+These are squared carrier amplitudes, not physical energies. Introduce three response-memory
+bits 𝜗𝑝 and two supplied common thresholds 0 < ℓ < ℎ < 𝑅2 . The candidate rule sets 𝜗𝑝 ∶ 0 → 1
+on reaching 𝑞𝑝 ≥ ℎ, and 𝜗𝑝 ∶ 1 → 0 on reaching 𝑞𝑝 ≤ ℓ. Between the thresholds it retains its
+previous value. Start with a supplied consistent memory: a zero bit has 𝑞𝑝 < ℎ and a one bit
+has 𝑞𝑝 > ℓ. At each first guard hit update every enabled bit in one batch. Leave 𝑥 unchanged
+and continue the same 𝐴.
+This is a deterministic passive hybrid readout once its initial state and thresholds are supplied
+[27]. The common thresholds make it covariant under fixed vertex relabeling, since signed per-
+mutations transport 𝐷𝑝 to the corresponding pair projector and commute with 𝐴. All integrity
+gates are held open; forced resets, changing gates or feedback to 𝐴 are outside this contract. The
+response memory may be used as a candidate binary label, but no identification with native
+closure, obligation saturation or geometric replacement is derived. Hysteresis and dwell-time
+analysis are established control methods [28]; the following constants and collision example
+concern this particular carrier.
+
+D.15.2 Exact stock-speed and event-count bounds
+For any orthogonal projector 𝐷 and skew 𝐴, set 𝐵 = 𝐷𝐴(𝐼 − 𝐷) and 𝛽𝐷 = ‖𝐵‖. Direct
+differentiation gives
+
+
+        𝑞 ′ = 𝑥𝑇 (𝐷𝐴 − 𝐴𝐷)𝑥 = 2(𝐷𝑥)𝑇 𝐴(𝐼 − 𝐷)𝑥,             |𝑞 ′ | ≤ 2𝛽𝐷 √𝑞(𝑅2 − 𝑞) ≤ 𝛽𝐷 𝑅2 .
+
+The commutator 𝐷𝐴 − 𝐴𝐷 is symmetric and, in 𝐷 ⊕ (𝐼 − 𝐷) blocks, has off-diagonal blocks
+𝐵, 𝐵𝑇 ; its norm is 𝛽𝐷 . For an opposite-edge pair of the tetrahedron, the two nonzero rows of 𝐵
+have Gram matrix
+
+
+                        𝐵𝐵𝑇 ∣im 𝐷 = 2(𝑎2 + 𝑏2 )𝐼2 ,       𝛽 = √2(𝑎2 + 𝑏2 ).
+                                 𝑝
+
+
+
+Each edge has two vertex and two face incidences; opposite edges have disjoint vertex and face
+supports. This proves the identity and explains why the cell/face coeﬀicient 𝑐 does not enter
+the direct bound. If 𝑎 = 𝑏 = 0, the pair stocks are constant and no subsequent switches occur
+from a consistent initialization.
+For 𝛽 > 0, consecutive switches of any one address are separated by at least
+
+
+                                                 46
+                                arcsin √ℎ/𝑅2 − arcsin √ℓ/𝑅2   ℎ−ℓ
+                        𝑑∗ =                                ≥     > 0.
+                                             𝛽                𝛽𝑅2
+
+To prove this, a switch back requires traversal of the threshold band. On that band, differenti-
+ating arcsin √𝑞/𝑅2 bounds its absolute speed by 𝛽. Integrating along the traversal proves the
+first inequality, and 2√𝑞(𝑅2 − 𝑞) ≤ 𝑅2 proves the second. Nonmonotone motion cannot shorten
+this required traversal. For the canonical generator, 𝛽 = 2, the angular bound is attainable: if 𝑒
+is a unit coordinate vector on one edge in the pair, the invariant plane spanned by 𝑒, 𝐴𝑒/2 has
+a unit-norm trajectory with 𝑞𝑝 = sin2 (2𝑠). Its increasing crossing time between the two levels
+equals 𝑑∗ .
+Consequently, in an interval of length 𝑆, the total number of individual toggles is bounded by
+
+
+                                     𝑁toggle (𝑆) ≤ 3 (1 + ⌊𝑆/𝑑∗ ⌋) .
+
+The batch count is no larger. Thus no finite interval contains infinitely many switches. This is a
+per-address dwell bound and a finite-activity result, not a uniform positive separation between
+all distinct event times. Different addresses can cross arbitrarily close together.
+
+D.15.3 Bounded observation error and crossing-time sensitivity
+If the observed stocks satisfy |𝑞𝑝̂ − 𝑞𝑝 | ≤ 𝜀 < (ℎ − ℓ)/2, consecutive switches of an address require
+the true stock to move between at least ℎ − 𝜀 and ℓ + 𝜀. Replace 𝑑∗ above by
+
+                       arcsin √(ℎ − 𝜀)/𝑅2 − arcsin √(ℓ + 𝜀)/𝑅2   ℎ − ℓ − 2𝜀
+              𝑑∗,𝜀 =                                           ≥            > 0.
+                                          𝛽                         𝛽𝑅2
+
+The event-count bound follows with this replacement. The strict half-gap condition is necessary
+for a uniform count bound based only on this error amplitude and carrier constants. For the
+canonical flow choose orthonormal opposite-edge vectors 𝑒1 , 𝑒2 in the same pair and put 𝑤𝑖 =
+𝐴𝑒𝑖 /2. The unit trajectory
+
+                                cos(2𝑠)𝑒1 + sin(2𝑠)𝑤1 + sin(2𝑠)𝑒2 − cos(2𝑠)𝑤2
+                       𝑥(𝑠) =                        √
+                                                       2
+
+has constant 𝑞𝑝 = 1/2. With ℓ = 3/8, ℎ = 5/8 and smooth measured stock 𝑞𝑝̂ = 1/2+sin(𝑀 𝑠)/8,
+the error is exactly half the gap and the controller switches at successive maxima and minima.
+Arbitrarily large 𝑀 gives arbitrarily many toggles on a fixed interval while the true stock remains
+constant. This refutes a uniform amplitude-only count bound at the boundary; it does not assert
+infinite activity for any one fixed smooth noise signal.
+For a well-defined continuous measured guard signal the first-hit rule applies directly; at supplied
+sample times the same count bound holds, but sampling delay needs a separate bound. If
+𝑥̂ = 𝑥 + 𝑒, ‖𝑒‖ ≤ 𝛿, then
+
+
+                                   |𝑥𝑇̂ 𝐷𝑝 𝑥̂ − 𝑥𝑇 𝐷𝑝 𝑥| ≤ 2𝑅𝛿 + 𝛿 2 .
+
+Hence 𝛿 < √𝑅2 + (ℎ − ℓ)/2 − 𝑅 is suﬀicient for a positive noise-adjusted gap. This is a declared
+norm-error contract, not an inferred apparatus noise law.
+
+
+
+
+                                                   47
+Event timing needs more than a gap. Suppose a matched ideal rising crossing 𝑠∗ is isolated, the
+previous response state agrees, no earlier noisy guard hit is possible, and 𝑞𝑝′ ≥ 𝜈 > 0 throughout
+the local band [ℎ − 𝜀, ℎ + 𝜀]. Continuity of the measured signal then gives
+
+
+                                           |𝑠∗̂ − 𝑠∗ | ≤ 𝜀/𝜈.
+
+Indeed the measured first hit lies between the true crossings of ℎ − 𝜀 and ℎ + 𝜀, each at most
+𝜀/𝜈 from 𝑠∗ . Descending crossings have the corresponding −𝑞𝑝′ bound. Without isolation and
+a lower slope, small errors can create, erase or reorder crossings; no such timing guarantee is
+claimed at grazing or simultaneous events.
+
+D.15.4 Symmetric collisions obstruct a universal one-pair selector
+For the canonical generator, start from the unit vertex state 𝑥(0) = 𝑒0 and 𝜗 = 000. All three
+pair stocks are
+
+
+                                         𝑞𝑝 (𝑠) = 41 sin2 (2𝑠).
+
+Choose, solely as an exact test fixture, ℓ = 1/16 and √ ℎ = 3/16. All three bits turn on at
+𝑠 = 𝜋/6 and off at 𝑠 = 5𝜋/12, with crossing slopes ± 3/4. The stabilizer of vertex 0 is 𝑆3 and
+permutes the three pair addresses transitively while fixing the complete carrier trajectory and
+initial response. A deterministic equivariant rule required to select exactly one of these enabled
+addresses would have to return an address fixed by that stabilizer. None exists. It can hold
+or select the invariant batch; a one-address choice requires an additional reference/asymmetric
+state or a stochastic rule. Symmetry requires equal probabilities among the three if that is the
+only available information, but does not source randomness or its clock.
+The batch 000 → 111 is not a primitive edge of D.13’s no-flip/one-flip graph. Its endpoint
+transformation belongs to the 48-element closure in D.14. Serializing it into three one-flip
+events creates six possible orders; if a realized order matters, recovering it requires six values,
+hence three worst-case fixed-length bits conditional on the known batch. These are information
+requirements, not a derived physical work cost or three physical elapsed ticks.
+There is also no uniform global dwell bound even away from exact collision. For 𝑥(0) = (𝑒0 +
+𝜂𝑒1 )/√1 + 𝜂2 with small 𝜂 > 0,
+
+                              (1 − 𝜂)2
+                       𝑞𝐴 =              sin2 (2𝑠),        𝑞𝐵 = 𝑞𝐶 = 14 sin2 (2𝑠).
+                              4(1 + 𝜂2 )
+
+The A onset occurs just after the B/C onset, with a separation tending to zero as 𝜂 → 0. Per-
+address dwell and finite activity remain valid. Constructor checks cover the exact carrier, all
+signed symmetries, stock identities, transverse fixture and collision stabilizer [27].
+The result supplies a testable candidate readout rule with explicit assumptions and proves its
+event and noise limits. Its thresholds, memory preparation, continuous observation, collision
+semantics and implementation resources remain supplied. It does not select native events from
+the carrier alone, alter the reconciled obligation/flux audit, or close G05/G06, physical winding,
+apparatus renewal or entropy-area normalization.
+
+
+
+
+                                                      48
+D.16 Sampled acquisition and receipts of uncertain event times
+D.16.1 A dwell bound does not guarantee threshold detection
+Keep D.15’s passive fixed-carrier model. Its per-address dwell bound concerns the ideal response
+memory after a guard hit. It does not require the stock to remain above the upper threshold
+until a sampler reads it. For example, on the canonical vertex trajectory 𝑞𝑝 = 41 sin2 (2𝑠) choose
+ℎ = 1/4 and ℓ = 1/8. The ideal inclusive guard turns on at 𝜋/4 and off at 3𝜋/8. For every odd
+integer 𝑁 , the grid 𝑠𝑘 = 𝑘𝜋/(2𝑁 ) misses every maximum: equality would require 2𝑘 = (2𝑗+1)𝑁 ,
+impossible by parity. Direct threshold polling therefore remains off even as the grid becomes
+arbitrarily fine.
+This is a limitation of the threshold-polling observer, not an impossibility theorem for model-
+assisted reconstruction from richer data. Transverse high excursions can also be arbitrarily
+narrow near grazing; a uniform completeness guarantee needs a quantitative excursion condition
+rather than a cadence alone. The finite-activity theorem in D.15 remains valid.
+
+D.16.2 Certified guards and suﬀicient conditions for faithful acquisition
+Let actual sampling times have maximum gap Δ > 0 and let |𝑦𝑝,𝑘 − 𝑞𝑝 (𝑠𝑘 )| ≤ 𝜀. Initialize the
+sampled response equal to the ideal one. Use the conservative guards
+
+
+                       0→1     if 𝑦𝑝,𝑘 − 𝜀 ≥ ℎ,        1→0   if 𝑦𝑝,𝑘 + 𝜀 ≤ ℓ;
+
+otherwise retain the sampled bit. Update all enabled bits in a detection batch, leaving the
+carrier unchanged. A confirmation implies that the true stock is on the appropriate side of
+its ideal threshold. Large error can prevent confirmation altogether. Unlike D.15’s raw noisy
+threshold rule, these interval guards need no half-gap condition merely to exclude a wrong-side
+confirmation; completeness has the additional conditions below [29].
+For each ideal rising event at 𝜏 , assume the true stock reaches ℎ + 2𝜀 at some 𝑢 ≤ 𝜏 + 2𝜀/𝜈, and
+stays at least that high on [𝑢, 𝑢 + Δ]. A suﬀicient reach condition is 𝑞𝑝′ ≥ 𝜈 > 0 until reaching
+that level. For a falling event use ℓ − 2𝜀 and −𝑞𝑝′ ≥ 𝜈. These are supplied event-wise excursion
+and persistence hypotheses; they are not consequences of skewness alone.
+Then the matched sampled event is confirmed with delay
+
+
+                             0 ≤ 𝑠det − 𝜏 ≤ 𝐷,         𝐷 = 2𝜀/𝜈 + Δ.
+
+Proof. A sample occurs in [𝑢, 𝑢 + Δ]. For a rise, its value satisfies 𝑦 ≥ 𝑞 − 𝜀 ≥ ℎ + 𝜀, so the
+rising guard fires if it has not already done so. A matched confirmation cannot precede the ideal
+event, because its true stock must already have reached the ideal threshold. The falling proof is
+the same with inequalities reversed.
+If these hypotheses hold for every event and 𝐷 < 𝑑∗ , where 𝑑∗ is D.15’s ideal per-address dwell
+bound, induction gives exactly the same toggle word at each address: every event is confirmed
+before the next opposite event, and no extra matched event can occur between ideal switches.
+This claim preserves address-wise words, not necessarily the global order or simultaneity of
+different addresses. For a finite acquisition window the guarantee covers events at least 𝐷 before
+its end; later events require a tail acquisition or an unresolved end-window receipt.
+
+D.16.3 Time intervals preserve what detection order cannot
+With exact detection time 𝑠𝑖 , retain an event-time interval 𝐼𝑖 = [𝑠𝑖 − 𝐷𝑖 , 𝑠𝑖 ]. With timestamp
+error at most 𝑗, use
+
+                                                  49
+                                     𝐼𝑖 = [𝑠𝑖̂ − 𝐷𝑖 − 𝑗, 𝑠𝑖̂ + 𝑗].
+
+Declare event 𝑖 definitely earlier than 𝑘 only if sup 𝐼𝑖 < inf 𝐼𝑘 . Overlapping intervals do not
+certify order or simultaneity. A suﬀicient global ordering condition for ideal times 𝜏𝑖 < 𝜏𝑘 is
+𝜏𝑘 − 𝜏𝑖 > 𝐷𝑖 + 2𝑗, since delays are one-sided. D.15 supplies no uniform gap between different
+addresses, so no positive fixed cadence guarantees global ordering on that full domain. The
+bound Δ refers to actual gaps; if nominal periodic samples have time jitter 𝑗𝑠 , use at most
+Δnominal + 2𝑗𝑠 instead.
+Even an ideal simultaneous batch may split into several detection batches under address-wise
+error. Such a log records acquisition order. It must not be used as a fine carrier-event order
+without further evidence. If 𝑚! different serial orders remain possible and the desired functional
+distinguishes all of them, recovering a realized order requires at least ⌈log2 (𝑚!)⌉ additional fixed-
+length bits, conditional on the known event set. This is a necessary storage condition, not a
+mechanism for observing the order; guessing those bits adds no evidence. True batches and
+unresolved order remain valid receipt objects.
+
+D.16.4 Quantization, an exact fixture and a finite storage ledger
+A 𝑏-bit uniform quantizer on [0, 𝑅2 ] with bin-midpoint outputs has maximum quantization error
+𝑅2 /2𝑏+1 . Clipping an analog reading to that interval cannot increase its error relative to a true
+stock in the interval. With analog error at most 𝜀𝑎 , use
+
+
+                                         𝜀 = 𝜀𝑎 + 𝑅2 /2𝑏+1 .
+
+A suﬀicient design inequality for the delay certificate is
+
+
+                              2𝜀𝑎 + 𝑅2 /2𝑏 < 𝜈(𝑑∗ − Δ),          Δ < 𝑑∗ .
+
+The excursion hypotheses must still be checked. These are logical precision and cadence budgets,
+not an ADC implementation or a physical energy law.
+For the canonical unit vertex trajectory, use 𝑅 = 1, ℓ = 1/16, ℎ = 3/16, 𝑏 = 6, 𝜀𝑎 = 0
+and
+√ Δ = 1/64. Then 𝜀 = 1/128. On the required rising/falling bands, the speed is at least
+  39/16 > 3/8; choose 𝜈 = 3/8. The confirmation core has length at least 3/64 > Δ: its stock
+margin to the peak or trough is 3/64 and |𝑞𝑝′ | ≤ 2. The sinusoidal upper and lower cores are
+each a single interval. Thus
+
+                                   2(1/128)   1    11     1
+                              𝐷=            +    =     <    ≤ 𝑑∗ .
+                                     3/8      64   192   16
+
+Six bits are the minimum for the chosen conservative test 𝐷 < 1/16; five give 19/192 > 1/16.
+This uses the linear dwell certificate rather than optimizing the angular one, and is not a globally
+optimal digitizer lower bound.
+On 𝑠𝑛 = 𝑛/64, 0 ≤ 𝑛 ≤ 128, the deterministic midpoint-quantized observer records masks 111 at
+ticks 34 and 84. Exact rational sine enclosures certify every bin and guard. Allowing arbitrary
+stock errors within 1/128 gives per-address onset ticks 34–36 and extinction ticks 84–87, with all
+twelve combinations permitted by the replay envelope. All are within the proved delay bound.
+The 123 = 1728 joint combinations can produce up to six detection batches from the two ideal
+batches; no probability or independence law is assumed.
+
+
+                                                  50
+There are 129 scans and 387 scalar stock values. The declared current buffers use 18 stock
+bits, three response bits, an eight-bit tick counter and a three-bit mask buffer. Retaining every
+quantized stock value separately uses 2322 bits. A dense response-word format uses 3(129) = 387
+bits including the initial response. A sparse format with a three-bit initial response, an eight-bit
+count, and an eight-bit tick plus three-bit mask per record uses 33 bits for the deterministic
+two-record trace, or at most 77 for the six-record error envelope. These formats encode the
+observed response log; they do not replace the raw stock archive when that is required. Interval
+interpretation, scale, thresholds, quantizer, clock and error contracts require separately supplied
+metadata.
+Storage capacity is not automatically information gained; a completely known deterministic
+preparation may make its trace predictable. Nor is the log the whole apparatus: sensor prepara-
+tion, back-action, calibration, reference/clock supply, reliable retention, coding/processing and
+renewal remain uncosted physical resources. This package closes a conditional finite sampling
+and receipt contract. Native event selection, physical implementation, complete energy cost and
+entropy per boundary area remain open.
+
+D.17 Receipt consistency, covariance and errors it cannot reveal
+D.17.1 The declared signless tree map
+The filled tetrahedron has a Hasse graph with 15 simplex vertices and 28 adjacent-degree con-
+tainment edges. Choose the 14-edge spanning tree and 14 chords specified in the certificate [30].
+For a declared latent field 𝑧 ∈ ℝ15 , let 𝑆, 𝐻 ∈ {0, 1}14×15 map 𝑧 to endpoint sums on tree and
+chord edges. These are signless observation matrices, not the signed boundary operator or skew
+generator.
+The graph is bipartite by simplex-degree parity. Let 𝑣 have value −1 on even degrees and +1
+on odd degrees. Then 𝑆𝑣 = 𝐻𝑣 = 0. Connectivity gives ker 𝑆 = span{𝑣}, so every chord row
+is in the tree row space. Along its odd-length tree path, alternating the endpoint sums cancels
+internal vertices and retains the two endpoints. Hence
+
+
+                                  𝐻 = 𝐶𝑆,        𝐶 ∈ {−1, 0, 1}14×14 .
+
+For the supplied tree, rank 𝑆 = 14 and rank 𝐻 = rank 𝐶 = 10. The longest chord path has
+seven edges. A different tree can change 𝐶 and its error amplification. The graph argument is
+standard incidence/path algebra; the certificate identifies this particular split, not a new general
+reconstruction method.
+A possible magnitude-receipt application requires a separate map. On full nonzero support,
+if a product receipt is |𝐽𝑖𝑗 | = 2|𝐵𝑖𝑗 ||𝑐𝑖 ||𝑐𝑗 |, define 𝑧𝑖 = log |𝑐𝑖 | and 𝑦𝑖𝑗 = log(|𝐽𝑖𝑗 |/(2|𝐵𝑖𝑗 |)).
+Then 𝑦𝑖𝑗 = 𝑧𝑖 + 𝑧𝑗 . Zero amplitudes, phase/sign information and calibration require additional
+treatment. Applying these signless matrices directly to the chain amplitudes instead defines
+another observable. The null direction 𝑣 is a measurement gauge: 𝐴𝑣 ≠ 0 for the native
+canonical generator, so it is not a harmonic carrier mode.
+
+D.17.2 What zero residual covariance establishes
+For noiseless observations 𝑌𝑆 = 𝑆𝑧 and 𝑌𝐻 = 𝐻𝑧,
+
+
+                                          𝑟 = 𝑌𝐻 − 𝐶𝑌𝑆 = 0
+
+
+
+
+                                                   51
+holds for every realization, independently of Gaussianity or the dynamics that generated 𝑧.
+With finite second moments, Σ𝐻𝐻 = 𝐶Σ𝑆𝑆 𝐶 𝑇 and Σ𝐻𝑆 = 𝐶Σ𝑆𝑆 . If 𝑀 = (𝐼; 𝐶), any positive
+semidefinite supplied training covariance produces
+
+
+                         Σ28 = 𝑀 Σ𝑆𝑆 𝑀 𝑇 ⪰ 0,        rank Σ28 = rank Σ𝑆𝑆 .
+
+The equality of ranks follows because 𝑀 has the left inverse selecting its first 14 rows. The 14
+independent columns of (−𝐶 𝑇 ; 𝐼) lie in the covariance kernel. They span the entire kernel only
+when Σ𝑆𝑆 is positive definite; otherwise the kernel is larger.
+Thus zero residual from the same generated latent field confirms the enforced observation identity.
+It does not independently validate the carrier evolution, a source law or a physical prediction.
+Any alternative latent history passed through the same matrices satisfies it too. A covariance
+propagation identity is not an empirical held-out success.
+
+D.17.3 A residual error contract and its blind subspace
+Now declare independently acquired channels with errors, allowing arbitrary correlations:
+
+                     ̃𝑆 = 𝑆𝑧 + 𝑒𝑆 ,
+                     𝑌                   ̃𝐻 = 𝐻𝑧 + 𝑒𝐻 ,
+                                         𝑌                     𝑟 = 𝑒𝐻 − 𝐶𝑒𝑆 .
+
+Writing 𝑅𝑖𝑗 = Cov(𝑒𝑖 , 𝑒𝑗 ), finite second moments give
+
+
+                         Cov(𝑟) = 𝑅𝐻𝐻 + 𝐶𝑅𝑆𝑆 𝐶 𝑇 − 𝑅𝐻𝑆 𝐶 𝑇 − 𝐶𝑅𝑆𝐻 .
+
+The cancellation of 𝑧 is pointwise, so this formula does not require the errors to be independent
+of 𝑧. For zero-mean independent equal-variance errors across all 28 channels it becomes 𝜎2 (𝐼 +
+𝐶𝐶 𝑇 ), positive definite when 𝜎 > 0. For componentwise error bounds,
+
+
+                                         ‖𝑟‖∞ ≤ 𝜀𝐻 + 7𝜀𝑆
+
+on this tree. The row-specific coeﬀicient is its path length, ranging from three to seven here.
+These are supplied noise contracts, not a derived sensor law. The residual mean must also be
+tested: a constant nonzero 𝑒𝐻 = 𝑏, 𝑒𝑆 = 0 has zero covariance but residual 𝑏.
+Finally set 𝐿 = (−𝐶, 𝐼). Its full blind error subspace is
+
+
+                        ker 𝐿 = {(𝑢, 𝐶𝑢) ∶ 𝑢 ∈ ℝ14 },       dim ker 𝐿 = 14.
+
+Such errors change both blocks consistently and produce zero residual. Since 𝑆 is surjective,
+each is the observation of some latent-field perturbation. Additional roots or stock references can
+resolve aspects of the measurement gauge, but a dynamics test still needs a specified temporal
+prediction or other independent observable. The residual can detect failures of the declared
+receipt consistency relation; passing it cannot establish that all state estimates, event sources or
+physics are correct. This distinction qualifies how the sampled receipts of D.16 can be audited
+without claiming unearned predictive validation.
+
+
+
+
+                                                52
+Appendix E. Data, code and development declarations
+The preserved UD_CONDITIONING_REVIEW_v0.8_PACKAGE.zip contains the prior manuscript,
+the conditioning report, exact Gram/LDL/Sturm certificates, current replay and the preserved
+version-0.7 gluing package. Run verify_conditioning.py with SymPy, NumPy and SciPy;
+its required source certificates are in baseline/. It regenerates the conditioning certifi-
+cates and CONDITIONING_CHECKS.json. Prior source and replay scopes remain unchanged.
+ENVIRONMENT.json records the constructor environment.
+The preserved UD_PARTNER_REVIEW_v0.9_PACKAGE.zip adds the prior revised manuscript, the
+partner-work audit, the original partner DOCX and its paragraph/Oﬀice Math extracts, an
+explicit claim-disposition register, verify_partner_findings.py, PARTNER_CHECKS.json and
+the positive-metric certificate. Run the new replay with SymPy; it executes no imported partner
+code. The archive preserves the full version-0.8 conditioning package. The imported working
+notes are unreviewed claim data; only independently rederived material is integrated. Their
+unattested physical, modular-filter and holonomy interpretations are not promoted. Approxi-
+mate recurrence and metric-class qualifications also have written proofs in D.10.
+The preserved version-0.10 additional-research package contains this manuscript, its compan-
+ion audit, the independently authored verify_additional_research.py, exact check output,
+source register, claim dispositions and the five new input documents. Original DOCX and gov-
+ernance/ledger bytes are preserved inside the source archive with their hashes. The version-0.9
+manuscript is preserved as a baseline; its complete earlier evidence package remains pinned by
+the source register and prior capture commit. The new replay checks event counts/composability,
+selected auxiliary finite-group facts and counterexamples to imported transport claims. It does
+not repeat every earlier replay. Auxiliary group/transport calculations are retained in the com-
+panion audit rather than admitted as UD physical correspondences. All additions remain devel-
+opment, with no registry promotion or independent review.
+The preserved version-0.11 history-receipt package contains this manuscript, the companion fine-
+history report, verify_history_receipts.py, exact receipt/kernel checks and the full integer
+scalar-increment constraint certificate. It preserves the version-0.10 manuscript and pins its
+earlier evidence release in the source register. The new replay concerns the declared all-open
+Boolean/permutation graph and its two receipt contracts; it is not a replay or promotion of all
+historical UD claims. Null probabilities, scalar covariance, frame composition, supplied model
+ticks and the graph-cycle diagnostic’s failed consistency hypotheses are explicit.
+The preserved version-0.12 additional-research package adds three original partner DOCX files,
+paragraph and Oﬀice Math extracts, an audit with explicit claim dispositions, and the inde-
+pendently authored verify_research_batch3.py. Its 19 exact check families cover aﬀine com-
+position, a projective cocycle counterexample, the corrected order-104 finite-field block, receipt
+partitions and conditional scattering/noise benchmarks. D.14 integrates the aﬀine result and
+the phase-extension limits. Neither the reference scattering networks nor an optional central
+phase factor is a derived native physical correspondence. The full eight-terminal floating-probe
+noise remains open. The version-0.11 manuscript is preserved and its evidence package pinned
+by hash and capture commit.
+The preserved version-0.13 admission package adds a passive carrier-driven hysteresis candi-
+date, its exact stock-speed, per-address dwell, bounded-noise and isolated-crossing bounds,
+a sharp half-gap noise counterexample, and a symmetry collision obstruction. The replay
+verify_admission.py independently constructs the incidence matrices and all signed actions.
+Twenty check families pass, including an explicitly numerical timing corollary; the general es-
+timates have written proofs in D.15. The candidate holds integrity gates open and leaves the
+carrier unchanged, with thresholds, response memory and observation supplied. It does not
+
+
+                                               53
+replace a native admission law or any frozen obligation/flux protocol. The package preserves
+the v0.12 manuscript and pins its evidence release and GitHub capture.
+The preserved version-0.14 sampled-acquisition package adds a polling counterexample,
+certified interval guards, conditional completeness/delay proofs, uncertain-time receipts, a
+digitizer precision/cadence budget and explicit acquisition/storage counts. The new replay
+verify_sampled_acquisition.py passes 18 check families. It constructs exact rational
+enclosures for all guards in a finite synthetic trace and propagates a joint bounded-error
+envelope; no noise probabilities or physical measurements are supplied. The v0.13 manuscript
+and selected source bytes are preserved, with its complete evidence package pinned by SHA-256
+and capture commit. This closes a conditional passive observation contract, not a physical
+sensor, native source law or complete apparatus-energy comparison.
+The current version-0.15 additional-research package preserves four supplied DOCX originals,
+complete main-document XML, paragraph/table extracts and Oﬀice Math equations. Main-
+document hashes identify one repeat of S9 and one duplicate pair within this batch. The
+new independent replay verify_research_batch4.py passes 25 check families: signless covari-
+ance/path identities, noise and blind-error qualifications, Boolean orbit counts, and auxiliary
+cyclic-cocycle/modular repairs. D.17 integrates the receipt/error findings. The companion audit
+records exact contradictions to imported modular and physical-protection claims, with precise
+primary references; optional topological models are not identified with native UD physics. Orig-
+inal source code is not executed, and prior evidence is pinned rather than all replayed.
+Source recovery is pinned to repository base commit 4b9c1f7ba03f76324b792f389517161d2bc47e05
+and first-package commit f274108856caecd2504f28a6729a91ce93846893; the source register
+records the inspected bytes. These identifiers establish provenance rather than review accep-
+tance. Package verification does not replay every proof or apparatus theorem in Papers I-IV;
+inherited results must be reviewed in those sources.
+ChatGPT/Codex assisted with synthesis, source checking, symbolic/numerical calculations and
+preparation of this review candidate. This is a development disclosure. The named author must
+verify the final text, accept responsibility for it, and complete the target venue’s authorship,
+funding, competing-interest and assistance declarations before submission. No declaration of
+funding or competing interests is inferred from missing source information.
+
+
+References
+  1. Mayes, Benjamin Walker. Finite Tetrahedral Complexes, Skew Support Flow and Con-
+     tact Readiness. Paper I, consolidated review draft 1.1.1, 4 October 2026. M5 release,
+     source/paper-1.md.
+  2. Mayes, Benjamin Walker. Projective Reconstruction, Complex Phase Receipts and Frozen-
+     Tree Validation. Paper II, consolidated review draft 1.1.1, 4 October 2026. M5 release,
+     source/paper-2.md.
+  3. Mayes, Benjamin Walker. Tetrahedral Symmetry, Radial Spectra and Finite Collective
+     Mechanisms. Paper III, consolidated review draft 1.1.1, 4 October 2026. M5 release,
+     source/paper-3.md.
+  4. Mayes, Benjamin Walker. Finite Prepared Quantum Controllers, Capture Windows and
+     Correlation-Preserving Renewal. Paper IV, development draft 0.1, 4 October 2026. M5
+     release, source/paper-4.md.
+  5. Governance Amendment — CRL-2 Subdivision and Anti-Erosion Rules, supplied
+     UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md. Development and registry lanes remain
+
+
+                                              54
+    distinct.
+ 6. Mayes UD research record. Native pre-event projection obstruction, 12 October 2026,
+    captures/2026-10-12T014919Z-codex-native-source-97c0393f/THEOREM.md.
+ 7. Mayes UD research record. Direct-Theta event to typed closure and hard-mask pushforward,
+    10 October 2026, captures/2026-10-10T170752Z-codex-theta-closure-245626d6/REPORT.md.
+ 8. Mayes UD research record. Bounded subdivision two-event gate and Vertex interface and
+    cross-event generator gate, 13 October 2026, repository captures identified by the compan-
+    ion source register; reports are included in the replay sources.
+ 9. UD first closure package, 14 October 2026. UD_FIRST_CLOSURE_PACKAGE_v0.1.md, accom-
+    panying source hashes, exact incidence certificates and replay.
+10. UD core methodological governance: representation and approximation, version 1.0, 14 Oc-
+    tober 2026. User-authorized methodological addition; no theorem-confidence or physical-
+    promotion receipt. UD_Representation_And_Approximation_Governance_v1.0.md.
+11. Horak, Danijela, and Jürgen Jost. Spectra of combinatorial Laplace operators on simplicial
+    complexes. Advances in Mathematics 244 (2013), 303-336. DOI: 10.1016/j.aim.2013.05.007.
+    arXiv:1105.2712.
+12. Knill, Oliver. The Dirac operator of a graph. 2013. arXiv:1306.2166.
+13. Singer, Amit. Angular Synchronization by Eigenvectors and Semidefinite Program-
+    ming.    Applied and Computational Harmonic Analysis 30 (2011), 20-36.     DOI:
+    10.1016/j.acha.2010.02.001. arXiv:0905.3174.
+14. Christandl, Matthias, Nilanjana Datta, Artur Ekert, and Andrew J. Landahl. Perfect
+    State Transfer in Quantum Spin Networks. Physical Review Letters 92 (2004), 187902.
+    DOI: 10.1103/PhysRevLett.92.187902. arXiv:quant-ph/0309131.
+15. Reeb, David, and Michael M. Wolf. An improved Landauer Principle with finite-size correc-
+    tions. New Journal of Physics 16 (2014), 103011. DOI: 10.1088/1367-2630/16/10/103011.
+    arXiv:1306.4352.
+16. Jacobson, Ted. Thermodynamics of Spacetime: The Einstein Equation of State. Physi-
+    cal Review Letters 75 (1995), 1260-1263. DOI: 10.1103/PhysRevLett.75.1260. arXiv:gr-
+    qc/9504004.
+17. Serre, Jean-Pierre. Linear Representations of Finite Groups. Graduate Texts in Mathe-
+    matics 42, Springer, 1977. DOI: 10.1007/978-1-4684-9458-7.
+18. Knill, Oliver. The McKean-Singer Formula in Graph Theory. 2013, §9.3 and complete-
+    graph example. arXiv:1301.1408.
+19. Wee, Junjie, Ginestra Bianconi, and Kelin Xia. Persistent Dirac for molecular representa-
+    tion. Scientific Reports 13, 11183 (2023). DOI: 10.1038/s41598-023-37853-z.
+20. Åström, Karl Johan, and Richard M. Murray. Feedback Systems: An Introduction for
+    Scientists and Engineers. Author draft v2.4a, 16 September 2006, §7.1, Theorem 7.1.
+    Inspected draft. Background reference for the observability rank criterion; draft numbering
+    is version-specific.
+21. Gouasmi, Ayoub, Eric Parish, and Karthik Duraisamy. A priori estimation of mem-
+    ory effects in coarse-grained nonlinear systems using the Mori-Zwanzig formalism.
+    arXiv:1611.06277v2, 2017. DOI: 10.1098/rspa.2017.0385. Background reference for
+    projected memory equations.
+
+
+                                             55
+22. LAPACK authors. LAPACK Users’ Guide, “Linear Least Squares Problems” and “How
+    to Measure Errors.” Oﬀicial documentation: least squares, error measures. Background
+    for standard least-squares and norm-based conditioning; the specialized bounds here are
+    proved explicitly.
+23. Supplied partner-LLM working notes, Calculating the Square Root of 4/3, DOCX upload
+    ingested 14 October 2026. Unreviewed source data; no public-paper or model-identity
+    claim. Original SHA-256, paragraph anchors, dispositions and independent replay are
+    documented in the companion partner-work audit and version-0.9 package. This reference
+    identifies provenance, not authority for the corrected results.
+24. Additional supplied partner working notes, 1, 2, and 3(5).docx, 1, 2, and 3(7).docx
+    and 1, 2, and 3(8).docx, ingested 14 October 2026. Exact hashes, paragraph anchors,
+    source/dependency dispositions and independent checks are in the companion additional-
+    research audit and version-0.10 package. Unreviewed source data; this reference records
+    provenance rather than authority for their conclusions.
+25. UD Fine History and Winding Receipts, version 0.1, 14 October 2026. Independently
+    authored development analysis with a declared graph, normalized kernel family, scalar
+    no-loop proof, exact constraint certificate and finite receipt-size bounds. Companion re-
+    port and replay in the version-0.11 package. Constructor checked; no registry or physical
+    promotion and no independent review.
+26. UD Additional Research Audit: Aﬀine Control Closure, Phase Extensions and Conditional
+    Transport, version 0.3, 14 October 2026. Companion constructor audit and independent
+    exact replay for supplied partner working notes 1, 2, and 3(9).docx, (10).docx and
+    (11).docx. Original byte hashes, paragraph anchors and equations are preserved in the
+    version-0.12 package. Unreviewed inputs; no independent review or physical promotion.
+27. Carrier-driven Admission: A Passive Hysteresis Candidate, version 0.1, 15 October 2026
+    UTC. Companion development report, explicit response contract, written bounds and
+    verify_admission.py in the version-0.13 package. Constructor checks only; no indepen-
+    dent review, registry conclusion or physical promotion.
+28. Li, Zhanjie, Yajing Ma, Dong Yue and Jun Zhao. “Guaranteed Dwell-Times of Hysteresis
+    Switching for Switched Nonlinear Systems via Switching Characteristic Indices.” SIAM
+    Journal on Control and Optimization. DOI 10.1137/22M1471699. Background attribution
+    for established hysteresis/dwell methods; D.15 derives its own bounds directly. Publisher
+    abstract inspected; no uninspected theorem is imported.
+29. Sampled Event Acquisition and Uncertainty Receipts, version 0.1, 15 October 2026 UTC.
+    Companion development report, written conditional detection/order bounds, exact finite
+    trace and verify_sampled_acquisition.py in the version-0.14 package. Constructor-
+    checked passive observer; no apparatus execution, independent review, registry conclusion
+    or physical promotion.
+30. Additional Research Audit: Receipt Covariance and Twisted Phase Labels, version 0.4, 15
+    October 2026 UTC. Companion audit of supplied working notes 1, 2, and 3(12).docx
+    through (15).docx, with original hashes, duplicate-body evidence, claim dispositions, ex-
+    act covariance certificates and independently authored replay. Primary topology references
+    are specified in the companion report. Development; no independent review, native phys-
+    ical identification or promotion.
+
+
+
+
+                                            56
+
