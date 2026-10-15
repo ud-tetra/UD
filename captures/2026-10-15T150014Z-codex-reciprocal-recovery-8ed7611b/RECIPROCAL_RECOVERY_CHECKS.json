@@ -1,0 +1,285 @@
+{
+  "checks": [
+    {
+      "name": "symbolic_cubic_characteristic_polynomial",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "symbolic_routh_second_determinant",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "raw_pulled_back_storage_balance",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "normalization_does_not_equal_symmetric_rate",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "signed_burden_positive_cone_not_invariant",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "finite_chain_dimensions",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "chain_nilpotence",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "fundamental_cycle_and_dual_connectivity",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "exact_rational_boundary_ranks",
+      "status": "PASS",
+      "scope": "EXACT",
+      "justification": "mod-2 lower bounds; constant/fundamental-cycle upper bounds and B1 B2=0 give matching rational upper bounds"
+    },
+    {
+      "name": "exact_vertex_annihilating_polynomial",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "nine_exact_spectral_moments",
+      "status": "PASS",
+      "scope": "EXACT",
+      "moments": [
+        120,
+        1440,
+        18720,
+        252000,
+        3463200,
+        48263040,
+        679502880,
+        9642983040,
+        137726676000
+      ],
+      "eigenvalues_Qsqrt5": [
+        {
+          "pair": [
+            0,
+            0
+          ],
+          "multiplicity": 1
+        },
+        {
+          "pair": [
+            9,
+            -3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "pair": [
+            9,
+            3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "pair": [
+            10,
+            -2
+          ],
+          "multiplicity": 9
+        },
+        {
+          "pair": [
+            10,
+            2
+          ],
+          "multiplicity": 9
+        },
+        {
+          "pair": [
+            9,
+            0
+          ],
+          "multiplicity": 16
+        },
+        {
+          "pair": [
+            12,
+            0
+          ],
+          "multiplicity": 25
+        },
+        {
+          "pair": [
+            14,
+            0
+          ],
+          "multiplicity": 36
+        },
+        {
+          "pair": [
+            15,
+            0
+          ],
+          "multiplicity": 16
+        }
+      ]
+    },
+    {
+      "name": "coupled_and_undamped_dimension_split",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "six_vertex_projectors_and_relief_commutation",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "ten_mode_dimensions_after_burden_extension",
+      "status": "PASS",
+      "scope": "EXACT",
+      "orbit_counts": [
+        12,
+        72,
+        120,
+        60
+      ]
+    },
+    {
+      "name": "declared_two_parameter_normalization_commutes",
+      "status": "PASS",
+      "scope": "EXACT",
+      "justification": "S P0=P0 S=10 P0; hence every nu0 P0+nuperp(I-P0) commutes"
+    },
+    {
+      "name": "local_drain_breaks_every_fibration_average",
+      "status": "PASS",
+      "scope": "EXACT",
+      "commutator_frobenius_squared": "9/50 for unscaled orthoprojectors"
+    },
+    {
+      "name": "active_reciprocal_coupling_changes_carrier_gap",
+      "status": "PASS",
+      "scope": "EXACT",
+      "gap_derivative": "(2/5)*gamma for c0=bhat=e_u+e_v"
+    },
+    {
+      "name": "joint_score_dissipation_gap_has_both_signs",
+      "status": "PASS",
+      "scope": "EXACT",
+      "justification": "Dscore L is real symmetric, nonzero, traceless; therefore indefinite"
+    },
+    {
+      "name": "uniform_diffusion_blindness",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "exact_pseudoinverse_polynomial",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "target_boundary_average_vanishes",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "protected_cycle_gap_coefficient",
+      "status": "PASS",
+      "scope": "EXACT",
+      "coefficients": [
+        "11/600",
+        "11/600",
+        "11/600",
+        "0",
+        "11/600",
+        "11/600"
+      ]
+    },
+    {
+      "name": "protected_cycle_retained_stock_coefficient",
+      "status": "PASS",
+      "scope": "EXACT",
+      "cycle_stock_coefficient": "601/720"
+    },
+    {
+      "name": "operator_norm_certificate_for_cut",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "certified_finite_protected_gap",
+      "status": "PASS",
+      "scope": "EXACT",
+      "cut_duration": "1/1000",
+      "lower_gap": "6551/375000000000"
+    },
+    {
+      "name": "source_and_restored_score_commutation",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "359_dimensional_spectrum_matches_cubic_factors",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "max_error": 3.730349362740526e-14
+    },
+    {
+      "name": "one_local_drain_stabilizes_vertex_burden_lane",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "largest_real_part": -0.0007818880501532233
+    },
+    {
+      "name": "uniform_local_drains_stabilize_vertex_burden_lane",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "largest_real_part": -0.028024528083910205
+    },
+    {
+      "name": "protected_score_gap_after_cut",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "gaps": [
+        1.833326611121403e-08,
+        1.8333266111214044e-08,
+        1.833326611121403e-08,
+        0.0,
+        1.833326611121403e-08,
+        1.8333266111214044e-08
+      ],
+      "retained_support": 8.347187449138966e-07
+    },
+    {
+      "name": "protected_lane_survives_reciprocal_relaxation",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "time": 600.0,
+      "burden_norm": 2.2000491884661714e-09,
+      "carrier_minus_dark_norm": 1.963480945287323e-08,
+      "final_carrier_gaps": [
+        1.8333266108560608e-08,
+        1.833326611054792e-08,
+        1.8333266107102547e-08,
+        0.0,
+        1.8333266109673464e-08,
+        1.8333266112262923e-08
+      ]
+    }
+  ],
+  "exact_count": 26,
+  "numerical_count": 5,
+  "physical_promotion": 0,
+  "status": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "scope": "Conditional reciprocal extension on restored uniform carrier; not the active edge-cut spectrum, native burden occupancy, event trigger, physical rate or independent review."
+}
