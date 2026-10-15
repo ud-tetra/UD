@@ -1,0 +1,143 @@
+{
+  "version": "0.1",
+  "lane": "development; no registry promotion",
+  "physical_promotion": 0,
+  "claims": [
+    {
+      "id": "GBT-01",
+      "claim": "Skew-Hermitian Hasse-link gauge transport; norm and regional support currents",
+      "status": "EXACT_CONDITIONAL",
+      "assumptions": [
+        "finite oriented filled tetrahedron",
+        "rank-r complex simplex fibers",
+        "unitary adjacent incidence links",
+        "local skew temporal blocks"
+      ],
+      "proof": "Theorem 1; equations (1),(5)",
+      "review": "constructor only",
+      "dependencies": [
+        "UD Paper I v1.1.1 Sections4-6",
+        "supplied rank-r unitary Hasse links"
+      ],
+      "constructor": "Codex in this session",
+      "independent_reviewer": null,
+      "lane": "development; no registry promotion"
+    },
+    {
+      "id": "GBT-02",
+      "claim": "D_U squared zero iff all incidence diamonds flat; on filled tetrahedron flat implies pure gauge",
+      "status": "EXACT_CONDITIONAL",
+      "assumptions": [
+        "same Hasse-link convention",
+        "all graded chain coordinates retained",
+        "unique full top simplex"
+      ],
+      "proof": "Theorem 1(3)-(5)",
+      "scope_limit": "Incidence flatness only; temporal curvature may remain. Not an exclusion of curved gauge dynamics or global holonomy on other bases.",
+      "dependencies": [
+        "GBT-01",
+        "filled tetrahedron face poset with unique top simplex"
+      ],
+      "constructor": "Codex in this session",
+      "independent_reviewer": null,
+      "lane": "development; no registry promotion"
+    },
+    {
+      "id": "GBT-03",
+      "claim": "One-incidence phase yields exact characteristic polynomial and sqrt2,2,sqrt6 split at pi/2",
+      "status": "EXACT_CONDITIONAL",
+      "assumptions": [
+        "rank1",
+        "one vertex0-edge01 link phase",
+        "all other links identity",
+        "unit link magnitude",
+        "temporal connection zero"
+      ],
+      "proof": "Corollary 2, two-plane Gram proof",
+      "verification": "five exact phase fixtures",
+      "dependencies": [
+        "GBT-01",
+        "native A0 squared=-4(I-P0)",
+        "one-incidence phase contract"
+      ],
+      "constructor": "Codex in this session",
+      "independent_reviewer": null,
+      "lane": "development; no registry promotion"
+    },
+    {
+      "id": "GBT-04",
+      "claim": "Global orthogonal centralizer O(1)xU(7); simultaneous signed S4 centralizer O(1)xU(1)^3",
+      "status": "EXACT_INTERNAL",
+      "assumptions": [
+        "canonical real unit-metric 15-coordinate generator",
+        "full signed S4 action",
+        "global coordinate symmetries"
+      ],
+      "scope_limit": "Does not classify every possible enlarged or noncommuting gauge branch",
+      "dependencies": [
+        "UD Paper III v1.1.1 Section2.3",
+        "native active complex structure"
+      ],
+      "constructor": "Codex in this session",
+      "independent_reviewer": null,
+      "lane": "development; no registry promotion"
+    },
+    {
+      "id": "GBT-05",
+      "claim": "Exact scalar state-phase receipts have trivial cycle products",
+      "status": "EXACT_CONDITIONAL",
+      "assumptions": [
+        "nonzero support at retained vertices",
+        "receipts produced by one state",
+        "proper reversed-edge conjugation"
+      ],
+      "scope_limit": "Independent link/connection measurement has different data",
+      "dependencies": [
+        "UD Paper II v1.1.1 complex receipts",
+        "nonzero scalar support"
+      ],
+      "constructor": "Codex in this session",
+      "independent_reviewer": null,
+      "lane": "development; no registry promotion"
+    },
+    {
+      "id": "GBT-06",
+      "claim": "Assumed SM product Lie algebra admits three independent positive invariant kinetic coefficients",
+      "status": "EXACT_CONDITIONAL",
+      "assumptions": [
+        "assume su3+su2+u1",
+        "fixed generator normalizations",
+        "invariant symmetric positive forms"
+      ],
+      "scope_limit": "No beta functions or scale matching derived",
+      "dependencies": [
+        "assumed Standard Model compact Lie algebra",
+        "fixed generator normalization"
+      ],
+      "constructor": "Codex in this session",
+      "independent_reviewer": null,
+      "lane": "development; no registry promotion"
+    },
+    {
+      "id": "GBT-H1",
+      "claim": "Independent unitary Hasse transport is a possible physical bridge architecture",
+      "status": "CANDIDATE",
+      "missing": [
+        "source-selected internal fibers/group",
+        "closed link dynamics and Gauss constraints",
+        "continuum/Lorentz/chiral matter limits",
+        "units/calibration",
+        "independent data tests"
+      ],
+      "dependencies": [
+        "GBT-01",
+        "GBT-02",
+        "GBT-03",
+        "OPEN: source-selected gauge-field dynamics"
+      ],
+      "constructor": "Codex in this session",
+      "independent_reviewer": null,
+      "lane": "development; no registry promotion"
+    }
+  ]
+}
