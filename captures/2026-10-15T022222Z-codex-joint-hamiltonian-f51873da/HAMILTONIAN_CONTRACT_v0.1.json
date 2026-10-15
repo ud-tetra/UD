@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "type": "CANDIDATE finite classical action",
+  "source_graph": {
+    "complex": "filled oriented tetrahedron",
+    "nodes": 15,
+    "links": 28,
+    "diamonds": 18,
+    "max_degree": 4
+  },
+  "variables": {
+    "psi": "one canonical complex fundamental vector per node",
+    "chi": "one independent canonical complex conjugate-representation vector per node; explicit addition",
+    "U": "unitary r by r matrix per incidence link",
+    "E": "Hermitian left cotangent momentum per link"
+  },
+  "parameters": {
+    "rank": "arbitrary integer r>=1, not physically selected",
+    "a": ">0",
+    "kappa": ">=0",
+    "mu": ">=0; internal phase coefficient, not established rest mass"
+  },
+  "units": "dimensionless internal time; physical clock/action units OPEN",
+  "Hamiltonian": "a/2 sum tr(E^2) + kappa sum_d(1-Re tr(W_d)/r) + psi^dagger(mu I+h_U)psi + chi^dagger(mu I+bar(h_U))chi",
+  "Gauss": "sum_head E - sum_tail U^dagger E U - psi psi^dagger + bar(chi)chi^T =0",
+  "admissible_nonzero_data": "chi=bar(psi), E=0, arbitrary unitary U; initial preparation only",
+  "verification": "constructor checks plus written universal proofs; not independent review",
+  "physical_promotion": 0
+}

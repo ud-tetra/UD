@@ -1,0 +1,244 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\setlist{nosep,leftmargin=18pt}
+\setlength{\headheight}{14pt}\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Conditional dynamics}\rhead{GHT v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\U}{\mathrm U}\newcommand{\id}{\mathbf1}\newcommand{\dd}{\mathrm d}
+\begin{document}
+\begin{center}
+{\Large\bfseries A constrained joint link--matter Hamiltonian\\on the tetrahedral incidence graph}\\[8pt]
+{\large Gauss closure, reciprocal backreaction, global flow,\\and an exact neutral curvature seed}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 15 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem manuscript
+\end{center}
+\begin{abstract}
+We construct a finite classical Hamiltonian extension of the previously specified unitary Hasse-link transport family. A fundamental and a conjugate-representation matter field provide nonzero neutral initial data on a closed graph. The canonical moment map supplies first-class matrix Gauss constraints. The equations preserve those constraints, the Hamiltonian, and both matter norms; their temporal-gauge solutions exist globally. An explicit neutral scalar preparation starts with flat links and produces nonzero diamond curvature at second order in internal time. The scalar curvature defect begins as $2a^2s^4$. These are deductions within an explicitly chosen action, not a derivation of that action from UD, a selection of a physical gauge group, or evidence for force unification.
+\end{abstract}
+\textbf{Claim typing.} The Hamiltonian and extra matter species are \textsc{Candidate} inputs. All universal statements below are \textsc{Derived, conditional on those inputs}. Finite symbolic fixtures are \textsc{Exact} constructor checks; an integration receipt is separately \textsc{Numerical}. Physical promotion remains $0$. This manuscript has not received independent review.
+
+\section{Source graph and transport convention}
+Let $K=\Delta^3$ be the filled tetrahedron, with its $15$ nonempty simplices in increasing vertex orientation: $4$ vertices, $6$ edges, $4$ faces and $1$ tetrahedron. The signed total boundary $B$ satisfies $B^2=0$. Its $28$ nonzero entries define an oriented incidence graph. Write $e=(i\leftarrow j)$ when $i$ is a codimension-one face of $j$, with $b_e=B_{ij}\in\{\pm1\}$. Incidence signs are not electric-charge signs.
+
+At each simplex place $\mathbb C^r$, $r\geq1$, and at each oriented link place $U_e\in\U(r)$. Set
+\[
+ (D_U)_{ij}=b_eU_e,\qquad A_U=D_U^\dagger-D_U,
+ \qquad h_U=iA_U=h_U^\dagger.
+\]
+The old prescribed-link equation is $\dot\psi=A_U\psi$. Here links acquire their own momenta and equations. A prescribed identity connection is not automatically an invariant solution of the coupled model.
+
+\newpage
+\section{Declared canonical extension}
+At every link introduce a Hermitian left momentum $E_e$. At every node introduce independent complex classical fields $\psi_i,\chi_i\in\mathbb C^r$. They transform as
+\begin{align}
+\psi_i'&=g_i\psi_i,&\chi_i'&=\bar g_i\chi_i,\\
+U_e'&=g_iU_eg_j^\dagger,&E_e'&=g_iE_eg_i^\dagger,
+\qquad g_i\in\U(r).
+\end{align}
+The second field is an explicit extension. It is not yet identified with an antiparticle, a fermion, or a source-derived degree of freedom.
+
+Use the product cotangent and canonical complex phase space, with real one-form
+\begin{equation}
+\Theta=-i\sum_e\tr(E_e\,\dd U_eU_e^\dagger)
++\frac{i}{2}\sum_i\left(\psi_i^\dagger\dd\psi_i-\dd\psi_i^\dagger\psi_i
++\chi_i^\dagger\dd\chi_i-\dd\chi_i^\dagger\chi_i\right).
+\end{equation}
+Take $\omega=-\dd\Theta$, $\iota_{X_H}\omega=\dd H$; thus
+$\{\psi_{i\alpha},\bar\psi_{j\beta}\}=-i\delta_{ij}\delta_{\alpha\beta}$,
+and likewise for $\chi$. Fields of different species commute.
+
+A diamond $d=(i,j,h,k)$ has two paths from $k$ to $i$:
+\[
+ P_d=U_{ij}U_{jk},\qquad Q_d=U_{ih}U_{hk},\qquad W_d=Q_d^\dagger P_d.
+\]
+There are $18$ diamonds. $W_d$ is based at $k$ and transforms by conjugation there. Choose constants $a>0$, $\kappa\geq0$, $\mu\geq0$, and define
+\begin{align}
+H={}&\frac a2\sum_e\tr(E_e^2)
++\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)\notag\\
+&+\psi^\dagger(\mu\id+h_U)\psi
++\chi^\dagger(\mu\id+\bar h_U)\chi. \label{eq:H}
+\end{align}
+All quantities use dimensionless internal-time units at this stage. The parameters are action coefficients; no electromagnetic, weak, strong, gravitational, or laboratory normalization has been assigned. The on-site $\mu$ is a phase-rate coefficient, not an established rest mass.
+
+Every term in \eqref{eq:H} is real and gauge invariant. In particular $h_{U'}=G h_U G^\dagger$, where $G=\operatorname{diag}(g_i)$; complex conjugation gives the conjugate-representation covariance. The diamond term is nonnegative because $W_d$ is unitary.
+
+The canonical constrained action is
+\[
+\mathcal S=\int\!\left[\Theta(\dot x)-H(x)-\sum_i\tr(\Lambda_i\mathcal G_i)\right]\dd s,
+\qquad \Lambda_i=\Lambda_i^\dagger,
+\]
+with $\mathcal G_i$ specified on the next page. This is a standard lattice Hamiltonian construction adapted to the incidence graph; the general cotangent mechanism is not claimed as new \cite{KS,Frolov}.
+
+\newpage
+\section{Gauss constraints and the neutrality obstruction}
+\begin{theorem}[Moment map and constrained closure]\label{th:closure}
+For the declared canonical phase space, the local gauge action has Hermitian moment map
+\begin{equation}
+\mathcal G_i=\sum_{e:\,\mathrm{head}(e)=i}E_e
+-\sum_{e:\,\mathrm{tail}(e)=i}U_e^\dagger E_eU_e
+-\psi_i\psi_i^\dagger+\bar\chi_i\chi_i^T.\label{eq:Gauss}
+\end{equation}
+The constraints $\mathcal G_i=0$ are first class and invariant under the Hamiltonian flow. Their zero set contains nonzero matter data. Its quotient may be stratified; no smooth free-action quotient is assumed.
+\end{theorem}
+\begin{proof}
+For Hermitian node parameters $T_i$, the infinitesimal action is
+\[
+\delta\psi_i=iT_i\psi_i,\quad\delta\chi_i=-i\bar T_i\chi_i,
+\quad\delta U_e=iT_iU_e-iU_eT_j.
+\]
+Contracting $\Theta$ with this vector field gives exactly
+$\mathcal J[T]=\sum_i\tr(T_i\mathcal G_i)$: the link term contributes
+$\tr(T_iE_e)-\tr(T_jU_e^\dagger E_eU_e)$, and matter contributes
+$-\psi_i^\dagger T_i\psi_i+\chi_i^\dagger\bar T_i\chi_i$.
+The one-form is invariant, so Cartan's identity gives
+$\iota_{X_T}\omega=\dd\mathcal J[T]$. Equivariance is direct:
+$\mathcal G_i'=g_i\mathcal G_ig_i^\dagger$. Thus
+\[
+\{\mathcal J[T],\mathcal J[S]\}=\mathcal J[i[T,S]],
+\qquad \{\mathcal J[T],H\}=0.
+\]
+There is no central term. The first identity proves first-class closure; the second follows from the established invariance of $H$ and proves preservation of the constraint surface. Finally, arbitrary $\psi_i$, $\chi_i=\bar\psi_i$, $E_e=0$, and arbitrary unitary links give $\mathcal G_i=0$ pointwise. This relation between the two species is an initial preparation, not an asserted invariant submanifold.
+\end{proof}
+
+Define $N_\psi=\sum_i\|\psi_i\|^2$ and $N_\chi=\sum_i\|\chi_i\|^2$. Taking traces and summing \eqref{eq:Gauss} cancels every link contribution:
+\begin{equation}
+ \sum_i\tr\mathcal G_i=N_\chi-N_\psi.\label{eq:neutral}
+\end{equation}
+Consequently zero-source Gauss law requires equal total norms. Equal totals alone do not solve every matrix constraint; the explicit preparation above does.
+
+\begin{proposition}[Scoped single-species obstruction]
+With this canonical fundamental matter field, full $\U(r)$ gauge group, no $\chi$, no external charge, and the same closed graph, $\mathcal G=0$ forces $\psi=0$.
+\end{proposition}
+\begin{proof}Equation \eqref{eq:neutral} becomes $0=-N_\psi$; every summand in $N_\psi$ is nonnegative.\end{proof}
+This does not exclude $\mathrm{SU}(r)$ theories, other matter phase spaces, boundaries, or explicit background sources. The repair chosen here adds a dynamical opposite-charge partner and keeps that assumption visible.
+
+\newpage
+\section{Equations and reciprocal backreaction}
+Work first in temporal gauge $\Lambda=0$. Define the Hermitian left gradient $\mathcal F_e$ of all $U$-dependent terms by
+\[
+ \delta H\big|_{\delta U_e=iX_eU_e}=\sum_e\tr(\mathcal F_eX_e),
+ \qquad X_e=X_e^\dagger.
+\]
+The equations are
+\begin{align}
+i\dot\psi&=(\mu\id+h_U)\psi,&i\dot\chi&=(\mu\id+\bar h_U)\chi,\label{eq:matter}\\
+\dot U_e&=iaE_eU_e,&\dot E_e&=-\mathcal F_e.\label{eq:field}
+\end{align}
+The electric coadjoint drift vanishes for the isotropic quadratic $\tr E_e^2$. Unitarity of $U$ and Hermiticity of $E$ are preserved. In particular $\dot\psi=A_U\psi-i\mu\psi$ while $\dot\chi=-\bar A_U\chi-i\mu\chi$.
+
+Writing $z_i=\bar\chi_i$ only as a convenient force notation, the matter part is
+\begin{equation}
+\mathcal F_e^{\rm m}=b_e\left[
+ U_e\psi_j\psi_i^\dagger+\psi_i\psi_j^\dagger U_e^\dagger
++U_ez_jz_i^\dagger+z_iz_j^\dagger U_e^\dagger\right].\label{eq:force}
+\end{equation}
+Although $z$ transforms as a fundamental vector, its conjugated symplectic structure has the opposite sign; treating it as a second ordinary canonical fundamental field would change the model. Equation \eqref{eq:force} follows by differentiating the two real edge Hamiltonians, each of the form $2b_e\Ima(\psi_i^\dagger U_e\psi_j)$ or $2b_e\Ima(z_i^\dagger U_ez_j)$.
+
+For an arbitrary temporal multiplier, add
+\[
+\dot\psi_i\supset i\Lambda_i\psi_i,\quad
+\dot\chi_i\supset-i\bar\Lambda_i\chi_i,\quad
+\dot U_e\supset i\Lambda_iU_e-iU_e\Lambda_j,\quad
+\dot E_e\supset i[\Lambda_i,E_e].
+\]
+Then $\dot{\mathcal G}_i=i[\Lambda_i,\mathcal G_i]$. Under a time-dependent gauge transformation,
+$\Lambda_i'=g_i\Lambda_ig_i^\dagger-i\dot g_ig_i^\dagger$. Thus the prior temporal connection is $\Omega_i=i\Lambda_i$ with its usual inhomogeneous transformation.
+
+The scalar support currents for $e=(i\leftarrow j)$ are
+\[
+J_e^\psi=2b_e\Rea(\psi_i^\dagger U_e\psi_j),\qquad
+J_e^\chi=2b_e\Rea(\chi_i^\dagger\bar U_e\chi_j).
+\]
+That link contributes $(-J_e^\psi,+J_e^\psi)$ to the head/tail $\psi$ stocks and $(+J_e^\chi,-J_e^\chi)$ to the $\chi$ stocks. Hence both norms are conserved. For central charge $q_i=\|\psi_i\|^2-\|\chi_i\|^2$, the head loses $J_e^\psi+J_e^\chi$, exactly matching $\tr\dot E_e$ from the matter force. Matrix balance follows from the moment-map proof and can also be checked directly from \eqref{eq:force}.
+
+\newpage
+\section{Energy bound and global existence}
+\begin{theorem}[Conserved quantities and complete temporal-gauge flow]
+For all $r\geq1$, $a>0$, $\kappa\geq0$, $\mu\geq0$ and finite initial data, equations \eqref{eq:matter}--\eqref{eq:field} have a unique solution for every $s\in\mathbb R$. They preserve $H$, $N_\psi$, $N_\chi$ and every initial Gauss constraint. On the constraint surface $N_\psi=N_\chi$.
+\end{theorem}
+\begin{proof}
+The Hamiltonian is autonomous, so $\dot H=\{H,H\}=0$. Each matter norm is conserved by its Hermitian single-particle operator, equivalently by its separate global phase symmetry. Gauss preservation was proved in Theorem \ref{th:closure}.
+
+The graph has maximum degree four. Unitary links and $2xy\leq x^2+y^2$ give
+\begin{align*}
+\left|\psi^\dagger h_U\psi\right|
+&\leq\sum_{e=(i\leftarrow j)}2\|\psi_i\|\|\psi_j\|\\
+&\leq\sum_i\deg(i)\|\psi_i\|^2\leq4N_\psi.
+\end{align*}
+The same bound holds for $\chi^\dagger\bar h_U\chi$. Since the diamond potential and $\mu(N_\psi+N_\chi)$ are nonnegative,
+\begin{equation}
+ \sum_e\tr(E_e^2)\leq\frac{2}{a}
+ \left[H(0)+4(N_\psi+N_\chi)\right].\label{eq:bound}
+\end{equation}
+For fixed conserved norms, the right side is finite and nonnegative. All unitary links lie in a compact manifold; both matter vectors lie on bounded finite-dimensional spheres; Hermitian momenta are bounded by \eqref{eq:bound}. The vector field is smooth on this finite-dimensional phase space. A finite-time maximal solution cannot escape every compact subset, so the continuation theorem extends it in both time directions.
+\end{proof}
+
+This argument does not require $H$ to be bounded below uniformly over arbitrary matter norms. If a nonnegative Hamiltonian on the entire phase space is desired, the declared choice $\mu\geq4$ supplies
+\[
+H\geq\frac a2\sum_e\tr E_e^2+V(U)+(\mu-4)(N_\psi+N_\chi)\geq0.
+\]
+Because the two norms are conserved, the on-site term changes only species phase evolution and does not alter the link force. These completeness statements concern internal time, not physical spacetime causality or relativistic propagation.
+
+The finite construction supplies reciprocal dynamics and constrained existence. It does not provide a continuum limit, a quantum Hilbert space of constrained states, a renormalization group, or a physical energy map. These require additional arguments rather than a reinterpretation of the finite energy bound.
+
+\newpage
+\section{An exact neutral seed of spatial curvature}
+For $r=1$ write $U_e=e^{i\theta_e}$, $E_e\in\mathbb R$. Let $R$ be the ordinary node--link incidence matrix, head $+1$, tail $-1$; it does not include $b_e$. Let $C$ have rows $+1,+1,-1,-1$ along the two diamond paths. Then
+\[
+RC^T=0,\qquad \operatorname{rank}R=\operatorname{rank}C=14,
+\qquad \phi=C\theta.
+\]
+The scalar equations and constraints become
+\begin{align}
+\dot\theta&=aE,&\dot E&=-\kappa C^T\sin(C\theta)-(J^\psi+J^\chi),\\
+\mathcal G&=RE-|\psi|^2+|\chi|^2=0.
+\end{align}
+The magnetic force has zero ordinary divergence, and the matter balance on the preceding pages gives $\dot{\mathcal G}=0$ explicitly.
+
+\begin{corollary}[Neutral matter can leave the flat-link sector]
+Set $\theta(0)=E(0)=0$. Let $\psi(0)=\chi(0)=c$ be real, with amplitude one at the vertex $\{0\}$ and at the edge $\{0,1\}$, and zero elsewhere. For either diamond containing the link $e_*=\{0\}\leftarrow\{0,1\}$, orient its curl so $C_{d,e_*}=+1$. For any $a>0$, $\kappa\geq0$, $\mu\geq0$,
+\begin{equation}
+\phi_d(s)=2as^2+O(s^3),\qquad
+1-\cos\phi_d(s)=2a^2s^4+O(s^5).\label{eq:seed}
+\end{equation}
+The initial data obey all Gauss constraints, $N_\psi=N_\chi=2$, and the solution preserves those constraints.
+\end{corollary}
+\begin{proof}
+The two charge matrices cancel nodewise, so $\mathcal G(0)=0$. At identity links all diamond gradients vanish. A matter force is nonzero only if both endpoints are occupied, selecting $e_*$. Increasing vertex orientation has $b_{e_*}=-1$. Formula \eqref{eq:force} gives $\mathcal F^{\rm m}_{e_*}(0)=4b_{e_*}=-4$, hence $\dot E_{e_*}(0)=4$; all other momentum derivatives vanish. Consequently $\dot\theta(0)=0$, $\ddot\theta(0)=4a\,\mathbf e_*$. Each of the two affected diamonds has $\ddot\phi_d(0)=4a$ in the chosen orientation. Smooth Taylor expansion and $1-\cos x=x^2/2+O(x^4)$ give \eqref{eq:seed}. The fourth derivative of the defect is $48a^2$. Preservation follows from Theorem \ref{th:closure}.
+\end{proof}
+Opposite initial charge densities do not imply zero current: the two species have opposite transport signs, so their charge currents add in this preparation. No external source is injected. Flatness is therefore not an invariant sector for arbitrary admissible data in this chosen model. This does not contradict the earlier theorem that a connection held flat is gauge equivalent to untwisted transport, nor turn a fixed skew operator into a curvature source without added dynamics.
+
+\newpage
+\section{Verification, provenance and remaining obligations}
+The accompanying verifier constructs $B,R,C$ afresh and checks exact symbolic identities for scalar canonical brackets, charge-current signs, reciprocal forces, and the curvature seed. Noncommuting rank-two fixtures check matrix Gauss covariance, diamond covariance, Hermitian force gradients, local matter balance and neutral initial data. These finite fixtures support the written universal proofs; they are not exhaustive proofs for arbitrary rank and are not independent review.
+
+A separate full-graph scalar integration uses DOP853 on $s\in[0,1]$, $a=\kappa=1$, $\mu=0$, and the stated neutral seed. Its machine-readable receipt reports maximum energy drift, norm drift and Gauss residual. The early-time curvature ratio is compared with the exact Taylor coefficient. Numerical evidence is diagnostic only; no experiment or published experimental dataset enters this manuscript.
+
+\begin{center}\small
+\begin{tabular}{p{30mm}p{48mm}p{55mm}}
+\toprule
+Item & Status & Remaining obligation\\\midrule
+Joint Hamiltonian & Candidate input; conditional closure proved & Derive or select the action from source UD principles\\
+Opposite-charge partner & Explicit extra degree of freedom & Justify matter content and preparation physically\\
+Gauss and energy & Derived within the declared model & Independent proof review\\
+Curvature seed & Exact Taylor result in a scalar fixture & Determine modes, continuum behavior and observables\\
+Gauge group and rank & Arbitrary $\U(r)$ chosen & Derive physical algebra and representations\\
+Force strengths & No physical identification & Kinetic normalization, thresholds and running\\
+Proton and monopoles & No prediction here & Appropriate states, symmetry breaking, topology, rates\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The source tetrahedral boundary, incidence graph and prescribed unitary transport family are inherited from the UD portal and the preceding \emph{Unitary Hasse-Link Transport} v0.1 manuscript. The canonical link momenta, symplectic form, two-species matter phase space, action coefficients and Wilson-type diamond potential are declared additions. Prior frozen theorem files and bridge ledgers are not rewritten by this addendum.
+
+The next mathematical gate is a mode and stability analysis about an admissible neutral background, with gauge directions removed. A finite $\U(r)$ label or a conserved Hamiltonian alone does not establish the Standard Model, Lorentz symmetry, a unification scale, proton decay, or magnetic monopoles.
+
+\begin{thebibliography}{9}
+\bibitem{KS} J. Kogut and L. Susskind, \emph{Hamiltonian formulation of Wilson's lattice gauge theories}, Phys. Rev. D \textbf{11}, 395 (1975). \href{https://doi.org/10.1103/PhysRevD.11.395}{doi:10.1103/PhysRevD.11.395}. Primary abstract inspected; canonical lattice-Hamiltonian background.
+\bibitem{Frolov} S. A. Frolov, \emph{Gauge-invariant Hamiltonian formulation of lattice Yang--Mills theory and the Heisenberg double}, arXiv:hep-th/9501143 (1995), sec. 2, especially equations (2.11)--(2.16). \url{https://arxiv.org/pdf/hep-th/9501143}. Primary full text inspected; cotangent link variables and lattice Gauss constraints. Our Hermitian conventions are derived here rather than imported unchanged.
+\end{thebibliography}
+\end{document}
