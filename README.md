@@ -8,7 +8,8 @@ The bootstrap mirrors 13,269 source files from the UD portal, current UD-named L
 
 Physical promotion: **0**. Independent review pending. Importing an artifact does not promote its claims.
 
-Live portal: https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/
+Live portals: https://tetrahedral-packet-complexes.ben-w-mayes.chatgpt.site/
+https://unified-dynamics-public.ben-w-mayes.chatgpt.site/
 
 Multiple contributors use unique branches, capture directories and event files; prior scientific artifacts are never overwritten. Owner branch-protection setup remains listed in [administrative setup](docs/ADMIN_SETUP.md).
 
