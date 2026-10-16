@@ -1,0 +1,36 @@
+{
+  "status": "PROPOSED_MATHEMATICAL_REQUIREMENTS",
+  "lane": "development; no registry entry",
+  "physical_promotion": 0,
+  "independent_review": "PENDING",
+  "model": "Frozen quartic critical orbit, epsilon=0, equal species norms, each finite rank, a,N>0",
+  "target": "0<eta<=PET certified radius; same unnormalized Frobenius/unit-matter-sphere orbit metric",
+  "initial_preparation": "distance<=eta^2 sqrt(N/(1600J)), J=max(a,25N); or direct initial-distance/relative-energy condition in manuscript",
+  "canonical_gradient_cap": "nu_star=N eta^3/12800",
+  "mixed_contract": "nu+eta*beta<=nu_star; generic gradient<=nu; centered error has gradient zero on nominal orbit and Hessian norm<=beta",
+  "coefficient_contract": "14N G_r +3N D_s +eta(A+12N K+24N H_c)<=N eta^3/12800",
+  "typed_errors": {
+    "A": "max |Delta a_e|",
+    "K": "max |Delta kappa_d|/(rN)",
+    "H_c": "absolute value of chosen real common hopping component xi_0",
+    "G_r": "max |xi_e-xi_0|",
+    "D_s": "half-range of scalar site detunings; uniform component free"
+  },
+  "time_requirement": "Same amplitude cap uniformly plus integral_0^T sup_tube ||grad partial_t V_t|| dt<=nu_star; coefficient-rate bound nu_1+eta beta_1 may be integrated, not the derivative of an envelope",
+  "readout_requirement": "18 complex dressed Wilson expectations: |z_d-1|<21eta; instrument error sigma gives total<=21eta+sigma; eta<=tau/42 and sigma<=tau/2 suffice for target tau",
+  "preparation_warning": "Loop proximity does not certify full initial orbit distance or electric/matter preparation",
+  "static_minimizing_set": "Nonempty compact invariant set on zero Gauss, stable as a set, within largest nonnegative root of c r^3-beta r/2-nu=0; <=eta/2, or <=eta/4 for purely centered errors",
+  "nominal_orbit_warning": "A small positive uniform magnetic shift can pass trapping budget while destabilizing the exact nominal orbit; no unique perturbed orbit, attraction or retained degeneracy",
+  "physical_translation_gates": [
+    "Source-selected realization of carrier and action",
+    "Calibrated state, energy, time and detector maps",
+    "Certified initial preparation or relative-energy bounds",
+    "Coefficient amplitude and cumulative-rate estimation",
+    "Independent mathematical review and empirical test"
+  ],
+  "limits": [
+    "No non-Hamiltonian force extension in this budget",
+    "No sharp basin, infinite-rank flow or endpoint branch classifier",
+    "No physical coupling unification or proton/monopole/neutrino confirmation"
+  ]
+}
