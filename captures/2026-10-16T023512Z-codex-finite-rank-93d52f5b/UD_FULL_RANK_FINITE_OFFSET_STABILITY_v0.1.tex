@@ -1,0 +1,223 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Finite-offset full-rank stability}\rhead{FRC v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\id}{\mathbf1}
+\begin{document}
+\begin{center}
+{\Large\bfseries Full-rank finite-offset stability\\of the balanced phase branches}\\[10pt]
+{\large A matter-aligned normal form and an explicit color gap}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 16 October 2026 UTC\\
+Version 0.1\quad |\quad Computer-assisted conditional theorem
+\end{center}
+\begin{abstract}
+The preceding finite-offset certificate continued 26 labeled stationary phase branches but left the stability of their higher-rank embeddings open. We close that gap on the same sufficient interval. A local gauge aligns the sum of the two conjugately represented matter fields; their mixed color--matter quadratic term then cancels exactly, including at nonzero offset. A two-color determinant identity bounds the magnetic correction by the small diamond phase. The resulting normal energy is uniformly positive for every finite rank. Gauss reduction supplies an explicit lower bound on color-normal frequencies. Together with the inherited scalar minimum and unused-block vacuum minimum, this proves nonlinear orbital stability of the six balanced embeddings. The other twenty embeddings retain their scalar instabilities. All statements concern the frozen candidate Hamiltonian; none is a physical correspondence or empirical result.
+\end{abstract}
+\[
+\boxed{0<\epsilon\le10^{-5},\qquad \epsilon=\frac\kappa{rN}-k_*.}
+\]
+\begin{theorem}[Finite-rank extension]\label{th:main}
+Fix any finite $r\ge2$, $a,N>0$, and the frozen model below. Throughout the displayed interval, all six balanced one-active-color phase-branch embeddings are nonlinearly orbitally stable modulo gauge and species phases, on the fixed-norm, zero-Gauss phase space. Their active-to-unused-color squared frequencies satisfy
+\[
+\omega_{\rm color}^2>\frac{aN}{16}.
+\]
+The unused-block cycle frequencies satisfy $\omega_{\rm vac}^2>3aN/32$. These are bounds on the linear symplectic slice, before its residual stabilizer constraint and quotient. The twelve index-one and eight index-two scalar saddle embeddings remain unstable. At $\epsilon=0$ the branches coalesce; stability of that critical orbit follows from the inherited positive scalar quartic and the same positive normal blocks.
+\end{theorem}
+\textbf{Status.} Derived conditional mathematics; development, no registry entry. Constructor verification: 28 exact/interval checks and four synthetic matrix fixtures. Independent review pending. Physical promotion $0$. The interval is sufficient, not maximal; an explicit nonlinear basin radius is not supplied.
+\newpage
+\section{Frozen model and inherited interval inputs}
+The carrier is the 15 nonempty faces of a tetrahedron, with 28 incidence links and 18 diamonds. For $e=(i\leftarrow j)$, let $b_e=B_{ij}=\pm1$ be the oriented boundary sign. Write $D_U[i,j]=b_eU_e$ and $h_U=i(D_U^\dagger-D_U)$. On $d=(i,j,h,k)$ use
+\[
+W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk}.
+\]
+The unchanged Hamiltonian is
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++\psi^\dagger(\mu\id+h_U)\psi+\chi^\dagger(\mu\id+\bar h_U)\chi.
+\]
+Both matter norms are $N$. Set $z=\bar\chi$; then $\psi,z$ transform in the same fundamental representation and have opposite symplectic forms. Their energy uses the same $h_U$. The mass term is constant on the norm surface. The moment map is
+\[
+G_i=\sum_{e:\,i=\mathrm{head}(e)}E_e-
+\sum_{e:\,i=\mathrm{tail}(e)}U_e^\dagger E_eU_e
+-\psi_i\psi_i^\dagger+z_iz_i^\dagger.
+\]
+For $s=r-1$, the certified stationary representatives in positive-matter gauge are
+\[
+U_e^*=\diag(u_e,I_s),\quad u_e=-ib_e e^{iX_e},\quad E_e^*=0,
+\quad\psi_i^*=z_i^*=\sqrt N f_i e_1.
+\]
+Here $h_{\rm active}f=\lambda f$, $\|f\|=1$, $f_i>0$. The species rotate with opposite signs at frequency $\mu+\lambda$. In that rotating frame use $H-(\mu+\lambda)(\|\psi\|^2+\|z\|^2)$. Its restriction to fixed norms differs from $H$ only by a constant.
+
+The preceding certificate [1] proves the scalar Morse indices and the following bounds on three global 192-bit Arb solution tubes, including their rescaled zero endpoint:
+\[
+f_i>\frac15,\quad |X_e|<\frac1{40},\quad |\phi_d|<\frac1{16},\quad
+\lambda<-\frac{37}{10},\qquad \phi=CX,
+\]
+\[
+\frac3{80}<k_*<k_*+10^{-5}<\frac1{25}.
+\]
+The scalar representatives have orbit sizes $6,12,8$ and indices $0,1,2$. The index-zero representatives are strict energy minima after gauge and species-phase reduction [1]. The frozen inactive hopping is $h_0=i(B^T-B)$. Direct integer multiplication gives
+\[
+h_0^2=4I-kk^T,\qquad k=(1,1,1,1,0,\ldots,0)^T,
+\]
+and hence $\|h_0\|=2$ and $h_0-\lambda I>(17/10)I$.
+\newpage
+\section{A matter-aligned normal gauge}
+Fix one unused color. Parametrize a left link variation by
+\[
+U_e(t)=e^{itH_e}U_e^*,\qquad (H_e)_{a1}=\beta_e,
+\quad(H_e)_{1a}=\bar\beta_e,
+\]
+with no other entries; write $(\delta E_e)_{a1}=e_e$. Let $p=\delta\psi^a$, $z'=\delta z^a$, and define
+\[
+P=(p+z')/\sqrt2,\qquad Q=(p-z')/\sqrt2.
+\]
+Since $\psi_i^*+z_i^*=2\sqrt N f_i e_1$ is nonzero at every node, a smooth local unitary frame aligns $\psi_i+z_i$ with the active first line. Its tangent condition is $P=0$. The remaining $\mathrm U(s)$ frames are retained for later reduction.
+
+\begin{lemma}[Exact quadratic cancellation]\label{lem:cancel}
+In this gauge the coefficient of $t^2$ in the fixed-norm rotating energy is
+\begin{equation}\label{eq:q}
+\mathcal Q_\perp=a\|e\|^2+Q^\dagger(h_0-\lambda I)Q
++2N\sum_e f_if_j\cos X_e\,|\beta_e|^2+\mathcal Q_{\rm mag}(\beta).
+\end{equation}
+There is no $\beta Q$ term. This is a quadratic Taylor coefficient, one half of the raw second derivative.
+\end{lemma}
+\begin{proof}
+For the matter hopping energy $\psi^\dagger h_U\psi+z^\dagger h_Uz$, the two background vectors agree. Every mixed first link/first matter variation therefore depends on $p+z'=\sqrt2P$ and vanishes when $P=0$. The two pure inactive matter terms become $Q^\dagger h_0Q$. A norm-preserving retraction removes active norm equal to the inactive norm; stationarity of the active eigenvector subtracts $\lambda\|Q\|^2$. Equivalently this is the norm Lagrange multiplier in the rotating energy.
+
+For a single link $(e^{itH_e}U_e^*)_{11}=u_e(1-t^2|\beta_e|^2/2)+O(t^4)$. The two species have total background hopping $-4Nf_if_j\cos X_e$. Their link quadratic coefficient is thus $2Nf_if_j\cos X_e|\beta_e|^2$. Finally, $\tr(\delta E_e)^2=2|e_e|^2$, giving $a\|e\|^2$.
+\end{proof}
+The cancellation does not require $X=0$. It is a consequence of the equal background matter fields and their common hopping operator.
+
+For $s>1$, residual global $\mathrm U(s)$ covariance makes the quadratic form a sum of identical copies of \eqref{eq:q}, one per unused color. Indeed its defining representation admits only the Hermitian color contraction at quadratic order; the central $\mathrm U(1)$ excludes holomorphic $\beta\beta$ terms. Distinct unused colors have no mixed quadratic contribution. Pure unused-block variables form a separate vacuum sector.
+\newpage
+\section{The finite-offset magnetic correction}
+On a two-color plane, the unperturbed Wilson matrix is $\diag(-e^{i\phi_d},1)$. All link generators above are traceless, so for every $t$
+\[
+\det W_d(t)=-e^{i\phi_d},\qquad
+W_d(t)=i e^{i\phi_d/2}S_d(t),\quad S_d(t)\in\mathrm{SU}(2).
+\]
+The trace of every $\mathrm{SU}(2)$ matrix is real. Differentiating twice, and bounding the operator norm of a product derivative, gives
+\[
+|\Rea\tr W_d''(0)|
+\le 2|\sin(\phi_d/2)|\,\|W_d''(0)\|_{\rm op}
+\le 2|\sin(\phi_d/2)|\left(\sum_{e\in d}|\beta_e|\right)^2.
+\]
+For clarity, the first inequality uses $|\tr S_d''|\le2\|S_d''\|_{\rm op}$ and the fixed unit-modulus scalar factor. The second follows by the product rule: the pure second derivatives contribute $\sum\|H_e\|^2$, and the mixed terms contribute $2\sum_{e<f}\|H_e\|\|H_f\|$. Here $\|H_e\|=|\beta_e|$, including reversed link factors.
+
+\begin{lemma}[Uniform magnetic bound]
+For one unused color throughout the certified interval,
+\[
+|\mathcal Q_{\rm mag}(\beta)|<\frac{3N}{200}\|\beta\|^2.
+\]
+\end{lemma}
+\begin{proof}
+The magnetic quadratic coefficient on a diamond is $-\kappa\Rea\tr W_d''(0)/(2r)$. Four-edge Cauchy--Schwarz gives
+\[
+|\mathcal Q_{{\rm mag},d}|\le\frac{4\kappa}{r}|\sin(\phi_d/2)|
+\sum_{e\in d}|\beta_e|^2.
+\]
+Each edge lies in at most three diamonds; this is checked exactly in the replay. Since $\kappa/r=N(k_*+\epsilon)$, $k_*+\epsilon<1/25$ and $|\sin(\phi_d/2)|<1/32$, summing gives $12N/(25\cdot32)=3N/200$.
+\end{proof}
+At $\phi=0$ the magnetic quadratic term vanishes exactly, recovering [2]. At finite offset it need not vanish and is explicitly retained.
+
+The positive matter link coefficient satisfies
+\[
+2Nf_if_j\cos X_e>\frac{2N}{25}\left(1-\frac{1}{2\cdot40^2}\right)
+=\frac{3199N}{40000}.
+\]
+Subtracting the magnetic bound leaves $2599N/40000>N/16$. Therefore
+\begin{equation}\label{eq:coercive}
+\boxed{\mathcal Q_\perp\ge a\|e\|^2+\frac{17}{10}\|Q\|^2+
+\frac N{16}\|\beta\|^2.}
+\end{equation}
+These constants are independent of the finite rank. The conclusion is positivity on the fixed-norm normal space before imposing Gauss.
+\newpage
+\section{Gauss reduction and frequency separation}
+Define the twisted incidence matrix $R_u$ by head entry $1$ and tail entry $-u_e$, and put $F=\diag(f_i)$. The inactive/active entry of the linear Gauss law is
+\[
+R_u e-\sqrt{2N}FQ=0,
+\qquad Q=(2N)^{-1/2}F^{-1}R_u e.
+\]
+A node gauge parameter $\eta$ acts by $\delta\beta=R_u^\dagger\eta$ and $\delta P=i\sqrt{2N}F\eta$; $F$ is invertible. On $P=0$ the opposite matter symplectic forms cancel on pullback, and the color slice has symplectic form $2\Rea\sum_e d\bar e_e\wedge d\beta_e$ in the convention $\dot\beta=Me$, $\dot e=-S\beta$.
+
+Substitution in \eqref{eq:q} gives
+\[
+H_\perp=e^\dagger M_\perp e+\beta^\dagger S_\perp\beta,
+\]
+\[
+M_\perp=aI+\frac1{2N}R_u^\dagger F^{-1}(h_0-\lambda I)F^{-1}R_u\ge aI,
+\quad S_\perp=2N\diag(f_if_j\cos X_e)+M_{\rm mag}>\frac N{16}I.
+\]
+The squared frequencies are eigenvalues of the Hermitian matrix
+\[
+M_\perp^{1/2}S_\perp M_\perp^{1/2}>\frac{aN}{16}I.
+\]
+This supplies 28 complex oscillators per unused color in the linear symplectic slice. It is not a count of freely admissible nonlinear reduced modes.
+
+The unused $\mathrm U(s)$ block is exactly the identity-link vacuum. On the ordinary cycle space its curl eigenvalues are $6$ twice, $6\pm\sqrt2$ three times each, and $4\pm\sqrt2$ three times each [2]. For every Hermitian unused-color generator,
+\[
+\omega_{\rm vac}^2\ge\frac{a\kappa}{r}(4-\sqrt2)
+>aN\frac3{80}\frac52=\frac{3aN}{32}.
+\]
+\textbf{Residual constraint.} The background stabilizer is global $\mathrm U(s)$. Its moment map begins at quadratic order. Both oscillator lists precede its zero-moment condition and quotient. No smoothness or naive sum-of-dimensions claim about the final singular reduced space is used in the energy proof.
+
+For comparison only, when $a=N=1$, the inherited scalar radial bracket is $\omega_{\rm rad}^2<(71/5)\epsilon\le71/500000$ [1]. Thus throughout the interval and at every finite rank,
+\[
+\frac{\omega_{\rm color}}{\omega_{\rm rad}}>\sqrt{\frac{31250}{71}}>20,
+\qquad
+\frac{\omega_{\rm vac}}{\omega_{\rm rad}}>\sqrt{\frac{46875}{71}}>25.
+\]
+No laboratory units or measured interaction couplings are assigned to these frequencies.
+\newpage
+\section{Nonlinear orbital stability and the endpoint}
+\begin{proof}[Proof of Theorem \ref{th:main}]
+Near an embedded representative, the nonvanishing sum of matter fields defines the smooth matter-aligned frame of Section 2. Fix the unused node frames along a spanning tree; a compact global $\mathrm U(s)$ stabilizer remains. Use local coordinates $A$ for the active scalar block, $B$ for the unused vacuum block, and $Y$ for the color-normal variables, with norm constraints built into the chart. On $Y=0$ the Hamiltonian splits exactly as
+\[
+H(A,B,0)=H_{\rm scalar}(A;\kappa/r)+H_{\rm vacuum}(B;\kappa/r),
+\]
+up to constants. The vacuum part is
+\[
+H_{\rm vacuum}=\frac a2\sum_e\tr E_{B,e}^2+
+\frac\kappa r\sum_d\left(s-\Rea\tr W_{B,d}\right)\ge0.
+\]
+All first derivatives in $Y$ vanish on the block-diagonal submanifold: a single off-diagonal insertion has zero trace and active matter has zero inactive component. This remains true when nearby active matter fields differ. At the equilibrium, \eqref{eq:coercive} supplies a strictly positive normal quadratic form. By continuity, for each fixed $r,a,N,\epsilon$ it remains positive in a sufficiently small chart. Taylor's theorem in $Y$ gives, for some $c>0$,
+\[
+H(A,B,Y)\ge H_{\rm scalar}(A;\kappa/r)+H_{\rm vacuum}(B;\kappa/r)
++c\|Y\|^2.
+\]
+The inherited balanced scalar branch is a strict transverse energy minimum [1]. The unused vacuum has a strict transverse quadratic minimum after its tree gauge fixing: its curl kernel consists exactly of gauge gradients [2]. Their sum with the normal term is therefore a strict local minimum modulo the compact gauge/species-phase orbit, even at a nonfree orbit.
+
+Energy and the two norms are conserved. For any sufficiently small fixed-distance boundary around that orbit, compactness and the strict minimum give a positive energy gap. Sufficiently close initial states have smaller energy excess and cannot cross that boundary. This proves nonlinear orbital stability on the full fixed-norm surface. The invariant zero-Gauss subset inherits the conclusion.
+
+For the twelve and eight saddle embeddings, the one-active-color scalar subsystem is invariant. Its inherited hyperbolic instability [1] therefore proves instability under the larger class of full-rank perturbations. This argument does not classify additional higher-rank stationary states.
+
+At $\epsilon=0$ the six balanced representatives coalesce at the original critical orbit. The inherited reduced scalar energy has a strictly positive quartic on its critical kernel [2,3], with positive transverse quadratic terms. The normal estimate above and the vacuum estimate are still positive at $k_*$. The same energy-gap argument proves stability of that coalesced orbit; a positive scalar quadratic gap at the endpoint is neither assumed nor asserted.
+\end{proof}
+The explicit interval certifies the coefficient location of these local stability results. It does not supply a numerical nonlinear displacement radius, a global basin, convergence or attraction. The nonlinear neighborhood may shrink as $\epsilon\downarrow0$ and may depend on the fixed rank. No infinite-rank limit is claimed.
+\newpage
+\section{Reproduction, provenance and next proof obligations}
+\textbf{Rigorous constructor replay.} Run with Python 3, NumPy and python-flint 0.9.0:
+\begin{quote}\ttfamily python3 verify\_rank\_extension.py\end{quote}
+The output is \texttt{FINITE\_RANK\_CERTIFICATE\_v0.1.json}. Its 28 checks include exact integer geometry, rational margins, the inactive hopping identity, and rigorous 192-bit Arb replay of each inherited global solution tube. The interval inputs and two helper modules are copied byte-for-byte from [1]; their hashes are recorded in the provenance receipt. The inherited scalar existence/index/frequency certificate is retained as a dependency; its 1,536 child boxes and 2,048 spectral cuts are not recounted as new checks here.
+
+\textbf{Synthetic diagnostics.} Run with SciPy additionally installed:
+\begin{quote}\ttfamily python3 check\_matrix\_hessian.py\end{quote}
+Four deterministic fixtures use ranks 2 and 3, all three branch families, offsets $5\times10^{-6}$ and $10^{-5}$, and two $(a,N)$ choices. They compare the predicted quadratic coefficient with the full unprojected matrix Hamiltonian using norm-preserving matter retractions. The largest absolute difference is below $8\times10^{-8}$. Independent matrix-jet polarization reconstructs the magnetic Hermitian form; its observed operator norm is below $0.0032N$, and every tested color squared frequency exceeds $0.107aN$. Multi-color additivity is checked in rank 3. These floating computations detect sign/factor mistakes; they prove no interval assertion and analyze no experimental data.
+
+\textbf{Trust and scope.} The proof uses the frozen finite-dimensional action and moment map, prior conditional theorems, the supplied interval-tube implementation and ball-arithmetic software. Constructor replay is not independent mathematical review. The sufficient interval is not a sharp outer stability boundary. Exact finite-offset color eigenvalues and an explicit nonlinear stability neighborhood remain open. No correspondence with electromagnetic, weak or strong interactions, proton decay, monopoles or neutrino data is proved.
+
+The next mathematical deliverable is a quantitative nonlinear energy barrier: an explicit chart radius and energy threshold for perturbations around a balanced embedded branch. It should keep its dependence on $r,a,N,\epsilon$ explicit and retain the residual moment-map constraint. Independent verification of the normal-form proof and interval replay remains a separate obligation.
+
+\textbf{Frozen workstream references (same constructor, not independent review).}
+\begin{enumerate}
+\item FOC v0.1, \emph{Finite-offset certification of the curved phase branches}, 15 October 2026. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#finite-offset-v01}{UD portal, G12}. Inputs and certificate are included in this package.
+\item HR v0.1, \emph{Full-rank orbital stability of the embedded curved branch}, 15 October 2026. Repository capture \texttt{2026-10-15T135143Z-codex-higher-rank-df6164e2}. The statement concerns the original embedded negative-holonomy branch and supplies the inactive and vacuum blocks and critical endpoint.
+\item CBF v0.1, curved phase-branch bifurcation theorem; frozen positive critical quartic and scalar indices. Retained through the dependency chain of [1].
+\end{enumerate}
+\vfill
+\textbf{Promotion record.} Development, no registry entry. Independent review: pending. Physical promotion: $0$. No unpublished data, laboratory experiment or physical fit is used. The absent image referenced in the session is not a proof input.
+\end{document}
