@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "claim_type": "COMPUTER-ASSISTED DERIVED CONDITIONAL; constructor certificate, not independent review",
+  "parameter_region": "0 < epsilon <= 1/100000, epsilon=kappa/(r*N)-k_star",
+  "closed_regularized_region": "0 <= epsilon <= 1/100000",
+  "normalization": "Stationary states and observable errors: any N>0, finite r embeddings, a>0. Finite scalar mode bounds: a=N=r=1. Scalar Morse/stability: r=1, any a>0,N>0 after corresponding canonical scaling.",
+  "global_boxes": 3,
+  "parameter_cells_per_family": 512,
+  "validated_child_boxes": 1536,
+  "spectral_sector_cut_tests": 2048,
+  "precision_bits": 192,
+  "arithmetic": "python-flint Arb balls; polynomial remainders bounded by geometric tails; floating eigensolvers propose congruences only",
+  "stationary_variable_count": 44,
+  "global_ground_gap_lower": "3/5",
+  "matter_component_lower": "1/5",
+  "absolute_diamond_phase_upper": "1/16",
+  "critical_radius_bounds": "2 sqrt(epsilon) < R < (5/2) sqrt(epsilon)",
+  "uniform_relative_radius_squared_error": "|R^2/(Gamma*epsilon/(4*q_k))-1| <= 25 epsilon",
+  "uniform_fast_loop_error": "||(I-L L^T/Gamma) phi||_2 <= 297 epsilon^(3/2)",
+  "uniform_real_fingerprint_bias": "|eta_a-eta_k| <= 41 epsilon",
+  "oriented_phase_noise_sufficient": "||delta phi||_2 <= 5 sqrt(epsilon) guarantees nearest-P4 classification on 26 branch families",
+  "real_channel_noise_sufficient": "max of six labeled |delta Re z_d| <= epsilon/40 guarantees nearest-eta classification, after clipping to [-1,1]; overall sign remains invisible",
+  "soft_squared_coefficients": {
+    "radial": [
+      "1417/100",
+      "71/5"
+    ],
+    "angular": [
+      "149/50",
+      "1499/500"
+    ],
+    "scope": "a=N=r=1; same interval; angular mode twice by exact symmetry"
+  },
+  "soft_squared_ratio_bounds": [
+    "7085/1499",
+    "710/149"
+  ],
+  "soft_frequency_ratio_bounds": [
+    [
+      "217404791181839442019/100000000000000000000",
+      "217404791181839442020/100000000000000000000"
+    ],
+    [
+      "218291105433568676069/100000000000000000000",
+      "218291105433568676070/100000000000000000000"
+    ]
+  ],
+  "absolute_frequency_ratio_error_from_limit": "<1/200",
+  "families": [
+    {
+      "family_k": 1,
+      "oriented_branches": 6,
+      "global_contraction_norm_upper": [
+        "6928281218930681840/100000000000000000000",
+        "6928281218930681841/100000000000000000000"
+      ],
+      "global_self_map_ratio_upper": [
+        "51553281177006429600/100000000000000000000",
+        "51553281177006429601/100000000000000000000"
+      ],
+      "child_cells": 512,
+      "child_contraction_norm_upper": [
+        "13531743550378251/100000000000000000000",
+        "13531743550378252/100000000000000000000"
+      ],
+      "child_self_map_ratio_upper": [
+        "50003033193332715248/100000000000000000000",
+        "50003033193332715249/100000000000000000000"
+      ],
+      "scalar_Morse_index": 0,
+      "amplitude_h_derivative_bound": 28,
+      "relative_radius_squared_error_coefficient": 23,
+      "fast_loop_error_coefficient": 56,
+      "real_fingerprint_bias_coefficient": 27,
+      "trace_of_normalized_distance_Gram_lower": [
+        "597892241189401829615/100000000000000000000",
+        "597892241189401829616/100000000000000000000"
+      ],
+      "leading_radius_squared_coefficient": [
+        "598690895673283909497/100000000000000000000",
+        "598690895673283909498/100000000000000000000"
+      ],
+      "minimum_spectral_margin": [
+        "27128055167709822612/100000000000000000000",
+        "27128055167709822613/100000000000000000000"
+      ]
+    },
+    {
+      "family_k": 2,
+      "oriented_branches": 12,
+      "global_contraction_norm_upper": [
+        "9692421974604720845/100000000000000000000",
+        "9692421974604720846/100000000000000000000"
+      ],
+      "global_self_map_ratio_upper": [
+        "52298029026116502054/100000000000000000000",
+        "52298029026116502055/100000000000000000000"
+      ],
+      "child_cells": 512,
+      "child_contraction_norm_upper": [
+        "18906186421862455/100000000000000000000",
+        "18906186421862456/100000000000000000000"
+      ],
+      "child_self_map_ratio_upper": [
+        "50004485116372103782/100000000000000000000",
+        "50004485116372103783/100000000000000000000"
+      ],
+      "scalar_Morse_index": 1,
+      "amplitude_h_derivative_bound": 15,
+      "relative_radius_squared_error_coefficient": 14,
+      "fast_loop_error_coefficient": 297,
+      "real_fingerprint_bias_coefficient": 35,
+      "trace_of_normalized_distance_Gram_lower": [
+        "493954713545826962217/100000000000000000000",
+        "493954713545826962218/100000000000000000000"
+      ],
+      "leading_radius_squared_coefficient": [
+        "494513568490163005879/100000000000000000000",
+        "494513568490163005880/100000000000000000000"
+      ],
+      "minimum_spectral_margin": null
+    },
+    {
+      "family_k": 3,
+      "oriented_branches": 8,
+      "global_contraction_norm_upper": [
+        "6289470184921770441/100000000000000000000",
+        "6289470184921770442/100000000000000000000"
+      ],
+      "global_self_map_ratio_upper": [
+        "56289470135965728850/100000000000000000000",
+        "56289470135965728851/100000000000000000000"
+      ],
+      "child_cells": 512,
+      "child_contraction_norm_upper": [
+        "12270909567458361/100000000000000000000",
+        "12270909567458362/100000000000000000000"
+      ],
+      "child_self_map_ratio_upper": [
+        "50012270860424547657/100000000000000000000",
+        "50012270860424547658/100000000000000000000"
+      ],
+      "scalar_Morse_index": 2,
+      "amplitude_h_derivative_bound": 27,
+      "relative_radius_squared_error_coefficient": 25,
+      "fast_loop_error_coefficient": 191,
+      "real_fingerprint_bias_coefficient": 41,
+      "trace_of_normalized_distance_Gram_lower": [
+        "467026578131481073796/100000000000000000000",
+        "467026578131481073797/100000000000000000000"
+      ],
+      "leading_radius_squared_coefficient": [
+        "467402871773394214534/100000000000000000000",
+        "467402871773394214535/100000000000000000000"
+      ],
+      "minimum_spectral_margin": null
+    }
+  ],
+  "ground_spectrum_characteristic": "x^15 + (-28)*x^13 + 264*x^11 + (-1120)*x^9 + 2176*x^7 + (-1536)*x^5",
+  "scope_limits": [
+    "No claim that these tubes exhaust all stationary states at each finite offset",
+    "Full-rank finite-offset orbital stability of stable embeddings not certified here; stationary embeddings and readout bounds are",
+    "Finite mode-ratio bound fixes a=N=r=1; no uniform bound in arbitrary electric coefficient",
+    "No empirical data, physical correspondence or independent review"
+  ],
+  "physical_promotion": 0,
+  "independent_review": "PENDING"
+}
