@@ -1,0 +1,326 @@
+{
+  "status": "PASS",
+  "claim_bin": "DERIVED_CONDITIONAL",
+  "independent_review": "PENDING",
+  "physical_promotion": 0,
+  "checks": [
+    {
+      "name": "sphere_speed_squared_operator_norm",
+      "pass": true
+    },
+    {
+      "name": "order_six_bound",
+      "pass": true
+    },
+    {
+      "name": "sixth_remainder",
+      "pass": true
+    },
+    {
+      "name": "fifth_polarization",
+      "pass": true
+    },
+    {
+      "name": "cubic_W_squared",
+      "pass": true
+    },
+    {
+      "name": "cubic_young_coefficient",
+      "pass": true
+    },
+    {
+      "name": "quartic_multi_z",
+      "pass": true
+    },
+    {
+      "name": "quartic_W_squared",
+      "pass": true
+    },
+    {
+      "name": "quartic_x_six",
+      "pass": true
+    },
+    {
+      "name": "quintic_base_parity",
+      "pass": true
+    },
+    {
+      "name": "quintic_linear_W",
+      "pass": true
+    },
+    {
+      "name": "quintic_young_coefficient",
+      "pass": true
+    },
+    {
+      "name": "quintic_multi_W",
+      "pass": true
+    },
+    {
+      "name": "sixth_x_six",
+      "pass": true
+    },
+    {
+      "name": "sixth_W_squared",
+      "pass": true
+    },
+    {
+      "name": "coarse_remainder_coefficient",
+      "pass": true
+    },
+    {
+      "name": "fast_absorption_all_parameters",
+      "pass": true
+    },
+    {
+      "name": "critical_shift_all_parameters",
+      "pass": true
+    },
+    {
+      "name": "quartic_distance_conversion",
+      "pass": true
+    },
+    {
+      "name": "old_radius_uses_quartic_cap",
+      "pass": true
+    },
+    {
+      "name": "linear_radius_gain_50000",
+      "pass": true
+    },
+    {
+      "name": "root_radius_gain_50000",
+      "pass": true
+    }
+  ],
+  "check_count": 22,
+  "uniform_radius_gain": "R_parity >= 50000 R_EQT for all a,N>0 at each finite rank",
+  "comparison_certificates": {
+    "old_radius_uses_quartic_cap": {
+      "variable": "u=N/(100alpha)-1 >=0",
+      "numerator_coefficients_descending": [
+        "3812846782500",
+        "7626272435000",
+        "3813425652614"
+      ],
+      "denominator_coefficients_descending": [
+        "9",
+        "9"
+      ]
+    },
+    "linear_radius_gain_50000": {
+      "variable": "u=N/(100alpha)-1 >=0",
+      "numerator_coefficients_descending": [
+        "3812846782500",
+        "7401272525000",
+        "3588425742614"
+      ],
+      "denominator_coefficients_descending": [
+        "9",
+        "9"
+      ]
+    },
+    "root_radius_gain_50000": {
+      "variable": "u=N/(100alpha)-1 >=0",
+      "numerator_coefficients_descending": [
+        "4486975489759445156250000",
+        "13649426586158821875000000",
+        "1136061766802603636347750000/81",
+        "409091127087427087767500000/81",
+        "15187899093119505638824900/81"
+      ],
+      "denominator_coefficients_descending": [
+        "1"
+      ]
+    }
+  },
+  "budget_examples": [
+    {
+      "exact": {
+        "a": "1",
+        "N": "1",
+        "alpha": "1/100",
+        "D": "6975",
+        "S6": "30965999846014127/18",
+        "R_cert": "1/829538022",
+        "R_ideal_squared": "9/6193199969202825400",
+        "R_old": "9/381342574261400",
+        "radius_gain": "190671287130700/3732921099",
+        "J": "25",
+        "eta": "1/829538022",
+        "boundary_barrier": "1/757643967646987548306809966493968409600",
+        "initial_radius_squared": "1/18941099191174688707670249162349210240000"
+      },
+      "decimal_diagnostics": {
+        "a": 1.0,
+        "N": 1.0,
+        "alpha": 0.01,
+        "D": 6975.0,
+        "S6": 1720333324778562.5,
+        "R_cert": 1.2054902529832443e-09,
+        "R_ideal_squared": 1.4532067501057067e-18,
+        "R_old": 2.360082667777541e-14,
+        "radius_gain": 51078.306257739634,
+        "J": 25.0,
+        "eta": 1.2054902529832443e-09,
+        "boundary_barrier": 1.3198811614717884e-39,
+        "initial_radius_squared": 5.279524645887153e-41
+      },
+      "initial_radius_rational_bracket": [
+        "36330168750940153068303320647173570834894452309089/5000000000000000000000000000000000000000000000000000000000000000000000",
+        "72660337501880306136606641294347141669788904618179/10000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "checks": {
+        "positive_radius": true,
+        "radius_le_one": true,
+        "shift_small": true,
+        "fast_absorption": true,
+        "quartic_absorption": true,
+        "distance_conversion": true,
+        "rational_radius_exceeds_50000_old": true,
+        "inside_initial_ball": true
+      }
+    },
+    {
+      "exact": {
+        "a": "1/100000",
+        "N": "1",
+        "alpha": "1/200000",
+        "D": "13950000",
+        "S6": "123835348941977923400002376/9",
+        "R_cert": "1/74187554793983",
+        "R_ideal_squared": "9/49534139576791169360000950400",
+        "R_old": "9/1525138828792000011400",
+        "radius_gain": "1525138828792000011400/667687993145847",
+        "J": "25",
+        "eta": "1/74187554793983",
+        "boundary_barrier": "1/48466784861493698303477007733844213728338106888339832833600",
+        "initial_radius_squared": "1/1211669621537342457586925193346105343208452672208495820840000"
+      },
+      "decimal_diagnostics": {
+        "a": 1e-05,
+        "N": 1.0,
+        "alpha": 5e-06,
+        "D": 13950000.0,
+        "S6": 1.3759483215775326e+25,
+        "R_cert": 1.3479349774729403e-14,
+        "R_ideal_squared": 1.8169287034950091e-28,
+        "R_old": 5.901102135815748e-21,
+        "radius_gain": 2284208.8587009455,
+        "J": 25.0,
+        "eta": 1.3479349774729403e-14,
+        "boundary_barrier": 2.0632686959899594e-59,
+        "initial_radius_squared": 8.253074783959838e-61
+      },
+      "initial_radius_rational_bracket": [
+        "4542321758737440251943449401413039541841/5000000000000000000000000000000000000000000000000000000000000000000000",
+        "9084643517474880503886898802826079083683/10000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "checks": {
+        "positive_radius": true,
+        "radius_le_one": true,
+        "shift_small": true,
+        "fast_absorption": true,
+        "quartic_absorption": true,
+        "distance_conversion": true,
+        "rational_radius_exceeds_50000_old": true,
+        "inside_initial_ball": true
+      }
+    },
+    {
+      "exact": {
+        "a": "100",
+        "N": "3",
+        "alpha": "3/100",
+        "D": "6975",
+        "S6": "30965999846014127/6",
+        "R_cert": "1/829538022",
+        "R_ideal_squared": "9/6193199969202825400",
+        "R_old": "9/381342574261400",
+        "radius_gain": "190671287130700/3732921099",
+        "J": "100",
+        "eta": "1/829538022",
+        "boundary_barrier": "1/252547989215662516102269988831322803200",
+        "initial_radius_squared": "1/25254798921566251610226998883132280320000"
+      },
+      "decimal_diagnostics": {
+        "a": 100.0,
+        "N": 3.0,
+        "alpha": 0.03,
+        "D": 6975.0,
+        "S6": 5160999974335688.0,
+        "R_cert": 1.2054902529832443e-09,
+        "R_ideal_squared": 1.4532067501057067e-18,
+        "R_old": 2.360082667777541e-14,
+        "radius_gain": 51078.306257739634,
+        "J": 100.0,
+        "eta": 1.2054902529832443e-09,
+        "boundary_barrier": 3.959643484415365e-39,
+        "initial_radius_squared": 3.9596434844153653e-41
+      },
+      "initial_radius_rational_bracket": [
+        "62925698124179482203088532724193135289651852440249/10000000000000000000000000000000000000000000000000000000000000000000000",
+        "251702792496717928812354130896772541158607409761/40000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "checks": {
+        "positive_radius": true,
+        "radius_le_one": true,
+        "shift_small": true,
+        "fast_absorption": true,
+        "quartic_absorption": true,
+        "distance_conversion": true,
+        "rational_radius_exceeds_50000_old": true,
+        "inside_initial_ball": true
+      }
+    },
+    {
+      "exact": {
+        "a": "1",
+        "N": "1",
+        "alpha": "1/100",
+        "D": "6975",
+        "S6": "30965999846014127/18",
+        "R_cert": "1/829538022",
+        "R_ideal_squared": "9/6193199969202825400",
+        "R_old": "9/381342574261400",
+        "radius_gain": "190671287130700/3732921099",
+        "J": "25",
+        "eta": "1/1000000000000",
+        "boundary_barrier": "1/1600000000000000000000000000000000000000000000000000",
+        "initial_radius_squared": "1/40000000000000000000000000000000000000000000000000000"
+      },
+      "decimal_diagnostics": {
+        "a": 1.0,
+        "N": 1.0,
+        "alpha": 0.01,
+        "D": 6975.0,
+        "S6": 1720333324778562.5,
+        "R_cert": 1.2054902529832443e-09,
+        "R_ideal_squared": 1.4532067501057067e-18,
+        "R_old": 2.360082667777541e-14,
+        "radius_gain": 51078.306257739634,
+        "J": 25.0,
+        "eta": 1e-12,
+        "boundary_barrier": 6.25e-52,
+        "initial_radius_squared": 2.5e-53
+      },
+      "initial_radius_rational_bracket": [
+        "1/200000000000000000000000000",
+        "50000000000000000000000000000000000000000001/10000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "checks": {
+        "positive_radius": true,
+        "radius_le_one": true,
+        "shift_small": true,
+        "fast_absorption": true,
+        "quartic_absorption": true,
+        "distance_conversion": true,
+        "rational_radius_exceeds_50000_old": true,
+        "inside_initial_ball": true
+      }
+    }
+  ],
+  "inherited_status_validated_separately": true,
+  "inherited_certificate_sha256": "0c7312370ca663f7944f1997574a9406f6200825ab2b5e078aa25bf5ad9415f4",
+  "scope": "Analytic isometric involution, parity and sixth-order proof in manuscript; exact constant identities, positive-coefficient full-parameter comparison and rational examples checked here. Frozen EQT input is dependency, not newly re-proved or independently reviewed."
+}
