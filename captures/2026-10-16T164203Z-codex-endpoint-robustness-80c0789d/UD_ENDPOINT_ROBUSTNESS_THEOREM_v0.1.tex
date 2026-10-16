@@ -1,0 +1,280 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Robust trapping at the quartic critical endpoint},pdfauthor={Unified Dynamics research workstream}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Endpoint robustness}\rhead{ERT v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\grad}{\operatorname{grad}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Robust trapping\\at the quartic critical endpoint}\\[10pt]
+{\large Generic forces, centered curvature errors and cumulative drift}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 16 October 2026 UTC\\
+Version 0.1\quad |\quad Derived conditional theorem
+\end{center}
+\begin{abstract}
+The critical endpoint has quartic restoring energy rather than a positive normal Hessian in all directions. We derive an explicit model-error budget from its certified nonlinear tube. Generic gradient errors consume a cubic-in-radius budget, whereas centered errors with zero gradient on the nominal orbit consume a quadratic curvature budget. Static errors yield a nearby compact invariant minimizing set with an explicit cubic-root localization; centered errors improve this to a square-root bound. Cumulative gradient variation gives a time-dependent guarantee. Typed coefficient and loop-readout requirements are supplied. A stiffness increase can satisfy the trapping budget while destabilizing the exact nominal orbit, so trapping and persistence of nominal stability are kept distinct.
+\end{abstract}
+For finite $r\ge1$, $a,N>0$ and $\epsilon=\kappa/(rN)-k_*=0$, let $R_{\rm p}$ be the explicit certified radius of [1]. Choose $0<\eta\le R_{\rm p}$ and put
+\[
+c=\frac N{1600},\quad J=\max(a,25N),\quad B=c\eta^4,\quad
+\delta=\eta^2\sqrt{c/J},\qquad \nu_* =\frac{c\eta^3}{8}.
+\]
+\begin{theorem}[Endpoint error budget]\label{th:main}
+Let $V=V_g+V_c$ be a smooth node-gauge/species-phase invariant Hamiltonian error on the fixed-norm manifold. On the closed distance-$\eta$ tube about the frozen orbit $\mathcal O_*$, assume
+\[
+\|\grad V_g\|\le\nu,\qquad
+\grad V_c|_{\mathcal O_*}=0,\qquad
+\|\operatorname{Hess}V_c\|\le\beta,\qquad
+\boxed{\nu+\beta\eta\le\nu_* .}
+\]
+Every initial state at orbit distance at most $\delta$ stays at distance less than $\eta$ for all real time under $H+V$. On zero Gauss there is a nonempty compact invariant minimizing set, stable as a set, with
+\[
+d_g(x,\mathcal O_*)\le r_+(\nu,\beta)\le\eta/2,
+\quad c r_+^3-\frac\beta2r_+-\nu=0,
+\]
+where $r_+$ is the largest nonnegative root. For purely centered errors,
+\[
+\boxed{\beta\le\frac{c\eta^2}{8},\qquad
+r_+=\sqrt{\frac{\beta}{2c}}\le\frac\eta4.}
+\]
+\end{theorem}
+\textbf{Status.} Development, no registry entry. Frozen action and ledger unchanged. Constructor verification only; independent review pending; physical promotion $0$. The theorem does not assert a unique shifted orbit, attraction or retained stability of the nominal orbit.
+\newpage
+\section{Model, metric and the inherited quartic tube}
+The frozen tetrahedral Hasse carrier has 15 nodes, 28 incidence links and 18 diamonds. For link $e=(i\leftarrow j)$, set $D_U[i,j]=b_eU_e$, $b_e=B_{ij}=\pm1$, $h_U=i(D_U^\dagger-D_U)$ and
+\[
+W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk},\qquad d=(i,j,h,k).
+\]
+With $q=\psi/\sqrt N$, $w=\bar\chi/\sqrt N$, $\|q\|=\|w\|=1$,
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++N(q^\dagger h_Uq+w^\dagger h_Uw)+2\mu N.
+\]
+The two species have opposite symplectic forms. The metric is the product of unnormalized Frobenius bi-invariant link metrics, Euclidean Frobenius electric metrics and real round metrics on the two unit matter spheres:
+\[
+\|(iA_eU_e,F_e,p,z)\|_g^2
+=\sum_e\|A_e\|_F^2+\sum_e\|F_e\|_F^2+\|p\|^2+\|z\|^2.
+\]
+The critical representative is $U_e^*=\diag(-ib_e,I_{r-1})$, $E^*=0$, $q_i^*=w_i^*=v_ie_1$. Here $v>0$ is the unit Perron eigenvector of unsigned adjacency, $\rho=\sqrt{8+2\sqrt{10}}$, $v_i>1/5$, and $k_*\simeq0.03760248457$. The energy reference is $H_*=2N(\mu-\rho)+36Nk_*$. The compact gauge/species-phase orbit $\mathcal O_*$ includes the relative phase motion.
+
+Write $d(x)=d_g(x,\mathcal O_*)$. The PET theorem [1] supplies
+\begin{equation}\label{eq:base}
+c d(x)^4\le H(x)-H_*\le\frac J2 d(x)^2\quad(d(x)\le R_{\rm p}),
+\qquad \|\grad H(x)\|\le Jd(x).
+\end{equation}
+The lower bound uses intrinsic parity and a sixth-order remainder; the upper and gradient estimates follow from a global Hessian bound. A fully explicit radius is obtained by
+\[
+\alpha=\min(a/2,N/100),\quad D_0=279N/(4\alpha),
+\quad C_3=279N,\ C_4=1600N,\ C_5=10000N,
+\]
+\[
+S_6=\frac{9C_3^2D_0^2}{2\alpha}+\frac{C_3D_0^3}{6}
++\frac{C_4^2}{18\alpha}+5C_4D_0^2+\frac{2C_5D_0}{15}+\frac{8C_5^2}{9\alpha}+264N,
+\]
+\[
+R_{\rm p}=\min\left\{\frac\alpha{500000N},\sqrt{\frac N{400S_6}}\right\}
+\le2\times10^{-8}.
+\]
+The unchanged helper returns an inward-rounded rational radius. These are mathematical metric/energy units. No laboratory noise or physical time scale is assigned.
+
+Spatial errors are at least $C^2$ near the closed tube and preserve the stated gauge and independent species-phase symmetries. They therefore preserve the fixed species norms and matrix moment map. The zero-Gauss subset remains invariant; its final quotient can be singular. No free quotient chart is assumed.
+\newpage
+\section{Static energy transfer and minimizing-set localization}
+An invariant error is constant on $\mathcal O_*$. Subtract its orbit value and write $W=V-V(\mathcal O_*)$. A shortest geodesic from the orbit to a point at distance $d\le\eta$ stays in the tube. The hypotheses give
+\begin{equation}\label{eq:W}
+|W(x)|\le\nu d(x)+\frac\beta2d(x)^2,
+\qquad\|\grad V(x)\|\le\nu+\beta d(x)\le\nu_*.
+\end{equation}
+The centered estimate integrates its Hessian from a zero starting gradient. Gauge invariance transports that condition over the entire orbit.
+
+\begin{proof}[Trapping part of Theorem \ref{th:main}]
+Let $s=d(x_0)<\eta$ and $E_0=H(x_0)-H_*$. Conservation of $H+V$ gives, until first exit,
+\[
+H(x(t))-H_*\le E_0+\nu(s+\eta)+\frac\beta2(s^2+\eta^2).
+\]
+A strict upper bound below $B$ therefore suffices for no exit. If $s\le\delta$, then $E_0\le J\delta^2/2=B/2$, and $\delta/\eta=\eta\sqrt{c/J}\le\eta/200<1$. The total potential variation is at most
+\[
+2\nu\eta+\beta\eta^2\le2\eta(\nu+\beta\eta)\le B/4.
+\]
+The nominal energy stays at most $3B/4$, while reaching $d=\eta$ would require at least $B$ by \eqref{eq:base}. This is impossible in either time direction. Compact trapping and smoothness give complete flow for these initial states.
+\end{proof}
+
+\begin{proof}[Minimizing-set part]
+Intersect the closed tube with the zero-Gauss fixed-norm surface. This is compact, contains $\mathcal O_*$, and need not be a smooth manifold. Minimize $F=H-H_*+W$ there. On the boundary,
+\[
+F\ge B-\nu\eta-\beta\eta^2/2\ge7B/8>0,
+\]
+whereas $F=0$ on the nominal orbit. The full nonempty compact minimizing set $\mathcal K$ lies in the interior. At any minimizer,
+\[
+c d^4-\nu d-\beta d^2/2\le F\le0.
+\]
+For $d>0$, this gives $c d^3-\beta d/2-\nu\le0$ and hence $d\le r_+$. The cubic is positive beyond its largest nonnegative root. Moreover
+\[
+c(\eta/2)^3-\beta\eta/4-\nu
+\ge 3\beta\eta/4\ge0,
+\]
+so $r_+\le\eta/2$. If $\nu=0$, its largest root is $\sqrt{\beta/(2c)}\le\eta/4$; if $\beta=0$, it is $(\nu/c)^{1/3}$.
+
+Energy conservation and the boundary gap keep every trajectory from $\mathcal K$ inside it. For any sufficiently small neighborhood of the full set $\mathcal K$, its compact complement in the tube has strictly higher $F$. This gap proves stability of $\mathcal K$ as a set. A unique equilibrium, retained degeneracy or attraction does not follow.
+\end{proof}
+\newpage
+\section{Time-dependent drift and the role of cumulative control}
+For time-dependent invariant $V_t$, set
+\[
+W_t(x)=V_t(x)-V_t(\mathcal O_*),\qquad F_t=H-H_*+W_t.
+\]
+This removes arbitrary time-dependent constants. Suppose the amplitude bounds of Theorem \ref{th:main} hold uniformly, so $\|\grad V_t\|_{\rm tube}\le\nu_*$. Let $\rho(t)$ bound $\|\grad\partial_t V_t\|$ on that tube. Require
+\[
+\boxed{\int_0^T\rho(t)\,dt\le\nu_* .}
+\]
+Along the perturbed Hamiltonian flow, $\dot F_t=\partial_tW_t$ exactly. Since $|\partial_tW_t|\le\rho(t)d$, for $s\le\delta$ before first exit,
+\[
+H(x(t))-H_*\le\frac J2s^2+\nu_*s+\nu_*\eta
++\eta\int_0^T\rho(t)\,dt
+\le\frac{7B}{8}<B.
+\]
+Thus trapping holds through $T$. A bound on the total integral over $[0,\infty)$ gives all-forward-time trapping. No tracking of instantaneous minimizers is implied.
+
+For a differentiable split $V_t=V_{g,t}+V_{c,t}$ with centered $V_{c,t}$ at every time, it suffices that
+\[
+\rho(t)\le\nu_1(t)+\eta\beta_1(t),
+\]
+where $\nu_1$ bounds $\|\grad\partial_tV_{g,t}\|$ and $\beta_1$ bounds $\|\operatorname{Hess}\partial_tV_{c,t}\|$. These are bounds on coefficient derivatives or potential derivatives, not derivatives of a previously reported bound envelope.
+
+\textbf{Why amplitude alone is insufficient.} Even a system satisfying a quartic lower bound on a tube can escape under arbitrarily small bounded periodic driving. On $q^2+p^2\le1$,
+\[
+H_0=(q^2+p^2)/2\ge(q^2+p^2)^2/2.
+\]
+For $V_t=-f q\sin t$, $f>0$ can be arbitrarily small, with $\|\grad V_t\|\le f$. The exact zero-initial-state solution is
+\[
+q(t)=\tfrac f2(\sin t-t\cos t),\qquad p(t)=\tfrac{ft}{2}\sin t.
+\]
+At $t=2\pi n$ it has $q=-\pi fn$, $p=0$, and leaves every fixed radius. The constructor replay verifies the ODE, initial values and sample sequence. This is a counterexample within the abstract quartic-coercivity class, not a claim that the same drive destabilizes every UD orbit. The cumulative condition excludes this generic inference from instantaneous smallness.
+
+No non-Hamiltonian force is included in the present budget. If such a tangent field is later admitted, its relative-energy work must be added explicitly. A physical experiment would also need a calibrated mapping from the model evolution parameter to time.
+\newpage
+\section{Typed coefficient budgets at the critical orbit}
+Admit kinetic errors $\Delta a_e$, diamond errors $\Delta\kappa_d$, real relative hopping errors $\xi_e$ and real scalar site detunings $v_i$:
+\begin{align*}
+V={}&\frac12\sum_e\Delta a_e\tr E_e^2
++\sum_d\Delta\kappa_d\left(1-\frac1r\Rea\tr W_d\right)\\
+&+N(q^\dagger\delta h_Uq+w^\dagger\delta h_Uw)
++N\sum_i v_i(\|q_i\|^2+\|w_i\|^2),
+\end{align*}
+where $\delta D_U[i,j]=b_e\xi_eU_e$ and $\delta h_U=i(\delta D_U^\dagger-\delta D_U)$. Choose a real common component $\xi_0$ and define
+\[
+A=\max|\Delta a_e|,\quad K=\max_d\frac{|\Delta\kappa_d|}{rN},\quad
+H_c=|\xi_0|,\quad G_r=\max_e|\xi_e-\xi_0|,\quad
+D_s=\frac{\max_i v_i-\min_i v_i}{2}.
+\]
+For real hopping errors, the midpoint of their range is one possible common component. For time variation choose a differentiable component or bound its piecewise derivatives almost everywhere.
+
+\begin{lemma}[Centered coefficient split]\label{lem:coeff}
+The kinetic, diamond and common real hopping errors form a centered $V_c$ with
+\[
+\|\operatorname{Hess}V_c\|\le\beta_{\rm coeff}=A+12NK+24NH_c.
+\]
+The residual hopping and site errors form $V_g$ with
+\[
+\|\grad V_g\|\le\nu_{\rm coeff}=14NG_r+3ND_s.
+\]
+Consequently a sufficient mixed requirement is
+\[
+\boxed{14NG_r+3ND_s+\eta(A+12NK+24NH_c)
+\le\frac{N\eta^3}{12800}.}
+\]
+\end{lemma}
+\begin{proof}
+The kinetic gradient vanishes at $E=0$ and its global Hessian norm is at most $A$. Every background Wilson matrix is Hermitian, $\diag(-1,I)$, so each diamond potential has zero first derivative there, individually. Two-generator trace estimates, four links per diamond and at most three diamonds per link give Hessian norm at most $12NK$ independently of finite rank.
+
+A common real hopping error multiplies the nominal hopping functional. Its matter derivative vanishes on the fixed norms because $v$ is a hopping eigenvector; its link derivative vanishes at the real-ground critical phase. Its global second geodesic derivative is bounded by $24NH_c$, from the degree-four block Schur and sphere-speed estimate in [1]. These centered conditions transport over $\mathcal O_*$ by invariance.
+
+For residual hopping, degree four bounds its hopping operator and link derivative by $4G_r$ and $4G_r b$. Along a unit tangent with link/matter speeds $b,c_1,c_2$, the energy derivative is at most $8NG_r(b+c_1+c_2)\le8\sqrt3NG_r<14NG_r$. Subtracting the uniform midpoint of the site detunings leaves operator norm at most $D_s$ and derivative at most $2ND_s(c_1+c_2)\le2\sqrt2ND_s<3ND_s$. Uniform site or mass shifts are constant on the norm surface and spend no budget.
+\end{proof}
+Complex hopping errors can be covered generically by choosing $\xi_0=0$ and $G_r=\max|\xi_e|$; only the centered common component must be real. For time variation use the same bounds on coefficient derivatives to construct $\nu_1+\eta\beta_1$, then integrate it separately from the amplitude bound.
+\newpage
+\section{Displacement exponents and nominal-orbit instability}
+The minimizing-set localization is H\"older rather than Lipschitz at the quartic endpoint. Its exponents cannot generally be improved using only the stated coercivity and derivative hypotheses.
+
+For $H_0=p^2/2+cq^4$ and a generic tilt $V=-\nu q$, the unique minimum is
+\[
+p=0,\qquad q=(\nu/(4c))^{1/3}.
+\]
+The error gradient has norm $\nu$ and the displacement scales exactly as $\nu^{1/3}$. For a centered error $V=-\beta q^2/2$, the two minima are
+\[
+p=0,\qquad q=\pm\sqrt{\beta/(4c)}.
+\]
+Here $\grad V(0)=0$, $\|\operatorname{Hess}V\|=\beta$, and displacement scales as $\sqrt\beta$. The origin remains stationary and becomes a saddle for every $\beta>0$. These are exact normal-form counterexamples to stronger generic persistence claims, not a proof that every UD coefficient perturbation attains these constants.
+
+\textbf{An admitted UD stiffness shift.} Let the normalized magnetic coefficient increase uniformly by $t>0$, so $\Delta\kappa_d=rNt$ and $K=t$. Its gradient at the critical orbit is zero and its Hessian bound is $\beta=12Nt$. It passes the present sufficient contract whenever
+\[
+0<t\le\frac{\eta^2}{153600}.
+\]
+Yet it places the original orbit above the frozen sharp stability boundary [3]. Explicitly, in a pure active critical phase direction $Zb$, its additional quadratic energy coefficient is
+\[
+-\frac{Nt}{2}\|CZb\|^2<0\quad(b\ne0),
+\]
+where $C$ is the diamond curl and $CZ$ has rank three in the frozen kernel identity. The original relative equilibrium remains stationary, but the inherited dynamical theorem makes it unstable above the boundary. The minimizing-set result still places the full new minimizing set within
+\[
+d\le\sqrt{\frac{12Nt}{2c}}=\sqrt{9600t}\le\eta/4.
+\]
+Thus finite-radius trapping does not imply stability of the exact nominal orbit under parameter error. Instability can produce departure from a smaller neighborhood while the trajectory remains inside the larger certified tube. No contradiction or attraction to a new minimum is implied.
+
+This is why the theorem concludes existence and stability of the complete minimizing invariant set, rather than uniqueness of a shifted equilibrium or survival of the endpoint degeneracy. The frozen nonlinear phase-branch diagram is separate conditional support, not a new independently reviewed bifurcation result in this release.
+\newpage
+\section{Readout transfer and mathematical experiment requirements}
+For a diamond based at node $k$, retain the gauge-invariant normalized readout
+\[
+z_d(x)=-\frac{q_k^\dagger W_dq_k}{\|q_k\|^2}.
+\]
+At the critical orbit $z_d^*=1$ for all 18 diamonds. For $d(x)\le\eta\le R_{\rm p}$, each denominator stays nonzero and
+\[
+\boxed{|z_d(x)-1|\le\sqrt{404}\,d(x)<21\eta.}
+\]
+To verify the bound, align with a closest orbit representative. The nominal node norm exceeds $1/5$ and its matter chord error is at most global round distance. Normalization changes the local unit vector by at most ten times that matter error, contributing a coefficient twenty to the expectation. Four-link telescoping contributes coefficient two times the joint link distance. Cauchy--Schwarz gives $\sqrt{20^2+2^2}=\sqrt{404}<21$ [2]. Since $R_{\rm p}<1/10$, local matter cannot vanish.
+
+An instrument with complex per-channel error at most $\sigma$ has total error at most $21\eta+\sigma$ relative to the nominal readout. For a declared target $\tau>0$, it suffices to choose
+\[
+\eta\le\min(R_{\rm p},\tau/42),\qquad \sigma\le\tau/2.
+\]
+The nominal endpoint readouts coalesce; no 26-branch classifier is supplied here. This readout bound follows from a state bound. It does not conversely certify the full initial orbit distance, which includes electric and matter variables not recovered by these loops alone.
+
+At $a=N=1$ and $\eta=1/829538022$, the canonical sufficient values are
+\begin{center}\begin{tabular}{ll}\toprule
+Quantity & Approximate value\\\midrule
+Target tube $\eta$ & $1.20549\times10^{-9}$\\
+Initial radius $\delta$ & $7.26603\times10^{-21}$\\
+Boundary energy $B$ & $1.31988\times10^{-39}$\\
+Generic gradient cap $\nu_*$ & $1.36861\times10^{-31}$\\
+Pure centered Hessian cap $\nu_*/\eta$ & $1.13532\times10^{-22}$\\
+Pure normalized magnetic error cap $K$ & $9.46098\times10^{-24}$\\
+Complex loop state-error bound $21\eta$ & $2.53153\times10^{-8}$\\\bottomrule
+\end{tabular}\end{center}
+The coefficient caps are alternatives or shared reserves, not independent simultaneous allowances. The exact calculator accepts a mixed allocation and a separate cumulative variation input. Zero defaults are illustrative assumptions, not measurements. Out of budget means the sufficient test is inconclusive, not that instability has been proved.
+
+A proposed experiment must specify a realization of the carrier/action; calibrated state, energy, time and detector maps; certified preparation distance or relative energy; coefficient amplitude and cumulative rate bounds; and instrument uncertainty. The attached machine-readable contract records these mathematical requirements. None is a physical identification or a substitute for independent review.
+\newpage
+\section{Verification, provenance and remaining scope}
+\textbf{Exact constructor replay.} With Python 3 and SymPy, run
+\begin{quote}\ttfamily python3 verify\_endpoint\_robustness.py\end{quote}
+The certificate records 24 exact algebraic checks: energy allocation, the mixed cubic localization identity, coefficient/readout constants, the two quartic normal forms, the stiffness shift and the resonant-drive obstruction. Five exact rational budget examples include generic-only, centered-only, mixed and unequal-coefficient cases. A rational bisection encloses the largest nonnegative localization root. The frozen PET certificate is hash-bound as inherited support and is not counted as new interval evidence or independent review.
+
+\textbf{Synthetic diagnostic.} With NumPy, SciPy and python-flint 0.9.0, run
+\begin{quote}\ttfamily python3 check\_endpoint\_gradients.py\end{quote}
+Four deterministic full-matrix fixtures at $r=1,2,3,5$ check centered gradients at the critical representative, their linear growth on a short geodesic, the generic/mixed coefficient bounds, finite-difference directional derivatives, free uniform detuning and loop readouts. Maximum derivative discrepancy is below $8\times10^{-13}$ in these fixtures. Unscaled coefficient shapes are reported with the factor needed to fit the canonical tube budget. Gauss is not imposed because the analytic inequalities hold on the larger fixed-norm surface. These are numerical diagnostics, not empirical samples or a proof over a domain.
+
+\textbf{Calculator.} Uses the Python standard library and the unchanged PET radius helper:
+\begin{quote}\ttfamily python3 endpoint\_robustness\_budget.py --a 1 --N 1\end{quote}
+Optional exact-rational inputs set the target radius, five typed coefficient bounds and cumulative variation. The variation input must bound the integrated spatial gradient of the time derivative, using the stated coefficient-rate formula. The calculator command help lists the options. Decimal fields are diagnostics; radius, energy, initial-radius square and root enclosures are exact rational outputs.
+
+\textbf{Frozen references (same constructor).}
+\begin{enumerate}
+\item PET v0.1, \emph{Parity-sharpened trapping at the critical endpoint}, 16 October 2026. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#endpoint-parity-v01}{UD portal G17}, \href{https://github.com/ud-tetra/UD/pull/165}{PR 165}, capture suffix \texttt{37748fe1}. Supplies the quartic tube and its frozen dependencies.
+\item RHT v0.1, \emph{Robust nonlinear trapping under Hamiltonian model errors}, 16 October 2026. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#robust-trapping-v01}{UD portal G15}. Positive-offset transfer method and matrix/readout estimates; the present endpoint proof is derived explicitly above.
+\item HRC v0.1, \emph{Higher-rank curved stability theorem}, and CBF v0.1, \emph{Curved-branch bifurcation theorem}, 15 October 2026. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#higher-rank-curved-v01}{UD portal G8} and \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#critical-bifurcation-v01}{G10}. Supplies the sharp nominal parameter boundary and phase-branch context.
+\end{enumerate}
+The action and coefficient ledger are unchanged. Development, no registry entry; independent review pending; physical promotion $0$. Conditional dependency depth is retained. No unique perturbed orbit, attraction, sharp basin, infinite-rank flow, physical coupling unification or proton/monopole/neutrino confirmation is established. No experimental samples or unavailable image are proof inputs. The next bridge task needs a specified realization and calibrated observation map before a data reanalysis can test this model.
+\end{document}
