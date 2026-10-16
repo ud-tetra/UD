@@ -1,0 +1,279 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Parity-sharpened trapping at the critical endpoint},pdfauthor={Unified Dynamics research workstream}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Parity and endpoint trapping}\rhead{PET v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Parity-sharpened trapping\\at the critical endpoint}\\[10pt]
+{\large A sixth-order bound and a uniform radius improvement}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 16 October 2026 UTC\\
+Version 0.1\quad |\quad Conditional theorem extension
+\end{center}
+\begin{abstract}
+The frozen critical orbit has an explicit energy-preserving isometric reflection. It reverses all three soft directions and fixes the leading fast-relaxation correction. Three parity cancellations remove the fifth-order loss responsible for the preceding very small sufficient radius. A sixth-order geodesic remainder and quantitative fast-variable completion preserve the same quartic orbit-distance coercivity on a larger explicit tube. An exact positive-coefficient comparison proves a radius improvement of at least 50,000 for every positive kinetic coefficient and matter norm, at each finite rank. No physical tolerance or maximal basin is inferred.
+\end{abstract}
+For $a,N>0$, finite $r\ge1$, and $\epsilon=\kappa/(rN)-k_*=0$, put
+\[
+\alpha=\min(a/2,N/100),\quad D=\frac{279N}{4\alpha},\quad J=\max(a,25N),
+\]
+\[
+C_3=279N,\qquad C_4=1600N,\qquad C_5=10000N.
+\]
+\begin{align*}
+S_6={}&\frac{9C_3^2D^2}{2\alpha}+\frac{C_3D^3}{6}
++\frac{C_4^2}{18\alpha}+5C_4D^2
++\frac{2C_5D}{15}+\frac{8C_5^2}{9\alpha}+264N,\\
+R_{\rm p}={}&\min\left\{\frac{\alpha}{500000N},\sqrt{\frac{N}{400S_6}}\right\}.
+\end{align*}
+\begin{theorem}[Larger explicit endpoint tube]\label{th:main}
+For the unchanged critical orbit $\mathcal O_*$ and the product metric of page 2,
+\[
+\boxed{H-H_*\ge\frac{N}{1600}d_g(x,\mathcal O_*)^4
+\quad\text{for }d_g(x,\mathcal O_*)\le R_{\rm p}.}
+\]
+For every $0<\eta\le R_{\rm p}$, the boundary barrier and sufficient initial radius are
+\[
+B_\eta=\frac{N\eta^4}{1600},\qquad
+\delta_\eta=\eta^2\sqrt{\frac{N}{1600J}}.
+\]
+Initial distance at most $\delta_\eta$ implies all-time distance less than $\eta$. Initial distance less than $\eta$ and energy excess below $B_\eta$ also suffice. Zero Gauss is included by invariance. Compared with the radius $R_{\rm EQT}$ in [1],
+\[
+\boxed{R_{\rm p}\ge50000R_{\rm EQT}\quad\text{for every }a,N>0.}
+\]
+\end{theorem}
+\textbf{Status.} Development, no registry entry. Derived conditional mathematics; frozen action and coefficient ledger unchanged. Constructor checks only; independent review pending; physical promotion $0$.
+\newpage
+\section{Model, metric and frozen quantitative inputs}
+Use the 15-node, 28-link, 18-diamond tetrahedral Hasse carrier. For oriented link $e=(i\leftarrow j)$, $b_e=B_{ij}=\pm1$, let $D_U[i,j]=b_eU_e$, $h_U=i(D_U^\dagger-D_U)$ and
+\[
+W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk}
+\quad\text{for diamond }d=(i,j,h,k).
+\]
+With normalized matter $q=\psi/\sqrt N$, $w=\bar\chi/\sqrt N$, $\|q\|=\|w\|=1$,
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++N(q^\dagger h_Uq+w^\dagger h_Uw)+2\mu N.
+\]
+The fixed-norm phase space has link factors $\mathrm U(r)$, Euclidean Hermitian electric factors and two real unit matter spheres. Its product metric is
+\[
+\|(iA_eU_e,F_e,p,z)\|_g^2
+=\sum_e\|A_e\|_F^2+\sum_e\|F_e\|_F^2+\|p\|^2+\|z\|^2.
+\]
+Distance to the compact node-gauge/species-phase orbit is minimized in this complete metric. Matrix Frobenius norms are unnormalized. These are mathematical coordinates and energy units, without a laboratory calibration.
+
+Let $T$ be unsigned adjacency, $\rho=\sqrt{8+2\sqrt{10}}$ and $v>0$ its unit Perron eigenvector. The frozen critical representative is
+\[
+U_e^*=\diag(-ib_e,I_{r-1}),\quad E_e^*=0,\quad q_i^*=w_i^*=v_i e_1,
+\qquad \kappa=rNk_*.
+\]
+Here $k_*\simeq0.03760248457$, with $3/80<k_*<1/25$, and $H_*=2N(\mu-\rho)+36Nk_*$. The relative species-phase motion is included in $\mathcal O_*$.
+
+At any orbit point $p$, let $\mathcal N$ be its orbit-normal tangent space and split $\mathcal N=K\oplus F$, where $K$ is the three-dimensional Hessian kernel and $F=K^\perp\cap\mathcal N$. For $f(u)=H(\exp_pu)-H_*$ write $A=\operatorname{Hess}H|_F$ and $T_j=d^jf(0)$. The conditional inputs re-established in [1] are
+\begin{align*}
+\frac12\langle Az,z\rangle&\ge\alpha\|z\|^2,\qquad z\in F,\\
+h(k)&=A^{-1}\left(\tfrac12T_3[k,k,\cdot]|_F\right),\qquad
+\|h(k)\|\le D\|k\|^2,\\
+q_{\rm rel}(k)&=\frac1{24}T_4[k,k,k,k]-\frac12\langle Ah(k),h(k)\rangle
+\ge\frac N{200}\|k\|^4.
+\end{align*}
+The multilinear tensor bounds are $\|T_3\|\le C_3$, $\|T_4\|\le C_4$; global unit-speed geodesic derivative bounds are $M_2=J$, $M_3=62N$, $M_4=150N$, $M_5=380N$.
+
+These inputs retain their frozen conditional provenance: two Arb matrix inequalities, the exact kernel identity, the scalar relaxed quartic and the higher-rank block identities. They are dependencies, not new independent review in this extension. The new proof adds the exact reflection and explicit sixth-order error control.
+\newpage
+\section{An exact energy-preserving reflection}
+For a node corresponding to simplex $i$ of size $|i|$, define the real unitary matrix
+\[
+J_i=\diag(1,(-1)^{|i|}I_{r-1}).
+\]
+For $r=1$ the unused block is absent. Define a map $\mathcal S$ on the full fixed-norm manifold by
+\begin{align*}
+U'_e&=-J_i\overline{U_e}J_j,& E'_e&=J_i\overline{E_e}J_i,
+&&e=(i\leftarrow j),\\
+q'_i&=J_i\overline{q_i},&w'_i&=J_i\overline{w_i}.
+\end{align*}
+\begin{lemma}[Reflection and soft parity]\label{lem:reflection}
+$\mathcal S$ is an isometric involution, preserves $H$ and fixes the displayed critical representative. It preserves its gauge/species-phase orbit. At the displayed representative $p$, its differential on $\mathcal N$ $L=d\mathcal S_p$ is an orthogonal involution, acts as $-I$ on $K$ and fixes $h(k)$. Consequently
+\[
+T_3[k,h,h]=0,\qquad T_4[k,k,k,h]=0,\qquad T_5[k,k,k,k,k]=0.
+\]
+\end{lemma}
+\begin{proof}
+Conjugation, fixed left/right unitary multiplication and a link sign are isometries of the declared product metric. The matrices $J_i$ are real and square to identity, so $\mathcal S^2=I$. In block node notation,
+\[
+D_{U'}=-J\overline{D_U}J,\qquad h_{U'}=J\overline{h_U}J.
+\]
+This proves matter-energy invariance. The four minus signs in a diamond cancel and its Wilson matrix is conjugate by the endpoint $J_k$ to $\overline{W_d}$; its real trace is unchanged. Electric squared traces and the constant mass term are unchanged.
+
+At the background, $-\overline{-ib_e}=-ib_e$ in the active color. Adjacent simplex sizes differ by one, so the unused link block becomes $-(-1)^{|i|+|j|}I=I$. The real active matter is fixed. Node gauge $g_i$ is transformed to $J_i\overline{g_i}J_i$, and global species phases are conjugated, so the orbit is preserved. Hence its normal space is preserved as well.
+
+A pure active critical phase tangent changes sign under $\mathcal S$. Orthogonal projection onto $\mathcal N$ commutes with $L$, so the intrinsic three-dimensional kernel is odd. The Hessian commutes with $L$. Tensor invariance gives $T_j[Lu_1,\ldots,Lu_j]=T_j[u_1,\ldots,u_j]$. In particular the fast covector $T_3[k,k,\cdot]/2$ is even; its inverse-Hessian image $h(k)$ is even. Each displayed tensor expression has an odd number of odd inputs and therefore vanishes.
+\end{proof}
+Because an isometry intertwines exponential maps, $f(Lu)=f(u)$ exactly. These are intrinsic jet statements; no numerical slice radius or freely acting final quotient is assumed. The map is used as an energy isometry. No symplectic or dynamical-reversibility assertion is needed.
+\newpage
+\section{Cubic and quartic error bounds on the relaxation graph}
+Write $u=k+z\in\mathcal N$ with $k\in K$, $z\in F$. Put $x=\|k\|$, $y=\|z\|$, $s=\|u\|$, $h=h(k)$ and
+\[
+w=z+h,\qquad W=\|w\|,\qquad H_h=\|h\|\le Dx^2.
+\]
+Assume $s\le R\le1$ and $DR\le1$. Then $W\le y+H_h\le2R$. Completing the leading fast terms gives exactly
+\[
+\frac12\langle Az,z\rangle+\frac12T_3[k,k,z]+\frac1{24}T_4[k^4]
+=\frac12\langle Aw,w\rangle+q_{\rm rel}(k)
+\ge\alpha W^2+\frac N{200}x^4.
+\]
+Here and below repeated powers in tensor brackets denote repeated arguments.
+
+The remaining cubic is $T_3[k,z,z]/2+T_3[z,z,z]/6$. Substitute $z=w-h$. The potential constant $T_3[k,h,h]/2$ vanishes by Lemma \ref{lem:reflection}. The terms with two or more $w$ factors are bounded by
+\[
+\left(\frac{C_3R}{2}+\frac{C_3(2R)}6+\frac{C_3R}{2}\right)W^2
+=\frac{4C_3R}{3}W^2.
+\]
+The remaining linear terms have absolute sum at most
+\[
+C_3Dx^3W+\frac{C_3D^2}{2}x^4W\le\frac{3C_3D}{2}x^3W.
+\]
+Young's inequality with $\alpha W^2/8$ gives the total cubic-error bound
+\begin{equation}\label{eq:cubic}
+\left(\frac\alpha8+\frac{4C_3R}{3}\right)W^2
++\left(\frac{9C_3^2D^2}{2\alpha}+\frac{C_3D^3}{6}\right)x^6.
+\end{equation}
+The last term accounts for $T_3[h,h,h]/6$ in absolute value.
+
+The quartic with one $z$ is $T_4[k,k,k,z]/6$. Its $h$ part vanishes by parity. Its remaining part is bounded by
+\[
+\frac{C_4}{6}x^3W\le\frac\alpha8W^2+\frac{C_4^2}{18\alpha}x^6.
+\]
+The quartic terms with at least two $z$ factors are at most $(C_4/2)s^2y^2$. Since $k\perp z$,
+\[
+s^2y^2=x^2y^2+y^4\le34R^2W^2+10D^2x^6.
+\]
+Indeed $y^2\le2W^2+2D^2x^4$, $y^4\le8(W^4+D^4x^8)$, $W^4\le4R^2W^2$, and $D^4x^8\le D^2x^6$. Thus the total quartic error is at most
+\begin{equation}\label{eq:quartic}
+\left(\frac\alpha8+17C_4R^2\right)W^2
++\left(\frac{C_4^2}{18\alpha}+5C_4D^2\right)x^6.
+\end{equation}
+The parity cancellations keep the constant losses at weighted order six. Bounding those terms only by an unrestricted fifth-order remainder would discard this improvement.
+\newpage
+\section{The fifth-order jet and sixth-order remainder}
+The order-five diagonal derivative bound $380N$ from [1], with real polarization factor $5^5/5!$, gives
+\[
+\|T_5\|\le\frac{380\cdot3125}{120}N<10000N=C_5.
+\]
+For $u_0=k-h$, parity leaves only the terms with one, three or five $h$ factors in $T_5[u_0^5]$. Using $Dx\le1$,
+\[
+\frac1{120}|T_5[u_0^5]|
+\le C_5\left(\frac{Dx^6}{24}+\frac{D^3x^8}{12}+\frac{D^5x^{10}}{120}\right)
+\le\frac{2C_5D}{15}x^6.
+\]
+Expand $u=u_0+w$. Since $\|u_0\|\le2x$, the single-$w$ term is bounded by
+\[
+\frac{C_5}{24}(2x)^4W\le\frac{2C_5R}{3}x^3W
+\le\frac\alpha8W^2+\frac{8C_5^2}{9\alpha}x^6,
+\]
+where the last step also uses $R\le1$. The terms with at least two $w$ factors have coefficient sum $26/120$ and are bounded by
+\[
+\frac{26}{120}C_5(2R)^3W^2<2C_5R^3W^2.
+\]
+Altogether the fifth-order jet has absolute value at most
+\begin{equation}\label{eq:fifth}
+\left(\frac\alpha8+2C_5R^3\right)W^2
++\left(\frac{2C_5D}{15}+\frac{8C_5^2}{9\alpha}\right)x^6.
+\end{equation}
+
+For a unit-speed product geodesic, let $b$ be the total link speed and $c,d$ the two matter speeds, so $b^2+c^2+d^2\le1$. The same degree-four block Schur and Leibniz estimate as [1] gives the order-six matter derivative bound
+\[
+4N[(b+2c)^6+(b+2d)^6]\le4\cdot6^3N=864N.
+\]
+Every differentiated Wilson trace with six generator factors is bounded using two Frobenius norms and operator norms for the rest. Four edges per diamond, at most three diamonds per edge and $\kappa/r<N/25$ give a total magnetic bound $(2\sqrt3)^6N/25=1728N/25$. Electric derivatives above order two vanish. Hence globally
+\[
+|(H\circ\gamma)^{(6)}|<940N,\qquad
+|\mathcal R_6(u)|\le\frac{940N}{720}s^6<2Ns^6.
+\]
+Here $\mathcal R_6$ is the Taylor remainder after degree five. Since
+\[
+s^6\le4(x^6+y^6),\quad y^6\le32(W^6+D^6x^{12}),\quad
+W^6\le16R^4W^2,\quad D^6x^{12}\le x^6,
+\]
+the remainder is at most
+\begin{equation}\label{eq:sixth}
+264N x^6+4096NR^4W^2.
+\end{equation}
+These global radial estimates do not require an assigned neighborhood for the final quotient.
+\newpage
+\section{Absorption, distance coercivity and the uniform improvement}
+Adding \eqref{eq:cubic}--\eqref{eq:sixth}, the completed lower bound loses at most
+\[
+\left[\frac{3\alpha}{8}+\frac{4C_3R}{3}+17C_4R^2+2C_5R^3+4096NR^4\right]W^2
++S_6x^6.
+\]
+For $R=R_{\rm p}$, $R\le\alpha/(500000N)\le2\times10^{-8}$, so $R<1$ and $DR\le279/2000000<1/2$. Also
+\[
+\frac{4C_3R}{3}+17C_4R^2+2C_5R^3+4096NR^4
+\le51668NR\le\frac{51668}{500000}\alpha<\frac\alpha8,
+\]
+\[
+S_6x^6\le S_6R^2x^4\le\frac{N}{400}x^4.
+\]
+Thus
+\[
+f(u)\ge\frac\alpha2W^2+\frac{N}{400}x^4.
+\]
+The unchanged distance conversion from [1] is explicit:
+\[
+s^4\le2x^4+2y^4\le(2+4D^2R^2)x^4+4R^2W^2
+\le3x^4+4R^2W^2.
+\]
+Since $3N/1600\le N/400$ and $NR^2/400\le\alpha/2$, this proves $f(u)\ge Ns^4/1600$.
+
+For any state at orbit distance $s\le R_{\rm p}$, a closest orbit point and minimizing product geodesic exist. First variation makes its initial tangent orbit-normal. The preceding calculation applies there by isometry and the global radial remainder bound. Hence the same lower bound holds in $d_g$, without a unique nearest point or numerical slice radius. The upper estimate $\Delta H\le Jd_g^2/2$ is unchanged. It gives at most $B_\eta/2$ from the stated initial ball; conservation prevents reaching the distance-$\eta$ boundary. Global flow and zero-Gauss invariance are inherited from the frozen action [1]. This proves the trapping part of Theorem \ref{th:main}.
+
+To compare radii, write $\lambda=\alpha/N\in(0,1/100]$, $E_0=\mathcal E_{\rm EQT}/N$ and $S_0=S_6/N$, where
+\[
+E_0=2177D^2+\frac{800D}{3}+\frac{19}{6}+\frac{1280000}{9\lambda},
+\qquad D=\frac{279}{4\lambda}.
+\]
+The previous radius is $R_{\rm EQT}=\min\{\lambda/10000,1/(400E_0)\}$. Substitute $\lambda=1/[100(1+t)]$, $t\ge0$. Each of the following rational functions has numerator and denominator with strictly positive coefficients in $t$, as recorded exactly in the certificate:
+\[
+400\lambda E_0-10000,\qquad
+400\lambda E_0-500000\cdot50000,\qquad
+400E_0^2-50000^2S_0.
+\]
+The first proves $R_{\rm EQT}=1/(400E_0)$. The other two prove that both defining caps of $R_{\rm p}$ exceed $50000R_{\rm EQT}$. This completes the uniform comparison. It enlarges a sufficient guarantee and does not identify the actual stability boundary in distance.
+\newpage
+\section{Reproduction, numerical sizes and research status}
+At $a=N=1$,
+\[
+\alpha=\frac1{100},\quad D=6975,\quad
+S_6=\frac{30965999846014127}{18},\qquad
+R_{\rm p}=\sqrt{\frac9{6193199969202825400}}.
+\]
+The calculator returns the rational radius $\widehat R=1/829538022\le R_{\rm p}$. It obeys all sufficient inequalities exactly. At target $\eta=\widehat R$,
+\begin{center}
+\begin{tabular}{lll}\toprule
+Quantity & Previous EQT bound & New parity bound\\\midrule
+Outer radius & $2.36008\times10^{-14}$ & $1.20549\times10^{-9}$\\
+Boundary barrier & $1.93905\times10^{-58}$ & $1.31988\times10^{-39}$\\
+Sufficient initial radius & $2.78500\times10^{-30}$ & $7.26603\times10^{-21}$\\\bottomrule
+\end{tabular}
+\end{center}
+The radius gain is approximately $51078.3$. Barrier gains scale as the fourth power and initial-radius gains as the square of the radius gain at fixed $a,N$. These remain conservative mathematical guarantees; no experimental resolution or physical energy scale is assigned.
+
+\textbf{Exact replay.} Python 3 with SymPy: run \texttt{python3 certify\_parity.py}. It checks 22 exact rational/symbolic conditions, including the positive-coefficient all-parameter comparison, plus four exact rational budget examples. The frozen EQT certificate is hash-bound and retained as an inherited dependency; it is not counted as a new Arb replay or independent review. The analytic reflection and tensor error estimates are proved in this manuscript.
+
+\textbf{Calculator.} Standard-library Python: run \texttt{python3 parity\_budget.py --a 1 --N 1}. Optionally add an exact rational \texttt{--eta} no greater than its returned rational radius. For irrational square-root caps, the calculator rounds inward with an integer ceiling. It returns exact energy/barrier values, an exact initial-radius square and a rational square-root enclosure. Decimal fields are diagnostics.
+
+\textbf{Matrix diagnostic.} With NumPy, SciPy and python-flint 0.9.0, run
+\begin{quote}\ttfamily python3 check\_parity\_matrices.py\end{quote}
+Four deterministic synthetic fixtures at $r=1,2,3,5$ check full-matrix energy invariance, the square identity and the fixed critical representative. These are numerical diagnostics, not proof on a domain or experimental evidence; Gauss is not imposed because the energy isometry holds on the larger fixed-norm manifold.
+
+\textbf{Provenance.} [1] EQT v0.1, \emph{Explicit quartic trapping at the critical endpoint}, 16 October 2026, \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#endpoint-quartic-v01}{UD portal G16}, merged \href{https://github.com/ud-tetra/UD/pull/164}{PR 164}, capture suffix \texttt{f06df94b}. That theorem retains its scalar quartic, kernel and higher-rank dependencies. This extension preserves those assumptions and the declared metric, and replaces only its sufficient radius by a larger one. Earlier artifacts remain immutable.
+
+\textbf{Remaining work.} The tube is still small because global tensor norms and coarse Young inequalities are retained. Actual directional coefficients on the relaxation graph may permit further improvement. Endpoint model-error/forcing budgets, sharp basins, independent mathematical review and calibrated realization/readout maps remain open. No attraction, infinite-rank flow, measured coupling unification, proton decay or monopole/neutrino signal is established. The unavailable Genesis image is not a proof input.
+
+Development, no registry entry. The action and coefficient ledger are unchanged. Constructor verification does not raise the confidence of its conditional dependencies. Independent review pending; physical promotion $0$.
+\end{document}
