@@ -1,0 +1,307 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Explicit quartic trapping at the critical endpoint},pdfauthor={Unified Dynamics research workstream}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Critical endpoint}\rhead{EQT v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Explicit quartic trapping\\at the critical endpoint}\\[10pt]
+{\large A nonlinear radius, energy barrier and stability modulus}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 16 October 2026 UTC\\
+Version 0.1\quad |\quad Computer-assisted conditional theorem
+\end{center}
+\begin{abstract}
+At the zero-offset critical orbit, three missing quadratic directions are stabilized by the frozen positive relaxed quartic. We convert that qualitative statement into explicit orbit-distance coercivity on the full fixed-norm phase space, at every finite rank. Two new rigorous matrix bounds control the fast scalar Hessian and the metric size of critical coordinates. Global fourth and fifth geodesic derivatives, polarization and a quantitative completion of the fast variables give an explicit radius without requiring a numerical gauge-slice chart radius. The conserved-energy barrier then gives an initial perturbation modulus proportional to the square of the target distance. The constants are conservative sufficient guarantees in a declared mathematical metric.
+\end{abstract}
+For $a,N>0$, finite $r\ge1$, and $\epsilon=\kappa/(rN)-k_*=0$, define
+\[
+\alpha=\min\left(\frac a2,\frac N{100}\right),\qquad
+D=\frac{279N}{4\alpha},\qquad J=\max(a,25N),
+\]
+\[
+\mathcal E=N\left(2177D^2+\frac{800D}{3}+\frac{19}{6}\right)
++\frac{1280000N^2}{9\alpha},\qquad
+\boxed{R_* =\min\left\{\frac{\alpha}{10000N},\frac{N}{400\mathcal E}\right\}.}
+\]
+\begin{theorem}[Quantitative critical-endpoint stability]\label{th:main}
+For the frozen critical gauge/species-phase orbit $\mathcal O_*$ and metric specified on page 2,
+\[
+\boxed{H(x)-H_*\ge\frac N{1600}d_g(x,\mathcal O_*)^4
+\quad\text{if }d_g(x,\mathcal O_*)\le R_*.}
+\]
+For every $0<\eta\le R_*$, set
+\[
+\boxed{B_\eta=\frac N{1600}\eta^4,\qquad
+\delta_\eta=\eta^2\sqrt{\frac{N}{1600J}}.}
+\]
+Every initial state with $d_g(x_0,\mathcal O_*)\le\delta_\eta$ has $H(x_0)-H_*\le B_\eta/2$ and stays at distance less than $\eta$ for all real time. More generally, initial distance less than $\eta$ and energy excess less than $B_\eta$ suffice. The invariant zero-Gauss subset inherits both conclusions.
+\end{theorem}
+\textbf{Status.} Development, no registry entry. Derived conditional mathematics under the unchanged action. Constructor verification only; independent review pending; physical promotion $0$.
+\newpage
+\section{Frozen model and declared metric}
+The carrier has the 15 nonempty faces of a tetrahedron, 28 Hasse links and 18 diamonds. Write $b_e=B_{ij}=\pm1$ for the oriented boundary incidence of link $e=(i\leftarrow j)$, $D_U[i,j]=b_eU_e$, and $h_U=i(D_U^\dagger-D_U)$. For a diamond $d=(i,j,h,k)$ set
+\[
+W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk}.
+\]
+With $q=\psi/\sqrt N$, $w=\bar\chi/\sqrt N$, $\|q\|=\|w\|=1$, the energy is
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++N(q^\dagger h_Uq+w^\dagger h_Uw)+2\mu N.
+\]
+The two normalized matter species transform in the same fundamental representation and have opposite symplectic forms. Norms, energy and Gauss are conserved by the frozen action.
+
+Let $T$ be the unsigned node adjacency, $\rho=\sqrt{8+2\sqrt{10}}$, and let $v>0$ be its unit Perron eigenvector. Put $d=\sqrt{10}$,
+\[
+\ell=\frac{16(10+d)}9,\qquad
+v_i=\frac1{\sqrt\ell}\left(1,\frac\rho3,\frac{1+d}3,
+\frac{4(1+d)}{3\rho}\right)_{|i|},
+\]
+where the subscript selects the entry by simplex size. Define
+\[
+\lambda_+=\frac{28+17d+\sqrt{866-128d}}{18},\quad
+w_0=\frac{\rho(10-d)}{480},\quad k_*=\frac{4w_0}{\lambda_+}.
+\]
+Then $3/80<k_*<1/25$, $k_*\simeq0.03760248457$. The critical representative is
+\[
+U_e^*=\diag(-ib_e,I_{r-1}),\quad E_e^*=0,\quad q_i^*=w_i^*=v_i e_1,
+\qquad \kappa=rNk_*.
+\]
+Each diamond has Wilson matrix $\diag(-1,I_{r-1})$. Hence
+\[
+H_*=2N(\mu-\rho)+36Nk_*.
+\]
+
+The complete product manifold is
+\[
+\mathcal M=\mathrm U(r)^{28}\times\operatorname{Herm}(r)^{28}
+\times S^{30r-1}\times S^{30r-1}.
+\]
+Use bi-invariant Frobenius link metrics, Euclidean Frobenius electric metrics and real round unit-sphere matter metrics. Thus
+\[
+\|(iA_eU_e,F_e,p,z)\|_g^2
+=\sum_e\|A_e\|_F^2+\sum_e\|F_e\|_F^2+\|p\|^2+\|z\|^2.
+\]
+The compact group $\mathrm U(r)^{15}\times\mathrm U(1)^2$ acts isometrically. Its orbit $\mathcal O_*$ includes the species phase motion of the relative equilibrium. Distance $d_g$ is the product geodesic distance minimized over that orbit. This unnormalized matrix metric is not a laboratory noise norm.
+\newpage
+\section{Fast coercivity and the critical coordinate map}
+Let $C$ be the signed diamond curl matrix, $Z:\mathbb R^3\to\mathbb R^{28}$ the frozen critical phase map [1], and
+\[
+H_0=4\diag(v_iv_j)-k_*C^TC,\qquad
+P_Z=Z(Z^TZ)^{-1}Z^T.
+\]
+The inherited exact identity is $H_0Z=0$. The new Arb certificates prove
+\begin{equation}\label{eq:matrixbounds}
+\boxed{H_0+P_Z>\frac1{50}I_{28},\qquad Z^TZ<50I_3.}
+\end{equation}
+In particular $H_0> I/50$ on $(\operatorname{im}Z)^\perp$. The smallest positive scalar eigenvalue is approximately $0.0243348$; that decimal is diagnostic only.
+
+For completeness the critical map uses the orthonormal Hadamard map
+\[
+a=\frac12\begin{pmatrix}1&1&1\\1&-1&-1\\-1&1&-1\\-1&-1&1\end{pmatrix}b,
+\qquad \sum_i a_i=0,\quad \|a\|=\|b\|.
+\]
+For a link adding vertex $t$ to lower simplex $u$, its critical phase is
+\[
+(Zb)_e=\begin{cases}
+a_{u_1}+3a_t,&|u|=1,\\
+\gamma\sum_{j\in u}a_j+(2\gamma-4/c)a_t,&|u|=2,\\
+4(1-c\gamma)a_t/h,&|u|=3,
+\end{cases}
+\]
+where $c=(1+\sqrt{10})/3$, $h=(8-\sqrt{10})/3$, and $\gamma=-\lambda_++(5+4\sqrt{10})/3$.
+
+Let $\mathcal N$ be the orbit-normal tangent space at the representative, $K$ the kernel of its Hessian, and $F=K^\perp\cap\mathcal N$. Then $\dim K=3$. For $z\in F$,
+\begin{equation}\label{eq:fast}
+\frac12\operatorname{Hess}H(z,z)\ge\alpha\|z\|^2.
+\end{equation}
+To see this with the stated metric, use the frozen scalar matter gauge $\Im P=0$, with $P=(p+z)/\sqrt2$ real and perpendicular to $v$, and $Q=(p-z)/\sqrt2$ complex and perpendicular to $v$. At zero phase the mixed phase--matter Hessian vanishes. The phase coefficient is $N\theta^TH_0\theta/2$; all nonground scalar matter gaps exceed $3/5$. Thus the scalar fast floor is $N/100$.
+
+The matter-aligned off-diagonal color gauge has $P=0$, with quadratic coefficient
+\[
+a\|e\|^2+NQ^\dagger(h_{\rm inactive}+\rho)Q
++2N\sum_e v_iv_j|\beta_e|^2.
+\]
+Here $\operatorname{spec}(h_{\rm inactive})=\{0,\pm2\}$ and $v_i>1/5$. In metric $2\|\beta\|^2+2\|e\|^2+\|Q\|^2$ its floor is at least $\min(a/2,N/32)$. The unused vacuum floor is greater than $3N/64$, since its curl gap is $4-\sqrt2>5/2$ and $k_*>3/80$ [2]. The electric floor is $a/2$.
+\newpage
+\section{Why the relaxed quartic controls the intrinsic kernel}
+The gauge-fixed Hessian blocks on the preceding page are orthogonal; their only remaining kernel is the scalar critical phase subspace. For an orbit-normal fast vector $z$, choose its gauge-fixed representative $z'=z+t$ with orbit tangent $t$. Split off its pure critical phase part: $z'=Zb+u$, where $u$ has phase perpendicular to $Z$ and otherwise contains the positive matter, color, vacuum and electric blocks. Projecting onto $F$ gives $z=P_F P_{\mathcal N}u$, so $\|u\|\ge\|z\|$. Gauge invariance at a critical point makes the Hessian annihilate orbit tangents. The block floors therefore prove \eqref{eq:fast} without a gauge-coordinate norm loss.
+
+The map $b\mapsto k=P_{\mathcal N}(Zb,0,0,0)$ identifies $\mathbb R^3$ with $K$. It is injective because a pure critical link variation with fixed nonzero matter cannot be an orbit tangent: the scalar node phases preserving that matter are constant and have zero link gradient. The color and vacuum orbit tangents do not supply active scalar critical links. Equation \eqref{eq:matrixbounds} gives
+\begin{equation}\label{eq:kmetric}
+\|k\|^2\le\|Zb\|^2<50\|b\|^2.
+\end{equation}
+
+The frozen relaxed scalar critical quartic is exactly
+\[
+q_{\rm sc}(b)=N\left[A_4\|b\|^4+B_4\sum_i a_i^4\right],
+\qquad 11<A_4<12,\quad12<B_4<13.
+\]
+The directed-integer interval replay re-establishes these strict enclosures. Since $\sum a_i^4\ge\|b\|^4/4$, it follows that $q_{\rm sc}(b)>14N\|b\|^4$.
+
+\begin{lemma}[Intrinsic reduced quartic]\label{lem:quartic}
+Let $f(u)=H(\exp_p u)-H_*$ on $\mathcal N$ at $p\in\mathcal O_*$. Write its Taylor tensors as $A=\operatorname{Hess}H|_F$, $T_3$, $T_4$. The cubic on $K$ is zero. Define the fast covector $b(k)=\tfrac12T_3[k,k,\cdot]|_F$ and $z_0(k)=A^{-1}b(k)$. Then
+\[
+q_{\rm rel}(k)=\frac1{24}T_4[k,k,k,k]
+-\frac12\langle b(k),A^{-1}b(k)\rangle
+\ge c_0\|k\|^4,\qquad c_0=\frac N{200}.
+\]
+\end{lemma}
+\begin{proof}
+The fast stationary equation solves to $z=-A^{-1}b(k)+O(\|k\|^3)$ by the implicit function theorem. Substitution gives the displayed quartic. A smooth change of transverse coordinates preserves this reduced leading quartic under its linear map on $K$: a quadratic shift of fast coordinates cancels on completing the same square, while a quadratic shift of critical coordinates changes a homogeneous quartic only at degree five. The cubic on $K$ vanishes in the frozen scalar reduction (also forced by its local minimum), and hence in these coordinates.
+
+At block-diagonal points the full energy splits into scalar plus unused vacuum energy. The first derivative in off-diagonal color variables vanishes identically on that submanifold [2]. Thus no term quadratic in the scalar critical variable and linear in a new color or vacuum fast variable changes its relaxed quartic. Electric relaxation is zero. The intrinsic reduced quartic equals $q_{\rm sc}(b)$. By \eqref{eq:kmetric}, it exceeds $14N\|k\|^4/2500>N\|k\|^4/200$.
+\end{proof}
+Only the jet identity uses a local slice. The explicit radius below uses global product geodesics and does not assume any unquantified slice radius.
+\newpage
+\section{Global derivative bounds through fifth order}
+Along a unit-speed product geodesic write $U_e(t)=e^{itA_e}U_e(0)$ and $E_e(t)=E_e(0)+tF_e$. Let
+\[
+b^2=\sum\|A_e\|_F^2,\quad e^2=\sum\|F_e\|_F^2,
+\quad c=\|\dot q\|,\quad d=\|\dot w\|,
+\quad b^2+e^2+c^2+d^2=1.
+\]
+Round-sphere derivatives satisfy $\|q^{(j)}\|=c^j$, $\|w^{(j)}\|=d^j$. The maximum node degree is four. The block Schur bound gives $\|h_U^{(j)}\|\le4b^j$, including order zero. Leibniz therefore gives for $n\ge2$
+\[
+\left|\frac{d^n}{dt^n}N(q^\dagger h_Uq+w^\dagger h_Uw)\right|
+\le4N[(b+2c)^n+(b+2d)^n]\le4\,6^{n/2}N.
+\]
+The last inequality uses the squared operator norm six of the matrix with rows $(1,2,0)$, $(1,0,2)$ and $\|x\|_n\le\|x\|_2$.
+
+For $n\ge2$, every differentiated Wilson trace contains at least two Hermitian generator factors, counted with multiplicity, separated by unitary factors. Schatten bounds with two Frobenius factors and operator bounds for the rest yield
+\[
+|\tr W_d^{(n)}|\le\left(\sum_{e\in d}\|A_e\|_F\right)^n.
+\]
+Four edges per diamond and at most three diamonds per edge imply
+\[
+\sum_d\left(\sum_{e\in d}\|A_e\|_F\right)^n
+\le2^n\left(\sum_d\sum_{e\in d}\|A_e\|_F^2\right)^{n/2}
+\le(2\sqrt3)^n b^n.
+\]
+Since $\kappa/r=Nk_*<N/25$, the magnetic term contributes at most $(2\sqrt3)^nN/25$. Electric derivatives vanish above order two and the mass term is constant. Combining terms, including the inherited sharper order-two allocation [3], gives globally
+\[
+\boxed{M_2=J,\quad M_3=62N,\quad M_4=150N,\quad M_5=380N.}
+\]
+For order four, $144+144/25<150$. For order five, $144\sqrt6<360$ and $288\sqrt3/25<20$.
+
+For $f(u)=H(\exp_pu)-H_*$, diagonal derivatives at zero are these geodesic derivatives. The elementary real polarization identity bounds a symmetric $n$-tensor's multilinear norm by $n^n/n!$ times its diagonal norm. Hence
+\begin{equation}\label{eq:tensors}
+\|T_3\|\le279N=:C_3,\qquad
+\|T_4\|\le1600N=:C_4.
+\end{equation}
+Taylor's theorem along each radial geodesic has remainder
+\begin{equation}\label{eq:remainder}
+|\mathcal R_5(u)|\le\frac{19N}{6}\|u\|^5.
+\end{equation}
+These are bounds in the declared real product metric, independent of finite rank. They do not require a bound on electric base points or a chart neighborhood estimate.
+\newpage
+\section{Quantitative completion and error absorption}
+Write an orbit-normal tangent vector as $u=k+z$, $k\in K$, $z\in F$. Put $x=\|k\|$, $y=\|z\|$ and $s=\|u\|$. By \eqref{eq:fast} and \eqref{eq:tensors},
+\[
+\|z_0(k)\|\le\frac{C_3}{4\alpha}x^2=Dx^2.
+\]
+Set $w=z+z_0(k)$, $W=\|w\|$. Completing the quadratic and the critical-squared/fast cubic gives the lower bound
+\[
+\frac12\langle Aw,w\rangle+q_{\rm rel}(k)
+\ge\alpha W^2+c_0x^4.
+\]
+The omitted cubic terms have at least two $z$ factors and absolute sum at most $C_3sy^2$. Quartic terms with at least two $z$ factors have absolute sum at most $(C_4/2)s^2y^2$. The single-$z$ quartic term satisfies
+\[
+\frac{C_4}{6}x^3y\le
+\frac\alpha8W^2+\frac{C_4^2}{18\alpha}s^2x^4
++\frac{C_4D}{6}sx^4,
+\]
+using $y\le W+Dx^2$ and Young's inequality.
+
+Fix $s\le R\le1$. Define $P_R=C_3R+(C_4/2)R^2\le1079NR$. Then
+\[
+P_Ry^2\le2P_RW^2+2P_RD^2x^4.
+\]
+Since $s^5\le R x^4+3R^3 y^2$, the remainder \eqref{eq:remainder} is at most
+\[
+\frac{19N}{6}R x^4+19NR^3W^2+19ND^2R^3x^4.
+\]
+Using $R^2,R^3\le R$, the total error in the completed lower bound is at most
+\begin{equation}\label{eq:totalerror}
+\left(\frac\alpha8+2177NR\right)W^2+\mathcal E R x^4,
+\end{equation}
+with $\mathcal E$ as on page 1. The coefficient $2177=2(1079)+19$ bounds both relevant grouped terms; $C_4^2/(18\alpha)=1280000N^2/(9\alpha)$.
+
+Choose $R=R_*$. Since $\alpha\le N/100$, $R_*\le10^{-6}<1$, and
+\[
+\frac\alpha8+2177NR_*\le\left(\frac18+\frac{2177}{10000}\right)\alpha
+<\frac\alpha2,\qquad
+\mathcal E R_*\le\frac N{400}=\frac{c_0}{2}.
+\]
+It follows that
+\begin{equation}\label{eq:completed}
+f(u)\ge\frac\alpha2 W^2+\frac{c_0}{2}x^4.
+\end{equation}
+Moreover $DR_*\le279/40000<1/2$. Therefore
+\[
+s^4\le2x^4+2y^4\le(2+4D^2R_*^2)x^4+4R_*^2W^2
+\le3x^4+4R_*^2W^2.
+\]
+The inequalities $3N/1600\le c_0/2$ and $(N/400)R_*^2\le\alpha/2$ convert \eqref{eq:completed} into $f(u)\ge(N/1600)s^4$.
+\newpage
+\section{Orbit-distance barrier and all-time trapping}
+\begin{proof}[Proof of Theorem \ref{th:main}]
+For a state $x$ choose a nearest point $p\in\mathcal O_*$; compactness guarantees one. Completeness of $\mathcal M$ gives a minimizing geodesic from $p$ to $x$, with initial tangent $u$ of length $s=d_g(x,\mathcal O_*)$. First variation makes $u$ orbit-normal. The energy is critical on the fixed-norm manifold at every orbit point. The preceding Taylor argument applies to $u$ for $s\le R_*$ and is transported over the orbit by isometry. Consequently
+\[
+\Delta H(x)\ge\frac N{1600}s^4.
+\]
+A unique nearest point, a prescribed tubular radius, and a smooth final symplectic quotient are not needed. The proof uses jets at the starting point and a remainder bound along the whole minimizing geodesic.
+
+The global second derivative bound gives the independent upper estimate
+\[
+\Delta H(x)\le\frac J2s^2.
+\]
+For $s_0\le\delta_\eta$, it yields
+\[
+\Delta H(x_0)\le\frac J2\delta_\eta^2
+=\frac{N\eta^4}{3200}=\frac{B_\eta}{2}.
+\]
+Also $\delta_\eta/\eta=\eta\sqrt{N/(1600J)}\le\eta/200<1$. The distance-$\eta$ boundary has energy excess at least $B_\eta$. Conservation of energy and continuity of orbit distance prevent a trajectory with smaller energy from first reaching that boundary. This proves both initial-data criteria.
+
+The flow exists for all real time: link and matter factors are compact, the hopping energy has absolute value at most $8N$, and the magnetic energy is nonnegative. Conservation bounds the electric norm along each trajectory. A smooth finite-dimensional Hamiltonian vector field cannot escape to infinity in finite time under that bound. Conserved norms and Gauss permit restriction to the admissible invariant subset.
+\end{proof}
+
+At $a=N=1$, the constants are exactly
+\[
+\alpha=\frac1{100},\quad D=6975,\quad
+\mathcal E=\frac{1906712871307}{18},\quad
+R_* =\frac9{381342574261400}.
+\]
+At target $\eta=R_*$,
+\begin{center}
+\begin{tabular}{lll}\toprule
+Quantity & Formula & Approximate value\\\midrule
+Outer radius & $R_*$ & $2.36008\times10^{-14}$\\
+Boundary barrier & $R_*^4/1600$ & $1.93905\times10^{-58}$\\
+Sufficient initial radius & $R_*^2/200$ & $2.78500\times10^{-30}$\\\bottomrule
+\end{tabular}
+\end{center}
+The initial modulus is quadratic in the target distance, $\delta_\eta=\eta^2/200$ in this normalization. The boundary energy is quartic. Positive-offset quadratic estimates in [3] vanish on approach to the endpoint; the present estimate is a separate nonzero endpoint guarantee. These tiny values reflect deliberately coarse global estimates and are not inferred physical tolerances or evidence of the actual basin size.
+\newpage
+\section{Reproduction, provenance and remaining work}
+Run with Python 3, NumPy, SymPy and python-flint 0.9.0:
+\begin{quote}\ttfamily python3 certify\_endpoint.py\end{quote}
+The replay constructs the algebraic carrier and the two matrices in \eqref{eq:matrixbounds} at 192-bit Arb precision. Floating eigenvectors propose a real decimal-rational congruence only. Acceptance requires every transformed diagonal ball to exceed the sum of absolute off-diagonal balls in its row, with positive diagonal. The resulting strictly diagonally dominant symmetric matrix is positive; its positivity also establishes invertibility of the proposed congruence. Both matrix tests pass. An Arb residual enclosure checks compatibility with the inherited exact kernel identity but is not presented as an exact identity proof.
+
+The copied directed-integer verifier uses outward-rounded endpoints on a $10^{-60}$ grid, positive Gaussian pivots and integer square roots. It replays $11<A_4<12$, $12<B_4<13$. Exact rational inequalities verify derivative/polarization constants and four radius/barrier budgets, including a small kinetic coefficient and a smaller target. General absorption inequalities are proved symbolically in the manuscript; finitely many budget examples are not used to prove a continuum of parameters.
+
+\textbf{Scope.} This closes the explicit quartic-endpoint modulus left open by [3]. It covers the original critical orbit, where the phase branches coalesce, on the larger fixed-norm manifold and therefore on zero Gauss. Its constants are independent of finite rank in the specified metric. No infinite-rank phase space or infinite-rank evolution is constructed. The stabilizer moment-map condition remains intact; no assertion that all linear slice modes are independently admissible nonlinear motions is made.
+
+\textbf{Limits and next step.} The radius is sufficient, not optimal; it is not a nearest-saddle energy, basin volume or attraction rate. No experiment or simulation campaign is used as a proof premise. An efficient next mathematical step is a local remainder estimate adapted to the fast-relaxation graph, which may greatly enlarge the guaranteed radius. For experimental planning, a realization and calibrated readout metric must be specified before this abstract tolerance can be translated into an instrument requirement. Physical gauge-group selection, running interaction couplings, proton decay and monopole/neutrino signatures are not established by this stability result.
+
+\textbf{Frozen dependencies (same constructor; independent review pending).}
+\begin{enumerate}
+\item CBF v0.1, \emph{Curved-branch bifurcation theorem}, 15 October 2026. Critical phase map, exact kernel and relaxed scalar quartic. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#critical-bifurcation-v01}{UD portal G10}; capture \href{https://github.com/ud-tetra/UD/tree/main/captures/2026-10-15T153746Z-codex-critical-bifurcation-f84d71a8}{f84d71a8}.
+\item HRC v0.1, \emph{Higher-rank curved stability theorem}, 15 October 2026. Color completion, vacuum gap and absence of new quartic relaxation. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#higher-rank-curved-v01}{UD portal G8}; capture \href{https://github.com/ud-tetra/UD/tree/main/captures/2026-10-15T135143Z-codex-higher-rank-df6164e2}{df6164e2}.
+\item NEB v0.1, \emph{An explicit nonlinear perturbation radius and conserved-energy barrier}, 16 October 2026. Product metric, global second/third derivative estimates and energy trapping method. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#energy-barrier-v01}{UD portal G14}; capture \href{https://github.com/ud-tetra/UD/tree/main/captures/2026-10-16T025702Z-codex-energy-barrier-a105f222}{a105f222}.
+\end{enumerate}
+The action and coefficient ledger are unchanged. This is a development-lane conditional theorem and creates no registry entry. Constructor certificate replay does not constitute independent review or empirical confirmation. Physical promotion remains $0$.
+\end{document}
