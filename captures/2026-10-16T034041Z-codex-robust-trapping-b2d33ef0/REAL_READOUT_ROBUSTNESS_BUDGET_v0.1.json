@@ -1,0 +1,63 @@
+{
+  "theorem": "RHT v0.1; DERIVED CONDITIONAL under frozen action and stated error class",
+  "input_provenance": "Supplied mathematical upper bounds; zero defaults are illustrative assumptions, not measurements. For time variation A,K,G,D must bound the whole interval.",
+  "reported_limits_scope": "Reference limits are sufficient; guarantees require the stated conditions. Separate forcing-only limits do not combine automatically with Hamiltonian errors.",
+  "base_budget": {
+    "theorem": "NEB v0.1; DERIVED CONDITIONAL under frozen UD action",
+    "a": "1",
+    "N": "1",
+    "epsilon": "1/100000",
+    "m": "1/200000",
+    "J": "25",
+    "L": "62",
+    "outer_radius_R": "3/12400000",
+    "chosen_target_eta": "1/168000000",
+    "boundary_energy_barrier_B_eta": "1/11289600000000000000000",
+    "automatic_initial_energy_budget_B_eta_over_two": "1/22579200000000000000000",
+    "exact_initial_radius_squared": "1/282240000000000000000000",
+    "initial_radius_sqrt_enclosure": [
+      "188230813105260674523743663359/100000000000000000000000000000000000000000",
+      "1882308131052606745237436633591/1000000000000000000000000000000000000000000"
+    ],
+    "safe_rational_initial_radius": "188230813105260674523743663359/100000000000000000000000000000000000000000",
+    "interpretation": "d_g(x0,chosen balanced orbit)<=safe_rational_initial_radius guarantees d_g(x(t),orbit)<eta for all time; all distances use the declared Frobenius/round-sphere product metric",
+    "scope": "finite rank r>=1; normalized matter norms exactly one; physical Gauss-zero restriction invariant",
+    "physical_promotion": 0,
+    "independent_review": "PENDING"
+  },
+  "selected_target_eta": "1/168000000",
+  "canonical_gradient_limit_nu_star": "1/537600000000000",
+  "autonomous_potential_oscillation_limit": "1/45158400000000000000000",
+  "maximum_minimizer_set_displacement_bound": "1/1344000000",
+  "time_integrated_gradient_rate_limit": "1/537600000000000",
+  "coefficient_error_inputs": {
+    "A_max_absolute_kinetic_error": "0",
+    "K_max_diamond_error_divided_by_rN": "0",
+    "G_max_relative_incidence_hopping_error": "0",
+    "D_half_range_of_scalar_site_detunings": "0"
+  },
+  "coefficient_gradient_upper": "0",
+  "coefficient_budget_status": "WITHIN_SUFFICIENT_BUDGET",
+  "gradient_variation_input": "0",
+  "time_budget_status": "WITHIN_SUFFICIENT_BUDGET",
+  "forcing_only_cumulative_metric_displacement_limit": "1/6720000000000000",
+  "forcing_only_scope": "Separate nominal-H flow plus tangent external forcing, with no simultaneous V assumed; bound integral ||Y_t||_g by this value",
+  "readout": {
+    "real_readout_target_cap_applied": true,
+    "complex_loop_model_error_upper": "1/8000000",
+    "real_instrument_error_per_channel_allowed": "1/8000000",
+    "real_total_error_per_channel_upper": "1/4000000",
+    "oriented_phase_model_error_L2_upper": "3/2800000",
+    "oriented_instrument_phase_L2_allowed": "(5/2)*sqrt(epsilon)",
+    "class_scope": "Real channels identify one of three family classes; oriented phases identify the inherited 26 labels; physical readout map remains unprovided"
+  },
+  "limits": [
+    "Exact equal norms and gauge/species-phase invariant Hamiltonian errors",
+    "Time-dependent conclusion lasts only while cumulative variation budget holds",
+    "No unique displaced stationary orbit or retained branch degeneracy claimed",
+    "Outside a sufficient budget is not proof of instability",
+    "No physical units or empirical result"
+  ],
+  "physical_promotion": 0,
+  "independent_review": "PENDING"
+}

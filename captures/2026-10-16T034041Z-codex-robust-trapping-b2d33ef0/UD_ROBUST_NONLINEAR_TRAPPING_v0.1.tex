@@ -1,0 +1,256 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Robust nonlinear trapping under Hamiltonian model errors},pdfauthor={Unified Dynamics research workstream}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Robust nonlinear trapping}\rhead{RHT v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\id}{\mathbf1}\newcommand{\grad}{\operatorname{grad}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Robust nonlinear trapping\\under Hamiltonian model errors}\\[10pt]
+{\large Static uncertainty, cumulative drift and loop-readout budgets}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 16 October 2026 UTC\\
+Version 0.1\quad |\quad Derived conditional theorem
+\end{center}
+\begin{abstract}
+The explicit nonlinear energy-barrier certificate assumed the frozen Hamiltonian exactly. We derive sufficient robustness budgets for gauge- and species-phase invariant Hamiltonian errors, retaining the fixed equal norms and Gauss law. A small static gradient preserves all-time trapping about a selected nominal balanced orbit and yields a nearby compact invariant minimizing set. For time-dependent errors, a cumulative gradient-variation bound supplies a finite-horizon guarantee. A separate work estimate covers tangent external forcing. We translate the static gradient budget into kinetic, diamond, hopping and site-detuning errors, and transfer the state bound to complex loop readouts and the inherited real-channel classifier. An exact resonant oscillator shows why instantaneous smallness alone cannot support a general all-time conclusion for arbitrary drives. No laboratory calibration or physical correspondence is assumed.
+\end{abstract}
+For finite $r\ge1$, $a,N>0$, $0<\epsilon\le10^{-5}$ and $\epsilon=\kappa/(rN)-k_*$, define
+\[
+m=\tfrac12\min(a,N\epsilon),\quad J=\max(a,25N),\quad R_0=3m/(62N).
+\]
+Choose any $0<\eta\le R_0$ and set
+\[
+\boxed{B_\eta=\frac{m\eta^2}{2},\quad
+\delta_\eta=\eta\sqrt{\frac m{2J}},\quad \nu_*=\frac{m\eta}{16}.}
+\]
+\begin{theorem}[Robust finite-radius trapping]\label{th:main}
+Let $\mathcal O$ be one nominal balanced orbit and use the product metric below. Suppose the autonomous perturbation $V$ preserves node gauge and independent species phases, and $\|\grad V\|_g\le\nu_*$ on the closed distance-$\eta$ tube. Every initial state at distance at most $\delta_\eta$ remains at distance less than $\eta$ for all time under $H+V$. On zero Gauss, $H+V$ has a nonempty compact invariant minimizing set within distance $\eta/8$ of $\mathcal O$, stable as a set. No unique displaced stationary orbit is asserted.
+
+For $V_t$, the same trapping holds through $0\le t\le T$ if additionally
+\[
+\sup_{0\le t\le T}\|\grad V_t\|_{g,\mathrm{tube}}\le\nu_*,
+\qquad\int_0^T\|\grad\partial_tV_t\|_{g,\mathrm{tube}}\,dt\le\nu_*.
+\]
+\end{theorem}
+\textbf{Status.} Development, no registry entry. Thirty exact rational/integer/symbolic checks and six synthetic matrix-gradient fixtures pass. The prior 211-check interval certificate remains a dependency, not new verification. Independent review pending; physical promotion $0$. Trapping about the nominal orbit does not make that orbit invariant under the perturbed flow.
+\newpage
+\section{Nominal geometry and inherited barrier}
+The frozen carrier has 15 nonempty tetrahedral simplex nodes, 28 incidence links and 18 diamonds. For $e=(i\leftarrow j)$, $D_U[i,j]=b_eU_e$, $b_e=B_{ij}=\pm1$, and $h_U=i(D_U^\dagger-D_U)$. On a diamond $d=(i,j,h,k)$ put $W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk}$. With $q=\psi/\sqrt N$, $w=\bar\chi/\sqrt N$ of total norm one,
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++N(q^\dagger h_Uq+w^\dagger h_Uw)+2\mu N.
+\]
+The nominal representative is $U_e^*=\diag(-ib_ee^{iX_e},I_{r-1})$, $E^*=0$, $q_i^*=w_i^*=f_ie_1$. Its fixed-norm energy reference is $H_*$, and $\mathcal O$ is its node-gauge/species-phase orbit. The opposite matter symplectic forms are unchanged.
+
+The metric is the product of unnormalized Frobenius bi-invariant link metrics, Frobenius Euclidean electric metrics and real round metrics on the two unit matter spheres. For $v=(iA_eU_e,F_e,p,z)$,
+\[
+\|v\|_g^2=\sum_e\|A_e\|_F^2+\sum_e\|F_e\|_F^2+\|p\|^2+\|z\|^2.
+\]
+Distance $d(x)=d_g(x,\mathcal O)$ is minimized over the compact gauge/species-phase orbit. The final gauge quotient need not be smooth. Norms are fixed exactly; zero Gauss is an invariant subset for the perturbations admitted here.
+
+The NEB theorem [1] proves, for $d(x)\le R_0$,
+\begin{equation}\label{eq:base}
+\frac m2d(x)^2\le H(x)-H_*\le\frac J2d(x)^2,
+\qquad \|\grad H(x)\|_g\le Jd(x).
+\end{equation}
+The lower estimate follows from the normal Hessian and global third derivative bound $62N$; the upper estimate from the global Hessian norm bound $J$. The gradient estimate follows by integrating that Hessian along a shortest geodesic normal to the orbit, starting with $\grad H=0$.
+
+At $d=\eta$, the boundary energy excess is at least $B_\eta$. At $d\le\delta_\eta$, it is at most $B_\eta/2$. The maximum radius satisfies
+\[
+R_0\le\frac{3\epsilon}{124}\le\frac3{12400000}<\frac1{10}.
+\]
+The inherited stationary bounds include $f_i>1/5$, $|\phi_d|<1/16$ and $\phi=CX$ [1,2]. These keep the local matter and phase readouts defined.
+
+All statements use the frozen nominal $a,N,\epsilon$ and metric. A coefficient error is a perturbation about that fixed reference, not a redefinition of its offset or equilibrium. Spatial $V$ is at least $C^2$ near the closed tube; $V_t$ is also sufficiently differentiable in time. The admitted Hamiltonians preserve the same norms and moment map.
+\newpage
+\section{Static trapping and a nearby minimizing invariant set}
+Gauge/species-phase invariance makes $V$ constant on $\mathcal O$. Subtract that value and write $W(x)=V(x)-V(\mathcal O)$. A shortest geodesic from the orbit to a point at distance $d\le\eta$ stays inside the tube. A gradient bound $\|\grad V\|\le\nu$ thus gives
+\[
+|W(x)|\le\nu d(x),\qquad
+\operatorname{osc}_{\mathrm{tube}}V\le2\nu\eta.
+\]
+\begin{lemma}[Static energy transfer]\label{lem:static}
+For $s=d(x_0)<\eta$, a sufficient no-exit condition is
+\[
+\boxed{\frac J2s^2+\nu(s+\eta)<B_\eta.}
+\]
+Alternatively, nominal initial energy excess $E_0$ and potential oscillation $\Omega$ suffice when $E_0+\Omega<B_\eta$.
+\end{lemma}
+\begin{proof}
+Conservation of $H+V$ gives $H(x(t))-H_*=H(x_0)-H_*+V(x_0)-V(x(t))$. Until first exit, the potential difference is bounded by $\nu(s+\eta)$ or $\Omega$. A first exit requires nominal energy at least $B_\eta$, contradicting either strict inequality.
+\end{proof}
+For $s\le\delta_\eta$, $\nu\le\nu_*=m\eta/16$ and $\delta_\eta<\eta$, the initial term is at most $B_\eta/2$ and the potential variation at most $2\nu_*\eta=B_\eta/4$. Nominal energy stays below $3B_\eta/4$ while in the tube; exit is impossible. The oscillation-only sufficient budget is $\Omega\le B_\eta/4$.
+
+\begin{proof}[Minimizing-set assertion of Theorem \ref{th:main}]
+Intersect the closed tube with the zero-Gauss fixed-norm surface. This set is compact, contains $\mathcal O$, and is invariant up to first exit. Minimize
+\[
+F(x)=H(x)-H_*+W(x)
+\]
+on it. On the boundary $F\ge B_\eta-\nu_*\eta=7B_\eta/8>0$, whereas $F=0$ on the nominal orbit. The nonempty compact minimizing set $\mathcal K$ is therefore interior. At a minimizer, $F\le0$; by \eqref{eq:base},
+\[
+\tfrac m2d^2-\nu d\le F\le0
+\quad\Longrightarrow\quad d\le2\nu/m\le\eta/8.
+\]
+Conservation of $F$ and the positive boundary gap keep $\mathcal K$ invariant for all time. For any small neighborhood of $\mathcal K$ inside the tube, compactness gives a positive energy gap on its complement because all minimizers are included in $\mathcal K$. Energy conservation proves stability of this entire set. Compact trapping also ensures complete flow for these states.
+\end{proof}
+This is persistence of a minimizing invariant set. A particular stationary representative, uniqueness, sixfold degeneracy or tracking of a shifted orbit would require further assumptions. No regular quotient chart is used.
+\newpage
+\section{Time variation and external work}
+For $\widetilde H_t=H+V_t$ subtract the instantaneous orbit value:
+\[
+W_t(x)=V_t(x)-V_t(\mathcal O),\qquad
+F_t(x)=H(x)-H_*+W_t(x).
+\]
+This removes arbitrary time-dependent constants, including a uniform mass shift. Let $\nu(t)$ bound $\|\grad V_t\|$ and $\rho(t)$ bound $\|\grad\partial_tV_t\|$ on the tube. Then
+\[
+|W_t(x)|\le\nu(t)d(x),\qquad
+|\partial_tW_t(x)|\le\rho(t)d(x).
+\]
+Along the perturbed Hamiltonian flow, $dF_t(x(t))/dt=\partial_tW_t(x(t))$ exactly. Through $0\le t\le T$ before first exit, $d\le\eta$ and
+\begin{equation}\label{eq:time}
+H(x(t))-H_*\le\frac J2s^2+\nu(0)s+
+\eta\nu_{\max}+\eta\int_0^T\rho(t)\,dt.
+\end{equation}
+If the right side is strictly below $B_\eta$, no exit can occur through $T$. With $s\le\delta_\eta$, $\nu_{\max}\le\nu_*$ and $\int_0^T\rho\le\nu_*$, it is bounded by
+\[
+\frac{B_\eta}{2}+\frac{B_\eta}{4}+\frac{B_\eta}{8}
+=\frac{7B_\eta}{8}<B_\eta.
+\]
+This proves the time-dependent part of Theorem \ref{th:main}. An all-forward-time guarantee follows if the amplitude and total variation budgets hold on $[0,\infty)$. A finite-horizon statement does not imply instantaneous-minimizer tracking.
+
+\textbf{A separate forcing-only contract.} Consider the nominal Hamiltonian flow plus a tangent external field $Y_t$, with no simultaneous $V_t$ assumed. Suppose it preserves the stated constraint surface and $\|Y_t\|_g\le u(t)$ inside the tube. By \eqref{eq:base},
+\[
+\left|\frac{dH}{dt}\right|=|dH(Y_t)|\le J\eta\,u(t).
+\]
+For an initial state in the same $\delta_\eta$ ball, the sufficient cumulative displacement budget
+\[
+\boxed{\int_0^T u(t)\,dt\le\frac{m\eta}{8J}}
+\]
+adds at most $B_\eta/4$ nominal energy and traps through $T$. More generally, any directly certified positive-work budget $\int_0^T(dH(Y_t))_+dt<B_\eta-E_0$ suffices. Energy-removing tangent forcing does not spend that budget.
+
+The forcing-only and Hamiltonian-error budgets are separate contracts. Combining them requires adding their work terms in one relative-energy estimate; passing each independently is not a combined guarantee. Rates use the model evolution parameter, with no identification as physical seconds.
+\newpage
+\section{From coefficient errors to a gradient budget}
+Keep the carrier and matrix moment map fixed. Admit real kinetic errors $\Delta a_e$, diamond errors $\Delta\kappa_d$, relative incidence-hopping errors $\xi_e$ and scalar site detunings $v_i$. The perturbation is
+\begin{align*}
+V={}&\frac12\sum_e\Delta a_e\tr E_e^2
++\sum_d\Delta\kappa_d\left(1-\frac1r\Rea\tr W_d\right)\\
+&+N(q^\dagger\delta h_Uq+w^\dagger\delta h_Uw)
++N\sum_i v_i(\|q_i\|^2+\|w_i\|^2),
+\end{align*}
+where $\delta D_U[i,j]=b_e\xi_eU_e$ and $\delta h_U=i(\delta D_U^\dagger-\delta D_U)$. Define the typed error sizes
+\[
+A=\max_e|\Delta a_e|,\quad K=\max_d\frac{|\Delta\kappa_d|}{rN},\quad
+G=\max_e|\xi_e|,\quad D=\frac{\max_i v_i-\min_i v_i}{2}.
+\]
+\begin{lemma}[Coefficient-to-gradient bound]\label{lem:coeff}
+On the distance-$\eta$ tube,
+\[
+\boxed{\|\grad V\|_g\le A\eta+
+N\big[(1+12\eta)K+14G+3D\big]=:\nu_{\rm coeff}.}
+\]
+\end{lemma}
+\begin{proof}
+The electric norm is at most $\eta$, so the kinetic gradient is at most $A\eta$.
+
+For the diamond term, its gradient at the embedded representative is active-diagonal only, with link entries proportional to $NC^T(\delta k\sin\phi)$, where $\delta k_d=\Delta\kappa_d/(rN)$. Since each edge lies in at most three diamonds, $|\phi_d|<1/16$ and there are 28 links, its norm is at most $(3\sqrt{28}/16)NK<NK$. Two-generator trace estimates and four-edge incidence give the global magnetic Hessian norm bound $12NK$, independently of rank. Integration along a shortest geodesic from the orbit gives $NK(1+12\eta)$.
+
+For hopping, maximum degree four gives $\|\delta h_U\|\le4G$ and $\|\delta h'_U\|\le4Gb$ for link speed $b$. If matter speeds are $c,d$, the energy derivative is at most $8NG(b+c+d)\le8\sqrt3NG<14NG$ for a unit tangent. The site term, after subtracting its arbitrary uniform midpoint, has derivative at most $2ND(c+d)\le2\sqrt2ND<3ND$. Summing gives the result.
+\end{proof}
+It suffices that $\nu_{\rm coeff}\le m\eta/16$. A common detuning or mass shift is constant on the norm surface and spends no relative-energy budget. These errors preserve gauge and species-phase symmetries and hence Gauss and norms.
+
+For differentiable time-varying coefficients, use the same formula with
+\[
+A_1=\max|\dot{\Delta a}_e|,\quad K_1=\max|\dot{\Delta\kappa}_d|/(rN),
+\qquad G_1=\max|\dot\xi_e|,
+\]
+and $D_1=(\max\dot v_i-\min\dot v_i)/2$ to bound $\rho(t)$. Require the amplitude budget and integral of this rate bound to meet the two canonical limits separately.
+\newpage
+\section{State-to-readout transfer and classifier reserves}
+For a diamond based at node $k$, the gauge-invariant complex readout is
+\[
+z_d(x)=-\frac{q_k^\dagger W_dq_k}{\|q_k\|^2},\qquad z_d^*=e^{i\phi_d}.
+\]
+\begin{lemma}[Loop readout Lipschitz bound]\label{lem:readout}
+If $d(x)\le\eta\le R_0$, all local denominators are nonzero and
+\[
+|z_d(x)-z_d^*|\le\sqrt{404}\,d(x)<21\eta,\qquad
+\|\delta\phi\|_2<180\eta.
+\]
+At $d=0$ the errors vanish.
+\end{lemma}
+\begin{proof}
+Choose a closest orbit representative. Its node norm exceeds $1/5$, while the global matter chord error is at most its round distance. Since $\eta<1/10$, the perturbed local vector cannot vanish. The normalization inequality $\|a/\|a\|-b/\|b\|\|\le2\|a-b\|/\|b\|$ gives a local unit-vector error at most $10\|\delta q_k\|$.
+
+For unitary $W$, the expectation changes by at most twice the unit-vector error plus $\|W-W^*\|_{\rm op}$. Four-factor telescoping bounds the latter by the sum of four link chord errors, at most twice their joint geodesic norm. Cauchy--Schwarz combining the matter coefficient 20 and link coefficient 2 gives $\sqrt{400+4}\,d$.
+
+Since $21R_0<1/2$, the readout remains in a nonzero disc about $e^{i\phi_d}$. Its phase error is bounded by $\arcsin|z_d-z_d^*|\le2|z_d-z_d^*|$. For 18 diamonds the phase norm is below $42\sqrt{18}\,\eta<180\eta$. The inherited $|\phi_d|<1/16$ and small radius keep the principal phase chart unwrapped.
+\end{proof}
+\textbf{Six real channels.} The inherited classifier [2] tolerates total error at most $\epsilon/40$ in each of six labeled real loop channels. Choose
+\[
+\boxed{\eta\le\min(R_0,\epsilon/1680),\qquad
+\max_d|\delta\Rea z_d|_{\rm instrument}\le\epsilon/80.}
+\]
+Then state motion contributes at most $21\eta\le\epsilon/80$, leaving the other half to the instrument. After clipping to $[-1,1]$, nearest-class discrimination among the three inherited branch families is retained. The real readout still cannot recover overall sign.
+
+\textbf{Oriented phases.} For every $\eta\le R_0$, $180\eta\le(135/31)\epsilon<5\epsilon<(5/2)\sqrt\epsilon$ on the certified interval. An instrument phase-error vector of norm at most $(5/2)\sqrt\epsilon$ therefore fits within the inherited total $5\sqrt\epsilon$ budget for the 26 labeled phase branches [2].
+
+Use the selected, possibly smaller, $\eta$ in all trapping, gradient and initial-state budgets. These are conditional normalized readout requirements; no physical detector or calibration map is supplied.
+\newpage
+\section{A resonant obstruction, examples and scope}
+Small instantaneous error does not by itself imply general all-time trapping for arbitrary time dependence. Consider the exact oscillator
+\[
+H_0=(p^2+\omega^2q^2)/2,\qquad V_t=-f q\sin\omega t,\quad f,\omega>0.
+\]
+Although $\|\grad V_t\|\le f$ for arbitrarily small $f$, the zero-initial-state solution is
+\[
+q(t)=\frac f{2\omega^2}(\sin\omega t-\omega t\cos\omega t),\qquad
+p(t)=\frac{ft}{2}\sin\omega t.
+\]
+At $t_n=2\pi n/\omega$, $q(t_n)=-\pi fn/\omega^2$ and $p(t_n)=0$. The state leaves every fixed radius. On any fixed tube the instantaneous potential magnitude is also arbitrarily small with $f$. The symbolic replay verifies the ODE, initial state and unbounded sample sequence exactly.
+
+This rules out a generic inference from instantaneous forcing size to all-time trapping. It is not a classification of driven UD instabilities. The cumulative variation/work condition supplies the additional hypothesis used here. Periodic forcing generally exhausts that sufficient budget; failure of the budget is not proof that a particular trajectory becomes unstable.
+
+For $a=N=1$, $\epsilon=10^{-5}$, the default and real-readout targets give:
+\begin{center}\begin{tabular}{lll}
+\toprule
+Quantity & Default target & Real-readout target\\\midrule
+$\eta$ & $3/12400000$ & $1/168000000$\\
+$\nu_*=m\eta/16$ & $3/39680000000000$ & $1/537600000000000$\\
+Approximate $\eta$ & $2.41935\cdot10^{-7}$ & $5.95238\cdot10^{-9}$\\
+Approximate $\nu_*$ & $7.56048\cdot10^{-14}$ & $1.86012\cdot10^{-15}$\\\bottomrule
+\end{tabular}\end{center}
+The default target uses $R_0$; the second reserves the real-channel noise budget. The exact calculator returns $B_\eta$, $\delta_\eta^2$ and certified rational bounds on $\delta_\eta$. These conservative values are mathematical guarantees, not tolerance estimates or laboratory units.
+
+\textbf{Limits.} The nominal orbit is generally not invariant for $H+V$. The guarantee is finite-radius trapping and persistence of a nearby invariant minimizing set. No unique perturbed stationary branch, unchanged degeneracy, attraction or instantaneous-minimizer tracking is proved. The quadratic endpoint $\epsilon=0$ is excluded. Bounds are sufficient, not maximal. They apply uniformly to finite ranks in the declared metric; no infinite-rank flow is constructed. Errors changing constraints, carrier or gauge representation need a new theorem. Independent review and a physical realization/readout map remain separate obligations.
+\newpage
+\section{Verification, operational contract and provenance}
+\textbf{Exact constructor replay.} With Python 3 and SymPy, run
+\begin{quote}\ttfamily python3 verify\_robustness.py\end{quote}
+The machine-readable certificate records 30 rational/integer/symbolic checks: carrier incidence, coefficient constants, energy allocation, readout bounds, three exact budget examples and the resonant obstruction. There are no new interval cells. The prior NEB 211-check, 64-cell interval certificate remains an explicit dependency, not fresh verification.
+
+\textbf{Synthetic diagnostic.} With NumPy, SciPy and python-flint 0.9.0, run
+\begin{quote}\ttfamily python3 check\_robust\_gradients.py\end{quote}
+Six deterministic fixtures use ranks 2,3,5, three $(a,N)$ pairs, and default/real-readout targets. They reconstruct full matrix gradients of all four error terms, compare directional derivatives with central differences (maximum discrepancy below $4\cdot10^{-13}$), check the gradient bound and invariance under a uniform site detuning. Loop readout differences are checked against the distance bound. These are floating synthetic diagnostics, not interval proof or experimental data. Gauss is not enforced because the inequalities hold on the larger fixed-norm surface.
+
+\textbf{Exact calculator.} Uses only the Python standard library:
+\begin{quote}\ttfamily
+python3 robustness\_budget.py --a 1 --N 1 --epsilon 1/100000\\
+python3 robustness\_budget.py --a 1 --N 1 --epsilon 1/100000 --real-readout
+\end{quote}
+Optional \texttt{--A}, \texttt{--K}, \texttt{--G}, \texttt{--D} and \texttt{--gradient-variation} supply error bounds. An out-of-budget result means only that this sufficient criterion does not apply. The forcing-only contract is kept separate.
+
+\textbf{Operational mathematical requirements.} Select a nominal balanced reference and positive offset; declare $a,N,r$ and the metric; select a state/readout target $\eta$; bound coefficient errors and, for time variation, their cumulative rate; certify initial orbit distance or relative energy; specify instrument error in the normalized readout channels. A physical experiment additionally needs state, energy, evolution-parameter and detector maps. None is inferred from matching constants.
+
+\textbf{Frozen references (same constructor, not independent review).}
+\begin{enumerate}
+\item NEB v0.1, \emph{An explicit nonlinear perturbation radius and conserved-energy barrier}, 16 October 2026. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#energy-barrier-v01}{UD portal G14}; capture \texttt{2026-10-16T025702Z-codex-energy-barrier-a105f222}, merged PR 162.
+\item FOC v0.1, \emph{Finite-offset certification of the curved phase branches}, 15 October 2026. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#finite-offset-v01}{UD portal G12}; retained stationary and measurement certificate.
+\end{enumerate}
+Inherited files are copied unchanged and hashed in the provenance receipt. The action and coefficient ledger are unchanged. Conditional dependency depth is retained; citation and constructor replay do not promote status. Next: a sharper local remainder/endpoint modulus or a separately specified physical realization.
+
+\textbf{Promotion record:} development, no registry entry. Independent review pending. Physical promotion $0$. No experimental samples or unavailable image are used.
+\end{document}
