@@ -1,0 +1,261 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Explicit nonlinear perturbation radius and energy barrier},pdfauthor={Unified Dynamics research workstream}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Explicit nonlinear energy barrier}\rhead{NEB v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\id}{\mathbf1}
+\begin{document}
+\begin{center}
+{\Large\bfseries An explicit nonlinear perturbation radius\\and conserved-energy barrier}\\[10pt]
+{\large Quantitative orbital trapping of balanced finite-offset branches}\\[10pt]
+Unified Dynamics research workstream\quad |\quad 16 October 2026 UTC\\
+Version 0.1\quad |\quad Computer-assisted conditional theorem
+\end{center}
+\begin{abstract}
+We make the preceding local stability theorem quantitative. On a specified product Riemannian metric, 64 rigorous interval cells certify a scalar Schur-complement floor proportional to the positive offset. The full orbit-normal quadratic energy then has a simple lower bound at every finite rank. Global second and third geodesic derivative estimates for the frozen Hamiltonian give an explicit trapping radius, boundary energy barrier and smaller initial ball guaranteed to remain inside that radius for all time. No smoothness of the final gauge quotient or unspecified continuity neighborhood is required. The resulting radii are conservative mathematical guarantees, not maximal basins or physically calibrated tolerances.
+\end{abstract}
+For $r\ge1$ finite, $a,N>0$ and $0<\epsilon\le10^{-5}$, set
+\[
+\epsilon=\frac\kappa{rN}-k_*,\qquad
+m=\frac12\min(a,N\epsilon),\quad J=\max(a,25N),\quad L=62N.
+\]
+\[
+\boxed{R=\frac{3m}{62N},\qquad B=\frac{mR^2}{2},\qquad
+\delta=R\sqrt{\frac{m}{2J}}.}
+\]
+\begin{theorem}[Explicit orbital trapping]\label{th:main}
+Let $\mathcal O_\epsilon$ be the gauge/species-phase orbit of any one of the six balanced one-active-color stationary embeddings. With distance $d_g$ defined below, every initial state on the fixed-norm surface satisfying $d_g(x_0,\mathcal O_\epsilon)\le\delta$ obeys
+\[
+H(x_0)-H_*\le B/2,\qquad d_g(x(t),\mathcal O_\epsilon)<R
+\quad\hbox{for all }t\in\mathbb R.
+\]
+More generally, $d_g(x_0,\mathcal O_\epsilon)<R$ and $H(x_0)-H_*<B$ suffice. The invariant zero-Gauss subset inherits these guarantees. For any target $0<\eta\le R$, replacing $R$ by $\eta$ in $B$ and $\delta$ gives the same trapping statement with outer radius $\eta$.
+\end{theorem}
+\textbf{Status.} Development, no registry entry. Derived conditional mathematics under the unchanged action. Constructor verification: 211 exact/interval checks on 64 parameter cells, plus six synthetic jet diagnostics. Independent review pending; physical promotion $0$. The quadratic certificate excludes $\epsilon=0$.
+\newpage
+\section{Model, energy reference and perturbation metric}
+Use the frozen 15-node, 28-link, 18-diamond tetrahedral incidence carrier. For $e=(i\leftarrow j)$ let $b_e=B_{ij}=\pm1$, $D_U[i,j]=b_eU_e$, and $h_U=i(D_U^\dagger-D_U)$. On a diamond $d=(i,j,h,k)$,
+\[
+W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk}.
+\]
+Write normalized matter fields $q=\psi/\sqrt N$ and $w=\bar\chi/\sqrt N$, each of total norm one. They transform in the same fundamental representation but have opposite symplectic forms. The Hamiltonian on the norm surface is
+\[
+H=\frac a2\sum_e\tr E_e^2+\kappa\sum_d\left(1-\frac1r\Rea\tr W_d\right)
++N(q^\dagger h_Uq+w^\dagger h_Uw)+2\mu N.
+\]
+The embedded representative is
+\[
+U_e^*=\diag(-ib_ee^{iX_e},I_{r-1}),\quad E_e^*=0,\quad q_i^*=w_i^*=f_i e_1,
+\]
+where $f>0$, $\|f\|=1$, $h_{\rm active}f=\lambda f$, and $\phi=CX$. Its energy reference is exactly
+\[
+H_*=2N(\mu+\lambda)+N(k_*+\epsilon)\sum_d(1+\cos\phi_d).
+\]
+All barrier comparisons use $\Delta H=H-H_*$, not the absolute sign of $H$.
+
+Equip
+\[
+\mathcal M=\mathrm U(r)^{28}\times\operatorname{Herm}(r)^{28}
+\times S^{30r-1}\times S^{30r-1}
+\]
+with the product of Frobenius bi-invariant link metrics, Frobenius Euclidean electric metrics and real round unit-sphere matter metrics. For a tangent vector $v=(iA_eU_e,F_e,p,z)$,
+\begin{equation}\label{eq:metric}
+\|v\|_g^2=\sum_e\|A_e\|_F^2+\sum_e\|F_e\|_F^2+\|p\|^2+\|z\|^2.
+\end{equation}
+This is a declared mathematical coordinate metric, with unnormalized matrix Frobenius norms and matter divided by $\sqrt N$. It is not a laboratory norm or a per-entry noise bound.
+
+The compact group $\mathrm U(r)^{15}\times\mathrm U(1)^2$ acts isometrically by node gauge transformations and independent global matter phases. Define $d_g(x,\mathcal O_\epsilon)$ as the infimum of product geodesic distance to its orbit. Link distances are the Euclidean norms of principal eigenangles; sphere distance is $\arccos\Rea\langle q_1,q_2\rangle$; the electric distance to the orbit is $\big(\sum\|E_e\|_F^2\big)^{1/2}$. The two sphere distances use the full 15-node matter vectors.
+\newpage
+\section{A certified scalar energy floor}
+The inherited stationary tubes [1] and full-rank theorem [2] give
+\[
+f_i>1/5,\quad |X_e|<1/40,\quad |\phi_d|<1/16,\quad
+\lambda<-37/10,\quad 0<k_*+\epsilon<1/25.
+\]
+The real-symmetric baseline unsigned hopping has characteristic polynomial
+\[
+t^5(t-2)^3(t+2)^3(t^4-16t^2+24).
+\]
+It has only one eigenvalue below $-3$. The phase perturbation has operator norm below $4/40=1/10$. Thus every nonground eigenvalue of $h_{\rm active}$ exceeds $-31/10$, and its ground gap exceeds $3/5$. The polynomial and inequalities are checked in the new replay.
+
+Let $L_0=h_{\rm active}-\lambda I$, $A_0=\Rea h_{\rm active}-\lambda I$, and let $J_f$ be the real 15-by-28 matrix with entries
+\[
+(J_f)_{i,e}=f_j\sin X_e,\qquad(J_f)_{j,e}=f_i\sin X_e.
+\]
+The fixed-norm, scalar matter variations have $P=(p+z)/\sqrt2$ and $Q=(p-z)/\sqrt2$. Node gauge fixes $\Im P=0$; the remaining global phase fixes $\Im\langle f,Q\rangle=0$. Then $P\perp f$ is real and $Q\perp f$ is complex. With scalar link angle $\theta$, the non-electric quadratic coefficient is
+\[
+N\left[\frac12\theta^TH_{\rm ph}\theta+P^TA_0P
++2\sqrt2P^TJ_f\theta+Q^\dagger L_0Q\right],
+\]
+\[
+H_{\rm ph}=4\diag(f_if_j\cos X_e)-(k_*+\epsilon)C^T\diag(\cos\phi)C.
+\]
+Since $A_0f=0$, write $A_0^+$ for its inverse on $f^\perp$, extended by zero on $f$. Completing the square yields
+\[
+\widetilde P=P+\sqrt2 A_0^+J_f\theta,\qquad
+C_{\rm ph}=H_{\rm ph}-4J_f^TA_0^+J_f.
+\]
+\begin{lemma}[Uniform scalar Schur floor]\label{lem:floor}
+Throughout $0<\epsilon\le10^{-5}$ on each balanced branch,
+\[
+C_{\rm ph}>2\epsilon I_{28}.
+\]
+\end{lemma}
+The proof is the rigorous scaled Schur certificate on page 7. Both $A_0$ on real $f^\perp$ and $L_0$ on complex $f^\perp$ exceed $3I/5$. Also
+\[
+\|J_f\|_{\rm op}^2\le\|J_f\|_F^2
+\le\frac1{40^2}\sum_i\deg(i)f_i^2\le\frac1{400},
+\quad\|\sqrt2 A_0^+J_f\|<1/8.
+\]
+Consequently $\|\theta\|^2+\|P\|^2\le2(\|\theta\|^2+\|\widetilde P\|^2)$, and the scalar quadratic coefficient is at least $N\epsilon(\|\theta\|^2+\|P\|^2+\|Q\|^2)/2$.
+\newpage
+\section{From a scalar floor to the full orbit-normal Hessian}
+The electric quadratic coefficient is $(a/2)\sum\|F_e\|_F^2$. For one unused color, the matter-aligned gauge of [2] gives the fixed-norm quadratic coefficient
+\[
+\mathcal Q_{\rm color}\ge a\|e\|^2+
+\frac{17N}{10}\|Q\|^2+\frac N{16}\|\beta\|^2.
+\]
+Here $Q$ uses normalized matter, $\beta$ is the off-diagonal left link generator, and $e$ is the off-diagonal electric entry. In metric \eqref{eq:metric} their squared length is $2\|\beta\|^2+2\|e\|^2+\|Q\|^2$. Thus the color floor in that metric is at least $\min(a/2,N/32)$.
+
+The unused block is the identity-link vacuum. After removing its ordinary gauge gradients, its least curl eigenvalue is $4-\sqrt2>5/2$ [2]. Since $k_*>3/80$, its link quadratic floor is greater than $3N/64$ in Frobenius metric, with electric floor $a/2$.
+
+At equilibrium the active scalar, active-to-unused-color and unused vacuum blocks are orthogonal in the product metric and have no mixed Hessian entries. The color form is a sum of identical copies over unused colors. Frobenius normalization is retained in the vacuum block.
+
+\begin{lemma}[Full normal coercivity]\label{lem:normal}
+At every point of $\mathcal O_\epsilon$ and for every tangent vector $v$ perpendicular to that orbit, the coefficient $\mathcal Q(v)$ of the second-order energy expansion obeys
+\[
+\boxed{\mathcal Q(v)=\tfrac12\operatorname{Hess}_g H(v,v)
+\ge m\|v\|_g^2,\qquad m=\tfrac12\min(a,N\epsilon).}
+\]
+\end{lemma}
+\begin{proof}
+Apply the scalar gauge of page 3, the matter-aligned color gauge of [2], and a vacuum gradient gauge. If $v$ is orbit-normal and $v'=v+v_{\rm orb}$ is its gauge-fixed representative, then $\|v'\|_g\ge\|v\|_g$. Because $H$ is constant along the orbit and critical on the fixed-norm surface, its Hessian annihilates orbit-tangent vectors, including mixed entries. Hence $\mathcal Q(v')=\mathcal Q(v)$.
+
+The preceding block bounds give a common floor $m$: $\epsilon\le10^{-5}$ implies $N\epsilon/2<N/32$ and $N\epsilon/2<3N/64$. Summing the orthogonal blocks therefore gives $\mathcal Q(v')\ge m\|v'\|_g^2\ge m\|v\|_g^2$. Isometry transports the result over the entire orbit. The six signed/permuted balanced representatives have the same bounds by the inherited isometric symmetry actions.
+\end{proof}
+This argument takes place on the larger fixed-norm phase space. It does not solve Gauss by choosing a potentially singular quotient chart. The global $\mathrm U(r-1)$ stabilizer and its residual moment-map condition remain present; restricting the eventual trapping estimate to zero Gauss is valid by invariance.
+
+The constant $m$ is an energy quadratic coefficient, not a squared frequency. Its electric dependence and the chosen metric are essential to that distinction.
+\newpage
+\section{Global geodesic derivative bounds}
+Along a unit-speed product geodesic, write $U_e(t)=e^{itA_e}U_e(0)$, $E_e(t)=E_e(0)+tF_e$, and round-sphere geodesics for $q,w$. Set
+\[
+b^2=\sum\|A_e\|_F^2,\quad e^2=\sum\|F_e\|_F^2,
+\quad c=\|\dot q\|,\quad d=\|\dot w\|,\qquad b^2+e^2+c^2+d^2=1.
+\]
+Sphere derivatives have norms $\|q^{(k)}\|=c^k$ and $\|w^{(k)}\|=d^k$. The maximum node degree is four, so the block Schur bound gives $\|h_U^{(k)}\|_{\rm op}\le4b^k$, including $k=0$. Leibniz then gives, for $n=2,3$,
+\[
+\left|\frac{d^n}{dt^n}N(q^\dagger h_Uq+w^\dagger h_Uw)\right|
+\le4N[(b+2c)^n+(b+2d)^n].
+\]
+The two-by-three matrix with rows $(1,2,0),(1,0,2)$ has squared operator norm six. Therefore the second derivative is bounded by $24N(b^2+c^2+d^2)$; the third is bounded by
+\[
+24\sqrt6\,N(b^2+c^2+d^2)^{3/2}<60N.
+\]
+For the magnetic term, let $a_e=\|A_e\|_F$. Each differentiated trace contains two or three generators separated by unitary factors. Schatten/Cauchy--Schwarz bounds give absolute trace at most the product of their Frobenius norms. This avoids a factor of $r$. Product differentiation consequently gives
+\[
+|\tr W_d^{(n)}|\le\left(\sum_{e\in d}a_e\right)^n,\qquad n=2,3.
+\]
+Every diamond has four edges and every edge occurs in at most three diamonds. Thus
+\[
+\sum_d\left(\sum_{e\in d}a_e\right)^2\le12b^2,
+\]
+\[
+\sum_d\left(\sum_{e\in d}a_e\right)^3
+\le8\left(\sum_d\sum_{e\in d}a_e^2\right)^{3/2}
+\le24\sqrt3\,b^3<42b^3.
+\]
+The magnetic prefactor is $\kappa/r=N(k_*+\epsilon)<N/25$. The electric term has second derivative $ae^2$ and third derivative zero; the mass term is constant. Combining all terms proves the global bounds
+\begin{equation}\label{eq:derivatives}
+\boxed{|(H\circ\gamma)''|\le J=\max(a,25N),\qquad
+|(H\circ\gamma)'''|\le L=62N.}
+\end{equation}
+They hold at every point of $\mathcal M$ along every unit-speed geodesic, independently of $E(0)$ and of the finite rank. They are not local continuity assumptions.
+\newpage
+\section{The radius, barrier and sufficient initial ball}
+\begin{proof}[Proof of Theorem \ref{th:main}]
+For any state $x$, choose a nearest point $y\in\mathcal O_\epsilon$, which exists because the orbit is compact. The complete product manifold has a minimizing unit-speed geodesic $\gamma:[0,s]\to\mathcal M$ from $y$ to $x$, where $s=d_g(x,\mathcal O_\epsilon)$. Its initial tangent is perpendicular to the orbit by first variation. The energy gradient vanishes on the orbit on the fixed-norm manifold. Lemma \ref{lem:normal} and \eqref{eq:derivatives} therefore give
+\begin{equation}\label{eq:taylor}
+\Delta H(x)\ge ms^2-\frac L6s^3,
+\qquad \Delta H(x)\le\frac J2s^2.
+\end{equation}
+No unique nearest point, uniform tubular-coordinate theorem or smooth final quotient is needed.
+
+Set $R=3m/L$. For all $0\le s\le R$,
+\[
+\Delta H(x)\ge\frac m2s^2.
+\]
+In particular the distance-$R$ boundary has energy excess at least $B=mR^2/2$. Any trajectory beginning at distance less than $R$ with energy excess below $B$ cannot reach that boundary, since distance is continuous and $H$ is conserved.
+
+For $\delta=R\sqrt{m/(2J)}$, the upper estimate gives
+\[
+d_g(x_0,\mathcal O_\epsilon)\le\delta
+\quad\Longrightarrow\quad \Delta H(x_0)\le\frac J2\delta^2
+=\frac{mR^2}{4}=\frac B2<B.
+\]
+Also $m\le N/200000$, $J\ge25N$, so $\delta<R$. This proves the guaranteed initial-ball statement. For a target $0<\eta\le R$, the same lower estimate at $s=\eta$ and the same upper bound prove the stated stability modulus.
+
+The flow exists for all real time. The gauge and matter variables are on compact factors; the hopping contribution has magnitude at most $8N$ and the magnetic energy is nonnegative. Conservation bounds the electric Frobenius norm on each trajectory. The smooth finite-dimensional Hamiltonian vector field cannot escape to infinity in finite time. Norms and Gauss are conserved by the frozen action, so restriction to zero Gauss preserves the conclusion.
+\end{proof}
+The energy-sublevel condition can admit states outside the smaller guaranteed initial ball; their energy must be checked directly. Neither condition implies attraction. The proof permits the residual stabilizer and arbitrary normal perturbations compatible with the declared fixed norms.
+
+At $a=N=1$, the constants simplify exactly to
+\[
+m=\epsilon/2,\qquad R=\frac{3\epsilon}{124},\qquad
+B=\frac{9\epsilon^3}{61504},\qquad
+\delta=\frac{3\epsilon^{3/2}}{1240}.
+\]
+At $\epsilon=10^{-5}$, $R\simeq2.41935\times10^{-7}$, $B\simeq1.46332\times10^{-19}$ and $\delta\simeq7.65067\times10^{-11}$ in the declared mathematical metric/energy normalization. These very conservative sizes are guarantees, not estimates of actual tolerance.
+\newpage
+\section{The interval certificate and reproducible diagnostics}
+\begin{proof}[Proof of Lemma \ref{lem:floor}]
+Use the inherited rescaling $X=\sqrt t(Zb+tYc)$, $f=v+ts$, $\lambda=-\rho+t\ell$, $t=\epsilon$. It regularizes the 44 stationary equations at $t=0$ [1]. The unchanged helper supplies analytic matrices $A,B,D$ such that
+\[
+H_{\rm ph}=H_0+tA,\qquad
+C_{\rm ph}=H_0+t(A-BD^{-1}B^T),
+\quad H_0=4\diag(v_iv_j)-k_*C^TC.
+\]
+To check the conversion, put $V=F^{-1}Q_d$, with $F=\diag(f)$ and $Q_d$ an orthonormal basis of the zero-sum node space. Then $V$ spans $f^\perp$, $V^TA_0V=4D$, and $J_f^TV=\sqrt t B$. Thus $4J_f^TA_0^+J_f=tBD^{-1}B^T$ exactly.
+
+Set $T=A-BD^{-1}B^T-2I$. In the full basis $[Z,Y]$, a factored Schur test for $C_{\rm ph}-2tI$ is
+\[
+F_{\rm fast}=Y^T(H_0+tT)Y>0,
+\]
+\[
+G_{\rm crit}=Z^TTZ-tZ^TTYF_{\rm fast}^{-1}Y^TTZ>0.
+\]
+The actual critical Schur block is $tG_{\rm crit}$, so positivity follows for every $t>0$ without dividing an interval by $t$.
+
+The replay divides $[0,10^{-5}]$ into 64 rational closed cells. In each it validates the stationary root by 192-bit Arb contraction, checks the enclosing child box is inside the inherited global tube, and certifies $D$, $F_{\rm fast}$ and $G_{\rm crit}$ positive by ball-arithmetic congruences. Floating eigensolvers propose transformations only; rigorous strict inequalities accept them. All 64 cells, including shared endpoints and the rescaled zero endpoint, pass. Uniqueness in the global tube identifies the same balanced family in every cell. The signed/permuted branches inherit the result by isometry.
+\end{proof}
+Run with Python 3, NumPy and python-flint 0.9.0:
+\begin{quote}\ttfamily python3 certify\_energy\_barrier.py\end{quote}
+There are 19 global geometry/margin checks and three checks on each of 64 cells, totaling 211. Matrix inversions and positive congruences are required inside those cell checks. The output is \texttt{NONLINEAR\_ENERGY\_BARRIER\_CERTIFICATE\_v0.1.json}.
+
+With SciPy additionally installed, run
+\begin{quote}\ttfamily python3 check\_geodesic\_bounds.py\end{quote}
+Six deterministic synthetic fixtures cover $r=2,3,5$, offsets $10^{-5},10^{-6}$ and three $(a,N)$ pairs. They compare the direct scalar Schur complement against the rescaled formula and check the proposed scalar metric floor. Full matrix/sphere jets check vanishing first energy derivative and the global second/third derivative bounds along unit-speed product geodesics. These floating checks are numerical diagnostics, not proof over a region or experimental evidence.
+\newpage
+\section{Interpretation, dependencies and remaining limits}
+\textbf{What is now explicit.} $R$ is an outer trapping tube in orbit geodesic distance. $B$ is a lower bound on energy excess at its boundary. $\delta$ is a smaller initial-distance guarantee that enforces half the barrier budget automatically. The family $\delta(\eta)=\eta\sqrt{m/(2J)}$, $0<\eta\le R$, is an explicit nonlinear orbital stability modulus. All are specified at every positive offset in the certified interval, for any fixed $a,N>0$ and finite rank.
+
+\textbf{Rank and normalization.} The formulas are independent of finite rank in the specified unnormalized Frobenius product metric. This follows from trace estimates with two or three generator norms and the normalized magnetic prefactor $\kappa/r$. It does not construct an infinite-rank phase space or prove an infinite-rank flow theorem. A per-component tolerance, rescaled trace norm or alternative matter normalization requires a separate conversion.
+
+\textbf{What remains open.} The bound is sufficient and intentionally conservative. It is not the nearest-saddle energy, maximal invariant region, basin volume or best perturbation radius. It does not establish nonlinear independence of slice modes, attraction or smoothness of the residual quotient. The formulas vanish as $\epsilon\downarrow0$; the quartically stable endpoint needs its own quantitative quartic modulus. The coefficient interval is inherited and is not proved maximal.
+
+\textbf{Provenance and status.} The stationary tubes and scalar branch identities come from [1]; the positive finite-offset color normal form and vacuum floor come from [2]. The new derivation re-establishes the slow scalar floor and geodesic remainder estimates explicitly. Support is conditional on that frozen action and those dependencies; replay does not convert constructor work into independent review. The coefficient ledger and action are unchanged. No experimental samples, measured coupling constants, physical units or proton/monopole/neutrino predictions enter the theorem. Development, no registry entry; independent review pending; physical promotion $0$.
+
+\textbf{Frozen references (same constructor).}
+\begin{enumerate}
+\item FOC v0.1, \emph{Finite-offset certification of the curved phase branches}, 15 October 2026. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#finite-offset-v01}{UD portal G12}. Repository capture \texttt{2026-10-15T233126Z-codex-finite-offset-fc0e45f7}.
+\item FRC v0.1, \emph{Full-rank finite-offset stability of the balanced phase branches}, 16 October 2026. \href{https://unified-dynamics-public.ben-w-mayes.chatgpt.site/papers/\#finite-rank-v01}{UD portal G13}. Repository capture \texttt{2026-10-16T023512Z-codex-finite-rank-93d52f5b}, merged PR 161.
+\end{enumerate}
+The unchanged modules, stationary input file and inherited result certificates accompany this release; hashes are recorded in its provenance receipt. The full earlier replay and manuscripts remain available through the cited append-only captures and public release packages.
+
+The next useful mathematical step is to sharpen these conservative bounds with a local remainder estimate in the weak scalar directions, then certify robustness to a stated Hamiltonian/model perturbation. A physical tolerance requires an independently specified realization and readout map. The unavailable session image is not a proof input.
+\vfill
+\textbf{Promotion record:} development only. Non-constructor review: pending. Physical promotion: $0$.
+\end{document}
