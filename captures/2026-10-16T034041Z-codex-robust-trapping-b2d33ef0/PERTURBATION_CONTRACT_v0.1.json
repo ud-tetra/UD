@@ -1,0 +1,30 @@
+{
+  "theorem": "NEB v0.1",
+  "claim_type": "DERIVED CONDITIONAL method bound under frozen action",
+  "state": "One chosen balanced branch gauge/species-phase orbit; r>=1 finite; a,N>0; 0<epsilon<=1/100000",
+  "metric": "Unnormalized Frobenius links and electric fields; real round spheres on q=psi/sqrt(N),w=bar(chi)/sqrt(N); minimize distance over gauge/species phases",
+  "energy_reference": "H_star=2*N*(mu+lambda)+N*(k_star+epsilon)*sum_d(1+cos(phi_d))",
+  "m": "min(a,N*epsilon)/2",
+  "J": "max(a,25*N)",
+  "R": "3*m/(62*N)",
+  "B": "m*R^2/2",
+  "delta_squared": "R^2*m/(2*J)",
+  "automatic_acceptance": "Initial metric distance <=delta gives energy excess <=B/2 and traps all time at distance <R",
+  "energy_acceptance": "Initial metric distance <R AND energy excess <B traps all time at distance <R",
+  "target_variant": "For 0<eta<=R replace B by m*eta^2/2 and delta^2 by eta^2*m/(2*J)",
+  "conservation_assumptions": [
+    "exact frozen autonomous Hamiltonian",
+    "fixed equal species norms N",
+    "Gauss-zero condition invariant; estimate holds before imposing it"
+  ],
+  "excluded": [
+    "epsilon=0 quadratic-radius guarantee",
+    "per-entry tolerance without norm conversion",
+    "perturbed or dissipative dynamics without new analysis",
+    "physical seconds, laboratory amplitudes or calibrated energy units",
+    "maximal basin or sharp saddle barrier"
+  ],
+  "calculator": "barrier_budget.py returns exact rational energy/radius bounds, exact delta^2 and certified rational lower/upper square-root bounds",
+  "physical_promotion": 0,
+  "independent_review": "PENDING"
+}

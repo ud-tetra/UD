@@ -1,0 +1,62 @@
+{
+  "theorem": "RHT v0.1; DERIVED CONDITIONAL",
+  "metric": "Unnormalized Frobenius link/electric factors; real round unit matter spheres; distance minimized over nominal gauge/species orbit",
+  "reference": "One chosen balanced embedding, finite r>=1, a,N>0, 0<epsilon<=1/100000",
+  "frozen_constants": {
+    "m": "min(a,N*epsilon)/2",
+    "J": "max(a,25*N)",
+    "R0": "3*m/(62*N)"
+  },
+  "selected_target": "0<eta<=R0; real classifier additionally eta<=epsilon/1680",
+  "initial_radius": "delta_eta=eta*sqrt(m/(2*J))",
+  "barrier": "B_eta=m*eta^2/2",
+  "static_error": {
+    "gradient_limit": "nu_star=m*eta/16",
+    "alternative_oscillation_limit": "B_eta/4",
+    "conclusion": "all-time trapping below eta; zero-Gauss minimizing invariant set within eta/8; no unique perturbed stationary orbit"
+  },
+  "time_dependent_error": {
+    "amplitude": "sup_t ||grad V_t||_tube<=nu_star",
+    "variation": "integral_0^T ||grad partial_t V_t||_tube dt<=nu_star",
+    "conclusion": "trapping through T; all-forward-time only if same bounds hold on [0,infinity)"
+  },
+  "coefficient_error": {
+    "A": "max_e |Delta a_e|",
+    "K": "max_d |Delta kappa_d|/(r*N)",
+    "G": "max_e |relative hopping error xi_e|",
+    "D": "(max_i site_detuning_i-min_i site_detuning_i)/2",
+    "gradient_bound": "A*eta+N*((1+12*eta)*K+14*G+3*D)",
+    "rate_bound": "same formula applied to derivatives; integrate for variation cap",
+    "common_mode": "Uniform detuning/mass shifts are constants on the norm surface and spend no relative-energy budget"
+  },
+  "forcing_only": {
+    "cumulative_metric_displacement": "integral ||Y_t||_g dt<=m*eta/(8*J)",
+    "scope": "Separate nominal-H plus tangent external forcing case, not combined automatically with V_t"
+  },
+  "readout": {
+    "complex_loop_model_error_per_channel": "<21*eta",
+    "oriented_phase_model_error_L2": "<180*eta",
+    "real_instrument_per_channel": "<=epsilon/80 with real-readout target",
+    "real_combined_per_channel": "<=epsilon/40",
+    "real_scope": "three branch-family classes, no overall sign",
+    "oriented_instrument_phase_L2": "<=(5/2)*sqrt(epsilon)",
+    "oriented_scope": "inherited 26 labeled phase branches"
+  },
+  "model_requirements": [
+    "equal fixed species norms",
+    "same carrier and gauge representation",
+    "symmetry-preserving Hamiltonian errors or stated tangent forcing",
+    "smooth dynamics on neighborhood of closed tube"
+  ],
+  "experimental_requirements_still_open": [
+    "state preparation and metric calibration",
+    "Hamiltonian error/gradient bounds from apparatus",
+    "energy calibration",
+    "model evolution parameter to laboratory clock map",
+    "loop readout to detector channel map",
+    "non-constructor review and empirical execution"
+  ],
+  "input_provenance": "Calculator inputs are declared mathematical bounds; zero defaults are illustrative, not measurements",
+  "physical_promotion": 0,
+  "independent_review": "PENDING"
+}
