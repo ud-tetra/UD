@@ -1,0 +1,3 @@
+# UD local-source selection v0.1
++
++Read UD_Local_Source_Selection_v0.1.md. Run `python verify_local_source.py` with NumPy, SciPy and SymPy. It uses only the packaged baseline data, reconstructs the signed chain actions and response, and writes LOCAL_SOURCE_CHECKS.json and LOCAL_SOURCE_DATA.json. Twenty-one exact finite/algebraic checks and two labelled numerical corroborations pass. General proofs are in the report. A local hard edge gate has a certified finite selection window for a localized preparation; geometry alone and the declared static free flow do not supply a native occurrence law. Source randomness, preparation, clock, restoration and renewal are supplied premises. No independent review; physical promotion 0; development, no registry entry.
