@@ -1,0 +1,739 @@
+<h1 id="tetrahedral-packet-complexes-hodgedirac-transport-projective-receipts-and-retriangulation">Tetrahedral Packet Complexes: Hodge–Dirac Transport, Projective Receipts, and Retriangulation</h1>
+<p><strong>Benjamin Walker Mayes</strong></p>
+<p><strong>Manuscript state:</strong> <code>LEAN JOURNAL REFACTOR v2.1 — RECEIPT-INDEX CONSTITUTIVE UPDATE</code><br />
+<strong>Source scientific baseline:</strong> <code>UD JOP v1.9 + provenance ledger v0.44</code><br />
+<strong>Scientific change:</strong> <code>APPEND-ONLY EXACT/CONDITIONAL CONSTITUTIVE THEOREM UPDATE</code></p>
+<h2 id="abstract">Abstract</h2>
+<p>We study a finite relational dynamics on tetrahedral packet complexes while separating exact discrete mathematics from physical interpretation. The local carrier is the tetrahedral graph <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>K</mi><mn>4</mn></msub><annotation encoding="application/x-tex">K_4</annotation></semantics></math> with automorphism group <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>4</mn></msub><annotation encoding="application/x-tex">S_4</annotation></semantics></math>, together with an opposite-edge binary fiber <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Θ</mi><mo>≅</mo><msubsup><mi>𝔽</mi><mn>2</mn><mn>3</mn></msubsup></mrow><annotation encoding="application/x-tex">\Theta\cong\mathbb F_2^3</annotation></semantics></math>. On the filled tetrahedron we use the oriented simplicial chain complex of dimensions <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">4,6,4,1</annotation></semantics></math> and a real skew Hodge–Dirac generator. The single-cell carrier satisfies the exact identity <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>𝒜</mi><mn>2</mn></msup><mo>=</mo><mo>−</mo><mn>4</mn><mrow><mo stretchy="true" form="prefix">(</mo><mi>I</mi><mo>−</mo><msub><mi>P</mi><msub><mi>H</mi><mn>0</mn></msub></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\mathcal A^2=-4(I-P_{H_0}),
+</annotation></semantics></math> which yields one harmonic zero mode, fourteen nonzero directions at frequency magnitude <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>, and exact conservation of the quadratic chain support. On glued tetrahedral complexes we derive oriented Hasse-current balance laws and analyze a finite <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>↔</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">2\leftrightarrow3</annotation></semantics></math> Pachner relay. The current A/B/C relay has exact spectra with B/C signed-permutation covariance and no finite nonzero common recurrence. The central new observable-facing result is a Projective Support Receipt (PSR). We prove that current receipt summaries do not identify the chain ray, derive a sufficient PSR consisting of normalized simplex supports, forest-relative signs, and one root sign per support component, and prove exact projective reconstruction and event-level covariance through the current relay. For the fully supported filled tetrahedron, the Hasse graph provides an intrinsic <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>28</mn><mo>=</mo><mn>14</mn><mo>+</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">28=14+14</annotation></semantics></math> reconstruction/held-out split. A coherent photonic map is given as a faithful representation of the support and bilinear-current observables; its held-out experimental test remains pending. No identification with physical spacetime, energy, elementary particles, or empirical coupling constants is claimed.</p>
+<h2 id="introduction-and-contribution-boundary">1. Introduction and contribution boundary</h2>
+<p>This paper isolates a finite mathematical core of the Unified Dynamics (UD) research program. The object studied here is not assumed to be physical spacetime, a quantum field, or a completed unification theory. The aim is narrower: define a finite tetrahedral carrier, derive its transport and receipt structure exactly, identify what information is and is not reconstructible, and specify a falsifiable observable realization without importing downstream physical constants.</p>
+<p>The construction uses standard ingredients from simplicial homology, Hodge/Dirac-type finite operators, finite group actions, and finite-dimensional operator theory. Those ingredients are background. The claimed contribution is their specific organization on the declared tetrahedral packet carrier together with the following results:</p>
+<ol type="1">
+<li>a symmetry-resolved <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>4</mn></msub><mo>×</mo><mi>Θ</mi></mrow><annotation encoding="application/x-tex">S_4\times\Theta</annotation></semantics></math> finite exposure architecture with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Θ</mi><mo>≅</mo><msubsup><mi>𝔽</mi><mn>2</mn><mn>3</mn></msubsup></mrow><annotation encoding="application/x-tex">\Theta\cong\mathbb F_2^3</annotation></semantics></math>;</li>
+<li>exact single-cell and glued-carrier support transport identities on the declared chain complex;</li>
+<li>exact finite retriangulation constraints, including B/C signed-permutation covariance and a no-common-recurrence result for the current A/B/C relay;</li>
+<li>receipt-conditioned <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Θ</mi><annotation encoding="application/x-tex">\Theta</annotation></semantics></math> transport identities and an exact source-complete relative-frame extractor;</li>
+<li>a chain-ray nonidentifiability theorem for the pre-PSR receipt set;</li>
+<li>a sufficient PSR and exact projective reconstruction theorem;</li>
+<li>PSR forest-choice gauge equivalence and A/B/C event covariance;</li>
+<li>an intrinsic <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>28</mn><mo>=</mo><msub><mn>14</mn><mrow><mi mathvariant="normal">r</mi><mi>e</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>u</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow></msub><mo>+</mo><msub><mn>14</mn><mrow><mi mathvariant="normal">h</mi><mi>e</mi><mi>l</mi><mi>d</mi><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">28=14_{\mathrm reconstruction}+14_{\mathrm heldout}</annotation></semantics></math> falsification design on the fully supported filled tetrahedron.</li>
+</ol>
+<p>The main unresolved scientific issue is constitutive: the finite transport architecture does not by itself determine which event occurs. Source-complete frame extraction is available; general event polarity/multiplicity remains conditional on additional source receipts. This constitutive gap is treated as an explicit open problem rather than repaired by fitting.</p>
+<p>The remainder of the paper is mathematical. Physical correspondence is discussed only as an open map.</p>
+<h2 id="tetrahedral-carrier-and-oriented-chain-complex">2. Tetrahedral carrier and oriented chain complex</h2>
+<h3 id="tetrahedral-carrier-and-opposite-edge-fiber">2.1 Tetrahedral carrier and opposite-edge fiber</h3>
+<p>Let <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>K</mi><mn>4</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false" form="postfix">}</mo><mo>,</mo><mspace width="2.0em"></mspace><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>K</mi><mn>4</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>12</mn><mo>,</mo><mn>13</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>23</mn><mo>,</mo><mn>24</mn><mo>,</mo><mn>34</mn><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+V(K_4)=\{1,2,3,4\},
+\qquad
+E(K_4)=\{12,13,14,23,24,34\}.
+</annotation></semantics></math></p>
+<p>Then <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>V</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>K</mi><mn>4</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>4</mn><mo>,</mo><mspace width="2.0em"></mspace><mrow><mo stretchy="true" form="prefix">|</mo><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>K</mi><mn>4</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>4</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>6</mn><mo>,</mo><mspace width="2.0em"></mspace><mo>Aut</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>K</mi><mn>4</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>≅</mo><msub><mi>S</mi><mn>4</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+|V(K_4)|=4,
+\qquad
+|E(K_4)|=\binom42=6,
+\qquad
+\operatorname{Aut}(K_4)\cong S_4.
+</annotation></semantics></math></p>
+<p>The three perfect matchings are <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mi>A</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>12</mn><mo>,</mo><mn>34</mn><mo stretchy="false" form="postfix">}</mo><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>M</mi><mi>B</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>13</mn><mo>,</mo><mn>24</mn><mo stretchy="false" form="postfix">}</mo><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>M</mi><mi>C</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>14</mn><mo>,</mo><mn>23</mn><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+M_A=\{12,34\},\qquad
+M_B=\{13,24\},\qquad
+M_C=\{14,23\}.
+</annotation></semantics></math></p>
+<p>Assign one binary coordinate to each opposite-edge class: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Θ</mi><mo>:=</mo><msubsup><mi>𝔽</mi><mn>2</mn><mn>3</mn></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\Theta:=\mathbb F_2^3.
+</annotation></semantics></math> The Hamming observable <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>H</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>θ</mi><mi>A</mi></msub><mo>+</mo><msub><mi>θ</mi><mi>B</mi></msub><mo>+</mo><msub><mi>θ</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">
+w_H(\theta)=\theta_A+\theta_B+\theta_C
+</annotation></semantics></math> has shell multiplicities <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+1,3,3,1.
+</annotation></semantics></math></p>
+<p>The product carrier <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝒳</mi><mn>1</mn></msub><mo>=</mo><msub><mi>S</mi><mn>4</mn></msub><mo>×</mo><mi>Θ</mi></mrow><annotation encoding="application/x-tex">
+\mathcal X_1=S_4\times\Theta
+</annotation></semantics></math> has cardinality <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>𝒳</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>24</mn><mo>⋅</mo><mn>8</mn><mo>=</mo><mn>192</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+|\mathcal X_1|=24\cdot8=192.
+</annotation></semantics></math> This is a finite carrier count only.</p>
+<h3 id="filled-tetrahedral-chain-carrier">2.2 Filled tetrahedral chain carrier</h3>
+<p>Use the ordered vertices <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mn>1</mn><mo>&lt;</mo><mn>2</mn><mo>&lt;</mo><mn>3</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">
+0&lt;1&lt;2&lt;3,
+</annotation></semantics></math> edge basis <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>01</mn><mo>,</mo><mn>02</mn><mo>,</mo><mn>03</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>13</mn><mo>,</mo><mn>23</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+(01,02,03,12,13,23),
+</annotation></semantics></math> face basis <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>012</mn><mo>,</mo><mn>013</mn><mo>,</mo><mn>023</mn><mo>,</mo><mn>123</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+(012,013,023,123),
+</annotation></semantics></math> and oriented 3-cell <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0123</mn><annotation encoding="application/x-tex">0123</annotation></semantics></math>.</p>
+<p>The chain dimensions are <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mo>dim</mo><msub><mi>C</mi><mn>0</mn></msub><mo>=</mo><mn>4</mn><mo>,</mo><mspace width="2.0em"></mspace><mo>dim</mo><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mn>6</mn><mo>,</mo><mspace width="2.0em"></mspace><mo>dim</mo><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mn>4</mn><mo>,</mo><mspace width="2.0em"></mspace><mo>dim</mo><msub><mi>C</mi><mn>3</mn></msub><mo>=</mo><mn>1</mn><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\dim C_0=4,\qquad
+\dim C_1=6,\qquad
+\dim C_2=4,\qquad
+\dim C_3=1.
+}
+</annotation></semantics></math></p>
+<p>With the canonical orientation, the boundary maps satisfy <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>B</mi><mn>1</mn></msub><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>B</mi><mn>2</mn></msub><msub><mi>B</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+B_1B_2=0,
+\qquad
+B_2B_3=0.
+}
+</annotation></semantics></math></p>
+<p>Their ranks are <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>rank</mo><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mn>3</mn><mo>,</mo><mspace width="2.0em"></mspace><mo>rank</mo><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mn>3</mn><mo>,</mo><mspace width="2.0em"></mspace><mo>rank</mo><msub><mi>B</mi><mn>3</mn></msub><mo>=</mo><mn>1</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\operatorname{rank}B_1=3,\qquad
+\operatorname{rank}B_2=3,\qquad
+\operatorname{rank}B_3=1,
+</annotation></semantics></math> so the filled tetrahedron has <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mo>dim</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>H</mi><mn>0</mn></msub><mo>,</mo><msub><mi>H</mi><mn>1</mn></msub><mo>,</mo><msub><mi>H</mi><mn>2</mn></msub><mo>,</mo><msub><mi>H</mi><mn>3</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\dim(H_0,H_1,H_2,H_3)=(1,0,0,0).
+}
+</annotation></semantics></math></p>
+<p>The explicit matrices are retained in Appendix A.</p>
+<h2 id="hodgedirac-transport-and-support-continuity">3. Hodge–Dirac transport and support continuity</h2>
+<h3 id="skew-transport-and-conserved-support">3.1 Skew transport and conserved support</h3>
+<p>On <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒞</mi><mo>=</mo><msub><mi>C</mi><mn>0</mn></msub><mo>⊕</mo><msub><mi>C</mi><mn>1</mn></msub><mo>⊕</mo><msub><mi>C</mi><mn>2</mn></msub><mo>⊕</mo><msub><mi>C</mi><mn>3</mn></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\mathcal C=C_0\oplus C_1\oplus C_2\oplus C_3,
+</annotation></semantics></math> define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mi>𝒜</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><msub><mi>B</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msubsup><mi>B</mi><mn>1</mn><mi>T</mi></msubsup></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><msub><mi>B</mi><mn>2</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><msubsup><mi>B</mi><mn>2</mn><mi>T</mi></msubsup></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><msub><mi>B</mi><mn>3</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><msubsup><mi>B</mi><mn>3</mn><mi>T</mi></msubsup></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\mathcal A=
+\begin{pmatrix}
+0&amp;-B_1&amp;0&amp;0\\
+B_1^T&amp;0&amp;-B_2&amp;0\\
+0&amp;B_2^T&amp;0&amp;-B_3\\
+0&amp;0&amp;B_3^T&amp;0
+\end{pmatrix}.
+}
+</annotation></semantics></math></p>
+<p>Then <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>𝒜</mi><mi>T</mi></msup><mo>=</mo><mo>−</mo><mi>𝒜</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\mathcal A^T=-\mathcal A.
+</annotation></semantics></math></p>
+<p>For <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>c</mi><mo accent="true">̇</mo></mover><mo>=</mo><mi>𝒜</mi><mi>c</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\dot c=\mathcal A c,
+</annotation></semantics></math> the quadratic support <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>μ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mi>c</mi><mi>T</mi></msup><mi>c</mi></mrow><annotation encoding="application/x-tex">
+S_\mu(c)=c^Tc
+</annotation></semantics></math> obeys <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mfrac><mrow><mi>d</mi><msub><mi>S</mi><mi>μ</mi></msub></mrow><mrow><mi>d</mi><mi>s</mi></mrow></mfrac><mo>=</mo><mn>0</mn><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\frac{dS_\mu}{ds}=0.
+}
+</annotation></semantics></math></p>
+<p>This is finite norm conservation. No physical energy interpretation is assumed.</p>
+<h3 id="exact-single-cell-spectrum-and-decomposition">3.2 Exact single-cell spectrum and decomposition</h3>
+<p>Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><msub><mi>H</mi><mn>0</mn></msub></msub><annotation encoding="application/x-tex">P_{H_0}</annotation></semantics></math> be the orthogonal projector onto the uniform vertex harmonic mode. The canonical tetrahedral incidence matrices satisfy <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msup><mi>𝒜</mi><mn>2</mn></msup><mo>=</mo><mo>−</mo><mn>4</mn><mrow><mo stretchy="true" form="prefix">(</mo><mi>I</mi><mo>−</mo><msub><mi>P</mi><msub><mi>H</mi><mn>0</mn></msub></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><msup><mi>𝒜</mi><mn>3</mn></msup><mo>+</mo><mn>4</mn><mi>𝒜</mi><mo>=</mo><mn>0</mn><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\mathcal A^2=-4(I-P_{H_0}),
+\qquad
+\mathcal A^3+4\mathcal A=0.
+}
+</annotation></semantics></math></p>
+<p>Equivalently, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>det</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><mi>I</mi><mo>−</mo><mi>𝒜</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>λ</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>7</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\det(\lambda I-\mathcal A)=\lambda(\lambda^2+4)^7.
+</annotation></semantics></math></p>
+<p>Thus the single-cell carrier contains one harmonic zero mode and fourteen nonzero directions with frequency magnitude <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>. The resulting recurrence parameter is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>; it is an internal flow parameter, not physical time.</p>
+<p>The chain carrier decomposes orthogonally as <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒞</mi><mo>=</mo><msub><mi>H</mi><mn>0</mn></msub><mo>⊕</mo><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>C</mi><mn>0</mn><mo>⊥</mo></msubsup><mo>⊕</mo><mo>im</mo><msubsup><mi>B</mi><mn>1</mn><mi>T</mi></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>⊕</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo>im</mo><msub><mi>B</mi><mn>2</mn></msub><mo>⊕</mo><mo>im</mo><msubsup><mi>B</mi><mn>2</mn><mi>T</mi></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>⊕</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo>im</mo><msub><mi>B</mi><mn>3</mn></msub><mo>⊕</mo><msub><mi>C</mi><mn>3</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\mathcal C
+=
+H_0
+\oplus
+(C_0^\perp\oplus\operatorname{im}B_1^T)
+\oplus
+(\operatorname{im}B_2\oplus\operatorname{im}B_2^T)
+\oplus
+(\operatorname{im}B_3\oplus C_3),
+</annotation></semantics></math> with dimensions <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mspace width="0.278em"></mspace><mn>6</mn><mo>,</mo><mspace width="0.278em"></mspace><mn>6</mn><mo>,</mo><mspace width="0.278em"></mspace><mn>2</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+1,\;6,\;6,\;2.
+</annotation></semantics></math></p>
+<p>On <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>1</mn></msub><annotation encoding="application/x-tex">C_1</annotation></semantics></math>, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Π</mi><mrow><mi mathvariant="normal">c</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><msubsup><mi>B</mi><mn>1</mn><mi>T</mi></msubsup><msub><mi>B</mi><mn>1</mn></msub><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>Π</mi><mrow><mi mathvariant="normal">c</mi><mi>y</mi><mi>c</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><msub><mi>B</mi><mn>2</mn></msub><msubsup><mi>B</mi><mn>2</mn><mi>T</mi></msubsup><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>Π</mi><mrow><mi mathvariant="normal">c</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>+</mo><msub><mi>Π</mi><mrow><mi mathvariant="normal">c</mi><mi>y</mi><mi>c</mi></mrow></msub><mo>=</mo><msub><mi>I</mi><msub><mi>C</mi><mn>1</mn></msub></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\Pi_{\mathrm cut}=\frac14B_1^TB_1,
+\qquad
+\Pi_{\mathrm cyc}=\frac14B_2B_2^T,
+\qquad
+\Pi_{\mathrm cut}+\Pi_{\mathrm cyc}=I_{C_1}.
+</annotation></semantics></math> Because <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">H_1=0</annotation></semantics></math>, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ker</mo><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mo>im</mo><msub><mi>B</mi><mn>2</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\ker B_1=\operatorname{im}B_2.
+</annotation></semantics></math></p>
+<p>For a normalized pure edge-cycle <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>∈</mo><mo>ker</mo><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">z\in\ker B_1</annotation></semantics></math>, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>z</mi><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>c</mi><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><msubsup><mi>B</mi><mn>2</mn><mi>T</mi></msubsup><mi>z</mi><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>c</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>c</mi><mn>3</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+c_1(s)=\cos(2s)z,
+\qquad
+c_2(s)=\frac12\sin(2s)B_2^Tz,
+\qquad
+c_0(s)=c_3(s)=0.
+</annotation></semantics></math></p>
+<h3 id="hasse-currents-and-control-volume-balance">3.3 Hasse currents and control-volume balance</h3>
+<p>For incident adjacent-degree simplices <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>⊂</mo><mi>η</mi></mrow><annotation encoding="application/x-tex">\sigma\subset\eta</annotation></semantics></math>, define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>J</mi><mrow><mi>σ</mi><mi>η</mi></mrow></msub><mo>=</mo><mn>2</mn><msub><mi>B</mi><mrow><mi>σ</mi><mi>η</mi></mrow></msub><msub><mi>c</mi><mi>σ</mi></msub><msub><mi>c</mi><mi>η</mi></msub><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+J_{\sigma\eta}
+=
+2B_{\sigma\eta}c_\sigma c_\eta.
+}
+</annotation></semantics></math></p>
+<p>For any finite Hasse control volume <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℛ</mi><annotation encoding="application/x-tex">\mathcal R</annotation></semantics></math>, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>μ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℛ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munder><mo>∑</mo><mrow><mi>σ</mi><mo>∈</mo><mi>ℛ</mi></mrow></munder><msubsup><mi>c</mi><mi>σ</mi><mn>2</mn></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+S_\mu(\mathcal R)=\sum_{\sigma\in\mathcal R}c_\sigma^2.
+</annotation></semantics></math></p>
+<p><strong>Theorem 3.1 (Exact support control-volume balance).</strong> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>s</mi></mrow></mfrac><msub><mi>S</mi><mi>μ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℛ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>J</mi><mrow><mi mathvariant="normal">i</mi><mi>n</mi></mrow></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℛ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><msub><mi>J</mi><mrow><mi mathvariant="normal">o</mi><mi>u</mi><mi>t</mi></mrow></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℛ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\frac{d}{ds}S_\mu(\mathcal R)
+=
+J_{\mathrm in}(\mathcal R)-J_{\mathrm out}(\mathcal R),
+}
+</annotation></semantics></math> where only Hasse incidences crossing the cut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.167em"></mspace><mi>𝒦</mi><mo>\</mo><mi>ℛ</mi></mrow><annotation encoding="application/x-tex">\mathcal R\,|\,\mathcal K\setminus\mathcal R</annotation></semantics></math> contribute.</p>
+<p>Internal incidence-current contributions cancel pairwise. Taking <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mo>=</mo><mi>𝒦</mi></mrow><annotation encoding="application/x-tex">\mathcal R=\mathcal K</annotation></semantics></math> recovers global support conservation.</p>
+<p>On a glued tetrahedral complex, shared simplices occur once in the global chain carrier. Equal-top-star ownership <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>w</mi><mrow><mi>σ</mi><mi>τ</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi>q</mi></mrow></msubsup><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>n</mi><mn>3</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>σ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+w_{\sigma\tau}^{\mathrm eq}=\frac1{n_3(\sigma)}
+</annotation></semantics></math> partitions each unique-simplex support exactly: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mrow><mi>τ</mi><mo>⊃</mo><mi>σ</mi></mrow></munder><msubsup><mi>w</mi><mrow><mi>σ</mi><mi>τ</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi>q</mi></mrow></msubsup><mo>=</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\sum_{\tau\supset\sigma}w_{\sigma\tau}^{\mathrm eq}=1.
+</annotation></semantics></math> Hence <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mi>τ</mi></munder><msubsup><mi>S</mi><mrow><mi>μ</mi><mo>,</mo><mi>τ</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi>q</mi></mrow></msubsup><mo>=</mo><msubsup><mi>S</mi><mi>μ</mi><mrow><mi mathvariant="normal">g</mi><mi>l</mi><mi>o</mi><mi>b</mi><mi>a</mi><mi>l</mi></mrow></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\sum_\tau S_{\mu,\tau}^{\mathrm eq}=S_\mu^{\mathrm global}.
+</annotation></semantics></math></p>
+<p>These gluing identities are exact finite bookkeeping statements.</p>
+<h2 id="branch-and-receipt-dynamics">4. Branch and receipt dynamics</h2>
+<h3 id="exact-hamming-branch-structure">4.1 Exact Hamming branch structure</h3>
+<p>On the basis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">|</mo><mi>θ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>:</mo><mi>θ</mi><mo>∈</mo><mi>Θ</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{|\theta\rangle:\theta\in\Theta\}</annotation></semantics></math>, define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>W</mi><mi>Θ</mi></msub><mrow><mo stretchy="true" form="prefix">|</mo><mi>θ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>w</mi><mi>H</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">⟩</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+W_\Theta|\theta\rangle=w_H(\theta)|\theta\rangle.
+</annotation></semantics></math></p>
+<p>For <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">w\in\{0,1,2,3\}</annotation></semantics></math>, define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>P</mi><mi>w</mi><mi>Θ</mi></msubsup><mo>=</mo><munderover><mo>∏</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mrow><mi>m</mi><mo>≠</mo><mi>w</mi></mrow></mtd></mtr></mtable><mn>3</mn></munderover><mfrac><mrow><msub><mi>W</mi><mi>Θ</mi></msub><mo>−</mo><mi>m</mi><mi>I</mi></mrow><mrow><mi>w</mi><mo>−</mo><mi>m</mi></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_w^\Theta
+=
+\prod_{\substack{m=0\\m\neq w}}^3
+\frac{W_\Theta-mI}{w-m}.
+</annotation></semantics></math></p>
+<p>Then <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>P</mi><mi>w</mi><mi>Θ</mi></msubsup><msubsup><mi>P</mi><mrow><mi>w</mi><mi>′</mi></mrow><mi>Θ</mi></msubsup><mo>=</mo><msub><mi>δ</mi><mrow><mi>w</mi><mi>w</mi><mi>′</mi></mrow></msub><msubsup><mi>P</mi><mi>w</mi><mi>Θ</mi></msubsup><mo>,</mo><mspace width="2.0em"></mspace><munder><mo>∑</mo><mi>w</mi></munder><msubsup><mi>P</mi><mi>w</mi><mi>Θ</mi></msubsup><mo>=</mo><msub><mi>I</mi><mi>Θ</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">
+P_w^\Theta P_{w&#39;}^\Theta=\delta_{ww&#39;}P_w^\Theta,
+\qquad
+\sum_wP_w^\Theta=I_\Theta,
+</annotation></semantics></math> and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mo>rank</mo><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>P</mi><mn>0</mn><mi>Θ</mi></msubsup><mo>,</mo><msubsup><mi>P</mi><mn>1</mn><mi>Θ</mi></msubsup><mo>,</mo><msubsup><mi>P</mi><mn>2</mn><mi>Θ</mi></msubsup><mo>,</mo><msubsup><mi>P</mi><mn>3</mn><mi>Θ</mi></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\operatorname{rank}
+(P_0^\Theta,P_1^\Theta,P_2^\Theta,P_3^\Theta)
+=
+(1,3,3,1).
+}
+</annotation></semantics></math></p>
+<p>The induced <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>4</mn></msub><annotation encoding="application/x-tex">S_4</annotation></semantics></math> action permutes the three matching coordinates and preserves Hamming weight: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>ρ</mi><mi>Θ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><msub><mi>W</mi><mi>Θ</mi></msub><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+[\rho_\Theta(g),W_\Theta]=0.
+</annotation></semantics></math></p>
+<p>The complement involution obeys <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒞</mi><msub><mi>W</mi><mi>Θ</mi></msub><msup><mi>𝒞</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mn>3</mn><mi>I</mi><mo>−</mo><msub><mi>W</mi><mi>Θ</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\mathcal C W_\Theta\mathcal C^{-1}=3I-W_\Theta,
+</annotation></semantics></math> so the weight-one and weight-two sectors are exactly paired. Shell multiplicity therefore does not select one over the other.</p>
+<p>If an operator <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>U</mi><mi>e</mi><mi>Θ</mi></msubsup><annotation encoding="application/x-tex">U_e^\Theta</annotation></semantics></math> is supplied, branch preservation is exact iff <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mrow><mo stretchy="true" form="prefix">[</mo><msubsup><mi>U</mi><mi>e</mi><mi>Θ</mi></msubsup><mo>,</mo><msub><mi>W</mi><mi>Θ</mi></msub><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mn>0</mn><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+[U_e^\Theta,W_\Theta]=0.
+}
+</annotation></semantics></math></p>
+<h3 id="receipt-conditioned-affine-transport">4.2 Receipt-conditioned affine transport</h3>
+<p>For exposure endpoints <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mo>−</mo></msup><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>g</mi><mo>−</mo></msup><mo>,</mo><msup><mi>θ</mi><mo>−</mo></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><msup><mi>x</mi><mo>+</mo></msup><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>g</mi><mo>+</mo></msup><mo>,</mo><msup><mi>θ</mi><mo>+</mo></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+x^-=(g^-,\theta^-),
+\qquad
+x^+=(g^+,\theta^+),
+</annotation></semantics></math> define the relative-frame receipt <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>e</mi></msub><mo>=</mo><msup><mi>g</mi><mo>+</mo></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>g</mi><mo>−</mo></msup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">
+r_e=g^+(g^-)^{-1}
+</annotation></semantics></math> and the parity-transition receipt <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>e</mi></msub><mo>=</mo><msup><mi>θ</mi><mo>+</mo></msup><mo>⊕</mo><msub><mi>P</mi><mrow><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mi>e</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msub><msup><mi>θ</mi><mo>−</mo></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+a_e=\theta^+\oplus P_{\pi(r_e)}\theta^-.
+</annotation></semantics></math></p>
+<p>The receipt-conditioned visible operator is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msubsup><mi>U</mi><mi>e</mi><mrow><mi>Θ</mi><mo>,</mo><mi mathvariant="normal">a</mi><mi>f</mi><mi>f</mi></mrow></msubsup><mo>=</mo><mi>X</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mi>e</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>Γ</mi><mi>Θ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mi>e</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+U_e^{\Theta,\mathrm aff}
+=
+X(a_e)\Gamma_\Theta(\pi(r_e)).
+}
+</annotation></semantics></math></p>
+<p>It is unitary. If <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><msub><mi>w</mi><mi>H</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mi>e</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+r=w_H(a_e),
+</annotation></semantics></math> then the branch-transition ranks satisfy <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>rank</mo><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>P</mi><mrow><mi>w</mi><mi>′</mi></mrow><mi>Θ</mi></msubsup><msubsup><mi>U</mi><mi>e</mi><mrow><mi>Θ</mi><mo>,</mo><mi mathvariant="normal">a</mi><mi>f</mi><mi>f</mi></mrow></msubsup><msubsup><mi>P</mi><mi>w</mi><mi>Θ</mi></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>r</mi><mi>s</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mn>3</mn><mo>−</mo><mi>r</mi></mrow><mrow><mi>w</mi><mo>−</mo><mi>s</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>s</mi><mo>=</mo><mfrac><mrow><mi>w</mi><mo>+</mo><mi>r</mi><mo>−</mo><mi>w</mi><mi>′</mi></mrow><mn>2</mn></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\operatorname{rank}
+\left(
+P_{w&#39;}^\Theta
+U_e^{\Theta,\mathrm aff}
+P_w^\Theta
+\right)
+=
+\binom rs
+\binom{3-r}{w-s},
+\qquad
+s=\frac{w+r-w&#39;}2,
+</annotation></semantics></math> for admissible integral <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>, and vanish otherwise.</p>
+<p>Moreover, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mfrac><mn>1</mn><mn>8</mn></mfrac><mo stretchy="false" form="postfix">∥</mo><mrow><mo stretchy="true" form="prefix">[</mo><msubsup><mi>U</mi><mi>e</mi><mrow><mi>Θ</mi><mo>,</mo><mi mathvariant="normal">a</mi><mi>f</mi><mi>f</mi></mrow></msubsup><mo>,</mo><msub><mi>W</mi><mi>Θ</mi></msub><mo stretchy="true" form="postfix">]</mo></mrow><msubsup><mo stretchy="false" form="postfix">∥</mo><mi>F</mi><mn>2</mn></msubsup><mo>=</mo><msub><mi>w</mi><mi>H</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mi>e</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\frac18
+\|[U_e^{\Theta,\mathrm aff},W_\Theta]\|_F^2
+=
+w_H(a_e).
+}
+</annotation></semantics></math></p>
+<p>Thus branch mixing can be nonzero while the receipt-conditioned transport remains unitary.</p>
+<h3 id="exact-relative-frame-extraction">4.3 Exact relative-frame extraction</h3>
+<p>Let the ordered pre-event transport on the oriented edge carrier be <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>𝒯</mi><mrow><mn>1</mn><mo>,</mo><mi>n</mi></mrow><mrow><mi mathvariant="normal">p</mi><mi>r</mi><mi>e</mi></mrow></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\mathcal T_{1,n}^{\mathrm pre}.
+</annotation></semantics></math></p>
+<p>Since <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><msubsup><mi>B</mi><mn>1</mn><mi>T</mi></msubsup><mo>=</mo><mn>4</mn><msub><mi>I</mi><mn>4</mn></msub><mo>−</mo><msub><mi>J</mi><mn>4</mn></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">
+B_1B_1^T=4I_4-J_4,
+</annotation></semantics></math> define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mover><mi>P</mi><mo accent="true">̂</mo></mover><mrow><mn>0</mn><mo>,</mo><mi>n</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>B</mi><mn>1</mn></msub><msubsup><mi>𝒯</mi><mrow><mn>1</mn><mo>,</mo><mi>n</mi></mrow><mrow><mi mathvariant="normal">p</mi><mi>r</mi><mi>e</mi></mrow></msubsup><msubsup><mi>B</mi><mn>1</mn><mi>T</mi></msubsup><mo>+</mo><msub><mi>J</mi><mn>4</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\widehat P_{0,n}
+=
+\frac14
+\left(
+B_1\mathcal T_{1,n}^{\mathrm pre}B_1^T+J_4
+\right).
+}
+</annotation></semantics></math></p>
+<p>If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>P</mi><mo accent="true">̂</mo></mover><mrow><mn>0</mn><mo>,</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">\widehat P_{0,n}</annotation></semantics></math> is exactly a four-vertex permutation matrix and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>B</mi><mn>1</mn></msub><msubsup><mi>𝒯</mi><mrow><mn>1</mn><mo>,</mo><mi>n</mi></mrow><mrow><mi mathvariant="normal">p</mi><mi>r</mi><mi>e</mi></mrow></msubsup><mo>=</mo><msub><mover><mi>P</mi><mo accent="true">̂</mo></mover><mrow><mn>0</mn><mo>,</mo><mi>n</mi></mrow></msub><msub><mi>B</mi><mn>1</mn></msub><mo>,</mo></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+B_1\mathcal T_{1,n}^{\mathrm pre}
+=
+\widehat P_{0,n}B_1,
+}
+</annotation></semantics></math> then there is a unique <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>n</mi></msub><mo>∈</mo><msub><mi>S</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">r_n\in S_4</annotation></semantics></math> satisfying <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mover><mi>P</mi><mo accent="true">̂</mo></mover><mrow><mn>0</mn><mo>,</mo><mi>n</mi></mrow></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_0(r_n)=\widehat P_{0,n}.
+</annotation></semantics></math></p>
+<p>Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P_1(r_n)</annotation></semantics></math> be the induced signed edge action and define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>n</mi></msub><mo>=</mo><msub><mi>P</mi><mn>1</mn></msub><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><msubsup><mi>𝒯</mi><mrow><mn>1</mn><mo>,</mo><mi>n</mi></mrow><mrow><mi mathvariant="normal">p</mi><mi>r</mi><mi>e</mi></mrow></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+K_n=P_1(r_n)^{-1}\mathcal T_{1,n}^{\mathrm pre}.
+</annotation></semantics></math> Then <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>B</mi><mn>1</mn></msub><msub><mi>K</mi><mi>n</mi></msub><mo>=</mo><msub><mi>B</mi><mn>1</mn></msub><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+B_1K_n=B_1.
+}
+</annotation></semantics></math></p>
+<p>Thus the residual transport is boundary silent. If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>𝒯</mi><mrow><mn>1</mn><mo>,</mo><mi>n</mi></mrow><mrow><mi mathvariant="normal">p</mi><mi>r</mi><mi>e</mi></mrow></msubsup><annotation encoding="application/x-tex">\mathcal T_{1,n}^{\mathrm pre}</annotation></semantics></math> is orthogonal, the residual fixes the cut space and acts only on the cycle space.</p>
+<h3 id="receipt-index-constitutive-event-operator">4.4 Receipt-index constitutive event operator</h3>
+<p>For receipt-complete events the constitutive frontier can be narrowed further.</p>
+<p>Let <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>ℒ</mi><mi>n</mi><mo>−</mo></msubsup><annotation encoding="application/x-tex">
+\mathcal L_n^-
+</annotation></semantics></math> be the finite viable pre-event obligation space and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>ℒ</mi><mi>n</mi><mo>+</mo></msubsup><annotation encoding="application/x-tex">
+\mathcal L_n^+
+</annotation></semantics></math> the finite viable output-obligation space constructed from target-hidden source receipts. For any pre-specified continuation map <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>n</mi></msub><mo>:</mo><msubsup><mi>ℒ</mi><mi>n</mi><mo>−</mo></msubsup><mo>→</mo><msubsup><mi>ℒ</mi><mi>n</mi><mo>+</mo></msubsup><mo>,</mo></mrow><annotation encoding="application/x-tex">
+F_n:\mathcal L_n^-\to\mathcal L_n^+,
+</annotation></semantics></math> finite rank-nullity gives <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ind</mo><msub><mi>F</mi><mi>n</mi></msub><mo>=</mo><mo>dim</mo><msubsup><mi>ℒ</mi><mi>n</mi><mo>−</mo></msubsup><mo>−</mo><mo>dim</mo><msubsup><mi>ℒ</mi><mi>n</mi><mo>+</mo></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\operatorname{ind}F_n
+=
+\dim\mathcal L_n^- - \dim\mathcal L_n^+.
+</annotation></semantics></math></p>
+<p>Hence the net Hamming budget is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>μ</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>=</mo><mo>dim</mo><msubsup><mi>ℒ</mi><mi>n</mi><mo>−</mo></msubsup><mo>−</mo><mo>dim</mo><msubsup><mi>ℒ</mi><mi>n</mi><mo>+</mo></msubsup><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\mu_{\Theta,n}
+=
+\dim\mathcal L_n^- - \dim\mathcal L_n^+.
+}
+</annotation></semantics></math></p>
+<p>The explicit predecessor/continuation map is therefore unnecessary for the <strong>net</strong> event budget once the two obligation spaces are independently constructed. It remains necessary for separate sink/addition counts and lineage provenance.</p>
+<p>After exact frame alignment, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>k</mi><mi>n</mi><mo>+</mo></msubsup><mo>=</mo><msub><mi>w</mi><mi>H</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mover><mi>θ</mi><mo accent="true">‾</mo></mover><mi>n</mi><mo>−</mo></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><msub><mi>μ</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+k_n^+
+=
+w_H(\bar\theta_n^-)+\mu_{\Theta,n}.
+</annotation></semantics></math> Carrier admissibility requires <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msubsup><mi>k</mi><mi>n</mi><mo>+</mo></msubsup><mo>≤</mo><mn>3</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+0\le k_n^+\le3.
+</annotation></semantics></math></p>
+<p>The integrity-constrained endpoint set is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝒜</mi><msubsup><mi>k</mi><mi>n</mi><mo>+</mo></msubsup></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">{</mo><mi>θ</mi><mo>∈</mo><mi>Θ</mi><mo>:</mo><msub><mi>w</mi><mi>H</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msubsup><mi>k</mi><mi>n</mi><mo>+</mo></msubsup><mo>,</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>θ</mi><mi>p</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>T</mi><mi>p</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn><mo stretchy="true" form="postfix">}</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\mathcal A_{k_n^+}(T)
+=
+\left\{
+\theta\in\Theta:
+w_H(\theta)=k_n^+,\ 
+(1-\theta_p)(1-T_p)=0
+\right\}.
+</annotation></semantics></math></p>
+<p>Using only the pre-event quadratic burden histories, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Θ</mi><mrow><mrow><mi mathvariant="normal">o</mi><mi>p</mi><mi>t</mi></mrow><mo>,</mo><mi>n</mi></mrow></msub><mo>=</mo><munder><mo>arg min</mo><mrow><mi>θ</mi><mo>∈</mo><msub><mi>𝒜</mi><msubsup><mi>k</mi><mi>n</mi><mo>+</mo></msubsup></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></munder><munder><mo>∑</mo><mi>p</mi></munder><msub><mi>θ</mi><mi>p</mi></msub><msubsup><mi>W</mi><mrow><mi>p</mi><mo>,</mo><mi>n</mi></mrow><mrow><mi>B</mi><mn>2</mn></mrow></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\Theta_{{\mathrm opt},n}
+=
+\operatorname*{arg\,min}_{\theta\in\mathcal A_{k_n^+}(T)}
+\sum_p\theta_pW_{p,n}^{B2}.
+</annotation></semantics></math></p>
+<p>A singleton optimizer predicts <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>θ</mi><mi>n</mi><mo>+</mo></msubsup><annotation encoding="application/x-tex">\theta_n^+</annotation></semantics></math> without endpoint access. Empty admissibility is a source inconsistency; an exact optimum tie returns hold.</p>
+<p>Define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msubsup><mover><mi>θ</mi><mo accent="true">‾</mo></mover><mi>n</mi><mo>−</mo></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>⊙</mo><msubsup><mi>θ</mi><mi>n</mi><mo>+</mo></msubsup><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>o</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>=</mo><msubsup><mover><mi>θ</mi><mo accent="true">‾</mo></mover><mi>n</mi><mo>−</mo></msubsup><mo>⊙</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msubsup><mi>θ</mi><mi>n</mi><mo>+</mo></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+c_{\Theta,n}
+=
+(1-\bar\theta_n^-)\odot\theta_n^+,
+\qquad
+o_{\Theta,n}
+=
+\bar\theta_n^-\odot(1-\theta_n^+),
+</annotation></semantics></math> and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>c</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⊕</mo><msub><mi>o</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+a_n=c_{\Theta,n}\oplus o_{\Theta,n}.
+</annotation></semantics></math></p>
+<p>Then <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>c</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>−</mo><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>o</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><msub><mi>μ</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>,</mo></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+|c_{\Theta,n}|-|o_{\Theta,n}|
+=
+\mu_{\Theta,n},
+}
+</annotation></semantics></math> while <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>c</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>o</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><msub><mi>w</mi><mi>H</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+|c_{\Theta,n}|+|o_{\Theta,n}|
+=
+w_H(a_n).
+}
+</annotation></semantics></math></p>
+<p>Thus a source-complete receipt packet and unique burden optimum determine net polarity, net multiplicity, gross pair-toggle multiplicity, and directed addresses. The earlier signed-support sign law is retained only as an independent consistency diagnostic on this domain.</p>
+<p>The remaining upstream gap is no longer the event operator itself. It is the native construction of the pre-event obligation spaces <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>ℒ</mi><mi>n</mi><mo>±</mo></msubsup><annotation encoding="application/x-tex">\mathcal L_n^\pm</annotation></semantics></math> from more primitive packet dynamics.</p>
+<h2 id="retriangulation-and-finite-covariance-constraints">5. Retriangulation and finite covariance constraints</h2>
+<h3 id="oriented-pachner-pair">5.1 Oriented Pachner pair</h3>
+<p>On vertices <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">0,1,2,3,4</annotation></semantics></math>, define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mo>−</mo></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>0123</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>−</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>0124</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+K_-=[0123]-[0124],
+</annotation></semantics></math> and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mo>+</mo></msub><mo>=</mo><mo>−</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>1234</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>0234</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>−</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>0134</mn><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+K_+=-[1234]+[0234]-[0134].
+</annotation></semantics></math></p>
+<p>Then <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>K</mi><mo>−</mo></msub><mo>−</mo><msub><mi>K</mi><mo>+</mo></msub><mo>=</mo><mi>∂</mi><mrow><mo stretchy="true" form="prefix">[</mo><mn>01234</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+K_--K_+=\partial[01234],
+}
+</annotation></semantics></math> so <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mi>∂</mi><msub><mi>K</mi><mo>−</mo></msub><mo>=</mo><mi>∂</mi><msub><mi>K</mi><mo>+</mo></msub><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\partial K_-=\partial K_+.
+}
+</annotation></semantics></math></p>
+<p>A separate exact no-go shows that no fixed binary vertex labeling makes all five participating tetrahedra simultaneously satisfy the declared <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>:</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2{:}2</annotation></semantics></math> condition. Topological admissibility therefore does not imply fixed-label micro-admissibility.</p>
+<h3 id="finite-abc-relay">5.2 Finite A/B/C relay</h3>
+<p>Use <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>0123</mn><mo>,</mo><mn>0124</mn><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">
+A=\{0123,0124\},
+</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>0123</mn><mo>,</mo><mn>0124</mn><mo>,</mo><mn>0134</mn><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">
+B=\{0123,0124,0134\},
+</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>0134</mn><mo>,</mo><mn>0234</mn><mo>,</mo><mn>1234</mn><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+C=\{0134,0234,1234\}.
+</annotation></semantics></math></p>
+<p>Their exact <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>-vectors are <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+f(A)=(5,9,7,2),
+</annotation></semantics></math> and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mo>,</mo><mn>10</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+f(B)=f(C)=(5,10,9,3).
+</annotation></semantics></math></p>
+<p>The involution <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+p=(0\ 3)(1\ 4)
+</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> fixed induces a signed-permutation simplicial isomorphism <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>≅</mo><mi>C</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">
+B\cong C.
+</annotation></semantics></math></p>
+<h3 id="exact-spectra-and-no-common-recurrence">5.3 Exact spectra and no common recurrence</h3>
+<p>The global unique-simplex Hodge–Dirac spectra are <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mo>Spec</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>𝒜</mi><mi>A</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mn>0</mn><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>∪</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mo>±</mo><mi>i</mi><msqrt><mn>3</mn></msqrt><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>∪</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mo>±</mo><mi>i</mi><msqrt><mn>5</mn></msqrt><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>7</mn><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>,</mo></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\operatorname{Spec}(\mathcal A_A)
+=
+0^{(1)}
+\cup
+(\pm i\sqrt3)^{(4)}
+\cup
+(\pm i\sqrt5)^{(7)},
+}
+</annotation></semantics></math> and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mo>Spec</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>𝒜</mi><mi>B</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>Spec</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>𝒜</mi><mi>C</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mn>0</mn><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>∪</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mo>±</mo><mi>i</mi><msqrt><mn>2</mn></msqrt><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>∪</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mo>±</mo><mi>i</mi><msqrt><mn>5</mn></msqrt><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>11</mn><mo stretchy="true" form="postfix">)</mo></mrow></msup><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\operatorname{Spec}(\mathcal A_B)
+=
+\operatorname{Spec}(\mathcal A_C)
+=
+0^{(1)}
+\cup
+(\pm i\sqrt2)^{(2)}
+\cup
+(\pm i\sqrt5)^{(11)}.
+}
+</annotation></semantics></math></p>
+<p>Equivalently, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>χ</mi><mi>A</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>λ</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>4</mn></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>7</mn></msup><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\chi_A(\lambda)
+=
+\lambda(\lambda^2+3)^4(\lambda^2+5)^7,
+</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>χ</mi><mi>B</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>χ</mi><mi>C</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>λ</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>11</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\chi_B(\lambda)
+=
+\chi_C(\lambda)
+=
+\lambda(\lambda^2+2)^2(\lambda^2+5)^{11}.
+</annotation></semantics></math></p>
+<p>Since <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mfrac><mn>5</mn><mn>3</mn></mfrac></msqrt><mo>∉</mo><mi>ℚ</mi><mo>,</mo><mspace width="2.0em"></mspace><msqrt><mfrac><mn>5</mn><mn>2</mn></mfrac></msqrt><mo>∉</mo><mi>ℚ</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\sqrt{\frac53}\notin\mathbb Q,
+\qquad
+\sqrt{\frac52}\notin\mathbb Q,
+</annotation></semantics></math> there is no finite <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">T&gt;0</annotation></semantics></math> satisfying <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>T</mi><mi>𝒜</mi></mrow></msup><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">
+e^{T\mathcal A}=I
+</annotation></semantics></math> for the full flow on any of the current A/B/C complexes.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mtext mathvariant="normal">The current A/B/C relay admits no finite nonzero global Hodge–Dirac recurrence.</mtext></menclose><annotation encoding="application/x-tex">
+\boxed{
+\text{The current A/B/C relay admits no finite nonzero global Hodge–Dirac recurrence.}
+}
+</annotation></semantics></math></p>
+<p>Thus the exact single-cell recurrence cannot be promoted to a universal clock on the glued carriers.</p>
+<p>Detailed intertwiners, inclusion residuals, protected/vulnerable sector decomposition, and canonical internal action-transfer results are preserved in Supplement S4 and the source manuscript.</p>
+<h2 id="projective-support-receipt">6. Projective Support Receipt</h2>
+<h3 id="ray-nonidentifiability-before-psr">6.1 Ray nonidentifiability before PSR</h3>
+<p>The previously available event, route, lineage, Hasse-current, and total-support receipts do not identify one chain ray. In particular, the parity-degree rescaling <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>λ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>c</mi><mn>0</mn></msub><mo>,</mo><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub><mi>c</mi><mn>2</mn></msub><mo>,</mo><msub><mi>c</mi><mn>3</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><msub><mi>c</mi><mn>0</mn></msub><mo>,</mo><msup><mi>λ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mi>λ</mi><msub><mi>c</mi><mn>2</mn></msub><mo>,</mo><msup><mi>λ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msub><mi>c</mi><mn>3</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>λ</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">
+G_\lambda(c_0,c_1,c_2,c_3)
+=
+(\lambda c_0,\lambda^{-1}c_1,\lambda c_2,\lambda^{-1}c_3),
+\qquad
+\lambda&gt;0,
+</annotation></semantics></math> leaves adjacent-degree bilinear Hasse currents invariant.</p>
+<p>An additional exact witness preserves <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">S_\mu</annotation></semantics></math> while changing the ray. Therefore <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">event/route/lineage receipts</mtext><mo>+</mo><mtext mathvariant="normal">all Hasse currents</mtext><mo>+</mo><msub><mi>S</mi><mi>μ</mi></msub><mo stretchy="false" form="postfix">}</mo><mo>⇏</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>c</mi><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\{\text{event/route/lineage receipts}
++\text{all Hasse currents}+S_\mu\}
+\not\Rightarrow[c].
+}
+</annotation></semantics></math></p>
+<p>This is a scoped identifiability no-go.</p>
+<h3 id="sufficient-receipt-and-reconstruction-theorem">6.2 Sufficient receipt and reconstruction theorem</h3>
+<p>For <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c\neq0</annotation></semantics></math>, define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>σ</mi></msub><mo>=</mo><mfrac><msubsup><mi>c</mi><mi>σ</mi><mn>2</mn></msubsup><mrow><msub><mi>S</mi><mi>μ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\rho_\sigma=\frac{c_\sigma^2}{S_\mu(c)}.
+</annotation></semantics></math></p>
+<p>On the Hasse graph restricted to nonzero-support simplices, choose a deterministic spanning forest <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>. For each forest incidence record <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>χ</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><mo>=</mo><mo>sgn</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>c</mi><mi>σ</mi></msub><msub><mi>c</mi><mi>τ</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>sgn</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>B</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><msub><mi>J</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\chi_{\sigma\tau}
+=
+\operatorname{sgn}(c_\sigma c_\tau)
+=
+\operatorname{sgn}(B_{\sigma\tau}J_{\sigma\tau}),
+</annotation></semantics></math> and record one coefficient sign <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ϵ</mi><mi>C</mi></msub><annotation encoding="application/x-tex">\epsilon_C</annotation></semantics></math> at a root of each connected support component.</p>
+<p>Define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mo>PSR</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>ρ</mi><mi>σ</mi></msub><mo stretchy="false" form="postfix">}</mo><mo>,</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>χ</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><msub><mo stretchy="false" form="postfix">}</mo><mi>F</mi></msub><mo>,</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>ϵ</mi><mi>C</mi></msub><mo stretchy="false" form="postfix">}</mo><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\operatorname{PSR}(c)
+=
+\left(
+\{\rho_\sigma\},
+\{\chi_{\sigma\tau}\}_{F},
+\{\epsilon_C\}
+\right).
+}
+</annotation></semantics></math></p>
+<p>Propagate signs through the forest and set <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>c</mi><mo accent="true">̂</mo></mover><mi>σ</mi></msub><mo>=</mo><msub><mi>s</mi><mi>σ</mi></msub><msqrt><msub><mi>ρ</mi><mi>σ</mi></msub></msqrt><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\widehat c_\sigma=s_\sigma\sqrt{\rho_\sigma}.
+</annotation></semantics></math></p>
+<p>Then <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mi>ℛ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mo>PSR</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mi>c</mi><msqrt><mrow><msub><mi>S</mi><mi>μ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msqrt></mfrac><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\mathcal R(\operatorname{PSR}(c))
+=
+\frac{c}{\sqrt{S_\mu(c)}}.
+}
+</annotation></semantics></math></p>
+<p>Thus the PSR determines the positive projective chain ray while leaving absolute support normalization separate.</p>
+<h3 id="pre-event-acquisition-algebra">6.3 Pre-event acquisition algebra</h3>
+<p>At a frozen pre-event state, acquire <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>σ</mi></msub><mo>=</mo><msubsup><mi>c</mi><mi>σ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">
+q_\sigma=c_\sigma^2
+</annotation></semantics></math> for each unique simplex and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><mo>=</mo><mn>2</mn><msub><mi>B</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><msub><mi>c</mi><mi>σ</mi></msub><msub><mi>c</mi><mi>τ</mi></msub></mrow><annotation encoding="application/x-tex">
+J_{\sigma\tau}=2B_{\sigma\tau}c_\sigma c_\tau
+</annotation></semantics></math> on the forest incidences.</p>
+<p>The exact consistency identity is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msubsup><mi>J</mi><mrow><mi>σ</mi><mi>τ</mi></mrow><mn>2</mn></msubsup><mo>=</mo><mn>4</mn><msub><mi>q</mi><mi>σ</mi></msub><msub><mi>q</mi><mi>τ</mi></msub><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+J_{\sigma\tau}^2=4q_\sigma q_\tau.
+}
+</annotation></semantics></math></p>
+<p>One common sign flip per connected support component remains invisible to stocks and bilinear currents. For a deterministic root <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>, a matched calibrated probe gives <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>q</mi><mi>r</mi><mo>+</mo></msubsup><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>c</mi><mi>r</mi></msub><mo>+</mo><mi>α</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>,</mo><mspace width="2.0em"></mspace><msubsup><mi>q</mi><mi>r</mi><mo>−</mo></msubsup><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>c</mi><mi>r</mi></msub><mo>−</mo><mi>α</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>,</mo></mrow><annotation encoding="application/x-tex">
+q_r^+=(c_r+\alpha)^2,
+\qquad
+q_r^-=(c_r-\alpha)^2,
+</annotation></semantics></math> so <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msubsup><mi>q</mi><mi>r</mi><mo>+</mo></msubsup><mo>−</mo><msubsup><mi>q</mi><mi>r</mi><mo>−</mo></msubsup><mo>=</mo><mn>4</mn><mi>α</mi><msub><mi>c</mi><mi>r</mi></msub><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+q_r^+-q_r^-=4\alpha c_r.
+}
+</annotation></semantics></math></p>
+<p>The probe amplitude is a measurement control, not an internal coefficient.</p>
+<h3 id="forest-gauge-and-abc-event-covariance">6.4 Forest gauge and A/B/C event covariance</h3>
+<p>Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> denote the canonical A-to-B inclusion and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> the signed B-to-C simplicial permutation. At the event map, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>T</mi><mi>T</mi></msup><mi>T</mi><mo>=</mo><msub><mi>I</mi><mi>A</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><msup><mi>P</mi><mi>T</mi></msup><mi>P</mi><mo>=</mo><msub><mi>I</mi><mi>B</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>𝒜</mi><mi>C</mi></msub><mi>P</mi><mo>=</mo><mi>P</mi><msub><mi>𝒜</mi><mi>B</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+T^TT=I_A,
+\qquad
+P^TP=I_B,
+\qquad
+\mathcal A_CP=P\mathcal A_B.
+</annotation></semantics></math></p>
+<p>The PSR reconstruction commutes with these event maps: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>ℛ</mi><mi>B</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mo>PSR</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>T</mi><msub><mi>c</mi><mi>A</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>T</mi><msub><mi>ℛ</mi><mi>A</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mo>PSR</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>c</mi><mi>A</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\mathcal R_B(\operatorname{PSR}(Tc_A))
+=
+T\mathcal R_A(\operatorname{PSR}(c_A)),
+}
+</annotation></semantics></math> and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>ℛ</mi><mi>C</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mo>PSR</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>P</mi><msub><mi>c</mi><mi>B</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><msub><mi>ℛ</mi><mi>B</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mo>PSR</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>c</mi><mi>B</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\mathcal R_C(\operatorname{PSR}(Pc_B))
+=
+P\mathcal R_B(\operatorname{PSR}(c_B)).
+}
+</annotation></semantics></math></p>
+<p>A mapped forest and a freshly recomputed canonical forest may use different incidence edges yet reconstruct the same ray. Forest choice is therefore a receipt-serialization gauge rather than a new state variable.</p>
+<p>These are event-level statements. They do not erase the known dynamical residual of the dimension-changing A-to-B move.</p>
+<h3 id="authentication-and-interval-uncertainty">6.5 Authentication and interval uncertainty</h3>
+<p>Receipt consistency does not establish source authenticity: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mtext mathvariant="normal">PSR schema integrity</mtext><mo>⇏</mo><mtext mathvariant="normal">identity with a separately intended external state</mtext><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\text{PSR schema integrity}
+\not\Rightarrow
+\text{identity with a separately intended external state}.
+}
+</annotation></semantics></math></p>
+<p>A measurement-facing receipt therefore separates source authentication from mathematical feasibility. Cryptographic authentication establishes packet integrity and trusted-key possession; it does not establish physical truth.</p>
+<p>For strictly positive measured support intervals, write <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>σ</mi></msub><mo>=</mo><mo>ln</mo><msub><mi>q</mi><mi>σ</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+x_\sigma=\ln q_\sigma.
+</annotation></semantics></math> The exact current law gives the interval constraint <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>ln</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msubsup><mi>J</mi><mrow><mi>σ</mi><mi>τ</mi></mrow><mo>min</mo></msubsup><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><msub><mi>x</mi><mi>σ</mi></msub><mo>+</mo><msub><mi>x</mi><mi>τ</mi></msub><mo>≤</mo><mn>2</mn><mo>ln</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msubsup><mi>J</mi><mrow><mi>σ</mi><mi>τ</mi></mrow><mo>max</mo></msubsup><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+2\ln\!\left(\frac{J_{\sigma\tau}^{\min}}2\right)
+\le
+x_\sigma+x_\tau
+\le
+2\ln\!\left(\frac{J_{\sigma\tau}^{\max}}2\right).
+</annotation></semantics></math></p>
+<p>Together with the logged support intervals, magnitude compatibility becomes a linear feasibility problem in the transformed measured fields. If a required support or sign interval crosses zero, the result is indeterminate rather than repaired by a fitted tolerance.</p>
+<h2 id="faithful-observable-realization-and-held-out-test">7. Faithful observable realization and held-out test</h2>
+<h3 id="intrinsic-held-out-design">7.1 Intrinsic held-out design</h3>
+<p>The fully supported filled tetrahedron has 15 simplex coordinates and exactly 28 Hasse incidences: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mn>12</mn><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>↔</mo><msub><mi>C</mi><mn>1</mn></msub></mrow></msub><mo>+</mo><msub><mn>12</mn><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>↔</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></msub><mo>+</mo><msub><mn>4</mn><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>↔</mo><msub><mi>C</mi><mn>3</mn></msub></mrow></msub><mo>=</mo><mn>28</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+12_{C_0\leftrightarrow C_1}
++
+12_{C_1\leftrightarrow C_2}
++
+4_{C_2\leftrightarrow C_3}
+=
+28.
+</annotation></semantics></math></p>
+<p>A spanning tree on the 15 supported simplex vertices contains <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mo>−</mo><mn>1</mn><mo>=</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">
+15-1=14
+</annotation></semantics></math> incidences. The remaining 14 incidences are not required for reconstruction. Hence <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mn>28</mn><mo>=</mo><msub><mn>14</mn><mrow><mi mathvariant="normal">r</mi><mi>e</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>u</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow></msub><mo>+</mo><msub><mn>14</mn><mrow><mi mathvariant="normal">h</mi><mi>e</mi><mi>l</mi><mi>d</mi><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+28
+=
+14_{\mathrm reconstruction}
++
+14_{\mathrm heldout}.
+}
+</annotation></semantics></math></p>
+<p>The training PSR defines a frozen feasible set <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ℱ</mi><mrow><mi mathvariant="normal">P</mi><mi>S</mi><mi>R</mi></mrow></msub><annotation encoding="application/x-tex">\mathcal F_{\mathrm PSR}</annotation></semantics></math>. For each held-out Hasse incidence, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msubsup><mi>I</mi><mrow><mi>σ</mi><mi>τ</mi></mrow><mrow><mi mathvariant="normal">p</mi><mi>r</mi><mi>e</mi><mi>d</mi></mrow></msubsup><mo>=</mo><msub><mo>range</mo><mrow><mi>c</mi><mo>∈</mo><msub><mi>ℱ</mi><mrow><mi mathvariant="normal">P</mi><mi>S</mi><mi>R</mi></mrow></msub></mrow></msub><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><msub><mi>B</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><msub><mi>c</mi><mi>σ</mi></msub><msub><mi>c</mi><mi>τ</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+I_{\sigma\tau}^{\mathrm pred}
+=
+\operatorname{range}_{c\in\mathcal F_{\mathrm PSR}}
+\left(
+2B_{\sigma\tau}c_\sigma c_\tau
+\right).
+}
+</annotation></semantics></math></p>
+<p>Held-out data are released only after these predictions are frozen. The held-out channels may not repair the reconstruction receipt.</p>
+<h3 id="coherent-photonic-representation">7.2 Coherent photonic representation</h3>
+<p>A coherent multi-mode interferometer provides a faithful representation of the PSR observables. Assign one optical mode to each simplex coordinate and define <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mrow><mi mathvariant="normal">s</mi><mi>c</mi><mi>i</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi></mrow></msub><mo>=</mo><munder><mo>∑</mo><mi>τ</mi></munder><msup><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>E</mi><mi>τ</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_{\mathrm science}=\sum_\tau |E_\tau|^2.
+</annotation></semantics></math></p>
+<p>Then <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msub><mi>ρ</mi><mi>σ</mi></msub><mo>=</mo><mfrac><msup><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>E</mi><mi>σ</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><msub><mi>P</mi><mrow><mi mathvariant="normal">s</mi><mi>c</mi><mi>i</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi></mrow></msub></mfrac><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\rho_\sigma
+=
+\frac{|E_\sigma|^2}{P_{\mathrm science}}.
+}
+</annotation></semantics></math></p>
+<p>For one Hasse-adjacent pair, a calibrated 50:50 analyzer yields <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mo>+</mo></msub><mo>=</mo><mfrac><msup><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>E</mi><mi>σ</mi></msub><mo>+</mo><msub><mi>E</mi><mi>τ</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><mn>2</mn></mfrac><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>P</mi><mo>−</mo></msub><mo>=</mo><mfrac><msup><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>E</mi><mi>σ</mi></msub><mo>−</mo><msub><mi>E</mi><mi>τ</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><mn>2</mn></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">
+P_+
+=
+\frac{|E_\sigma+E_\tau|^2}{2},
+\qquad
+P_-
+=
+\frac{|E_\sigma-E_\tau|^2}{2},
+</annotation></semantics></math> and therefore <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mo>+</mo></msub><mo>−</mo><msub><mi>P</mi><mo>−</mo></msub><mo>=</mo><mn>2</mn><mo>Re</mo><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>E</mi><mi>σ</mi><mo>*</mo></msubsup><msub><mi>E</mi><mi>τ</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+P_+-P_-
+=
+2\operatorname{Re}(E_\sigma^\ast E_\tau).
+</annotation></semantics></math></p>
+<p>On the admitted common real quadrature, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><msubsup><mi>J</mi><mrow><mi>σ</mi><mi>τ</mi></mrow><mrow><mi mathvariant="normal">o</mi><mi>p</mi><mi>t</mi></mrow></msubsup><mo>=</mo><msub><mi>B</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><mfrac><mrow><msub><mi>P</mi><mo>+</mo></msub><mo>−</mo><msub><mi>P</mi><mo>−</mo></msub></mrow><msub><mi>P</mi><mrow><mi mathvariant="normal">s</mi><mi>c</mi><mi>i</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi></mrow></msub></mfrac><mo>=</mo><mn>2</mn><msub><mi>B</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><msub><mover><mi>c</mi><mo accent="true">̂</mo></mover><mi>σ</mi></msub><msub><mover><mi>c</mi><mo accent="true">̂</mo></mover><mi>τ</mi></msub><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+J_{\sigma\tau}^{\mathrm opt}
+=
+B_{\sigma\tau}
+\frac{P_+-P_-}{P_{\mathrm science}}
+=
+2B_{\sigma\tau}\widehat c_\sigma\widehat c_\tau.
+}
+</annotation></semantics></math></p>
+<p>A phase-locked auxiliary provides the matched root-sign probe.</p>
+<p>Under the publication correspondence scale adopted here, this optical map is <strong>CRL-1: faithful representation</strong>. It establishes an explicit observable algebra map; it does not identify the optical processor as the physical UD substrate.</p>
+<h3 id="experimental-status">7.3 Experimental status</h3>
+<p>A 20-mode implementation has been preregistered with <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mtext mathvariant="normal">–</mtext><mn>15</mn><mo>=</mo><mtext mathvariant="normal">science</mtext><mo>,</mo><mspace width="2.0em"></mspace><mn>16</mn><mo>=</mo><mtext mathvariant="normal">reference</mtext><mo>,</mo><mspace width="2.0em"></mspace><mn>17</mn><mo>=</mo><mtext mathvariant="normal">root auxiliary</mtext><mo>,</mo><mspace width="2.0em"></mspace><mn>18</mn><mtext mathvariant="normal">–</mtext><mn>20</mn><mo>=</mo><mtext mathvariant="normal">calibration/guard</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">
+1\text{--}15=\text{science},
+\qquad
+16=\text{reference},
+\qquad
+17=\text{root auxiliary},
+\qquad
+18\text{--}20=\text{calibration/guard}.
+</annotation></semantics></math></p>
+<p>The deterministic 14 reconstruction and 14 held-out incidences are frozen. Device/laboratory qualification, authenticated calibration intake, and zero-touch held-out release tooling are maintained as supplementary reproducibility artifacts.</p>
+<p>No real held-out optical result exists at this manuscript state. Thus:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mtext mathvariant="normal">CRL-1 mathematical representation: specified</mtext><mo>,</mo></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\text{CRL-1 mathematical representation: specified},
+}
+</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mtext mathvariant="normal">CRL-2 operational same-observable test: pending</mtext><mo>,</mo></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\text{CRL-2 operational same-observable test: pending},
+}
+</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mrow><mtext mathvariant="normal">CRL-3 constitutive physical-carrier identification: open</mtext><mi>.</mi></mrow></menclose><annotation encoding="application/x-tex">
+\boxed{
+\text{CRL-3 constitutive physical-carrier identification: open}.
+}
+</annotation></semantics></math></p>
+<h2 id="discussion">8. Discussion</h2>
+<h3 id="novelty-relative-to-standard-machinery">8.1 Novelty relative to standard machinery</h3>
+<p>The paper does not claim novelty for the existence of simplicial boundary operators, Hodge/Dirac-style finite generators, controlled-unitary constructions, or Kraus dilation identities. The intended new contribution is the specific finite tetrahedral packet architecture and the receipt structure derived on it.</p>
+<p>The strongest distinct results are the PSR identifiability no-go, sufficient projective reconstruction theorem, forest-gauge result, event covariance through the current A/B/C relay, authenticated interval-feasibility construction, and the intrinsic <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>28</mn><mo>=</mo><mn>14</mn><mo>+</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">28=14+14</annotation></semantics></math> held-out design. The source-complete relative-frame extractor and the finite retriangulation spectral constraints are additional framework-specific results.</p>
+<h3 id="what-is-not-claimed">8.2 What is not claimed</h3>
+<p>Nothing in this paper identifies <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">
+S_\mu
+</annotation></semantics></math> with physical energy, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝒜</mi><annotation encoding="application/x-tex">
+\mathcal A
+</annotation></semantics></math> with a quantum Hamiltonian, the finite tetrahedral carrier with physical spacetime, the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Θ</mi><annotation encoding="application/x-tex">\Theta</annotation></semantics></math> fiber with a Standard Model gauge or matter degree of freedom, or any internal finite ratio with a measured physical coupling.</p>
+<p>The optical representation is a test of the receipt/observable algebra in a calibrated medium. Even a successful held-out optical test would establish operational implementability of the mapped observables in that device, not a constitutive theory of nature.</p>
+<h3 id="highest-open-problem">8.3 Highest open problem</h3>
+<p>The highest upstream gap is constitutive event selection.</p>
+<p>The framework currently contains exact transport structure, exact receipt reconstruction once source data exist, and a falsifiable observable layer. It does not yet derive from the closed finite carrier alone a unique source law that decides the general event polarity and multiplicity.</p>
+<p>This gap is upstream of most proposed physical interpretations. Progress on the constitutive source law therefore has greater explanatory value than adding additional analog hardware platforms or numerical correspondences.</p>
+<h2 id="conclusion">9. Conclusion</h2>
+<p>The finite tetrahedral carrier supports a replayable chain complex, exact skew Hodge–Dirac support transport, finite branch structure, retriangulation constraints, and an exact projective receipt for the chain ray. The PSR identifies precisely which support and sign information is sufficient, proves which earlier receipt summaries are insufficient, and yields an intrinsic held-out test on the same observable algebra.</p>
+<p>These results define a finite mathematical and experimental-methods program. They do not yet constitute a physical theory of spacetime, matter, gauge fields, or measured constants. The next scientific step is therefore twofold but ordered: execute the already-preregistered observable realization, and independently advance the constitutive event-source law that determines which receipt is produced.</p>
+<h1 id="appendix-a.-explicit-tetrahedral-boundary-matrices">Appendix A. Explicit tetrahedral boundary matrices</h1>
+<p>In the ordered bases <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>01</mn><mo>,</mo><mn>02</mn><mo>,</mo><mn>03</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>13</mn><mo>,</mo><mn>23</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mn>012</mn><mo>,</mo><mn>013</mn><mo>,</mo><mn>023</mn><mo>,</mo><mn>123</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+(01,02,03,12,13,23),
+\qquad
+(012,013,023,123),
+</annotation></semantics></math> the canonical matrices are <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+B_1=
+\begin{pmatrix}
+-1&amp;-1&amp;-1&amp;0&amp;0&amp;0\\
+1&amp;0&amp;0&amp;-1&amp;-1&amp;0\\
+0&amp;1&amp;0&amp;1&amp;0&amp;-1\\
+0&amp;0&amp;1&amp;0&amp;1&amp;1
+\end{pmatrix},
+</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">
+B_2=
+\begin{pmatrix}
+1&amp;1&amp;0&amp;0\\
+-1&amp;0&amp;1&amp;0\\
+0&amp;-1&amp;-1&amp;0\\
+1&amp;0&amp;0&amp;1\\
+0&amp;1&amp;0&amp;-1\\
+0&amp;0&amp;1&amp;1
+\end{pmatrix},
+</annotation></semantics></math> and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>3</mn></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+B_3=
+\begin{pmatrix}
+-1\\
+1\\
+-1\\
+1
+\end{pmatrix}.
+</annotation></semantics></math></p>
+<p>Direct multiplication gives <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>B</mi><mn>2</mn></msub><msub><mi>B</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+B_1B_2=0,
+\qquad
+B_2B_3=0.
+</annotation></semantics></math></p>
+<h1 id="appendix-b.-retriangulation-spectra-and-preserved-relay-details">Appendix B. Retriangulation spectra and preserved relay details</h1>
+<p>The exact characteristic polynomials used in Section 5 are <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>χ</mi><mi>A</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>λ</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>4</mn></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>7</mn></msup><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\chi_A(\lambda)
+=
+\lambda(\lambda^2+3)^4(\lambda^2+5)^7,
+</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>χ</mi><mi>B</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>χ</mi><mi>C</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>λ</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>11</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\chi_B(\lambda)
+=
+\chi_C(\lambda)
+=
+\lambda(\lambda^2+2)^2(\lambda^2+5)^{11}.
+</annotation></semantics></math></p>
+<p>The full source manuscript additionally derives: - the exact B/C signed-permutation chain isomorphism; - the dimension-changing A-to-B inclusion residual; - protected and vulnerable spectral subspaces; - exact action-budget transfer through the current relay; - the lifted loop-history action functional; - the no-go for one universal scalar conversion from endpoint loop defect to accumulated action.</p>
+<p>Those statements are preserved unchanged in Supplement S4 and in the full v1.9 source manuscript. They are not required for the central PSR theorem chain.</p>
+<h1 id="appendix-c.-psr-proof-and-uncertainty-details">Appendix C. PSR proof and uncertainty details</h1>
+<p>For positive support on one forest edge <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>σ</mi><mo>,</mo><mi>τ</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\sigma,\tau)</annotation></semantics></math>, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>J</mi><mrow><mi>σ</mi><mi>τ</mi></mrow><mn>2</mn></msubsup><mo>=</mo><mn>4</mn><msub><mi>q</mi><mi>σ</mi></msub><msub><mi>q</mi><mi>τ</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+J_{\sigma\tau}^2=4q_\sigma q_\tau.
+</annotation></semantics></math> A resolved relative sign and one root sign per support component determine every coefficient sign on the forest. The normalized coefficient magnitudes are <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><msub><mi>ρ</mi><mi>σ</mi></msub></msqrt><annotation encoding="application/x-tex">\sqrt{\rho_\sigma}</annotation></semantics></math>, so reconstruction follows by sign propagation.</p>
+<p>With certified current interval <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><msub><mi>J</mi><mo>min</mo></msub><mo>≤</mo><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>J</mi><mrow><mi>σ</mi><mi>τ</mi></mrow></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><msub><mi>J</mi><mo>max</mo></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">
+0&lt;J_{\min}\le |J_{\sigma\tau}|\le J_{\max},
+</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>σ</mi></msub><mo>=</mo><mo>ln</mo><msub><mi>q</mi><mi>σ</mi></msub></mrow><annotation encoding="application/x-tex">x_\sigma=\ln q_\sigma</annotation></semantics></math>, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>ln</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>J</mi><mo>min</mo></msub><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><msub><mi>x</mi><mi>σ</mi></msub><mo>+</mo><msub><mi>x</mi><mi>τ</mi></msub><mo>≤</mo><mn>2</mn><mo>ln</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>J</mi><mo>max</mo></msub><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+2\ln(J_{\min}/2)
+\le
+x_\sigma+x_\tau
+\le
+2\ln(J_{\max}/2).
+</annotation></semantics></math> Together with the logged stock intervals, the magnitude feasibility problem is linear. Root-probe constraints remain exact quadratic preimages. Zero-crossing support or sign intervals are reported as indeterminate.</p>
+<p>The complete derivations, authenticated receipt schema, robustness cases, and experimental custody protocol are retained in the supplementary research package.</p>
+<hr />
+<h2 id="publication-claim-boundary">Publication claim boundary</h2>
+<p>This v2.0 manuscript is an editorial refactor of the governed v1.9 scientific source. No theorem, no-go, claim status, ledger value, or provenance ruling is changed by this refactor.</p>
