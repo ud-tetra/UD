@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "scope": "Conditional exact linear-algebra selection gates; no source-law adoption",
+  "physical_promotion": 0,
+  "independent_human_review": "PENDING",
+  "dimensions": {
+    "old": 15,
+    "fine": 149,
+    "complement": 134
+  },
+  "fixed_retraction_metric_family": "HS=R^T G iff H=R^T G R+Q^T W Q, with W SPD on ker R",
+  "complete_compatible_pair_classification": "All SPD compatible H induce chain retraction R_H=G^-1 S^T H; H=R_H^T G R_H+Q_H^T H Q_H",
+  "induced_retraction_in_both_metric_examples": "Exactly the affine source-coordinate retraction R",
+  "metric_cases": [
+    {
+      "w": "1",
+      "barycenter_01_norm_squared": "2"
+    },
+    {
+      "w": "2",
+      "barycenter_01_norm_squared": "7/2"
+    }
+  ],
+  "three_compatibility_conditions": "PASS for both metrics",
+  "symmetry": "Both metrics invariant under all 24 S4 relabelings",
+  "metric_nonuniqueness": true,
+  "observable_cases": [
+    {
+      "lambda": "0",
+      "barycenter_01_value": "1/2",
+      "calibrated_on_coarse_code": true,
+      "positive_and_dominated_by_H1": true,
+      "complement_blind": true
+    },
+    {
+      "lambda": "1/2",
+      "barycenter_01_value": "5/4",
+      "calibrated_on_coarse_code": true,
+      "positive_and_dominated_by_H1": true,
+      "complement_blind": false
+    },
+    {
+      "lambda": "1",
+      "barycenter_01_value": "2",
+      "calibrated_on_coarse_code": true,
+      "positive_and_dominated_by_H1": true,
+      "complement_blind": false
+    }
+  ],
+  "observable_nonuniqueness_at_fixed_metric": true,
+  "complement_blind_observable": "Unique after calibration and complement-blindness: K=R^T D R",
+  "diagonal_metric_generator_no_go": {
+    "coarse_vertex": [
+      0
+    ],
+    "fine_flag": [
+      2,
+      3
+    ],
+    "diagonal_metric_raising_coefficient": "0",
+    "transported_coarse_raising_coefficient": "1"
+  },
+  "metric_selection_source_gate": "Source-authored retraction and complement pairing remain required",
+  "observable_selection_source_gate": "Source-authored coarse observable and complement-blind semantics remain required",
+  "checker_sha256": "c57f36353db15b3ec5db63ac98a77307fb4055ea6c4ce19bf8b80f3406c7f142",
+  "current_subdivision_implementation_sha256": "1bc01c94ac77a723622060736f0c4cf586fceefea1a037ac899f65ee3d6d414f"
+}
