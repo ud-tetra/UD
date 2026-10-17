@@ -1,0 +1,52 @@
+{
+  "status": "CONSTRUCTOR_TARGETED_IMPLEMENTATION_FROZEN_BEFORE_NEW_EXECUTION",
+  "created_utc": "2026-10-17T19:39:17.589797+00:00",
+  "known_prior_controls": true,
+  "independent_preregistration": false,
+  "physical_promotion": 0,
+  "code_sha256": {
+    "propose_complementary.py": "7285e45458f9983324eb1e1532233f9016195fabbd93bac0978354207106e604",
+    "certify_sketch.py": "b786795a4534598eeb501488353ac7ce79c332197bb5424aed1f3ba0e984f513",
+    "certify_record.py": "1f2f036018cd0de46a26c1db7d0232032f4fc5b5dd862e351eb0dbad8e36334b",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "residual_preflight.py": "fc4a7c9770f6e222c52ae802711c13ab792e56c4ab5d68366b191153f98dbb5a"
+  },
+  "contract_sha256": "ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c",
+  "rule_sha256": "c7017102c67c83bdf123a79a298917d49697a06fa69773eb3087ec428c8dcc26",
+  "witness_sha256": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+  "cases": [
+    {
+      "case": "clean",
+      "record_path": "../observer-work/inputs/normalized_history.i64le",
+      "record_sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+      "planned_scope": "full positive sketch check; proposal; no new full Hankel proof needed"
+    },
+    {
+      "case": "bounded_null_impulse",
+      "record_path": "../sketch-blind-work/records/bounded_null_impulse.i64le",
+      "record_sha256": "edf24bc22f53bd51ada813462374a929d297615c840ff3512f15d54a89935e3c",
+      "planned_scope": "sketch check; new proposal; full Hankel certificate"
+    },
+    {
+      "case": "bounded_null_alternating",
+      "record_path": "../sketch-blind-work/records/bounded_null_alternating.i64le",
+      "record_sha256": "d7176ec724691b9364ce630a8ff778466541bd3d06d29589bc83e73a962cc61c",
+      "planned_scope": "sketch check and proposal"
+    },
+    {
+      "case": "strong_null_alternating",
+      "record_path": "../sketch-blind-work/records/strong_null_alternating.i64le",
+      "record_sha256": "a4423d82b61bbf23a7ecaf445ed28d2c0d7e06b000f76f7ac0b8ea24c8622875",
+      "planned_scope": "sketch check and preserved proposer outcome including HOLD"
+    },
+    {
+      "case": "dense_sign",
+      "record_path": "../noise-campaign/records/dense_sign.i64le",
+      "record_sha256": "4c33c76fd688a5f23ae4f9aa318fe9976aee7dce51adced101b3ff8ca370851b",
+      "planned_scope": "sketch check and proposal"
+    }
+  ],
+  "acceptance": "Frozen full Hankel threshold, count1893, cap2029 unchanged; discovery sketch is new development version, no retroactive admission",
+  "failures": "Retain every run and HOLD; no optimizer retry or model/order extension in this campaign",
+  "setup_note": "Before freeze, validation rejected a mistaken 2294-entry assumption: pinned witness stores its first320 entries, followed implicitly by1974 zeros. A setup invocation without a freeze failed before reading any record. Logs retained; code corrected before actual campaign."
+}
