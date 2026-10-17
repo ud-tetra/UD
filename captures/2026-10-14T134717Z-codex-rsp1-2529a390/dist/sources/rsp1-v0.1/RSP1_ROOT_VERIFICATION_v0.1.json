@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "root_no_bank_states_stock_0_to_3": 5488,
+  "large_cursor_bank_example_committed_updates": 55,
+  "invalid_initial_states_rejected": [
+    "negative_stock",
+    "boolean_counter",
+    "bad_mask",
+    "viability_exceeds_response",
+    "wrong_branch",
+    "bad_cursor",
+    "bank_not_finite_queue",
+    "broken_integrity_stock"
+  ],
+  "parallel_initial_states": 41664,
+  "parallel_targeted_states": 6,
+  "parallel_relabel_comparisons": 250020,
+  "implementation_sha256": "8e9db2e432d9defb78dde206ac8c39714f291c0d9ecb8dc63279d0496e9f7ca8",
+  "theorem_sha256": "2b48098d6a477f1de5e45b27ef4f57c723486a25a684953f69b8a913beb82e4e",
+  "parallel_receipt_sha256": "fde3f283fc9b06e6e20bc46dfcdb0bccd46dea9c737157615399b23e38b8ca51",
+  "source_scope_review_sha256": "fef895cdbac76c2380f8ddd62716206fdc23441448f93b0ea9b5bfbf18e77356",
+  "checks": [
+    "finite admitted recurrence",
+    "strict global potential",
+    "exact C pulse duration and token/toggle balance",
+    "H finite latch bound",
+    "source-null and zero-budget bit events",
+    "zero refill pointer progress",
+    "complete-state stopping",
+    "visible projection counterexample",
+    "input rejection",
+    "parallel evidence hash binding"
+  ],
+  "scope": "Constructor-team mathematics and separate AI scope audit; no native realization, independent human proof review, registry promotion or empirical score."
+}
