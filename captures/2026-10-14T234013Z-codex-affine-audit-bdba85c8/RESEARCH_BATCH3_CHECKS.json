@@ -1,0 +1,127 @@
+{
+  "scope": "Independent finite-model checks; no physical or independent-review promotion",
+  "passed": true,
+  "checks": {
+    "primitive_action_closure": {
+      "passed": true,
+      "primitive": 24,
+      "closure": 48
+    },
+    "C2_times_S4_bijection": {
+      "passed": true
+    },
+    "C2_times_S4_homomorphism": {
+      "passed": true
+    },
+    "projective_cocycle": {
+      "passed": true,
+      "triples": 110592
+    },
+    "nontrivial_projective_commutator": {
+      "passed": true,
+      "commuting_group_elements": true,
+      "anticommuting_lifts": true
+    },
+    "semidirect_104_classes": {
+      "passed": true,
+      "order": 104,
+      "class_sizes": {
+        "26": 2,
+        "2": 25,
+        "1": 2
+      }
+    },
+    "complex_irrep_dimensions": {
+      "passed": true,
+      "linear": 4,
+      "dimension_two": 25
+    },
+    "F7_Wedderburn_correction": {
+      "passed": true,
+      "matrix_two_extension_degrees": [
+        1,
+        6,
+        6,
+        12
+      ],
+      "correct_dimension": 104,
+      "imported_dimension": 56
+    },
+    "affine_group_algebra_dimension": {
+      "passed": true,
+      "affine": 48,
+      "with_optional_C13": 624
+    },
+    "eight_terminal_unitarity": {
+      "passed": true
+    },
+    "eight_terminal_dc_solution": {
+      "passed": true,
+      "potentials_in_I_h_over_e2": [
+        "-1/(z - 1)",
+        "-z/(2*(z - 1))",
+        "0",
+        "(z - 2)/(2*(z - 1))",
+        "-(z + 1)/(2*(z - 1))",
+        "-1/(2*(z - 1))",
+        "1/2",
+        "-1/(2*(z - 1))"
+      ],
+      "domain": "0<z<1"
+    },
+    "conditional_Hall_and_conductance": {
+      "passed": true,
+      "Rxy_in_h_over_e2": -1,
+      "G_in_e2_over_h": "1-z",
+      "R14": "z/(2*(1-z))"
+    },
+    "endpoint_qualifications": {
+      "passed": true,
+      "z0_rank": 6,
+      "z1_incompatible_nonzero_injected_current": true
+    },
+    "shot_noise_normalization": {
+      "passed": true,
+      "fixed_incident_current": "2*I0*e*z*(1 - z)",
+      "fixed_measured_current": "2*I*e*z",
+      "full_eight_terminal_voltage_probe_noise": "OPEN"
+    },
+    "O_pair_partition": {
+      "passed": true,
+      "same_address_same_parity": 18,
+      "same_address_cross_parity": 27,
+      "cross_address_same_parity": 54,
+      "cross_address_cross_parity": 54
+    },
+    "FO_count_and_weight_compatibility": {
+      "passed": true,
+      "cartesian": 144,
+      "ordered_F_then_Q_weight_compatible": 36,
+      "either_order_weight_compatible": 72
+    },
+    "E_pair_partition": {
+      "passed": true,
+      "same_address_same_parity": 18,
+      "same_address_cross_parity": 27,
+      "cross_address_same_parity": 54,
+      "cross_address_cross_parity": 54
+    },
+    "FE_count_and_weight_compatibility": {
+      "passed": true,
+      "cartesian": 144,
+      "ordered_F_then_Q_weight_compatible": 36,
+      "either_order_weight_compatible": 72
+    },
+    "quadratic_burden_is_not_event_label": {
+      "passed": true,
+      "activation": "k*(2*n+1)",
+      "deactivation": "k*(1-2*n)",
+      "work_identification": "NOT_DERIVED"
+    }
+  },
+  "count": 19,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "sympy": "1.14.0"
+  }
+}
