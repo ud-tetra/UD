@@ -1,0 +1,145 @@
+{
+  "status": "TARGETED_COMPLEMENT_CAMPAIGN_EXECUTED",
+  "created_utc": "2026-10-17T19:42:25.407783+00:00",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "known_constructed_records": true,
+  "new_independent_data": false,
+  "cases": [
+    {
+      "case": "clean",
+      "record_sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+      "exact_sketch_order": 105,
+      "retained_condition_upper": [
+        35759459825489507140525766679471,
+        1267650600228229401496703205376
+      ],
+      "readable_bounds": {
+        "sigma_retained_lower": 0.1459175293212987,
+        "sigma_largest_upper": 4.116222582673983,
+        "sigma_discarded_upper": 3.218225321506475e-06,
+        "condition_upper": 28.20923984815006,
+        "cutoff": 0.009994547932194514,
+        "noise_envelope": 0.004997273966097257
+      },
+      "proposer_status": "UNTRUSTED_PROPOSAL_ONLY",
+      "prior_original_sketch_order": 105,
+      "full_Hankel_replay_in_this_campaign": false
+    },
+    {
+      "case": "bounded_null_impulse",
+      "record_sha256": "edf24bc22f53bd51ada813462374a929d297615c840ff3512f15d54a89935e3c",
+      "exact_sketch_order": 105,
+      "retained_condition_upper": [
+        35759459823734719888353347307552,
+        1267650600228229401496703205376
+      ],
+      "readable_bounds": {
+        "sigma_retained_lower": 0.1459175293490477,
+        "sigma_largest_upper": 4.116222583254771,
+        "sigma_discarded_upper": 3.7526350500272103e-06,
+        "condition_upper": 28.209239846765776,
+        "cutoff": 0.009994547932194514,
+        "noise_envelope": 0.004997273966097257
+      },
+      "proposer_status": "UNTRUSTED_PROPOSAL_ONLY",
+      "prior_original_sketch_order": 105,
+      "full_Hankel_replay_in_this_campaign": true
+    },
+    {
+      "case": "bounded_null_alternating",
+      "record_sha256": "d7176ec724691b9364ce630a8ff778466541bd3d06d29589bc83e73a962cc61c",
+      "exact_sketch_order": 105,
+      "retained_condition_upper": [
+        35759459839003262530622697132606,
+        1267650600228229401496703205376
+      ],
+      "readable_bounds": {
+        "sigma_retained_lower": 0.1459175292725142,
+        "sigma_largest_upper": 4.11622258285336,
+        "sigma_discarded_upper": 3.844433034946801e-05,
+        "condition_upper": 28.20923985881053,
+        "cutoff": 0.009994547932194514,
+        "noise_envelope": 0.004997273966097257
+      },
+      "proposer_status": "UNTRUSTED_PROPOSAL_ONLY",
+      "prior_original_sketch_order": 105,
+      "full_Hankel_replay_in_this_campaign": false
+    },
+    {
+      "case": "strong_null_alternating",
+      "record_sha256": "a4423d82b61bbf23a7ecaf445ed28d2c0d7e06b000f76f7ac0b8ea24c8622875",
+      "exact_sketch_order": 106,
+      "retained_condition_upper": [
+        35779203705318863965356833722284,
+        1267650600228229401496703205376
+      ],
+      "readable_bounds": {
+        "sigma_retained_lower": 0.1459054441015908,
+        "sigma_largest_upper": 4.118154170625524,
+        "sigma_discarded_upper": 4.39601763339314e-06,
+        "condition_upper": 28.224815023064817,
+        "cutoff": 0.009994547932194514,
+        "noise_envelope": 0.004997273966097257
+      },
+      "proposer_status": "HOLD",
+      "prior_original_sketch_order": 105,
+      "full_Hankel_replay_in_this_campaign": false
+    },
+    {
+      "case": "dense_sign",
+      "record_sha256": "4c33c76fd688a5f23ae4f9aa318fe9976aee7dce51adced101b3ff8ca370851b",
+      "exact_sketch_order": 105,
+      "retained_condition_upper": [
+        35759450853457735364785275618622,
+        1267650600228229401496703205376
+      ],
+      "readable_bounds": {
+        "sigma_retained_lower": 0.14591755861251418,
+        "sigma_largest_upper": 4.116222376198376,
+        "sigma_discarded_upper": 1.0116926005179092e-05,
+        "condition_upper": 28.20923277046495,
+        "cutoff": 0.009994547932194514,
+        "noise_envelope": 0.004997273966097257
+      },
+      "proposer_status": "UNTRUSTED_PROPOSAL_ONLY",
+      "prior_original_sketch_order": 105,
+      "full_Hankel_replay_in_this_campaign": false
+    }
+  ],
+  "strong_certified_discovery_and_proposal_wall_seconds": 5.851401711002836,
+  "strong_HOLD_reason": "Current proposer only models one stationary mode plus non-Nyquist conjugate pairs; the detected106-component order is unsupported. No true full-record spectral failure conclusion.",
+  "full_positive_status": "CERTIFIED_NUMERIC_RECORD_SIGNATURE",
+  "full_positive_bounds": {
+    "sigma_r_lower": 0.00011933958592609249,
+    "sigma_1_upper": 0.08432947136878693,
+    "sigma_r_plus1_upper": 1.0944435905731162e-08,
+    "condition_upper": 706.6345229403806
+  },
+  "full_positive_benchmark": {
+    "status": "CERTIFIED_NUMERIC_RECORD_SIGNATURE",
+    "wall_seconds": 108.56346004200168,
+    "peak_rss_kib": 2090464,
+    "dense_hankel_allocated": false,
+    "dense_hankel_bytes_avoided": 307895468032,
+    "source_operator_or_nominal_modes_used": false,
+    "readable_bounds": {
+      "sigma_r_lower": 0.00011933958592609249,
+      "sigma_1_upper": 0.08432947136878693,
+      "sigma_r_plus1_upper": 1.0944435905731162e-08,
+      "condition_upper": 706.6345229403806
+    },
+    "executed_code_sha256": {
+      "certify_record.py": "1f2f036018cd0de46a26c1db7d0232032f4fc5b5dd862e351eb0dbad8e36334b",
+      "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+      "residual_preflight.py": "fc4a7c9770f6e222c52ae802711c13ab792e56c4ab5d68366b191153f98dbb5a"
+    }
+  },
+  "new_version_not_retroactive_acquisition_admission": true,
+  "no_universal_fitting_convergence_claim": true,
+  "reduced_sketch_kernel_dimensions": [
+    2134,
+    2133
+  ],
+  "nominal_dynamical_observer_kernel_747_unchanged": true
+}
