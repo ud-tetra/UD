@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "check_families": 20,
+  "checks": {
+    "skew_and_chain": {
+      "passed": true
+    },
+    "pair_projectors": {
+      "passed": true
+    },
+    "pair_0_symbolic_coupling": {
+      "passed": true,
+      "beta_squared": "2*(a**2+b**2)",
+      "third_channel_direct_dependence": false
+    },
+    "pair_0_stock_derivative": {
+      "passed": true
+    },
+    "pair_1_symbolic_coupling": {
+      "passed": true,
+      "beta_squared": "2*(a**2+b**2)",
+      "third_channel_direct_dependence": false
+    },
+    "pair_1_stock_derivative": {
+      "passed": true
+    },
+    "pair_2_symbolic_coupling": {
+      "passed": true,
+      "beta_squared": "2*(a**2+b**2)",
+      "third_channel_direct_dependence": false
+    },
+    "pair_2_stock_derivative": {
+      "passed": true
+    },
+    "zero_direct_channel": {
+      "passed": true
+    },
+    "signed_symmetry_and_stock_covariance": {
+      "passed": true,
+      "group_actions": 24,
+      "projector_identities": 72
+    },
+    "exact_vertex_trajectory": {
+      "passed": true
+    },
+    "symmetric_stock_trajectory": {
+      "passed": true,
+      "pair_stock": "sin(2*t)**2/4"
+    },
+    "transverse_simultaneous_switches": {
+      "passed": true,
+      "first_on": "pi/6",
+      "first_off": "5*pi/12",
+      "all_three_addresses": true
+    },
+    "no_equivariant_single_address_at_symmetric_state": {
+      "passed": true,
+      "stabilizer_order": 6,
+      "fixed_addresses": []
+    },
+    "canonical_angular_bound_attainment": {
+      "passed": true,
+      "attainable_crossing_time": "(asin(sqrt(hi))-asin(sqrt(lo)))/2"
+    },
+    "half_gap_noise_threshold_sharpness": {
+      "passed": true,
+      "true_stock": "1/2",
+      "thresholds": [
+        "3/8",
+        "5/8"
+      ],
+      "noise": "sin(M*s)/8",
+      "effect": "arbitrarily many toggles as M grows; no amplitude-only uniform count bound at epsilon=gap/2"
+    },
+    "no_uniform_global_interevent_gap": {
+      "passed": true,
+      "argument": "A crossing approaches the simultaneous B/C crossing as eta tends to zero from above",
+      "scope": "per-address dwell does not give a positive uniform global event separation"
+    },
+    "transverse_timing_numerical_corollary": {
+      "passed": true,
+      "status": "NUMERICAL_CORROBORATION_OF_WRITTEN_CALCULUS_PROOF",
+      "largest_constant_bias_shift": 0.037883189334683195,
+      "proved_bound": "sqrt(39)/156"
+    },
+    "bounded_noise_gap": {
+      "passed": true,
+      "epsilon": "1/64",
+      "effective_gap": "3/32",
+      "linear_dwell": "3/64"
+    },
+    "serialization_count": {
+      "passed": true,
+      "orders": 6,
+      "worst_case_order_receipt_bits": 3
+    }
+  },
+  "scope": "Exact finite carrier and declared passive hysteresis controller; written proofs supply general dwell/noise bounds.",
+  "status": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "physical_promotion": 0,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "sympy": "1.14.0"
+  }
+}
