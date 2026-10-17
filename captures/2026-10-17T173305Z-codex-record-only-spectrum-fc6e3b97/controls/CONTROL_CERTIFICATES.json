@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "scope": "Full-size encoded-record perturbation certificates from base rank-r approximation; proposer not rerun; no metrology or hidden-dynamics claim.",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "exact_full_record_difference_scans": 2,
+  "controls": [
+    {
+      "control": "bounded_vector_impulse",
+      "recipe": {
+        "base_sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+        "coordinate": [
+          0,
+          4095,
+          0
+        ],
+        "raw_int64_increment": 268435456
+      },
+      "modified_record_sha256": "4e444414bd91989e056c3d6c2a4dfcfb6fb422e04c1577ee417d662631ed5902",
+      "changed_entries_verified": 1,
+      "hankel_difference_frobenius": [
+        1,
+        67108864
+      ],
+      "hankel_difference_singular_value": [
+        1,
+        4294967296
+      ],
+      "difference_rank": 4096,
+      "numeric_signature_certified": true,
+      "sigma_r_lower": [
+        75637940274241645616025051,
+        633825300114114700748351602688
+      ],
+      "sigma_1_upper": [
+        53450155009115354029316802269,
+        633825300114114700748351602688
+      ],
+      "tail_upper": [
+        9445450010407379925323,
+        633825300114114700748351602688
+      ],
+      "condition_upper": [
+        53450155009115354029316802269,
+        75637940274241645616025051
+      ],
+      "status": "CERTIFIED_NUMERIC_RECORD_SIGNATURE",
+      "vector_impulse_amplitude": [
+        1,
+        1048576
+      ]
+    },
+    {
+      "control": "strong_rank_breach_impulse",
+      "recipe": {
+        "base_sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+        "coordinate": [
+          0,
+          4095,
+          0
+        ],
+        "raw_int64_increment": 281474976710656
+      },
+      "modified_record_sha256": "931de1e3f4cece8ef81994b328e037db3d8aaa8f2b8400e06ef7f0a7e1dd28a1",
+      "changed_entries_verified": 1,
+      "hankel_difference_frobenius": [
+        1,
+        64
+      ],
+      "hankel_difference_singular_value": [
+        1,
+        4096
+      ],
+      "difference_rank": 4096,
+      "numeric_signature_certified": false,
+      "sigma_r_lower": [
+        -9827872929275834814286541349,
+        633825300114114700748351602688
+      ],
+      "sigma_1_upper": [
+        63353665878665430489219368669,
+        633825300114114700748351602688
+      ],
+      "tail_upper": [
+        9903520315000086867282491723,
+        633825300114114700748351602688
+      ],
+      "condition_upper": null,
+      "guaranteed_count_above_threshold_at_least": 2203,
+      "sigma_r_plus1_lower": [
+        154742504193627866272892597,
+        633825300114114700748351602688
+      ],
+      "actual_signature_breach_proved": true,
+      "status": "CERTIFIED_FROZEN_RANK_BREACH"
+    }
+  ],
+  "seconds": 3.726957061999201
+}

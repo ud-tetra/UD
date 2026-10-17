@@ -1,0 +1,111 @@
+{
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "R01",
+      "status": "EXACT",
+      "claim": "Complete weighted integer record residual and energy; original payload losslessly restored.",
+      "origin": "this record-only development capture",
+      "constructor": "Codex",
+      "reviewers": [
+        "constructor only"
+      ],
+      "dependencies": [
+        "record bytes",
+        "dyadic phase dictionary"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "R02",
+      "status": "DERIVED",
+      "claim": "Actual record-only retained spectrum and complete projection tail.",
+      "origin": "this record-only development capture",
+      "constructor": "Codex",
+      "reviewers": [
+        "constructor only"
+      ],
+      "dependencies": [
+        "R01",
+        "validated factor Grams",
+        "exact Cholesky/SVD residuals"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "R03",
+      "status": "DERIVED",
+      "claim": "Bounded full-size perturbation preserves signature; strong perturbation provably breaches target count.",
+      "origin": "this record-only development capture",
+      "constructor": "Codex",
+      "reviewers": [
+        "constructor only"
+      ],
+      "dependencies": [
+        "R02",
+        "exact full-record difference scans",
+        "rank perturbation inequality"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "R04",
+      "status": "EXACT_CONDITIONAL",
+      "claim": "Norm-ball and uniform vector-error signature robustness; premise receipts remain unvalidated.",
+      "origin": "this record-only development capture",
+      "constructor": "Codex",
+      "reviewers": [
+        "constructor only"
+      ],
+      "dependencies": [
+        "R02",
+        "frozen error ceiling",
+        "Weyl inequality"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "R05",
+      "status": "NUMERICAL",
+      "claim": "Measured proposer/verifier time and RSS; source-code fingerprints attached.",
+      "origin": "this record-only development capture",
+      "constructor": "Codex",
+      "reviewers": [
+        "constructor only"
+      ],
+      "dependencies": [
+        "record benchmark execution"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "R06",
+      "status": "LOCKED_SCOPE_NO_GO",
+      "claim": "Sampled data alone do not uniquely select a continuous generator without a frequency restriction.",
+      "origin": "this record-only development capture",
+      "constructor": "Codex",
+      "reviewers": [
+        "constructor only"
+      ],
+      "dependencies": [
+        "rotation-plane alias identity"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "R07",
+      "status": "OPEN",
+      "claim": "Non-constructor review, apparatus data, metrology and broader noisy-proposal convergence.",
+      "origin": "this record-only development capture",
+      "constructor": "Codex",
+      "reviewers": [
+        "constructor only"
+      ],
+      "dependencies": [
+        "development status only"
+      ],
+      "lane": "development \u2014 no registry entry"
+    }
+  ]
+}
