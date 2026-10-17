@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "version": "0.1",
+  "reading_edition": "0.13",
+  "physical_promotion": 0,
+  "scope": "Exact conditional consistency for the same retained refinement sequence; no native metric/history/event adoption.",
+  "counts": [
+    {
+      "level": 0,
+      "f_vector": [
+        4,
+        6,
+        4,
+        1
+      ],
+      "dimension": 15,
+      "new_directions": 0,
+      "total_details": 0
+    },
+    {
+      "level": 1,
+      "f_vector": [
+        15,
+        50,
+        60,
+        24
+      ],
+      "dimension": 149,
+      "new_directions": 134,
+      "total_details": 134
+    },
+    {
+      "level": 2,
+      "f_vector": [
+        149,
+        796,
+        1224,
+        576
+      ],
+      "dimension": 2745,
+      "new_directions": 2596,
+      "total_details": 2730
+    },
+    {
+      "level": 3,
+      "f_vector": [
+        2745,
+        17000,
+        28080,
+        13824
+      ],
+      "dimension": 61649,
+      "new_directions": 58904,
+      "total_details": 61634
+    },
+    {
+      "level": 4,
+      "f_vector": [
+        61649,
+        396016,
+        666144,
+        331776
+      ],
+      "dimension": 1455585,
+      "new_directions": 1393936,
+      "total_details": 1455570
+    }
+  ],
+  "all_sparse_chain_identities": true,
+  "all_step_and_composite_retractions": true,
+  "sparse_nonzeros": {
+    "B2": 7568,
+    "S21": 1051,
+    "R21": 5027,
+    "S20": 748,
+    "R20": 7576
+  },
+  "factorial_detail_witnesses": [
+    {
+      "degree": 1,
+      "factor": 2,
+      "sequential_norm_squared": "2",
+      "fresh_composite_norm_squared": "4"
+    },
+    {
+      "degree": 2,
+      "factor": 6,
+      "sequential_norm_squared": "2",
+      "fresh_composite_norm_squared": "12"
+    },
+    {
+      "degree": 3,
+      "factor": 24,
+      "sequential_norm_squared": "2",
+      "fresh_composite_norm_squared": "48"
+    }
+  ],
+  "edge_detail_witness": {
+    "sequential": "2",
+    "fresh_composite": "4"
+  },
+  "probe_count": 12,
+  "probe_ledgers": [
+    {
+      "sequential_norm_squared": "1",
+      "fresh_composite_norm_squared": "1",
+      "coarse_stock": "1",
+      "first_detail_stock": "0",
+      "new_detail_stock": "0"
+    },
+    {
+      "sequential_norm_squared": "95/48",
+      "fresh_composite_norm_squared": "167/96",
+      "coarse_stock": "71/192",
+      "first_detail_stock": "23/64",
+      "new_detail_stock": "5/4"
+    },
+    {
+      "sequential_norm_squared": "11/16",
+      "fresh_composite_norm_squared": "13/16",
+      "coarse_stock": "1/16",
+      "first_detail_stock": "1/8",
+      "new_detail_stock": "1/2"
+    },
+    {
+      "sequential_norm_squared": "1259/768",
+      "fresh_composite_norm_squared": "2599/2304",
+      "coarse_stock": "59/2304",
+      "first_detail_stock": "275/1152",
+      "new_detail_stock": "11/8"
+    },
+    {
+      "sequential_norm_squared": "1111/1296",
+      "fresh_composite_norm_squared": "1261/1296",
+      "coarse_stock": "1/1296",
+      "first_detail_stock": "5/216",
+      "new_detail_stock": "5/6"
+    },
+    {
+      "sequential_norm_squared": "1111/1296",
+      "fresh_composite_norm_squared": "1261/1296",
+      "coarse_stock": "1/1296",
+      "first_detail_stock": "5/216",
+      "new_detail_stock": "5/6"
+    },
+    {
+      "sequential_norm_squared": "169969/165888",
+      "fresh_composite_norm_squared": "166147/165888",
+      "coarse_stock": "7/165888",
+      "first_detail_stock": "103/27648",
+      "new_detail_stock": "49/48"
+    },
+    {
+      "sequential_norm_squared": "169955/165888",
+      "fresh_composite_norm_squared": "166961/165888",
+      "coarse_stock": "29/165888",
+      "first_detail_stock": "97/27648",
+      "new_detail_stock": "49/48"
+    },
+    {
+      "sequential_norm_squared": "318505/331776",
+      "fresh_composite_norm_squared": "331201/331776",
+      "coarse_stock": "1/331776",
+      "first_detail_stock": "23/13824",
+      "new_detail_stock": "23/24"
+    },
+    {
+      "sequential_norm_squared": "318505/331776",
+      "fresh_composite_norm_squared": "331201/331776",
+      "coarse_stock": "1/331776",
+      "first_detail_stock": "23/13824",
+      "new_detail_stock": "23/24"
+    },
+    {
+      "sequential_norm_squared": "2",
+      "fresh_composite_norm_squared": "4",
+      "coarse_stock": "0",
+      "first_detail_stock": "2",
+      "new_detail_stock": "0"
+    },
+    {
+      "sequential_norm_squared": "3",
+      "fresh_composite_norm_squared": "5",
+      "coarse_stock": "1",
+      "first_detail_stock": "2",
+      "new_detail_stock": "0"
+    }
+  ],
+  "mixed_witness": {
+    "coarse_stock": "1",
+    "sequential_total": "3",
+    "fresh_composite_total": "5",
+    "sequential_coarse_fraction": "1/3",
+    "fresh_coarse_fraction": "1/5"
+  },
+  "complete_effect_count": 17,
+  "metric_regrouping": "PASS after transporting calibrated detail pairings; fresh unit composite fails on retained details",
+  "coarse_observable_composition": "R20=R10R21;K2=R21^T(R10^T D R10)R21=R20^T D R20",
+  "composite_detail_form": "PSD on ambient; positive definite on ker R20; kills the original coarse image",
+  "dense_2745_metric_materialized": false,
+  "source_adoption": "OPEN",
+  "independent_human_review": "PENDING",
+  "checker_sha256": "71ce48aed3c877ed2e8e838c7f9537c6d55652b2a9f61ac3a105ba7aa920ecbe"
+}
