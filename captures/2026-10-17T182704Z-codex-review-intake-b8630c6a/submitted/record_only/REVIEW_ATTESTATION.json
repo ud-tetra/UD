@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "artifact_type": "NON_CONSTRUCTOR_REVIEW_ATTESTATION",
+  "target_package": "UD_RECORD_ONLY_SPECTRAL_CERTIFICATE_v0.2",
+  "audit_version": "0.2.0-eval",
+  "control_posture": "CONTAINED_INVARIANT_VERIFIED",
+  "structural_completeness": true,
+  "runtime_constructor_invoked": false,
+  "spectral_invariants": {
+    "basis_orthogonality_verified": true,
+    "residual_norm_bounded": true,
+    "codec_bijection_verified": true
+  },
+  "separation_of_duties": {
+    "generator": "RUNTIME_SPECTRAL_CODEC",
+    "verifier": "NON_CONSTRUCTOR_INDEPENDENT_AUDIT",
+    "enforced": true
+  },
+  "attestation_verdict": "CERTIFICATE_STRUCTURALLY_ADMISSIBLE"
+}
