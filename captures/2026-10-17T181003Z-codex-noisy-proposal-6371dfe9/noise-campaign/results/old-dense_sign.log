@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/f3d1c2f040c9/observer-work/propose_record.py", line 41, in <module>
+    p=argparse.ArgumentParser();p.add_argument('record');p.add_argument('contract');p.add_argument('output');a=p.parse_args();run(a.record,a.contract,a.output)
+                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f3d1c2f040c9/observer-work/propose_record.py", line 22, in run
+    print('learned temporal dimension',q,'relative gap',s[q-1]/s[0],s[q]/s[0],flush=True)
+                                                                    ~^^^
+IndexError: index 160 is out of bounds for axis 0 with size 160

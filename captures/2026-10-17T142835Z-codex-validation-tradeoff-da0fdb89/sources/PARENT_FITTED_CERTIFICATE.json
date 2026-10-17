@@ -1,0 +1,377 @@
+{
+  "status": "EXACT_AND_INTERVAL_CONDITIONAL_CERTIFIED",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "fit_status": "Explicit candidate fitted centre; no empirical fit supplied or claimed",
+  "fitted_centre": {
+    "grade_Q": [
+      [
+        1,
+        1
+      ],
+      [
+        65,
+        64
+      ],
+      [
+        33,
+        32
+      ],
+      [
+        67,
+        64
+      ]
+    ],
+    "grade_H": [
+      [
+        1,
+        1
+      ],
+      [
+        4225,
+        4096
+      ],
+      [
+        1089,
+        1024
+      ],
+      [
+        4489,
+        4096
+      ]
+    ],
+    "common_rate": [
+      33,
+      32
+    ],
+    "native_rates": [
+      [
+        2145,
+        2048
+      ],
+      [
+        70785,
+        65536
+      ],
+      [
+        72963,
+        65536
+      ]
+    ],
+    "directed_ratios": [
+      [
+        2145,
+        2048
+      ],
+      [
+        1089,
+        1040
+      ],
+      [
+        67,
+        64
+      ],
+      [
+        66,
+        65
+      ],
+      [
+        65,
+        64
+      ],
+      [
+        1089,
+        1072
+      ]
+    ],
+    "formula": "Khat=c Q^-1 A Q = Hhat^-1 A(what)",
+    "all_sparse_entries_similarity_checked": 14880,
+    "H_skew_checked": true,
+    "input_formula": "Xhat=Q^-1 X",
+    "corrected_readout": "R Q; if raw readout isR, multiply each measured channel byits fitted gradeQ factor",
+    "sampling_step": [
+      16,
+      33
+    ],
+    "raw_preparation_squared_norm": [
+      429235381321,
+      465403494270
+    ],
+    "Hhat_stock_each": [
+      165,
+      169
+    ],
+    "input_whitening_norm": [
+      67,
+      64
+    ],
+    "output_correction_norm": [
+      33,
+      32
+    ],
+    "raw_to_normalized_sufficient_error_factors": {
+      "preparation_raw_ceiling_factor": [
+        64,
+        67
+      ],
+      "raw_readout_operator_ceiling_factor": [
+        32,
+        33
+      ],
+      "raw_additive_vector_ceiling_factor": [
+        32,
+        33
+      ],
+      "raw_origin_and_jitter_ceiling_factor": [
+        32,
+        33
+      ]
+    },
+    "known_offset_penalty": "zero under the exact coordinate/input/readout/time transfer"
+  },
+  "common_scale_family": {
+    "q_range": [
+      [
+        1023,
+        1024
+      ],
+      [
+        1025,
+        1024
+      ]
+    ],
+    "uncertainty": [
+      1,
+      1024
+    ],
+    "constant_over_entire_run": true,
+    "temporal_C_upper_rational": [
+      1828864,
+      1021
+    ],
+    "sine_proof": "For0<x<2, sinx>=x/3. Thus|sin(qx)| >= (1-3d) sinx for|q-1|<=d. C(q)<=C/(1-3d).",
+    "modal_blocks_unchanged": true,
+    "primitive_common_factor_ceiling_each": [
+      1,
+      4096
+    ],
+    "primitive_scale_formula": "q=alpha*beta/lambda, for common clock, rate and metric scales; each within1/4096 ofone",
+    "primitive_q_enclosure": [
+      [
+        16769025,
+        16781312
+      ],
+      [
+        16785409,
+        16773120
+      ]
+    ],
+    "requires_separate_identification_of_factors_for_signal_rank": false
+  },
+  "residual_model": "G=Htilde^-1(q A+DeltaA+J), q in common scale interval, ||Htilde-I||<=eta, ||DeltaA||<=4r, J skew, ||J||<=sigma",
+  "residual_generator_bound": [
+    2305,
+    8796093021952
+  ],
+  "propagator_bound": {
+    "arb_enclosure": "[1.000000000029103830457157220086920726121178508609104537435101218479840672488 +/- 5.22e-76]",
+    "display_only": 1.0000000000291038
+  },
+  "response_error_u": {
+    "arb_enclosure": "[8.888914342799552393698551321264108669320206651270292705067666875708529707162e-8 +/- 5.86e-84]",
+    "display_only": 8.888914342799553e-08
+  },
+  "response_error_v": {
+    "arb_enclosure": "[2.589284287991259905033181721658665368933064237548410773782718017939407941952e-10 +/- 4.22e-86]",
+    "display_only": 2.58928428799126e-10
+  },
+  "residual_tolerances": {
+    "preparation": [
+      1,
+      33554432
+    ],
+    "readout": [
+      1,
+      33554432
+    ],
+    "additive_output": [
+      1,
+      67108864
+    ],
+    "origin": [
+      1,
+      536870912
+    ],
+    "jitter": [
+      1,
+      536870912
+    ],
+    "rate_shape_each": [
+      1,
+      34359738368
+    ],
+    "metric_shape": [
+      1,
+      34359738368
+    ],
+    "extra_skew": [
+      1,
+      34359738368
+    ]
+  },
+  "improvements": {
+    "effective_common_scale_tolerance_ratio_to_old_clock_cap": [
+      268435456,
+      1
+    ],
+    "primitive_common_factor_tolerance_ratio_to_old_rate_metric_cap": [
+      67108864,
+      1
+    ],
+    "residual_rate_metric_extra_skew_tolerance_ratio": [
+      8,
+      1
+    ]
+  },
+  "protocols": [
+    {
+      "axis_samples": 2048,
+      "fitted_raw_sampling_step": [
+        16,
+        33
+      ],
+      "last_fitted_raw_time": [
+        65504,
+        33
+      ],
+      "normalized_last_time": [
+        2047,
+        1
+      ],
+      "raw_vectors_per_preparation": 4095,
+      "temporal_epsilon_upper": [
+        7,
+        8
+      ],
+      "nominal_common_family_rank": 1893,
+      "nominal_family_condition_bound": [
+        15360,
+        1
+      ],
+      "Hankel_residual_error": {
+        "arb_enclosure": "[2.251145482912651830801735907869643339404521230190862611288851906832101986410e-6 +/- 2.69e-82]",
+        "display_only": 2.2511454829126517e-06
+      },
+      "residual_error_over_signal_lower": {
+        "arb_enclosure": "[0.2086404405860763378850818437204254528476333895893220603398707220174984285616 +/- 4.51e-77]",
+        "display_only": 0.20864044058607634
+      },
+      "retained_signal_condition_upper": 19410,
+      "retained_signal_condition_enclosure": {
+        "arb_enclosure": "[19409.89839285731032951094081609632253920282596254317420141097767575629365358 +/- 1.91e-72]",
+        "display_only": 19409.89839285731
+      },
+      "signal_count_above_half_nominal_lower_threshold": 1893,
+      "worst_raw_response_error_to_common_family": {
+        "arb_enclosure": "[6.18915637179806426497277811636169887713800315938862612443999047029282102789e-7 +/- 2.03e-82]",
+        "display_only": 6.189156371798064e-07
+      },
+      "parent_pointwise_error_budget_required": false
+    },
+    {
+      "axis_samples": 4096,
+      "fitted_raw_sampling_step": [
+        16,
+        33
+      ],
+      "last_fitted_raw_time": [
+        43680,
+        11
+      ],
+      "normalized_last_time": [
+        4095,
+        1
+      ],
+      "raw_vectors_per_preparation": 8191,
+      "temporal_epsilon_upper": [
+        1,
+        2
+      ],
+      "nominal_common_family_rank": 1893,
+      "nominal_family_condition_bound": [
+        3072,
+        1
+      ],
+      "Hankel_residual_error": {
+        "arb_enclosure": "[3.989123433169219467655824611029202298133497072730336310997161832992025205200e-6 +/- 8.49e-82]",
+        "display_only": 3.98912343316922e-06
+      },
+      "residual_error_over_signal_lower": {
+        "arb_enclosure": "[0.0924298848037803297028098870226272149341352085022542286418891047483564872003 +/- 5.94e-77]",
+        "display_only": 0.09242988480378032
+      },
+      "retained_signal_condition_upper": 3385,
+      "retained_signal_condition_enclosure": {
+        "arb_enclosure": "[3384.964289200517806312975303920504747295419782417231939247629688528112578073 +/- 4.87e-73]",
+        "display_only": 3384.9642892005177
+      },
+      "signal_count_above_half_nominal_lower_threshold": 1893,
+      "worst_raw_response_error_to_common_family": {
+        "arb_enclosure": "[1.149201059360416455048073428231864555271291871788777138914699697103272849301e-6 +/- 2.42e-82]",
+        "display_only": 1.1492010593604164e-06
+      },
+      "parent_pointwise_error_budget_required": false
+    },
+    {
+      "axis_samples": 8192,
+      "fitted_raw_sampling_step": [
+        16,
+        33
+      ],
+      "last_fitted_raw_time": [
+        262112,
+        33
+      ],
+      "normalized_last_time": [
+        8191,
+        1
+      ],
+      "raw_vectors_per_preparation": 16383,
+      "temporal_epsilon_upper": [
+        1,
+        4
+      ],
+      "nominal_common_family_rank": 1893,
+      "nominal_family_condition_bound": [
+        5120,
+        3
+      ],
+      "Hankel_residual_error": {
+        "arb_enclosure": "[7.470734605845757032314448819062350440769038478768917832462105845418673721145e-6 +/- 8.65e-82]",
+        "display_only": 7.470734605845757e-06
+      },
+      "residual_error_over_signal_lower": {
+        "arb_enclosure": "[0.1154003129737444083587312655194552569973295276258180248966519273694493177596 +/- 4.00e-77]",
+        "display_only": 0.11540031297374441
+      },
+      "retained_signal_condition_upper": 1930,
+      "retained_signal_condition_enclosure": {
+        "arb_enclosure": "[1929.440052954689572423892510344433917583622433593238570101562372892369679811 +/- 5.25e-73]",
+        "display_only": 1929.4400529546895
+      },
+      "signal_count_above_half_nominal_lower_threshold": 1893,
+      "worst_raw_response_error_to_common_family": {
+        "arb_enclosure": "[2.209771903721636512149664661423253890386274983488606191856100997251254342324e-6 +/- 5.03e-82]",
+        "display_only": 2.2097719037216363e-06
+      },
+      "parent_pointwise_error_budget_required": false
+    }
+  ],
+  "scope": "37-input real original-shell signal gap after declared fitted-coordinate transfer; no claim that arbitrary fitted grade ratios lie in the matched family or that hardware meets the residual bounds",
+  "open": [
+    "Generic independently fitted nonuniform rates require fresh modal/cluster certificates",
+    "Existing grade uncertainty bounds do not establish the anisotropic residual tolerances",
+    "Physical input/readout conversion and clock bridge",
+    "Independent review"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "physical_promotion": 0,
+  "records": [
+    {
+      "id": "RET-RANGE-01",
+      "found_by": "constructor adversarial input tests",
+      "affected_claim": "Initial draft filtered every out-of-range signed-int64 proposal coefficient.",
+      "fault": "abs(int64 minimum) overflows and can bypass an absolute-value range check; floating dyadic cast boundaries also needed explicit checks.",
+      "replacement": "Direct signed comparisons plus finite/range checks before float-to-int64 casts.",
+      "verification": "Full guarded numerical proof rerun and dedicated int64-minimum/overflow/NaN/infinity rejection tests passed. The base mathematical certificate SHA-256 stayed identical.",
+      "scientific_result_changed": false,
+      "independent_review": false
+    }
+  ],
+  "retraction_object_to_claim_object_ratio": [
+    1,
+    7
+  ],
+  "ratio_definition": "Capture diagnostic: correction objects divided by explicitly listed claim objects, not an empirical error probability."
+}

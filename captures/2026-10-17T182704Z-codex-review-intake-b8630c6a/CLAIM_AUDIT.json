@@ -1,0 +1,108 @@
+{
+  "status": "SCOPED_CLAIM_AUDIT",
+  "physical_promotion": 0,
+  "independent_review": "not verified",
+  "claims": [
+    {
+      "id": "N-ADMISSIBILITY",
+      "submission": "noise_campaign",
+      "claim": "All listed records strictly satisfy FROZEN_CONTRACT.json.",
+      "disposition": "OVERBROAD",
+      "correction": "The constructed cases satisfy the stated additive global-vector bound. The single-vector impulse attains the bound at equality and exceeds the sufficient coordinate ceiling by8. Full calibration/model-family/metrology membership is unvalidated.",
+      "evidence": [
+        "Frozen contract history_vector_error_ceiling and sufficient_history_scalar_error_ceiling",
+        "Noise campaign REVIEW_PACKET.md and RECORD_MANIFEST.json"
+      ]
+    },
+    {
+      "id": "N-INDEPENDENCE",
+      "submission": "noise_campaign",
+      "claim": "Separation of generator and verifier satisfies non-constructor criteria.",
+      "disposition": "NOT_ESTABLISHED",
+      "correction": "Algorithmic separation is useful but does not identify an independent reviewer. runtime_constructor_invoked=false does not establish non-constructor authorship or review provenance.",
+      "evidence": [
+        "Attached governance promotion and provenance sections",
+        "Submitted attestations contain no reviewer attribution"
+      ]
+    },
+    {
+      "id": "N-RANK",
+      "submission": "noise_campaign",
+      "claim": "Spatial rank robustness eliminates legacy rank deficiencies.",
+      "disposition": "REQUIRES_SCOPE_CORRECTION",
+      "correction": "Legacy failures included noise-mode over-counting and stationary over-ranking1929. Four fresh records certify1893 singular values above the threshold; exact algebraic rank is not1893 in general. The single-vector record has at least2203 nonzero singular values.",
+      "evidence": [
+        "OLD_SPATIAL_RANK_DIAGNOSTIC.json",
+        "FULL_CERTIFICATE_RESULTS.json",
+        "RANK_COUNTEREXAMPLE.json"
+      ]
+    },
+    {
+      "id": "R-STATE",
+      "submission": "record_only",
+      "claim": "Static factors and residual fully specify the state without dynamical operators.",
+      "disposition": "VALID_ONLY_FOR_ENCODED_OBSERVATION_RECORD",
+      "correction": "A pinned decoder, dictionary and exact residual restore the finite observation array. They do not identify the2640-dimensional bulk state, hidden modes or a unique continuous generator.",
+      "evidence": [
+        "RECORD_ONLY_THEOREMS.md lossless replay and sampling no-go sections",
+        "Nominal observer kernel theorem"
+      ]
+    },
+    {
+      "id": "R-NO-LEAK",
+      "submission": "record_only",
+      "claim": "Codec guarantees closure without informational leakage across the projection boundary.",
+      "disposition": "UNSUPPORTED_PHYSICAL_OR_OBSERVER_INTERPRETATION",
+      "correction": "Lossless compression neither restores projected-away modes nor certifies physical absence of leakage. It preserves the recorded observations exactly.",
+      "evidence": [
+        "Codec payload SHA256 round trip",
+        "Observation-codec indistinguishability theorem in AUDIT_REPORT.md"
+      ]
+    },
+    {
+      "id": "R-BIJECTION",
+      "submission": "record_only",
+      "claim": "codec_bijection_verified=true.",
+      "disposition": "REQUIRES_DOMAIN_AND_EVIDENCE",
+      "correction": "The constructor demonstrated a bit-exact round trip for the frozen record. Global bijectivity across arbitrary dictionaries/records was not proved; the codec rejects residuals outside its finite range.",
+      "evidence": [
+        "record_codec.py range check",
+        "CODEC_MANIFEST.json and codec_restore.log"
+      ]
+    },
+    {
+      "id": "R-ORTHOGONALITY",
+      "submission": "record_only",
+      "claim": "basis_orthogonality_verified=true.",
+      "disposition": "SUPPORTED_ONLY_AS_BOUNDED_DEFECT",
+      "correction": "The certificate bounds Gram/unitarity defects and applies polar/frame corrections; proposed numeric factors are not asserted to be exactly orthogonal.",
+      "evidence": [
+        "Record-only PROGRESS.json",
+        "certified/CERTIFICATE.json eta_left_upper/eta_right_upper/core_svd_residual_upper"
+      ]
+    },
+    {
+      "id": "R-TIMESTAMPS",
+      "submission": "record_only",
+      "claim": "Mathematical invariant definitions do not depend on task completion timestamps.",
+      "disposition": "SCOPED_AGREEMENT",
+      "correction": "Arithmetic truth is independent of wall-clock task duration. Acquisition timestamps, frozen sample indexing, pre-data chronology and review provenance remain relevant to experimental status.",
+      "evidence": [
+        "RECORD_ONLY_THEOREMS.md",
+        "Frozen contract and attached CRL2 governance"
+      ]
+    },
+    {
+      "id": "B-REVIEW",
+      "submission": "both",
+      "claim": "Named admissibility verdicts close the independent-review gate.",
+      "disposition": "HOLD",
+      "correction": "Both manifests mismatch every listed existing target file. Reviewer attribution, independence statement and the original reviewed byte bindings are missing. Review scope/execution evidence must be stated; custodian ruling and pre-data experimental requirements are separate.",
+      "evidence": [
+        "HASH_AUDIT.json",
+        "Submitted review JSON",
+        "Attached governance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "physical_promotion": 0,
+  "claims": [
+    {
+      "id": "I1",
+      "status": "EXACT",
+      "claim": "The two submitted manifests each mismatch all12 listed existing files in the named frozen archive.",
+      "dependencies": [
+        "Submitted digest strings",
+        "Pinned delivered archive bytes",
+        "Immutable capture consistency"
+      ],
+      "origin": "review intake audit",
+      "constructor": "Codex, original numerical-package constructor",
+      "reviewers": [
+        "constructor intake checks only"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "I2",
+      "status": "DERIVED",
+      "claim": "The single-vector encoded record has algebraic rank at least2203 while1893 singular values exceed the frozen threshold.",
+      "dependencies": [
+        "Existing constructor spectral certificate",
+        "Rank-perturbation inequality",
+        "Pinned control record hash"
+      ],
+      "origin": "review intake audit",
+      "constructor": "Codex, original numerical-package constructor",
+      "reviewers": [
+        "constructor intake checks only"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "I3",
+      "status": "DERIVED",
+      "claim": "Lossless coding of observed histories cannot distinguish nominal states separated by the observer kernel.",
+      "dependencies": [
+        "Nominal observation map and kernel",
+        "Composition preserves indistinguishability"
+      ],
+      "origin": "review intake audit",
+      "constructor": "Codex, original numerical-package constructor",
+      "reviewers": [
+        "constructor intake checks only"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "I4",
+      "status": "RECEIVED_UNVERIFIED",
+      "claim": "The submitted non-constructor admissibility verdicts are preserved but not authenticated as independent review.",
+      "dependencies": [
+        "User-pasted attestations",
+        "Missing reviewer provenance",
+        "Failed package bindings"
+      ],
+      "origin": "review intake audit",
+      "constructor": "Codex, original numerical-package constructor",
+      "reviewers": [
+        "constructor intake checks only"
+      ],
+      "lane": "development \u2014 no registry entry"
+    },
+    {
+      "id": "I5",
+      "status": "GOVERNANCE_DISPOSITION",
+      "claim": "Review closure and promotion are held; previous numerical certificates are unchanged.",
+      "dependencies": [
+        "I1",
+        "I4",
+        "Attached governance and current development scope"
+      ],
+      "origin": "review intake audit",
+      "constructor": "Codex, original numerical-package constructor",
+      "reviewers": [
+        "constructor intake checks only"
+      ],
+      "lane": "development \u2014 no registry entry"
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "status": "DERIVED_CONDITIONAL_CONSTRUCTOR_VERIFIED",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "lane": "development; no registry entry",
+  "fault_family": {
+    "coordinates": "selected fitted/normalized chain coordinates; all receipts apply in this frame",
+    "H": "H0+S, H0 grade scalar with entries in[15/16,17/16]",
+    "S": "symmetric same-grade off-diagonal matching on the2574 source-listed pairs, each pair has an observed endpoint; norm<=1/16",
+    "w": "three positive native weights in[15/16,17/16], logger scale absorbed",
+    "background_effective_ratios": "D_k=w_k/h_(k-1),U_k=w_k/h_k in[15/16,17/16]",
+    "K": "(H0+S)^-1 A_w, constant through validation, calibration and later acquisition",
+    "C": "189-by2640 readout; C-R supported in source local stencils; coarse normC<=2",
+    "extra_skewJ": "excluded; set0, not inferred small by this protocol",
+    "excluded": [
+      "Nonmatching metric defects",
+      "Cross-grade or diagonal metric heterogeneity",
+      "Readout outside listed stencils",
+      "Extra generator terms that could cancel a metric signal",
+      "Unbounded drift or nonlinear response"
+    ]
+  },
+  "code": {
+    "preparations": 260,
+    "controlled_coordinates": 1502,
+    "local_readout_coefficient_rank": 16175,
+    "readout_code_sigma_min": [
+      1,
+      5
+    ],
+    "metric_pairs": 2574,
+    "minimum_exclusive_native_neighbor_count": 3,
+    "exclusive_count_witness": [
+      1680,
+      840
+    ],
+    "oriented_observed_endpoints_checked": 3171,
+    "times": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        128
+      ],
+      [
+        1,
+        64
+      ],
+      [
+        3,
+        128
+      ],
+      [
+        1,
+        32
+      ],
+      [
+        5,
+        128
+      ]
+    ],
+    "epochs": 2,
+    "blank_extra_each_epoch": true,
+    "scalar_readings": 591948,
+    "including_one_six_ratio_calibration_scalar_readings": 591960
+  },
+  "fit_independent_test": "Decode only coefficientsj withA[r,j]=0. They vanish for every diagonal grade-scalar background; do not subtract a fitted generator.",
+  "instrument_contract": {
+    "per_code_normalized_blank_corrected_189_vector_error": [
+      1,
+      18446744073709551616
+    ],
+    "sufficient_component_contract": {
+      "coarse_readout_norm_upper": 2,
+      "full_state_preparation_error": [
+        1,
+        295147905179352825856
+      ],
+      "logger_time_error": [
+        1,
+        2361183241434822606848
+      ],
+      "blank_corrected_additive_vector_error": [
+        1,
+        73786976294838206464
+      ],
+      "computation_error": [
+        1,
+        73786976294838206464
+      ],
+      "total_response_error_bound": {
+        "arb_enclosure": "[4.049154674477362760376177420357365287086979721590343310887887177361566664799e-20 +/- 2.20e-96]",
+        "display_only": 4.0491546744773625e-20
+      }
+    },
+    "status": "candidate requirements; no apparatus receipt supplied"
+  },
+  "static_gate": {
+    "decoded_residual_threshold": [
+      23,
+      9223372036854775808
+    ],
+    "decoded_error_bound": {
+      "arb_enclosure": "[2.468197616305571471298796356199579341142039278224720187897875625801121705440e-18 +/- 1.29e-94]",
+      "display_only": 2.4681976163055714e-18
+    },
+    "passing_readout_operator_error": {
+      "arb_enclosure": "[4.961862613022231669515937798200445277421336153224720187897875625801121705440e-18 +/- 1.59e-94]",
+      "display_only": 4.9618626130222316e-18
+    },
+    "declared_passing_readout_error_ceiling": [
+      1,
+      144115188075855872
+    ],
+    "unused_static_data_Frobenius_gate": [
+      17,
+      18446744073709551616
+    ]
+  },
+  "dynamic_gate": {
+    "positive_time_weights": [
+      [
+        5,
+        3
+      ],
+      [
+        -10,
+        21
+      ],
+      [
+        5,
+        42
+      ],
+      [
+        -5,
+        252
+      ],
+      [
+        1,
+        630
+      ]
+    ],
+    "zero_time_weight": [
+      -1627,
+      1260
+    ],
+    "step": [
+      1,
+      128
+    ],
+    "generator_norm_upper": 5,
+    "moment_identity": "sum_(r>=0) M_r t^r =1+14400t^5/product_(k=1..5)(1-k^2t)",
+    "derivative_remainder_bound": {
+      "arb_enclosure": "[1.492831401025223229942773873553635171837125019243338024137e-17 +/- 4.16e-75]",
+      "display_only": 1.4928314010252234e-17
+    },
+    "readout_contamination_factor": {
+      "arb_enclosure": "[16.33405242657628675627531056339730441364743053822873439383185331504165377569 +/- 3.13e-75]",
+      "display_only": 16.334052426576285
+    },
+    "noise_amplification_factor": [
+      144128,
+      315
+    ],
+    "maximum_row_decoder_factor": {
+      "arb_enclosure": "[31.48015247739438761437045593522255258387536494801346485570590702079171310659 +/- 1.14e-75]",
+      "display_only": 31.480152477394387
+    },
+    "row_error_bound": {
+      "arb_enclosure": "[3.8021548801499578475783817110486780012726492871058432707887e-15 +/- 6.11e-74]",
+      "display_only": 3.802154880149958e-15
+    },
+    "forbidden_row_residual_acceptance_ceiling": [
+      9,
+      2251799813685248
+    ],
+    "metric_signal_lower_factor": {
+      "arb_enclosure": "[1.438381293482804672825560975645015114416170452991319552710704758022366519232 +/- 2.53e-76]",
+      "display_only": 1.4383812934828046
+    },
+    "passing_metric_defect_bound": {
+      "arb_enclosure": "[5.4220378171886695961971616793856911350374004170809210977742e-15 +/- 5.66e-74]",
+      "display_only": 5.42203781718867e-15
+    },
+    "declared_passing_metric_defect_ceiling": [
+      1,
+      140737488355328
+    ],
+    "visibility_proof": "For matched pair(r,t), forbidden row equals[-s/(h_grade^2-s^2)]*(A_w rowt) off native support; exclusive count>=3 andw>=15/16."
+  },
+  "robust_six_ratio_extension": {
+    "gain_preparation_observed_infinity_error": [
+      1,
+      562949953421312
+    ],
+    "full_gain_preparation_error_additional_receipt": "at actual gain readout, full state norm<=sqrt6*2^-49 including unobserved coordinates; this supplements the observed infinity receipt",
+    "larger_generator_envelope": 5,
+    "baseline_feature_error_bound": {
+      "arb_enclosure": "[4.503833903877975743611744468177613901624394180561471869947524061014629857062e-13 +/- 2.29e-89]",
+      "display_only": 4.5038339038779756e-13
+    },
+    "metric_model_feature_error_bound": {
+      "arb_enclosure": "[8.307167409378927496748562157154360261891184793359233250691104131870002758408e-14 +/- 8.66e-90]",
+      "display_only": 8.307167409378927e-14
+    },
+    "readout_model_feature_error_bound": {
+      "arb_enclosure": "[1.739532846976433400780000036788115528294594363751510016679710595989952835784e-15 +/- 3.34e-91]",
+      "display_only": 1.7395328469764334e-15
+    },
+    "resulting_six_ratio_vector_error_bound": {
+      "arb_enclosure": "[7.400475202367141219989125122904288853870573254418637868979289475201912076575e-13 +/- 9.12e-89]",
+      "display_only": 7.400475202367141e-13
+    },
+    "declared_six_ratio_vector_ceiling": [
+      1,
+      1099511627776
+    ],
+    "scope": "Re-derived after restricted-fault passage; no circular assumption that the original diagonal-only calibration theorem already applies"
+  },
+  "history_transfer": {
+    "metric_defect_frame_factor": [
+      78608,
+      50625
+    ],
+    "readout_frame_factor": [
+      4913,
+      3375
+    ],
+    "requires_measured_effective_rate_shape_gate": [
+      1,
+      274877906944
+    ],
+    "diagonal_metric_shape_error": {
+      "arb_enclosure": "[1.16415321827838316263535284357099504992591423750501165645896423647e-11 +/- 3.10e-77]",
+      "display_only": 1.1641532182783832e-11
+    },
+    "total_metric_shape_error_including_S": {
+      "arb_enclosure": "[1.16525651394994128521137175392014628449381547207291289102686547104e-11 +/- 5.19e-77]",
+      "display_only": 1.1652565139499413e-11
+    },
+    "native_rate_shape_error": {
+      "arb_enclosure": "[1.72365825318152559342852080118557004142863249854657018255443042613e-11 +/- 5.99e-77]",
+      "display_only": 1.7236582531815255e-11
+    },
+    "readout_error_in_final_fitted_frame": {
+      "arb_enclosure": "[1.010097355552480385759500441727814850983796296296296296296296296296296296296e-17 +/- 3.02e-93]",
+      "display_only": 1.0100973555524804e-17
+    },
+    "declared_final_readout_ceiling": [
+      1,
+      72057594037927936
+    ],
+    "common_scale_error_after_chat_time_normalization": {
+      "arb_enclosure": "[9.701276818925351753548008121375999601709087255150271564155708788e-13 +/- 1.92e-77]",
+      "display_only": 9.701276818925353e-13
+    },
+    "declared_common_scale_error_ceiling": [
+      1,
+      549755813888
+    ],
+    "parent_metric_and_rate_budget_each": [
+      1,
+      34359738368
+    ],
+    "extra_skewJ": 0,
+    "history_sampling": "logger step1/(2*chat), transformed37 preparations andsoftware outputframe corrections",
+    "gain_correction_policy": "Retain the globally validatedC for history. The six residual gain estimates normalize calibration features only; changing the acquisition correction requires renewed readout validation.",
+    "retained_signal_count": 1893,
+    "parent_condition_bounds": {
+      "2048": 19410,
+      "4096": 3385,
+      "8192": 1930
+    },
+    "additional_required_history_receipts": {
+      "preparation_error": [
+        1,
+        33554432
+      ],
+      "additive_noise": [
+        1,
+        67108864
+      ],
+      "origin_error": [
+        1,
+        536870912
+      ],
+      "jitter": [
+        1,
+        536870912
+      ],
+      "constant_params_entire_batch": true
+    },
+    "actual_kernel_dimension_unchanged_claimed": false
+  },
+  "synthetic_metric_controls": [
+    {
+      "rho": [
+        0,
+        1
+      ],
+      "decoded_value": [
+        -13536206567337018815274681296346538210311702188291984250509665492536193606196793394795336265480507,
+        454540813170671681456536063956797633137753989489953357281364751999073765895329219189874816112222463927605264384000000
+      ],
+      "true_forbidden_coefficient": [
+        0,
+        1
+      ],
+      "finite_estimator_coefficient_error_bound": {
+        "arb_enclosure": "[2.977995853202828503522630100287270509574741773802594143154844132126029737121e-20 +/- 1.06e-96]",
+        "display_only": 2.9779958532028286e-20
+      },
+      "signal_lower": {
+        "arb_enclosure": "[2.977995853202828503522630100287270509574741773802594143154819539208211946916e-20 +/- 3.19e-96]",
+        "display_only": 2.9779958532028286e-20
+      },
+      "decision": "WITHIN_NULL_GATE",
+      "synthetic": true
+    },
+    {
+      "rho": [
+        1,
+        17592186044416
+      ],
+      "decoded_value": [
+        -23461402931103764671455188956903073595615696408050813987448927548252543999256182416187010603941493117882776000878116820027932589635883678615660571910029544415259709345496634492643390869666361133343676947571663801407076396892876625155913727038922645677789959310319600521297172093249852115456263927560393170490841587242442664694602521427891562072353901698859527284729823241782063200500782068741546117387943371557570897584446606055832677234313633857860752482367768769104498580602048175906864455460512651566699060137209684882641030874690942686753749378947825577341976636867554303722401257216333591334857786651549057,
+        412737148996232722369232605771106193198420055426234181106316528188237457475280476693951338641446224756297237903692328006795986507216093182787295662029593300024773516842511602720073005820101158338575726482938497287322272369017020980730583812164677198567771804521746295827432551126725121150901766966579858119190173950757904969185824140218872099399603300915984965319302889006100305776341413612977810591471844944113037645989519734479281548513396743565607606140976552930742186591350960475293118427962228274567400134440197325035390734233694470360029831185552201714113941724832601517868314390322174178099200000000000000000000000000
+      ],
+      "true_forbidden_coefficient": [
+        -17592186044416,
+        309485009821345068724781055
+      ],
+      "finite_estimator_coefficient_error_bound": {
+        "arb_enclosure": "[2.977995853198644300129030391279477052445194126528562612495509511657153898832e-20 +/- 1.84e-96]",
+        "display_only": 2.9779958531986445e-20
+      },
+      "signal_lower": {
+        "arb_enclosure": "[5.684344864076654685613294288022490511075294757205634982007499622400310235608e-14 +/- 5.82e-90]",
+        "display_only": 5.684344864076654e-14
+      },
+      "decision": "REJECT",
+      "synthetic": true
+    },
+    {
+      "rho": [
+        -1,
+        17592186044416
+      ],
+      "decoded_value": [
+        164229648439593808404723786237433881214351137283206625663971337468806755532089691872732762796442541051818557137496608791706670071438999968528066850357327894421735185026225291061719029799329099318642131074416632090441048814295656989266591996276169116775356664947010203963852175568425939725703632602488273056910206276814957019411792453350390355151461320326711731421023967073659788983355012285645646658714516209851357790497508645280507511253825838920017743405303339535439663057021227931844706736699111423613987669584871737410665856262410415783011378260934976852196656906263485946590553903962499250627888197385670279,
+        2889160042973629056584628240397743352388940387983639267744215697317662202326963336857659370490123573294080665325846296047571905550512652279511069634207153100173414617897581219040511040740708108370030085380569481011255906583119146865114086685152740389974402631652224070792027857887075848056312368766059006834331217655305334784300768981532104695797223106411894757235120223042702140434389895290844674140302914608791263521926638141354970839593777204959253242986835870515195306139456723327051828995735597921971800941081381275247735139635861292520208818298865411998797592073828210625078200732255219246694400000000000000000000000000
+      ],
+      "true_forbidden_coefficient": [
+        17592186044416,
+        309485009821345068724781055
+      ],
+      "finite_estimator_coefficient_error_bound": {
+        "arb_enclosure": "[2.977995853207012706916230006734411010660525302412558255788267414993632996197e-20 +/- 3.01e-96]",
+        "display_only": 2.9779958532070127e-20
+      },
+      "signal_lower": {
+        "arb_enclosure": "[5.684338908084948279956287242762092497187231651486206040886631338647976502639e-14 +/- 5.01e-90]",
+        "display_only": 5.6843389080849486e-14
+      },
+      "decision": "REJECT",
+      "synthetic": true
+    }
+  ],
+  "synthetic_static_control": {
+    "row": 4,
+    "column": 0,
+    "epsilon": [
+      1,
+      1099511627776
+    ],
+    "encoded": [
+      1,
+      2199023255552
+    ],
+    "exactly_decoded": true,
+    "decision": "REJECT",
+    "synthetic": true
+  },
+  "limits": {
+    "unrestricted_static_readout_nullity_per_row": 2380,
+    "six_time_unrestricted_readout_nullity_per_row_lower": 1080,
+    "restricted_family_membership_not_proved_by_gate_passage": true,
+    "finite_epochs_do_not_certify_arbitrary_future_drift": true,
+    "independent_review": "pending",
+    "physical_experiment": "not executed"
+  },
+  "verification": {
+    "exact_sparse_entries": 14880,
+    "local_coefficients_injective": 16175,
+    "metric_exclusive_neighbor_bound": "all listed observed endpoints checked",
+    "moment_rational_identity": "exact",
+    "interval_bits": 256,
+    "finite_metric_control_count": 3
+  }
+}
