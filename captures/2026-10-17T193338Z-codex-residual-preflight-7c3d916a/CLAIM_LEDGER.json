@@ -1,0 +1,33 @@
+{
+  "artifact": "UD_RESIDUAL_PREFLIGHT_RETURN_v0.1",
+  "physical_promotion": 0,
+  "claims": [
+    {
+      "id": "P1",
+      "status": "EXACT",
+      "claim": "Strict exact reverse-triangle residual gate cannot remove an acceptance by the unchanged residual-budget verifier",
+      "evidence": "THEOREMS.md; residual_preflight.py",
+      "scope": "Same inputs, same proposal and successfully executed unchanged proof; no fitting convergence or true-spectrum failure conclusion"
+    },
+    {
+      "id": "P2",
+      "status": "COMPUTATIONAL_CONSTRUCTOR",
+      "claim": "Eight archived residual gates compose to the same pass/HOLD decisions",
+      "evidence": "RECEIPT_REPLAY.json",
+      "scope": "Receipt replay, not eight new full-record checks"
+    },
+    {
+      "id": "P3",
+      "status": "COMPUTATIONAL_CONSTRUCTOR",
+      "claim": "Fresh positive and negative full-record regression controls",
+      "evidence": "VALIDATION.json; BENCHMARK_COMPARISON.json",
+      "scope": "Constructed known records; not blinded independent data"
+    },
+    {
+      "id": "P4",
+      "status": "OPEN",
+      "claim": "Independent review, universal fitting guarantees and full acquisition qualification remain open",
+      "evidence": "GitHub #178, #177, #144, #136, #130"
+    }
+  ]
+}
