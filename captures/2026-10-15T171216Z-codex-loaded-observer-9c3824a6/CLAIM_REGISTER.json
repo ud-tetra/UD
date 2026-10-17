@@ -1,0 +1,76 @@
+{
+  "lane": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "physical_promotion": 0,
+  "constructor": "Codex",
+  "reviewers": [],
+  "claims": [
+    {
+      "id": "L01",
+      "type": "EXACT",
+      "claim": "Six-state reduction, physical energy pullback and source-power/loss identity.",
+      "dependencies": [
+        "PR121 model",
+        "matched component assumptions",
+        "declared drive resistance"
+      ]
+    },
+    {
+      "id": "L02",
+      "type": "DERIVED",
+      "claim": "Three samples per channel give certified sigma_min>1/50.",
+      "dependencies": [
+        "L01",
+        "specified benchmark",
+        "rational Taylor Gram certificate"
+      ]
+    },
+    {
+      "id": "L03",
+      "type": "DERIVED",
+      "claim": "Eight-parameter relative box 1/100000 gives reconstruction, write-error and retention bounds.",
+      "dependencies": [
+        "L01",
+        "L02",
+        "constant matched-family parameters",
+        "calibrated sample gains/times",
+        "accurate actuator waveform"
+      ]
+    },
+    {
+      "id": "L04",
+      "type": "EXACT",
+      "claim": "Explicit finite nominal write reaches its target and has exact net electrical work and heat.",
+      "dependencies": [
+        "L01",
+        "zero initial state",
+        "specified polynomial pulse"
+      ]
+    },
+    {
+      "id": "L05",
+      "type": "DERIVED",
+      "claim": "Binary amplitude 6nu is sufficient, retention exceeds 19/20 and gross electrical work is below (144/5) Eref nu^2.",
+      "dependencies": [
+        "L02",
+        "L03",
+        "L04",
+        "six bounded sample errors",
+        "positive nu"
+      ]
+    },
+    {
+      "id": "L06",
+      "type": "NUMERICAL",
+      "claim": "Ten numerical corroborations pass; not empirical validation.",
+      "dependencies": [
+        "specified software environment"
+      ]
+    },
+    {
+      "id": "L07",
+      "type": "OPEN",
+      "claim": "Symmetry-breaking mismatch, complete apparatus recording/renewal/reset cost, physical area map and fundamental action normalization remain unresolved.",
+      "dependencies": []
+    }
+  ]
+}
