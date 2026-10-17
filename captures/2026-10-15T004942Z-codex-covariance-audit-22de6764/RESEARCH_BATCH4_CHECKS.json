@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "check_families": 25,
+  "checks": {
+    "declared_14_14_Hasse_split": {
+      "passed": true
+    },
+    "integer_path_factorization": {
+      "passed": true,
+      "rank_S": 14,
+      "rank_H": 10,
+      "rank_C": 10
+    },
+    "parity_measurement_gauge": {
+      "passed": true
+    },
+    "covariance_embedding_and_constraints": {
+      "passed": true
+    },
+    "positive_covariance_rank": {
+      "passed": true,
+      "theorem": "For PSD training covariance of rank r, rank(M Sigma M^T)=r and nullity=28-r"
+    },
+    "singular_covariance_kernel_qualification": {
+      "passed": true,
+      "rank": 1,
+      "nullity": 27,
+      "advertised_constraint_columns": 14
+    },
+    "path_noise_amplification": {
+      "passed": true,
+      "max_row_l1": 7,
+      "row_path_lengths": [
+        5,
+        5,
+        5,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        7,
+        3,
+        5,
+        5
+      ],
+      "deterministic_bound": "epsilon_H + ||C||_infinity*epsilon_S"
+    },
+    "common_field_error_blindness": {
+      "passed": true,
+      "blind_error_dimension": 14
+    },
+    "independent_unit_noise_residual": {
+      "passed": true,
+      "covariance": "sigma^2*(I+C*C^T), not zero"
+    },
+    "constant_bias_not_seen_by_covariance": {
+      "passed": true,
+      "written_counterexample": "e_S=0, e_H=b constant: mean residual b, covariance zero"
+    },
+    "noiseless_pointwise_residual": {
+      "passed": true,
+      "gaussian_assumption_required": false
+    },
+    "measurement_gauge_is_not_harmonic": {
+      "passed": true,
+      "norm_Av_squared": 44
+    },
+    "Boolean_pair_partitions": {
+      "passed": true
+    },
+    "matching_stabilizer_orbits": {
+      "passed": true
+    },
+    "singlet_group_scope": {
+      "passed": true,
+      "restricted_S3_times_complement_orbit": 1,
+      "full_affine_orbit": 4,
+      "no_operator_or_attractor_derived": true
+    },
+    "cyclic_three_cocycle": {
+      "passed": true,
+      "quadruples": 28561
+    },
+    "cyclic_nonthrivial_class_witness": {
+      "passed": true,
+      "witness": "product_j omega_k(1,j,1)=exp(2*pi*i*k/13), whereas coboundaries telescope to 1"
+    },
+    "slant_coboundary_keeps_phase": {
+      "passed": true,
+      "epsilon_a_x": "exp(2*pi*i*k*a*x/169)",
+      "spin_a1_b0": "exp(2*pi*i*k/169)"
+    },
+    "twisted_fusion_and_balancing": {
+      "passed": true
+    },
+    "bilinear_nondegeneracy": {
+      "passed": true
+    },
+    "twisted_fusion_group": {
+      "passed": true,
+      "k0": "C13 x C13",
+      "nonzero_k": "C169",
+      "meaning": "169 labels do not imply componentwise flux-charge addition"
+    },
+    "pure_charge_isotropic_subgroup": {
+      "passed": true,
+      "order": 13
+    },
+    "normalized_Gauss_sum": {
+      "passed": true,
+      "normalized_sum": 1,
+      "central_charge_mod_8": 0
+    },
+    "imported_modular_identity_fails": {
+      "passed": true,
+      "modulus": 53,
+      "primitive_root_13": 16,
+      "witness_row": [
+        0,
+        0
+      ],
+      "witness_column": [
+        0,
+        0
+      ],
+      "residual": 6,
+      "argument": "A complex identity over Z[zeta_13,1/13] would survive this reduction"
+    },
+    "repaired_modular_reduction": {
+      "passed": true,
+      "scope": "exact necessary finite-field check; complex identities follow from metric-group character orthogonality and Gauss-sum proof"
+    }
+  },
+  "physical_promotion": 0,
+  "scope": "Finite algebra and repaired conditional examples; no independent review, native action, sensor, gapping protection or area law",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "sympy": "1.14.0",
+    "numpy": "2.3.5"
+  }
+}
