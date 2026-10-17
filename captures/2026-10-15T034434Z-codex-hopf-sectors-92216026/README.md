@@ -1,0 +1,3 @@
+# 600-cell Hopf sectors v0.1
+
+Read UD_600Cell_Hopf_Sector_Assessment_v0.1.md. Run `python verify_hopf_sectors.py` with NumPy, SciPy and SymPy. It reconstructs exact Q(phi) vertices, all simplices, integer boundary maps and signed cyclic actions; 24 exact finite check families pass. HOPF_SECTOR_CHECKS.json contains the rank/character certificates, and COMPLEX_AND_ACTION.json the finite complex and action. Fourier and perturbation identities have written proofs. This is a separate development result, not a narrative manuscript update, native gauge theory, physical promotion or independent review.
