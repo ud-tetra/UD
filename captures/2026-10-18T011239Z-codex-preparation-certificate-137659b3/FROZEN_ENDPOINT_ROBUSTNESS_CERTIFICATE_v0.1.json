@@ -1,0 +1,429 @@
+{
+  "status": "PASS",
+  "check_count": 24,
+  "checks": [
+    {
+      "name": "static_energy_fraction",
+      "pass": true
+    },
+    {
+      "name": "time_energy_fraction",
+      "pass": true
+    },
+    {
+      "name": "minimizing_boundary_gap",
+      "pass": true
+    },
+    {
+      "name": "generic_radius_scaling",
+      "pass": true
+    },
+    {
+      "name": "centered_radius_scaling",
+      "pass": true
+    },
+    {
+      "name": "mixed_cubic_half_eta",
+      "pass": true
+    },
+    {
+      "name": "magnetic_hessian_incidence",
+      "pass": true
+    },
+    {
+      "name": "common_hopping_hessian",
+      "pass": true
+    },
+    {
+      "name": "residual_hopping_gradient",
+      "pass": true
+    },
+    {
+      "name": "site_half_range_gradient",
+      "pass": true
+    },
+    {
+      "name": "loop_metric_constant",
+      "pass": true
+    },
+    {
+      "name": "loop_total_error_split",
+      "pass": true
+    },
+    {
+      "name": "tilted_quartic_stationary",
+      "pass": true
+    },
+    {
+      "name": "tilted_quartic_curvature",
+      "pass": true
+    },
+    {
+      "name": "centered_quartic_stationary",
+      "pass": true
+    },
+    {
+      "name": "centered_quartic_curvature",
+      "pass": true
+    },
+    {
+      "name": "centered_origin_negative_curvature",
+      "pass": true
+    },
+    {
+      "name": "diamond_critical_negative_shift",
+      "pass": true
+    },
+    {
+      "name": "uniform_stiffness_budget",
+      "pass": true
+    },
+    {
+      "name": "uniform_stiffness_shift_bound",
+      "pass": true
+    },
+    {
+      "name": "resonant_ode_q",
+      "pass": true
+    },
+    {
+      "name": "resonant_ode_p",
+      "pass": true
+    },
+    {
+      "name": "resonant_zero_initial",
+      "pass": true
+    },
+    {
+      "name": "resonant_unbounded_sequence",
+      "pass": true
+    }
+  ],
+  "claim_bin": "DERIVED_CONDITIONAL",
+  "independent_review": "PENDING",
+  "physical_promotion": 0,
+  "budget_examples": [
+    {
+      "mode": "generic",
+      "status": "WITHIN_SUFFICIENT_BUDGET",
+      "time_budget_status": "WITHIN_SUFFICIENT_BUDGET",
+      "exact": {
+        "a": "1",
+        "N": "1",
+        "eta": "1/829538022",
+        "R_cert": "1/829538022",
+        "c": "1/1600",
+        "J": "25",
+        "B_eta": "1/757643967646987548306809966493968409600",
+        "delta_eta_squared": "1/18941099191174688707670249162349210240000",
+        "gradient_cap": "1/7306659345839967280552789094400",
+        "centered_hessian_cap": "1/8808106623279007795200",
+        "generic_gradient_bound": "1/7306659345839967280552789094400",
+        "centered_hessian_bound": "0",
+        "gradient_budget_spent": "1/7306659345839967280552789094400",
+        "gradient_budget_reserve": "0",
+        "cumulative_gradient_variation": "1/7306659345839967280552789094400",
+        "static_nominal_energy_upper_bound": "1/1010191956862650064409079955325291212800",
+        "time_nominal_energy_upper_bound": "7/6061151741175900386454479731951747276800",
+        "complex_loop_state_error_upper_bound": "7/276512674",
+        "pure_magnetic_K_cap": "1/105697279479348093542400",
+        "pure_uniform_hopping_cap": "1/211394558958696187084800",
+        "pure_residual_hopping_cap": "1/102293230841759541927739047321600",
+        "pure_site_half_range_cap": "1/21919978037519901841658367283200"
+      },
+      "decimal_diagnostics": {
+        "a": 1.0,
+        "N": 1.0,
+        "eta": 1.2054902529832443e-09,
+        "R_cert": 1.2054902529832443e-09,
+        "c": 0.000625,
+        "J": 25.0,
+        "B_eta": 1.3198811614717884e-39,
+        "delta_eta_squared": 5.279524645887153e-41,
+        "gradient_cap": 1.3686145099529625e-31,
+        "centered_hessian_cap": 1.1353177734668798e-22,
+        "generic_gradient_bound": 1.3686145099529625e-31,
+        "centered_hessian_bound": 0.0,
+        "gradient_budget_spent": 1.3686145099529625e-31,
+        "gradient_budget_reserve": 0.0,
+        "cumulative_gradient_variation": 1.3686145099529625e-31,
+        "static_nominal_energy_upper_bound": 9.899108711038413e-40,
+        "time_nominal_energy_upper_bound": 1.1548960162878149e-39,
+        "complex_loop_state_error_upper_bound": 2.531529531264813e-08,
+        "pure_magnetic_K_cap": 9.460981445557331e-24,
+        "pure_uniform_hopping_cap": 4.7304907227786655e-24,
+        "pure_residual_hopping_cap": 9.775817928235446e-33,
+        "pure_site_half_range_cap": 4.5620483665098746e-32
+      },
+      "delta_eta_rational_bracket": [
+        "36330168750940153068303320647173570834894452309089/5000000000000000000000000000000000000000000000000000000000000000000000",
+        "72660337501880306136606641294347141669788904618179/10000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "minimizing_set_distance_cubic_root_bracket": [
+        "1/1659076044",
+        "221537999297485978817301176713390763/367548387470147816881675835018197268351156224"
+      ],
+      "root_bound_scope": "Upper endpoint bounds every member of the full minimizing set; no unique shifted orbit or attraction",
+      "assumption_note": "Inputs must bound the full tube; zero defaults are assumptions, not measurements; rates use the model evolution parameter",
+      "physical_promotion": 0
+    },
+    {
+      "mode": "centered",
+      "status": "WITHIN_SUFFICIENT_BUDGET",
+      "time_budget_status": "WITHIN_SUFFICIENT_BUDGET",
+      "exact": {
+        "a": "1",
+        "N": "1",
+        "eta": "1/829538022",
+        "R_cert": "1/829538022",
+        "c": "1/1600",
+        "J": "25",
+        "B_eta": "1/757643967646987548306809966493968409600",
+        "delta_eta_squared": "1/18941099191174688707670249162349210240000",
+        "gradient_cap": "1/7306659345839967280552789094400",
+        "centered_hessian_cap": "1/8808106623279007795200",
+        "generic_gradient_bound": "0",
+        "centered_hessian_bound": "1/8808106623279007795200",
+        "gradient_budget_spent": "1/7306659345839967280552789094400",
+        "gradient_budget_reserve": "0",
+        "cumulative_gradient_variation": "1/7306659345839967280552789094400",
+        "static_nominal_energy_upper_bound": "1/1010191956862650064409079955325291212800",
+        "time_nominal_energy_upper_bound": "7/6061151741175900386454479731951747276800",
+        "complex_loop_state_error_upper_bound": "7/276512674",
+        "pure_magnetic_K_cap": "1/105697279479348093542400",
+        "pure_uniform_hopping_cap": "1/211394558958696187084800",
+        "pure_residual_hopping_cap": "1/102293230841759541927739047321600",
+        "pure_site_half_range_cap": "1/21919978037519901841658367283200"
+      },
+      "decimal_diagnostics": {
+        "a": 1.0,
+        "N": 1.0,
+        "eta": 1.2054902529832443e-09,
+        "R_cert": 1.2054902529832443e-09,
+        "c": 0.000625,
+        "J": 25.0,
+        "B_eta": 1.3198811614717884e-39,
+        "delta_eta_squared": 5.279524645887153e-41,
+        "gradient_cap": 1.3686145099529625e-31,
+        "centered_hessian_cap": 1.1353177734668798e-22,
+        "generic_gradient_bound": 0.0,
+        "centered_hessian_bound": 1.1353177734668798e-22,
+        "gradient_budget_spent": 1.3686145099529625e-31,
+        "gradient_budget_reserve": 0.0,
+        "cumulative_gradient_variation": 1.3686145099529625e-31,
+        "static_nominal_energy_upper_bound": 9.899108711038413e-40,
+        "time_nominal_energy_upper_bound": 1.1548960162878149e-39,
+        "complex_loop_state_error_upper_bound": 2.531529531264813e-08,
+        "pure_magnetic_K_cap": 9.460981445557331e-24,
+        "pure_uniform_hopping_cap": 4.7304907227786655e-24,
+        "pure_residual_hopping_cap": 9.775817928235446e-33,
+        "pure_site_half_range_cap": 4.5620483665098746e-32
+      },
+      "delta_eta_rational_bracket": [
+        "36330168750940153068303320647173570834894452309089/5000000000000000000000000000000000000000000000000000000000000000000000",
+        "72660337501880306136606641294347141669788904618179/10000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "minimizing_set_distance_cubic_root_bracket": [
+        "1/3318152088",
+        "332306998946228968225951765070086145/1102645162410443450645027505054591805053468672"
+      ],
+      "root_bound_scope": "Upper endpoint bounds every member of the full minimizing set; no unique shifted orbit or attraction",
+      "assumption_note": "Inputs must bound the full tube; zero defaults are assumptions, not measurements; rates use the model evolution parameter",
+      "physical_promotion": 0
+    },
+    {
+      "mode": "mixed",
+      "status": "WITHIN_SUFFICIENT_BUDGET",
+      "time_budget_status": "WITHIN_SUFFICIENT_BUDGET",
+      "exact": {
+        "a": "1",
+        "N": "1",
+        "eta": "1/829538022",
+        "R_cert": "1/829538022",
+        "c": "1/1600",
+        "J": "25",
+        "B_eta": "1/757643967646987548306809966493968409600",
+        "delta_eta_squared": "1/18941099191174688707670249162349210240000",
+        "gradient_cap": "1/7306659345839967280552789094400",
+        "centered_hessian_cap": "1/8808106623279007795200",
+        "generic_gradient_bound": "1/14613318691679934561105578188800",
+        "centered_hessian_bound": "1/17616213246558015590400",
+        "gradient_budget_spent": "1/7306659345839967280552789094400",
+        "gradient_budget_reserve": "0",
+        "cumulative_gradient_variation": "1/7306659345839967280552789094400",
+        "static_nominal_energy_upper_bound": "1/1010191956862650064409079955325291212800",
+        "time_nominal_energy_upper_bound": "7/6061151741175900386454479731951747276800",
+        "complex_loop_state_error_upper_bound": "7/276512674",
+        "pure_magnetic_K_cap": "1/105697279479348093542400",
+        "pure_uniform_hopping_cap": "1/211394558958696187084800",
+        "pure_residual_hopping_cap": "1/102293230841759541927739047321600",
+        "pure_site_half_range_cap": "1/21919978037519901841658367283200"
+      },
+      "decimal_diagnostics": {
+        "a": 1.0,
+        "N": 1.0,
+        "eta": 1.2054902529832443e-09,
+        "R_cert": 1.2054902529832443e-09,
+        "c": 0.000625,
+        "J": 25.0,
+        "B_eta": 1.3198811614717884e-39,
+        "delta_eta_squared": 5.279524645887153e-41,
+        "gradient_cap": 1.3686145099529625e-31,
+        "centered_hessian_cap": 1.1353177734668798e-22,
+        "generic_gradient_bound": 6.843072549764813e-32,
+        "centered_hessian_bound": 5.676588867334399e-23,
+        "gradient_budget_spent": 1.3686145099529625e-31,
+        "gradient_budget_reserve": 0.0,
+        "cumulative_gradient_variation": 1.3686145099529625e-31,
+        "static_nominal_energy_upper_bound": 9.899108711038413e-40,
+        "time_nominal_energy_upper_bound": 1.1548960162878149e-39,
+        "complex_loop_state_error_upper_bound": 2.531529531264813e-08,
+        "pure_magnetic_K_cap": 9.460981445557331e-24,
+        "pure_uniform_hopping_cap": 4.7304907227786655e-24,
+        "pure_residual_hopping_cap": 9.775817928235446e-33,
+        "pure_site_half_range_cap": 4.5620483665098746e-32
+      },
+      "delta_eta_rational_bracket": [
+        "36330168750940153068303320647173570834894452309089/5000000000000000000000000000000000000000000000000000000000000000000000",
+        "72660337501880306136606641294347141669788904618179/10000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "minimizing_set_distance_cubic_root_bracket": [
+        "281173498651934321479358558405847515/551322581205221725322513752527295902526734336",
+        "562346997303868642958717116811695031/1102645162410443450645027505054591805053468672"
+      ],
+      "root_bound_scope": "Upper endpoint bounds every member of the full minimizing set; no unique shifted orbit or attraction",
+      "assumption_note": "Inputs must bound the full tube; zero defaults are assumptions, not measurements; rates use the model evolution parameter",
+      "physical_promotion": 0
+    },
+    {
+      "mode": "mixed",
+      "status": "WITHIN_SUFFICIENT_BUDGET",
+      "time_budget_status": "WITHIN_SUFFICIENT_BUDGET",
+      "exact": {
+        "a": "1/100000",
+        "N": "1",
+        "eta": "1/74187554793983",
+        "R_cert": "1/74187554793983",
+        "c": "1/1600",
+        "J": "25",
+        "B_eta": "1/48466784861493698303477007733844213728338106888339832833600",
+        "delta_eta_squared": "1/1211669621537342457586925193346105343208452672208495820840000",
+        "gradient_cap": "1/5226405964837068212932133211485309061031513600",
+        "centered_hessian_cap": "1/70448554064770944071334454899200",
+        "generic_gradient_bound": "1/10452811929674136425864266422970618122063027200",
+        "centered_hessian_bound": "1/140897108129541888142668909798400",
+        "gradient_budget_spent": "1/5226405964837068212932133211485309061031513600",
+        "gradient_budget_reserve": "0",
+        "cumulative_gradient_variation": "1/5226405964837068212932133211485309061031513600",
+        "static_nominal_energy_upper_bound": "3/193867139445974793213908030935376854913352427553359331334400",
+        "time_nominal_energy_upper_bound": "7/387734278891949586427816061870753709826704855106718662668800",
+        "complex_loop_state_error_upper_bound": "21/74187554793983",
+        "pure_magnetic_K_cap": "1/845382648777251328856013458790400",
+        "pure_uniform_hopping_cap": "1/1690765297554502657712026917580800",
+        "pure_residual_hopping_cap": "1/73169683507718954981049864960794326854441190400",
+        "pure_site_half_range_cap": "1/15679217894511204638796399634455927183094540800"
+      },
+      "decimal_diagnostics": {
+        "a": 1e-05,
+        "N": 1.0,
+        "eta": 1.3479349774729403e-14,
+        "R_cert": 1.3479349774729403e-14,
+        "c": 0.000625,
+        "J": 25.0,
+        "B_eta": 2.0632686959899594e-59,
+        "delta_eta_squared": 8.253074783959838e-61,
+        "gradient_cap": 1.913360742980812e-46,
+        "centered_hessian_cap": 1.41947554960545e-32,
+        "generic_gradient_bound": 9.56680371490406e-47,
+        "centered_hessian_bound": 7.09737774802725e-33,
+        "gradient_budget_spent": 1.913360742980812e-46,
+        "gradient_budget_reserve": 0.0,
+        "cumulative_gradient_variation": 1.913360742980812e-46,
+        "static_nominal_energy_upper_bound": 1.5474515219924693e-59,
+        "time_nominal_energy_upper_bound": 1.8053601089912143e-59,
+        "complex_loop_state_error_upper_bound": 2.8306634526931746e-13,
+        "pure_magnetic_K_cap": 1.1828962913378751e-33,
+        "pure_uniform_hopping_cap": 5.914481456689376e-34,
+        "pure_residual_hopping_cap": 1.3666862449862943e-47,
+        "pure_site_half_range_cap": 6.377869143269373e-47
+      },
+      "delta_eta_rational_bracket": [
+        "4542321758737440251943449401413039541841/5000000000000000000000000000000000000000000000000000000000000000000000",
+        "9084643517474880503886898802826079083683/10000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "minimizing_set_distance_cubic_root_bracket": [
+        "281173498651934321479358558405847515/49306087385494825241901591302956379756587965743104",
+        "562346997303868642958717116811695031/98612174770989650483803182605912759513175931486208"
+      ],
+      "root_bound_scope": "Upper endpoint bounds every member of the full minimizing set; no unique shifted orbit or attraction",
+      "assumption_note": "Inputs must bound the full tube; zero defaults are assumptions, not measurements; rates use the model evolution parameter",
+      "physical_promotion": 0
+    },
+    {
+      "mode": "mixed",
+      "status": "WITHIN_SUFFICIENT_BUDGET",
+      "time_budget_status": "WITHIN_SUFFICIENT_BUDGET",
+      "exact": {
+        "a": "100",
+        "N": "3",
+        "eta": "1/829538022",
+        "R_cert": "1/829538022",
+        "c": "3/1600",
+        "J": "100",
+        "B_eta": "1/252547989215662516102269988831322803200",
+        "delta_eta_squared": "1/25254798921566251610226998883132280320000",
+        "gradient_cap": "1/2435553115279989093517596364800",
+        "centered_hessian_cap": "1/2936035541093002598400",
+        "generic_gradient_bound": "1/4871106230559978187035192729600",
+        "centered_hessian_bound": "1/5872071082186005196800",
+        "gradient_budget_spent": "1/2435553115279989093517596364800",
+        "gradient_budget_reserve": "0",
+        "cumulative_gradient_variation": "1/2435553115279989093517596364800",
+        "static_nominal_energy_upper_bound": "1/336730652287550021469693318441763737600",
+        "time_nominal_energy_upper_bound": "7/2020383913725300128818159910650582425600",
+        "complex_loop_state_error_upper_bound": "7/276512674",
+        "pure_magnetic_K_cap": "1/105697279479348093542400",
+        "pure_uniform_hopping_cap": "1/211394558958696187084800",
+        "pure_residual_hopping_cap": "1/102293230841759541927739047321600",
+        "pure_site_half_range_cap": "1/21919978037519901841658367283200"
+      },
+      "decimal_diagnostics": {
+        "a": 100.0,
+        "N": 3.0,
+        "eta": 1.2054902529832443e-09,
+        "R_cert": 1.2054902529832443e-09,
+        "c": 0.001875,
+        "J": 100.0,
+        "B_eta": 3.959643484415365e-39,
+        "delta_eta_squared": 3.9596434844153653e-41,
+        "gradient_cap": 4.105843529858888e-31,
+        "centered_hessian_cap": 3.4059533204006393e-22,
+        "generic_gradient_bound": 2.052921764929444e-31,
+        "centered_hessian_bound": 1.7029766602003197e-22,
+        "gradient_budget_spent": 4.105843529858888e-31,
+        "gradient_budget_reserve": 0.0,
+        "cumulative_gradient_variation": 4.105843529858888e-31,
+        "static_nominal_energy_upper_bound": 2.9697326133115236e-39,
+        "time_nominal_energy_upper_bound": 3.464688048863445e-39,
+        "complex_loop_state_error_upper_bound": 2.531529531264813e-08,
+        "pure_magnetic_K_cap": 9.460981445557331e-24,
+        "pure_uniform_hopping_cap": 4.7304907227786655e-24,
+        "pure_residual_hopping_cap": 9.775817928235446e-33,
+        "pure_site_half_range_cap": 4.5620483665098746e-32
+      },
+      "delta_eta_rational_bracket": [
+        "62925698124179482203088532724193135289651852440249/10000000000000000000000000000000000000000000000000000000000000000000000",
+        "251702792496717928812354130896772541158607409761/40000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "minimizing_set_distance_cubic_root_bracket": [
+        "281173498651934321479358558405847515/551322581205221725322513752527295902526734336",
+        "562346997303868642958717116811695031/1102645162410443450645027505054591805053468672"
+      ],
+      "root_bound_scope": "Upper endpoint bounds every member of the full minimizing set; no unique shifted orbit or attraction",
+      "assumption_note": "Inputs must bound the full tube; zero defaults are assumptions, not measurements; rates use the model evolution parameter",
+      "physical_promotion": 0
+    }
+  ],
+  "frozen_input_sha256": "785669dc56e0094c63043ace1d4b41942104e05de19f9e557674e0c81771af2d",
+  "scope": "Analytic quartic barrier transfer, minimizing-set localization and coefficient proof in manuscript. Exact identities, two scalar normal forms, drift counterexample and five rational budgets checked here. Frozen PET input remains inherited conditional support; no new interval region or independent review."
+}

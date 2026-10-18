@@ -1,0 +1,17 @@
+"""Finalize this unique append-only capture before its first commit."""
+from pathlib import Path
+import json,subprocess,hashlib,os,shutil
+P=Path(__file__).resolve().parent;root=P.parent;state=json.loads((root/'preparation-capture-state.json').read_text());C=root/state['capture_path'];R=root/'ud-repo';S=root/'ud-public'
+base='fac3c74cbfe886d8dd3fa62dd355774d03815f6b';head='0ea51b67fafe68544b70ba3f5627900de1c1780c'
+patch=subprocess.check_output(['git','diff','--binary',base,head],cwd=S);(C/'SITE_SOURCE_CHANGE.patch').write_bytes(patch)
+index=root/'preparation-reconstruction.index'
+env=dict(os.environ,GIT_INDEX_FILE=str(index))
+subprocess.run(['git','read-tree',base],cwd=S,env=env,check=True)
+subprocess.run(['git','apply','--cached','--binary','-'],cwd=S,env=env,input=patch,check=True)
+tree=subprocess.check_output(['git','write-tree'],cwd=S,env=env).decode().strip();expected=subprocess.check_output(['git','rev-parse',head+'^{tree}'],cwd=S).decode().strip();assert tree==expected
+(C/'SOURCE_PATCH_VERIFICATION_v0.1.json').write_text(json.dumps({'status':'PASS','base':base,'head':head,'reconstructed_tree':tree,'expected_tree':expected,'patch_sha256':hashlib.sha256(patch).hexdigest(),'method':'Fresh isolated Git index; apply complete binary source patch; tree equality','prior_home_unchanged':subprocess.check_output(['git','show',base+':dist/index.html'],cwd=S)==(S/'dist/index.html').read_bytes(),'previous_observation_receipt_unchanged':subprocess.check_output(['git','show',base+':dist/sources/observation-v0.1/SITE_VALIDATION.json'],cwd=S)==(S/'dist/sources/observation-v0.1/SITE_VALIDATION.json').read_bytes()},indent=2)+'\n')
+for name in ['SITE_RELEASE_v0.1.json','capture.py']:
+ if (P/name).exists():shutil.copyfile(P/name,C/name)
+files=[{'path':p.relative_to(R).as_posix(),'size_bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(C.iterdir()) if p.is_file() and p.name!='MANIFEST.json']
+m={'capture_id':state['capture_id'],'status':'DERIVED CONDITIONAL / GAUGE-INVARIANT PREPARATION CERTIFICATE / REVIEW PENDING','physical_promotion':0,'provenance':{'origin':'User: continue next steps after endpoint robustness','constructor':'Codex current session','reviewers':[],'repo_base':state['base'],'site_source_base':base,'site_source_commit':head,'lane':'development; no registry entry; nominal action/ledger unchanged'},'verification_scope':'Eight-page analytic theorem; 46 exact finite topology/rational checks; eight floating full-matrix fixtures, four zero-Gauss hidden-electric and three unused-color controls. PDF rendered and checked; static Site/previous presentation checks; full binary source patch reconstruction. Constructor work, not independent review.','scope_limits':['Frozen finite-rank tetrahedral critical orbit and declared metric','Guaranteed interval coverage, norm/Gauss and model identification external to score','ERT/PET trapping and action remain conditional inherited support','Uniform precision allocation sufficient, not necessary or physically calibrated','No empirical reanalysis, physical GUT conclusion, complete tomography or minimal channel theorem'],'supersedes':[{'claim':'ERT preparation-distance gap left by active-loop readout proximity','scope':'Adds a full-invariant sufficient certificate and exact active-only obstruction; retains all prior admissibility/error and physical limits'}],'files':files}
+(C/'MANIFEST.json').write_text(json.dumps(m,indent=2)+'\n');print(json.dumps({'capture':state['capture_id'],'files':len(files),'site_tree':tree}))
