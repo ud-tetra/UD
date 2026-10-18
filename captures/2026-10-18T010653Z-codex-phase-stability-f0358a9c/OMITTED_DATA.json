@@ -1,0 +1,37 @@
+{
+  "files": [
+    {
+      "role": "clean reference raw record",
+      "filename": "normalized_history.i64le",
+      "size_bytes": 150321232,
+      "sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+      "recovery": "Inherited pinned record-only/sketch-blind baseline recipes; no nominal operator needed for verifier",
+      "reason": "150-MB inherited raw input"
+    },
+    {
+      "role": "phase_budget_2neg28",
+      "path": "records/phase_budget_2neg28.i64le",
+      "size_bytes": 150321232,
+      "sha256": "e7afbf9e341d8ed2d926a8c0a0736d207aae37e040b6aedae2cfd0db2572c455",
+      "recovery": "make_phase_records.py with pinned reference record/proposal and declared runtime; hash must match",
+      "reason": "150-MB generated control; exact recipe and gate receipts included"
+    },
+    {
+      "role": "phase_budget_2neg20",
+      "path": "records/phase_budget_2neg20.i64le",
+      "size_bytes": 150321232,
+      "sha256": "0ff574629b79cb3d0d51ba02f1b6e36c24c426722e31eeb77ebdb5d8c15db656",
+      "recovery": "make_phase_records.py with pinned reference record/proposal and declared runtime; hash must match",
+      "reason": "150-MB generated control; exact recipe and gate receipts included"
+    },
+    {
+      "path": "results/certificate-phase_budget_2neg20/FACTOR_GRAMS.npz",
+      "size_bytes": 38302195,
+      "sha256": "5e5dc25bd10ed064cd52263aba0f4492c13f9b693e6e6d6c2eaa3c1c25cf6b2e",
+      "recovery": "Unchanged certify_record.py plus pinned record and included new proposal",
+      "reason": "Large full spectral factor Grams"
+    }
+  ],
+  "no_placeholder_substitution": true,
+  "physical_promotion": 0
+}

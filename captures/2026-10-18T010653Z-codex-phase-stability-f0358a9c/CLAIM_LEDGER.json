@@ -1,0 +1,67 @@
+{
+  "artifact": "UD_PHASE_STABILITY_RETURN_v0.1",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "P1",
+      "status": "EXACT_CONDITIONAL_THEOREM_WITH_VALIDATED_CONSTANTS",
+      "claim": "Exact-arithmetic top105-SVD/LS phase matching around pinned fitted reference is unique at2^-27, with phase error<0.000646029 radians/sample",
+      "evidence": [
+        "THEOREMS.md",
+        "PHASE_STABILITY_CERTIFICATE.json"
+      ],
+      "limit": "Largest passing radius on frozen grid, not an optimal bound; actual floating implementation not certified"
+    },
+    {
+      "id": "P2",
+      "status": "PROOF_LIMIT",
+      "claim": "At2^-20 this sufficient bound provides only one-sided enclosures and cannot certify unique matching",
+      "evidence": [
+        "PHASE_STABILITY_CERTIFICATE.json"
+      ],
+      "limit": "Not an actual fitter-failure or impossibility conclusion at that error level"
+    },
+    {
+      "id": "P3",
+      "status": "EXACT_NO_GO",
+      "claim": "Sampled phases alias continuous frequencies; exact real-valued phase identification under arbitrary positive bounded error is not uniform",
+      "evidence": [
+        "THEOREMS.md sections5"
+      ],
+      "limit": "Does not prohibit approximate/local recovery or additional prior restrictions"
+    },
+    {
+      "id": "P4",
+      "status": "CONSTRUCTOR_EMPIRICAL",
+      "claim": "Two coherent controls fit105 components with observed intended-parameter discrepancy<=2.776e-15",
+      "evidence": [
+        "FIXTURE_MANIFEST.json",
+        "CONTROL_RESULTS.json"
+      ],
+      "limit": "Parameters are intended constructor targets, not true physical frequencies; no general convergence guarantee"
+    },
+    {
+      "id": "P5",
+      "status": "CONSTRUCTOR_VALIDATED_FINITE_RECORD",
+      "claim": "One new coherent control passes unchanged full Hankel signature, count1893, condition<706.570",
+      "evidence": [
+        "results/certificate-phase_budget_2neg20/CERTIFICATE.json",
+        "VALIDATION.json"
+      ],
+      "limit": "Not full acquisition admission, experimental data or independent review"
+    },
+    {
+      "id": "P6",
+      "status": "OPEN",
+      "claim": "Validated floating phase-estimator adapter and sharper full-budget proof; independent replay and metrology",
+      "evidence": [
+        "GitHub #178",
+        "#130",
+        "#177",
+        "#136",
+        "#144"
+      ]
+    }
+  ]
+}
