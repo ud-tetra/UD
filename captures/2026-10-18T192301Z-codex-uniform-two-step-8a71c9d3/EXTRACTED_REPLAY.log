@@ -1,0 +1,27 @@
+{"readable": {"baseline_low_rank_residual_upper": 6.959378720221247e-13, "noise_multiplier_upper": 1080.8188487387988, "beta_lower": 0.9744380656864774}, "passing_exponents": [null, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]}
+{"readable": {"baseline_low_rank_residual_upper": 6.959378720221247e-13, "noise_multiplier_upper": 707.293293986015, "beta_lower": 0.9744380656864774}, "passing_exponents": [null, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]}
+{"status": "CERTIFIED_SOURCE_PRECISION_ORDER", "case": "cyclic_unit", "exact_encoded_count_above_source_cutoff": 209, "source_precision_cutoff": [1, 16777216], "record_sha256": "fd819bea491085f222d9ad7fef325b922ec75a8690c7b6ac69b2429617c67339", "route": "Prior arbitrary-vector2^-37 order theorem applied to exact new2^-48 vector error", "prior_certificate_sha256": "2ffb813c1f8b15cb36bc6e241857c91e504952a89dae28410a96c433824809b6", "physical_promotion": 0, "replay": true}
+{
+  "case": "cyclic_unit",
+  "status": "CERTIFIED_ACTUAL_TWO_STEP_PHASE_MATCHING",
+  "reason": null,
+  "readable": {
+    "eigenvalue_radius_upper": 9.322637430912905e-10,
+    "two_step_phase_error_radians_upper": 9.32264009679046e-10,
+    "minimum_target_chord_lower": 7.285423493387166e-07
+  }
+}
+{
+  "status": "VALIDATED_ASSIGNED_SOURCE_TARGET_ERROR",
+  "case": "cyclic_unit",
+  "circular_two_step_error_upper": [
+    9596510643683329,
+    1267650600228229401496703205376
+  ],
+  "unique_disjoint_phase_matching": true,
+  "readable_error_upper": 7.570312073339105e-15,
+  "does_not_replace_frozen_similarity_certificate": true,
+  "physical_promotion": 0
+}
+{"status": "PASS", "physical_promotion": 0, "original_validation": {"status": "PASS", "physical_promotion": 0, "uniform_rows": 32, "uniform_ideal_passing_rows": 23, "unchanged_original_instrumented_output": true, "actual_phase_replay_identical": true, "zero_factor_control": "ALL_UNIFORM_PHASE_ROWS_HOLD", "uniform_actual_floating_convergence_claimed": false, "independent_review": "pending"}, "uniform_versions_replayed": 2, "uniform_rows": 64, "zero_coefficient_controls": "BOTH_VERSIONS_RETURN_ALL_PHASE_HOLD", "actual_noise_inside_refined_ideal_ball": true, "uniform_actual_floating_convergence_claimed": false, "independent_review": "pending"}
+PASS: package/witness hashes; exact baseline residual and both uniform phase grids; actual phase replay; both zero-factor HOLD controls. Raw cross-Grams and raw noise are not regenerated in this portable replay.
