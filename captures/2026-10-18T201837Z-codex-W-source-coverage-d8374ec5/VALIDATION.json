@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "exact_source_selector": {
+    "status": "PASS",
+    "ambient_dimension": 30,
+    "standard_rank": 12,
+    "selected_rank": 6,
+    "field": "Q(sqrt(8065)) via rational coefficient pairs",
+    "selector_polynomial": "C^2-(23/8)C+(129/160)P_std=0",
+    "vertex_projection": "alpha=(1+89/sqrt(8065))/2",
+    "isotropy": "P0 P_evt A P_evt P0=0",
+    "scope": "exact finite carrier/selector construction;lower-response selection principle supplied"
+  },
+  "csv_component_comparison": {
+    "classification": "NUMERICAL_DIAGNOSTIC_NOT_INTERVAL_CERTIFICATE",
+    "decimal_precision": 100,
+    "max_entry_residual": "4E-100",
+    "predeclared_threshold": "1E-85"
+  },
+  "runner_static_test_keys": {
+    "CRL2C": [
+      "Q121_commutation",
+      "TH_definition",
+      "Theta_definition",
+      "W_orthogonality",
+      "case_id",
+      "classification",
+      "copy_swap_sign",
+      "event_antisymplectic",
+      "input_sha256",
+      "parity_intertwining",
+      "residuals",
+      "results",
+      "schema",
+      "tolerance"
+    ],
+    "CRL2D": [
+      "Ic_definition",
+      "anti",
+      "case_id",
+      "classification",
+      "commute",
+      "input_sha256",
+      "intertwine",
+      "orth",
+      "residuals",
+      "results",
+      "schema",
+      "swap",
+      "th",
+      "theta",
+      "tolerance"
+    ]
+  },
+  "fresh_counterexamples": [
+    "orthonormal supplied W satisfies parity identities but not A^2 W=-5W",
+    "commuting diag(2I,3I) is outside the reciprocal family and is caught by the added D-definition check"
+  ],
+  "coverage_limits": [
+    "neither runner checks native A or selected projector membership",
+    "neither runner checks the repaired full typed composite",
+    "D explicitly checks reciprocal family but does not explicitly guard c>0"
+  ],
+  "archived_runners_executed": false,
+  "independent_review": false,
+  "physical_promotion": 0
+}
