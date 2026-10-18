@@ -1,0 +1,55 @@
+{
+  "status": "WIDE_TIMING_DIAGNOSTIC_FROZEN_BEFORE_NUMERICAL_EXECUTION",
+  "created_utc": "2026-10-18T18:00:28.024016+00:00",
+  "source_main": "f84afda13579a57328ea836c513ad1feb56f3da1",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "same_team_reviews_only": true,
+  "widths": [
+    161,
+    257,
+    321
+  ],
+  "old_sketch_seed": 172026,
+  "new_sketch_seed": 184052,
+  "new_rng_shape": [
+    2294,
+    160
+  ],
+  "columns": "[2Wold|v|2Wnew], denominator128; nested prefixes preserve the old161 exactly",
+  "thresholds": [
+    "same exact parent cutoff squared",
+    "parent cutoff squared times new_Frobenius_squared/old_Frobenius_squared"
+  ],
+  "old_threshold_and_stress_saturation_already_known": true,
+  "cases": [
+    {
+      "case": "ramp_joint_clocks",
+      "record_sha256": "e9f246e8142249781555c99ffca41b98946d88558a43c07ae032594405c48e99"
+    },
+    {
+      "case": "ramp_clock_stress",
+      "record_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59"
+    }
+  ],
+  "code_sha256": {
+    "bindings.py": "fd16cd7edffaa084f48f7313c72e444426a7f4b7abf252ce31c145b286ece626",
+    "certify.py": "022bd40b25fc37e57bab8b168f8bbee473e1d0a25215d8291af2aed06217491a",
+    "model.py": "c5e9c13dc945fe78f3765d9e94154f77bbbce1bbbcb84c50e13417748362f58a",
+    "project.py": "4fd82cf201fbfacc9e3e4f41a6735d589adbc08b23096f7c878aa9732712b57b",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "replay_package.py": "f926baead2357bc0f345caf850485f098d9a41ee56885280535b84ce45a4c32a",
+    "run.py": "96c9cd8a78cf46e65d922c50de55adaca9ddbd9a324fcaf7a9f06f4d5fa2ad93",
+    "test_wide.py": "c834035e1492985d1e0594e896ebc7dca86d228d656aca9d8a71ae6d59f8de96",
+    "validate.py": "98b1867654f427ed042316d522be2eb62d9dc0170e91396403f5699541adaced"
+  },
+  "inputs_sha256": {
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PARENT_CAMPAIGN_FREEZE.json": "948f8027ffc113c0afc722caa0320e731390ab4e74768c58ec3df8fed675b9e4",
+    "PARENT_DATA_FREEZE.json": "5cf6b41a6ae1922d1924186784d28ade277146bba809ab4a7360ac4fcb16c52b",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192",
+    "SKETCH_RULE.json": "c7017102c67c83bdf123a79a298917d49697a06fa69773eb3087ec428c8dcc26"
+  },
+  "acceptance": "Strict validated spectral enclosure comparisons. All threshold intersections/HOLDs retained; no width, recipe, threshold or code tuning after outcomes. These are known-record diagnostics, not independent discovery or acquisition admission.",
+  "scope": "Exact mathematical sketch of encoded records; floating eigensystems are untrusted certificate proposals. No new BLAS-sketch rounding, phase extraction, full-Hankel or SI claim."
+}
