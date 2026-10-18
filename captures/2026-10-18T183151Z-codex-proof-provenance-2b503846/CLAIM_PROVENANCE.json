@@ -1,0 +1,2363 @@
+[
+  {
+    "claim_id": "P-DEF",
+    "title": "Typed pair variables",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-DEF",
+      "source_citations": [
+        {
+          "source_id": "E04",
+          "section": "§2",
+          "anchor_text": "omega",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-ADM",
+    "title": "Admissible response domain",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-ADM",
+      "source_citations": [
+        {
+          "source_id": "E04",
+          "section": "§2",
+          "anchor_text": "admissible",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-DEF",
+        "kind": "proof_premise",
+        "reason": "Defines the masks in the inequalities."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-IDLE",
+    "title": "Idle-response decomposition",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-IDLE",
+      "source_citations": [
+        {
+          "source_id": "C0963",
+          "section": "declared_source_variables / exact_response_form",
+          "anchor_text": "q = omega OR h",
+          "snapshot_sha256": "6da081eec3922f361d4e616673b0f994eed9471c050e818e8b98b80b46e9d2bc"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-ADM",
+        "kind": "proof_premise",
+        "reason": "The inequalities make h an admissible residual mask."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-RANK",
+    "title": "Finite continuation spaces",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-RANK",
+      "source_citations": [
+        {
+          "source_id": "C0884",
+          "section": "§2",
+          "anchor_text": "finite-dimensional continuation map",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-INDEX",
+    "title": "Rank-nullity index",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-INDEX",
+      "source_citations": [
+        {
+          "source_id": "C0884",
+          "section": "§2",
+          "anchor_text": "Rank-nullity",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-RANK",
+        "kind": "proof_premise",
+        "reason": "Finite domain and codomain dimensions determine the index."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-BUDGET",
+    "title": "Full Hamming budget",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-BUDGET",
+      "source_citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem",
+          "anchor_text": "Hamming event budget",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-DEF",
+        "kind": "proof_premise",
+        "reason": "Uses Theta=1−q on both three-seat states."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-CORRECT",
+    "title": "Idle-corrected identity",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-CORRECT",
+      "source_citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem",
+          "anchor_text": "residual idle-response index",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-IDLE",
+        "kind": "proof_premise",
+        "reason": "Separates viable and idle counts."
+      },
+      {
+        "id": "P-INDEX",
+        "kind": "proof_premise",
+        "reason": "Supplies the viable count difference."
+      },
+      {
+        "id": "P-BUDGET",
+        "kind": "proof_premise",
+        "reason": "Identifies the full response count difference."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-EQUAL",
+    "title": "Index equals full budget iff idle totals match",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-EQUAL",
+      "source_citations": [
+        {
+          "source_id": "C0957",
+          "section": "Theorem / decomposition",
+          "anchor_text": "mu_\\Theta=\\operatorname{ind}F_\\omega+\\nu_h",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-CORRECT",
+        "kind": "proof_premise",
+        "reason": "The difference equals the idle count difference."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-PRIOR",
+    "title": "Saturated prior premise",
+    "status": "CONSTITUTIVE_PREMISE",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-PRIOR",
+      "source_citations": [
+        {
+          "source_id": "C0957",
+          "section": "Saturated-prior corollary",
+          "anchor_text": "h^-=0",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-SAT",
+    "title": "Saturated-prior corollary",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-SAT",
+      "source_citations": [
+        {
+          "source_id": "C0957",
+          "section": "Saturated-prior corollary",
+          "anchor_text": "circularity firewall",
+          "snapshot_sha256": "6ea514e6f5af3cbce082605d2575259748aa22e976be5a4d8dfec5855824fae1"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-CORRECT",
+        "kind": "proof_premise",
+        "reason": "Starts from the corrected identity."
+      },
+      {
+        "id": "P-PRIOR",
+        "kind": "constitutive_assumption",
+        "reason": "Sets only the previous idle mask to zero."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-NOIDLE",
+    "title": "POC-1 no-idle response",
+    "status": "CANDIDATE",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-NOIDLE",
+      "source_citations": [
+        {
+          "source_id": "C0963",
+          "section": "minimum_missing_object / admissible_reopen_routes",
+          "anchor_text": "h=000",
+          "snapshot_sha256": "6da081eec3922f361d4e616673b0f994eed9471c050e818e8b98b80b46e9d2bc"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-ADDRESS",
+    "title": "Binding no-idle address",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-ADDRESS",
+      "source_citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "address-selector",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-DEF",
+        "kind": "proof_premise",
+        "reason": "Relates the response and Theta masks."
+      },
+      {
+        "id": "P-NOIDLE",
+        "kind": "constitutive_assumption",
+        "reason": "Supplies the no-idle final response law."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-BURDEN",
+    "title": "Burden and integrity inputs",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-BURDEN",
+      "source_citations": [
+        {
+          "source_id": "C0884",
+          "section": "§5",
+          "anchor_text": "three-pair address selector",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-SHELL",
+    "title": "Conditional shell optimizer",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-SHELL",
+      "source_citations": [
+        {
+          "source_id": "C0884",
+          "section": "§5",
+          "anchor_text": "HOLD_UNRESOLVED_SYMMETRY",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-BURDEN",
+        "kind": "proof_premise",
+        "reason": "Requires supplied weights, integrity and shell count."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-CONFLICT",
+    "title": "Two final selectors can conflict",
+    "status": "EXACT_NO_GO",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-CONFLICT",
+      "source_citations": [
+        {
+          "source_id": "E04",
+          "section": "§3",
+          "anchor_text": "18",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-ADM",
+        "kind": "proof_premise",
+        "reason": "Defines viability admissibility."
+      },
+      {
+        "id": "P-ADDRESS",
+        "kind": "proof_premise",
+        "reason": "Supplies the binding no-idle response."
+      },
+      {
+        "id": "P-SHELL",
+        "kind": "proof_premise",
+        "reason": "Supplies the alternative historical optimization."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-FRAME",
+    "title": "Frame-alignment receipt",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-FRAME",
+      "source_citations": [
+        {
+          "source_id": "E04",
+          "section": "§5",
+          "anchor_text": "frame",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-SOURCE",
+    "title": "Native pre-event viability source",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-SOURCE",
+      "source_citations": [
+        {
+          "source_id": "C0884",
+          "section": "§9",
+          "anchor_text": "native pre-event mechanism",
+          "snapshot_sha256": "027b1d033ef17e7d9946b18cd577b5e370e7c9319bf439a6ba689249f71971b5"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-HSOURCE",
+    "title": "Independent idle-response source",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-HSOURCE",
+      "source_citations": [
+        {
+          "source_id": "C0963",
+          "section": "minimum_missing_object",
+          "anchor_text": "before endpoint release",
+          "snapshot_sha256": "6da081eec3922f361d4e616673b0f994eed9471c050e818e8b98b80b46e9d2bc"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-PREDICT",
+    "title": "Native address/polarity prediction",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-PREDICT",
+      "source_citations": [
+        {
+          "source_id": "E04",
+          "section": "§§2–5",
+          "anchor_text": "pre-event",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-SOURCE",
+        "kind": "evaluation_requirement",
+        "reason": "Native viability inputs must precede the endpoint."
+      },
+      {
+        "id": "P-HSOURCE",
+        "kind": "evaluation_requirement",
+        "reason": "The residual budget requires an independent response law/receipt."
+      },
+      {
+        "id": "P-FRAME",
+        "kind": "evaluation_requirement",
+        "reason": "Address comparison requires relative-frame alignment."
+      },
+      {
+        "id": "P-CORRECT",
+        "kind": "proof_premise",
+        "reason": "The full budget must include the idle term."
+      },
+      {
+        "id": "P-SHELL",
+        "kind": "proof_premise",
+        "reason": "An optimizer used by the model must declare admissibility and tie behavior."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-SCORE",
+    "title": "Eligible independent score",
+    "status": "SOURCE_BLOCKED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-SCORE",
+      "source_citations": [
+        {
+          "source_id": "R35",
+          "section": "Object and scope / scoring gate",
+          "anchor_text": "SOURCE_INCOMPLETE_NO_SCORE",
+          "snapshot_sha256": "7924f1d2acc7a8419ae1a70ef3a44e8d776fea32e4ca9141f857ef9b06bc331a"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-PREDICT",
+        "kind": "evaluation_requirement",
+        "reason": "The tested model must supply lawful pre-event outputs."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-FLUX",
+    "title": "Fixed-K flux witness",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-FLUX",
+      "source_citations": [
+        {
+          "source_id": "E04",
+          "section": "§4",
+          "anchor_text": "EXACT fixed-K counterexample",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "P-FLUX-NOGO",
+    "title": "Universal flux-index equality fails",
+    "status": "EXACT_NO_GO",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "P-FLUX-NOGO",
+      "source_citations": [
+        {
+          "source_id": "E04",
+          "section": "§4",
+          "anchor_text": "counterexample",
+          "snapshot_sha256": "0243b70b3077ad58303ffad4f13d73fdc32bbe55fd204e52d2877c36318f4553"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "P-FLUX",
+        "kind": "proof_premise",
+        "reason": "Nonzero signed flux coexists with zero index."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-UNIT",
+    "title": "Typed action unit",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-UNIT",
+      "source_citations": [
+        {
+          "source_id": "E11",
+          "section": "§2",
+          "anchor_text": "B_0",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-METRIC",
+    "title": "Unit chain metric and active sector",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-METRIC",
+      "source_citations": [
+        {
+          "source_id": "C0579",
+          "section": "Theorem / source anchors",
+          "anchor_text": "Euclidean chain norm",
+          "snapshot_sha256": "ef3bb744995b2cca8087c7ae1718a40a0526cbae314254b2a9ebc5ba6dce2fae"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-CARRIER",
+    "title": "Single-cell spectral identity",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-CARRIER",
+      "source_citations": [
+        {
+          "source_id": "C0906",
+          "section": "§1",
+          "anchor_text": "Exact carrier",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-METRIC",
+        "kind": "proof_premise",
+        "reason": "The carrier and norm fix the declared spectral identity."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-J",
+    "title": "Active complex structure",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-J",
+      "source_citations": [
+        {
+          "source_id": "C0579",
+          "section": "Theorem",
+          "anchor_text": "orthogonal complex structure",
+          "snapshot_sha256": "ef3bb744995b2cca8087c7ae1718a40a0526cbae314254b2a9ebc5ba6dce2fae"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-CARRIER",
+        "kind": "proof_premise",
+        "reason": "Skewness and A²=−4I imply J²=−I and orthogonality."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-PHASE",
+    "title": "Lifted phase history",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-PHASE",
+      "source_citations": [
+        {
+          "source_id": "C0906",
+          "section": "§§1,3",
+          "anchor_text": "Endpoint phase alone",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-ACTION",
+    "title": "Single-sector lifted action",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-ACTION",
+      "source_citations": [
+        {
+          "source_id": "C0906",
+          "section": "§1",
+          "anchor_text": "lifted Hodge action",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-J",
+        "kind": "proof_premise",
+        "reason": "Provides the source symplectic normalization."
+      },
+      {
+        "id": "A-PHASE",
+        "kind": "proof_premise",
+        "reason": "Provides support and accumulated phase."
+      },
+      {
+        "id": "A-UNIT",
+        "kind": "proof_premise",
+        "reason": "Dimensionalizes the internal action."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-SCALE",
+    "title": "Specific action-phase scale",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-SCALE",
+      "source_citations": [
+        {
+          "source_id": "C0906",
+          "section": "§2",
+          "anchor_text": "amplitude-independent",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-ACTION",
+        "kind": "proof_premise",
+        "reason": "Cancel the nonzero support and lifted phase."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-NORM",
+    "title": "Normalized representative",
+    "status": "CONVENTION",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-NORM",
+      "source_citations": [
+        {
+          "source_id": "C0906",
+          "section": "§5",
+          "anchor_text": "normalized representative",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-REC",
+    "title": "Normalized recurrence action",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-REC",
+      "source_citations": [
+        {
+          "source_id": "C0906",
+          "section": "§§3,5",
+          "anchor_text": "One recurrence",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-ACTION",
+        "kind": "proof_premise",
+        "reason": "Integrates the lifted phase over the recurrence."
+      },
+      {
+        "id": "A-NORM",
+        "kind": "constitutive_assumption",
+        "reason": "Uses the normalized representative."
+      },
+      {
+        "id": "A-CARRIER",
+        "kind": "proof_premise",
+        "reason": "Fixes native frequency 2 and recurrence pi."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-END",
+    "title": "Endpoint versus history comparison",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-END",
+      "source_citations": [
+        {
+          "source_id": "C0906",
+          "section": "§3",
+          "anchor_text": "2\\pi n\\equiv0",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-END-NOGO",
+    "title": "Endpoint-only accumulated action no-go",
+    "status": "EXACT_NO_GO",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-END-NOGO",
+      "source_citations": [
+        {
+          "source_id": "C0906",
+          "section": "§3",
+          "anchor_text": "generally nonzero",
+          "snapshot_sha256": "4e5cdc41c1fd93f69b8d80aeb557f5cfdf8b3b335b320ef4b2028bc1b08c6739"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-END",
+        "kind": "proof_premise",
+        "reason": "The domain contains histories sharing the endpoint."
+      },
+      {
+        "id": "A-ACTION",
+        "kind": "proof_premise",
+        "reason": "Their accumulated actions differ."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-G05",
+    "title": "Universal scalar alias retired",
+    "status": "RETIRED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-G05",
+      "source_citations": [
+        {
+          "source_id": "L65",
+          "section": "G05",
+          "anchor_text": "RETIRED FROM MAINLINE AS UNIVERSAL SCALAR",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-ALG",
+    "title": "Conditional scalar-family algebra",
+    "status": "PRESERVED_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-ALG",
+      "source_citations": [
+        {
+          "source_id": "REC02",
+          "section": "ARA01",
+          "anchor_text": "Conditional scalar-family algebra survives",
+          "snapshot_sha256": "fc74e96093e5892a56e148e13fc4735fa3c49b206096282ada73d32e8e996cd9"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-CERT",
+    "title": "Restricted scalar sufficiency certificate",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-CERT",
+      "source_citations": [
+        {
+          "source_id": "L65",
+          "section": "G05 next_gate",
+          "anchor_text": "sufficient for O09",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-ALIAS",
+    "title": "Restricted native scalar identification",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-ALIAS",
+      "source_citations": [
+        {
+          "source_id": "L65",
+          "section": "G05",
+          "anchor_text": "restricted scalar aliases",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-ALG",
+        "kind": "proof_premise",
+        "reason": "Keeps any supplied scalar-family calculation conditional."
+      },
+      {
+        "id": "A-CERT",
+        "kind": "evaluation_requirement",
+        "reason": "Native identification requires independent sufficiency/proportionality."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-ETA",
+    "title": "Unambiguous current ratio",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-ETA",
+      "source_citations": [
+        {
+          "source_id": "L65",
+          "section": "G06",
+          "anchor_text": "current canonical ratio is eta_A=A0/hbar",
+          "snapshot_sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-UNIT",
+        "kind": "proof_premise",
+        "reason": "Declares the native dimensional numerator."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-QPB",
+    "title": "QPB-1 physical correspondence candidate",
+    "status": "CANDIDATE",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-QPB",
+      "source_citations": [
+        {
+          "source_id": "C0883",
+          "section": "Frozen prediction",
+          "anchor_text": "Frozen prediction",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-SCALE",
+        "kind": "proof_premise",
+        "reason": "The exact internal ratio motivates, but does not prove, the correspondence."
+      },
+      {
+        "id": "A-ETA",
+        "kind": "proof_premise",
+        "reason": "Fixes the ratio convention."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-ANCHOR",
+    "title": "Independent physical A0 anchor",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-ANCHOR",
+      "source_citations": [
+        {
+          "source_id": "C0883",
+          "section": "Lawful future test",
+          "anchor_text": "independently constructed physical",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-QPB-TEST",
+    "title": "Prospective QPB-1 comparison",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-QPB-TEST",
+      "source_citations": [
+        {
+          "source_id": "C0883",
+          "section": "Verdicts",
+          "anchor_text": "QPB1_FAIL",
+          "snapshot_sha256": "29442a9bedd0beafa14abc1b56a89077d0ebb1a25541441ae6e23fdcf09bd50a"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-QPB",
+        "kind": "constitutive_assumption",
+        "reason": "Freezes the candidate prediction before comparison."
+      },
+      {
+        "id": "A-ANCHOR",
+        "kind": "evaluation_requirement",
+        "reason": "The independent physical numerator is required."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-SPEED",
+    "title": "Speed/action identities",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-SPEED",
+      "source_citations": [
+        {
+          "source_id": "E11",
+          "section": "§2",
+          "anchor_text": "c",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-UNIT",
+        "kind": "proof_premise",
+        "reason": "Substitute a0=c_speed tau0 into the action unit."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-GAUGE",
+    "title": "Physical clock scale gauge",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-GAUGE",
+      "source_citations": [
+        {
+          "source_id": "E11",
+          "section": "§§3–4",
+          "anchor_text": "Scale-gauge theorem",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-SPEED",
+        "kind": "proof_premise",
+        "reason": "Defines the invariants of the transformation."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-ANCHOR-NOGO",
+    "title": "Action anchor alone cannot set seconds",
+    "status": "EXACT_NO_GO",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-ANCHOR-NOGO",
+      "source_citations": [
+        {
+          "source_id": "E11",
+          "section": "§§3,9",
+          "anchor_text": "What can break the scale gauge?",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-GAUGE",
+        "kind": "proof_premise",
+        "reason": "The gauge leaves A0 unchanged for every lambda."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-CLOCK-ANCHOR",
+    "title": "Independent scale-sensitive anchor",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-CLOCK-ANCHOR",
+      "source_citations": [
+        {
+          "source_id": "E11",
+          "section": "§9",
+          "anchor_text": "What can break the scale gauge?",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "A-CLOCK",
+    "title": "Absolute physical clock",
+    "status": "OPEN",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "A-CLOCK",
+      "source_citations": [
+        {
+          "source_id": "E11",
+          "section": "§§5,8–9",
+          "anchor_text": "Strongest lawful clock bridge",
+          "snapshot_sha256": "2d41cee743acbaee4b7ae2101ee32a96c5eca8904bc1ff4ea12bd35c21065331"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "A-CLOCK-ANCHOR",
+        "kind": "evaluation_requirement",
+        "reason": "A gauge-breaking measurement and correspondence is necessary."
+      },
+      {
+        "id": "A-GAUGE",
+        "kind": "proof_premise",
+        "reason": "The current unit identities otherwise admit a free positive lambda."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "G-HISTORY",
+    "title": "Same local canonical history",
+    "status": "CONSTITUTIVE_PREMISE",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "G-HISTORY",
+      "source_citations": [
+        {
+          "source_id": "E13",
+          "section": "§§4–5",
+          "anchor_text": "same local canonical history",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "G-STATIONARY",
+    "title": "Stationary Genesis local carrier",
+    "status": "CONSTITUTIVE_PREMISE",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "G-STATIONARY",
+      "source_citations": [
+        {
+          "source_id": "E13",
+          "section": "§§1–3",
+          "anchor_text": "locally stationary Genesis",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "G-EVENT",
+    "title": "GH-2 active event geometry",
+    "status": "SOURCE_DECLARED",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "G-EVENT",
+      "source_citations": [
+        {
+          "source_id": "E13",
+          "section": "§6",
+          "anchor_text": "exact GH-2 event geometry",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "G-LOCAL",
+    "title": "Conditional Genesis–Hodge ratios",
+    "status": "EXACT_CONDITIONAL",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "G-LOCAL",
+      "source_citations": [
+        {
+          "source_id": "E13",
+          "section": "§§5–11",
+          "anchor_text": "Conditional canonical identity theorem",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "G-HISTORY",
+        "kind": "constitutive_assumption",
+        "reason": "Requires equality of local canonical histories."
+      },
+      {
+        "id": "G-STATIONARY",
+        "kind": "constitutive_assumption",
+        "reason": "Requires the stationary harmonic symplectic form and frequency."
+      },
+      {
+        "id": "G-EVENT",
+        "kind": "proof_premise",
+        "reason": "Eliminates the balanced coordinate normalization."
+      },
+      {
+        "id": "A-J",
+        "kind": "proof_premise",
+        "reason": "Supplies the Hodge local canonical plane."
+      },
+      {
+        "id": "A-UNIT",
+        "kind": "proof_premise",
+        "reason": "Supplies the native dimensional action scale."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "G-VARY",
+    "title": "Nonstationary history domain",
+    "status": "DOMAIN_PREMISE",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "G-VARY",
+      "source_citations": [
+        {
+          "source_id": "E13",
+          "section": "§12",
+          "anchor_text": "omega_G(t)",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "G-CONST",
+    "title": "Constant unit-ratio requirement",
+    "status": "DOMAIN_PREMISE",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "G-CONST",
+      "source_citations": [
+        {
+          "source_id": "E13",
+          "section": "§12",
+          "anchor_text": "single constant ratio",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  },
+  {
+    "claim_id": "G-GLOBAL-NOGO",
+    "title": "Nonstationary global clock no-go",
+    "status": "EXACT_NO_GO",
+    "lane": "development — no registry entry",
+    "origin": {
+      "graph_commit": "77d18b76a8222a04baefa69f7b700b589b858939",
+      "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb",
+      "node_id": "G-GLOBAL-NOGO",
+      "source_citations": [
+        {
+          "source_id": "E13",
+          "section": "§12",
+          "anchor_text": "single constant ratio",
+          "snapshot_sha256": "909a193d046ea7e560bc83f044cb942c74a39f93ac929a6486073d0792cf8082"
+        }
+      ]
+    },
+    "constructor": {
+      "original_identity": "NOT_ATTRIBUTED_BY_GRAPH",
+      "current_provenance_auditor": "Codex"
+    },
+    "reviews": {
+      "constructor_source_audit": "Original graph declaration; not an independent review",
+      "github_pr71_submissions": 0,
+      "external_ai": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "independent_human": "NO_ATTRIBUTABLE_RECEIPT_IN_THIS_AUDIT",
+      "custodian_ruling": "NONE_ADDED"
+    },
+    "dependencies": [
+      {
+        "id": "G-VARY",
+        "kind": "proof_premise",
+        "reason": "Requires at least two distinct local frequencies."
+      },
+      {
+        "id": "G-CONST",
+        "kind": "constitutive_assumption",
+        "reason": "Requires one unchanged ratio over the history."
+      }
+    ],
+    "text_citations_are_not_proof_edges": true,
+    "correction_handling": "Excluded inferences and source statuses preserved; revisions trigger re-derivation of affected reuse, not rewriting original records.",
+    "reuse_limits": [
+      "Historical scoped graph snapshot only",
+      "No inference that no review exists elsewhere",
+      "No global completeness or physical identification",
+      "Evaluation requirements are not algebraic proof premises"
+    ]
+  }
+]
