@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "controls": [
+    {
+      "control": "frame_reduction_plus_one",
+      "altered_metric": "frame_span_residual_upper",
+      "validated_upper": [
+        1267650600228215408843594591571,
+        1267650600228229401496703205376
+      ],
+      "receipt": {
+        "dyadic_residual_Gram": {
+          "Gram_dimension": 105,
+          "residual_scale_bits": 139,
+          "trace_squared_bound": [
+            1897137590064143626149698747474914820030245193225304124818701107819520104261523593,
+            1897137590064188545819787018382342682267975428761855001222473056385648716020711424
+          ],
+          "Gershgorin_squared_bound": [
+            29642774844772328979412327950257559885723218703274308807584095698397323583172543,
+            29642774844752946028434172162224104410437116074403984394101141506025761187823616
+          ],
+          "chosen_squared_bound": [
+            1897137590064143626149698747474914820030245193225304124818701107819520104261523593,
+            1897137590064188545819787018382342682267975428761855001222473056385648716020711424
+          ],
+          "choice": "min(trace, max absolute row sum), both exact PSD eigenvalue upper bounds",
+          "physical_promotion": 0
+        },
+        "reference_phase_approximation_upper": [
+          1014810516500592,
+          1267650600228229401496703205376
+        ],
+        "exact_binary_scale_bits": {
+          "basis": 79,
+          "frame_reduction": 60
+        }
+      },
+      "result": {
+        "status": "HOLD",
+        "reason": "HOLD: emitted phase rounding/matching"
+      }
+    },
+    {
+      "control": "shift_entry_plus_1_over_64",
+      "altered_metric": "shift_residual_upper",
+      "validated_upper": [
+        19805790866345216651618093027,
+        1267650600228229401496703205376
+      ],
+      "receipt": {
+        "exact_squared_shift_residual": [
+          29639034230285512648263871920632861419477597675749938504553940689922146896639175,
+          121416805764108066932466369176469931665150427440758720078238275608681517825325531136
+        ]
+      },
+      "result": {
+        "status": "HOLD",
+        "reason": "HOLD: emitted phase rounding/matching"
+      }
+    }
+  ]
+}
