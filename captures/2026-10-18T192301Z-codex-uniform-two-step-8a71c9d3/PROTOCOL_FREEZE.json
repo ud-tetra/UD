@@ -1,0 +1,97 @@
+{
+  "status": "PROOF_GRID_AND_NOISE_CONTROL_FROZEN_BEFORE_NEW_BASELINE_RESIDUAL_OR_FITTING",
+  "created_utc": "2026-10-18T19:18:28.888509+00:00",
+  "source_main": "5d42bf60e601d7d603ecaf0589a3549bb5786cf9",
+  "baseline_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "same_team_review_only": true,
+  "source_precision_cutoff": [
+    1,
+    16777216
+  ],
+  "uniform_exponents": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "cases": [
+    {
+      "case": "cyclic_unit",
+      "mode": "cyclic_one_channel",
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    }
+  ],
+  "noise_recipe": "At preparation a, time k add integer (-1)^(a+floor(k/62)) at channel(a+k)%62; zero elsewhere; quantum2^-48.",
+  "shift_comparison_rule": "Saved binary64 T0 is a comparison matrix, not assumed exactLS; Mbar=(1+sigma)/beta charges actual residual.",
+  "uniform_phase_scope": "Exact top209-SVD and exactLS only; actual floating outputs require separate per-record witnesses.",
+  "code_sha256": {
+    "baseline.py": "ea82ed01780dd22dadeec2069d4778682b9a8fbb3bc0f0b75c469113abfb66a0",
+    "bindings.py": "3fac82f24a65602737b87b4553767ecc7fb9e9205582fa2a8faf47f7d638f7a3",
+    "certify.py": "dc9528a07f7a0e3fa4bde185067986c621294eaa3e675dbdd4ecbbffe0bf13dc",
+    "direct_error_v2.py": "0b65e8decb1f1e7641b619cf6df5ab06c90a505e8fe8aae2909a830a52c22030",
+    "make_record.py": "35800eaf9104e001c8ab447467d2be04dc406ca55f7349aacc7b32efcaa3d651",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "propose.py": "bd2fa4e7e0de240a5e77409ef52fff2fec7a6572d7248f436374ad66d1bcc747",
+    "propose_reference.py": "6785dd37726aa99a370f82e731bcfd24a30e796eceeb35bdfb835dfb270030d2",
+    "reference.py": "c476fad5f3695c24d2b753db2e8f7415307caab7533836e7b447257d445dba9d",
+    "replay_package.py": "634d2b2fdd269a28c2e73e61502b4ceb7a89068d911699ebd7fa3a60390980e0",
+    "run.py": "d60e8d18a02ec89fbd8404921a1dbd29617061ac2ca407be4918d08c20eeef07",
+    "sketch.py": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+    "source_order.py": "18cdaa519016ea3f60dc474fea6c91363a4d8968b511f47893db9dfdcc5c7875",
+    "uniform.py": "d0bfb042bf803552159a9d0f983426f118cb692d8d619285368f887750634546",
+    "validate.py": "48784b1ecdfd0bb5db3601ed26dfb8cf0f4a30afb7970d8b6c1655f69168763a"
+  },
+  "inputs_sha256": {
+    "BASE_BASIS_A.npz": "d9d4795747958625060fbf3c155367af0f176519de50c5d1e49f9b6ef4c24735",
+    "BASE_BASIS_B.npz": "c12ed0f14149ef4ad599fb65cdc4a8a4a9739da89b25ec71a2b1d28229b53cf4",
+    "BASE_CERTIFICATE.json": "b4a9c8d4f65760e30c2201bedd1c35d2b5dab8f38a541e59e6bfa114c1915911",
+    "BASE_FLOAT_META.npz": "cdd8a9e86d18c3a678957067af650a861dfce61157571f4d62c1f94905a013d6",
+    "BASE_ORDER_CERTIFICATE.json": "0d3e63c89dbd7c821d459974f4f2a9bbcda5a5586bb2132bd9f3f542c6381dd9",
+    "BASE_SOURCE_WITNESS.npz": "dbe7f2b1a234f84b37f713710c5912c34d07623f92cafef64112603fa643e2e2",
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PREVIOUS_UNIFORM.json": "2ffb813c1f8b15cb36bc6e241857c91e504952a89dae28410a96c433824809b6",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192"
+  }
+}
