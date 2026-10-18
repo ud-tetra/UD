@@ -1,0 +1,186 @@
+{
+  "status": "NOISE_RECIPES_AND_CHECKS_FROZEN_BEFORE_GENERATION_OR_FITTING",
+  "created_utc": "2026-10-18T18:35:49.542688+00:00",
+  "source_main": "8bee441ff9106ec98bf87f9f0570bfa61cffe275",
+  "baseline_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "same_team_reviews_only": true,
+  "source_precision_cutoff": [
+    1,
+    16777216
+  ],
+  "seeds": {
+    "dense_sign": 218209,
+    "coherent_dc": 218210
+  },
+  "cases": [
+    {
+      "case": "dense_a0",
+      "mode": "dense_sign",
+      "integer_amplitude": 1,
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    },
+    {
+      "case": "dense_a8",
+      "mode": "dense_sign",
+      "integer_amplitude": 256,
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    },
+    {
+      "case": "dense_a12",
+      "mode": "dense_sign",
+      "integer_amplitude": 4096,
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    },
+    {
+      "case": "dense_a16",
+      "mode": "dense_sign",
+      "integer_amplitude": 65536,
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    },
+    {
+      "case": "dense_a25",
+      "mode": "dense_sign",
+      "integer_amplitude": 33554432,
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    },
+    {
+      "case": "dc_a25",
+      "mode": "coherent_dc",
+      "integer_amplitude": 33554432,
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    }
+  ],
+  "uniform_exponents": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "code_sha256": {
+    "bindings.py": "010181a814b23d8c7d22eff15b762d5e681ddc301e54d433b8f777faa9700d04",
+    "certify.py": "dc9528a07f7a0e3fa4bde185067986c621294eaa3e675dbdd4ecbbffe0bf13dc",
+    "direct_error.py": "dd87bac398ecfd2343aad2e327da6d32e5259db75797d3911b31f8f417408f81",
+    "make_records.py": "e2cb1872a215656dfce93faa1e540952e70c907d898ef19f457f3ea7bab07488",
+    "noise_math.py": "c22300f9f8e31514c8aab0a954a0c908b0f9f8e4f7c68e330487b6d4d0a9ea0a",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "propose.py": "bd2fa4e7e0de240a5e77409ef52fff2fec7a6572d7248f436374ad66d1bcc747",
+    "propose_reference.py": "6785dd37726aa99a370f82e731bcfd24a30e796eceeb35bdfb835dfb270030d2",
+    "reference.py": "c476fad5f3695c24d2b753db2e8f7415307caab7533836e7b447257d445dba9d",
+    "replay_package.py": "58b3aa17e7018d2f06896ab4a62ee2d0cd02d130a6f5427d0d4fce69e6e5e6a9",
+    "run.py": "709ca83efc1ae04452eb1d227cf5d9734aa812963010a6e90a270b21d42e728e",
+    "sketch.py": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+    "source_order.py": "4085724d3006812567e1e86fe50595a88061b52d385a2f44a1ea1049ebb3441e",
+    "test_noise.py": "c62a20f899f74b9ecce777959d6e024a3c2c55137f5693234f9ec0af573a8ebb",
+    "uniform.py": "e754c4f5626370cd9665720804778d6d3302a03dbee4d3e50626f574d0667924",
+    "validate.py": "7f6543d5c55e8def8bd0cc01f35c29acd145a602d86dc4154822c138ab08e64c"
+  },
+  "inputs_sha256": {
+    "BASE_LAST_ROWS.npz": "dbc7adccef8182310be4b9f30d27a8122665389bf4ca8b28dca290677c811807",
+    "BASE_ORDER_CERTIFICATE.json": "0d3e63c89dbd7c821d459974f4f2a9bbcda5a5586bb2132bd9f3f542c6381dd9",
+    "BASE_PHASE_CERTIFICATE.json": "b4a9c8d4f65760e30c2201bedd1c35d2b5dab8f38a541e59e6bfa114c1915911",
+    "LAST_ROWS_PROVENANCE.json": "48c86bd811bff35f4615e77d22767e2142b8191417c72de258054555962cb850",
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PARENT_ADAPTER_FREEZE.json": "ddc797a2dd8acbb9034f523953fdf2b94c3c0b8608d4c8d4899e71c479e3a3f9",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192"
+  },
+  "dense_levels_share_one_exact_sign_pattern": true,
+  "acceptance": "All exact raw hashes/gates frozen before fitting. No cutoff/rank/seed tuning after results. Source tail includes exactnoiseGram norm for dense, DC is absorbed into stationary source span. Preserve every order/phase HOLD. Direct parameter discrepancies are supplementary and never substitute for frozen similarity certificate.",
+  "scope": "Same-constructor knownstress synthetic perturbations. Uniformorder theorem distinct from idealuniformphase sufficient bound, which mayHOLD evenat0noise; finite actual outcomes notuniversal coverage. No sourcecut/originalnoisecontract change."
+}
