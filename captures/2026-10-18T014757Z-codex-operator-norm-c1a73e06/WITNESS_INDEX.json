@@ -1,0 +1,53 @@
+{
+  "status": "COMPLETE_ACTUAL_FLOAT_AND_EXACT_SKETCH_ARRAYS",
+  "physical_promotion": 0,
+  "arrays": [
+    {
+      "path": "results/dense_sign/FLOAT_WITNESS.npz",
+      "size_bytes": 7032014,
+      "sha256": "0e036144776e35345a93e3eff78c824816197c8cdbd75fb0500d0d03145c3bf8",
+      "archive": "WITNESS_dense_sign_float.zip"
+    },
+    {
+      "path": "results/dense_sign/EXACT_RECORD_SKETCH.npz",
+      "size_bytes": 9683821,
+      "sha256": "030f6472c9dc7ca379345c03d12ab8090a25e2c3f8b545994efdf71202a12516",
+      "archive": "WITNESS_dense_sign_sketch.zip"
+    },
+    {
+      "path": "results/coherent_dc/FLOAT_WITNESS.npz",
+      "size_bytes": 7031828,
+      "sha256": "098c44b4cd7e6e3b3ef407c5148567ddc70db9fdb7156412930cd9c34ce2ae47",
+      "archive": "WITNESS_coherent_dc_float.zip"
+    },
+    {
+      "path": "results/coherent_dc/EXACT_RECORD_SKETCH.npz",
+      "size_bytes": 9683754,
+      "sha256": "4a19f6a5000256ecec108cbce5c17d700e3be473bb54e4947a788c7fcf137d30",
+      "archive": "WITNESS_coherent_dc_sketch.zip"
+    }
+  ],
+  "archives": [
+    {
+      "filename": "WITNESS_dense_sign_float.zip",
+      "size_bytes": 7021851,
+      "sha256": "7e041e2b14ea53ec4739128cde7e278a2d3ae6ba9c60a522e668783871278dfd"
+    },
+    {
+      "filename": "WITNESS_dense_sign_sketch.zip",
+      "size_bytes": 9686958,
+      "sha256": "b531b9c8ec17a67f8b0b057d2e1a8221d912aa70ebfc9bb89b7b7ba2084775de"
+    },
+    {
+      "filename": "WITNESS_coherent_dc_float.zip",
+      "size_bytes": 7021814,
+      "sha256": "59f4fe1b88f01e4928ff21925f7460e2d8c43bb037aa2bfdb95b657f20e7883b"
+    },
+    {
+      "filename": "WITNESS_coherent_dc_sketch.zip",
+      "size_bytes": 9686893,
+      "sha256": "cbfd6263a69e586b1bdc54679710b2a6bcfcb8087a24d2560611fe3375e82f87"
+    }
+  ],
+  "instructions": "Extract core and every witness archive into one folder, then run replay_package.py"
+}

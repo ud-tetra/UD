@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "fresh_raw_readings_projected": 37580308,
+  "portable_replays": 2,
+  "tests": 6,
+  "cases": [
+    {
+      "case": "dense_sign",
+      "comparisons": {
+        "frobenius": {
+          "status": "HOLD",
+          "reason": "HOLD: emitted phase rounding/matching",
+          "unique_reference_phase_matching": false,
+          "physical_promotion": 0
+        },
+        "operator": {
+          "status": "CERTIFIED_FLOATING_ESTIMATOR_PHASE_MATCHING",
+          "basis_polar_distance_upper": [
+            12448197727594512,
+            1267650600228229401496703205376
+          ],
+          "projected_sketch_residual_upper": [
+            27327751597806250558279651,
+            1267650600228229401496703205376
+          ],
+          "reference_subspace_sine_upper": [
+            337216196178629858458444501,
+            1267650600228229401496703205376
+          ],
+          "aligned_basis_distance_upper": [
+            337216199173960714657557358,
+            1267650600228229401496703205376
+          ],
+          "shift_operator_distance_upper": [
+            1000517116460506282284154265,
+            1267650600228229401496703205376
+          ],
+          "eigenvector_inverse_norm_upper": [
+            12992459191891464687197884701606,
+            1267650600228229401496703205376
+          ],
+          "eigenvalue_backward_error_upper": [
+            567943646697003434,
+            1267650600228229401496703205376
+          ],
+          "returned_eigenvalue_radius_upper": [
+            1127123441825986297837898905,
+            1267650600228229401496703205376
+          ],
+          "emitted_phase_error_radians_upper": [
+            1127123590339074073069480214,
+            1267650600228229401496703205376
+          ],
+          "unique_reference_phase_matching": true,
+          "computed_sketch_order_certified": true,
+          "physical_promotion": 0,
+          "scope": "Per-record captured floating outputs about the pinned fitted reference, not global convergence or physical frequency identification",
+          "readable": {
+            "eigenvalue_radius_upper": 0.00088914361861467,
+            "emitted_phase_error_radians_upper": 0.0008891437357708389
+          }
+        }
+      },
+      "operator_Gram_receipts": {
+        "reference_model": {
+          "Gram_dimension": 161,
+          "residual_scale_bits": 127,
+          "trace_squared_bound": [
+            304759568295625074746328345790052690545679673207616085284400309523977,
+            28948022309329048855892746252171976963317496166410141009864396001978282409984
+          ],
+          "Gershgorin_squared_bound": [
+            4311268876087526257945643225016556731439310049806572870040803817341,
+            14474011154664524427946373126085988481658748083205070504932198000989141204992
+          ],
+          "chosen_squared_bound": [
+            4311268876087526257945643225016556731439310049806572870040803817341,
+            14474011154664524427946373126085988481658748083205070504932198000989141204992
+          ],
+          "choice": "min(trace, max absolute row sum), both exact PSD eigenvalue upper bounds",
+          "physical_promotion": 0
+        },
+        "projection": {
+          "Gram_dimension": 161,
+          "residual_scale_bits": 145,
+          "trace_squared_bound": [
+            53727991308484967653203368577039420324262285063691025177438261477175858290159,
+            15541351137805832567355695254588151253139254712417116170014499277911234281641667985408
+          ],
+          "Gershgorin_squared_bound": [
+            112854131341932039702435194739722571247108584809160214236230636611844915615,
+            242833611528216133864932738352939863330300854881517440156476551217363035650651062272
+          ],
+          "chosen_squared_bound": [
+            112854131341932039702435194739722571247108584809160214236230636611844915615,
+            242833611528216133864932738352939863330300854881517440156476551217363035650651062272
+          ],
+          "choice": "min(trace, max absolute row sum), both exact PSD eigenvalue upper bounds",
+          "physical_promotion": 0
+        }
+      }
+    },
+    {
+      "case": "coherent_dc",
+      "comparisons": {
+        "frobenius": {
+          "status": "HOLD",
+          "reason": "HOLD: emitted phase rounding/matching",
+          "unique_reference_phase_matching": false,
+          "physical_promotion": 0
+        },
+        "operator": {
+          "status": "HOLD",
+          "reason": "HOLD: emitted phase rounding/matching",
+          "unique_reference_phase_matching": false,
+          "physical_promotion": 0
+        }
+      },
+      "operator_Gram_receipts": {
+        "reference_model": {
+          "Gram_dimension": 161,
+          "residual_scale_bits": 127,
+          "trace_squared_bound": [
+            313546346878299755610263299071573540987433598774208757997024587339273,
+            28948022309329048855892746252171976963317496166410141009864396001978282409984
+          ],
+          "Gershgorin_squared_bound": [
+            366414067712394728894571051497951559725912810954194692952250312316283,
+            14474011154664524427946373126085988481658748083205070504932198000989141204992
+          ],
+          "chosen_squared_bound": [
+            313546346878299755610263299071573540987433598774208757997024587339273,
+            28948022309329048855892746252171976963317496166410141009864396001978282409984
+          ],
+          "choice": "min(trace, max absolute row sum), both exact PSD eigenvalue upper bounds",
+          "physical_promotion": 0
+        },
+        "projection": {
+          "Gram_dimension": 161,
+          "residual_scale_bits": 144,
+          "trace_squared_bound": [
+            1002484345491798794090137912124196915138419874241604152868699,
+            3885337784451458141838923813647037813284813678104279042503624819477808570410416996352
+          ],
+          "Gershgorin_squared_bound": [
+            1039332103385291519149730648752538737769152357065309193493,
+            30354201441027016733116592294117482916287606860189680019559568902170379456331382784
+          ],
+          "chosen_squared_bound": [
+            1039332103385291519149730648752538737769152357065309193493,
+            30354201441027016733116592294117482916287606860189680019559568902170379456331382784
+          ],
+          "choice": "min(trace, max absolute row sum), both exact PSD eigenvalue upper bounds",
+          "physical_promotion": 0
+        }
+      }
+    }
+  ],
+  "no_full_Hankel_allocated": true,
+  "uniform_all_input_guarantee": false,
+  "all_HOLDs_retained": true
+}
