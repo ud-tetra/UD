@@ -1,0 +1,48 @@
+{
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "lane": "development \u2014 no registry entry",
+  "claims": [
+    {
+      "id": "T1",
+      "type": "EXACT_CONDITIONAL",
+      "claim": "Finite fixed-point recurrence and exact contraction bound every generated raw coordinate against the declared learned modal waveform.",
+      "evidence": [
+        "THEOREMS.md",
+        "make_records.py",
+        "DATA_FREEZE.json"
+      ]
+    },
+    {
+      "id": "T2",
+      "type": "NUMERICAL",
+      "claim": "Fresh original/instrumented actual floating executions and saved-array residual checks; per-case verdicts and errors are in VALIDATION.json.",
+      "evidence": [
+        "RUN_EXECUTIONS.json",
+        "VALIDATION.json",
+        "SOURCE_IDENTITY.json"
+      ]
+    },
+    {
+      "id": "T3",
+      "type": "DERIVED",
+      "claim": "Passing PR189 residual proof certifies actual emitted phases relative to the pinned fitted reference, including rounding.",
+      "evidence": [
+        "PARENT_FRAME_THEOREMS.md",
+        "certify_span.py",
+        "results"
+      ]
+    },
+    {
+      "id": "T4",
+      "type": "OPEN",
+      "claim": "Independent data/review, SI clock transfer, acquisition qualification and full-Hankel signature are outside these finite synthetic tests.",
+      "evidence": [
+        "PROVENANCE.json",
+        "README.md"
+      ]
+    }
+  ],
+  "all_HOLDs_preserved": true,
+  "O03_tolerances_are_protocol_controls": true
+}
