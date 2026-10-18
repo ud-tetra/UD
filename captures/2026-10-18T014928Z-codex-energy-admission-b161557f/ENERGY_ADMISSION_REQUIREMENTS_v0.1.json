@@ -1,0 +1,42 @@
+{
+  "status": "DERIVED_CONDITIONAL_AMBIENT_HAMILTONIAN_CONTRACT",
+  "physical_promotion": 0,
+  "reference": "Finite tetrahedral critical orbit, kappa=r*N*k_star, actual constant positive species norms n_q,n_w",
+  "symplectic_convention": "Opposite matter signs, with actual norm weights retained after normalization",
+  "gates": {
+    "geometry": "P_upper<=eta^2/4, nonzero transported coherence",
+    "energy": "F_actual_upper<=N*eta^4/3200",
+    "mixed_error": "nu+eta*(beta_other+20*D_norm)<=N*eta^3/12800",
+    "norm_uncertainty": "D_norm=max(|nqL-N|,|nqU-N|)+max(|nwL-N|,|nwU-N|)",
+    "time": "Integral of full-tube spatial-gradient variation <=N*eta^3/12800 through declared horizon"
+  },
+  "scalar_channels": {
+    "inherited_normalized_invariant_inputs": 27,
+    "species_norms": 2,
+    "actual_orbit_relative_energy": 1,
+    "total_sufficient": 30,
+    "minimality_claim": false
+  },
+  "gauss": {
+    "scope": "Ambient Hamiltonian confinement at nonzero levels; not zero-source constrained-action solutions",
+    "global_trace": "sum trace(G_i)=n_w-n_q",
+    "lower_bound": "||G||>=abs(n_w-n_q)/sqrt(15*r)",
+    "upper_bound": "||G||<=abs(n_w-n_q)*sqrt(sum(v_i^4))+sqrt(8+4*n_q^2+4*n_w^2)*distance",
+    "projection": "No linear correction bound in frozen quadratic cone; full nonlinear quantitative projection open"
+  },
+  "external_obligations": [
+    "Action/carrier/representation/metric identification",
+    "Positive conserved norm calibration",
+    "Guaranteed joint coverage of norm/score/actual-energy intervals",
+    "Full-tube coefficient and drift bounds",
+    "Declared constrained or ambient/source-driven target",
+    "Physical state/energy/time/detector mapping and non-constructor review"
+  ],
+  "excluded": [
+    "Non-Hamiltonian norm leakage or arbitrary integration defects",
+    "Constraint repair from a residual alone",
+    "Zero-Gauss feasibility inferred from equal norms",
+    "Overall precision improvement or sharp basin",
+    "Empirical or physical GUT promotion"
+  ]
+}
