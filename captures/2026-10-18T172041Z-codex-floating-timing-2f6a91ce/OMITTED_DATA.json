@@ -1,0 +1,32 @@
+{
+  "physical_promotion": 0,
+  "omitted": [
+    "records/*.i64le"
+  ],
+  "reason": "Avoid duplicate601,284,928-byte raw storage; all source inputs, frozen generator, exact timing recipes and full record hashes retained. Saved floating witnesses and original proposals are retained in witness archives.",
+  "recovery": "Extract core+witness ZIPs, install requirements, run OPENBLAS_NUM_THREADS=1 python make_records.py --destination /new/empty/path; requires all four raw SHA256 and metadata rows to match DATA_FREEZE.json.",
+  "bytes_omitted": 601284928,
+  "records": [
+    {
+      "case": "modal_zero",
+      "record_sha256": "d3d34bfc6579e52526205e863bfeb7e045f6fe7b40d94c1006070b262acd5c1c",
+      "bytes": 150321232
+    },
+    {
+      "case": "origin_alternating",
+      "record_sha256": "22e9238c38ff818dee504e1d4f59706d40cd278495afe2872cad826123213e9f",
+      "bytes": 150321232
+    },
+    {
+      "case": "ramp_joint_clocks",
+      "record_sha256": "e9f246e8142249781555c99ffca41b98946d88558a43c07ae032594405c48e99",
+      "bytes": 150321232
+    },
+    {
+      "case": "ramp_clock_stress",
+      "record_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+      "bytes": 150321232
+    }
+  ],
+  "ordinary_saved_array_replay_regenerates_raw": false
+}

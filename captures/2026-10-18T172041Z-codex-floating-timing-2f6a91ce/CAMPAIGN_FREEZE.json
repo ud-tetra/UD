@@ -1,0 +1,109 @@
+{
+  "status": "CONSTRUCTOR_TIMING_CAMPAIGN_FROZEN_BEFORE_RAW_GENERATION_AND_FITTING",
+  "created_utc": "2026-10-18T17:10:05.271476+00:00",
+  "source_main": "e8b54567ad7b9cfddf898377c2e3d697beae3899",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "same_team_review_only": true,
+  "code_sha256": {
+    "audit_records.py": "207e0b95bac72ebcccbc75af193cef481d8942ca32587132c383c61c52039256",
+    "bindings.py": "accefa3a9ba4919594684f3e38004dbfc64e8a77aa87d4ae06fb0a366a135d3c",
+    "certify_span.py": "1db44a3513cdb8c44ebc0a1543daa0c4bcf6111e29ef2b587d3a5d6a26685f8c",
+    "frame_math.py": "553d3c4e8b49487496e2d61674abaf4822d15951c4b00bc23a372df4449bef98",
+    "frame_values.py": "163a40b18cd14b59c414c02a77e9a98d57c36c6877af38480d56e3cb917dd71f",
+    "instrumented_proposer.py": "c7f500e9b46645ef12948ff7815df0069b5b51f5edad7a8bc98cd39838e4bccb",
+    "make_records.py": "3b0032168e87a0849a08f233a4b91eee7fdfe2d3a081e65ac8cca835975d93f0",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "propose_complementary.py": "7285e45458f9983324eb1e1532233f9016195fabbd93bac0978354207106e604",
+    "propose_reduction.py": "323a73766d1ec6ee3890346f66313d2956a6e1c3218c4be07c557a245c7f237f",
+    "replay_all.py": "714fbe43a17288f68f88cd757eafe8db8bb5c256f79c76c2153243f6802329d1",
+    "replay_package.py": "ce015d61fa1c7d764e8c1cb3e57e0d6313605afc1907601b9733c85189f0cac2",
+    "run_campaign.py": "4694f249b4af75c469bf2ca20506c1cd15eb823abd9ae8da3cc1a39a971423cc",
+    "test_span.py": "111437e56908282b7390024585fb76cfe140ead479f1e19d55bf4b9193167062",
+    "test_timing.py": "39da98103b545bf11e7b684f6c1d1039ca54d824ec1a60d2656c4b110f347165",
+    "validate_campaign.py": "918414b3bd64d18a98af56876a08cb6411139d67ad42b4c6234e71e730b8b06c"
+  },
+  "inputs_sha256": {
+    "FROZEN_CONTRACT.json": "ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c",
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PHASE_STABILITY_CERTIFICATE.json": "c8eb769bb54d9ca688bd8fa9e6d19d8eba2e3387efd8fc7d85c9134a51cd1913",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192",
+    "SKETCH_RULE.json": "c7017102c67c83bdf123a79a298917d49697a06fa69773eb3087ec428c8dcc26"
+  },
+  "cases": [
+    {
+      "case": "modal_zero",
+      "origin": "zero",
+      "rate": [
+        0,
+        1
+      ],
+      "jitter": [
+        0,
+        1
+      ]
+    },
+    {
+      "case": "origin_alternating",
+      "origin": "alternating_quarter",
+      "rate": [
+        0,
+        1
+      ],
+      "jitter": [
+        0,
+        1
+      ]
+    },
+    {
+      "case": "ramp_joint_clocks",
+      "origin": "ramp_half",
+      "rate": [
+        1,
+        281474976710656
+      ],
+      "jitter": [
+        1,
+        17179869184
+      ]
+    },
+    {
+      "case": "ramp_clock_stress",
+      "origin": "ramp_half",
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ]
+    }
+  ],
+  "audit_time_indices": [
+    0,
+    1,
+    17,
+    4095,
+    8190
+  ],
+  "source_model": "Direct learned real modal waveform; no inherited raw clean residual and no additive-to-clean gate claim",
+  "times": "t_ak = o_a + (1 + (-1)^a*rate)k + (-1)^(a+k)*jitter; origin as declared; one clock across62 channels per preparation",
+  "shape": [
+    37,
+    8191,
+    62
+  ],
+  "raw_dtype": "<i8",
+  "quantum": [
+    1,
+    281474976710656
+  ],
+  "generator": "96-bit fixed-point complex recurrence with validated Arb anchors, phase60-bit quantization, exact coefficient contraction then ties-even raw48-bit quantization",
+  "acceptance": "Unchanged original/instrumented proposer and PR189 proof. Pin every raw hash before fitting. Preserve all order/proof HOLDs; never force105 or tune recipes, thresholds, code or reference after results.",
+  "target": "Actual emitted phases compared to original pinned reference; distorted clock components need not equal that frame",
+  "scope": "Synthetic learned-model fixtures; not independent/blinded apparatus data, SI metrology or full-Hankel certification",
+  "known_previous_ideal_budget_results": true
+}

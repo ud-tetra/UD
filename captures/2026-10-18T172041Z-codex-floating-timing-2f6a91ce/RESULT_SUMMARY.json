@@ -1,0 +1,61 @@
+{
+  "status": "THREE_ACTUAL_OUTPUT_PHASE_CERTIFICATES_AND_ONE_RETAINED_ORDER_HOLD",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "raw_records": 4,
+  "encoded_readings_checked": 75160616,
+  "direct_Arb_spot_checks": 45880,
+  "fresh_original_and_instrumented_runs": 8,
+  "complete_saved_array_replays": 3,
+  "tests": 14,
+  "cases": [
+    {
+      "case": "modal_zero",
+      "status": "CERTIFIED_FRAME_SPAN_PHASE_MATCHING",
+      "readable": {
+        "eigenvalue_radius_upper": 4.834098579890326e-12,
+        "emitted_phase_error_radians_upper": 4.834217408798691e-12
+      },
+      "reason": null,
+      "learned_order": 105,
+      "original_proposal_byte_identical": true
+    },
+    {
+      "case": "origin_alternating",
+      "status": "CERTIFIED_FRAME_SPAN_PHASE_MATCHING",
+      "readable": {
+        "eigenvalue_radius_upper": 4.658865405085937e-12,
+        "emitted_phase_error_radians_upper": 4.658986668882064e-12
+      },
+      "reason": null,
+      "learned_order": 105,
+      "original_proposal_byte_identical": true
+    },
+    {
+      "case": "ramp_joint_clocks",
+      "status": "CERTIFIED_FRAME_SPAN_PHASE_MATCHING",
+      "readable": {
+        "eigenvalue_radius_upper": 6.644163177365697e-09,
+        "emitted_phase_error_radians_upper": 6.644163314820973e-09
+      },
+      "reason": null,
+      "learned_order": 105,
+      "original_proposal_byte_identical": true
+    },
+    {
+      "case": "ramp_clock_stress",
+      "stage": "proposer",
+      "status": "HOLD",
+      "reason": "HOLD: proposal order incompatible with current stationary/conjugate-pair model",
+      "learned_order": 161
+    }
+  ],
+  "uniform_scalar_evaluation_bound": [
+    1180730772984452572957,
+    664613997892457936451903530140172288
+  ],
+  "source_scope": "Synthetic direct learned modal model at declared rational preparation clocks; no independent apparatus data",
+  "phase_target": "Original pinned fitted reference; not exact clock-distorted modes",
+  "new_full_Hankel_proof": false,
+  "SI_clock_qualification": false
+}
