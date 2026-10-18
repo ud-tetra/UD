@@ -1,0 +1,45 @@
+{
+  "status": "CONSTRUCTOR_OPERATOR_BOUND_COMPARISON_FREEZE_BEFORE_NEW_RUNS",
+  "created_utc": "2026-10-18T01:46:20.416744+00:00",
+  "source_main": "1e3099b50bcb9c6f716de0d66312507ea0722d09",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "code_sha256": {
+    "certify_operator.py": "bce6e65534d1591f8f9af9c81295fd94ea1bd29210e08d3eb2de77a2ef74fe20",
+    "instrumented_proposer.py": "c7f500e9b46645ef12948ff7815df0069b5b51f5edad7a8bc98cd39838e4bccb",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "propose_complementary.py": "7285e45458f9983324eb1e1532233f9016195fabbd93bac0978354207106e604",
+    "replay_all.py": "a57e535fbd6a1b51f15f442f05f07aec8337ec170aed75de2c0b8065623d3fbf",
+    "replay_package.py": "f221197c6283c76f9ac1fb9b56d0bd20c69e8b8a2617362587075db5f6c18cc6",
+    "run_campaign.py": "c11cae773c8f80d300a9b4db52ce127a3f642b9b2db6ebc4038ec13e7399a10e",
+    "test_operator.py": "c207d919ff79141c378595825855dbcef7287c4a622ee95a67d4f92b95a5143b",
+    "validate_campaign.py": "44e224aebb19f0e6dc89b317f56899eafb1110f1a1c10b9ad3a99a8ae99ba217"
+  },
+  "inputs_sha256": {
+    "ADAPTER_TEST_REFERENCE.json": "5f5a042ac57e2cedad613cf8c8d97affea9fb6202cca13df3694edc763219f10",
+    "FROZEN_CONTRACT.json": "ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c",
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PHASE_STABILITY_CERTIFICATE.json": "c8eb769bb54d9ca688bd8fa9e6d19d8eba2e3387efd8fc7d85c9134a51cd1913",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192",
+    "SKETCH_RULE.json": "c7017102c67c83bdf123a79a298917d49697a06fa69773eb3087ec428c8dcc26"
+  },
+  "cases": [
+    {
+      "case": "dense_sign",
+      "record_path": "../noise-campaign/records/dense_sign.i64le",
+      "record_sha256": "4c33c76fd688a5f23ae4f9aa318fe9976aee7dce51adced101b3ff8ca370851b",
+      "original_proposal_path": "results/original-dense_sign/PROPOSAL.npz"
+    },
+    {
+      "case": "coherent_dc",
+      "record_path": "../noise-campaign/records/coherent_dc.i64le",
+      "record_sha256": "b57f336a2864b7424edcae9d39e650151c5914c30f5dccc1792f3c05305d2683",
+      "original_proposal_path": "results/original-coherent_dc/PROPOSAL.npz"
+    }
+  ],
+  "acceptance": "Unchanged assemble() phase gates; compare Frobenius and exact PSD trace/row-sum bounds on same actual outputs; original uninstrumented proposal byte identity; retain all HOLDs, no threshold tuning or retries",
+  "scope": "Two previously known constructor records and fitted-reference phases; no uniform whole-ball or physical phase guarantee",
+  "data_and_reference_previously_known": true
+}

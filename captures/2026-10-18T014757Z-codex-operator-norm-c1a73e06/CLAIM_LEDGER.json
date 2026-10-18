@@ -1,0 +1,47 @@
+{
+  "artifact": "UD_FLOATING_OPERATOR_BOUND_COMPARISON_v0.1",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "G1",
+      "status": "EXACT_UPPER_BOUND_THEOREM",
+      "claim": "PSD Gram trace/absolute-row-sum minimum is an operator-norm-squared upper bound no worse than Frobenius squared",
+      "evidence": [
+        "THEOREMS.md",
+        "operator_bounds.py"
+      ]
+    },
+    {
+      "id": "G2",
+      "status": "CONSTRUCTOR_VALIDATED_FLOATING_OUTPUT",
+      "claim": "dense_sign: refined proof certifies unique fitted-reference matching with error<0.000889144 radians/sample, prior Frobenius proof HOLD",
+      "evidence": [
+        "VALIDATION.json",
+        "results/dense_sign/FLOAT_CERTIFICATE.json"
+      ]
+    },
+    {
+      "id": "G3",
+      "status": "HOLD",
+      "claim": "coherent_dc: both sufficient proofs HOLD at emitted phase matching; no estimator failure or true spectral failure inferred",
+      "evidence": [
+        "results/coherent_dc/FLOAT_CERTIFICATE.json"
+      ]
+    },
+    {
+      "id": "G4",
+      "status": "CONSTRUCTOR_REPLAY",
+      "claim": "Two exact saved-array replays and six tests agree; original proposal bytes unchanged",
+      "evidence": [
+        "VALIDATION.json",
+        "HOSTILE_TEST_RESULTS.txt"
+      ]
+    },
+    {
+      "id": "G5",
+      "status": "OPEN",
+      "claim": "Independent replay/review, uniform phase guarantees, same-subspace amplitude refinement and acquisition/metrology remain open"
+    }
+  ]
+}
