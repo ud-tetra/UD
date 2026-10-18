@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "control": "zero_source_inverse",
+      "returncode": 0,
+      "certificate_status": "HOLD_TWO_STEP_MATCHING",
+      "rejected": true,
+      "stderr_tail": ""
+    },
+    {
+      "control": "tampered_emitted_phase",
+      "returncode": 1,
+      "certificate_status": null,
+      "rejected": true,
+      "stderr_tail": "                                                                          ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ud-two-step-control-zypjvyrk/work/certify.py\", line 37, in run\n    num,den=float(w['angles'][idx]).as_integer_ratio();quo,rem=divmod(num*(1<<60),den);assert int(emitted[idx])==quo+int(2*rem>den or(2*rem==den and quo%2))\n                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    }
+  ],
+  "original_arrays_unchanged": true,
+  "physical_promotion": 0
+}
