@@ -1,0 +1,24 @@
+{
+  "status": "SAME_TEAM_MATHEMATICAL_REVIEW_ONLY",
+  "independent_review": "pending",
+  "physical_promotion": 0,
+  "reviews": [
+    {
+      "task": "timing_review",
+      "findings": [
+        "209 waveform-span and417 shift-closure are upper bounds, not equal dimensions",
+        "Sideband amplitudes are tied; stride-two family closes exactly",
+        "Recompute sketch norms and scaled noise allowance"
+      ]
+    },
+    {
+      "task": "excitation_review",
+      "findings": [
+        "Preserve old RNG shape before appending separately seeded columns",
+        "Encoded exact Gram count and actual BLAS counts are different claims",
+        "Quantization can increase exact raw rank; retain a source-model tail bound",
+        "Small exact-Gram residuals can certify counts without fullHankel"
+      ]
+    }
+  ]
+}
