@@ -1,0 +1,221 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Energy admission with norm errors and nonzero Gauss levels},pdfauthor={Unified Dynamics research workstream}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Energy and residual admission}\rhead{ERA v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\diag}{\operatorname{diag}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\Om}{\mathcal O_*}\newcommand{\F}{\mathrm F}
+\begin{document}
+\begin{center}
+{\Large\bfseries Energy admission with norm errors\\and nonzero Gauss levels}\\[9pt]
+{\large A stronger sufficient preparation test\\and a singular-constraint correction obstruction}\\[9pt]
+Unified Dynamics research workstream\quad |\quad 18 October 2026 UTC\\
+Version 0.1\quad |\quad Derived conditional theorem
+\end{center}
+\begin{abstract}
+We extend the frozen endpoint preparation contract in two directions. Conserved errors in the two species norms give a centered Hamiltonian perturbation with an explicit curvature budget. A joint geometry-and-energy gate replaces the earlier small distance-only ball by a sufficient sublevel test inside the larger tube; an exact zero-Gauss example is admitted at 2.5 times the earlier sufficient initial radius. The proof works on the ambient normalized phase space and requires no zero-Gauss projection. Nonzero Gauss levels remain distinct from solutions of the zero-source constrained action. We quantify their conserved residual and retain the global trace obstruction to unequal-norm neutrality. An exact residual-cone example shows that correction distance can scale as the square root of the residual, precluding a linear correction estimate in that cone. No physical constraint repair or experimental result is asserted.
+\end{abstract}
+Fix $a,N>0$, finite $r\ge1$, $\kappa=rNk_*$ and $0<\eta\le R_{\rm p}$ from the frozen endpoint tube [1,2]. Let the actual constant species norms be $n_q,n_w>0$. Normalize each species separately, retaining the frozen unit-sphere/Frobenius metric and reference orbit $\Om$. Put
+\[
+c=N/1600,\qquad B=c\eta^4,\qquad D_N=|n_q-N|+|n_w-N|.
+\]
+\begin{theorem}[Sufficient energy admission]\label{th:main}
+Let other invariant Hamiltonian errors have generic gradient bound $\nu$ and centered Hessian bound $\beta_o$ on the full tube. Set
+\[
+\beta=\beta_o+20D_N,\qquad \nu+\eta\beta\le c\eta^3/8.
+\]
+Let $\widehat{\mathcal P}$ bound the invariant preparation score of [3], and let $\widehat F_0$ bound the total actual orbit-relative initial energy. If
+\[
+\boxed{\widehat{\mathcal P}\le\eta^2/4,\qquad \widehat F_0\le B/2,}
+\]
+then $d_g(x(t),\Om)<\eta$ for all real time under static ambient Hamiltonian evolution, at any initial Gauss level. Uniform time-dependent errors also permit trapping through $T$ when their cumulative spatial-gradient variation is at most $c\eta^3/8$.
+\end{theorem}
+\textbf{Status.} Development, no registry entry. Constructor verification; independent review pending; physical promotion $0$. Frozen nominal action and ledger unchanged. Nonzero Gauss states here are ambient Hamiltonian states, not zero-source constrained-action solutions.
+\newpage
+\section{Norm changes as centered Hamiltonian errors}
+The frozen carrier is the tetrahedron's fifteen nonempty faces, with 28 Hasse links and eighteen diamonds. For $e=(i\leftarrow j)$, $b_e=\pm1$, define $D_U[i,j]=b_eU_e$, $h_U=i(D_U^\dagger-D_U)$ and
+\[
+W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk}.
+\]
+The actual matter coordinates are $\psi=\sqrt{n_q}q$, $\bar\chi=\sqrt{n_w}w$, $\|q\|=\|w\|=1$. The Hamiltonian expressed in these coordinates is
+\[
+H_n=\frac a2\sum_e\tr E_e^2+\kappa\sum_d(1-\Rea\tr W_d/r)
++n_q q^\dagger h_Uq+n_w w^\dagger h_Uw+\mu(n_q+n_w).
+\]
+The two matter symplectic forms have opposite signs and retain scales $n_q,n_w$. Normalizing is a coordinate change on each positive fixed-norm leaf; it does not change the physical norms, repair Gauss constraints or replace their symplectic weights by $N$.
+
+Write $H_N$ for the reference equal-norm function and $H_*=H_N(\Om)$. The frozen orbit has $U_e^*=\diag(-ib_e,I_{r-1})$, $E^*=0$, $q_i^*=w_i^*=v_ie_1$, with $v>0$ a unit Perron vector and $\rho=\sqrt{8+2\sqrt{10}}$. Define $f(U,z)=z^\dagger h_Uz$. Up to a constant,
+\[
+V_n=H_n-H_N=(n_q-N)f(U,q)+(n_w-N)f(U,w).
+\]
+Its orbit value, including the mass term, is $(n_q+n_w-2N)(\mu-\rho)$.
+\begin{lemma}[Norm-error curvature budget]\label{lem:norm}
+The gradient of $V_n$ vanishes on $\Om$ and $\|\operatorname{Hess}V_n\|\le20D_N$ globally in the reference product metric.
+\end{lemma}
+\begin{proof}
+At the reference point, $h_{U^*}=-T$ on the active color and $Tv=\rho v$, so the sphere derivative of each individual $f$ vanishes. A link variation is $iA_eU_e^*$ with Hermitian $A_e$; its active diagonal is imaginary relative to the real hopping minimum, and its first energy derivative is zero. Invariance transports these conditions over the orbit.
+
+Along a product geodesic let $b^2=\sum\|A_e\|_\F^2$ and $c_z=\|\dot z\|$. Maximum node degree four gives $\|h_U^{(j)}\|\le4b^j$. Round-sphere derivatives give $\|z^{(j)}\|=c_z^j$. Leibniz implies
+\[
+|f''|\le4(b+2c_z)^2\le20(b^2+c_z^2),
+\]
+since $20(b^2+c_z^2)-4(b+2c_z)^2=4(2b-c_z)^2\ge0$. Multiply by each absolute norm error and sum; the total product speed bounds each $b^2+c_z^2$. This proves the Hessian bound. The constant mass term has zero derivatives.
+\end{proof}
+Norms are conserved by species-phase invariant Hamiltonian evolution. Time variation of actual norms caused by non-Hamiltonian leakage is outside this theorem.
+\newpage
+\section{Energy gate and proof of trapping}
+Let $d=d_g(x,\Om)$. The conditional inherited endpoint bounds [1,2], on the full normalized fixed-norm manifold, are
+\[
+H_N-H_*\ge c d^4,\qquad H_N-H_*\le Jd^2/2,
+\quad d\le R_{\rm p},\qquad J=\max(a,25N).
+\]
+They are geometric energy bounds, not statements restricted to zero Gauss. Combining $V_n$ with other errors $V_o=V_g+V_{c,o}$ gives $V=V_g+V_c$ with centered Hessian bound $\beta_o+20D_N$. Define
+\[
+W(x)=V(x)-V(\Om),\qquad F=H_N-H_*+W.
+\]
+Thus $F=(H_n+V_o)-(H_n+V_o)(\Om)$ is the \emph{total actual orbit-relative energy}. An additive energy offset cancels. It is not merely the nominal energy $H_N-H_*$ when norm or coefficient errors are present.
+
+Integrating the gradient and centered Hessian along a shortest orbit geodesic yields
+\[
+|W(x)|\le\nu d+\beta d^2/2.
+\]
+The preparation theorem [3] supplies $d^2\le\mathcal P\le\widehat{\mathcal P}$ globally whenever its first transported coherence is nonzero. The geometry gate therefore places the initial state within $\eta/2$. It uses no unproved local-chart membership assumption.
+\begin{proof}[Static part of Theorem \ref{th:main}]
+On $d=\eta$,
+\[
+F\ge B-\nu\eta-\beta\eta^2/2\ge B-\eta(\nu+\beta\eta)\ge7B/8.
+\]
+Initially $F\le\widehat F_0\le B/2$. Conservation of the actual Hamiltonian conserves $F$ for any ambient Gauss level and for the actual symplectic norm weights. Continuity forbids first exit from the tube in either time direction. Compact trapping and smoothness give complete flow. Moreover, inside the tube,
+\[
+H_N(x(t))-H_*\le\widehat F_0+\nu\eta+\beta\eta^2/2\le5B/8.
+\]
+No minimizer on a particular nonzero momentum level, attraction or constraint repair is inferred.
+\end{proof}
+For differentiable $V_t$ with uniform amplitude bounds, subtract $V_t(\Om)$ and put $F_t=H_N-H_*+V_t-V_t(\Om)$. If $\rho(t)$ bounds $\|\nabla\partial_tV_t\|$ on the tube, then, before exit,
+\[
+\dot F_t=\partial_t(V_t-V_t(\Om)),\qquad |\dot F_t|\le\eta\rho(t).
+\]
+Hence $\int_0^T\rho\le c\eta^3/8$ gives $F_t\le B/2+B/8=5B/8<7B/8$, while the boundary lower bound still holds. Also $H_N-H_*\le3B/4$. This proves the time-dependent assertion through $T$; a finite total integral gives all-forward-time trapping. Norm errors in Lemma~\ref{lem:norm} are constant, so they add no time-variation term.
+\newpage
+\section{Gauss levels: quantitative bounds and a strict obstruction}
+With the frozen Hermitian left-cotangent convention the ambient moment map is
+\[
+G_i=\sum_{\mathrm{head}=i}E_e-\sum_{\mathrm{tail}=i}U_e^\dagger E_eU_e
+-n_q q_iq_i^\dagger+n_w w_iw_i^\dagger,\qquad
+ g=\left(\sum_i\|G_i\|_\F^2\right)^{1/2}.
+\]
+Gauge invariance implies $\dot G_i=0$ in temporal gauge. With multipliers $\Lambda_i$, $\dot G_i=i[\Lambda_i,G_i]$, so $g$ and the summed trace remain constant. These identities also hold for time-dependent gauge-invariant Hamiltonians. They do not require $G=0$.
+\begin{theorem}[Trace compatibility and residual envelope]\label{th:gauss}
+Every ambient state obeys
+\[
+\sum_i\tr G_i=n_w-n_q,\qquad
+\boxed{g\ge\frac{|n_w-n_q|}{\sqrt{15r}}.}
+\]
+Therefore unequal total norms cannot satisfy the closed-carrier zero-source Gauss law. Equality of norms alone is not sufficient for all matrix constraints. With $m_v=(\sum_i v_i^4)^{1/2}\le1$ and $d=d_g(x,\Om)$,
+\[
+\boxed{g\le |n_w-n_q|m_v+
+\sqrt{8+4n_q^2+4n_w^2}\,d.}
+\]
+In particular $g\le D_N+\sqrt{8+4n_q^2+4n_w^2}\sqrt{\widehat{\mathcal P}}$ whenever a preparation upper score is valid.
+\end{theorem}
+\begin{proof}
+Taking traces cancels each link contribution, giving the first identity; Cauchy--Schwarz against fifteen identity matrices gives the lower bound. At a closest orbit point, after gauge/phase alignment, $G_i^*=(n_w-n_q)v_i^2P_0$, so its combined Frobenius norm is $|n_w-n_q|m_v$.
+
+For arbitrary unitary links the electric divergence has squared norm at most $8\sum_e\|E_e\|_\F^2$: apply Cauchy--Schwarz at each node of degree at most four, then count each edge twice. The block Gram map satisfies
+\[
+\left(\sum_i\|q_iq_i^\dagger-q_i^*q_i^{*\dagger}\|_\F^2\right)^{1/2}
+\le2\|q-q^*\|,
+\]
+because every block norm is at most one and $aa^\dagger-bb^\dagger=(a-b)a^\dagger+b(a-b)^\dagger$. The same holds for $w$. Let $E_0$ be the combined electric norm and $Q,W$ the two matter chord distances. Then
+\[
+g\le |n_w-n_q|m_v+\sqrt8E_0+2n_qQ+2n_wW,
+\quad E_0^2+Q^2+W^2\le d^2.
+\]
+Cauchy--Schwarz gives the asserted envelope. It is valid regardless of rank or link displacement.
+\end{proof}
+The upper envelope is a consistency consequence of preparation, not a converse certificate: the diamond electric circulations of [3] can have zero Gauss and arbitrarily large orbit distance. Nonzero $G$ remains a violation of the zero-source constrained action, even when its ambient trajectory is trapped. A physical source or a separate admissibility model would be needed to interpret such a level.
+\newpage
+\section{A square-root correction obstruction in the residual cone}
+The frozen local residual model [4] has $s=r-1\ge1$ unused colors and moment map
+\[
+J_S=C_+C_+^\dagger-C_-C_-^\dagger+\sum_\ell[Z_\ell,Z_\ell^\dagger].
+\]
+Here $C_\pm$ are $s\times28$ oscillator amplitude matrices and the $Z_\ell$ are unused vacuum oscillator matrices. Their Euclidean Frobenius coordinate norm is a \emph{cone norm}, distinct from the original product metric. Taking the trace forces $\|C_+\|_\F=\|C_-\|_\F$ on $\mathcal C=J_S^{-1}(0)$.
+\begin{theorem}[No linear correction bound in the frozen cone]
+Let $X$ have Frobenius norm one and a single nonzero color/oscillator entry. At the cone point $z_t=(C_+=tX,C_-=0,Z_\ell=0)$, $t>0$,
+\[
+\boxed{\|J_S(z_t)\|_\F=t^2,\qquad
+\operatorname{dist}_{\rm cone}(z_t,\mathcal C)=t/\sqrt2.}
+\]
+Thus no constant $L$ bounds correction distance by $L\|J_S\|_\F$ uniformly near the cone origin.
+\end{theorem}
+\begin{proof}
+Since $XX^\dagger$ is a rank-one projector, the residual norm is $t^2$. At any neutral cone point let $a=\|C_+\|_\F=\|C_-\|_\F$. Its squared distance from $z_t$ is at least
+\[
+(t-a)^2+a^2\ge t^2/2.
+\]
+Vacuum coordinates only add nonnegative distance and cannot remove trace imbalance. The lower bound is attained by $C_+=C_-=tX/2$ and $Z=0$, which has exactly zero matrix moment. Hence the distance is $t/\sqrt2$. The ratio to the residual is $1/(\sqrt2t)$, unbounded as $t\downarrow0$.
+\end{proof}
+This is an exact result for the declared residual cone. The frozen local normal-form identification [4] remains conditional support; no explicit norm-comparison radius or constants for a nonlinear full-state correction map are supplied here. The cone calculation therefore does not itself certify a quantitative projection algorithm in the original coordinates.
+
+This obstruction explains why the present admission theorem uses ambient energy confinement instead of adding an unjustified linear Gauss-projection error to its distance score. It also distinguishes three separate claims: conservation of a measured residual, a small initial distance to a reference orbit, and actual membership in the zero-source Gauss constraint. None is interchangeable with the others.
+
+\textbf{Scope separation.} The unused-color residual cone and its correction distance concern the tetrahedral gauge Hamiltonian. They are not the 747-dimensional observer kernel or temporal-sketch blind directions of the independent 600-cell record workstream. No statement here changes that workstream's phase-estimator validation.
+\newpage
+\section{Exact input contract and a strict extension witness}
+The geometry gate can use the 27 invariant scalar inputs of [3], evaluated after separately normalizing by the actual positive norms. Adding the two norm readings and one total orbit-relative energy reading yields a sufficient 30-scalar contract, assuming certified coverage. It is not a minimal-channel claim; obtaining those scalars may require many physical measurements. Optional Gauss metrology checks constraint consistency but is not needed for the ambient trapping proof.
+
+For norm intervals $0<q_L\le n_q\le q_U$, $0<w_L\le n_w\le w_U$, use
+\[
+D_U=\max(|q_L-N|,|q_U-N|)+\max(|w_L-N|,|w_U-N|).
+\]
+The exact calculator replaces $D_N$ by $D_U$ in the shared error budget. It accepts rational upper bounds on the preparation score and \emph{actual} relative energy, plus $\nu,\beta_o$ and cumulative variation. It checks each gate separately. It cannot establish interval realizability or coverage, norm calibration, the Hamiltonian realization or an energy reference from arithmetic alone. A rejected gate is inconclusive about stability.
+
+At $a=N=1$, $\eta=1/829538022$, the inherited constants give
+\begin{center}
+\begin{tabular}{ll}\toprule
+Sufficient input quantity & Model-unit bound\\\midrule
+Geometry score ceiling $\eta^2/4$ & $3.63301688\times10^{-19}$\\
+Actual relative energy ceiling $B/2$ & $6.59940581\times10^{-40}$\\
+Norm-error sum, if no other errors & $D_N\le\eta^2/256000\simeq5.67658887\times10^{-24}$\\
+Previous distance-only score ceiling $\delta^2$ & $5.27952465\times10^{-41}$\\\bottomrule
+\end{tabular}
+\end{center}
+The geometric ceiling is about $6.88\times10^{21}$ times the old score ceiling, \emph{conditional on the added energy gate}. This is not a basin-volume gain or an overall precision improvement: the energy measurement still needs a tiny guaranteed upper error. These are sufficient mathematical bounds, not necessary laboratory tolerances.
+
+\textbf{Exact strict-extension witness.} At rank one, equal unit norms and zero other errors, keep the configuration on the reference orbit. Let $z_e\in\{0,\pm1\}$ be one diamond circulation, with zero node divergence and $\sum z_e^2=4$. Set
+\[
+E_e=\lambda z_e,\qquad \lambda=\eta^2/160.
+\]
+It is zero Gauss, with $d^2=\mathcal P=4\lambda^2$, and the actual relative energy is $F_0=2\lambda^2=B/8$. Since $J=25$ and $\delta^2=\eta^4/40000$,
+\[
+\boxed{d^2=\frac{25}{4}\delta^2,\qquad d=\frac52\delta,\qquad
+\mathcal P\le\eta^2/4.}
+\]
+The new two-gate certificate accepts this exact preparation, while it lies outside the previous sufficient distance-only ball. This does not show failure of trapping outside that older ball, which was always a sufficient guarantee rather than a sharp boundary.
+\newpage
+\section{Verification, provenance and next experiment requirements}
+The constructor replay supplies 49 exact algebra/topology and rational-arithmetic checks: curvature and energy allocations, cone distance identities, eight budget examples, four invalid-input controls, degree/trace cancellation and rational matrix Gauss fixtures at ranks $1,2,5$. The strict electric witness is exact. Finite checks support, rather than exhaustively prove, the analytic geodesic and Noether arguments.
+
+Separate floating diagnostics supply 32 random Hessian fixtures, four centering controls and four Gauss-envelope/covariance controls at ranks $1,2,3,5$, using actual block matrices and sphere tangents. These are neither interval proofs, empirical data, independent review nor long-time integration tests.
+
+Unchanged parity/score calculators and frozen GPC/ERT certificates are hash-bound in the package. The quartic tube, reference orbit and RGC oscillator representation remain conditional dependencies. Citation improves no confidence status. The attached ledger and governance remain unchanged.
+
+A future experiment or emulator still requires:
+\begin{enumerate}
+\item A source-selected finite action, carrier and representation; calibrated positive norms, normalized observables and actual reference energy.
+\item Guaranteed joint-coverage norm, invariant-score and energy enclosures. All norm and coefficient errors share one budget.
+\item A declared constraint target. Unequal norms preclude closed-carrier zero-source Gauss; an ambient confinement result does not repair that constraint.
+\item Cumulative gradient-variation control over the requested duration. Non-Hamiltonian leakage, external sources and integration defects need separate work/residual bounds.
+\item Non-constructor review and physical state/energy/time/detector mapping before a physical identification or experimental-readiness claim.
+\end{enumerate}
+No experimental dataset is analyzed. Next is a typed external-source or defect-work contract, then a targeted data-availability search after selecting a measurable realization. No force unification, proton decay, monopole evidence or empirical GUT result follows here.
+\begin{thebibliography}{9}\small\setlength{\itemsep}{2pt}
+\bibitem{ert} UD workstream. \emph{Robust trapping at the quartic critical endpoint}, ERT v0.1, 16 October 2026. Capture endpoint-robustness, UTC 2026-10-16T164203Z, suffix 80c0789d. Conditional inherited tube/error contract; review pending.
+\bibitem{pet} UD workstream. \emph{Parity-sharpened endpoint trapping}, PET v0.1, 16 October 2026. Capture endpoint-parity, UTC 2026-10-16T161824Z, suffix 37748fe1. Conditional quartic radius; review pending.
+\bibitem{gpc} UD workstream. \emph{Gauge-invariant certification of critical-orbit preparation}, GPC v0.1, 18 October 2026. Capture preparation-certificate, UTC 2026-10-18T011239Z, suffix 137659b3. Conditional geometry certificate; review pending.
+\bibitem{rgc} UD workstream. \emph{Residual Gauss reduction of the embedded curved branch}, RGC v0.1, 15 October 2026. Capture residual-gauss, UTC 2026-10-15T150512Z, suffix d090da32. Conditional oscillator cone; review pending.
+\end{thebibliography}
+\end{document}
