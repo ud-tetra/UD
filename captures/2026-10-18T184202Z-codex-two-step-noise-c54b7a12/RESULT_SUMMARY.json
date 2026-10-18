@@ -1,0 +1,105 @@
+{
+  "status": "FINITE_NOISE_CAMPAIGN_AND_UNIFORM_ORDER_BOUND_COMPLETED",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "rows": [
+    {
+      "case": "dense_a0",
+      "mode": "dense_sign",
+      "integer_amplitude": 1,
+      "max_scalar_noise": 3.552713678800501e-15,
+      "per_vector_noise_norm": 2.7974095480984613e-14,
+      "learned_order": 209,
+      "order_status": "CERTIFIED_SOURCE_PRECISION_ORDER",
+      "phase_status": "CERTIFIED_ACTUAL_TWO_STEP_PHASE_MATCHING",
+      "primary_phase_error_upper": 9.102013471516153e-10,
+      "supplemental_actual_assigned_error_upper": 1.3878402753734163e-14,
+      "supplemental_unique_matching": true,
+      "reason": null
+    },
+    {
+      "case": "dense_a8",
+      "mode": "dense_sign",
+      "integer_amplitude": 256,
+      "max_scalar_noise": 9.094947017729282e-13,
+      "per_vector_noise_norm": 7.161368443132061e-12,
+      "learned_order": 209,
+      "order_status": "CERTIFIED_SOURCE_PRECISION_ORDER",
+      "phase_status": "CERTIFIED_ACTUAL_TWO_STEP_PHASE_MATCHING",
+      "primary_phase_error_upper": 1.3565584253040696e-09,
+      "supplemental_actual_assigned_error_upper": 3.8818954209183565e-12,
+      "supplemental_unique_matching": true,
+      "reason": null
+    },
+    {
+      "case": "dense_a12",
+      "mode": "dense_sign",
+      "integer_amplitude": 4096,
+      "max_scalar_noise": 1.4551915228366852e-11,
+      "per_vector_noise_norm": 1.1458189509011297e-10,
+      "learned_order": 209,
+      "order_status": "CERTIFIED_SOURCE_PRECISION_ORDER",
+      "phase_status": "CERTIFIED_ACTUAL_TWO_STEP_PHASE_MATCHING",
+      "primary_phase_error_upper": 7.563574469904715e-09,
+      "supplemental_actual_assigned_error_upper": 6.193717822425596e-11,
+      "supplemental_unique_matching": true,
+      "reason": null
+    },
+    {
+      "case": "dense_a16",
+      "mode": "dense_sign",
+      "integer_amplitude": 65536,
+      "max_scalar_noise": 2.3283064365386963e-10,
+      "per_vector_noise_norm": 1.8333103214418076e-09,
+      "learned_order": 209,
+      "order_status": "CERTIFIED_SOURCE_PRECISION_ORDER",
+      "phase_status": "CERTIFIED_ACTUAL_TWO_STEP_PHASE_MATCHING",
+      "primary_phase_error_upper": 1.0816489638270511e-07,
+      "supplemental_actual_assigned_error_upper": 9.89733184913164e-10,
+      "supplemental_unique_matching": true,
+      "reason": null
+    },
+    {
+      "case": "dense_a25",
+      "mode": "dense_sign",
+      "integer_amplitude": 33554432,
+      "max_scalar_noise": 1.1920928955078125e-07,
+      "per_vector_noise_norm": 9.386548845782055e-07,
+      "learned_order": 321,
+      "order_status": "HOLD_NOISY_ORDER_BOUND",
+      "phase_status": "HOLD_SOURCE_ORDER_APPLICABILITY",
+      "primary_phase_error_upper": null,
+      "supplemental_actual_assigned_error_upper": null,
+      "supplemental_unique_matching": null,
+      "reason": "Unchanged precision-cutoff floating order is not209; no forced truncation"
+    },
+    {
+      "case": "dc_a25",
+      "mode": "coherent_dc",
+      "integer_amplitude": 33554432,
+      "max_scalar_noise": 1.1920928955078125e-07,
+      "per_vector_noise_norm": 9.386548845782055e-07,
+      "learned_order": 209,
+      "order_status": "CERTIFIED_SOURCE_PRECISION_ORDER",
+      "phase_status": "CERTIFIED_ACTUAL_TWO_STEP_PHASE_MATCHING",
+      "primary_phase_error_upper": 9.686393711173816e-10,
+      "supplemental_actual_assigned_error_upper": 1.1986617452358899e-14,
+      "supplemental_unique_matching": true,
+      "reason": null
+    }
+  ],
+  "uniform_order_interior_budget": [
+    1,
+    137438953472
+  ],
+  "uniform_order_strict_radius_lower": [
+    10206290548832055292,
+    1267650600228229401496703205376
+  ],
+  "uniform_phase_status": "HOLD_UNIFORM_IDEAL_PHASE_BOUND",
+  "uniform_actual_floating_phase_convergence_claim": false,
+  "all_raw_noise_checks_and_regeneration_passed": true,
+  "actual_validation": "PASS",
+  "largest_tested_dense_primary_phase_pass": 65536,
+  "largest_tested_dc_primary_phase_pass": 33554432
+}
