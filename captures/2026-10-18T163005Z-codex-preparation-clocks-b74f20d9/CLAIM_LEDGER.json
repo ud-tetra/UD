@@ -1,0 +1,65 @@
+{
+  "artifact": "UD_PREPARATION_SPECIFIC_CLOCKS_v0.1",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "P1",
+      "type": "EXACT",
+      "claim": "Common origins preserve true singular values; differential origins need not preserve rank or global preparation operator norm.",
+      "evidence": [
+        "THEOREMS.md",
+        "CONTROL_RESULTS.json"
+      ]
+    },
+    {
+      "id": "P2",
+      "type": "DERIVED",
+      "claim": "Unknown-origin and per-preparation clock/preparation error bounds under the declared unwrapped modal interpolation.",
+      "evidence": [
+        "THEOREMS.md",
+        "prep_math.py"
+      ]
+    },
+    {
+      "id": "P3",
+      "type": "NUMERICAL",
+      "claim": "Four declared-origin profiles have positive validated excitation margins; 80 frozen budget rows and joint examples replay using exact rational certificates.",
+      "evidence": [
+        "PREPARATION_CLOCK_FREEZE.json",
+        "CERTIFICATE.json",
+        "REPLAY_CERTIFICATE.json",
+        "VALIDATION.json"
+      ]
+    },
+    {
+      "id": "P4",
+      "type": "DERIVED",
+      "claim": "Joint unknown-origin example has conditional ideal-estimator phase error below4.492e-5 radians/sample.",
+      "evidence": [
+        "CERTIFICATE.json",
+        "THEOREMS.md"
+      ]
+    },
+    {
+      "id": "P5",
+      "type": "NO-GO",
+      "claim": "Aliased samples alone do not bound jitter sensitivity or distinguish clock scale from frequency scale.",
+      "evidence": [
+        "PARENT_CLOCK_THEOREMS.md",
+        "THEOREMS.md"
+      ]
+    },
+    {
+      "id": "P6",
+      "type": "OPEN",
+      "claim": "Physical source/preparation/metric mapping, SI timing qualification, new actual floating output checks and independent review are not supplied by these model certificates.",
+      "evidence": [
+        "ACQUISITION_REQUIREMENTS.json",
+        "PROVENANCE.json"
+      ]
+    }
+  ],
+  "same_team_parallel_reviews_are_independent": false,
+  "all_HOLD_outcomes_retained": true
+}

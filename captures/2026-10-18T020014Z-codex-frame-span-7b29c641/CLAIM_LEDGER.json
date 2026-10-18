@@ -1,0 +1,43 @@
+{
+  "artifact": "UD_FIXED_REFERENCE_FRAME_SPAN_v0.1",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "S1",
+      "status": "EXACT_CONDITIONAL_THEOREM",
+      "claim": "Direct real reference-frame residual bounds the captured-basis principal angles without charging amplitude differences within the reference span",
+      "evidence": [
+        "THEOREMS.md",
+        "frame_math.py",
+        "frame_values.py"
+      ],
+      "conditions": "Fixed full-rank reference frame; eta<1; validated direct residual, shift, eigenpair, inverse and argument separation gates"
+    },
+    {
+      "id": "S2",
+      "status": "CONSTRUCTOR_VALIDATED_SAVED_OUTPUTS",
+      "claim": "coherent_dc certifies<1.256e-11; dense_sign<0.000502361; phase_2neg20<3.802e-7 radians/sample relative to fitted reference",
+      "evidence": [
+        "VALIDATION.json",
+        "results/*/SPAN_CERTIFICATE.json"
+      ],
+      "limit": "No new estimator run or raw-data verification, no physical or whole-ball guarantee"
+    },
+    {
+      "id": "S3",
+      "status": "CONSTRUCTOR_REPLAY_AND_REFUSAL_CONTROLS",
+      "claim": "Three exact-array replays, eight checks and two frozen actual-array corruption refusals pass",
+      "evidence": [
+        "VALIDATION.json",
+        "REFUSAL_RESULTS.json",
+        "HOSTILE_TEST_RESULTS.txt"
+      ]
+    },
+    {
+      "id": "S4",
+      "status": "OPEN",
+      "claim": "Uniform fitting/error guarantees, independent review/replay, excitation and acquisition/metrology qualification remain open"
+    }
+  ]
+}

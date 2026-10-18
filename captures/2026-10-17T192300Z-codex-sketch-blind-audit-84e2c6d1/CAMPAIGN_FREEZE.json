@@ -1,0 +1,50 @@
+{
+  "status": "CONSTRUCTOR_PREDECLARED_SYNTHETIC_CAMPAIGN",
+  "created_at": "2026-10-17T19:15:20.950850+00:00",
+  "independent_preregistration": false,
+  "baseline_already_known": true,
+  "physical_promotion": 0,
+  "record_shape": [
+    37,
+    8191,
+    62
+  ],
+  "encoding_denominator": 281474976710656,
+  "D_column_index": "37*c+a",
+  "sketch_shape": [
+    2294,
+    160
+  ],
+  "sketch_seed": 172026,
+  "sketch_denominator": 64,
+  "null_vector_sha256": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+  "baseline_sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+  "code_sha256": {
+    "propose_record.py": "3c8c3659c96abc010e21cefc16ba8a6f815d9f3d721ac6eb1adb9dd39097f964",
+    "certify_record.py": "6398ae88749cb0e88d6b0b216a8cf6da641a5484301b6bbe597db5f71a2cfedb",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072"
+  },
+  "cases": [
+    {
+      "name": "bounded_null_impulse",
+      "scale": 1458888,
+      "clock": "one at k=4095, zero otherwise",
+      "expected_budget": "coordinate and global vector ceilings"
+    },
+    {
+      "name": "bounded_null_alternating",
+      "scale": 1458888,
+      "clock": "(-1)^k for every time k",
+      "expected_budget": "coordinate and global vector ceilings"
+    },
+    {
+      "name": "strong_null_alternating",
+      "scale": 47804853381,
+      "clock": "(-1)^k for every time k",
+      "expected_budget": "deliberately out of budget; should reach residual verifier rather than discovery hold"
+    }
+  ],
+  "acceptance_rule": "unchanged frozen contract; preserve all HOLDs and outputs; no fitting retries or code changes after this freeze",
+  "source_scope": "New constructed adversarial records only; no independent apparatus data or native-model qualification",
+  "raw_baseline_location": "observer-work/inputs/normalized_history.i64le; preserved source baseline reconstructed from record-only lossless codec"
+}

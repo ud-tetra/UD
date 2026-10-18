@@ -1,0 +1,101 @@
+{
+  "status": "PASS_NUMERICAL_DIAGNOSTICS",
+  "source_and_raw_force_controls": [
+    {
+      "rank": 1,
+      "source_directional_derivative_residual": 6.427642988533751e-11,
+      "source_norm": 0.7867201945596443,
+      "source_norm_upper": 4.1924630354415955,
+      "source_summed_trace": -0.05000000000000007,
+      "trace_rate_target": -0.05,
+      "raw_force_reconstruction_error": 4.249328998188488e-16,
+      "raw_tangent_real_inner_abs": 1.3877787807814457e-16,
+      "global_ground_shift": 2.7778642921140753
+    },
+    {
+      "rank": 2,
+      "source_directional_derivative_residual": 5.312618446117106e-11,
+      "source_norm": 0.7701156198474247,
+      "source_norm_upper": 4.1924630354415955,
+      "source_summed_trace": -0.050000000000000024,
+      "trace_rate_target": -0.05,
+      "raw_force_reconstruction_error": 3.1678539607236855e-16,
+      "raw_tangent_real_inner_abs": 1.6653345369377348e-16,
+      "global_ground_shift": 3.48576625076523
+    },
+    {
+      "rank": 3,
+      "source_directional_derivative_residual": 4.889047852276601e-11,
+      "source_norm": 0.7842350002203018,
+      "source_norm_upper": 4.1924630354415955,
+      "source_summed_trace": -0.049999999999999864,
+      "trace_rate_target": -0.05,
+      "raw_force_reconstruction_error": 7.18609592513088e-16,
+      "raw_tangent_real_inner_abs": 1.1102230246251565e-16,
+      "global_ground_shift": 3.7543274621151363
+    },
+    {
+      "rank": 5,
+      "source_directional_derivative_residual": 4.8639600801093644e-11,
+      "source_norm": 0.9084765548322201,
+      "source_norm_upper": 4.1924630354415955,
+      "source_summed_trace": -0.0500000000000001,
+      "trace_rate_target": -0.05,
+      "raw_force_reconstruction_error": 6.227270698852813e-16,
+      "raw_tangent_real_inner_abs": 3.157196726277789e-16,
+      "global_ground_shift": 3.8581922699918563
+    }
+  ],
+  "centered_ground_shift_controls": [
+    {
+      "rank": 1,
+      "comparison_path_length": 0.001,
+      "ground_shift": 1.3584107811936974e-06,
+      "centered_upper": 9.999999999999999e-06
+    },
+    {
+      "rank": 1,
+      "comparison_path_length": 0.0001,
+      "ground_shift": 1.84800215130565e-08,
+      "centered_upper": 1e-07
+    },
+    {
+      "rank": 2,
+      "comparison_path_length": 0.001,
+      "ground_shift": 1.1469993750345964e-06,
+      "centered_upper": 9.999999999999999e-06
+    },
+    {
+      "rank": 2,
+      "comparison_path_length": 0.0001,
+      "ground_shift": 1.4501170486624915e-08,
+      "centered_upper": 1e-07
+    },
+    {
+      "rank": 3,
+      "comparison_path_length": 0.001,
+      "ground_shift": 9.173255093308796e-07,
+      "centered_upper": 9.999999999999999e-06
+    },
+    {
+      "rank": 3,
+      "comparison_path_length": 0.0001,
+      "ground_shift": 1.0296862029690601e-08,
+      "centered_upper": 1e-07
+    },
+    {
+      "rank": 5,
+      "comparison_path_length": 0.001,
+      "ground_shift": 6.586953564813314e-07,
+      "centered_upper": 9.999999999999999e-06
+    },
+    {
+      "rank": 5,
+      "comparison_path_length": 0.0001,
+      "ground_shift": 6.428616750042693e-09,
+      "centered_upper": 1e-07
+    }
+  ],
+  "scope": "Four full-matrix source derivative/trace and raw-force reconstruction fixtures; eight ground-shift fixtures. Electric bound 0.1 used only for the general derivative inequality; these are not claimed endpoint-tube states, trajectories, interval proofs or empirical data.",
+  "physical_promotion": 0
+}

@@ -1,0 +1,134 @@
+{
+  "status": "CONSTRUCTOR_BENCHMARK",
+  "physical_promotion": 0,
+  "historical_full_strong_control": {
+    "status": "HOLD",
+    "wall_seconds": 108.51675582200187,
+    "peak_rss_kib": 2090928,
+    "dense_hankel_allocated": false,
+    "dense_hankel_bytes_avoided": 307895468032,
+    "source_operator_or_nominal_modes_used": false,
+    "readable_bounds": {
+      "sigma_r_lower": -0.02153509713976772,
+      "sigma_1_upper": 0.10598397935386221,
+      "sigma_r_plus1_upper": 0.021654447697088682
+    },
+    "executed_code_sha256": {
+      "certify_record.py": "6398ae88749cb0e88d6b0b216a8cf6da641a5484301b6bbe597db5f71a2cfedb",
+      "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072"
+    }
+  },
+  "new_isolated_strong_control": {
+    "status": "HOLD",
+    "wall_seconds": 29.871186794996902,
+    "peak_rss_kib": 439948,
+    "dense_hankel_allocated": false,
+    "dense_hankel_bytes_avoided": 307895468032,
+    "source_operator_or_nominal_modes_used": false,
+    "readable_bounds": {},
+    "executed_code_sha256": {
+      "certify_record.py": "1f2f036018cd0de46a26c1db7d0232032f4fc5b5dd862e351eb0dbad8e36334b",
+      "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+      "residual_preflight.py": "fc4a7c9770f6e222c52ae802711c13ab792e56c4ab5d68366b191153f98dbb5a"
+    }
+  },
+  "observed_wall_seconds_saved": 78.64556902700497,
+  "observed_wall_reduction_fraction": 0.7247320326826385,
+  "observed_speed_ratio": 3.6328237162701966,
+  "observed_peak_rss_reduction_fraction": 0.7895919897767881,
+  "comparison_limit": "Historical baseline versus fresh isolated optimized run in same development runtime, not an interleaved randomized benchmark or hardware-independent guarantee",
+  "all_completed_new_attempts": [
+    {
+      "output_directory": "results/strong_null_alternating",
+      "benchmark": {
+        "status": "HOLD",
+        "wall_seconds": 30.20694337000168,
+        "peak_rss_kib": 440028,
+        "dense_hankel_allocated": false,
+        "dense_hankel_bytes_avoided": 307895468032,
+        "source_operator_or_nominal_modes_used": false,
+        "readable_bounds": {},
+        "executed_code_sha256": {
+          "certify_record.py": "1f2f036018cd0de46a26c1db7d0232032f4fc5b5dd862e351eb0dbad8e36334b",
+          "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "residual_preflight.py": "fc4a7c9770f6e222c52ae802711c13ab792e56c4ab5d68366b191153f98dbb5a"
+        }
+      },
+      "record_residual_matches_parent_bytes": true,
+      "co_schedule": "brief overlap with another new campaign control; not an isolated timing comparison",
+      "scalar_readings_checked": 18790154
+    },
+    {
+      "output_directory": "results/bounded_null_impulse",
+      "benchmark": {
+        "status": "CERTIFIED_NUMERIC_RECORD_SIGNATURE",
+        "wall_seconds": 107.85248511100144,
+        "peak_rss_kib": 2090300,
+        "dense_hankel_allocated": false,
+        "dense_hankel_bytes_avoided": 307895468032,
+        "source_operator_or_nominal_modes_used": false,
+        "readable_bounds": {
+          "sigma_r_lower": 0.00011933958620223183,
+          "sigma_1_upper": 0.0843294713744678,
+          "sigma_r_plus1_upper": 1.0944151305709999e-08,
+          "condition_upper": 706.6345213529047
+        },
+        "executed_code_sha256": {
+          "certify_record.py": "1f2f036018cd0de46a26c1db7d0232032f4fc5b5dd862e351eb0dbad8e36334b",
+          "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "residual_preflight.py": "fc4a7c9770f6e222c52ae802711c13ab792e56c4ab5d68366b191153f98dbb5a"
+        }
+      },
+      "record_residual_matches_parent_bytes": true,
+      "co_schedule": "brief overlap with another new campaign control; not an isolated timing comparison",
+      "scalar_readings_checked": 18790154
+    },
+    {
+      "output_directory": "results/strong_null_alternating_serial",
+      "benchmark": {
+        "status": "HOLD",
+        "wall_seconds": 29.470658459002152,
+        "peak_rss_kib": 440060,
+        "dense_hankel_allocated": false,
+        "dense_hankel_bytes_avoided": 307895468032,
+        "source_operator_or_nominal_modes_used": false,
+        "readable_bounds": {},
+        "executed_code_sha256": {
+          "certify_record.py": "1f2f036018cd0de46a26c1db7d0232032f4fc5b5dd862e351eb0dbad8e36334b",
+          "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "residual_preflight.py": "fc4a7c9770f6e222c52ae802711c13ab792e56c4ab5d68366b191153f98dbb5a"
+        }
+      },
+      "record_residual_matches_parent_bytes": true,
+      "co_schedule": "brief overlap with another new campaign control; not an isolated timing comparison",
+      "scalar_readings_checked": 18790154
+    },
+    {
+      "output_directory": "results/strong_null_alternating_isolated",
+      "benchmark": {
+        "status": "HOLD",
+        "wall_seconds": 29.871186794996902,
+        "peak_rss_kib": 439948,
+        "dense_hankel_allocated": false,
+        "dense_hankel_bytes_avoided": 307895468032,
+        "source_operator_or_nominal_modes_used": false,
+        "readable_bounds": {},
+        "executed_code_sha256": {
+          "certify_record.py": "1f2f036018cd0de46a26c1db7d0232032f4fc5b5dd862e351eb0dbad8e36334b",
+          "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "residual_preflight.py": "fc4a7c9770f6e222c52ae802711c13ab792e56c4ab5d68366b191153f98dbb5a"
+        }
+      },
+      "record_residual_matches_parent_bytes": true,
+      "co_schedule": "no other campaign verifier concurrent",
+      "scalar_readings_checked": 18790154
+    }
+  ],
+  "completed_new_all_readings_executions": 4,
+  "total_readings_checked_including_repeats": 75160616,
+  "true_proposal_residual_lower_readable": 0.021635399121756174,
+  "threshold_readable": 1.5043432635659878e-05,
+  "positive_certificate_byte_identical": true,
+  "all_attempts_retained": true,
+  "setup_note": "An initial unittest invocation from the parent directory failed to import the test module; the corrected working-directory invocation passed. No data record was changed."
+}

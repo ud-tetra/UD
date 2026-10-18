@@ -1,0 +1,273 @@
+{
+  "status": "DERIVED_CONDITIONAL_CONSTRUCTOR_VERIFIED",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "candidate_fault_family": {
+    "metric": "H=H0+S; same-grade off-diagonal defects on listed pairs; active pairs form a matching; at least one endpoint observed; ||S||<=1/16",
+    "background": "H0 grade scalar, w and constant clock within declared background uncertainty of frozen fit",
+    "readout": "gain-normalized C-R has support only in the listed local row stencils",
+    "stability": "constant linear plant through validation and later acquisition",
+    "excluded": [
+      "Cross-grade metrics",
+      "Nonmatching interacting metric defects",
+      "Metric diagonal heterogeneity outside H0",
+      "Readout outside listed stencils",
+      "Nonlinearity or unbounded temporal drift"
+    ]
+  },
+  "code": {
+    "preparations": 260,
+    "controlled_coordinates": 1502,
+    "readout_coefficient_rank": 16175,
+    "restricted_readout_sigma_min": [
+      1,
+      5
+    ],
+    "restricted_readout_condition_upper": 5,
+    "preparation_norm_upper": 1,
+    "metric_pairs": 2574,
+    "metric_pair_row_Gram_min_eigenvalue": 3,
+    "times": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1024
+      ],
+      [
+        1,
+        512
+      ]
+    ],
+    "epochs": 2,
+    "blank_extra": true,
+    "scalar_outputs": 295974,
+    "previous_full_basis_scalar_outputs": 2043740160,
+    "reduction_factor_exact": [
+      1802240,
+      261
+    ]
+  },
+  "instrument_contract": {
+    "per_code_normalized_blank_corrected_vector_error": [
+      1,
+      10000000000000
+    ],
+    "static_Frobenius_error": {
+      "arb_enclosure": "[4.553020975132884230231592748302214558970148124675260434358840735000876898983e-12 +/- 3.75e-88]",
+      "display_only": 4.553020975132884e-12
+    },
+    "static_residual_threshold": {
+      "arb_enclosure": "[7.577520933803738634579703896162700161699889465342121890079620536779410059845e-12 +/- 7.28e-88]",
+      "display_only": 7.577520933803739e-12
+    },
+    "unused_static_cells": 32965,
+    "unused_static_Frobenius_threshold": {
+      "arb_enclosure": "[1.612451549659709930473322646060754226226879261121714677587318477852774990205e-12 +/- 1.79e-88]",
+      "display_only": 1.6124515496597098e-12
+    },
+    "passing_readout_operator_error": {
+      "arb_enclosure": "[1.213054190893662286481129664446491472067003759001738232443846127178028695883e-11 +/- 2.68e-87]",
+      "display_only": 1.2130541908936622e-11
+    },
+    "declared_readout_error_ceiling": [
+      13,
+      1000000000000
+    ]
+  },
+  "dynamic_estimator": {
+    "formula": "[8Y(h)-Y(2h)-7Y(0)]/(6h), opposite-parity outputs; subtract R Khat P before local decoding",
+    "h": [
+      1,
+      1024
+    ],
+    "generator_norm_ceiling": 5,
+    "odd_remainder_bound": {
+      "arb_enclosure": "[9.4739300334402338312643515225006754746032892859162166705862644714e-11 +/- 2.84e-76]",
+      "display_only": 9.473930033440234e-11
+    },
+    "readout_contamination_factor": {
+      "arb_enclosure": "[8.415112202632890798777594791573057028229660649489831828840201135047268474966 +/- 4.97e-76]",
+      "display_only": 8.41511220263289
+    },
+    "noise_factor_times_ecol": {
+      "arb_enclosure": "[2.730666666666666666666666666666666666666666666666666666666666666666666666667e-10 +/- 3.96e-86]",
+      "display_only": 2.730666666666667e-10
+    },
+    "maximum_row_decode_factor": {
+      "arb_enclosure": "[31.48015247739438761437045593522255258387536494801346485570590702079171310659 +/- 1.14e-75]",
+      "display_only": 31.480152477394387
+    },
+    "row_error_bound": {
+      "arb_enclosure": "[1.479207783487400951485111126829425078763649792505100142109190239453e-8 +/- 6.48e-75]",
+      "display_only": 1.479207783487401e-08
+    },
+    "null_effective_generator_uncertainty": [
+      844749999812499999991,
+      234374998593750002109375000000
+    ],
+    "maximum_row_residual_threshold": {
+      "arb_enclosure": "[1.839634452236627627399457830239131882659436951859128529837942798306e-8 +/- 5.75e-75]",
+      "display_only": 1.8396344522366276e-08
+    },
+    "metric_visibility_lower_factor": {
+      "arb_enclosure": "[1.732050791978572582505057598223825641778397482731895660197866360319186665422 +/- 1.34e-76]",
+      "display_only": 1.7320507919785726
+    },
+    "passing_metric_S_operator_bound": {
+      "arb_enclosure": "[2.124226911538961353788320698777434720824469581543130738682193413769e-8 +/- 4.78e-75]",
+      "display_only": 2.1242269115389613e-08
+    },
+    "declared_metric_S_upper": [
+      23,
+      1000000000
+    ]
+  },
+  "conditional_actual_observer_protocols": [
+    {
+      "samples": 2048,
+      "extra_acquisition_jitter_ceiling": [
+        1,
+        1000000
+      ],
+      "finite_map_error_upper": {
+        "arb_enclosure": "[6.15011977861263247450351467434199168214791600834928387646523135381173929041e-5 +/- 3.57e-80]",
+        "display_only": 6.150119778612632e-05
+      },
+      "actual_sigma_min_lower": {
+        "arb_enclosure": "[0.001278134696258700039842502023650532364636120174990373988365600953894510052514 +/- 1.68e-79]",
+        "display_only": 0.0012781346962587
+      },
+      "actual_condition_enclosed_upper": {
+        "arb_enclosure": "[782.438272057806117305411259061124424879489129969604331986822112043736199984 +/- 4.30e-73]",
+        "display_only": 782.4382720578061
+      },
+      "declared_condition_upper": 783,
+      "rank": 2640,
+      "kernel_dimension": 0
+    },
+    {
+      "samples": 4096,
+      "extra_acquisition_jitter_ceiling": [
+        1,
+        1000000
+      ],
+      "finite_map_error_upper": {
+        "arb_enclosure": "[0.0001180230820062709542035685691179060398042464032991344089250787928722323071254 +/- 1.77e-80]",
+        "display_only": 0.00011802308200627096
+      },
+      "actual_sigma_min_lower": {
+        "arb_enclosure": "[0.002561248706083381774971505771669998523110952266848599245335427741993022583711 +/- 1.99e-79]",
+        "display_only": 0.0025612487060833818
+      },
+      "actual_condition_enclosed_upper": {
+        "arb_enclosure": "[390.4806365373903304131967250537557921305352353817937428251370160295692575792 +/- 4.31e-74]",
+        "display_only": 390.48063653739035
+      },
+      "declared_condition_upper": 391,
+      "rank": 2640,
+      "kernel_dimension": 0
+    },
+    {
+      "samples": 8192,
+      "extra_acquisition_jitter_ceiling": [
+        1,
+        1000000
+      ],
+      "finite_map_error_upper": {
+        "arb_enclosure": "[0.0002310668501305170661030844357019791266656943024088972488205385145715608226196 +/- 6.34e-80]",
+        "display_only": 0.00023106685013051708
+      },
+      "actual_sigma_min_lower": {
+        "arb_enclosure": "[0.003050357531396457493900085390979068131018917213599050425425814551968234150821 +/- 2.99e-79]",
+        "display_only": 0.0030503575313964573
+      },
+      "actual_condition_enclosed_upper": {
+        "arb_enclosure": "[327.9061744582522706601438724287423116868491092601937680882929220976210883875 +/- 6.59e-74]",
+        "display_only": 327.9061744582523
+      },
+      "declared_condition_upper": 328,
+      "rank": 2640,
+      "kernel_dimension": 0
+    }
+  ],
+  "synthetic_local_cross_talk": {
+    "row": 4,
+    "input": 0,
+    "epsilon": [
+      1,
+      1000000000
+    ],
+    "color": 17,
+    "encoded_scalar": [
+      1,
+      2000000000
+    ],
+    "exactly_recovered": true,
+    "not_empirical": true
+  },
+  "synthetic_local_metric": {
+    "pair": [
+      0,
+      4
+    ],
+    "rho": [
+      1,
+      1000000
+    ],
+    "coded_input_color": 177,
+    "decoded_coefficient_signal_lower": {
+      "arb_enclosure": "[1.000000666947688624109892774562624063389535070801366885622577341885853198732e-6 +/- 9.89e-83]",
+      "display_only": 1.0000006669476887e-06
+    },
+    "rejected_with_error_budget": true,
+    "not_empirical": true
+  },
+  "blind_spots": {
+    "static_unrestricted_nullity_per_row": 2380,
+    "three_time_unrestricted_nullity_per_row_lower": 1860,
+    "static_two_entry_alias": {
+      "row": 1,
+      "positive_input": 1,
+      "negative_input": 20,
+      "same_color": 0,
+      "outside_local_family": true
+    },
+    "not_a_full_basis_observer_validation": true,
+    "metric_harmonic_and_sampling_alias_no_go_outside_family_remain": true
+  },
+  "sources": [
+    {
+      "path": "sources/PARENT_DISCREPANCY_CERTIFICATE.json",
+      "size_bytes": 10174,
+      "sha256": "0584e2325242921354ba21e74e8490e598049d3fffb4fb2af9b15f093948770a"
+    },
+    {
+      "path": "sources/PARENT_GRADE_CALIBRATION_CERTIFICATE.json",
+      "size_bytes": 16861,
+      "sha256": "20eb37d374846a18f719a201e06b313439b94eb4b14779c3a2f43db9a3b00cc8"
+    },
+    {
+      "path": "sources/PARENT_ROBUSTNESS_CERTIFICATE.json",
+      "size_bytes": 11207,
+      "sha256": "09e91a66273df6cee21ab472bd28d976fb92e0ee0076552a5bb495eb494ac89d"
+    },
+    {
+      "path": "sources/RESULTS.json",
+      "size_bytes": 3476,
+      "sha256": "9e8b19e7a526321a4dcb4854d05e0e11fd75ed05b7eb05106c4701b5bc57898a"
+    },
+    {
+      "path": "sources/SCHEDULE_CERTIFICATES.json",
+      "size_bytes": 1885,
+      "sha256": "979194b7cf5defc33d7b1ff5dae5d731f02cf8e16b4a6db4c8086ea7f7d60061"
+    },
+    {
+      "path": "sources/operators.npz",
+      "size_bytes": 31610,
+      "sha256": "813b0bb2ea2cec43c8ffbbf954b05b8b9ac2144394f421d98aaa1eed308f396d"
+    }
+  ]
+}

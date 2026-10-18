@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "known_baseline_new_constructor_noise_cases": 5,
+  "exact_additive_scalar_comparisons": 93950770,
+  "original_and_instrumented_proposer_runs": 10,
+  "saved_array_phase_replays": 4,
+  "tests": 13,
+  "cases": [
+    {
+      "case": "dense_216104",
+      "stage": "phase_certificate",
+      "status": "CERTIFIED_FRAME_SPAN_PHASE_MATCHING",
+      "readable": {
+        "eigenvalue_radius_upper": 0.0005002616846478435,
+        "emitted_phase_error_radians_upper": 0.0005002617055140266
+      },
+      "reason": null,
+      "learned_order": 105,
+      "per_vector_gate": true,
+      "original_proposal_byte_identical": true
+    },
+    {
+      "case": "dense_216105",
+      "stage": "phase_certificate",
+      "status": "CERTIFIED_FRAME_SPAN_PHASE_MATCHING",
+      "readable": {
+        "eigenvalue_radius_upper": 0.0004993427925301951,
+        "emitted_phase_error_radians_upper": 0.0004993428132816079
+      },
+      "reason": null,
+      "learned_order": 105,
+      "per_vector_gate": true,
+      "original_proposal_byte_identical": true
+    },
+    {
+      "case": "dense_216106",
+      "stage": "phase_certificate",
+      "status": "CERTIFIED_FRAME_SPAN_PHASE_MATCHING",
+      "readable": {
+        "eigenvalue_radius_upper": 0.0005024883574190072,
+        "emitted_phase_error_radians_upper": 0.0005024883785650671
+      },
+      "reason": null,
+      "learned_order": 105,
+      "per_vector_gate": true,
+      "original_proposal_byte_identical": true
+    },
+    {
+      "case": "block_512_216107",
+      "stage": "phase_certificate",
+      "status": "CERTIFIED_FRAME_SPAN_PHASE_MATCHING",
+      "readable": {
+        "eigenvalue_radius_upper": 0.0004968479635662712,
+        "emitted_phase_error_radians_upper": 0.0004968479840082205
+      },
+      "reason": null,
+      "learned_order": 105,
+      "per_vector_gate": true,
+      "original_proposal_byte_identical": true
+    },
+    {
+      "case": "oversized_impulse_216108",
+      "stage": "proposer",
+      "status": "HOLD",
+      "reason": "HOLD: proposal order incompatible with current stationary/conjugate-pair model",
+      "learned_order": 106,
+      "per_vector_gate": false
+    }
+  ],
+  "all_HOLDs_retained": true,
+  "new_full_Hankel_execution": false,
+  "no_full_Hankel_allocated": true,
+  "uniform_all_input_phase_guarantee": false,
+  "independent_records_or_review_claimed": false
+}

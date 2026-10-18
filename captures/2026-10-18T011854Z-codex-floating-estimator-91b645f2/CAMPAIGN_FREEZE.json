@@ -1,0 +1,44 @@
+{
+  "status": "CONSTRUCTOR_FLOATING_ADAPTER_FREEZE_BEFORE_NEW_RUNS",
+  "created_utc": "2026-10-18T01:14:50.393651+00:00",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "source_main": "f70d5a12e8081e3d2c13342f8584607325527c5e",
+  "code_sha256": {
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "certify_floating.py": "5c426cd565955f7d86073a50f3b1b8221e506b3d36e96ca0360f87e3696c3b44",
+    "instrumented_proposer.py": "c7f500e9b46645ef12948ff7815df0069b5b51f5edad7a8bc98cd39838e4bccb",
+    "propose_complementary.py": "7285e45458f9983324eb1e1532233f9016195fabbd93bac0978354207106e604",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072"
+  },
+  "inputs_sha256": {
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "SKETCH_RULE.json": "c7017102c67c83bdf123a79a298917d49697a06fa69773eb3087ec428c8dcc26",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192",
+    "PHASE_STABILITY_CERTIFICATE.json": "c8eb769bb54d9ca688bd8fa9e6d19d8eba2e3387efd8fc7d85c9134a51cd1913",
+    "FROZEN_CONTRACT.json": "ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c"
+  },
+  "cases": [
+    {
+      "case": "clean",
+      "record_path": "../observer-work/inputs/normalized_history.i64le",
+      "record_sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+      "parent_proposal_sha256": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192"
+    },
+    {
+      "case": "phase_2neg28",
+      "record_path": "../phase-stability-work/records/phase_budget_2neg28.i64le",
+      "record_sha256": "e7afbf9e341d8ed2d926a8c0a0736d207aae37e040b6aedae2cfd0db2572c455",
+      "parent_proposal_sha256": "37117a29918572686d75d450d44f1ee93cb26d1e0d57940dfeb2dcc5c75f1e39"
+    },
+    {
+      "case": "phase_2neg20",
+      "record_path": "../phase-stability-work/records/phase_budget_2neg20.i64le",
+      "record_sha256": "0ff574629b79cb3d0d51ba02f1b6e36c24c426722e31eeb77ebdb5d8c15db656",
+      "parent_proposal_sha256": "97b1ede0752d44e2a0fccd268174a7d81ebb6ba2d0bf1e69111352932d73e35f"
+    }
+  ],
+  "acceptance": "Exact residual gates and disjoint reference eigenvalue/phase enclosures; require byte-identical original proposal; retain every HOLD; no threshold adjustment or retries",
+  "scope": "Three pinned constructor records; a posteriori validation of actual floating outputs, not global convergence or physical frequency identification",
+  "data_and_reference_previously_known": true
+}

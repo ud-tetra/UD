@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "artifact_type": "NON_CONSTRUCTOR_NOISE_CAMPAIGN_ATTESTATION",
+  "target_package": "UD_NOISY_RECORD_PROPOSAL_CAMPAIGN_v0.1",
+  "audit_version": "0.1.0-eval",
+  "control_posture": "NOISE_INVARIANT_BOUNDS_VALIDATED",
+  "structural_completeness": true,
+  "runtime_constructor_invoked": false,
+  "noise_modes_verified": [
+    "clean",
+    "coherent_dc",
+    "dense_sign",
+    "ramp",
+    "single_vector"
+  ],
+  "invariants_verified": {
+    "discovery_gap_bounded": true,
+    "spatial_rank_preserved": true,
+    "coefficient_provenance_anchored": true,
+    "implementation_frozen": true
+  },
+  "attestation_verdict": "PROPOSAL_CAMPAIGN_ADMISSIBLE"
+}

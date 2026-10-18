@@ -1,0 +1,42 @@
+{
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "W1",
+      "type": "EXACT_CONDITIONAL",
+      "claim": "Waveform span<=209, one-step closure<=417, stride-two invariance, under declared two-class clocks.",
+      "evidence": [
+        "THEOREMS.md"
+      ]
+    },
+    {
+      "id": "W2",
+      "type": "NUMERICAL_VALIDATED",
+      "claim": "Exact encoded sketch counts and condition enclosures at six widths/cases and two frozen cutoff rules.",
+      "evidence": [
+        "results/*/CERTIFICATE.json",
+        "VALIDATION.json"
+      ]
+    },
+    {
+      "id": "W3",
+      "type": "DERIVED",
+      "claim": "Comparison rank in[205,209]; encoded sigma210 at width321 below1.034e-10; exact encoded rank may be larger.",
+      "evidence": [
+        "THEOREMS.md",
+        "RESULT_SUMMARY.json"
+      ]
+    },
+    {
+      "id": "W4",
+      "type": "OPEN",
+      "claim": "New stride-two phase extraction, BLAS-rounding bridge, independent review, SI and full acquisition remain open.",
+      "evidence": [
+        "README.md",
+        "PROVENANCE.json"
+      ]
+    }
+  ]
+}

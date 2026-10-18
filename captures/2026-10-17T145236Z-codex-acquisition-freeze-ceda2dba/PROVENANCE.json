@@ -1,0 +1,64 @@
+{
+  "parent_local_commit": "36ef6e17b8a1cb7f82c7b14f4d353106ed61e31a",
+  "origin_main_checked": "3b4ccc26a65b5deef0e917fa8bbadf045649695d",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "lane": "development; no registry entry",
+  "sources": [
+    {
+      "path": "sources/BASE_PREPARATIONS.npz",
+      "size_bytes": 16113,
+      "sha256": "1ce79059d335da57796742fa939aec3ddf5c7d261cf4d4dc8b2261662fd3d382"
+    },
+    {
+      "path": "sources/OPERATORS.npz",
+      "size_bytes": 30830,
+      "sha256": "e38fcbf6b0f43b170820e5e27ed2345d361703eae5e30dbca4127b9729ca5596"
+    },
+    {
+      "path": "sources/PARENT_ACQUISITION_CHOICES.json",
+      "size_bytes": 5121,
+      "sha256": "7711c83f489883c122912a5572d5ecd103f4ebed3101afa69c8a5b9069e45029"
+    },
+    {
+      "path": "sources/PARENT_DIAGNOSTIC_REPLAY_PACKAGE.zip",
+      "size_bytes": 185670,
+      "sha256": "3d37db16af56d629c856cba5689ae1c7748a2ffa0ca8fbd0f83211145bca389c"
+    },
+    {
+      "path": "sources/PARENT_FITTED_CERTIFICATE.json",
+      "size_bytes": 9566,
+      "sha256": "ef86bb2dcf0e9a88d4861b2f0517750d30a2c2b2aabca5df613bb100da226ca7"
+    },
+    {
+      "path": "sources/PARENT_NOISE_CERTIFICATE.json",
+      "size_bytes": 690217,
+      "sha256": "639ebec4fa19115f2a0158cb2e26e44704ad589d860abb7cdcc88806172a2aae"
+    },
+    {
+      "path": "sources/PARENT_SHAPE_GATE.json",
+      "size_bytes": 1712,
+      "sha256": "ac7cbced607650244960b83fd9942d875ba599a32422dc0ff262b199486cb364"
+    },
+    {
+      "path": "sources/PARENT_SIX_RATIO_CERTIFICATE.json",
+      "size_bytes": 15772,
+      "sha256": "75df8be6b28b987d2dbcfb18680f32d2634bd0b3fcd63e9797a76fd1a8f38a57"
+    },
+    {
+      "path": "sources/PARENT_TRADEOFF_CERTIFICATE.json",
+      "size_bytes": 26782,
+      "sha256": "358fe21435061500997b877e1983ec829d8989a315319006736a86eeced5b2ca"
+    }
+  ],
+  "verification_scope": "Exact scalar/vector budget composition; outward512-bit gates with numerical error reserve; SHAKE preparation identity; source operator skewness; fixed encoding;13 adversarial checks; isolated replay",
+  "inheritance": "Modal singular bounds, common-rate temporal Gram bound, fitted coordinate implications and diagnostic/ratio inversion proofs are inherited, not fully rerun. Parent diagnostic replay package included as source evidence.",
+  "governance": "AGENTS and O03/Q139/Q165/Q169 read; CRL2 amendment is a proposal. Constructor freeze does not imply preregistration or independent review.",
+  "publication": "local only; no push, PR, issue or project update",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "python-flint": "0.9.0"
+  }
+}

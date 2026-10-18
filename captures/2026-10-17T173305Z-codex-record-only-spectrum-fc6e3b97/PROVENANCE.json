@@ -1,0 +1,41 @@
+{
+  "capture_id": "2026-10-17T173305Z-codex-record-only-spectrum-fc6e3b97",
+  "origin": "Constructed nominal encoded record from previous capture, treated as exact finite numeric input; no apparatus measurements.",
+  "constructor": "Codex, current session",
+  "reviewers": [
+    "constructor checks only"
+  ],
+  "independent_review": "pending",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "parent_local_commit": "89eef7dffb8930678b4579a451b6233b1d9519cc",
+  "input_sha256": {
+    "record": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+    "contract": "ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c",
+    "proposal": "ea872023167f09a5b2d57560449bbbe0a8adb6519526000eb1d8e9777a7aba5f"
+  },
+  "input_lineage_capture": "2026-10-17T165137Z-codex-nominal-benchmark-b80f21bf",
+  "algorithm_lineage": "Factor-Gram and exact residual method extends the nominal v0.2 code; nominal spectral data are not dependencies of this certificate.",
+  "scientific_dependencies": [
+    "Complete finite encoded record",
+    "Frozen contract and unchanged threshold/rank/condition gate",
+    "Untrusted record-learned dyadic proposal",
+    "Exact weighted residual and interval factor-Gram/SVD proofs"
+  ],
+  "governance_read": {
+    "ledger": "Attached v0.39; O03 proposal controls are not theory constants; current support definitions remain scoped.",
+    "CRL2_amendment": "Attached file explicitly says governance proposal; non-constructor review and custodian promotion gates are unsatisfied; no registry promotion attempted."
+  },
+  "source_code_sha256": {
+    "record_codec.py": "7e943781a5f734a85da4ca76156b4d5eeffe5af67caee6fec2ee82e158f01c12",
+    "perturbation_controls.py": "0dc9ac03dbb3d0a2b5ab3d322d9bdd32e0232adcdc53d547a155bc31c77ab815",
+    "replay.py": "747df2ddd984915be5e2122657d3b4bfd025616094d092daa27b5f0daa529bf5",
+    "test_record.py": "a44a15e81ccbb3aa709e7edd52c0fa1988af14d3ba9e1a63bcf894865ca60e9f",
+    "robustness.py": "751ccc15b6777903c46ec87af6e66b5eb9e7d4d126fd27c682fd3d249a896d48",
+    "proof_math.py": "2f292914dd0fafdfed7a56e63627660df55927fb7f17ed70901bbbd80e96a108",
+    "propose_record.py": "b94aae3c9a1fe879349fde32d692cf527eae471da8d09fcac6c12e52da36d29b",
+    "certify_record.py": "6398ae88749cb0e88d6b0b216a8cf6da641a5484301b6bbe597db5f71a2cfedb"
+  },
+  "lossless_input_restoration": "codec_restore.log: identical original payload SHA-256; no nominal frequencies provided to the learner",
+  "publication": "local only; no push, PR, issue or project update"
+}

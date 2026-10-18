@@ -1,0 +1,9 @@
+learned temporal dimension 106 relative gap 2.7219836155786246e-08 1.9793552953750314e-14
+Traceback (most recent call last):
+  File "/workspace/scratch/f3d1c2f040c9/observer-work/propose_record.py", line 41, in <module>
+    p=argparse.ArgumentParser();p.add_argument('record');p.add_argument('contract');p.add_argument('output');a=p.parse_args();run(a.record,a.contract,a.output)
+                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f3d1c2f040c9/observer-work/propose_record.py", line 23, in run
+    if q<3 or q>=160 or q%2!=1:raise ArithmeticError('HOLD: proposal order not resolved')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ArithmeticError: HOLD: proposal order not resolved

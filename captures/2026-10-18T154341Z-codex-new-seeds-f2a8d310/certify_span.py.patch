@@ -1,0 +1,20 @@
+--- PR189/certify_span.py
++++ new-seed-campaign/certify_span.py
+@@ -1,4 +1,4 @@
+-"""Saved actual-floating output verification via fixed reference temporal span."""
++"""Actual-floating output verification for frozen new constructor records."""
+ import os
+ os.environ.setdefault('OPENBLAS_NUM_THREADS','1')
+ import argparse,json,time,resource
+@@ -49,8 +49,9 @@
+  metrics={'basis_orthogonality_upper':up(eta),'frame_span_residual_upper':up(span),'shift_residual_upper':up(shift),'inverse_residual_upper':up(inverse),'inverse_norm_upper':up(invnorm),'eigenpair_residual_upper':up(eigen),'argument_output_error_upper':argerror}
+  try:result=assemble_span(metrics,constants)
+  except AssertionError as exc:result={'status':'HOLD','reason':str(exc),'unique_reference_phase_matching':False,'physical_promotion':0}
+- result.update(case=case,record_sha256=entry['record_sha256'],witness_sha256=entry['witness_sha256'],proposal_sha256=entry['proposal_sha256'],frame_reduction_sha256=reduction_hash,metrics=metrics,frame_span_receipt=span_receipt,exact_squared_norms={'basis_orthogonality':eta2,'shift':shift2,'inverse':inverse2,'inverse_norm':invnorm2,'eigenpair':eigen2},exact_binary_scale_bits={'basis':bu,'shift':bt,'eigenvectors':bv,'inverse':bi,'eigenvalues':bl},parent_certificate_status=parent['status'],parent_comparison=parent.get('comparison'),saved_actual_floating_outputs=True,estimator_rerun=False,original_estimator_and_proposal_unchanged=True,fresh_raw_readings_projected=0,replay=replay,independent_review='pending',nominal_operator_or_source_modes_used=False,fixed_fitted_reference_phases_used=True,frame_constants_recomputed=True,wall_seconds=time.monotonic()-start,peak_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+- assert sha(reduction)==reduction_hash;load_case(case)
++ result.update(case=case,record_sha256=entry['record_sha256'],witness_sha256=entry['witness_sha256'],proposal_sha256=entry['proposal_sha256'],frame_reduction_sha256=reduction_hash,metrics=metrics,frame_span_receipt=span_receipt,exact_squared_norms={'basis_orthogonality':eta2,'shift':shift2,'inverse':inverse2,'inverse_norm':invnorm2,'eigenpair':eigen2},exact_binary_scale_bits={'basis':bu,'shift':bt,'eigenvectors':bv,'inverse':bi,'eigenvalues':bl},proposer_status=parent['status'],saved_actual_floating_outputs=True,originated_from_fresh_constructor_execution=True,estimator_executed_by_this_verifier=False,original_estimator_and_proposal_unchanged=True,fresh_raw_readings_rechecked_for_noise_gates=0,source_proposer_input_readings=18790154,replay=replay,independent_review='pending',nominal_operator_or_source_modes_used=False,fixed_fitted_reference_phases_used=True,frame_constants_recomputed=True,wall_seconds=time.monotonic()-start,peak_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
++ assert sha(reduction)==reduction_hash
++ _,after,_,_=load_case(case);assert after['witness_sha256']==entry['witness_sha256'] and after['proposal_sha256']==entry['proposal_sha256']
+  dest=out/('REPLAY_CERTIFICATE.json' if replay else 'SPAN_CERTIFICATE.json');assert not dest.exists();dest.write_text(json.dumps(result,indent=2));print(json.dumps({'case':case,'status':result['status'],'readable':result.get('readable'),'reason':result.get('reason'),'seconds':result['wall_seconds']},indent=2),flush=True)
+  return result
+ if __name__=='__main__':

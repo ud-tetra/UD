@@ -1,0 +1,60 @@
+{
+  "status": "CONSTRUCTOR_FRAME_SPAN_FREEZE_BEFORE_EVALUATION",
+  "created_utc": "2026-10-18T01:57:56.835463+00:00",
+  "source_main": "8cb2e3c8f450c67d63099d12c502800667e1d572",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "code_sha256": {
+    "bindings.py": "d9e15e0e28514325cc77e96f622938189fe7534f7f193970b7cd05729723b09f",
+    "certify_span.py": "3d5360dbd8506cf327f6e53cb72c825ece961e1c569c71fe394c609d0ea110a4",
+    "frame_math.py": "553d3c4e8b49487496e2d61674abaf4822d15951c4b00bc23a372df4449bef98",
+    "frame_values.py": "163a40b18cd14b59c414c02a77e9a98d57c36c6877af38480d56e3cb917dd71f",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "propose_reduction.py": "323a73766d1ec6ee3890346f66313d2956a6e1c3218c4be07c557a245c7f237f",
+    "replay_all.py": "baa083ad3a66e2425330aef1c0d13fcefe6e1c8830ee300f8ee48ad0fc3506cc",
+    "replay_package.py": "ffff9da4e2cb092958073d9b88ed06fd5a6c3aa3ba41bbff78c36d1e5962b2ce",
+    "run_campaign.py": "c7c038cf134ef22b1b6b10d9d62ebbced3e5d832bfa83c512ed5088239bea044",
+    "run_refusals.py": "176bb6f0429b7038f17993baf4fb0e4a5b7a1a9eb91bde34327ee26817739a5e",
+    "test_span.py": "111437e56908282b7390024585fb76cfe140ead479f1e19d55bf4b9193167062",
+    "validate_campaign.py": "aa8526aed4c427dbf57d8d96a7a2e4d92feae761f3a3cfb78ee6493fc603225a"
+  },
+  "inputs_sha256": {
+    "PARENT_coherent_dc.json": "c1825129280e2a5fb1e9363d58c94516063ed3330e4b1c0d60c96c4cb729457b",
+    "PARENT_dense_sign.json": "d9f65e37820131aaf1d1055e36a3919c9cf54e16e17f12390a58246936a2a49d",
+    "PARENT_phase_2neg20.json": "93f769a5851559439b490da88e629bfa5022ac31e398ecd2328c3cfcf32e688a",
+    "PHASE_STABILITY_CERTIFICATE.json": "c8eb769bb54d9ca688bd8fa9e6d19d8eba2e3387efd8fc7d85c9134a51cd1913",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192"
+  },
+  "cases": [
+    {
+      "case": "coherent_dc",
+      "record_sha256": "b57f336a2864b7424edcae9d39e650151c5914c30f5dccc1792f3c05305d2683",
+      "witness_sha256": "098c44b4cd7e6e3b3ef407c5148567ddc70db9fdb7156412930cd9c34ce2ae47",
+      "proposal_sha256": "ab15e652a3c2713b9eebff3d34ecc19aca6b34421c523ba65bc9be48b8d74088",
+      "parent_certificate_status": "HOLD"
+    },
+    {
+      "case": "dense_sign",
+      "record_sha256": "4c33c76fd688a5f23ae4f9aa318fe9976aee7dce51adced101b3ff8ca370851b",
+      "witness_sha256": "0e036144776e35345a93e3eff78c824816197c8cdbd75fb0500d0d03145c3bf8",
+      "proposal_sha256": "69fcfe9e78cf6d8881751293042eeadc2e90a02808b163d2bf5e09ca811190c0",
+      "parent_certificate_status": "CERTIFIED_FLOATING_ESTIMATOR_PHASE_MATCHING"
+    },
+    {
+      "case": "phase_2neg20",
+      "record_sha256": "0ff574629b79cb3d0d51ba02f1b6e36c24c426722e31eeb77ebdb5d8c15db656",
+      "witness_sha256": "826a1662239318321a39bfdbc4353e08f8741e40f483b60006f5814362462f9a",
+      "proposal_sha256": "97b1ede0752d44e2a0fccd268174a7d81ebb6ba2d0bf1e69111352932d73e35f",
+      "parent_certificate_status": "CERTIFIED_FLOATING_ESTIMATOR_PHASE_MATCHING"
+    }
+  ],
+  "acceptance": "Exact direct fixed-reference frame residual and unchanged strict shift/eigenvalue/argument separation gates. Reuse actual captured floating output bytes. Preserve all old and new HOLDs; no phase, threshold, code or control retuning after this freeze.",
+  "corruption_controls": [
+    "coherent_dc auxiliary reduction D[0,0]+=1",
+    "coherent_dc captured shift T[0,0]+=1/64"
+  ],
+  "scope": "Three previously known constructor saved outputs, not new records or fresh estimator runs, not independent review, not whole-ball guarantee",
+  "data_and_previous_certificates_previously_known": true
+}

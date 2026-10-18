@@ -1,0 +1,687 @@
+{
+  "status": "DERIVED_CONDITIONAL_CONSTRUCTOR_VERIFIED",
+  "physical_promotion": 0,
+  "lane": "development; no registry entry",
+  "independent_review": "pending",
+  "candidate_family": "constant logger-time K formed by scaling each lower-grade row of channelA_k byD_k and each upper-grade row byU_k in frozen A orientation; diagonal positive gains; no offsets/cross-talk",
+  "ratio_order": [
+    "D1",
+    "U1",
+    "D2",
+    "U2",
+    "D3",
+    "U3"
+  ],
+  "effective_ratios": "D_k=alpha w_k/h_(k-1), U_k=alpha w_k/h_k",
+  "ratio_and_gain_box": [
+    [
+      15,
+      16
+    ],
+    [
+      17,
+      16
+    ]
+  ],
+  "clock_anchor_required_for_effective_ratios": false,
+  "absolute_metric_scale_identified": false,
+  "finite_protocol": {
+    "logger_interval": [
+      1,
+      32
+    ],
+    "preparation_count": 3,
+    "gain_preparation_unit_coordinates": [
+      1,
+      133,
+      486,
+      878,
+      1680,
+      2040
+    ],
+    "gain_preparation_squared_norm": 6,
+    "dynamic_A_unit_coordinates": [
+      1,
+      1680
+    ],
+    "dynamic_B_unit_coordinates": [
+      133,
+      2040
+    ],
+    "dynamic_preparation_squared_norm_each": 2,
+    "raw_scalar_readings": 12,
+    "raw_breakdown": [
+      6,
+      3,
+      3
+    ],
+    "finite_positive_time_samples_per_dynamic_run": 1,
+    "ports": [
+      {
+        "coordinate": 1,
+        "grade": 0,
+        "simplex": [
+          1
+        ],
+        "in_original_62_shell": false
+      },
+      {
+        "coordinate": 133,
+        "grade": 1,
+        "simplex": [
+          1,
+          11
+        ],
+        "in_original_62_shell": false
+      },
+      {
+        "coordinate": 486,
+        "grade": 1,
+        "simplex": [
+          33,
+          34
+        ],
+        "in_original_62_shell": true
+      },
+      {
+        "coordinate": 878,
+        "grade": 2,
+        "simplex": [
+          1,
+          11,
+          87
+        ],
+        "in_original_62_shell": false
+      },
+      {
+        "coordinate": 1680,
+        "grade": 2,
+        "simplex": [
+          33,
+          34,
+          41
+        ],
+        "in_original_62_shell": true
+      },
+      {
+        "coordinate": 2040,
+        "grade": 3,
+        "simplex": [
+          0,
+          33,
+          34,
+          41
+        ],
+        "in_original_62_shell": false
+      }
+    ],
+    "additional_ports_over_original_62": [
+      1,
+      133,
+      878,
+      2040
+    ],
+    "feature_records": [
+      {
+        "ratio": "D1",
+        "preparation": "B",
+        "output": 1,
+        "sign": 1
+      },
+      {
+        "ratio": "U1",
+        "preparation": "A",
+        "output": 133,
+        "sign": -1
+      },
+      {
+        "ratio": "D2",
+        "preparation": "A",
+        "output": 486,
+        "sign": -1
+      },
+      {
+        "ratio": "U2",
+        "preparation": "B",
+        "output": 878,
+        "sign": 1
+      },
+      {
+        "ratio": "D3",
+        "preparation": "B",
+        "output": 1680,
+        "sign": -1
+      },
+      {
+        "ratio": "U3",
+        "preparation": "A",
+        "output": 2040,
+        "sign": 1
+      }
+    ],
+    "gain_estimator": "project each initial gain reading onto [15/16,17/16]",
+    "normalized_feature": "signed dynamic reading / (h * estimated_port_gain)",
+    "readout_coordinates_zero_based": true
+  },
+  "uniform_finite_inverse": {
+    "exact_jet": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "generator_norm_upper": [
+      17,
+      4
+    ],
+    "Jacobian_error_bound": {
+      "arb_enclosure": "[0.173081961636946222323639980047584613386816791926258225828208558439205762073 +/- 8.33e-76]",
+      "display_only": 0.17308196163694622
+    },
+    "declared_Jacobian_error_ceiling": [
+      1,
+      5
+    ],
+    "lower_Lipschitz": [
+      4,
+      5
+    ],
+    "upper_Lipschitz": [
+      6,
+      5
+    ],
+    "condition_upper": [
+      3,
+      2
+    ],
+    "projected_iteration": "q_next=projection_box(q+z-Phi(q))",
+    "iterations": 20,
+    "initial_point": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "Euclidean_step_error_ceiling": [
+      1,
+      1152921504606846976
+    ],
+    "dyadic_coordinate_rounding_denominator": 18446744073709551616,
+    "projected_fixed_point_defect_bound": {
+      "arb_enclosure": "[3.85401527739990324156378196223925108838683895571557280488715856209661454313e-15 +/- 2.81e-90]",
+      "display_only": 3.854015277399903e-15
+    },
+    "accepted_defect_ceiling": [
+      1,
+      17592186044416
+    ],
+    "forward_evaluation": "exact rational Taylor polynomial of degree32 plus uniform interval remainder",
+    "boundary_caution": "stop on projected fixed-point defect; raw forward residual can remain nonzero for out-of-image data"
+  },
+  "candidate_precision_contract": {
+    "gain_preparation_observed_coefficient_infinity_error": [
+      1,
+      562949953421312
+    ],
+    "gain_initial_reading_infinity_noise": [
+      1,
+      562949953421312
+    ],
+    "dynamic_combined_two_preparation_state_error_2norm": [
+      1,
+      562949953421312
+    ],
+    "dynamic_six_scalar_raw_noise_2norm": [
+      1,
+      562949953421312
+    ],
+    "sufficient_each_dynamic_scalar_noise": [
+      1,
+      2251799813685248
+    ],
+    "per_run_logger_interval_total_error": [
+      1,
+      36028797018963968
+    ],
+    "individual_gain_estimation_error_bound": [
+      33,
+      9007199254740992
+    ],
+    "normalized_data_computation_error_2norm": [
+      1,
+      1152921504606846976
+    ],
+    "data_feature_error_formula": "exp(omega*(h+j))*(nu+2*epsilon_g+u*xi+2*u*omega*j)/(h*l) + data_round",
+    "data_feature_error_bound": {
+      "arb_enclosure": "[4.382259267701651522085418889722206220361088756054110272969620479673242066415e-13 +/- 4.04e-89]",
+      "display_only": 4.3822592677016516e-13
+    },
+    "ratio_vector_error_bound_formula": "(5/4)*(B+projected_fixed_point_defect)",
+    "ratio_vector_error_bound": {
+      "arb_enclosure": "[6.188366820387164588477897879730882775451360945067637841212025599591552583019e-13 +/- 3.63e-89]",
+      "display_only": 6.188366820387164e-13
+    },
+    "stronger_verified_ratio_vector_error_ceiling": [
+      1,
+      1099511627776
+    ],
+    "requested_each_ratio_absolute_error_gate": [
+      1,
+      549755813888
+    ],
+    "stochastic_averaging_assumed": false
+  },
+  "parent_shape_gate": {
+    "estimated_relative_rate_shape_ceiling": [
+      1,
+      274877906944
+    ],
+    "separate_common_scale_gate": [
+      1,
+      1024
+    ],
+    "metric_shape_error_bound": {
+      "arb_enclosure": "[1.16415321827838316263535284357099504992591423750501165645896423647e-11 +/- 3.10e-77]",
+      "display_only": 1.1641532182783832e-11
+    },
+    "native_rate_shape_error_bound": {
+      "arb_enclosure": "[1.72365825318152559342852080118557004142863249854657018255443042613e-11 +/- 5.99e-77]",
+      "display_only": 1.7236582531815255e-11
+    },
+    "residual_shape_ceiling": [
+      1,
+      34359738368
+    ],
+    "requires_actual_estimates_to_pass": true
+  },
+  "synthetic_round_trips": [
+    {
+      "case": "unit",
+      "true_ratios": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "estimated_ratios": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "projected_fixed_point_defect_bound": {
+        "arb_enclosure": "[9.818822972014374338576182159026394894794958416697805372453349257121475533518e-65 +/- 7.11e-141]",
+        "display_only": 9.818822972014374e-65
+      },
+      "actual_error_L1_upper": [
+        0,
+        1
+      ],
+      "apparatus_data": false
+    },
+    {
+      "case": "alternating_boundary",
+      "true_ratios": [
+        [
+          15,
+          16
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          17,
+          16
+        ]
+      ],
+      "estimated_ratios": [
+        [
+          15,
+          16
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          17,
+          16
+        ]
+      ],
+      "projected_fixed_point_defect_bound": {
+        "arb_enclosure": "[9.818822972014374338576182159026394894794958416697805372453349257121475533518e-65 +/- 7.11e-141]",
+        "display_only": 9.818822972014374e-65
+      },
+      "actual_error_L1_upper": [
+        0,
+        1
+      ],
+      "apparatus_data": false
+    },
+    {
+      "case": "fitted_centre",
+      "true_ratios": [
+        [
+          2145,
+          2048
+        ],
+        [
+          66,
+          65
+        ],
+        [
+          1089,
+          1040
+        ],
+        [
+          65,
+          64
+        ],
+        [
+          67,
+          64
+        ],
+        [
+          1089,
+          1072
+        ]
+      ],
+      "estimated_ratios": [
+        [
+          2145,
+          2048
+        ],
+        [
+          1170658758523875391,
+          1152921504606846976
+        ],
+        [
+          1207241844727746497,
+          1152921504606846976
+        ],
+        [
+          65,
+          64
+        ],
+        [
+          67,
+          64
+        ],
+        [
+          4684819098943493869,
+          4611686018427387904
+        ]
+      ],
+      "projected_fixed_point_defect_bound": {
+        "arb_enclosure": "[4.928292371053251677852226677256860090488178495227113913294283797115372345213e-20 +/- 3.07e-96]",
+        "display_only": 4.928292371053252e-20
+      },
+      "actual_error_L1_upper": [
+        991,
+        20083892610251274321920
+      ],
+      "apparatus_data": false
+    },
+    {
+      "case": "imperfect_gain_and_raw_noise",
+      "true_ratios": [
+        [
+          2145,
+          2048
+        ],
+        [
+          66,
+          65
+        ],
+        [
+          1089,
+          1040
+        ],
+        [
+          65,
+          64
+        ],
+        [
+          67,
+          64
+        ],
+        [
+          1089,
+          1072
+        ]
+      ],
+      "estimated_ratios": [
+        [
+          9660221200709807323,
+          9223372036854775808
+        ],
+        [
+          18730540136381667073,
+          18446744073709551616
+        ],
+        [
+          4828967378911032651,
+          4611686018427387904
+        ],
+        [
+          18734974449860924607,
+          18446744073709551616
+        ],
+        [
+          19311435202164873559,
+          18446744073709551616
+        ],
+        [
+          2342409549471704607,
+          2305843009213693952
+        ]
+      ],
+      "gain_raw_readings": [
+        [
+          18577348462903361,
+          18014398509481984
+        ],
+        [
+          17451448556060735,
+          18014398509481984
+        ],
+        [
+          18577348462903361,
+          18014398509481984
+        ],
+        [
+          17451448556060735,
+          18014398509481984
+        ],
+        [
+          18577348462903361,
+          18014398509481984
+        ],
+        [
+          17451448556060735,
+          18014398509481984
+        ]
+      ],
+      "signed_dynamic_raw_readings": [
+        [
+          31447617430165770782275104713552749586973129451937095508963639587310243543079627165356689119080248440648427409228075147,
+          933800460710569196086462861201983701121595400265507166824504215969624003042730878503578313369415030430428871786496000000
+        ],
+        [
+          30494659609397218511131905011870920518538434754468058893560875550910975667588026567145682079918809117074291752842289343,
+          994280984501551122345087093895761375312182602349235831611272760199511444772060978245367533766577243842883564339200000000
+        ],
+        [
+          1038676063239259904312937812882373930150911903142002437199871913421214307979956507981301418325642654267507959566940621229,
+          30822710519548084792697699910768602634677660672826310779949455566184854787933890325606393546763894559129390494515200000000
+        ],
+        [
+          110528848344540634172302865439034103901918401267136310832428705647091787668400872984107608395706318932924101567365409,
+          3599207183716022162335156900980131675338217565065107082755738498459769935826465079621239941236478710743469916160000000
+        ],
+        [
+          1598417999421619849557304324378863901830254207813295996240119942027094528837779855041765722378330811368419255115714797,
+          47419554645458591988765692170413234822581016419732785815306854717207468904513677424009836225790607014045216145408000000
+        ],
+        [
+          6298244112367062613533777423401416549647341320133522289816405692133132659017859416983664689195346315963201891936076969,
+          204974849112627462144987185510818498910511490330457848362939307487283897845317186284429614653417462576840611725312000000
+        ]
+      ],
+      "projected_fixed_point_defect_bound": {
+        "arb_enclosure": "[1.017354442827544487601370777187485774826882041679434249550506090843251718623e-19 +/- 3.87e-95]",
+        "display_only": 1.0173544428275445e-19
+      },
+      "normalized_data_error_L1_upper": {
+        "arb_enclosure": "[8.535708743325738992060952778985657042975931693005572806560285074265149407845e-14 +/- 8.77e-90]",
+        "display_only": 8.535708743325739e-14
+      },
+      "actual_error_L1_upper": [
+        6866637699,
+        80335570441005097287680
+      ],
+      "preparation_and_timing_dynamic_errors_in_this_example": 0,
+      "apparatus_data": false
+    }
+  ],
+  "out_of_image_boundary_witness": {
+    "noise_each_normalized_feature": [
+      -1,
+      8796093022208
+    ],
+    "projected_defect_of_exact_boundary_point": 0,
+    "raw_residual_lower_bound": {
+      "arb_enclosure": "[2.784747428885541578662564546341276800337649866215394086748222279014060590281e-13 +/- 1.96e-89]",
+      "display_only": 2.7847474288855413e-13
+    },
+    "raw_residual_exceeds_solver_defect_ceiling": true
+  },
+  "scope_limits": [
+    "No apparatus execution or independent review",
+    "The twelve scalars do not validate diagonal readout, grade-scalar metric, or absence of extra dynamics",
+    "Gain preparation errors are bounded at the actual initial readout event",
+    "Parameters and gains are constant across runs; no arbitrary drift",
+    "Four auxiliary ports require separate calibration access; original62 alone does not supply this protocol",
+    "No bound on extra skewJ or the entire acquisition readout operator follows from six gains",
+    "Logger-time accuracy is not a derivation of physical seconds",
+    "Protocol precisions are design controls under ledgerO03, not theory constants"
+  ],
+  "exact_checks": {
+    "sparse_generator_entries": 14880,
+    "orthogonal_channel_products_zero": 12,
+    "all_cross_channel_directed_products_zero": true,
+    "full_carrier_rational_forward_checks": 4,
+    "odd_parity_and_jet": true
+  }
+}

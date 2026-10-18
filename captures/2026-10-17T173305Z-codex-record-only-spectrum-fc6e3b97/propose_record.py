@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+"""Untrusted record-only temporal proposal. No nominal operator, roots or modal data."""
+import os
+os.environ.setdefault('OPENBLAS_NUM_THREADS','1')
+import argparse,time,json,hashlib,resource
+from pathlib import Path
+import numpy as np
+from scipy.linalg import svd,lstsq,eigvals
+PROTOCOL='ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c'
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def run(record_path,contract_path,out):
+ t=time.monotonic();out=Path(out);out.mkdir(parents=True,exist_ok=True)
+ if (out/'PROPOSAL.npz').exists():raise FileExistsError('Never overwrite a proposal')
+ if sha(contract_path)!=PROTOCOL:raise ValueError('Frozen contract changed')
+ contract=json.loads(Path(contract_path).read_text());fmt=contract['data_format'];shape=tuple(fmt['shape'])
+ if Path(record_path).stat().st_size!=fmt['bytes']:raise ValueError('Record incomplete')
+ before=sha(record_path);Y=np.memmap(record_path,dtype=fmt['dtype'],mode='r',shape=shape)
+ # Time rows; output columns c*preparations+a. The random mixture only proposes a basis.
+ D=np.asarray(Y.transpose(1,2,0).reshape(shape[1],-1),dtype=np.float64)/2.**48
+ rng=np.random.default_rng(172026);mix=rng.choice([-1.,1.],size=(D.shape[1],160))/np.sqrt(D.shape[1]);Z=D@mix
+ U,s,_=svd(Z,full_matrices=False,check_finite=False);q=int(np.count_nonzero(s>s[0]*2.**-32))
+ print('learned temporal dimension',q,'relative gap',s[q-1]/s[0],s[q]/s[0],flush=True)
+ if q<3 or q>=160 or q%2!=1:raise ArithmeticError('HOLD: proposal order not resolved')
+ shift=lstsq(U[:-1,:q],U[1:,:q],check_finite=False)[0];ev=eigvals(shift,check_finite=False);ph=np.angle(ev)
+ # A proposed real oscillatory frame with a stationary term. The verifier checks its full residual.
+ pos=np.sort(ph[ph>1e-10]);neg=np.sort(-ph[ph<-1e-10]);zero=ph[np.abs(ph)<=1e-10]
+ if len(pos)!=(q-1)//2 or len(zero)!=1 or np.max(abs(pos-neg))>1e-8:raise ArithmeticError('HOLD: conjugate proposal pairing failed')
+ theta=np.rint(pos*2.**60).astype(np.int64);k=np.arange(shape[1],dtype=np.float64);design=np.ones((shape[1],q))
+ for j,x in enumerate(theta):
+  angle=k*(float(x)/2.**60);design[:,2*j+1]=np.cos(angle);design[:,2*j+2]=np.sin(angle)
+ C=lstsq(design,D,check_finite=False)[0]
+ if not np.all(np.isfinite(C)) or np.max(abs(C))>1:raise ArithmeticError('HOLD: proposal amplitude range')
+ coeff=np.rint(C*2.**60).astype(np.int64)
+ np.savez_compressed(out/'PROPOSAL.npz',theta=theta,coeff=coeff)
+ residual=D-design@(coeff.astype(float)/2.**60)
+ info={'status':'UNTRUSTED_PROPOSAL_ONLY','physical_promotion':0,'independent_review':'pending','nominal_frequencies_or_factors_loaded':False,'input_files':{'record_sha256':before,'contract_sha256':PROTOCOL},'proposal_sha256':sha(out/'PROPOSAL.npz'),'temporal_dimension':q,'positive_frequency_count':len(pos),'mixture_columns':160,'seed':172026,'relative_discovery_cutoff':[1,2**32],'modal_relative_cutoff':[1,2**30],'max_float_entry_residual':float(np.max(abs(residual))),'phase_pairing_error':float(np.max(abs(pos-neg))),'unit_modulus_eigenvalue_defect':float(np.max(abs(abs(ev)-1))),'proposal_singular_value_above_cutoff':float(s[q-1]),'proposal_singular_value_below_cutoff':float(s[q]),'seconds':time.monotonic()-t,'peak_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}
+ if sha(record_path)!=before:raise RuntimeError('Record changed')
+ (out/'PROPOSAL_REPORT.json').write_text(json.dumps(info,indent=2));print(json.dumps(info,indent=2),flush=True)
+ return info
+if __name__=='__main__':
+ p=argparse.ArgumentParser();p.add_argument('record');p.add_argument('contract');p.add_argument('output');a=p.parse_args();run(a.record,a.contract,a.output)

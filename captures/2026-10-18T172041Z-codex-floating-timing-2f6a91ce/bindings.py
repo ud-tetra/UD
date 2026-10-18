@@ -1,0 +1,18 @@
+from pathlib import Path
+import json,hashlib
+P=Path(__file__).resolve().parent
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def checked(path,expected):assert sha(path)==expected,'HOLD: frozen file hash mismatch'
+def check_freeze():
+ f=json.loads((P/'CAMPAIGN_FREEZE.json').read_text())
+ for n,h in f['code_sha256'].items():checked(P/n,h)
+ for n,h in f['inputs_sha256'].items():checked(P/'inputs'/n,h)
+ assert json.loads((P/'inputs/PHASE_STABILITY_CERTIFICATE.json').read_text())['reference_proposal_sha256']==sha(P/'inputs/REFERENCE_PROPOSAL.npz')
+ return f
+def load_case(case):
+ f=check_freeze();e=next(x for x in f['cases'] if x['case']==case);d=json.loads((P/'DATA_FREEZE.json').read_text());assert d['campaign_sha256']==sha(P/'CAMPAIGN_FREEZE.json')
+ r=next(x for x in d['records'] if x['case']==case);o=P/f'results/{case}';report=json.loads((o/'PROPOSAL_REPORT.json').read_text())
+ assert report['input_files']['record_sha256']==r['record_sha256'] and report['proposal_sha256']==sha(o/'PROPOSAL.npz')
+ assert sha(o/'PROPOSAL.npz')==sha(P/f'results/original-{case}/PROPOSAL.npz'),'HOLD: original proposal changed'
+ entry={**e,**r,'witness_sha256':sha(o/'FLOAT_WITNESS.npz'),'proposal_sha256':sha(o/'PROPOSAL.npz')}
+ return f,entry,o,report
