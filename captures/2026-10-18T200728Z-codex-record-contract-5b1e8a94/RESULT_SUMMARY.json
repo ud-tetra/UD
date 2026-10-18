@@ -1,0 +1,65 @@
+{
+  "status": "RECORD_WISE_ACTUAL_FLOATING_CONTRACT_VERIFIED",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "cases": [
+    {
+      "case": "baseline",
+      "status": "CERTIFIED_RECORD_WISE_FLOATING_PHASE_CONTRACT",
+      "readable": {
+        "aligned_basis_distance_upper": 7.155455792549009e-14,
+        "actual_sketch_fit_residual_upper": 6.959378720221247e-13,
+        "fit_envelope_upper": 3.2087484324901042e-12,
+        "phase_error_upper": 1.2671473859584108e-08
+      },
+      "negative_controls": {
+        "zero_coefficient": "HOLD_SKETCH_APPROXIMATION_QUALITY",
+        "zero_eigenvector_inverse": "HOLD_EIGENVECTOR_INVERSE",
+        "zero_inverse_residual_lower": [
+          18326212135903288391473542969034,
+          1267650600228229401496703205376
+        ],
+        "zero_coefficient_fit_lower": [
+          29877043936670218230388828005925,
+          1267650600228229401496703205376
+        ]
+      }
+    },
+    {
+      "case": "cyclic_unit",
+      "status": "CERTIFIED_RECORD_WISE_FLOATING_PHASE_CONTRACT",
+      "readable": {
+        "aligned_basis_distance_upper": 1.607956431502303e-11,
+        "actual_sketch_fit_residual_upper": 7.602638146516159e-13,
+        "fit_envelope_upper": 3.2087484324901042e-12,
+        "phase_error_upper": 1.69035397613396e-08
+      },
+      "negative_controls": {
+        "zero_coefficient": "HOLD_SKETCH_APPROXIMATION_QUALITY",
+        "zero_eigenvector_inverse": "HOLD_EIGENVECTOR_INVERSE",
+        "zero_inverse_residual_lower": [
+          18326212135903288391473542969034,
+          1267650600228229401496703205376
+        ],
+        "zero_coefficient_fit_lower": [
+          29877043936670218058782846959803,
+          1267650600228229401496703205376
+        ]
+      }
+    },
+    {
+      "case": "dense_unit",
+      "status": "HOLD_RAW_NOISE_BALL"
+    }
+  ],
+  "new_estimator_runs": 0,
+  "raw_records_audited": 3,
+  "exact_sketch_raw_projection_replays": 2,
+  "raw_eligibility_readings_checked": 56370462,
+  "raw_eligibility_readings_with_replays": 112740924,
+  "uniform_floating_convergence_claimed": false,
+  "negative_control_evaluations": 4,
+  "fit_carrier": "8191\u00d7321 sketch, not full raw record or Hankel",
+  "frozen_verifier_unchanged": true,
+  "postexecution_structure_guard": "structure.py"
+}
