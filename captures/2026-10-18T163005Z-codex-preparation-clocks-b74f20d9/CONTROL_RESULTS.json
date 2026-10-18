@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "families": [
+    {
+      "name": "common_origin_preserves_span",
+      "exact_joint_rank": 3,
+      "orthogonal_rotation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "preparation_specific_origin_loses_rank",
+      "exact_coefficient_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_temporal_rank": 2
+    },
+    {
+      "name": "global_preparation_norm_not_invariant",
+      "squared_operator_norm_before": 1,
+      "squared_operator_norm_after": 2,
+      "each_preparation_column_norm_preserved": true
+    },
+    {
+      "name": "forward_rotation_sign",
+      "exact_waveform_identity_verified": true
+    },
+    {
+      "name": "correlated_preparation_jitter",
+      "exact_raw_residual_squared_norm": 2,
+      "derivative_squared_bound_upper": [
+        6255604971528050006125283011777,
+        1267650600228229401496703205376
+      ],
+      "independence_assumption": false
+    }
+  ],
+  "finite_controls_do_not_replace_general_proof": true
+}
