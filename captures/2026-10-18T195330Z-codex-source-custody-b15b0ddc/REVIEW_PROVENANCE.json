@@ -1,0 +1,81 @@
+{
+  "classification": "IMPORTED_RECORDS_NOT_NEW_REVIEW",
+  "records": [
+    {
+      "archive_member": "dist/sources/UD_PARITY_CARRIER_CRL2D_STATUS_v0.1.csv",
+      "bundle_member": "review-records/UD_PARITY_CARRIER_CRL2D_STATUS_v0.1.csv",
+      "sha256": "96e036fc27f67443e688f59a8d88be6831f067baa129bea84bff5e96a516a541"
+    },
+    {
+      "archive_member": "dist/sources/UD_CRL2D_PROMOTION_AND_GOVERNANCE_REVIEW_STATUS_v0.1.csv",
+      "bundle_member": "review-records/UD_CRL2D_PROMOTION_AND_GOVERNANCE_REVIEW_STATUS_v0.1.csv",
+      "sha256": "10e528e15725c232d0d03d51dbd2a71da56433a9a2d1e5d944875a8faca40acf"
+    },
+    {
+      "archive_member": "dist/sources/joint-carrier-v0.1/JOINT_CARRIER_REVIEW_DISPOSITION_v0.1.json",
+      "bundle_member": "review-records/JOINT_CARRIER_REVIEW_DISPOSITION_v0.1.json",
+      "sha256": "76288cbf1a2a642d14d066b92d3e3e1f2418db7a7c70a190c8fc7b0db149274a"
+    },
+    {
+      "archive_member": "dist/sources/native-admission-v0.1/NATIVE_ADMISSION_REVIEW_DISPOSITION_v0.1.json",
+      "bundle_member": "review-records/NATIVE_ADMISSION_REVIEW_DISPOSITION_v0.1.json",
+      "sha256": "1b3e8829a1165d27642cc473225bc858728e7843735fac0a14f3b2a62a064a50"
+    },
+    {
+      "archive_member": "dist/sources/programmed-clock-v0.1/PROGRAMMED_CLOCK_REVIEW_DISPOSITION_v0.1.json",
+      "bundle_member": "review-records/PROGRAMMED_CLOCK_REVIEW_DISPOSITION_v0.1.json",
+      "sha256": "6980150371d9bf5df0fe19d3774338eeac0210c110db5908d61cde0a117e2d71"
+    },
+    {
+      "archive_member": "dist/sources/response-contract-v0.1/REVIEW_ACKNOWLEDGMENT_v0.1.json",
+      "bundle_member": "review-records/REVIEW_ACKNOWLEDGMENT_v0.1.json",
+      "sha256": "a266d965c9f7c40e34ed80432afa959bf2362c3bc7cebf0bf0ed4d08f613dcef"
+    }
+  ],
+  "parity_summary": {
+    "claim": "UD_HODGE_EVENT_RETAINED_PARITY_CARRIER_THEOREM_v0.1",
+    "theorem_sha256": "47fea91d97f8e2c4441b7bab1f1ad06f9a8fc74507f34645433572791d74a863",
+    "crl2c_execution_record_sha256": "762916a56873ddc3a1527e848ae72738aedda337e0cbc4d6f16a9b901e077088",
+    "independent_replicator": "Gemini",
+    "replication_provider": "Google",
+    "replication_verdict": "PASS",
+    "valid_cases": "12/12 IN_SCOPE_PASS",
+    "controls": "6/6 CONTROL_FAIL",
+    "in_scope_failures": "0",
+    "custodian_ruling": "PROMOTE_TO_CRL2D",
+    "current_crl": "CRL-2d",
+    "label": "REPLICATED",
+    "crl3_eligibility": "ELIGIBLE_FOR_CONSIDERATION_ONLY",
+    "permanent_rider": "transport consistency; not dynamical discovery",
+    "physical_promotion": "0"
+  },
+  "external_ai": {
+    "provider": "Google",
+    "replicator": "Gemini",
+    "asserted_result": "PASS",
+    "evidence_level": "ATTRIBUTED_SUMMARY_ONLY",
+    "full_replication_receipt_recovered": false
+  },
+  "independent_human": {
+    "status": "NOT_ESTABLISHED_BY_RECOVERED_RECORDS"
+  },
+  "custodian": {
+    "summary_asserts": "PROMOTE_TO_CRL2D",
+    "identity": null,
+    "ruling_receipt_recovered": false
+  },
+  "hash_target_search": {
+    "domain": "dist/sources md,txt,json,csv members below200000 bytes",
+    "matches": {
+      "theorem_sha256": [],
+      "crl2c_execution_record_sha256": []
+    }
+  },
+  "constructor_team": {
+    "joint_carrier": "Source explicitly classifies AI checks as constructor-team",
+    "native_admission": "Source explicitly classifies AI checks as constructor-team",
+    "programmed_clock": "Human review pending;source review labels constructor-team"
+  },
+  "user_acknowledgment": "Public presentation acknowledgment;no specific adversarial proof finding or promotion",
+  "physical_promotion": 0
+}
