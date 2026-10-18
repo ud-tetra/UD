@@ -1,0 +1,40 @@
+{
+  "physical_promotion": 0,
+  "omitted": "Two existing PR195 raw records,300642464 bytes total",
+  "records": [
+    {
+      "case": "modal_zero",
+      "record_sha256": "d3d34bfc6579e52526205e863bfeb7e045f6fe7b40d94c1006070b262acd5c1c",
+      "rate": [
+        0,
+        1
+      ],
+      "jitter": [
+        0,
+        1
+      ],
+      "classes": [
+        1
+      ]
+    },
+    {
+      "case": "ramp_clock_stress",
+      "record_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    }
+  ],
+  "recovery": "Use PR195 capture2026-10-18T172041Z-codex-floating-timing-2f6a91ce and make_records.py --destination /new/empty/path; hashes must match ADAPTER_FREEZE.json",
+  "retained": "All available actual floating arrays, original/instrumented phase proposals, exactGrams, inverse/reduction witnesses and certificate receipts",
+  "ordinary_portable_replay_regenerates_raw_or_runs_adapter": false
+}

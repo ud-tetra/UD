@@ -1,0 +1,43 @@
+{
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "lane": "development \u2014 no registry entry",
+  "claims": [
+    {
+      "id": "S1",
+      "type": "EXACT_CONDITIONAL",
+      "claim": "Normal two-step rotation model and direct actual-output similarity bound.",
+      "evidence": [
+        "THEOREMS.md",
+        "certify.py"
+      ]
+    },
+    {
+      "id": "S2",
+      "type": "NUMERICAL_VALIDATED",
+      "claim": "Actual two-step floating outputs certify105-way baseline and209-way stress matching, under new source-precision cutoff.",
+      "evidence": [
+        "VALIDATION.json",
+        "results/*/CERTIFICATE.json"
+      ]
+    },
+    {
+      "id": "S3",
+      "type": "DERIVED",
+      "claim": "Source comparison rank209; encoded209th value above0.0028804 and210th below1.034e-10. Encoded exact algebraic rank remains distinct.",
+      "evidence": [
+        "results/ramp_clock_stress/ORDER_CERTIFICATE.json",
+        "STRUCTURAL_AUDIT.json"
+      ]
+    },
+    {
+      "id": "S4",
+      "type": "OPEN",
+      "claim": "Original204/205 noise-cutoff HOLD unchanged; modulo-pi aliasing, independent review, source/metric/clock physics, SI and acquisition obligations remain.",
+      "evidence": [
+        "README.md",
+        "PROVENANCE.json"
+      ]
+    }
+  ]
+}

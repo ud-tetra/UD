@@ -1,0 +1,85 @@
+{
+  "status": "TWO_STEP_SOURCE_PRECISION_AUDIT_FROZEN_BEFORE_NUMERICAL_EXECUTION",
+  "created_utc": "2026-10-18T18:14:54.012367+00:00",
+  "source_main": "8c5df327bd5e5c4395bd7b2b86c48103acd50c4b",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "same_team_reviews_only": true,
+  "cases": [
+    {
+      "case": "modal_zero",
+      "record_sha256": "d3d34bfc6579e52526205e863bfeb7e045f6fe7b40d94c1006070b262acd5c1c",
+      "rate": [
+        0,
+        1
+      ],
+      "jitter": [
+        0,
+        1
+      ],
+      "classes": [
+        1
+      ]
+    },
+    {
+      "case": "ramp_clock_stress",
+      "record_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    }
+  ],
+  "source_precision_cutoff": [
+    1,
+    16777216
+  ],
+  "sketch_width": 321,
+  "lag": 2,
+  "code_sha256": {
+    "bindings.py": "e29832a0d81716ce3bc8a84d185a47662fafe8dae776e6fbefc84d10c9041f48",
+    "certify.py": "201e26bd181d8255f573dcfb1d342c9b91b174da664c5d2cb19742502641f22b",
+    "controls.py": "8a0611f5f2abe667f866d812a5d896fb83c77a16f3fada179bb8518ba25c56b1",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "propose.py": "bd2fa4e7e0de240a5e77409ef52fff2fec7a6572d7248f436374ad66d1bcc747",
+    "propose_reference.py": "6785dd37726aa99a370f82e731bcfd24a30e796eceeb35bdfb835dfb270030d2",
+    "reference.py": "c476fad5f3695c24d2b753db2e8f7415307caab7533836e7b447257d445dba9d",
+    "replay_package.py": "bd144065ed8df7a0b472b98366e87bf7721b59020eaf1245c62b340a85719a16",
+    "run.py": "7dbbf4545996ebb18112dd1f977b7a532aee5be2f40bbfca55545ef3ebe68a80",
+    "sketch.py": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+    "source_order.py": "fe620746f3f4091ef6bdab8d217182a72bf9df11b48f478237f9dbdb6bf7e07e",
+    "test_adapter.py": "2d80337a9ca81372720dac218b3d42c5db473fbc6c52bda09f1cc86fb0c50152",
+    "validate.py": "e31f9a18541a57ba8da82a0c17b54ab884c3074e0c917b3058996c0602ac9b91"
+  },
+  "inputs_sha256": {
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PARENT_CAMPAIGN_FREEZE.json": "948f8027ffc113c0afc722caa0320e731390ab4e74768c58ec3df8fed675b9e4",
+    "PARENT_DATA_FREEZE.json": "5cf6b41a6ae1922d1924186784d28ade277146bba809ab4a7360ac4fcb16c52b",
+    "PREVIOUS_WIDE_CERTIFICATE.json": "1e0f09a7d860f9aa18c8ec1a0f0fc24fe8f5ab45c1eb09af917f925aedade644",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192"
+  },
+  "record_only_adapter_loads_source_phases": false,
+  "new_source_audit_vs_original_noise_contract": "Original204/205 cutoff counts and stressHOLD remain unchanged. New precision threshold is an O03 synthetic source audit, justified by generation/quantization error and qth lower singular bound; not original instrument-noise admission. No forcedtargetrank if actualfloatingcountdiffers.",
+  "phase_proof": "Exact-binary actual T,D,source inverse,eigenvector/eigenvalue residuals; validated normal two-stepJ and similarity bound R=hD*(||TD-DJ||+||D||*eigen_backward_error). Strict2R<fulltargetminchord and emission gate; allHOLDsretained.",
+  "source_interpolation": "Pinned learned real modal model, not physical source truth",
+  "alias_contract": "Circular two-step phases; any dividedby2 error is a conditional source-labeled lift. Frequencies remain modulo pi without an independent band/source choice.",
+  "reference_preliminary_same_team_diagnostics_already_known": [
+    "Stress model frame condition approximately86.44",
+    "Candidate rateclass gap approximately7.2854e-7; complete209targetchord recomputed by certifier"
+  ],
+  "control_recipes": [
+    "Zero source inverse on isolated actual209 witness must be refused",
+    "Change one emittedphaseinteger after rebinding lineage must be refused by emission check"
+  ],
+  "acceptance": "Freezecode/threshold/reference before execution; original/instrumented proposals identical; retain every count/order/phase HOLD and do notretune; source-order and phase certificates replay exactly excluding runtime."
+}
