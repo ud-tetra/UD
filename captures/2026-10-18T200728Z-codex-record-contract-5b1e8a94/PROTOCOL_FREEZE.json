@@ -1,0 +1,115 @@
+{
+  "status": "RULES_FROZEN_BEFORE_NEW_ARCHIVED_RECORD_MEASUREMENTS",
+  "created_utc": "2026-10-18T20:03:57.317998+00:00",
+  "source_main": "7da1836292a8f157af28c4a8d713406b5436dd1f",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "archived_known_controls_not_blinded": true,
+  "new_proposer_runs": 0,
+  "baseline_path": "floating-timing-work/records/ramp_clock_stress.i64le",
+  "baseline_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "raw_noise_budget": [
+    1,
+    281474976710656
+  ],
+  "source_precision_cutoff": [
+    1,
+    16777216
+  ],
+  "fit_envelope": "Exact rank209 approximation residual of321-column sketch\u2264parent_r+parent_C*2^-48; not a full raw-record residual.",
+  "phase_gate": "2R<parent target chord and2(asin(R)+argument_error)<same chord; no exactLS assumption.",
+  "cases": [
+    {
+      "case": "baseline",
+      "raw_path": "floating-timing-work/records/ramp_clock_stress.i64le",
+      "record_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    },
+    {
+      "case": "cyclic_unit",
+      "raw_path": "uniform-two-work/records/cyclic_unit.i64le",
+      "record_sha256": "fd819bea491085f222d9ad7fef325b922ec75a8690c7b6ac69b2429617c67339",
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    },
+    {
+      "case": "dense_unit",
+      "raw_path": "two-step-noise-work/records/dense_a0.i64le",
+      "record_sha256": "93118b8da1b61f5a015ef7a6234b12ed417797f79a00a85b666246b6c3699817",
+      "rate": [
+        1,
+        1048576
+      ],
+      "jitter": [
+        1,
+        16
+      ],
+      "classes": [
+        1,
+        -1
+      ]
+    }
+  ],
+  "negative_controls": [
+    "zero_coefficient",
+    "zero_eigenvector_inverse"
+  ],
+  "code_sha256": {
+    "bindings.py": "87a54766c87224e3dc3017ed3dd1646c64da0de086c8056a3f92d780f566a8f9",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "project.py": "9f2b31fa9541a27b58d0345a1f3cf27777846de8675e435bcb47aab937d89ac0",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "reference.py": "c476fad5f3695c24d2b753db2e8f7415307caab7533836e7b447257d445dba9d",
+    "replay_package.py": "8b61c1130fcc7e4ef2fd17745e38fc2178aed5e983ce5ff5115d18f776d25633",
+    "run.py": "8045f410eda1d3b55d5ee091566ff5d5f937832a29820dd684267b8bdf102eeb",
+    "sketch.py": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+    "validate.py": "1e1fb3ee9f609289506d6f84e9ee024156e7a3d4a454b12f08068c655d8fd2d7",
+    "verify.py": "f15338beef90ab4356072bde16598c967986852ae7241a1faf6e53f5f40511fc"
+  },
+  "inputs_sha256": {
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PARENT_PHASE_CERTIFICATE.json": "b4a9c8d4f65760e30c2201bedd1c35d2b5dab8f38a541e59e6bfa114c1915911",
+    "PARENT_SOURCE_WITNESS.npz": "dbe7f2b1a234f84b37f713710c5912c34d07623f92cafef64112603fa643e2e2",
+    "PARENT_UNIFORM_CERTIFICATE.json": "9e5633627fc08f385159b869673930e5e389cb2a799534b7ef3c48603121ed73",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192",
+    "baseline/BASIS_A.npz": "d9d4795747958625060fbf3c155367af0f176519de50c5d1e49f9b6ef4c24735",
+    "baseline/BASIS_B.npz": "c12ed0f14149ef4ad599fb65cdc4a8a4a9739da89b25ec71a2b1d28229b53cf4",
+    "baseline/CERTIFICATE.json": "b4a9c8d4f65760e30c2201bedd1c35d2b5dab8f38a541e59e6bfa114c1915911",
+    "baseline/DISCOVERY.json": "06cdb1c9e49f43060e52460dcd70ab7604179fb8edc85fbc1e7505f6ce96544e",
+    "baseline/FLOAT_META.npz": "cdd8a9e86d18c3a678957067af650a861dfce61157571f4d62c1f94905a013d6",
+    "baseline/PHASE_PROPOSAL.npz": "0bef676b04d7cea69f5c5a82b0d2d4c8017eeaf0e5f9c0553a32d83dfd843389",
+    "baseline/REPORT.json": "f8263844d196d88e5615fff309941c6e3d5f8bde310d0465a3861732f6d9e8a3",
+    "cyclic_unit/BASIS_A.npz": "1bbb1f7f5b18ab2107c17c2cfe840f6a77034ce050d6ab36c5ea5b18a77ba688",
+    "cyclic_unit/BASIS_B.npz": "bdbfc2375f4bcd1c2613f7130d28b0874d26b63eb86e6e4922b8edec95380404",
+    "cyclic_unit/CERTIFICATE.json": "a6e7ca9075ad458ab1e4e422043b2bdb8f6d90aba02362f0510524ba2c61f8c7",
+    "cyclic_unit/DISCOVERY.json": "9657a9b8aa347fcd7fbe84c3441f6c3a559cbc67f9f933acf9a42d5e26240611",
+    "cyclic_unit/FLOAT_META.npz": "edfae2dfa9b475425446f4f51c4649e9c6402a7ed399b6b0440dd249088ce26e",
+    "cyclic_unit/PHASE_PROPOSAL.npz": "ef97883ddb7529034aa6e045a04b8e60a5cd17bb155c05e51fbc1d671fab7bf3",
+    "cyclic_unit/REPORT.json": "a9ca5be4d6aa6952444f8b5238c14d241c68d61972530e0fa0c4a0cfb4830911",
+    "dense_unit/CERTIFICATE.json": "23f7de51f0e30dc01220565ef29965d0eaeb72276e2d91d410ace1c903f12492",
+    "dense_unit/DISCOVERY.json": "2cde71d89b4c08caab6b569631f5cda02ba9368dcf04a45d90e4fed214729b48",
+    "dense_unit/REPORT.json": "db73afef82aa8681639380b52f3fe2126f191410b3d244326f4a978cdebbcd8b"
+  }
+}
