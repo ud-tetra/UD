@@ -1,0 +1,51 @@
+{
+  "artifact": "UD_FLOATING_ESTIMATOR_VALIDATION_v0.1",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "F1",
+      "status": "EXACT_A_POSTERIORI_THEOREM",
+      "claim": "Residual bounds for actual floating basis, shift, eigenvalues and emitted arguments certify per-record unique reference-phase matching",
+      "evidence": [
+        "THEOREMS.md",
+        "numeric_math.py",
+        "certify_floating.py"
+      ],
+      "limit": "Pinned fitted reference, not physical frequency truth or global fitting convergence"
+    },
+    {
+      "id": "F2",
+      "status": "CONSTRUCTOR_VALIDATED_FLOATING_RUNS",
+      "claim": "Three actual runs pass with phase bounds<4.50e-10,<7.06e-8,<1.805e-5 radians/sample and unchanged original proposal bytes",
+      "evidence": [
+        "VALIDATION.json",
+        "results/*/FLOAT_CERTIFICATE.json"
+      ],
+      "limit": "Three pinned records, not uniform all-error-pattern2^-20 coverage"
+    },
+    {
+      "id": "F3",
+      "status": "CONSTRUCTOR_EXACT_ARRAY_REPLAY",
+      "claim": "Three saved-array residual replays agree with fresh raw-source executions; six tests pass",
+      "evidence": [
+        "VALIDATION.json",
+        "REPLAY_EXECUTIONS.json",
+        "HOSTILE_TEST_RESULTS.txt"
+      ],
+      "limit": "Same constructor; independent raw-source replay and review remain open"
+    },
+    {
+      "id": "F4",
+      "status": "OPEN",
+      "claim": "Uniform phase guarantees, independent review/replay and acquisition/metrology obligations",
+      "evidence": [
+        "GitHub #178",
+        "#130",
+        "#177",
+        "#136",
+        "#144"
+      ]
+    }
+  ]
+}
