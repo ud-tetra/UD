@@ -1,0 +1,43 @@
+{
+  "status": "DERIVED_CONDITIONAL_CONTINUOUS_SOURCE_WORK_CONTRACT",
+  "physical_promotion": 0,
+  "state": "Normalized unitary-link/unit-sphere trajectory with actual varying positive norm weights; continuous tangent defects",
+  "initial_gates": [
+    "P_upper<=eta^2/4",
+    "F_actual_upper<=N*eta^4/3200"
+  ],
+  "amplitude": "nu+eta*(beta_other+20*(D_initial+L_absolute))<=N*eta^3/12800",
+  "cumulative_work": "eta*T_parameter+10*eta^2*L_positive+W_prefix<=N*eta^4/6400",
+  "norms": {
+    "absolute": "Integral abs(ell_q)+abs(ell_w); not terminal norm difference",
+    "positive": "Integral max(ell_q,0)+max(ell_w,0); pure base loss contributes no positive norm work",
+    "floor": "Each initial lower norm minus its absolute variation upper must be positive"
+  },
+  "parameter_variation": "Integral rho_explicit+k_q*lambda_q+k_w*lambda_w, bounding spatial gradients of actual potential partial derivatives uniformly over the tube/norm box",
+  "defect_work": "An upper bound for every prefix of signed dF[Y], or integral positive work; terminal cancellation insufficient",
+  "speed_alternative": "W_prefix=((J+beta_total)*eta+nu)*Integral norm(Y)",
+  "gauss": {
+    "source": "S=d_xG[Y]-ell_q*q*q_dagger+ell_w*w*w_dagger",
+    "covariant_balance": "Gdot=i[Lambda,G]+S",
+    "trace": "sum trace(S)=ell_w-ell_q",
+    "drift": "norm(G(t))<=norm(G(0))+K_G*L_Y+L_absolute",
+    "K_G_squared": "16*eta^2+8+4*nq_ceiling^2+4*nw_ceiling^2",
+    "zero_source": "Initial G=0 and S=0 pointwise/a.e.; small bounds do not repair the constraint"
+  },
+  "raw_force_map": "ell=2*Re<psi,f>; p=f/sqrt(n)-ell*q/(2*n)",
+  "constant_rate_horizon": "20*eta*r_absolute*y*T^2+{eta*r_parameter+10*eta^2*r_positive+[(J+beta_initial)*eta+nu]*y}*T<=B/4, with amplitude and positive floors",
+  "separate_obligations": [
+    "Calibrated realization/action/state/energy/time mapping",
+    "Guaranteed joint-coverage initial and accumulated bounds",
+    "Matrix source/carrier realization if claiming G=Q",
+    "Certified manifold reconstruction for numerical defects",
+    "Non-constructor review and independent physical validation"
+  ],
+  "excluded": [
+    "Arbitrary numerical schemes or endpoint-only net work",
+    "Jumps without controlled bridges, nonunitary/off-sphere states",
+    "White-noise/unbounded-variation theorem",
+    "Physical source construction or constraint projection",
+    "Empirical/GUT promotion"
+  ]
+}

@@ -1,0 +1,238 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Controlled source and defect work at the quartic endpoint},pdfauthor={Unified Dynamics research workstream}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{Unified Dynamics | Source and defect work}\rhead{SDW v0.1}\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\Rea}{\operatorname{Re}}\newcommand{\Om}{\mathcal O_*}\newcommand{\F}{\mathrm F}
+\begin{document}
+\begin{center}
+{\Large\bfseries Controlled source and defect work\\at the quartic endpoint}\\[9pt]
+{\large Norm leakage, prefix energy budgets\\and a covariant Gauss-source contract}\\[9pt]
+Unified Dynamics research workstream\quad |\quad 18 October 2026 UTC\\
+Version 0.1\quad |\quad Derived conditional theorem
+\end{center}
+\begin{abstract}
+We extend the finite tetrahedral endpoint admission theorem to continuous controlled trajectories with varying positive matter norms and a tangent implementation defect. A lower bound on the matter hopping energy makes norm loss nonpositive in the moving-reference energy balance; only positive norm variation spends the base norm-work allowance. Other parameter changes and defect work share an explicit cumulative budget. Signed defect work must be bounded at every prefix, rather than only at the final time. We derive the exact matrix Gauss-source law and a drift envelope, translate additive raw matter forcing into norm and normalized tangent defects, and give a constant-rate horizon inequality. These are mathematical input contracts; they do not construct a physical source sector, repair the zero-source constraints or certify an unspecified numerical algorithm.
+\end{abstract}
+Fix the frozen finite-rank endpoint and $0<\eta\le R_{\rm p}$. Put $c=N/1600$, $B=c\eta^4$, $J=\max(a,25N)$. Let $L_n$ bound total norm variation, $L_n^+$ positive norm variation, $D_0$ the initial norm-error sum and $\mathcal T$ the other parameter-gradient variation integral. Definitions appear below.
+\begin{theorem}[Cumulative work admission]\label{th:main}
+Assume a positive uniform norm floor, a continuous manifold-valued trajectory, the frozen tube bounds, and the uniform amplitude contract
+\[
+\beta=\beta_o+20(D_0+L_n),\qquad \nu+\eta\beta\le c\eta^3/8.
+\]
+Let $\mathcal W_Y\ge0$ bound every prefix of signed tangent-defect work before possible exit. If the initial geometry/actual-energy gates and work gate hold,
+\[
+\boxed{\widehat{\mathcal P}_0\le\eta^2/4,\quad \widehat F_0\le B/2,\quad
+\eta\mathcal T+10\eta^2L_n^++\mathcal W_Y\le B/4,}
+\]
+then $d_g(x(t),\Om)<\eta$ throughout the declared horizon. One may take the sufficient defect-work bound
+\[
+\mathcal W_Y=[(J+\beta)\eta+\nu]\,L_Y,\qquad
+L_Y\ge\int\|Y_t\|_g\,dt.
+\]
+The result is ambient Hamiltonian confinement with controlled non-Hamiltonian terms. Exact zero-source Gauss admissibility requires the separate source conditions of Section 3.
+\end{theorem}
+\textbf{Status.} Development, no registry entry; constructor verification; independent review pending; physical promotion $0$. Nominal action, reference coefficients and ledger unchanged.
+\newpage
+\section{Moving norms, normalized state and a ground-energy bound}
+The tetrahedral carrier has 15 nodes, 28 Hasse links and 18 diamonds. Write $D_U[i,j]=b_eU_e$ for $e=(i\leftarrow j)$, $b_e=\pm1$, $h_U=i(D_U^\dagger-D_U)$, and $W_d=(U_{ih}U_{hk})^\dagger U_{ij}U_{jk}$. At $\kappa=rNk_*$ the parameterized Hamiltonian is
+\[
+H_n=\frac a2\sum_e\tr E_e^2+\kappa\sum_d(1-\Rea\tr W_d/r)
++n_q f(U,q)+n_w f(U,w)+\mu(n_q+n_w),
+\]
+where $f(U,z)=z^\dagger h_Uz$, $\|q\|=\|w\|=1$, and $\psi=\sqrt{n_q}q$, $\bar\chi=\sqrt{n_w}w$. The normalized matter symplectic forms retain their opposite signs and actual norm weights. The frozen reference orbit has $U_e^*=\operatorname{diag}(-ib_e,I)$, $E^*=0$, $q_i^*=w_i^*=v_ie_1$, with $Tv=\rho v$, $T$ unsigned adjacency and $\rho=\sqrt{8+2\sqrt{10}}$.
+
+Let $V_o(t,x,n)$ be other gauge/species-phase invariant errors, uniformly split into generic gradient bound $\nu$ and orbit-centered Hessian bound $\beta_o$. Define the actual moving-reference energy
+\[
+F(t,x,n)=H_n(x)+V_o(t,x,n)-[H_n+V_o](t,\Om,n).
+\]
+Thus the mass offset cancels. Write $d=d_g(x,\Om)$ in the frozen unnormalized Frobenius/unit-sphere metric. Consider
+\[
+\dot x=X_{H_n+V_o}^{(n)}(x)+Y_t(x,n),\qquad
+\dot n_q=\ell_q(t,x,n),\quad\dot n_w=\ell_w(t,x,n).
+\]
+Here $Y=(iA_eU_e,F_e,p,z)$ is tangent: $A_e,F_e$ are Hermitian and $\Rea\langle q,p\rangle=\Rea\langle w,z\rangle=0$. Assume sufficient continuity/local Lipschitz regularity for unique solutions, and uniform positive norm floors. Global species-phase terms are immaterial to the energy and Gauss estimates.
+\begin{lemma}[Ground shift and its local size]\label{lem:ground}
+For every unit normalized matter vector, $f(U,z)+\rho\ge0$. On $d\le\eta$,
+\[
+0\le f(U,q)+\rho\le10d^2,\qquad
+0\le f(U,w)+\rho\le10d^2.
+\]
+\end{lemma}
+\begin{proof}
+Let $u_i=\|z_i\|$. The link quadratic form satisfies
+$f(U,z)\ge-2\sum_{e=(i,j)}u_i u_j=-u^TTu\ge-\rho$, by the Rayleigh bound and $\|u\|=1$. At the reference orbit each $f=-\rho$ and its gradient is zero. The degree-four geodesic estimate $|f''|\le4(b+2c_z)^2\le20(b^2+c_z^2)$ from [1] gives the upper bound by twice integrating along a shortest orbit geodesic.
+\end{proof}
+Let $L_s\ge\int|\ell_s|$, $L_s^+\ge\int\max(\ell_s,0)$, $L_n=L_q+L_w$ and $L_n^+=L_q^++L_w^+$. Then the norm-error sum is at most $D_0+L_n$. For initial intervals $[s_L,s_U]$, it suffices that $s_L-L_s>0$; the entire norm box is $[s_L-L_s,s_U+L_s]$.
+\newpage
+\section{Work balance, trapping proof and the prefix requirement}
+All bounds below are uniform over the full tube and admitted norm box, before possible first exit. Suppose
+\[
+\|\nabla_x\partial_tV_o\|\le\rho_o(t),\qquad
+\|\nabla_x\partial_{n_s}V_o\|\le k_s(t),\qquad
+|\ell_s|\le\lambda_s(t).
+\]
+Use the nonnegative parameter-variation integral
+\[
+\mathcal T\ge\int_0^T[\rho_o(t)+k_q(t)\lambda_q(t)+k_w(t)\lambda_w(t)]\,dt.
+\]
+These are derivatives of the actual potential family, not derivatives of previously reported bound envelopes. The extra $k_s$ terms are necessary when other errors depend on the leaking norms; they vanish for norm-independent errors.
+
+Along the trajectory the Hamiltonian part contributes zero to $\dot F$. The exact remaining balance is
+\[
+\dot F=\partial_t(V_o-V_o|_{\Om})
++\sum_s\ell_s\{f(U,z_s)+\rho+\partial_{n_s}(V_o-V_o|_{\Om})\}
++d_xF[Y].
+\]
+No derivative of the time-varying symplectic weights is added: this follows from the chain rule and $d_x(H_n+V_o)[X_{H_n+V_o}^{(n)}]=0$ at each fixed $n$. Lemma~\ref{lem:ground} bounds the base norm contribution above by $10\eta^2\sum_s\max(\ell_s,0)$. Negative norm flux cannot increase that part of $F$.
+
+Require, for every $0\le t\le T$ before exit,
+\[
+\int_0^t d_xF[Y],d\tau\le\mathcal W_Y.
+\]
+An upper bound on its positive-part integral suffices. Since the frozen $\|\nabla H_N\|\le Jd$ and error gradient is at most $\nu+\beta d$, the speed bound in Theorem~\ref{th:main} is sufficient as well.
+\begin{proof}[Proof of Theorem \ref{th:main}]
+The initial score gives $d(0)\le\eta/2$. Integrating the balance at any prefix gives
+\[
+F(t)\le\widehat F_0+\eta\mathcal T+10\eta^2L_n^++\mathcal W_Y\le3B/4.
+\]
+On $d=\eta$, the inherited quartic lower bound and error amplitude contract give
+\[
+F\ge B-\nu\eta-\beta\eta^2/2\ge7B/8.
+\]
+Continuity forbids first exit. The positive norm floor and bounded variables permit continuation over the stated horizon under the regularity assumptions. Finite total bounds uniform over all forward times give all-forward-time confinement. No claim of attraction or constraint projection follows.
+\end{proof}
+\textbf{Why terminal net work is insufficient.} In the abstract canonical oscillator $H=(q^2+p^2)/2$, choose $Y=(-p,q+f)$, where $f=1$ on $[0,1]$ and $f=-1$ on $[1,2]$. From zero initial data, $q=0$, $p=t$ then $p=2-t$. Terminal signed work is zero, but prefix work reaches $1/2$ and the trajectory leaves every radius below one. This exact piecewise-smooth control is not a UD trajectory; it disproves replacing a prefix work bound by terminal cancellation, even in a class with a local quartic energy lower bound.
+\newpage
+\section{Exact Gauss-source balance and a drift envelope}
+All node-matrix norms are combined Frobenius norms. Use the frozen Hermitian moment map
+\[
+G_i=\sum_{\mathrm{head}=i}E_e-\sum_{\mathrm{tail}=i}U_e^\dagger E_eU_e
+-n_q q_iq_i^\dagger+n_w w_iw_i^\dagger.
+\]
+For tangent $Y=(iA_eU_e,F_e,p,z)$ its state derivative is
+\begin{align*}
+(d_xG[Y])_i={}&\sum_{\mathrm{head}=i}F_e
+-\sum_{\mathrm{tail}=i}U_e^\dagger\{F_e+i[E_e,A_e]\}U_e\\
+&-n_q(p_iq_i^\dagger+q_ip_i^\dagger)
++n_w(z_iw_i^\dagger+w_iz_i^\dagger).
+\end{align*}
+\begin{theorem}[Source compatibility]\label{th:gauss}
+Define
+\[
+\boxed{S_i=(d_xG[Y])_i-\ell_q q_iq_i^\dagger+\ell_w w_iw_i^\dagger.}
+\]
+In temporal gauge $\dot G_i=S_i$. With multipliers $\Lambda_i$ the law is $\dot G_i=i[\Lambda_i,G_i]+S_i$, and
+\[
+\sum_i\tr S_i=\ell_w-\ell_q,\qquad
+\sum_i\tr G_i=n_w-n_q.
+\]
+An externally declared charge $Q_i$ satisfies $G_i=Q_i$ throughout a trajectory if it satisfies the same covariant source equation and agrees initially. Zero-source admissibility requires $G_i(0)=0$ and $S_i=0$ almost everywhere. Equal total norm flux is necessary but not sufficient.
+\end{theorem}
+\begin{proof}
+At fixed $n$, gauge invariance makes the Hamiltonian contribution to $\dot G$ zero in temporal gauge. Differentiate the displayed moment map, using $\delta U=iAU$ and $\delta(U^\dagger EU)=U^\dagger(F+i[E,A])U$. Tangency of $p,z$ and cyclicity of trace cancel all state-derivative terms in the summed trace. The difference $G-Q$ obeys a homogeneous unitary-conjugation equation when their sources agree, so zero initial difference remains zero. The converse for zero target follows directly from the exact equation.
+\end{proof}
+Let $n_q\le n_{q,+}$, $n_w\le n_{w,+}$. Throughout the admitted tube, $\|E\|\le\eta$. Then
+\[
+\|d_xG[Y]\|\le K_G\|Y\|_g,\qquad
+K_G^2=16\eta^2+8+4n_{q,+}^2+4n_{w,+}^2.
+\]
+Indeed electric divergence contributes $\sqrt8\|F\|$; the tail commutator contributes at most $4\eta\|A\|$ by degree four and $\|[E,A]\|_\F\le2\|E\|_\F\|A\|_\F$. The matter derivatives contribute $2n_q\|p\|+2n_w\|z\|$. Cauchy--Schwarz proves the bound. Since each normalized block-Gram vector has norm at most one,
+\[
+\boxed{\|G(t)\|\le\|G(0)\|+\int_0^t\|S\|\,d\tau
+\le\|G(0)\|+K_GL_Y+L_n.}
+\]
+Unitary-conjugation interaction frames give the same envelope with multipliers. A small drift bound does not prove $S=0$, supply charge dynamics, or repair the zero-source constrained action. This is a compatibility contract, not a constructed physical source sector.
+\newpage
+\section{From additive matter forcing to the normalized contract}
+Suppose a known norm-preserving base evolution for the raw matter vector $\psi=\sqrt n\,q$ is supplemented by additive forcing $f_\psi$. Its exact norm and normalized tangent contributions are
+\[
+\ell=2\Rea\langle\psi,f_\psi\rangle,
+\qquad p=\frac{f_\psi}{\sqrt n}-\frac{\ell}{2n}q.
+\]
+Taking $\Rea\langle q,p\rangle$ gives zero. This is real orthogonal projection of $f_\psi/\sqrt n$ onto the sphere tangent, so
+\[
+\|p\|\le\frac{\|f_\psi\|}{\sqrt n},\qquad
+|\ell|\le2\sqrt n\,\|f_\psi\|.
+\]
+The same formulas apply to the conjugated second species, with its own forcing. Any additional phase motion from a norm-dependent Hamiltonian belongs to the norm-preserving base and contributes no extra relative-energy or Gauss work.
+
+If $A_s\ge\int_0^T\|f_s\|dt$ and the initial norm is exactly $n_s(0)$, then
+\[
+\sqrt{n_s(t)}\in[\sqrt{n_s(0)}-A_s,\sqrt{n_s(0)}+A_s].
+\]
+Thus $A_s<\sqrt{n_s(0)}$ certifies a positive floor, and sufficient allocations are
+\[
+\int_0^T|\ell_s|dt\le2(\sqrt{n_s(0)}+A_s)A_s,
+\qquad \int_0^T\|p_s\|dt\le\frac{A_s}{\sqrt{n_s(0)}-A_s}.
+\]
+These are upper bounds derived from the raw-force envelope. Inserting them into Theorem~\ref{th:main} is conservative; directly measured norm variation or relative-energy work can be sharper. Norm loss alone has $L_s^+=0$, but its absolute variation still enlarges the amplitude envelope and can change Gauss charge.
+
+\textbf{An exact radial-loss control.} Let $f_\psi=(\gamma_q/2)\psi$ and $f_{\bar\chi}=(\gamma_w/2)\bar\chi$ with real $\gamma_s(t)$. Then $\ell_s=\gamma_s n_s$ and the normalized tangent defects vanish. Start on the frozen normalized orbit, $E=0$. Its matter currents remain at their stationary values and the normalized state stays on that orbit with allowed phase motion. Hence $F=0$ for the base Hamiltonian at all times, while
+\[
+G_i=(n_w-n_q)v_i^2P_0,\qquad
+S_i=(\ell_w-\ell_q)v_i^2P_0.
+\]
+Equal initial norms and matched radial flux keep zero Gauss. One-species loss produces a nonzero Gauss source despite zero normalized distance and zero relative energy. This is an explicitly declared external-force control, not a source law selected by UD. The trapping theorem applies when its separate norm-floor and amplitude budgets hold.
+
+For a numerical scheme, the theorem requires a continuous manifold-valued reconstruction with certified tangent residual and prefix work, including roundoff. Discrete endpoint energy cancellation alone is insufficient. A jump may cross the tube without a controlled continuous bridge; nonunitary links, off-sphere coordinates or stochastic paths of unbounded variation need additional theorems. No general integrator or white-noise guarantee is supplied.
+\newpage
+\section{Constant-rate horizon inequality and exact calculator}
+Suppose initial norm intervals are positive and rates give
+\[
+|\ell_q|\le r_q,\quad|\ell_w|\le r_w,\quad
+\max(\ell_q,0)+\max(\ell_w,0)\le r_+,\quad
+\|Y\|\le y,\quad \rho_o+k_q\lambda_q+k_w\lambda_w\le r_V.
+\]
+Put $r_n=r_q+r_w$, $\beta_0=\beta_o+20D_0$. A sufficient duration $T$ obeys the positive floors $n_{s,L}(0)-r_sT>0$ and
+\[
+\nu+\eta\beta_0+20\eta r_nT\le c\eta^3/8,
+\]
+\[
+\boxed{20\eta r_n yT^2+
+\{\eta r_V+10\eta^2r_++[(J+\beta_0)\eta+\nu]y\}T\le B/4.}
+\]
+The quadratic term arises because norm drift enlarges the curvature bound used for defect work. This is a sufficient horizon inequality; rates alone do not give an all-time result when these cumulative budgets grow without bound. Physical time still requires a calibrated mapping from the model evolution parameter.
+
+The standard-library calculator accepts exact rational norm intervals, absolute/positive norm variation, other parameter-gradient variation, defect path length, initial geometry/energy bounds, and error amplitudes. It uses the speed-derived work bound unless a certified sharper \emph{every-prefix} signed-work upper bound is provided. It likewise permits a sharper certified source-integral bound. Optional initial Gauss metrology gives a total drift envelope; it is not assumed zero by default. All inputs need guaranteed joint coverage; arithmetic does not establish realizability or metrology.
+
+At $a=N=1$, $\eta=1/829538022$ and zero initial norm/coefficient errors, the illustrative single-input caps are
+\begin{center}
+\begin{tabular}{ll}\toprule
+Sufficient quantity & Model-unit cap\\\midrule
+Shared cumulative work allowance $B/4$ & $3.29970290\times10^{-40}$\\
+Absolute norm variation, amplitude cap & $\eta^2/256000\simeq5.67658887\times10^{-24}$\\
+Defect path length, speed bound only & $B/(4J\eta)\simeq1.09489161\times10^{-32}$\\
+Other gradient variation, alone & $c\eta^3/4$\\\bottomrule
+\end{tabular}
+\end{center}
+At the norm-only amplitude cap, even pure norm gain contributes at most $B/16$ work. Pure loss contributes zero base norm work, yet spends the amplitude allowance. The speed-only path cap is particularly conservative because it uses a full-tube energy-gradient bound; a certified direct prefix-work bound can be much better. Individual caps cannot be spent independently in a mixed case. No necessary laboratory precision, feasible actuator specification or physical source strength is inferred.
+
+The package supplies twelve budget examples, including pure loss, mixed inputs, a sharper prefix-work input and rejected work/amplitude/floor cases. Failure of a sufficient gate does not demonstrate instability.
+\newpage
+\section{Verification scope and requirements before experimentation}
+The constructor replay supplies 43 exact finite/rational checks: energy allocations, gain/loss distinctions, commutator algebra, tangent decomposition, twelve budget controls, invalid inputs, terminal-work cancellation and the rate-horizon identity. The full analytic proof remains in this manuscript; finite checks are not exhaustive proofs or independent review.
+
+Floating diagnostics at ranks $1,2,3,5$ supply four matrix source/trace and raw-force controls and eight centered ground-shift controls. The general derivative test uses electric norm $0.1$ solely for that inequality; those random states are not endpoint-tube preparations. No trajectory, interval proof or empirical claim follows.
+
+Unchanged ERA/PET/GPC calculators and the ERA certificate are hash-bound. Their conditional action, orbit and tube estimates retain their scope. Governance and ledger are unchanged; no physical promotion or registry ruling occurs.
+
+The experiment-facing obligations are:
+\begin{enumerate}
+\item Select a realizable action/carrier; calibrate state, energy and model-time units; identify the constraint target and any actual external charge carriers.
+\item Establish joint-coverage initial geometry, actual-energy and norm intervals, positive norm floors and a duration.
+\item Bound absolute/positive norm variation, other parameter-gradient variation and every-prefix defect work. A speed-derived work bound needs a certified manifold-valued residual path.
+\item Derive or measure the matrix source when claiming $G=Q$. Exact zero-source admissibility needs pointwise source cancellation; small work or drift is insufficient.
+\item Complete non-constructor review and a physical bridge. Then audit published datasets for these observables and coverage information.
+\end{enumerate}
+No experimental data are reanalyzed. Next is a source-selected realization or an actual reconstructed-trajectory certificate, followed by the data audit. No coupling unification, proton decay or monopole result follows from this finite model theorem.
+\begin{thebibliography}{9}\small\setlength{\itemsep}{2pt}
+\bibitem{era} UD workstream. \emph{Energy admission with norm errors and nonzero Gauss levels}, ERA v0.1, 18 October 2026. Frozen capture energy-admission, UTC 2026-10-18T014928Z, suffix b161557f. Conditional reference theorem; review pending.
+\bibitem{ert} UD workstream. \emph{Robust trapping at the quartic critical endpoint}, ERT v0.1, 16 October 2026. Capture endpoint-robustness, UTC 2026-10-16T164203Z, suffix 80c0789d. Conditional error and derivative estimates.
+\bibitem{pet} UD workstream. \emph{Parity-sharpened endpoint trapping}, PET v0.1, 16 October 2026. Capture endpoint-parity, UTC 2026-10-16T161824Z, suffix 37748fe1. Conditional quartic tube and radius.
+\bibitem{gpc} UD workstream. \emph{Gauge-invariant certification of critical-orbit preparation}, GPC v0.1, 18 October 2026. Capture preparation-certificate, UTC 2026-10-18T011239Z, suffix 137659b3. Conditional geometry score; review pending.
+\end{thebibliography}
+\end{document}
