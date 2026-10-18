@@ -1,0 +1,149 @@
+{
+  "status": "OPEN_MODEL_TO_ACQUISITION_INPUT_REQUIREMENTS",
+  "physical_promotion": 0,
+  "units": "nominal sample-index and sketched modal coefficient units; no SI conversion established",
+  "required_inputs": [
+    {
+      "id": "M1",
+      "input": "Unwrapped interpolation, source-generator bound or physical frequency band",
+      "reason": "Aliased modes can have unboundedly different jitter sensitivity",
+      "status": "DECLARED_PRINCIPAL_BAND_MODEL_ONLY"
+    },
+    {
+      "id": "M2",
+      "input": "Independent clock-rate calibration bound mu",
+      "reason": "Frequency and sample-clock scale are observationally confounded",
+      "status": "OPEN"
+    },
+    {
+      "id": "M3",
+      "input": "Timestamp jitter bound j and dependence/common-clock structure",
+      "reason": "The instantiated certificate assumes one common clock; per-preparation timing needs raw-block bounds",
+      "status": "OPEN"
+    },
+    {
+      "id": "M4",
+      "input": "Preparation-to-modal coefficient source map and operator-norm error bound p",
+      "reason": "p<gamma is a coefficient condition, not a physical preparation guarantee",
+      "status": "OPEN"
+    },
+    {
+      "id": "M5",
+      "input": "Excitation certificate after actual preparation/offset changes",
+      "reason": "Column-specific rotations or vanished mode pairs can collapse rank",
+      "status": "REFERENCE_MODEL_CERTIFIED_ONLY"
+    },
+    {
+      "id": "M6",
+      "input": "Independent acquisition/model-noise floor and additive vector bounds",
+      "reason": "The inherited clean fit residual is not a future instrument-noise guarantee",
+      "status": "OPEN"
+    },
+    {
+      "id": "M7",
+      "input": "Separately calibrated nominal sample interval",
+      "reason": "Required for conversion from model sample units to SI time/frequencies",
+      "status": "OPEN"
+    },
+    {
+      "id": "M8",
+      "input": "Actual floating residual and separate full-Hankel/acquisition checks",
+      "reason": "A priori ideal-estimator phase budgets do not replace runtime or full-spectral verification",
+      "status": "REQUIRED_FOR_NEW_ACQUISITION"
+    },
+    {
+      "id": "M9",
+      "input": "Physical/native readout and metric source mapping",
+      "reason": "The Euclidean sketched modal norm is a declared model norm; source/observer mapping under task136 is separate",
+      "status": "OPEN"
+    }
+  ],
+  "frozen_joint_model_example": {
+    "preparation_fraction": [
+      1,
+      4
+    ],
+    "jitter": [
+      1,
+      1073741824
+    ],
+    "clock_rate": [
+      1,
+      17592186044416
+    ],
+    "raw_delta": [
+      1,
+      17179869184
+    ]
+  },
+  "joint_result": {
+    "preparation_fraction_of_certified_gamma": [
+      1,
+      4
+    ],
+    "jitter_sample_units": [
+      1,
+      1073741824
+    ],
+    "absolute_clock_rate_error": [
+      1,
+      17592186044416
+    ],
+    "raw_vector_error": [
+      1,
+      17179869184
+    ],
+    "model_floor_included": true,
+    "physical_promotion": 0,
+    "scope": "Conditional exact top105 SVD/least-squares estimator, declared principal-band common-clock interpolation; not arbitrary floating output or SI calibration",
+    "preparation_coefficient_error_upper": [
+      384439927677834968716206698,
+      1267650600228229401496703205376
+    ],
+    "model_sigma105_lower": [
+      69293408595919080890642565714,
+      1267650600228229401496703205376
+    ],
+    "clock_error_vector_norm_upper": [
+      137686330336552865467568,
+      1267650600228229401496703205376
+    ],
+    "timing_sketch_error_upper": [
+      127321038317962977799877,
+      1267650600228229401496703205376
+    ],
+    "additive_sketch_error_upper": [
+      386645345619390370986534,
+      1267650600228229401496703205376
+    ],
+    "total_sketch_error_upper": [
+      513999834260716119480119,
+      1267650600228229401496703205376
+    ],
+    "status": "CERTIFIED_CONDITIONAL_EXACT_ESTIMATOR_MATCHING",
+    "unique_phase_matching": true,
+    "subspace_sine_upper": [
+      9403160341560075100346178,
+      1267650600228229401496703205376
+    ],
+    "basis_distance_upper": [
+      9403160341624749499898910,
+      1267650600228229401496703205376
+    ],
+    "eigenvalue_radius_upper": [
+      22692330430594107968329019,
+      1267650600228229401496703205376
+    ],
+    "phase_error_radians_upper": [
+      22692330431806064136720389,
+      1267650600228229401496703205376
+    ],
+    "readable": {
+      "model_sigma105_lower": 0.05466286103082617,
+      "total_sketch_error_upper": 4.0547437453835855e-07,
+      "phase_error_radians_upper": 1.7901092326008845e-05
+    }
+  },
+  "nominal_hidden_subspace_changed": false,
+  "review_hold_177_closed": false
+}

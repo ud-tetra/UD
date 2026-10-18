@@ -1,0 +1,160 @@
+{
+  "status": "CONSTRUCTOR_CONDITIONAL_PREPARATION_CLOCK_GRID_FREEZE",
+  "created_utc": "2026-10-18T15:57:12.168801+00:00",
+  "source_main": "ba50cbcd146c3223d20f752cb23c9967dc9a828f",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "same_team_review_only": true,
+  "code_sha256": {
+    "bindings.py": "aac427445432bad87439608b47266f54d1aa24474d6ffbb089279d4e5c304d81",
+    "calibration_math.py": "aff1c570ddbd5ede968198fad4125fae5aac0afb2fdff59f6cd29f7b8f74812c",
+    "certify_budgets.py": "b9903cbf0799de1d2fc58fe700362ea808dc045a538a510022016b13d0b2b65c",
+    "controls.py": "c680725dc8b701eda42963eeaa77d96b4cff94d22fdc15bbcd075a87abf9ff8d",
+    "frame_values.py": "163a40b18cd14b59c414c02a77e9a98d57c36c6877af38480d56e3cb917dd71f",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "propose_inverse.py": "cf385a7ed9065bf7af42b4da8d95673b2b4e7d8da4470ec909140e88ac817172",
+    "replay_package.py": "b89487f0157d8fd72c8fe405cc1073918a94923114f5d9b0ccf89e60722bc435",
+    "run.py": "2e773c2613b48789754b47c0b2bd5dc356d46e8263850b906e98c119c76b9c3e",
+    "source_model.py": "642dafeb827dc28ec6e8138c172131573a4d4649955c327572415bab1ea012c6",
+    "test_calibration.py": "d0a19e998cc64370f08ac02425d2acf2f704d0787eeaf3eb2a2dd67bc89ebd7f",
+    "validate.py": "6b8c9514f57569e6d2f23e247a40a3a5f35305e7fda3f8182a751234227f0a94"
+  },
+  "inputs_sha256": {
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PHASE_STABILITY_CERTIFICATE.json": "c8eb769bb54d9ca688bd8fa9e6d19d8eba2e3387efd8fc7d85c9134a51cd1913",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192"
+  },
+  "preparation_fractions": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "grid_preparation_fraction": [
+    1,
+    4
+  ],
+  "jitter_exponents": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "clock_rate_exponents": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "raw_noise_exponents": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "joint_control": {
+    "preparation_fraction": [
+      1,
+      4
+    ],
+    "jitter": [
+      1,
+      1073741824
+    ],
+    "clock_rate": [
+      1,
+      17592186044416
+    ],
+    "raw_delta": [
+      1,
+      17179869184
+    ]
+  },
+  "acceptance": "Strict certified excitation margin p<gamma; exact-SVD subspace separation, deleted-row rank and disjoint reference eigenvalue disks. All HOLD/one-sided results retained. Largest passing budgets only on these frozen grids, no optimality claim. No retuning after results.",
+  "scope": "A priori exact-arithmetic estimator theorem under declared principal-band interpolation and common clock. Not a new actual-floating estimator guarantee, SI clock certificate, physical preparation guarantee, independent review or whole2^-20-ball closure.",
+  "reference_already_known": true,
+  "review_preliminary_margin_calculation_preceded_freeze": true,
+  "controls": [
+    "common quarter-turn offset preserves span",
+    "coefficient boundary removes excitation",
+    "preparation-specific offsets collapse rank",
+    "single-row timing jitter obeys derivative bound",
+    "alias phases identical at integer samples but divergent under arbitrarily small jitter",
+    "clock-rate and frequency-scale confounding"
+  ]
+}

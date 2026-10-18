@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "common_offset": {
+    "quarter_turn_coefficient_rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "joint_span_rank": 3,
+    "orthogonal": true
+  },
+  "excitation_boundary": {
+    "coefficient_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "rank": 2,
+    "strict_margin_required": true
+  },
+  "preparation_specific_offsets": {
+    "coefficient_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        -1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "rank": 2,
+    "unconditional_rank_preservation_refuted": true
+  },
+  "single_row_jitter": {
+    "exact_residual_norm_squared": 2,
+    "derivative_bound_squared_upper": [
+      3127802485764025003062641505889,
+      1267650600228229401496703205376
+    ]
+  },
+  "alias_jitter_family": [
+    {
+      "alias_index": 1,
+      "jitter": [
+        1,
+        2
+      ],
+      "integer_sample_defect_upper": [
+        0,
+        1267650600228229401496703205376
+      ],
+      "perturbed_discrepancy_lower": [
+        1999,
+        1000
+      ],
+      "exact_symbolic_perturbed_discrepancy": 2
+    },
+    {
+      "alias_index": 2,
+      "jitter": [
+        1,
+        4
+      ],
+      "integer_sample_defect_upper": [
+        0,
+        1267650600228229401496703205376
+      ],
+      "perturbed_discrepancy_lower": [
+        1999,
+        1000
+      ],
+      "exact_symbolic_perturbed_discrepancy": 2
+    },
+    {
+      "alias_index": 16,
+      "jitter": [
+        1,
+        32
+      ],
+      "integer_sample_defect_upper": [
+        0,
+        1267650600228229401496703205376
+      ],
+      "perturbed_discrepancy_lower": [
+        1999,
+        1000
+      ],
+      "exact_symbolic_perturbed_discrepancy": 2
+    },
+    {
+      "alias_index": 1024,
+      "jitter": [
+        1,
+        2048
+      ],
+      "integer_sample_defect_upper": [
+        0,
+        1267650600228229401496703205376
+      ],
+      "perturbed_discrepancy_lower": [
+        1999,
+        1000
+      ],
+      "exact_symbolic_perturbed_discrepancy": 2
+    }
+  ],
+  "clock_rate_confounding": {
+    "relative_rate": [
+      1,
+      1000
+    ],
+    "finite_checked_samples": 17,
+    "difference_upper": [
+      0,
+      1267650600228229401496703205376
+    ],
+    "exact_identity": "theta*(1+rate)*k == ((1+rate)*theta)*k for every k"
+  },
+  "finite_controls_are_not_the_general_proof": true
+}
