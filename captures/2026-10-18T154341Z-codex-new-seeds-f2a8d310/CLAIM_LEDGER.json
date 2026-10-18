@@ -1,0 +1,53 @@
+{
+  "artifact": "UD_NEW_SEED_PHASE_CAMPAIGN_v0.1",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "N1",
+      "status": "EXACT_ENCODED_GATE_IDENTITIES",
+      "claim": "Four bounded patterns satisfy scalar2^-23 and vector2^-20; each bounded vector uses31/32 of the squared vector budget",
+      "evidence": [
+        "EXACT_GATES.md",
+        "DATA_FREEZE.json"
+      ],
+      "limit": "Protocol controls, not theory constants or full acquisition qualification"
+    },
+    {
+      "id": "N2",
+      "status": "CONSTRUCTOR_CERTIFIED_FLOATING_OUTPUTS",
+      "claim": "Four fresh records have unique fitted-reference phase matching; all errors<0.000502489 radians/sample; original proposals byte-identical",
+      "evidence": [
+        "VALIDATION.json",
+        "results/*/SPAN_CERTIFICATE.json"
+      ],
+      "limit": "Finite deterministic seeds on a known synthetic baseline, not all noise patterns or physical truth"
+    },
+    {
+      "id": "N3",
+      "status": "CONSTRUCTOR_MODEL_ORDER_HOLD",
+      "claim": "Oversized impulse discovers106 components and both proposer versions HOLD at unsupported model order",
+      "evidence": [
+        "OUTCOMES.json",
+        "results/oversized_impulse_216108/HOLD.json"
+      ],
+      "limit": "Intentionally violates additive gates; not demonstrated true full-Hankel signature failure"
+    },
+    {
+      "id": "N4",
+      "status": "CONSTRUCTOR_REPLAY_REPRODUCTION",
+      "claim": "Four phase residual replays,13 tests and five exact deterministic raw regenerations pass",
+      "evidence": [
+        "VALIDATION.json",
+        "RAW_REGENERATION_RECEIPT.json",
+        "TEST_RESULTS.txt"
+      ],
+      "limit": "Not independent replay or attributable non-constructor review"
+    },
+    {
+      "id": "N5",
+      "status": "OPEN",
+      "claim": "Uniform excitation/timing/error guarantees, independent review/source custody and full acquisition/metrology qualification remain open"
+    }
+  ]
+}

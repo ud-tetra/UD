@@ -1,0 +1,80 @@
+{
+  "status": "CONSTRUCTOR_NEW_SEEDS_FREEZE_BEFORE_NOISE_GENERATION_AND_FITTING",
+  "created_utc": "2026-10-18T15:39:28.896980+00:00",
+  "source_main": "aa70d16da6bf5189e1285ef70b14c8faf672b746",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "baseline_sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+  "baseline_codec_repository_path": "captures/2026-10-17T181003Z-codex-noisy-proposal-6371dfe9/observer-work/codec",
+  "baseline_codec_sha256": {
+    "CODEC_DICTIONARY.npz": "ea872023167f09a5b2d57560449bbbe0a8adb6519526000eb1d8e9777a7aba5f",
+    "CODEC_MANIFEST.json": "e9c0b0e49e2d7a8bea46c19c3c0fb9c714f9bc74448b02daf81f95b994401bf8",
+    "LOSSLESS_RESIDUAL.npz": "f57c1bef2ffd4372481fca251a2a4304530842dd4c0b4bbe069b49b11ebf4d98"
+  },
+  "code_sha256": {
+    "bindings.py": "accefa3a9ba4919594684f3e38004dbfc64e8a77aa87d4ae06fb0a366a135d3c",
+    "certify_span.py": "ec226565f74647166bc431e430e23e2844897d834924e55abcfad614d2065a94",
+    "frame_math.py": "553d3c4e8b49487496e2d61674abaf4822d15951c4b00bc23a372df4449bef98",
+    "frame_values.py": "163a40b18cd14b59c414c02a77e9a98d57c36c6877af38480d56e3cb917dd71f",
+    "instrumented_proposer.py": "c7f500e9b46645ef12948ff7815df0069b5b51f5edad7a8bc98cd39838e4bccb",
+    "make_records.py": "5adeea6a1d96f30b06458fbadef695c540333ec0255022d06c43a839233061bb",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "propose_complementary.py": "7285e45458f9983324eb1e1532233f9016195fabbd93bac0978354207106e604",
+    "propose_reduction.py": "323a73766d1ec6ee3890346f66313d2956a6e1c3218c4be07c557a245c7f237f",
+    "record_codec.py": "7e943781a5f734a85da4ca76156b4d5eeffe5af67caee6fec2ee82e158f01c12",
+    "replay_all.py": "2573dcb999bd1b7ba2cfd62f1a87b24c5f4bdbc78a88da36643258a8ea2a1f11",
+    "replay_package.py": "ce015d61fa1c7d764e8c1cb3e57e0d6313605afc1907601b9733c85189f0cac2",
+    "reproduce_records.py": "8210f4ce0cdffa82196124df23a570b4ad5c079d6419a0a7d7f07a87fe26205c",
+    "run_campaign.py": "73693f2a6b4b2796d1ed122cab85e3efc38f7baa81ba1ffda16571cd573082bf",
+    "test_noise.py": "cf457bda0f7e3b94e89ceaaea934380df0d20a4cfad34539774ceace70d2b404",
+    "test_span.py": "111437e56908282b7390024585fb76cfe140ead479f1e19d55bf4b9193167062",
+    "validate_campaign.py": "553f8a1a3c58d9768e59e454768411c5587e10a25c5440afa4f06f94d37bc71f"
+  },
+  "inputs_sha256": {
+    "FROZEN_CONTRACT.json": "ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c",
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PHASE_STABILITY_CERTIFICATE.json": "c8eb769bb54d9ca688bd8fa9e6d19d8eba2e3387efd8fc7d85c9134a51cd1913",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192",
+    "SKETCH_RULE.json": "c7017102c67c83bdf123a79a298917d49697a06fa69773eb3087ec428c8dcc26"
+  },
+  "cases": [
+    {
+      "case": "dense_216104",
+      "mode": "dense_sign",
+      "seed": 216104,
+      "integer_amplitude": 33554432
+    },
+    {
+      "case": "dense_216105",
+      "mode": "dense_sign",
+      "seed": 216105,
+      "integer_amplitude": 33554432
+    },
+    {
+      "case": "dense_216106",
+      "mode": "dense_sign",
+      "seed": 216106,
+      "integer_amplitude": 33554432
+    },
+    {
+      "case": "block_512_216107",
+      "mode": "block_sign",
+      "seed": 216107,
+      "integer_amplitude": 33554432
+    },
+    {
+      "case": "oversized_impulse_216108",
+      "mode": "oversized_impulse",
+      "seed": 216108,
+      "integer_amplitude": 1099511627776
+    }
+  ],
+  "acceptance": "Use unchanged 161-column estimator and PR189 frame-span proof with unchanged strict matching gates. Generate/freeze all raw hashes and exact additive gates before fitting. Compare original/instrumented proposals or HOLD receipts. Retain every HOLD; no seed, recipe, reference, threshold or proof tuning after execution.",
+  "scope": "New constructor noise on a previously known synthetic baseline; not independent/blinded measurements or independent review. Phase matching to pinned learned reference only. No new full-Hankel signature claim.",
+  "expected_failure_control": "Oversized impulse intentionally violates both additive gates; retain its actual proposer/proof outcome, never infer physical or true full-spectral failure",
+  "numpy_version": "2.3.5",
+  "rng": "numpy default_rng PCG64",
+  "baseline_already_known": true
+}
