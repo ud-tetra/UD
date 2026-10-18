@@ -1,0 +1,57 @@
+{
+  "status": "CONSTRUCTOR_FREEZE_BEFORE_NEW_EXECUTION",
+  "created_utc": "2026-10-18T01:02:23.042813+00:00",
+  "physical_promotion": 0,
+  "independent_preregistration": false,
+  "reference_record_path": "../observer-work/inputs/normalized_history.i64le",
+  "reference_record_sha256": "812ede167804a754f1e7343cc370cdc72a231d3f255a8656080e5cc7a2753ff7",
+  "inputs_sha256": {
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "SKETCH_RULE.json": "c7017102c67c83bdf123a79a298917d49697a06fa69773eb3087ec428c8dcc26",
+    "BASELINE_SKETCH_CERTIFICATE.json": "12387849c79fcb51b2b1fbb6f9ff49a8da331c6a573d73746caa538568126f8e",
+    "REFERENCE_PROPOSAL.npz": "f3b677cf8664e0caac6d24bab179ae296eb9c07faccdf833df17e8104a4ef192",
+    "FROZEN_CONTRACT.json": "ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c"
+  },
+  "code_sha256": {
+    "certify_phase.py": "9d0f07227b8ebaa5bf3662ce0c15d958565a5b61de39af0826e04053b876dbf8",
+    "phase_math.py": "76473a56e5c23685d816e3682a14c1efb290d48da0f496f911e229a9b94e66cf",
+    "make_phase_records.py": "80dfe0aaa29c158fba1023f070f8c3af4c18df0ede2481cb2c344afe1e641971",
+    "propose_complementary.py": "7285e45458f9983324eb1e1532233f9016195fabbd93bac0978354207106e604",
+    "certify_record.py": "1f2f036018cd0de46a26c1db7d0232032f4fc5b5dd862e351eb0dbad8e36334b",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "residual_preflight.py": "fc4a7c9770f6e222c52ae802711c13ab792e56c4ab5d68366b191153f98dbb5a"
+  },
+  "phase_bound_dyadic_exponents": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "phase_control_vector_budget_exponents": [
+    28,
+    20
+  ],
+  "intended_shift_rule": "Nearest positive-phase pair lower member; gamma floor to2^-60 of delta/(4*8190*max preparation coefficient L1 bound)",
+  "numerical_controls": "Run unchanged complementary proposer once on each new record; retain HOLD; one full Hankel certificate on2^-20 budget control only",
+  "scope": "Stability about pinned fitted reference for exact-arithmetic truncated-SVD/LS estimator; actual float proposer controls empirical, not a certified implementation error proof",
+  "universal_optimizer_convergence_claimed": false,
+  "old_inputs_already_known": true,
+  "full_Hankel_criteria_unchanged": true
+}
