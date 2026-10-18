@@ -1,0 +1,56 @@
+{
+  "artifact": "UD_PREPARATION_CLOCK_BUDGET_v0.1",
+  "physical_promotion": 0,
+  "independent_review": "pending",
+  "claims": [
+    {
+      "id": "T1",
+      "status": "EXACT_CONDITIONAL_MATRIX_THEOREM",
+      "claim": "Validated coefficient right inverse gives gamma>0; coefficient error p<gamma preserves temporal excitation",
+      "evidence": [
+        "THEOREMS.md",
+        "BUDGET_CERTIFICATE.json"
+      ],
+      "limit": "Sketched learned temporal model; no physical state-preparation map or spatial rank1893 implication"
+    },
+    {
+      "id": "T2",
+      "status": "EXACT_CONDITIONAL_CLOCK_TRANSPORT",
+      "claim": "Declared unwrapped common-clock interpolation gives derivative-norm bound including affine-rate accumulation; exact-SVD phase matching follows under strict gates",
+      "evidence": [
+        "THEOREMS.md",
+        "calibration_math.py"
+      ],
+      "limit": "Exact estimator only; future noise floor, band, clock and preparation inputs must be independently justified"
+    },
+    {
+      "id": "T3",
+      "status": "CONSTRUCTOR_VALIDATED_BUDGET_GRID",
+      "claim": "74 rows and one joint example replay; gamma>0.0012130785174, joint phase bound<1.791e-5 radians/sample; all HOLD/one-sided outcomes retained",
+      "evidence": [
+        "VALIDATION.json",
+        "BUDGET_CERTIFICATE.json"
+      ],
+      "limit": "Largest passing budgets only on frozen grids, not necessary/optimal; isolated maxima not jointly combinable"
+    },
+    {
+      "id": "T4",
+      "status": "EXACT_NO_GO",
+      "claim": "Sampled aliases alone do not bound jitter sensitivity; clock rate and generator frequency scale are confounded",
+      "evidence": [
+        "THEOREMS.md",
+        "CONTROL_RESULTS.json"
+      ],
+      "limit": "No-go addresses missing assumptions, not algorithm malfunction"
+    },
+    {
+      "id": "T5",
+      "status": "OPEN",
+      "claim": "Independent replay/review, source/physical band, clock/preparation maps, SI calibration, acquisition and metrology inputs",
+      "evidence": [
+        "ACQUISITION_REQUIREMENTS.json",
+        "TEAM_REVIEW.json"
+      ]
+    }
+  ]
+}
