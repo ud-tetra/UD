@@ -1,0 +1,234 @@
+{
+  "status": "OPEN_MODEL_TO_ACQUISITION_INPUT_REQUIREMENTS",
+  "physical_promotion": 0,
+  "units": "nominal sample-index and sketched modal coefficient units; no SI conversion established",
+  "required_inputs": [
+    {
+      "id": "M1",
+      "input": "Unwrapped interpolation, source-generator bound or physical frequency band",
+      "reason": "Aliased modes can have unboundedly different jitter sensitivity",
+      "status": "DECLARED_PRINCIPAL_BAND_MODEL_ONLY"
+    },
+    {
+      "id": "M2",
+      "input": "Independent clock-rate calibration bound mu",
+      "reason": "Frequency and sample-clock scale are observationally confounded",
+      "status": "OPEN"
+    },
+    {
+      "id": "M3",
+      "input": "Per-preparation timestamp jitter and rate bounds, channel synchrony and dependence structure",
+      "reason": "Current proof permits arbitrary dependence across preparations but requires one common clock across62 channels within each preparation",
+      "status": "MODEL_BOUNDS_CERTIFIED; ACQUISITION_INPUTS_OPEN"
+    },
+    {
+      "id": "M4",
+      "input": "Physical preparation-to-modal source map and per-preparation modal-block operator bounds p_a",
+      "reason": "Differential origin rotations preserve each block norm; global operator norm may grow. Use sqrt(sum p_a^2), not unchanged global norm.",
+      "status": "OPEN"
+    },
+    {
+      "id": "M5",
+      "input": "Actual origin patterns or uncertainty boxes and post-preparation excitation certificate",
+      "reason": "Known exact profiles and unknown-origin boxes are separate routes. Unknown deviations from a profile must be charged separately.",
+      "status": "FOUR_FROZEN_MODEL_PROFILES_AND_UNKNOWN_ORIGIN_BOX_CERTIFIED_ONLY"
+    },
+    {
+      "id": "M6",
+      "input": "Independent acquisition/model-noise floor and additive vector bounds",
+      "reason": "The inherited clean fit residual is not a future instrument-noise guarantee",
+      "status": "OPEN"
+    },
+    {
+      "id": "M7",
+      "input": "Separately calibrated nominal sample interval",
+      "reason": "Required for conversion from model sample units to SI time/frequencies",
+      "status": "OPEN"
+    },
+    {
+      "id": "M8",
+      "input": "Actual floating residual and separate full-Hankel/acquisition checks",
+      "reason": "A priori ideal-estimator phase budgets do not replace runtime or full-spectral verification",
+      "status": "REQUIRED_FOR_NEW_ACQUISITION"
+    },
+    {
+      "id": "M9",
+      "input": "Physical/native readout and metric source mapping",
+      "reason": "The Euclidean sketched modal norm is a declared model norm; source/observer mapping under task136 is separate",
+      "status": "OPEN"
+    }
+  ],
+  "frozen_joint_model_example": {
+    "offset_box_sample_units": [
+      1,
+      65536
+    ],
+    "preparation_fraction_of_gamma": [
+      1,
+      4
+    ],
+    "jitter_sample_units": [
+      1,
+      17179869184
+    ],
+    "absolute_preparation_rate_error": [
+      1,
+      281474976710656
+    ],
+    "raw_vector_error": [
+      1,
+      68719476736
+    ],
+    "known_profile_margin_used": false,
+    "model_floor_included": true,
+    "physical_promotion": 0,
+    "scope": "Conditional exact estimator; per-preparation common-across-channels clocks, principal-band interpolation, per-preparation modal error blocks, not SI or general floating convergence",
+    "per_preparation_modal_error_bound": [
+      6639935751073572482155708,
+      1267650600228229401496703205376
+    ],
+    "total_coefficient_preparation_loss_upper": [
+      384439927677834968716206698,
+      1267650600228229401496703205376
+    ],
+    "offset_coefficient_loss_upper": [
+      324413109111551586612927175,
+      1267650600228229401496703205376
+    ],
+    "coefficient_excitation_margin_lower": [
+      828906673921953319535692918,
+      1267650600228229401496703205376
+    ],
+    "combined_preparation_slope_upper": [
+      12848271437788366092023993737742,
+      1267650600228229401496703205376
+    ],
+    "timing_sketch_error_upper": [
+      830194261162234612013420,
+      1267650600228229401496703205376
+    ],
+    "additive_sketch_error_upper": [
+      96661336404847592746634,
+      1267650600228229401496703205376
+    ],
+    "model_sigma105_lower": [
+      49802118795606889783994872461,
+      1267650600228229401496703205376
+    ],
+    "total_sketch_error_upper": [
+      926889047890444975453762,
+      1267650600228229401496703205376
+    ],
+    "status": "CERTIFIED_CONDITIONAL_PREPARATION_CLOCK_MATCHING",
+    "unique_phase_matching": true,
+    "subspace_sine_upper": [
+      23593239698115470133347647,
+      1267650600228229401496703205376
+    ],
+    "basis_distance_upper": [
+      23593239699137053046194451,
+      1267650600228229401496703205376
+    ],
+    "eigenvalue_radius_upper": [
+      56937413487684549916246476,
+      1267650600228229401496703205376
+    ],
+    "phase_error_radians_upper": [
+      56937413506828996675883434,
+      1267650600228229401496703205376
+    ],
+    "readable": {
+      "model_sigma105_lower": 0.03928694451502682,
+      "total_sketch_error_upper": 7.311865333582982e-07,
+      "phase_error_radians_upper": 4.491569955994019e-05
+    }
+  },
+  "joint_result": {
+    "offset_box_sample_units": [
+      1,
+      65536
+    ],
+    "preparation_fraction_of_gamma": [
+      1,
+      4
+    ],
+    "jitter_sample_units": [
+      1,
+      17179869184
+    ],
+    "absolute_preparation_rate_error": [
+      1,
+      281474976710656
+    ],
+    "raw_vector_error": [
+      1,
+      68719476736
+    ],
+    "known_profile_margin_used": false,
+    "model_floor_included": true,
+    "physical_promotion": 0,
+    "scope": "Conditional exact estimator; per-preparation common-across-channels clocks, principal-band interpolation, per-preparation modal error blocks, not SI or general floating convergence",
+    "per_preparation_modal_error_bound": [
+      6639935751073572482155708,
+      1267650600228229401496703205376
+    ],
+    "total_coefficient_preparation_loss_upper": [
+      384439927677834968716206698,
+      1267650600228229401496703205376
+    ],
+    "offset_coefficient_loss_upper": [
+      324413109111551586612927175,
+      1267650600228229401496703205376
+    ],
+    "coefficient_excitation_margin_lower": [
+      828906673921953319535692918,
+      1267650600228229401496703205376
+    ],
+    "combined_preparation_slope_upper": [
+      12848271437788366092023993737742,
+      1267650600228229401496703205376
+    ],
+    "timing_sketch_error_upper": [
+      830194261162234612013420,
+      1267650600228229401496703205376
+    ],
+    "additive_sketch_error_upper": [
+      96661336404847592746634,
+      1267650600228229401496703205376
+    ],
+    "model_sigma105_lower": [
+      49802118795606889783994872461,
+      1267650600228229401496703205376
+    ],
+    "total_sketch_error_upper": [
+      926889047890444975453762,
+      1267650600228229401496703205376
+    ],
+    "status": "CERTIFIED_CONDITIONAL_PREPARATION_CLOCK_MATCHING",
+    "unique_phase_matching": true,
+    "subspace_sine_upper": [
+      23593239698115470133347647,
+      1267650600228229401496703205376
+    ],
+    "basis_distance_upper": [
+      23593239699137053046194451,
+      1267650600228229401496703205376
+    ],
+    "eigenvalue_radius_upper": [
+      56937413487684549916246476,
+      1267650600228229401496703205376
+    ],
+    "phase_error_radians_upper": [
+      56937413506828996675883434,
+      1267650600228229401496703205376
+    ],
+    "readable": {
+      "model_sigma105_lower": 0.03928694451502682,
+      "total_sketch_error_upper": 7.311865333582982e-07,
+      "phase_error_radians_upper": 4.491569955994019e-05
+    }
+  },
+  "nominal_hidden_subspace_changed": false,
+  "review_hold_177_closed": false,
+  "source": "PR193 extended by current preparation-specific certificate; frozen model examples, not instrument specifications"
+}
