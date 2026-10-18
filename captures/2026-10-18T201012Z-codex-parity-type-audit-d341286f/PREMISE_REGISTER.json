@@ -1,0 +1,95 @@
+{
+  "namespace": "PARITY_TYPED_AUDIT_v0.1",
+  "scope": "Declared finite algebraic targets only;not global proof completeness",
+  "physical_promotion": 0,
+  "premises": [
+    {
+      "id": "P-SPACES",
+      "text": "Distinct typed retained,event and selected-Hodge spaces",
+      "status": "EXPLICIT_SOURCE_OR_ALIGNMENT_PREMISE"
+    },
+    {
+      "id": "P-ISOMETRY",
+      "text": "W*:W E->H with W*W=I_E",
+      "status": "EXPLICIT_SOURCE_OR_ALIGNMENT_PREMISE"
+    },
+    {
+      "id": "P-BLOCKS",
+      "text": "R_E,R_V and positive diagonal I_c in declared aligned coordinates",
+      "status": "EXPLICIT_SOURCE_OR_ALIGNMENT_PREMISE"
+    },
+    {
+      "id": "P-FORMS",
+      "text": "Canonical J_E,J_V and Darboux pullback W*J_H W=J_E",
+      "status": "EXPLICIT_SOURCE_OR_ALIGNMENT_PREMISE"
+    }
+  ],
+  "claims": [
+    {
+      "id": "T-HODGE",
+      "premises": [
+        "P-SPACES",
+        "P-ISOMETRY",
+        "P-BLOCKS"
+      ],
+      "conclusion": "T Theta_H=R_E T",
+      "status": "EXACT_CONDITIONAL_CONSTRUCTOR_DERIVATION"
+    },
+    {
+      "id": "T-RETAINED",
+      "premises": [
+        "P-SPACES",
+        "P-BLOCKS"
+      ],
+      "conclusion": "R_E I_c=I_c R_V",
+      "status": "EXACT_CONDITIONAL_CONSTRUCTOR_DERIVATION"
+    },
+    {
+      "id": "T-COMPOSITE",
+      "premises": [
+        "T-HODGE",
+        "T-RETAINED",
+        "P-SPACES",
+        "P-ISOMETRY"
+      ],
+      "conclusion": "F=W I_c;T Theta_H F=R_E I_c=I_c R_V",
+      "status": "EXACT_CONDITIONAL_CONSTRUCTOR_DERIVATION"
+    },
+    {
+      "id": "T-SECTOR",
+      "premises": [
+        "P-ISOMETRY",
+        "P-BLOCKS"
+      ],
+      "conclusion": "Theta_H^2=I_H;ambient zero extension squares toP_H",
+      "status": "EXACT_CONDITIONAL_CONSTRUCTOR_DERIVATION"
+    },
+    {
+      "id": "T-ANTISYMPLECTIC",
+      "premises": [
+        "P-ISOMETRY",
+        "P-BLOCKS",
+        "P-FORMS"
+      ],
+      "conclusion": "R_E and Theta_H are anti-symplectic on their declared carriers",
+      "status": "EXACT_CONDITIONAL_CONSTRUCTOR_DERIVATION"
+    },
+    {
+      "id": "T-SWAP",
+      "premises": [
+        "P-BLOCKS",
+        "P-FORMS"
+      ],
+      "conclusion": "S R S*=-R and S* J S=-J",
+      "status": "EXACT_CONDITIONAL_CONSTRUCTOR_DERIVATION"
+    }
+  ],
+  "non_dependencies": [
+    "Historical CRL status",
+    "Custodian ruling",
+    "Gemini replication pass count",
+    "SA023",
+    "Physical parity identification"
+  ],
+  "review": "Independent review pending;native W existence/admission not newly established"
+}
