@@ -1,0 +1,21 @@
+{
+  "status": "PASS_STATIC_SCOPE_REVIEW_OF_COMPONENT_REPLAY_GUARD_V2",
+  "utc": "2026-10-19T21:29:01.426007+00:00",
+  "reviewed_files": {
+    "replay.py": "d80f67f9cc00e4015dde3985a36b82faadd200c8dd21331b89ee9e1ccbc495ab",
+    "replay_v2.py": "7993a84c7ee7317bc0e1bb6424393115cecf142d15ab417bb5aa6e226585c516",
+    "REPLAY_FREEZE.json": "7516cc1a32a6b27bb1b8fa758ed1a0d0622fca5cd31b1a16ba9bbb20b4dd7ed9",
+    "REPLAY_FREEZE_v0.2.json": "0bf70d1cba0dcc98d893543d335872b7e455c102dd116a40487d022a916ab85e",
+    "OPERATIONAL_REPLAY_CORRECTION.json": "ed485250ca26bfa0e2a46e294063463a06ade7c7d7c48c760c1218c4be45cf7e",
+    "REPLAY_GUARD_CONTROLS.json": "913d838613453d4878a817a445ae6b148f846270401e3e440b7577d3e859ef6e",
+    "REPLAY_RECEIPT_v0.2.json": "f138f14ae7b3cf54324ae3d71c370b7d10542b415cd4c86feabe161df74dd563"
+  },
+  "scope": "Static code/source-preservation review only; root-frozen guard controls and successful raw replay receipt inspected, not independently rerun by this reviewer.",
+  "finding": "Nearest-manifest guard protects the entire immutable capture rather than only the replay package subdirectory; new output, raw identity, package hashes and byte-identical scientific-result checks remain.",
+  "scientific_checker_contract_result_and_execution_freeze_hashes_unchanged": true,
+  "original_v1_artifacts_preserved": true,
+  "reviewer_raw_replays": 0,
+  "reviewer_estimator_SVD_eigenvalue_inverse_alignment_calls": 0,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
