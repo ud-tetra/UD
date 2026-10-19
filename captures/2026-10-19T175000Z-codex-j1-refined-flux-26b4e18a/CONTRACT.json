@@ -1,0 +1,59 @@
+{
+  "classification": "NUMERICAL_GENERATION_EXACT_POSTERIOR_AUDIT_CONDITIONAL_CONTINUUM",
+  "lane": "Development \u2014 no registry entry",
+  "constructor": "Codex",
+  "reviewers": [],
+  "source_hashes": [
+    {
+      "path": "UD-j1-flux/captures/2026-10-19T172000Z-codex-j1-continuum-a6d49b02/THEOREM.md",
+      "size_bytes": 11843,
+      "sha256": "1896034783246dc5849226d44e60253a241541c79455ae2c7f8fd4313f128a40"
+    },
+    {
+      "path": "UD-j1-flux/captures/2026-10-19T174000Z-codex-j1-review-91f0d2ca/RECONCILIATION.md",
+      "size_bytes": 7368,
+      "sha256": "2e8d7170484bde39e08cf302ae02d97bbf10f9e2ce7218019f576499feba87b6"
+    },
+    {
+      "path": "UD-j1-flux/captures/2026-10-19T163000Z-codex-j1-refinement-37b86ad0/verify_refinement.py",
+      "size_bytes": 6478,
+      "sha256": "f02fbc6d8271f0e7c46c948e3e315a2633e14b1599160f4b94b9eb65b0197e38"
+    },
+    {
+      "path": "project_sources/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "size_bytes": 43009,
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "path": "project_sources/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "size_bytes": 4882,
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "backend": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "dtype": "complex128",
+    "solver": "numpy.linalg.solve",
+    "target_arithmetic": "exact Fraction; gamma=1/10 rational",
+    "representation": "Stored reduced coefficient floats decoded by exact hex; exact mean-free lift Z. Free flux coefficients likewise decoded, constraints then imposed exactly."
+  },
+  "backend_reference": "https://numpy.org/doc/2.3/reference/generated/numpy.linalg.solve.html",
+  "fixed_port": "F=10(x+y); identical normalized volume source/readout as PR223",
+  "mesh": "14 field nodes,16 conforming tetrahedra; global RT1 reconstruction240 coefficients",
+  "audit_fixtures": {
+    "omega": [
+      "0",
+      "4",
+      "9/2",
+      "5"
+    ],
+    "gamma": "1/10"
+  },
+  "raw_absolute_algebraic_output_budget": "1/10000000000",
+  "arithmetic_scope": "Exact rational audit of stored binary64 reduced solution, floating reported outputs and projected flux; no all-input IEEE theorem",
+  "refinement_scope": "One additional hierarchy level; four sampled frequencies; no global resonance-accuracy pass or infinite mesh-family certification",
+  "prior_pr225_merge": "2bb49eb403eea091d344c98aa0d56e2ecf57a459; successful remote CI and local combined integrity before merge",
+  "independent_review": false,
+  "physical_promotion": 0
+}
