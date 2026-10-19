@@ -1,0 +1,214 @@
+{
+  "planned_controls": 52,
+  "rows": [
+    {
+      "id": "raw_tamper",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "prediction_tamper",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "calibration_tamper",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "analytic_model_tamper",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "signature_bitflip",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "signature_short",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "untrusted_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_domain_signed",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_run_signed",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_challenge_signed",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_admission_signed",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "receipt_predates_admission",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "calibration_signed_postdata",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "acquisition_signed_predata",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "future_receipt",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "missing_role",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "duplicate_role",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_key_role",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_algorithm",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_public_key_length",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "revoked_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "expired_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "not_yet_valid_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "expired_policy",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "caller_policy_hash_wrong",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "caller_admission_hash_wrong",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "bundle_policy_path_refused",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "same_principal_calibration_and_lineage",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "duplicate_public_key_different_principals",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "constructor_signs_calibration",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "synthetic_key_for_apparatus_refused",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "declared_lineage_reuse",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "raw_hash_in_model_ancestry",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "duplicate_admission_json_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "float_beta_refused",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "crossrun_old_receipt",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "role_substring_not_a_role_list",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "empty_key_roles",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "constructor_bare_string",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "expired_now_despite_old_claimed_issue",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "valid_harmonic_envelope_and_receipts",
+      "expected": "CONDITIONAL_ANALYTIC_CONSISTENCY"
+    },
+    {
+      "id": "clear_analytic_mismatch",
+      "expected": "ANALYTIC_CONTRACT_CONTRADICTION"
+    },
+    {
+      "id": "overlap_at_saved_cap",
+      "expected": "HOLD_ANALYTIC_OVERLAP"
+    },
+    {
+      "id": "predictor_uncertainty_changes_saved_PASS_to_HOLD",
+      "expected": "HOLD_ANALYTIC_OVERLAP"
+    },
+    {
+      "id": "exact_constant_model_zero_beta",
+      "expected": "CONDITIONAL_ANALYTIC_CONSISTENCY"
+    },
+    {
+      "id": "beta_too_small",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "negative_beta",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_analytic_grid",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "unsupported_analytic_model",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_analytic_units",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "wrong_target_id",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE"
+    },
+    {
+      "id": "bundle_replacement_policy_ignored",
+      "expected": "CONDITIONAL_ANALYTIC_CONSISTENCY"
+    }
+  ],
+  "extraction": "StaticAST of frozen generator; no key generation, signing or candidate verification performed"
+}

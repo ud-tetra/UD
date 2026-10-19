@@ -1,0 +1,835 @@
+{
+  "status": "PASS_FROZEN_AUTHENTICATION_AND_ANALYTIC_CONTROLS",
+  "rows": [
+    {
+      "id": "valid_harmonic_envelope_and_receipts",
+      "expected": "CONDITIONAL_ANALYTIC_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_ANALYTIC_CONSISTENCY",
+        "base_saved_predictor_status": "CONDITIONAL_CONSISTENCY",
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "analytic_envelope": {
+          "model_id": "toy-harmonic-reference",
+          "checked_scalars": 496,
+          "error_squared_upper": [
+            11112347725505551823719028279056465182532718,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "validated_model_to_saved_predictor_F_upper": [
+            4029976972070274613645189775515043622804441202,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "predata_beta_F_upper": [
+            1,
+            256
+          ],
+          "scope": "Finite nominal-grid bound to the exact declared harmonic formula, not a theorem that the formula describes an apparatus."
+        },
+        "total_uncertainty_F_upper": [
+          9745856858604791503398669205949951292609490785,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_upper": [
+          9745856858604791503398669205949951292609490785,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "signature_status": "VERIFIED_UNDER_CALLER_PINNED_POLICY",
+        "authorized_principals": {
+          "calibration": "fixture-calibrator",
+          "model": "fixture-constructor",
+          "acquisition": "fixture-acquirer",
+          "lineage": "fixture-lineage-reviewer"
+        },
+        "verification_utc": "2026-10-19T20:00:00Z",
+        "freshness": "RUN_CHALLENGE_BOUND; STATELESS_EXACT_REPLAY_IS_IDEMPOTENT",
+        "calibration_truth": "NOT_CERTIFIED",
+        "heldout_independence": "NOT_CERTIFIED",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "physical_promotion": 0,
+        "scope": "Mathematical harmonic-envelope and record checks under supplied calibration premises; key-to-principal identity is caller policy, not outside identity proof or physical qualification."
+      }
+    },
+    {
+      "id": "clear_analytic_mismatch",
+      "expected": "ANALYTIC_CONTRACT_CONTRADICTION",
+      "result": {
+        "status": "ANALYTIC_CONTRACT_CONTRADICTION",
+        "base_saved_predictor_status": "CONTRACT_CONTRADICTION",
+        "residual_F_squared_exact": [
+          1,
+          4
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "analytic_envelope": {
+          "model_id": "toy-harmonic-reference",
+          "checked_scalars": 496,
+          "error_squared_upper": [
+            11112347725505551823719028279056465182532718,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "validated_model_to_saved_predictor_F_upper": [
+            4029976972070274613645189775515043622804441202,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "predata_beta_F_upper": [
+            1,
+            256
+          ],
+          "scope": "Finite nominal-grid bound to the exact declared harmonic formula, not a theorem that the formula describes an apparatus."
+        },
+        "total_uncertainty_F_upper": [
+          9745856858604791503398669205949951292609490785,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_lower": [
+          721004961806846667598443747152191558535356780703,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_upper": [
+          740496675524056250605241085564091461120575762273,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "signature_status": "VERIFIED_UNDER_CALLER_PINNED_POLICY",
+        "authorized_principals": {
+          "calibration": "fixture-calibrator",
+          "model": "fixture-constructor",
+          "acquisition": "fixture-acquirer",
+          "lineage": "fixture-lineage-reviewer"
+        },
+        "verification_utc": "2026-10-19T20:00:00Z",
+        "freshness": "RUN_CHALLENGE_BOUND; STATELESS_EXACT_REPLAY_IS_IDEMPOTENT",
+        "calibration_truth": "NOT_CERTIFIED",
+        "heldout_independence": "NOT_CERTIFIED",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "physical_promotion": 0,
+        "scope": "Mathematical harmonic-envelope and record checks under supplied calibration premises; key-to-principal identity is caller policy, not outside identity proof or physical qualification."
+      }
+    },
+    {
+      "id": "overlap_at_saved_cap",
+      "expected": "HOLD_ANALYTIC_OVERLAP",
+      "result": {
+        "status": "HOLD_ANALYTIC_OVERLAP",
+        "base_saved_predictor_status": "HOLD_OVERLAPPING_ENCLOSURE",
+        "residual_F_squared_exact": [
+          1,
+          256
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "analytic_envelope": {
+          "model_id": "toy-harmonic-reference",
+          "checked_scalars": 496,
+          "error_squared_upper": [
+            11112347725505551823719028279056465182532718,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "validated_model_to_saved_predictor_F_upper": [
+            4029976972070274613645189775515043622804441202,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "predata_beta_F_upper": [
+            1,
+            256
+          ],
+          "scope": "Finite nominal-grid bound to the exact declared harmonic formula, not a theorem that the formula describes an apparatus."
+        },
+        "total_uncertainty_F_upper": [
+          9745856858604791503398669205949951292609490785,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_lower": [
+          81597995474576640884331632838817737435886293151,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_upper": [
+          101089709191786223891128971250717640021105274721,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "signature_status": "VERIFIED_UNDER_CALLER_PINNED_POLICY",
+        "authorized_principals": {
+          "calibration": "fixture-calibrator",
+          "model": "fixture-constructor",
+          "acquisition": "fixture-acquirer",
+          "lineage": "fixture-lineage-reviewer"
+        },
+        "verification_utc": "2026-10-19T20:00:00Z",
+        "freshness": "RUN_CHALLENGE_BOUND; STATELESS_EXACT_REPLAY_IS_IDEMPOTENT",
+        "calibration_truth": "NOT_CERTIFIED",
+        "heldout_independence": "NOT_CERTIFIED",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "physical_promotion": 0,
+        "scope": "Mathematical harmonic-envelope and record checks under supplied calibration premises; key-to-principal identity is caller policy, not outside identity proof or physical qualification."
+      }
+    },
+    {
+      "id": "predictor_uncertainty_changes_saved_PASS_to_HOLD",
+      "expected": "HOLD_ANALYTIC_OVERLAP",
+      "result": {
+        "status": "HOLD_ANALYTIC_OVERLAP",
+        "base_saved_predictor_status": "CONDITIONAL_CONSISTENCY",
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "analytic_envelope": {
+          "model_id": "toy-harmonic-reference",
+          "checked_scalars": 496,
+          "error_squared_upper": [
+            11112347725505551823719028279056465182532718,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "validated_model_to_saved_predictor_F_upper": [
+            4029976972070274613645189775515043622804441202,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "predata_beta_F_upper": [
+            1,
+            16
+          ],
+          "scope": "Finite nominal-grid bound to the exact declared harmonic formula, not a theorem that the formula describes an apparatus."
+        },
+        "total_uncertainty_F_upper": [
+          95380718420962384366895827372919659475574288225,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_upper": [
+          95380718420962384366895827372919659475574288225,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "signature_status": "VERIFIED_UNDER_CALLER_PINNED_POLICY",
+        "authorized_principals": {
+          "calibration": "fixture-calibrator",
+          "model": "fixture-constructor",
+          "acquisition": "fixture-acquirer",
+          "lineage": "fixture-lineage-reviewer"
+        },
+        "verification_utc": "2026-10-19T20:00:00Z",
+        "freshness": "RUN_CHALLENGE_BOUND; STATELESS_EXACT_REPLAY_IS_IDEMPOTENT",
+        "calibration_truth": "NOT_CERTIFIED",
+        "heldout_independence": "NOT_CERTIFIED",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "physical_promotion": 0,
+        "scope": "Mathematical harmonic-envelope and record checks under supplied calibration premises; key-to-principal identity is caller policy, not outside identity proof or physical qualification."
+      }
+    },
+    {
+      "id": "exact_constant_model_zero_beta",
+      "expected": "CONDITIONAL_ANALYTIC_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_ANALYTIC_CONSISTENCY",
+        "base_saved_predictor_status": "CONDITIONAL_CONSISTENCY",
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "analytic_envelope": {
+          "model_id": "toy-harmonic-reference",
+          "checked_scalars": 496,
+          "error_squared_upper": [
+            0,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "validated_model_to_saved_predictor_F_upper": [
+            0,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "predata_beta_F_upper": [
+            0,
+            1
+          ],
+          "scope": "Finite nominal-grid bound to the exact declared harmonic formula, not a theorem that the formula describes an apparatus."
+        },
+        "total_uncertainty_F_upper": [
+          4036866087780951979165525328151970747078504289,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_upper": [
+          4036866087780951979165525328151970747078504289,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "signature_status": "VERIFIED_UNDER_CALLER_PINNED_POLICY",
+        "authorized_principals": {
+          "calibration": "fixture-calibrator",
+          "model": "fixture-constructor",
+          "acquisition": "fixture-acquirer",
+          "lineage": "fixture-lineage-reviewer"
+        },
+        "verification_utc": "2026-10-19T20:00:00Z",
+        "freshness": "RUN_CHALLENGE_BOUND; STATELESS_EXACT_REPLAY_IS_IDEMPOTENT",
+        "calibration_truth": "NOT_CERTIFIED",
+        "heldout_independence": "NOT_CERTIFIED",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "physical_promotion": 0,
+        "scope": "Mathematical harmonic-envelope and record checks under supplied calibration premises; key-to-principal identity is caller policy, not outside identity proof or physical qualification."
+      }
+    },
+    {
+      "id": "beta_too_small",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ANALYTIC_ENVELOPE_EXCEEDS_PREDECLARED_BETA",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "negative_beta",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "NEGATIVE_BUDGET",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_analytic_grid",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ANALYTIC_GRID_BINDING",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "unsupported_analytic_model",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ANALYTIC_TARGET",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_analytic_units",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ANALYTIC_UNITS",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_target_id",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ANALYTIC_TARGET",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "raw_tamper",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "BASE_FILE_HASH_raw_adc",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "prediction_tamper",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "BASE_FILE_HASH_prediction",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "calibration_tamper",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "CALIBRATION_BINDING",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "analytic_model_tamper",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ANALYTIC_MODEL_HASH",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "signature_bitflip",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "INVALID_SIGNATURE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "signature_short",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "HEX_SCHEMA",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "untrusted_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "UNTRUSTED_KEY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_domain_signed",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "SIGNED_CONTEXT_OR_ARTIFACT_BINDING",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_run_signed",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "SIGNED_CONTEXT_OR_ARTIFACT_BINDING",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_challenge_signed",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "SIGNED_CONTEXT_OR_ARTIFACT_BINDING",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_admission_signed",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "SIGNED_CONTEXT_OR_ARTIFACT_BINDING",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "receipt_predates_admission",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "RECEIPT_PREDATES_ADMISSION",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "calibration_signed_postdata",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ROLE_CHRONOLOGY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "acquisition_signed_predata",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ROLE_CHRONOLOGY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "future_receipt",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "KEY_OR_RECEIPT_TIME",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "missing_role",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "RECEIPT_COUNT",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "duplicate_role",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "ROLE_DUPLICATION_OR_UNKNOWN",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_key_role",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "KEY_ALGORITHM_OR_ROLE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_algorithm",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "KEY_ALGORITHM_OR_ROLE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_public_key_length",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "HEX_SCHEMA",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "revoked_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "REVOKED_KEY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "expired_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "KEY_OR_RECEIPT_TIME",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "not_yet_valid_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "KEY_OR_RECEIPT_TIME",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "expired_policy",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "POLICY_SNAPSHOT_VALIDITY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "caller_policy_hash_wrong",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "CALLER_POLICY_HASH",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "caller_admission_hash_wrong",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "CALLER_ADMISSION_HASH",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "bundle_policy_path_refused",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "POLICY_MUST_BE_CALLER_EXTERNAL",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "same_principal_calibration_and_lineage",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "PRINCIPAL_DUTY_SEPARATION",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "duplicate_public_key_different_principals",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "DUPLICATE_PUBLIC_KEY_PRINCIPALS",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "constructor_signs_calibration",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "PRINCIPAL_DUTY_SEPARATION",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "synthetic_key_for_apparatus_refused",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "SYNTHETIC_KEYS_FOR_ACTUAL_APPARATUS",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "declared_lineage_reuse",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "BASE_HELDOUT_LINEAGE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "raw_hash_in_model_ancestry",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "BASE_SCORED_RAW_IN_CALIBRATION_OR_MODEL_ANCESTRY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "duplicate_admission_json_key",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "DUPLICATE_JSON_KEY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "float_beta_refused",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "NONINTEGER_JSON_NUMBER",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "crossrun_old_receipt",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "SIGNED_CONTEXT_OR_ARTIFACT_BINDING",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "bundle_replacement_policy_ignored",
+      "expected": "CONDITIONAL_ANALYTIC_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_ANALYTIC_CONSISTENCY",
+        "base_saved_predictor_status": "CONDITIONAL_CONSISTENCY",
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "analytic_envelope": {
+          "model_id": "toy-harmonic-reference",
+          "checked_scalars": 496,
+          "error_squared_upper": [
+            11112347725505551823719028279056465182532718,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "validated_model_to_saved_predictor_F_upper": [
+            4029976972070274613645189775515043622804441202,
+            1461501637330902918203684832716283019655932542976
+          ],
+          "predata_beta_F_upper": [
+            1,
+            256
+          ],
+          "scope": "Finite nominal-grid bound to the exact declared harmonic formula, not a theorem that the formula describes an apparatus."
+        },
+        "total_uncertainty_F_upper": [
+          9745856858604791503398669205949951292609490785,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "analytic_mismatch_upper": [
+          9745856858604791503398669205949951292609490785,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "signature_status": "VERIFIED_UNDER_CALLER_PINNED_POLICY",
+        "authorized_principals": {
+          "calibration": "fixture-calibrator",
+          "model": "fixture-constructor",
+          "acquisition": "fixture-acquirer",
+          "lineage": "fixture-lineage-reviewer"
+        },
+        "verification_utc": "2026-10-19T20:00:00Z",
+        "freshness": "RUN_CHALLENGE_BOUND; STATELESS_EXACT_REPLAY_IS_IDEMPOTENT",
+        "calibration_truth": "NOT_CERTIFIED",
+        "heldout_independence": "NOT_CERTIFIED",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "physical_promotion": 0,
+        "scope": "Mathematical harmonic-envelope and record checks under supplied calibration premises; key-to-principal identity is caller policy, not outside identity proof or physical qualification."
+      }
+    },
+    {
+      "id": "role_substring_not_a_role_list",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "KEY_ROLE_SCHEMA",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "empty_key_roles",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "KEY_ROLE_SCHEMA",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "constructor_bare_string",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "CONSTRUCTOR_PRINCIPAL_POLICY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "expired_now_despite_old_claimed_issue",
+      "expected": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+      "result": {
+        "status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+        "reason": "KEY_NOT_VALID_AT_VERIFICATION",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    }
+  ],
+  "controls": 52,
+  "physical_holds": 52,
+  "same_run_replay_idempotent": true,
+  "new_key_generation_calls": 0,
+  "new_signing_calls": 0,
+  "actual_apparatus_acquisitions": 0,
+  "real_independently_trusted_keys_supplied": 0,
+  "physical_promotion": 0,
+  "protocol_sha256": "46a08826a0800e44bf845dda0d8873f560e8fee9c5e99ac332f4ecd7dae5d130",
+  "externally_pinned_data_freeze_sha256": "cf4f70845aaf8c017a2c0a401fac59c6c9c5d59006da7438aadda949adeafcd5"
+}

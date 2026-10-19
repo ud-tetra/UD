@@ -1,0 +1,34 @@
+{
+  "status": "SAME_TEAM_ADVERSARIAL_REVIEW_PASS",
+  "utc": "2026-10-19T20:05:32.493399+00:00",
+  "files": {
+    "AUDIT.log": {
+      "sha256": "18614bfc8c70494773866b05a75b89aa173ed1d240baded3b28afa1cef9f80a0",
+      "bytes": 182
+    },
+    "AUDIT_FREEZE.json": {
+      "sha256": "401c410a29f337dd54ae2c68635f9811343331ca1161c3dfe0bbb2b6217812c2",
+      "bytes": 1312
+    },
+    "AUDIT_RECEIPT.json": {
+      "sha256": "7446c571dcb70c98b94fda90bfdfdf179181812156535e0be35e2bc512388fa8",
+      "bytes": 3421
+    },
+    "REVIEW.md": {
+      "sha256": "bc69492f0a8cf019ab65e02ed125ed6705e1012babc9b8f6bd6b4cc6968bc9c0",
+      "bytes": 2557
+    },
+    "audit.py": {
+      "sha256": "d5599cee359b03ccb2af9fd0bfd1a089a181f4ff8ade90082a079c32a3a23205",
+      "bytes": 9066
+    }
+  },
+  "verifier": "counterexample_audit",
+  "constructor": "rounding_review",
+  "independence": "separate same-team audit; not external non-constructor promotion review",
+  "proof": "Exact direct residual arithmetic and source-family eligibility checked; strict minimum residual exceeds unchanged cap.",
+  "new_estimator_calls": 0,
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "lane": "development \u2014 no registry entry"
+}
