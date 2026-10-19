@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "control": "../escape",
+      "status": "REFUSED"
+    },
+    {
+      "control": "/absolute",
+      "status": "REFUSED"
+    },
+    {
+      "control": "a/../../escape",
+      "status": "REFUSED"
+    },
+    {
+      "control": "a\\escape",
+      "status": "REFUSED"
+    },
+    {
+      "control": "a//b",
+      "status": "REFUSED"
+    },
+    {
+      "control": "a/./b",
+      "status": "REFUSED"
+    },
+    {
+      "control": "C:/drive",
+      "status": "REFUSED"
+    },
+    {
+      "control": "symlink",
+      "status": "REFUSED"
+    },
+    {
+      "control": "cross-archive duplicate",
+      "status": "REFUSED"
+    },
+    {
+      "control": "ordinary relative nested file",
+      "status": "ACCEPTED"
+    }
+  ],
+  "archived_scripts_executed": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

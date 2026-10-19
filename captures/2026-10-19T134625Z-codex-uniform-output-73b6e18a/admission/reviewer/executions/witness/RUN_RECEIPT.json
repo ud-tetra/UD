@@ -1,0 +1,393 @@
+{
+  "status": "PASS_CONSTRUCTOR_REPLAY_ONLY",
+  "reviewer_identity": null,
+  "external_nonconstructor_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry",
+  "mode": "witness",
+  "runner_sha256": "09109172db281cee57f3d6f66071d9b0d30c22910021b98bfa3ba7a76edb8271",
+  "started_utc": "2026-10-19T13:33:29.038171+00:00",
+  "commands": [
+    {
+      "tag": "rounding-witness",
+      "cwd_relative_to_output": "rounding-replay-work",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "replay_entry.py"
+      ],
+      "returncode": 0,
+      "log": "rounding-witness.log",
+      "log_sha256": "a8f717e85b8016df78b6d03d63497fefab7a6fe805e84ea0bd80e4e0fb1e133c"
+    },
+    {
+      "tag": "contract-witness",
+      "cwd_relative_to_output": "record-contract-work",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "replay_entry.py"
+      ],
+      "returncode": 0,
+      "log": "contract-witness.log",
+      "log_sha256": "4a7388b1dae9e46be17102db97061edae3d815665685bbf9357364ae9e18b509"
+    }
+  ],
+  "intake": [
+    {
+      "capture": "2026-10-19T132221Z-codex-rounding-replay-82e4a9b7",
+      "root_manifest_sha256": "cd8b68fc18572031cd0818ef78e9a189bab22d4d06fab89a1a33adae95d5aa52",
+      "files": [
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/ARCHIVE_STRUCTURE.json",
+          "sha256": "82486feb4dc5cf8fb95789f9d5fcfbd3e749fbc8d39d40cf059d4bb8d35c1bc6",
+          "size_bytes": 98
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/BUILD_RECEIPT.json",
+          "sha256": "05b1aeaa9f5dc2ad46f64329f87b9dbd821c4f3b70a9edaf5669817b3bc00047",
+          "size_bytes": 233
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/CLAIM_LEDGER.json",
+          "sha256": "1bc81e373814a1c18731b80db2d5bd6f7901bd4448e4bd2cc89321dd67287c54",
+          "size_bytes": 875
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/EXTRACTED_REPLAY.log",
+          "sha256": "a8f717e85b8016df78b6d03d63497fefab7a6fe805e84ea0bd80e4e0fb1e133c",
+          "size_bytes": 875
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/EXTRACTED_REPLAY_RECEIPT.json",
+          "sha256": "6b160e947006d214573786569a821deb4c62ef37df8e5d4055b16b60ef9876ba",
+          "size_bytes": 370
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/FREEZE.json",
+          "sha256": "9d22fb1e1229146098946b9cab5fa28e80f598c4d4c2aa8c5e14a31f8da4d7e5",
+          "size_bytes": 881
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/LEGACY_IDENTITY.json",
+          "sha256": "48b5fe867887fcfd3ec95167ff9ab892d146bc1dcdee324336327fd81b71ece2",
+          "size_bytes": 324
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/PACKAGE_MANIFEST.json",
+          "sha256": "5601210d7ae884a51800f90b7f8d7a7aece3d787ba7f33123a21807788379e7b",
+          "size_bytes": 10149
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/PROVENANCE.json",
+          "sha256": "561fdbf1dbdd9de62b316c92320fcab9e58a4177b1cb387cbd22f1e093edabfb",
+          "size_bytes": 962
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/RAW_PROJECTION_REPLAY.json",
+          "sha256": "cf49d8a176e48d9c76c2660de6feef0386d0acd9280cedd71659b4c88644d5ae",
+          "size_bytes": 661
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/README.md",
+          "sha256": "d9ceea047a91ea4e898ed68840d553ac7cd7131c7b09a5b2e0afbd26dbde1de1",
+          "size_bytes": 5477
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/RESULT_SUMMARY.json",
+          "sha256": "afdbb94332ec07c2aee5c033351eee05d3ea9201e2a7dcf36f45b7ae771639a8",
+          "size_bytes": 879
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/SUPPLEMENT_FREEZE.json",
+          "sha256": "47e0f3b50ec239055e55d59c4fc0b595e279e497c20474c34d2debe7ca36dc83",
+          "size_bytes": 284
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/TEAM_REVIEW.json",
+          "sha256": "497828931e23f1f7509840a1d3a35a04681c6c0f96fe3e6c447ec8665572a388",
+          "size_bytes": 648
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/THEOREMS.md",
+          "sha256": "f4f9387783ce347f88f3129e2869224022fdbfae384bf0ea03d9e066b27f8993",
+          "size_bytes": 5329
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/UD_ROUNDING_AND_RAW_REPLAY_v0.1_CORE.zip",
+          "sha256": "c2420b8849dd1f0e886990531c77d0fb00a4924811b358d85693ff4e6ddd7a47",
+          "size_bytes": 61793
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_01.zip",
+          "sha256": "7983a8a75ab1de3c07dbb676c0c4abd546075defd6d86156331eaf03d4632ab6",
+          "size_bytes": 6722550
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_02.zip",
+          "sha256": "1762b9a760a33027fb1b6e4b1396248e8ea4a998adbf4e4f681b2e77b352d9a6",
+          "size_bytes": 6722673
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_03.zip",
+          "sha256": "b00c46cc3f4f735d9b559a3eb330b5f768682874bb5d93d7ec4cafaa25f16e36",
+          "size_bytes": 7849719
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_04.zip",
+          "sha256": "6ea24f91454b7ece0e5b8aa1e8132ad70e5c7eb4a6d04b86d4cc7329a6eb0660",
+          "size_bytes": 6427355
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_05.zip",
+          "sha256": "de33d64547a7524222ed8d3ebc68c242f90bcb88cc8a02a43cfd9cce82a6ca34",
+          "size_bytes": 6427289
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_06.zip",
+          "sha256": "ae1cd9a73f28fa05419fbfad2c5ea173d5a717754de61e0789b704c1f448195a",
+          "size_bytes": 6422905
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_INDEX.json",
+          "sha256": "e34ca078737aaa361039c37d8b3fd08839c944249ef994a506e4e678950f2961",
+          "size_bytes": 6177
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/bindings.py",
+          "sha256": "2e1b8743d358d8dc835c3d79bb1ac09bd7dc66fac27c3ba93ca366afb6fba87e",
+          "size_bytes": 59
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/certify.py",
+          "sha256": "1bee163e870fb97ca8a722f9580e52a271cb5ca6954e453c79ff2db3764bbe55",
+          "size_bytes": 4262
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/raw_verify.py",
+          "sha256": "dd670c6a477b4b09a774ddea941418b5c3ad3e072a250ba7f51cb163dbea475d",
+          "size_bytes": 1901
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/replay_entry.py",
+          "sha256": "4eb0576b99ab303f1068d7420f500238e3e88f2662fda32579c9ee3a934ad54e",
+          "size_bytes": 1457
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/requirements.txt",
+          "sha256": "f316cfe9d3cc7a32d4d8c597b5d31b0a44699919b3b9e9d0d3e92c6a36b54a4f",
+          "size_bytes": 47
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/run.py",
+          "sha256": "46ec0321b69b3b5988af9c36b497292b839129bccbd2538087c60a75fe7f8616",
+          "size_bytes": 3591
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/sketch.py",
+          "sha256": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+          "size_bytes": 419
+        }
+      ],
+      "archive_count": 7,
+      "unique_members": 70,
+      "uncompressed_bytes": 40713272
+    },
+    {
+      "capture": "2026-10-18T200728Z-codex-record-contract-5b1e8a94",
+      "root_manifest_sha256": "2abff70a6412770971dfecd214e1a4d51b53af44876f2eadd12271f785cd1480",
+      "files": [
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/ARCHIVE_STRUCTURE.json",
+          "sha256": "544ed5728d0af4d78aae0cc81947f66cb1d623f5b48aa3ef883dd0eb66945cb0",
+          "size_bytes": 179
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/CLAIM_LEDGER.json",
+          "sha256": "24be7aa16451e0bd704543997ccabf6d745f95c320905f45d2d1bcfb32497d10",
+          "size_bytes": 1091
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/PACKAGE_MANIFEST.json",
+          "sha256": "d1e8effd60403972df154d29e1b6001572e26a68f2191417d29cbc2686ced18c",
+          "size_bytes": 10204
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/PROTOCOL_FREEZE.json",
+          "sha256": "30e4a13c08c60c6561df62845ad8f6d9311052082bc9d6baff3f8bf9cf2db052",
+          "size_bytes": 5211
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/PROVENANCE.json",
+          "sha256": "0907c1017683598d04adc58cc039ae6315315c6101d210a6aed641446ff731a4",
+          "size_bytes": 646
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/README.md",
+          "sha256": "4a62d1e67817b027a4f89e3d49b923dafd29e32751b8f202b4274f43649f8ace",
+          "size_bytes": 4415
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/RESULT_SUMMARY.json",
+          "sha256": "84261ae08d6d2f5d217ff7c368913561e3909deea2bd1c6ccfe54a2413604f3b",
+          "size_bytes": 2287
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/RUN_EXECUTIONS.json",
+          "sha256": "8128a5fc4f5bed7272b6d72e25200fc34c83970b8989015260e2bdf477e753c6",
+          "size_bytes": 449
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/TEAM_REVIEW.json",
+          "sha256": "649d87158ff2b5cd5ab5aae81b7d8f322b2f0e30373fa2afc3146d02a1217ccd",
+          "size_bytes": 684
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/THEOREMS.md",
+          "sha256": "a9aa2f24b7fb85e0cbf691177ab11c52c5d418115c7a2873cf726f1b59087f84",
+          "size_bytes": 6219
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/UD_RECORD_WISE_FLOATING_PHASE_CONTRACT_v0.1_CORE.zip",
+          "sha256": "fba4f531a9b8f0e9aba3e6b15446846b8e30904288b600fed0c0533db3e3141c",
+          "size_bytes": 92369
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/VALIDATION.json",
+          "sha256": "2242594aa60c2b82df3daa58b7fb48aa3b30e405a867e22fe520133aed764a89",
+          "size_bytes": 2041
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_01.zip",
+          "sha256": "1b9c64bf31bcc9596647c5528cd19d12c712a36c0fce29dfcbd22b2cb8b85803",
+          "size_bytes": 8474844
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_02.zip",
+          "sha256": "57580c3fc6260242cd1747f6cd6269e3eeea87049b4acdd92ca7c78d95435622",
+          "size_bytes": 7742697
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_03.zip",
+          "sha256": "f67ea3d649a00c1d524e50a2fc2ab798f3cc7c6201cfdcb1494ca37b468f3856",
+          "size_bytes": 6564193
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_04.zip",
+          "sha256": "4450c18d1ac05b3144fd3498beab20c107ee90e862c17c758255035d34fe24d9",
+          "size_bytes": 7742817
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_05.zip",
+          "sha256": "493a5f31fc7f27cfc5c2c492f45dcd36dbfeccdd786b11e2317ff06eeb167ec6",
+          "size_bytes": 8333434
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_06.zip",
+          "sha256": "ac997539adc45df5596a4976556cdf0f5953cc9604eeb76a3343c7183f80b57c",
+          "size_bytes": 849135
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_INDEX.json",
+          "sha256": "f0ed0f6302189345331f1f7bffee47529e513ff68ac6a8af9f6cf4067559039f",
+          "size_bytes": 4034
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/bindings.py",
+          "sha256": "87a54766c87224e3dc3017ed3dd1646c64da0de086c8056a3f92d780f566a8f9",
+          "size_bytes": 681
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/build_capture.py",
+          "sha256": "58016c7c38681a9d03e1cb0f0c1e537de0eb9456da16e31b0a4262fefce11546",
+          "size_bytes": 3898
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/finalize.py",
+          "sha256": "d9fcbc72ed502592f6366181d0180d406682358981e134cff17f95d893e65d65",
+          "size_bytes": 6825
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/numeric_math.py",
+          "sha256": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+          "size_bytes": 3417
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/operator_bounds.py",
+          "sha256": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+          "size_bytes": 842
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/project.py",
+          "sha256": "9f2b31fa9541a27b58d0345a1f3cf27777846de8675e435bcb47aab937d89ac0",
+          "size_bytes": 3690
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/proof_math.py",
+          "sha256": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "size_bytes": 10879
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/reference.py",
+          "sha256": "c476fad5f3695c24d2b753db2e8f7415307caab7533836e7b447257d445dba9d",
+          "size_bytes": 2387
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/replay_entry.py",
+          "sha256": "54a0f9d51679eb325e5aa944bf981a32e635523c5fb5b39aabb0223557883e90",
+          "size_bytes": 218
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/replay_package.py",
+          "sha256": "8b61c1130fcc7e4ef2fd17745e38fc2178aed5e983ce5ff5115d18f776d25633",
+          "size_bytes": 985
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/requirements.txt",
+          "sha256": "f316cfe9d3cc7a32d4d8c597b5d31b0a44699919b3b9e9d0d3e92c6a36b54a4f",
+          "size_bytes": 47
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/run.py",
+          "sha256": "8045f410eda1d3b55d5ee091566ff5d5f937832a29820dd684267b8bdf102eeb",
+          "size_bytes": 612
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/sketch.py",
+          "sha256": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+          "size_bytes": 419
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/structure.py",
+          "sha256": "206854a71fab0f581ed9773883652ea0f65aa75dd428ea7786cf45bebd6cf707",
+          "size_bytes": 1153
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/validate.py",
+          "sha256": "1e1fb3ee9f609289506d6f84e9ee024156e7a3d4a454b12f08068c655d8fd2d7",
+          "size_bytes": 1283
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/verify.py",
+          "sha256": "f15338beef90ab4356072bde16598c967986852ae7241a1faf6e53f5f40511fc",
+          "size_bytes": 8415
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/EXTRACTED_REPLAY.log",
+          "sha256": "4a7388b1dae9e46be17102db97061edae3d815665685bbf9357364ae9e18b509",
+          "size_bytes": 2759
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/EXTRACTED_REPLAY_RECEIPT.json",
+          "sha256": "33ed9f08045eb157ed8fece7847e55b4583a8d3ccea86fb7994616cc41123840",
+          "size_bytes": 580
+        }
+      ],
+      "archive_count": 7,
+      "unique_members": 77,
+      "uncompressed_bytes": 40341027
+    }
+  ],
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "scope": "Saved witness checks only; no raw reconstruction",
+  "finished_utc": "2026-10-19T13:34:46.741235+00:00"
+}

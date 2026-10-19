@@ -1,0 +1,141 @@
+{
+  "status": "ACTUAL_GATE_EVALUATION",
+  "rows": [
+    {
+      "mode": "legacy_gemm",
+      "status": "ADMITTED_UNIFORM_RETURNED_OUTPUT_GATES",
+      "gates": {
+        "full_left_orthogonality": true,
+        "full_right_orthogonality": true,
+        "full_SVD_error": true,
+        "raw_shift_residual": true,
+        "inverse_residual": true,
+        "proposed_inverse_norm": true,
+        "eigenpair_residual": true,
+        "emitted_argument_error": true
+      },
+      "metrics": {
+        "full_left_orthogonality": [
+          52287766197540075708148385684919044422135,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "full_right_orthogonality": [
+          55812708492144109534450137858826366097324,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "full_SVD_error": [
+          391411687213612842031225955025186039163793,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "raw_shift_residual": [
+          86522545190908849437824720147852447258178621,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "inverse_residual": [
+          187083710353098113903786428642195126124974,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "proposed_inverse_norm": [
+          111367356114596648729246021758727954203559526129537319472,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "eigenpair_residual": [
+          177405739062646431056435217105881288727259,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "emitted_argument_error": [
+          408544546705780406900134435454480887119,
+          1532495540865888858358347027150309183618739122183602176
+        ]
+      },
+      "readable": {
+        "full_left_orthogonality": 3.411935943904705e-14,
+        "full_right_orthogonality": 3.6419491609488717e-14,
+        "full_SVD_error": 2.554080431401829e-13,
+        "raw_shift_residual": 5.645859507168418e-11,
+        "inverse_residual": 1.220778171056813e-13,
+        "proposed_inverse_norm": 72.67059064437603,
+        "eigenpair_residual": 1.1576264617540671e-13,
+        "emitted_argument_error": 2.6658775559956606e-16
+      }
+    },
+    {
+      "mode": "integer_projection",
+      "status": "ADMITTED_UNIFORM_RETURNED_OUTPUT_GATES",
+      "gates": {
+        "full_left_orthogonality": true,
+        "full_right_orthogonality": true,
+        "full_SVD_error": true,
+        "raw_shift_residual": true,
+        "inverse_residual": true,
+        "proposed_inverse_norm": true,
+        "eigenpair_residual": true,
+        "emitted_argument_error": true
+      },
+      "metrics": {
+        "full_left_orthogonality": [
+          52287766197540075708148385684919044422135,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "full_right_orthogonality": [
+          55812708492144109534450137858826366097324,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "full_SVD_error": [
+          391411687213612842031225955025186039163793,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "raw_shift_residual": [
+          86522545190908849437824720147852447258178621,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "inverse_residual": [
+          187083710353098113903786428642195126124974,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "proposed_inverse_norm": [
+          111367356114596648729246021758727954203559526129537319472,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "eigenpair_residual": [
+          177405739062646431056435217105881288727259,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "emitted_argument_error": [
+          408544546705780406900134435454480887119,
+          1532495540865888858358347027150309183618739122183602176
+        ]
+      },
+      "readable": {
+        "full_left_orthogonality": 3.411935943904705e-14,
+        "full_right_orthogonality": 3.6419491609488717e-14,
+        "full_SVD_error": 2.554080431401829e-13,
+        "raw_shift_residual": 5.645859507168418e-11,
+        "inverse_residual": 1.220778171056813e-13,
+        "proposed_inverse_norm": 72.67059064437603,
+        "eigenpair_residual": 1.1576264617540671e-13,
+        "emitted_argument_error": 2.6658775559956606e-16
+      },
+      "exact_input_identity_to": "legacy_gemm"
+    }
+  ],
+  "bindings": {
+    "results/legacy_gemm/FACTOR_0.npz": "a2a97f5fcfe23cd4ee5be9f4f4233ca3a2e685a72b6c025d9568b97a5fe1a21c",
+    "results/legacy_gemm/FACTOR_1.npz": "7b138f6581fee8b35a46e1ddd02f32a09462fe93a5d94438f0b3049e2fad15a2",
+    "results/legacy_gemm/FACTOR_2.npz": "de7be6d752d33bc9a9c5084f22c5b76436eb62bf775df2a2646b89a12a3de0f6",
+    "results/legacy_gemm/PHASE_META.npz": "a45ff5dba1ca564509004d204bba646d85fc45cd96763cf155183a19509c11e7",
+    "results/legacy_gemm/PHASE_PROPOSAL.npz": "ef97883ddb7529034aa6e045a04b8e60a5cd17bb155c05e51fbc1d671fab7bf3",
+    "results/legacy_gemm/SVD_META.npz": "9840cac9e47a0ba924895189067effbf0052b10352b74cbc9ccaf5e6f83ef044",
+    "results/integer_projection/FACTOR_0.npz": "a2a97f5fcfe23cd4ee5be9f4f4233ca3a2e685a72b6c025d9568b97a5fe1a21c",
+    "results/integer_projection/FACTOR_1.npz": "7b138f6581fee8b35a46e1ddd02f32a09462fe93a5d94438f0b3049e2fad15a2",
+    "results/integer_projection/FACTOR_2.npz": "de7be6d752d33bc9a9c5084f22c5b76436eb62bf775df2a2646b89a12a3de0f6",
+    "results/integer_projection/PHASE_META.npz": "a45ff5dba1ca564509004d204bba646d85fc45cd96763cf155183a19509c11e7",
+    "results/integer_projection/PHASE_PROPOSAL.npz": "ef97883ddb7529034aa6e045a04b8e60a5cd17bb155c05e51fbc1d671fab7bf3",
+    "results/integer_projection/SVD_META.npz": "9840cac9e47a0ba924895189067effbf0052b10352b74cbc9ccaf5e6f83ef044"
+  },
+  "physical_promotion": 0,
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "external_review": "PENDING",
+  "full_SVD_certificate_recomputation": "separate parent replay required; hashes bind cached exact certificate here"
+}

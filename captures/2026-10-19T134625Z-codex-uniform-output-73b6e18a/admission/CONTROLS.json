@@ -1,0 +1,33 @@
+{
+  "status": "PASS_FROZEN_BOUND_AND_FOUR_NEGATIVE_CONTROLS",
+  "controls": [
+    {
+      "control": "frozen_contract",
+      "status": "CERTIFIED_UNIFORM_CONDITIONAL_RETURNED_OUTPUT_PHASE_BOUND"
+    },
+    {
+      "control": "looser_SVD_error_budget_2neg39",
+      "status": "HOLD_UNIFORM_CONDITIONAL_OUTPUT_BOUND",
+      "reason": "strict matching not certified",
+      "not_an_estimator_failure": true
+    },
+    {
+      "control": "oversized_argument_budget_2neg20",
+      "status": "HOLD_UNIFORM_CONDITIONAL_OUTPUT_BOUND",
+      "not_an_estimator_failure": true
+    },
+    {
+      "control": "outside_frozen_noise_domain_2neg47",
+      "status": "HOLD_UNIFORM_CONDITIONAL_OUTPUT_BOUND",
+      "scope": "analytic sensitivity only; uniform integerproof for this largerball not claimed",
+      "not_an_estimator_failure": true
+    },
+    {
+      "control": "zero_inverse_witness",
+      "status": "REFUSED_INVERSE_GATE",
+      "exact_residual_squared": 209
+    }
+  ],
+  "physical_promotion": 0,
+  "external_review": false
+}
