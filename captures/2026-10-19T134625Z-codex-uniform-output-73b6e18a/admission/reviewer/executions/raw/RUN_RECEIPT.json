@@ -1,0 +1,1246 @@
+{
+  "status": "PASS_CONSTRUCTOR_REPLAY_ONLY",
+  "reviewer_identity": null,
+  "external_nonconstructor_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry",
+  "mode": "raw",
+  "runner_sha256": "09109172db281cee57f3d6f66071d9b0d30c22910021b98bfa3ba7a76edb8271",
+  "started_utc": "2026-10-19T13:34:55.344215+00:00",
+  "commands": [
+    {
+      "tag": "rounding-witness",
+      "cwd_relative_to_output": "rounding-replay-work",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "replay_entry.py"
+      ],
+      "returncode": 0,
+      "log": "rounding-witness.log",
+      "log_sha256": "a8f717e85b8016df78b6d03d63497fefab7a6fe805e84ea0bd80e4e0fb1e133c"
+    },
+    {
+      "tag": "contract-witness",
+      "cwd_relative_to_output": "record-contract-work",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "replay_entry.py"
+      ],
+      "returncode": 0,
+      "log": "contract-witness.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "tag": "PR195-raw-generation",
+      "cwd_relative_to_output": "floating-timing-work",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "make_records.py",
+        "--destination",
+        "/workspace/scratch/f3d1c2f040c9/offline-review-raw-test/generated-PR195-records"
+      ],
+      "returncode": 0,
+      "log": "PR195-raw-generation.log",
+      "log_sha256": "06417b88a5050fdd0d75b827b3f1e1b89d7aec2d396d8bb5e442b3b07dd8aced"
+    },
+    {
+      "tag": "PR201-cyclic-generation",
+      "cwd_relative_to_output": "uniform-two-work",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "make_record.py",
+        "--regenerate",
+        "/workspace/scratch/f3d1c2f040c9/offline-review-raw-test/uniform-two-work/records/cyclic_unit.i64le"
+      ],
+      "returncode": 0,
+      "log": "PR201-cyclic-generation.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "tag": "PR204-complete-raw-replay",
+      "cwd_relative_to_output": "record-contract-raw-replay",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "project.py",
+        "--raw-replay"
+      ],
+      "returncode": 0,
+      "log": "PR204-complete-raw-replay.log",
+      "log_sha256": "5b8e7bae43034c41b0c5b1efe7ed734f112a05ff87e4f0db25af8816ad90f96f"
+    },
+    {
+      "tag": "PR208-complete-projection-replay",
+      "cwd_relative_to_output": "rounding-replay-work",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "raw_verify.py"
+      ],
+      "returncode": 0,
+      "log": "PR208-complete-projection-replay.log",
+      "log_sha256": "6df47261bb1a6d2172e5063ea4d75a18ae885b8241903950db7cd8d249f59e38"
+    }
+  ],
+  "intake": [
+    {
+      "capture": "2026-10-19T132221Z-codex-rounding-replay-82e4a9b7",
+      "root_manifest_sha256": "cd8b68fc18572031cd0818ef78e9a189bab22d4d06fab89a1a33adae95d5aa52",
+      "files": [
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/ARCHIVE_STRUCTURE.json",
+          "sha256": "82486feb4dc5cf8fb95789f9d5fcfbd3e749fbc8d39d40cf059d4bb8d35c1bc6",
+          "size_bytes": 98
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/BUILD_RECEIPT.json",
+          "sha256": "05b1aeaa9f5dc2ad46f64329f87b9dbd821c4f3b70a9edaf5669817b3bc00047",
+          "size_bytes": 233
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/CLAIM_LEDGER.json",
+          "sha256": "1bc81e373814a1c18731b80db2d5bd6f7901bd4448e4bd2cc89321dd67287c54",
+          "size_bytes": 875
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/EXTRACTED_REPLAY.log",
+          "sha256": "a8f717e85b8016df78b6d03d63497fefab7a6fe805e84ea0bd80e4e0fb1e133c",
+          "size_bytes": 875
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/EXTRACTED_REPLAY_RECEIPT.json",
+          "sha256": "6b160e947006d214573786569a821deb4c62ef37df8e5d4055b16b60ef9876ba",
+          "size_bytes": 370
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/FREEZE.json",
+          "sha256": "9d22fb1e1229146098946b9cab5fa28e80f598c4d4c2aa8c5e14a31f8da4d7e5",
+          "size_bytes": 881
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/LEGACY_IDENTITY.json",
+          "sha256": "48b5fe867887fcfd3ec95167ff9ab892d146bc1dcdee324336327fd81b71ece2",
+          "size_bytes": 324
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/PACKAGE_MANIFEST.json",
+          "sha256": "5601210d7ae884a51800f90b7f8d7a7aece3d787ba7f33123a21807788379e7b",
+          "size_bytes": 10149
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/PROVENANCE.json",
+          "sha256": "561fdbf1dbdd9de62b316c92320fcab9e58a4177b1cb387cbd22f1e093edabfb",
+          "size_bytes": 962
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/RAW_PROJECTION_REPLAY.json",
+          "sha256": "cf49d8a176e48d9c76c2660de6feef0386d0acd9280cedd71659b4c88644d5ae",
+          "size_bytes": 661
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/README.md",
+          "sha256": "d9ceea047a91ea4e898ed68840d553ac7cd7131c7b09a5b2e0afbd26dbde1de1",
+          "size_bytes": 5477
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/RESULT_SUMMARY.json",
+          "sha256": "afdbb94332ec07c2aee5c033351eee05d3ea9201e2a7dcf36f45b7ae771639a8",
+          "size_bytes": 879
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/SUPPLEMENT_FREEZE.json",
+          "sha256": "47e0f3b50ec239055e55d59c4fc0b595e279e497c20474c34d2debe7ca36dc83",
+          "size_bytes": 284
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/TEAM_REVIEW.json",
+          "sha256": "497828931e23f1f7509840a1d3a35a04681c6c0f96fe3e6c447ec8665572a388",
+          "size_bytes": 648
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/THEOREMS.md",
+          "sha256": "f4f9387783ce347f88f3129e2869224022fdbfae384bf0ea03d9e066b27f8993",
+          "size_bytes": 5329
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/UD_ROUNDING_AND_RAW_REPLAY_v0.1_CORE.zip",
+          "sha256": "c2420b8849dd1f0e886990531c77d0fb00a4924811b358d85693ff4e6ddd7a47",
+          "size_bytes": 61793
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_01.zip",
+          "sha256": "7983a8a75ab1de3c07dbb676c0c4abd546075defd6d86156331eaf03d4632ab6",
+          "size_bytes": 6722550
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_02.zip",
+          "sha256": "1762b9a760a33027fb1b6e4b1396248e8ea4a998adbf4e4f681b2e77b352d9a6",
+          "size_bytes": 6722673
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_03.zip",
+          "sha256": "b00c46cc3f4f735d9b559a3eb330b5f768682874bb5d93d7ec4cafaa25f16e36",
+          "size_bytes": 7849719
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_04.zip",
+          "sha256": "6ea24f91454b7ece0e5b8aa1e8132ad70e5c7eb4a6d04b86d4cc7329a6eb0660",
+          "size_bytes": 6427355
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_05.zip",
+          "sha256": "de33d64547a7524222ed8d3ebc68c242f90bcb88cc8a02a43cfd9cce82a6ca34",
+          "size_bytes": 6427289
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_06.zip",
+          "sha256": "ae1cd9a73f28fa05419fbfad2c5ea173d5a717754de61e0789b704c1f448195a",
+          "size_bytes": 6422905
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/WITNESS_INDEX.json",
+          "sha256": "e34ca078737aaa361039c37d8b3fd08839c944249ef994a506e4e678950f2961",
+          "size_bytes": 6177
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/bindings.py",
+          "sha256": "2e1b8743d358d8dc835c3d79bb1ac09bd7dc66fac27c3ba93ca366afb6fba87e",
+          "size_bytes": 59
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/certify.py",
+          "sha256": "1bee163e870fb97ca8a722f9580e52a271cb5ca6954e453c79ff2db3764bbe55",
+          "size_bytes": 4262
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/raw_verify.py",
+          "sha256": "dd670c6a477b4b09a774ddea941418b5c3ad3e072a250ba7f51cb163dbea475d",
+          "size_bytes": 1901
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/replay_entry.py",
+          "sha256": "4eb0576b99ab303f1068d7420f500238e3e88f2662fda32579c9ee3a934ad54e",
+          "size_bytes": 1457
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/requirements.txt",
+          "sha256": "f316cfe9d3cc7a32d4d8c597b5d31b0a44699919b3b9e9d0d3e92c6a36b54a4f",
+          "size_bytes": 47
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/run.py",
+          "sha256": "46ec0321b69b3b5988af9c36b497292b839129bccbd2538087c60a75fe7f8616",
+          "size_bytes": 3591
+        },
+        {
+          "path": "captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/sketch.py",
+          "sha256": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+          "size_bytes": 419
+        }
+      ],
+      "archive_count": 7,
+      "unique_members": 70,
+      "uncompressed_bytes": 40713272
+    },
+    {
+      "capture": "2026-10-18T200728Z-codex-record-contract-5b1e8a94",
+      "root_manifest_sha256": "2abff70a6412770971dfecd214e1a4d51b53af44876f2eadd12271f785cd1480",
+      "files": [
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/ARCHIVE_STRUCTURE.json",
+          "sha256": "544ed5728d0af4d78aae0cc81947f66cb1d623f5b48aa3ef883dd0eb66945cb0",
+          "size_bytes": 179
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/CLAIM_LEDGER.json",
+          "sha256": "24be7aa16451e0bd704543997ccabf6d745f95c320905f45d2d1bcfb32497d10",
+          "size_bytes": 1091
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/PACKAGE_MANIFEST.json",
+          "sha256": "d1e8effd60403972df154d29e1b6001572e26a68f2191417d29cbc2686ced18c",
+          "size_bytes": 10204
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/PROTOCOL_FREEZE.json",
+          "sha256": "30e4a13c08c60c6561df62845ad8f6d9311052082bc9d6baff3f8bf9cf2db052",
+          "size_bytes": 5211
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/PROVENANCE.json",
+          "sha256": "0907c1017683598d04adc58cc039ae6315315c6101d210a6aed641446ff731a4",
+          "size_bytes": 646
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/README.md",
+          "sha256": "4a62d1e67817b027a4f89e3d49b923dafd29e32751b8f202b4274f43649f8ace",
+          "size_bytes": 4415
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/RESULT_SUMMARY.json",
+          "sha256": "84261ae08d6d2f5d217ff7c368913561e3909deea2bd1c6ccfe54a2413604f3b",
+          "size_bytes": 2287
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/RUN_EXECUTIONS.json",
+          "sha256": "8128a5fc4f5bed7272b6d72e25200fc34c83970b8989015260e2bdf477e753c6",
+          "size_bytes": 449
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/TEAM_REVIEW.json",
+          "sha256": "649d87158ff2b5cd5ab5aae81b7d8f322b2f0e30373fa2afc3146d02a1217ccd",
+          "size_bytes": 684
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/THEOREMS.md",
+          "sha256": "a9aa2f24b7fb85e0cbf691177ab11c52c5d418115c7a2873cf726f1b59087f84",
+          "size_bytes": 6219
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/UD_RECORD_WISE_FLOATING_PHASE_CONTRACT_v0.1_CORE.zip",
+          "sha256": "fba4f531a9b8f0e9aba3e6b15446846b8e30904288b600fed0c0533db3e3141c",
+          "size_bytes": 92369
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/VALIDATION.json",
+          "sha256": "2242594aa60c2b82df3daa58b7fb48aa3b30e405a867e22fe520133aed764a89",
+          "size_bytes": 2041
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_01.zip",
+          "sha256": "1b9c64bf31bcc9596647c5528cd19d12c712a36c0fce29dfcbd22b2cb8b85803",
+          "size_bytes": 8474844
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_02.zip",
+          "sha256": "57580c3fc6260242cd1747f6cd6269e3eeea87049b4acdd92ca7c78d95435622",
+          "size_bytes": 7742697
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_03.zip",
+          "sha256": "f67ea3d649a00c1d524e50a2fc2ab798f3cc7c6201cfdcb1494ca37b468f3856",
+          "size_bytes": 6564193
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_04.zip",
+          "sha256": "4450c18d1ac05b3144fd3498beab20c107ee90e862c17c758255035d34fe24d9",
+          "size_bytes": 7742817
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_05.zip",
+          "sha256": "493a5f31fc7f27cfc5c2c492f45dcd36dbfeccdd786b11e2317ff06eeb167ec6",
+          "size_bytes": 8333434
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_06.zip",
+          "sha256": "ac997539adc45df5596a4976556cdf0f5953cc9604eeb76a3343c7183f80b57c",
+          "size_bytes": 849135
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/WITNESS_INDEX.json",
+          "sha256": "f0ed0f6302189345331f1f7bffee47529e513ff68ac6a8af9f6cf4067559039f",
+          "size_bytes": 4034
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/bindings.py",
+          "sha256": "87a54766c87224e3dc3017ed3dd1646c64da0de086c8056a3f92d780f566a8f9",
+          "size_bytes": 681
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/build_capture.py",
+          "sha256": "58016c7c38681a9d03e1cb0f0c1e537de0eb9456da16e31b0a4262fefce11546",
+          "size_bytes": 3898
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/finalize.py",
+          "sha256": "d9fcbc72ed502592f6366181d0180d406682358981e134cff17f95d893e65d65",
+          "size_bytes": 6825
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/numeric_math.py",
+          "sha256": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+          "size_bytes": 3417
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/operator_bounds.py",
+          "sha256": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+          "size_bytes": 842
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/project.py",
+          "sha256": "9f2b31fa9541a27b58d0345a1f3cf27777846de8675e435bcb47aab937d89ac0",
+          "size_bytes": 3690
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/proof_math.py",
+          "sha256": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "size_bytes": 10879
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/reference.py",
+          "sha256": "c476fad5f3695c24d2b753db2e8f7415307caab7533836e7b447257d445dba9d",
+          "size_bytes": 2387
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/replay_entry.py",
+          "sha256": "54a0f9d51679eb325e5aa944bf981a32e635523c5fb5b39aabb0223557883e90",
+          "size_bytes": 218
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/replay_package.py",
+          "sha256": "8b61c1130fcc7e4ef2fd17745e38fc2178aed5e983ce5ff5115d18f776d25633",
+          "size_bytes": 985
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/requirements.txt",
+          "sha256": "f316cfe9d3cc7a32d4d8c597b5d31b0a44699919b3b9e9d0d3e92c6a36b54a4f",
+          "size_bytes": 47
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/run.py",
+          "sha256": "8045f410eda1d3b55d5ee091566ff5d5f937832a29820dd684267b8bdf102eeb",
+          "size_bytes": 612
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/sketch.py",
+          "sha256": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+          "size_bytes": 419
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/structure.py",
+          "sha256": "206854a71fab0f581ed9773883652ea0f65aa75dd428ea7786cf45bebd6cf707",
+          "size_bytes": 1153
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/validate.py",
+          "sha256": "1e1fb3ee9f609289506d6f84e9ee024156e7a3d4a454b12f08068c655d8fd2d7",
+          "size_bytes": 1283
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/verify.py",
+          "sha256": "f15338beef90ab4356072bde16598c967986852ae7241a1faf6e53f5f40511fc",
+          "size_bytes": 8415
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/EXTRACTED_REPLAY.log",
+          "sha256": "4a7388b1dae9e46be17102db97061edae3d815665685bbf9357364ae9e18b509",
+          "size_bytes": 2759
+        },
+        {
+          "path": "captures/2026-10-18T200728Z-codex-record-contract-5b1e8a94/EXTRACTED_REPLAY_RECEIPT.json",
+          "sha256": "33ed9f08045eb157ed8fece7847e55b4583a8d3ccea86fb7994616cc41123840",
+          "size_bytes": 580
+        }
+      ],
+      "archive_count": 7,
+      "unique_members": 77,
+      "uncompressed_bytes": 40341027
+    },
+    {
+      "capture": "2026-10-18T172041Z-codex-floating-timing-2f6a91ce",
+      "root_manifest_sha256": "5b814cbfe38155f356854b962493aad4bb95982a31cdef66c5a4027005ceb461",
+      "files": [
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/ACQUISITION_REQUIREMENTS.json",
+          "sha256": "a7f45fe3b648ccf68d1721a8ff085dd8baae836e31fe4bc5b33fce28a66c6542",
+          "size_bytes": 8241
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/CAMPAIGN_FREEZE.json",
+          "sha256": "948f8027ffc113c0afc722caa0320e731390ab4e74768c58ec3df8fed675b9e4",
+          "size_bytes": 4359
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/CLAIM_LEDGER.json",
+          "sha256": "cb2db2fb9815b6060d2299988ab99230bda03d30d9da8619a741de51a98ecb47",
+          "size_bytes": 1457
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/DATA_FREEZE.json",
+          "sha256": "5cf6b41a6ae1922d1924186784d28ade277146bba809ab4a7360ac4fcb16c52b",
+          "size_bytes": 5209
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/DIRECT_SOURCE_AUDIT.json",
+          "sha256": "787e7f7d9119c95356dd3543a8782e49a1c49783abc63228016fbe1ab9606843",
+          "size_bytes": 1187
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/OMITTED_DATA.json",
+          "sha256": "7178e8e1c1baa814da0d61021d64112ab53ce60e0801eeec8bfc6e9b6014f32c",
+          "size_bytes": 1280
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/OUTCOMES.json",
+          "sha256": "8d48f38109289409c960783bb7a0aed0e580a68e06f15b961ca18be66ad2c540",
+          "size_bytes": 1253
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/PACKAGE_MANIFEST.json",
+          "sha256": "c56c4d8dbd51f351c15e31cda1723167c4f4839b5c012d06d07c205dbe747d55",
+          "size_bytes": 16254
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/PARENT_FRAME_THEOREMS.md",
+          "sha256": "97a5e2d8d60b31b35e0b7a0d02b630f90f19fde35bdbb3b8ccaa8dbf9bf38a6a",
+          "size_bytes": 5901
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/PROVENANCE.json",
+          "sha256": "2d9ec0a20dc65197421a08278f47a3e1c1b6fd1390761bb47c61fc20a87e8716",
+          "size_bytes": 1378
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/RAW_REGENERATION_RECEIPT.json",
+          "sha256": "c4cc0b0a2c22310d84334f018cb3802a8af61962aa9b748abe74fd8d670d3639",
+          "size_bytes": 5092
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/README.md",
+          "sha256": "6665f856d53ea3026ed5bceaa9645029d5694c7a80331ac6a76595c2ae714036",
+          "size_bytes": 4903
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/REPLAY_EXECUTIONS.json",
+          "sha256": "303ead50f010e815cf7f9d13778bc4c5c5c12bef356bd3f74936becfa67fc4fa",
+          "size_bytes": 582
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/RESULT_SUMMARY.json",
+          "sha256": "a7194d6dc9d77c0e273ca83ee4e4a35a41cc6f1809906b997dda2a5c1ce9c306",
+          "size_bytes": 2033
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/RUN_EXECUTIONS.json",
+          "sha256": "064403873aa5fbe0b9faec609a38f6505dda46cbebaab1230eeeadd6ede1158d",
+          "size_bytes": 1691
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/SOURCE_IDENTITY.json",
+          "sha256": "1651b81402c2aa394a76cc1560b48faadf4d60d976071065e3dd707fd02d501c",
+          "size_bytes": 2182
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/TEAM_REVIEW.json",
+          "sha256": "a9920ceba9f89c702e0b27bf9a350e2e75023374ce82af5d5f0ec77b5057aad3",
+          "size_bytes": 1205
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/TEST_RESULTS.txt",
+          "sha256": "4ddd5e1bf642a921baa196d05cdea1c7a536f1ab7c312dc38da29343468e6b18",
+          "size_bytes": 1595
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/THEOREMS.md",
+          "sha256": "063dd4febdd5875976a41658b2bdb97bb1879cef6596a9a137cd63cb5bbc815e",
+          "size_bytes": 5326
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/UD_FLOATING_TIMING_CAMPAIGN_v0.1_CORE.zip",
+          "sha256": "f7ce24a1fca13a75a02cee74a857d08ad95676365fb569901b52783e18dc1005",
+          "size_bytes": 5525980
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/VALIDATION.json",
+          "sha256": "338574cbf5f08c8cdad03a541ee62d3bb0256ad56a34b10facc0d9460bf09793",
+          "size_bytes": 1752
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/WITNESS_INDEX.json",
+          "sha256": "ab0a2283f3bb1910b9f3e84e19fa6ed840acd6cd546debb7da60d06db27e51e5",
+          "size_bytes": 2197
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/WITNESS_modal_zero.zip",
+          "sha256": "897f790584e7290119f63f2bb79a8e03c8476fce14111d46d4fa737085a56043",
+          "size_bytes": 8266592
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/WITNESS_origin_alternating.zip",
+          "sha256": "5e3e2463cda3e3998f021821aaafa2b9ac75c08238ac858de38a457ecec46d95",
+          "size_bytes": 8321637
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/WITNESS_ramp_joint_clocks.zip",
+          "sha256": "e383ed18dbf198e4f9f23315d0bff052601654d8de17b13d4987dd7ffb524d72",
+          "size_bytes": 8386100
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/audit_records.py",
+          "sha256": "207e0b95bac72ebcccbc75af193cef481d8942ca32587132c383c61c52039256",
+          "size_bytes": 1673
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/bindings.py",
+          "sha256": "accefa3a9ba4919594684f3e38004dbfc64e8a77aa87d4ae06fb0a366a135d3c",
+          "size_bytes": 1261
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/bindings.py.patch",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/build_capture.py",
+          "sha256": "36c65740ca1c93d1f09bd91dae5ca8ec4a8523c4f0518ee435cd1602007296b4",
+          "size_bytes": 4230
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/certify_span.py",
+          "sha256": "1db44a3513cdb8c44ebc0a1543daa0c4bcf6111e29ef2b587d3a5d6a26685f8c",
+          "size_bytes": 5253
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/certify_span.py.patch",
+          "sha256": "056f77b4c852dbbba6cd8ec3b369b1097baf0a351dceeb090c9b351adee8fc83",
+          "size_bytes": 3423
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/frame_math.py",
+          "sha256": "553d3c4e8b49487496e2d61674abaf4822d15951c4b00bc23a372df4449bef98",
+          "size_bytes": 2479
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/frame_values.py",
+          "sha256": "163a40b18cd14b59c414c02a77e9a98d57c36c6877af38480d56e3cb917dd71f",
+          "size_bytes": 1228
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/instrumented_proposer.py",
+          "sha256": "c7f500e9b46645ef12948ff7815df0069b5b51f5edad7a8bc98cd39838e4bccb",
+          "size_bytes": 5951
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/make_records.py",
+          "sha256": "3b0032168e87a0849a08f233a4b91eee7fdfe2d3a081e65ac8cca835975d93f0",
+          "size_bytes": 4666
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/numeric_math.py",
+          "sha256": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+          "size_bytes": 3417
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/operator_bounds.py",
+          "sha256": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+          "size_bytes": 842
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/proof_math.py",
+          "sha256": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "size_bytes": 10879
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/propose_complementary.py",
+          "sha256": "7285e45458f9983324eb1e1532233f9016195fabbd93bac0978354207106e604",
+          "size_bytes": 5403
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/propose_reduction.py",
+          "sha256": "323a73766d1ec6ee3890346f66313d2956a6e1c3218c4be07c557a245c7f237f",
+          "size_bytes": 721
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/replay_all.py",
+          "sha256": "714fbe43a17288f68f88cd757eafe8db8bb5c256f79c76c2153243f6802329d1",
+          "size_bytes": 813
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/replay_package.py",
+          "sha256": "ce015d61fa1c7d764e8c1cb3e57e0d6313605afc1907601b9733c85189f0cac2",
+          "size_bytes": 1080
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/requirements.txt",
+          "sha256": "f316cfe9d3cc7a32d4d8c597b5d31b0a44699919b3b9e9d0d3e92c6a36b54a4f",
+          "size_bytes": 47
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/run_campaign.py",
+          "sha256": "4694f249b4af75c469bf2ca20506c1cd15eb823abd9ae8da3cc1a39a971423cc",
+          "size_bytes": 2683
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/test_span.py",
+          "sha256": "111437e56908282b7390024585fb76cfe140ead479f1e19d55bf4b9193167062",
+          "size_bytes": 2600
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/test_timing.py",
+          "sha256": "39da98103b545bf11e7b684f6c1d1039ca54d824ec1a60d2656c4b110f347165",
+          "size_bytes": 2263
+        },
+        {
+          "path": "captures/2026-10-18T172041Z-codex-floating-timing-2f6a91ce/validate_campaign.py",
+          "sha256": "918414b3bd64d18a98af56876a08cb6411139d67ad42b4c6234e71e730b8b06c",
+          "size_bytes": 2934
+        }
+      ],
+      "archive_count": 4,
+      "unique_members": 103,
+      "uncompressed_bytes": 30691448
+    },
+    {
+      "capture": "2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3",
+      "root_manifest_sha256": "50254410652197465e3e121ac55b35b7f19e6798d4bfedc452a121433a00ce0d",
+      "files": [
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/CLAIM_LEDGER.json",
+          "sha256": "01c19896f0b891bbddc156640433cbb5b1fbda7b509bf4177b214d29b181533d",
+          "size_bytes": 1197
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/DATA_FREEZE.json",
+          "sha256": "36fde4cb8883feb49f7d9f56a783fe00ca83cc817863b568cebe371a943d1fda",
+          "size_bytes": 828
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/PACKAGE_MANIFEST.json",
+          "sha256": "eaf616c5ec9a60857cd74f9f9a2f81775df04eebd6389fa88128f8f37c985ed7",
+          "size_bytes": 12004
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/PROTOCOL_FREEZE.json",
+          "sha256": "b380f8878dcaf5ad23debd29d1c681600c40dcc067e42204e6dd6d3e2bc731f2",
+          "size_bytes": 3787
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/PROVENANCE.json",
+          "sha256": "890e53f6fe7b850a4f6d5f3e7c18326386719ec45a3b0e5da1444575ea66a057",
+          "size_bytes": 677
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/RAW_NOISE_REGENERATION.json",
+          "sha256": "ff787879a5876b7e3093275946a4d164ede26faecc24a22da0a8f761d2107afd",
+          "size_bytes": 592
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/RAW_SOURCE_REPLAY.json",
+          "sha256": "9c67791afb862adacdccbf432ef5f1c7915164c51048c7349234149254bb2188",
+          "size_bytes": 499
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/README.md",
+          "sha256": "c76f704ba51c3b222a2414c448234df0c1fff0b585e4f2e2393f8cb550990a74",
+          "size_bytes": 4678
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/REFINEMENT_FREEZE.json",
+          "sha256": "8f03d53f07b9cb20821042f8744d41fecc616eca78ea71bc7d596a65fe9ea63a",
+          "size_bytes": 716
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/RESULT_SUMMARY.json",
+          "sha256": "3e24f68b331661137075980bbbc98d68202d1bd56f252ff6ed31eaae8dbb821e",
+          "size_bytes": 1159
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/RUN_EXECUTIONS.json",
+          "sha256": "2dbaee8a63a76c742212714ca926121f090456ab9ae0f2710df04a5f5bfdce16",
+          "size_bytes": 1397
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/TEAM_REVIEW.json",
+          "sha256": "95a5f6fc4d4f50f6a863bae027351e8b926ffc5345d007270892d1866f038474",
+          "size_bytes": 659
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/THEOREMS.md",
+          "sha256": "2e9020353222305bcbd00c0b4f9b14bc94e5de84d75b3434cb6069f1486461c1",
+          "size_bytes": 6516
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/UD_UNIFORM_IDEAL_TWO_STEP_PHASE_v0.1_CORE.zip",
+          "sha256": "95104a7978ec6d33523d376ef22c58042a5c49dce20dbac1e6e13f590c870366",
+          "size_bytes": 95058
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/UNIFORM_CERTIFICATE.json",
+          "sha256": "51070fe0296c1e88535ccd8929cdfc4609cb95f2dadf7dca6dc8109afc7afbf1",
+          "size_bytes": 15462
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/UNIFORM_REPLAY.json",
+          "sha256": "a7d792947ad6ec20cdd90cc48df7270bbbc3802755f30b4e817bc64064f7f4b3",
+          "size_bytes": 15461
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/UNIFORM_V2_CERTIFICATE.json",
+          "sha256": "9e5633627fc08f385159b869673930e5e389cb2a799534b7ef3c48603121ed73",
+          "size_bytes": 16218
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/UNIFORM_V2_REPLAY.json",
+          "sha256": "08567393534cfc29f5ce29d3367914b36303210bcd19a0d70bfa4d9376925ade",
+          "size_bytes": 16217
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/VALIDATION.json",
+          "sha256": "dd503816bfb1766664d88726742f30baf5233c2376b6884e45cb38f8101d3710",
+          "size_bytes": 345
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/VALIDATION_V2.json",
+          "sha256": "062242f6fe14d39a6c5d663f5bdac2f9f1dec3aab3b2d7eb2d824b2957d16856",
+          "size_bytes": 708
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_01.zip",
+          "sha256": "f9ba0fa567c3ae3cbb20bcdf38f522c5ed58e63f31417f3741ef2a8e98745f6d",
+          "size_bytes": 3368151
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_02.zip",
+          "sha256": "6c132525b744ce24ccbffe2b1fc94ba771bcd181114266197b3b390da7c250b6",
+          "size_bytes": 6563935
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_03.zip",
+          "sha256": "3f1bf97c106a9d2e862c0573e4e046bacbfec6162e7cf485fa9ec3f42a178022",
+          "size_bytes": 8414466
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_04.zip",
+          "sha256": "8cfe7c17d653ad413f193db8f6af1536fe65a9e0ed9274d080a0c2752a3618c6",
+          "size_bytes": 7801434
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_05.zip",
+          "sha256": "34879f2d28b33d82bc7185e5c074f91165341a442e1f4c67e87f69dbbf8b5c97",
+          "size_bytes": 8418404
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_INDEX.json",
+          "sha256": "3ad6f6aeb6dd9068a07c1e17733b035f9784a7dc157edad35ea42bfa26b48bc0",
+          "size_bytes": 3655
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/baseline.py",
+          "sha256": "ea82ed01780dd22dadeec2069d4778682b9a8fbb3bc0f0b75c469113abfb66a0",
+          "size_bytes": 2521
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/bindings.py",
+          "sha256": "3fac82f24a65602737b87b4553767ecc7fb9e9205582fa2a8faf47f7d638f7a3",
+          "size_bytes": 904
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/build_capture.py",
+          "sha256": "4923bca88d8db52eb4cdb721dc35380d076159089f6b7190613708a9992720d1",
+          "size_bytes": 4131
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/certify.py",
+          "sha256": "dc9528a07f7a0e3fa4bde185067986c621294eaa3e675dbdd4ecbbffe0bf13dc",
+          "size_bytes": 5790
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/direct_error_v2.py",
+          "sha256": "0b65e8decb1f1e7641b619cf6df5ab06c90a505e8fe8aae2909a830a52c22030",
+          "size_bytes": 1484
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/finalize.py",
+          "sha256": "87f1ebb8a6fd35595216280b8424588b9c9b3395c5815694d634b32d9d253355",
+          "size_bytes": 8457
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/make_record.py",
+          "sha256": "35800eaf9104e001c8ab447467d2be04dc406ca55f7349aacc7b32efcaa3d651",
+          "size_bytes": 2128
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/numeric_math.py",
+          "sha256": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+          "size_bytes": 3417
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/operator_bounds.py",
+          "sha256": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+          "size_bytes": 842
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/proof_math.py",
+          "sha256": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "size_bytes": 10879
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/propose.py",
+          "sha256": "bd2fa4e7e0de240a5e77409ef52fff2fec7a6572d7248f436374ad66d1bcc747",
+          "size_bytes": 2421
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/propose_reference.py",
+          "sha256": "6785dd37726aa99a370f82e731bcfd24a30e796eceeb35bdfb835dfb270030d2",
+          "size_bytes": 641
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/reference.py",
+          "sha256": "c476fad5f3695c24d2b753db2e8f7415307caab7533836e7b447257d445dba9d",
+          "size_bytes": 2387
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/replay_package.py",
+          "sha256": "634d2b2fdd269a28c2e73e61502b4ceb7a89068d911699ebd7fa3a60390980e0",
+          "size_bytes": 1142
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/replay_package_v2.py",
+          "sha256": "b6282f669783c51e5c00185e932de91c788655beccb667bf7a52289255b6d3c0",
+          "size_bytes": 1232
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/requirements.txt",
+          "sha256": "f316cfe9d3cc7a32d4d8c597b5d31b0a44699919b3b9e9d0d3e92c6a36b54a4f",
+          "size_bytes": 47
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/run.py",
+          "sha256": "d60e8d18a02ec89fbd8404921a1dbd29617061ac2ca407be4918d08c20eeef07",
+          "size_bytes": 1587
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/sketch.py",
+          "sha256": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+          "size_bytes": 419
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/source_order.py",
+          "sha256": "18cdaa519016ea3f60dc474fea6c91363a4d8968b511f47893db9dfdcc5c7875",
+          "size_bytes": 1269
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/uniform.py",
+          "sha256": "d0bfb042bf803552159a9d0f983426f118cb692d8d619285368f887750634546",
+          "size_bytes": 4883
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/uniform_v2.py",
+          "sha256": "9b47c010615c84707233ce03798fab7349ddd6ae8a952c81c7217c5ee64b4188",
+          "size_bytes": 5345
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/validate.py",
+          "sha256": "48784b1ecdfd0bb5db3601ed26dfb8cf0f4a30afb7970d8b6c1655f69168763a",
+          "size_bytes": 1503
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/validate_v2.py",
+          "sha256": "964d9ebffdf68143fcf8c42086e01dc9893b3e3e492b2256af3e93cb3d3bb7fd",
+          "size_bytes": 1250
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/EXTRACTED_REPLAY.log",
+          "sha256": "1144118664fa8d35194e857844b08f18fd16e9d05b2ae0938b9e961483692ca6",
+          "size_bytes": 2535
+        },
+        {
+          "path": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/EXTRACTED_REPLAY_RECEIPT.json",
+          "sha256": "69789e5b1226bb6b4c35fa22fad0d96a5cc5d788c1aae81afa01d5a40b3e1c00",
+          "size_bytes": 592
+        }
+      ],
+      "archive_count": 6,
+      "unique_members": 89,
+      "uncompressed_bytes": 35064324
+    },
+    {
+      "capture": "2026-10-18T184202Z-codex-two-step-noise-c54b7a12",
+      "root_manifest_sha256": "9edbaef931c33f28f30a147591ee0ef9eaacb27c36b8d85cb6edb9d2f52bf945",
+      "files": [
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/CLAIM_LEDGER.json",
+          "sha256": "830ef0e15e0425fde12c81c845a57b086edfeba090894ba6c285f57f6c5ec380",
+          "size_bytes": 1042
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/DATA_FREEZE.json",
+          "sha256": "1edba28a6642c43751fe263f9c0e44eb55d4ff681653571d77035ffac5866ea6",
+          "size_bytes": 4942
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/DIAGNOSTIC_CORRECTION.json",
+          "sha256": "495c32e83820ede8898a7563eed9e762b81c6c98657692f94b55f336ac0c54a3",
+          "size_bytes": 502
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/NOISE_FREEZE.json",
+          "sha256": "0ee01702e6d23795422eed9de0016ae0cfa051f01c600973fedeb007f6763aad",
+          "size_bytes": 5300
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/OMITTED_DATA.json",
+          "sha256": "63d8e4d0d886274f884d03b87d193c7051f8899dbb5b0a4eb79f2145007ceb69",
+          "size_bytes": 516
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/PACKAGE_MANIFEST.json",
+          "sha256": "3703fd167f08dcc0ae01593a2531bca67c1820176388d259c33b88427e1bdbeb",
+          "size_bytes": 25686
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/PROVENANCE.json",
+          "sha256": "67b6c6b09e6be140adccdca0b3770be909d183b1bd69ec30a4efd73c11405e07",
+          "size_bytes": 667
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/RAW_REGENERATION_RECEIPT.json",
+          "sha256": "33e00d0dbaae7202fe20fbb529b99b23d026b95ef867a494cdaf675adb9c4290",
+          "size_bytes": 4744
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/README.md",
+          "sha256": "04cc2de0bd8502bdc0b6a6d3e369911bf1e279d90472865b21d6b3c419d4abb0",
+          "size_bytes": 5305
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/RESULT_SUMMARY.json",
+          "sha256": "e2e9d9e4a293bb802c0e9a488d027d8ec8ee78975171fac847f32779983d30fa",
+          "size_bytes": 3978
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/RUN_EXECUTIONS.json",
+          "sha256": "3baff5b1613cf49546d3475bd4d8bcda28271505eede1656e89f72fd1addef38",
+          "size_bytes": 4743
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/SOURCE_IDENTITY.json",
+          "sha256": "707e8a56005eb60150c9193c130f87ba1ca2726496d1c7b8692f203e69e60d0a",
+          "size_bytes": 1583
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/TEAM_REVIEW.json",
+          "sha256": "d50d2a8433fc0a151902c75c1e9da5915865cdfd4222196752acb1e61306df5d",
+          "size_bytes": 819
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/TEST_RESULTS.txt",
+          "sha256": "f4756b1559ba23c1687a277c82c6fa46eb37ce0759885f59952a08f766987697",
+          "size_bytes": 708
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/THEOREMS.md",
+          "sha256": "473d71e79b70fa480237f8050914be023c5140aeecd9ba13060a0afbf2eaeda7",
+          "size_bytes": 6670
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/UD_TWO_STEP_NOISE_TOLERANCE_v0.1_CORE.zip",
+          "sha256": "ba84bd0e58835c12eba3dd6cbdb74c8101d3c15a740c0f9bfeb0bbbc89f10aa9",
+          "size_bytes": 2225130
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/UNIFORM_CERTIFICATE.json",
+          "sha256": "2ffb813c1f8b15cb36bc6e241857c91e504952a89dae28410a96c433824809b6",
+          "size_bytes": 14679
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/VALIDATION.json",
+          "sha256": "5c31dc69bad7dd4bce954a0d150d2eb952f5b14c5c5f96f16c05ba150aadc3cf",
+          "size_bytes": 6238
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_01.zip",
+          "sha256": "ca1f82d437d2a44ff24e4d640ef03b30c4293e665bfdf38da36bd99573a8b015",
+          "size_bytes": 6563775
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_02.zip",
+          "sha256": "417c4f520a14cf48472fc968bc8638f455f45d6988f253e676e13917f16ef1a0",
+          "size_bytes": 8417008
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_03.zip",
+          "sha256": "a33f838867cf0d45e135286a848d3446730d2b8d8fb382d81b974927c9ea23e3",
+          "size_bytes": 6564060
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_04.zip",
+          "sha256": "b9151b5307af9e1e0aa295e67cb35adc2b8058aa63c36afc9dfa9daa3f4c5cdd",
+          "size_bytes": 8416705
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_05.zip",
+          "sha256": "3e1951b2b02fe698a8e377c5f469dde11777cc2d9c859b66304a8cdfc2d22e4e",
+          "size_bytes": 6564178
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_06.zip",
+          "sha256": "7e1229126aab78f0946c7d092e25a486d85653e953e0507c13b4affede2c61c1",
+          "size_bytes": 8416871
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_07.zip",
+          "sha256": "f6e4519c6892c9237e32cef8ac6bd13ec136ae3f84940559b2f9bb9e68e0d2b1",
+          "size_bytes": 6564327
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_08.zip",
+          "sha256": "c954907b77ce0aa44daa2c369dd2e98677cce8f486d5fd1cbf8415f51a88deca",
+          "size_bytes": 8416564
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_09.zip",
+          "sha256": "e6eacbd97755ba162105ba243054e4ddb59fe71db5c5d3a4970c1685868e91c9",
+          "size_bytes": 6564113
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_10.zip",
+          "sha256": "ea7aa63cf284ee48d4a64a0868df81c970b1b1de2434d1cdc3cf97ef0355ee13",
+          "size_bytes": 8426292
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/WITNESS_INDEX.json",
+          "sha256": "506c7aba88b93e480d559416a3bbdb24aa6c5c82a9adff0e16d26b67e2b84bbb",
+          "size_bytes": 8157
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/bindings.py",
+          "sha256": "010181a814b23d8c7d22eff15b762d5e681ddc301e54d433b8f777faa9700d04",
+          "size_bytes": 901
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/build_capture.py",
+          "sha256": "b86a10559ac2638b964b5dc535087ffe3c3a71c81d5493320e5e0272b5610860",
+          "size_bytes": 4310
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/certify.py",
+          "sha256": "dc9528a07f7a0e3fa4bde185067986c621294eaa3e675dbdd4ecbbffe0bf13dc",
+          "size_bytes": 5790
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/direct_error.py",
+          "sha256": "dd87bac398ecfd2343aad2e327da6d32e5259db75797d3911b31f8f417408f81",
+          "size_bytes": 1445
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/direct_error_v2.py",
+          "sha256": "0b65e8decb1f1e7641b619cf6df5ab06c90a505e8fe8aae2909a830a52c22030",
+          "size_bytes": 1484
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/finalize_docs.py",
+          "sha256": "d44f53b8764012eae7caa5ba51bf2170a8da2b8ffdeeacd639496ee3b61f41ab",
+          "size_bytes": 9441
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/fresh_run_v2.py",
+          "sha256": "c9f89bfe177efc2cdceaa0eeadec4c708c5ba2728c5c61aea0e2fdc1051d98b6",
+          "size_bytes": 2020
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/make_records.py",
+          "sha256": "e2cb1872a215656dfce93faa1e540952e70c907d898ef19f457f3ea7bab07488",
+          "size_bytes": 3107
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/noise_math.py",
+          "sha256": "c22300f9f8e31514c8aab0a954a0c908b0f9f8e4f7c68e330487b6d4d0a9ea0a",
+          "size_bytes": 649
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/numeric_math.py",
+          "sha256": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+          "size_bytes": 3417
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/operator_bounds.py",
+          "sha256": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d",
+          "size_bytes": 842
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/proof_math.py",
+          "sha256": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+          "size_bytes": 10879
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/propose.py",
+          "sha256": "bd2fa4e7e0de240a5e77409ef52fff2fec7a6572d7248f436374ad66d1bcc747",
+          "size_bytes": 2421
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/propose_reference.py",
+          "sha256": "6785dd37726aa99a370f82e731bcfd24a30e796eceeb35bdfb835dfb270030d2",
+          "size_bytes": 641
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/reference.py",
+          "sha256": "c476fad5f3695c24d2b753db2e8f7415307caab7533836e7b447257d445dba9d",
+          "size_bytes": 2387
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/replay_package.py",
+          "sha256": "58b3aa17e7018d2f06896ab4a62ee2d0cd02d130a6f5427d0d4fce69e6e5e6a9",
+          "size_bytes": 1334
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/replay_package_v2.py",
+          "sha256": "a84eadbd8b3177b54cb7945fa132b5feacf06390f0ae36fb599751e704a0e088",
+          "size_bytes": 1337
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/requirements.txt",
+          "sha256": "f316cfe9d3cc7a32d4d8c597b5d31b0a44699919b3b9e9d0d3e92c6a36b54a4f",
+          "size_bytes": 47
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/resume.py",
+          "sha256": "fc877f2a1f5ced7646731ec164c0bddc6a6be1754859e530ef7c49af787917f0",
+          "size_bytes": 2219
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/run.py",
+          "sha256": "709ca83efc1ae04452eb1d227cf5d9734aa812963010a6e90a270b21d42e728e",
+          "size_bytes": 2014
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/sketch.py",
+          "sha256": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+          "size_bytes": 419
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/source_order.py",
+          "sha256": "4085724d3006812567e1e86fe50595a88061b52d385a2f44a1ea1049ebb3441e",
+          "size_bytes": 2171
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/test_noise.py",
+          "sha256": "c62a20f899f74b9ecce777959d6e024a3c2c55137f5693234f9ec0af573a8ebb",
+          "size_bytes": 1172
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/uniform.py",
+          "sha256": "e754c4f5626370cd9665720804778d6d3302a03dbee4d3e50626f574d0667924",
+          "size_bytes": 2783
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/validate.py",
+          "sha256": "7f6543d5c55e8def8bd0cc01f35c29acd145a602d86dc4154822c138ab08e64c",
+          "size_bytes": 2624
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/EXTRACTED_REPLAY.log",
+          "sha256": "4b237cb550933b358849ef1837d489a70ff8a37a42edd15b203add81dfa36f9d",
+          "size_bytes": 30424
+        },
+        {
+          "path": "captures/2026-10-18T184202Z-codex-two-step-noise-c54b7a12/EXTRACTED_REPLAY_RECEIPT.json",
+          "sha256": "14208c6d98a166701bdd895aae35f7591acd1e1ab4a7b8c33c88fc4b76bd89d0",
+          "size_bytes": 613
+        }
+      ],
+      "archive_count": 11,
+      "unique_members": 186,
+      "uncompressed_bytes": 78089004
+    }
+  ],
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "dense_reconstruction": {
+    "case": "dense_a0",
+    "bytes": 150321232,
+    "sha256": "93118b8da1b61f5a015ef7a6234b12ed417797f79a00a85b666246b6c3699817",
+    "scalar_differences_checked": 18790154,
+    "vector_integer_squared_error_max": 62
+  },
+  "scope": "Saved witness checks plus raw reconstruction/projection",
+  "finished_utc": "2026-10-19T13:42:33.297968+00:00"
+}
