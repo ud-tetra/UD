@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "expected_rejections": [
+    {
+      "name": "under_solved_zero",
+      "rejected": true,
+      "diagnostic": "AssertionError: raw algebraic budget 2"
+    },
+    {
+      "name": "nonfinite",
+      "rejected": true,
+      "diagnostic": "ValueError: cannot convert NaN to integer ratio"
+    },
+    {
+      "name": "truncated_free_flux",
+      "rejected": true,
+      "diagnostic": "AssertionError"
+    }
+  ]
+}
