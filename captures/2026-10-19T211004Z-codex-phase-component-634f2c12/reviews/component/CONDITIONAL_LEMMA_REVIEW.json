@@ -1,0 +1,21 @@
+{
+  "artifact_type": "SAME_TEAM_CONDITIONAL_SPECTRAL_LEMMA_REVIEW",
+  "reviewed_path": "/workspace/scratch/f3d1c2f040c9/phase-component-work-20261019/SPECTRAL_ERROR_LEMMA.md",
+  "reviewed_sha256": "62b872e2def9a9d5c63f32fd34bac606d4ba7a9502b36483b13ee49a6db8d548",
+  "bytes": 5333,
+  "algebra_status": "PASS_CONDITIONAL_ALGEBRA_ONLY",
+  "review": {
+    "unweighted_operator": "P and W and unitary F and positive-row selection are contractions; amplitude errors at most whole-vector epsilon_l2. DC and RMS epsilon_l2/sqrt(N). Tapered RMS has same debit only when normalized by sqrt(N).",
+    "margin": "Observed strict amplitude margin>2alpha proves unique true discrete-bin maximum among declared selected bins; no continuum frequency or sub-bin guarantee.",
+    "centroid": "Nonnegative per-bin frequency/power bounds and strictly positive lower total power give conservative quotient enclosure; zero lower denominator => HOLD.",
+    "power_convention": "For declared P_j=d_j|FFT(WPv)_j|^2/(N sumw2), amplitude operator is diag(sqrt(d_j/sumw2)) R F W P. Safe norm L<=sqrt(2/sumw2)*max|w|. One-sided Nyquist weight1, interior2.",
+    "computed_debit": "alpha_total=L*epsilon_vector+eta_computation; eta must independently include window, FFT and normalization departures. No validated finite FFT eta supplied.",
+    "per_sample_conversion": "If uniform per-sample epsilon_sample is simultaneous on common grid, epsilon_vector<=sqrt(N)*epsilon_sample; no independence required."
+  },
+  "physical_status": "HOLD_NO_CALIBRATED_WAVEFORM_BOUND_CLOCK_INTERVAL_OR_VALIDATED_COMPUTATION_DEBIT",
+  "finite_tests_are_not_proof": true,
+  "experimental_records_evaluated": 0,
+  "new_fits": 0,
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

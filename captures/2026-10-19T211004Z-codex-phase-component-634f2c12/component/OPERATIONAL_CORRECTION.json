@@ -1,0 +1,26 @@
+{
+  "artifact_type": "APPEND_ONLY_COMPONENT_OPERATIONAL_CORRECTION",
+  "supersedes_entrypoints": [
+    "reference_checker.py",
+    "controls.py",
+    "replay.py"
+  ],
+  "replacement_entrypoints": [
+    "reference_checker_v2.py",
+    "controls_v2.py",
+    "replay_v2.py"
+  ],
+  "preserved_failure": "FIRST_RUN_FAILURE.json",
+  "changes": [
+    "Serialize synthetic NumPy assertions as Pythonbooleans",
+    "Exclusive NEW external output, refuse input/package/existing paths before rawreading",
+    "Reject nonfinite median/interpolation/error reductions before serialization",
+    "Clarify deterministic joint uncertainty enclosures do not require covariance, unlike statistical coverage models",
+    "Five reviewed post-v1 guard controls added with original26 expectations unchanged"
+  ],
+  "scientific_changes": "No source, crop, feature, split, comparator, physicalthreshold or fitting change",
+  "chronology": "Failure known and disclosed before v2 correction; v2 freeze precedes rerun and newguard execution",
+  "new_raw_record_executions": 0,
+  "new_fits": 0,
+  "physical_promotion": 0
+}

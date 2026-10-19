@@ -1,0 +1,158 @@
+{
+  "artifact_type": "SAME_TEAM_COMPONENT_SYNTHETIC_REVIEW_RESULTS",
+  "source_freeze": {
+    "sha256": "c00e32a950aeca549b1a5db84832b07ef1102dfe97e9b30d634287ecf1a809be",
+    "bytes": 3132
+  },
+  "review_freeze": {
+    "sha256": "58cc9f9d9b6ec5d02178ed6f8d86f484617431d91335dca86244ea96f2c89870",
+    "bytes": 1373
+  },
+  "results": [
+    {
+      "id": "wrong-source-refused-before-gzip",
+      "pass": true,
+      "scope": "scalar identity rejection plus static ordering; raw entrypoint not invoked",
+      "detail": {
+        "wrong_identity": "REFUSED",
+        "static_identity_line": 132,
+        "static_gzip_line": 134,
+        "raw_entrypoint_invocations": 0
+      }
+    },
+    {
+      "id": "valid100groups-partition60-20-20",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": {
+        "train": 60,
+        "validation": 20,
+        "test": 20
+      }
+    },
+    {
+      "id": "row-count-refusal",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": "ROW_COUNT"
+    },
+    {
+      "id": "duplicate-group-channel-refusal",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": "DUPLICATE_CHANNEL_GROUP"
+    },
+    {
+      "id": "metadata-nonfinite-refusal",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": "METADATA_NONFINITE"
+    },
+    {
+      "id": "nonzero-drive-metadata-refusal",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": "DRIVE_METADATA_MISMATCH"
+    },
+    {
+      "id": "channel-schema-refusal",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": "CHANNEL_SCHEMA"
+    },
+    {
+      "id": "rate-mismatch-refusal",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": "RATE_METADATA_MISMATCH"
+    },
+    {
+      "id": "constant-decimal-undefined-spectrum",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": {
+        "DC": 0.1,
+        "AC_RMS": 0.0,
+        "spectral_labels": null
+      }
+    },
+    {
+      "id": "analytic-four-point-DC-RMS-Nyquist",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": {
+        "interior_power": 2.0,
+        "nyquist_power": 1.0
+      }
+    },
+    {
+      "id": "independent-small-DFT-rectangular-and-Hann",
+      "pass": true,
+      "scope": "8-point cmath direct DFT versus local NumPy checker, approximate formula consistency only",
+      "detail": [
+        {
+          "taper": "rect",
+          "direct_positive_power": 5.000000000000001,
+          "numpy_positive_power": 5.0,
+          "direct_centroid_label_Hz": 3.0301515190165
+        },
+        {
+          "taper": "hann",
+          "direct_positive_power": 4.464263145504697,
+          "numpy_positive_power": 4.464263145504699,
+          "direct_centroid_label_Hz": 3.8185026170599796
+        }
+      ]
+    },
+    {
+      "id": "crop-premean-DC",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": {
+        "retained_samples": 4,
+        "DC": 3.0
+      }
+    },
+    {
+      "id": "nonfinite-waveform-refusal",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": "TRACE_SCHEMA_OR_NONFINITE"
+    },
+    {
+      "id": "fixed-training-baseline-predictions-and-no-heldout-refit",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": {
+        "heldout_values_shifted_by": 1000,
+        "training_unchanged": true,
+        "comparisons": 80,
+        "reconstructed_predictions_match_frozen_training_only_rules": true
+      }
+    },
+    {
+      "id": "missing-feature-HOLD-no-deletion",
+      "pass": true,
+      "scope": "synthetic implementation check",
+      "detail": {
+        "channel": 1,
+        "feature": "DC",
+        "status": "HOLD_UNDEFINED_FEATURE",
+        "dropped_records": 0
+      }
+    }
+  ],
+  "controls": 15,
+  "all_pass": true,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "scope": "Separate same-team source/static review and tiny synthetic checks. No waveform/no calibrated numeric interval/no physical or external-review certificate.",
+  "raw_record_entrypoint_invocations": 0,
+  "experimental_records_evaluated": 0,
+  "new_raw_downloads": 0,
+  "new_fits": 0,
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

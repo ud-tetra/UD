@@ -1,0 +1,136 @@
+{
+  "artifact_type": "PUBLISHED_CIRCUIT_COMPONENT_REANALYSIS_CONTRACT",
+  "version": "0.2.0",
+  "lane": "RIECHERT10_DESCRIPTIVE_COMPONENT",
+  "source_sha256": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c",
+  "source_bytes": 30941478,
+  "shape": {
+    "rows": 1000,
+    "metadata_columns": 6,
+    "samples_per_row": 16384,
+    "channels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "records_per_channel": 100,
+    "sample_rate_metadata_hz": 1953125
+  },
+  "grouping": {
+    "key": "exact decimal values of first five metadata fields; channel is sixth field",
+    "requirements": "100 groups, ten distinct channels each, 100 distinct frequency labels; metadata columns 2,3,4 zero; rate1953125; frequency labels in[21000,41000]",
+    "order": "ascending distinct frequency-label numerical value",
+    "split": {
+      "train": "sorted group index mod5 in{0,1,2}:60 groups",
+      "validation": "index mod5=3:20 groups",
+      "test": "index mod5=4:20 groups"
+    },
+    "all_channels_and_samples_of_group_stay_together": true,
+    "labels_are_not": "certified physical drive, detuning, iid repetitions or independent preparation draws"
+  },
+  "extraction": {
+    "window_samples_zero_based_half_open": [
+      200,
+      16384
+    ],
+    "mean": "arithmetic mean over selected window, reported as nominal-voltage DC",
+    "primary_taper": "rectangular",
+    "sensitivity_taper": "symmetric Hann w_n=(1-cos(2*pi*n/(N-1)))/2 on same demeaned window",
+    "dft": "numpy float64 rfft, no zero-padding; one-sided energy weights2 exceptDC andNyquist; P_l=d_l*|DFT(w*(x-mean))_l|^2/(N*sum(w^2))",
+    "features": [
+      "DC",
+      "AC_RMS from untapered demeaned samples",
+      "dominant_positive_bin_label_Hz",
+      "positive_power_centroid_label_Hz"
+    ],
+    "positive_bins": "1..floor(N/2), DC excluded; Nyquist retained once",
+    "tie": "first maximum in computed float64 powers (lower bin); no exact arithmetic frequency guarantee",
+    "zero_ac": "dominant/centroid undefined(None), spectral-feature model score HOLD; do not invent zero frequency",
+    "sensitivity": "report Hann-minus-rect dominant-bin and centroid for every row, no cherry-picked primary window",
+    "forbidden": [
+      "filtering",
+      "smoothing",
+      "resampling",
+      "zero-padding",
+      "channel10 subtraction",
+      "bad-row deletion",
+      "phase inference",
+      "crosschannel synchronization inference",
+      "envelope/Gauss extraction",
+      "silent zero fill"
+    ],
+    "crop_N": 16184,
+    "crop_bin_label_Hz_exact": "1953125/16184",
+    "DC_order": "PRE-demean cropmean; demean once before both spectra",
+    "constant_trace": "If all cropped parsed float64 samples compare exactly equal, report that value asDC and set AC exactlyzero; no tolerance clipping."
+  },
+  "descriptive_models": {
+    "features": [
+      "DC",
+      "AC_RMS",
+      "rect_dominant_Hz",
+      "rect_centroid_Hz"
+    ],
+    "model_C": "training-channel-feature median; even sample count uses arithmetic average of two middle sorted values",
+    "model_L": "piecewise-linear interpolation vs metadata frequency label, training only; outside training range constant nearest endpoint",
+    "training": "60 groups only; every channel separately; fixed models, no hyperparameters or adaptive model selection",
+    "validation": "report MAE and max-absolute error for20groups; no tuning",
+    "test": "one report on20groups after frozen code/contract, MAE and max-absolute error",
+    "reporting": "raw feature units only, all10channels, paired per-group errors; no pvalue/SEM/95percent/independence/causal claim",
+    "comparison": "report bothmodels and signed error difference descriptively; neither is a gauge-preserving or gauge-breaking physical null",
+    "missing_feature": "HOLD affected channel-feature score; no deletion or imputation"
+  },
+  "uncertainty": {
+    "status": "HOLD_MISSING_INDEPENDENT_CALIBRATION_TIMING_COVARIANCE",
+    "descriptive_labels": "metadata Hz and recorded nominal V, not independently calibrated SI guarantees",
+    "missing": [
+      "channel gain/offset/nonlinearity bounds and covariance",
+      "sample-clock rate/skew/jitter calibration and anti-alias transfer",
+      "actual acquisition configuration connecting frequency label to controls",
+      "preparation/feedback/drive/loss histories",
+      "capacitor/frequency normalization and calibrated oscillator state map",
+      "joint dependence and simultaneous-coverage assumptions"
+    ],
+    "deterministic_future_rule": "If independently frozen per-sample voltage error bound epsilon is supplied, |mean_error|<=epsilon and |RMS_AC_error|<=epsilon (orthogonal mean removal is an l2 contraction); otherwise no numeric uncertainty interval. No Lipschitz peak-frequency bound without a proved spectral gap. Clock labels remain conditional. New uncertainty evidence requires separate version before inferential evaluation. Independently certified joint deterministic enclosures need no covariance model; a statistical confidence claim instead needs a justified joint dependence/coverage model. Neither form of evidence is supplied now.",
+    "not_allowed": [
+      "FFTbin width as confidence bound",
+      "15V software guard as calibrated ADC rail",
+      "zero metadata amplitude as evidence of all physical sources absent",
+      "zero covariance assumption",
+      "2^-49 residual gate",
+      "2^-38 shape gate as circuit tolerance",
+      "2^-48 model noise as SI tolerance"
+    ],
+    "numpy_rounding": "No outward FFT/window/comparison rounding enclosure is implemented. All current floating results, including tie selection, are descriptive. Any future interval needs an independently certified numerical error allowance as well as acquisition bounds.",
+    "statistical_intervals_bootstrap": "DISABLED"
+  },
+  "stop_rules": [
+    "wrong compressed hash/bytecount: refuse before parsing",
+    "schema/nonfinite/missing or duplicate channel/group/unequal metadata: HOLD all outputs",
+    "rate/frequency-label range/distinct-count/zero-drive-field mismatch: HOLD, no automatic repair",
+    "arithmetic nonfinite: HOLD",
+    "calibrated clipping/linearity/phase/energy/Gauss/model-comparison claims: HOLD until separate pinned calibration/state-model contract",
+    "no extra sources, fits, tuned windows or repeats added under this version"
+  ],
+  "scope": {
+    "new_raw_download_this_turn": false,
+    "new_raw_execution_this_turn": false,
+    "synthetic_controls_only": true,
+    "physical_promotion": 0,
+    "native_62_channel_apparatus": "HOLD_INCOMPATIBLE_OBSERVER_AND_CALIBRATION",
+    "published_circuit_physical_model_fit": "HOLD_MISSING_CALIBRATED_MODEL_AND_ACQUISITION_CONFIGURATION",
+    "gauss_conservation_significance": "HOLD",
+    "UD_correspondence": "HOLD_NO_STATE_ACTION_TOPOLOGY_BRIDGE",
+    "external_review": "PENDING",
+    "development_registry_entry": false
+  },
+  "supersedes": "COMPONENT_CONTRACT.json only for output safety, finite-comparison arithmetic and clarified deterministic-uncertainty option; no extraction/split/model/threshold retuning",
+  "output_safety": "New external output only, exclusive creation, never overwrite a raw input, package member or prior output."
+}
