@@ -1,0 +1,45 @@
+# Prospective frame records and floating kernel — same-team code review
+
+Status: PASS for the proposed fixed-baseline synthetic domain; no material open defect found in `records.py` or `kernel.py`. This is static code/math review, not an execution or numerical outcome review. The exact reviewed file hashes are in CODE_REVIEW.json. This supplements DESIGN_REVIEW.md and does not replace later complete protocol freeze, raw regeneration, source-frame validation, or saved-output replay.
+
+## records.py
+
+`transforms` builds same-parity37-by-37 integer numerator matrices and checks `M M^T=den^2 I` and every nonzero's parity. Signed cycle indexing uses a cyclic roll within each parity list; signed shuffle uses one generator, even permutation first then odd. The fixed signs are determined by the output preparation index. The rational branch constructs18 disjoint blocks `[[3,-4],[4,3]]`, with final even preparation36 unchanged via numerator5. Thus the implementation matches the proposed exact orthogonal maps before quantization.
+
+`nominal` reads both pair members from the original baseline, forms their integer linear combination, and divides by5 only once. Integer floor plus the `remainder>=3` increment correctly implements nearest rounding for positive and negative numerators. Denominator5 never has a half tie. Its exact check `abs(5*out-v)<=2` establishes the2/5 quantum error bound. Signed transformations return the integer combination directly. The pinned original baseline's recorded maximum raw magnitude30100665057350 provides ample int64 margin for all multiply/add/rounding operations; generation also checks `7*maxabs<2^63`. This conclusion is specific to the pinned baseline, not unrestricted int64 inputs.
+
+For each family, channels are drawn first as a37-by-8191 integer array, then signs as a separate array of the same shape, from that family's frozen seed. Exactly one±1 entry is added per62-vector. The reread checks compare every scalar against the regenerated new nominal and expected onehot perturbation, and require squared integer error1 in all vectors. Nominal hashes are computed in the same little-endian preparation/time/channel byte order as raw records. The clean input hash is checked before and after generation, all raw hashes are collected before the estimator function can start, and distinct record hashes are required.
+
+`model_bounds` correctly propagates the old scalar source-waveform error d0 through the exact transform. Signed maps keep d0. Rational rows have absolute coefficient sum at most7/5, then at most2/5 quantum rounding error. Let dnom be this scalar bound and q=2^-48. The added onehot perturbation gives squared62-vector source error at most `62*dnom^2 + 2*dnom*q + q^2`; this is valid without a statistical independence premise. The code explicitly refuses to claim original-baseline ball membership or per-preparation norm conservation. The bound is conservative for the one unpaired preparation.
+
+## kernel.py
+
+The reshape is preparation/time/channel to time/channel/preparation, matching the row index `37*channel+preparation` of the inherited2294-by-321 sketch. The old/new160-column signed sketches and one null-vector column are reconstructed from the frozen seeds/source vector. The null-vector checks match the parent design.
+
+The int64 matrix product is safe under `maxabs(X)*max_column_L1(A)<2^63`: each individual product and every partial dot sum lies within the same absolute bound. With exact integer numerator N satisfying `maxabs(N)<2^53`, the float64 cast and subsequent division by2^55 are exact. Thus this input wrapper adds no projection rounding under its checked range conditions. The range guards must be evaluated anew for each generated family; old baseline-ball numerator/delta bounds are not assumed.
+
+The estimator retains the inherited SciPy thin SVD, learned cutoff2^-24, lag-two least squares, eigenvalues and angle arithmetic. q is counted, never assigned209. Only the learned retained columns are saved; the metadata says no full-SVD certificate was executed. This is adequate for a direct source-frame witness on an actual209-column U, but the saved record is not a new fullfactor approximation or rigorous cutoff-order certificate. Phase/eigensystem values remain untrusted witnesses unless separately certified.
+
+The numeric branch permits other odd learned orders to be estimated. Therefore the subsequent fixed209 source-frame validator must explicitly HOLD on any q other than209 and on absent phase metadata; it must not force a slice of209 or silently reinterpret a different order. The wrapper itself writes the learned order even when the phase branch is skipped. No universal library convergence is established by the code. If a numerical exception occurs, retain it explicitly and process/retain the remaining frozen cases rather than substituting a different preparation.
+
+## Fixed policy and proof scope
+
+The old PR224 direct source-frame budget remains applicable algebraically to any measured retained209-column basis with the same reference U0 and validated retained Gram, residual and exact normal-equation premises. The new raw records do not need old original-baseline ball membership for that direct implication. The exact old raw-frame ceiling, Gram cap and normal cap must be copied and hash-bound; the normal cap must not be recomputed from the new outputs.
+
+The current two files do not themselves implement source-frame acceptance. A later validator must bind each raw hash, returned U/T, frozen dyadic X witness, exact residual/Gram/normal fractions, and the unchanged published policy. The review's policy applicability statement is conditional on that binding. Inherited phase/fullfactor/eight-gate conclusions are not being reissued for the new families by this source-frame track.
+
+Suggested checks before/after execution remain: exact permutation/rotation/parity predicates; deterministic RNG call-order replay; integer rounding residue checks; per-new-nominal onehot differences; hash mutation refusal; projection overflow/cast range guards; explicit learned-order HOLD; zero-alignment refusal; fixed cap equality/over-cap refusal. Independently regenerate all raw bytes and reproject before checking the saved frame witnesses.
+
+No record generation, estimator/SVD/projection execution, input mutation, or numerical outcome inspection was performed by this review. Same-team review only; external review pending. Physical Promotion=0.
+
+## Additive audit of validation, alignment, controls and replay
+
+The subsequently supplied `validate.py`, `align.py`, `controls.py` and `replay.py` were also reviewed before any new records or results. Their exact hashes are included in the receipt. `kernel.py` now pins OpenBLAS/OMP thread counts before importing NumPy/SciPy. The copied FIXED_BUDGET.json, PARENT_UNIFORM.json and PUBLISHED_ALLOWANCE.json are byte-identical to the previously reviewed policy/source files.
+
+`constants` requires the protocol's fixed-budget object to equal the copied published source-budget object. `classify` requires q209, the old retained Gram cap, the old normal cap, the strict raw-frame ceiling, and a strict source-bound comparison. A direct shift bound that happens to pass cannot override another failed budget premise. The q-not209 branch produces explicit HOLD and retains the original learned order; it does not attempt an alignment or209-dimensional bound.
+
+The validator hashes every listed numeric witness and checks the run receipt against the global execution table, recipe/data table and raw record hash. The alignment freeze binds the execution/data hashes and proposed X files. The exact Gram, explicit residual, normal and shift squared arithmetic uses the same correctly typed integer exponents as the previously reviewed direct proof. Its comparison to the actual exact shift residual is a useful consistency check. U0 is the hash-pinned previously certified reference, and its source proof remains an inherited dependency rather than a freshly re-proved certificate.
+
+The auxiliary alignment script proposes X by LU only after saved U is returned, without changing U, T, order or caps. It freezes proposed files before exact validation; optimality or inverse accuracy is not trusted. The five finite controls exercise interior acceptance, wrong-order refusal, excessive Gram/normal refusal and strict frame-boundary refusal. They are synthetic policy controls rather than new estimator cases.
+
+The replay loads only the pinned source-basis archive members, repeats exact saved-witness validation and controls, and optionally regenerates all fresh raw records and recomputes integer projections. Regeneration compares the full recorded data table including raw/nominal hashes and recipe metadata; projection digests and range receipts must match. It does not rerun the SVD or acquire new data. Library exceptions in the original estimator wrapper are not converted into explicit HOLD rows, so any actual exceptional run must be retained and reported without replacing its frozen case; no universal convergence is promised.

@@ -1,0 +1,51 @@
+{
+  "artifact_type": "SAME_TEAM_PROSPECTIVE_PREPARATION_DESIGN_REVIEW",
+  "status": "DESIGN_ACCEPTABLE_WITH_EXPLICIT_NEW_NOMINAL_DOMAIN",
+  "reviewed_utc": "2026-10-19T17:40:58.976440+00:00",
+  "notes_sha256": "80150599676c37a17550ef9d1a8382b40171409e1a77160e70eb98f704abb077",
+  "source_policy_sha256": "a7fd2ce87210db905ab2c25116c87ec608ad340f9d191950e3bdaed4e5bf7860",
+  "source_policy_budget_freeze_sha256": "91e0383ef59c4686f73d93b9074ba5026bea01e76c8892f0b546235e8133ef88",
+  "fixed_caps": {
+    "allowed_raw_frame_residual_lower": [
+      381527313601431382856959552268984538841185108,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "retained_Gram_cap": [
+      1,
+      8796093022208
+    ],
+    "normal_cap": [
+      47178096742828133451511969857398525988578,
+      1532495540865888858358347027150309183618739122183602176
+    ]
+  },
+  "recipes_reviewed": [
+    "signedcycle within even19/odd18",
+    "signedshuffle seed219137 within parity with frozen signs",
+    "adjacent within-parity rational3/5,4/5 plane rotations; one unpaired even index"
+  ],
+  "noise_seeds": [
+    219201,
+    219202,
+    219203
+  ],
+  "findings": {
+    "exact_parity_block_orthogonality_before_quantization": true,
+    "prequantization_temporal_span_preservation_only": true,
+    "postsketch_learned209_not_guaranteed": true,
+    "denominator5_nearest_rounding_coordinate_error_max": [
+      2,
+      5
+    ],
+    "denominator5_half_ties_possible": false,
+    "new_nominal_per62_noise_squared_integer_norm_required": 1,
+    "original_raw_ball_eligibility_claimed": false,
+    "per_preparation_energy_preservation_without_Gram_premise_claimed": false,
+    "fixed_direct_source_frame_policy_applicable_with_measured_premises": true,
+    "new_all_eight_gate_fullfactor_or_phase_certificate_claimed": false,
+    "all_HOLDs_and_cases_must_be_retained": true
+  },
+  "scope": "Proposal/math/domain audit only. No new record/nominal generation, data outcomes viewed, estimator/SVD/projection execution or frozen parent mutation. Complete prospective code/manifest must be separately frozen and replayed.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

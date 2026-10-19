@@ -1,0 +1,37 @@
+{
+  "artifact_type": "SAME_TEAM_PREFREEZE_CODE_REVIEW_ADDENDUM",
+  "status": "PASS_PREFREEZE_CODE_WITH_NUMERIC_EXCEPTION_RETENTION",
+  "reviewed_utc": "2026-10-19T17:48:16.805208+00:00",
+  "prior_code_review_sha256": "457c22e42b9da4da92064f043c3b0bab4c8c608c30d50405e913243a366a17ce",
+  "files": {
+    "INPUT_INDEX.json": "420f03d38307c2b57ae76b96e5abed06457565e36615fba8ddc2b72a26774bec",
+    "align.py": "27181e4e33485aa2e1fbd635ca826a51d5de1630bc5db747126a8f24970a2453",
+    "common.py": "ba0b183ceac3ac5692466936a2c02ff20d55486faf3aa3424572189a907866cd",
+    "controls.py": "483d739b13b8b5307ac74b957a637f33ff81ed291af86b3adbf58dfe6fffee29",
+    "inputs/BASE_GENERATION.json": "5cf6b41a6ae1922d1924186784d28ade277146bba809ab4a7360ac4fcb16c52b",
+    "inputs/FIXED_BUDGET.json": "a7fd2ce87210db905ab2c25116c87ec608ad340f9d191950e3bdaed4e5bf7860",
+    "inputs/NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "inputs/PARENT_ESTIMATOR.py": "cd475a225dd2185cbfdad4acd1acb18c5ccf7ccc1329c7c1bdf43c2d115449fe",
+    "inputs/PARENT_UNIFORM.json": "9e5633627fc08f385159b869673930e5e389cb2a799534b7ef3c48603121ed73",
+    "inputs/PUBLISHED_ALLOWANCE.json": "f6e2ad0ea78201f5b5472a25477f99e361d15500117d9146464807b3a956b63b",
+    "kernel.py": "6ce4891798f9c609392610c6c363cef5f5a06aef40877bafb597f74c41706290",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "records.py": "0f59baef036bc1eddf8045766e4d82aba208794f79b2e9ea9a36209f3e4337cf",
+    "replay.py": "f811c9dc42bec21a60fb1aa1ab08b837bb8e69e054424daa9689c9ad6334d361",
+    "validate.py": "439c5cc1674646f194f5bb2ea1d2b523d0da28b1067a670fdaf957ad17f6e1a1"
+  },
+  "reviewed_changes": [
+    "kernel per-case try catches projection/SVD/LS/eigen/angle exceptions, records type/message and HOLD_ESTIMATOR_EXECUTION, retains partial witnesses and continues other frozen cases without retry or retuning.",
+    "align skips non-COMPLETED or non209 cases.",
+    "validate retains explicit numerical HOLD before order/frame acceptance."
+  ],
+  "operational_caveat_resolved": true,
+  "new_policy_thresholds_or_retuning": false,
+  "new_records_or_estimator_or_projection_runs": 0,
+  "new_outputs_viewed": false,
+  "remaining_scope": "Full optional raw-projection replay still correctly refuses if a projection range premise fails. No universal library convergence or guaranteed replay success is asserted.",
+  "review_conclusion": "No material open math/code issue in reviewed fixed-domain protocol; prospective protocol must now freeze these exact bytes before generation.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
