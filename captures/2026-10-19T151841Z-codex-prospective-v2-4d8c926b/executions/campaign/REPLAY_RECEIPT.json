@@ -1,0 +1,61 @@
+{
+  "status": "PASS_COMPLETE_PROSPECTIVE_CAMPAIGN_REPLAY",
+  "mode": "raw_and_saved_factors",
+  "commands": [
+    {
+      "tag": "raw-regeneration",
+      "argv": [
+        "make_records.py",
+        "--regenerate",
+        "/workspace/scratch/f3d1c2f040c9/prospective-v2-clean-replay/campaign/generated"
+      ],
+      "exit_code": 0,
+      "log_sha256": "d15602a05fe183c5e1f13bf358e785678bba3aa57a8972ebb42e6cac21c71dca"
+    },
+    {
+      "tag": "materialize",
+      "argv": [
+        "materialize.py",
+        "--raw-records",
+        "/workspace/scratch/f3d1c2f040c9/prospective-v2-clean-replay/campaign/generated"
+      ],
+      "exit_code": 0,
+      "log_sha256": "838a37f9c688784dd7fb9117f9dbb7b2b4c6d67a1b508e49a645e8dfc2f9be20"
+    },
+    {
+      "tag": "full-factor-certificate",
+      "argv": [
+        "-c",
+        "import full_svd; from bindings import P,freeze\nfor n in freeze()[\"cases\"]:\n full_svd.P=P/\"results\"/n\n full_svd.certify(\"integer_projection\")\n"
+      ],
+      "exit_code": 0,
+      "log_sha256": "735d7475897a0d0b435b972137f2e89a1927672f939815c6b820f56b59b101b4"
+    },
+    {
+      "tag": "original-policy",
+      "argv": [
+        "gates.py",
+        "--replay"
+      ],
+      "exit_code": 0,
+      "log_sha256": "5b49fae9ebfc74100ba6ce37976c79cbc0bda99ca6372bded4ecaeaf5e0abdaa"
+    },
+    {
+      "tag": "published-v2",
+      "argv": [
+        "v2.py",
+        "--repo",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo",
+        "--replay"
+      ],
+      "exit_code": 0,
+      "log_sha256": "510a17b75aa5715b46c317a2611b6a88f37489c88d4ede99646ba6c723af9c85"
+    }
+  ],
+  "new_estimator_or_SVD_runs": 0,
+  "reviewer_identity": null,
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "cases": 3,
+  "helpers_checked_before_after": true
+}

@@ -1,0 +1,68 @@
+{
+  "status": "PASS_EXACT_GATE_COMPARISONS_AND_TWO_ACTUAL_WITNESS_CONTROLS",
+  "rows": [
+    {
+      "case": "rotating_checker",
+      "exact_raw_shift_residual_squared": [
+        "12426819485805997242146151717421527505892463980708068291784235701",
+        "3885337784451458141838923813647037813284813678104279042503624819477808570410416996352"
+      ],
+      "strict_v1_shift_violation": false,
+      "v1_gate_ratio_upper": [
+        1231643510928964947357187404577,
+        1267650600228229401496703205376
+      ],
+      "v1_gate_ratio_lower": [
+        1231643510928964947357187404576,
+        1267650600228229401496703205376
+      ]
+    },
+    {
+      "case": "block128",
+      "exact_raw_shift_residual_squared": [
+        "87945740427219851701350523999589616407971414601974487878470445737",
+        "31082702275611665134711390509176302506278509424834232340028998555822468563283335970816"
+      ],
+      "strict_v1_shift_violation": false,
+      "v1_gate_ratio_upper": [
+        1158423714417279335085036660686,
+        1267650600228229401496703205376
+      ],
+      "v1_gate_ratio_lower": [
+        1158423714417279335085036660685,
+        1267650600228229401496703205376
+      ]
+    },
+    {
+      "case": "directed_period4",
+      "exact_raw_shift_residual_squared": [
+        "217835564029038191422395580635752587649858198933452912141757021061",
+        "1942668892225729070919461906823518906642406839052139521251812409738904285205208498176"
+      ],
+      "strict_v1_shift_violation": true,
+      "v1_gate_ratio_upper": [
+        7292634006261174094540531926565,
+        1267650600228229401496703205376
+      ],
+      "v1_gate_ratio_lower": [
+        7292634006261174094540531926564,
+        1267650600228229401496703205376
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "name": "zero_inverse_actual_saved_eigensystem",
+      "exact_inverse_residual_squared": 209,
+      "status": "HOLD_V2",
+      "failed_gate": "inverse_residual"
+    },
+    {
+      "name": "one_integer_projected_entry_mutation",
+      "status": "REFUSED_PROJECTION_HASH",
+      "original_arrays_unchanged": true
+    }
+  ],
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS_FULL_PROSPECTIVE_V2_REPLAY_AND_CONTROLS",
+  "commands": [
+    {
+      "tag": "campaign",
+      "argv": [
+        "replay.py",
+        "--repo",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/prospective-v2-clean-replay/campaign",
+        "--baseline",
+        "/workspace/scratch/f3d1c2f040c9/floating-timing-work/records/ramp_clock_stress.i64le"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e7650a5d0dd638ab5908a2afaead11b3c3e3c66bd664d34970bcdd8ca6898199"
+    },
+    {
+      "tag": "supplement",
+      "argv": [
+        "supplement.py",
+        "--repo",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo",
+        "--replay"
+      ],
+      "exit_code": 0,
+      "log_sha256": "eeefd75264790338ee8e02348597b62d37905604d139de40e974ec72697430cf"
+    }
+  ],
+  "reviewer_identity": null,
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "cases": 3,
+  "new_estimator_or_SVD_runs": 0,
+  "mode": "raw_and_saved_factors",
+  "parent_receipt_sha256": "bf9cf293e39b957d99c9ed7ab3c823693214ca7ce423ff3919d9d0b2368e87e3"
+}

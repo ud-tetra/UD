@@ -1,0 +1,74 @@
+{
+  "frozen_at_utc": "2026-10-19T15:12:53.834530+00:00",
+  "cases": [
+    "rotating_checker",
+    "block128",
+    "directed_period4"
+  ],
+  "baseline": "floating-timing-work/records/ramp_clock_stress.i64le",
+  "baseline_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "integer_anchor": [
+    {
+      "path": "rounding-replay-work/results/INTEGER_0.npz",
+      "sha256": "c71aefe2fb6d12e8f448e71d347312506a664185255b986d933a0842f7ae2ffb"
+    },
+    {
+      "path": "rounding-replay-work/results/INTEGER_1.npz",
+      "sha256": "bc3cb079e987d5e1450f7c24d68ad39cce603314da30f725463d2fc889bd51f8"
+    },
+    {
+      "path": "rounding-replay-work/results/INTEGER_2.npz",
+      "sha256": "5ae1a7979fa4b574911798d7f2728bf5c128cd41ec1a51bfedb9bb7237e4dbae"
+    }
+  ],
+  "code_sha256": {
+    "bindings.py": "6a212358f13b8fe66c8358e8206be146c40d66347091f80d90994f812b7a23bf",
+    "full_svd.py": "1bee163e870fb97ca8a722f9580e52a271cb5ca6954e453c79ff2db3764bbe55",
+    "gates.py": "334ad951fef449f1e0eb2dba50b47806c469b23cea53b8d2757fc2f732f330b3",
+    "make_records.py": "7282fd9974f08a59b2d452882f2e8c997fe6e7792e46d0b61c556a89584503df",
+    "materialize.py": "ccde50052732a048e66b2c9f9aeba259327bf97b5216b8dead03c5615fb538be",
+    "offline_intake.py": "762812090623d5aefa8f736e78d8abe46a0c62f3f9221e244a1a117179af10ab",
+    "replay.py": "56834f99a182fc40812530d4ea36832b8ff4cd598f5c084e1d89bb6cf945bddf",
+    "run.py": "cd475a225dd2185cbfdad4acd1acb18c5ccf7ccc1329c7c1bdf43c2d115449fe",
+    "sketch.py": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+    "v2.py": "b84ba493ce82ebc497372e39498c32dd6d3664ad3bbb63219ca761b49c9db347"
+  },
+  "inputs_sha256": {
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "PARENT_GATE_FREEZE.json": "46a5d21e1cb0ab79e6adf1f6ca0c1049fe35696254722c8e635bdcf16c4a34f9",
+    "SPATIAL_SELECTION.json": "83cee22b4a0609f98c2ad01851d604bb072749ded700db4342fa042fdbd17585",
+    "UNIFORM_CERTIFICATE.json": "c35789cf6dca5bd5ace4760f9f5c6d3db3b06e6595ce55ef1c00f694e6c508f2"
+  },
+  "helper_sha256": {
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d"
+  },
+  "source_cutoff": [
+    1,
+    16777216
+  ],
+  "raw_vector_noise": [
+    1,
+    281474976710656
+  ],
+  "no_source_phases_loaded_by_proposer": true,
+  "known_source_sensitivity_design": true,
+  "not_blinded": true,
+  "all_cases_and_HOLDs_retained": true,
+  "gates_unchanged_from_PR210": true,
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "v2_capture": {
+    "id": "2026-10-19T144404Z-codex-source-shift-v2-b3f742ce",
+    "manifest_sha256": "2e96561aa767063736d02a597fa1d89aca5c5a3c9f290ca97e64aa53220e8e22"
+  },
+  "recipes": {
+    "rotating_checker": "channel=(preparation+3*time)%62; sign=(-1)^(preparation+time)",
+    "block128": "default_rng219101; shape(37,64); channelsintegers0..61first, signsintegers0..1next; constantblock128; final127",
+    "directed_period4": "PR212frozen spatial37table times[+1,+1,-1,-1]repeated; no newspatialselector"
+  },
+  "prospective_relative_to_published_v2": true,
+  "policies_changed": false,
+  "same_team_design_review_sha256": "6bb98d798a29b7e172ff6a55b39dab8cc256337ef0668ad3531a06bc66cf3e24"
+}
