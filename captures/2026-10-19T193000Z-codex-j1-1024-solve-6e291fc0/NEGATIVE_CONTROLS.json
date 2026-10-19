@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "expected_rejections": [
+    {
+      "name": "zero_state",
+      "rejected": true,
+      "diagnostic": "AssertionError: raw algebraic1e-10 budget"
+    },
+    {
+      "name": "nonfinite_word",
+      "rejected": true,
+      "diagnostic": "ValueError: cannot convert NaN to integer ratio"
+    },
+    {
+      "name": "truncated_low_word",
+      "rejected": true,
+      "diagnostic": "AssertionError"
+    }
+  ]
+}
