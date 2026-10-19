@@ -1,0 +1,31 @@
+{
+  "artifact_type": "SAME_TEAM_PREFREEZE_FINDINGS",
+  "timestamp_utc": "2026-10-19T19:13:24.511261+00:00",
+  "reviewed_sha256": {
+    "apparatus.py": "d9c8c1bda082b3aede7b13536ee2d17c7beb18d8d816adba6bc3df345f33b22d",
+    "APPARATUS_CONTRACT.json": "a7742bb0333f8877e2418152c9bd8af7be1fb6d20a3bd9b1dfe76115b3768653",
+    "CONTROL_FIXTURES.json": "f59485b288c05ab8eab73f9f6f0f5d73704112df6cb907a623f7d02cb246fe9b",
+    "APPARATUS_PACKET_TEMPLATE.json": "986aaf1c11646b14812e1a4b9458ae7501891bbb9eef74d123b898e67cb54047",
+    "replay.py": "163b10ba3e295921c8a9596f84be6b3bba5f6f6de6339e244841f79a72a1a4f6"
+  },
+  "wrapper_fix_seen": true,
+  "findings": [
+    {
+      "id": "schema-container-types",
+      "status": "RECOMMENDED_BEFORE_FREEZE",
+      "detail": "Require channel_map list of exact ints, and calibration/validation_source_ids nonempty lists of nonempty strings; set/len alone accepts malformed-but-hashable objects."
+    },
+    {
+      "id": "inverse-gain-denominator",
+      "status": "CLARIFICATION_BEFORE_FREEZE",
+      "detail": "Gain minimum must bound absolute applied decoder denominator ghat, not just true gain, for displayed inverse-gain bound."
+    },
+    {
+      "id": "sketch-norm-direction",
+      "status": "CLARIFICATION_BEFORE_FREEZE",
+      "detail": "Use explicit kA=sqrt738137/4096>=||A||2; an upper limit on kA alone does not establish operator domination."
+    }
+  ],
+  "scope": "Read-only source/contract review; no controls, records or estimators executed. All apparatus outputs always physical HOLD.",
+  "physical_promotion": 0
+}

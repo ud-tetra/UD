@@ -1,0 +1,119 @@
+{
+  "artifact_type": "SAME_TEAM_BOUNDED_PREPARATION_NOISE_FAMILY_MATH_REVIEW",
+  "status": "PASS_UNIFORM_EXACT_CUTOFF_THEOREM_WITH_EXPLICIT_PREMISES",
+  "reviewed_utc": "2026-10-19T19:07:37.925578+00:00",
+  "notes_sha256": "0a79f7d5b841c5c0e06a48afac270bfe6f4133a1b34c5a7cb7bc7bbb823f0f17",
+  "independent_source_arithmetic_receipt_sha256": "eaa9dcf34fbe84b9d841271b1c5da07a053767ab34e0e4695382006c3398def2",
+  "source_arithmetic_freeze_sha256": "475d7169e60038c8c8c608bf30e766a17f87ceb46826159e1fce364891604f5a",
+  "baseline_norm_squared_recomputed_from_all_encoded_entries": true,
+  "sketch_Frobenius_squared_recomputed": [
+    738137,
+    4096
+  ],
+  "nscalar": 18790154,
+  "nvector": 303067,
+  "anchor_noise_radius": [
+    1,
+    281474976710656
+  ],
+  "new_family_noise_radius": "delta; optional encoded delta=m*2^-48",
+  "anchor_distance_bound": "k*(F0*rho+h*sqrt(nscalar)+(delta+h)*sqrt(nvector))",
+  "uniform_tail_bound": "k*((d0+h/2)*sqrt(nscalar)+delta*sqrt(nvector))",
+  "sufficient_guarantee": "tail<cut, minimum_anchor_sigma209_lower-distance>cut, at unchanged cut=2^-24",
+  "source_contour_maximum_integer_m": 1127,
+  "conservative_floor_minus_one_m": 1126,
+  "independent_source_arithmetic_rows": [
+    {
+      "policy": "maximum_strict_integer_for_this_tail_contour",
+      "m": 1127,
+      "delta": [
+        1127,
+        281474976710656
+      ],
+      "rho": [
+        1,
+        1048576
+      ],
+      "rho_exponent": 20,
+      "sigma209_lower": [
+        2457814059033258512180633028626549715398482901516933,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "sigma210_upper": [
+        45663068627346412654356292161824338261336538040,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "critical_rho_upper": [
+        1826900502632228952456272441680519692330528941223,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "critical_rho_lower": [
+        1826900502632228952456272441680519692330528941222,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "strict_cutoff_guarantee_at_closed_chosen_radius": true,
+      "readable": {
+        "delta": 4.0039083160081645e-12,
+        "rho": 9.5367431640625e-07,
+        "sigma209_lower": 0.0016037985060919312,
+        "sigma210_upper": 2.979654257365468e-08
+      }
+    },
+    {
+      "policy": "floor_minus_one_conservative",
+      "m": 1126,
+      "delta": [
+        1126,
+        281474976710656
+      ],
+      "rho": [
+        1,
+        1048576
+      ],
+      "rho_exponent": 20,
+      "sigma209_lower": [
+        2457814099269487062013035127883480099869827621434053,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "sigma210_upper": [
+        45622832398796580252257035231439866916616620920,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "critical_rho_upper": [
+        1826900520577674521431709839092712102989697042610,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "critical_rho_lower": [
+        1826900520577674521431709839092712102989697042609,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "strict_cutoff_guarantee_at_closed_chosen_radius": true,
+      "readable": {
+        "delta": 4.000355602329364e-12,
+        "rho": 9.5367431640625e-07,
+        "sigma209_lower": 0.0016037985323472954,
+        "sigma210_upper": 2.9770287209461517e-08
+      }
+    }
+  ],
+  "required_premises": [
+    "Pinned source matrix of temporal rank<=209 with uniform entrywise error d0.",
+    "Exactly orthogonal real preparation map; same-parity condition preserves clock-class semantics.",
+    "Operator distance to a declared anchor<=rho (Frobenius distance<=rho also suffices).",
+    "Each new preparation/time62-vector noise norm<=delta; anchor noise norm<=h.",
+    "E in hZ^N required additionally for encoded/int64 backend claims.",
+    "Actual anchor sigma209 lower corresponds to its rounded nominal and anchor noise.",
+    "Strict inequalities validated at exact chosen closed-family radius."
+  ],
+  "minimal_assumption_findings": [
+    "No extra sqrt62/37 factor in F0*rho; repeated prep block has same operator norm.",
+    "Tail independent ofrho follows from orthogonality and source rank, not from lower excitation.",
+    "Same-parity not needed for the aggregate rank/Frobenius inequality, but keeps preparation classes distinct.",
+    "Generic same-parity orthogonal quarter-turn counterexample shows no global sketch excitation without anchor margin.",
+    "Floor-minus-one is conservative; maximality requires next integer contour refusal and never means actual noise tolerance."
+  ],
+  "new_records_or_estimator_or_phase_runs": 0,
+  "scope": "Uniform exact projected-matrix cutoff only. No library convergence, fullfactor quality, normal/eigenpair/phase gate, old8policy, empirical apparatus or SI guarantee. Independent arithmetic expression within same team, not external review.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
