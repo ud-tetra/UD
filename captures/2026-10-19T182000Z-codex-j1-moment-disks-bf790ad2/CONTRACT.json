@@ -1,0 +1,52 @@
+{
+  "title": "Fixed J1 volume port: continuum moment disks and explicit output acceptance test v0.1",
+  "base": "88b76a35e741f9a5da786effd9a38d6cc80e6b53",
+  "classification": "DERIVED_EXACT_CONDITIONAL",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "independent_review": false,
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "33c1dff1e4659d5430dce8bfe3d5caf69802a542e98b1d750d4347fec0081966"
+    },
+    {
+      "path": "captures/2026-10-19T181100Z-codex-j1-edgewise-6f281bc4/REPORT.md",
+      "sha256": "c52eac70172eca63175c5a18e62fc65ebeb61b403995983be4ae45a0c013702e"
+    },
+    {
+      "path": "captures/2026-10-19T181100Z-codex-j1-edgewise-6f281bc4/RESULTS.json",
+      "sha256": "a72643ae9db1abbbcbc1cdd28e9be775063189a2d79142f308cfe176a9cc1154"
+    },
+    {
+      "path": "captures/2026-10-19T181100Z-codex-j1-edgewise-6f281bc4/red_flux.py",
+      "sha256": "e441d1346f5f6f079a7b60dcc5251a257dd8995624b7352271d9be9eaa36a48b"
+    },
+    {
+      "path": "captures/2026-10-19T181100Z-codex-j1-edgewise-6f281bc4/WITNESS.json",
+      "sha256": "f253a4b969429a46240dc39c430cbc26ea1e5ca6deb100584177dbb370840248"
+    },
+    {
+      "path": "user_attachment/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "path": "user_attachment/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "source_inputs": "INPUT_RESULTS.json is a byte-identical copy of the merged PR229 exact posterior certificate. New transform uses that certificate, not a new solve or experiment.",
+  "model": "Same meanfree Neumann scalar wave on normalized J1, F=10(x+y), z=-omega\u00b2+2i gamma omega, gamma external. Continuum gap4, F L2 norm\u00b220, gradient norm\u00b2400, H(0)<=1.206865. No discrete spectral-gap substitution.",
+  "exact_scope": "Rational circle parameters, outward square-root bounds, rational half-plane intersection and convex-vertex distance bound. Three formal polynomial identities in8 variables. Three exact two-atom controls; three negative-frequency conjugation checks; three rejection/gate controls.",
+  "target": "Constructor-set audit target1/10 absolute dimensionless output error; evaluation allowance1e-10. No experimental preregistration or independent approval is asserted.",
+  "stopping_scope": "Sufficient pointwise and uniform-band conditions only. Dynamic samples fail target; entire band is not covered; no algorithmic termination proof.",
+  "alignment": "Ledger incidence/support entries do not select a native UD metric action or damping. CRL2 attachment remains a governance proposal. No source/registry edits.",
+  "unavailable_attachment": "Gap2_FINAL_Finite_Genesis.png not read/used; reupload requested",
+  "open": [
+    "dynamic1/10 accuracy",
+    "entire-band coverage",
+    "scalable refined/dual certificates and stopping termination",
+    "independent review",
+    "native UD source/action/units bridge and physical calibration"
+  ]
+}
