@@ -1,0 +1,80 @@
+{
+  "artifact_type": "SAME_TEAM_MATH_AND_CODE_REVIEW",
+  "status": "PASS_SCOPED_REVIEW_NO_MATERIAL_OPEN_ISSUE",
+  "reviewed_utc": "2026-10-19T17:22:03.583671+00:00",
+  "target": "floating-budget-work/budget_v2.py and direct.py",
+  "parent_core_freeze_sha256": "9ce7704f916c99db6e666b09b604177d2bb5465efd559a84bf363ab404b9d840",
+  "parent_budget_amendment_freeze_sha256": "91e0383ef59c4686f73d93b9074ba5026bea01e76c8892f0b546235e8133ef88",
+  "parent_replay_freeze_sha256": "21ae5c21740b9e0bf7cb91e97698779dc7bfd5e16b2b43681f17c8b8309e24e1",
+  "independent_arithmetic_check": {
+    "result": "PASS_THREE_EXACT_EXPANDED_CROSSGRAM_FRACTION_MATCHES",
+    "receipt_sha256": "aff006f0068ae44ca8e2909da760d7ba67330221c38ed6fb7f9d95f1bfa4bce2",
+    "formula": "trace(G1)+trace(X^T G0 X)-2trace(X^T H01)",
+    "parent_direct_expression": "explicit dyadic U1-U0X subtraction",
+    "retained_Gram_bounds_verified": true,
+    "exact_PR217_normal_and_shift_fraction_lineage_verified": true,
+    "source_input_witness_code_hashes_before_after_equal": true
+  },
+  "independent_expression_diagnostic": {
+    "status": "PASS_INDEPENDENT_DECIMAL_EXPRESSION_DIAGNOSTIC",
+    "receipt_sha256": "6dea8e500a258e363af34bad7280fd99f4d5e85200cf905278ba1bce73e7bb90",
+    "precision_digits": 140,
+    "method": "stdlib Decimal; 400-step monotone bisection of factorized scalar selfmap, no parent code import",
+    "exact_directed_dyadic_budget_and_bracket_matches": true,
+    "enclosure_authority": false
+  },
+  "code_math_findings": [
+    "Arbitrary dyadic X is valid: projection annihilates U0X; no inverse or optimality validation of X is needed.",
+    "Actual retained Gram controls U1 polar normalization; no full321 polar triangle correction is needed in direct route.",
+    "Alignment bound measures admitted input perturbation plus numerical effects; it is not roundoff alone.",
+    "Same-U/T exact normal residual supports actual returned least-squares Pythagorean bound.",
+    "All direct residual, Gram, normal and shift squared dyadic exponents reviewed; exact cross-Grams confirm residual fractions.",
+    "Scalar Frobenius quality contour is sufficient only with stated source/Gram/normal premises; fixed dyadic graph witness is verified at lower/upper contour endpoints.",
+    "Comparisons are strict; equality and failed sufficient contours are proof refusal, not an estimator failure theorem.",
+    "No blanket floating solver admission or uniform BLAS/SVD/lstsq convergence follows."
+  ],
+  "corrections_preserved": [
+    {
+      "scope": "parent pre-budget-evaluation",
+      "issue": "Original draft displayed rounded-down graph radius despite evaluating expression radius.",
+      "resolution": "budget_v2 evaluates the exact dyadic witness before deriving scalar frontier; separately frozen before execution; original unused budget.py retained."
+    },
+    {
+      "scope": "review-only diagnostic",
+      "issue": "First Decimal diagnostic used rounded subtraction for exact endpoint-gap equality.",
+      "resolution": "Exact Fraction gap check in separately frozen budget_diagnostic_v2.py; original script, freeze and failed log retained; no parent output changed."
+    }
+  ],
+  "outcome_summary": {
+    "direct_source_frame_route": "PASS all three archived outputs",
+    "scalar_F_route": "HOLD for all three archived fullfactor certificates, not estimator failure",
+    "raw_frame_residual_budget_lower": 2.4895818841068944e-10,
+    "scalar_F_sufficient_budget_lower": 1.73686299125739e-13,
+    "published_strict_shift_allowance_lower": 5.563206409135e-10,
+    "rows": [
+      {
+        "case": "rotating_checker",
+        "actual_returned_shift_source_bound_upper": 8.419017102142668e-11
+      },
+      {
+        "case": "block128",
+        "actual_returned_shift_source_bound_upper": 8.492630351661678e-11
+      },
+      {
+        "case": "directed_period4",
+        "actual_returned_shift_source_bound_upper": 3.938477713310011e-10
+      }
+    ]
+  },
+  "clean_parent_replay": {
+    "status": "PASS_CLEAN_FLOATING_OUTPUT_SOURCE_BUDGET_REPLAY",
+    "receipt_sha256": "0be6679ae2dc8767bc9523f5974d138e71c84d1b3efcd7b2bd25d70a8c9d9550",
+    "data_only_members": 17,
+    "bytes": 77356154,
+    "controls": 5,
+    "logs_hashes_verified": true
+  },
+  "scope": "Same-team post-known-output read-only review plus independent arithmetic expressions; no external review, no new estimator/SVD/raw generation, no rerun of inherited fullfactor/raw/other7gate proofs. Parent and extracted source files were not modified.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
