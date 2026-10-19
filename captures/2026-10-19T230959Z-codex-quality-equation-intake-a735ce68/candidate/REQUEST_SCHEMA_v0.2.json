@@ -1,0 +1,3094 @@
+{
+  "$comment": "This frozen null request is a form, not calibration evidence or raw authorization. Later evidence responses require a new version and independent review.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_type": {
+      "const": "UD_SOURCE_SPECIFIC_PRE_RAW_REQUEST",
+      "type": "string"
+    },
+    "calibration": {
+      "additionalProperties": false,
+      "properties": {
+        "amplitude_channels": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "applied_gain_V_per_nominal_V": {
+                "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "applied_offset_V": {
+                "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "channel": {
+                "maximum": 10,
+                "minimum": 1,
+                "type": "integer"
+              },
+              "evidence": {
+                "additionalProperties": false,
+                "properties": {
+                  "authority": {
+                    "maxLength": 4096,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "bytes": {
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "role": {
+                    "const": "amplitude_calibration",
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "pattern": "^[0-9a-f]{64}$",
+                    "type": "string"
+                  },
+                  "uri": {
+                    "maxLength": 4096,
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "role",
+                  "uri",
+                  "sha256",
+                  "bytes",
+                  "authority"
+                ],
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "gain_interval": {
+                "additionalProperties": false,
+                "properties": {
+                  "lower": {
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "upper": {
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ],
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "nonlinearity_bound_V_per_sample": {
+                "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "offset_interval_V": {
+                "additionalProperties": false,
+                "properties": {
+                  "lower": {
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "upper": {
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ],
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "quantization_and_noise_bound_V_per_sample": {
+                "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "valid_input_range_nominal_V": {
+                "additionalProperties": false,
+                "properties": {
+                  "lower": {
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "upper": {
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ],
+                "type": [
+                  "object",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "channel",
+              "applied_gain_V_per_nominal_V",
+              "gain_interval",
+              "offset_interval_V",
+              "nonlinearity_bound_V_per_sample",
+              "quantization_and_noise_bound_V_per_sample",
+              "valid_input_range_nominal_V",
+              "evidence",
+              "applied_offset_V"
+            ],
+            "type": "object"
+          },
+          "maxItems": 10,
+          "minItems": 10,
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "anti_alias": {
+          "additionalProperties": false,
+          "properties": {
+            "declared_input_band_Hz": {
+              "additionalProperties": false,
+              "properties": {
+                "lower": {
+                  "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "upper": {
+                  "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "lower",
+                "upper"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "domain_and_transfer_proof": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "anti_alias_transfer",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "inband_response_vector_error_V": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "out_of_band_alias_vector_error_V": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "declared_input_band_Hz",
+            "inband_response_vector_error_V",
+            "out_of_band_alias_vector_error_V",
+            "domain_and_transfer_proof"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "independently_accepted_calibration_authority": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "external_calibration_authority",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "joint_error": {
+          "additionalProperties": false,
+          "properties": {
+            "allocation_no_double_counting": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "joint_error_allocation",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "coverage_fraction": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "deterministic_proof": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "joint_deterministic_enclosure",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "epsilon_vector_V": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "population_and_dependence": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "statistical_population_dependence",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "route": {
+              "enum": [
+                "DETERMINISTIC_JOINT_ENCLOSURE",
+                "JUSTIFIED_STATISTICAL_SIMULTANEOUS_COVERAGE",
+                null
+              ],
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "scope": {
+              "additionalProperties": false,
+              "properties": {
+                "coverage_domain_and_population_description": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "reviewer_or_authority": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "scope": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "sha256": {
+                      "pattern": "^[0-9a-f]{64}$",
+                      "type": "string"
+                    },
+                    "uri": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "uri",
+                    "sha256",
+                    "reviewer_or_authority",
+                    "scope"
+                  ],
+                  "type": [
+                    "object",
+                    "null"
+                  ]
+                },
+                "covered_channel_numbers": {
+                  "const": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                  ],
+                  "items": {
+                    "maximum": 10,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  "maxItems": 10,
+                  "minItems": 10,
+                  "type": "array"
+                },
+                "crop_start_inclusive": {
+                  "minimum": 0,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "crop_stop_exclusive": {
+                  "minimum": 1,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "custodian_manifest_evidence": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "reviewer_or_authority": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "scope": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "sha256": {
+                      "pattern": "^[0-9a-f]{64}$",
+                      "type": "string"
+                    },
+                    "uri": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "uri",
+                    "sha256",
+                    "reviewer_or_authority",
+                    "scope"
+                  ],
+                  "type": [
+                    "object",
+                    "null"
+                  ]
+                },
+                "group_count": {
+                  "minimum": 1,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "independent_coverage_domain_review": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "reviewer_or_authority": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "scope": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "sha256": {
+                      "pattern": "^[0-9a-f]{64}$",
+                      "type": "string"
+                    },
+                    "uri": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "uri",
+                    "sha256",
+                    "reviewer_or_authority",
+                    "scope"
+                  ],
+                  "type": [
+                    "object",
+                    "null"
+                  ]
+                },
+                "no_other_source_count_or_crop_assumed": {
+                  "const": true,
+                  "type": "boolean"
+                },
+                "record_count": {
+                  "minimum": 1,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "samples_per_record": {
+                  "minimum": 1,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "source_persistent_id": {
+                  "const": "doi:10.11588/DATA/6MEKHI/NH8JC2",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_persistent_id",
+                "custodian_manifest_evidence",
+                "independent_coverage_domain_review",
+                "record_count",
+                "group_count",
+                "samples_per_record",
+                "crop_start_inclusive",
+                "crop_stop_exclusive",
+                "covered_channel_numbers",
+                "coverage_domain_and_population_description",
+                "no_other_source_count_or_crop_assumed"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "simultaneous_coverage_proof": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "statistical_simultaneous_coverage",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "route",
+            "scope",
+            "epsilon_vector_V",
+            "allocation_no_double_counting",
+            "deterministic_proof",
+            "coverage_fraction",
+            "population_and_dependence",
+            "simultaneous_coverage_proof"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "timebase": {
+          "additionalProperties": false,
+          "properties": {
+            "band_or_derivative_domain_proof": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "time_warp_domain",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "evidence": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "timebase_calibration",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "grid_model": {
+              "enum": [
+                "COMMON_UNIFORM_GRID_WITH_BOUNDED_WARP",
+                null
+              ],
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "interchannel_skew_s": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "origin_uncertainty_s": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rate_interval_Hz": {
+              "additionalProperties": false,
+              "properties": {
+                "lower": {
+                  "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "upper": {
+                  "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "lower",
+                "upper"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "sample_jitter_s": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "warp_to_waveform_vector_error_V": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "grid_model",
+            "rate_interval_Hz",
+            "origin_uncertainty_s",
+            "interchannel_skew_s",
+            "sample_jitter_s",
+            "warp_to_waveform_vector_error_V",
+            "band_or_derivative_domain_proof",
+            "evidence"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "validated_computation": {
+          "additionalProperties": false,
+          "properties": {
+            "DC_error_V": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "FFT_window_normalization_rounding_proof": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "validated_rounding",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "PR246_AGREEMENT_IS_NOT_A_ROUNDING_PROOF": {
+              "const": true,
+              "type": "boolean"
+            },
+            "RMS_error_V": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "implementation_version_and_precision": {
+              "additionalProperties": false,
+              "properties": {
+                "authority": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "bytes": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "role": {
+                  "const": "numerical_implementation",
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "maxLength": 4096,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "operator": {
+              "enum": [
+                "PR246_RECT_HANN_DEMEAN_ONE_SIDED_POWER",
+                null
+              ],
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "spectral_amplitude_error_V": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "operator",
+            "implementation_version_and_precision",
+            "FFT_window_normalization_rounding_proof",
+            "DC_error_V",
+            "RMS_error_V",
+            "spectral_amplitude_error_V",
+            "PR246_AGREEMENT_IS_NOT_A_ROUNDING_PROOF"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "independently_accepted_calibration_authority",
+        "amplitude_channels",
+        "timebase",
+        "anti_alias",
+        "joint_error",
+        "validated_computation"
+      ],
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "channel_roles_filename_only": {
+      "items": false,
+      "maxItems": 10,
+      "minItems": 10,
+      "prefixItems": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "site1",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 2,
+              "type": "integer"
+            },
+            "role": {
+              "const": "link1",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 3,
+              "type": "integer"
+            },
+            "role": {
+              "const": "site2",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 4,
+              "type": "integer"
+            },
+            "role": {
+              "const": "link2",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 5,
+              "type": "integer"
+            },
+            "role": {
+              "const": "site3",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 6,
+              "type": "integer"
+            },
+            "role": {
+              "const": "link3",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 7,
+              "type": "integer"
+            },
+            "role": {
+              "const": "site4",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 8,
+              "type": "integer"
+            },
+            "role": {
+              "const": "link4",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 9,
+              "type": "integer"
+            },
+            "role": {
+              "const": "empty",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": 10,
+              "type": "integer"
+            },
+            "role": {
+              "const": "site5",
+              "type": "string"
+            },
+            "verified_wiring": {
+              "additionalProperties": false,
+              "properties": {
+                "reviewer_or_authority": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "uri": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uri",
+                "sha256",
+                "reviewer_or_authority",
+                "scope"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "role",
+            "verified_wiring"
+          ],
+          "type": "object"
+        }
+      ],
+      "type": "array"
+    },
+    "drive": {
+      "additionalProperties": false,
+      "filename_tag": {
+        "const": "Vdrv=0.050V",
+        "type": "string"
+      },
+      "properties": {
+        "actual_amplitude_interval_V": {
+          "additionalProperties": false,
+          "properties": {
+            "lower": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "upper": {
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "lower",
+            "upper"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "calibration_evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "filename_tag": {
+          "const": "Vdrv=0.050V",
+          "type": "string"
+        },
+        "source_work_and_loss_feedback_history": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "waveform_frequency_phase_history": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "filename_tag",
+        "actual_amplitude_interval_V",
+        "waveform_frequency_phase_history",
+        "source_work_and_loss_feedback_history",
+        "calibration_evidence"
+      ],
+      "type": "object"
+    },
+    "exposure": {
+      "additionalProperties": false,
+      "properties": {
+        "independent_custody_review": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "independent_exposure_review": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "local_raw_inspected": {
+          "const": false,
+          "type": "boolean"
+        },
+        "notebook_outputs_inspected": {
+          "const": false,
+          "type": "boolean"
+        },
+        "public_candidate_derived_parameter_use": {
+          "const": true,
+          "type": "boolean"
+        },
+        "public_figure_sections": {
+          "const": [
+            "Fig 7",
+            "Fig 4",
+            "Fig 8"
+          ],
+          "type": "array"
+        },
+        "public_notebook_exact_path_used": {
+          "const": true,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "public_notebook_exact_path_used",
+        "public_figure_sections",
+        "public_candidate_derived_parameter_use",
+        "local_raw_inspected",
+        "notebook_outputs_inspected",
+        "independent_custody_review",
+        "independent_exposure_review"
+      ],
+      "type": "object"
+    },
+    "fresh_confirmation_request": {
+      "additionalProperties": false,
+      "properties": {
+        "independent_custody_and_prior_exposure_review": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "model_and_score_frozen_before_all_outcome_access": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "new_acquisition_or_demonstrably_unseen_source": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "new_source_specific_channel_calibration_time_alias_joint_budget": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "nonconstructor_review_and_custodian_ruling": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "selection_independent_of_outcomes": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "new_acquisition_or_demonstrably_unseen_source",
+        "selection_independent_of_outcomes",
+        "independent_custody_and_prior_exposure_review",
+        "new_source_specific_channel_calibration_time_alias_joint_budget",
+        "model_and_score_frozen_before_all_outcome_access",
+        "nonconstructor_review_and_custodian_ruling"
+      ],
+      "type": "object"
+    },
+    "identity_scope": {
+      "const": "Published metadata only; MD5 not independently checked and no raw SHA256 supplied.",
+      "type": "string"
+    },
+    "known_groups": {
+      "minimum": 1,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "known_records": {
+      "minimum": 1,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lane": {
+      "const": "development \u2014 no registry entry",
+      "type": "string"
+    },
+    "physical_model_comparison": {
+      "additionalProperties": false,
+      "properties": {
+        "acquisition_configuration": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "acquisition_configuration",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "alternative_equations_parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "alternative_model",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "alternative_physical_justification": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "alternative_justification",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "bootstrap_or_pvalues": {
+          "const": false,
+          "type": "boolean"
+        },
+        "claimed_confirmatory_on_existing_PR246": {
+          "const": false,
+          "type": "boolean"
+        },
+        "comparison_design": {
+          "enum": [
+            "RETROSPECTIVE_EXISTING_PUBLIC_ONLY",
+            null
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "drive_feedback_loss_history": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "drive_feedback_loss",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "energy_source_work_and_model_discrepancy": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "energy_source_work_model_discrepancy",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "equations_parameters_domains_units": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "physical_model_equations_parameters",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "failed_integration": {
+          "const": "HOLD_NO_IMPUTATION",
+          "type": "string"
+        },
+        "family": {
+          "enum": [
+            "COMPLEX_OSCILLATOR_THREE_WAVE_MIXING",
+            null
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fresh_validation_calibration_and_error_budget": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "fresh_validation_error_budget",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "fresh_validation_source": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "fresh_validation_source",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "frozen_fit_solver_bounds_tiebreak": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "fit_preregistration",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "heldout_scoring_and_error_allocation": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "heldout_scoring_preregistration",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "independent_unseen_lineage": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "independent_unseen_lineage",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "link_amplitude": {
+          "enum": [
+            "AMPLITUDE_DEPENDENT_COMPLEX_OSCILLATOR_NOT_UNIT_MODULUS_ROTOR",
+            null
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "margin_rationale_before_new_fit": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "selection_margin_rationale",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "preparation_initial_state_and_uncertainty": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "preparation_state_uncertainty",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "retune_after_hold": {
+          "const": false,
+          "type": "boolean"
+        },
+        "score_observable": {
+          "enum": [
+            "CALIBRATED_VOLTAGE_VECTOR_L2_AND_MAX_ABS",
+            null
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "selection_margin_V": {
+          "pattern": "^-?[0-9]+/[1-9][0-9]*$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state_action_readout_map": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "state_action_readout",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "state_estimation_and_model_prediction_error_budget": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "bytes": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "role": {
+              "const": "state_prediction_error_budget",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "training_only_fit": {
+          "const": true,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "family",
+        "link_amplitude",
+        "equations_parameters_domains_units",
+        "state_action_readout_map",
+        "acquisition_configuration",
+        "preparation_initial_state_and_uncertainty",
+        "drive_feedback_loss_history",
+        "energy_source_work_and_model_discrepancy",
+        "alternative_equations_parameters",
+        "alternative_physical_justification",
+        "frozen_fit_solver_bounds_tiebreak",
+        "comparison_design",
+        "fresh_validation_source",
+        "independent_unseen_lineage",
+        "claimed_confirmatory_on_existing_PR246",
+        "training_only_fit",
+        "retune_after_hold",
+        "failed_integration",
+        "heldout_scoring_and_error_allocation",
+        "score_observable",
+        "selection_margin_V",
+        "margin_rationale_before_new_fit",
+        "bootstrap_or_pvalues",
+        "fresh_validation_calibration_and_error_budget",
+        "state_estimation_and_model_prediction_error_budget"
+      ],
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "physical_promotion": {
+      "const": 0,
+      "type": "integer"
+    },
+    "pre_raw_freeze": {
+      "additionalProperties": false,
+      "properties": {
+        "all_artifact_sha256": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "comparator_physical_justification": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "custodian_ruling": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "drive_loss_feedback": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "freeze_receipt": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "model_equations_parameters_units": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "nonconstructor_review": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "readout_initial_state_preparation": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "scoring_error_budget_and_margin": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "selection_and_training_history": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "solver_error_tiebreak_and_failure_rule": {
+          "additionalProperties": false,
+          "properties": {
+            "reviewer_or_authority": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "scope": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "uri": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "sha256",
+            "reviewer_or_authority",
+            "scope"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "model_equations_parameters_units",
+        "readout_initial_state_preparation",
+        "drive_loss_feedback",
+        "comparator_physical_justification",
+        "solver_error_tiebreak_and_failure_rule",
+        "scoring_error_budget_and_margin",
+        "selection_and_training_history",
+        "all_artifact_sha256",
+        "freeze_receipt",
+        "nonconstructor_review",
+        "custodian_ruling"
+      ],
+      "type": "object"
+    },
+    "purpose": {
+      "const": "RETROSPECTIVE_EXPLORATORY_ONLY",
+      "type": "string"
+    },
+    "raw_download_authorized_by_this_metadata": {
+      "const": false,
+      "type": "boolean"
+    },
+    "raw_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "const": 81386005,
+          "type": "integer"
+        },
+        "checksum": {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "MD5",
+              "type": "string"
+            },
+            "value": {
+              "const": "3fc592443a1c117ab4a9503e01d5a92c",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ],
+          "type": "object"
+        },
+        "path": {
+          "const": "05-28/set1a_CH1-site1_CH2-link1_CH3-site2_CH4-link2_CH5-site3_CH6-link3_CH7-site4_CH8-link4_CH9-empty_CH10-site5_Vdrv=0.050V.gz",
+          "type": "string"
+        },
+        "persistent_id": {
+          "const": "doi:10.11588/DATA/6MEKHI/NH8JC2",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "bytes",
+        "persistent_id",
+        "checksum"
+      ],
+      "type": "object"
+    },
+    "version": {
+      "const": "0.2.0",
+      "type": "string"
+    }
+  },
+  "required": [
+    "artifact_type",
+    "version",
+    "lane",
+    "source",
+    "identity_scope",
+    "raw_sha256",
+    "known_records",
+    "known_groups",
+    "channel_roles_filename_only",
+    "drive",
+    "exposure",
+    "purpose",
+    "calibration",
+    "physical_model_comparison",
+    "pre_raw_freeze",
+    "fresh_confirmation_request",
+    "physical_promotion",
+    "raw_download_authorized_by_this_metadata"
+  ],
+  "title": "Candidate-specific pre-raw request v0.2, metadata only",
+  "type": "object"
+}

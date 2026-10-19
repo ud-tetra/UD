@@ -1,0 +1,159 @@
+{
+  "artifact_type": "PRIMARY_AUTHOR_SOURCE_CELLS_ONLY",
+  "author_repository": "tychon/U1CircuitsData",
+  "commit": "265b6671dde799d7c73f32247fa3ee93ae70e0f2",
+  "figures_blob_sha": "96cf12bad621f2ebf6d639cfe791898b4e048145",
+  "simulations_blob_sha": "5d3b2b0b1fa8e921e24eecf165fd515e587d4d91",
+  "scope": "Source text only; notebook outputs deliberately not inspected or retained; no author code executed; no raw gzip read.",
+  "source_urls": {
+    "figures": "https://github.com/tychon/U1CircuitsData/blob/265b6671dde799d7c73f32247fa3ee93ae70e0f2/U1%20Figures.ipynb",
+    "simulations": "https://github.com/tychon/U1CircuitsData/blob/265b6671dde799d7c73f32247fa3ee93ae70e0f2/U1%20Simulations.ipynb"
+  },
+  "cells": {
+    "figures": [
+      {
+        "index": 0,
+        "type": "markdown",
+        "source": "First run shared code all cells in section 'Shared code'.  \nThe following sections 2 to 5 can be run independently, but inside each section, cell order should be observed.  \nWhere noted, additional data that is produced by the Simulation notebook needs to be prepared."
+      },
+      {
+        "index": 6,
+        "type": "code",
+        "source": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport pandas as pd\n%matplotlib notebook\n\n\ndef rainbow(n, i, shift=0):\n    if n == 1: return plt.cm.nipy_spectral(0)\n    x = i / (n-1) + shift\n    return plt.cm.nipy_spectral(0.96 * (x % 1.01))\n\n\nMETALEN = 6\nINIT_SAMPLE = 200\nCLIPPING_WARNING = 15\n\n\n# Load data from running u1drive1.c on a chain of Red Pitayas\n# using the run-chain.sh bash script, which concatenates\n# outputs into one file.\n#\n# Metadata in the beginning of the second axis:\n# 0 samplerate,\n# 1 driving freq,\n# 2 driving amplitude,\n# 3 driving phase,\n# 4 ttlCH2 delay,\n# 5 channel,\n# 6... samples\n#\n# Returns array of shape (channels, shots, meta+samples)\ndef load_chain(inputfile):\n    # Route through pandas to support gzipped files\n    data = pd.read_csv(INPUTBASE+inputfile, delimiter='\\t', header=None).values\n    assert np.all(data[:,0] == data[0,0]), \"Not all at same samplerate in \"+inputfile\n    assert np.all(np.absolute(data[:, METALEN:]) < CLIPPING_WARNING), \"Maybe clipping values in \"+inputfile\n    \n    chnum = int(np.max(data[:,5]))\n    shots = data.shape[0] // chnum\n    assert data.shape[0] == chnum * shots\n    \n    # Splice rows to order data: each RP has two fast ADC channels,\n    # and their outputs are appended.\n    # (all rows of the same shot next to each other)\n    # 1, 2, 1, 2, ..., 3, 4, 3, 4, ...  =>  1, 2, 3, 4, 1, 2, 3, 4, ....\n    sorted = np.zeros((chnum, shots, data.shape[1]))\n    for i in range(shots):\n        for rpidx in range(chnum//2):\n            assert data[shots*rpidx*2+i*2  ,5] - rpidx*2 == 1\n            assert data[shots*rpidx*2+i*2+1,5] - rpidx*2 == 2\n            sorted[rpidx*2  ,i] = data[shots*rpidx*2+i*2]\n            sorted[rpidx*2+1,i] = data[shots*rpidx*2+i*2+1]\n    \n    return sorted\n\n\n# Combine multiple data sets loaded with load_chain() into one array,\n# because multiple runs are required to see the whole chain.\n#\n# Does not reset channel indexing in metadata.\n#\n# datas: list of arrays as returned by load_chain()\n# idxs: list of 2-tuples with idx in datas and one channel idx (starting from 0)\ndef mux_lattice(datas, idxs):\n    shots = datas[0].shape[1]\n    assert all(d.shape[1] == shots for d in datas), \\\n        \"Number of measurements doesn't match for all data sets.\"\n    \n    lattice = np.zeros((len(idxs), shots, datas[0].shape[2]))\n    for i, (dataidx, chidx) in enumerate(idxs):\n        lattice[i] = datas[dataidx][chidx]\n    return lattice\n\n\ndef plot_traces(data, idx=0):\n    \"\"\"Plot time traces.\"\"\"\n    samplerate = data[0,idx,0]\n    print(\"samplerate {}, frequency {} Hz,\\namplitude {} V, phase {} rad,\\nch2 delay {} s\".format(*data[0,idx,:METALEN-1]))\n    ts = (np.arange(data.shape[-1]-METALEN)-INIT_SAMPLE) / samplerate\n    \n    fig, axs = plt.subplots(nrows=data.shape[0], figsize=(10,13), sharex=True)\n    for ch in range(data.shape[0]):\n        axs[ch].plot(ts*1e3, data[ch, idx, METALEN:], color=('C0' if ch%2==0 else 'C1'))\n        axs[ch].set_ylabel(f\"CH{ch+1}\")\n        axs[ch].grid()\n    axs[-1].set_xlabel('time / ms')\n    fig.tight_layout()\n    \n    return fig, axs"
+      },
+      {
+        "index": 9,
+        "type": "markdown",
+        "source": "# Interactions\nDataset 2021-05-28 set 1."
+      },
+      {
+        "index": 10,
+        "type": "code",
+        "source": "data = load_chain('05-28/set1a_CH1-site1_CH2-link1_CH3-site2_CH4-link2_CH5-site3_CH6-link3_CH7-site4_CH8-link4_CH9-empty_CH10-site5_Vdrv=0.050V.gz')\nlattice = data[[0,1,2,3,4,5,6,7,9],...]\n# axes: (lattice position, shots, metadata + samples)\n\nsamplerate = data[0,0,0]"
+      },
+      {
+        "index": 12,
+        "type": "code",
+        "source": "fs = [31.401e3, 59.921e3, 86.308e3, 60.113e3, 31.208e3, 62.112e3, 88.363e3, 60.941e3, 32.469e3]\n\nprint('δ', calcδ(fs)/1e3, 'kHz')\nprint('Δ', calcΔ(calcδ(fs))/1e3, 'kHz')\nprint('m', calcΔ(calcδ(fs))/2/1e3, 'kHz')\n\nm1 = calcΔ(calcδ(fs))[0] / 2\nm = np.mean(calcΔ(calcδ(fs)) / 2)\nm = np.mean(calcΔ(calcδ(fs)) / 2)\nprint('m', m/1e3, 'kHz mean')"
+      },
+      {
+        "index": 13,
+        "type": "code",
+        "source": "Vref = 10.2\nf0 = 60e3\n\nferr = 0.2e3\nVreferr = 0.4\n\nJt, Jterr = np.full(4, np.nan), np.full(4, np.nan)\nfor i in range(4):\n    f1 = fs[2*i]\n    f2 = fs[2*i+1]\n    f3 = fs[2*i+2]\n    Jtheo = (f1 * f2 * f3 / f0**3 / 2)**0.5 / 4 / Vref\n    Jtheoerr = 1/(8 * (f1 * f2 * f3 / f0**3 / 2)**0.5) * (f1*f2*f3/f0**3/2) * (ferr/f1 + ferr/f2 + ferr/f3) / Vref + Jtheo * Vreferr/Vref\n    print(f\"Jtheo = {Jtheo * f0/1e3:.4f} +- {Jtheoerr * f0/1e3:.4f} kHz\")\n    Jt[i], Jterr[i] = Jtheo, Jtheoerr\n\nprint(f\"std J = {np.std(Jt) * f0/1e3:.4f} kHz\")\nprint(f\"mean J = {np.mean(Jt)*f0/1e3:.4f} +- {np.sum(Jtheoerr**2)**0.5/len(Jt) * f0/1e3:.4f} kHz\")"
+      },
+      {
+        "index": 15,
+        "type": "code",
+        "source": "J = 0.92e3\nJerr = 0.05e3"
+      },
+      {
+        "index": 17,
+        "type": "code",
+        "source": "fdrv = lattice[0,:,1] - fs[0] + m1\nν = fdrv\n\n# Index where driving on resonance\nshotidx = 209\n\nplot_traces(lattice, shotidx);"
+      },
+      {
+        "index": 18,
+        "type": "markdown",
+        "source": "Extract frequency and amplitude from spectrum:\n* use boxcar window to get frequency shifts,\n* use flattop window to get amplitudes at those frequencies.\n\nMain lobe attenuation of flattop window is -13.3 dB.  \nhttp://www.marcuswinter.de/media/window%20functions%20cheat%20sheet.pdf  \nMain lobe of boxcar window is at 0 dB.  \nAttenuations are defined above in 'Shared code' section.\n\nDiscard first third of spectrum where dynamics is still relaxing."
+      },
+      {
+        "index": 19,
+        "type": "code",
+        "source": "# Spectrum for plotting\nspectrum, fbins = time_spectrum(lattice[...,lattice.shape[-1]//3:], samplerate, window=windows.hann)\n# Spectrum to find frequencies\nspectrumf, fbins = time_spectrum(lattice[...,lattice.shape[-1]//3:], samplerate, window=windows.boxcar)\n# Spectrum to get amplitudes\nspectrumA, fbins = time_spectrum(lattice[...,lattice.shape[-1]//3:], samplerate, window=windows.flattop)"
+      },
+      {
+        "index": 20,
+        "type": "code",
+        "source": "from scipy.signal import find_peaks, peak_widths\n\n\n# Noise of spectral components due to 5mV measurement noise\nnums = lattice.shape[-1]//3\nVnoise = nums**0.5 * 0.005 / nums * 2\n\nfbinsize = fbins[1]\nprint(f\"f bin size {fbins[1]/1e3} kHz\")\n\n# Initial guess of shift to select peaks\nfshiftexpect = 2.0e3 # Hz\nfexpwindow = int(0.5e3 / fbinsize)\n\n# Prepare arrays to save peak positions and heights\nl = (spectrum.shape[0]+1)//2\nfshift = np.full(l, np.nan)\nfshifterr = fbinsize\n\nheight = np.full(l, np.nan)\nlinkheight = np.full(l-1, np.nan)\nheighterr = Vnoise * FLATTOP_PEAKLOSS\n\nfig, axs = plt.subplots(nrows=spectrum.shape[0], sharex=True, figsize=(6, 14))\nΔ = calcΔ(calcδ(fs))\nrf = calc_rfbase(fs)\nfor i in range(spectrum.shape[0]):\n    axs[i].set_ylabel(fmt_title('V', i))\n    axs[i].plot((fbins-rf[i])/1e3, spectrumf[i,shotidx], label=\"Boxcar window\")\n    axs[i].plot((fbins-rf[i])/1e3, spectrumA[i,shotidx], label=\"Flattop window\")\n    axs[i].axhline(Vnoise * BOXCAR_PEAKLOSS, color='C2', linestyle='--', label=\"Boxcar noise floor\")\n    axs[i].axhline(Vnoise * FLATTOP_PEAKLOSS, color='C3', linestyle='--', label=\"Flattop noise floor\")\n    \n    if i == 0:\n        fexp = m1\n    elif i%2 == 0:\n        fexp = Δ[i//2]/2 + fshiftexpect\n    elif i == 1:\n        fexp = fshiftexpect\n    else:\n        fexp = 0\n    \n    #axs[i].axvline(fexp/1e3, color='k', zorder=-1)\n    centeridx = np.argmin(np.absolute(fbins - rf[i] - fexp))\n    axs[i].axvspan(\n        (fbins[centeridx-fexpwindow]-rf[i])/1e3,\n        (fbins[centeridx+fexpwindow]-rf[i])/1e3,\n        color='gray', alpha=0.3, zorder=-2)\n    \n    peaks = find_peaks(\n        spectrumf[i, shotidx, centeridx-fexpwindow:centeridx+fexpwindow+1],\n        distance=fexpwindow*3)\n    width = peak_widths(spectrumf[i, shotidx, centeridx-fexpwindow:centeridx+fexpwindow+1], peaks[0])\n    drvpeakidx = centeridx - fexpwindow + peaks[0][0]\n    axs[i].errorbar(\n        [(fbins[drvpeakidx]-rf[i])/1e3], [spectrumf[i, shotidx, drvpeakidx]],\n        xerr=[fshifterr/1e3],\n        fmt='x', color='C3')\n    axs[i].errorbar(\n        [(fbins[drvpeakidx]-rf[i])/1e3], [spectrumA[i, shotidx, drvpeakidx]],\n        yerr=[heighterr],\n        fmt='x', color='C3')\n        \n    if i%2 == 0:\n        shift = fbins[drvpeakidx] - rf[i] - Δ[i//2]/2\n        fshift[i//2] = shift\n        height[i//2] = spectrumA[i, shotidx, drvpeakidx]\n    else:\n        shift = fbins[drvpeakidx] - rf[i]\n        linkheight[i//2] = spectrumA[i, shotidx, drvpeakidx]\n\n    print(f\"lidx {i} ({i//2+1}\"+(\"'\" if i%2==1 else \" \") +\"): \"\n          f\"peak {fbins[drvpeakidx]/1e3:.3f} kHz (width {width[0][0]*fbinsize/1e3:.3f} kHz), shift {shift/1e3:.3f} kHz, \"\n          f\"amplitude {spectrumA[i, shotidx, drvpeakidx]/FLATTOP_PEAKLOSS*1e3:7.2f} mV\")\n    \n    axs[i].grid()\n    axs[i].set_yscale('log')\naxs[0].legend(loc='upper left')\nplt.xlim(-10, 15)\nplt.tight_layout()"
+      },
+      {
+        "index": 21,
+        "type": "markdown",
+        "source": "Calculate $J$ from frequency shift $f_U$ on second site (eq. F11).  \nCalculate error from error on frequency shift $\\Delta J = \\frac{\\partial J}{\\partial f_U} \\Delta f_U$:"
+      },
+      {
+        "index": 22,
+        "type": "code",
+        "source": "νr = ν[shotidx]\n\nAs = height / FLATTOP_PEAKLOSS\n\nJexp = ((2*fshift[1] + m + νr)**2 - (m + νr)**2)**0.5 / (2 * As[0])\nJexperr = 1/(8*J*As[0]**2)* 4 * (2*fshift[1]+m+νr) * fshifterr\nprint(f\"J = {Jexp/1e3:.4f} +- {Jexperr/1e3:.4f} kHz\")"
+      },
+      {
+        "index": 23,
+        "type": "markdown",
+        "source": "## Fig 7\nTake a look at the amplitude decay along the lattice:"
+      },
+      {
+        "index": 24,
+        "type": "code",
+        "source": "from scipy.optimize import curve_fit\n\nd = np.arange(fshift.size)\nds = np.linspace(0, l-1, 100)\n\npopta, pcova = curve_fit(lambda x, a, b: a * x + b, d, np.log(As))\nperra = np.sqrt(np.diag(pcova))\nprint(popta)\nprint(perra)\nprint(pcova)\n\nBs = linkheight / FLATTOP_PEAKLOSS\nprint(\"Base of decay ( A=b^(-d) ) b =\", np.exp(popta[0]))\nprint(\"Comparison:            BJ/2m =\", np.mean(Bs) * J/(2*m))\n\nplt.figure(figsize=(5,3), constrained_layout=True)\ndsa = np.linspace(0, 4, 100)\n\nBprod = np.array([np.prod(Bs[:i]) for i in range(len(Bs)+1)])\nplt.plot(d, (Bprod * J/m/2)**d * As[0], 'k:', label='$A_1 \\prod_{x=1}^d \\mathcal B_x J/2m$')\n#plt.fill_between(d, (Bprod * (J-Jerr)/m/2)**d * As[0], (Bprod * (J+Jerr)/m/2)**d * As[0])\nplt.errorbar(d, As, yerr=Vnoise, fmt='x', label=\"Measured amplitudes\")\n#plt.plot(d, Vrms[::2,shotidx] * 2**0.5, 'go', label=\"RMS\")\n#plt.axhline(Vnoise/FLATTOP_PEAKLOSS, color='C1', label='noise floor')\n\nplt.grid()\nplt.yscale('log')\nplt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))\nplt.xlabel(\"Distance d to first site\")\nplt.ylabel(\"Voltage amplitude (V)\")\nplt.legend()\n\nplt.savefig('plot.pdf')"
+      },
+      {
+        "index": 25,
+        "type": "markdown",
+        "source": "## Fig 4\nEstimate amplitude of first site for all driving frequencies using RMS value:"
+      },
+      {
+        "index": 26,
+        "type": "code",
+        "source": "# Use second half of trace only, to avoid initial relaxation.\nVrms = np.sqrt(np.mean(lattice[:,:,lattice.shape[-1]//2:]**2, axis=-1))"
+      },
+      {
+        "index": 27,
+        "type": "code",
+        "source": "fig, (ax1, ax2) = fig.subplots = plt.subplots(\n    ncols=2, sharex=True,\n    figsize=(5, 1.8), constrained_layout=True)\n\nVrms1 = np.sqrt(np.mean(lattice[0,:,METALEN+INIT_SAMPLE:]**2, axis=1))\nax = ax1\nax.plot(fdrv/1e3, Vrms1)\nax.set_ylabel(r\"RMS $V_1$ (V)\")\nax.set_xlabel(r\"$f_\\text{drv}$ (kHz)\")\nax.set_title(r\"Driving \"+fmt_title(\"V\", 0))\n\nfrom matplotlib.transforms import Affine2D\ntrafo = Affine2D(np.array([\n    [ 1, 0, 0],\n    [ -1, 1, 0],\n    [ 0, 0, 1]\n]))\n\nlidx = 2\nvmin, vmax = 3e-4, 5\nax = ax2\nim = ax.imshow(\n    spectrum[lidx].T, origin='lower',\n    extent=(\n        fdrv[0]/1e3, fdrv[-1]/1e3,\n        (fbins[0]-rf[lidx])/1e3, (fbins[-1]-rf[lidx])/1e3),\n    norm=LogNorm(vmin=vmin, vmax=vmax),\n    cmap='Purples', aspect='auto', interpolation='bicubic')\nim.set_transform(trafo + ax.transData)\n\n# PT prediction\nA = Vrms[0] * 2**0.5\nμ = np.sqrt((m+ν)**2 + (2*J*A)**2)/2\nax.plot(fdrv/1e3, ((μ-(m-ν)/2) - fdrv)/1e3, '-.', color='maroon', linewidth=1.1, label='Perturb. theory')\n\nax.axhline(0, color='k', linestyle='--', linewidth=1)\nplt.annotate(text='', xy=(fdrv[shotidx]/1e3, 0.75*fshift[1]/1e3), xytext=(fdrv[shotidx]/1e3, 0), arrowprops=dict(arrowstyle='<->'))\nplt.annotate(text=r\"$f_U$\", xy=(fdrv[shotidx]/1e3+0.5, fshift[1]/3/1e3))\nax.set_ylim(-1.1, 4.2)\nax.set_xlim(-0.5, 5.5)\nax.set_ylabel(r\"$f_\\text{rot} - f_\\text{drv}$ (kHz)\")\nax.set_xlabel(r\"$f_\\text{drv}$ (kHz)\")\nax.set_title(r\"Spectrum \" + fmt_title(\"V\", lidx))\nax.legend(loc='upper right')\n\ncb = fig.colorbar(im)\ncb.set_label('Voltage amplitude (V)')\ncb.minorticks_off()\n\nplt.savefig('plot.pdf')"
+      },
+      {
+        "index": 28,
+        "type": "markdown",
+        "source": "Use amplitudes to calculate perturbative prediction for frequency shifts $f_U$ at $f_\\text{drv}=+m$.  \nSystematic error of $f_U$ calculated from systematic error on $J$, which means that it is exactly the frequency resolution for the $f_U$ of the second site, because this was used to get $J$."
+      },
+      {
+        "index": 29,
+        "type": "code",
+        "source": "νs = np.zeros(5)\nνs[0] = νr\n\nfUexp, fUexperr = np.zeros(5), np.zeros(5)\nfor i in range(1, 5):\n    if i%2 == 0:  # odd site\n        μi = np.sqrt((m-νs[i-1])**2 - (2*J*As[i-1])**2)/2\n        μierr = 1/(8*μi) * 8 * As[i-1]**2 * J * Jerr\n        νs[i] = μi + (m + νs[i-1])/2\n        fUexp[i] = νs[i] - νr\n        fUexperr[i] = μierr + fUexperr[i-1]\n    else: # even site\n        μi = np.sqrt((m+νs[i-1])**2 + (2*J*As[i-1])**2)/2\n        μierr = 1/(8*μi) * 8 * As[i-1]**2 * J * Jerr\n        νs[i] = μi - (m - νs[i-1])/2\n        fUexp[i] = νs[i] - νr\n        fUexperr[i] = μierr + fUexperr[i-1]\n\nprint(' ν ', νs/1e3, 'kHz')\nprint(' fU', fUexp/1e3, 'kHz')\nprint('ΔfU', fUexperr/1e3, 'kHz sys.')"
+      },
+      {
+        "index": 30,
+        "type": "code",
+        "source": "plt.figure(figsize=(5,3), constrained_layout=True)\nax = plt.gca()\nax.errorbar(\n    d[1:], fshift[1:]/1e3, yerr=fshifterr/1e3, markersize=5,\n    fmt='d', color='C0', label=\"Measured peaks\", zorder=3)\nax.fill_between(\n    [0.5, *d[1:], d[-1]+0.5], (fUexp[[1,1,2,3,4,4]]-fUexperr[[1,1,2,3,4,4]])/1e3, (fUexp[[1,1,2,3,4,4]]+fUexperr[[1,1,2,3,4,4]])/1e3,\n    color='maroon', label=\"Perturbation theory\", alpha=0.3, zorder=-1)\nax.set_ylim(0, 2.6)\nax.set_xlim(0.7, d[-1] + 0.3)\nax.grid(axis='y')\nax.legend(loc='lower right')\nax.xaxis.set_major_locator(MaxNLocator(integer=True))\n#ax.tick_params(axis='y', which='both', left=False, right=True, labelleft=False, labelright=True)\nax.set_ylabel(r\"Frequency shift $f_U$ (kHz)\")\nax.set_xlabel(\"Lattice distance\")\nax.set_title(\"Frequency shift on matter sites\")\n\nplt.savefig('plot.pdf')"
+      },
+      {
+        "index": 31,
+        "type": "code",
+        "source": "fig, axs = plot_rotating_frame(\n    spectrum, fbins, fs[:lattice.shape[0]],\n    xs=fdrv/1e3, xlabel=r\"$f_\\text{drv}$ / kHz\",\n    fdrv=fdrv,\n    frange=7e3, vmin=1e-4, vmax=2.5)\naxs[0].set_xlim(-0.5, 5.5)\naxs[0].set_ylim(-2.5, 6)\n#axs[0].set_xlim(-7, 7)\n#axs[0].set_ylim(-9, 9)\nfig.set_size_inches(12, 4)\n\nprint(f\"Driving freq. {lattice[0,shotidx,1]/1e3:.3f} kHz, in rotating frame {fdrv[shotidx]/1e3:.3f} kHz\")\nprint(fdrv[shotidx]/1e3, \"kHz\")\nfor ax in axs:\n    ax.axvline(fdrv[shotidx]/1e3, color='maroon', linestyle='-.', linewidth=1)\n\nA = Vrms[0] * 2**0.5\nμ = np.sqrt((m+ν)**2 + (2*J*A)**2)/2\naxs[1].plot(fdrv/1e3, (μ-(ν+m)/2)/1e3, '-.', color='lime', linewidth=1.1)\naxs[2].plot(fdrv/1e3, (μ-(m-ν)/2)/1e3, '-.', color='lime', linewidth=1.1)\n\nfor i in range(len(fshift)):\n    axs[2*i].errorbar([fdrv[shotidx]/1e3], [(m+fshift[i])/1e3], yerr=[fshifterr/1e3], fmt=' ', color='salmon', linewidth=2, zorder=5, capsize=2)"
+      },
+      {
+        "index": 32,
+        "type": "markdown",
+        "source": "## Fig 8"
+      },
+      {
+        "index": 33,
+        "type": "code",
+        "source": "fig, axs = plot_rotating_frame(\n    spectrum / HANN_PEAKLOSS, fbins, fs[:lattice.shape[0]],\n    xs=fdrv/1e3, xlabel=r\"$f_\\text{drv}$ (kHz)\",\n    frange=7e3, vmin=5e-5, vmax=1e1)\naxs[0].set_xlim(-7, 7)\naxs[0].set_ylim(-7, 7)\nfig.set_size_inches(11, 3.3)\n\nplt.savefig('plot.pdf')\n\n#for ax in axs:\n#    ax.axvline(fdrv[shotidx]/1e3, color='maroon', linestyle='-.', linewidth=1)"
+      }
+    ],
+    "simulations": [
+      {
+        "index": 2,
+        "type": "markdown",
+        "source": "The circuit is initialized by turning of a current through the inductor: $Q(t=0)=0$ and $\\Phi(t=0)\\neq\\Phi^\\text{in}$, which in dimensionless variables corresponds to a purely imaginary value.  The dimensionless variables are defined from flux and charge as\n$$ a = \\frac{1}{\\sqrt{2 \\omega_x/\\omega_0}} \\left( Q/Q_0 + i \\frac{\\omega_x}{\\omega_0} \\Phi/\\Phi_0\\right)$$ with scales $\\omega_0, Q_0, \\Phi_0$."
+      },
+      {
+        "index": 6,
+        "type": "code",
+        "source": "import numpy as np\nfrom scipy.integrate import odeint\n\nimport matplotlib.pyplot as plt\n%matplotlib notebook\n\n\nclass RangeViolation(Exception):\n    def __init__(self, time, msg=None):\n        self.simulationtime = time\n        if msg is None:\n            msg = f\"One variable outside range at time {time}.\"\n        super().__init__(msg)\n\n\ndef eom_free(y, m, dtype=complex):\n    \"\"\"Implements a_x=-(-1)^x m_x a_x.\n    m scalar or (l,) shaped array.\n    \"\"\"\n    doty = np.zeros(y.shape, dtype)\n    doty[::2] = -1j * m * y[::2]\n    doty[::4] *= -1\n    return doty\n\ndef eom_interaction(y, J, dtype=complex):\n    \"\"\"J scalar or (l-1,) shaped or (l-1,3) shaped.\"\"\"\n    a, b = y[::2], y[1::2]\n    l = a.shape[0]\n    J = np.broadcast_to(J, (l-1,3))\n    \n    dota, dotb = np.zeros(a.shape, dtype), np.zeros(b.shape, dtype)\n    dota[2::2] += 1j * J[1::2,0] * np.conj(b[1::2]) * a[1:-1:2] # x odd: b_{x-1}^* a_{x-1}\n    dota[:-1:2] += 1j * J[::2,2] * np.conj(b[::2]) * a[1::2] # x odd: b_x^* a_{x+1}\n    dota[1::2] += 1j * J[::2,0] * b[::2] * a[:-1:2] # x even: b_{x-1} a_{x-1}\n    dota[1:-1:2] += 1j * J[1::2,2] * b[1::2] * a[2::2] # x even: b_x a_{x+1}\n    \n    dotb[::2] = 1j * J[::2,1] * np.conj(a[:-1:2]) * a[1::2] # x odd\n    dotb[1::2] = 1j * J[1::2,1] * np.conj(a[2::2]) * a[1:-1:2] # x even\n    \n    doty = np.zeros(y.shape, dtype)\n    doty[::2] = dota\n    doty[1::2] = dotb\n    return doty\n\ndef eom_drive(t, Iω, Ibar):\n    \"\"\"Iω and Ibar either scalar or (2l-1,) shaped.\"\"\"\n    return Ibar * np.exp(1j * Iω * t)\n\n\ndef eom(y, t, m, J, Iω=None, Ibar=0, k=None, delay=None,\n        rangelimit=np.inf, dtype=complex):\n    \"\"\"eom = dydt, where y = (a1, b1, a2 b2, ...)\n    \n    l is the number of sites,\n    n the number of oscillators / variables.\n    y has shape (n,).\n    \n    All quantities dimensionless.\n    \n    m (scalar or array of shape (l,)): mass / detuning.\n    J (scalar or array of shape (l-1,) or shape (l-1, 3)):\n        Coupling strength, optionally different for each\n        link or for each multiplier.\n    Iω (array of shape (n,)): External driving frequency\n        in rotating frame.\n    Ibar (array of shape (n,)): amplitude of extenal driving.\n    k (scalar or array of shape (n,)): Dissipation.\n    delay (scalar or array of shape (l-1, 3)): Delay of\n        multiplier output.  Extrapolates current y backwards\n        by delay using dydt to find input of multipliers.\n        Use only with small delay and small J for this\n        approximation to be good.\n    rangelimit (scalar): Raises RangeViolation if any element\n        of y is outside [-rangelimit, rangelimit].\n    \"\"\"\n    if np.isfinite(rangelimit) and np.any(np.absolute(y) > rangelimit):\n        raise RangeViolation(t)\n    \n    doty = eom_free(y, m, dtype)\n    interaction = eom_interaction(y, J, dtype)\n    doty += interaction\n    \n    if Iω is not None:\n        doty += Ibar * np.exp(1j * Iω * t)\n    if k is not None:\n        doty -= k * y\n    \n    if delay is not None:\n        yold = y - delay * doty\n        doty -= interaction\n        doty += eom_interaction(yold, J, dtype)\n    \n    # Remove back-action onto link 1:\n    #doty[1] = 0\n    \n    return doty\n\n\ndef complex_odeint(func, y0, ts, args=(), full_output=0, printmessg=0):\n    \"\"\"Wrap odeint for complex valued functions.\"\"\"\n    n = len(y0)\n    flaty0 = np.concatenate([np.real(y0), np.imag(y0)])\n    def flatfunc(flaty, t, *args):\n        dy = func(flaty[:n] + 1j * flaty[n:], t, *args)\n        return np.concatenate([np.real(dy), np.imag(dy)])\n    out = odeint(flatfunc, flaty0, ts, args,\n                 full_output=full_output, printmessg=printmessg)\n    if type(out) is tuple:\n        return out[0][:,:n]+1j*out[0][:,n:], *out[1:]\n    else:\n        return out[:,:n] + 1j*out[:,n:]\n\n\ndef run_complex(ts, y0, *args):\n    \"\"\"\n    Returns y of shape (steps, 2l-1)\n    \"\"\"\n    ys, out = complex_odeint(eom, y0, ts, args=args, full_output=True)\n    if np.any((out['mused'] < 1) | (out['mused'] > 2)):\n        ys[:,:] = np.nan\n    else:\n        assert np.allclose(ys[0,:], y0)\n    return ys"
+      },
+      {
+        "index": 12,
+        "type": "code",
+        "source": "def Ibar(Iext, fres, C=20e-9, f0=60e3, V0=1):\n    \"\"\"Calculate dimensionless driving amplitude from Iext[A] and\n    resonance frequency fres[Hz] of site where driving is applied.\"\"\"\n    ωbar = fres / f0\n    ω0 = 2*np.pi * f0\n    return -1j/2 * Iext / (np.sqrt(2 * ωbar) * ω0 * C * V0)\n\ndef Vtoain(V, fs, V0=1, f0=60e3):\n    \"\"\"Convert initial voltages to initial complex variables\n    (step function in magn flux / current).\"\"\"\n    return 1j / (2 * fs / f0)**0.5 * V/V0\n\ndef atoV(a, fs, V0=1, f0=60e3):\n    \"\"\"Convert complex variables back into voltages.\"\"\"\n    return (2 * fs / f0)**0.5 * a.real * V0\n\ndef ftoJ(fs, Vref, V0=1, f0=60e3):\n    \"\"\"Calculate interaction strengths from tuning.\"\"\"\n    ωsites = fs[...,::2] / f0\n    ωlinks = fs[...,1::2] / f0\n    Js = [(ωsites[...,i] * ωlinks[...,i] * ωsites[...,i+1] / 2**5)**0.5 * V0/Vref for i in range(ωlinks.shape[-1])]\n    # concatenate along last axis\n    return np.concatenate([J[...,np.newaxis] for J in Js], axis=len(fs.shape)-1)\n\ndef fbins_in_kHz(fbins, tstep, f0=60e3):\n    \"\"\"Convert frequency bins from dimensionless to kHz.\"\"\"\n    samplerate = 2*np.pi*f0 / tstep\n    return fbins * samplerate / 1e3"
+      }
+    ]
+  },
+  "access_failures": [
+    {
+      "operation": "Firecrawl scrape raw notebook URL",
+      "result": "Transport closed; no usable source returned; not retried. Source cells obtained through GitHub immutable blob API instead."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "status": "PASS_SIX_POST_KNOWN_GUARD_CONTROLS",
+  "freeze_sha256": "817d67619ae09a7d474b51ee6307dc910d4f1e0a8c17b0dffb61791ca17f5696",
+  "rows": [
+    {
+      "id": "inside_package",
+      "observed_allow": false,
+      "expected_allow": false,
+      "reason": "HOLD output inside protected package or capture"
+    },
+    {
+      "id": "sibling_under_outer_capture",
+      "observed_allow": false,
+      "expected_allow": false,
+      "reason": "HOLD output inside protected package or capture"
+    },
+    {
+      "id": "resolved_symlink_into_capture",
+      "observed_allow": false,
+      "expected_allow": false,
+      "reason": "HOLD output inside protected package or capture"
+    },
+    {
+      "id": "lexical_capture_symlink_outward",
+      "observed_allow": false,
+      "expected_allow": false,
+      "reason": "HOLD output inside protected package or capture"
+    },
+    {
+      "id": "ancestor_of_source",
+      "observed_allow": false,
+      "expected_allow": false,
+      "reason": "HOLD output is ancestor of protected source"
+    },
+    {
+      "id": "new_external_directory",
+      "observed_allow": true,
+      "expected_allow": true,
+      "reason": "ALLOW_NEW_EXTERNAL"
+    }
+  ],
+  "raw_reads": 0,
+  "new_estimator_calls": 0,
+  "numerical_replay_calls": 0,
+  "physical_promotion": 0
+}

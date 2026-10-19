@@ -1,0 +1,150 @@
+{
+  "actual_null_leaf_count": 163,
+  "all_pass": false,
+  "artifact_type": "SAME_TEAM_POST_OUTCOME_INTAKE_REVIEW",
+  "author_code_executed": false,
+  "controls": [
+    {
+      "detail": "HOLD_INCOMPLETE_UNVERIFIED_REQUEST",
+      "name": "actual_snapshot_safe_HOLD",
+      "pass": true
+    },
+    {
+      "detail": "Complete mutable declarations are synthetic; no URI is evidence.",
+      "name": "all_mutable_fields_filled_no_authorization",
+      "pass": true
+    },
+    {
+      "detail": {
+        "remaining_null_paths": [
+          "request.channel_roles_filename_only[0].verified_wiring",
+          "request.channel_roles_filename_only[1].verified_wiring",
+          "request.channel_roles_filename_only[2].verified_wiring",
+          "request.channel_roles_filename_only[3].verified_wiring",
+          "request.channel_roles_filename_only[4].verified_wiring",
+          "request.channel_roles_filename_only[5].verified_wiring",
+          "request.channel_roles_filename_only[6].verified_wiring",
+          "request.channel_roles_filename_only[7].verified_wiring",
+          "request.channel_roles_filename_only[8].verified_wiring",
+          "request.channel_roles_filename_only[9].verified_wiring"
+        ]
+      },
+      "name": "const_null_wiring_makes_complete_status_unreachable",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "boolean_channel_identity_refused",
+      "pass": false
+    },
+    {
+      "detail": [],
+      "name": "float_channel_identity_refused",
+      "pass": false
+    },
+    {
+      "detail": [
+        "request.channel_roles_filename_only:CONST"
+      ],
+      "name": "swapped_CH9_CH10_roles_refused",
+      "pass": true
+    },
+    {
+      "detail": [
+        "request:TYPE"
+      ],
+      "name": "null_input",
+      "pass": true
+    },
+    {
+      "detail": [
+        "request:TYPE"
+      ],
+      "name": "array_input",
+      "pass": true
+    },
+    {
+      "detail": [
+        "request:TYPE"
+      ],
+      "name": "boolean_input",
+      "pass": true
+    },
+    {
+      "detail": [
+        "request.artifact_type:MISSING",
+        "request.version:MISSING",
+        "request.lane:MISSING",
+        "request.source:MISSING",
+        "request.identity_scope:MISSING",
+        "request.raw_sha256:MISSING",
+        "request.known_records:MISSING",
+        "request.known_groups:MISSING",
+        "request.channel_roles_filename_only:MISSING",
+        "request.drive:MISSING",
+        "request.exposure:MISSING",
+        "request.purpose:MISSING",
+        "request.calibration:MISSING",
+        "request.physical_model_comparison:MISSING",
+        "request.pre_raw_freeze:MISSING",
+        "request.fresh_confirmation_request:MISSING",
+        "request.physical_promotion:MISSING",
+        "request.raw_download_authorized_by_this_metadata:MISSING"
+      ],
+      "name": "empty_object",
+      "pass": true
+    },
+    {
+      "detail": "Filesystem/network entry points refused while evaluating supplied schema.",
+      "name": "declared_evidence_never_opened",
+      "pass": true
+    },
+    {
+      "detail": "Decoded JSON subsection equality; no inherited blocker closed.",
+      "name": "PR250_calibration_template_exact",
+      "pass": true
+    },
+    {
+      "detail": "Decoded JSON schema subsection equality.",
+      "name": "PR250_calibration_schema_exact",
+      "pass": true
+    },
+    {
+      "detail": "Decoded JSON subsection equality; no inherited blocker closed.",
+      "name": "PR250_physical_model_comparison_template_exact",
+      "pass": true
+    },
+    {
+      "detail": "Decoded JSON schema subsection equality.",
+      "name": "PR250_physical_model_comparison_schema_exact",
+      "pass": true
+    },
+    {
+      "detail": "Source text predicate only; no author code executed.",
+      "name": "author_path_and_channel_readout_syntax",
+      "pass": true
+    },
+    {
+      "detail": "Candidate-derived Jexp and reused shift; no notebook output claim.",
+      "name": "author_parameter_and_exposure_chain",
+      "pass": true
+    },
+    {
+      "detail": "No never-usable claim; no calibration admission.",
+      "name": "retrospective_use_preserved",
+      "pass": false
+    },
+    {
+      "detail": "Prospective producer file freeze replayed.",
+      "name": "producer_frozen_files_intact",
+      "pass": true
+    }
+  ],
+  "count": 19,
+  "new_fits": 0,
+  "new_raw_downloads": 0,
+  "null_leaf_count_is_not_independent_blockers": true,
+  "original_qualification_blockers_unresolved": 128,
+  "physical_promotion": 0,
+  "raw_access_authorized": false
+}

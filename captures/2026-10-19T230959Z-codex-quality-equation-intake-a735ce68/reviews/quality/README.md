@@ -1,0 +1,15 @@
+# Separate same-team quality-counterexample and phase-equation review
+
+Development — no registry entry. Physical Promotion=0. External nonconstructor review PENDING. This reviewer did not construct either proof. This remains same-team mathematical review, not independent physical replication or an external governance promotion receipt.
+
+The pre-evaluation review planned a low-rank source comparison with an explicit residual debit. The final producer instead uses a direct compression of the exact encoded matrix. That changes the proof route legitimately: it is not an approximation to Z0, so no discarded source approximation residual is silently dropped. Source cross-Gram H is an inherited pinned exact source receipt, independently replayed by the historical package; the present review does not recompute all of H against raw input.
+
+For L of dimension8191×210 and R of dimension321×210, put D=LᵀZR. Singular-value multiplication inequalities give sigma210(Z)≥sigma210(D)/(||L||2||R||2). For an exact dyadic candidate K and rho≥||I−DK||2<1, D is invertible and sigma210(D)≥(1−rho)/||K||2≥(1−rho)/||K||F. Thus only exact integer residuals and outward scalar square roots are needed to validate an inverse candidate. The reviewer uses a640-bit inverse only as a proposal, decodes its midpoint to exact dyadics, and independently checks the integer residual. It does not assume successful interval inversion is the proof.
+
+`arithmetic/REVIEW_RECEIPT.json` records successful alternate-association reconstruction of both44,100-entry compressions, exact basis/test Gram checks, independently regenerated raw hashes and encoded ball membership. The exact inverse residual upper bounds are below8.62e-192 and8.42e-192. Both strict lower bounds exceed the old2^-41 rank209 reconstruction cap. The reviewer has not run the estimator and does not assert a solver/phase failure.
+
+`SINGULAR_EQUATION_REVIEW.json` separately reviews the written retained singular-equation proof and independently recalculates its scalar enclosure from inherited exact source fractions. It confirms the conditional3q/2 phase gate with positive margin. It does not measure a new actual output residual or establish a universal numerical backend guarantee. The singular-equation residual and rank209 reconstruction residual remain different typed objects.
+
+The root corollary is valid for the encoded domain: the one-quantum witness belongs to every ball with delta≥q, while every delta<q ball contains only the zero perturbation. No nontrivial encoded ball can uniformly meet the old rank209 approximation cap. This supplies a necessary delta<q restriction, not a zero-noise PASS claim.
+
+The arithmetic review was frozen AFTER constructor outcomes were known and BEFORE review replay; this is disclosed in AUDIT_FREEZE.json. Its five small negative controls cover threshold/equality refusal and encoding membership. Producer controls, evaluated separately, are not recounted as reviewer independence. No files, source factors or inverse matrices were duplicated into the review package. No estimator fit or physical experiment was performed.
