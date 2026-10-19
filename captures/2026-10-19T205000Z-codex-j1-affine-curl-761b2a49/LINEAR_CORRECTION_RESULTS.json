@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "source_linear_witness_sha256": "f69f2c7ee4f329de77d500c5d54de43904fc9e5cf3fd67885fba2797401d4a4f",
+  "mesh": {
+    "nodes": 285,
+    "tetrahedra": 1024,
+    "interior_edges": 924,
+    "interior_faces": 1856,
+    "potential_coefficients_per_component": 5560
+  },
+  "checks": {
+    "local_basis_divergence_identities": 16832,
+    "actual_affine_divergence_checks": 8192,
+    "correction_face_vertex_component_checks": 53760,
+    "gradient_orthogonality": 8,
+    "exact_flux_norm_nonincrease": 8,
+    "nonconstant_cell_components": 7168
+  },
+  "exact_flux_norm_changes": [
+    "-2693468447604273995556878255667895607764602703822745227/2942391438462506608048026292128593632547979114592516177920",
+    "0",
+    "-854689483909197071334697596320977836058743550344304663508443/7061739452310015859315263101108624718115149875022038827008000",
+    "-2414542058302885217679170453096474167696782610109505229838179/17654348630775039648288157752771561795287874687555097067520000",
+    "-37632921097711494476077608577104487315691174690149660014523081/1506504416492803383320589461569839939864565306671368283095040000",
+    "-18551029816925411405661176199671862828151132404029306193185627/12052035331942427066564715692558719518916522453370946264760320000",
+    "-1773880292343100011822231162856969666825909403335139653063657/321387608851798055108392418468232520504440598756558567060275200",
+    "-1712419466231655257631096680815126424614666108418761550666221/25711008708143844408671393477458601640355247900524685364822016000"
+  ],
+  "controls": [
+    "nonfinite potential coefficient",
+    "truncated potential coefficients"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr",
+    "dtype": "float64",
+    "scope": "Sparse least-squares proposal in edge/face potential space; exact posterior validity/decrease, not exact optimality/rank or all-input IEEE theorem.",
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 208,
+        "residual_norm": 24.819421855525928,
+        "normal_residual_norm": 9.304077169711429e-07
+      },
+      {
+        "component": 1,
+        "stop_code": 0,
+        "iterations": 0,
+        "residual_norm": 0.0,
+        "normal_residual_norm": 0.0
+      },
+      {
+        "component": 2,
+        "stop_code": 2,
+        "iterations": 209,
+        "residual_norm": 259.68590123750516,
+        "normal_residual_norm": 9.949953880324648e-06
+      },
+      {
+        "component": 3,
+        "stop_code": 2,
+        "iterations": 209,
+        "residual_norm": 271.97426245974293,
+        "normal_residual_norm": 1.0559964326120064e-05
+      },
+      {
+        "component": 4,
+        "stop_code": 2,
+        "iterations": 210,
+        "residual_norm": 111.90039459303361,
+        "normal_residual_norm": 4.147505071825509e-06
+      },
+      {
+        "component": 5,
+        "stop_code": 2,
+        "iterations": 209,
+        "residual_norm": 28.880728469658127,
+        "normal_residual_norm": 1.124271355863005e-06
+      },
+      {
+        "component": 6,
+        "stop_code": 2,
+        "iterations": 210,
+        "residual_norm": 49.819842966600774,
+        "normal_residual_norm": 1.912154713846815e-06
+      },
+      {
+        "component": 7,
+        "stop_code": 2,
+        "iterations": 209,
+        "residual_norm": 6.043583656973386,
+        "normal_residual_norm": 2.332205140648348e-07
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
