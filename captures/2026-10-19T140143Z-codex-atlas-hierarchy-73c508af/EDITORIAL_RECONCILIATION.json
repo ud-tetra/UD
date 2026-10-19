@@ -1,0 +1,260 @@
+{
+  "schema": "UD_ATLAS_EDITORIAL_RECONCILIATION_v0.2",
+  "date": "2026-10-19",
+  "previous_site_version": 38,
+  "previous_source_commit": "389a9f0c4ecfcd486e2aa79cefbd4a8ecbc05e1c",
+  "primary_navigation": [
+    {
+      "route": "/",
+      "label": "Overview"
+    },
+    {
+      "route": "/primer/",
+      "label": "Foundations"
+    },
+    {
+      "route": "/research/",
+      "label": "Research programmes"
+    },
+    {
+      "route": "/evidence/",
+      "label": "Evidence & open questions"
+    },
+    {
+      "route": "/papers/",
+      "label": "Papers & reading"
+    },
+    {
+      "route": "/archive/",
+      "label": "Research archive"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/archive/",
+      "title": "Research archive",
+      "primary_parent": "/archive/",
+      "role": "overview"
+    },
+    {
+      "route": "/contribution/",
+      "title": "Contribute a review",
+      "primary_parent": "/archive/",
+      "role": "reference"
+    },
+    {
+      "route": "/dependencies/",
+      "title": "Dependency explorer",
+      "primary_parent": "/archive/",
+      "role": "reference"
+    },
+    {
+      "route": "/dynamics/",
+      "title": "Dynamics & source laws",
+      "primary_parent": "/primer/",
+      "role": "reading"
+    },
+    {
+      "route": "/evidence/",
+      "title": "Evidence & open questions",
+      "primary_parent": "/evidence/",
+      "role": "overview"
+    },
+    {
+      "route": "/evidence/measurable-audit/",
+      "title": "Realization & dataset audit",
+      "primary_parent": "/evidence/",
+      "role": "reading"
+    },
+    {
+      "route": "/history/",
+      "title": "Programme history",
+      "primary_parent": "/archive/",
+      "role": "reference"
+    },
+    {
+      "route": "/history-comparison/",
+      "title": "History comparison",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/",
+      "title": "Overview",
+      "primary_parent": "/",
+      "role": "overview"
+    },
+    {
+      "route": "/joint-carrier/",
+      "title": "Complete carrier",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/ledger/",
+      "title": "Coefficient ledger",
+      "primary_parent": "/archive/",
+      "role": "reference"
+    },
+    {
+      "route": "/mathematics/",
+      "title": "Mathematical results",
+      "primary_parent": "/primer/",
+      "role": "reading"
+    },
+    {
+      "route": "/metric-admission/",
+      "title": "Source metrics",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/metric-selection/",
+      "title": "Selection premises",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/native-admission/",
+      "title": "Native operator",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/observation/",
+      "title": "Observation & calibration",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/papers/",
+      "title": "Papers & reading",
+      "primary_parent": "/papers/",
+      "role": "overview"
+    },
+    {
+      "route": "/primer/",
+      "title": "Foundations",
+      "primary_parent": "/primer/",
+      "role": "overview"
+    },
+    {
+      "route": "/programmed-clock/",
+      "title": "Supplied clock",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/realization/",
+      "title": "Native realization",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/reconciliation/",
+      "title": "Corrections & dispositions",
+      "primary_parent": "/archive/",
+      "role": "reference"
+    },
+    {
+      "route": "/refinement-tower/",
+      "title": "Refinement hierarchy",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/research/",
+      "title": "Research programmes",
+      "primary_parent": "/research/",
+      "role": "overview"
+    },
+    {
+      "route": "/research/parity/",
+      "title": "Parity transport",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/research-record/",
+      "title": "Capture register",
+      "primary_parent": "/archive/",
+      "role": "reference"
+    },
+    {
+      "route": "/source-contract/",
+      "title": "Response contract",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/source-programme/",
+      "title": "Prepared source programme",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/sources/",
+      "title": "Source registry",
+      "primary_parent": "/archive/",
+      "role": "reference"
+    },
+    {
+      "route": "/subdivision/",
+      "title": "Refinement interface",
+      "primary_parent": "/research/",
+      "role": "specialist"
+    },
+    {
+      "route": "/updates/",
+      "title": "Dated updates",
+      "primary_parent": "/archive/",
+      "role": "reference"
+    }
+  ],
+  "changes": [
+    "Replace25 flat primary destinations with6; specialist pages inherit a programme and reading sequence",
+    "Create Research, Parity and Archive guides",
+    "Group27 paper articles by logical dependency; preserve original article bytes and anchors",
+    "Keep all earlier update articles; recent notes and expandable historical chronology",
+    "Bound the capture-register default view; preserve all118 entries and search/deep links",
+    "Reconcile Evidence parity wording with later recovered ruling-document and remaining attribution/raw-output gaps",
+    "Move dated material to Updates; keep Home as a stable reading guide"
+  ],
+  "scientific_data": "claims.json, ledger.json, source files and all scientific scripts unchanged; no scientific result promoted",
+  "evidence_wording_amendment": {
+    "old": "Portal records Gemini replication and custodian CRL2d ruling; source-recorded AI replication",
+    "new": "Historical report and full ruling document recovered; named/signed original approval and raw-output commitment still unresolved; external-AI/internal transport scope retained",
+    "basis": "research-record v0.1 custody and parity records, preserved in public Site v38"
+  },
+  "old_paths_preserved": [
+    "contribution/index.html",
+    "dependencies/index.html",
+    "dynamics/index.html",
+    "evidence/index.html",
+    "evidence/measurable-audit/index.html",
+    "history-comparison/index.html",
+    "history/index.html",
+    "index.html",
+    "joint-carrier/index.html",
+    "ledger/index.html",
+    "mathematics/index.html",
+    "metric-admission/index.html",
+    "metric-selection/index.html",
+    "native-admission/index.html",
+    "observation/index.html",
+    "papers/index.html",
+    "primer/index.html",
+    "programmed-clock/index.html",
+    "realization/index.html",
+    "reconciliation/index.html",
+    "refinement-tower/index.html",
+    "research-record/index.html",
+    "source-contract/index.html",
+    "source-programme/index.html",
+    "sources/index.html",
+    "subdivision/index.html",
+    "updates/index.html"
+  ],
+  "independent_review": "not supplied by editorial work",
+  "physical_promotion": 0
+}
