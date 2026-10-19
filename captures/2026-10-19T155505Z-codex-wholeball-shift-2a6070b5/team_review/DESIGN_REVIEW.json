@@ -1,0 +1,34 @@
+{
+  "status": "PASS_SAME_TEAM_WHOLEBALL_SHIFT_MATH_DESIGN_REVIEW",
+  "reviewed_at_utc": "2026-10-19T15:44:23.408316+00:00",
+  "design_review_sha256": "d6d86a1dbb34b85257129c989a7493e3980d57bc35b9c54ddb35017a9aebb658",
+  "source_reference_hashes": {
+    "/workspace/scratch/f3d1c2f040c9/prospective-v2-work/full_svd.py": "1bee163e870fb97ca8a722f9580e52a271cb5ca6954e453c79ff2db3764bbe55",
+    "/workspace/scratch/f3d1c2f040c9/record-contract-work/numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "/workspace/scratch/f3d1c2f040c9/two-step-work/certify.py": "201e26bd181d8255f573dcfb1d342c9b91b174da664c5d2cb19742502641f22b",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/source_math.py": "f26937a91205197dd945d67b7c05899606eb3d549bf50c330170e96fab19e1fc"
+  },
+  "numerical_constants_or_case_outcomes_evaluated": false,
+  "material_mathematical_issues": [],
+  "required_norm_conditions": [
+    "Frobenius-upgrade lane must cite actual Frobenius reconstruction/Gram/projection bound construction.",
+    "Generic operator-only lane uses sqrt209*epsilon2 for retained-right projected error.",
+    "Baseline sigma0F and normal residual nu are Frobenius bounds.",
+    "One common principal-angle Procrustes alignment supports both d2 and dF."
+  ],
+  "required_guards": [
+    "etaF<1",
+    "alpha>2e2",
+    "beta>d2",
+    "betaA>0",
+    "finite supported real U/T and exact saved-array provenance",
+    "strict lowerbound comparison for fixed-basis gate obstruction"
+  ],
+  "lower_bound_direction": "Exact or lower s_squared minus upper nu_squared/beta_lower_squared, then max0 andsqrt; never use a residual upper to establish a lower.",
+  "quantifier": "Conditional whole-ball residual estimate for quality-qualified returned factors and declared normal-residual bound; not uniform solver success or all-algorithmno-go.",
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "external_independent_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry"
+}

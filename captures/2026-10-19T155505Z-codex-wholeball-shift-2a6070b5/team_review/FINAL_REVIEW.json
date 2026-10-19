@@ -1,0 +1,244 @@
+{
+  "status": "PASS_SAME_TEAM_WHOLEBALL_CODE_NORM_AND_FIXED_BASIS_REVIEW",
+  "reviewed_at_utc": "2026-10-19T15:48:53.658209+00:00",
+  "review_code_sha256": "4ffe5e35185dfd085ba15b3ad3aac79aee4698bd7218ac5875401fbbfc864488",
+  "reviewed_sources_before_after_equal": {
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/bounds.py": "b7c73c7e27a82d0c4f67b7c6bc5539395a35675001c65e7a3e40c9d58bb8d6a9",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/controls.py": "3ee0342a6198272201a3a4e5b13a7a30d9adedc8bab8b16301cafe5196d60689",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/normal.py": "86e9be1d72f78e2ec6626a9789aec1f7b5a698c51696f3df3d74c18ec9b8f213",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/offline_intake.py": "762812090623d5aefa8f736e78d8abe46a0c62f3f9221e244a1a117179af10ab",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/inputs/PARENT_BASELINE_PROOF.py": "9b47c010615c84707233ce03798fab7349ddd6ae8a952c81c7217c5ee64b4188",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/inputs/PARENT_FULL_SVD.py": "1bee163e870fb97ca8a722f9580e52a271cb5ca6954e453c79ff2db3764bbe55",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/inputs/PARENT_ORDER.json": "0d3e63c89dbd7c821d459974f4f2a9bbcda5a5586bb2132bd9f3f542c6381dd9",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/inputs/PARENT_PHASE.json": "b4a9c8d4f65760e30c2201bedd1c35d2b5dab8f38a541e59e6bfa114c1915911",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/inputs/PARENT_UNIFORM.json": "9e5633627fc08f385159b869673930e5e389cb2a799534b7ef3c48603121ed73",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/inputs/PR210_FREEZE.json": "46a5d21e1cb0ab79e6adf1f6ca0c1049fe35696254722c8e635bdcf16c4a34f9",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/inputs/PUBLISHED_ALLOWANCE.json": "f6e2ad0ea78201f5b5472a25477f99e361d15500117d9146464807b3a956b63b",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/THEOREMS.md": "dfadc8571f0c601dee62c00b7dca554ea344a3e227aa13adbe5da848fe0f9fc1"
+  },
+  "source_only_arithmetic_diagnostics": [
+    {
+      "mode": "ideal",
+      "delta": [
+        0,
+        1
+      ],
+      "normal_ceiling": [
+        0,
+        1
+      ],
+      "independent_J": "0.0000000005414300433735692369866657694610255043582573540245462555886233513344315497325366586970729618463042126",
+      "independent_amin": "0.9744380654448681536069510065961705121329495878518636090241207145439999496085265400724461995308532207",
+      "sufficient": true
+    },
+    {
+      "mode": "ideal",
+      "delta": [
+        0,
+        1
+      ],
+      "normal_ceiling": [
+        1,
+        35184372088832
+      ],
+      "independent_J": "0.0000000005414300433735692369866657694610255043582573540245462555886233513344315497325366586970729618463042126",
+      "independent_amin": "0.9744380654448681536069510065961705121329495878518636090241207145439999496085265400724461995308532207",
+      "sufficient": true
+    },
+    {
+      "mode": "ideal",
+      "delta": [
+        1,
+        281474976710656
+      ],
+      "normal_ceiling": [
+        0,
+        1
+      ],
+      "independent_J": "0.000000002309063309958605202783207287522480444167160008897841744582801166485608972631081642012973993252279859",
+      "independent_amin": "0.9744380645724937950372009040193339364057886642619958707291159587197633154614523944183659566919795422",
+      "sufficient": false
+    },
+    {
+      "mode": "ideal",
+      "delta": [
+        1,
+        281474976710656
+      ],
+      "normal_ceiling": [
+        1,
+        35184372088832
+      ],
+      "independent_J": "0.000000002309063309958605202783207287522480444167160008897841744582801166485608972631081642012973993252279859",
+      "independent_amin": "0.9744380645724937950372009040193339364057886642619958707291159587197633154614523944183659566919795422",
+      "sufficient": false
+    },
+    {
+      "mode": "returned_operator_only",
+      "delta": [
+        0,
+        1
+      ],
+      "normal_ceiling": [
+        0,
+        1
+      ],
+      "independent_J": "0.000000005166277046402408009209288250934668978955465795173632574568755570868887488705867532678542780479697395",
+      "independent_amin": "0.9744380652868240918892316262294546927922146370935206690048242611964859530416365889255742262884323201",
+      "sufficient": false
+    },
+    {
+      "mode": "returned_operator_only",
+      "delta": [
+        0,
+        1
+      ],
+      "normal_ceiling": [
+        1,
+        35184372088832
+      ],
+      "independent_J": "0.000000005166277046402408009209288250934668978955465795173632574568755570868887488705867532678542780479697395",
+      "independent_amin": "0.9744380652868240918892316262294546927922146370935206690048242611964859530416365889255742262884323201",
+      "sufficient": false
+    },
+    {
+      "mode": "returned_operator_only",
+      "delta": [
+        1,
+        281474976710656
+      ],
+      "normal_ceiling": [
+        0,
+        1
+      ],
+      "independent_J": "0.00000000693391031730100650976348880601964850321885409916655433142402413669234550724826951877470161829808105",
+      "independent_amin": "0.9744380644144497330440789355847698964139644845359837382369992004041559973221169898576710725760442111",
+      "sufficient": false
+    },
+    {
+      "mode": "returned_operator_only",
+      "delta": [
+        1,
+        281474976710656
+      ],
+      "normal_ceiling": [
+        1,
+        35184372088832
+      ],
+      "independent_J": "0.00000000693391031730100650976348880601964850321885409916655433142402413669234550724826951877470161829808105",
+      "independent_amin": "0.9744380644144497330440789355847698964139644845359837382369992004041559973221169898576710725760442111",
+      "sufficient": false
+    },
+    {
+      "mode": "returned_F_certificate",
+      "delta": [
+        0,
+        1
+      ],
+      "normal_ceiling": [
+        0,
+        1
+      ],
+      "independent_J": "0.0000000008615518218705901960359505901568273957699438681086286085887076131344660099098948420775565446221824465",
+      "independent_amin": "0.9744380652868240918892316262294546927922146370935206690048242611964859530416365889255742262884323201",
+      "sufficient": false
+    },
+    {
+      "mode": "returned_F_certificate",
+      "delta": [
+        0,
+        1
+      ],
+      "normal_ceiling": [
+        1,
+        35184372088832
+      ],
+      "independent_J": "0.0000000008615518218705901960359505901568273957699438681086286085887076131344660099098948420775565446221824465",
+      "independent_amin": "0.9744380652868240918892316262294546927922146370935206690048242611964859530416365889255742262884323201",
+      "sufficient": false
+    },
+    {
+      "mode": "returned_F_certificate",
+      "delta": [
+        1,
+        281474976710656
+      ],
+      "normal_ceiling": [
+        0,
+        1
+      ],
+      "independent_J": "0.000000002629185089013856789550077257632866295819011910626570317733451100336641378271260527229366598662727519",
+      "independent_amin": "0.9744380644144497330440789355847698964139644845359837382369992004041559973221169898576710725760442111",
+      "sufficient": false
+    },
+    {
+      "mode": "returned_F_certificate",
+      "delta": [
+        1,
+        281474976710656
+      ],
+      "normal_ceiling": [
+        1,
+        35184372088832
+      ],
+      "independent_J": "0.000000002629185089013856789550077257632866295819011910626570317733451100336641378271260527229366598662727519",
+      "independent_amin": "0.9744380644144497330440789355847698964139644845359837382369992004041559973221169898576710725760442111",
+      "sufficient": false
+    }
+  ],
+  "saved_basis_diagnostics": [
+    {
+      "case": "rotating_checker",
+      "expanded_and_direct_residual_squared_agree": true,
+      "independent_fixed_basis_lower": "0.00000000005655428857587509225868768299790246365230030976478379233163766100748495732989450474086751681114433393",
+      "normal_norm_exceeds_illustrative_2neg45_ceiling": true,
+      "old_gate_obstruction": false
+    },
+    {
+      "case": "block128",
+      "expanded_and_direct_residual_squared_agree": true,
+      "independent_fixed_basis_lower": "0.000000000053192200106621719907888853741121168196172015972874957611431851683566149593242105927812747441716392",
+      "normal_norm_exceeds_illustrative_2neg45_ceiling": true,
+      "old_gate_obstruction": false
+    },
+    {
+      "case": "directed_period4",
+      "expanded_and_direct_residual_squared_agree": true,
+      "independent_fixed_basis_lower": "0.000000000334861329641499149901767663271976225563260744755908464535849718289316378257225841466203147021126779",
+      "normal_norm_exceeds_illustrative_2neg45_ceiling": true,
+      "old_gate_obstruction": true
+    }
+  ],
+  "diagnostic_precision_decimal_digits": 160,
+  "arithmetic_authority": "Primary validated bounds remain512-bit Arb plus exactdyadic/rational receipts; mpmath160digit recomputation is an independent-expression diagnostic.",
+  "findings": [
+    "Genericop lane correctlyuses sqrt209epsilon; F lane justified by actual F-norm Gram/reconstruction certificate proof.",
+    "One common alignment, Frobenius baseline sigma and fullpositive deleted-row singularmargin retained.",
+    "Exactnormal numerator/denominator and expanded s_squared scaling are correct; s_squared agrees exactly with earlier directdifference proof.",
+    "Fixedbasis lower uses exact s_squared minus upper normalcomponent and positive lower singularmargin; no residualupper used aslower.",
+    "Allfull-radius apriori proofbounds exceed publishedallowance, so sufficiencyHOLD is reported without actualfailureclaim.",
+    "Directed-only fixedbasis oldgate obstruction is valid and does not negate its v2PASS or constrain other bases/algorithms.",
+    "Actual normalnorms exceed illustrative nu2^-45; no claim theymeetthatfrozenceiling shouldbe made."
+  ],
+  "material_issues": [],
+  "report_hashes": {
+    "FREEZE.json": "f966028afc0cffad33ca80423b4c6c8ee8794ccde58841a8f8bba39a01b1062b",
+    "THEOREMS.md": "dfadc8571f0c601dee62c00b7dca554ea344a3e227aa13adbe5da848fe0f9fc1",
+    "APRIORI_BOUNDS.json": "47c497802e0ae4595bae77dafe3a579cb34f595e309017f2534df0a1e6c6c5bb",
+    "NORMAL_CERTIFICATES.json": "04a57038c4f99c9a7f01cabcd9fc20b68925f7acf70346c7e0350ca97849ead8",
+    "CONTROLS.json": "76327ad4172b851b24d1836ac362daf30e2a0ee03be64ac4d1ea1d4140361bcf"
+  },
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "new_raw_generation": false,
+  "exact_normal_matrix_reexecution_by_reviewer": false,
+  "dependencies": [
+    "Clean composed proof replay remains separate from this read-only review.",
+    "Pinned fullfactor/source/encodedrecord certificate dependencies remain explicit."
+  ],
+  "external_independent_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry"
+}

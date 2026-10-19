@@ -1,0 +1,70 @@
+{
+  "status": "CERTIFIED_DATA_ONLY_FIXED_BASIS_OLD_GATE_OBSTRUCTION",
+  "case": "directed_period4",
+  "reviewed_at_utc": "2026-10-19T15:50:58.480032+00:00",
+  "freeze_sha256": "9b8721be235d084bba50b147816d86d72b4c58e3dace687224372f6c7ab2a562",
+  "code_sha256": "28315108fd950cf43ec94b9a9eddae7bba7fee0db328f0e38606402bb59b9d09",
+  "input_sha256_before_after_equal": {
+    "/workspace/scratch/f3d1c2f040c9/prospective-v2-work/results/directed_period4/results/integer_projection/FACTOR_0.npz": "f635aa88b473efa76d23079ccb60dd97a55633df56e8ada1a1a1aa4accb3bb5e",
+    "/workspace/scratch/f3d1c2f040c9/prospective-v2-work/results/directed_period4/results/integer_projection/FACTOR_1.npz": "a1ef49fa3ffef756c1ce6e20eb29cb81ece1e650f640b9d04bcd548a01376db4",
+    "/workspace/scratch/f3d1c2f040c9/prospective-v2-work/results/directed_period4/results/integer_projection/FACTOR_2.npz": "128e8d93596239302bbad8bbf408e617f411c76ab56d576171d04cb54b7ee53f",
+    "/workspace/scratch/f3d1c2f040c9/prospective-v2-work/results/directed_period4/results/integer_projection/PHASE_META.npz": "5d0e15388d7e1c86d847b02b6433767a684fec4a58fc396aed5fdaea512e70d7",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/NORMAL_CERTIFICATES.json": "04a57038c4f99c9a7f01cabcd9fc20b68925f7acf70346c7e0350ca97849ead8"
+  },
+  "actual_deleted_basis_gram_defect_squared_exact": [
+    "2730350022229985894077251229681308038446163467176395701789834507024384332287001195902875590961",
+    "2135987035920910082395021706169552114602704522356652769947041607822219725780640550022962086936576"
+  ],
+  "deleted_basis_sigma_min_squared_lower_exact": [
+    "369426139970127084869193842146966759432377953125845559",
+    "383123885216472214589586756787577295904684780545900544"
+  ],
+  "margin_certificate_exact": {
+    "ell_positive": true,
+    "ell_at_most_one": true,
+    "one_minus_ell_squared_at_least_Gram_F_defect_squared": true
+  },
+  "direct_shift_residual_squared_exact": [
+    "217835564029038191422395580635752587649858198933452912141757021061",
+    "1942668892225729070919461906823518906642406839052139521251812409738904285205208498176"
+  ],
+  "direct_normal_residual_squared_exact": [
+    "5381588442712597966336341887685875795961312630363627670317413367309500801157441045674062644225354072082219",
+    "5678427533559428832416592249125035424637823130369672345949142181098744438385921275985867583701277855943457200048954515105739075223552"
+  ],
+  "LS_minimum_residual_squared_lower_before_max0_exact": [
+    "80474150862087483289820319665185968950268089753520882542750573632618686841587320631369226263494504513484758754635709331",
+    "717672670094993916410846643993590256734266376289602183741446818488809269595016092286855457909786106193299986854869820782688006892509200384"
+  ],
+  "LS_minimum_residual_squared_lower_exact": [
+    "80474150862087483289820319665185968950268089753520882542750573632618686841587320631369226263494504513484758754635709331",
+    "717672670094993916410846643993590256734266376289602183741446818488809269595016092286855457909786106193299986854869820782688006892509200384"
+  ],
+  "old_shift_gate_squared_exact": [
+    "1",
+    "295147905179352825856"
+  ],
+  "strict_squared_lower_exceeds_old_gate": true,
+  "LS_minimum_residual_norm_lower": [
+    513173494518880067465781457386670532875084115,
+    1532495540865888858358347027150309183618739122183602176
+  ],
+  "readable": {
+    "Gram_F_defect": 0.03575278330299257,
+    "singularvalue_squared_lower": 0.9642472166970074,
+    "LS_minimum_residual_norm_lower": 3.3486132966424646e-10,
+    "normal_residual_F": 3.0785144546764306e-14
+  },
+  "parent_direct_N_and_expanded_s2_exactly_agree": true,
+  "proof": "G=A^T A; ||G-I||2<=etaF<=1-ell =>sigmamin(A)^2>=ell. ExactnormalLS Pythagoras implies min_T||B-AT||F^2>=s2-n2/ell. Finalstrictgatecomparison is rational, not floating.",
+  "scope": "Every real replacement T on THIS saved basis violates ONLY old fixedrawshiftgate ifflagtrue. No otherbasis/algorithm/truephase/v2/wholeballuniform failure claim.",
+  "source_frame_or_wholeball_bound_needed": false,
+  "post_known_outcome_supplement": true,
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "new_raw_generation": false,
+  "external_independent_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry",
+  "seconds": 7.546027256999878
+}
