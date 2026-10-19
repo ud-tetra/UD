@@ -1,0 +1,94 @@
+{
+  "version": "UD_PARITY_EXPANDED_CONTRACT_v0.1",
+  "status": "CANDIDATE_FROZEN_CONSTRUCTOR_ONLY",
+  "base_commit": "698102fbfdc95e5dd25933d27fdd92980810287d",
+  "physical_promotion": 0,
+  "source_pins": [
+    {
+      "path": "captures/2026-10-18T201837Z-codex-W-source-coverage-d8374ec5/exact_selector_check.py",
+      "sha256": "433edd3d5234d383c9a5ea34c00b88b7143aeefe1a2287cef173d4cc20b4e719"
+    },
+    {
+      "path": "captures/2026-10-18T201837Z-codex-W-source-coverage-d8374ec5/sources/UD_PACHNER_CANONICAL_EVENT_SECTOR_SELECTOR_v0.1.md",
+      "sha256": "7519abba9dedd846159a9459dbe6b9fa283d684b40ae61e6158b2efc0031631d"
+    },
+    {
+      "path": "captures/2026-10-18T201837Z-codex-W-source-coverage-d8374ec5/sources/UD_PACHNER_EVENT_DARBOUX_BASIS_v0.1.csv",
+      "sha256": "2a0e0a7fa4eb4ca9377b783cf6ffe076e1bb246398223fa62378fd4d16a6d387"
+    },
+    {
+      "path": "captures/2026-10-18T201837Z-codex-W-source-coverage-d8374ec5/sources/UD_PACHNER_EVENT_DARBOUX_MAP_AND_GENERATOR_PUSHFORWARD_v0.1.md",
+      "sha256": "08e4e0232e8030f6cf10820086d0ab83f50b923818634c4c3e080043c64258bc"
+    },
+    {
+      "path": "captures/2026-10-18T201837Z-codex-W-source-coverage-d8374ec5/sources/UD_PARITY_CARRIER_CRL2C_RUNNER_v0.1.py",
+      "sha256": "029ca554aab0bd667a6af63f4bb11433d22ec5ddfcbd9762b71db2ca14b63f89"
+    },
+    {
+      "path": "captures/2026-10-18T201837Z-codex-W-source-coverage-d8374ec5/sources/UD_PARITY_CARRIER_CRL2D_REPLICATION_RUNNER_v0.1.py",
+      "sha256": "d9d16ff90b6ff2066f147605160c1a983d7f8b16459ec9235eaab2c39f682c97"
+    },
+    {
+      "path": "captures/2026-10-18T201012Z-codex-parity-type-audit-d341286f/SOURCE_THEOREM_v0.1.md",
+      "sha256": "47fea91d97f8e2c4441b7bab1f1ad06f9a8fc74507f34645433572791d74a863"
+    },
+    {
+      "path": "captures/2026-10-18T201012Z-codex-parity-type-audit-d341286f/TYPED_REPAIR_v0.1.md",
+      "sha256": "3e7ba2d04e6a94fc3da700b6005e5687da53afd03326d113d072f0253512052c"
+    }
+  ],
+  "source_model": {
+    "ambient": "ascending simplices sizes 1..4 of boundary Delta4; dimension30",
+    "metric": "unit Euclidean",
+    "orientation": "ascending vertices; skew boundary blocks +B,-B^T",
+    "selection": "S4 fixing vertex4; complex-compatible lower-response rank6 projector; supplied convention"
+  },
+  "types": {
+    "W": [
+      30,
+      6
+    ],
+    "T": [
+      6,
+      30
+    ],
+    "Theta": [
+      30,
+      30
+    ],
+    "Ic": [
+      6,
+      6
+    ],
+    "c": "real finite scalar; bool excluded; 0.001 <= c <= 1000 (numeric lane only)"
+  },
+  "numeric": {
+    "scalar": "Python finite binary64 float or int; bool excluded",
+    "norm": "induced infinity = max absolute row sum",
+    "atol": 1e-10,
+    "rtol": 1e-12,
+    "rule": "norm(L-R) <= atol + rtol * max(norm(L), norm(R)); all intermediates finite",
+    "classification": "NUMERICAL_SOURCE_ADMITTED; never EXACT_PASS"
+  },
+  "required_gates": [
+    "source_hashes",
+    "types_finite_positive_c",
+    "W_orthonormal",
+    "selected_membership",
+    "native_generator",
+    "Darboux_pullback",
+    "T_definition",
+    "Theta_definition",
+    "Ic_definition",
+    "event_intertwining",
+    "Ic_intertwining",
+    "Theta_F",
+    "full_typed_composite",
+    "ambient_square",
+    "event_antisymplectic",
+    "copy_swap"
+  ],
+  "history_policy": "No archived runner execution, replacement or historical score revision. Fresh constructor fixtures are public development tests, not a blinded cohort.",
+  "promotion_policy": "No registry or CRL promotion. Independent adversarial review, blinded cohort commitment and execution, independent replication and applicable custodian ruling remain separate.",
+  "frame_policy": "Any selected orthonormal Darboux frame passing native-generator convention is admitted. Theta is frame-dependent conditional algebra; canonical-frame uniqueness and physical parity are not asserted."
+}
