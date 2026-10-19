@@ -1,0 +1,55 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "classification": "EXACT_CONDITIONAL",
+  "constructor": "Codex",
+  "reviewers": [],
+  "source_hashes": [
+    {
+      "path": "UD-j1-continuum/captures/2026-10-19T163000Z-codex-j1-refinement-37b86ad0/REPORT.md",
+      "size_bytes": 8273,
+      "sha256": "ca562d68ce70d1bf601f9a278d4a6171e1b00143f7aa9e2b419b512a425ffc64"
+    },
+    {
+      "path": "UD-j1-continuum/captures/2026-10-19T163000Z-codex-j1-refinement-37b86ad0/verify_refinement.py",
+      "size_bytes": 6478,
+      "sha256": "f02fbc6d8271f0e7c46c948e3e315a2633e14b1599160f4b94b9eb65b0197e38"
+    },
+    {
+      "path": "project_sources/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "size_bytes": 43009,
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "path": "project_sources/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "size_bytes": 4882,
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "fixed_port": "F=10(x+y); force density F*f; output integral(F*u)dmu; dmu=dV/(sqrt2/12) after a=1 scaling",
+  "space": "zero-mean complex H1 J1; natural Neumann boundary",
+  "damping": "positive material gamma; optional same-port passive zeta>=0",
+  "mesh_contract": "Conforming continuous P1; exact same polyhedron and integration; mean subtraction; uniformly shape-regular family h->0",
+  "external_mathematical_anchors": [
+    {
+      "url": "https://arxiv.org/abs/1110.2960",
+      "scope": "convex-domain Poincare inequality, intro equation1.4"
+    },
+    {
+      "url": "https://finite-element.github.io/L5_convergence.html",
+      "scope": "standard Galerkin approximation framework"
+    }
+  ],
+  "theorems": [
+    "Uniform compact-band continuum convergence",
+    "Quadratic collocated output error",
+    "Mesh-independent positive-damping stability/gain",
+    "Guaranteed Hdiv flux residual error with exact RT1 coarse witness"
+  ],
+  "limitations": [
+    "No computed H2/interpolation constant or mesh-size stopping rule",
+    "Coarse near-resonance error bound can be loose",
+    "Infinite mesh family not implemented/certified here",
+    "Native UD action/state/units bridge and independent review open"
+  ],
+  "physical_promotion": 0
+}
