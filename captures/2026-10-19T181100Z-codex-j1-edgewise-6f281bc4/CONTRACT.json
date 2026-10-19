@@ -1,0 +1,52 @@
+{
+  "title": "Fixed J1 volume port: h-reducing edgewise mesh family and eight-cell RT1 patches v0.1",
+  "base": "a36864dc84a518ed71a0cc1a38012dde965d9550",
+  "status": "DERIVED_EXACT_CONDITIONAL_AND_AUDITED_NUMERICAL_WITNESSES",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "independent_review": false,
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "33c1dff1e4659d5430dce8bfe3d5caf69802a542e98b1d750d4347fec0081966"
+    },
+    {
+      "path": "captures/2026-10-19T180100Z-codex-j1-local-flux-8c9d0f36/REPORT.md",
+      "sha256": "4acf88de8090344c1fe96f554f849017623d38831d5f421e3e23874f14f7abd1"
+    },
+    {
+      "path": "captures/2026-10-19T180100Z-codex-j1-local-flux-8c9d0f36/patch_flux.py",
+      "sha256": "21c2015afa1cf7279359bd098b78d6a4a33d1cf937845ddb8e53d055e3a7c629"
+    },
+    {
+      "path": "captures/2026-10-19T180100Z-codex-j1-local-flux-8c9d0f36/fine_flux_core.py",
+      "sha256": "edd086b69b066f2106354a77c7ba208b890b392d5f395b762af13fb4d1537b3c"
+    },
+    {
+      "path": "captures/2026-10-19T180100Z-codex-j1-local-flux-8c9d0f36/RESULTS.json",
+      "sha256": "2d22c47b94ce87827b9142af3384731c1004303127559711997c4f87088ab109"
+    },
+    {
+      "path": "user_attachment/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "path": "user_attachment/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "source_alignment": "Ledger Q169-Q179 concerns incidence/support dynamics and does not select the scalar-wave action or damping. CRL2 subdivision file labels itself a governance proposal, not enacted policy. Neither is silently promoted or overwritten.",
+  "port": "a=1 J1; coordinates x,y,t=sqrt2*z, metric diag(1,1,1/2); dmu normalized by sqrt2/12. Meanfree Neumann scalar wave, fixed distributed F=10(x+y), external gamma. tau=ct/a.",
+  "mesh_family": "From the14-node16-tet starting mesh, every ordered child increment frame equals1/2 a parent column permutation. Uniform finite shape set and h_l\u00b2<=5/(4*4^l). Exact conformity reference-face test.",
+  "numerical_scope": "55 nodes128 cells; four complex128 state/output witnesses at omega0,4,9/2,5 and gamma1/10. Exact hex decoding and Fraction audit, posterior algebraic raw-output budget1e-10. No all-input IEEE theorem.",
+  "flux_scope": "Parent16-cell projected divergence plus16 independent eight-cell RT1 patches. Exact local L2 projection and final global divergence/normal checks. Float free-variable proposals are not assumed optimal.",
+  "convergence_scope": "Qualitative uniform convergence of the exact conforming Galerkin family over the declared compact damped band now has an explicit admissible mesh sequence. No certified numerical h-to-output rate or proof of estimator convergence/algorithm termination.",
+  "open": [
+    "accurate continuum resonance intervals",
+    "quantitative a priori approximation/regularity constants",
+    "convergence of hierarchical flux certificates",
+    "independent review",
+    "native UD source/action/units selection and physical calibration"
+  ],
+  "unavailable_attachment": "Gap2_FINAL_Finite_Genesis.png was not read or used; reupload requested"
+}
