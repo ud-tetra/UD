@@ -1,0 +1,48 @@
+{
+  "status": "PASS_COMPLETE_CAMPAIGN_REPLAY",
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "new_SVD_or_estimator_runs": 0,
+  "mode": "saved_factors_only",
+  "logs": [
+    {
+      "tag": "materialize",
+      "argv": [
+        "materialize.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "a4297e2906f8ab07456f0556171cbfff0ec7b05d880b90aae42a3dffe094a6d4"
+    },
+    {
+      "tag": "full-SVD-replay",
+      "argv": [
+        "-c",
+        "import full_svd; from bindings import P,freeze\nfor n in freeze()[\"cases\"]:\n full_svd.P=P/\"results\"/n\n full_svd.certify(\"integer_projection\")\n"
+      ],
+      "exit_code": 0,
+      "log_sha256": "eccffa071ee0a792b9f4030d2a61461f71123e8723e5657f81249429a135c490"
+    },
+    {
+      "tag": "all-output-gates",
+      "argv": [
+        "gates.py",
+        "--replay"
+      ],
+      "exit_code": 0,
+      "log_sha256": "03c828123e9e28167e8a1ed91910f2701eda219af3dcb185bf7b9ab891cde966"
+    },
+    {
+      "tag": "strict-shift-exceedance",
+      "argv": [
+        "exceedance.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "1c0ef7ff5d077afb04894b9fcdf68d9c217e1669f6e0981ade51942b82661b9d"
+    }
+  ],
+  "cases": 3,
+  "admitted": 2,
+  "HOLD": 1,
+  "helper_hashes_before_after_verified": true,
+  "reviewer_identity": null
+}

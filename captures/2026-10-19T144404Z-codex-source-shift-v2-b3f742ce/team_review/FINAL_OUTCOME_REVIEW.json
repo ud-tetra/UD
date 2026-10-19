@@ -1,0 +1,77 @@
+{
+  "status": "PASS_SAME_TEAM_SAVED_OUTCOME_AND_PARENT_REPLAY_REVIEW",
+  "reviewed_at_utc": "2026-10-19T14:43:18.474283+00:00",
+  "review_code_sha256": "0801a531245b9e14e986232e37c1e6fc9af8a3dcb0c46e56419730a8e21543f6",
+  "source_only_review_sha256": "d14e6f07d45d10789263572354d7f6cebc024178d3e436fdbc4cd7d94ffab647",
+  "verified_hashes_before_after": {
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/controls.py": "b63b9f339442b799003d5c199112c198be968809c20a85cc81b49c1c197b67b0",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/offline_intake.py": "762812090623d5aefa8f736e78d8abe46a0c62f3f9221e244a1a117179af10ab",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/review.py": "167b6ac9672fc424ea5b31f3e4d0d9697df485911656637ea7abed50d99e1af5",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/source_math.py": "f26937a91205197dd945d67b7c05899606eb3d549bf50c330170e96fab19e1fc",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/validate.py": "e07274d14305282b1e42d1d4d04c22c55e8f72b72a139fff59c17ccef2db5e9b",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/inputs/EXACT_SHIFT_EXCEEDANCE.json": "f52732d7dd261a3a1d96cba112d3e980fcabe1c934c5c2f0269a8343ee5a3997",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/inputs/GATE_RESULTS.json": "13d1311026e3baf14967ce95d84188211cfc143c3c5d3a9a678d8bfa73edfadb",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/inputs/PARENT_ORDER.json": "0d3e63c89dbd7c821d459974f4f2a9bbcda5a5586bb2132bd9f3f542c6381dd9",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/inputs/PARENT_PHASE.json": "b4a9c8d4f65760e30c2201bedd1c35d2b5dab8f38a541e59e6bfa114c1915911",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/inputs/PARENT_UNIFORM.json": "9e5633627fc08f385159b869673930e5e389cb2a799534b7ef3c48603121ed73",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-work/inputs/PR210_FREEZE.json": "46a5d21e1cb0ab79e6adf1f6ca0c1049fe35696254722c8e635bdcf16c4a34f9",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-parent-replay/materialize.log": "a4297e2906f8ab07456f0556171cbfff0ec7b05d880b90aae42a3dffe094a6d4",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-parent-replay/full-SVD-replay.log": "eccffa071ee0a792b9f4030d2a61461f71123e8723e5657f81249429a135c490",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-parent-replay/all-output-gates.log": "03c828123e9e28167e8a1ed91910f2701eda219af3dcb185bf7b9ab891cde966",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-parent-replay/strict-shift-exceedance.log": "1c0ef7ff5d077afb04894b9fcdf68d9c217e1669f6e0981ade51942b82661b9d",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-parent-replay/record-contract-work/numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-parent-replay/record-contract-work/proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "/workspace/scratch/f3d1c2f040c9/source-shift-parent-replay/record-contract-work/operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d"
+  },
+  "parent_replay_receipt_sha256": "e0a2ff6b08e0f8fc6fcf023eb53bf397bd19e820323b53957a93d914e41277eb",
+  "actual_v2_sha256": "62f1591b1be3386ba21008393ffc9fbf2236f478bd0f22d6fc9a46aa8c5645c3",
+  "controls_sha256": "2c3bdae53bb0c31421e76e5b49d78ef706d693586788ccdbd35f22d4f45ff677",
+  "rows": [
+    {
+      "case": "stationary_port0",
+      "old_policy_status": "ADMITTED_UNIFORM_OUTPUT_CONTRACT",
+      "v2_status": "CERTIFIED_RETURNED_OUTPUT_V2",
+      "independently_crosschecked_phase": "0.0000003070955249275053860508357354359720285031064400906166118045770651343257364409532548348678634045449891",
+      "phase_upper": [
+        470622522571271420935318917753589597410633188450,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "seeded_onehot",
+      "old_policy_status": "ADMITTED_UNIFORM_OUTPUT_CONTRACT",
+      "v2_status": "CERTIFIED_RETURNED_OUTPUT_V2",
+      "independently_crosschecked_phase": "0.0000003076672508820844092386246574635866240353136280565137385502551346933500994276224009195146416849279169",
+      "phase_upper": [
+        471498690047261067682266289777314856799581517164,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "directed_random_time",
+      "old_policy_status": "HOLD_OUTPUT_GATES",
+      "v2_status": "CERTIFIED_RETURNED_OUTPUT_V2",
+      "independently_crosschecked_phase": "0.0000003285771090728711977728455470647247053131202124363356271658353997104337736564462569744729789137492307",
+      "phase_upper": [
+        503542954484779903439138244432078353474807648571,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    }
+  ],
+  "synthetic_metric_controls": 13,
+  "scope": "Read-only hash/log/retained-policy checks and independent-expression numerical diagnostic. Primary validated outward authority remains frozen Arb certificates. No new estimator/SVD/raw generation.",
+  "findings": [
+    "Fresh complete parent replay and every log hash verify.",
+    "All seven old maxima unchanged and checked; v2 strict source allowance holds for all three saved metric upperbounds.",
+    "Directed v1HOLD remains retained alongside distinct v2PASS.",
+    "Peroutput phasebounds are separately computed; v1numerical promise is not reused.",
+    "All13synthetic boundary/refusal controls retained; no claim of new solver/physical trials."
+  ],
+  "material_issues": [],
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "new_raw_generation": false,
+  "external_independent_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry"
+}

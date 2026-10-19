@@ -1,0 +1,60 @@
+{
+  "status": "PASS_COMPLETE_SAVED_FACTOR_AND_V2_REPLAY",
+  "started_utc": "2026-10-19T14:41:47.579862+00:00",
+  "commands": [
+    {
+      "tag": "complete-parent-replay",
+      "argv": [
+        "replay_package.py",
+        "--repo",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/source-shift-clean-replay/parent-replay"
+      ],
+      "exit_code": 0,
+      "log_sha256": "8c9d3d0ff5c74126871b977ee22f0a923808f0c45fa496c58c3c6879a84ec891"
+    },
+    {
+      "tag": "source-allowance",
+      "argv": [
+        "source_math.py",
+        "--replay"
+      ],
+      "exit_code": 0,
+      "log_sha256": "bc73ea1c78a8dfd2f32a9f90db0aff67f457b6658ff0750c760fe02ec7d76a58"
+    },
+    {
+      "tag": "actual-v2",
+      "argv": [
+        "validate.py",
+        "--campaign",
+        "/workspace/scratch/f3d1c2f040c9/source-shift-clean-replay/parent-replay",
+        "--replay"
+      ],
+      "exit_code": 0,
+      "log_sha256": "0a137fe0235647f043140a3d62517353108a879a43bc48aa03d9a008c34b74c9"
+    },
+    {
+      "tag": "boundary-controls",
+      "argv": [
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "4ce7ee3108665b20d2fc1160a43c2b7032d58f1c24df9b8fd658d0a29bd9ddc3"
+    }
+  ],
+  "new_estimator_SVD_or_raw_generation": false,
+  "reviewer_identity": null,
+  "external_nonconstructor_review": "PENDING",
+  "physical_promotion": 0,
+  "parent_intake": {
+    "archive_count": 10,
+    "unique_members": 93,
+    "uncompressed_bytes": 72475797
+  },
+  "cases": 3,
+  "original_policy_admitted": 2,
+  "original_policy_HOLD": 1,
+  "numerical_rows_verified": true,
+  "finished_utc": "2026-10-19T14:43:17.561662+00:00"
+}
