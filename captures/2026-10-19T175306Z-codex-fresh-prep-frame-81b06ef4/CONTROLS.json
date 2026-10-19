@@ -1,0 +1,72 @@
+{
+  "status": "ALL_FIVE_PREDECLARED_CONTROLS_PASSED",
+  "rows": [
+    {
+      "control": "interior",
+      "status": "CERTIFIED_FRESH_MEASURED_SOURCE_FRAME_SHIFT",
+      "expected_acceptance": true,
+      "gates": {
+        "order_applicability": true,
+        "retained_Gram_cap": true,
+        "fixed_normal_cap": true,
+        "frame_budget": true,
+        "source_bound_strict_allowance": true
+      },
+      "passed": true
+    },
+    {
+      "control": "wrong_order",
+      "status": "HOLD_ORDER_APPLICABILITY_AND_SOURCE_BOUND_STRICT_ALLOWANCE",
+      "expected_acceptance": false,
+      "gates": {
+        "order_applicability": false,
+        "retained_Gram_cap": true,
+        "fixed_normal_cap": true,
+        "frame_budget": true,
+        "source_bound_strict_allowance": false
+      },
+      "passed": true
+    },
+    {
+      "control": "Gram_above_fixed_cap",
+      "status": "HOLD_RETAINED_GRAM_CAP",
+      "expected_acceptance": false,
+      "gates": {
+        "order_applicability": true,
+        "retained_Gram_cap": false,
+        "fixed_normal_cap": true,
+        "frame_budget": true,
+        "source_bound_strict_allowance": true
+      },
+      "passed": true
+    },
+    {
+      "control": "normal_above_fixed_cap",
+      "status": "HOLD_FIXED_NORMAL_CAP",
+      "expected_acceptance": false,
+      "gates": {
+        "order_applicability": true,
+        "retained_Gram_cap": true,
+        "fixed_normal_cap": false,
+        "frame_budget": true,
+        "source_bound_strict_allowance": true
+      },
+      "passed": true
+    },
+    {
+      "control": "frame_boundary_strict",
+      "status": "HOLD_FRAME_BUDGET",
+      "expected_acceptance": false,
+      "gates": {
+        "order_applicability": true,
+        "retained_Gram_cap": true,
+        "fixed_normal_cap": true,
+        "frame_budget": false,
+        "source_bound_strict_allowance": true
+      },
+      "passed": true
+    }
+  ],
+  "budget_sha256": "a7fd2ce87210db905ab2c25116c87ec608ad340f9d191950e3bdaed4e5bf7860",
+  "physical_promotion": 0
+}
