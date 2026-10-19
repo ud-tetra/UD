@@ -26,7 +26,9 @@ def norm(a):return max(sum(abs(x) for x in r) for r in a)
 def close(a,b):
     if not all(math.isfinite(x) for m in (a,b) for r in m for x in r):return False
     error=norm([[x-y for x,y in zip(r,s)] for r,s in zip(a,b)])
-    return error <= CONTRACT['numeric']['atol']+CONTRACT['numeric']['rtol']*max(norm(a),norm(b))
+    left,right=norm(a),norm(b)
+    if not all(math.isfinite(v) for v in (error,left,right)):return False
+    return error <= CONTRACT['numeric']['atol']+CONTRACT['numeric']['rtol']*max(left,right)
 def matrix(a,shape):
     return isinstance(a,list) and len(a)==shape[0] and all(isinstance(r,list) and len(r)==shape[1] and all(type(x) in (int,float) and math.isfinite(x) for x in r) for r in a)
 def canonical(a,p,c=2.0):

@@ -36,6 +36,8 @@ def main():
     assert norm([[2e-11]*6])==1.2e-10
     assert not close([[2e-11]*6],[[0.0]*6])
     results['row_sum_boundary']='rejected as required'
+    assert not close([[1e308]*6],[[1e308]*6])
+    results['overflowed_norm']='rejected despite finite entries'
     # Missing embedding is dimensionally invalid: T(6x30) Theta(30x30) Ic(6x6).
     assert CONTRACT['types']['Theta'][1]!=CONTRACT['types']['Ic'][0]
     results['omitted_embedding']='dimension mismatch; W(30x6) mandatory'
