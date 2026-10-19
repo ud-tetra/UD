@@ -1,0 +1,112 @@
+{
+  "artifact_type": "SAME_TEAM_INITIAL_OUTCOME_BINDING_REVIEW",
+  "review_utc": "2026-10-19T18:27:09.635305+00:00",
+  "protocol_sha256": "baa1b4a59fd65f37a7802b28bdeeca93c2490fb220c8274c6fa2463d73aa190e",
+  "data_freeze_sha256": "5d3b7271a91239fd57feffebea8067ae090acea32d171f2939043245de85c6dd",
+  "controls_sha256": "b4f511016fb89b5ea506f5c8fc78e2736c43d7c9cfe9ea3d83e99252acdef6b6",
+  "frozen_source_hashes_match": true,
+  "fixed_budget_unchanged": true,
+  "rows": [
+    {
+      "case": "reverse_stationary",
+      "recipe": {
+        "case": "reverse_stationary",
+        "transform": "signed_reverse",
+        "noise": "stationary"
+      },
+      "record_sha256": "e52a01d1468c937c3f13fe08638ca91c70d55f51e39aa4d3cd4146b82dba2d0b",
+      "exact_orthogonality": true,
+      "same_clock_parity": true,
+      "source_error_fractions_independently_recomputed": true,
+      "denominator": 1,
+      "maximum_row_L1": 1
+    },
+    {
+      "case": "shuffle_cycle",
+      "recipe": {
+        "case": "shuffle_cycle",
+        "transform": "signed_shuffle",
+        "transform_seed": 219237,
+        "noise": "cycle"
+      },
+      "record_sha256": "544b6beca3f088f39cda623474b68e5d43bc2ecdf830ec76194f7055088d8079",
+      "exact_orthogonality": true,
+      "same_clock_parity": true,
+      "source_error_fractions_independently_recomputed": true,
+      "denominator": 1,
+      "maximum_row_L1": 1
+    },
+    {
+      "case": "shuffle_block1024",
+      "recipe": {
+        "case": "shuffle_block1024",
+        "transform": "signed_shuffle",
+        "transform_seed": 219238,
+        "noise": "block1024",
+        "noise_seed": 219301
+      },
+      "record_sha256": "59eac41ed345c786ca0e5883da9475f26db01a9ec6a0eb2bcf9f679efc4483b2",
+      "exact_orthogonality": true,
+      "same_clock_parity": true,
+      "source_error_fractions_independently_recomputed": true,
+      "denominator": 1,
+      "maximum_row_L1": 1
+    },
+    {
+      "case": "offset_rotation_period2",
+      "recipe": {
+        "case": "offset_rotation_period2",
+        "transform": "R1",
+        "noise": "period2"
+      },
+      "record_sha256": "bbc6d2d667e50a24e56c57bfd6ee5f7c931405288c338bf666633c9f75fc5cb7",
+      "exact_orthogonality": true,
+      "same_clock_parity": true,
+      "source_error_fractions_independently_recomputed": true,
+      "denominator": 5,
+      "maximum_row_L1": 7
+    },
+    {
+      "case": "double_rotation_period4",
+      "recipe": {
+        "case": "double_rotation_period4",
+        "transform": "R1R0",
+        "noise": "period4"
+      },
+      "record_sha256": "b6f84d806e7c7d6b84597ab56fd5c84be5c50ace6c95fc96a4adbe5cd2ba36ea",
+      "exact_orthogonality": true,
+      "same_clock_parity": true,
+      "source_error_fractions_independently_recomputed": true,
+      "denominator": 25,
+      "maximum_row_L1": 49
+    },
+    {
+      "case": "transpose_directed",
+      "recipe": {
+        "case": "transpose_directed",
+        "transform": "R1R0_transpose",
+        "noise": "directed_spatial",
+        "noise_seed": 219302
+      },
+      "record_sha256": "243762aeae956b592d1624c12aa18a0f50bbdde75534dd2f586b24d45a10888e",
+      "exact_orthogonality": true,
+      "same_clock_parity": true,
+      "source_error_fractions_independently_recomputed": true,
+      "denominator": 25,
+      "maximum_row_L1": 49
+    }
+  ],
+  "controls_pass": 12,
+  "total_new_raw_scalars_checked_by_generator": 112740924,
+  "raw_generation_performed_by_reviewer": false,
+  "new_estimator_runs_by_reviewer": 0,
+  "infrastructure_interruption": {
+    "file": "FIT_AND_FRAME.log",
+    "sha256_at_review": "24f4a92f0d122a8f706d3bcec491c1d0b6d0f3b17045ad91d47eb8c51be38f82",
+    "description": "Driver interrupted before fourth estimate because its raw path already existed. First three saved RUN outputs are COMPLETED q209. Existing fourth raw matches frozen SHA exactly. No fourth numerical estimator failure is implied.",
+    "obstruction_sha256": "bbc6d2d667e50a24e56c57bfd6ee5f7c931405288c338bf666633c9f75fc5cb7"
+  },
+  "outcome_review": "PENDING_CAMPAIGN_COMPLETION",
+  "physical_promotion": 0,
+  "independent_non_constructor_review": false
+}

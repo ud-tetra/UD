@@ -1,0 +1,14 @@
+{"stage": "actual_floating_estimator", "case": "reverse_stationary", "order": 209, "execution_status": "COMPLETED"}
+{"stage": "actual_floating_estimator", "case": "shuffle_cycle", "order": 209, "execution_status": "COMPLETED"}
+{"stage": "actual_floating_estimator", "case": "shuffle_block1024", "order": 209, "execution_status": "COMPLETED"}
+Traceback (most recent call last):
+  File "/workspace/scratch/f3d1c2f040c9/cutoff-campaign-work/driver.py", line 50, in <module>
+    intake(args.repo,work/'source');run_campaign(args.baseline,work,work/'source')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f3d1c2f040c9/cutoff-campaign-work/driver.py", line 26, in run_campaign
+    raw=Path(work)/(record['case']+'.i64le');fresh=generate_one(baseline,record['recipe'],raw);assert fresh==record;rows.append(estimate(raw,record));raw.unlink()
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f3d1c2f040c9/cutoff-campaign-work/records.py", line 54, in generate_one
+    f=freeze();baseline=Path(baseline);assert sha(baseline)==f['baseline_sha256'];Y=np.memmap(baseline,dtype='<i8',mode='r',shape=SHAPE);mx=max(abs(int(Y.min())),abs(int(Y.max())));assert 49*mx+25<2**63;M,den=transform(spec);channels,signs=noise(spec);raw=Path(raw);assert not raw.exists();raw.parent.mkdir(parents=True,exist_ok=True)
+                                                                                                                                                                                                                                                                                 ^^^^^^^^^^^^^^^^
+AssertionError

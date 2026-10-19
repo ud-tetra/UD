@@ -1,0 +1,15 @@
+{
+  "artifact_type": "REVIEW_ONLY_ASSERTION_CORRECTION",
+  "initial_script": "circular_review.py",
+  "initial_freeze_sha256": "b1c08d2287095b11a4cfa53f59a73502390549e8d59cd1a286b0998156cce887",
+  "failed_log_sha256": "907d62823e47bc49c61839fc921b862742503bbf8c79d43bd35de61d4d570d7a",
+  "initial_assertion": "Independent2^-180 endpoint must equal main endpoint exactly.",
+  "issue": "The exact dyadic direct difference can lie on the2^-180 grid. Validated arg(exp) uncertainty can round the main upper one additional quantum outward. Exact endpoint equality is unnecessary.",
+  "corrected_script": "circular_review_v2.py",
+  "corrected_parent_freeze_sha256": "2578487b10fe940c75b811e7668a087f0072ee37f443858ee4632fff85eb2069",
+  "corrected_requirement": "Independent validated direct upper <= published main upper, with no additive tolerance. Nonnegative outward-grid slack is recorded diagnostically. All phase/radius/bijection conditions remain checked.",
+  "main_code_or_results_changed": false,
+  "old_script_freeze_failure_preserved": true,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

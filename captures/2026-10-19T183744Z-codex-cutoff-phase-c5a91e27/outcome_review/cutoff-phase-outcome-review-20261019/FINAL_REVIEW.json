@@ -1,0 +1,139 @@
+{
+  "artifact_type": "SAME_TEAM_SCOPED_CUTOFF_AND_PHASE_OUTCOME_REVIEW",
+  "status": "PASS_SELECTED_EXACT_RESIDUAL_AND_ALL1881_CIRCULAR_EXPRESSION_AUDIT",
+  "reviewed_utc": "2026-10-19T18:34:06.573976+00:00",
+  "notes_sha256": "c1128f774e43a7689f67327d1caa7b19c914380df3f76044acb91f928dd57c56",
+  "protocol_sha256": "baa1b4a59fd65f37a7802b28bdeeca93c2490fb220c8274c6fa2463d73aa190e",
+  "selected_residuals": [
+    {
+      "kind": "parent",
+      "case": "signed_cycle",
+      "status": "PASS_EXACT_DIRECT_VS_EXPANDED_RESIDUAL",
+      "main_combined_status_retained": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "main_cutoff_status_retained": "CERTIFIED_EXACT_SKETCH_CUTOFF_209",
+      "exact_fraction_match": true,
+      "raw_nominal_projection_digests_reproduced": true
+    },
+    {
+      "kind": "new",
+      "case": "reverse_stationary",
+      "status": "PASS_EXACT_DIRECT_VS_EXPANDED_RESIDUAL",
+      "main_combined_status_retained": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "main_cutoff_status_retained": "CERTIFIED_EXACT_SKETCH_CUTOFF_209",
+      "exact_fraction_match": true,
+      "raw_nominal_projection_digests_reproduced": true
+    }
+  ],
+  "selected_raw_nominal_integer_and_dyadic_projection_hashes_reproduced": true,
+  "selected_raw_scalars_reconstructed_in_memory": 37580308,
+  "raw_or_N_files_written": 0,
+  "circular_pairs_checked": 1881,
+  "circular_parent_cases": 3,
+  "circular_new_cases": 6,
+  "direct_validated_pair_uppers_at_most_published_uppers": true,
+  "comparison_uses_additive_tolerance": false,
+  "maximum_main_extra_outward_grid_units": 1,
+  "all_main_outcomes_retained": [
+    {
+      "case": "signed_cycle",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        8477451398261881365739577163100909993984,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "signed_shuffle",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        10894845759395454473730949671630969765888,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "rational_pair",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        22750871015685317707732038183833990856704,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "reverse_stationary",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        31130026555340445763995814346192404348928,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "shuffle_cycle",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        11738798688985084016025073800789213839360,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "shuffle_block1024",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        16035295748945766727043571687645689937920,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "offset_rotation_period2",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        9687785856061513097178566135278752235520,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "double_rotation_period4",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        8593072734540989175911558993258936795136,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    },
+    {
+      "case": "transpose_directed",
+      "combined_status": "CERTIFIED_CUTOFF_PHASE_AND_FIXED_FRAME",
+      "observed_status": "CERTIFIED_OBSERVED_TWO_STEP_EMISSION_BIJECTION",
+      "direct_observed_phase_upper": [
+        9363575108251231388145763938188012814336,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    }
+  ],
+  "original_scientific_code_and_caps_unchanged": true,
+  "completed_first3_interruption_witnesses_unchanged": true,
+  "operational_continuation_separately_frozen": true,
+  "parent_full_raw_projection_replay": "Separate parent execution; not claimed by this selected audit",
+  "review_only_correction_preserved": {
+    "reason": "Exact-grid equality was unnecessarily strict; direct dyadic subtraction can round one grid unit less than arg(exp) interval upper.",
+    "correction_receipt_sha256": "934286ff6233d58f35f3cfa123a7311e71e5d5b07fd598206f2e0e5269cbb713",
+    "no_root_result_or_gate_changed": true
+  },
+  "receipts": {
+    "DIRECT_RESIDUAL.json": "724bc7cd0718407818ba49649ff10132dd4798e06707b24f2c6f45c6238a30d3",
+    "SELECTED_RESIDUAL_COMPARISON.json": "a1d64e1557426cb07681234a4d22c8fe805e43053ba04ea0e4a92b679e8bc02c",
+    "CIRCULAR_PARENT_V2.json": "04f92c8675c21590c3b041e07783e23b3975de6a9073282189bcafd486423ffe",
+    "CIRCULAR_NEW_V2.json": "0381d35eda9860e7679ed9e2dde2f6d816ef4ba5bc6e36e9030a5d1af91b16ef",
+    "REVIEW_ASSERTION_CORRECTION.json": "934286ff6233d58f35f3cfa123a7311e71e5d5b07fd598206f2e0e5269cbb713"
+  },
+  "review_new_estimator_or_SVD_runs": 0,
+  "scope": "Same-team post-output arithmetic corroboration: direct residual expression on predetermined2cases and all9 emitted-list selected pairs. Does not independently repeat all9 residual certificates, exact spectrum(T), physical acquisition, old8gate admission, old raw-ball admission or uniform solver success.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

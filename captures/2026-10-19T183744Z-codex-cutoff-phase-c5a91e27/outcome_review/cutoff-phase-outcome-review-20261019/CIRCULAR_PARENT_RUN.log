@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/f3d1c2f040c9/cutoff-phase-outcome-review-20261019/circular_review.py", line 53, in <module>
+    p=argparse.ArgumentParser();p.add_argument('kind',choices=['parent','new']);run(p.parse_args().kind)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f3d1c2f040c9/cutoff-phase-outcome-review-20261019/circular_review.py", line 39, in run
+    hi=min(z.upper() for z in distances);lo=min(z.lower() for z in distances);bound=upper(arb(hi));assert bound==match['circular_error_upper']
+                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
