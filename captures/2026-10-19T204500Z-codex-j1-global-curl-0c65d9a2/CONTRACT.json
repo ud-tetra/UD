@@ -1,0 +1,67 @@
+{
+  "title": "Fixed J1 port: global interior-edge curl corrections and constant-variance obstruction v0.1",
+  "classification": "DERIVED_EXACT_CONDITIONAL_WITH_AUDITED_FLOAT_PROPOSALS",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "independent_review": false,
+  "base": "e8ec3cfe3c68a17450542fdfc6980c46823bed54",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "33c1dff1e4659d5430dce8bfe3d5caf69802a542e98b1d750d4347fec0081966"
+    },
+    {
+      "path": "captures/2026-10-19T203000Z-codex-j1-phase-circle-951db2e4/REPORT.md",
+      "sha256": "dff676be0e648d6a9325b353b1894351b66baf29249da67480531fb410f3784f"
+    },
+    {
+      "path": "captures/2026-10-19T203000Z-codex-j1-phase-circle-951db2e4/phase_flux.py",
+      "sha256": "cc89954e65bd02d0a9f8d406536e01023b53b9b44b2a9e1ac20eb438e6da4356"
+    },
+    {
+      "path": "captures/2026-10-19T203000Z-codex-j1-phase-circle-951db2e4/phase_circle.py",
+      "sha256": "e2210162ac71cef8ec288a0ece2ef29ae5b7ce88dce6892c26939b24b9a7c8d5"
+    },
+    {
+      "path": "captures/2026-10-19T203000Z-codex-j1-phase-circle-951db2e4/PHASE_RESULTS.json",
+      "sha256": "4e05849dc9610e81c4545a71d7d5109a9011c2a9932703285d62eb8eefcbdde0"
+    },
+    {
+      "path": "captures/2026-10-19T200000Z-codex-j1-mapped-flux-370b92da/FLUX_WITNESS.json",
+      "sha256": "fd7f6310943b723d723de1e0631fe478dab160d2399ae86c22f4e4b284f71941"
+    },
+    {
+      "path": "captures/2026-10-19T200000Z-codex-j1-mapped-flux-370b92da/FLUX_RESULTS.json",
+      "sha256": "4889199fae9409ab9bf8a2c34019ac65690550557f1466b2099627c0de626ffc"
+    },
+    {
+      "path": "captures/2026-10-19T200000Z-codex-j1-mapped-flux-370b92da/STATE_WITNESS.json",
+      "sha256": "9d6277dcd7884c57194cb2a9c797f95aa4423c018db9523a9379082932683443"
+    },
+    {
+      "path": "captures/2026-10-19T200000Z-codex-j1-mapped-flux-370b92da/flux2_summary.py",
+      "sha256": "ca4fc8a302db2394a5ac2c7214fdb10e62808283a91b89e27d36e0a678465bc5"
+    },
+    {
+      "path": "user_attachment/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "path": "user_attachment/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "scope": "Same285-node1024-cell state/flux; no PDE solve. Add global piecewise constant divergencefree curl corrections from924 interior edge potentials; floating least-squares proposal, exact posterior audit. Numerical rank833 is not an exact optimality/rank theorem.",
+  "verification_scope": "17920 correction trace checks;8 exact gradient orthogonality and8 flux-norm nonincrease checks;2240 nonzero original macro trace components;prior86528 final flux checks retained. Exact covariance/output/evaluation checks, malformed/exterior-trace controls, constant variance floor and exact squared precision obstruction. Captured stored-results replay.",
+  "results": "Selected phase radii7.52385 and1.62343 at omega4.5/5; retain inherited23.4767 at4. Static bracket[1.175722,1.204102], new midpoint1.189912 uniform1/10 strip |omega|<=.141462 for gamma[.1,1]. Dynamic accuracy still OPEN.",
+  "obstruction_scope": "For the fixed frozen flux plus ANY piecewise constant correction, the phase-circle delta*eta\u00b2 radius cannot meet1/10 at omega4/4.5/5. Does not lower-bound actual transfer error or rule out another certificate, nonconstant correction or new state/flux.",
+  "open": [
+    "nonconstant curl or globally coupled RT1 corrections",
+    "dynamic and full-band1/10 accuracy",
+    "estimator convergence and stopping termination",
+    "independent review",
+    "native UD action/source/units and physical calibration"
+  ],
+  "alignment": "Support/incidence ledger does not source this scalar-wave action or damping. CRL2 amendment remains proposal. No source or registry edits.",
+  "unavailable_attachment": "Gap2_FINAL_Finite_Genesis.png not read or used; reupload requested."
+}
