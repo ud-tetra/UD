@@ -1,0 +1,44 @@
+{
+  "status": "PASS_SAME_SAVED_LEGACY_TUPLE_TRACE",
+  "recorded_after_manual_source_trace_execution": true,
+  "preregistered_trace_claimed": false,
+  "full_certificate_sha256": "00ec0288e8bf6598bc00986ea0740cfc055457999fa899bad1ae615f8b419aec",
+  "source_freeze_certificate_pin": "00ec0288e8bf6598bc00986ea0740cfc055457999fa899bad1ae615f8b419aec",
+  "actual_admission_mode": "legacy_gemm",
+  "same_saved_arrays": [
+    {
+      "path": "results/legacy_gemm/FACTOR_1.npz",
+      "sha256": "7b138f6581fee8b35a46e1ddd02f32a09462fe93a5d94438f0b3049e2fad15a2",
+      "source_freeze_equals_actual_admission": true
+    },
+    {
+      "path": "results/legacy_gemm/SVD_META.npz",
+      "sha256": "9840cac9e47a0ba924895189067effbf0052b10352b74cbc9ccaf5e6f83ef044",
+      "source_freeze_equals_actual_admission": true
+    },
+    {
+      "path": "results/legacy_gemm/FACTOR_2.npz",
+      "sha256": "de7be6d752d33bc9a9c5084f22c5b76436eb62bf775df2a2646b89a12a3de0f6",
+      "source_freeze_equals_actual_admission": true
+    },
+    {
+      "path": "results/legacy_gemm/PHASE_PROPOSAL.npz",
+      "sha256": "ef97883ddb7529034aa6e045a04b8e60a5cd17bb155c05e51fbc1d671fab7bf3",
+      "source_freeze_equals_actual_admission": true
+    },
+    {
+      "path": "results/legacy_gemm/FACTOR_0.npz",
+      "sha256": "a2a97f5fcfe23cd4ee5be9f4f4233ca3a2e685a72b6c025d9568b97a5fe1a21c",
+      "source_freeze_equals_actual_admission": true
+    },
+    {
+      "path": "results/legacy_gemm/PHASE_META.npz",
+      "sha256": "a45ff5dba1ca564509004d204bba646d85fc45cd96763cf155183a19509c11e7",
+      "source_freeze_equals_actual_admission": true
+    }
+  ],
+  "source_actual_verifier_sha256": "5624caa3f722722532a6404e25487bad3eba68df0483a11c896b8e65959f2e49",
+  "interpretation": "Full-factor rawresidual/Gram bounds and existing retained lag/eigenpair/inverse/argument metrics reference the same hash-bound saved U/T/ev/em tuple. Not inferred merely from equal rawinput or equal projected record.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

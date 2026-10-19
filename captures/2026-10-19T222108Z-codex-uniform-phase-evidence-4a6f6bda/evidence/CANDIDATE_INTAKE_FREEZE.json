@@ -1,0 +1,44 @@
+{
+  "artifact_type": "CANDIDATE_METADATA_GATE_FREEZE",
+  "version": "0.1.0",
+  "lane": "development \u2014 no registry entry",
+  "frozen_before_any_candidate_raw_download": true,
+  "raw_records_opened_this_audit": 0,
+  "source_selection_rule": "Inventory all32releasedrawarchive metadata; consider only filename-declared10-channel archives for current ten-channel component. Exclude already exposed05-21 from fresh confirmation. Do not infer rawschema, fresh independent acquisition or calibration from filenames.",
+  "already_exposed": {
+    "path": "05-21/set2_CH1-site1_CH2-link1_CH3-site2_CH4-link2_CH5-site3_CH6-link3_CH7-site4_CH8-link4_CH9-site5_CH10-empty.gz",
+    "bytes": 30941478,
+    "persistent_id": "doi:10.11588/DATA/6MEKHI/4PV8ZU",
+    "checksum": {
+      "type": "MD5",
+      "value": "81771941562f83818f3d905bd6f9e9e2"
+    }
+  },
+  "candidate": {
+    "path": "05-28/set1a_CH1-site1_CH2-link1_CH3-site2_CH4-link2_CH5-site3_CH6-link3_CH7-site4_CH8-link4_CH9-empty_CH10-site5_Vdrv=0.050V.gz",
+    "bytes": 81386005,
+    "persistent_id": "doi:10.11588/DATA/6MEKHI/NH8JC2",
+    "checksum": {
+      "type": "MD5",
+      "value": "3fc592443a1c117ab4a9503e01d5a92c"
+    }
+  },
+  "candidate_status": "HOLD_METADATA_ONLY_NOT_INDEPENDENT_FRESH_VALIDATION",
+  "candidate_differences": [
+    "Filename says CH9-empty and CH10-site5, opposite selected05-21 last-two-channel roles",
+    "Filename says Vdrv=0.050V, not undriven zero-amplitude source",
+    "Distinct filename/datefolder/MD5 does not establish independence, unseen lineage or model-discrepancy error coverage"
+  ],
+  "open_before_raw_requirements": [
+    "Independent source-custody/exposure review, including prior notebook/figure dependence",
+    "Actual calibration/timebase/anti-alias/joint error evidence for candidate acquisition",
+    "New versioned source request and channel map; current PR250 request is exact-source bound and cannot be silently repointed",
+    "Freeze physical model and justified comparator, parameter and preparation domains, drive/feedback/loss histories, solver and scoring margins before viewing new raw outcomes",
+    "Nonconstructor review before any confirmatory designation"
+  ],
+  "raw_download_authorized_by_this_artifact": false,
+  "hardware_or_outreach_authorized_by_this_artifact": false,
+  "physical_promotion": 0,
+  "frozen_at_UTC": "2026-10-19T22:16:18.861184+00:00",
+  "frozen_at_scope": "Artifact freeze before any possible future candidate raw access, not an independently attested acquisition preregistration."
+}
