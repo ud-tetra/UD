@@ -1,0 +1,31 @@
+{
+  "status": "SAME_TEAM_STATIC_DESIGN_AND_CODE_REVIEW_PASS_BEFORE_INPUTS_AND_FITS",
+  "utc": "2026-10-19T20:23:37.953074+00:00",
+  "reviewer": "counterexample_audit",
+  "reviewed_files": {
+    "driver.py": "7d3bd86947e8c3de05f3fb67944276c9fd0c1318b39fcb1db235b6718b425468",
+    "verify.py": "9ba425b13aa313572b5d974d670205491fdd2bb27f2a84a30f53de8a7aa3dc7b",
+    "estimator.py": "5fa15ca0f3830f168fe9e1483db7f21cb6e462780209b4d8b4e8ad43d64cfe86",
+    "common.py": "e5b52ec5f4e5e06d50fc345956fd87128f2bc61c1b6af64449fd9032fd1be54f"
+  },
+  "design_review_sha256": "1992cdeceab822966d1f51f476496c66817fb9fb543aa38449472aafeb2f4d3f",
+  "fixed_amplitudes": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "eligibility": "Same reverse_stationary signed-permutation anchor; existing1127q enlarged encoded family; source-selected direction pinned from prior counterexample.",
+  "checks": [
+    "All four complete rawhashes frozen before first fit",
+    "One unchanged estimator call percase; no retry",
+    "q209 applicability retained",
+    "Strict existential upper r\u00b2<cap\u00b2 for framePASS; exact minimumlower>cap\u00b2 for frameFAIL; otherwiseHOLD",
+    "Gram/normal separate and oldcapsunchanged",
+    "Finite directional and nested-ball exclusion scopes separated; no monotonicity assumption"
+  ],
+  "new_estimator_calls": 0,
+  "independence": "Separate same-team reviewer; not external review or blinded data review",
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

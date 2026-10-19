@@ -1,0 +1,65 @@
+{
+  "status": "PASS_SCOPED_ENGINEERING_REVIEW_REAL_INTAKE_REMAINS_HOLD",
+  "reviewed_utc": "2026-10-19T20:35:42.492871+00:00",
+  "reviewer": "Codex replay_review same-team agent",
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry",
+  "reviewed_current_entrypoint": "intake_v2.py",
+  "reviewed_implementation_sha256": {
+    "intake_v2.py": "962bcf0aeb0ea093152cd0ed841c5333800db6dc7584908b70ef7c4973153ff3",
+    "SOURCE_BINDINGS.json": "58d5c39bb20ef3db8a8496e87b8e5c15f954ac3ba59bb9297c3b8f5234528c95",
+    "KNOWN_SYNTHETIC_AUTHORITY.json": "3a9f431ecb776ea93b8ce434d080cf8a4f4a314b4c04aeeede85a4a7410d61ca",
+    "verifier/authenticated_record.py": "6ac45ce73f84067147ebfa8dc108fa3a79d5c813f5096282a34bce4033354edf",
+    "verifier/base_record.py": "738c4bb239a519fefbd5dd346fa61e83184d4d280a36b1e4092e0ebf45186266"
+  },
+  "v1_protocol_sha256": "efde3e2d3d596168010ada86bd3d50eeab5474724a0486315dfa0d19383d2079",
+  "v2_protocol_sha256": "7cd97347154158329cf608d56cc2f30834e18f4b3958ce32fd6e21960bfad9a2",
+  "v1_frozen_files_unchanged": true,
+  "v2_launch_only_delta_verified": true,
+  "initial_implementation_findings": [
+    "denylist/source-indexbinding",
+    "realcountversuscallerclassification",
+    "same-snapshotrequest/policy/admissionbinding"
+  ],
+  "all_three_initial_findings_addressed": true,
+  "knownfixture_alias_finding_addressed": true,
+  "own_tiny_boundary_controls": 13,
+  "own_optimized_control_count": 1,
+  "own_actual_pinned_verifier_placeholder_delegations": 1,
+  "own_negative_integration_status": "HOLD_AUTH_OR_ANALYTIC_EVIDENCE",
+  "old52_auth_controls_executed": 0,
+  "new_keys_signatures_fits": 0,
+  "actual_real_records_verified": 0,
+  "actual_hardware_acquisitions_verified": 0,
+  "constructor_results_inspected": {
+    "controls": 20,
+    "optimized_checks": 2,
+    "current_actual_status": "HOLD_MISSING_EXTERNAL_EVIDENCE",
+    "blocking_requirements": 6
+  },
+  "public_authority_provenance_review": {
+    "direct_members_read": 53,
+    "valid_published_publickeys": 5,
+    "policy_hashes": 15,
+    "admission_hashes": 52,
+    "archives_opened": 0
+  },
+  "failure_history_preserved": [
+    "BOUNDARY_TESTS.log",
+    "BOUNDARY_TESTS_v2.log",
+    "DELEGATE_DIAGNOSTIC.json",
+    "TEST_FREEZE.json",
+    "TEST_FREEZE_v2.json"
+  ],
+  "successful_harness": "check_boundaries_v3_intake_v2.py",
+  "successful_freeze_sha256": "76f71f82b1ea924453afb7de7120bbdccfbb2b15c3586dcf375d82599817950a",
+  "successful_result_sha256": "176477b9dbb87de5e253dfbd986d2e7e69d65cbc8cd9d8559910868888b1a936",
+  "scope_limits": [
+    "Finite metadata/path controls only, not exhaustive security or physical validation",
+    "Trustedhostinstalledruntimepremise; no compromised-hostsandboxclaim",
+    "Unknownkeys andexternalpaths do notproveindependentrealworldidentity",
+    "No suppliedrealrequest orqualifyingcompletebundle; no rawrealdata admitted",
+    "Historicalexperimentalcontentaudit/publicdatasetcompatibility separatelyreviewedbyroot"
+  ]
+}

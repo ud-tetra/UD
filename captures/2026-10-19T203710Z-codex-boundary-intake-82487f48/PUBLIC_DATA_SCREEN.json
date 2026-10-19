@@ -1,0 +1,81 @@
+{
+  "artifact_type": "PRIMARY_PUBLISHED_DATA_METADATA_COMPATIBILITY_SCREEN",
+  "retrieved_utc": "2026-10-19T20:22:51.916455+00:00",
+  "native_contract": {
+    "repository_path": "captures/2026-10-17T145236Z-codex-acquisition-freeze-ceda2dba/FROZEN_CONTRACT.json",
+    "sha256": "ba28c60cffd40806d3ecd76bf83db7b2caac71de9173b0de7a471b504e84d20c",
+    "preparations": 37,
+    "channels": 62,
+    "vectors_per_preparation": 8191,
+    "shape": [
+      37,
+      8191,
+      62
+    ],
+    "time_unit": "normalized model time; SI transfer OPEN",
+    "rule": "No zero fill, adaptive rank fallback, sample deletion or channel invention"
+  },
+  "candidates": [
+    {
+      "id": "zenodo-3521009-v1",
+      "url": "https://zenodo.org/records/3521009",
+      "doi": "10.5281/zenodo.3521009",
+      "source_kind": "Author-deposited dataset landing page, primary source",
+      "web_reference": "turn18view0",
+      "documented_channels": 28,
+      "documented_rows_per_trace": 30000,
+      "network_configurations": 20,
+      "coupling_settings": 101,
+      "repetitions": 3,
+      "dynamics": "nonlinear electronic Rossler oscillator network",
+      "representative_publisher_checksum": {
+        "file": "R1.7z",
+        "algorithm": "md5",
+        "hex": "62498276b6fa90dd91cb2b7cc7688d3e",
+        "raw_bytes_downloaded": false
+      },
+      "documented_total_file_volume": "20.6 GB",
+      "eligibility": "INCOMPATIBLE_WITH_FROZEN_NATIVE_CONTRACT",
+      "reasons": [
+        "28 measured channels instead of62",
+        "No declared map from experimental network, preparations, time and coordinate units to the frozen UD family",
+        "No externally pinned UD calibration, model/admission or four-role acquisition receipts supplied in this session"
+      ],
+      "future_use": "Separate model-development or synchronization benchmark under its own preregistered observable; no native UD signature claim"
+    },
+    {
+      "id": "zenodo-10408265-v1",
+      "url": "https://zenodo.org/records/10408265",
+      "doi": "10.5281/zenodo.10408265",
+      "source_kind": "Author-deposited dataset landing page, primary source",
+      "web_reference": "turn18view2",
+      "documented_channels": 6,
+      "documented_rows_per_trace": 30000,
+      "oscillators": 3,
+      "linear_coupling_settings": 100,
+      "nonlinear_coupling_settings": 100,
+      "dynamics": "chaotic electronic Rossler-like oscillators with pairwise and higher-order interactions",
+      "representative_publisher_checksum": {
+        "file": "Lineal_Y_NoLineal_Y.zip",
+        "algorithm": "md5",
+        "hex": "b718fc34bdb8577f86388b0cf040a555",
+        "raw_bytes_downloaded": false
+      },
+      "documented_total_file_volume": "24.7 GB",
+      "eligibility": "INCOMPATIBLE_WITH_FROZEN_NATIVE_CONTRACT",
+      "reasons": [
+        "6 measured channels instead of62",
+        "The word simplicial does not identify the UD carrier, coframe, preparations or fixed generator",
+        "No independently pinned UD calibration, model/admission or four-role acquisition receipts supplied in this session"
+      ],
+      "future_use": "Potential separate higher-order interaction benchmark after a source-derived measurement map; no present UD identification"
+    }
+  ],
+  "raw_bytes_downloaded": 0,
+  "candidate_estimator_fits": 0,
+  "recalibration_or_refitting": false,
+  "public_MD5_note": "Publisher transport checksums are metadata only; not locally recomputed SHA256, public-key authentication, calibration truth or independently frozen UD evidence",
+  "claim_scope": "Metadata compatibility screen of exactly these2 records, not an exhaustive dataset search and not a raw-data numerical reanalysis",
+  "status": "HOLD_NO_COMPATIBLE_REAL_ACQUISITION_PACKET",
+  "physical_promotion": 0
+}

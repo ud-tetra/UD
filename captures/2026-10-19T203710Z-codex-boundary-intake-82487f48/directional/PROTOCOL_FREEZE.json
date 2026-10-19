@@ -1,0 +1,47 @@
+{
+  "status": "PROSPECTIVE_FOUR_DIRECTIONAL_AMPLITUDES_FROZEN_BEFORE_RECORDS_AND_FITS",
+  "frozen_utc": "2026-10-19T20:24:13.784706+00:00",
+  "amplitudes": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "files": {
+    "DESIGN.md": "a9fca8f810fa5a3a9f09a6ec216f511b3beaee527eed7eb6f01e41bcad0f7d0d",
+    "GOVERNANCE_INPUTS.json": "a834b4329577a89c825f3c32e01511d590732a901d87e6173934623c9c70da31",
+    "INPUT_PROVENANCE.json": "3cdd6b2f0058ce3aaa060cb1ec69dcbbb4bbce32bc0faf0d6a4fa54dd20ec96e",
+    "common.py": "e5b52ec5f4e5e06d50fc345956fd87128f2bc61c1b6af64449fd9032fd1be54f",
+    "controls.py": "d949012feca343114740ce0bf80793bc7a283b08a0ed1d60593fd22f581af425",
+    "driver.py": "7d3bd86947e8c3de05f3fb67944276c9fd0c1318b39fcb1db235b6718b425468",
+    "estimator.py": "5fa15ca0f3830f168fe9e1483db7f21cb6e462780209b4d8b4e8ad43d64cfe86",
+    "inputs/ANCHOR_DATA.json": "b827bb9a4d5f97b7c09777ac4848f4f629137b3dabb05a67313f22174c2b2d00",
+    "inputs/FAMILY_CERTIFICATE.json": "c031fc6a74c0fbb34b6f29b616847df48b11ee09127dcb611fb59b8e5ed5ce4a",
+    "inputs/FIXED_BUDGET.json": "0b25eac3d630c63dffcf45f0ca6caa9d81544a4d011cdbd6f5b030a8e907f627",
+    "inputs/NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "inputs/SOURCE_PHASE.json": "b4a9c8d4f65760e30c2201bedd1c35d2b5dab8f38a541e59e6bfa114c1915911",
+    "inputs/SPATIAL_SELECTION.json": "20b616c839ea0e30b65127c6f02328ecc5416fac85b4a00e724b031df16afd98",
+    "verify.py": "9ba425b13aa313572b5d974d670205491fdd2bb27f2a84a30f53de8a7aa3dc7b"
+  },
+  "source_files": {
+    "floating-timing-work/records/ramp_clock_stress.i64le": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+    "prospective-frame-source/U0_A.npz": "d9d4795747958625060fbf3c155367af0f176519de50c5d1e49f9b6ef4c24735",
+    "prospective-frame-source/U0_B.npz": "c12ed0f14149ef4ad599fb65cdc4a8a4a9739da89b25ec71a2b1d28229b53cf4",
+    "strict-family-review-20261019/PROTOCOL_FREEZE.json": "27f4519b527e7c35a1cc0887c6bb6ed11665b0a602fd8226742e4aebd2b641b6",
+    "strict-family-review-20261019/SPATIAL_SELECTION.json": "20b616c839ea0e30b65127c6f02328ecc5416fac85b4a00e724b031df16afd98",
+    "strict-family-review-20261019/COUNTEREXAMPLE_RESULT.json": "db94e0eaa88c803494296fdbe97db5767c1c25bfd52779f1136501ad7df3b962",
+    "strict-family-review-20261019/estimator.py": "5fa15ca0f3830f168fe9e1483db7f21cb6e462780209b4d8b4e8ad43d64cfe86"
+  },
+  "reference_basis_sources": {
+    "A": "prospective-frame-source/U0_A.npz",
+    "B": "prospective-frame-source/U0_B.npz"
+  },
+  "baseline_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "planned_estimator_runs": 4,
+  "no_retry_reselection_or_retuning": true,
+  "raw_storage": "anonymous RAM memfd; complete source reconstruction",
+  "known_before_freeze": "Same-direction amplitude1127 counterexample and other prior finite outputs known. All four new amplitude0,1,2,4 outputs unknown. Same-team prefreeze design/code review, not external/blind.",
+  "scope": "Finite actual-output frame/Gram/normal endpoint study and nested-ball necessary exclusion only; no uniform sufficiency, ray monotonicity, ideal-SVD or phase-failure claim.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

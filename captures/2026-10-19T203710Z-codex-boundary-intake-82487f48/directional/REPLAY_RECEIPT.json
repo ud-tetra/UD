@@ -1,0 +1,78 @@
+{
+  "status": "PASS_ALL_FOUR_FULL_RAW_PROJECTION_AND_EXACT_SAVED_FACTOR_REPLAY",
+  "completed_utc": "2026-10-19T20:30:05.944938+00:00",
+  "raw_rows": [
+    {
+      "case": "directional_amp_0",
+      "record_sha256": "e8d650de5ac4bd357fac3c075c842889efd72c60c3ef24aa4fca5ac916404c40",
+      "scalars_rechecked": 18790154,
+      "vectors_rechecked": 303067,
+      "projection_entries_recomputed": 2629311,
+      "projection": {
+        "partial_sum_bound": 138101851283121800,
+        "numerator_max": 3062262992119723,
+        "integer_bytes_sha256": "a1cca36fcb186df7520690d7119a34fd702b4c2ce8df32d02496a800028e8a30",
+        "projection_bytes_sha256": "80d301520d603388115bc89ecb1d0b2429b978e719052b51d4264d0660a07627"
+      }
+    },
+    {
+      "case": "directional_amp_1",
+      "record_sha256": "cd8abaed3b9e6b53c18edb118a283335c62d0009e91eadd5f48e05b16aa79613",
+      "scalars_rechecked": 18790154,
+      "vectors_rechecked": 303067,
+      "projection_entries_recomputed": 2629311,
+      "projection": {
+        "partial_sum_bound": 138101851283121800,
+        "numerator_max": 3062262992119675,
+        "integer_bytes_sha256": "99c542345dafff685ba8e150d8a925096fbdba068dd6b9bd5e1be05e43a7b0c7",
+        "projection_bytes_sha256": "9437f3c6768fb396b7e5863f06c5f1cbc5a3b5fe61aef60d5ca05c50c7d0147f"
+      }
+    },
+    {
+      "case": "directional_amp_2",
+      "record_sha256": "3364f9b19426b1bd45925661a57f8c2aa204a36336c10f8e1f43d086e5c64a6e",
+      "scalars_rechecked": 18790154,
+      "vectors_rechecked": 303067,
+      "projection_entries_recomputed": 2629311,
+      "projection": {
+        "partial_sum_bound": 138101851283121800,
+        "numerator_max": 3062262992119627,
+        "integer_bytes_sha256": "9a519fb1af32ed70724ea95eaf1e8da901d11b63c22cada7150a1fa51466be90",
+        "projection_bytes_sha256": "f183c4980dc4e4eadbffb7ff4a64f3dc35a58c046c46840ef460ccc13e442b7e"
+      }
+    },
+    {
+      "case": "directional_amp_4",
+      "record_sha256": "f17a00d4b8a8e1cce1507c4829a0116479ad4c4a42a8306d0318beeca345d4cd",
+      "scalars_rechecked": 18790154,
+      "vectors_rechecked": 303067,
+      "projection_entries_recomputed": 2629311,
+      "projection": {
+        "partial_sum_bound": 138101851283121800,
+        "numerator_max": 3062262992119531,
+        "integer_bytes_sha256": "52c4659624673b14cb52789c84c9b37d74c6c4f1662b5b62b4e1523750272565",
+        "projection_bytes_sha256": "c7f043a5ab4cdebbe6f64e7c5043da864fc7449a4888b6880daf90772410a9c5"
+      }
+    }
+  ],
+  "total_scalars_rechecked": 75160616,
+  "total_vector_norms_rechecked": 1212268,
+  "total_projection_entries_recomputed": 10517244,
+  "saved_factor_certificate_exact_equal": true,
+  "negative_hash_control": {
+    "status": "ASSERTION_REJECTION",
+    "message": "",
+    "rejection_function": "certify",
+    "rejection_line": "if 'alignment' in row:assert sha(P/row['alignment'])==row['sha256']",
+    "expected_alignment_sha256": "a3835b6d09ef1bb995264fa496f75625657d31884ebd89eee00311d0d7a79335",
+    "mutated_alignment_sha256": "a053f154882b35322b7429788a3e082070bfecda575ea625e7bd3ca8bb492045"
+  },
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "persistent_raw_files": 0,
+  "replay_freeze_sha256": "5949b23b5152275ae059e427711051443732a918e25b8ea10abb8ca34c5fe570",
+  "all_original_frozen_sources_unchanged": true,
+  "scope": "Same-team replay and known-outcome engineering hash control. Reference source paths rebound only to identical verified arrays; all original frozen files unchanged. No fits, amplitude selection or threshold changes.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

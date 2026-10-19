@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/f3d1c2f040c9/real-intake-review-20261019/check_boundaries_v2.py", line 51, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/f3d1c2f040c9/real-intake-review-20261019/check_boundaries_v2.py", line 48, in main
+    q=request();out=m.verify_request(str(q),sha(q));(P/'DELEGATE_DIAGNOSTIC.json').write_text(json.dumps(out,indent=2));assert out['status']=='HOLD_DELEGATED_EVIDENCE' and out['delegations']==1 and out['candidate_requests_delegated']==1 and out['real_records_evaluated']==0 and out['actual_real_records_verified']==0 and out['delegated_result']['status']=='HOLD_AUTH_OR_ANALYTIC_EVIDENCE';rows.append({'control':'actual pinned verifier negative integration','outcome':out,'actual_real_records':0,'signatures_created':0})
+                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

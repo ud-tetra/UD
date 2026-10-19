@@ -1,0 +1,47 @@
+{
+  "status": "PASS_FIVE_EXACT_ENDPOINT_LOGIC_CONTROLS",
+  "rows": [
+    {
+      "id": "zero",
+      "expected": "CERTIFIED_FRAME_PASS",
+      "actual": "CERTIFIED_FRAME_PASS",
+      "exact_lower": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "id": "strict_equality",
+      "expected": "HOLD_FRAME_INCONCLUSIVE",
+      "actual": "HOLD_FRAME_INCONCLUSIVE",
+      "exact_lower": [
+        "1",
+        "1"
+      ]
+    },
+    {
+      "id": "above_cap",
+      "expected": "CERTIFIED_FRAME_FAIL",
+      "actual": "CERTIFIED_FRAME_FAIL",
+      "exact_lower": [
+        "4",
+        "1"
+      ]
+    },
+    {
+      "id": "normal_correction_required",
+      "expected": "HOLD_FRAME_INCONCLUSIVE",
+      "actual": "HOLD_FRAME_INCONCLUSIVE",
+      "exact_lower": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "id": "negative_squared_residual",
+      "actual": "ASSERTION_REJECTION"
+    }
+  ],
+  "new_estimator_runs": 0,
+  "physical_promotion": 0
+}
