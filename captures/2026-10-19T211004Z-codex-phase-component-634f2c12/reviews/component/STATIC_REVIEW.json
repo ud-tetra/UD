@@ -1,0 +1,67 @@
+{
+  "artifact_type": "SAME_TEAM_COMPONENT_STATIC_REVIEW",
+  "version": "0.1.0",
+  "scope": "Contract/source/static mathematics review and predeclared synthetic controls; no experimental record executed",
+  "authority": "Repository AGENTS and CRL2/O03 governance; no independent physical promotion receipt",
+  "source_identity": {
+    "paper_doi": "10.1103/PhysRevB.105.205141",
+    "arxiv": "https://arxiv.org/html/2108.01086v1",
+    "dataset_doi": "10.11588/DATA/6MEKHI",
+    "file_doi": "10.11588/DATA/6MEKHI/4PV8ZU",
+    "author_commit": "265b6671dde799d7c73f32247fa3ee93ae70e0f2",
+    "raw_path": "05-21/set2_CH1-site1_CH2-link1_CH3-site2_CH4-link2_CH5-site3_CH6-link3_CH7-site4_CH8-link4_CH9-site5_CH10-empty.gz",
+    "raw_sha256": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c",
+    "raw_bytes": 30941478,
+    "raw_hash_status": "Inherited complete-content receipt, not newly hashed or downloaded in this component review",
+    "fresh_reads": "Primary paper, pinned author README/acquisition text read as text only; fresh GitHub tree metadata confirms selected blob path and size. No notebook/script execution."
+  },
+  "findings": [
+    {
+      "topic": "Groups and heldout split",
+      "assessment": "Accept scoped descriptive design: first five decimal metadata values identify matching ten-channel groups; sixth field is channel. All samples/channels stay together. Sorted 100 distinct labels yield fixed60/20/20 groups. These are distinct acquisition settings, not iid repeats, independent draws or certified effective drives."
+    },
+    {
+      "topic": "Selection and spectral units",
+      "assessment": "Crop[200,16384) has16184 samples; nominal bin spacing1953125/16184, not earlier full-record119.209Hz. DC must precede demeaning; fixed rectangular primary plus symmetric Hann sensitivity; no phase/selection/tuning. Channel10 is retained, empty only by filename."
+    },
+    {
+      "topic": "Descriptive model separation",
+      "assessment": "Fixed training-only median and metadata-label interpolation with endpoint extension. Both heldout lanes reported without model selection. Neither is a calibrated gauge-symmetric model nor gauge-breaking physical null. A future physical-model test remains HOLD."
+    },
+    {
+      "topic": "Missing values and stops",
+      "assessment": "Wrong source identity refused before gzip; schema/nonfinite/duplicate/group failures reject outputs. Undefined feature retains HOLD rather than imputation or dropping rows. Check exact-constant parsed values to avoid a rounding-created false frequency."
+    },
+    {
+      "topic": "Uncertainty",
+      "assessment": "No independent waveform calibration, clock/time-grid, anti-alias, shared covariance or floating-FFT error debit supplied. No numeric physical interval, SD/SEM/bootstrap coverage or simultaneous guarantee. Deterministic future enclosures need justified upstream bounds and arithmetic debits."
+    },
+    {
+      "topic": "Nonlinear link mismatch",
+      "assessment": "Paper complex oscillator b=sqrt(I)exp(i theta) retains sqrt(I) in hopping; E=-(-1)^x|b|^2 is not an independent signed electric rotor variable. Five matter sites/four links do not map to62-channel600-cell native observer, source-work interface or UD state energy."
+    }
+  ],
+  "prefreeze_implementation_findings_sent": [
+    {
+      "finding": "DC feature after demeaning would be tautological; crop bin differs from full record",
+      "resolution": "Final initial draft computes pre-demean DC and declares16184 crop bin."
+    },
+    {
+      "finding": "Constant decimal floating mean can create tiny AC residual and false peak",
+      "resolution": "Initial constructor draft corrected to exact-input equality with exact zero AC, no tolerance clipping."
+    },
+    {
+      "finding": "Finite per-bin powers do not imply finite reductions/centroid",
+      "resolution": "Initial constructor draft added finite total/centroid checks; parent requested additional comparison reduction guards in append-onlyv2."
+    }
+  ],
+  "limits": [
+    "historical source summaries known before freeze; not blind preregistration",
+    "synthetic controls test implementation only; no apparatus data validation",
+    "same-team separate implementation review is not external non-constructor review",
+    "no new raw download/reanalysis, fits, keys or signing"
+  ],
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "status": "STATIC_SCOPE_ACCEPTED_PENDING_FINAL_FROZEN_SYNTHETIC_AUDIT"
+}

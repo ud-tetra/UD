@@ -1,0 +1,100 @@
+{
+  "artifact_type": "SAME_TEAM_COMPONENT_REVIEW_RESULT",
+  "status": "PASS_SCOPED_ENGINEERING_REVIEW_PHYSICAL_NATIVE_ADMISSION_REMAINS_HOLD",
+  "source_freeze": {
+    "path": "circuit-component-work-20261019/PROTOCOL_FREEZE_v0.2.json",
+    "bytes": 3132,
+    "sha256": "c00e32a950aeca549b1a5db84832b07ef1102dfe97e9b30d634287ecf1a809be"
+  },
+  "review_precontrol_freeze": {
+    "path": "circuit-component-review-20261019/AUDIT_FREEZE.json",
+    "bytes": 1373,
+    "sha256": "58cc9f9d9b6ec5d02178ed6f8d86f484617431d91335dca86244ea96f2c89870"
+  },
+  "own_control_results": {
+    "path": "circuit-component-review-20261019/AUDIT_RESULTS.json",
+    "bytes": 4398,
+    "sha256": "1b6c4d15e0720e17d2e64d6c02651a238686fb5655060dc19a0180734f35c7d8"
+  },
+  "constructor_control_results_read": {
+    "path": "circuit-component-work-20261019/CONTROL_RESULTS_v0.2.json",
+    "bytes": 4267,
+    "sha256": "17108d35a77cda107e404f9d9aea060069c9fdbac64fdabd040da5ad918d1da6"
+  },
+  "constructor_execution_receipt_read": {
+    "path": "circuit-component-work-20261019/EXECUTION_RECEIPT.json",
+    "bytes": 905,
+    "sha256": "8e0703ba135662b13ed9d732269b01fee22518291ec7b07cd41aad0601129159"
+  },
+  "own_checks": {
+    "predeclared_categories": 15,
+    "passed": 15,
+    "stderr_bytes": 0,
+    "source_and_review_frozen_bytes_unchanged": true,
+    "independent_small_DFT_implementation": "cmath direct8point evaluation; approximate formula consistency, not interval arithmetic",
+    "heldout_no_refit": "1000 added to heldout features only; reconstructed predictions exactly fixed training-only median/interpolation with endpoint handling"
+  },
+  "constructor_observation": {
+    "controls": 31,
+    "passed": 31,
+    "reported_primary_replay_byte_identical": true,
+    "review_action": "Read and hash-checked constructor receipt/results; did not rerun constructor controls"
+  },
+  "inherited_source_bindings": [
+    {
+      "path": "ud-repo/captures/2026-10-18T141800Z-codex-measurable-audit-a7c392e1/REPORT_CONTENT_v0.1.json",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "ud-repo/captures/2026-10-18T141800Z-codex-measurable-audit-a7c392e1/WAVEFORM_AUDIT_v0.1.json",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "ud-repo/captures/2026-10-18T141800Z-codex-measurable-audit-a7c392e1/DATASET_INVENTORY_v0.1.json",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "ud-repo/captures/2026-10-18T141800Z-codex-measurable-audit-a7c392e1/audit_waveform.py",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "ud-repo/captures/2026-10-18T141800Z-codex-measurable-audit-a7c392e1/MANIFEST.json",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "actual-admission-intake-work-20261019/PRIOR_AUDIT_RECONCILIATION.json",
+      "bytes_match": true,
+      "sha256_match": true
+    }
+  ],
+  "conditional_spectral_lemma_review": {
+    "path": "circuit-component-review-20261019/CONDITIONAL_LEMMA_REVIEW.json",
+    "bytes": 1741,
+    "sha256": "d2b5b14146fe4e2e5e14577dab84bfb4402e56fd4ce33962bdcb7e7a17b2b7bc"
+  },
+  "v1_failure_preserved": true,
+  "limits": [
+    "100 different frequency metadata settings, not100iid repetitions; no repeat-based SEM/bootstrap coverage",
+    "descriptive feature baselines only; calibrated physical model comparison remainsHOLD",
+    "historial source summary disclosed before freeze; not blinded preregistration",
+    "source waveform hash inherited, not freshly downloaded or rehashed",
+    "same-team review is not external non-constructor review",
+    "conditional deterministic error lemma is algebraic; no calibrated epsilon,time-grid or validated floating error bound supplied",
+    "no native62channel observer,state energy,Gauss significance or UD correspondence certified"
+  ],
+  "raw_record_entrypoint_invocations": 0,
+  "actual_experimental_records_evaluated": 0,
+  "new_raw_downloads": 0,
+  "new_fits": 0,
+  "new_keys": 0,
+  "new_signatures": 0,
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "development_registry_entry": false,
+  "completed_utc": "2026-10-19T21:03:13.985037+00:00"
+}

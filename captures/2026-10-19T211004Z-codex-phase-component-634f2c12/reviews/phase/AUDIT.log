@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/f3d1c2f040c9/directional-phase-audit-20261019/audit.py", line 94, in <module>
+    if __name__=='__main__':audit()
+                            ^^^^^^^
+  File "/workspace/scratch/f3d1c2f040c9/directional-phase-audit-20261019/audit.py", line 84, in audit
+    matched.append({'emitted_index':i,'target_index':j,'target_label':targets[j]['label'],'circular_error_upper':up(err),'source_omega':targets[j]['omega']})
+                                                                                                                 ^^^^^^^
+  File "/workspace/scratch/f3d1c2f040c9/directional-phase-audit-20261019/audit.py", line 18, in up
+    n=(x*(1<<180)).ceil().unique_fmpz();assert n is not None;return [int(n),1<<180]
+                                               ^^^^^^^^^^^^^
+AssertionError
