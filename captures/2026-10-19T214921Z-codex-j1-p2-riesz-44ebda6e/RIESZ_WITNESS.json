@@ -1,0 +1,31 @@
+{
+  "omega": "9/2",
+  "gamma": "1/10",
+  "source_state_sha256": "d4184cf1c094cbffcf0d2f3103d58e8b0ebcb157eeb9e57240fad7ae3f6e85f6",
+  "topology_sha256": "28105ba91998721313f7eb066411c9c7932eb08c5eb94bc737a031b60d1427dd",
+  "nodes_P1": 2809,
+  "edges_total": 15864,
+  "nodes_P2": 18673,
+  "coefficient_format": "gzip of 2*n little-endian binary64 words, first real-residual test then imaginary-residual test; P1 vertices first, then all sorted mesh edges",
+  "test_payload_sha256": "16ebc1f663b068a27f41d247f53f4d0e96f29d6abc701a2bf28993fa8153856f",
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "cg with diagonal preconditioner on K_P2 + 11^T/n; proposal RHS subtracts floating Euclidean mean",
+    "scope": "Numerical Riesz test proposals only; exact lower certificate needs neither a solver tolerance guarantee nor exact Galerkin optimality.",
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 0,
+        "iterations": 400,
+        "floating_residual_norm": 4.153118702627313e-12
+      },
+      {
+        "component": 1,
+        "stop_code": 0,
+        "iterations": 401,
+        "floating_residual_norm": 9.793516338989958e-13
+      }
+    ]
+  }
+}
