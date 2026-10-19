@@ -1,0 +1,47 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "classification": "EXACT_CONDITIONAL",
+  "constructor": "Codex",
+  "reviewers": [],
+  "source_hashes": [
+    {
+      "source_name": "REPORT.md",
+      "sha256": "d6d07994aa94e2747042049a2f5a67afafa3da507cf29958fa922b908d41c828",
+      "size_bytes": 9028
+    },
+    {
+      "source_name": "verify_j1.py",
+      "sha256": "a3d9a06942e8ef926772436c9f20aa1e26620b6d330c447ea5a9cf00ce14ecfe",
+      "size_bytes": 4596
+    },
+    {
+      "source_name": "20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "size_bytes": 43009
+    },
+    {
+      "source_name": "21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4",
+      "size_bytes": 4882
+    }
+  ],
+  "operator": "P1 scalar-wave action with exact gradient stiffness and consistent tetrahedral mass",
+  "normalization": "a=1; tau=c*t/a; integrals divided by Vref=sqrt2*a^3/12",
+  "port_force": "p*f, p=(0,1,0,-1,0[,0])",
+  "readout": "y=p^T*q",
+  "comparison_models": [
+    "J1 diagonal13",
+    "J1 diagonal24",
+    "J1 center refinement",
+    "regular Kminus same boundary labels"
+  ],
+  "source_selection": "Declared benchmark choice, not derived from UD primitives or preregistered experimental evidence",
+  "limits": [
+    "Lossless conditional finite-dimensional model",
+    "Not full-continuum convergence",
+    "Not arbitrary-refinement invariance",
+    "Native UD action/chain-state bridge open",
+    "No hardware or physical promotion"
+  ],
+  "physical_promotion": 0
+}
