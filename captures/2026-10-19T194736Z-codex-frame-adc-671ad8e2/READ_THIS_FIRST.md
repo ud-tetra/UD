@@ -1,0 +1,3 @@
+# Current reading order
+
+Use README.md and THEOREMS.md for results and proof. BOUNDS.json supplies their exact directed endpoints; the identical certificate is also in results/FAMILY_PHASE_CERTIFICATE.json. Use APPARATUS_REQUIREMENTS_v0.2.md as the current apparatus specification. The first frozen requirements document is retained unchanged; POST_FREEZE_CLARIFICATION.json records the later explicit sensor/model sign convention. Executable code, inputs, gates and numerical results did not change. All physical verdicts HOLD. Development — no registry entry; external review PENDING; Physical Promotion=0.

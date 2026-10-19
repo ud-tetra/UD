@@ -1,0 +1,983 @@
+{
+  "status": "PASS_FROZEN_BYTE_CONTROLS",
+  "rows": [
+    {
+      "id": "consistent_exact_bytes",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_CONSISTENCY",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          4036866087780951979165525328151970747078504289,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "one_sample_model_contradiction",
+      "expected": "CONTRACT_CONTRADICTION",
+      "result": {
+        "status": "CONTRACT_CONTRADICTION",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          1,
+          4
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          726713952577670507122676891029989539080887767199,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          734787684753232411081007941686293480575044775777,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "overlapping_uncertainty",
+      "expected": "HOLD_OVERLAPPING_ENCLOSURE",
+      "result": {
+        "status": "HOLD_OVERLAPPING_ENCLOSURE",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          1,
+          256
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          87306986245400480408564776716615717981417279647,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          95380718420962384366895827372919659475574288225,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "exact_cap_equality",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_CONSISTENCY",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          1,
+          256
+        ],
+        "acquisition_F_squared_exact": [
+          0,
+          1
+        ],
+        "max_vector_error_squared_exact": [
+          0,
+          1
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          91343852333181432387730302044767688728495783936,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          91343852333181432387730302044767688728495783936,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "channel_permutation_covariance",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_CONSISTENCY",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          4036866087780951979165525328151970747078504289,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "unchanged_decoder_after_permutation",
+      "expected": "CONTRACT_CONTRADICTION",
+      "result": {
+        "status": "CONTRACT_CONTRADICTION",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          1,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          1457464771243121966224519307388131048908854038687,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          1465538503418683870182850358044434990403011047265,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "timing_error_in_acquisition_budget",
+      "expected": "HOLD_OVERLAPPING_ENCLOSURE",
+      "result": {
+        "status": "HOLD_OVERLAPPING_ENCLOSURE",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1089,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1089,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          1,
+          32
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          133216580896771415312462335829015034653590641529,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "timing_not_double_counted_as_noise",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_CONSISTENCY",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          1,
+          32
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          4036866087780951979165525328151970747078504289,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "fractional_gain_offset_and_all_error_terms",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_CONSISTENCY",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          469225,
+          301989888
+        ],
+        "max_vector_error_squared_exact": [
+          469225,
+          2415919104
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          57609443127707335536008017703835415869766154954,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "negative_sign_covariance",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_CONSISTENCY",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          4036866087780951979165525328151970747078504289,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "nonconstant_clock_aggregate_exact",
+      "expected": "HOLD_OVERLAPPING_ENCLOSURE",
+      "result": {
+        "status": "HOLD_OVERLAPPING_ENCLOSURE",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          35797321,
+          536870912
+        ],
+        "max_vector_error_squared_exact": [
+          91030681,
+          4294967296
+        ],
+        "max_timing_error_exact": [
+          3159,
+          32768
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          377389343087692607099264072723221156636633678276,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "duplicate_channel_refused",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "CHANNEL_BIJECTION",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "negative_error_refused",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "NEGATIVE_BUDGET",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "zero_gain_refused",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "APPLIED_GAIN",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "one_sigma_not_uniform_bound",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "UNSUPPORTED_COVERAGE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "wrong_calibration_units",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "CALIBRATION_UNITS",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "calibration_postdates_data",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "CALIBRATION_CHRONOLOGY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "expired_calibration",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "CALIBRATION_VALIDITY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "contract_postdates_data",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "CONTRACT_CHRONOLOGY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "shared_calibration_lineage",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "HELDOUT_LINEAGE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "shared_model_lineage",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "HELDOUT_LINEAGE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "same_declared_constructor_calibrator",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "DECLARED_DUTIES",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "clipped_adc_rail",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "ADC_RAIL_OR_RANGE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "nonmonotone_timestamps",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "NONMONOTONE_TIMESTAMPS",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "clock_outside_calibrated_domain",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "CLOCK_DOMAIN",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "prediction_wrong_length",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "RAW_OR_PREDICTION_LENGTH",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "raw_wrong_length",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "RAW_OR_PREDICTION_LENGTH",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "timestamp_wrong_length",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "TIMESTAMP_LENGTH",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "real_cap_unset",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "RATIONAL_SCHEMA",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "malformed_lineage",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "LINEAGE_SCHEMA",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "noninjective_alias_band",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "NONINJECTIVE_ALIAS_BAND",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "declared_injective_band_math_only",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_CONSISTENCY",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          4036866087780951979165525328151970747078504289,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "invented_apparatus_receipts_still_no_physical_pass",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "status": "CONDITIONAL_CONSISTENCY",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          0,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          4036866087780951979165525328151970747078504289,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "apparatus_submission",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "clock_rate_interval_reaches_zero",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "CLOCK_RATE_INTERVAL_NOT_POSITIVE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "exact_squared_residual_exceeds_int64",
+      "expected": "CONTRACT_CONTRADICTION",
+      "result": {
+        "status": "CONTRACT_CONTRADICTION",
+        "raw_scalar_readings_checked": 496,
+        "timestamp_vectors_checked": 8,
+        "residual_F_squared_exact": [
+          18889465931203702947841,
+          16
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ],
+        "mismatch_lower": [
+          50216813882724033835265808704131244595311620830051214463135,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "mismatch_upper": [
+          50216813882732107567441370608089575645967924771545371471713,
+          1461501637330902918203684832716283019655932542976
+        ],
+        "cap": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "calibration_authenticity": "NOT_AUTHENTICATED",
+        "declared_lineage_only": true,
+        "heldout_independence": "NOT_CERTIFIED",
+        "unaliased_identification": "NOT_CERTIFIED",
+        "provenance_kind": "synthetic_fixture",
+        "source_family_membership": "NOT_CERTIFIED",
+        "prediction_target": "frozen_saved_predictor_not_ideal_analytic_source",
+        "scope": "Exact record arithmetic conditional on supplied deterministic calibration/domain/chronology/lineage premises. Not empirical calibration truth, external review or physical qualification."
+      }
+    },
+    {
+      "id": "scored_raw_declared_model_ancestor",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "SCORED_RAW_IN_CALIBRATION_OR_MODEL_ANCESTRY",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "path_escape_refused",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "PATH_OR_MISSING_FILE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "unfilled_template_refused",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "MALFORMED_OR_MISSING_EVIDENCE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "hash_mutation_raw_adc",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "FILE_HASH_raw_adc",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "hash_mutation_timestamps",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "FILE_HASH_timestamps",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "hash_mutation_prediction",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "FILE_HASH_prediction",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "hash_mutation_calibration",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "FILE_HASH_calibration",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "frozen_model_hash_refused",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "PREDICTION_FREEZE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "frozen_calibration_hash_refused",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "CALIBRATION_FREEZE",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    },
+    {
+      "id": "frozen_contract_hash_refused",
+      "expected": "HOLD_INPUT_EVIDENCE",
+      "result": {
+        "status": "HOLD_INPUT_EVIDENCE",
+        "reason": "FROZEN_CONTRACT_HASH",
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0
+      }
+    }
+  ],
+  "controls": 45,
+  "source_receipts_checked": 6,
+  "physical_verdicts_hold": 45,
+  "actual_apparatus_acquisitions": 0,
+  "new_estimator_fits": 0,
+  "tiny_adc_fixture_bundles": 45,
+  "raw_scalars_successfully_scanned": 6944,
+  "frozen_generator_rebuild_byte_identical": true,
+  "protocol_sha256": "530f3b1af64b824709d6082bf288b844798ae7c8799816984c515e8c5710f652",
+  "physical_promotion": 0
+}

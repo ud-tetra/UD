@@ -1,0 +1,29 @@
+{
+  "artifact_type": "SAME_TEAM_REPLAY_TEMPLATE_DOCUMENTATION_BINDING_REVIEW",
+  "timestamp_utc": "2026-10-19T19:44:48.596360+00:00",
+  "status": "SCOPED_STATIC_REVIEW_WITH_EXPLICIT_SIGN_CONVENTION_CLARIFICATION",
+  "protocol_sha256": "530f3b1af64b824709d6082bf288b844798ae7c8799816984c515e8c5710f652",
+  "original_reviewed_core_bytes_match": true,
+  "all_frozen_files_match": true,
+  "reviewed_files_sha256": {
+    "apparatus_record.py": "738c4bb239a519fefbd5dd346fa61e83184d4d280a36b1e4092e0ebf45186266",
+    "make_fixtures.py": "6cad2dc49be2f920406262ae4f1ff43b44f1c187dfc77d26ee5303da4e291352",
+    "replay.py": "703aae84e37835d3b75332cae19e5e5699d61291dde23ead4e5bdc91696e1a64",
+    "APPARATUS_REQUIREMENTS.md": "97e067b2fb0d4ecc5d7a42624df3a7845ef5e8c97a08b841b517334ff1eeab97",
+    "README.md": "943f947ce73eb2e75f533022ffcabe915f733862abeedde698bd13a64b3c1792",
+    "REAL_CONTRACT_TEMPLATE.json": "8ad66b1d1890803d8cd02b106ba202ca999df2ce9d7ad4ea43a184f41a5f3c44",
+    "REAL_PACKET_TEMPLATE.json": "78a2903b8d18c6deace3489cdc64aacf8c4d8ff520026ac6b1b2bbc1bd5fc033",
+    "requirements.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "INPUT_PROVENANCE.json": "5a8b06e71c6a0db102207171614abfe51b5c55a45bf2a2ac2270e4f9ec591912"
+  },
+  "note_sha256": "535b6a8c3b0ef82e9514b217d46e939e7e371572417e3acb24070ccdb126c077",
+  "candidate_execution_by_reviewer": false,
+  "new_fits": 0,
+  "new_physical_records": 0,
+  "control_outcomes_claimed": false,
+  "sign_convention_clarification": "Raw z=g*y_sensor+b+n, corrected target ytrue=sign*y_sensor; equivalently z=g*sign*ytrue+b+n. Exact parser already implements corrected target. Original frozen docs must remain unchanged; retain explicit clarification.",
+  "scope": "Replay/data/member/rebuild/expected-metric binding, templates and apparatus docs only. Family-phase proof/numbers reviewed separately.",
+  "independent_non_constructor_review": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
