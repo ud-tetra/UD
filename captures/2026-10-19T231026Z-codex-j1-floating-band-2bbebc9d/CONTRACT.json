@@ -1,0 +1,76 @@
+{
+  "name": "J1 fixed-P2 actual binary64 local-band certificate v0.1",
+  "status": "DERIVED / EXACT CONDITIONAL ON IEEE BINARY64 RN MODEL",
+  "source_dependencies": [
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/CONTRACT.json",
+      "size_bytes": 7227,
+      "sha256": "95bfa2edb7988a9d224bd6cef3ca7727ee7d84acc47c0747a6d5365f34d3e446"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/LOCAL_BAND_RESULTS.json",
+      "size_bytes": 5996,
+      "sha256": "5ebed1020965b1126b6344746bbb00f46df3a9361a0f2557b23cb2d57f0e3e62"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/REPLAY.log",
+      "size_bytes": 2666,
+      "sha256": "ff6dad7f4aeabd9bfe95f0225709c24cbe898a7d6d12f04a58c0bb455a95a14c"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/MANIFEST.json",
+      "size_bytes": 4500,
+      "sha256": "cbe45ce394f9757b4380ffb5743bc7c4ba57b7b3c5dd8621b944bbb03421ffd0"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/UPPER_RESULTS.json",
+      "size_bytes": 8312,
+      "sha256": "f2101b0f0f24dfa2e636b13c26f7c232ead06831fe5fa64bb830a683a044e8c0"
+    },
+    {
+      "path": "captures/2026-10-19T220433Z-codex-j1-p2-state-8d4041af/P2_WITNESS.json",
+      "size_bytes": 895,
+      "sha256": "33170c1856b62ac5ea60100fb0d2dfe38535f135fc2563e149a00af37f151878"
+    }
+  ],
+  "input_document_provenance": [
+    {
+      "filename": "20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "role": "Source data; not a native derivation of the benchmark scalar-wave action/damping"
+    },
+    {
+      "filename": "21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4",
+      "role": "Source data; not a native derivation of the benchmark scalar-wave action/damping"
+    }
+  ],
+  "governance_amendment_status": "Proposal, not enacted by citation",
+  "source_state": "Same exact decoded meanfree P2 state from PR251; no new solve",
+  "exact_estimator": "J(w)=J(w0)-(z(w)-z(w0))*integral v\u00b2 dmu, w0=9/2, gamma=1/10",
+  "actual_evaluator": "evaluator.py, six frozen binary64 constants, twelve explicit scalar operations, exact rational domain guard, real/imaginary returned as complex",
+  "rounding_model": "Each primitive +,-,* returns binary64 RN ties-to-even, no FMA/contraction; coefficients and source files unchanged; overflow excluded by propagated magnitude<16; underflow handled by additive 2^-1075 term. Conditional semantics, not platform-wide formal verification.",
+  "input_scope": "Every finite native binary64 omega whose exact represented value is in [8983/2000,9017/2000]; input parsing and measurement uncertainty excluded",
+  "target": "Absolute scalar-wave continuum output error<=1/10",
+  "previous_interval": [
+    "899/200",
+    "901/200"
+  ],
+  "extended_interval": [
+    "8983/2000",
+    "9017/2000"
+  ],
+  "floating_uniform_proof": "Exact interval/error propagation, including frozen constant quantization. All rational error bounds rounded upward on a 2^-120 bookkeeping grid. Proof spans every accepted float; 1,663 native/oracle sample traces are supplemental constructor controls.",
+  "native_program_check": "AST operation sequence matches the declared twelve-operation DAG; saved float words equal exact-rational software RN constants; native trace matches integer-only software rounding oracle on boundary/center/grid/pseudorandom controls.",
+  "lineage_scope": "New compact evaluator for the exact corrected estimator family; distinct from prior sparse-matrix output evaluation, with center change explicitly quantified. No original sparse pipeline-wide claim.",
+  "provisional_record": "INITIAL_FLOATING_BAND_RESULTS.json predates the added direct closed-estimator identity and constant-quantization-omission controls; numerical bounds unchanged; FLOATING_BAND_RESULTS.json is the final replay target.",
+  "missing_not_read": [
+    "Gap2_FINAL_Finite_Genesis.png"
+  ],
+  "lane": "Development \u2014 no registry entry",
+  "registry_entry": null,
+  "scientific_status": "OPEN",
+  "independent_review": false,
+  "physical_promotion": 0,
+  "supersedes": []
+}
