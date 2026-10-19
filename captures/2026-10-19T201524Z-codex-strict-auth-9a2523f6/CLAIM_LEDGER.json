@@ -1,0 +1,41 @@
+{
+  "claims": [
+    {
+      "id": "STRICT_FRAME_COUNTEREXAMPLE",
+      "type": "NO-GO",
+      "scope": "Uniform unchanged strict returned-frame admission for actual outputs of this numerical estimator on PR233 family",
+      "status": "EXACT_SAVED_OUTPUT_LOWER_WITNESS",
+      "minimum_frame_residual_lower": 1.9908695710212329e-07,
+      "unchanged_cap": 2.4895818841068944e-10,
+      "ratio_lower_over_cap_greater_than": 799.68029,
+      "learned_order": 209,
+      "Gram_pass": true,
+      "normal_pass": true,
+      "inputs": "counterexample/PROTOCOL_FREEZE.json; counterexample/DATA_FREEZE.json",
+      "proof": "counterexample/COUNTEREXAMPLE_RESULT.json; reviews/strict-family-independent-audit-20261019/AUDIT_RECEIPT.json"
+    },
+    {
+      "id": "ANALYTIC_TRANSFER",
+      "type": "DERIVED",
+      "scope": "Same finite grid, coordinates, units and Frobenius metric",
+      "statement": "max(0,r-alpha-beta) <= ||Ytrue-Ya||F <= r+alpha+beta",
+      "status": "Validated harmonic formula-to-saved-predictor beta and exact acquisition alpha; physical correspondence OPEN"
+    },
+    {
+      "id": "RECEIPT_VERIFICATION",
+      "type": "EXACT",
+      "scope": "Supplied bytes under externally caller-pinned synthetic public-key policy/admission",
+      "status": "52 frozen controls and byte-identical replay pass; physical HOLD",
+      "trust_boundary": "Policy identity, claimed signing times, key control and acquisition truth are external premises"
+    },
+    {
+      "id": "IDEAL_PHASE_OR_PHYSICAL_FAILURE",
+      "type": "OPEN",
+      "status": "NOT_ESTABLISHED",
+      "scope": "No inference from this actual-output frame counterexample to ideal singular vectors, phases, all algorithms or physical laws"
+    }
+  ],
+  "lane": "Development \u2014 no registry entry",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

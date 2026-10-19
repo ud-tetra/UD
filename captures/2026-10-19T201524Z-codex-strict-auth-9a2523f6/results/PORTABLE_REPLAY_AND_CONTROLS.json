@@ -1,0 +1,46 @@
+{
+  "status": "PASS_POSTKNOWN_SUPPLEMENT_RAW_REPLAY_EXACT_SAVED_FACTOR_REPLAY_AND_THREE_HOSTILE_CONTROLS",
+  "controls": [
+    {
+      "id": "zero_alignment",
+      "expected": "HOLD_NO_MINIMAL_FRAME_COUNTEREXAMPLE",
+      "actual": "HOLD_NO_MINIMAL_FRAME_COUNTEREXAMPLE",
+      "reason": "Conservative normal correction must be subtracted; raw r-squared alone is not a lower bound."
+    },
+    {
+      "id": "zero_returned_basis",
+      "expected": "HOLD_NO_MINIMAL_FRAME_COUNTEREXAMPLE_AND_GRAM_REFUSAL",
+      "actual": "HOLD_NO_MINIMAL_FRAME_COUNTEREXAMPLE",
+      "retained_Gram_pass": false,
+      "scope": "Synthetic saved-array control, not a new estimator output or input record."
+    },
+    {
+      "id": "alignment_hash_mismatch",
+      "expected": "ASSERTION_REJECTION",
+      "actual": "AssertionError",
+      "message": "ALIGNMENT.npz"
+    }
+  ],
+  "saved_factor_result_exact_equal": true,
+  "raw_replay": {
+    "status": "PASS_INDEPENDENT_RAW_REGENERATION_ALL_COORDINATES_AND_PROJECTION",
+    "record_sha256": "5f4db78ac52f14eb729260f4936bc818338e308373d3c8b19f5c55c1937643ae",
+    "raw_scalars_checked": 18790154,
+    "exact_vector_norms_checked": 303067,
+    "projection_entries_recomputed": 2629311,
+    "projection": {
+      "partial_sum_bound": 138101851283121800,
+      "numerator_max": 3062262992065627,
+      "integer_bytes_sha256": "f0e3b05a5c9c833bef4e226e08c7537ff943b8a576e178aaf5ac7004ef9145a1",
+      "projection_bytes_sha256": "6a92dd189ef42150af950a5d72240ac33d822134e62d37634040cea89b2dc114"
+    },
+    "new_estimator_runs": 0,
+    "persistent_raw_files_written": 0
+  },
+  "all_original_frozen_and_supplement_sources_unchanged": true,
+  "supplement_freeze_sha256": "a2f3bda6f7ef70c77225b0473e4b7df3681b35862795bf7b43c8e6d21a4692cd",
+  "completed_utc": "2026-10-19T20:13:06.861418+00:00",
+  "scope": "Known-outcome supplementary engineering controls, not blinded and no new estimator/SVD fit. Fixtures may mutate data only in isolated paths; original factors untouched.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

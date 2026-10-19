@@ -1,0 +1,11 @@
+# Signed analytic-record outcome review
+
+All52 frozen synthetic controls matched their expected outcomes:3 conditional analytic consistency,1 analytic contract contradiction,2 analytic overlap HOLD and46 authentication/analytic-evidence HOLD. All52 physical verdicts remain HOLD_UNQUALIFIED. No real independently trusted apparatus keys, calibration evidence or hardware records were supplied.
+
+I independently verified60 public-key signatures across the six processed numeric controls and nine wrong-context/policy/time controls, without using candidate verification code or generating/signing with private keys. Signed wrong-domain/run/challenge/admission and cross-run receipts have valid signatures but invalid context. Revoked, expired, wrong-role and constructor-separated policy cases likewise demonstrate that signature validity alone is insufficient for admission.
+
+All six numeric rows were independently replayed from the frozen ADC/predictor/calibration bytes using direct Fraction arithmetic over2976 scalar readings. Exact residual and acquisition squares match. The harmonic error was independently reduced to2*c²*sum(k=0..3)cos(k/32)², with c=1/1024 or0. Its validated bound, declared beta, the SUM sqrt(alpha²)+beta, all verdicts and reported outward interval endpoints check. A larger predeclared beta correctly turns the saved-predictor PASS into analytic overlap HOLD.
+
+All522 archive member hashes,52 unique plan/index outcomes, original scientific/review code hashes and caller-passed data pin match. The data pin is the disclosed local constructor engineering pin in DATA_ADMISSION, not external preregistration or real identity authority. Primary and read-only replay result JSONs are byte-identical. Exact same-run idempotence is intended and supplies no at-most-once acquisition freshness.
+
+These checks validate mathematical formula/artifact envelopes and signature bytes under frozen synthetic policy assumptions. They do not authenticate calibration truth, independent humans, actual signing chronology, heldout acquisition independence, physical model correspondence or unaliased/SI identification. The reviewer performed no signing, key generation, candidate-verifier invocation, record generation or model fit. Separate strict-frame counterexample evidence is outside this review. External review remains pending; Physical Promotion=0.

@@ -1,0 +1,33 @@
+{
+  "artifact_type": "SAME_TEAM_PREDICTOR_AUTH_PREFREEZE_STATIC_REVIEW",
+  "review_utc": "2026-10-19T20:09:32.168290+00:00",
+  "status": "NO_REMAINING_MATERIAL_ISSUE_IN_REVIEWED_SCOPE_READY_TO_FREEZE",
+  "reviewed_files_sha256": {
+    "authenticated_record.py": "6ac45ce73f84067147ebfa8dc108fa3a79d5c813f5096282a34bce4033354edf",
+    "base_record.py": "738c4bb239a519fefbd5dd346fa61e83184d4d280a36b1e4092e0ebf45186266",
+    "make_auth_fixtures.py": "531b4f7af773ce13d85e35bdf6b4bd26bf72cfad577ed8cdb6aad88a878148b6",
+    "replay_auth.py": "9b05c790e379fc7aee0bb4e7edebf4fe06d9ff62b758421c052307336487a4d0",
+    "THEOREMS.md": "970152b4258a24427e82253db1e6b689f2678372e6d65dfe67b799c73148be1f",
+    "CONTROL_PLAN.json": "fd8091bb0dac60fe0446896aa85ca9849f35ebb22bf273962628222b9726cda9",
+    "INPUT_PROVENANCE.json": "d19610ae45af14620052d961ed4dd26814e3effd84dcc634cfb424c5fd28ec0c",
+    "API_SOURCES.json": "e346ac0d97df255f0a701638f3472a0b3c35315df58e7d479facc9bbc10449fb",
+    "requirements.txt": "3b1edd10bbc6da5b057b432f26cc368eac202d238fb234da18e122b189f0ddfb"
+  },
+  "review_note_sha256": "d9c2ce756ada93b468cbe3a0f0bdc6ee22f19500420f614fb26381ee60f789a8",
+  "base_verifier_and_inputs_match_pinned_capture": true,
+  "statically_matched_unique_planned_controls": 52,
+  "resolved_findings": [
+    "Strict authorized role and constructor-principal list schema",
+    "Key valid both at claimed issuance and verification epoch",
+    "External data-freeze hash required for nondeterministic signing fixtures",
+    "Model-constructor author role explicit, not independent review"
+  ],
+  "candidate_code_imported_or_executed": false,
+  "keys_or_signatures_generated_by_reviewer": 0,
+  "actual_apparatus_data": 0,
+  "new_fits": 0,
+  "scope": "Static transfer/envelope math, receipt authorization/context binding, data-freeze/replay integrity, source provenance and docs. No crypto fixture outcome, real identity authority, empirical truth or physical qualification.",
+  "independent_non_constructor_review": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
