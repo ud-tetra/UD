@@ -1,0 +1,37 @@
+{
+  "artifact_type": "POST_V1_SAME_TEAM_CAPTURE_GUARD_REVIEW_RESULTS",
+  "all_pass": true,
+  "controls": 3,
+  "results": [
+    {
+      "id": "capture-sibling-output-refused",
+      "pass": true,
+      "reason": "OUTPUT_INSIDE_IMMUTABLE_PACKAGE_OR_MANIFEST_ANCESTOR"
+    },
+    {
+      "id": "external-symlink-into-capture-refused",
+      "pass": true,
+      "reason": "OUTPUT_INSIDE_IMMUTABLE_PACKAGE_OR_MANIFEST_ANCESTOR"
+    },
+    {
+      "id": "capture-symlink-outside-refused",
+      "pass": true,
+      "reason": "OUTPUT_INSIDE_IMMUTABLE_PACKAGE_OR_MANIFEST_ANCESTOR"
+    }
+  ],
+  "two_nested_manifest_roots_exercised": true,
+  "sibling_outside_nearest_manifest_root_protected": true,
+  "ast_unchanged_outside_output_path": true,
+  "constructor_source_freeze": {
+    "bytes": 3810,
+    "sha256": "93892eaf85ee74304d04183d8981ba436d15174efbf7947a60004fa9d5173103"
+  },
+  "review_freeze": {
+    "bytes": 728,
+    "sha256": "a1c2a1fa86491979372e785265ac77deb7988919108362ecdac7fda99f3f8e8e"
+  },
+  "v1_review_evidence_retained": true,
+  "scope": "Post-known metadata path-safety tests under trusted nonconcurrent host. Temporary synthetic layouts only; no actualcapturewrite, evidenceURI,raw/model/calibration evaluation or signatures.",
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

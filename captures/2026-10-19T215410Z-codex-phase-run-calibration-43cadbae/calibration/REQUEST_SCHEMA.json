@@ -1,0 +1,1613 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Request metadata only, never calibration truth/admission",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_type": {
+      "type": "string",
+      "const": "RIECHERT10_CALIBRATION_MODEL_REQUEST"
+    },
+    "version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "REQUEST_METADATA_ONLY",
+        "SYNTHETIC_METADATA_CONTROL"
+      ]
+    },
+    "lane": {
+      "type": "string",
+      "const": "PUBLISHED_CIRCUIT_COMPONENT_10"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "raw_sha256": {
+          "type": "string",
+          "const": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c"
+        },
+        "result_sha256": {
+          "type": "string",
+          "const": "5eb74f78fa2eace3c71f1970821d2f58e4b7c33ba871495e2e97261d8af71875"
+        },
+        "known_records": {
+          "type": "integer",
+          "const": 1000
+        },
+        "known_groups": {
+          "type": "integer",
+          "const": 100
+        },
+        "prior_validation_and_test_exposed": {
+          "type": "boolean",
+          "const": true
+        },
+        "source_units": {
+          "type": "string",
+          "const": "recorded_nominal_V_and_metadata_Hz"
+        }
+      },
+      "required": [
+        "raw_sha256",
+        "result_sha256",
+        "known_records",
+        "known_groups",
+        "prior_validation_and_test_exposed",
+        "source_units"
+      ]
+    },
+    "calibration": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "independently_accepted_calibration_authority": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "external_calibration_authority"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "amplitude_channels": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "minItems": 10,
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "channel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 10
+              },
+              "applied_gain_V_per_nominal_V": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+              },
+              "gain_interval": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "lower": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                  },
+                  "upper": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ]
+              },
+              "offset_interval_V": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "lower": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                  },
+                  "upper": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ]
+              },
+              "nonlinearity_bound_V_per_sample": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+              },
+              "quantization_and_noise_bound_V_per_sample": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+              },
+              "valid_input_range_nominal_V": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "lower": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                  },
+                  "upper": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                  }
+                },
+                "required": [
+                  "lower",
+                  "upper"
+                ]
+              },
+              "evidence": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "role": {
+                    "type": "string",
+                    "const": "amplitude_calibration"
+                  },
+                  "uri": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4096
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "authority": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4096
+                  }
+                },
+                "required": [
+                  "role",
+                  "uri",
+                  "sha256",
+                  "bytes",
+                  "authority"
+                ]
+              },
+              "applied_offset_V": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+              }
+            },
+            "required": [
+              "channel",
+              "applied_gain_V_per_nominal_V",
+              "gain_interval",
+              "offset_interval_V",
+              "nonlinearity_bound_V_per_sample",
+              "quantization_and_noise_bound_V_per_sample",
+              "valid_input_range_nominal_V",
+              "evidence",
+              "applied_offset_V"
+            ]
+          }
+        },
+        "timebase": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "grid_model": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "COMMON_UNIFORM_GRID_WITH_BOUNDED_WARP",
+                null
+              ]
+            },
+            "rate_interval_Hz": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "lower": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                },
+                "upper": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                }
+              },
+              "required": [
+                "lower",
+                "upper"
+              ]
+            },
+            "origin_uncertainty_s": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "interchannel_skew_s": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "sample_jitter_s": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "warp_to_waveform_vector_error_V": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "band_or_derivative_domain_proof": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "time_warp_domain"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            },
+            "evidence": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "timebase_calibration"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            }
+          },
+          "required": [
+            "grid_model",
+            "rate_interval_Hz",
+            "origin_uncertainty_s",
+            "interchannel_skew_s",
+            "sample_jitter_s",
+            "warp_to_waveform_vector_error_V",
+            "band_or_derivative_domain_proof",
+            "evidence"
+          ]
+        },
+        "anti_alias": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "declared_input_band_Hz": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "lower": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                },
+                "upper": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+                }
+              },
+              "required": [
+                "lower",
+                "upper"
+              ]
+            },
+            "inband_response_vector_error_V": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "out_of_band_alias_vector_error_V": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "domain_and_transfer_proof": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "anti_alias_transfer"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            }
+          },
+          "required": [
+            "declared_input_band_Hz",
+            "inband_response_vector_error_V",
+            "out_of_band_alias_vector_error_V",
+            "domain_and_transfer_proof"
+          ]
+        },
+        "joint_error": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "route": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "DETERMINISTIC_JOINT_ENCLOSURE",
+                "JUSTIFIED_STATISTICAL_SIMULTANEOUS_COVERAGE",
+                null
+              ]
+            },
+            "scope": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "ALL_1000_RECORDS_EACH_CROPPED_16184_VECTOR",
+                null
+              ]
+            },
+            "epsilon_vector_V": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "allocation_no_double_counting": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "joint_error_allocation"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            },
+            "deterministic_proof": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "joint_deterministic_enclosure"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            },
+            "coverage_fraction": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "population_and_dependence": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "statistical_population_dependence"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            },
+            "simultaneous_coverage_proof": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "statistical_simultaneous_coverage"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            }
+          },
+          "required": [
+            "route",
+            "scope",
+            "epsilon_vector_V",
+            "allocation_no_double_counting",
+            "deterministic_proof",
+            "coverage_fraction",
+            "population_and_dependence",
+            "simultaneous_coverage_proof"
+          ]
+        },
+        "validated_computation": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "operator": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "PR246_RECT_HANN_DEMEAN_ONE_SIDED_POWER",
+                null
+              ]
+            },
+            "implementation_version_and_precision": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "numerical_implementation"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            },
+            "FFT_window_normalization_rounding_proof": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "const": "validated_rounding"
+                },
+                "uri": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "required": [
+                "role",
+                "uri",
+                "sha256",
+                "bytes",
+                "authority"
+              ]
+            },
+            "DC_error_V": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "RMS_error_V": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "spectral_amplitude_error_V": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+            },
+            "PR246_AGREEMENT_IS_NOT_A_ROUNDING_PROOF": {
+              "type": "boolean",
+              "const": true
+            }
+          },
+          "required": [
+            "operator",
+            "implementation_version_and_precision",
+            "FFT_window_normalization_rounding_proof",
+            "DC_error_V",
+            "RMS_error_V",
+            "spectral_amplitude_error_V",
+            "PR246_AGREEMENT_IS_NOT_A_ROUNDING_PROOF"
+          ]
+        }
+      },
+      "required": [
+        "independently_accepted_calibration_authority",
+        "amplitude_channels",
+        "timebase",
+        "anti_alias",
+        "joint_error",
+        "validated_computation"
+      ]
+    },
+    "physical_model_comparison": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "family": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "COMPLEX_OSCILLATOR_THREE_WAVE_MIXING",
+            null
+          ]
+        },
+        "link_amplitude": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "AMPLITUDE_DEPENDENT_COMPLEX_OSCILLATOR_NOT_UNIT_MODULUS_ROTOR",
+            null
+          ]
+        },
+        "equations_parameters_domains_units": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "physical_model_equations_parameters"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "state_action_readout_map": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "state_action_readout"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "acquisition_configuration": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "acquisition_configuration"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "preparation_initial_state_and_uncertainty": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "preparation_state_uncertainty"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "drive_feedback_loss_history": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "drive_feedback_loss"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "energy_source_work_and_model_discrepancy": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "energy_source_work_model_discrepancy"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "alternative_equations_parameters": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "alternative_model"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "alternative_physical_justification": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "alternative_justification"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "frozen_fit_solver_bounds_tiebreak": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "fit_preregistration"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "comparison_design": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "RETROSPECTIVE_EXISTING_PUBLIC_ONLY",
+            "FRESH_INDEPENDENT_UNSEEN_SOURCE_REQUIRED",
+            null
+          ]
+        },
+        "fresh_validation_source": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "fresh_validation_source"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "independent_unseen_lineage": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "independent_unseen_lineage"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "claimed_confirmatory_on_existing_PR246": {
+          "type": "boolean",
+          "const": false
+        },
+        "training_only_fit": {
+          "type": "boolean",
+          "const": true
+        },
+        "retune_after_hold": {
+          "type": "boolean",
+          "const": false
+        },
+        "failed_integration": {
+          "type": "string",
+          "const": "HOLD_NO_IMPUTATION"
+        },
+        "heldout_scoring_and_error_allocation": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "heldout_scoring_preregistration"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "score_observable": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "CALIBRATED_VOLTAGE_VECTOR_L2_AND_MAX_ABS",
+            null
+          ]
+        },
+        "selection_margin_V": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?[0-9]+/[1-9][0-9]*$"
+        },
+        "margin_rationale_before_new_fit": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "selection_margin_rationale"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "bootstrap_or_pvalues": {
+          "type": "boolean",
+          "const": false
+        },
+        "fresh_validation_calibration_and_error_budget": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "fresh_validation_error_budget"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        },
+        "state_estimation_and_model_prediction_error_budget": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "const": "state_prediction_error_budget"
+            },
+            "uri": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            }
+          },
+          "required": [
+            "role",
+            "uri",
+            "sha256",
+            "bytes",
+            "authority"
+          ]
+        }
+      },
+      "required": [
+        "family",
+        "link_amplitude",
+        "equations_parameters_domains_units",
+        "state_action_readout_map",
+        "acquisition_configuration",
+        "preparation_initial_state_and_uncertainty",
+        "drive_feedback_loss_history",
+        "energy_source_work_and_model_discrepancy",
+        "alternative_equations_parameters",
+        "alternative_physical_justification",
+        "frozen_fit_solver_bounds_tiebreak",
+        "comparison_design",
+        "fresh_validation_source",
+        "independent_unseen_lineage",
+        "claimed_confirmatory_on_existing_PR246",
+        "training_only_fit",
+        "retune_after_hold",
+        "failed_integration",
+        "heldout_scoring_and_error_allocation",
+        "score_observable",
+        "selection_margin_V",
+        "margin_rationale_before_new_fit",
+        "bootstrap_or_pvalues",
+        "fresh_validation_calibration_and_error_budget",
+        "state_estimation_and_model_prediction_error_budget"
+      ]
+    },
+    "trusted_evidence_review": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "const": "independent_content_review"
+        },
+        "uri": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "authority": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "role",
+        "uri",
+        "sha256",
+        "bytes",
+        "authority"
+      ]
+    },
+    "metadata_checker_cannot_establish_authenticity": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "required": [
+    "artifact_type",
+    "version",
+    "classification",
+    "lane",
+    "source",
+    "calibration",
+    "physical_model_comparison",
+    "trusted_evidence_review",
+    "metadata_checker_cannot_establish_authenticity"
+  ]
+}

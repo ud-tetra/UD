@@ -1,0 +1,33 @@
+{
+  "artifact_type": "PRE_PACKET_REVIEW_PLAN",
+  "version": "0.1.0",
+  "review_role": "Same-team separate engineering review, not external calibration review",
+  "scope": "Read draft packet/schema/checker and run tiny metadata-only refusal/structural controls after own code+plan freeze. No raw data, fits, private signatures, keys or claimed evidence.",
+  "review_topics": [
+    "exact source/crop/channel identity;10channel descriptive lane remains distinct from native62",
+    "nominal V/Hz labels versus independently calibrated SI claims",
+    "common-grid timing/skew/jitter and analog anti-alias/ADC calibration scope",
+    "joint deterministic enclosure OR justified statistical dependence/coverage, without treating100frequencysettings as iid repeats",
+    "validated numerical rounding debit separately from acquisition error",
+    "physical oscillator model withsqrt(I) amplitude, preparation/source/dissipation histories and justified alternative; missing evidence blocks physical validation",
+    "content hashes and structural completeness do not establish evidence truth or reviewer independence",
+    "null/MISSING placeholders are not zero error bounds or accepted admissions"
+  ],
+  "control_policy": "Freeze constructor bytes plus own test recipe before executing metadata tests. Known absent-evidence actual packet must remain HOLD. Synthetic positive structural fixtures, if any, must be labelled fabricated exercise only and remain physicalHOLD. No raw/external authority generated.",
+  "prospective_test_categories": [
+    "missing-evidence-null-packet-HOLD",
+    "nominal-units-not-SI",
+    "native62-relabel-refusal",
+    "metadata-sample-rate-not-clock-calibration",
+    "anti-alias-missing-HOLD",
+    "covariance-only-not-simultaneous-coverage",
+    "deterministic-route-not-forced-statistical-covariance",
+    "rounding-debit-absent-HOLD",
+    "unsupported-physical-model-or-alternative-HOLD",
+    "placeholder-zero-not-evidence",
+    "packet-complete-never-physical-promotion"
+  ],
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "actual_calibration_evidence_supplied": false
+}

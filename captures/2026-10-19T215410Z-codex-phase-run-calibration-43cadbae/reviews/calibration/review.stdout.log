@@ -1,0 +1,162 @@
+{
+  "artifact_type": "SAME_TEAM_PACKET_METADATA_REVIEW_RESULTS",
+  "source_freeze": {
+    "sha256": "2afb6721c4c7ad8ed2713cac9a2e1a9fe8d09e0c5ea9fbb36276eec599c646e3",
+    "bytes": 2348
+  },
+  "review_freeze": {
+    "sha256": "f1ff4bccd0ca32e7494c7361c96a7f276ea22a03e63942cdafdc0e30f99cb053",
+    "bytes": 1381
+  },
+  "all_pass": true,
+  "categories": 11,
+  "results": [
+    {
+      "id": "missing-evidence-null-packet-HOLD",
+      "pass": true,
+      "detail": {
+        "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+        "blocking_count": 128,
+        "physical_admission": "HOLD",
+        "evidence_content_verified": false
+      }
+    },
+    {
+      "id": "nominal-units-not-SI",
+      "pass": true,
+      "detail": {
+        "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+        "blocking_count": 1,
+        "physical_admission": "HOLD",
+        "evidence_content_verified": false
+      }
+    },
+    {
+      "id": "native62-relabel-refusal",
+      "pass": true,
+      "detail": {
+        "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+        "blocking_count": 1,
+        "physical_admission": "HOLD",
+        "evidence_content_verified": false
+      }
+    },
+    {
+      "id": "metadata-sample-rate-not-clock-calibration",
+      "pass": true,
+      "detail": {
+        "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+        "blocking_count": 1,
+        "physical_admission": "HOLD",
+        "evidence_content_verified": false
+      }
+    },
+    {
+      "id": "anti-alias-missing-HOLD",
+      "pass": true,
+      "detail": {
+        "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+        "blocking_count": 1,
+        "physical_admission": "HOLD",
+        "evidence_content_verified": false
+      }
+    },
+    {
+      "id": "covariance-only-not-simultaneous-coverage",
+      "pass": true,
+      "detail": {
+        "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+        "blocking_count": 1,
+        "physical_admission": "HOLD",
+        "evidence_content_verified": false
+      }
+    },
+    {
+      "id": "deterministic-route-not-forced-statistical-covariance",
+      "pass": true,
+      "detail": {
+        "status": "METADATA_COMPLETE_UNVERIFIED",
+        "blocking_count": 0,
+        "physical_admission": "HOLD",
+        "evidence_content_verified": false
+      }
+    },
+    {
+      "id": "rounding-debit-absent-HOLD",
+      "pass": true,
+      "detail": {
+        "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+        "blocking_count": 1,
+        "physical_admission": "HOLD",
+        "evidence_content_verified": false
+      }
+    },
+    {
+      "id": "unsupported-physical-model-or-alternative-HOLD",
+      "pass": true,
+      "detail": {
+        "unit_modulus_replacement": {
+          "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+          "blocking_count": 1,
+          "physical_admission": "HOLD",
+          "evidence_content_verified": false
+        },
+        "missing_alternative_justification": {
+          "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+          "blocking_count": 1,
+          "physical_admission": "HOLD",
+          "evidence_content_verified": false
+        },
+        "exposed_data_called_confirmatory": {
+          "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+          "blocking_count": 1,
+          "physical_admission": "HOLD",
+          "evidence_content_verified": false
+        }
+      }
+    },
+    {
+      "id": "placeholder-zero-not-evidence",
+      "pass": true,
+      "detail": {
+        "zero_without_evidence": {
+          "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+          "blocking_count": 108,
+          "physical_admission": "HOLD",
+          "evidence_content_verified": false
+        },
+        "boolean_as_count": {
+          "status": "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA",
+          "blocking_count": 1,
+          "physical_admission": "HOLD",
+          "evidence_content_verified": false
+        },
+        "strict_parser_refusals": 3
+      }
+    },
+    {
+      "id": "packet-complete-never-physical-promotion",
+      "pass": true,
+      "detail": {
+        "fixture_classification": "SYNTHETIC_METADATA_CONTROL",
+        "authority_strings": "invented syntax labels, not credentials or reviewers",
+        "deterministic": {
+          "status": "METADATA_COMPLETE_UNVERIFIED",
+          "blocking_count": 0,
+          "physical_admission": "HOLD",
+          "evidence_content_verified": false
+        },
+        "statistical": {
+          "status": "METADATA_COMPLETE_UNVERIFIED",
+          "blocking_count": 0,
+          "physical_admission": "HOLD",
+          "evidence_content_verified": false
+        }
+      }
+    }
+  ],
+  "scope": "Tiny invented metadata only; no evidence URI opened, evidence files created, private signatures/keys, raw record or model fit. Complete fixture deliberately unverified.",
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "actual_calibration_evidence_supplied": false
+}

@@ -1,0 +1,23 @@
+{
+  "artifact_type": "POST_V1_SUCCESS_OUTPUT_SAFETY_CORRECTION",
+  "observed_after": "PROTOCOL_FREEZE.json and40/40primary/replay metadata controls completed",
+  "finding": "HERE-only output protection allows a new sibling file under an ancestor immutable capture in a nested published layout. No in-capture write occurred.",
+  "preserved": [
+    "validate_request.py",
+    "controls.py",
+    "replay.py",
+    "PROTOCOL_FREEZE.json",
+    "CONTROL_PLAN.json",
+    "CONTROL_RESULTS.json",
+    "EXECUTION_RECEIPT.json"
+  ],
+  "current_entrypoints": [
+    "validate_request_v2.py",
+    "controls_v2.py",
+    "replay_v2.py"
+  ],
+  "change": "Reject lexical and resolved output paths inside HERE or any MANIFEST-bearing ancestor. No source/schema/math/uncertainty/model/threshold change.",
+  "new_controls": "Four disclosed post-known supplements: ancestor sibling, both symlink directions, actual nulltemplate CLI remainsHOLD; original40expectations retained",
+  "science_status": "No evidencecontent verified, no raw/model execution, physicalHOLD/promotion0",
+  "recorded_utc": "2026-10-19T21:43:07.854645+00:00"
+}

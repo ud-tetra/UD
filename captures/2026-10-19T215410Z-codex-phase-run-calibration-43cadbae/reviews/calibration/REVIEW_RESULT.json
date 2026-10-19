@@ -1,0 +1,123 @@
+{
+  "artifact_type": "SAME_TEAM_CALIBRATION_MODEL_PACKET_REVIEW_RESULT",
+  "status": "PASS_SCOPED_METADATA_ENGINEERING_REVIEW_PHYSICAL_ADMISSION_HOLD",
+  "current_entrypoint": "validate_request_v2.py",
+  "source_v1_freeze": {
+    "path": "calibration-model-packet-20261019/PROTOCOL_FREEZE.json",
+    "bytes": 2348,
+    "sha256": "2afb6721c4c7ad8ed2713cac9a2e1a9fe8d09e0c5ea9fbb36276eec599c646e3"
+  },
+  "source_current_freeze": {
+    "path": "calibration-model-packet-20261019/PROTOCOL_FREEZE_v0.2.json",
+    "bytes": 3810,
+    "sha256": "93892eaf85ee74304d04183d8981ba436d15174efbf7947a60004fa9d5173103"
+  },
+  "own_metadata_precontrol_freeze": {
+    "path": "calibration-model-review-20261019/REVIEW_FREEZE.json",
+    "bytes": 1381,
+    "sha256": "f1ff4bccd0ca32e7494c7361c96a7f276ea22a03e63942cdafdc0e30f99cb053"
+  },
+  "own_guard_precontrol_freeze": {
+    "path": "calibration-model-review-20261019/GUARD_REVIEW_FREEZE_v0.2.json",
+    "bytes": 728,
+    "sha256": "a1c2a1fa86491979372e785265ac77deb7988919108362ecdac7fda99f3f8e8e"
+  },
+  "own_metadata_results": {
+    "path": "calibration-model-review-20261019/CONTROL_RESULTS.json",
+    "bytes": 5018,
+    "sha256": "090f1313e1900f2ba2e792f43c02ec0a2b94e408c315cf0fe09ccf4b7e22184b"
+  },
+  "own_guard_results": {
+    "path": "calibration-model-review-20261019/GUARD_CONTROL_RESULTS_v0.2.json",
+    "bytes": 1301,
+    "sha256": "2d4b96d25d406a9772f4c765721dc57227387296be3e97337c53d80d55803ad3"
+  },
+  "own_results": {
+    "metadata_categories_passed": 11,
+    "metadata_categories": 11,
+    "post_known_guard_categories_passed": 3,
+    "post_known_guard_categories": 3,
+    "stderr_bytes": 0,
+    "all_frozen_source_and_test_bytes_unchanged": true,
+    "unchanged_production_AST_except_output_path": true,
+    "temporary_two_nested_manifest_roots_exercised": true
+  },
+  "producer_results_read_not_rerun": {
+    "current_results": {
+      "path": "calibration-model-packet-20261019/CONTROL_RESULTS_v0.2.json",
+      "bytes": 6056,
+      "sha256": "08f9d9c7797366f5909bf2f2437262070d23d1826f52e07fee28861ac786fa5b"
+    },
+    "current_receipt": {
+      "path": "calibration-model-packet-20261019/EXECUTION_RECEIPT_v0.2.json",
+      "bytes": 991,
+      "sha256": "9d039ba242403526d20817213312b86c57681e2a003e07a623094eae32d44465"
+    },
+    "controls": 44,
+    "pass": 44,
+    "reported_primary_replay_byte_identical": true,
+    "original40_success_retained": true
+  },
+  "inherited_source_bindings_verified": [
+    {
+      "path": "captures/2026-10-19T212946Z-codex-phase-noise-circuit-9c6cb2dc/NEXT_EVIDENCE_REQUIREMENTS.md",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "captures/2026-10-19T212946Z-codex-phase-noise-circuit-9c6cb2dc/component/RESULT_SUMMARY.json",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "captures/2026-10-19T212946Z-codex-phase-noise-circuit-9c6cb2dc/component/PRIMARY_EXECUTION_RECEIPT.json",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "captures/2026-10-19T212946Z-codex-phase-noise-circuit-9c6cb2dc/component/COMPONENT_RESULT.json",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "captures/2026-10-19T212946Z-codex-phase-noise-circuit-9c6cb2dc/component/EXECUTION_FREEZE.json",
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "/workspace/scratch/f3d1c2f040c9/phase-component-work-20261019/SPECTRAL_ERROR_LEMMA.md",
+      "bytes_match": true,
+      "sha256_match": true
+    }
+  ],
+  "substantive_review": [
+    "Source/raw/result identity, nominalunits and ten-channel lane remain exact; native62 not inferred",
+    "Missingnull/zerowithoutevidence remainHOLD; complete inventedpositivefixture only METADATA_COMPLETE_UNVERIFIED",
+    "Conditional declaredbudget exactarithmetic is not calibrated bound; domain/grid/anti-alias/evidence content unverified",
+    "Deterministic joint route needs no statistical independence/covariance; statisticalroute needs explicit simultaneouscoverage declarations, not iid100frequencyassumption",
+    "PR246 numeric agreement notvalidated floating-rounding enclosure",
+    "Nonlinear oscillator/readout/source-work/model-discrepancy/alternative/solver/scoring errorbudgets required as declarations; no physical model validated",
+    "Existing1000publishedrecords exposed; retrospective only, freshconfirmation requires separatelyreviewed newsource/lineage/errorcoverage",
+    "Caller requestpin bindsparsedbytes, notauthority; no evidenceURIs opened"
+  ],
+  "correction_chronology": "Parent identified missing immutable-capture sibling protection after originalproducer40 and own11controls passed. V1results and source retained. Guard-onlyv2 amendment and own3post-known tests frozen before their respective execution. Earlier ownreview missed broader capture boundary and only covered HERE/input/existingpath protection. No actualcapturewrite occurred.",
+  "residual_limits": [
+    "Metadata syntax and declared arithmetic only, not evidence truth, authority, calibration, blindness, numerical proof or model science",
+    "Trusted package/runtime and nonconcurrenthost filesystem premise, no sandbox or hostilehost race protection",
+    "Testfixture authority labels/hashes are invented syntax markers, not credentials or evidence; no evidencefile/signature/keygenerated",
+    "Separate same-team review/testrecipes exercise shared productionvalidator; not external scientific review or independent calibration certificate"
+  ],
+  "actual_calibration_evidence_supplied": false,
+  "actual_apparatus_records_evaluated": 0,
+  "raw_records_opened": 0,
+  "new_fits": 0,
+  "hardware_operations": 0,
+  "signatures_or_keys_generated": 0,
+  "physical_admission": "HOLD",
+  "calibrated_model_comparison": "HOLD",
+  "native62_intake": "HOLD_SEPARATE_COMPONENT_LANE",
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "development_registry_entry": false,
+  "completed_utc": "2026-10-19T21:45:07.579171+00:00"
+}
