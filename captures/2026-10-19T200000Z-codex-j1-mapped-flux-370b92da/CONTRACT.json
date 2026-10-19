@@ -1,0 +1,66 @@
+{
+  "title": "Fixed J1 port: mapped hierarchical RT1 flux on1024 cells v0.1",
+  "base": "8b6f8114ea4be5ae75b9c5597caa5f36c04d5c35",
+  "classification": "DERIVED_EXACT_CONDITIONAL_AND_AUDITED_FLOAT_PROPOSALS",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "independent_review": false,
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "33c1dff1e4659d5430dce8bfe3d5caf69802a542e98b1d750d4347fec0081966"
+    },
+    {
+      "path": "captures/2026-10-19T193000Z-codex-j1-1024-solve-6e291fc0/REPORT.md",
+      "sha256": "9db79b0cd6086937d8c806a2b5a33adf578f642a1bf6bce962f7fe3160d6f529"
+    },
+    {
+      "path": "captures/2026-10-19T193000Z-codex-j1-1024-solve-6e291fc0/WITNESS.json",
+      "sha256": "9d6277dcd7884c57194cb2a9c797f95aa4423c018db9523a9379082932683443"
+    },
+    {
+      "path": "captures/2026-10-19T193000Z-codex-j1-1024-solve-6e291fc0/SOLVE_RESULTS.json",
+      "sha256": "431574ac738a9e16d65272243a018347ce11565451a94954f6b3d1c0978c3d7e"
+    },
+    {
+      "path": "captures/2026-10-19T193000Z-codex-j1-1024-solve-6e291fc0/CONTINUUM_RESULTS.json",
+      "sha256": "7373d0873fc446130bd01385061d14723c01b6a1a9bcc3471fbc7fe34440cf9e"
+    },
+    {
+      "path": "captures/2026-10-19T193000Z-codex-j1-1024-solve-6e291fc0/level2_check.py",
+      "sha256": "30231ea4c0b5cec162b2d5c9268f2a69e8ced6ab3baf78507e3aaa66cca74709"
+    },
+    {
+      "path": "captures/2026-10-19T180100Z-codex-j1-local-flux-8c9d0f36/patch_flux.py",
+      "sha256": "21c2015afa1cf7279359bd098b78d6a4a33d1cf937845ddb8e53d055e3a7c629"
+    },
+    {
+      "path": "captures/2026-10-19T181100Z-codex-j1-edgewise-6f281bc4/red_mesh.py",
+      "sha256": "cdd326012eeba774fc17969c674f00fde31123a62056bbf09b074b50ceab1783"
+    },
+    {
+      "path": "user_attachment/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "path": "user_attachment/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "model": "Same normalized J1 scalar-wave benchmark, distributed F=10(x+y), meanfree Neumann Laplacian, continuum gap4, externally declared gamma. No native constitutive law or physical calibration.",
+  "construction": "Root16-cell global RT1 solve plus16 coarse and128 fine mapped eight-cell zero-normal patches. One120-coefficient104-equation reference operator rank103/free17 reused. Exact projections/reconstruction and final divergence/trace audit.",
+  "coordinate_convention": "Physical flux tau represented by contravariant coordinate j=(tau_x,tau_y,sqrt2*tau_z), metric diag(1,1,1/2). On x=o+G xi use j=G j_ref; constant Jacobian determinant absorbed into coefficients, so div_x j=div_ref j_ref. Norm integration includes parent volume and G^TgG.",
+  "numerical_scope": "Existing285-node/1024-cell two-word state/output witnesses reused byte-identically; new float free-coefficient proposals are decoded exactly and constraints imposed algebraically. No all-input IEEE theorem or exact/global optimality claim.",
+  "verification_scope": "1568 root scalar constraints;119808 mapped scalar constraints;1152 vector map roundtrips;32768 final divergence and53760 final trace checks. Exact polynomial moments through degree4. Source output identities and reported evaluation bounds rechecked. Two malformed-input controls plus two structural controls. 35 exact degree4 reference partition identities and three nonorthogonal mapped constant-flux norm checks.",
+  "results_scope": "Fine flux improves output radii at omega4.5/5 to16.3574/3.55629; at omega4 retain inherited23.4767 because new flux149.699 is worse. No dynamic1/10 pass. Static upper tightens to1.206011.",
+  "open": [
+    "resonance1/10 precision",
+    "coarse-interface flux corrections or goal-oriented dual certificate",
+    "full-band precision and stopping termination",
+    "convergence of this hierarchical estimator under further refinement",
+    "independent review",
+    "native UD action/source/units bridge"
+  ],
+  "alignment": "Attached ledger native support operators remain separate from the scalar-wave action. CRL2 amendment remains a governance proposal. No uploaded-source or scientific registry edits.",
+  "unavailable_attachment": "Gap2_FINAL_Finite_Genesis.png not read or used; reupload requested"
+}
