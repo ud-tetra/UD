@@ -1,0 +1,28 @@
+{
+  "status": "PASS_SOURCE_WEIGHT_AUXILIARY_DESIGN_WITH_EXPLICIT_ROWSPACE_AND_ENCODING_CONDITIONS",
+  "reviewed_at_utc": "2026-10-19T16:24:29.552485+00:00",
+  "math_audit_sha256": "d1535c276fa7da5d78937a047fe34434762514eed4d79ede4da99847fde70745",
+  "source_reference_hashes": {
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/FREEZE.json": "f966028afc0cffad33ca80423b4c6c8ee8794ccde58841a8f8bba39a01b1062b",
+    "/workspace/scratch/f3d1c2f040c9/wholeball-shift-work/THEOREMS.md": "dfadc8571f0c601dee62c00b7dca554ea344a3e227aa13adbe5da848fe0f9fc1",
+    "/workspace/scratch/f3d1c2f040c9/uniform-two-work/UNIFORM_V2_CERTIFICATE.json": "9e5633627fc08f385159b869673930e5e389cb2a799534b7ef3c48603121ed73",
+    "/workspace/scratch/f3d1c2f040c9/uniform-two-work/baseline/COEFFICIENT_PROPOSAL.npz": "89e16cf354f9ae015e73f717654a5d20f58cea7fad310d03f5239888107a2e3e"
+  },
+  "new_weights_or_numerical_outcomes_computed": false,
+  "key_conditions": [
+    "Construct K=C0transpose*M exactly.",
+    "Validate rho<1 for C0K-I; then true C0dagger=K(C0K)^-1.",
+    "Charge1/(1-rho) and whitening1/sqrt(1-eta0).",
+    "Encoded onehot block support, with /128 sketchscale and sqrt8191 times.",
+    "Exact row-squared maxima before outward square roots.",
+    "Same pinned baseline/coefficient/basis as old exact residual.",
+    "F-vs-operator approximation lanes and normal-residual premise remain explicit."
+  ],
+  "simple_graph_coordinate_finding": "Only quadratic in-span changes; no justified removal of leading1+M0 or generic sqrt2 gain.",
+  "material_design_issues": [],
+  "new_estimator_runs": 0,
+  "new_SVD_runs": 0,
+  "external_independent_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry"
+}

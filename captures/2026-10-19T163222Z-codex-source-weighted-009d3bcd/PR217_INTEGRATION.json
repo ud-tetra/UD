@@ -1,0 +1,89 @@
+{
+  "pr": 217,
+  "merge_sha": "cb47f5202e6b8fdac21a6804a10b1b2050c882fa",
+  "verified_tree": "cf6eafeceba079ff5d9f34bb0a8bdae1da510780",
+  "parallel_APP04_preserved": true,
+  "ci": {
+    "workflow_runs": [
+      {
+        "id": 39281617354,
+        "name": "UD capture integrity",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 300,
+        "jobs_url": "https://api.github.com/repos/ud-tetra/UD/actions/runs/39281617354/jobs",
+        "logs_url": "https://api.github.com/repos/ud-tetra/UD/actions/runs/39281617354/logs",
+        "workflow_id": 377771235
+      }
+    ]
+  },
+  "jobs": {
+    "jobs": [
+      {
+        "id": 118156853146,
+        "name": "UD capture integrity",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 39281617354,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify append-only capture and hashes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Check integrity rejection controls",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          }
+        ]
+      }
+    ]
+  },
+  "local_integrity": {
+    "status": "PASS",
+    "manifests": 127,
+    "checked_files": 2259,
+    "events": 131
+  },
+  "physical_promotion": 0
+}
