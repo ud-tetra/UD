@@ -1,0 +1,21 @@
+{
+  "id": "UD_CONTROLLER_COEFFICIENT_AND_FIXED_WORD_CONTRACT_v0.1",
+  "status": "DERIVED_CONDITIONAL_CONSTRUCTOR_CHECKED",
+  "protocol": "development construction; no independent preregistration or registry entry",
+  "source_model": "unchanged v106 canonical acceleration plus v110 inverse-mass damping command",
+  "logical_inputs": "nine Q, nine v, nine damping velocities,81 estimated damping entries and four implemented parameters",
+  "numeric_backend": "signed fixed point; nearest ties-even at each multiply/divide/input conversion; common fractional precision p; W stored bits;2W+2 wide scratch bits; overflow refuses command",
+  "norm": "induced infinity row norm for matrix; infinity vector norm; componentwise parameter errors in native units",
+  "source_domain": "v110 Q_radius, velocity_radius and v103 extended parameter boxes; exact source result bytes in SOURCES.zip",
+  "method": "native analytic coefficient Lipschitz majorant plus DAG-wide absolute rounding induction; half of unchanged e_C for each channel",
+  "admission": "logical state/parameter boxes, actual-versus-implemented parameter mismatch, original damping row norm, common Q/V timestamp, causal total age including computation<=original h, positive mass, division separation and every register range",
+  "limits": [
+    "no IEEE binary floating-point certification",
+    "no hardware execution-time, metrology, actuator or SI-scale feasibility certificate",
+    "target/reference parameter mismatch remains inherited and distinct",
+    "true physical coefficients and timestamps require externally qualified inputs",
+    "no independent scientific review"
+  ],
+  "blind_or_empirical_data": false,
+  "physical_promotion": 0
+}
