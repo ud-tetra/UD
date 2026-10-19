@@ -1,0 +1,68 @@
+{
+  "title": "Fixed J1 port:8192-cell state and paired residual audit at omega9/2 v0.1",
+  "classification": "EXACT_POSTERIOR_AUDIT_OF_NUMERICAL_REFINEMENT_CONDITIONAL_MODEL",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "independent_review": false,
+  "base": "10bc8010ec538ebf0afbf82fc144680d61698f64",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "33c1dff1e4659d5430dce8bfe3d5caf69802a542e98b1d750d4347fec0081966"
+    },
+    {
+      "path": "captures/2026-10-19T205000Z-codex-j1-affine-curl-761b2a49/REPORT.md",
+      "sha256": "641f5d95aa4dd4bccc6037c59ecdd50c22ae3206dcd1b0ecb1a3306e94682c59"
+    },
+    {
+      "path": "captures/2026-10-19T205000Z-codex-j1-affine-curl-761b2a49/STATE_WITNESS.json",
+      "sha256": "9d6277dcd7884c57194cb2a9c797f95aa4423c018db9523a9379082932683443"
+    },
+    {
+      "path": "captures/2026-10-19T205000Z-codex-j1-affine-curl-761b2a49/SOLVE_RESULTS.json",
+      "sha256": "431574ac738a9e16d65272243a018347ce11565451a94954f6b3d1c0978c3d7e"
+    },
+    {
+      "path": "captures/2026-10-19T205000Z-codex-j1-affine-curl-761b2a49/BUBBLE_FLOOR_RESULTS.json",
+      "sha256": "77ff34c2e7d77a8371840ab18c50ec4fb281887eaaafb483655b84bd42f5fbc7"
+    },
+    {
+      "path": "captures/2026-10-19T205000Z-codex-j1-affine-curl-761b2a49/LINEAR_PHASE_RESULTS.json",
+      "sha256": "3ec8b28fecfb02bd6c45da6f24207a06c1f08a7196b8ae49d606cc8c8a32048b"
+    },
+    {
+      "path": "captures/2026-10-19T205000Z-codex-j1-affine-curl-761b2a49/level2_check.py",
+      "sha256": "30231ea4c0b5cec162b2d5c9268f2a69e8ced6ab3baf78507e3aaa66cca74709"
+    },
+    {
+      "path": "captures/2026-10-19T205000Z-codex-j1-affine-curl-761b2a49/red_mesh.py",
+      "sha256": "cdd326012eeba774fc17969c674f00fde31123a62056bbf09b074b50ceab1783"
+    },
+    {
+      "path": "captures/2026-10-19T205000Z-codex-j1-affine-curl-761b2a49/curl_interface.py",
+      "sha256": "59904d199f3d47ea18f59285a48c3c57032da47c0cc2a2da6db55b2249eb7fe0"
+    },
+    {
+      "path": "user_attachment/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "path": "user_attachment/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "scope": "Same fixed distributed source, normalized domain and declared damping. New1785-node8192-cell P1 state at omega9/2,gamma1/10; exact two-word meanfree projection/residual/output audit. No own fine-mesh continuum flux/dual upper certificate.",
+  "backend": "NumPy2.3.5/SciPy1.17.0 complex128 sparse SuperLU solve plus one solve of exact decoded residual; actual witnesses, not all-input IEEE theorem.",
+  "verification_scope": "Exact8192 determinant/volume and max-diameter checks; exact nested sparse stiffness/mass; zero-mean source/state and residual; inverse-free algebraic output bounds and actual reported-output evaluation discrepancies. Same1024-cell coarse-bubble polynomial integration reproduces old lower bound exactly before comparing new state; separate8192 fine-bubble test,9 reference partition moment identities.3 malformed-state controls. Captured stored-results replay.",
+  "results": "Raw algebraic output bound5.08e-16; corrected bound2.0922e-14. Same-test lower bound.018844902887 ->.014438968377 (ratio.7662002),still forces delta*eta\u00b2>.1. Fine-test lower.003940632811 alone is inconclusive. Coarse-fine corrected output difference~.412694 is numerical diagnostic only.",
+  "continuum_scope": "Inherited continuum disk recentered to new reported corrected output gives radius~14.43497, not1/10. Lower-bound reduction is not a full-residual norm reduction theorem or a continuum upper certificate. No rate/termination claim.",
+  "open": [
+    "interior-cell state enrichment at omega4.5 or another certificate",
+    "own fine flux/dual upper certificate",
+    "dynamic/full-band1/10 accuracy",
+    "independent review",
+    "stopping termination and native UD action/source/units bridge"
+  ],
+  "alignment": "Ledger support/incidence operators do not source this scalar-wave action/damping. CRL2 attachment remains proposal. No uploaded-source or registry edits.",
+  "unavailable_attachment": "Gap2_FINAL_Finite_Genesis.png not read or used; reupload requested."
+}
