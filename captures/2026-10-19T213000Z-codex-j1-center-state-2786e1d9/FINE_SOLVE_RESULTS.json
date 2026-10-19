@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "classification": "CONDITIONAL_8192_CELL_SPARSE_TWO_WORD_STATE",
+  "source_witness_sha256": "29311d01b06ce21c8d3b2c914a8f73a4f5442e6faaf6fa1b311295221b2b3451",
+  "source_old_state_sha256": "9d6277dcd7884c57194cb2a9c797f95aa4423c018db9523a9379082932683443",
+  "mesh": {
+    "nodes": 1785,
+    "tetrahedra": 8192,
+    "max_diameter_squared": "5/256",
+    "stiffness_nonzeros": 22089,
+    "mass_nonzeros": 23273,
+    "exact_nested_stiffness_mass": true
+  },
+  "omega": "9/2",
+  "gamma": "1/10",
+  "raw_output_real": "-104682605335653451372308084516619433803/21267647932558653966460912964485513216",
+  "raw_output_imag": "-399765962352573227968693193195627567015/340282366920938463463374607431768211456",
+  "corrected_output_real": "-6957352484192698886366111648047411668966090654554179286321102932017632160613/1413477651822707463666638000594334812661987117500495166497284961034095820800",
+  "corrected_output_imag": "-3321125680755869026254402886433368387053608493699935020109190140576160136169/2826955303645414927333276001188669625323974235000990332994569922068191641600",
+  "algebraic_dual_residual_squared_upper": "381433127354739549943057697/7915474850207161796533172803328274950907127858002772932384795781790936596480000",
+  "raw_total_algebraic_output_bound": "127/250000000000000000",
+  "corrected_algebraic_output_bound": "82803782408017119553533520695617084265734823260320313837481489706894339370292660367/3957737425103580898266586401664137475453563929001386466192397890895468298240000000000000000000000",
+  "raw_evaluation_bound": "507/1000000000000000000",
+  "corrected_evaluation_bound": "10461/500000000000000000",
+  "coarse_fine_corrected_output_difference_upper": "20634680761928197/50000000000000000",
+  "difference_scope": "Numerical refinement diagnostic, not a continuum accuracy bound.",
+  "inherited_reported_corrected_continuum_radius": "321355164498975556783724480293860256792241597779471126859365990149205378538642439440409667455246533/22262273016207642552749548509360773299426297100632798872332238136287009177600000000000000000000000",
+  "continuum_radius_scope": "Prior valid continuum disk recentered to the new reported corrected output; no own fine flux/dual upper certificate.",
+  "precision_target": "1/10",
+  "continuum_precision_passed": false,
+  "backend": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.splu",
+    "dtype": "complex128",
+    "scope": "Sparse full Neumann matrix at nonzero z; exact residual correction solved once. Actual witness posterior audit, not all-input IEEE guarantee."
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
