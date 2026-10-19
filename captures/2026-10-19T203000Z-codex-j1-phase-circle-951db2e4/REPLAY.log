@@ -1,0 +1,35 @@
+COMMAND: python3 phase_flux.py .
+exact fine-to-parent-to-root L2 projections complete
+reference patch operator rank103/free17 prepared
+level1 patches 16/16
+level2 patches 16/128
+level2 patches 32/128
+level2 patches 48/128
+level2 patches 64/128
+level2 patches 80/128
+level2 patches 96/128
+level2 patches 112/128
+level2 patches 128/128
+direct final divergence checks complete
+direct final normal-trace checks complete
+exact flux norms 128/1024
+exact flux norms 256/1024
+exact flux norms 384/1024
+exact flux norms 512/1024
+exact flux norms 640/1024
+exact flux norms 768/1024
+exact flux norms 896/1024
+exact flux norms 1024/1024
+omega 0 eta²~0.030288522066298406 output radius~0.030288522066298593
+omega 4 eta²~7.475610708107227 output radius~149.69898776921028
+omega 9/2 eta²~0.726276515803754 output radius~16.357353121462804
+omega 5 eta²~0.14213812452701008 output radius~3.5562947394695734
+read-only replay matches FLUX_RESULTS.json
+read-only replay matches COVARIANCE_RESULTS.json
+COMMAND: python3 phase_circle.py .
+read-only replay matches PHASE_RESULTS.json
+omega 0 phase radius 0.01514426103314923 selected phase_circle 0.01514426103314923 old center bound 0.030288522066298593
+omega 4 phase radius 74.8494938846051 selected inherited 23.476733086824407 old center bound 23.476733086824407
+omega 9/2 phase radius 8.178676560731397 selected phase_circle 8.178676560731397 old center bound 16.357353121462804
+omega 5 phase radius 1.7781473697347858 selected phase_circle 1.7781473697347858 old center bound 3.5562947394695734
+PASS phase circle, exact covariance and outer polygon audit
