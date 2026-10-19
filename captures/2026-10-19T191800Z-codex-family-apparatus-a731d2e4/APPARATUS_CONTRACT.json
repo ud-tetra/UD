@@ -1,0 +1,122 @@
+{
+  "version": "0.1-prospective",
+  "status": "FROZEN_PROTOCOL_LOGIC_NOT_APPARATUS_CERTIFICATE",
+  "coordinate_unit": "model_coordinate",
+  "required_receipts": [
+    "gain_offset_adc",
+    "timebase",
+    "channel_decoder",
+    "preparation_tube",
+    "deterministic_noise",
+    "heldout_lineage",
+    "model_prediction_freeze",
+    "frequency_band_filter"
+  ],
+  "synthetic_control_cap": [
+    1,
+    16
+  ],
+  "real_mismatch_cap": "OPEN_PRE_DATA_CONTRACT_REQUIRED",
+  "physical_admission": "HOLD_UNQUALIFIED_ALWAYS_IN_THIS_LOGIC_VERIFIER",
+  "physical_promotion": 0,
+  "lanes": {
+    "temporal209": {
+      "nominal_index_step": [
+        1,
+        1
+      ],
+      "preparations": 37,
+      "times": 8191,
+      "channels": 62,
+      "raw_quantum": [
+        1,
+        281474976710656
+      ],
+      "rho": [
+        1,
+        1048576
+      ],
+      "excitation_noise_per_vector": [
+        1127,
+        281474976710656
+      ],
+      "scope": "order-only exact sketch guarantee; future floating gates separate"
+    },
+    "six_ratio": {
+      "sample_step": [
+        1,
+        32
+      ],
+      "readings": 12,
+      "preparations": 3,
+      "ratio_l2_gate_strict": [
+        1,
+        549755813888
+      ],
+      "order": [
+        "D1",
+        "U1",
+        "D2",
+        "U2",
+        "D3",
+        "U3"
+      ],
+      "additional_ports": [
+        1,
+        133,
+        878,
+        2040
+      ],
+      "status": "Separate calibration lane, not executed"
+    },
+    "native1893": {
+      "M": 4096,
+      "normalized_step": [
+        1,
+        2
+      ],
+      "candidate_raw_step": [
+        16,
+        33
+      ],
+      "history_channels": 62,
+      "diagnostic_outputs": 189,
+      "history_vector_error": [
+        1,
+        1048576
+      ],
+      "shape_gate": [
+        1,
+        274877906944
+      ],
+      "status": "Inherited source contract, not re-certified here"
+    }
+  },
+  "error_decomposition": {
+    "scalar_inverse_gain": "(dg*A+db+adc)/gmin+processing+L_t*dt; disjoint deterministic nonnegative bounds; APPLIED decoder |ghat|>=gmin>0",
+    "raw_vector": "sqrt(sum_channel scalar_bound^2)",
+    "raw_F": "sqrt(sum_preparation_time vector_bound^2)",
+    "projected_F": "kA*raw_F, with kA=sqrt(738137/4096)>=||S||op from exact Frobenius norm",
+    "timing": "do_a+k*de_a+jitter_a over frozen horizon; convert seconds through independently calibrated model-time scale",
+    "preparation": "Fanchor*operator_error, if not already included in mismatch hypothesis; no double counting",
+    "mismatch_interval": "[max(0,r_lower-alpha),r_upper+alpha]",
+    "consistency": "upper<=frozen cap",
+    "contradiction": "lower>frozen cap; at least one declared assumption fails",
+    "otherwise": "HOLD"
+  },
+  "open_qualification": [
+    "actual independent calibration receipts and validity domains",
+    "calibrated SI time and coordinate map",
+    "external injective two-step alias band/filter evidence",
+    "prospective preparation and heldout acquisition lineage",
+    "actual raw evidence and independently computed residual/error enclosures",
+    "external nonconstructor reviewer and custodian receipt"
+  ],
+  "refused": [
+    "2^-49 residual gate",
+    "repurposing 2^-38 shape gate as Borel/shear/noise norm",
+    "physical acceptance from receipt hashes or synthetic controls",
+    "inferring hidden747-space leakage from residuals",
+    "universal floating solver/frame/phase success from excitation guarantee"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "artifact_type": "SAME_TEAM_FAMILY_CODE_AND_OUTCOME_REVIEW",
+  "status": "PASS_CODE_CUSTODY_AND_EXACT_ENDPOINT_REVIEW",
+  "reviewed_utc": "2026-10-19T19:16:48.296370+00:00",
+  "notes_sha256": "42173c6fad31b16af78cfb4613a4000f45c94ea5a29b5bb3d50f4c53ed292066",
+  "protocol_sha256": "19ed993a43c1b2c559a45b68664d89eeb277cf5cc862b90b151c5c74706f0554",
+  "reviewed_code_and_inputs": {
+    "certify_family.py": "14dcfde78d74b8a67a0985eeab4a88910ce3e5b1d5af79388559383061ebf079",
+    "replay.py": "de4f493b920372db0c67bb7ce10d4b017448e69f23f76170cc37f27ea2efcef0",
+    "THEOREMS.md": "7381793daae8d872a2a4be08946372a4203ca4ed8409cc3af3fd6606cbf3a464",
+    "INPUT_PROVENANCE.json": "c6f71950cecbb7a10884f4a9f0048c000c8d3cec71afe2b08d6e66e0b56e92a9",
+    "inputs/BASE_GENERATION.json": "ec3f46c7639cbd59e52d10a7f7cea5f3222abb3e7ed7b5352ff463710f42e5ef",
+    "inputs/SOURCE_BOUNDS.json": "eaa9dcf34fbe84b9d841271b1c5da07a053767ab34e0e4695382006c3398def2",
+    "inputs/ANCHOR_DATA.json": "b827bb9a4d5f97b7c09777ac4848f4f629137b3dabb05a67313f22174c2b2d00",
+    "inputs/FIXED_BUDGET.json": "0b25eac3d630c63dffcf45f0ca6caa9d81544a4d011cdbd6f5b030a8e907f627",
+    "inputs/NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "inputs/ANCHORS.json": "161d37d1cfba1b0d26d5bada99cfa7809fdd3b7ed5c3a30442f606a0e6d1bfcf"
+  },
+  "source_custody": {
+    "status": "PASS_SOURCE_MANIFEST_HASHES_AND_EXACT_DERIVED_JSON_CUSTODY",
+    "receipt_sha256": "823fac7c5ab9702e766af4cf2c571ccb3dc23ce6dc6341442666b18f5fe3f6f4",
+    "five_exact_source_extractions_verified": true
+  },
+  "independent_endpoints": {
+    "status": "PASS_EXACT_ENDPOINT_IDENTITY_NO_TOLERANCES",
+    "receipt_sha256": "dd043f2e0b28aaa02d195f673994033da5fb226dfcdb6d77755e0db88bc5d4c9",
+    "compared_fields": [
+      "rho",
+      "delta_per_62_vector",
+      "sigma209_lower",
+      "sigma210_upper",
+      "rho_critical_lower",
+      "rho_critical_upper",
+      "anchor_min_lower",
+      "sketch_F_squared",
+      "baseline_F_squared",
+      "distance_upper"
+    ],
+    "comparison_tolerance": null,
+    "all_pairs_exactly_equal": true
+  },
+  "resolved_review_findings": [
+    "Derived JSON inputs now have original source/manifest hashes, destination hashes and extraction rules.",
+    "Anchor quantum/status/order/cutoff and baseline record-hash guards explicit.",
+    "Theorem explicitly defines exact orthogonal same-parity tubes, nearest rounding and encoded E in hZ^N.",
+    "Largest radius terminology corrected to largest power-of-two within the specific half-gap reserve."
+  ],
+  "original_scientific_code_and_source_hashes_unchanged_since_protocol_freeze": true,
+  "new_record_or_estimator_or_phase_runs_by_review": 0,
+  "uniform_conclusion": "Exactly209 singular values above2^-24 for every member of the declared family at delta1127*2^-48 and rho2^-20.",
+  "scope_limits": [
+    "No actual apparatus/physical calibration qualification.",
+    "No uniform floating solver/fullfactor/frame/normal/phase admission.",
+    "No old original-baseline raw-ball admission or automatic int64 exact-backend guarantee.",
+    "No entire old eight-gate/native1893/hidden-space/SI claim."
+  ],
+  "material_open_issues_in_reviewed_scope": [],
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

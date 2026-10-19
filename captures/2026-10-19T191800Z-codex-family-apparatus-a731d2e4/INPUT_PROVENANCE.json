@@ -1,0 +1,47 @@
+{
+  "sources": [
+    {
+      "destination": "inputs/ANCHORS.json",
+      "source_path": "captures/2026-10-19T183744Z-codex-cutoff-phase-c5a91e27/CAMPAIGN_NUMERIC_CERTIFICATES.json",
+      "source_sha256": "d4c47f236a06843acbbd6b1d69b19043ae69b0bee3b703091135bb1eb720fea3",
+      "source_manifest_sha256": "ee7773a91222ad9b6e2e085b6efee557bf63a35627b49ee0b7e14a12d9980097",
+      "destination_sha256": "161d37d1cfba1b0d26d5bada99cfa7809fdd3b7ed5c3a30442f606a0e6d1bfcf",
+      "extraction": "select rows fields case,record_sha256,cutoff; no numeric changes"
+    },
+    {
+      "destination": "inputs/ANCHOR_DATA.json",
+      "source_path": "captures/2026-10-19T183744Z-codex-cutoff-phase-c5a91e27/DATA_FREEZE.json",
+      "source_sha256": "5d3b7271a91239fd57feffebea8067ae090acea32d171f2939043245de85c6dd",
+      "source_manifest_sha256": "ee7773a91222ad9b6e2e085b6efee557bf63a35627b49ee0b7e14a12d9980097",
+      "destination_sha256": "b827bb9a4d5f97b7c09777ac4848f4f629137b3dabb05a67313f22174c2b2d00",
+      "extraction": "identity JSON parse/serialize"
+    },
+    {
+      "destination": "inputs/BASE_GENERATION.json",
+      "source_path": "captures/2026-10-19T183744Z-codex-cutoff-phase-c5a91e27/inputs/BASE_GENERATION.json",
+      "source_sha256": "5cf6b41a6ae1922d1924186784d28ade277146bba809ab4a7360ac4fcb16c52b",
+      "source_manifest_sha256": "ee7773a91222ad9b6e2e085b6efee557bf63a35627b49ee0b7e14a12d9980097",
+      "destination_sha256": "ec3f46c7639cbd59e52d10a7f7cea5f3222abb3e7ed7b5352ff463710f42e5ef",
+      "extraction": "select records.case==ramp_clock_stress into row"
+    },
+    {
+      "destination": "inputs/NULL_VECTOR.json",
+      "source_path": "captures/2026-10-19T183744Z-codex-cutoff-phase-c5a91e27/inputs/NULL_VECTOR.json",
+      "source_sha256": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+      "source_manifest_sha256": "ee7773a91222ad9b6e2e085b6efee557bf63a35627b49ee0b7e14a12d9980097",
+      "destination_sha256": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+      "extraction": "identity JSON parse/serialize"
+    },
+    {
+      "destination": "inputs/FIXED_BUDGET.json",
+      "source_path": "captures/2026-10-19T183744Z-codex-cutoff-phase-c5a91e27/inputs/FIXED_BUDGET.json",
+      "source_sha256": "a7fd2ce87210db905ab2c25116c87ec608ad340f9d191950e3bdaed4e5bf7860",
+      "source_manifest_sha256": "ee7773a91222ad9b6e2e085b6efee557bf63a35627b49ee0b7e14a12d9980097",
+      "destination_sha256": "0b25eac3d630c63dffcf45f0ca6caa9d81544a4d011cdbd6f5b030a8e907f627",
+      "extraction": "identity JSON parse/serialize"
+    }
+  ],
+  "baseline_raw_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "source_rank_premise": "209-clock parity-family proof inherited; not an apparatus model",
+  "external_review": "PENDING"
+}

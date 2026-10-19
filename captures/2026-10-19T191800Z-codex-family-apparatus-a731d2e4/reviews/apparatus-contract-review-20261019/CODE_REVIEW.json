@@ -1,0 +1,163 @@
+{
+  "artifact_type": "SAME_TEAM_APPARATUS_PROTOCOL_PREFREEZE_CODE_REVIEW",
+  "timestamp_utc": "2026-10-19T19:14:36.120570+00:00",
+  "verdict": "NO_REMAINING_MATERIAL_ISSUE_IN_REVIEWED_SCOPE_READY_TO_FREEZE",
+  "reviewed_files_sha256": {
+    "apparatus.py": "9ba7a42d82a9147ed87c7705dffb8653359c5cd76122c170ffd6eb4d09bb7ef2",
+    "APPARATUS_CONTRACT.json": "febf344ce75ae6b14ccc893a0d5389c70f08a4e3a8a9a7ef97275c2dbf765d2f",
+    "CONTROL_FIXTURES.json": "5d0f374be69430f2bf16959e8164e17556326a3f2aedfdbb222287548f33f87e",
+    "replay.py": "de4f493b920372db0c67bb7ce10d4b017448e69f23f76170cc37f27ea2efcef0",
+    "APPARATUS_PACKET_TEMPLATE.json": "986aaf1c11646b14812e1a4b9458ae7501891bbb9eef74d123b898e67cb54047",
+    "THEOREMS.md": "7381793daae8d872a2a4be08946372a4203ca4ed8409cc3af3fd6606cbf3a464",
+    "README.md": "502ffb4b451975c088b84a94d978c882b1298dcd699982ced2009a72b5f8274f",
+    "requirements.txt": "5496e7271d505d7b19a846478e75ad44b1df45ab58c7981dbb1fc16c5d6143ef",
+    "certify_family.py": "14dcfde78d74b8a67a0985eeab4a88910ce3e5b1d5af79388559383061ebf079",
+    "INPUT_PROVENANCE.json": "c6f71950cecbb7a10884f4a9f0048c000c8d3cec71afe2b08d6e66e0b56e92a9"
+  },
+  "reviewed_note_sha256": "c887d5de67981e58f599b132937f1b3f4fde16455cc57a1b2b41a516a8436f8c",
+  "contract_canonical_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+  "declared_controls": 32,
+  "declared_expected_outcomes": [
+    {
+      "id": "consistent_stationary_toy",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "clear_mismatch",
+      "expected": "CONTRACT_CONTRADICTION"
+    },
+    {
+      "id": "overlap",
+      "expected": "HOLD"
+    },
+    {
+      "id": "cap_equality",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "missing_gain_offset_adc",
+      "expected": "HOLD"
+    },
+    {
+      "id": "missing_timebase",
+      "expected": "HOLD"
+    },
+    {
+      "id": "missing_channel_decoder",
+      "expected": "HOLD"
+    },
+    {
+      "id": "missing_preparation_tube",
+      "expected": "HOLD"
+    },
+    {
+      "id": "missing_deterministic_noise",
+      "expected": "HOLD"
+    },
+    {
+      "id": "missing_heldout_lineage",
+      "expected": "HOLD"
+    },
+    {
+      "id": "missing_model_prediction_freeze",
+      "expected": "HOLD"
+    },
+    {
+      "id": "missing_frequency_band_filter",
+      "expected": "HOLD"
+    },
+    {
+      "id": "receipt_hash_mutation",
+      "expected": "HOLD"
+    },
+    {
+      "id": "wrong_units",
+      "expected": "HOLD"
+    },
+    {
+      "id": "wrong_lane",
+      "expected": "HOLD"
+    },
+    {
+      "id": "duplicate_channel",
+      "expected": "HOLD"
+    },
+    {
+      "id": "missing_samples",
+      "expected": "HOLD"
+    },
+    {
+      "id": "clipping",
+      "expected": "HOLD"
+    },
+    {
+      "id": "unsupported_probabilistic_budget",
+      "expected": "HOLD"
+    },
+    {
+      "id": "shared_lineage",
+      "expected": "HOLD"
+    },
+    {
+      "id": "prediction_refit",
+      "expected": "HOLD"
+    },
+    {
+      "id": "alias_ambiguity",
+      "expected": "HOLD"
+    },
+    {
+      "id": "negative_uncertainty",
+      "expected": "HOLD"
+    },
+    {
+      "id": "reversed_enclosure",
+      "expected": "HOLD"
+    },
+    {
+      "id": "cap_mutation",
+      "expected": "HOLD"
+    },
+    {
+      "id": "protocol_mutation",
+      "expected": "HOLD"
+    },
+    {
+      "id": "invented_physical_receipts_refused",
+      "expected": "HOLD"
+    },
+    {
+      "id": "unfilled_apparatus_template",
+      "expected": "HOLD"
+    },
+    {
+      "id": "dict_channel_map",
+      "expected": "HOLD"
+    },
+    {
+      "id": "boolean_channel",
+      "expected": "HOLD"
+    },
+    {
+      "id": "string_lineage",
+      "expected": "HOLD"
+    },
+    {
+      "id": "empty_lineage_id",
+      "expected": "HOLD"
+    }
+  ],
+  "resolved_findings": [
+    "Null/malformed template wrapper returns HOLD",
+    "Exact-int list channel-map schema and nonempty string-list lineage schema",
+    "Inverse gain lower bound refers to applied decoder denominator",
+    "Explicit sketch norm equality and operator domination"
+  ],
+  "candidate_code_or_controls_executed_by_reviewer": false,
+  "new_records_or_estimators": 0,
+  "apparatus_admission_implemented": false,
+  "independent_non_constructor_review": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "scope": "Static apparatus protocol/schema, uncertainty/decision mathematics, malformed-input and synthetic-only admission review. Family cutoff proof/scalar replay reviewed separately."
+}

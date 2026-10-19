@@ -1,0 +1,5233 @@
+[
+  {
+    "id": "consistent_stationary_toy",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "clear_mismatch",
+    "expected": "CONTRACT_CONTRADICTION",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        4
+      ],
+      "residual_F_upper": [
+        1,
+        4
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "overlap",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        16
+      ],
+      "residual_F_upper": [
+        1,
+        16
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "cap_equality",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        0,
+        1
+      ],
+      "residual_F_lower": [
+        1,
+        16
+      ],
+      "residual_F_upper": [
+        1,
+        16
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_gain_offset_adc",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_timebase",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_channel_decoder",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_preparation_tube",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_deterministic_noise",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_heldout_lineage",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_model_prediction_freeze",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_frequency_band_filter",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        }
+      }
+    }
+  },
+  {
+    "id": "receipt_hash_mutation",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units",
+            "changed": true
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "wrong_units",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "volts",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "wrong_lane",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "six_ratio",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "duplicate_channel",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        60
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "missing_samples",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 1,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "clipping",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 1,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "unsupported_probabilistic_budget",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "one_sigma",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "shared_lineage",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-cal-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "prediction_refit",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": false,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "alias_ambiguity",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": true,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "negative_uncertainty",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        -1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "reversed_enclosure",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        4
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "cap_mutation",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        8
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "protocol_mutation",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "invented_physical_receipts_refused",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "apparatus_submission",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "unfilled_apparatus_template",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": null,
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "apparatus_submission",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": null,
+      "validation_source_ids": null,
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": null,
+      "acquisition_F_upper": null,
+      "residual_F_lower": null,
+      "residual_F_upper": null,
+      "receipts": null,
+      "note": "UNEXECUTED template. Fill from independently calibrated evidence, never scored validation fits. This verifier cannot confer physical qualification."
+    }
+  },
+  {
+    "id": "dict_channel_map",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15,
+        "16": 16,
+        "17": 17,
+        "18": 18,
+        "19": 19,
+        "20": 20,
+        "21": 21,
+        "22": 22,
+        "23": 23,
+        "24": 24,
+        "25": 25,
+        "26": 26,
+        "27": 27,
+        "28": 28,
+        "29": 29,
+        "30": 30,
+        "31": 31,
+        "32": 32,
+        "33": 33,
+        "34": 34,
+        "35": 35,
+        "36": 36,
+        "37": 37,
+        "38": 38,
+        "39": 39,
+        "40": 40,
+        "41": 41,
+        "42": 42,
+        "43": 43,
+        "44": 44,
+        "45": 45,
+        "46": 46,
+        "47": 47,
+        "48": 48,
+        "49": 49,
+        "50": 50,
+        "51": 51,
+        "52": 52,
+        "53": 53,
+        "54": 54,
+        "55": 55,
+        "56": 56,
+        "57": 57,
+        "58": 58,
+        "59": 59,
+        "60": 60,
+        "61": 61
+      },
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "boolean_channel",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        true,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "string_lineage",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": "abc",
+      "validation_source_ids": [
+        "toy-val-0"
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  },
+  {
+    "id": "empty_lineage_id",
+    "expected": "HOLD",
+    "packet": {
+      "contract_sha256": "63b2467ad221ef4925c7c4f1b32b55fcedb849dbe7064fcc7833f85cad52dc82",
+      "lane": "temporal209",
+      "units": "model_coordinate",
+      "provenance_kind": "synthetic_fixture",
+      "channel_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "missing_samples": 0,
+      "clipped_samples": 0,
+      "uncertainty_kind": "deterministic_uniform",
+      "calibration_source_ids": [
+        "toy-cal-0"
+      ],
+      "validation_source_ids": [
+        ""
+      ],
+      "prediction_frozen_before_validation": true,
+      "unaliased_identification": false,
+      "alias_band_injective": false,
+      "mismatch_cap": [
+        1,
+        16
+      ],
+      "acquisition_F_upper": [
+        1,
+        128
+      ],
+      "residual_F_lower": [
+        1,
+        32
+      ],
+      "residual_F_upper": [
+        1,
+        32
+      ],
+      "receipts": {
+        "gain_offset_adc": {
+          "body": {
+            "id": "gain_offset_adc",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "fb32828ef3089b818de4b829953e985b21d8a916af9f3b516273a3d39f58d93e"
+        },
+        "timebase": {
+          "body": {
+            "id": "timebase",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1adb3c348a37ac3eb8afeba2afb9ecfd2842b08eaa832798bf1943d1bbb8bc09"
+        },
+        "channel_decoder": {
+          "body": {
+            "id": "channel_decoder",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "618d6d1baf97a876f3354ea4f3426ebab3d63bff821aed14b161481d28439281"
+        },
+        "preparation_tube": {
+          "body": {
+            "id": "preparation_tube",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "1b05f7600b569801696713648dbdadec53c1150fd5c84b7940ca5d05937cb6e0"
+        },
+        "deterministic_noise": {
+          "body": {
+            "id": "deterministic_noise",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "2128d7750c674e6bcafdcfd2fb141f6f5ba16af3e584f19fa2908fd5832b0f2b"
+        },
+        "heldout_lineage": {
+          "body": {
+            "id": "heldout_lineage",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "5147e9677ab6f0821be298ae26224d36f18edbfd2eb29a61f912ac952b857ccd"
+        },
+        "model_prediction_freeze": {
+          "body": {
+            "id": "model_prediction_freeze",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "63fbd80fd3b011a872d6c390d8d2b96cc1b4c98a0e80a754f0479e69b00ad7b3"
+        },
+        "frequency_band_filter": {
+          "body": {
+            "id": "frequency_band_filter",
+            "provenance": "synthetic arithmetic assumption; not a real calibration",
+            "valid_domain": "four-time stationary toy, one active channel, model units"
+          },
+          "sha256": "be06ba5e4192a6ead4ff66bb2a2a72d8bd1ad25dd0a94c92ced433668bed84fa"
+        }
+      }
+    }
+  }
+]

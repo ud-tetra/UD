@@ -1,0 +1,664 @@
+{
+  "status": "PASS_FROZEN_SYNTHETIC_LOGIC_CONTROLS",
+  "controls": [
+    {
+      "id": "consistent_stationary_toy",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "mathematical_status": "CONDITIONAL_CONSISTENCY",
+        "hold_reasons": [],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "clear_mismatch",
+      "expected": "CONTRACT_CONTRADICTION",
+      "result": {
+        "mathematical_status": "CONTRACT_CONTRADICTION",
+        "hold_reasons": [],
+        "mismatch_lower": [
+          31,
+          128
+        ],
+        "mismatch_upper": [
+          33,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "overlap",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [],
+        "mismatch_lower": [
+          7,
+          128
+        ],
+        "mismatch_upper": [
+          9,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "cap_equality",
+      "expected": "CONDITIONAL_CONSISTENCY",
+      "result": {
+        "mathematical_status": "CONDITIONAL_CONSISTENCY",
+        "hold_reasons": [],
+        "mismatch_lower": [
+          1,
+          16
+        ],
+        "mismatch_upper": [
+          1,
+          16
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_gain_offset_adc",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_gain_offset_adc"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_timebase",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_timebase"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_channel_decoder",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_channel_decoder"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_preparation_tube",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_preparation_tube"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_deterministic_noise",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_deterministic_noise"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_heldout_lineage",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_heldout_lineage"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_model_prediction_freeze",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_model_prediction_freeze"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_frequency_band_filter",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_frequency_band_filter"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "receipt_hash_mutation",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RECEIPT_gain_offset_adc"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "wrong_units",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "UNITS"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "wrong_lane",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "WRONG_LANE"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "duplicate_channel",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "CHANNEL_MAP"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "missing_samples",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RAW_COVERAGE"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "clipping",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "RAW_COVERAGE"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "unsupported_probabilistic_budget",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "UNSUPPORTED_COVERAGE"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "shared_lineage",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "HELDOUT_LINEAGE"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "prediction_refit",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "PREDICTION_FREEZE"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "alias_ambiguity",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "ALIAS_BAND"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "negative_uncertainty",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "INVALID_NUMERIC_ENCLOSURE"
+        ],
+        "mismatch_lower": null,
+        "mismatch_upper": null,
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "reversed_enclosure",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "INVALID_NUMERIC_ENCLOSURE"
+        ],
+        "mismatch_lower": null,
+        "mismatch_upper": null,
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "cap_mutation",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "CAP_MUTATION"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "protocol_mutation",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "CONTRACT_HASH"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "invented_physical_receipts_refused",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "APPARATUS_NUMERIC_EVIDENCE_NOT_IMPLEMENTED"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "unfilled_apparatus_template",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "MALFORMED_PACKET"
+        ],
+        "mismatch_lower": null,
+        "mismatch_upper": null,
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Malformed inputs rejected before any apparatus qualification."
+      }
+    },
+    {
+      "id": "dict_channel_map",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "CHANNEL_MAP"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "boolean_channel",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "CHANNEL_MAP"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "string_lineage",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "LINEAGE_SCHEMA"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    },
+    {
+      "id": "empty_lineage_id",
+      "expected": "HOLD",
+      "result": {
+        "mathematical_status": "HOLD",
+        "hold_reasons": [
+          "LINEAGE_SCHEMA"
+        ],
+        "mismatch_lower": [
+          3,
+          128
+        ],
+        "mismatch_upper": [
+          5,
+          128
+        ],
+        "physical_verdict": "HOLD_UNQUALIFIED",
+        "physical_promotion": 0,
+        "scope": "Synthetic protocol logic only; receipt hashes neither validate calibration nor authenticate an external reviewer."
+      }
+    }
+  ],
+  "control_count": 32,
+  "gain_bound_fixture": [
+    93,
+    16384
+  ],
+  "new_records": 0,
+  "new_fits": 0,
+  "physical_acquisitions": 0,
+  "baseline_scalar_norm_checks": 18790154,
+  "norm_source": "raw bytes replayed",
+  "parent_source_extractions_verified": 5,
+  "protocol_sha256": "19ed993a43c1b2c559a45b68664d89eeb277cf5cc862b90b151c5c74706f0554",
+  "physical_promotion": 0
+}
