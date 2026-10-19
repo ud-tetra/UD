@@ -1,0 +1,41 @@
+{
+  "artifact_type": "CALIBRATION_MODEL_REQUEST_ACCEPTANCE_CONTRACT",
+  "version": "0.1.0",
+  "request_lane": "PUBLISHED_CIRCUIT_COMPONENT_10",
+  "evidence_verification_implemented": false,
+  "statuses": {
+    "HOLD_INCOMPLETE_OR_INVALID_REQUEST_METADATA": "Any malformed type,missingrequireddeclaration,nullunresolvedreference,role/source/lane mismatch,invalidexactrational,contradictorydomain,too-small declaredbudget orcallerpin error",
+    "METADATA_COMPLETE_UNVERIFIED": "Only structure anddeclaredarithmetic complete; NO calibration,authority,heldout,rounding,physicalmodel orphysicaltruthcertification"
+  },
+  "unconditional_output": {
+    "physical_admission": "HOLD",
+    "physical_promotion": 0,
+    "native_62_channel_intake": "HOLD_SEPARATE_INCOMPATIBLE_COMPONENT_LANE",
+    "actual_apparatus_records_evaluated": 0
+  },
+  "source": {
+    "raw_sha256": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c",
+    "PR246_result_sha256": "5eb74f78fa2eace3c71f1970821d2f58e4b7c33ba871495e2e97261d8af71875",
+    "current_units": "nominalV/metadataHz only",
+    "all_current_records_exposed": true
+  },
+  "future_independent_content_gates": [
+    "Source/calibrationauthority/acquisitionconfig externallyaccepted",
+    "Actualvaliditydomain/commonphysicalgrid andjointdeterministicenclosure OR justifiedstatisticalcoverage",
+    "Validatedimplementation-specific computationdebit",
+    "Declaredcalibratedoscillatormodel+appropriatejustifiedalternative+state/readout/prep/drive/loss/sourceworkbudget",
+    "Frozenbefore-newfit solver/score/margin rules,retrospectiveknown-datadisclosure orfreshindependentvalidation withnewerrorcoverage",
+    "Independentnonconstructorreview/custodianpromotionreceipt outside thispacket"
+  ],
+  "not_implemented": [
+    "EvidenceURI retrieval/contentreview",
+    "Hardwareauthentication orcalibration",
+    "Actualrawmeasurements ormodel fitting",
+    "Statisticalbootstrap/pvalues",
+    "UDstate/topologybridge",
+    "Native62authentication/intake"
+  ],
+  "development_registry_entry": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

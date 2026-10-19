@@ -1,0 +1,119 @@
+{
+  "artifact_type": "CONTENT_REVIEW_REQUIREMENTS_NOT_EVIDENCE",
+  "roles": {
+    "amplitude_calibration": [
+      "Traceable channel/source/acquisition identity and independent acceptance",
+      "Appliedgain/offset, true intervals, nonlinearity and noise/quantization bounds in postdecoderV",
+      "Calibrated validity domain containing every selected actualsample; no15V softwareguard substitution",
+      "Joint deterministic validity or defined joint coverage event"
+    ],
+    "external_calibration_authority": [
+      "Externally accepted provenance/authority and scope before numericalclaim",
+      "Independence/contentreview must be established outside this metadata checker; no selfassertion shortcut"
+    ],
+    "timebase_calibration": [
+      "Actual calibrated rate interval and simultaneous grid/clockmapping",
+      "Origin/interchannel skew/jitter bounds and acquisitionconfiguration",
+      "No identification of frequency label with effective drive/detuning withoutconfiguration"
+    ],
+    "time_warp_domain": [
+      "Waveform band/derivative bound on declared domain",
+      "Derive waveform-vector voltageerror from actual timewarp; keepnominal/physicalgrid separate"
+    ],
+    "anti_alias_transfer": [
+      "Actual analogfront-end/filter/ADC response and calibratedband",
+      "Boundinbanddistortion plus outofbandaliastail over the acquisition; a nominalNyquistlabel is insufficient"
+    ],
+    "joint_error_allocation": [
+      "All1000 croppedN16184trace vectors covered on the samecoordinategrid",
+      "Map/allocate gain,offset,nonlinearity,noise,timewarp,analog/alias exactlyonce",
+      "Do not replace missingbounds withzero"
+    ],
+    "joint_deterministic_enclosure": [
+      "Independent sourcebound simultaneous errorproof; no covariance orindependencepremise necessary"
+    ],
+    "statistical_population_dependence": [
+      "Define actual sampledpopulation, dependencies/repeatedsettings and exposure",
+      "100metadatafrequencies are not100iidrepeats"
+    ],
+    "statistical_simultaneous_coverage": [
+      "Justify singlejointcoverage event for everyclaimedchannel/trace/bin and allerrorcomponents",
+      "Marginalconfidence or independentquadrature alone insufficient; no default95percent"
+    ],
+    "numerical_implementation": [
+      "Implementation/version/precision, exactoperator andN/window/normalization conventions",
+      "Sourcehashes and reproducible proof/enclosure provenance"
+    ],
+    "validated_rounding": [
+      "Outward/errorvalidated FFT/mean/window/normalization and stored-versus-analyticwindow debit",
+      "Separate DC/RMS/spectralamplitude computationalbounds",
+      "PR246agreement,binwidth,windowdisagreement are not outward roundingproof"
+    ],
+    "physical_model_equations_parameters": [
+      "Versionbound actualcomplexoscillator equations andparamdomains/units",
+      "Calibration ofcouplings/detunings ratherthanpaper/protocoldefaults",
+      "Retain amplitude-dependent link; no substituteUDrotor"
+    ],
+    "state_action_readout": [
+      "Canonicalstate/action/unit/readoutmap with validitydomain anderrorpropagation",
+      "Voltage-only data do not establish missingquadratures/phase/action"
+    ],
+    "acquisition_configuration": [
+      "Actualselectedfile drive/preparation/feedback/filter/timingconfiguration andfrequencylabel meaning",
+      "Never inferconfiguration from author defaultacquisitioncode"
+    ],
+    "preparation_state_uncertainty": [
+      "Initial-state/quadrature/preparation uncertainty and repeat/lineageevidence",
+      "Separatestateestimationerror frommodelmismatch"
+    ],
+    "drive_feedback_loss": [
+      "Actualdrive/feedback/loss histories, directions/units anduncertainties"
+    ],
+    "energy_source_work_model_discrepancy": [
+      "Declaredphysicalenergy/sources/lossbalance andeveryrequiredsource-workhistory",
+      "Independentmodel-discrepancy allowance, not inferred residualzero"
+    ],
+    "state_prediction_error_budget": [
+      "Separateacquisition, initialstate, timing, model-discrepancy, integrator/solver andreadoutprediction errors",
+      "Propagate to exactsameheldout scorecoordinates; no doublecounting/noisytruth assumption"
+    ],
+    "alternative_model": [
+      "Explicit alternativeequations, parameters/domains andreadout in sameobservationcoordinates"
+    ],
+    "alternative_justification": [
+      "Scientific reason thisalternative addresses the declaredquestion and is physicallyappropriate",
+      "No inventedgauge-breakingnull or median/interpolation mechanisticinterpretation"
+    ],
+    "fit_preregistration": [
+      "Before newfit: trainingpartition, solver,bounds,initialization,precision,termination,tiebreaks",
+      "No test/validation refitting orpostHOLDretuning; retainallfailures; failedinferenceHOLDnozeroimputation"
+    ],
+    "heldout_scoring_preregistration": [
+      "Specify calibratedvoltage predictiontimegrid andobservable",
+      "Both aggregateL2V andglobalmaxabsoluteV score with aggregation/uncertainty conventions fixed before fit",
+      "AllPR246records exposed =>retrospectiveexploratory only; freshconfirmation requiresnewindependentunseendata",
+      "Fixedselection rule: both declared scoreintervals must separate in same direction beyond predeclaredmargin; otherwiseHOLD"
+    ],
+    "selection_margin_rationale": [
+      "Margin/unit/threshold rationale independent ofheldout outcomes, frozenbefore newfit",
+      "No physicalgate borrowedfromnativeprotocolconstants"
+    ],
+    "fresh_validation_source": [
+      "Freshindependent/unseen sourceidentity, acquisition IDs andindependent acceptance"
+    ],
+    "independent_unseen_lineage": [
+      "Externally reviewed preparation/source independence andblindness; metadataflag notproof"
+    ],
+    "fresh_validation_error_budget": [
+      "Separatecalibration/timing/aliasing/numericaldebit andjointcoverage forfuturevalidation, orproved coverageextension",
+      "Existing1000vector epsilon does not automatically coverfreshdata"
+    ],
+    "independent_content_review": [
+      "Actualindependentreview of scientificcalibration, authority,model/alternative,allocation andholdout evidence",
+      "No actualcontent orindependence certification occurs in thispacket"
+    ]
+  },
+  "no_supplied_bundles": true,
+  "all_actual_claims": "HOLD",
+  "physical_promotion": 0
+}

@@ -1,0 +1,71 @@
+{
+  "status": "PASS_TEN_FROZEN_MATCH_ENCODING_AND_COMPLEX_ARITHMETIC_CONTROLS",
+  "rows": [
+    {
+      "id": "old_saved_positive",
+      "expected_match": true,
+      "actual_match": true,
+      "status": "CERTIFIED_FINITE_EMITTED_TWO_STEP_BIJECTION"
+    },
+    {
+      "id": "old_shift_stationary",
+      "expected_match": false,
+      "actual_match": false,
+      "status": "HOLD_FINITE_EMITTED_MATCH"
+    },
+    {
+      "id": "old_duplicate_emission",
+      "expected_match": false,
+      "actual_match": false,
+      "status": "HOLD_FINITE_EMITTED_MATCH"
+    },
+    {
+      "id": "old_permuted_order",
+      "expected_match": true,
+      "actual_match": true,
+      "status": "CERTIFIED_FINITE_EMITTED_TWO_STEP_BIJECTION"
+    },
+    {
+      "id": "positive_half_even",
+      "expected_integer": 0,
+      "actual_integer": 0
+    },
+    {
+      "id": "positive_three_halves",
+      "expected_integer": 2,
+      "actual_integer": 2
+    },
+    {
+      "id": "negative_three_halves",
+      "expected_integer": -2,
+      "actual_integer": -2
+    },
+    {
+      "id": "negative_half_even",
+      "expected_integer": 0,
+      "actual_integer": 0
+    },
+    {
+      "id": "zero_inverse_refusal",
+      "inverse_residual_F_upper": [
+        2167275978168831745282800581884047809581357933085665142,
+        1532495540865888858358347027150309183618739122183602176
+      ],
+      "exact_residual_squared": [
+        "2",
+        "1"
+      ],
+      "exceeds_unit_invertibility_margin": true
+    },
+    {
+      "id": "identity_inverse_norm",
+      "operator_norm_upper": [
+        1532495540865888858358347027150309183618739122183602176,
+        1532495540865888858358347027150309183618739122183602176
+      ]
+    }
+  ],
+  "scope": "Old source positive/mutation/permutation controls and exact tiny arithmetic controls; none is a new four-case estimator output or fit. All main outputs retained separately.",
+  "new_estimator_SVD_alignment_fits": 0,
+  "physical_promotion": 0
+}
