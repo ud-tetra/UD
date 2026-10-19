@@ -1,0 +1,50 @@
+{
+  "status": "PASS_SOURCE_BINDINGS_SIX_POWERS_AND_SIX_HOSTILE_GUARDS",
+  "power_exponents": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "input_bindings": 4,
+  "guards": [
+    {
+      "id": "inside_self",
+      "status": "REFUSED_BEFORE_OUTPUT_OR_SOURCE_BINDING",
+      "returncode": 1
+    },
+    {
+      "id": "inside_inner_capture",
+      "status": "REFUSED_BEFORE_OUTPUT_OR_SOURCE_BINDING",
+      "returncode": 1
+    },
+    {
+      "id": "inside_outer_capture",
+      "status": "REFUSED_BEFORE_OUTPUT_OR_SOURCE_BINDING",
+      "returncode": 1
+    },
+    {
+      "id": "ancestor_of_source",
+      "status": "REFUSED_BEFORE_OUTPUT_OR_SOURCE_BINDING",
+      "returncode": 1
+    },
+    {
+      "id": "symlink_target_inside",
+      "status": "REFUSED_BEFORE_OUTPUT_OR_SOURCE_BINDING",
+      "returncode": 1
+    },
+    {
+      "id": "symlink_lexical_inside",
+      "status": "REFUSED_BEFORE_OUTPUT_OR_SOURCE_BINDING",
+      "returncode": 1
+    }
+  ],
+  "per_vector_lattice_patterns": 7689,
+  "lattice_extension": "All integer records with each squared norm <3q^2 coincide with closed3q/2 ball; no boundary3q^2 claim",
+  "new_fits": 0,
+  "new_SVD_or_eigenvalue_calls": 0,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

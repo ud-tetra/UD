@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "control_count": 10,
+  "controls": [
+    {
+      "control": "relocated_valid_roots",
+      "expected": "PASS",
+      "status": "PASS",
+      "reason": null,
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "wrong_repo_no_original_fallback",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_MISSING_DECLARED_INPUT:repository:AGENTS.md",
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "missing_governance_no_original_fallback",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_MISSING_GOVERNANCE_ROOT",
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "wrong_governance_no_original_fallback",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_MISSING_DECLARED_INPUT:governance:UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39.md",
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "repository_hash_mutation",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_DECLARED_INPUT_HASH:repository:captures/2026-10-19T215410Z-codex-phase-run-calibration-43cadbae/calibration/REQUEST_TEMPLATE.json",
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "governance_hash_mutation",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_DECLARED_INPUT_HASH:governance:UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "repository_symlink_escape",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_INPUT_ESCAPES_DECLARED_ROOT",
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "governance_symlink_escape",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_INPUT_ESCAPES_DECLARED_ROOT",
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "optimized_python_refused",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_OPTIMIZED_PYTHON_ASSERTIONS_DISABLED",
+      "absolute_path_fallback_used": false
+    },
+    {
+      "control": "original_artifact_tamper",
+      "expected": "HOLD",
+      "status": "HOLD",
+      "reason": "HOLD_ORIGINAL_ARTIFACT_HASH:README.md",
+      "absolute_path_fallback_used": false
+    }
+  ],
+  "execution_scope": "Renamed temporary audit plus minimal relocated checkout; no original-path fallback; stdout-only verifier",
+  "original_files_changed": false,
+  "raw_records_opened": 0,
+  "new_fits": 0,
+  "calibration_evidence_verified": false,
+  "physical_promotion": 0
+}

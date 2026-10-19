@@ -1,0 +1,99 @@
+{
+  "artifact_type": "ENUMERATED_PRIMARY_EVIDENCE_AUDIT",
+  "access_date_UTC": "2026-10-19",
+  "scope": "Limited enumerated primary pages and sourcecode, not exhaustive absence claim; no waveform or author notebook execution.",
+  "sources": [
+    {
+      "id": "PAPER",
+      "url": "https://arxiv.org/html/2108.01086v1",
+      "version": "2108.01086v1",
+      "bibliography_url": "https://arxiv.org/abs/2108.01086",
+      "submission_date": "2021-08-02",
+      "journal_doi": "10.1103/PhysRevB.105.205141",
+      "publication_render_note": "HTML displayed August24,2026; abstract submission history is2021-08-02. Render date not adopted as experimental acquisition date.",
+      "quote": "Careful tuning of the feedback strength is required to achieve both long time traces and small gauge violation.",
+      "quote_scope": "AppendixB feedback",
+      "paraphrase": "Five matter and four complex link oscillators use a three-wave mixing Hamiltonian. Link magnitude remains in hopping and link action is signed squared magnitude, not an independent unit rotor. Positive feedback compensates loss. AppendixC infers energy from voltage envelopes after background removal. Reported nominal resonances, coupling and detuning do not independently calibrate the selected released acquisition. Drive, loss and initial-state histories still require source-bound evidence.",
+      "retained_quote_sha256": "df080093c6e280cfa734d94322f3475ad538959e0049c4f33bd1713b3e0c944c",
+      "hash_scope": "Retained excerpt only, not whole remote source bytes."
+    },
+    {
+      "id": "DEPOSIT",
+      "url": "https://heidata.uni-heidelberg.de/api/datasets/:persistentId/?persistentId=doi:10.11588/DATA/6MEKHI",
+      "status": "API succeeded; dataset HTML scrape failed",
+      "released_at": "2022-02-03T13:14:19Z",
+      "version": "1.0",
+      "paraphrase": "Version1.0 metadata lists32gzip rawarchives with perfilePID, bytecount and MD5; includes two filename-declared10-channel files. Data license CC-BY4.0, sourcecode BSD2-Clause. No rawcontent read."
+    },
+    {
+      "id": "AUTHOR_REPO",
+      "url": "https://github.com/tychon/U1CircuitsData",
+      "commit": "265b6671dde799d7c73f32247fa3ee93ae70e0f2",
+      "commit_date": "2022-05-08",
+      "paraphrase": "Current public author repository has measurement code, simulation/analysis notebooks and circuitdesign; datefolders describe2021rawdata. No notebook executed."
+    },
+    {
+      "id": "UTILITY_HEADER",
+      "url": "https://raw.githubusercontent.com/tychon/U1CircuitsData/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/utility.h",
+      "quote": "#define RP_BASE_SAMPLERATE 125e6\n#define RP_BUFFER_SIZE 16384",
+      "paraphrase": "Nominal undecimated samplerate and bufferconstants; not a measured frequency interval.",
+      "retained_quote_sha256": "ab59dd2435ecf4cdf5d676602d5bf1c4a2c6ae5f1668bbf995320c0b101a6a4a",
+      "hash_scope": "Retained excerpt only, not whole remote source bytes."
+    },
+    {
+      "id": "DRIVE1",
+      "url": "https://raw.githubusercontent.com/tychon/U1CircuitsData/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/u1_drive1.c",
+      "quote": "rp_AcqSetDecimation(RP_DEC_64);\nrp_AcqSetTriggerDelay(7992);\nrp_AcqSetAveraging(1);",
+      "paraphrase": "Program sets both channels RP_HIGH gain and external negative-edge trigger. It queries API samplerate and olddata in volts, then prints metadata and samples using defaultprecision %f. Programsource alone does not prove selectedfile compiledbinary/configuration, API calibration, rounding behavior or boardidentity. A comment gives extra0.2\u20130.3us latency for generatedCH2trigger; this is not a measured interdevice clock/skew bound.",
+      "retained_quote_sha256": "1dd89a1e964c3a2d901b771b1f87f534fa5f3418341ceeecf2635cc299256973",
+      "hash_scope": "Retained excerpt only, not whole remote source bytes."
+    },
+    {
+      "id": "GPIO",
+      "url": "https://raw.githubusercontent.com/tychon/U1CircuitsData/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/oscilloscope_gpio.c",
+      "quote": "Acquire signal on RF analog inputs @ 125Msps/8.\nrp_AcqSetDecimation(RP_DEC_64);",
+      "paraphrase": "Header nominal/8 description conflicts with executable/64 setup. Code setting is the conditional recipe, not proof of actualfile runtime. Do not propagate header as calibrated sample rate.",
+      "retained_quote_sha256": "06687e4d585f95eb135ddea7feeae17613bf935a8706f538756f012db4659017",
+      "hash_scope": "Retained excerpt only, not whole remote source bytes."
+    },
+    {
+      "id": "CHAIN_README",
+      "url": "https://github.com/tychon/U1CircuitsData/tree/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements",
+      "paraphrase": "Author describes joining extension trigger pins and concatenating twochannels perdevice. This documents triggerchain intent. It does not specify sharedADCclock, frequency drift, calibrated jitter or waveformerror enclosure."
+    },
+    {
+      "id": "DRIVE2",
+      "url": "https://raw.githubusercontent.com/tychon/U1CircuitsData/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/u1_drive2.c",
+      "quote": "rp_AcqSetDecimation(RP_DEC_8);",
+      "paraphrase": "Another author acquisitionprogram uses/8; program-specific configuration must not be mixed into drive1/selecteddata assumptions.",
+      "retained_quote_sha256": "b896a7073618c087c492a7bb2c926ca3de3f01014f42eb878e2d2847e49c7abd",
+      "hash_scope": "Retained excerpt only, not whole remote source bytes."
+    },
+    {
+      "id": "VENDOR_CONTEXT",
+      "url": "https://content.redpitaya.com/blog/red-pitaya-stemlab-125-14-product-variation-comparison",
+      "displayed_date": "2022-01-27",
+      "quote": "Based on the STEMlab 125-14 Starter kit and it comes with individual ISO17025 certificate.",
+      "paraphrase": "Manufacturer distinguishes base, externalclock and individualcalibration variants. Generic specs include125MS/s and14bit for125-14. No serialnumber/modelvariant or certificate binding to this acquisition was found in the enumerated author/deposit pages. Generic specs are not substituted for calibration.",
+      "retained_quote_sha256": "fd21c07a6129b26dbd43183d8e95d82f582654c3fb0d65f092b560b14cf2324c",
+      "hash_scope": "Retained excerpt only, not whole remote source bytes."
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://heidata.uni-heidelberg.de/dataset.xhtml?persistentId=doi:10.11588/DATA/6MEKHI",
+      "operation": "Firecrawl HTML scrape",
+      "status": "allenginesfailed; APImetadata succeeded"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tychon/U1CircuitsData/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/utility.c",
+      "operation": "Firecrawl scrape",
+      "status": "internalerror; notused"
+    }
+  ],
+  "new_raw_downloads": 0,
+  "new_fits": 0,
+  "physical_promotion": 0,
+  "physical_calibration_evidence_obtained": false,
+  "fresh_validation_admitted": false
+}

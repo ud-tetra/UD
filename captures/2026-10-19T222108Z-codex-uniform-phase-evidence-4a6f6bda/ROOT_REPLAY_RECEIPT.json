@@ -1,0 +1,63 @@
+{
+  "status": "PASS_ROOT_RELOCATED_PHASE_SUPPLEMENT_SKETCH_EVIDENCE_REPLAY",
+  "commands": [
+    {
+      "label": "phase",
+      "argv": [
+        "python",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo/captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/phase/certify_v2.py",
+        "--repo",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/uniform-phase-c6-root-replay"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"COMPLETE_SOURCE_BOUND_PHASE_ONLY_UNIFORM_IMPLICATION\", \"C\": 597.1110560985338, \"rows\": [[[0, 1], \"ideal\", \"CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION\", 6.137009793949225e-08], [[0, 1], \"retained_conditional\", \"CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION\", 1.0743925716687979e-07], [[1, 281474976710656], \"ideal\", \"CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION\", 2.3050814478088026e-07], [[1, 281474976710656], \"retained_conditional\", \"CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION\", 2.7657730412146703e-07], [[3, 562949953421312], \"ideal\", \"CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION\", 3.150771683908763e-07], [[3, 562949953421312], \"retained_conditional\", \"CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION\", 3.611463277880632e-07], [[2, 281474976710656], \"ideal\", \"HOLD_DISKS_NOT_STRICTLY_DISJOINT\", 3.996461921270745e-07], [[2, 281474976710656], \"retained_conditional\", \"HOLD_DISKS_NOT_STRICTLY_DISJOINT\", 4.457153515808618e-07], [[1127, 281474976710656], \"ideal\", \"HOLD_DISKS_NOT_STRICTLY_DISJOINT\", 0.0001906802703401088], [[1127, 281474976710656], \"retained_conditional\", \"HOLD_DISKS_NOT_STRICTLY_DISJOINT\", 0.00019072633962774826]], \"controls\": 16, \"new_fits\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "label": "supplement",
+      "argv": [
+        "python",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo/captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/phase/certify_supplement_v2.py",
+        "--repo",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/uniform-phase-c6-root-supplement"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS_FINITE_BASELINE_INHERITED_PREMISE_INSTANTIATION_AND_SAME_SKETCH_BINDING\", \"supplement_freeze_sha256\": \"c99ba8762a36d77b477224a05a01f280936568f59b9c19a760e57f13d6f6d4bc\", \"same_sketch_first_three_exact_power_rows\": [63152, 1233436656, 534960210172866048], \"same_sketch_Gram_int64le_sha256\": \"aa5cb27a4651cf8f96195fc8d5b2a7ff2db5b3bc080a35f74ee5b66430f9158d\", \"baseline_mode\": \"legacy_gemm; exact input identity to integer_projection inherited from sourceadmission\", \"raw_record_noise_relative_original_baseline_upper\": [1, 281474976710656], \"record_sha256\": \"fd819bea491085f222d9ad7fef325b922ec75a8690c7b6ac69b2429617c67339\", \"original_baseline_sha256\": \"25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59\", \"record_membership_scope\": \"Inherited complete raw replay of oneq/vector cyclicunit, NOT zero-noise baseline; original raw bytes not reread this supplement\", \"metadata_member\": \"results/legacy_gemm/SVD_META.npz\", \"metadata_sha256\": \"9840cac9e47a0ba924895189067effbf0052b10352b74cbc9ccaf5e6f83ef044\", \"proposed_tail_sigma210_exact\": [\"2112663191747033\", \"19807040628566084398385987584\"], \"retained_operator_error_upper\": [554871084375374789186780172626951637936741, 1532495540865888858358347027150309183618739122183602176], \"raw_full_tail_operator_upper\": [163459397161761947155554217601765598772943, 1532495540865888858358347027150309183618739122183602176], \"retained_polar_correction_upper\": [293820078029857665507477778364008866333245, 1532495540865888858358347027150309183618739122183602176], \"readable_retained_operator_error_upper\": 3.6207027660378194e-13, \"conditional_quality_gates\": {\"retained_order209\": true, \"retained_Gram\": true, \"retained_approximation_error\": true, \"raw_shift_residual\": true, \"inverse_residual\": true, \"proposed_inverse_norm\": true, \"eigenpair_residual\": true, \"emitted_argument_error\": true}, \"interpretation\": \"One EXISTING nonzero-oneq cyclicunit returned output meets the new retained-phase premises conditional on cached exact parentfullfactor and admission certificates. No new raw, factor, estimator fit or fullparentarithmetic rerun; no PR250 output admission or all-input library guarantee.\", \"new_estimator_SVD_eigenvalue_inverse_alignment_calls\": 0, \"external_review\": \"PENDING\", \"physical_promotion\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "label": "same_sketch",
+      "argv": [
+        "python",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo/captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/phase/same_sketch_probe.py",
+        "--repo",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS_EXACT_SAME_SKETCH_FUNCTION_ARRAY_AND_GRAM_BINDING\", \"source_sha256\": \"7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b\", \"source_path\": \"captures/2026-10-19T132221Z-codex-rounding-replay-82e4a9b7/sketch.py\", \"source_ast_scope\": \"Only the reviewed fixed sketch() function; no runner/bindings or archivedscript import\", \"same_null_vector_sha256\": \"006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292\", \"int64le_array_sha256\": \"30477f0615910f1ee0ecc37aec5261431d917871c13444f8bf5e6f189b3c83ce\", \"same_exact_Gram_sha256\": \"aa5cb27a4651cf8f96195fc8d5b2a7ff2db5b3bc080a35f74ee5b66430f9158d\", \"matrix_entries_compared\": 736374, \"new_estimator_calls\": 0, \"physical_promotion\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "label": "evidence",
+      "argv": [
+        "python",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo/captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/evidence/verify_audit_v2.py",
+        "--repo",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo",
+        "--governance-root",
+        "/workspace/scratch/f3d1c2f040c9/ud-repo/captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/governance"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"raw_metadata_rows\": 32,\n  \"ten_channel_labels\": 2,\n  \"unchanged_qualification_blockers\": 128,\n  \"exact_nominal_sample_rate_Hz\": \"1953125\",\n  \"exact_duration_identities_checked\": 4,\n  \"rational_clock_edge_checks\": 12,\n  \"timing_lemma_status\": \"DERIVED_CONDITIONAL_NOT_CALIBRATION\",\n  \"new_raw_downloads\": 0,\n  \"raw_records_opened\": 0,\n  \"new_fits\": 0,\n  \"physical_promotion\": 0,\n  \"verifier_version\": \"0.2.0\",\n  \"verified_declared_inputs\": [\n    {\n      \"role\": \"repository\",\n      \"relative_path\": \"AGENTS.md\",\n      \"sha256\": \"33c1dff1e4659d5430dce8bfe3d5caf69802a542e98b1d750d4347fec0081966\"\n    },\n    {\n      \"role\": \"repository\",\n      \"relative_path\": \"captures/2026-10-19T215410Z-codex-phase-run-calibration-43cadbae/calibration/README_v0.2.md\",\n      \"sha256\": \"4b0e8f8f254d80fd7740c045d1fdf4a0e6eb7ac4923c6a6c6f4632f4b4335eee\"\n    },\n    {\n      \"role\": \"repository\",\n      \"relative_path\": \"captures/2026-10-19T215410Z-codex-phase-run-calibration-43cadbae/calibration/REQUEST_SCHEMA.json\",\n      \"sha256\": \"964fa5ac8aac4ecb384198c29928d7a16fafe3297f3526f9ffcad8104c6a82dd\"\n    },\n    {\n      \"role\": \"repository\",\n      \"relative_path\": \"captures/2026-10-19T215410Z-codex-phase-run-calibration-43cadbae/calibration/REQUEST_TEMPLATE.json\",\n      \"sha256\": \"0298442bdc3d7b0438428edce5b39cb43fcc5998ef6230986b71a1dfaccec819\"\n    },\n    {\n      \"role\": \"repository\",\n      \"relative_path\": \"captures/2026-10-19T215410Z-codex-phase-run-calibration-43cadbae/calibration/TEMPLATE_PREFLIGHT_HOLD.json\",\n      \"sha256\": \"f3afc1218f3aa5ffda4f9fe38f36652132928ac664b4ad8cf55688ba364da2a0\"\n    },\n    {\n      \"role\": \"governance\",\n      \"relative_path\": \"UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39.md\",\n      \"sha256\": \"1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63\"\n    },\n    {\n      \"role\": \"governance\",\n      \"relative_path\": \"UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md\",\n      \"sha256\": \"8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4\"\n    }\n  ],\n  \"absolute_path_fallback_used\": false,\n  \"governance_inputs_verified\": 2,\n  \"qualification_blockers_closed\": 0\n}\n",
+      "stderr": ""
+    }
+  ],
+  "new_fits": 0,
+  "new_raw_waveform_reads": 0,
+  "physical_promotion": 0,
+  "phase_supplement_byteidentical_to_frozen": true
+}
