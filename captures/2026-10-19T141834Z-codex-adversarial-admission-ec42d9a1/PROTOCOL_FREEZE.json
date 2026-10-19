@@ -1,0 +1,59 @@
+{
+  "frozen_at_utc": "2026-10-19T14:04:28.237083+00:00",
+  "cases": [
+    "stationary_port0",
+    "seeded_onehot",
+    "directed_random_time"
+  ],
+  "baseline": "floating-timing-work/records/ramp_clock_stress.i64le",
+  "baseline_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "selection_source": "rounding-replay-work/results/legacy_gemm/SVD_META.npz",
+  "selection_source_sha256": "9840cac9e47a0ba924895189067effbf0052b10352b74cbc9ccaf5e6f83ef044",
+  "integer_anchor": [
+    {
+      "path": "rounding-replay-work/results/INTEGER_0.npz",
+      "sha256": "c71aefe2fb6d12e8f448e71d347312506a664185255b986d933a0842f7ae2ffb"
+    },
+    {
+      "path": "rounding-replay-work/results/INTEGER_1.npz",
+      "sha256": "bc3cb079e987d5e1450f7c24d68ad39cce603314da30f725463d2fc889bd51f8"
+    },
+    {
+      "path": "rounding-replay-work/results/INTEGER_2.npz",
+      "sha256": "5ae1a7979fa4b574911798d7f2728bf5c128cd41ec1a51bfedb9bb7237e4dbae"
+    }
+  ],
+  "code_sha256": {
+    "bindings.py": "6a212358f13b8fe66c8358e8206be146c40d66347091f80d90994f812b7a23bf",
+    "sketch.py": "7f07f4c76fcb9e446fe7665ff7747bdd07515013eeb1eb32b4da9d4573ebfb7b",
+    "make_records.py": "14f9d17a264553a3d0d1d53ce098b49ffbec09a74a45f2b4175d2fc91f31c609",
+    "run.py": "cd475a225dd2185cbfdad4acd1acb18c5ccf7ccc1329c7c1bdf43c2d115449fe",
+    "gates.py": "334ad951fef449f1e0eb2dba50b47806c469b23cea53b8d2757fc2f732f330b3",
+    "full_svd.py": "1bee163e870fb97ca8a722f9580e52a271cb5ca6954e453c79ff2db3764bbe55"
+  },
+  "inputs_sha256": {
+    "PARENT_GATE_FREEZE.json": "46a5d21e1cb0ab79e6adf1f6ca0c1049fe35696254722c8e635bdcf16c4a34f9",
+    "UNIFORM_CERTIFICATE.json": "c35789cf6dca5bd5ace4760f9f5c6d3db3b06e6595ce55ef1c00f694e6c508f2",
+    "NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292"
+  },
+  "helper_sha256": {
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "operator_bounds.py": "b625dabf693fbd7bc2c320f29b360298f8c195798704c662c6c990db0fe7003d"
+  },
+  "source_cutoff": [
+    1,
+    16777216
+  ],
+  "raw_vector_noise": [
+    1,
+    281474976710656
+  ],
+  "no_source_phases_loaded_by_proposer": true,
+  "known_source_sensitivity_design": true,
+  "not_blinded": true,
+  "all_cases_and_HOLDs_retained": true,
+  "gates_unchanged_from_PR210": true,
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}
