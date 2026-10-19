@@ -1,0 +1,99 @@
+COMMAND: python3 curl_flux.py .
+exact fine-to-parent-to-root L2 projections complete
+reference patch operator rank103/free17 prepared
+level1 patches 16/16
+level2 patches 16/128
+level2 patches 32/128
+level2 patches 48/128
+level2 patches 64/128
+level2 patches 80/128
+level2 patches 96/128
+level2 patches 112/128
+level2 patches 128/128
+global curl space:924 interior edges;576 boundary edges excluded
+read-only replay matches CURL_CORRECTION_RESULTS.json
+exact curl corrections pass; changed macro traces 2240
+direct final divergence checks complete
+direct final normal-trace checks complete
+exact flux norms 128/1024
+exact flux norms 256/1024
+exact flux norms 384/1024
+exact flux norms 512/1024
+exact flux norms 640/1024
+exact flux norms 768/1024
+exact flux norms 896/1024
+exact flux norms 1024/1024
+omega 0 eta²~0.028378631354536953 output radius~0.02837863135453714
+omega 4 eta²~6.915166231014518 output radius~138.4760958614446
+omega 9/2 eta²~0.668126664438519 output radius~15.047689884329111
+omega 5 eta²~0.12977069853832746 output radius~3.2468618400930693
+read-only replay matches CURL_FLUX_RESULTS.json
+read-only replay matches CURL_COVARIANCE_RESULTS.json
+COMMAND: python3 curl_circle.py .
+read-only replay matches CURL_PHASE_RESULTS.json
+omega 0 phase radius 0.014189315677268588 selected phase_circle 0.014189315677268588 old center bound 0.030288522066298593
+omega 4 phase radius 69.23804793072227 selected inherited 23.476733086824407 old center bound 23.476733086824407
+omega 9/2 phase radius 7.5238449421645495 selected phase_circle 7.5238449421645495 old center bound 15.076864081621261
+omega 5 phase radius 1.6234309200465338 selected phase_circle 1.6234309200465338 old center bound 3.2536394322569233
+PASS phase circle, exact covariance and outer polygon audit
+COMMAND: python3 curl_summary.py .
+read-only replay matches CURL_SUMMARY_RESULTS.json
+static 587861/500000 602051/500000 uniform strip 70731/500000 proxy 148739/125000
+omega 0 best radius 0.02837863135453714 new fine flux precision True
+omega 4 best radius 23.476733086824407 inherited continuum enclosure precision False
+omega 9/2 best radius 15.047689884329111 new fine flux precision False
+omega 5 best radius 3.2468618400930693 new fine flux precision False
+
+FULL STORED-RESULTS READ-ONLY REPLAY
+COMMAND: python3 curl_flux.py .
+exact fine-to-parent-to-root L2 projections complete
+reference patch operator rank103/free17 prepared
+level1 patches 16/16
+level2 patches 16/128
+level2 patches 32/128
+level2 patches 48/128
+level2 patches 64/128
+level2 patches 80/128
+level2 patches 96/128
+level2 patches 112/128
+level2 patches 128/128
+global curl space:924 interior edges;576 boundary edges excluded
+read-only replay matches CURL_CORRECTION_RESULTS.json
+read-only replay matches CONSTANT_FLOOR_RESULTS.json
+exact curl corrections pass; changed macro traces 2240
+direct final divergence checks complete
+direct final normal-trace checks complete
+exact flux norms 128/1024
+exact flux norms 256/1024
+exact flux norms 384/1024
+exact flux norms 512/1024
+exact flux norms 640/1024
+exact flux norms 768/1024
+exact flux norms 896/1024
+exact flux norms 1024/1024
+omega 0 eta²~0.028378631354536953 output radius~0.02837863135453714
+omega 4 eta²~6.915166231014518 output radius~138.4760958614446
+omega 9/2 eta²~0.668126664438519 output radius~15.047689884329111
+omega 5 eta²~0.12977069853832746 output radius~3.2468618400930693
+read-only replay matches CURL_FLUX_RESULTS.json
+read-only replay matches CURL_COVARIANCE_RESULTS.json
+COMMAND: python3 curl_circle.py .
+read-only replay matches CURL_PHASE_RESULTS.json
+omega 0 phase radius 0.014189315677268588 selected phase_circle 0.014189315677268588 old center bound 0.030288522066298593
+omega 4 phase radius 69.23804793072227 selected inherited 23.476733086824407 old center bound 23.476733086824407
+omega 9/2 phase radius 7.5238449421645495 selected phase_circle 7.5238449421645495 old center bound 15.076864081621261
+omega 5 phase radius 1.6234309200465338 selected phase_circle 1.6234309200465338 old center bound 3.2536394322569233
+PASS phase circle, exact covariance and outer polygon audit
+COMMAND: python3 curl_summary.py .
+read-only replay matches CURL_SUMMARY_RESULTS.json
+static 587861/500000 602051/500000 uniform strip 70731/500000 proxy 148739/125000
+omega 0 best radius 0.02837863135453714 new fine flux precision True
+omega 4 best radius 23.476733086824407 inherited continuum enclosure precision False
+omega 9/2 best radius 15.047689884329111 new fine flux precision False
+omega 5 best radius 3.2468618400930693 new fine flux precision False
+COMMAND: python3 floor_check.py .
+read-only replay matches FLOOR_CHECK_RESULTS.json
+omega 0 eta floor 0.010058970644102643 circle radius floor 0.005029485322051322 constant-only obstruction False
+omega 4 eta floor 2.375164703049344 circle radius floor 23.7813180564661 constant-only obstruction True
+omega 9/2 eta floor 0.22707057860771 circle radius floor 2.5570657710656413 constant-only obstruction True
+omega 5 eta floor 0.043510630287611034 circle radius floor 0.5443178109945879 constant-only obstruction True
