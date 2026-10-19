@@ -1,0 +1,165 @@
+{
+  "status": "PROSPECTIVE_CODE_RECIPES_AND_UNCHANGED_POLICY_FREEZE_BEFORE_GENERATION_FITS_AND_NUMERIC_EVALUATION",
+  "timestamp_utc": "2026-10-19T18:25:08.086596+00:00",
+  "baseline_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "parent_capture": {
+    "capture": "2026-10-19T175306Z-codex-fresh-prep-frame-81b06ef4",
+    "manifest_sha256": "b3f9da19ccd7965dd162886e864fa72577e22678d677cb80ed8ce406f2c02690"
+  },
+  "fixed_budget": {
+    "retained_Gram_cap": [
+      1,
+      8796093022208
+    ],
+    "normal_cap": [
+      47178096742828133451511969857398525988578,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "normal_cap_scope": "Maximum verified upper over the three named archived outputs; no future solver guarantee",
+    "allowed_aligned_distance_lower": [
+      381527313601453070176809330563396394344559618,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "allowed_sine_F_lower": [
+      381527313601453070173853439137090266079920270,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "allowed_raw_frame_residual_lower": [
+      381527313601431382856959552268984538841185108,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "returned_shift_bound_at_raw_ceiling_upper": [
+      852558897367396980535949644967312015756767971,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "allowance_lower": [
+      852558901491592233734276052423515288088358895,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "readable_raw_frame_budget_lower": 2.4895818841068944e-10
+  },
+  "relevant_phase_caps": {
+    "full_left_orthogonality": [
+      1,
+      8796093022208
+    ],
+    "full_right_orthogonality": [
+      1,
+      8796093022208
+    ],
+    "full_SVD_error": [
+      1,
+      2199023255552
+    ],
+    "raw_shift_residual": [
+      1,
+      17179869184
+    ],
+    "inverse_residual": [
+      1,
+      1099511627776
+    ],
+    "proposed_inverse_norm": [
+      128,
+      1
+    ],
+    "eigenpair_residual": [
+      1,
+      4398046511104
+    ],
+    "emitted_argument_error": [
+      1,
+      1125899906842624
+    ]
+  },
+  "cases": [
+    {
+      "case": "reverse_stationary",
+      "transform": "signed_reverse",
+      "noise": "stationary"
+    },
+    {
+      "case": "shuffle_cycle",
+      "transform": "signed_shuffle",
+      "transform_seed": 219237,
+      "noise": "cycle"
+    },
+    {
+      "case": "shuffle_block1024",
+      "transform": "signed_shuffle",
+      "transform_seed": 219238,
+      "noise": "block1024",
+      "noise_seed": 219301
+    },
+    {
+      "case": "offset_rotation_period2",
+      "transform": "R1",
+      "noise": "period2"
+    },
+    {
+      "case": "double_rotation_period4",
+      "transform": "R1R0",
+      "noise": "period4"
+    },
+    {
+      "case": "transpose_directed",
+      "transform": "R1R0_transpose",
+      "noise": "directed_spatial",
+      "noise_seed": 219302
+    }
+  ],
+  "case_design": "Six paired fixtures, not36Cartesian-product combinations",
+  "files": {
+    "INPUT_INDEX.json": "420f03d38307c2b57ae76b96e5abed06457565e36615fba8ddc2b72a26774bec",
+    "INPUT_PROVENANCE.json": "836fce8b47199582354269692ef13f2c9737622894605135addad461a03c3688",
+    "THEOREMS.md": "4ba04b9868b7b31c5fa41542da542a24356e51f430e7f4ddac32b7157f6ca9bc",
+    "align.py": "27181e4e33485aa2e1fbd635ca826a51d5de1630bc5db747126a8f24970a2453",
+    "common.py": "ba0b183ceac3ac5692466936a2c02ff20d55486faf3aa3424572189a907866cd",
+    "controls.py": "3c6a7a294299bbf80220a57cc4b5c8ee5c93a398b3e30007f8a452791dceac6c",
+    "cutoff_phase.py": "3ce57b8c47ff49d8af27a64c4cb1d57c262d33637e0e70c3dd75de3af44c6e8c",
+    "driver.py": "6d3a7cc2f6706ba88c8f555fa625c3892eeca258b1151e5e4befb02759af9c2d",
+    "estimator.py": "5fa15ca0f3830f168fe9e1483db7f21cb6e462780209b4d8b4e8ad43d64cfe86",
+    "frame.py": "5d7849e62e46954b7759f1d588949f8724602a839cf20d2a95af43b32cb860bb",
+    "inputs/BASE_GENERATION.json": "5cf6b41a6ae1922d1924186784d28ade277146bba809ab4a7360ac4fcb16c52b",
+    "inputs/FIXED_BUDGET.json": "a7fd2ce87210db905ab2c25116c87ec608ad340f9d191950e3bdaed4e5bf7860",
+    "inputs/NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "inputs/OLD_POLICY.json": "46a5d21e1cb0ab79e6adf1f6ca0c1049fe35696254722c8e635bdcf16c4a34f9",
+    "inputs/PARENT_EMISSION.npz": "dd4318eb70290192f990f1bb194a78594a0b699ad7ba3a083a31bcdf08e478a6",
+    "inputs/PARENT_UNIFORM.json": "9e5633627fc08f385159b869673930e5e389cb2a799534b7ef3c48603121ed73",
+    "inputs/PARENT_kernel.py": "6ce4891798f9c609392610c6c363cef5f5a06aef40877bafb597f74c41706290",
+    "inputs/PARENT_records.py": "0f59baef036bc1eddf8045766e4d82aba208794f79b2e9ea9a36209f3e4337cf",
+    "inputs/PUBLISHED_ALLOWANCE.json": "f6e2ad0ea78201f5b5472a25477f99e361d15500117d9146464807b3a956b63b",
+    "inputs/SOURCE_PHASE.json": "b4a9c8d4f65760e30c2201bedd1c35d2b5dab8f38a541e59e6bfa114c1915911",
+    "numeric_math.py": "7f4233359645411d70235b3c55e91f0f9ac57f45593952e604fe7e2e52b4a07f",
+    "proof_math.py": "78a5e376e9f9d347f98a780ba514b67ba9d8fa6dc24fa29df4847b87db387072",
+    "records.py": "ed4c27637f76285da5360f32b26ea5eecce9c95d7a4ca7cad8c3c10fc03de31d",
+    "requirements.txt": "f316cfe9d3cc7a32d4d8c597b5d31b0a44699919b3b9e9d0d3e92c6a36b54a4f",
+    "team_review/broader-campaign-review-20261019/ADOPTED_DESIGN.md": "73bc2c38a94dde03f065b3b9d8daba34afc423186107bc062803d1a37c4966de",
+    "team_review/broader-campaign-review-20261019/CODE_REVIEW.md": "bb9dcffa65d9b8ae03414d14933a7d04bcb99e52c85f5489656bf3a07d5e06cf",
+    "team_review/broader-campaign-review-20261019/DESIGN_RECEIPT.json": "404fa55bc2e6257169a4a2d2785aae5622c688ac80544b1786b8e64479acfea7",
+    "team_review/broader-campaign-review-20261019/FINAL_CODE_REVIEW.json": "c6e478868f3073ab3d1a2c70ceec872ddf473b92aba0335f49423d49625b0b4d",
+    "team_review/broader-campaign-review-20261019/PROSPECTIVE_REVIEW.md": "ecef3e5b9495b5a348c4dd93868d8502fc823d0a9c9efedccb94fabcb233f583",
+    "team_review/cutoff-phase-review-20261019/ADDENDUM.json": "421e04ec6bde622abd556a0d834981fa0408045a41387d8bc6ee6e4df03298ac",
+    "team_review/cutoff-phase-review-20261019/CODE_REVIEW.json": "3c7c33feaa48f403efac47bf2a30d56fd8d030c7737b39640621714aaf953eec",
+    "team_review/cutoff-phase-review-20261019/CODE_REVIEW.md": "00593040dab465add55aa65042935eb2b480e89970e6f0ea16fc4336b3f02be5",
+    "team_review/cutoff-phase-review-20261019/DESIGN_REVIEW.json": "dafc2ee341d63bacb98c1ea9054daa75694456d16d82cc04240c56bb6e5c6801",
+    "team_review/cutoff-phase-review-20261019/DESIGN_REVIEW.md": "dc8cd9f90750c575d357c0dc0a68922434c138b5e0f17046c4e274d75046eb40"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "new_estimator_runs_planned": 6,
+  "parent_saved_output_extensions_planned": 3,
+  "all_raw_hashes_frozen_before_first_new_fit": true,
+  "bitidentical_regeneration_required_before_each_fit": true,
+  "no_retry_replacement_or_outcome_retuning": true,
+  "old_parent_outcomes_known": true,
+  "blinded_external_preregistration_claimed": false,
+  "independent_physical_acquisition_claimed": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

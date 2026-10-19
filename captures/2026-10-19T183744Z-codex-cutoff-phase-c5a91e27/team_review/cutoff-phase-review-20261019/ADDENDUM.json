@@ -1,0 +1,24 @@
+{
+  "artifact_type": "SAME_TEAM_PREFREEZE_PARENT_RAW_PORTABILITY_ADDENDUM",
+  "status": "PASS_STATIC_PORTABILITY_ADDON",
+  "reviewed_utc": "2026-10-19T18:24:24.151710+00:00",
+  "prior_code_review_sha256": "3c7c33feaa48f403efac47bf2a30d56fd8d030c7737b39640621714aaf953eec",
+  "files": {
+    "records.py": "ed4c27637f76285da5360f32b26ea5eecce9c95d7a4ca7cad8c3c10fc03de31d",
+    "driver.py": "6d3a7cc2f6706ba88c8f555fa625c3892eeca258b1151e5e4befb02759af9c2d"
+  },
+  "reviewed_findings": [
+    "recover_parent consumes exact saved integer preparation matrices and denominators from the hash-pinned parent DATA_FREEZE; it does not rechoose transforms.",
+    "Explicit PCG64 channel-array then sign-array draws match the prior default_rng/PCG64 draw order.",
+    "The generic odd-denominator nearest rounding is identical to the prior denominator5 rule, including negative numerators.",
+    "Complete regenerated nominal hash and raw hash must match parent records; every62-vector scalar difference and onehot norm is checked.",
+    "Driver consumes and deletes one regenerated parent raw file at a time, comparing exact integer/dyadic projection receipts to parent run receipts.",
+    "Optional parent raw-directory shortcut affects initial verification only; replay regenerates all3 parents from the sole original baseline dependency.",
+    "Replay invokes no estimator/SVD. New projection-range refusal can remain explicit HOLD without a forced projection retry."
+  ],
+  "math_controls_or_caps_changed": false,
+  "new_records_or_estimator_or_phase_evaluations_by_review": 0,
+  "scope": "Static addon review only; new9-output replay still requires runtime execution and all prior policy/source proofs remain dependencies.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

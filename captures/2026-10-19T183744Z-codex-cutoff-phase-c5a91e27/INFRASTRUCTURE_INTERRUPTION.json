@@ -1,0 +1,88 @@
+{
+  "status": "INFRASTRUCTURE_FILENAME_COLLISION_BEFORE_FOURTH_FIT",
+  "timestamp_utc": "2026-10-19T18:27:51.202123+00:00",
+  "stopped_case": "offset_rotation_period2",
+  "stopped_before_estimator_invocation": true,
+  "original_log_sha256": "24f4a92f0d122a8f706d3bcec491c1d0b6d0f3b17045ad91d47eb8c51be38f82",
+  "completed_fits": [
+    {
+      "case": "reverse_stationary",
+      "run_sha256": "c582388d84b7b2999672ad2c86301c58b520f4d28bd1e61907eb98383ae19add",
+      "numeric_witnesses": {
+        "U_0.npz": "5b078e196ae892df4790f7dac14f8d90db3782a321e8be38479250488991d50b",
+        "SVD_META.npz": "6ad1eedae72444f363d9e388a2b3c0a6ad5bc575733d06eedb23e141a870a1e4",
+        "U_2.npz": "c6f69a2ef4bcf19a4723041aa6ca3e7d218b3313788d0714e256f67ec2e2e01f",
+        "U_1.npz": "412de6cd6fa36c1cd299d10bfb10820523d53f25b792df5abfa8c0f57f5143f2",
+        "PHASE_PROPOSAL.npz": "9307ded115d2ca366fd35f6e168c9c5284fa154b57c94c85ad3ab1d3deef94d4",
+        "PHASE_META.npz": "e1f06636318caa56997ea6f381fcbcd7fd014fb9bb825fbf83af1d5ca89cab28"
+      }
+    },
+    {
+      "case": "shuffle_cycle",
+      "run_sha256": "9594067f0ad6d680455982fd1ef9fb72bf8b4b8ce4364304a20240bf694c01fe",
+      "numeric_witnesses": {
+        "U_0.npz": "ea41d6519dc3866375bb15f8f6981987c8a4c65e6ff8e656e4fb15e9e7d744cc",
+        "SVD_META.npz": "e34543b0605c3b5f06eb7d0496565c2ca1efe5d6a073525675a7fbcb5195ca61",
+        "U_2.npz": "4ba105f628b88ce210877efb8995b6724a6b86d05a3a859d4d65156d06c21683",
+        "U_1.npz": "c6d914e48ae1329e40907585bf9af8657cd956b6929f43a62fe506406e46ca68",
+        "PHASE_PROPOSAL.npz": "536bbc21423dddc5f5091e7d07abca791510706aa2f6dc49c6f8741fc470a314",
+        "PHASE_META.npz": "62ac32d4398e5d63f96e05b74a06dd38332b4a4983d30f4c33668d00deb6fc1b"
+      }
+    },
+    {
+      "case": "shuffle_block1024",
+      "run_sha256": "3bdb76b9c2dd806a4861685ece8acebe154e85d2add5e280f243ee989acf47f9",
+      "numeric_witnesses": {
+        "U_0.npz": "997a906c82129b0fdc61a139ab63e28ad0902ee1b6cb2841f4df4719db949044",
+        "SVD_META.npz": "acdd53b0ed7e9b5cdada7ce084e40582bb540bcd0b7f1c565bb2259f194b2564",
+        "U_2.npz": "4ac306079ce81aaf842df75badbe0f58197d31935b724b09a370ce4d17a1e2c3",
+        "U_1.npz": "6b5018aeedcaf0896a74df1bc3f10f949d33e0979271df5a1ad316fc630070d7",
+        "PHASE_PROPOSAL.npz": "09fb58712f8d4388f73195ed71f5712c1d52355989648168d1f314a51f9ebeaa",
+        "PHASE_META.npz": "0301167d43ee5bcc3a3e4cb800be2cf36825d13c28e6f193d69b7571c2cbf9a0"
+      }
+    }
+  ],
+  "released_transient_files": [
+    {
+      "name": "reverse_stationary.i64le",
+      "bytes": 150321232,
+      "sha256": "e52a01d1468c937c3f13fe08638ca91c70d55f51e39aa4d3cd4146b82dba2d0b",
+      "kind": "Hash-matched reproducible transient raw"
+    },
+    {
+      "name": ".offset_rotation_period2.i64le.Px8cy4",
+      "bytes": 144179200,
+      "kind": "Incomplete transient copy in dedicated raw work directory"
+    },
+    {
+      "name": ".shuffle_block1024.i64le.gfgZ1a",
+      "bytes": 27262976,
+      "kind": "Incomplete transient copy in dedicated raw work directory"
+    },
+    {
+      "name": "offset_rotation_period2.i64le",
+      "bytes": 150321232,
+      "sha256": "bbc6d2d667e50a24e56c57bfd6ee5f7c931405288c338bf666633c9f75fc5cb7",
+      "kind": "Hash-matched reproducible transient raw"
+    },
+    {
+      "name": ".offset_rotation_period2.i64le.TK8Vld",
+      "bytes": 28573696,
+      "kind": "Incomplete transient copy in dedicated raw work directory"
+    },
+    {
+      "name": "shuffle_block1024.i64le",
+      "bytes": 150321232,
+      "sha256": "59eac41ed345c786ca0e5883da9475f26db01a9ec6a0eb2bcf9f679efc4483b2",
+      "kind": "Hash-matched reproducible transient raw"
+    },
+    {
+      "name": ".reverse_stationary.i64le.C8z5Mm",
+      "bytes": 117964800,
+      "kind": "Incomplete transient copy in dedicated raw work directory"
+    }
+  ],
+  "arithmetic_code_caps_recipes_and_primary_freeze_unchanged": true,
+  "continuation_policy": "Resume remaining3 in a new /tmp directory outside workspace; no repeat of completed fits or numerical retry or outcome-based adjustment",
+  "physical_promotion": 0
+}
