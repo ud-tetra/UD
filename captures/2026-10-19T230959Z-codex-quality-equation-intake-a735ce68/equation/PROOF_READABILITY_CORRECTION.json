@@ -1,0 +1,14 @@
+{
+  "artifact_type": "APPEND_ONLY_PROOF_READABILITY_ERRATUM",
+  "found_by": "constructor source-bound outward-rounding self-review after primary/replay",
+  "old": "THEOREMS.md",
+  "replacement": "THEOREMS_v0.2.md",
+  "reason": "Printed decimal597.1110560985338 is a readable nearest binary64 serialization and lies2.327071e-14 below the exact rational upper bound. Replace the narrative inequality with strictly safeC<597.111057. The code always consumed the pinned exact rational, never this decimal.",
+  "mathematical_derivation_changed": false,
+  "numeric_code_or_frozen_caps_changed": false,
+  "certificate_bytes_changed": false,
+  "scientific_gate_verdicts_changed": false,
+  "old_proof_preserved": true,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

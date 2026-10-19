@@ -1,0 +1,51 @@
+{
+  "status": "FROZEN_BEFORE_NEW_RECORD_OR_PROJECTION_EVALUATION",
+  "code_sha256": "2eb31060605e2b124945f1ba8c4ecfb081ca3be66c9f653d0103d1c9d2dc476d",
+  "sources": {
+    "captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/phase/inputs/NULL_VECTOR.json": "006f60c89a0cb485b81391283c02bc8dbcc379c7e26a0b48a6cd3edc59669292",
+    "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_01.zip": "f9ba0fa567c3ae3cbb20bcdf38f522c5ed58e63f31417f3741ef2a8e98745f6d",
+    "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_02.zip": "6c132525b744ce24ccbffe2b1fc94ba771bcd181114266197b3b390da7c250b6",
+    "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_03.zip": "3f1bf97c106a9d2e862c0573e4e046bacbfec6162e7cf485fa9ec3f42a178022"
+  },
+  "members": [
+    {
+      "archive": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_01.zip",
+      "archive_sha256": "f9ba0fa567c3ae3cbb20bcdf38f522c5ed58e63f31417f3741ef2a8e98745f6d",
+      "member": "baseline/COEFFICIENT_PROPOSAL.npz",
+      "sha256": "89e16cf354f9ae015e73f717654a5d20f58cea7fad310d03f5239888107a2e3e",
+      "label": "coeff"
+    },
+    {
+      "archive": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_01.zip",
+      "archive_sha256": "f9ba0fa567c3ae3cbb20bcdf38f522c5ed58e63f31417f3741ef2a8e98745f6d",
+      "member": "baseline/EXACT_GRAMS.npz",
+      "sha256": "3823d79c15c65e307fe556f325e17ad3fe69212c6860308db2136f6edbbe1e09",
+      "label": "gram"
+    },
+    {
+      "archive": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_02.zip",
+      "archive_sha256": "6c132525b744ce24ccbffe2b1fc94ba771bcd181114266197b3b390da7c250b6",
+      "member": "inputs/BASE_BASIS_A.npz",
+      "sha256": "d9d4795747958625060fbf3c155367af0f176519de50c5d1e49f9b6ef4c24735",
+      "label": "ua"
+    },
+    {
+      "archive": "captures/2026-10-18T192301Z-codex-uniform-two-step-8a71c9d3/WITNESS_03.zip",
+      "archive_sha256": "3f1bf97c106a9d2e862c0573e4e046bacbfec6162e7cf485fa9ec3f42a178022",
+      "member": "inputs/BASE_BASIS_B.npz",
+      "sha256": "c12ed0f14149ef4ad599fb65cdc4a8a4a9739da89b25ec71a2b1d28229b53cf4",
+      "label": "ub"
+    }
+  ],
+  "null_path": "captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/phase/inputs/NULL_VECTOR.json",
+  "baseline_sha256": "25a0888972c8fb961774ef69430070e07e1cf6bd02ca05fd1bb0a5552c6e9f59",
+  "recipes": [
+    "null_top1_alternating",
+    "null_top2_alternating"
+  ],
+  "recipe": "Index c*37+a. For each prep a choose count=1 then2 channels sorted(-abs(v[c*37+a]),c); sign=+ ifv>=0 else-. E_ac(t)=2^-48*(-1)^t*w_ac. Both evaluated once with all outcomes retained.",
+  "planned_new_estimator_calls": 0,
+  "known_before_freeze": "All previous outputs and cap2^-41 known. No new record or noisy projection evaluated; recipe uses pinned source sketch nullvector only. Test frame QR and exact compression certification fixed in code. Not blinded/external preregistration.",
+  "scope": "Development\u2014no registry entry; exact necessary retained-rank209-quality feasibility only, no phase-failure or physical claim.",
+  "physical_promotion": 0
+}
