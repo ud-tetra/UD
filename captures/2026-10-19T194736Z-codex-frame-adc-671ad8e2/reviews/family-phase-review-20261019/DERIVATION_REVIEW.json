@@ -1,0 +1,63 @@
+{
+  "artifact_type": "SAME_TEAM_SOURCE_ONLY_FAMILY_PHASE_DERIVATION_REVIEW",
+  "status": "PASS_SCOPED_DERIVATION_AND_NORM_TYPING",
+  "reviewed_utc": "2026-10-19T19:43:38.469248+00:00",
+  "freeze_sha256": "327c1c0b962043b782c38ab09ee12d0ea8d3219d24f3f55c429bae2587a04829",
+  "artifact_sha256": {
+    "bounds.py": "5aa850b3763933b19e837dd7a9e7c82635d4352c9edaf5c6d40bf1627b7f659a",
+    "BOUNDS.json": "170b5f01eaf2b5a04357289e0b495d5cd4338a1221e01ee627f35f547fd40a13",
+    "DERIVATION.md": "b3366af6c801ac2e390fe065ef70e3f5aa4a6a4f4ecadacd7b64abbdb5d0ae25",
+    "RUN.log": "1935bb441e331c8d2cf71ba9aff9d0040611dccd37e30658f9be52d12cc1c641"
+  },
+  "frozen_source_hashes_unchanged": {
+    "family-phase-review-20261019/bounds.py": true,
+    "family-apparatus-work/results/FAMILY_CERTIFICATE.json": true,
+    "family-apparatus-work/inputs/SOURCE_BOUNDS.json": true,
+    "family-apparatus-work/inputs/BASE_GENERATION.json": true,
+    "family-apparatus-work/inputs/FIXED_BUDGET.json": true,
+    "family-apparatus-work/PROTOCOL_FREEZE.json": true,
+    "cutoff-campaign-work/inputs/SOURCE_PHASE.json": true,
+    "cutoff-campaign-work/inputs/PARENT_UNIFORM.json": true,
+    "cutoff-campaign-work/inputs/OLD_POLICY.json": true,
+    "two-step-work/certify.py": true,
+    "two-step-noise-work/uniform.py": true
+  },
+  "key_mathematical_findings": [
+    "Explicit source approximation is Frobenius; sigma210 bound alone is insufficient.",
+    "Pinned source-span witness is OPERATOR; sqrt(209) inflation retained for Frobenius reference offset.",
+    "gamma>tau proves source rank 209 and equality with fixed 209-clock temporal span.",
+    "Uniform ideal exact-leading-SVD/exact-LS enclosure certifies nearest SOME source target only.",
+    "Conditional floating lanes require same-returned-factor normalized data approximation quality; full Gram and actual normal/eigenpair/inverse/emission checks do not supply data quality.",
+    "Two full-versus-retained polar displacements are conservative and require full left Frobenius Gram bound.",
+    "Failure of coarse sufficient frame, shift and unique-phase bounds is HOLD, not actual gate failure or impossibility.",
+    "Zero-radius/zero-noise coarse floor establishes only no unique-target PASS from these monotone formulas."
+  ],
+  "ideal_wide_readable": {
+    "source_error_F_upper": 2.979654257365468e-08,
+    "aligned_distance_F_upper": 1.8579692931167845e-05,
+    "ideal_LS_shift_F_upper": 3.764682929814078e-05,
+    "eigenvalue_radius_upper": 0.008534149639382939,
+    "nearest_some_target_phase_error_upper": 0.008534253235563631
+  },
+  "conditional_floating_readable": {
+    "qualified_full_factor_F_bound": {
+      "aligned_distance_F_upper": 1.857997659406487e-05,
+      "returned_shift_F_upper": 3.7647404065120366e-05,
+      "eigenvalue_radius_upper": 0.00853428315002533,
+      "nearest_some_target_emitted_phase_error_upper": 0.008534386751069158
+    },
+    "operator_only_projected_F_inflation": {
+      "aligned_distance_F_upper": 1.8583792197344295e-05,
+      "returned_shift_F_upper": 3.7655135364444505e-05,
+      "eigenvalue_radius_upper": 0.008536035789621182,
+      "nearest_some_target_emitted_phase_error_upper": 0.008536139454507473
+    }
+  },
+  "new_records": 0,
+  "new_estimator_fits": 0,
+  "new_SVD_executions": 0,
+  "returned_phase_output_evaluations": 0,
+  "independence_scope": "Same-team scalar derivation and norm provenance review only; not external or blind. Parent portable scalar recomputation is separate.",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

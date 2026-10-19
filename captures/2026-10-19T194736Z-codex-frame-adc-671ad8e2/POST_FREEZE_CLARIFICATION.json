@@ -1,0 +1,14 @@
+{
+  "artifact_type": "POST_FREEZE_DOCUMENTATION_CLARIFICATION",
+  "status": "SIGN_CONVENTION_CLARIFIED_NO_NUMERICAL_CHANGE",
+  "original": "APPARATUS_REQUIREMENTS.md#calibration-error-equation",
+  "replacement": "APPARATUS_REQUIREMENTS_v0.2.md",
+  "found_by": "same-team static review delivered after primary freeze/evaluation",
+  "reason": "Original raw equation y was not explicitly typed as sensor-coordinate before applying sign. Model target must be ytrue=sign*y_sensor; equivalently raw z=g*sign*ytrue+b+n. Code already computes this decoder exactly; all errors/norms invariant under sign\u00b11.",
+  "code_or_gate_changes": false,
+  "scientific_protocol_sha256": "530f3b1af64b824709d6082bf288b844798ae7c8799816984c515e8c5710f652",
+  "old_document_preserved": true,
+  "theorem_same_saved_factor_condition_already_in_frozen_version": true,
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

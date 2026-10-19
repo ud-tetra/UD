@@ -1,0 +1,203 @@
+{
+  "artifact_type": "SAME_TEAM_ACTUAL_BYTE_VERIFIER_PREFREEZE_REVIEW",
+  "timestamp_utc": "2026-10-19T19:41:43.608299+00:00",
+  "status": "NO_REMAINING_MATERIAL_ISSUE_IN_REVIEWED_PARSER_GENERATOR_SCOPE",
+  "reviewed_files_sha256": {
+    "apparatus_record.py": "738c4bb239a519fefbd5dd346fa61e83184d4d280a36b1e4092e0ebf45186266",
+    "make_fixtures.py": "6cad2dc49be2f920406262ae4f1ff43b44f1c187dfc77d26ee5303da4e291352"
+  },
+  "reviewed_note_sha256": "107bf42275e49447538b8c0edae64e411d795a9f50f74ac079cb7c85861d0025",
+  "statically_enumerated_fixture_count": 45,
+  "statically_enumerated_fixtures": [
+    {
+      "id": "consistent_exact_bytes",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "one_sample_model_contradiction",
+      "expected": "CONTRACT_CONTRADICTION"
+    },
+    {
+      "id": "overlapping_uncertainty",
+      "expected": "HOLD_OVERLAPPING_ENCLOSURE"
+    },
+    {
+      "id": "exact_cap_equality",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "channel_permutation_covariance",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "unchanged_decoder_after_permutation",
+      "expected": "CONTRACT_CONTRADICTION"
+    },
+    {
+      "id": "timing_error_in_acquisition_budget",
+      "expected": "HOLD_OVERLAPPING_ENCLOSURE"
+    },
+    {
+      "id": "timing_not_double_counted_as_noise",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "fractional_gain_offset_and_all_error_terms",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "negative_sign_covariance",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "nonconstant_clock_aggregate_exact",
+      "expected": "HOLD_OVERLAPPING_ENCLOSURE"
+    },
+    {
+      "id": "duplicate_channel_refused",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "negative_error_refused",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "zero_gain_refused",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "one_sigma_not_uniform_bound",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "wrong_calibration_units",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "calibration_postdates_data",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "expired_calibration",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "contract_postdates_data",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "shared_calibration_lineage",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "shared_model_lineage",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "same_declared_constructor_calibrator",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "clipped_adc_rail",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "nonmonotone_timestamps",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "clock_outside_calibrated_domain",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "prediction_wrong_length",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "raw_wrong_length",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "timestamp_wrong_length",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "real_cap_unset",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "malformed_lineage",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "noninjective_alias_band",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "declared_injective_band_math_only",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "invented_apparatus_receipts_still_no_physical_pass",
+      "expected": "CONDITIONAL_CONSISTENCY"
+    },
+    {
+      "id": "clock_rate_interval_reaches_zero",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "exact_squared_residual_exceeds_int64",
+      "expected": "CONTRACT_CONTRADICTION"
+    },
+    {
+      "id": "scored_raw_declared_model_ancestor",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "path_escape_refused",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "unfilled_template_refused",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "frozen_model_hash_refused",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "frozen_calibration_hash_refused",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "frozen_contract_hash_refused",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "hash_mutation_raw_adc",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "hash_mutation_timestamps",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "hash_mutation_prediction",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    },
+    {
+      "id": "hash_mutation_calibration",
+      "expected": "HOLD_INPUT_EVIDENCE"
+    }
+  ],
+  "exact_expected_fixture_math_reviewed": true,
+  "candidate_code_executed_by_reviewer": false,
+  "fixture_generation_or_execution_by_reviewer": false,
+  "new_full_records": 0,
+  "new_fits": 0,
+  "physical_acquisitions": 0,
+  "scope": "Current parser/generator static source and algebra review; replay/docs and any new source bytes not covered automatically. Conditional saved-predictor mismatch only, calibration authenticity/heldout/unaliased/source-family membership not certified.",
+  "independent_non_constructor_review": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

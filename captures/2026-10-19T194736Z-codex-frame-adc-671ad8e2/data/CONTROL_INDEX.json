@@ -1,0 +1,582 @@
+[
+  {
+    "id": "consistent_exact_bytes",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "one_sample_model_contradiction",
+    "expected": "CONTRACT_CONTRADICTION",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "overlapping_uncertainty",
+    "expected": "HOLD_OVERLAPPING_ENCLOSURE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "exact_cap_equality",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "expected_contract_sha256": "67299fa4d89e218d93fd2ac52faf87fc2840a4ccf696a40257b0f0757eb7c0a5",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "channel_permutation_covariance",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "expected_contract_sha256": "8c50b4cc851472a8f3b8b3c40edefb8d4b8f370e8a6cc5a6c11a663ae1fb8e4c",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "unchanged_decoder_after_permutation",
+    "expected": "CONTRACT_CONTRADICTION",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "timing_error_in_acquisition_budget",
+    "expected": "HOLD_OVERLAPPING_ENCLOSURE",
+    "expected_contract_sha256": "3efe5f3baf58e1a405fa9db267b039c3c7576c7b76e9cce5d8b766bc51b5f4d1",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "timing_not_double_counted_as_noise",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "expected_contract_sha256": "6cadeb984f51f9b25982a9c348447882816025a74ed63230469c9c8488d4b076",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "fractional_gain_offset_and_all_error_terms",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "expected_contract_sha256": "b9e8bc3691a9ffca33b175a766c9bb6f620e64d9897eb66ec49049c18abdd0e8",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {
+      "residual_F_squared_exact": [
+        0,
+        1
+      ],
+      "acquisition_F_squared_exact": [
+        469225,
+        301989888
+      ]
+    }
+  },
+  {
+    "id": "negative_sign_covariance",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "expected_contract_sha256": "738088e33b9928420c238b852a0d6ea23f82f2ffdea46b2281dd881a1c803fbf",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {
+      "residual_F_squared_exact": [
+        0,
+        1
+      ],
+      "acquisition_F_squared_exact": [
+        1,
+        131072
+      ]
+    }
+  },
+  {
+    "id": "nonconstant_clock_aggregate_exact",
+    "expected": "HOLD_OVERLAPPING_ENCLOSURE",
+    "expected_contract_sha256": "4c02aab2c8bd98a5c46657da0acb8f65cbb33ff655928372b51883f2a726fbe1",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {
+      "residual_F_squared_exact": [
+        0,
+        1
+      ],
+      "acquisition_F_squared_exact": [
+        35797321,
+        536870912
+      ],
+      "max_timing_error_exact": [
+        3159,
+        32768
+      ],
+      "max_vector_error_squared_exact": [
+        91030681,
+        4294967296
+      ]
+    }
+  },
+  {
+    "id": "duplicate_channel_refused",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "119d28e63bd8c131c22039fcc0e77b03178aa407ec6decf03e279fea9fef3e83",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "negative_error_refused",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "5b736a9b29e416255d5b16e395f91ed0e1c1e551853e458c9f4e6f4c8411c12e",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "zero_gain_refused",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "d71ebe369169bb0cc4cd5ceeabc8fdef0da49dfabddc5e125248ce26553d9d74",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "one_sigma_not_uniform_bound",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "e8b8753ab50341abd40521183ce0552488553b07279a8881d5b9550b08e7923c",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "wrong_calibration_units",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "da3445c90d7750daba5d4d7f8520eb313b85c0a6a6669efe91eb21216e9b921f",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "calibration_postdates_data",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "32a8ede1cd22f1a214d6fd7e6a33061dd7ddc4e2447f7c540a09772a481f48fa",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "expired_calibration",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "52f8c76da28a25e28c3d3ceec2b6cc60cd288fbd2e3e8a17f2226e2810b72f94",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "contract_postdates_data",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "ed1bd4460bd3625ac53a0902b286e1e05203875dd569d981d495716bd23f4c13",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "shared_calibration_lineage",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "shared_model_lineage",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "same_declared_constructor_calibrator",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "fd6963b7e4a1eb2339b4ae7640dcb7d012c5912c622bdb73c5fd12d446cd5e09",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "clipped_adc_rail",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "nonmonotone_timestamps",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "clock_outside_calibrated_domain",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "prediction_wrong_length",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "f329af2de58f374e6f85fe000b8df24feb53ffe02da732cb4e186a9c48476237",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "raw_wrong_length",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "timestamp_wrong_length",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "real_cap_unset",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "3dd7d6cba33a8fd2aff3182d6e4a7b74f116251f41637327e7d37e842caf70a0",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "malformed_lineage",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "noninjective_alias_band",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "dda4166f4807ba36485da31d49b3085b7e0c2a270d2f855cbbaf80767ca75885",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "declared_injective_band_math_only",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "invented_apparatus_receipts_still_no_physical_pass",
+    "expected": "CONDITIONAL_CONSISTENCY",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "clock_rate_interval_reaches_zero",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "ff576376cb0a972478ed971dc71a8448eeabf914e4050678e2326146d8eedf80",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "exact_squared_residual_exceeds_int64",
+    "expected": "CONTRACT_CONTRADICTION",
+    "expected_contract_sha256": "1bdd4ae3c3d88b087b95c93973db9cc39f41230c81849f0939260c86ff90e9e4",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {
+      "residual_F_squared_exact": [
+        18889465931203702947841,
+        16
+      ]
+    }
+  },
+  {
+    "id": "scored_raw_declared_model_ancestor",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "0c542bb3714e7f3bb05b6ea051fb943cfb81463afde4be00ba8636e025b924e6",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "path_escape_refused",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "unfilled_template_refused",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "hash_mutation_raw_adc",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "hash_mutation_timestamps",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "hash_mutation_prediction",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "hash_mutation_calibration",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "12d4ff7cfe950885c096bcd3a2c4d8ff093698e11acd436f9e9a6ae589a03ccd",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "frozen_model_hash_refused",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "a30759492eddb84194fe5fd7fcb362ff9ef68c6cb0d75d813cc6ef44cdf89f26",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "frozen_calibration_hash_refused",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "79184a410966b8ee6b299a53b39f912cb332235dcf9d57a96741e06f12bbf20c",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  },
+  {
+    "id": "frozen_contract_hash_refused",
+    "expected": "HOLD_INPUT_EVIDENCE",
+    "expected_contract_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "physical_expected": "HOLD_UNQUALIFIED",
+    "toy_shape": [
+      2,
+      4,
+      62
+    ],
+    "exact_expectations": {}
+  }
+]

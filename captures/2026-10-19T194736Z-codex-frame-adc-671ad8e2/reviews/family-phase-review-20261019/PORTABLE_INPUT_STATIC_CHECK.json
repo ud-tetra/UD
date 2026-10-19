@@ -1,0 +1,74 @@
+{
+  "status": "PASS_STATIC_SIX_SOURCE_BINDINGS_AND_FOUR_EXACT_AST_HELPERS",
+  "sources": [
+    {
+      "destination": "inputs/FAMILY_CERTIFICATE.json",
+      "checks": {
+        "destination_hash": true,
+        "parent_source_hash": true,
+        "manifest_hash": true,
+        "independent_pinned_input_exists": true
+      },
+      "independent_input": "family-apparatus-work/results/FAMILY_CERTIFICATE.json"
+    },
+    {
+      "destination": "inputs/BASE_GENERATION.json",
+      "checks": {
+        "destination_hash": true,
+        "parent_source_hash": true,
+        "manifest_hash": true,
+        "independent_pinned_input_exists": true
+      },
+      "independent_input": "family-apparatus-work/inputs/BASE_GENERATION.json"
+    },
+    {
+      "destination": "inputs/FIXED_BUDGET.json",
+      "checks": {
+        "destination_hash": true,
+        "parent_source_hash": true,
+        "manifest_hash": true,
+        "independent_pinned_input_exists": true
+      },
+      "independent_input": "family-apparatus-work/inputs/FIXED_BUDGET.json"
+    },
+    {
+      "destination": "inputs/SOURCE_PHASE.json",
+      "checks": {
+        "destination_hash": true,
+        "parent_source_hash": true,
+        "manifest_hash": true,
+        "independent_pinned_input_exists": true
+      },
+      "independent_input": "cutoff-campaign-work/inputs/SOURCE_PHASE.json"
+    },
+    {
+      "destination": "inputs/PARENT_UNIFORM.json",
+      "checks": {
+        "destination_hash": true,
+        "parent_source_hash": true,
+        "manifest_hash": true,
+        "independent_pinned_input_exists": true
+      },
+      "independent_input": "cutoff-campaign-work/inputs/PARENT_UNIFORM.json"
+    },
+    {
+      "destination": "inputs/OLD_POLICY.json",
+      "checks": {
+        "destination_hash": true,
+        "parent_source_hash": true,
+        "manifest_hash": true,
+        "independent_pinned_input_exists": true
+      },
+      "independent_input": "cutoff-campaign-work/inputs/OLD_POLICY.json"
+    }
+  ],
+  "helper_AST_identical": [
+    "tail",
+    "gam",
+    "align",
+    "ideal"
+  ],
+  "data_math_not_executed": true,
+  "same_team_only": true,
+  "physical_promotion": 0
+}

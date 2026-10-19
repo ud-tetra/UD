@@ -1,0 +1,364 @@
+{
+  "artifact_type": "SAME_TEAM_ACTUAL_BYTE_VERIFIER_FINAL_OUTCOME_REVIEW",
+  "review_utc": "2026-10-19T19:46:41.928323+00:00",
+  "status": "SCOPED_FROZEN_TOY_BYTE_OUTCOME_AND_REPLAY_REVIEW_PASS",
+  "protocol_sha256": "530f3b1af64b824709d6082bf288b844798ae7c8799816984c515e8c5710f652",
+  "control_count": 45,
+  "status_counts": {
+    "CONDITIONAL_CONSISTENCY": 8,
+    "CONTRACT_CONTRADICTION": 3,
+    "HOLD_OVERLAPPING_ENCLOSURE": 3,
+    "HOLD_INPUT_EVIDENCE": 31
+  },
+  "all_physical_verdicts_hold": 45,
+  "all_frozen_and_original_review_code_hashes_match": true,
+  "all270_archive_member_hashes_checked": true,
+  "primary_and_readonly_replay_result_bytes_match": true,
+  "both_rebuilt_archives_index_and_freeze_match_original_data_bytes": true,
+  "independent_pointwise_fraction_replay_rows": [
+    {
+      "id": "consistent_exact_bytes",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "one_sample_model_contradiction",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          1,
+          4
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "overlapping_uncertainty",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          1,
+          256
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "exact_cap_equality",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          1,
+          256
+        ],
+        "acquisition_F_squared_exact": [
+          0,
+          1
+        ],
+        "max_vector_error_squared_exact": [
+          0,
+          1
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "channel_permutation_covariance",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "unchanged_decoder_after_permutation",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          1,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "timing_error_in_acquisition_budget",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1089,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1089,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          1,
+          32
+        ]
+      }
+    },
+    {
+      "id": "timing_not_double_counted_as_noise",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          1,
+          32
+        ]
+      }
+    },
+    {
+      "id": "fractional_gain_offset_and_all_error_terms",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          469225,
+          301989888
+        ],
+        "max_vector_error_squared_exact": [
+          469225,
+          2415919104
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "negative_sign_covariance",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "nonconstant_clock_aggregate_exact",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          35797321,
+          536870912
+        ],
+        "max_vector_error_squared_exact": [
+          91030681,
+          4294967296
+        ],
+        "max_timing_error_exact": [
+          3159,
+          32768
+        ]
+      }
+    },
+    {
+      "id": "declared_injective_band_math_only",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "invented_apparatus_receipts_still_no_physical_pass",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          0,
+          1
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "exact_squared_residual_exceeds_int64",
+      "independent_pointwise_fraction_replay_matches": true,
+      "scalar_readings": 496,
+      "exact_values": {
+        "residual_F_squared_exact": [
+          18889465931203702947841,
+          16
+        ],
+        "acquisition_F_squared_exact": [
+          1,
+          131072
+        ],
+        "max_vector_error_squared_exact": [
+          1,
+          1048576
+        ],
+        "max_timing_error_exact": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "independent_pointwise_scalar_readings": 6944,
+  "closed_forms_affine_sign_varying_clock_large_integer_match": true,
+  "post_freeze_sign_clarification_preserves_original_code_gates_and_doc": true,
+  "new_estimator_fits": 0,
+  "new_full_records": 0,
+  "actual_apparatus_acquisitions": 0,
+  "fixture_generation_or_candidate_verifier_execution_by_reviewer": false,
+  "scope": "Saved tiny2x4x62 synthetic ADC controls; independent pointwise exact rational arithmetic and replay equality. No actual independently calibrated apparatus data, authentication, heldout independence, unaliased/SI identification, source-family membership or physical qualification. Family-phase proof/numbers are separately reviewed.",
+  "external_review": "PENDING",
+  "independent_non_constructor_review": false,
+  "physical_promotion": 0,
+  "artifact_sha256": {
+    "PROTOCOL_FREEZE.json": "530f3b1af64b824709d6082bf288b844798ae7c8799816984c515e8c5710f652",
+    "data/DATA_FREEZE.json": "f230023ce2ea499ff54cb15de91ca798e43cbef14f0f6e07461e8d88350b6da0",
+    "data/FIXTURES.zip": "2254ac2f7c45741454ff426ab1a9d6a08949f4edbd531d6f56b5940f6026682d",
+    "data/CONTROL_INDEX.json": "514ad9026b0f1c2232d6306358fe7ad2600724b18349fec0ef948da96691fe4c",
+    "results/APPARATUS_RESULTS.json": "de5d770752453f7a24805d671f5e32ee698a67c8f67b6703cb31383a91c7fb2b",
+    "REPLAY_RECEIPT.json": "cb0d54f8acda22c29d085d18fc6a6b647b0c6934a8e3064ab90f51c76a0878c1",
+    "DOCUMENTATION_FREEZE.json": "07f04e976b1b0d968bb9218cdb8e843e368b50e7efbefc32f29308ad13c91798",
+    "POST_FREEZE_CLARIFICATION.json": "193da5919d98e987ea7f85511aef6c30992d5c156d8b83041acc31015b376919",
+    "APPARATUS_REQUIREMENTS_v0.2.md": "ea156244400c880d3682b408a3a1441fe78e7cb3d1ae0857a4f5b7eee27edd8b"
+  }
+}
