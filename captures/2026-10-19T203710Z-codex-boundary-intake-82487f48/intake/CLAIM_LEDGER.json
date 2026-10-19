@@ -1,0 +1,70 @@
+{
+  "claims": [
+    {
+      "id": "REAL_CURRENT_INTAKE",
+      "status": "HOLD_MISSING_EXTERNAL_EVIDENCE",
+      "evidence": "results/ACTUAL_INTAKE_RESULT.json",
+      "actual_real_records": 0,
+      "blocking_items": [
+        "caller-provided REAL evidence request outside candidate bundle",
+        "independently caller-pinned expected request SHA256",
+        "complete REAL ADC/predictor/timestamp/calibration/receipt bundle",
+        "external REAL public-key policy with independently pinned SHA256",
+        "independently pinned analytic admission SHA256 and predata contract",
+        "caller verification epoch and independent calibration/acquisition/lineage provenance"
+      ]
+    },
+    {
+      "id": "ENGINEERING_METADATA_CONTROLS",
+      "status": "EXECUTED_SCOPED_CONSTRUCTOR_TESTS",
+      "controls": 20,
+      "optimized_checks": 2,
+      "status_counts": {
+        "HOLD_MISSING_EXTERNAL_EVIDENCE": 1,
+        "HOLD_INTAKE_PREFLIGHT": 18,
+        "HOLD_DELEGATED_EVIDENCE": 1
+      },
+      "evidence": "results/CONTROL_RESULTS.json",
+      "hardware_records": 0
+    },
+    {
+      "id": "READONLY_REPLAY",
+      "status": "BYTE_IDENTICAL",
+      "evidence": "REPLAY_RECEIPT.json",
+      "physical_replication_claimed": false
+    },
+    {
+      "id": "PR237_DELEGATION",
+      "status": "UNCHANGED_PINNED_VERIFIER_PLACEHOLDER_HOLD_ONLY",
+      "complete_real_evidence_path": "UNEXECUTED",
+      "actual_real_records": 0
+    },
+    {
+      "id": "DIRECT_REPO_INVENTORY",
+      "status": "DATA_ONLY_METADATA_SCOPE",
+      "files": 1514,
+      "relevant_rows": 17,
+      "archives_examined": false,
+      "prior_experimental_CONTENT_AUDIT_present": true
+    },
+    {
+      "id": "KNOWN_SYNTHETIC_AUTHORITY",
+      "status": "PUBLISHED_FIXTURE_BYTES_DENIED",
+      "public_test_keys": 5,
+      "unknown_key_identity": "NOT_CERTIFIED"
+    },
+    {
+      "id": "V1_RUNTIME_FAILURE",
+      "status": "PRESERVED_WITH_APPEND_ONLY_V2_LAUNCH_CORRECTION",
+      "evidence": "V1_FAILURE.json",
+      "gate_or_expected_outcome_changes": false
+    },
+    {
+      "id": "PHYSICAL_AUTHENTICITY_INDEPENDENCE",
+      "status": "OPEN_UNQUALIFIED_HOLD",
+      "external_review": "PENDING",
+      "physical_promotion": 0
+    }
+  ],
+  "physical_promotion": 0
+}

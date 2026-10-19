@@ -1,0 +1,46 @@
+{
+  "status": "DERIVED_NESTED_CLOSED_BALL_NECESSARY_EXCLUSION",
+  "counterexample_case": "directional_amp_2",
+  "counterexample_record_sha256": "3364f9b19426b1bd45925661a57f8c2aa204a36336c10f8e1f43d086e5c64a6e",
+  "counterexample_amplitude": 2,
+  "counterexample_vector_noise_radius": [
+    1,
+    140737488355328
+  ],
+  "uniform_strict_frame_admission_requires_radius_strictly_less_than": [
+    1,
+    140737488355328
+  ],
+  "exact_minimal_residual_squared_lower": [
+    "23128999048269730586110657200964751991945219033540675659433575873351885219533049191651005903125055094766555488249475",
+    "181709681073896497850437947159840597857997755437204463556732047267073805097640882257153564306317724439829648592276970688583231143411712"
+  ],
+  "unchanged_strict_raw_frame_cap": [
+    "95381828400357845714239888067246134710296277",
+    "383123885216472214589586756787577295904684780545900544"
+  ],
+  "source_anchor": "reverse_stationary",
+  "anchor_distance": [
+    0,
+    1
+  ],
+  "closed_ball_contains_all_encoded_vectors_with_norm_at_most_radius": true,
+  "proof": "For any delta >= witnessed per62-vector norm, this exact record belongs to the closed noise ball at the fixed source anchor. Its actual saved returned basis excludes every source alignment under the unchanged strict frame cap. Hence universal strict-frame admission by this actual frozen estimator on that ball is false. Set inclusion, not monotonicity of the estimator response, supplies the implication.",
+  "finite_frame_pass_amplitudes": [
+    0,
+    1
+  ],
+  "finite_frame_fail_amplitudes": [
+    2,
+    4
+  ],
+  "finite_frame_hold_amplitudes": [],
+  "smaller_sampled_PASS_proves_uniform_ball_sufficiency": false,
+  "monotone_directional_response_claimed": false,
+  "ideal_SVD_phase_or_physical_failure_claimed": false,
+  "certificate_sha256": "d8ca989d1fa6035ce4b95dcec67447e17108b903c4cb1effa96dfa38147f206b",
+  "boundary_freeze_sha256": "fb6ddad0a43135ca292da482f89c6b1d843bcfd428aec1826b4e06237be60650",
+  "completed_utc": "2026-10-19T20:30:36.264441+00:00",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

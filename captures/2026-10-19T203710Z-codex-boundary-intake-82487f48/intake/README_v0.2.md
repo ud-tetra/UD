@@ -1,0 +1,7 @@
+# REAL intake operational correction v0.2
+
+Use intake_v2.py and replay_v2.py with PROTOCOL_FREEZE_v0.2.json as the current entrypoints. Original v1 code, protocol and failed-run evidence remain unchanged. V1's first19 metadata controls passed; its final placeholder routing child could not import the installedflint dependency because PYTHONNOUSERSITE=1 suppressed the trusted host user-site. It safely returnedHOLD with no accepted handoff or real record. V1_FAILURE.json and OPERATIONAL_CORRECTION_v0.2.json disclose this result.
+
+V2 changes only the child dependency launch: use the normal trusted interpreter's installed packages, continue removing PYTHONPATH and run the unchanged SHA-pinned PR237 script from its own trusted directory. This is not a hardened host isolation boundary. No gate, cap, expected status or dataset changed. Freeze v2 before rerunning the same20 constructor metadata/path controls. No additional key generation/signing or fits occur.
+
+README.md remains applicable to evidence, trust and shape scope. The actual current invocation has no external REAL request/pins and must returnHOLD_MISSING_EXTERNAL_EVIDENCE. Missing evidence is not a permission issue. Real records evaluated=0 and hardware qualification=0. The only complete routing fixture is malformed placeholder metadata and must reach the unchanged verifier's earlyHOLD, not validate raw measurements. External reviewPENDING; Physical Promotion=0.

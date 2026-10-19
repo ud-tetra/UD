@@ -1,0 +1,44 @@
+{
+  "status": "INITIAL_IMPLEMENTATION_REVIEW_BEFORE_CONSTRUCTOR_FREEZE",
+  "checked_utc": "2026-10-19T20:28:19.762168+00:00",
+  "source_files_sha256": {
+    "intake.py": "9dfabe48331b349f7220d1e961439aa28b4ec039de70c0f0666ceaee70d072e5",
+    "SOURCE_BINDINGS.json": "c3d740a027635efaff44268a9351eb7ad3fd810d1ed342a22dd89a3c839ee39a",
+    "KNOWN_SYNTHETIC_AUTHORITY.json": "6fb89042f58d7bd73fa376349ffd6c3524ccd8b6038133117dfe8191ff474ac2",
+    "REQUEST_TEMPLATE.json": "5313781930debc31d5ea540f6c2adc4afe9087fdf96d72ddb84948ea9463ef89",
+    "verifier/authenticated_record.py": "6ac45ce73f84067147ebfa8dc108fa3a79d5c813f5096282a34bce4033354edf",
+    "verifier/base_record.py": "738c4bb239a519fefbd5dd346fa61e83184d4d280a36b1e4092e0ebf45186266"
+  },
+  "issues_communicated": [
+    {
+      "id": "RI-I1",
+      "finding": "RecordedknownsyntheticdenySHAisnotcheckedbeforedenylistuse; trustSOURCE_BINDINGS itselfneedsfixedbinding",
+      "requested_fix": "PinbindingsmetadataandverifydenyconsumedbytesSHAbeforegates"
+    },
+    {
+      "id": "RI-I2",
+      "finding": "AnydelegatedresultincludingearlyauthHOLDsetsreal_records_evaluated1",
+      "requested_fix": "Usecallerclassified/delegatedcandidatecountandkeepactualreal/hardwareverified0"
+    },
+    {
+      "id": "RI-I3",
+      "finding": "sha(path)thenread_json(path)canparseunhashedrequest/policybytesifchangedbetweenreads",
+      "requested_fix": "HashandparsestrictJSONfromonesnapshot; recheckcalleranchorsbefore/afterdelegate"
+    }
+  ],
+  "positive_findings": [
+    "BothdelegatemodulesbyteidenticaltopinnedPR237source",
+    "lexicalresolvedandancestor-symlinkcontainmentchecks",
+    "strictexternalrequesthashschema",
+    "knownpublishedsyntheticpublickeyrelabelrefusal",
+    "criticalproductiongatesuseneed/Refusenotassert",
+    "subprocesscwdtrustedverifier; PYTHONPATHremoved; user-siteimportsdisabled",
+    "absentrequestexplicitmissinglistHOLD0records0delegations"
+  ],
+  "tests_executed": 0,
+  "real_records_evaluated": 0,
+  "signatures_created": 0,
+  "keys_generated": 0,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

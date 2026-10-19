@@ -1,0 +1,33 @@
+{
+  "status": "PREFREEZE_DESIGN_FINDINGS_COMMUNICATED",
+  "recorded_utc": "2026-10-19T20:25:26.806481+00:00",
+  "same_team_review": true,
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "findings": [
+    {
+      "id": "RI-D1",
+      "severity": "material_if_authority_claimed",
+      "finding": "An exact known synthetic policy/admission bytehash denylist does not refuse the same published synthetic publickeys after policy reformatting, principal renaming or scope relabeling.",
+      "recommended_resolution": "Bind a unique publickey denylist to hash-verified retained PR237 trust-policy members, reject any reused knownfixture publickey regardlessofpolicybytehash; preservelimitedknownfixture scope.",
+      "constructor_response": "Agreed; implementing from retaineddirectpolicyfiles matchedtoauthoritativeDATA_FREEZE memberSHA; no archivesignaturegeneration or52controlrerun.",
+      "implementation_verified": false
+    },
+    {
+      "id": "RI-D2",
+      "severity": "path_boundary_design_requirement",
+      "finding": "Checking only resolve() containment can classify candidate-local symlinks to external anchors as callerexternal.",
+      "recommended_resolution": "Reject lexical candidateplacement and symlinkcomponents as wellas resolvedcandidatecontainment forrequest/policy anchors; localtrustedcodeimports only.",
+      "constructor_response": "Agreed; implementing lexicalcontainment andsymlinkcomponentrefusal.",
+      "implementation_verified": false
+    },
+    {
+      "id": "RI-D3",
+      "severity": "scope_requirement",
+      "finding": "A suppliedpin-source declaration or an apparatus policy/provenance label doesnot establish independenthistoricalpinning, genuinekeyidentity, metrologytruth or empiricaldata.",
+      "recommended_resolution": "Retaintrustpremiseasconditional; actualmissingdataset=>HOLD,0records; physicalHOLDalways; nodata/passmanufacturing.",
+      "constructor_response": "Design explicitlyretainspremisestatusandHOLDabsence.",
+      "implementation_verified": false
+    }
+  ]
+}
