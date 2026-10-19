@@ -1,0 +1,54 @@
+{
+  "title": "Fixed J1 volume port: local hierarchical RT1 and sharp spectral residual output bound v0.1",
+  "base": "a7148c31d847c3d091f54eac05e41a82d509bac7",
+  "lineage": [
+    "PR223",
+    "PR225",
+    "PR226",
+    "#218",
+    "#136"
+  ],
+  "status": "DERIVED_EXACT_CONDITIONAL_AND_AUDITED_NUMERICAL_WITNESSES",
+  "physical_promotion": 0,
+  "independent_review": false,
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "33c1dff1e4659d5430dce8bfe3d5caf69802a542e98b1d750d4347fec0081966"
+    },
+    {
+      "path": "captures/2026-10-19T175000Z-codex-j1-refined-flux-26b4e18a/REPORT.md",
+      "sha256": "55a9d6da98f5d3911b4f4f41b67c16027ea1d2f078552f0791903e5fc78ce865"
+    },
+    {
+      "path": "captures/2026-10-19T175000Z-codex-j1-refined-flux-26b4e18a/fine_flux_core.py",
+      "sha256": "edd086b69b066f2106354a77c7ba208b890b392d5f395b762af13fb4d1537b3c"
+    },
+    {
+      "path": "captures/2026-10-19T175000Z-codex-j1-refined-flux-26b4e18a/fine_flux_run.py",
+      "sha256": "3f63f9b51ba666c0a7dd58018dba5b7e7cfaf4147c3e06326c9341a3f9f42be9"
+    },
+    {
+      "path": "captures/2026-10-19T175000Z-codex-j1-refined-flux-26b4e18a/WITNESS.json",
+      "sha256": "ce038b0e81f5f2566d87dba5f9f0d90dab74bb4b696a4ff0c238759da32e52a3"
+    },
+    {
+      "path": "captures/2026-10-19T175000Z-codex-j1-refined-flux-26b4e18a/RESULTS.json",
+      "sha256": "992b9ff35f6b643b96098c26998550bb0f1e961d4d3a6e34833cb7d51060d310"
+    }
+  ],
+  "domain": "a=1 J1; coordinates x,y,t=sqrt(2)z, metric diag(1,1,1/2); dmu=dV/(sqrt(2)/12), total volume2. Meanfree Neumann scalar wave.",
+  "port": "Fixed distributed F=10(x+y), force F f and readout integral F u dmu. gamma external dimensionless phenomenology, tau=ct/a.",
+  "continuum_gap": "lambda_1 >= pi\u00b2/2 >4 by convex Poincare; only lower bound4 used, never finite-mesh eigenvalue.",
+  "numerical_scope": "Four stored NumPy complex128 state and output witnesses, omega0,4,9/2,5 at gamma1/10. Fraction audit includes exact meanfree lift, exact reconstructed flux, algebraic residual, and recorded output evaluation error. No all-input IEEE theorem.",
+  "mesh_scope": "One conforming interior enrichment of16parent tets to64children by barycenter splits. Parent faces and maximum diameter persist. Not an h->0 family or proof of adaptive scalability.",
+  "flux_scope": "Parent projected divergence plus16 independent child patches; exact constraints imposed after floating free-variable proposals. No claim of global or exact optimality.",
+  "open": [
+    "meaningful resonance accuracy",
+    "h-reducing conforming mesh family and quantitative approximation constants",
+    "independent review",
+    "native UD action/source/units bridge",
+    "physical calibration or horn mechanism"
+  ],
+  "publication_base": "e22b5de568893e6e0fb2ebc182ec25dd7324c16e"
+}
