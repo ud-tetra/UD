@@ -1,0 +1,31 @@
+{
+  "artifact_type": "PRE_RESULT_STREAMED_COMPONENT_REVIEW_PLAN",
+  "status": "FROZEN_BEFORE_NEW_PRIMARY_RESULT_EXPOSURE",
+  "source_sha256": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c",
+  "source_bytes": 30941478,
+  "known_before_freeze": "Prior complete-content summary and PR244 contract/code/synthetic controls read. Historical waveform audited earlier; not a blinded independent preregistration. New primary output not opened before freeze.",
+  "review": "Separate compensated Python mean/RMS, scipy FFT summaries, direct selected cosine/sine coefficients, sorted-list median/bisect interpolation, exact metadata/hash/group partition checks. No constructor code imports.",
+  "direct_selection": "Endpoint frequency labels21000 and41000 \u00d7 channels1,2,10, both fixed tapers; bins1,Nyquist,computed own peak and valid nearest neighbors. Recipe fixed before output exposure; not a revised extraction or model selection.",
+  "tolerances": {
+    "voltage_abs": 1e-12,
+    "power_abs": 1e-11,
+    "centroid_label_Hz_abs": 1e-06,
+    "dominant_bin_label_exact": true,
+    "model_abs": "4\u00d7 feature tolerance",
+    "direct_DFT_normalized_complex_abs": 1e-10
+  },
+  "tolerance_scope": "Engineering consistency only, not rigorous floating enclosure or acquisition uncertainty. Any failure is reported/preserved; no threshold retuning.",
+  "meaningful_controls": "Prior contract checker26+5 and own15 synthetic tests already exist; this task adds real-source independent recomputation rather than repeating mirror tests.",
+  "split": "Whole matched10channel metadata groups;100distinct labels sorted; modulo5 training0/1/2,validation3,test4. Not iid repeats.",
+  "physical_HOLD": [
+    "gain/timing/skew/anti-alias/calibration",
+    "calibrated model comparison",
+    "Gauss significance",
+    "native62observer",
+    "UD state energy/correspondence"
+  ],
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "raw_download_by_reviewer": false,
+  "new_fits": false
+}

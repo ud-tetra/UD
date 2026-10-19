@@ -1,0 +1,21 @@
+{
+  "status": "APPEND_ONLY_REPLAY_OUTPUT_GUARD_HARDENING",
+  "found_by": "Separate same-team prospective phase protocol review identified a parallel nearest-capture-root guard gap; root inspected analogous new component replay",
+  "reason": "Original new-directory/no-overwrite guard protected its package subtree only, allowing a supplied sibling output inside a parent immutable capture. No such write occurred.",
+  "preserved": [
+    "replay.py",
+    "REPLAY_FREEZE.json",
+    "REPLAY_RECEIPT.json"
+  ],
+  "current_entrypoint": "replay_v2.py",
+  "change": "Protect nearest ancestor containing MANIFEST.json, or standalone package when no such ancestor exists. Scientific checker, input identity, contract, partitions, features, models and result hash unchanged.",
+  "classification": "Post-known-outcome engineering safety addition, no scientific or physical promotion",
+  "planned_controls": [
+    "insidepackage_refused",
+    "insidecapture_sibling_refused",
+    "captureancestor_refused",
+    "external_new_allowed"
+  ],
+  "planned_v2_raw_replays": 1,
+  "physical_promotion": 0
+}

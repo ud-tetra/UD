@@ -1,0 +1,72 @@
+{
+  "artifact_type": "SAME_TEAM_COMPONENT_STREAM_REPLAY_RECEIPT",
+  "status": "PASS_DESCRIPTIVE_NUMERICAL_CONSISTENCY_PHYSICAL_HOLD",
+  "pre_result_freeze": {
+    "path": "component-execution-review-20261019/PRE_RESULT_FREEZE.json",
+    "bytes": 562,
+    "sha256": "28e1a10ce46d5b62718d040fbf52145adfde3ec5a970009bfa3092620089a75b"
+  },
+  "result": {
+    "path": "component-execution-review-20261019/REVIEW_RESULT.json",
+    "bytes": 12004,
+    "sha256": "3dc04026737722203c96894d3ce6fbdfdacc9ecc4992ce772c03456dcc8c80d0"
+  },
+  "primary_result": {
+    "path": "component-raw-execution-20261019/COMPONENT_RESULT.json",
+    "bytes": 940207,
+    "sha256": "5eb74f78fa2eace3c71f1970821d2f58e4b7c33ba871495e2e97261d8af71875"
+  },
+  "parent_primary_execution_freeze_sha256": "4bd068fb8abb934ec71ee3bcd86b7a1acfd0ae020a90d606b5db2c8e92a7c19d",
+  "reviewer_invocations": 1,
+  "reviewer_elapsed_seconds": 21.859758590999263,
+  "return_code": 0,
+  "stdout": {
+    "path": "component-execution-review-20261019/review.stdout.log",
+    "bytes": 251,
+    "sha256": "d9cb25186a5e3c384eebcc2a485dedacd8996121b01fec100620ed11526ac899"
+  },
+  "stderr": {
+    "path": "component-execution-review-20261019/review.stderr.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "command": [
+    "python",
+    "component-execution-review-20261019/review_stream.py",
+    "--raw",
+    "/tmp/ud-pinned-circuit-7966700a.gz",
+    "--result",
+    "component-raw-execution-20261019/COMPONENT_RESULT.json",
+    "--result-sha256",
+    "5eb74f78fa2eace3c71f1970821d2f58e4b7c33ba871495e2e97261d8af71875",
+    "--output",
+    "component-execution-review-20261019/REVIEW_RESULT.json"
+  ],
+  "source_sha256": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c",
+  "source_bytes": 30941478,
+  "source_acquisition_by_parent": "Parent reports immutable author commit265b6671dde799d7c73f32247fa3ee93ae70e0f2 Git blob2dc5ace1c7d79b01bb0aba96577861a9eeae6acc; reviewer independently hashed exactly decoded local gzip, did not download or execute author code.",
+  "chronology": "Review plan and complete code frozen before new result exposure. Checker fully recomputed raw features before opening parent result JSON. No mismatch, retuning or second execution. Historical source summaries known previously; not blinded independent preregistration.",
+  "raw_identity_before_and_after": true,
+  "parent_result_identity_before_and_after": true,
+  "prospective_source_bytes_unchanged": true,
+  "records_recomputed": 1000,
+  "groups": 100,
+  "features_and_model_scalar_checks": 13600,
+  "direct_selected_DFT_coefficients": 60,
+  "numerical_limits": "Compensated Python reductions and separate list/bisect baselines. SciPy and NumPy may share FFT backend ancestry; fixed direct scalar cosine/sine sums check only selected coefficients. Tolerances are engineering comparisons, not outward enclosures or calibrated uncertainty.",
+  "physical_HOLD": [
+    "timing/voltage/anti-alias calibration",
+    "physical circuit model comparison",
+    "Gauss significance",
+    "native62channel/600cell observer admission",
+    "UD state energy/correspondence"
+  ],
+  "actual_published_records_recomputed": 1000,
+  "new_experiments": 0,
+  "new_fits_or_tuning": 0,
+  "reviewer_downloads": 0,
+  "new_keys_or_signatures": 0,
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "completed_utc": "2026-10-19T21:18:40.859746+00:00"
+}

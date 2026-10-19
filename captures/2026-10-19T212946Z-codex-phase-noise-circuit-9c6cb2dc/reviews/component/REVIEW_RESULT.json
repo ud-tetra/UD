@@ -1,0 +1,422 @@
+{
+  "artifact_type": "SAME_TEAM_STREAMED_COMPONENT_EXECUTION_REVIEW",
+  "status": "PASS_DESCRIPTIVE_NUMERICAL_CONSISTENCY_PHYSICAL_HOLD",
+  "raw": {
+    "bytes": 30941478,
+    "sha256": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c"
+  },
+  "primary_result": {
+    "bytes": 940207,
+    "sha256": "5eb74f78fa2eace3c71f1970821d2f58e4b7c33ba871495e2e97261d8af71875"
+  },
+  "rows": 1000,
+  "groups": 100,
+  "records_per_channel": 100,
+  "split_counts": {
+    "train": 60,
+    "validation": 20,
+    "test": 20
+  },
+  "crop_N": 16184,
+  "own_feature_and_model_scalar_comparisons": 13600,
+  "maximum_absolute_differences": {
+    "record.DC": 6.938893903907228e-18,
+    "record.AC_RMS": 1.1102230246251565e-16,
+    "record.rect_positive_power": 1.6653345369377348e-16,
+    "record.rect_dominant_Hz": 0.0,
+    "record.rect_centroid_Hz": 5.820766091346741e-11,
+    "record.hann_positive_power": 2.220446049250313e-16,
+    "record.hann_dominant_Hz": 0.0,
+    "record.hann_centroid_Hz": 1.1641532182693481e-10,
+    "record.sensitivity_hann_minus_rect_dominant_Hz": 0.0,
+    "record.sensitivity_hann_minus_rect_centroid_Hz": 1.1641532182693481e-10,
+    "model.DC.median_MAE": 2.3852447794681098e-18,
+    "model.DC.median_max_abs": 6.938893903907228e-18,
+    "model.DC.linear_MAE": 7.589415207398531e-19,
+    "model.DC.linear_max_abs": 6.938893903907228e-18,
+    "model.DC.linear_minus_median_MAE": 2.0599841277224584e-18,
+    "paired.DC": 1.3877787807814457e-17,
+    "model.AC_RMS.median_MAE": 2.5153490401663703e-17,
+    "model.AC_RMS.median_max_abs": 5.551115123125783e-17,
+    "model.AC_RMS.linear_MAE": 1.5612511283791264e-17,
+    "model.AC_RMS.linear_max_abs": 1.1102230246251565e-16,
+    "model.AC_RMS.linear_minus_median_MAE": 2.5153490401663703e-17,
+    "paired.AC_RMS": 1.1102230246251565e-16,
+    "model.rect_dominant_Hz.median_MAE": 0.0,
+    "model.rect_dominant_Hz.median_max_abs": 0.0,
+    "model.rect_dominant_Hz.linear_MAE": 0.0,
+    "model.rect_dominant_Hz.linear_max_abs": 0.0,
+    "model.rect_dominant_Hz.linear_minus_median_MAE": 0.0,
+    "paired.rect_dominant_Hz": 0.0,
+    "model.rect_centroid_Hz.median_MAE": 2.255973186038318e-11,
+    "model.rect_centroid_Hz.median_max_abs": 5.820766091346741e-11,
+    "model.rect_centroid_Hz.linear_MAE": 1.1823431123048067e-11,
+    "model.rect_centroid_Hz.linear_max_abs": 1.1641532182693481e-10,
+    "model.rect_centroid_Hz.linear_minus_median_MAE": 2.1827872842550278e-11,
+    "paired.rect_centroid_Hz": 1.1641532182693481e-10
+  },
+  "selected_direct_DFT_rows": [
+    {
+      "frequency_label": "21000.000000",
+      "channel": 1,
+      "checks": [
+        {
+          "taper": "rect",
+          "bin": 1,
+          "normalized_complex_delta": 6.166758107064834e-19
+        },
+        {
+          "taper": "rect",
+          "bin": 256,
+          "normalized_complex_delta": 3.183086239548375e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 257,
+          "normalized_complex_delta": 1.023772872421423e-14
+        },
+        {
+          "taper": "rect",
+          "bin": 258,
+          "normalized_complex_delta": 5.86597729192951e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 8092,
+          "normalized_complex_delta": 5.42273593984125e-16
+        },
+        {
+          "taper": "hann",
+          "bin": 1,
+          "normalized_complex_delta": 5.160840239464307e-19
+        },
+        {
+          "taper": "hann",
+          "bin": 256,
+          "normalized_complex_delta": 3.0391503162986718e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 257,
+          "normalized_complex_delta": 8.605253040086699e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 258,
+          "normalized_complex_delta": 8.134323920465693e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 8092,
+          "normalized_complex_delta": 6.613332187609561e-16
+        }
+      ]
+    },
+    {
+      "frequency_label": "21000.000000",
+      "channel": 2,
+      "checks": [
+        {
+          "taper": "rect",
+          "bin": 1,
+          "normalized_complex_delta": 7.114588021515243e-19
+        },
+        {
+          "taper": "rect",
+          "bin": 460,
+          "normalized_complex_delta": 9.225581700434191e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 461,
+          "normalized_complex_delta": 1.0796200614689454e-14
+        },
+        {
+          "taper": "rect",
+          "bin": 462,
+          "normalized_complex_delta": 1.5894954796759128e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 8092,
+          "normalized_complex_delta": 1.103069039045183e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 1,
+          "normalized_complex_delta": 4.369047345771503e-19
+        },
+        {
+          "taper": "hann",
+          "bin": 460,
+          "normalized_complex_delta": 7.91700690423077e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 461,
+          "normalized_complex_delta": 1.2870424683122386e-14
+        },
+        {
+          "taper": "hann",
+          "bin": 462,
+          "normalized_complex_delta": 8.688326560374172e-16
+        },
+        {
+          "taper": "hann",
+          "bin": 8092,
+          "normalized_complex_delta": 1.9862894302047625e-16
+        }
+      ]
+    },
+    {
+      "frequency_label": "41000.000000",
+      "channel": 1,
+      "checks": [
+        {
+          "taper": "rect",
+          "bin": 1,
+          "normalized_complex_delta": 4.188536572689093e-19
+        },
+        {
+          "taper": "rect",
+          "bin": 256,
+          "normalized_complex_delta": 2.9554994630711413e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 257,
+          "normalized_complex_delta": 9.85651420899944e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 258,
+          "normalized_complex_delta": 6.331008832708337e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 8092,
+          "normalized_complex_delta": 3.7984525571144926e-16
+        },
+        {
+          "taper": "hann",
+          "bin": 1,
+          "normalized_complex_delta": 5.842605941538016e-19
+        },
+        {
+          "taper": "hann",
+          "bin": 256,
+          "normalized_complex_delta": 2.890032798221983e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 257,
+          "normalized_complex_delta": 8.485326454836954e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 258,
+          "normalized_complex_delta": 8.415998466018627e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 8092,
+          "normalized_complex_delta": 6.259633455944055e-16
+        }
+      ]
+    },
+    {
+      "frequency_label": "41000.000000",
+      "channel": 2,
+      "checks": [
+        {
+          "taper": "rect",
+          "bin": 1,
+          "normalized_complex_delta": 4.525523280793116e-19
+        },
+        {
+          "taper": "rect",
+          "bin": 460,
+          "normalized_complex_delta": 8.62770705184506e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 461,
+          "normalized_complex_delta": 1.1427936390810287e-14
+        },
+        {
+          "taper": "rect",
+          "bin": 462,
+          "normalized_complex_delta": 1.3108068434477776e-15
+        },
+        {
+          "taper": "rect",
+          "bin": 8092,
+          "normalized_complex_delta": 4.1800303708051787e-16
+        },
+        {
+          "taper": "hann",
+          "bin": 1,
+          "normalized_complex_delta": 6.512991241373405e-19
+        },
+        {
+          "taper": "hann",
+          "bin": 460,
+          "normalized_complex_delta": 7.751508892460624e-15
+        },
+        {
+          "taper": "hann",
+          "bin": 461,
+          "normalized_complex_delta": 1.3416084342981474e-14
+        },
+        {
+          "taper": "hann",
+          "bin": 462,
+          "normalized_complex_delta": 9.294787512647585e-16
+        },
+        {
+          "taper": "hann",
+          "bin": 8092,
+          "normalized_complex_delta": 2.327923656392032e-16
+        }
+      ]
+    },
+    {
+      "frequency_label": "21000.000000",
+      "channel": 10,
+      "checks": [
+        {
+          "taper": "rect",
+          "bin": 1,
+          "normalized_complex_delta": 2.7440015438090866e-20
+        },
+        {
+          "taper": "rect",
+          "bin": 265,
+          "normalized_complex_delta": 4.146218339869943e-18
+        },
+        {
+          "taper": "rect",
+          "bin": 266,
+          "normalized_complex_delta": 1.798828532490796e-17
+        },
+        {
+          "taper": "rect",
+          "bin": 267,
+          "normalized_complex_delta": 6.245060568467557e-18
+        },
+        {
+          "taper": "rect",
+          "bin": 8092,
+          "normalized_complex_delta": 1.6689006753968008e-18
+        },
+        {
+          "taper": "hann",
+          "bin": 1,
+          "normalized_complex_delta": 7.921494885949017e-21
+        },
+        {
+          "taper": "hann",
+          "bin": 265,
+          "normalized_complex_delta": 4.316742304273148e-18
+        },
+        {
+          "taper": "hann",
+          "bin": 266,
+          "normalized_complex_delta": 1.5824537786490618e-17
+        },
+        {
+          "taper": "hann",
+          "bin": 267,
+          "normalized_complex_delta": 1.3798289113430042e-17
+        },
+        {
+          "taper": "hann",
+          "bin": 8092,
+          "normalized_complex_delta": 1.1977556621838834e-18
+        }
+      ]
+    },
+    {
+      "frequency_label": "41000.000000",
+      "channel": 10,
+      "checks": [
+        {
+          "taper": "rect",
+          "bin": 1,
+          "normalized_complex_delta": 6.135773982321486e-20
+        },
+        {
+          "taper": "rect",
+          "bin": 265,
+          "normalized_complex_delta": 5.0663996432490666e-18
+        },
+        {
+          "taper": "rect",
+          "bin": 266,
+          "normalized_complex_delta": 1.7136372026844785e-17
+        },
+        {
+          "taper": "rect",
+          "bin": 267,
+          "normalized_complex_delta": 2.9769887609223487e-18
+        },
+        {
+          "taper": "rect",
+          "bin": 8092,
+          "normalized_complex_delta": 4.63828357190986e-18
+        },
+        {
+          "taper": "hann",
+          "bin": 1,
+          "normalized_complex_delta": 3.1685979543796066e-20
+        },
+        {
+          "taper": "hann",
+          "bin": 265,
+          "normalized_complex_delta": 5.275739382261345e-18
+        },
+        {
+          "taper": "hann",
+          "bin": 266,
+          "normalized_complex_delta": 1.426960068053723e-17
+        },
+        {
+          "taper": "hann",
+          "bin": 267,
+          "normalized_complex_delta": 1.1309719960078255e-17
+        },
+        {
+          "taper": "hann",
+          "bin": 8092,
+          "normalized_complex_delta": 2.1072777380630023e-17
+        }
+      ]
+    }
+  ],
+  "independence_scope": "No constructor imports; Python compensated mean/RMS and list/bisect models. SciPy FFT may share algorithm/backend ancestry with NumPy; direct selected cosine/sine sums strengthen limited coefficient checks, not interval proof. Same-team review is not external review.",
+  "numerical_tolerances": {
+    "voltage": 1e-12,
+    "power": 1e-11,
+    "frequency": 1e-06,
+    "direct_normalized_complex": 1e-10
+  },
+  "numeric_tolerance_scope": "Frozen engineering consistency thresholds, not outward rounding enclosures or instrument uncertainty",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "elapsed_seconds": 21.859758590999263,
+  "calibration": "HOLD",
+  "physical_model_test": "HOLD",
+  "gauss_significance": "HOLD",
+  "native62_channel_admission": "HOLD",
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "new_fits": 0,
+  "source_downloads_by_reviewer": 0,
+  "pre_result_freeze": {
+    "bytes": 562,
+    "sha256": "28e1a10ce46d5b62718d040fbf52145adfde3ec5a970009bfa3092620089a75b"
+  }
+}

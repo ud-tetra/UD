@@ -1,0 +1,19 @@
+# Same-team adversarial prefreeze review: prospective phase protocol
+
+**PASS for the static prospective contract.** Development — no registry entry. External review pending. Physical Promotion = 0.
+
+The review reads the recipes, builder, source index/provenance, contract, theory, future execution rules and portable static revalidator. No source code was imported for execution, and no carrier/profile/raw data or estimator/SVD/eigenvalue/inverse/alignment calculation was performed.
+
+The two exact new preparation matrices satisfy all2,738 integer orthogonality equalities and preserve preparation parity. Independently recovering the relative transform and computing its displacement Gram matrix gives diagonal entries0 or4D and zero off-diagonal entries, so the exact squared operator distance is4/D with D=2^44+1. It is strictly below2^-42 and hence below the existing PR233 radius squared2^-40. Both matrices are distinct from every prior family anchor. These are new points in the existing neighborhood, not replacements or redefinitions of old anchors.
+
+The one-rounded-new-nominal convention is correct: arbitrary-precision integer products precede division by odd D, then one nearest-even rounding precedes int64 conversion. Maximum nominal rounding error is at most(D−1)/(2D) raw quanta, strictly below one half quantum. Encoded noise is measured relative to that rounded nominal, has only one possible nonzero coordinate per62-vector, and has integer magnitude at most1127. The earlier family proof already charges the single nominal rounding, so it is not incorrectly counted again as noise or claimed to be an old-anchor raw-ball difference.
+
+The fixed ramp/carrier/chirp recipes are deterministic prospective hypotheses. Their source-clock labels and spatial selectors are frozen independently of future outcomes. A sign carrier contains harmonics; no pure sinusoidal or phase-failure conclusion is assumed. Fixed512-bit directed sign certification, declared sin(0) sign and global dataHOLD on uncertainty avoid guessed signs or precision escalation. No temporal carrier/profile table was evaluated during this review.
+
+All37 SHA selectors and four exact nearest-even half-tie cases were checked independently. The source target, numerical-quality caps, projection NULL input, estimator hash and family certificate are pinned to repository artifacts. The half-source-chord threshold is an identity/bijection radius only; it does not supply a2^-39 calibration error guarantee, SI identification or a uniform phase-accuracy theorem.
+
+Future execution requires all four complete raw/nominal hashes, coordinate differences, vector norms, integer/projection range checks and exact binary64 representability to pass and be frozen together before any fit. Any data failure means zero fits globally. Applicable outputs retain the learned order, separate phase/frame/Gram/normal verdicts, all numerical HOLDs, and at most one fit per case. Optional exact-T scoring has its own unchanged predicates. The operational runner must itself be frozen before future record generation; this protocol is not a claim that those future records or outcomes already exist.
+
+One source-preservation issue was found before final freeze: protecting only the script subdirectory would permit a replay output in a sibling directory inside its archived parent capture. The portable revalidator now protects the nearest ancestor containing MANIFEST.json as the entire capture root. Five independent pure-path scenarios validate the intended refusal/allowance boundary. The adjustment changes no scientific recipe, source, gate or contract value.
+
+Review receipt: REVIEW_RECEIPT.json. All resulting conclusions are static mathematical/provenance checks. Future empirical/floating outcomes and external non-constructor promotion review remain open.
