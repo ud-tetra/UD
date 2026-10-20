@@ -1,0 +1,105 @@
+{
+  "name": "J1 joined two-input frequency/damping rectangle v0.1",
+  "classification": "DERIVED / EXACT CONDITIONAL IEEE BINARY64 RN",
+  "source_dependencies": [
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/CONTRACT.json",
+      "size_bytes": 7227,
+      "sha256": "95bfa2edb7988a9d224bd6cef3ca7727ee7d84acc47c0747a6d5365f34d3e446"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/MANIFEST.json",
+      "size_bytes": 4500,
+      "sha256": "cbe45ce394f9757b4380ffb5743bc7c4ba57b7b3c5dd8621b944bbb03421ffd0"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/REPLAY.log",
+      "size_bytes": 2666,
+      "sha256": "ff6dad7f4aeabd9bfe95f0225709c24cbe898a7d6d12f04a58c0bb455a95a14c"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/UPPER_RESULTS.json",
+      "size_bytes": 8312,
+      "sha256": "f2101b0f0f24dfa2e636b13c26f7c232ead06831fe5fa64bb830a683a044e8c0"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/CONTRACT.json",
+      "size_bytes": 8305,
+      "sha256": "e0ab66325c73542fc3de9cde451fe68dda5fd41ece0a74c9886fd0e1a5b27e8e"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/JOINED_RESULTS.json",
+      "size_bytes": 5786,
+      "sha256": "708fba3f2e9829b608671c6eef716b5f9e5c9b7d93317ebaaf727ef959a3c1c7"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/MANIFEST.json",
+      "size_bytes": 7310,
+      "sha256": "abdcbfee701e9967c060b14550b4e2b0fadc90b2b04294c31c68ee2d818c7480"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/REPLAY.log",
+      "size_bytes": 3583,
+      "sha256": "26b6f9fe441f3331b9d33f4ec68fa62b2a3ddc37e53e75d07dd64a702ea011cf"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/UPPER_RESULTS.json",
+      "size_bytes": 8375,
+      "sha256": "54c61014509cbf227d7adeba8950538c81bfe61a96ae4674447709966f82f57e"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/rounding.py",
+      "size_bytes": 846,
+      "sha256": "fd63e7c1f40c19557bbda26d6b3b7e7663396e5e52374cf1bd0085a7b905395c"
+    }
+  ],
+  "previous_capture": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a",
+  "omega_interval": [
+    "8983/2000",
+    "36193/8000"
+  ],
+  "gamma_interval": [
+    "1/10",
+    "201/2000"
+  ],
+  "leaf_halfwidth": "17/2000",
+  "selector": "original iff exact represented omega <=577/128; neighbor otherwise; identical gamma input passed unchanged",
+  "frozen_state_centers": {
+    "original": [
+      "9/2",
+      "1/10"
+    ],
+    "neighbor": [
+      "289/64",
+      "1/10"
+    ]
+  },
+  "residual_theorem": "||r_z||Vprime <= Rc + CP*|z-zc|*||vc||L2, Rc=sqrt(d2)+sqrt(nu2), CP<=1/2. Corrected J family Jz=Jc-(z-zc)*integral vc^2; |Hz-Jz|<=sqrt(1+(omega/(2gamma))^2)*||r_z||Vprime^2. Valid for arbitrary exact meanfree frozen trial vc; no exact Galerkin assumption.",
+  "rectangle_proof": "For omega in [wc-rho,wc+rho], gamma in [gc,gmax], gc=1/10>0: |omega^2-wc^2|<=rho*(2wc+rho); |gamma*omega-gc*wc|<=gmax*(wc+rho)-gc*wc. Both nonnegative maxima occur at upper corner, so delta_z squared bound is their squared sum with factor 4 on imaginary part. Kappa upper uses omega upper and gamma lower.",
+  "IEEE_model": "RN ties-to-even binary64 +,-,* per 16 AST nodes; no contraction/FMA. Uniform error includes all seven constant quantizations, gamma0=1/10 in particular, input values exact represented floats, additive 2^-1075 underflow term; overflow excluded. Constructor oracle trace checks supplement uniform proof, not platform-wide formal verification.",
+  "parameter_semantics": "Runtime gamma denotes exact represented binary64 value. float(0.1) is slightly greater than rational 1/10; it is not asserted to be exactly old fixed gamma=1/10. Mathematical rectangle includes exact lower edge; input word census contains only represented values inside it. Prior one-input exact-fixed-gamma evaluator and evidence unchanged.",
+  "target_complex_absolute_error": "1/10",
+  "scope": "Reuse two already certified frozen P2 states and flux residual upper budgets. No new state solve or new flux fit. New two-input native evaluator has its own all-input rounding proof. Same externally declared scalar-wave benchmark, not native UD identification.",
+  "input_document_provenance": [
+    {
+      "filename": "20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "role": "Source data; not a native derivation of the benchmark scalar-wave action/damping"
+    },
+    {
+      "filename": "21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4",
+      "role": "Source data; not a native derivation of the benchmark scalar-wave action/damping"
+    }
+  ],
+  "governance_amendment_status": "Proposal, not enacted by citation",
+  "lane": "Development \u2014 no registry entry",
+  "registry_entry": null,
+  "scientific_status": "OPEN",
+  "independent_review": false,
+  "physical_promotion": 0,
+  "supersedes": [],
+  "missing_not_read": [
+    "Gap2_FINAL_Finite_Genesis.png"
+  ]
+}
