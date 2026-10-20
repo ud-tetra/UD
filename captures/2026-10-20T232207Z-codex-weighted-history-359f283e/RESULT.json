@@ -1,0 +1,98 @@
+{
+  "augmented_space_dimension": 444,
+  "checks": {
+    "dual_graph_connected": 600,
+    "exact_annihilator_entries": 18000,
+    "lower_nonzero_minors": [
+      {
+        "case": "nominal",
+        "nonzero_minor_determinant": 103,
+        "prime": 1009,
+        "rank_lower": 390
+      },
+      {
+        "case": "weighted",
+        "nonzero_minor_determinant": 66,
+        "prime": 1009,
+        "rank_lower": 443
+      },
+      {
+        "case": "augmented_nominal",
+        "nonzero_minor_determinant": 1005,
+        "prime": 1009,
+        "rank_lower": 444
+      }
+    ],
+    "pairwise_coprime_factor_checks": 435,
+    "rational_membership_entries": 1590000,
+    "source_norm_bounds": [
+      {
+        "col_abs_sum": "2",
+        "grade": 1,
+        "norm_squared_upper": "24",
+        "row_abs_sum": "12"
+      },
+      {
+        "col_abs_sum": "3",
+        "grade": 2,
+        "norm_squared_upper": "15",
+        "row_abs_sum": "5"
+      },
+      {
+        "col_abs_sum": "6",
+        "grade": 3,
+        "norm_squared_upper": "15",
+        "row_abs_sum": "5/2"
+      }
+    ]
+  },
+  "common_old_new_kernel_dimension": 640,
+  "conditioning": {
+    "full_domain_condition": "INFINITE",
+    "positive_condition_upper": "<2^10394665",
+    "positive_sigma_lower": ">2^-10394665",
+    "practical_2029_gate": "HOLD_NOT_CERTIFIED",
+    "type": "DERIVED_WORST_CASE_ANALYTIC_NOT_NUMERICAL_SVD"
+  },
+  "epsilon": "1/2",
+  "inherited_nominal_full_rank": 1893,
+  "net_observable_gain": 106,
+  "new_observation_rank_restricted_to_old_kernel": 107,
+  "nominal_top_rank": 390,
+  "old_kernel_contained_in_new": false,
+  "orbit": [
+    0,
+    9,
+    227,
+    432,
+    447,
+    582,
+    538,
+    347,
+    332,
+    141
+  ],
+  "sampling": {
+    "M": 4096,
+    "h": "1/2",
+    "kernel": 641,
+    "nonaliasing": "phase diameter<5<2pi",
+    "normalization": "1/64",
+    "rank": 1999
+  },
+  "scope": {
+    "SVD_calls": 0,
+    "estimator_calls": 0,
+    "external_promotion_review": "PENDING",
+    "full_Hankel_allocations": 0,
+    "new_acquisitions": 0,
+    "nominal_full_rank_and_channel_separation": "INHERITED_PRIOR_EXACT_RESULTS",
+    "physical_promotion": 0,
+    "physical_weight_source": "NOT_SUPPLIED"
+  },
+  "status": "PASS_EXACT_WEIGHTED_HISTORY_AND_FINITE_SAMPLE_RANK",
+  "weighted_full_kernel": 641,
+  "weighted_full_rank": 1999,
+  "weighted_sector_ranks": "NOT_COMPUTED",
+  "weighted_top_rank": 443
+}

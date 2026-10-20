@@ -1,0 +1,54 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "model": "epsilon1/2 C10-orbit whole-column weights; fixed unit-coordinate observer/preparations",
+  "claims": [
+    {
+      "id": "WR1",
+      "type": "EXACT_CONDITIONAL",
+      "statement": "Top cyclic ranks390 nominal /443 weighted, augmented invariant space444.",
+      "evidence": [
+        "UPPER_WITNESSES.zip exact rational memberships",
+        "LOWER_WITNESSES.json nonzero prime1009 minors",
+        "compute.py"
+      ]
+    },
+    {
+      "id": "WR2",
+      "type": "DERIVED_CONDITIONAL",
+      "statement": "Full history rank1999/kernel641, netgain106; old/new kernelintersection640 and oldkernel restricted observationrank107.",
+      "dependencies": [
+        "WR1",
+        "inherited nominal1893 and PR303 downward-closed channel separation",
+        "THEOREM.md"
+      ]
+    },
+    {
+      "id": "WS1",
+      "type": "DERIVED_CONDITIONAL",
+      "statement": "Frozen4096 half-step normalized sample map has rank1999/kernel641 without constructing full Hankel.",
+      "dependencies": [
+        "source normbound24",
+        "nonaliasing and finite Vandermonde",
+        "WR2"
+      ]
+    },
+    {
+      "id": "WC1",
+      "type": "DERIVED_WORST_CASE_ANALYTIC",
+      "statement": "On641kernel orthogonal quotient, sigma_min>2^-10394665 and kappa<2^10394665; full-domain condition infinite. Practical2029 gate NOT_CERTIFIED/HOLD.",
+      "dependencies": [
+        "integer observable minimal polynomial and discriminant",
+        "integer jet Gram pseudodeterminant",
+        "THEOREM.md section5"
+      ]
+    }
+  ],
+  "uncomputed": [
+    "weighted sector ranks",
+    "practically useful whole-quotient conditioning",
+    "new floating estimator accuracy",
+    "physical weight law/acquisition"
+  ],
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
