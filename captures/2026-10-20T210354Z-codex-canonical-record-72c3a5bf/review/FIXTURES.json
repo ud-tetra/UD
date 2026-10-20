@@ -1,0 +1,573 @@
+{
+  "cases": [
+    {
+      "bits": "1",
+      "case": "base_C",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "4f8b7a2d84c006de21dba6878bbad2ab10693fb2a38d45179cb0af133564c436",
+      "expected_matches": [
+        "A"
+      ],
+      "expected_relation": "LISTED_FINGERPRINT",
+      "expected_removed": 1,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/base_C.npy"
+    },
+    {
+      "bits": "1",
+      "case": "base_Fortran",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "4f8b7a2d84c006de21dba6878bbad2ab10693fb2a38d45179cb0af133564c436",
+      "expected_matches": [
+        "A"
+      ],
+      "expected_relation": "LISTED_FINGERPRINT",
+      "expected_removed": 1,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/base_Fortran.npy"
+    },
+    {
+      "bits": "2",
+      "case": "scaled_alias",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "4f8b7a2d84c006de21dba6878bbad2ab10693fb2a38d45179cb0af133564c436",
+      "expected_matches": [
+        "A"
+      ],
+      "expected_relation": "LISTED_FINGERPRINT",
+      "expected_removed": 2,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/scaled_alias.npy"
+    },
+    {
+      "bits": "0",
+      "case": "reduced_alias",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "4f8b7a2d84c006de21dba6878bbad2ab10693fb2a38d45179cb0af133564c436",
+      "expected_matches": [
+        "A"
+      ],
+      "expected_relation": "LISTED_FINGERPRINT",
+      "expected_removed": 0,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/reduced_alias.npy"
+    },
+    {
+      "bits": "2",
+      "case": "denominator_only_change",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 1,
+      "expected_fingerprint": "aa1c26fd7bf840bc5e89a0b21ee0e1801d635cb4e4559beb0fcba524477ed703",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 1,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/denominator_only_change.npy"
+    },
+    {
+      "bits": "0",
+      "case": "integer_even_saturation",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "550648d1d619a9c7aa7b1fd14a939aee2e4aa1c1a80c2fb138d9e1a140d5b104",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 0,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/integer_even_saturation.npy"
+    },
+    {
+      "bits": "1",
+      "case": "one_entry_change",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 1,
+      "expected_fingerprint": "533654d5dadb2101484a09b3a544147d28135e9c98c7ccdc703b2e17e27b47d9",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 0,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/one_entry_change.npy"
+    },
+    {
+      "bits": "1",
+      "case": "negative_matrix",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "bba4442eac92c21a218d9028abee7dccc0c4ccee4cf98c85b697b903ce21a31a",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 1,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/negative_matrix.npy"
+    },
+    {
+      "bits": "1",
+      "case": "different_shape",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "72288cbdc49196973e891ec1992587814aa1eb6413c364603091bffc187070ff",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 1,
+      "expected_shape": [
+        1,
+        4
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/different_shape.npy"
+    },
+    {
+      "bits": "0",
+      "case": "zero_b0",
+      "expected": "VALID",
+      "expected_all_zero": true,
+      "expected_bbar": 0,
+      "expected_fingerprint": "8a79ce6781309f0d8b155cf1f82072c46c643cffdb88101f46df507ac7972db3",
+      "expected_matches": [
+        "zero"
+      ],
+      "expected_relation": "LISTED_FINGERPRINT",
+      "expected_removed": 0,
+      "expected_shape": [
+        1,
+        3
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/zero_b0.npy"
+    },
+    {
+      "bits": "256",
+      "case": "zero_b256",
+      "expected": "VALID",
+      "expected_all_zero": true,
+      "expected_bbar": 0,
+      "expected_fingerprint": "8a79ce6781309f0d8b155cf1f82072c46c643cffdb88101f46df507ac7972db3",
+      "expected_matches": [
+        "zero"
+      ],
+      "expected_relation": "LISTED_FINGERPRINT",
+      "expected_removed": 256,
+      "expected_shape": [
+        1,
+        3
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/zero_b256.npy"
+    },
+    {
+      "bits": "0",
+      "case": "zero_other_shape",
+      "expected": "VALID",
+      "expected_all_zero": true,
+      "expected_bbar": 0,
+      "expected_fingerprint": "adc058442c07d35da8645a872ebd922c944a29fb70018f53ea09a8819958f0c0",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 0,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/zero_other_shape.npy"
+    },
+    {
+      "bits": "63",
+      "case": "INT64_MIN_b63",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "575376678e39020e833aa48b35dbba64d2ba1fbd261a1335fd37b695ee41b5e7",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 63,
+      "expected_shape": [
+        1,
+        1
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/INT64_MIN_b63.npy"
+    },
+    {
+      "bits": "0",
+      "case": "minus_one_b0",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "575376678e39020e833aa48b35dbba64d2ba1fbd261a1335fd37b695ee41b5e7",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 0,
+      "expected_shape": [
+        1,
+        1
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/minus_one_b0.npy"
+    },
+    {
+      "bits": "256",
+      "case": "INT64_MIN_b256",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 193,
+      "expected_fingerprint": "578a90efb4b18bb394ef5cc1784b33d1d3b5b9969af1ba554575805c364bd86d",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 63,
+      "expected_shape": [
+        1,
+        1
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/INT64_MIN_b256.npy"
+    },
+    {
+      "bits": "64",
+      "case": "INT64_MIN_b64",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 1,
+      "expected_fingerprint": "cdd6fbb5ec38f6b91b2f0ce8c687c90154b582e863dde411508212398bcf3f7d",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 63,
+      "expected_shape": [
+        1,
+        1
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/INT64_MIN_b64.npy"
+    },
+    {
+      "bits": "1",
+      "case": "minus_one_b1",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 1,
+      "expected_fingerprint": "cdd6fbb5ec38f6b91b2f0ce8c687c90154b582e863dde411508212398bcf3f7d",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 0,
+      "expected_shape": [
+        1,
+        1
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/minus_one_b1.npy"
+    },
+    {
+      "bits": "64",
+      "case": "INT64_MIN_and_odd",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 64,
+      "expected_fingerprint": "93246b175fde5d2eeed9d390c778220d6426603087fcac8a66148c9bd4cefb44",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 0,
+      "expected_shape": [
+        1,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/INT64_MIN_and_odd.npy"
+    },
+    {
+      "bits": "4",
+      "case": "negative_even_pair",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 2,
+      "expected_fingerprint": "7487e692ba5000a170afa99592c024727568c5e45a38ee05e7ffa2adf2d66741",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 2,
+      "expected_shape": [
+        1,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/negative_even_pair.npy"
+    },
+    {
+      "bits": "4",
+      "case": "positive_even_pair",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 2,
+      "expected_fingerprint": "63cd24f3a876aa0e222e02ed68af369931d7ba7f3d6ad679b03a15f241f641e9",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 2,
+      "expected_shape": [
+        1,
+        2
+      ],
+      "known": "fixtures/known.json",
+      "record": "fixtures/positive_even_pair.npy"
+    },
+    {
+      "bits": "1",
+      "case": "duplicate_fingerprint_allowed",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "4f8b7a2d84c006de21dba6878bbad2ab10693fb2a38d45179cb0af133564c436",
+      "expected_matches": [
+        "A",
+        "A_replica"
+      ],
+      "expected_relation": "LISTED_FINGERPRINT",
+      "expected_removed": 1,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known_duplicate_fingerprint.json",
+      "record": "fixtures/duplicate_fingerprint_allowed.npy"
+    },
+    {
+      "bits": "1",
+      "case": "empty_catalog_unlisted",
+      "expected": "VALID",
+      "expected_all_zero": false,
+      "expected_bbar": 0,
+      "expected_fingerprint": "4f8b7a2d84c006de21dba6878bbad2ab10693fb2a38d45179cb0af133564c436",
+      "expected_matches": [],
+      "expected_relation": "UNLISTED_FINGERPRINT",
+      "expected_removed": 1,
+      "expected_shape": [
+        2,
+        2
+      ],
+      "known": "fixtures/known_empty.json",
+      "record": "fixtures/empty_catalog_unlisted.npy"
+    },
+    {
+      "bits": "1",
+      "case": "float_dtype",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/float_dtype.npy"
+    },
+    {
+      "bits": "1",
+      "case": "int32_dtype",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/int32_dtype.npy"
+    },
+    {
+      "bits": "1",
+      "case": "object_dtype",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/object_dtype.npy"
+    },
+    {
+      "bits": "1",
+      "case": "vector_not_matrix",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/vector_not_matrix.npy"
+    },
+    {
+      "bits": "1",
+      "case": "empty_dimension",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/empty_dimension.npy"
+    },
+    {
+      "bits": "-1",
+      "case": "negative_bits",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/negative_bits.npy"
+    },
+    {
+      "bits": "257",
+      "case": "above_profile_bits",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/above_profile_bits.npy"
+    },
+    {
+      "bits": "True",
+      "case": "invalid_bits_syntax",
+      "expected": "ARGUMENT_ERROR",
+      "known": "fixtures/known.json",
+      "record": "fixtures/invalid_bits_syntax.npy"
+    },
+    {
+      "bits": "1",
+      "case": "catalog_duplicate_ID",
+      "expected": "INTAKE",
+      "known": "fixtures/catalog_duplicate_ID.json",
+      "record": "fixtures/catalog_duplicate_ID.npy"
+    },
+    {
+      "bits": "1",
+      "case": "catalog_bad_digest",
+      "expected": "INTAKE",
+      "known": "fixtures/catalog_bad_digest.json",
+      "record": "fixtures/catalog_bad_digest.npy"
+    },
+    {
+      "bits": "1",
+      "case": "catalog_bad_ID",
+      "expected": "INTAKE",
+      "known": "fixtures/catalog_bad_ID.json",
+      "record": "fixtures/catalog_bad_ID.npy"
+    },
+    {
+      "bits": "1",
+      "case": "catalog_unknown_claim",
+      "expected": "INTAKE",
+      "known": "fixtures/catalog_unknown_claim.json",
+      "record": "fixtures/catalog_unknown_claim.npy"
+    },
+    {
+      "bits": "1",
+      "case": "catalog_empty_coverage",
+      "expected": "INTAKE",
+      "known": "fixtures/catalog_empty_coverage.json",
+      "record": "fixtures/catalog_empty_coverage.npy"
+    },
+    {
+      "bits": "1",
+      "case": "catalog_empty_source",
+      "expected": "INTAKE",
+      "known": "fixtures/catalog_empty_source.json",
+      "record": "fixtures/catalog_empty_source.npy"
+    },
+    {
+      "bits": "1",
+      "case": "catalog_duplicate_JSON",
+      "expected": "INTAKE",
+      "known": "fixtures/catalog_duplicate_JSON.json",
+      "record": "fixtures/catalog_duplicate_JSON.npy"
+    },
+    {
+      "bits": "1",
+      "case": "oversize_rows",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/oversize_rows.npy"
+    },
+    {
+      "bits": "1",
+      "case": "oversize_columns",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/oversize_columns.npy"
+    },
+    {
+      "bits": "1",
+      "case": "truncated_payload",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/truncated_payload.npy"
+    },
+    {
+      "bits": "1",
+      "case": "symlink_record",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/link.npy"
+    },
+    {
+      "bits": "1",
+      "case": "symlink_record_ancestor",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/linkdir/N.npy"
+    },
+    {
+      "bits": "1",
+      "case": "symlink_catalog",
+      "expected": "INTAKE",
+      "known": "fixtures/known_link.json",
+      "record": "fixtures/symlink_catalog.npy"
+    },
+    {
+      "bits": "1",
+      "case": "existing_output_sentinel",
+      "expected": "OUTPUT_REJECTION",
+      "known": "fixtures/known.json",
+      "record": "fixtures/existing_output_sentinel.npy"
+    },
+    {
+      "bits": "1",
+      "case": "output_is_record_file",
+      "expected": "OUTPUT_REJECTION",
+      "known": "fixtures/known.json",
+      "record": "fixtures/output_is_record_file.npy"
+    },
+    {
+      "bits": "1",
+      "case": "output_is_input_directory",
+      "expected": "OUTPUT_REJECTION",
+      "known": "fixtures/known.json",
+      "record": "fixtures/output_is_input_directory.npy"
+    },
+    {
+      "bits": "1",
+      "case": "missing_record",
+      "expected": "INTAKE",
+      "known": "fixtures/known.json",
+      "record": "fixtures/absent.npy"
+    }
+  ],
+  "count": 47,
+  "large_record_copies": 0,
+  "new_acquisitions": 0,
+  "physical_promotion": 0,
+  "status": "BUILT_CONTROLLED_IDENTITY_FIXTURES"
+}

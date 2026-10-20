@@ -1,0 +1,81 @@
+{
+  "artifact_type": "SAME_TEAM_CANONICAL_DYADIC_IDENTITY_REVIEW",
+  "capture_exclusions": [
+    "fixtures/",
+    "executions/",
+    "all large input NPY matrices and root-created aliases",
+    "symlinks",
+    "Python bytecode caches"
+  ],
+  "corrections": {
+    "mathematical_retractions": 0,
+    "source_changes_requested": 0
+  },
+  "evidence": {
+    "ACTUAL_RESULTS.json": "2f70944ae02ea5fc8c4d82e423f07227e2c762d4793e0e4aa6345f3f6b464dea",
+    "NONIDENTIFIABILITY.md": "95e8dd9856bd2702c5729f504544050c35e65b69b2242b862e7b1f01a546bda7",
+    "ORACLE_CONTROLS.json": "22d4960be534c700446ec2e55d2566b520be03a9a1866bf9539f8463a6ffae22",
+    "PROOF.md": "601dc1750d44a0bd1ab03b2e1c43c8cc5cb7cd8d791450e153feb286e652f7a0",
+    "REVIEW_SUMMARY.md": "80a5d8c14d943776ee8f18c43c02a36dc0785b4fc408235d8249878a2f82ea62",
+    "SUITE_RESULTS.json": "8246ebb3090bc9026432665fe60f037282ce0c0fa11eec8988a434529753b91d"
+  },
+  "finite_counts": {
+    "cli_cases": 47,
+    "cli_checks": 383,
+    "negative_cli_cases": 25,
+    "oracle_controls": 170,
+    "supplied_checks": 194,
+    "supplied_listed": 6,
+    "supplied_screens": 8,
+    "supplied_synthetic_unlisted": 2,
+    "valid_cli_screens": 22
+  },
+  "implementation_version": "1.0",
+  "mathematical_conclusions": {
+    "canonical_bytes_equal_iff_same_shape_and_exact_rational_entries": true,
+    "conditional_acquisition_nonidentifiability": true,
+    "no_hash_injectivity_claim": true,
+    "zero_and_int64_min_and_integer_saturation_covered": true
+  },
+  "observed_source_or_mathematical_blockers": [],
+  "reviewer": "same-team independent mathematical and finite intake reviewer; not external promotion authority",
+  "scope": {
+    "actual_independent_replicate_existence_claimed": false,
+    "all_input_backend_conformance": "OPEN",
+    "catalog_match_does_not_merge_physical_evidence": true,
+    "development_unit_basis_receipts_not_executable_schema": true,
+    "endpoint_hashes_not_immutable_snapshot": true,
+    "external_promotion_review": "PENDING",
+    "fresh_preparation": "NOT_ESTABLISHED",
+    "independent_acquisition": "NOT_ESTABLISHED",
+    "large_matrix_copies_written": 0,
+    "listed_not_proof_of_replay": true,
+    "new_acquisitions": 0,
+    "new_estimator_calls": 0,
+    "numerical_spectral_certificate": "NOT_EVALUATED",
+    "physical_promotion": 0,
+    "physical_semantics_not_encoded": [
+      "units",
+      "basis",
+      "channel meaning",
+      "projection definition",
+      "raw acquisition",
+      "preparation",
+      "hidden state",
+      "history"
+    ],
+    "provenance_status": "HOLD_PROVENANCE_NOT_ESTABLISHED",
+    "registry_entry": "NONE_DEVELOPMENT",
+    "stable_inputs_during_run_assumed": true,
+    "supplied_projected_numeric_matrices_only": true,
+    "unlisted_not_proof_of_independence_or_freshness": true,
+    "whole_program_and_concurrent_mutation_guarantee": "OPEN"
+  },
+  "source_pins": {
+    "c21_identity/KNOWN_RECORDS.json": "2bb52d1155eb7b252399c4940148839dbc33885a1e1e79f10c15947f2e479df6",
+    "c21_identity/PROTOCOL.json": "3531adfefd2a593a1118b52bbf7993ee5091fb32d15e3e46484e744f027ac1c0",
+    "c21_identity/SEAL.json": "c81a9b5488db6b0b29b4c3d4c730f48cd19ede141d39581acae8cfd438b60a82",
+    "c21_identity/screen_record.py": "ef40cc9008f099edbbabb8bfdc69b6ec2a1bb2841e2282264025e25f273b53d4"
+  },
+  "status": "PASS_EXACT_PROOF_AND_FINITE_SCOPED_CHECKS"
+}
