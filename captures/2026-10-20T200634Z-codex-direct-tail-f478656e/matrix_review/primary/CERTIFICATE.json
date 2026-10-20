@@ -1,0 +1,715 @@
+{
+  "status": "COMPLETE_SAME_TEAM_DETERMINISTIC_TAIL_MATRIX_AUDIT",
+  "rows": [
+    {
+      "case": "boundary_pair_block",
+      "status": "PASS_ALL_ENTRY_TAIL_E_H_CRT_AND_SCALAR_ENCLOSURES",
+      "record_sha256": "1cc53470e0edcab5ac884eff8f37766d30bb6da3beb4a06a91e96d321a908f11",
+      "witness_compressed_sha256": "5ba6049c068ee60bd5dbce5ed9960e3c4ddf54a2824102b863e7cf5c87e0054d",
+      "canonical_N_payload_sha256": "94ab098c7b9488fc2c3777f6a7282caf142cc71ffbf01bcaf003e7e2e57fdf10",
+      "source_SVD_META_sha256": "c5c5aab0ae349112250ae81aba129f9d7c5725b294566b07603422b54c40dc27",
+      "independent_tail_denominator_bits": 66,
+      "E_difference_bound": "558664758128846283089643446516839252134400",
+      "H_difference_bound": "9125001070685999040896203591285489446812702056785053407129989886198999918879744",
+      "common_difference_bound": "9125001070685999040896203591285489446812702056785053407129989886198999918879744",
+      "difference_bound_terms": {
+        "N_max_abs": "2504646576089754",
+        "V_integer_max_abs": "41514184801642135552",
+        "saved_E_max_abs": "11981497159090794268101120",
+        "saved_H_max_abs": "796847646264701606991092687897355052407214351360",
+        "rows_N": 8191,
+        "columns_N": 321,
+        "identity_integer_scale": "5444517870735015415413993718908291383296"
+      },
+      "E_difference_bound_summands": [
+        "553220240258111255692732293707136692649984",
+        "5444517870735015415413993718908291383296",
+        "11981497159090794268101120"
+      ],
+      "H_difference_bound_summands": [
+        "9125001070685999040896203591284692599166437355178062314442092531146592704528384",
+        "796847646264701606991092687897355052407214351360"
+      ],
+      "CRT_product": "29641140550418408674168055667858947409055892761099477821500778698518065989259533",
+      "CRT_product_gt_twice_common_bound": true,
+      "all_prime_residue_checks": [
+        {
+          "prime": 16777213,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90353424440235024",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305560434859704304",
+          "modular_identity_scale": 995328,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "47ccdf565905e2939d36e6238417873fafd98a4e8a75a1571b5c1ade54adbcca",
+            "saved_residue_int64le_sha256": "47ccdf565905e2939d36e6238417873fafd98a4e8a75a1571b5c1ade54adbcca",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "65f51cdf0cabadb95dc164282aa81c5ae3678772cde48048bbe024938bf95c0e",
+            "saved_residue_int64le_sha256": "65f51cdf0cabadb95dc164282aa81c5ae3678772cde48048bbe024938bf95c0e",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777199,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90353273646716484",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305556587041291964",
+          "modular_identity_scale": 10823418,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "e05dc40f999fedc7fc4ed8f666983b4dd2e5c7339f74c2086b491f2b3e2c1eab",
+            "saved_residue_int64le_sha256": "e05dc40f999fedc7fc4ed8f666983b4dd2e5c7339f74c2086b491f2b3e2c1eab",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "487871841791e2e6793b6fd7e90dfb7fd8041377b7c9f4f5b2dae22ee810d38d",
+            "saved_residue_int64le_sha256": "487871841791e2e6793b6fd7e90dfb7fd8041377b7c9f4f5b2dae22ee810d38d",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777183,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90353101311420804",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305552189538466684",
+          "modular_identity_scale": 9363346,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "8c01a7a0db12c005161027eba39613282907c541245f97e5c4e5a4cd8e51267f",
+            "saved_residue_int64le_sha256": "8c01a7a0db12c005161027eba39613282907c541245f97e5c4e5a4cd8e51267f",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "574f654323eb69b96e4836dd337b26e9cc293e5e20cc40ebc76225175cf12bb9",
+            "saved_residue_int64le_sha256": "574f654323eb69b96e4836dd337b26e9cc293e5e20cc40ebc76225175cf12bb9",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777153,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352778183184384",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305543944231972864",
+          "modular_identity_scale": 16571146,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "069cc17e29e33c65149bbeee00453cfb7220d159dcbacb97f52085e324cb9432",
+            "saved_residue_int64le_sha256": "069cc17e29e33c65149bbeee00453cfb7220d159dcbacb97f52085e324cb9432",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "dc0681cb800a105d75476dd689f4976ebc4ed6d1196dee71cc92c1c2822cc0e2",
+            "saved_residue_int64le_sha256": "dc0681cb800a105d75476dd689f4976ebc4ed6d1196dee71cc92c1c2822cc0e2",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777141,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352648932051600",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305540646113503600",
+          "modular_identity_scale": 12367381,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "2773b26b3e4c68d8bbaa158c931fdbcb6cf694d34dbdfd6d2f6475ef68c3cf03",
+            "saved_residue_int64le_sha256": "2773b26b3e4c68d8bbaa158c931fdbcb6cf694d34dbdfd6d2f6475ef68c3cf03",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "8c5ef07018b8c93322e37ad8f7437c5bc908e563465061582aec549a1ca7303c",
+            "saved_residue_int64le_sha256": "8c5ef07018b8c93322e37ad8f7437c5bc908e563465061582aec549a1ca7303c",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777139,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352627390205124",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305540096427321404",
+          "modular_identity_scale": 147451,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "30f1b24ddcb9c5b8c8a2514b40d7afe2b31c8ee05e554c2a0ed9ba38f0a12cd7",
+            "saved_residue_int64le_sha256": "30f1b24ddcb9c5b8c8a2514b40d7afe2b31c8ee05e554c2a0ed9ba38f0a12cd7",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "dd7e95065cbee017de66db84807273e584c817237c298ae568d372c67402770c",
+            "saved_residue_int64le_sha256": "dd7e95065cbee017de66db84807273e584c817237c298ae568d372c67402770c",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777127,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352498139180196",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305536798311604316",
+          "modular_identity_scale": 16709750,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "f1a2d71611195bf72819becf888a8825bce76374f6d8463addcf05315dfe75d4",
+            "saved_residue_int64le_sha256": "f1a2d71611195bf72819becf888a8825bce76374f6d8463addcf05315dfe75d4",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "c8af033943c1a881e773122c6612e182252c286c2eb186778946038b82ff2250",
+            "saved_residue_int64le_sha256": "c8af033943c1a881e773122c6612e182252c286c2eb186778946038b82ff2250",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777121,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352433513702400",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305535149254630400",
+          "modular_identity_scale": 5267996,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "b3fc35ccc2645380b5db02ed89c4bb531cc2a7febed80d00c460026fdea163e4",
+            "saved_residue_int64le_sha256": "b3fc35ccc2645380b5db02ed89c4bb531cc2a7febed80d00c460026fdea163e4",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "e10abe159431ef430c47c64bb826b9b9d2d7afd6a8d2db30fd2d38ac02bb91ba",
+            "saved_residue_int64le_sha256": "e10abe159431ef430c47c64bb826b9b9d2d7afd6a8d2db30fd2d38ac02bb91ba",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777099,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352196553814884",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305529102717438364",
+          "modular_identity_scale": 11164665,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "90142422823f2c600c2d625153adec884cbed3fc4cc482f47e06992591957b3a",
+            "saved_residue_int64le_sha256": "90142422823f2c600c2d625153adec884cbed3fc4cc482f47e06992591957b3a",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "3c00764c70f749afbe792b90fc316752ce42d87ecde2d670ed0c1b3ec6b2d5e2",
+            "saved_residue_int64le_sha256": "3c00764c70f749afbe792b90fc316752ce42d87ecde2d670ed0c1b3ec6b2d5e2",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777049,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90351658009771584",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305515360616944064",
+          "modular_identity_scale": 3545198,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "4234700ed4824a88aba497b896cf9f72d421ed89ac22357fd44d3501e863a59e",
+            "saved_residue_int64le_sha256": "4234700ed4824a88aba497b896cf9f72d421ed89ac22357fd44d3501e863a59e",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "030f5b8e2a53211d10aae03287767d0be8a37a904f38d21363a4dfa45878424c",
+            "saved_residue_int64le_sha256": "030f5b8e2a53211d10aae03287767d0be8a37a904f38d21363a4dfa45878424c",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777027,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90351421050900996",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305509314105701116",
+          "modular_identity_scale": 3413756,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "cb7e6d22c31862a86b2c0246e18ac6411e5ca5d3a237dbfe8b3ebdd6cf58967b",
+            "saved_residue_int64le_sha256": "cb7e6d22c31862a86b2c0246e18ac6411e5ca5d3a237dbfe8b3ebdd6cf58967b",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "2640519701168320717f35cff1eabed60d63f803a85034edf499aa80442eaa13",
+            "saved_residue_int64le_sha256": "2640519701168320717f35cff1eabed60d63f803a85034edf499aa80442eaa13",
+            "first_mismatch": null
+          }
+        }
+      ],
+      "entries_per_matrix": 12544,
+      "proof": "Each integer E/H entry difference has absolute value<=its full bound<=common B and is divisible by every distinct prime. Product>2B implies exact equality of every entry.",
+      "scalars": {
+        "exact_V_gram_defect_F_squared": [
+          "12555598518028162430795671681490852585927408874372305",
+          "29642774844752946028434172162224104410437116074403984394101141506025761187823616"
+        ],
+        "exact_tail_output_gram_F_squared": [
+          "73429747752198135120856046989830575292099208613236035988141984511380797516929427424282989163537",
+          "3121748550315992231381597229793166305748598142664971150859156959625371738819765620120306103063491971159826931121406622895447975679288285306290176"
+        ],
+        "etaV_upper": [
+          "3942471068081444495621192609997815150023",
+          "191561942608236107294793378393788647952342390272950272"
+        ],
+        "tail_output_norm_upper": [
+          "600160970260069732627744865806518197580021",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "tail_sigma210_upper": [
+          "600160970260069732627744865806518197580021",
+          "1532495540865857318589802375594344214077859139662401992"
+        ],
+        "eta_squared_dominates_E_square": true,
+        "tail_norm_fourth_power_dominates_H_square": true,
+        "positive_rank_eta_below_one": true,
+        "sigma_times_one_minus_eta_dominates_tail_norm": true,
+        "scope": "Verified scalar enclosures; minimal180-bit wrappers and downstream theorem/prefix receipts reviewed separately"
+      }
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "status": "PASS_ALL_ENTRY_TAIL_E_H_CRT_AND_SCALAR_ENCLOSURES",
+      "record_sha256": "f6197f09efb5d1a1893d2fa6c8edd962276866a7f708a5847859d13b615f1fc3",
+      "witness_compressed_sha256": "3dee2f7519f8930b09020ec350b66a0efedb41d5ef337a8065fa14c2935dea2c",
+      "canonical_N_payload_sha256": "febd7fb82cf9648e05610ba836275c9f6feba621542c9b0f6b18032c24ea28dd",
+      "source_SVD_META_sha256": "cc65486754ed64294a11d4d88e6fce662d982314fb972e811681f4df5bf1fb32",
+      "independent_tail_denominator_bits": 65,
+      "E_difference_bound": "141316335033787444372782297170816337332736",
+      "H_difference_bound": "2308468323651610681126567414939005129614856921569196415937906050676707654064128",
+      "common_difference_bound": "2308468323651610681126567414939005129614856921569196415937906050676707654064128",
+      "difference_bound_terms": {
+        "N_max_abs": "2504646576089762",
+        "V_integer_max_abs": "20880553755301818368",
+        "saved_E_max_abs": "3460906978740758103607808",
+        "saved_H_max_abs": "16859047144030363460089460340888749675649390592",
+        "rows_N": 8191,
+        "columns_N": 321,
+        "identity_integer_scale": "1361129467683753853853498429727072845824"
+      },
+      "E_difference_bound_summands": [
+        "139955205566103687058021820000331160879104",
+        "1361129467683753853853498429727072845824",
+        "3460906978740758103607808"
+      ],
+      "H_difference_bound_summands": [
+        "2308468323651610681126567414938988270567712891205736326477565161927032004673536",
+        "16859047144030363460089460340888749675649390592"
+      ],
+      "CRT_product": "29641140550418408674168055667858947409055892761099477821500778698518065989259533",
+      "CRT_product_gt_twice_common_bound": true,
+      "all_prime_residue_checks": [
+        {
+          "prime": 16777213,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90353424440235024",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305560434859704304",
+          "modular_identity_scale": 248832,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "08947ba3716a6a29ad1572ae17dec247661aa985562cf5d079d84375a4bb4f69",
+            "saved_residue_int64le_sha256": "08947ba3716a6a29ad1572ae17dec247661aa985562cf5d079d84375a4bb4f69",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "d38e2cbfcf6263934fa4f303ea135c4359c4aedc29a1190696b2c51bf503f2cf",
+            "saved_residue_int64le_sha256": "d38e2cbfcf6263934fa4f303ea135c4359c4aedc29a1190696b2c51bf503f2cf",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777199,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90353273646716484",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305556587041291964",
+          "modular_identity_scale": 11094454,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "dfe41ff6754df7c3bbfd28826d385a47080c78d8d371dff814704f9b0dd120f0",
+            "saved_residue_int64le_sha256": "dfe41ff6754df7c3bbfd28826d385a47080c78d8d371dff814704f9b0dd120f0",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "0b2a8de41845fce295b143741f334a3d9b0c12192d0b9cc564b7ae3f4e1ef66c",
+            "saved_residue_int64le_sha256": "0b2a8de41845fce295b143741f334a3d9b0c12192d0b9cc564b7ae3f4e1ef66c",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777183,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90353101311420804",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305552189538466684",
+          "modular_identity_scale": 10729428,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "4e3a0898a4eaa4abed276c86c9c0cbdc4f1acf47eb798890d3ee6b72333af38c",
+            "saved_residue_int64le_sha256": "4e3a0898a4eaa4abed276c86c9c0cbdc4f1acf47eb798890d3ee6b72333af38c",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "70755a2865421b40aca5764a3e7aa514cdb12a7f52e4b2bebceab1a496dc2649",
+            "saved_residue_int64le_sha256": "70755a2865421b40aca5764a3e7aa514cdb12a7f52e4b2bebceab1a496dc2649",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777153,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352778183184384",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305543944231972864",
+          "modular_identity_scale": 12531363,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "d161351758315d5ab26faad4fd725c78282caca37c6161c9ef1738acb7f64ba1",
+            "saved_residue_int64le_sha256": "d161351758315d5ab26faad4fd725c78282caca37c6161c9ef1738acb7f64ba1",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "e040b8f6bdb08d77c22b6c8cf6849c93746ab367968e4e408b6e5f9209a24a03",
+            "saved_residue_int64le_sha256": "e040b8f6bdb08d77c22b6c8cf6849c93746ab367968e4e408b6e5f9209a24a03",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777141,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352648932051600",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305540646113503600",
+          "modular_identity_scale": 15674701,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "dda4d0fda3475e8ed4250407f5ed81ce9f08f1d4106f94f78e51fb8d807b9bc6",
+            "saved_residue_int64le_sha256": "dda4d0fda3475e8ed4250407f5ed81ce9f08f1d4106f94f78e51fb8d807b9bc6",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "e3e66786531f32159fff28845dc384aaded17fd6ff69a3dbd83b07b8cf2d72e1",
+            "saved_residue_int64le_sha256": "e3e66786531f32159fff28845dc384aaded17fd6ff69a3dbd83b07b8cf2d72e1",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777139,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352627390205124",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305540096427321404",
+          "modular_identity_scale": 12619717,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "946333b9f0a291dc099e210b9f649ac0f63e4003dc9f57d71d6c58b0847a098d",
+            "saved_residue_int64le_sha256": "946333b9f0a291dc099e210b9f649ac0f63e4003dc9f57d71d6c58b0847a098d",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "eecf922e313f1b413eed2c578c7a5484c7b305a024ce654615bafd774ed1952d",
+            "saved_residue_int64le_sha256": "eecf922e313f1b413eed2c578c7a5484c7b305a024ce654615bafd774ed1952d",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777127,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352498139180196",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305536798311604316",
+          "modular_identity_scale": 12566001,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "45ffd80974374b4a75c95c537f2f71a344ab93d76788db1b7135c8bae1ea8edc",
+            "saved_residue_int64le_sha256": "45ffd80974374b4a75c95c537f2f71a344ab93d76788db1b7135c8bae1ea8edc",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "50124025d9071a3f575c752b4959fd17abdf89566b9a346363c01464de2829a9",
+            "saved_residue_int64le_sha256": "50124025d9071a3f575c752b4959fd17abdf89566b9a346363c01464de2829a9",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777121,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352433513702400",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305535149254630400",
+          "modular_identity_scale": 1316999,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "d17ee383d3dcb44e079dc312fbb8cd73f85f4f697aec4320474dc72a573f8d08",
+            "saved_residue_int64le_sha256": "d17ee383d3dcb44e079dc312fbb8cd73f85f4f697aec4320474dc72a573f8d08",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "d12a48183e23fbae68df954a61096510d2bb06b6ee95b3ce267c313387abfbda",
+            "saved_residue_int64le_sha256": "d12a48183e23fbae68df954a61096510d2bb06b6ee95b3ce267c313387abfbda",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777099,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90352196553814884",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305529102717438364",
+          "modular_identity_scale": 6985441,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "95598d7f60d63e1a12880a50463c7dfee48a3793c587ff8c51e6a47b40f631f7",
+            "saved_residue_int64le_sha256": "95598d7f60d63e1a12880a50463c7dfee48a3793c587ff8c51e6a47b40f631f7",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "377dac9606b464b0c607e92d87b781176bdc2d71f4106085b3e4ee8fa91308e4",
+            "saved_residue_int64le_sha256": "377dac9606b464b0c607e92d87b781176bdc2d71f4106085b3e4ee8fa91308e4",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777049,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90351658009771584",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305515360616944064",
+          "modular_identity_scale": 9274824,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "516b3911069459f1c2f63d015ef2799bd09526f6aec87ef530f27dee8e2bffef",
+            "saved_residue_int64le_sha256": "516b3911069459f1c2f63d015ef2799bd09526f6aec87ef530f27dee8e2bffef",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "9201f2920ce26fe7557e4274a4287e1897ca15edee8332440ecf6fe690fa7023",
+            "saved_residue_int64le_sha256": "9201f2920ce26fe7557e4274a4287e1897ca15edee8332440ecf6fe690fa7023",
+            "first_mismatch": null
+          }
+        },
+        {
+          "prime": 16777027,
+          "prime_proved_by_trial_division": true,
+          "int64_limit_exclusive": "9223372036854775808",
+          "N_V_and_V_Gram_dot_inner": 321,
+          "N_V_and_V_Gram_dot_max": "90351421050900996",
+          "W_Gram_dot_inner": 8191,
+          "W_Gram_dot_max": "2305509314105701116",
+          "modular_identity_scale": 853439,
+          "E": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "ea77f5194be2236213734ec25c1bc1d8b651b85b65f763ecbd5da86d42741a75",
+            "saved_residue_int64le_sha256": "ea77f5194be2236213734ec25c1bc1d8b651b85b65f763ecbd5da86d42741a75",
+            "first_mismatch": null
+          },
+          "H": {
+            "entry_count": 12544,
+            "matching_entries": 12544,
+            "all_entries_match": true,
+            "computed_residue_int64le_sha256": "40bb43cd2cd9d60f8d7abb93de780a8e9adc1850e1695dcdd408935c7bc6993c",
+            "saved_residue_int64le_sha256": "40bb43cd2cd9d60f8d7abb93de780a8e9adc1850e1695dcdd408935c7bc6993c",
+            "first_mismatch": null
+          }
+        }
+      ],
+      "entries_per_matrix": 12544,
+      "proof": "Each integer E/H entry difference has absolute value<=its full bound<=common B and is divisible by every distinct prime. Product>2B implies exact equality of every entry.",
+      "scalars": {
+        "exact_V_gram_defect_F_squared": [
+          "449224960065589893388988928012507062160612454316497",
+          "926336713898529563388567880069503262826159877325124512315660672063305037119488"
+        ],
+        "exact_tail_output_gram_F_squared": [
+          "206388240864188333826703842826479426388041993710047479234025672402483759234352342663174780751",
+          "48777321098687378615337456715518223527321845979140174232174327494146433419058837814379782860367062049372295798771978482741374619988879457910784"
+        ],
+        "etaV_upper": [
+          "33747897423829159537439017031542766544797",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "tail_output_norm_upper": [
+          "390855268781585856702132258413104879955395",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "tail_sigma210_upper": [
+          "390855268781585856702132258413104879955395",
+          "1532495540865855110460923197990771744601707579417057379"
+        ],
+        "eta_squared_dominates_E_square": true,
+        "tail_norm_fourth_power_dominates_H_square": true,
+        "positive_rank_eta_below_one": true,
+        "sigma_times_one_minus_eta_dominates_tail_norm": true,
+        "scope": "Verified scalar enclosures; minimal180-bit wrappers and downstream theorem/prefix receipts reviewed separately"
+      }
+    }
+  ],
+  "freeze_sha256": "a83553c64768a54b52b78f3cd8f139b72d0c316169c822044abf1dfefe1ac489",
+  "source_bindings_sha256": "f5502d3069d0b1073795981f501fd23df64ea3250bfdabc5fb79b3ea2aaa5b70",
+  "method": "Independent binary64 ratio encoding; all-entry bounded CRT with independent two-stage modular H composition",
+  "independent_raw_projection_claimed": false,
+  "N_scope": "Temporary N payload/dimensions hash-match accepted original projection; raw recovery/projection proof inherited",
+  "prefix_PR286_norm_proofs": "INHERITED_NOT_RECOMPUTED",
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "new_factor_or_matrix_copies": 0,
+  "same_team_review": true,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
