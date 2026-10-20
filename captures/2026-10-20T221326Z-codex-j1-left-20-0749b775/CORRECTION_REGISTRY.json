@@ -1,0 +1,51 @@
+{
+  "status": "MINOR_METADATA_CORRECTION",
+  "found_by": "construction",
+  "created_at_utc": "2026-10-20T22:20:01.350391+00:00",
+  "reason": "The initial new23-state scout retained all_twenty_two and twenty-two labels from its22-state parent; actual formula bounds looped over all23 bank entries.",
+  "initial_sources": [
+    "INITIAL_planner.py",
+    "INITIAL_audit.py",
+    "INITIAL_REPORT.md",
+    "INITIAL_replay.py"
+  ],
+  "preserved_initial_outputs": [
+    "COVER.json",
+    "PLACEMENT_RESULTS.json",
+    "AUDIT_RESULTS.json",
+    "SCALAR_GENERATION.log",
+    "SCALAR_REPLAY.log"
+  ],
+  "corrected_sources": [
+    "planner.py",
+    "audit.py",
+    "replay.py",
+    "correction_replay.py"
+  ],
+  "corrected_outputs": [
+    "PLACEMENT_RESULTS_v0_2.json",
+    "AUDIT_RESULTS_v0_2.json"
+  ],
+  "required_invariant": "Same23 states,all rational coordinates,per-state bounds,minimum bounds,selected point,cover and uniform radius; only labels and corresponding source/output hashes change.",
+  "scientific_claim_retracted": false,
+  "independent_review": false,
+  "physical_promotion": 0,
+  "equivalence_receipt": "CORRECTION_REPLAY_RESULTS.json",
+  "supersession": [
+    {
+      "old": "PLACEMENT_RESULTS.json",
+      "new": "PLACEMENT_RESULTS_v0_2.json",
+      "reason": "Count labels corrected; all numerical values unchanged."
+    },
+    {
+      "old": "AUDIT_RESULTS.json",
+      "new": "AUDIT_RESULTS_v0_2.json",
+      "reason": "Bindings follow corrected labels and source hashes; numerical audit unchanged."
+    },
+    {
+      "old": "NEXT_STEP_REASSESSMENT.json",
+      "new": "NEXT_STEP_REASSESSMENT_v0_2.json",
+      "reason": "Bind next-step rationale to corrected scout hash; selected action unchanged."
+    }
+  ]
+}
