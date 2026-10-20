@@ -1,0 +1,142 @@
+{
+  "artifact_type": "SAME_TEAM_FINAL_TAIL_MATRIX_REVIEW",
+  "status": "PASS_ALL_ENTRY_TAIL_E_H_CRT_AND_SCALAR_ENCLOSURES_BOTH_CASES",
+  "source_freeze_sha256": "a83553c64768a54b52b78f3cd8f139b72d0c316169c822044abf1dfefe1ac489",
+  "source_bindings_sha256": "f5502d3069d0b1073795981f501fd23df64ea3250bfdabc5fb79b3ea2aaa5b70",
+  "input_ready_receipt_sha256": "7423797321b6a8612a0fb09b71cc712aef4f6a6d3ad0241971bca4105148249e",
+  "audit_certificate_sha256": "b02afd0e421755f381c44bc08b90420babf2214607badc8815d2de500be04086",
+  "controls_sha256": "dc70df705873fd44680805a874a51911ab5e319eb49bdc8f81b6b8e961ccecd1",
+  "control_count": 23,
+  "rows": [
+    {
+      "case": "boundary_pair_block",
+      "entries_per_matrix": 12544,
+      "matrices": [
+        "tail_factor_Gram_defect_E",
+        "tail_output_Gram_H"
+      ],
+      "prime_count": 11,
+      "primes": [
+        16777213,
+        16777199,
+        16777183,
+        16777153,
+        16777141,
+        16777139,
+        16777127,
+        16777121,
+        16777099,
+        16777049,
+        16777027
+      ],
+      "E_difference_bound": "558664758128846283089643446516839252134400",
+      "H_difference_bound": "9125001070685999040896203591285489446812702056785053407129989886198999918879744",
+      "common_difference_bound": "9125001070685999040896203591285489446812702056785053407129989886198999918879744",
+      "CRT_product": "29641140550418408674168055667858947409055892761099477821500778698518065989259533",
+      "product_strictly_greater_than_2_common_B": true,
+      "all_entries_all_primes_match": true,
+      "scalars": {
+        "exact_V_gram_defect_F_squared": [
+          "12555598518028162430795671681490852585927408874372305",
+          "29642774844752946028434172162224104410437116074403984394101141506025761187823616"
+        ],
+        "exact_tail_output_gram_F_squared": [
+          "73429747752198135120856046989830575292099208613236035988141984511380797516929427424282989163537",
+          "3121748550315992231381597229793166305748598142664971150859156959625371738819765620120306103063491971159826931121406622895447975679288285306290176"
+        ],
+        "etaV_upper": [
+          "3942471068081444495621192609997815150023",
+          "191561942608236107294793378393788647952342390272950272"
+        ],
+        "tail_output_norm_upper": [
+          "600160970260069732627744865806518197580021",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "tail_sigma210_upper": [
+          "600160970260069732627744865806518197580021",
+          "1532495540865857318589802375594344214077859139662401992"
+        ],
+        "eta_squared_dominates_E_square": true,
+        "tail_norm_fourth_power_dominates_H_square": true,
+        "positive_rank_eta_below_one": true,
+        "sigma_times_one_minus_eta_dominates_tail_norm": true,
+        "scope": "Verified scalar enclosures; minimal180-bit wrappers and downstream theorem/prefix receipts reviewed separately"
+      }
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "entries_per_matrix": 12544,
+      "matrices": [
+        "tail_factor_Gram_defect_E",
+        "tail_output_Gram_H"
+      ],
+      "prime_count": 11,
+      "primes": [
+        16777213,
+        16777199,
+        16777183,
+        16777153,
+        16777141,
+        16777139,
+        16777127,
+        16777121,
+        16777099,
+        16777049,
+        16777027
+      ],
+      "E_difference_bound": "141316335033787444372782297170816337332736",
+      "H_difference_bound": "2308468323651610681126567414939005129614856921569196415937906050676707654064128",
+      "common_difference_bound": "2308468323651610681126567414939005129614856921569196415937906050676707654064128",
+      "CRT_product": "29641140550418408674168055667858947409055892761099477821500778698518065989259533",
+      "product_strictly_greater_than_2_common_B": true,
+      "all_entries_all_primes_match": true,
+      "scalars": {
+        "exact_V_gram_defect_F_squared": [
+          "449224960065589893388988928012507062160612454316497",
+          "926336713898529563388567880069503262826159877325124512315660672063305037119488"
+        ],
+        "exact_tail_output_gram_F_squared": [
+          "206388240864188333826703842826479426388041993710047479234025672402483759234352342663174780751",
+          "48777321098687378615337456715518223527321845979140174232174327494146433419058837814379782860367062049372295798771978482741374619988879457910784"
+        ],
+        "etaV_upper": [
+          "33747897423829159537439017031542766544797",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "tail_output_norm_upper": [
+          "390855268781585856702132258413104879955395",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "tail_sigma210_upper": [
+          "390855268781585856702132258413104879955395",
+          "1532495540865855110460923197990771744601707579417057379"
+        ],
+        "eta_squared_dominates_E_square": true,
+        "tail_norm_fourth_power_dominates_H_square": true,
+        "positive_rank_eta_below_one": true,
+        "sigma_times_one_minus_eta_dominates_tail_norm": true,
+        "scope": "Verified scalar enclosures; minimal180-bit wrappers and downstream theorem/prefix receipts reviewed separately"
+      }
+    }
+  ],
+  "total_exact_matrix_entries": 50176,
+  "total_modular_entry_comparisons": 551936,
+  "assumptions_and_scope": [
+    "Exact saved binary64 tail V columns210..321 independently decoded; accepted source SVD_META hashes freshly checked",
+    "N payload and dimensions match original accepted integer projection; independent raw/reconstruction/projection proof is not claimed",
+    "Full difference bounds BE=321maxVi\u00b2+2^(2bV)+maxSavedE and BH=8191(321maxNmaxVi)\u00b2+maxSavedH; no tiny residual assumption",
+    "CommonB=max(BE,BH), shortest nonempty descending trial-proved primeprefix below2^24; product>2B and all entries agree modulo every prime",
+    "NVi,ViGram andWGram modular integer dot products use nonnegative residues, inner321/8191 and full sums strictly below2^63",
+    "Exact E/H squared Frobenius norms checked; eta squared and r fourth power dominate them, eta<1, and sigma*(1-eta)>=r",
+    "Minimal180bit wrappers and downstream Courant-Fischer/prefix arguments reviewed separately; PR286 retained-prefix norm proofs inherited"
+  ],
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "new_factor_or_matrix_copies": 0,
+  "independent_raw_projection_claimed": false,
+  "prefix_PR286_norm_proofs": "INHERITED_NOT_RECOMPUTED",
+  "all_frozen_sources_unchanged": true,
+  "same_team_review": true,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
