@@ -1,0 +1,118 @@
+{
+  "status": "PASS_EXACT_PARTIAL_FACTOR_NONIMPLICATION_COUNTERMODELS",
+  "matrix": "Z=diag(10001/200,2,0)",
+  "U_columns": [
+    "e2",
+    "e1"
+  ],
+  "V_columns": [
+    "e2",
+    "(200/10001,0,9999/10001)"
+  ],
+  "S_diagonal": [
+    2,
+    1
+  ],
+  "Gram_defects": [
+    0,
+    0
+  ],
+  "singular_equation_residual": 0,
+  "partial_lower_ell": 1,
+  "partial_qth_overstatement_debit": 0,
+  "source_tail_upper": 0,
+  "cutoff": [
+    1,
+    2
+  ],
+  "actual_cutoff_rank": 2,
+  "actual_algebraic_rank": 2,
+  "restricted_condition": 2,
+  "actual_ambient_leading_condition": [
+    "10001",
+    "400"
+  ],
+  "family": "n>=4: c=2n/(n\u00b2+1), h=(n\u00b2\u22121)/(n\u00b2+1), M=1/c; same exact Gram/equation/S/ell/cutoff, ambient kappa2=(n\u00b2+1)/(4n)\u2192\u221e",
+  "controls": [
+    {
+      "id": "V_Gram_identity",
+      "pass": true
+    },
+    {
+      "id": "U_Gram_identity",
+      "pass": true
+    },
+    {
+      "id": "singular_equation_exact",
+      "pass": true
+    },
+    {
+      "id": "saved_sorted_S",
+      "pass": true
+    },
+    {
+      "id": "true_singulars_sorted",
+      "pass": true
+    },
+    {
+      "id": "positive_partial_lower_ell",
+      "pass": true
+    },
+    {
+      "id": "inherited_tail_zero_below_cutoff",
+      "pass": true
+    },
+    {
+      "id": "ambient_cutoff_rank2",
+      "pass": true
+    },
+    {
+      "id": "ambient_algebraic_rank2",
+      "pass": true
+    },
+    {
+      "id": "restricted_condition_exact2",
+      "pass": true
+    },
+    {
+      "id": "ambient_leading_condition_exceeds2",
+      "pass": true
+    },
+    {
+      "id": "qth_underestimate_despite_zero_debit",
+      "pass": true
+    },
+    {
+      "id": "indexed_leading_error_positive_despite_zero_debit",
+      "pass": true
+    },
+    {
+      "id": "rational_family_Gram_5",
+      "pass": true
+    },
+    {
+      "id": "rational_family_residual_5",
+      "pass": true
+    },
+    {
+      "id": "rational_family_Gram_20",
+      "pass": true
+    },
+    {
+      "id": "rational_family_residual_20",
+      "pass": true
+    },
+    {
+      "id": "rational_family_Gram_100",
+      "pass": true
+    },
+    {
+      "id": "rational_family_residual_100",
+      "pass": true
+    }
+  ],
+  "control_count": 19,
+  "scope": "Logical exact matrix family only; no actual saved record or implementation bug",
+  "new_fits": 0,
+  "physical_promotion": 0
+}
