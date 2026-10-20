@@ -1,0 +1,141 @@
+{
+  "version": "0.1",
+  "status": "PROPOSED_OPEN",
+  "physical_promotion": 0,
+  "lane": "development; no registry entry",
+  "apparatus_kind": "Actively controlled classical flux-charge simulator",
+  "not_observations": true,
+  "independent_review": "PENDING",
+  "execution": "NONE",
+  "architecture": [
+    "Calibrated canonical flux-charge pairs",
+    "Timestamped 24-coordinate acquisition",
+    "Sampled digital command evaluation",
+    "Held voltage/current commands",
+    "Identified first-order actuation",
+    "LC plant",
+    "Independent coupling/work/source and endpoint readout"
+  ],
+  "units": {
+    "model_time": "tau=t/t0",
+    "physical_t0": "S_action/E_energy seconds; actual calibrated interval OPEN",
+    "normalized_input_box": "[-1,1] per coordinate",
+    "normalized_output_range": "[-10,10] per actuator"
+  },
+  "design_bounds": {
+    "T": "1/400000",
+    "additional_latency": "1/400000",
+    "maximum_coordinate_sample_age": "1/200000",
+    "input_error": "1/1000000",
+    "complete_command_error": "1/100000",
+    "actuator_model_distortion": "1/100000",
+    "minimum_actuator_rate": "400000",
+    "initial_tracking_error": "1/1000",
+    "static_and_other_residual": "3/400",
+    "prehistory_speed": "81/10",
+    "actuator_range_magnitude": "10",
+    "proposed_input_and_output_bits": 22
+  },
+  "physical_requirements": {
+    "sampling_period_seconds": "<=t0/400000",
+    "additional_latency_seconds": "<=t0/400000",
+    "actuator_time_constant_seconds": "<=t0/400000",
+    "minimum_voltage_range": "+-10*Phi0_c/t0 volts",
+    "minimum_current_range": "+-10*Q0_c/t0 amperes",
+    "example_preload_seconds": ">=t0/40000",
+    "clock_uncertainty": "Use worst-case normalized bounds across the joint t0 calibration interval"
+  },
+  "startup": {
+    "status": "OPEN",
+    "zero_initial_actuator": true,
+    "hold_radius": "1/1000000",
+    "hold_history": "Every sample used in preload is within the same hold tube",
+    "preload_duration": "at least 10 time constants",
+    "required_release_records": [
+      "initial state error",
+      "actuator tracking error",
+      "prehistory speed",
+      "no unbudgeted switching kick",
+      "work exchanged by holding system"
+    ],
+    "conditional_tracking_upper": "4391/8000000"
+  },
+  "quantization": {
+    "model": "Ideal uniform midrise, no clipping",
+    "input_error_floor": "1/4194304",
+    "output_error_floor": "5/2097152",
+    "note": "22 nominal bits do not establish attainable rate, noise, linearity or effective resolution; all additional errors must fit remaining allowances"
+  },
+  "evidence_required": [
+    {
+      "kind": "port/component design",
+      "status": "OPEN",
+      "records": [
+        "C and L with units",
+        "readout loading",
+        "port gains and signs",
+        "Phi0 Q0 common-action mismatch",
+        "E0 and t0 interval"
+      ]
+    },
+    {
+      "kind": "actuator identification",
+      "status": "OPEN",
+      "records": [
+        "identified first-order model over domain",
+        "distortion envelope",
+        "cross-channel errors",
+        "latency and bandwidth",
+        "bidirectional saturation and slew limits"
+      ]
+    },
+    {
+      "kind": "timing",
+      "status": "OPEN",
+      "records": [
+        "raw sensing/computation/application timestamps",
+        "jitter and frame drop indicators",
+        "maximum true coordinate age",
+        "release-clock origin"
+      ]
+    },
+    {
+      "kind": "metrology",
+      "status": "OPEN",
+      "records": [
+        "input error decomposition",
+        "command computation and quantization error",
+        "independent endpoint reconstruction",
+        "independent coupling witnesses",
+        "work/source records"
+      ]
+    },
+    {
+      "kind": "calibration regularity",
+      "status": "OPEN",
+      "records": [
+        "node residuals with joint uncertainty",
+        "cover radius",
+        "separately justified derivative bounds",
+        "unmodeled remainder and drift"
+      ]
+    },
+    {
+      "kind": "non-constructor review",
+      "status": "OPEN",
+      "records": [
+        "attributable adversarial premise and proof review"
+      ]
+    }
+  ],
+  "hold_rules": [
+    "Missing or unsupported bounds",
+    "Outside identified actuator domain",
+    "Unbudgeted delay, ringing, saturation, slew or coupling",
+    "Cold startup with no tracking certificate",
+    "Computed coupling used as the sole coupling witness",
+    "Failure of any exact margin",
+    "Per-run confidence misrepresented as campaign coverage"
+  ],
+  "scope": "Short Gauss-discriminator prefix only; no full CD-1 campaign or SDW endpoint admission"
+}
