@@ -1,0 +1,88 @@
+{
+  "actual_evidence_received": false,
+  "artifact_type": "SEPARATE_SAME_TEAM_REQUEST_INVENTORY_AUDIT_NOT_EVIDENCE_CERTIFICATE",
+  "base_errors": [],
+  "exact_original_path_count": 128,
+  "external_review": "PENDING",
+  "interpretation": "Request inventory and null-status checks only. Controls are mutated metadata, not actual evidence or scientific estimator tests.",
+  "negative_inventory_controls": [
+    {
+      "diagnostics": [
+        "exact_ordered_128",
+        "unique_128_paths"
+      ],
+      "id": "missing_path",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "exact_ordered_128",
+        "unique_128_paths"
+      ],
+      "id": "duplicate_path",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "channel:request.calibration.amplitude_channels[0].applied_gain_V_per_nominal_V"
+      ],
+      "id": "wrong_channel",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "role_section:request.calibration.amplitude_channels[0].applied_gain_V_per_nominal_V",
+        "source_category_role:request.calibration.amplitude_channels[0].applied_gain_V_per_nominal_V"
+      ],
+      "id": "wrong_role",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "role_section:request.calibration.independently_accepted_calibration_authority"
+      ],
+      "id": "wrong_section",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "route:request.calibration.joint_error.deterministic_proof"
+      ],
+      "id": "both_proofs_required",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "no_actual_return:R01"
+      ],
+      "id": "premature_content_verification",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "blank_receipt:reviewer_identity"
+      ],
+      "id": "manufactured_review_identity",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "no_promotion"
+      ],
+      "id": "physical_promotion",
+      "rejected": true
+    },
+    {
+      "diagnostics": [
+        "combined_reference:request.physical_model_comparison.state_estimation_and_model_prediction_error_budget"
+      ],
+      "id": "missing_prediction_crossreference",
+      "rejected": true
+    }
+  ],
+  "passed": true,
+  "physical_promotion": 0,
+  "qualification_blockers_closed": 0,
+  "source_binding_count": 10,
+  "source_hash_failures": []
+}

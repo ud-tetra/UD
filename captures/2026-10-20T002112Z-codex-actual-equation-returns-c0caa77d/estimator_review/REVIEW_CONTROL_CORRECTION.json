@@ -1,0 +1,7 @@
+{
+  "status": "REVIEWER_IMPLEMENTATION_DEFECT_RETAINED_BEFORE_SAVED_OUTPUT_ACCESS",
+  "prior_freeze_sha256": "028186d5848ccfbd5ec27123c0e85d386d112379350d8c119301210917d40b19",
+  "first_control_failure": "AttributeError: fmpz_mat has no copy method, during synthetic Gram control; no saved-output audit or estimator fit executed by reviewer",
+  "correction": "Use fmpz_mat(G) copy constructor; all arithmetic/premises unchanged; original code/freeze preserved",
+  "physical_promotion": 0
+}
