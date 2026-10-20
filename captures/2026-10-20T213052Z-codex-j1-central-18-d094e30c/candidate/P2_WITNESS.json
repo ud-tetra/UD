@@ -1,0 +1,22 @@
+{
+  "omega": "590516269/131072000",
+  "gamma": "9/50",
+  "nodes_P2": 18673,
+  "topology_sha256": "28105ba91998721313f7eb066411c9c7932eb08c5eb94bc737a031b60d1427dd",
+  "state_payload_sha256": "a6abc1e382bb4565b08b8d9301ab9f789b9797849f6f8e58ffe3dfba801acd15",
+  "coefficient_format": "gzip of four n-word little-endian binary64 arrays: hi real,hi imag,low real,low imag; vertices then all sorted edges; sum words exactly and subtract exact weighted mean/2",
+  "reported_raw_hex": [
+    "-0x1.104f229897e8cp+2",
+    "-0x1.c096e5b6daff5p+0"
+  ],
+  "reported_corrected_hex": [
+    "-0x1.104f22989802cp+2",
+    "-0x1.c096e5b6db62dp+0"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "splu on full complex Neumann matrix; one exact-residual correction solve",
+    "scope": "Actual saved two-word state and actual floating output posterior audit, not an all-input IEEE guarantee."
+  }
+}
