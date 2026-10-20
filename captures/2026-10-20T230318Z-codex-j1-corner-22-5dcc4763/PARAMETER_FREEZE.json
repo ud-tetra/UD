@@ -1,0 +1,58 @@
+{
+  "status": "PARAMETERS_FROZEN_BEFORE_GENERATION",
+  "center": [
+    "8983/2000",
+    "11/50"
+  ],
+  "binary64_centers": {
+    "omega": {
+      "hex": "0x1.1f74bc6a7ef9ep+2",
+      "stored_minus_exact": "19/70368744177664000"
+    },
+    "gamma": {
+      "hex": "0x1.c28f5c28f5c29p-3",
+      "stored_minus_exact": "1/900719925474099200"
+    }
+  },
+  "frozen_at_utc": "2026-10-20T23:03:18.639837+00:00",
+  "base_commit": "8a712fe62418931b52ffcfeae70b068771cf4dcb",
+  "source_placement_capture": "captures/2026-10-20T224141Z-codex-j1-central-21-5dc2b542",
+  "source_placement_file": "PLACEMENT_RESULTS.json",
+  "source_placement_sha256": "d0a8b6634961414e837987a188ffbe01bc097574c93d76b5e836dce49670c67e",
+  "source_selected_formula_lower": "2273671550406870335148418893768424151567407204161100845742666158817109948142816996880276223049751628710272190550527668464832603530183240375231331903/16000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "mesh": "unchanged meanfree conforming P2,18673 nodal coefficients,one exact mean constraint,12288 tetrahedra",
+  "provisional_cover_goal": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/10",
+      "11/50"
+    ]
+  },
+  "finite_algorithm_budget": {
+    "max_depth": 30,
+    "max_leaves": 4096
+  },
+  "placement_probe_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "11/50",
+      "23/100"
+    ]
+  },
+  "placement_grid": {
+    "omega_samples": 129,
+    "gamma_subdivisions": 8,
+    "exclude_lower_gamma_row": true,
+    "expected_probes": 1032
+  },
+  "candidate_only": "No new state/flux or uniform coverage before exact posterior and floating audits. Finite-grid placement is not global optimum or actual-error lower.",
+  "quantization_note": "Both center constants are nonbinary. Nearest frequency is above the exact lower boundary and equals the first accepted frequency word;nearest damping is above the exact upper boundary by one word beyond the last accepted damping input. Both errors must be included.",
+  "independent_review": false,
+  "physical_promotion": 0
+}
