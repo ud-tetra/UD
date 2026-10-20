@@ -1,0 +1,48 @@
+{
+  "all_input_backend_conformance": "OPEN",
+  "artifacts_sha256": {
+    "audit/CERTIFICATE.json": "8b08aec27b4659644e4b0b12da6f66c269efe2c6721c2f5b493a9ce1afd22fe6",
+    "identity/SCREEN.json": "2ebd6559339c6d0fe8b2ce9e7b0c08f56ad0383249955b3d52cad9549911ebdf",
+    "numerical/CERTIFICATE.json": "44385d203e37fb9f0e9bf6fa0ff77d5e9fd4330f9049aeb4f22ab12fab7967b2",
+    "numerical/WITNESS.json.gz": "de218f054ef3f705543d68d34f9e9dd1ae80d26f64391ed184f81e49fa1af40f"
+  },
+  "dependencies_sha256": "53154e08344f08e879851407d8bf8fd22a901e6b68fbc223c097820112d600c8",
+  "dimensions": {
+    "m": 8191,
+    "n": 321,
+    "q": 209
+  },
+  "external_promotion_review": "PENDING",
+  "fresh_preparation": "NOT_ESTABLISHED",
+  "identity_relation": "LISTED_FINGERPRINT",
+  "independent_acquisition": "NOT_ESTABLISHED",
+  "input_stability_premise": "Stable supplied inputs and stage artifacts during execution; endpoint hashes are not atomic snapshots",
+  "manifest_sha256": "1b0b7375ab343539eff8390c39603009d45fa8a06727397d16b2744e394cf49c",
+  "new_estimator_calls": 0,
+  "numerical_status": "CERTIFIED_WITH_DISTINCT_PRODUCT_AUDIT",
+  "physical_promotion": 0,
+  "provenance_status": "HOLD_PROVENANCE_NOT_ESTABLISHED",
+  "reason": null,
+  "record_payload_sha256": "94ab098c7b9488fc2c3777f6a7282caf142cc71ffbf01bcaf003e7e2e57fdf10",
+  "runner_seal_sha256": "f6ad6937ddbbb2c0546fe108160f778101254e3d0677cbe2baa7a9bd55f397e2",
+  "schema_version": "1.0",
+  "scope": "Finite supplied-record numerical handoff only; no acquisition/preparation/unit/physical correspondence established",
+  "stages_invoked": [
+    {
+      "returncode": 0,
+      "role": "identity",
+      "timed_out": false
+    },
+    {
+      "returncode": 0,
+      "role": "numerical",
+      "timed_out": false
+    },
+    {
+      "returncode": 0,
+      "role": "audit",
+      "timed_out": false
+    }
+  ],
+  "workflow_status": "NUMERICAL_PASS_PROVENANCE_HOLD"
+}

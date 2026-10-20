@@ -1,0 +1,73 @@
+{
+  "status": "PASS_EXECUTABLE_NUMERICAL_HANDOFF_PROVENANCE_HOLD",
+  "records": [
+    {
+      "case": "boundary_pair_block",
+      "workflow_status": "NUMERICAL_PASS_PROVENANCE_HOLD",
+      "provenance_status": "HOLD_PROVENANCE_NOT_ESTABLISHED",
+      "rollup_sha256": "89c1efd020d63087538f04c3553c2f3077e3ba2795a025570a4a4904d85b2756",
+      "stages_invoked": [
+        {
+          "returncode": 0,
+          "role": "identity",
+          "timed_out": false
+        },
+        {
+          "returncode": 0,
+          "role": "numerical",
+          "timed_out": false
+        },
+        {
+          "returncode": 0,
+          "role": "audit",
+          "timed_out": false
+        }
+      ]
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "workflow_status": "NUMERICAL_PASS_PROVENANCE_HOLD",
+      "provenance_status": "HOLD_PROVENANCE_NOT_ESTABLISHED",
+      "rollup_sha256": "eaaddc9db44af9304bbcd8e998bad278dd47a0eaa6d28fc7f27858bff2380b56",
+      "stages_invoked": [
+        {
+          "returncode": 0,
+          "role": "identity",
+          "timed_out": false
+        },
+        {
+          "returncode": 0,
+          "role": "numerical",
+          "timed_out": false
+        },
+        {
+          "returncode": 0,
+          "role": "audit",
+          "timed_out": false
+        }
+      ]
+    }
+  ],
+  "dependency_files_pinned": 13,
+  "integration_cases": 11,
+  "integration_checks": 88,
+  "result_content_controls": 28,
+  "negative_result_controls": 27,
+  "independent_actual_binding_checks": 334,
+  "small_full_workflow_replay_files_byte_identical": 5,
+  "actual_scientific_child_files_equal_frozen_baselines": 8,
+  "repeated_CRT_matrix_entries": 565160,
+  "repeated_CRT_modular_comparisons": 3441361,
+  "same_two_old_record_identities": true,
+  "new_estimator_calls": 0,
+  "new_independently_supplied_records": 0,
+  "new_physical_acquisitions": 0,
+  "existing_child_sources_modified": false,
+  "all_provenance_results": "HOLD_PROVENANCE_NOT_ESTABLISHED",
+  "independent_acquisition": "NOT_ESTABLISHED",
+  "fresh_preparation": "NOT_ESTABLISHED",
+  "old_HOLD_NOGO_changed": false,
+  "all_input_backend_conformance": "OPEN",
+  "external_promotion_review": "PENDING",
+  "physical_promotion": 0
+}

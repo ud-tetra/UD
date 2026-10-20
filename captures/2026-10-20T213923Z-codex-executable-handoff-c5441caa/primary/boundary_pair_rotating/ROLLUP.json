@@ -1,0 +1,48 @@
+{
+  "all_input_backend_conformance": "OPEN",
+  "artifacts_sha256": {
+    "audit/CERTIFICATE.json": "6d8c0dfd5c73a7500a2c12751d6a3017fc7fb036db5b1c02a64fb1d6d3444d8f",
+    "identity/SCREEN.json": "0880d2710e00e2365e1a5b1b7706629feab992d5646e3a95d0bd0c2f7600e2f0",
+    "numerical/CERTIFICATE.json": "f45c52dacd70ed3552af933db209ad3cfb081ee272e90d617cf4fbe25afddd2c",
+    "numerical/WITNESS.json.gz": "9c672f467e40dc200f2d531de5e595850eed3bfbd82fe73fb0762eb4124bd650"
+  },
+  "dependencies_sha256": "53154e08344f08e879851407d8bf8fd22a901e6b68fbc223c097820112d600c8",
+  "dimensions": {
+    "m": 8191,
+    "n": 321,
+    "q": 209
+  },
+  "external_promotion_review": "PENDING",
+  "fresh_preparation": "NOT_ESTABLISHED",
+  "identity_relation": "LISTED_FINGERPRINT",
+  "independent_acquisition": "NOT_ESTABLISHED",
+  "input_stability_premise": "Stable supplied inputs and stage artifacts during execution; endpoint hashes are not atomic snapshots",
+  "manifest_sha256": "58ab05b1dbbbdfa800cebbf10d137a72b8589ccca0c7033bbf5b677a6aab7977",
+  "new_estimator_calls": 0,
+  "numerical_status": "CERTIFIED_WITH_DISTINCT_PRODUCT_AUDIT",
+  "physical_promotion": 0,
+  "provenance_status": "HOLD_PROVENANCE_NOT_ESTABLISHED",
+  "reason": null,
+  "record_payload_sha256": "febd7fb82cf9648e05610ba836275c9f6feba621542c9b0f6b18032c24ea28dd",
+  "runner_seal_sha256": "f6ad6937ddbbb2c0546fe108160f778101254e3d0677cbe2baa7a9bd55f397e2",
+  "schema_version": "1.0",
+  "scope": "Finite supplied-record numerical handoff only; no acquisition/preparation/unit/physical correspondence established",
+  "stages_invoked": [
+    {
+      "returncode": 0,
+      "role": "identity",
+      "timed_out": false
+    },
+    {
+      "returncode": 0,
+      "role": "numerical",
+      "timed_out": false
+    },
+    {
+      "returncode": 0,
+      "role": "audit",
+      "timed_out": false
+    }
+  ],
+  "workflow_status": "NUMERICAL_PASS_PROVENANCE_HOLD"
+}

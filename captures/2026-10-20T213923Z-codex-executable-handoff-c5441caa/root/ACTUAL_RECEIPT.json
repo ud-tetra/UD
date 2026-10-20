@@ -1,0 +1,58 @@
+{
+  "status": "PASS_TWO_COMPLETE_HANDOFFS_AND_EIGHT_SCIENTIFIC_BASELINE_MATCHES",
+  "cases": [
+    {
+      "case": "boundary_pair_block",
+      "rollup_sha256": "89c1efd020d63087538f04c3553c2f3077e3ba2795a025570a4a4904d85b2756",
+      "scientific_outputs_byte_identical_to_frozen_child_baselines": {
+        "identity/SCREEN.json": {
+          "sha256": "2ebd6559339c6d0fe8b2ce9e7b0c08f56ad0383249955b3d52cad9549911ebdf",
+          "baseline": "captures/2026-10-20T210354Z-codex-canonical-record-72c3a5bf/primary/boundary_pair_block/original/SCREEN.json"
+        },
+        "numerical/CERTIFICATE.json": {
+          "sha256": "44385d203e37fb9f0e9bf6fa0ff77d5e9fd4330f9049aeb4f22ab12fab7967b2",
+          "baseline": "captures/2026-10-20T204456Z-codex-reusable-verifier-3e0fa1e2/primary/boundary_pair_block/CERTIFICATE.json"
+        },
+        "numerical/WITNESS.json.gz": {
+          "sha256": "de218f054ef3f705543d68d34f9e9dd1ae80d26f64391ed184f81e49fa1af40f",
+          "baseline": "captures/2026-10-20T204456Z-codex-reusable-verifier-3e0fa1e2/primary/boundary_pair_block/WITNESS.json.gz"
+        },
+        "audit/CERTIFICATE.json": {
+          "sha256": "8b08aec27b4659644e4b0b12da6f66c269efe2c6721c2f5b493a9ce1afd22fe6",
+          "baseline": "captures/2026-10-20T204456Z-codex-reusable-verifier-3e0fa1e2/matrix_review/primary/boundary_pair_block/CERTIFICATE.json"
+        }
+      }
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "rollup_sha256": "eaaddc9db44af9304bbcd8e998bad278dd47a0eaa6d28fc7f27858bff2380b56",
+      "scientific_outputs_byte_identical_to_frozen_child_baselines": {
+        "identity/SCREEN.json": {
+          "sha256": "0880d2710e00e2365e1a5b1b7706629feab992d5646e3a95d0bd0c2f7600e2f0",
+          "baseline": "captures/2026-10-20T210354Z-codex-canonical-record-72c3a5bf/primary/boundary_pair_rotating/original/SCREEN.json"
+        },
+        "numerical/CERTIFICATE.json": {
+          "sha256": "f45c52dacd70ed3552af933db209ad3cfb081ee272e90d617cf4fbe25afddd2c",
+          "baseline": "captures/2026-10-20T204456Z-codex-reusable-verifier-3e0fa1e2/primary/boundary_pair_rotating/CERTIFICATE.json"
+        },
+        "numerical/WITNESS.json.gz": {
+          "sha256": "9c672f467e40dc200f2d531de5e595850eed3bfbd82fe73fb0762eb4124bd650",
+          "baseline": "captures/2026-10-20T204456Z-codex-reusable-verifier-3e0fa1e2/primary/boundary_pair_rotating/WITNESS.json.gz"
+        },
+        "audit/CERTIFICATE.json": {
+          "sha256": "6d8c0dfd5c73a7500a2c12751d6a3017fc7fb036db5b1c02a64fb1d6d3444d8f",
+          "baseline": "captures/2026-10-20T204456Z-codex-reusable-verifier-3e0fa1e2/matrix_review/primary/boundary_pair_rotating/CERTIFICATE.json"
+        }
+      }
+    }
+  ],
+  "scientific_files_byte_identical": 8,
+  "root_regression_not_part_of_runner_decision": true,
+  "same_two_old_records": true,
+  "new_record_identities": 0,
+  "new_estimator_calls": 0,
+  "new_physical_acquisitions": 0,
+  "same_team_independent_review": "Separate reviewer checks workflow bindings; actual CRT child recomputes products per run",
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

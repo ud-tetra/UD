@@ -1,0 +1,68 @@
+{
+  "artifact_type": "SAME_TEAM_PINNED_HANDOFF_WORKFLOW_REVIEW",
+  "capture_exclusions": [
+    "fixtures/",
+    "executions/",
+    "dependency_mirror/",
+    "toy_replay/",
+    "all large input arrays",
+    "symlinks",
+    "bytecode caches"
+  ],
+  "evidence_sha256": {
+    "ACTUAL_BINDING_RESULTS.json": "d3d092a74f156ad8a19f39be28626d518eb03c90b0fe270ae61fad0d3daf3be7",
+    "INTEGRATION_RESULTS.json": "b1cd5f005fe1420d48e1874c202418b77556d9788c33bc5296d1af35f8a571e7",
+    "PROOF.md": "0de9a85df63acc1ad0d680ef4c0101cd1d340fce79932381698417aecf981697",
+    "RESULT_VALIDATION_RESULTS.json": "589dd7ed8586ab1c799ba08ca95193e755f68a416876102ea63c169be7f9be12",
+    "REVIEW_SUMMARY.md": "b72c6ab5b00c171e325b267e6a0aebc32f45e8cbf6b7d1acdcfa1229aa179913",
+    "TOY_REPLAY_RESULTS.json": "739f1a0d777003ee41093353b9afef2e6e5db72dd17c8da1e943a468bb362ab4"
+  },
+  "finite_evidence": {
+    "actual_audit_report_entries_total": 565160,
+    "actual_audit_report_modular_comparisons_total": 3441361,
+    "actual_binding_checks": 334,
+    "actual_existing_record_cases": 2,
+    "integration_cases": 11,
+    "integration_checks": 88,
+    "pinned_dependency_files": 13,
+    "result_content_controls": 28,
+    "result_negative_controls": 27,
+    "small_full_replay_files": 5
+  },
+  "frozen_inputs_and_source_unchanged": true,
+  "frozen_source_corrections_required": 0,
+  "implementation_version": "1.0",
+  "limitations": {
+    "actual_independent_replicate_existence_claimed": false,
+    "all_input_backend_conformance": "OPEN",
+    "catalog_match_does_not_merge_physical_evidence": true,
+    "distinct_pinned_auditor_is_matrix_scalar_evidence_dependency": true,
+    "endpoint_hashes_not_atomic_snapshot": true,
+    "existing_known_records_not_fresh_or_blinded": true,
+    "external_promotion_review": "PENDING",
+    "fresh_preparation": "NOT_ESTABLISHED",
+    "independent_acquisition": "NOT_ESTABLISHED",
+    "large_matrix_products_independently_repeated_by_this_reviewer": false,
+    "listed_fingerprint_not_replay_proof": true,
+    "new_acquisitions": 0,
+    "new_estimator_calls": 0,
+    "numeric_identity_not_physical_units_basis_projection_or_history": true,
+    "physical_promotion": 0,
+    "provenance_status": "HOLD_PROVENANCE_NOT_ESTABLISHED",
+    "registry_entry": "NONE_DEVELOPMENT",
+    "result_controls_not_malicious_child_process_security_test": true,
+    "stable_supplied_inputs_and_stage_artifacts_assumed": true,
+    "unlisted_fingerprint_not_freshness_proof": true,
+    "whole_program_and_concurrent_mutation_guarantee": "OPEN"
+  },
+  "mathematical_retractions": 0,
+  "observed_blockers": [],
+  "proof_status": "Conditional accepted-output workflow implication, not universal implementation correctness",
+  "source_pins": {
+    "DEPENDENCIES.json": "53154e08344f08e879851407d8bf8fd22a901e6b68fbc223c097820112d600c8",
+    "PROTOCOL.json": "34e48ebf004f1749da147305804cbb514f57f2b158926d7d383cdaec7acee315",
+    "SEAL.json": "f6ad6937ddbbb2c0546fe108160f778101254e3d0677cbe2baa7a9bd55f397e2",
+    "run_submission.py": "da0867e51316c9d9068ce0a6fd59bb755fe90e81cf5c41c1144b618f6df982c1"
+  },
+  "status": "PASS_CONDITIONAL_STATE_PROOF_AND_FINITE_CHECKS"
+}
