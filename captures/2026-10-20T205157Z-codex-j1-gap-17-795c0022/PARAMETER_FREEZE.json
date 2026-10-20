@@ -1,0 +1,47 @@
+{
+  "status": "PARAMETERS_FROZEN_BEFORE_GENERATION",
+  "center": [
+    "4624613/1024000",
+    "17/100"
+  ],
+  "frozen_at_utc": "2026-10-20T20:51:57.870985+00:00",
+  "base_commit": "3a8d6a657dcbeff53b21c7b4d9d3c695f865a48d",
+  "source_placement_capture": "captures/2026-10-20T203632Z-codex-j1-gap-16-60e33fe5",
+  "source_placement_sha256": "12aaa6fe6a54e1d308634f5ef6483119bd86a343b7f3fe84a0706bbb83aa7fec",
+  "source_selected_formula_lower": "308270275005750863380812791065397643498916541054053323634952242907782686300808223763224386214787412265152057504484123236489257713886115792219599613/1600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "mesh": "unchanged meanfree conforming P2,18673 DOF,12288 tetrahedra",
+  "provisional_cover_goal": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/10",
+      "17/100"
+    ]
+  },
+  "finite_algorithm_budget": {
+    "max_depth": 24,
+    "max_leaves": 4096
+  },
+  "placement_probe_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "17/100",
+      "9/50"
+    ]
+  },
+  "placement_grid": {
+    "omega_samples": 129,
+    "gamma_subdivisions": 8,
+    "exclude_lower_gamma_row": true,
+    "expected_probes": 1032
+  },
+  "candidate_only": "No new state/flux or uniform coverage before exact posterior and floating audits. Finite-grid placement is not global optimum or actual-error lower.",
+  "quantization_note": "Both center constants are nonbinary; nearest gamma17/100 lies above exact upper boundary. Runtime compares exact represented inputs and accepts only words<=exact upper.",
+  "independent_review": false,
+  "physical_promotion": 0
+}
