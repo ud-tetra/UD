@@ -1,0 +1,49 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "external_promotion_review": "PENDING",
+  "claims": [
+    {
+      "id": "C15-LATTICE",
+      "type": "EXACT_INTERNAL_PROTOCOL_ARITHMETIC",
+      "status": "CHECKED",
+      "statement": "For integer encoded noise with q=2^-48 and fixed radius(3/2)q, membership is exactly squared integer norm<=2. There are7689pointwise states and maximum squared-radius fraction8/9. No trajectory-wide estimator claim follows.",
+      "dependencies": [
+        "input_review/LATTICE_THEOREM.md",
+        "input_review/LATTICE_THEOREM_CHECK.json",
+        "root/LATTICE_CHECK.json"
+      ]
+    },
+    {
+      "id": "C15-INPUT",
+      "type": "EXACT_COMPUTATIONAL",
+      "status": "CHECKED_BEFORE_FITS",
+      "statement": "Both fixed records attain integer squared norm2 in every62vector; all actualscalar differences, norms and separated nominal+delta projection hashes independently checked before firstfit.",
+      "dependencies": [
+        "campaign/CAMPAIGN_FREEZE.json",
+        "input_review/FIT_PRE_RUN_REVIEW.json"
+      ]
+    },
+    {
+      "id": "C15-FLOAT",
+      "type": "NUMERICAL_WITH_EXACT_POSTERIOR_CERTIFICATE",
+      "status": "TWO_MAXIMAL_ENCODED_CASES_CERTIFIED",
+      "statement": "Two unchanged actualestimatorcalls,0retries; individual outcomes retained. Exact savedoutput checks, prospective independent advertised-metric-enclosure hardening and byte-identical zero-fitreplay.",
+      "dependencies": [
+        "RESULT.json",
+        "primary/",
+        "output_review/",
+        "root/ROOT_REPLAY_RECEIPT.json"
+      ]
+    },
+    {
+      "id": "C15-LIMITS",
+      "type": "OPEN",
+      "status": "OPEN",
+      "statement": "No uniform7689^303067trajectory/backend guarantee, blind/physicalfreshness, exactspectrumT, newcasefullreconstruction/sigma210lower, native1893/747recovery orSI/sixratioaccuracy. Original sourceproofs inherited. OlderHOLD/NO-GO unchanged;128path unresolved/UNSENT is snapshot, no newreturnsearch oroutreach.",
+      "dependencies": [
+        "campaign/PROTOCOL.md"
+      ]
+    }
+  ]
+}
