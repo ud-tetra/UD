@@ -1,0 +1,31 @@
+{
+  "classification": "PROVENANCE_METADATA_CORRECTION",
+  "found_by": "construction source audit",
+  "constructor": "Codex",
+  "reviewers": [],
+  "source_path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/UPPER_WITNESS.json.gz",
+  "source_sha256": "841dd5c6503bdccf38a8fe8b7aa43cf4e44328e0befcfc695d3b2c1dc587bc73",
+  "incorrect_field": {
+    "omega": "9/2"
+  },
+  "corrected_interpretation": {
+    "omega": "289/64",
+    "gamma": "1/10"
+  },
+  "evidence": {
+    "state_witness_omega": "289/64",
+    "upper_results_omega": "289/64",
+    "flux_source_actual_parameters": "om,ga=F(289,64),F(1,10)",
+    "flux_source_witness_literal": "omega:9/2 (copied label)",
+    "flux_source_state_hash_binding": "a96af36bf0c411d0b7f3546e6931a8f65038d9e6d15abc50f2fd4d47e394da53"
+  },
+  "impact": "The legacy flux-witness frequency label is incorrect and must not be used as parameter authority. Its state hash, actual flux arithmetic, results and prior saved replay bind the neighbor computation to omega289/64. This corrects the label interpretation only; it does not regenerate or replace old numeric coefficients or change their prior conditional mathematical scope. New witnesses enforce equality with the exact bound state parameters.",
+  "supersedes_fields": [
+    "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/UPPER_WITNESS.json.gz#/omega"
+  ],
+  "supersedes_files": [],
+  "lane": "Development \u2014 no registry entry",
+  "scientific_status": "OPEN",
+  "independent_review": false,
+  "physical_promotion": 0
+}
