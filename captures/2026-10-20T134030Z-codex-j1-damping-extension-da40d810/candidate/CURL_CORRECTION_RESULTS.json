@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_curl_witness_sha256": "a92867f69cec9c6df3aa95a2a6283f03c2ee035e254ff4067e1e9fbce7d40acd",
+  "source_coefficient_payload_sha256": "6d108a6c871739e51918c1d0b80591af76ccbb6f3e106cf9c645f1bd8ad9d83a",
+  "mesh": {
+    "nodes": 2809,
+    "tetrahedra": 12288,
+    "interior_edges": 13560,
+    "interior_faces": 23808,
+    "potential_coefficients_per_component": 74736,
+    "unequal_volumes": [
+      "1/4096",
+      "1/8192"
+    ]
+  },
+  "checks": {
+    "local_basis_divergence_identities": 230016,
+    "actual_affine_divergence_checks": 24576,
+    "correction_face_vertex_component_checks": 152064,
+    "gradient_orthogonality": 2,
+    "exact_flux_norm_nonincrease": 2,
+    "old_parent_interface_faces": 7424,
+    "nonzero_old_parent_face_vertex_components": 44544
+  },
+  "prior_affine_projection_norm_squared": [
+    "4927489507775670143708454344376771940532443608177313245081979375425816353813104768585538943428661560941583/268554547661284786763906413999283253654246321430567767417850547522306128386768022787850240000000000000000",
+    "555613178741236882649826154507996840530891153215737484192982987557079706201391276075780860700211059359/393390450675710136861191036131762578595087384908058253053492012972128117754054720880640000000000000000"
+  ],
+  "exact_flux_norm_changes": [
+    "-24994683862630841832439417423613952957920172494417086635804042384894582463009/388223232006969213043205017253082681700374879684584243727891987588710400000000",
+    "-238355113661770497760082932436380322333210908175540689870604930227338967359/53919893334301279589334030174039261347274288845081144962207220498432000000000"
+  ],
+  "controls": [
+    "truncated coefficient payload",
+    "nonfinite coefficient payload",
+    "corrupted exterior affine trace"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 4.2759567841641255,
+        "normal_residual_norm": 1.3302826534351288e-09
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 1.1865707907523229,
+        "normal_residual_norm": 3.475371976809703e-10
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
