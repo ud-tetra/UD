@@ -1,0 +1,83 @@
+{
+  "artifact_type": "C26_INDEPENDENT_MATHEMATICAL_AND_FINITE_PAYLOAD_REVIEW",
+  "capture_allowlist": [
+    "BOUND_CHECKS.json",
+    "CONDITION_CHECKS.json",
+    "FACTOR_FREEZE.json",
+    "FACTOR_RESULTS.json",
+    "FINAL_BINDING.json",
+    "FINAL_PAYLOAD_CHECKS.json",
+    "FINAL_PAYLOAD_FREEZE.json",
+    "FINAL_REVIEW.json",
+    "INTERSECTION_PROOF.md",
+    "PAYLOAD_CHECKS.json",
+    "PAYLOAD_FREEZE.json",
+    "PAYLOAD_V1_FAILURE.json",
+    "PAYLOAD_V2_FREEZE.json",
+    "PLAN.md",
+    "PLAN_FREEZE.json",
+    "REVIEW.md",
+    "VERIFICATION_HASH_MANIFEST.sha256",
+    "check_bounds.py",
+    "condition_review.py",
+    "factor_review.py",
+    "final_bind.py",
+    "verify_payloads.py",
+    "verify_payloads_final.py",
+    "verify_payloads_v2.py"
+  ],
+  "exact_conclusions": {
+    "augmented_nominal_dimension": 444,
+    "frozen4096_sample_kernel": 641,
+    "frozen4096_sample_rank": 1999,
+    "full_domain_condition": "INFINITE",
+    "net_full_rank_gain": 106,
+    "new_observation_restricted_to_old_hidden_rank": 107,
+    "nominal_top_rank": 390,
+    "old_new_hidden_intersection": 640,
+    "positive_sample_condition_upper": "<2^10394665",
+    "smallest_positive_sample_singular_lower": ">2^-10394665",
+    "weighted_full_kernel": 641,
+    "weighted_full_rank": 1999,
+    "weighted_sector_ranks": "NOT_COMPUTED",
+    "weighted_top_rank": 443
+  },
+  "independent_evidence": {
+    "condition_checks_sha256": "8605b2c51b79cc0415a86f306fc48aea8a680e40b41ec7b97efce1e64207ad83",
+    "exact_factor_profiles": 30,
+    "factor_result_sha256": "b247a15d9723bf6084d46ee18c134fcea07baf96ee7db42b66e992225d384579",
+    "final_payload_checks": 312,
+    "final_payload_receipt_sha256": "a403dde866d83d43c636859efcd7704e87f2e5181fb084bd994613651bde4f8d",
+    "nonzero_modular_minors": 3,
+    "producer_replay_three_scientific_files_byte_identical": true,
+    "upper_membership_entries": 1590000,
+    "upper_membership_payloads": 60
+  },
+  "inherited_premises": [
+    "nominal full-history rank1893 and kernel747",
+    "downward-closed readout channel separation",
+    "old observed frequency count105"
+  ],
+  "review_history": {
+    "false_complete_pass_before_failure": false,
+    "final_sign_normalized_archive_pass": true,
+    "historical_signed_denominator_stop_preserved": true,
+    "mathematical_retractions": 0
+  },
+  "review_markdown_sha256": "6da557b66a7efe3cffecaebc8e9e3576dddf74852f2f64725580ad351210657b",
+  "root_checker_sha256": "783e281347072333593590329b25b1275caeac48af398b4dc8b698f98111d945",
+  "root_theorem_sha256": "d3ffea5a2bb97015d8fac4f9ebb94dc7167f3a6caf248b9d545ad6a103d15f5f",
+  "scope": {
+    "external_promotion_review": "PENDING",
+    "no_archived_program_execution": true,
+    "no_estimator_fit_or_SVD": true,
+    "no_full_Hankel": true,
+    "no_new_acquisition": true,
+    "physical_promotion": 0,
+    "practical_conditioning_2029_and_other_gate_transfers": "HOLD",
+    "same_team_development_not_blinded_or_external": true,
+    "stable_intended_input_assumption": true,
+    "universal_implementation_and_concurrent_mutation_guarantees": "NOT_ESTABLISHED"
+  },
+  "status": "PASS"
+}
