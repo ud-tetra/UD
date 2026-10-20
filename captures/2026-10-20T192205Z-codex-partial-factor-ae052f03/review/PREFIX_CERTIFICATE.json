@@ -1,0 +1,151 @@
+{
+  "status": "PASS_INDEPENDENT_PREFIX_MINMAX_ORDERED_ONE_SIDED_BOUND",
+  "records": [
+    {
+      "case": "boundary_pair_block",
+      "prefix_indices": [
+        1,
+        209
+      ],
+      "tail_indices": [
+        210,
+        321
+      ],
+      "prefix_count": 209,
+      "tail_count": 112,
+      "d1": [
+        "608999218481816093812714463736324938967534433621650415563",
+        "1725436586697688657696289326934898369398366160632019483965277895393280"
+      ],
+      "saved_s210": [
+        "6650690928001205",
+        "19807040628566084398385987584"
+      ],
+      "all321_ordered_overstatement_upper": [
+        "608999218481816093812714463736324938967534433621650415563",
+        "1725436586697688657696289326934898369398366160632019483965277895393280"
+      ],
+      "bound_attained_by_envelope_term": "d1",
+      "all_prefix_numerators_positive": true,
+      "all321_envelopes_nonnegative": true,
+      "all321_one_sided_below_2neg41": true,
+      "qth_debit_matches_prior": true,
+      "readable": {
+        "d1": 3.5295369483695666e-13,
+        "saved_s210": 3.357740842117249e-13,
+        "all321_ordered_overstatement_upper": 3.5295369483695666e-13
+      }
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "prefix_indices": [
+        1,
+        209
+      ],
+      "tail_indices": [
+        210,
+        321
+      ],
+      "prefix_count": 209,
+      "tail_count": 112,
+      "d1": [
+        "145957541614574247607953851042659890368430894486834397751",
+        "431359146674421245055581140476749514036466969419551581794816587988992"
+      ],
+      "saved_s210": [
+        "254960686447373",
+        "2475880078570760549798248448"
+      ],
+      "all321_ordered_overstatement_upper": [
+        "145957541614574247607953851042659890368430894486834397751",
+        "431359146674421245055581140476749514036466969419551581794816587988992"
+      ],
+      "bound_attained_by_envelope_term": "d1",
+      "all_prefix_numerators_positive": true,
+      "all321_envelopes_nonnegative": true,
+      "all321_one_sided_below_2neg41": true,
+      "qth_debit_matches_prior": true,
+      "readable": {
+        "d1": 3.3836663193498766e-13,
+        "saved_s210": 1.0297780116820235e-13,
+        "all321_ordered_overstatement_upper": 3.3836663193498766e-13
+      }
+    }
+  ],
+  "controls": [
+    {
+      "id": "boundary_pair_block_all209_positive_prefix_numerators",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_all209_debit_identities",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_all209_debits_nonnegative",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_all209_debits_bounded_by_first",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_all112_tail_proposals_bounded_by_s210",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_all321_bound_identity",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_strict_2neg41_all321_one_sided",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_prefix_q_matches_prior",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_all209_positive_prefix_numerators",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_all209_debit_identities",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_all209_debits_nonnegative",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_all209_debits_bounded_by_first",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_all112_tail_proposals_bounded_by_s210",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_all321_bound_identity",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_strict_2neg41_all321_one_sided",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_prefix_q_matches_prior",
+      "pass": true
+    }
+  ],
+  "control_count": 16,
+  "statement": "For all j=1..321: saved_s_j\u2212sigma_j(Z)\u2264the per-case envelope, conditional on inherited saved retained Gram/equation premises",
+  "not_absolute_error": true,
+  "proposal_underestimation_controlled": false,
+  "two_sided_B1_closed": false,
+  "earlier_all_index_error_false_field_means_absolute_error": "The earlier certificate did not claim or refute this newly derived one-sided extension",
+  "new_fits": 0,
+  "new_raw_records": 0,
+  "new_factor_copies": 0,
+  "physical_promotion": 0
+}
