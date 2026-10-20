@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-20T03:15:16.193678Z",
+  "components": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate",
+      "exit_code": 0,
+      "log_sha256": "77b97706672bb2a6d011454b5d2af124e43e5d24c694e2115e0f1e51f467ec9b",
+      "matched_results": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 replay.py --scalar-only",
+      "working_directory": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7",
+      "exit_code": 0,
+      "log_sha256": "42d2cd52ca5fa879ef26084c0dd09f22011b9ef8e318feb76f07922192fa6037",
+      "matched_results": [
+        "COVER.json",
+        "EXTENSION_COVER.json",
+        "RIGHT_COVER.json",
+        "GOAL_DIAGNOSTIC.json",
+        "PLACEMENT_RESULTS.json",
+        "AUDIT_RESULTS.json"
+      ]
+    }
+  ],
+  "execution_shape": "Saved coefficient state/flux replay and scalar-only replay executed separately; no claim that default composing wrapper was executed.",
+  "coefficient_regeneration": false,
+  "independent_review": false,
+  "physical_promotion": 0
+}

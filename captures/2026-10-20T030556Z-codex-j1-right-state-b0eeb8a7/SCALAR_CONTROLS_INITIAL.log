@@ -1,0 +1,15 @@
+PASS full cells=24 extension cells=4 right cells=1 radius=0.09998044080302229 next=(577/128,11/100)
+Traceback (most recent call last):
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-level2/captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/replay.py", line 13, in <module>
+    ap=argparse.ArgumentParser();ap.add_argument('--scalar-only',action='store_true');a=ap.parse_args();main(a.scalar_only)
+                                                                                                        ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-level2/captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/replay.py", line 11, in main
+    audit.main();print('PASS scalar-only replay' if scalar_only else 'PASS full state flux adaptive replay',flush=True)
+    ^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-level2/captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/audit.py", line 83, in main
+    bad=copy.deepcopy(cover);mut(bad)
+                             ^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-level2/captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/audit.py", line 82, in <lambda>
+    for label,mut in [('zeroed certificate',lambda d:d['nodes'][d['leaf_indices'][0]]['certificate'].update(total_radius='0')),('changed split word',lambda d:d['nodes'][0].update(cut_word=d['nodes'][0]['cut_word']+1)),('missing leaf word',lambda d:d['nodes'][d['leaf_indices'][0]]['word_box'].__setitem__(0,d['nodes'][d['leaf_indices'][0]]['word_box'][0]+1))]:
+                                                                                                                                                                                            ~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'cut_word'
