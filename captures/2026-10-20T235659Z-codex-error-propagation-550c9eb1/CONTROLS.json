@@ -1,0 +1,130 @@
+{
+  "controls": [
+    {
+      "id": "AMPLITUDE_REQUIRED",
+      "proof": {
+        "actual_data_error": "2",
+        "amplitude_free_claim": "1/8",
+        "readout_error": "1/8",
+        "state_amplitude": 16
+      },
+      "status": "PASS_EXACT_COUNTERMODEL"
+    },
+    {
+      "id": "PREPARATION_READOUT_MIXED_TERM_REQUIRED",
+      "proof": {
+        "actual_data_error": "3/4",
+        "omitted_p_rho_claim": "1/2",
+        "p": "1/2",
+        "rho": "1/2",
+        "x": 0
+      },
+      "status": "PASS_EXACT_COUNTERMODEL"
+    },
+    {
+      "id": "CLOCK_GENERATOR_MIXED_TERM_REQUIRED",
+      "proof": {
+        "nominal_norm_cap": 5,
+        "omitting_xi_theta_cap": "5/16",
+        "response_lower": "95/192",
+        "theta": "1/16",
+        "toy_K": 0,
+        "xi": 8
+      },
+      "status": "PASS_EXACT_COUNTERMODEL"
+    },
+    {
+      "id": "COHERENT_NOISE_NO_SQRT_M_GAIN",
+      "proof": {
+        "M": 4096,
+        "normalized_noise_norm": "u",
+        "per_scalar_error": "u>0 at every time",
+        "unsupported_independence_gain": "u/64"
+      },
+      "status": "PASS_EXACT_COUNTERMODEL"
+    },
+    {
+      "id": "NON_SKEW_NEEDS_NEW_GROWTH_BOUND",
+      "proof": {
+        "actual_error": "exp(1)-1>3/2",
+        "actual_generator": 1,
+        "invalid_unitary_bound": 1,
+        "time": 1,
+        "toy_K": 0
+      },
+      "status": "PASS_EXACT_COUNTERMODEL"
+    },
+    {
+      "id": "RIGHT_INVERSE_DOES_NOT_CERTIFY_ORTHOGONAL_DECODER",
+      "proof": {
+        "B": [
+          "1",
+          "4/3"
+        ],
+        "B_F_Q_equals_Q": true,
+        "F": "[1,0]",
+        "F_B": 1,
+        "K_and_J": 0,
+        "Q": [
+          "3/5",
+          "4/5"
+        ],
+        "Q_norm": 1,
+        "decoder_conformance_defect": "4/3",
+        "intertwining_residual": 0,
+        "spurious_hidden_output_for_x_e1": "4/3",
+        "trial_Gram": "9/25"
+      },
+      "status": "PASS_EXACT_COUNTERMODEL"
+    },
+    {
+      "id": "SMALL_MAP_ERROR_DOES_NOT_PRESERVE_FULL_KERNEL",
+      "proof": {
+        "A": [
+          [
+            "1",
+            "0",
+            "1/4096"
+          ],
+          [
+            "0",
+            "1",
+            "1/4096"
+          ],
+          [
+            "-1",
+            "0",
+            "1/4096"
+          ]
+        ],
+        "actual_Gram_determinant": "1/113246208",
+        "actual_rank": 3,
+        "epsilon": "1/4096",
+        "full_positive_condition_lower": ">1/epsilon=4096",
+        "map": "A_epsilon/sqrt3",
+        "nominal_quotient_stability": "retained; fullrank/kernel equality not inferred",
+        "nominal_rank": 2,
+        "operator_map_error": "1/4096"
+      },
+      "status": "PASS_EXACT_COUNTERMODEL"
+    },
+    {
+      "id": "HIDDEN_STATE_NOT_RECONSTRUCTED",
+      "proof": {
+        "F": "[1,0]",
+        "identical_data": 0,
+        "worst_case_full_state_error_lower": 1,
+        "xminus": [
+          "0",
+          "-1"
+        ],
+        "xplus": [
+          "0",
+          "1"
+        ]
+      },
+      "status": "PASS_EXACT_COUNTERMODEL"
+    }
+  ],
+  "status": "PASS_EXACT_LOGICAL_COUNTERMODELS"
+}

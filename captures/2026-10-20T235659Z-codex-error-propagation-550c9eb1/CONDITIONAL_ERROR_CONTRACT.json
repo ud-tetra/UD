@@ -1,0 +1,94 @@
+{
+  "actual_decoder_required": {
+    "B_F_minus_nominal_orthogonal_projection_operator_norm": "<=alpha over full2640-dimensional state space",
+    "B_operator_norm": "<=beta",
+    "arithmetic_implementation_error": "<=algorithm_error for supplied input domain",
+    "status": "HOLD_NOT_DEDUCED_FROM_CONDITION_NUMBER"
+  },
+  "error_inputs": [
+    {
+      "declared_upper_bound": "1",
+      "evidence_receipt": null,
+      "name": "state_amplitude_X",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/4503599627370496",
+      "evidence_receipt": null,
+      "name": "preparation_p",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/73786976294838206464",
+      "evidence_receipt": null,
+      "name": "generator_error_xi",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/9007199254740992",
+      "evidence_receipt": null,
+      "name": "readout_RMS_rho",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/72057594037927936",
+      "evidence_receipt": null,
+      "name": "clock_RMS_eta",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/9007199254740992",
+      "evidence_receipt": null,
+      "name": "noise_RMS",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/9007199254740992",
+      "evidence_receipt": null,
+      "name": "encoding_RMS",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/4398046511104",
+      "evidence_receipt": null,
+      "name": "decoder_alpha",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "512",
+      "evidence_receipt": null,
+      "name": "decoder_beta",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/4398046511104",
+      "evidence_receipt": null,
+      "name": "algorithm_error",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    },
+    {
+      "declared_upper_bound": "1/549755813888",
+      "evidence_receipt": null,
+      "name": "observable_state_target_tau",
+      "status": "HOLD_NO_SOURCE_RECEIPT",
+      "type": "DECLARED_CONDITIONAL_CONTROL"
+    }
+  ],
+  "input_evidence_status": "UNSUPPLIED_HOLD",
+  "model_and_norm": "PR307 exact fixed sample map; unit chain coordinates;1/64 normalization",
+  "noise_norm": "sqrt(mean_j ||n_j||_2^2), deterministic; no independence assumed",
+  "physical_promotion": 0,
+  "preparation": "one fixed preparation error vector per trajectory; time-varying preparation requires a separate p_max/RMS contract",
+  "source_and_physical_units": "Required separately; no SI/physical acquisition inferred",
+  "status": "DEVELOPMENT_CONDITIONAL_EXAMPLE_NOT_ADMITTED_ACQUISITION"
+}
