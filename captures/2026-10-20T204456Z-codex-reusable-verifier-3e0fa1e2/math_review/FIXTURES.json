@@ -1,0 +1,278 @@
+{
+  "actual_saved_inputs_copied": false,
+  "cases": [
+    {
+      "case": "exact_q1",
+      "expected": "CERTIFIED",
+      "expected_bounds": {
+        "condition": [
+          1,
+          1
+        ],
+        "full_error": [
+          0,
+          1
+        ]
+      },
+      "manifest": "fixtures/exact_q1/manifest.json"
+    },
+    {
+      "case": "exact_q2",
+      "expected": "CERTIFIED",
+      "expected_bounds": {
+        "condition": [
+          2,
+          1
+        ],
+        "full_error": [
+          0,
+          1
+        ]
+      },
+      "manifest": "fixtures/exact_q2/manifest.json"
+    },
+    {
+      "case": "small_tail",
+      "expected": "CERTIFIED",
+      "expected_bounds": {
+        "condition": [
+          1,
+          1
+        ],
+        "full_error": [
+          1,
+          281474976710656
+        ]
+      },
+      "manifest": "fixtures/small_tail/manifest.json"
+    },
+    {
+      "case": "small_retained_residual",
+      "expected": "CERTIFIED",
+      "expected_bounds": {
+        "full_error": [
+          1,
+          140737488355328
+        ]
+      },
+      "manifest": "fixtures/small_retained_residual/manifest.json"
+    },
+    {
+      "case": "int64_min",
+      "expected": "CERTIFIED",
+      "expected_bounds": {
+        "condition": [
+          1,
+          1
+        ],
+        "full_error": [
+          0,
+          1
+        ]
+      },
+      "manifest": "fixtures/int64_min/manifest.json"
+    },
+    {
+      "case": "large_tail",
+      "expected": "NUMERICAL_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/large_tail/manifest.json"
+    },
+    {
+      "case": "zero_record_wrong_spectrum",
+      "expected": "NUMERICAL_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/zero_record_wrong_spectrum/manifest.json"
+    },
+    {
+      "case": "record_hash_mismatch",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/record_hash_mismatch/manifest.json"
+    },
+    {
+      "case": "payload_hash_mismatch",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/payload_hash_mismatch/manifest.json"
+    },
+    {
+      "case": "wrong_N_float_dtype",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/wrong_N_float_dtype/manifest.json"
+    },
+    {
+      "case": "wrong_N_vector_shape",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/wrong_N_vector_shape/manifest.json"
+    },
+    {
+      "case": "factor_NaN",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/factor_NaN/manifest.json"
+    },
+    {
+      "case": "singular_Inf",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/singular_Inf/manifest.json"
+    },
+    {
+      "case": "singular_unsorted",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/singular_unsorted/manifest.json"
+    },
+    {
+      "case": "singular_negative",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/singular_negative/manifest.json"
+    },
+    {
+      "case": "singular_exact_cutoff_tie",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/singular_exact_cutoff_tie/manifest.json"
+    },
+    {
+      "case": "q_zero",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/q_zero/manifest.json"
+    },
+    {
+      "case": "q_equals_n",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/q_equals_n/manifest.json"
+    },
+    {
+      "case": "right_wrong_shape",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/right_wrong_shape/manifest.json"
+    },
+    {
+      "case": "right_complex_dtype",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/right_complex_dtype/manifest.json"
+    },
+    {
+      "case": "right_object_dtype",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/right_object_dtype/manifest.json"
+    },
+    {
+      "case": "U_wrong_columns",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/U_wrong_columns/manifest.json"
+    },
+    {
+      "case": "U_wrong_declared_extent",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/U_wrong_declared_extent/manifest.json"
+    },
+    {
+      "case": "U_overlap",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/U_overlap/manifest.json"
+    },
+    {
+      "case": "U_gap",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/U_gap/manifest.json"
+    },
+    {
+      "case": "U_boolean_extent",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/U_boolean_extent/manifest.json"
+    },
+    {
+      "case": "negative_denominator_exponent",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/negative_denominator_exponent/manifest.json"
+    },
+    {
+      "case": "boolean_denominator_exponent",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/boolean_denominator_exponent/manifest.json"
+    },
+    {
+      "case": "missing_manifest_field",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/missing_manifest_field/manifest.json"
+    },
+    {
+      "case": "unknown_claim_field",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/unknown_claim_field/manifest.json"
+    },
+    {
+      "case": "truncated_oversized_header",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/truncated_oversized_header/manifest.json"
+    },
+    {
+      "case": "relative_path_escape",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/relative_path_escape/manifest.json"
+    },
+    {
+      "case": "symlink_input_file",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/symlink_input_file/manifest.json"
+    },
+    {
+      "case": "symlink_input_ancestor",
+      "expected": "INTAKE_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/symlink_input_ancestor/manifest.json"
+    },
+    {
+      "case": "existing_output_sentinel",
+      "expected": "OUTPUT_REJECTION",
+      "expected_bounds": {},
+      "manifest": "fixtures/existing_output_sentinel/manifest.json"
+    },
+    {
+      "case": "output_is_input_directory",
+      "expected": "OUTPUT_REJECTION",
+      "expected_bounds": {},
+      "manifest": "fixtures/output_is_input_directory/manifest.json"
+    },
+    {
+      "case": "output_is_input_file",
+      "expected": "OUTPUT_REJECTION",
+      "expected_bounds": {},
+      "manifest": "fixtures/output_is_input_file/manifest.json"
+    },
+    {
+      "case": "wrong_U_numerical",
+      "expected": "NUMERICAL_HOLD",
+      "expected_bounds": {},
+      "manifest": "fixtures/wrong_U_numerical/manifest.json"
+    }
+  ],
+  "count": 38,
+  "new_fits": 0,
+  "physical_promotion": 0,
+  "status": "BUILT_SMALL_EXACT_REVIEW_FIXTURES"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS_BOTH_FRESH_ALL_METRIC_RECORDS_AND_SCIENTIFIC_REPLAYS",
+  "cases": [
+    {
+      "case": "boundary_pair_block",
+      "scientific_replay_sha256": {
+        "CERTIFICATE.json": "5cb9bdb7beae2219219da72be791f20ec451ec7ba1ffb1151c7bd64b4aa7eadd",
+        "WITNESS.json.gz": "de218f054ef3f705543d68d34f9e9dd1ae80d26f64391ed184f81e49fa1af40f"
+      },
+      "old_direct_tail_exact_equal": true,
+      "old_full_error_readable_equal": true,
+      "regression_only_no_prior_certificate_in_producer": true
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "scientific_replay_sha256": {
+        "CERTIFICATE.json": "bb6072831b858f57c026662ed576596fe55d275cb05bfda3563df40bde88ba43",
+        "WITNESS.json.gz": "9c672f467e40dc200f2d531de5e595850eed3bfbd82fe73fb0762eb4124bd650"
+      },
+      "old_direct_tail_exact_equal": true,
+      "old_full_error_readable_equal": true,
+      "regression_only_no_prior_certificate_in_producer": true
+    }
+  ],
+  "byte_identical_scientific_files": 4,
+  "host_dependent_RESOURCE_excluded": true,
+  "fresh_metrics_per_case": [
+    "a",
+    "b",
+    "eta",
+    "r",
+    "f",
+    "g"
+  ],
+  "source_seal_unchanged": true,
+  "new_estimator_calls": 0,
+  "new_record_identities": 0,
+  "all_input_backend_conformance": "OPEN",
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

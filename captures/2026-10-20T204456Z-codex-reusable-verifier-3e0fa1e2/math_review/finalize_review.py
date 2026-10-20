@@ -1,0 +1,29 @@
+"""Seal standalone review artifacts; excludes generated fixtures and symlinks."""
+from pathlib import Path
+import hashlib,json
+P=Path(__file__).resolve().parent;W=P.parent
+names=['BLOCK_REVIEW.json','BLOCK_REVIEW_v1_1.json','CRC_PROBE.json','CRC_PROBE_v1_1.json','DIAGNOSTIC_CORRECTION_REVIEW.json','FIXTURES.json','FIXTURE_FREEZE.json','FIXTURE_RESULTS_v1.json','FIXTURE_RESULTS_v1_1.json','PLAN.md','PLAN_EXTENSION.md','PLAN_EXTENSION_FREEZE.json','PLAN_FREEZE.json','PROOF.md','REPLAY_AND_VERSION_REVIEW.json','ROTATING_REVIEW.json','ROTATING_REVIEW_v1_1.json','TRACE_CONTROLS.json','TRACE_FREEZE.json','TRACE_IDENTITIES.md','build_fixtures.py','probe_crc.py','probe_crc_v1_1.py','review_actual_scalars.py','review_actual_scalars_v1_1.py','review_diagnostic_correction.py','review_replay_and_versions.py','run_fixture_suite.py','run_fixture_suite_v1_1.py','trace_controls.py','REVIEW_SUMMARY.md','finalize_review.py']
+def read(n):return json.loads((P/n).read_text())
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+for n in ['FIXTURE_RESULTS_v1.json','FIXTURE_RESULTS_v1_1.json']:
+ j=read(n);assert j['case_count']==j['passed']==38 and j['positive_exact_checks']==130 and all(x['pass']and x['input_and_sentinel_bytes_unchanged']for x in j['cases'])
+assert len(read('TRACE_CONTROLS.json')['rows'])==10 and all(x['pass']for x in read('TRACE_CONTROLS.json')['rows'])
+for n in ['BLOCK_REVIEW.json','ROTATING_REVIEW.json','BLOCK_REVIEW_v1_1.json','ROTATING_REVIEW_v1_1.json']:
+ j=read(n);assert len(j['checks'])==52 and all(x['pass']for x in j['checks'])
+ for rel,h in j['source_sha256'].items():
+  path=W/rel
+  if not n.endswith('_v1_1.json')and rel.startswith('c20_verifier/'):path=W/rel.replace('c20_verifier/','c20_verifier_v1/',1)
+  assert sha(path)==h,(n,str(path))
+correction=read('DIAGNOSTIC_CORRECTION_REVIEW.json');assert correction['only_main_catch_changed']and correction['mathematical_retractions']==0
+for rel,h in correction['source_sha256'].items():assert sha(W/rel)==h
+crc=read('CRC_PROBE_v1_1.json');assert crc['observed_exit']==2 and crc['observed_status']=='HOLD_INTAKE_OR_INPUT_IO'and not crc['output_directory_created']and not crc['classification_gap_observed']
+replay=read('REPLAY_AND_VERSION_REVIEW.json');assert len(replay['checks'])==8 and all(x['pass']for x in replay['checks'])
+for rel,h in replay['source_sha256'].items():assert sha(W/rel)==h
+result={'status':'PASS_SCOPED_GENERIC_PROOF_SCALARS_AND_INTAKE_REVIEW_MATRIX_IDENTITY_AUDIT_PENDING','active_package_version':'1.1','generic_proof_and_test_plan_frozen_before_package_exercise':True,'trace_identity_controls':10,'historical_v1_fixture_cases':38,'active_v1_1_fixture_cases':38,'exact_positive_checks_per_suite':130,'all_frozen_cases_pass_both_versions':True,'active_CRC_regression_cases':1,'historical_diagnostic_findings':1,'diagnostic_corrections':1,'mathematical_retractions':0,'correction_scope':'Only main catch adds zipfile.BadZipFile; protocol version field only. All arithmetic/intake/calculation/derive function ASTs unchanged.','active_actual_scalar_checks_per_case':52,'exact_actual_norm_metric_pairs_per_case':6,'exact_actual_bound_pairs_per_case':9,'exact_actual_gate_checks_per_case':8,'active_scientific_replays_byte_identical_files':4,'v1_to_v1_1_witnesses_byte_identical':2,'generic_numerical_norm_inputs_fresh':True,'verifier_model_generator_estimator_or_prior_certificate_inputs':0,'actual_matrix_product_identity_audit':'PENDING_SEPARATE_ALL_ENTRY_CRT_REVIEW; not established by this scalar/intake review','actual_scalar_conclusion':'Both full321 error enclosures are below2^-41 conditional on correct exact six-matrix products for the supplied fixed record','input_stability_caveat':'Before/after hashes are endpoint identity checks, not an immutable snapshot or universal concurrent-mutation guarantee. Accepted-output theorem requires the intended fixed supplied bytes and correct exact products.','source_authenticity':'Supplied bytes only; acquisition/projection lineage and physical correspondence separate','all_input_backend_conformance':'OPEN','universal_program_or_intake_correctness_established':False,'algebraic_rank_or_full_matrix_condition_claimed':False,'prior_scientific_HOLD_or_NOGO_verdicts_changed':False,'new_fits':0,'new_preparations':0,'actual_saved_input_archives_copied_by_reviewer':False,'repo_or_root_source_mutations_by_reviewer':False,'capture_exclusions':['fixtures/','executions_v1/','executions_v1_1/','supplemental_crc_fixture/','supplemental_crc_fixture_v1_1/','all controlled symlinks and generated malformed archives'],'capture_scope':'Explicit top-level standalone review source and receipts only; no recursive tree capture','lane':'development — no registry entry','review_relationship':'Same-team independent proof, arithmetic implementation and finite adversarial tests; not external promotion authority','external_promotion_review':'PENDING','physical_promotion':0,'evidence_sha256':{n:sha(P/n)for n in names}}
+with(P/'FINAL_REVIEW.json').open('x')as z:json.dump(result,z,indent=2);z.write('\n')
+names.append('FINAL_REVIEW.json');manifest=''.join(sha(P/n)+'  '+n+'\n'for n in sorted(names))
+with(P/'VERIFICATION_HASH_MANIFEST.sha256').open('x')as z:z.write(manifest)
+for line in manifest.splitlines():h,n=line.split('  ',1);assert sha(P/n)==h and not(P/n).is_symlink()
+index={'status':'SAFE_STANDALONE_REVIEW_CAPTURE_INVENTORY','files':sorted(names+['VERIFICATION_HASH_MANIFEST.sha256']),'recursive_capture_permitted':False,'excluded_trees':result['capture_exclusions'],'physical_promotion':0}
+with(P/'CAPTURE_FILE_LIST.json').open('x')as z:json.dump(index,z,indent=2);z.write('\n')
+print(json.dumps({'status':result['status'],'inventoried_hashed_files':len(names),'safe_capture_files_including_manifest_and_list':len(names)+2,'final_review_sha256':sha(P/'FINAL_REVIEW.json'),'manifest_sha256':sha(P/'VERIFICATION_HASH_MANIFEST.sha256'),'capture_list_sha256':sha(P/'CAPTURE_FILE_LIST.json')}))
