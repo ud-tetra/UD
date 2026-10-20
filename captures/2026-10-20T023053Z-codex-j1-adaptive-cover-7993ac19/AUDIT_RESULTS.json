@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "classification": "DERIVED_CONDITIONAL_ADAPTIVE_COVER_AND_CANDIDATE_PLACEMENT",
+  "source_sha256": {
+    "kernel.py": "62df5c88105d525399efea7108991e617288c8ed3992a459df1fe8970dd63622",
+    "planner.py": "730f9b978bfb254a28e2009ac94a8956c84979e3b3bcf47a4ad0e48085dbea3e",
+    "evaluator.py": "aa82d178d887e59af78d66d794bb4b68f9f6aa9c651d3b165ab6bac7b7de8884",
+    "BANK.json": "a479befacc96ec5b2e4497fc17d1e6301a923df8c8cfe652ae91df50c3649ccd",
+    "CONTRACT.json": "3c46b0bd4bc0045660826665ed93ae5c217a4c9a132cb1b5d14adb1106bd53ad",
+    "COVER.json": "841f0eb0f5b6c71ccb4fbf205ea2bdd90168a62620cd0da3c2816b22dc02de5d",
+    "PLACEMENT_RESULTS.json": "8a5511cc2aef4036242c41ff3a75d29f9461014c57b9a3c46cc56dee23dd9933"
+  },
+  "leaf_count": 10,
+  "maximum_depth": 9,
+  "uniform_total_radius": "2499600309436494785872699649552439115487716087678898952074078025639946701414342877421792150888667783990892762110715324707695742329134718973007049/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "maximum_uniform_floating_radius": "469100513424759/500000000000000000000000000000",
+  "accepted_pair_count": 9263990586468007557233446268,
+  "continuous_closed_proof_boxes_cover_root": true,
+  "represented_word_partition_disjoint_complete": true,
+  "active_states": [
+    "shifted_neighbor",
+    "shifted_original"
+  ],
+  "unused_bank_states": [
+    "baseline_neighbor",
+    "baseline_original"
+  ],
+  "damping_width_ratio_to_previous": "7/3",
+  "native_controls": {
+    "sampled_input_pairs": 1388,
+    "node_comparisons": 22208,
+    "closed_estimator_checks": 1388,
+    "max_observed_floating_error_upper": "172407053387107/250000000000000000000000000000"
+  },
+  "controls": [
+    "zeroed certificate rejected",
+    "changed split word rejected",
+    "missing leaf word rejected",
+    "cyclic tree rejected",
+    "max_depth exhausted -> unresolved, not certified",
+    "max_leaves exhausted -> unresolved, not certified",
+    "omega below rejected",
+    "omega above rejected",
+    "gamma below rejected",
+    "gamma above rejected",
+    "omega NaN rejected",
+    "omega infinity rejected",
+    "omega negative infinity rejected",
+    "omega integer rejected",
+    "omega boolean rejected",
+    "omega string rejected",
+    "gamma NaN rejected",
+    "gamma infinity rejected",
+    "gamma negative infinity rejected",
+    "gamma integer rejected",
+    "gamma boolean rejected",
+    "gamma string rejected",
+    "recommended next point is not silently added to certified cover"
+  ],
+  "next_state_candidate": {
+    "omega": "8983/2000",
+    "gamma": "11/100",
+    "minimum_declared_formula_lower": "3670953849248778678327037798665777473963463637172615788251095938492992108833975634953704682730239947751746102820731487517218483059723681724577643701/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "scope": "Finite9x9 grid recommendation only; lower bound on all four particular sufficient upper formulas, not on actual error. No candidate-state accuracy claimed."
+  },
+  "algorithm_budget": "Parameter depth/leaf cap only; no finite mesh accuracy/termination theorem. Budget failures reject a cover.",
+  "IEEE_scope": "Conditional primitive binary64 RN ties-to-even, sixteen explicit operations, frozen constants/source; no FMA/contraction. Native/software traces supplement, not universal platform proof.",
+  "scientific_status": "OPEN",
+  "independent_review": false,
+  "physical_promotion": 0
+}
