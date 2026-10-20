@@ -1,0 +1,61 @@
+{
+  "status": "PROSPECTIVE_SEPARATE_SAVED_LAG_OPERATOR_REVIEW_PLAN",
+  "intake_head": "a92c47fa0fae4e003fa351a81d051a3733db1f8a",
+  "known_before_freeze": [
+    "PR256 two saved q209 tuples",
+    "top1 and top2 exact Frobenius lag norms",
+    "top2 original fixed Frobenius-route HOLD",
+    "both finite phase lists and measured phase implication results"
+  ],
+  "unknown_before_freeze": [
+    "both full exact residual Gram matrices",
+    "Gershgorin and induced-matrix operator enclosures",
+    "new separate operator-route results"
+  ],
+  "method": "Independent IEEE754 bit decoding and full residual Gram quadratic identity; exact Frobenius cross-check, symmetry, every-entry comparison, PSD-by-verified-Gram origin, rational bounds and fixed2^-34 operator cap; source-field/stable-expression phase substitution independently checked.",
+  "controls": [
+    "indefinite arbitrary matrix",
+    "overcap",
+    "nonpositive cap",
+    "scaling",
+    "symmetry",
+    "source or matrix tamper",
+    "premature pass",
+    "wrong operator/Frobenius substitution"
+  ],
+  "prohibited": [
+    "new estimator fit",
+    "new raw record",
+    "factor copy",
+    "change prior capture",
+    "revise prior Frobenius-route status",
+    "claim universal floating solver success"
+  ],
+  "source_hashes": {
+    "AGENTS.md": "33c1dff1e4659d5430dce8bfe3d5caf69802a542e98b1d750d4347fec0081966",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top1_alternating/U_0.npz": "0179c37d75421b768074b72567142372f999e79d8f7d9a4f194ddbf86dd41fbd",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top1_alternating/SVD_META.npz": "86fe85a283f5593ec4a58374318f8cb0034bac65e13cb2ffa6477f81c42738c7",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top1_alternating/U_2.npz": "37bbb4aa6c71f97dd859506535cb87549dccc469b3fc4f6a5a4cf07b9a941f6f",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top1_alternating/RUN.json": "188bb3234164f00d85da600c5e32eb72eb574430649c73cc7fdd3d06fc4f8a39",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top1_alternating/U_1.npz": "a6ba3223a27eddb2c75424fce921704e029ae77af9cb568decfc1951c7d6ef2c",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top1_alternating/PHASE_PROPOSAL.npz": "4a9ac4827d15a79e17add8cc0e5962064326a42c21821e18ab8d47bf74524f52",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top1_alternating/PHASE_META.npz": "b978019930d0dc6b44c0dfb7248ca68ea4b8b46b1ef300a6d4dfa48a74b46275",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top2_alternating/U_0.npz": "1fa2fae932ec999b686ea40f3ed981d751717048b14d13ac2d7e718eb293a88d",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top2_alternating/SVD_META.npz": "c75289437753e88ad18f25a9fc2bb33063b8f9b65a79e7586b4ad040db490407",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top2_alternating/U_2.npz": "1b111a02e445a050a5e4838c6b2e8e8816fda524c24defe1041faf010622f7d8",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top2_alternating/RUN.json": "2d0e776c087738d245a1a7948758e4f0919d087031428e6aa71c6447da18c9b2",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top2_alternating/U_1.npz": "48e7c1fd8c8e682b539ebea25a1e7d16807b9465ab662c1f947029819b2b80ef",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top2_alternating/PHASE_PROPOSAL.npz": "70d62497af4e6b488cefb803917eee06b0c2637d88fd053ce2c53809a41920b9",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/results/null_top2_alternating/PHASE_META.npz": "c0373fde050e91f218deccd185dd7b5b00024748b4922a444d9a2ca305554c22",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/RUN_EXECUTIONS.json": "ead02a6a512fb23509067ddd138aa5a349987e9013cc3e32ffa7b13f8201414f",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/DATA_FREEZE.json": "8bfb20b240d557c529f00827ffc2b598b89c1fc4add38c10c8daf2a24d8e03f5",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/PROTOCOL_FREEZE.json": "0e71a1d0991ecb8b3226c510193476d95a91a209c51b629db43c641ff4982d59",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator_primary/CERTIFICATE.json": "12e5af3b45a4676a65b0eef1a33b473b4eaf36115444f4bb42366eaa04b34616",
+    "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/evidence_return/SPECTRAL_OPERATOR_ADDENDUM.md": "61aa79433c0039a22db22cfac2dad8aefd870d5c098a0130a5f2c43b4e5f4e92"
+  },
+  "source_H_fullfactor_bounds": "inherited, not rerun",
+  "new_estimator_calls": 0,
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry"
+}

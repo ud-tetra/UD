@@ -1,0 +1,261 @@
+{
+  "artifact_type": "SEPARATE_POSTKNOWN_SAVED_LAG_OPERATOR_NORM_REFINEMENT",
+  "status": "COMPLETE_TWO_FIXED_SAVED_OUTPUT_CHECKS",
+  "freeze_sha256": "c727f92fb873135a48fbb2c235e53cb715ed2f892acc4c662c9fda33ec9a0b9a",
+  "source_bindings_sha256": "86eb823ab4efa7f3a5986471a80e5b65b503f6464d2dbd8eb4c3a2f6e297e5e5",
+  "rows": [
+    {
+      "case": "null_top1_alternating",
+      "record_sha256": "2c3c995418ab965613d9f5307c5a23f371c054cca8c8587b63d4859d7897c530",
+      "prior_campaign_status_preserved": "CERTIFIED_FINITE_ACTUAL_ESTIMATOR_EQ_AND_PHASE",
+      "prior_gates_preserved": {
+        "etaU": true,
+        "etaV": true,
+        "xi": true,
+        "sA": true,
+        "rho": true,
+        "h": true,
+        "eV": true,
+        "a": true,
+        "measured_singular_floor": true,
+        "conditional_phase_implication": true,
+        "finite_saved_phase_quality": true
+      },
+      "norm": {
+        "status": "CERTIFIED_OPERATOR_NORM_AT_FIXED_CAP",
+        "positive_cap": [
+          "1",
+          "17179869184"
+        ],
+        "residual_denominator_bits": 146,
+        "trace": [
+          "24083786959271507646962959482685050710211624861475414317396992357",
+          "7770675568902916283677847627294075626569627356208558085007249638955617140820833992704"
+        ],
+        "absolute_row_sum": [
+          "2313667441611405572829456650491393132672908423993523880606013401",
+          "971334446112864535459730953411759453321203419526069760625906204869452142602604249088"
+        ],
+        "Gram_Frobenius_squared": [
+          "134325912566206014045067221631893959662986929416207440929548956736892591491311865508007923983550046580051287238391159315028135641",
+          "60383398797144661635864873295812302254670739526663046854019300803929986598274381633378027602842540280663494000492221518396329354078796682120982948022923136698390325231616"
+        ],
+        "squared_cap_tests": {
+          "trace": true,
+          "absolute_row_sum": true,
+          "Gram_Frobenius": true
+        },
+        "selected_bound": "Gram_Frobenius",
+        "operator_norm_upper": [
+          "59184745006241021360200482544409068167163978",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "readable_operator_norm_upper": 3.861984810265779e-11,
+        "squared_Frobenius_equal_trace": [
+          "24083786959271507646962959482685050710211624861475414317396992357",
+          "7770675568902916283677847627294075626569627356208558085007249638955617140820833992704"
+        ],
+        "PSD_premise": "Verified exact construction D^T D; this function alone does not prove arbitrary input PSD"
+      },
+      "new_operator_route": {
+        "status": "CERTIFIED_SEPARATE_OPERATOR_ROUTE_FINITE_SAVED_OUTPUT",
+        "gates": {
+          "etaU": true,
+          "etaV": true,
+          "xi": true,
+          "sA": true,
+          "rho": true,
+          "h": true,
+          "eV": true,
+          "a": true,
+          "measured_singular_floor": true,
+          "direct_finite_phase_quality": true,
+          "measured_phase_implication": true
+        },
+        "measured_implication": {
+          "noise_radius": [
+            3,
+            562949953421312
+          ],
+          "status": "CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION",
+          "uniform_solver_success_claimed": false,
+          "requires_measured_singular_floor": true,
+          "required_proposed_singular_floor_lower": [
+            4414241366011623160476537349023504084768102190114731,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "readable_required_singular_floor_lower": 0.0028804268908459553,
+          "offspan_sine_upper": [
+            2088371230795146656101783423164715104509040408,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "polar_distance_upper": [
+            2088371230795146656586552244039433528569588489,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "shift_distance_upper": [
+            4484847623558195382276259459435578990480791940,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "eigenvalue_radius_upper": [
+            496683775087850502127814430020238778544606065442,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "source_half_chord_lower": [
+            558243950846770906175863469444248438199879204864,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "readable_half_chord_lower": 3.642711746693583e-07,
+          "phase_error_upper": [
+            496683775504106789953930751554961597745031331254,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "phase_matching_margin_lower": [
+            61560175342664116221932717889286840454847873610,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "readable_phase_error_upper": 3.241012859479324e-07,
+          "readable_matching_margin_lower": 4.0169888721425875e-08
+        },
+        "all_other_metrics_inherited_from_prior_exact_certificate": true,
+        "uniform_backend_success": false
+      },
+      "Gram_file": "null_top1_alternating_GRAM.json.gz",
+      "Gram_file_sha256": "4fb351b7165cd074df9c0e50a03d7d8c5401f8823e92ffb8d1a99632226560cb",
+      "canonical_Gram_payload_sha256": "bef29841f6fee217536e04d40fd81f7c02ef993a7c94641656d897be630657aa",
+      "Gram_file_bytes": 1342312,
+      "new_estimator_calls": 0
+    },
+    {
+      "case": "null_top2_alternating",
+      "record_sha256": "80fcef020f7b5c5f192aa8787b73eb57d9e749efb5d86dc25b4ed0cdfecbb2eb",
+      "prior_campaign_status_preserved": "HOLD_ACTUAL_ESTIMATOR_EQ_OR_PHASE",
+      "prior_gates_preserved": {
+        "etaU": true,
+        "etaV": true,
+        "xi": true,
+        "sA": false,
+        "rho": true,
+        "h": true,
+        "eV": true,
+        "a": true,
+        "measured_singular_floor": true,
+        "conditional_phase_implication": true,
+        "finite_saved_phase_quality": true
+      },
+      "norm": {
+        "status": "CERTIFIED_OPERATOR_NORM_AT_FIXED_CAP",
+        "positive_cap": [
+          "1",
+          "17179869184"
+        ],
+        "residual_denominator_bits": 144,
+        "trace": [
+          "1841605073164669134994181370011278121382556654293933116457602693",
+          "485667223056432267729865476705879726660601709763034880312953102434726071301302124544"
+        ],
+        "absolute_row_sum": [
+          "131337297584985507064557915131473675712143908398033081957684057",
+          "30354201441027016733116592294117482916287606860189680019559568902170379456331382784"
+        ],
+        "Gram_Frobenius_squared": [
+          "859689651305737546619578644256029710103218993646411387910056544102289057199780415933736150290628770900647452093785097566767593",
+          "235872651551346334515097161311766805682307576276027526773512893765351510149509303255382920323603672971341773439422740306235661539370299539535089640714543502728087207936"
+        ],
+        "squared_cap_tests": {
+          "trace": false,
+          "absolute_row_sum": false,
+          "Gram_Frobenius": true
+        },
+        "selected_bound": "Gram_Frobenius",
+        "operator_norm_upper": [
+          "66959969464865408199234538470918840452747240",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "readable_operator_norm_upper": 4.3693418792613105e-11,
+        "squared_Frobenius_equal_trace": [
+          "1841605073164669134994181370011278121382556654293933116457602693",
+          "485667223056432267729865476705879726660601709763034880312953102434726071301302124544"
+        ],
+        "PSD_premise": "Verified exact construction D^T D; this function alone does not prove arbitrary input PSD"
+      },
+      "new_operator_route": {
+        "status": "CERTIFIED_SEPARATE_OPERATOR_ROUTE_FINITE_SAVED_OUTPUT",
+        "gates": {
+          "etaU": true,
+          "etaV": true,
+          "xi": true,
+          "sA": true,
+          "rho": true,
+          "h": true,
+          "eV": true,
+          "a": true,
+          "measured_singular_floor": true,
+          "direct_finite_phase_quality": true,
+          "measured_phase_implication": true
+        },
+        "measured_implication": {
+          "noise_radius": [
+            3,
+            562949953421312
+          ],
+          "status": "CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION",
+          "uniform_solver_success_claimed": false,
+          "requires_measured_singular_floor": true,
+          "required_proposed_singular_floor_lower": [
+            4414241366011623160476537349023504084768102190114731,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "readable_required_singular_floor_lower": 0.0028804268908459553,
+          "offspan_sine_upper": [
+            2088057890291539207181843486190014207583105239,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "polar_distance_upper": [
+            2088057890291539207666394134766808162163440331,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "shift_distance_upper": [
+            4492175255771132650610672596083088426319669863,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "eigenvalue_radius_upper": [
+            497451240710069552721421044465121937052471052385,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "source_half_chord_lower": [
+            558243950846770906175863469444248438199879204864,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "readable_half_chord_lower": 3.642711746693583e-07,
+          "phase_error_upper": [
+            497451241126873932111590328950234701524252209923,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "phase_matching_margin_lower": [
+            60792709719896974064273140494013736675626994941,
+            1532495540865888858358347027150309183618739122183602176
+          ],
+          "readable_phase_error_upper": 3.2460208063366017e-07,
+          "readable_matching_margin_lower": 3.9669094035698104e-08
+        },
+        "all_other_metrics_inherited_from_prior_exact_certificate": true,
+        "uniform_backend_success": false
+      },
+      "Gram_file": "null_top2_alternating_GRAM.json.gz",
+      "Gram_file_sha256": "6717059189e8b0413f03253f8165ed19cf7cae69c8c4067bc076aa31d0ebcb90",
+      "canonical_Gram_payload_sha256": "c1db23c31c2a85b5e19bfc06372181a8d085c16d6240f897c454b37b4f388690",
+      "Gram_file_bytes": 1326485,
+      "new_estimator_calls": 0
+    }
+  ],
+  "known_prior_outcomes": "Both Frobenius values and finite phases known before freeze; exact residual Grams and operator bounds not computed before freeze",
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "new_factor_copies": 0,
+  "old_campaign_relabelled": false,
+  "old_reconstruction_no_go_unchanged": true,
+  "uniform_backend_success": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

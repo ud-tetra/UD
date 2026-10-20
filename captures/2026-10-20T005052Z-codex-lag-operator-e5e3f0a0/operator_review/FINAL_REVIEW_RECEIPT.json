@@ -1,0 +1,44 @@
+{
+  "status": "PASS_SCOPED_SAME_TEAM_PROSPECTIVE_AND_FINAL_REVIEW",
+  "pre_run_review_sha256": "2070b7acdb7e410623e2f92817532ed3a1f40299afff0cb497f8668ca296f6c9",
+  "driver_freeze_sha256": "e0405ad9f61b3ae30d4833393eeb6e93d76f12cce4594562ea02e11bb77b40b2",
+  "full_Gram_review_receipt_sha256": "87e24161b9e19b3d6909f591223aa8ae823638f65667665c26cb99752c261a5b",
+  "transitive_source_chain_check_sha256": "d7248231267acc7b2a53341c9304b1ada8ec7e02787da0e5e8998c1dfcbfe109",
+  "independent_controls": 14,
+  "exact_Gram_entries_independently_compared": 87362,
+  "root_canonical_payloads_and_Gzip_hashes_checked": true,
+  "individual_basis_shift_and_residual_denominators_checked": true,
+  "results": [
+    {
+      "case": "null_top1_alternating",
+      "operator_norm_upper": 3.861984810265779e-11,
+      "separate_operator_route": "CERTIFIED_SEPARATE_OPERATOR_ROUTE_FINITE_SAVED_OUTPUT",
+      "old_campaign_status_preserved": "CERTIFIED_FINITE_ACTUAL_ESTIMATOR_EQ_AND_PHASE",
+      "selected_predeclared_bound": "Gram_Frobenius",
+      "exact_cap_tests": {
+        "trace": true,
+        "absolute_row_sum": true,
+        "Gram_Frobenius": true
+      }
+    },
+    {
+      "case": "null_top2_alternating",
+      "operator_norm_upper": 4.3693418792613105e-11,
+      "separate_operator_route": "CERTIFIED_SEPARATE_OPERATOR_ROUTE_FINITE_SAVED_OUTPUT",
+      "old_campaign_status_preserved": "HOLD_ACTUAL_ESTIMATOR_EQ_OR_PHASE",
+      "selected_predeclared_bound": "Gram_Frobenius",
+      "exact_cap_tests": {
+        "trace": false,
+        "absolute_row_sum": false,
+        "Gram_Frobenius": true
+      }
+    }
+  ],
+  "top2_interpretation": "New separate operator route proves the mathematical norm premise. Old frozen Frobenius-route HOLD remains unchanged. Neither trace nor Gershgorin alone proves top2 cap; only the prospectively declared Gram-Frobenius bound does.",
+  "zero_new_estimator_fits": true,
+  "zero_raw_or_factor_copies": true,
+  "source_H_fullfactor_bounds": "Inherited, source hashes checked; not recomputed",
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "lane": "development \u2014 no registry entry"
+}
