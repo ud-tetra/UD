@@ -1,0 +1,98 @@
+{
+  "status": "PASS_INDEPENDENT_SOURCE_EXPRESSION_AUDIT",
+  "rows": [
+    {
+      "case": "null_top1_alternating",
+      "status": "PASS_INDEPENDENT_SOURCE_FIELD_AND_EXPRESSION_AUDIT",
+      "fixed_caps": {
+        "etaU": true,
+        "etaV": true,
+        "xi": true,
+        "sA": true,
+        "rho": true,
+        "h": true,
+        "eV": true,
+        "a": true
+      },
+      "fixed_caps_all_pass": true,
+      "conditional_measured_pointwise_status": "CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION",
+      "finite_list_status": "CERTIFIED_FINITE_EMITTED_TWO_STEP_BIJECTION",
+      "overall_actual_status_unchanged": "CERTIFIED_FINITE_ACTUAL_ESTIMATOR_EQ_AND_PHASE",
+      "independent_values": {
+        "offspan_sine_upper": [
+          2088371230795146656101783423164715104509040408,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "polar_distance_upper": [
+          2088371230795146656586552244039433528569588489,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "shift_distance_upper": [
+          4511664715935981895131043651100370847712552803,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "eigenvalue_radius_upper": [
+          499645600815042440650791053183222864360750101966,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "phase_error_upper": [
+          499645601231298884963893062910172543437869118038,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "phase_matching_margin_lower": [
+          58598349615472021211970406534075894762010086827,
+          1532495540865888858358347027150309183618739122183602176
+        ]
+      }
+    },
+    {
+      "case": "null_top2_alternating",
+      "status": "PASS_INDEPENDENT_SOURCE_FIELD_AND_EXPRESSION_AUDIT",
+      "fixed_caps": {
+        "etaU": true,
+        "etaV": true,
+        "xi": true,
+        "sA": false,
+        "rho": true,
+        "h": true,
+        "eV": true,
+        "a": true
+      },
+      "fixed_caps_all_pass": false,
+      "conditional_measured_pointwise_status": "CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION",
+      "finite_list_status": "CERTIFIED_FINITE_EMITTED_TWO_STEP_BIJECTION",
+      "overall_actual_status_unchanged": "HOLD_ACTUAL_ESTIMATOR_EQ_OR_PHASE",
+      "independent_values": {
+        "offspan_sine_upper": [
+          2088057890291539207181843486190014207583105239,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "polar_distance_upper": [
+          2088057890291539207666394134766808162163440331,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "shift_distance_upper": [
+          4520303008091269107557180032538650321535769744,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "eigenvalue_radius_upper": [
+          500557822859104879168777656079923997713650611970,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "phase_error_upper": [
+          500557823275909423248021787377773537615211129416,
+          1532495540865888858358347027150309183618739122183602176
+        ],
+        "phase_matching_margin_lower": [
+          57686127570861482927841682066474900584668075449,
+          1532495540865888858358347027150309183618739122183602176
+        ]
+      }
+    }
+  ],
+  "freeze_sha256": "cae286abf5295137d199ca4de323049ece06705b1da327a3f6dd3d7eaec5e39f",
+  "scope": "Same measured dyadic bounds checked against pinned source fields by independent stable algebra; source H/full-factor proofs inherited, not rerun; fixed cap failure cannot be overridden by pointwise or direct finite matching.",
+  "new_estimator_calls": 0,
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

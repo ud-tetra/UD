@@ -1,0 +1,167 @@
+{
+  "artifact_type": "SEPARATE_SAME_TEAM_REQUIREMENTS_CONTENT_REVIEW_NOT_EXTERNAL_ATTESTATION",
+  "reviewer_role": "Same-team reviewer of requirements package, not calibration authority, nonconstructor scientific certifier or custodian",
+  "known_outcomes_disclosed": "PR250/252/254 and candidate exposure known; draft corrections and source operator seen. No blinded data claim.",
+  "checks": [
+    {
+      "id": "exact_inventory",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "BLOCKER_RETURN_CROSSWALK.json:entries[0:128]",
+        "SOURCE_BINDINGS.json:inputs",
+        "INVENTORY_REVIEW_RUN_1.json"
+      ],
+      "finding": "Exact ordered128 source strings, unique128 paths, all10 bound source files and14 roles pass. These are metadata paths, not128 independent scientific gates;170 candidate null leaves are separate bookkeeping."
+    },
+    {
+      "id": "concrete_return_content",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:artifacts R01\u2013R14",
+        "BLOCKER_RETURN_CROSSWALK.json:requested_section/additional_requested_sections"
+      ],
+      "finding": "All paths identify concrete artifact/content sections, actual channel mapping and source/domain scope. Compound-path secondary refs include feedback/loss, energy discrepancy and state/model/solver allocation."
+    },
+    {
+      "id": "route_applicability",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R06.conditional_sections/inactive_route_rule",
+        "BLOCKER_RETURN_CROSSWALK.json:route_applicability",
+        "README.md:joint-error paragraph"
+      ],
+      "finding": "Four common joint fields, one deterministic-only and three statistical-only fields; justified N/A for inactive route. Neither scientific route was selected or demonstrated."
+    },
+    {
+      "id": "independent_authority",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R01/R14",
+        "EXTERNAL_RETURN_RECEIPT_TEMPLATE.json:reviewer_identity/calibration_authority_acceptance/custodian_ruling"
+      ],
+      "finding": "Names, authority acceptance, identity/conflicts, inspected-content decisions and custodian ruling remain blank. Custody hashes do not establish scientific validity or external independence."
+    },
+    {
+      "id": "domain",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R02\u2013R06",
+        "RETURN_REVIEW_GUIDE.md:Conditional error propagation to request"
+      ],
+      "finding": "Actual counts/crop/channel/wiring/device/calibration domains required; no old1000-record/N16184 source coverage transferred to a new source. Missing numerical allowances remain unknown."
+    },
+    {
+      "id": "timing",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R04",
+        "RETURN_REVIEW_GUIDE.md:clock/tau_N/epsilon_time formulas"
+      ],
+      "finding": "Explicit rate/origin/skew/jitter/crop domain and derivative/band proof propagate to time-warp voltage-vector enclosure. Requires rho<1, positive b and L for inverse allocation; N=1 and zero derivative cases handled without invalid division. No numerical clock tolerance supplied."
+    },
+    {
+      "id": "joint_coverage",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R06",
+        "RETURN_REVIEW_GUIDE.md:per-trace/stacked error paragraphs"
+      ],
+      "finding": "Deterministic simultaneous or justified statistical joint event remains alternative; no Gaussian/iid/covariance model invented. Disjoint-coordinate Euclidean stacking is distinguished from statistical cancellation."
+    },
+    {
+      "id": "numerical_debit",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R07",
+        "RETURN_REVIEW_GUIDE.md:Validated computational debits",
+        "SPECTRAL_OPERATOR_ADDENDUM.md and SOURCE_BINDINGS_ADDENDUM.json; pinned upstream SPECTRAL_ERROR_LEMMA.md"
+      ],
+      "finding": "FFT/window/normalization/rounding and prediction solver debits remain separate from acquisition/state/model uncertainty. Initial guide omitted explicit unitary FFT scaling; upstream source proves its factor under the stated frozen power convention. Addendum required for self-contained scope. Append-only operator clarification now supplies this exact convention and proof; original frozen bytes retained. This is a source-conditional bound, not a verified computation or physical error budget."
+    },
+    {
+      "id": "physical_model",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R08\u2013R12",
+        "UNSENT_EVIDENCE_REQUEST.md:physical model and alternative"
+      ],
+      "finding": "Requests independently justified equations, parameters/domains/units, physical realization, state/action/readout/quadratures, preparation, drive/feedback/loss, source-work/discrepancy and a scientifically justified comparator in the same coordinates."
+    },
+    {
+      "id": "complex_link",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R08.complex_link_amplitude",
+        "UNSENT_EVIDENCE_REQUEST.md:complex link-amplitude dependence"
+      ],
+      "finding": "Requested primary model explicitly retains complex link amplitude and its dependence; no unit rotor, independent-E substitution or UD group identification is introduced."
+    },
+    {
+      "id": "fresh_lineage",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R13",
+        "README.md:known05-21/05-28 exposure",
+        "RETURN_REVIEW_GUIDE.md:ordered review steps2\u20134"
+      ],
+      "finding": "Current05-28 remains retrospective exploratory in its lineage; filenames/new hashes/local lack of raw access cannot erase author feature-derived parameter exposure. Future confirmation requires independently reviewed unseen lineage and own calibration coverage."
+    },
+    {
+      "id": "score_freeze",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_PROFILE.json:R12",
+        "RETURN_REVIEW_GUIDE.md:score interval and ordered review"
+      ],
+      "finding": "Source/model/comparator/solver/bounds/precision/termination/ties/failures/train/holdout/score/margin rationale fixed before relevant outcomes; both aggregateL2 and max-absolute interval separation required. No retries/zero imputation or outcome-chosen threshold."
+    },
+    {
+      "id": "lane_separation",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_REVIEW_GUIDE.md:Keep the three interfaces separate",
+        "README.md:lane paragraph"
+      ],
+      "finding": "Synthetic209 temporal/internalq/two-step, native62\u00d737/1893 observable/747 hidden/189 diagnostics, and published10-channel lane remain distinct. No10\u219262 padding, kernel recovery or automatic state correspondence."
+    },
+    {
+      "id": "typed_units",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "RETURN_REVIEW_GUIDE.md:lane table/error propagation/no backsolving",
+        "README.md:lane paragraph"
+      ],
+      "finding": "No internal2^-48 quantum or six-ratio2^-39 accuracy becomes V/SI or apparatus tolerance. Native2^-38 shape and rejected2^-49 residual are not reassigned as physical gates; no new physical numerical target is supplied."
+    },
+    {
+      "id": "template_status",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "UNSENT_EVIDENCE_REQUEST.md:header",
+        "RETURN_PROFILE.json:status flags",
+        "EXTERNAL_RETURN_RECEIPT_TEMPLATE.json:self_reference_rule"
+      ],
+      "finding": "Request remains UNSENT; all14 roles NOT_RECEIVED_UNVERIFIED with null return hashes. Receipt R01\u2013R13 entries are blank; R14 completed statement is separately pinned with no recursive self-hash/self-review. All128 remain unresolved, raw/hardware/outreach unauthorized, externalPENDING/Physical0."
+    },
+    {
+      "id": "negative_examples",
+      "status": "PASS_REQUEST_CONTENT_SCOPE",
+      "references": [
+        "EXAMPLES.json:12 hypothetical examples",
+        "INVENTORY_REVIEW_RUN_1.json:10 mutated inventory controls"
+      ],
+      "finding": "All12 examples are hypothetical review dispositions only, not returned scientific evidence. Own10 mutations test inventory omissions, mappings, route and premature claim flags; they are not estimator or calibration experiments."
+    }
+  ],
+  "inventory_run_passed": true,
+  "negative_inventory_controls_rejected": 10,
+  "inventory_replays_byte_identical": true,
+  "actual_evidence_received": false,
+  "source_truth_independently_certified": false,
+  "qualification_blockers_closed": 0,
+  "original_blocker_paths_unresolved": 128,
+  "physical_promotion": 0,
+  "external_review": "PENDING",
+  "scope_verdict": "PASS_REQUEST_STRUCTURE_AND_CONTENT_SCOPE_ONLY",
+  "append_only_operator_clarification_resolved": true
+}
