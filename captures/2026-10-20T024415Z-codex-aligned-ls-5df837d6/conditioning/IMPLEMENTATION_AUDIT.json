@@ -1,0 +1,102 @@
+{
+  "artifact_type": "READ_ONLY_ACTUAL_ESTIMATOR_IMPLEMENTATION_AUDIT",
+  "created_UTC": "2026-10-20T02:35:03.164313+00:00",
+  "source_path": "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/estimator/estimator.py",
+  "source_sha256": "5fa15ca0f3830f168fe9e1483db7f21cb6e462780209b4d8b4e8ad43d64cfe86",
+  "source_calls": [
+    {
+      "name": "svd",
+      "line": 17,
+      "explicit_keyword_names": [
+        "full_matrices",
+        "check_finite"
+      ]
+    },
+    {
+      "name": "np.count_nonzero",
+      "line": 17,
+      "explicit_keyword_names": []
+    },
+    {
+      "name": "eigvals",
+      "line": 20,
+      "explicit_keyword_names": [
+        "check_finite"
+      ]
+    },
+    {
+      "name": "np.angle",
+      "line": 20,
+      "explicit_keyword_names": []
+    },
+    {
+      "name": "eig",
+      "line": 20,
+      "explicit_keyword_names": [
+        "check_finite"
+      ]
+    },
+    {
+      "name": "np.linalg.inv",
+      "line": 20,
+      "explicit_keyword_names": []
+    },
+    {
+      "name": "lstsq",
+      "line": 20,
+      "explicit_keyword_names": [
+        "check_finite"
+      ]
+    },
+    {
+      "name": "np.rint",
+      "line": 20,
+      "explicit_keyword_names": []
+    }
+  ],
+  "checks": [
+    {
+      "stage": "input_and_sketch",
+      "observed": "int64 raw layout37x8191x62; fixed integer sketch; int64 partial-sum and2^53 numerator range assertions; exact dyadic division2^55",
+      "verification_scope": "Accepted future inputs must independently satisfy custody/layout/encoding/range contracts; original assertion-based proposer is not sole authority."
+    },
+    {
+      "stage": "SVD_and_order",
+      "observed": "SciPy svd proposal; count returned singular values above2^-24; retained factors saved. No fullSVD error certificate in estimator.",
+      "verification_scope": "Conditional exact-data cutoff margin can specify needed singular-value error bound; no uniform implementation error bound is inferred. Retained equation/Gram/proposed-floor checks are mandatory separately."
+    },
+    {
+      "stage": "least_squares",
+      "observed": "SciPy lstsq on deleted-row U blocks; only returned solution[0] used. No explicit cond or lapack_driver argument is supplied.",
+      "verification_scope": "No undocumented default or a-priori rounding constant assumed. Current separate exact normal residual can bound distance of each saved T to exactLS; no rerun or all-input guarantee."
+    },
+    {
+      "stage": "eigenpair",
+      "observed": "Separate eigvals/eig calls with nearest-index assignment and uniqueness assertion.",
+      "verification_scope": "Actual saved complex residual and approximate inverse certificate, not index matching alone, are needed for accepted output."
+    },
+    {
+      "stage": "inverse",
+      "observed": "np.linalg.inv proposes H.",
+      "verification_scope": "Exact saved WH-I residual below1 proves invertibility and includes inverse debit; no blanket np.linalg.inv error guarantee."
+    },
+    {
+      "stage": "phase_encoding",
+      "observed": "np.angle then np.rint(angle*2^60) toint64.",
+      "verification_scope": "Inherited Arb argument and exact ties-to-even/finite-list checks certify saved emissions.2^60 scaling is not a physical clock."
+    },
+    {
+      "stage": "failures_and_environment",
+      "observed": "Exceptions retainedHOLD; no retry/fallback. Recorded Python/NumPy/SciPy versions and source-level one-thread settings in prior artifacts.",
+      "verification_scope": "No private runtime configuration inspected or captured; no full binary/build audit or universal backend proof. Verifier premises cannot rely on disabled assertions."
+    }
+  ],
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "all_input_solver_rounding_proved": false,
+  "future_workflow": "Unchanged proposer + independent exact residual verifier; certify only measured qualified outputs, otherwiseHOLD.",
+  "source_H_fullfactor_truth_rederived": false,
+  "old_campaign_relabelled": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
