@@ -1,0 +1,45 @@
+{
+  "accessed_UTC_date": "2026-10-20",
+  "status": "SUPPLIER_SPECIFICATION_SCREEN_ONLY",
+  "physical_promotion": 0,
+  "sources": [
+    {
+      "id": "ADI_AD5791_F",
+      "title": "AD5791 Rev. F",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/AD5791.pdf",
+      "pages": [
+        3,
+        17
+      ],
+      "facts": "20-bit DAC; B-grade one-LSB maximum INL at +/-10 V references, 0 to 105 C; settling statements depend on step/buffer.",
+      "scope": "Supplier limits under conditions; affine and reference errors require calibration"
+    },
+    {
+      "id": "ADI_LTC2500_B",
+      "title": "LTC2500-32 Rev. B",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/250032fb.pdf",
+      "pages": [
+        4,
+        7,
+        33
+      ],
+      "facts": "32-bit filtered output; no-latency composite includes 24 differential bits; 2 ppm max INL; averaging DF1024 at 1MHz has 1.024 ms spacing and 512 us listed delay.",
+      "scope": "Group delay is not automatically an absolute history bound; no noise-tail certificate"
+    },
+    {
+      "id": "TI_ADS127L21_C",
+      "title": "ADS127L21 Rev. C August 2025",
+      "url": "https://www.ti.com/lit/ds/symlink/ads127l21.pdf",
+      "pages": [
+        1,
+        7
+      ],
+      "facts": "Filtered ADC alternative; characteristics depend on mode.",
+      "scope": "Full mode-specific audit remains OPEN"
+    }
+  ],
+  "verbatim_excerpts": [],
+  "hardware_selection": "NONE",
+  "empirical_observations": "NONE",
+  "screen_result": "HOLD; clock/plant compatibility and calibrated error/model premises required"
+}

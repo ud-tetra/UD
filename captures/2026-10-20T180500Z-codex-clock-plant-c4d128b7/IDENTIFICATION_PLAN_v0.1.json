@@ -1,0 +1,93 @@
+{
+  "status": "PROPOSED_OPEN",
+  "physical_promotion": 0,
+  "lane": "development; no registry entry",
+  "review": "non-constructor adversarial review PENDING",
+  "execution": "NONE",
+  "admission": "HOLD; supplier specifications are not apparatus observations",
+  "alternative_design_bounds": {
+    "nu": "1/100000",
+    "q": "1/25000",
+    "remaining_SAC_bounds": "unchanged",
+    "total_residual": "149383/16000000",
+    "new_clock_parameters": "not measured"
+  },
+  "clock_gate": {
+    "condition": "400000*max(Tp,mu_p+ell_p,tau_p) <= t0 <= min_c sqrt(Lc*Cc)",
+    "interval_method": "use joint calibration intervals; no optimistic endpoint selection",
+    "filter_mode_screen": "nominal averaging-mode spacing requires t0 >=2048/5 s under this allocation",
+    "every_pair_LC_requirement": "at least 4194304/25 s^2 for that mode",
+    "physical_component_values": "OPEN"
+  },
+  "records": [
+    {
+      "stage": "clock_and_plant",
+      "status": "OPEN",
+      "required": [
+        "L and C per canonical pair with units",
+        "loading",
+        "Phi0 Q0 common action products",
+        "energy and physical time scale joint intervals",
+        "nonempty compatibility interval"
+      ]
+    },
+    {
+      "stage": "readout_history",
+      "status": "OPEN",
+      "required": [
+        "frozen mode and filter coefficients",
+        "absolute coefficient sum and first age moment",
+        "aperture/output availability timestamps",
+        "startup tails",
+        "channel synchronization/skew",
+        "all computation transfer and command-application delays"
+      ]
+    },
+    {
+      "stage": "static_and_noise",
+      "status": "OPEN",
+      "required": [
+        "reference-traceable gain offset INL maps",
+        "temperature drift and reference error",
+        "crosstalk and independent regularity bounds",
+        "simultaneous uncertainty including noise and reconstruction",
+        "no substitution of RMS for peak bound"
+      ]
+    },
+    {
+      "stage": "actuator_identification",
+      "status": "OPEN",
+      "residual": "r_a=physical_derivative(a)/omega_physical+a-c",
+      "target_infinity_bound": "1/100000",
+      "required": [
+        "independent command/output measurements",
+        "bounded derivative reconstruction error",
+        "rate interval uncertainty",
+        "held-segment cover and regularity bound",
+        "one-sided command transitions and glitches",
+        "initial tails and loads",
+        "bidirectional range and slew"
+      ]
+    },
+    {
+      "stage": "release_and_blinded_CD1",
+      "status": "OPEN",
+      "required": [
+        "hold radius and prehistory speed",
+        "release tracking",
+        "holding work",
+        "frozen rule and review receipt",
+        "nominal wrong-sign and frozen-electric controls"
+      ]
+    }
+  ],
+  "hold_conditions": [
+    "Empty clock compatibility interval",
+    "Missing raw history or unbounded latency",
+    "Unidentified actuator or unbounded derivative error",
+    "Missing simultaneous error coverage",
+    "Unbudgeted calibration drift saturation or crosstalk",
+    "No attributable non-constructor review for registration"
+  ],
+  "scope": "Short Gauss prefix; not full CD-1 campaign, SDW endpoint or physical bridge"
+}

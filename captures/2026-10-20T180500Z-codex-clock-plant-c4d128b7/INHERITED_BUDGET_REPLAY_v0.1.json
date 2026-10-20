@@ -1,0 +1,270 @@
+{
+  "status": "PASS_CONDITIONAL_MATHEMATICS",
+  "sampled_actuator": {
+    "status": "PASS_CONDITIONAL_DESIGN",
+    "input_kind": "Illustrative supplied bounds; no apparatus observations",
+    "physical_promotion": 0,
+    "constants": {
+      "target_L": {
+        "exact": "97/4",
+        "decimal": 24.25
+      },
+      "plant_L": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "command_L": {
+        "exact": "101/4",
+        "decimal": 25.25
+      },
+      "speed": {
+        "exact": "81/10",
+        "decimal": 8.1
+      }
+    },
+    "inputs": {
+      "period": {
+        "exact": "1/400000",
+        "decimal": 2.5e-06
+      },
+      "latency": {
+        "exact": "1/400000",
+        "decimal": 2.5e-06
+      },
+      "input_error": {
+        "exact": "1/100000",
+        "decimal": 1e-05
+      },
+      "command_error": {
+        "exact": "1/25000",
+        "decimal": 4e-05
+      },
+      "actuator_distortion": {
+        "exact": "1/100000",
+        "decimal": 1e-05
+      },
+      "actuator_pole": {
+        "exact": "400000",
+        "decimal": 400000.0
+      },
+      "initial_tracking_error": {
+        "exact": "1/1000",
+        "decimal": 0.001
+      },
+      "other_residual": {
+        "exact": "3/400",
+        "decimal": 0.0075
+      },
+      "actuator_range": {
+        "exact": "10",
+        "decimal": 10.0
+      },
+      "input_bits": 24,
+      "output_bits": 20
+    },
+    "max_sample_age": {
+      "exact": "1/200000",
+      "decimal": 5e-06
+    },
+    "held_command_error": {
+      "exact": "10521/8000000",
+      "decimal": 0.001315125
+    },
+    "actuator_lag_error": {
+      "exact": "8181/16000000",
+      "decimal": 0.0005113125
+    },
+    "steady_tracking_bound": {
+      "exact": "29383/16000000",
+      "decimal": 0.0018364375
+    },
+    "uniform_tracking_bound": {
+      "exact": "29383/16000000",
+      "decimal": 0.0018364375
+    },
+    "total_residual": {
+      "exact": "149383/16000000",
+      "decimal": 0.0093364375
+    },
+    "command_range_bound": {
+      "exact": "453127/50000",
+      "decimal": 9.06254
+    },
+    "actuator_range_bound": {
+      "exact": "18127/2000",
+      "decimal": 9.0635
+    },
+    "input_quantization": {
+      "exact": "1/16777216",
+      "decimal": 5.960464477539063e-08
+    },
+    "output_quantization": {
+      "exact": "5/524288",
+      "decimal": 9.5367431640625e-06
+    },
+    "margins": {
+      "tracking_allocation": {
+        "exact": "10617/16000000",
+        "decimal": 0.0006635625
+      },
+      "total_residual": {
+        "exact": "10617/16000000",
+        "decimal": 0.0006635625
+      },
+      "speed_bootstrap": {
+        "exact": "450617/16000000",
+        "decimal": 0.0281635625
+      },
+      "saturation": {
+        "exact": "1873/2000",
+        "decimal": 0.9365
+      },
+      "input_nonquantization_allowance": {
+        "exact": "521163/52428800000",
+        "decimal": 9.94039535522461e-06
+      },
+      "command_nonquantization_allowance": {
+        "exact": "49911/1638400000",
+        "decimal": 3.04632568359375e-05
+      }
+    }
+  },
+  "Gauss_prefix": {
+    "status": "PASS_CONDITIONAL_DESIGN",
+    "input_kind": "illustrative certified-bound inputs; no apparatus data",
+    "physical_promotion": 0,
+    "inputs": {
+      "initial_error": {
+        "exact": "1/10000",
+        "decimal": 0.0001
+      },
+      "snapshot_error": {
+        "exact": "1/10000",
+        "decimal": 0.0001
+      },
+      "vectorfield_defect": {
+        "exact": "1/100",
+        "decimal": 0.01
+      },
+      "nominal_window": {
+        "exact": "1/100",
+        "decimal": 0.01
+      },
+      "clock_radius": {
+        "exact": "1/100000",
+        "decimal": 1e-05
+      },
+      "control_age": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "plant_L": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "aggregate_calibration_node_bound": {
+        "exact": "1/400",
+        "decimal": 0.0025
+      },
+      "aggregate_grid_bound": {
+        "exact": "1/400",
+        "decimal": 0.0025
+      },
+      "unmodeled_bound": {
+        "exact": "69383/16000000",
+        "decimal": 0.0043364375
+      }
+    },
+    "constants": {
+      "vectorfield_L": {
+        "exact": "97/4",
+        "decimal": 24.25
+      },
+      "Gauss_L": {
+        "exact": "6",
+        "decimal": 6.0
+      },
+      "speed_M": {
+        "exact": "81/10",
+        "decimal": 8.1
+      }
+    },
+    "hmin": {
+      "exact": "999/100000",
+      "decimal": 0.00999
+    },
+    "hmax": {
+      "exact": "1001/100000",
+      "decimal": 0.01001
+    },
+    "trajectory_error": {
+      "exact": "2001/7572575",
+      "decimal": 0.00026424300848786574
+    },
+    "decision_error_B": {
+      "exact": "1388949/302903000",
+      "decimal": 0.0045854580509271945
+    },
+    "wrong_sign_ideal_drift_lower": {
+      "exact": "153441826567011/8000000000000000",
+      "decimal": 0.019180228320876375
+    },
+    "frozen_electric_ideal_drift_lower": {
+      "exact": "2497167665667/125000000000000",
+      "decimal": 0.019977341325336
+    },
+    "CD1_gate_lower": {
+      "exact": "100999/10000000",
+      "decimal": 0.0100999
+    },
+    "CD1_gate_upper": {
+      "exact": "101001/10000000",
+      "decimal": 0.0101001
+    },
+    "max_age_for_delay_allocation": {
+      "exact": "1/81810",
+      "decimal": 1.222344456667889e-05
+    },
+    "delay_bound": {
+      "exact": "0",
+      "decimal": 0.0
+    },
+    "total_defect_bound": {
+      "exact": "149383/16000000",
+      "decimal": 0.0093364375
+    },
+    "margins": {
+      "nominal_pass": {
+        "exact": "16703410097/3029030000000",
+        "decimal": 0.005514441949072806
+      },
+      "wrong_species_fail": {
+        "exact": "10891592870227332933/2423224000000000000000",
+        "decimal": 0.00449467026994918
+      },
+      "frozen_electric_fail": {
+        "exact": "200362128646031301/37862875000000000000",
+        "decimal": 0.005291783274408805
+      },
+      "initial_Gauss_gate": {
+        "exact": "41/5000",
+        "decimal": 0.0082
+      },
+      "tube": {
+        "exact": "6651924261/30290300000",
+        "decimal": 0.21960575699151214
+      },
+      "residual_budget": {
+        "exact": "10617/16000000",
+        "decimal": 0.0006635625
+      },
+      "delay_allocation": {
+        "exact": "1/400",
+        "decimal": 0.0025
+      }
+    }
+  },
+  "hardware": "HOLD",
+  "note": "Alternative nu/q only; tracking counted once; endpoint tolerances unchanged; no actual observations",
+  "physical_promotion": 0
+}
