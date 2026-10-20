@@ -1,0 +1,15 @@
+# Independent saved-factor budget review
+
+The independent plan, source pins, arithmetic and driver were frozen before computing new saved norm constants or grid outcomes. Prior PR256 factors, phases and Frobenius statuses, and PR258 operator bounds, were already known. This is a postknown deterministic mathematical refinement. There were no new estimator fits, actual perturbation generation, raw records or factor copies.
+
+The prospective review corrected norm-bound inequality directions, made the real factor types explicit, and required full-grid retention with null selections when no point qualifies. Root preserved both frozen versions and documented the corrections before calculating the new constants. Sixteen independent and twenty corrected-root synthetic controls pass. All142 payload hashes of the two prior captures and50 transitive source-chain checks pass.
+
+The reviewer independently decoded IEEE754 bits, recomputed exact squared Frobenius norms of saved T and complex W, and checked every other source-bound constant. Exact rational polynomial envelopes, all fixed caps and the positive minimum-diagonal floor agree for all162 joint-grid rows. All104 quality-qualified conditional phase implications were independently replayed using stable equivalent expressions and pinned source fields. The separate162 lag-only rows and their continuous quadratic-root intervals also agree.
+
+The largest certified joint grid radius is2^-49 for both saved centers, applied numerically in each separate typed coordinate u=v=s=t. The next larger grid candidate2^-48 has an insufficient xi envelope only. This does not establish a failed perturbation tuple or the actual largest permissible radius. The lag-only radii are2^-40 for top1 and2^-41 for top2; these certify only the lag cap and cannot be presented as complete quality preservation.
+
+Z and the eigenbasis W, eigenvalue proposal Lambda, inverse H and emitted phases stay fixed. EU, EV and ET are real; ES is real diagonal. The result certifies robustness of stated proof premises around these saved coordinates. It does not prove robustness of rerunning the numerical estimator or transfer a factor radius into raw-record noise tolerance. Direct finite phase-list quality and source H/full-factor proofs remain inherited and hash-bound, not recomputed.
+
+The separately reviewed, postknown scalar gauge note is exact: the sameZ=1 has signed factors(U,V)=(1,1) and(-1,-1), with input difference0 and factor differences2. This rules out an unaligned pairwise Lipschitz bound over arbitrary valid factor choices. It does not show discontinuity of the actual deterministic estimator or rule out local aligned/gauge-fixed or invariant comparisons. It supplies no physical gauge or native747-dimensional hidden-space identification.
+
+The old top2 frozen Frobenius-route HOLD and old reconstruction NO-GO remain immutable. No uniform numerical backend, raw acquisition, unaliased/SI frequency, six-ratio, native1893 or physical identification claim follows. Same-team arithmetic review; external review PENDING; Physical Promotion=0; development — no registry entry.
