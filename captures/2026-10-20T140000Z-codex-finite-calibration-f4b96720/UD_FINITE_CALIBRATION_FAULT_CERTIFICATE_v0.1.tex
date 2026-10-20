@@ -1,0 +1,228 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,fancyhdr,enumitem}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{UD: finite calibration and fault certificate}\fancyhead[R]{FCAL v0.1}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\newcommand{\norm}[1]{\left\|#1\right\|_\infty}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{Finite Calibration and a Short-Window Fault Certificate\\for the UD Diamond}
+\author{Ben W. Mayes research workstream\\Codex-assisted mathematical development}
+\date{20 October 2026 --- Version 0.1}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give sufficient, explicitly evaluable conditions for a controlled canonical apparatus to reproduce a short prefix of the proposed CD-1 diamond experiment. Finite calibration records imply a uniform residual bound only with a separately justified regularity certificate. A delay bound includes both target dynamics and cancellation of the physical plant. Exact rational error allocations separate the nominal Gauss-conserving evolution from two specified fault laws near model time $1/100$. The result is conditional mathematical preparation; all apparatus bounds are supplied design inputs and remain unmeasured.
+\end{abstract}
+\noindent\textbf{Typed status.} DERIVED CONDITIONAL; proposed apparatus return; constructor verification only; independent review pending; development lane, no registry entry; physical promotion 0. This manuscript extends CAM/CD-1 v0.1 without changing its original conditions or claiming full-horizon admission.
+
+\section{Physical ports and normalized dynamics}
+Retain the CAM convention $z=(\theta,E,x,y,u,v)\in\mathbb R^{24}$, with four entries in each block, $\psi=(x+iy)/\sqrt2$ and $w=(u-iv)/\sqrt2$. The canonical pairs are $(\theta,E),(x,y),(u,v)$. The opposite complex bracket of $w$ follows from this conjugated coordinate convention. The target is the CD-1 Hamiltonian field $F$ with $a=g=1$, $\kappa=1/16$, $\mu=0$. Its graph and initial state are fixed in Section 4.
+
+For each physical pair let $\Phi_c$ be flux and $Q_c$ charge. Assume common action products $\Phi_{0c}Q_{0c}=S_0$, energy scale $E_0$, and $t_0=S_0/E_0$. Consider the ideal, actively driven plant
+\begin{equation}
+\dot\Phi_c=Q_c/C_c+V_c,\qquad
+\dot Q_c=-\Phi_c/L_c+I_c .
+\end{equation}
+Writing $X_c=\Phi_c/\Phi_{0c}$, $Y_c=Q_c/Q_{0c}$ and $\tau=t/t_0$, put
+$\beta_c=Q_{0c}^2/(E_0C_c)$ and $\alpha_c=\Phi_{0c}^2/(E_0L_c)$. For a selected law $F_s$, command
+\begin{equation}
+\begin{split}
+V_c&=(\Phi_{0c}/t_0)\big[(F_s)_{X_c}-\beta_cY_c\big],\\
+I_c&=(Q_{0c}/t_0)\big[(F_s)_{Y_c}+\alpha_cX_c\big].
+\end{split}
+\end{equation}
+Then the ideal normalized field is exactly $F_s$. These are functional port requirements, not a completed circuit design. Actual loading, gains, crosstalk, finite bandwidth, action mismatch and applied controller work must be measured and bounded. External control can exchange energy with the plant; a target Hamiltonian conservation test does not imply conservation of the whole apparatus energy.
+\newpage
+\section{What finite calibration can certify}
+\begin{theorem}[Finite-cover residual certificate]
+Let $K$ be convex, let $r:K\to\mathbb R^m$ be continuously differentiable, and let calibration nodes form an infinity-norm cover of radius $d$. If the true node residuals satisfy $\norm{r(z_k)}\leq\epsilon_{\rm node}$ and
+$\sup_K\|Dr\|_{\infty\to\infty}\leq\Lambda$, then
+\begin{equation}
+\sup_K\norm{r}\leq\epsilon_{\rm node}+\Lambda d .
+\end{equation}
+\end{theorem}
+\begin{proof}
+Join any $z$ to a covering node $z_k$ by the segment in $K$. The fundamental theorem of calculus bounds $\norm{r(z)-r(z_k)}$ by $\Lambda\norm{z-z_k}\leq\Lambda d$.
+\end{proof}
+The node bound includes measurement uncertainty and drift; it is not the observed node discrepancy alone. For a justified decomposition
+$r=r_0+\sum_\ell A_\ell r_\ell(T_\ell z)$, with $\norm{r_0}\leq\epsilon_0$, module-node errors $\eta_\ell$ and module-domain cover radii $d_\ell$, the sharper rowwise bound is
+\begin{equation}
+\sup_K\norm{r}\leq\epsilon_0+
+\max_i\sum_{\ell,j}|(A_\ell)_{ij}|(\eta_\ell+\Lambda_\ell d_\ell).
+\end{equation}
+The decomposition and its crosstalk remainder require validation. Ideal kinetic and plaquette modules have one argument; a matter mixing output has phase plus two neighboring quadratures; an electric-current module has phase plus four endpoint quadratures, per species and edge. Errors in forming a plaquette phase must also be charged. Low module dimension helps only when the hardware actually supports this decomposition.
+
+\begin{proposition}[Finite-node obstruction]
+Finite samples alone do not certify a uniform residual bound on a domain with nonempty interior.
+\end{proposition}
+\begin{proof}
+Choose a small open ball avoiding every sampled node and a nonzero smooth bump supported inside it. Multiplying the bump by an arbitrary constant leaves all node values unchanged while making the supremum arbitrarily large. A smooth potential bump likewise gives an unobserved Hamiltonian vector-field perturbation. Thus a derivative bound inferred solely by interpolating the same finite samples is not a certificate without additional structural assumptions.
+\end{proof}
+
+\section{Controller age is a separate budget}
+Let the uncancelled normalized plant be $F_0(X,Y)=(\beta Y,-\alpha X)$, with Lipschitz constant $\lambda=\max_c(\alpha_c,\beta_c)$. The command is $U_s=F_s-F_0$. If the selected target has Lipschitz constant $L$, every commanded input has age at most $d_{\rm age}$, and actual history speed is bounded by $M$, then
+\begin{equation}
+\norm{U_s(z_{\rm stale})-U_s(z)}
+\leq(L+\lambda)M d_{\rm age}.
+\end{equation}
+This follows from $\operatorname{Lip}(U_s)\leq L+\lambda$ and coordinatewise history displacement at most $M d_{\rm age}$. Age includes sensing, computation, communication, actuation and sample holding. Initialization, prehistory and mode-switch transients must satisfy the same bounds or receive separate budgets. The target Lipschitz constant alone omits the cancellation term. The readout sample interval is not a controller-age certificate.
+\newpage
+\section{A robust Gauss-drift discriminator}
+Use the CD-1 diamond incidence convention and initial reference state
+$\theta=E=y=v=0$, $x=u=(1,1,1,1)/\sqrt2$.
+For clarity, the directed edges are the two downward paths from face $012$ to vertex $0$; the incidence signs are $b=(-1,1,-1,-1)$ and the cycle is $c=(1,1,-1,-1)$, as in CAM/CD-1.
+The selected laws are the correct field $F$, the field with the entire second-species complex dynamical sign reversed, and the field with electric response frozen at zero. The latter two are diagnostic faults, not alternative gauge theories.
+
+On $K=[-1,1]^{24}$ with lifted angles, all three fields satisfy
+\begin{equation}
+L=97/4,\qquad \sup_K\norm{F_s}\leq129/16.
+\end{equation}
+Exact polynomial majorants of Jacobian row sums are $1$ (angle), $97/4$ (electric), and $8$ (matter). Corresponding speed bounds are $1$, $129/16$ and $4$. The accompanying symbolic verifier differentiates the explicit CD-1 Hamiltonian and checks these bounds, including the fault laws.
+The local generator
+\begin{equation}
+G_i=(RE)_i-\tfrac12(x_i^2+y_i^2)+\tfrac12(u_i^2+v_i^2)
+\end{equation}
+has infinity-norm Lipschitz constant at most $6$ on $K$.
+
+\begin{theorem}[Prefix transfer and decisions]
+Suppose the actual initial state is within $e_0$ of the reference, the actual field residual from the selected law is bounded by $\delta$, and reconstructed endpoint coordinates have error at most $m$. Suppose the endpoint time belongs to $[h_-,h_+]$ with $Lh_+<1$. Put
+\begin{equation}
+\eta=\frac{e_0+\delta h_+}{1-Lh_+},\qquad
+B=6(\eta+e_0)+24m .
+\end{equation}
+The state discrepancy up to $h_+$ is at most $\eta$. If $\widehat D_i$ is the reconstructed change of $G_i$, valid bounds on the actual change are
+\begin{equation}
+\max(0,|\widehat D_i|-12m)\leq
+|G_i(z(h))-G_i(z(0))|\leq|\widehat D_i|+12m.
+\end{equation}
+The nominal upper decision bound is at most $B$; if an ideal fault has drift magnitude at least $q$, its lower decision bound is at least $q-B$.
+\end{theorem}
+\begin{proof}
+The integral discrepancy inequality gives $E\leq e_0+h_+(LE+\delta)$, hence $E\leq\eta$. The actual versus ideal Gauss-change error is at most $6(\eta+e_0)$. Two reconstructed endpoints contribute $12m$; the additional $12m$ in a certified upper or lower decision bound explains the $24m$ in $B$.
+\end{proof}
+These are conditional tube estimates. For this reference all ideal matter norms remain one, their coordinate speeds are below $3$, and $|E'_e|\leq33/16$. A sufficient interior condition is
+\begin{equation}
+3/4+3h_++\eta+m<1.
+\end{equation}
+A first-exit argument then closes the use of $K$ above. With $\delta=1/100$, the actual in-tube speed is below $81/10$; separately supply this speed bound for the controller's prehistory.
+\newpage
+\section{Explicit fault gaps and an exact design allocation}
+For the wrong second-species sign the exact source identity at node $0$ is
+$G'_0=-2(j^w_1+j^w_3)$, with initial value $2$.
+The conserved matter norms give $|j'_e|\leq4+|\theta'_e|$ and $|E_e(\tau)|\leq33\tau/16$. Thus
+$|G''_0|\leq16+33\tau/4$, and
+\begin{equation}
+G_0(h)-G_0(0)\geq q_w(h):=2h-8h^2-\tfrac{11}{8}h^3.
+\end{equation}
+For frozen electric response, $\theta=E=0$. With $A=D^T-D$, the exact graph identity is $A^2=-2I$. The two species evolve with opposite signs, yielding
+\begin{equation}
+G_0(h)-G_0(0)=-\frac{\sin(2\sqrt2h)}{\sqrt2},
+\quad |G_0(h)-G_0(0)|\geq q_f(h):=2h-\tfrac83h^3.
+\end{equation}
+The sine bound holds in the stated short window. Both polynomial lower bounds increase throughout the time interval below.
+
+Take the CD-1 drift gate $T(h)=(1+h)/100$. Nominal passage and detection of both faults are guaranteed if
+\begin{equation}
+B<T(h_-),\qquad
+\min(q_w(h_-),q_f(h_-))-B>T(h_+).
+\end{equation}
+These are sufficient conditions with the specified sign laws and preparation, not statistical power claims.
+
+One exact illustrative allocation is
+\begin{equation}
+e_0=m=10^{-4},\quad \delta=10^{-2},\quad
+h=10^{-2},\quad |h_{\rm actual}-h|\leq10^{-5}.
+\end{equation}
+It gives $\eta=2001/7572575$ and $B=1388949/302903000$.
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity or strict slack & Approximate value\\
+\midrule
+$B$ & $0.00458545805$\\
+$T(h_-)$; $T(h_+)$ & $0.0100999$; $0.0101001$\\
+$q_w(h_-)$; $q_f(h_-)$ & $0.01918022832$; $0.01997734133$\\
+Nominal gate minus $B$ & $0.00551444195$\\
+Wrong-sign lower decision minus gate & $0.00449467027$\\
+Frozen-response lower decision minus gate & $0.00529178327$\\
+Interior tube slack & $0.21960575699$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The initial reference Gauss value is zero. The certified initial upper bound is $6e_0+12m=0.0018<0.01$. These decimal displays are explanatory; the calculator makes its decisions using exact fractions.
+
+\section{A feasible budget is not an apparatus measurement}
+Allocate each of node uncertainty, cover interpolation, controller age and all other residuals at most $1/400$. Their sum is at most $\delta=1/100$. For $\lambda\leq1$ and $M=81/10$,
+\begin{equation}
+(L+\lambda)M\leq8181/40,\qquad
+d_{\rm age}\leq1/81810 .
+\end{equation}
+In physical time the age bound is $t_0/81810$ seconds. The example $d_{\rm age}=10^{-5}$ gives delay residual $0.00204525$ and total allocated residual $0.00954525$. The age value $10^{-3}$ would give total $0.212025$ and fails this sufficient allocation. Likewise $m=10^{-3}$ fails the drift certificate. Neither failure proves physical impossibility; each returns HOLD under this certificate.
+\newpage
+\section{Required apparatus return and verification scope}
+Before using this result, return the following attributable records:
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item Actual port equations, component values, loading and actuator topology; calibrated $\Phi_{0c},Q_{0c},E_0,t_0$ with units and joint uncertainty, and action-product mismatch.
+\item A module decomposition or full-domain calibration plan, node coordinates and residual intervals, cover radii, independently justified derivative bounds, drift records and crosstalk remainder. A finite grid with no regularity bound returns HOLD.
+\item Timestamped sensing and actuation records supporting maximum input age, including initialization and prehistory; plant bound $\lambda$, actual-history speed and every residual allocation.
+\item Raw state reconstruction and independent coupling witnesses, with endpoint $m$, preparation $e_0$ and clock error. Include covariance, systematic uncertainty, missing-channel and saturation indicators.
+\item Blinded nominal, wrong-sign and frozen-response runs using the same preparation and budget. Supply unrounded decision inputs, uncertainty method, source/work records and an attributable non-constructor review.
+\end{enumerate}
+The accompanying JSON return template leaves physical evidence OPEN. Its populated numerical defaults are design examples only. The calculator's PASS means that supplied numbers satisfy this sufficient mathematical test, not that their empirical premises hold.
+
+The original CD-1 proposal specifies at least 99\% joint coverage within a run. If a future campaign asserts 99\% joint coverage across 300 runs, it must allocate $\sum_r\alpha_r\leq0.01$ (for equal allocation, $\alpha_r\leq1/30000$), or supply another justified joint method. Shared calibration systematics must be included. No independence is needed for this union bound; no power calculation or rare-failure claim follows.
+
+\subsection*{Reproducibility}
+\texttt{verify\_finite\_record.py} uses exact symbolic Hamiltonian differentiation to verify the row bounds, fault-source identity and frozen-response propagator. \texttt{finite\_record\_certificate.py} uses rational arithmetic for the supplied design allocation and includes negative controls for excessive reconstruction error and controller age. The seven calculator controls also check a finite-node counterexample. These are constructor checks, not independent review.
+
+\subsection*{Limits and the next gate}
+This manuscript certifies only a short-window Gauss discriminator under stated bounds. It does not certify the full $8\pi$ CD-1 campaign, every energy/coupling/source channel, an autonomous physical Hamiltonian, the full tetrahedral trapping theorem, the SDW endpoint admission requirements, or any grand-unification claim. The general finite-cover and perturbation arguments are standard; novelty is not asserted for those general principles. Actual apparatus regularity, timing and measurement bounds remain OPEN.
+
+The next gate is to instantiate the active-port design and fill the return template with defensible calibration evidence, or establish that another apparatus has a better attainable error budget. The boundary remains preparation for physical experimentation. No experiment has been performed by this workstream.
+
+\subsection*{Dependency record}
+CAM/CD-1 v0.1 supplies the canonical map, diamond Hamiltonian, incidence conventions and proposed engineering gates. Its capture identifier is:\\
+\texttt{2026-10-20T133000Z-codex-canonical-diamond-6d82a19f}.\\
+Earlier joint-Hamiltonian and SDW captures retain their own assumptions and scopes. This addendum supplies no retrospective strengthening of those results.
+
+\vfill
+\noindent\textbf{Claim footer:} mathematical status DERIVED CONDITIONAL; apparatus status OPEN; evidence status exact constructor checks; independent review pending; physical promotion 0.
+\newpage
+\section{Explicit model and algebraic conventions}
+Index the nodes $(0,01,02,012)$ by $(0,1,2,3)$. For edge labels $1,2,3,4$ put $(i_e,j_e)=(0,1),(1,3),(0,2),(2,3)$, respectively. The signed incidence and directed matter matrix are
+\begin{equation}
+R=\begin{pmatrix}1&0&1&0\\-1&1&0&0\\0&0&-1&1\\0&-1&0&-1\end{pmatrix},
+\qquad D_{i_ej_e}=b_e,\quad D_{ij}=0\text{ otherwise}.
+\end{equation}
+Set $\phi=\theta_1+\theta_2-\theta_3-\theta_4$ and define
+\begin{equation}
+\begin{split}
+P_e&=x_{i_e}x_{j_e}+y_{i_e}y_{j_e}
+       +u_{i_e}u_{j_e}+v_{i_e}v_{j_e},\\
+Q_e&=x_{i_e}y_{j_e}-y_{i_e}x_{j_e}
+       +v_{i_e}u_{j_e}-u_{i_e}v_{j_e},\\
+H&=\tfrac12\sum_e E_e^2+\tfrac1{16}(1-\cos\phi)
+       +\sum_e b_e(P_e\sin\theta_e+Q_e\cos\theta_e).
+\end{split}
+\end{equation}
+Use $\{f,h\}=\sum_c(\partial_{q_c}f\,\partial_{p_c}h-
+\partial_{p_c}f\,\partial_{q_c}h)$ for $q=(\theta,x,u)$, $p=(E,y,v)$, and $F_a=\{z_a,H\}$. The wrong-sign law replaces all $u,v$ components of $F$ by their negatives, retaining every other component. The frozen-response law replaces all $E$ components by zero, retaining every other component.
+
+For the second species define
+\begin{equation}
+j^w_e=b_e\big[(u_{i_e}u_{j_e}+v_{i_e}v_{j_e})\cos\theta_e
+ -(v_{i_e}u_{j_e}-u_{i_e}v_{j_e})\sin\theta_e\big].
+\end{equation}
+The exact identity for the wrong-sign law is $G'=-2Rj^w$. At the reference state $j^w=b/2$, giving $G'(0)=(2,-2,0,0)$. For the correct law $G'=0$ identically. Norm conservation for each ideal law follows from Hermitian matter mixing; each complex species starts with Euclidean norm one.
+
+For frozen response, $\psi'=A\psi$, $w'=-Aw$, where $A=D^T-D$ and $A^2=-2I$. With $a=(1,1,1,1)^T/2$, $Aa=(1,-1,0,0)^T$,
+\begin{equation}
+\psi=\cos(\sqrt2\tau)a+\frac{\sin(\sqrt2\tau)}{\sqrt2}Aa,\quad
+w=\cos(\sqrt2\tau)a-\frac{\sin(\sqrt2\tau)}{\sqrt2}Aa .
+\end{equation}
+This establishes the Gauss formula in (12) directly. For wrong sign, the matter generator has spectral norm at most $2$, so $\|w'\|_2\leq2$. Differentiating a current gives the bound $4+|\theta'_e|$ used in (11). These ideal norm bounds are used only for the reference paths; apparatus deviations are charged through $\delta$ and $\eta$.
+
+To check the box constants in (6), expand each Jacobian entry as a polynomial in state coordinates and sine/cosine atoms, and sum absolute coefficients. Each atom has magnitude at most one on $K$. This deliberately conservative majorant yields the displayed row sums without numerical sampling or assumed statistical independence.
+\end{document}

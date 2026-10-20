@@ -1,0 +1,119 @@
+{
+  "version": "0.1",
+  "status": "OPEN_APPARATUS_RETURN",
+  "physical_promotion": 0,
+  "scope": "Short-window CD-1 Gauss discriminator; not full campaign or endpoint admission",
+  "design_inputs_kind": "Illustrative supplied mathematical bounds; no measurements",
+  "design_example": {
+    "initial_state_error_infinity": "1/10000",
+    "endpoint_reconstruction_error_infinity": "1/10000",
+    "continuous_vectorfield_residual_infinity": "1/100",
+    "nominal_time": "1/100",
+    "time_radius": "1/100000",
+    "controller_input_age": "1/100000",
+    "max_age_for_allocated_delay": "1/81810",
+    "plant_L_upper": "1",
+    "prehistory_and_actual_speed_upper": "81/10",
+    "residual_allocations": {
+      "node_uncertainty": "1/400",
+      "regularity_times_cover_radius": "1/400",
+      "controller_age": "1/400",
+      "other": "1/400"
+    },
+    "units": "All above normalized model units; physical time = model time * t0 seconds"
+  },
+  "required_records": [
+    {
+      "type": "port_design",
+      "status": "OPEN",
+      "records": [
+        "actual flux-charge port equations",
+        "component values with units",
+        "loading and actuator topology",
+        "input saturation and controller work"
+      ]
+    },
+    {
+      "type": "canonical_scale",
+      "status": "OPEN",
+      "records": [
+        "Phi0 and Q0 per channel",
+        "common action S0 and mismatch bounds",
+        "physical energy E0",
+        "t0 in seconds",
+        "joint uncertainty and traceability"
+      ]
+    },
+    {
+      "type": "finite_calibration",
+      "status": "OPEN",
+      "records": [
+        "domain and module decomposition",
+        "crosstalk remainder",
+        "nodes with true-residual uncertainty intervals",
+        "cover radii",
+        "independently justified derivative bounds",
+        "drift over planned experiment interval"
+      ]
+    },
+    {
+      "type": "control_timing",
+      "status": "OPEN",
+      "records": [
+        "timestamped sensing and actuation",
+        "maximum coordinate input age",
+        "initialization and prehistory speed",
+        "mode-switch transients",
+        "plant Lipschitz bound"
+      ]
+    },
+    {
+      "type": "metrology",
+      "status": "OPEN",
+      "records": [
+        "raw state records",
+        "independent coupling witnesses",
+        "preparation bound",
+        "endpoint reconstruction bound",
+        "clock bound",
+        "joint systematic and statistical uncertainty",
+        "missing channels and saturation flags"
+      ]
+    },
+    {
+      "type": "blinded_controls",
+      "status": "OPEN",
+      "records": [
+        "nominal law",
+        "wrong entire second-species sign",
+        "frozen electric response",
+        "unrounded decision inputs",
+        "same preparation and budget"
+      ]
+    },
+    {
+      "type": "review",
+      "status": "OPEN",
+      "records": [
+        "attributable non-constructor review",
+        "premise audit",
+        "joint coverage statement"
+      ]
+    }
+  ],
+  "hold_conditions": [
+    "Any required premise unsupported",
+    "Finite node samples with no regularity certificate",
+    "Residual or decision margin fails",
+    "Missing channels or unbounded saturation",
+    "Per-run coverage used as whole-campaign coverage without joint correction"
+  ],
+  "campaign_coverage": {
+    "original_CD1_per_run": "at least 99% joint",
+    "optional_300_run_joint_target": "99%",
+    "equal_union_bound_failure_allocation": "1/30000 per run",
+    "includes_shared_systematics": true
+  },
+  "independent_review": "PENDING",
+  "experimental_execution": "NONE"
+}
