@@ -1,0 +1,54 @@
+{
+  "RMS_time_squared": "11180715/8",
+  "RMS_time_upper": 2048,
+  "conditional_example": {
+    "actual_error_budget_admission": "HOLD",
+    "actual_estimator_conformance": "NOT_SUPPLIED_HOLD",
+    "all_input_bounds": "UNSUPPLIED_HOLD",
+    "conditional_implemented_error_upper": "36886076883031416579889793944980029441/46768052394588893382517914646921056628989841375232",
+    "ideal_inverse_error_upper": "421697581662764590562579786473351938075/1426425598034961248166796396731092227184190161944576",
+    "map_error_bound_b": "1106804644422573096961/5316911983139663491615228241121378304",
+    "normalized_data_error_bound": "15618428950472762613428880980494516225/23945242826029513411849172299223580994042798784118784",
+    "parameters": {
+      "algorithm_error": "1/4398046511104",
+      "clock_RMS_eta": "1/72057594037927936",
+      "decoder_alpha": "1/4398046511104",
+      "decoder_beta": "512",
+      "encoding_RMS": "1/9007199254740992",
+      "generator_error_xi": "1/73786976294838206464",
+      "noise_RMS": "1/9007199254740992",
+      "observable_state_target_tau": "1/549755813888",
+      "preparation_p": "1/4503599627370496",
+      "readout_RMS_rho": "1/9007199254740992",
+      "state_amplitude_X": "1"
+    },
+    "target_object": "observable-chain Euclidean state error, not sixratio q",
+    "verified_implication": "implemented_error<2^-40<2^-39 IF every stated premise is independently established"
+  },
+  "controls_passed": 8,
+  "ideal_total_data_requirement_for_declared_tau": "61/15199648742375424",
+  "inverse_amplification_upper": "27648/61",
+  "mean_time": "4095/4",
+  "sample_count": 4096,
+  "sample_step": "1/2",
+  "scope": {
+    "actual_estimator_calls": 0,
+    "external_promotion_review": "PENDING",
+    "fixed_linear_map_needed_for_singular_continuity": true,
+    "new_measurements": 0,
+    "new_noise_tolerance_measurement": false,
+    "old_sixratio_or_Hankel_gates_transferred": false,
+    "physical_promotion": 0
+  },
+  "selected_weight_calibration": {
+    "all_weight_uniform_error": "xi<=sqrt8*u<3*u foru>0",
+    "evidence": "DECLARED_ERROR_MODEL_ONLY_NO_MEASURED_CALIBRATION",
+    "example_selected_weight_upper": "2^-67 impliesxi<=2^-66",
+    "selected_Gram": "4 I10;100 exact entries checked",
+    "selected_weight_error_to_generator_norm": "xi=2*max|delta d_j| if support subsetJ"
+  },
+  "source_hidden_dimensions": 641,
+  "source_rank": 1999,
+  "status": "PASS_CONDITIONAL_ERROR_PROPAGATION_AND_EXACT_CONTROLS",
+  "time_variance": "5592405/16"
+}

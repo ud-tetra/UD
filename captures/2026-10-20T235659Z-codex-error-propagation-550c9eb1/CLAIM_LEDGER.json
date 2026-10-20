@@ -1,0 +1,55 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "origin": "PR307 conditioned observation map plus declared deterministic errors; new exact source weight gain and Fraction-only profile/controls",
+  "constructor": "Codex root",
+  "reviewer": "Separate same-team source/arithmetic/proof review, not external promotion authority",
+  "claims": [
+    {
+      "id": "ERR1",
+      "type": "DERIVED_CONDITIONAL",
+      "statement": "Normalized data error<=p+(X+p)b+nu+enc, b<=rho_RMS+T_RMS*xi+(5+xi)*eta_RMS; coherent errors/mixedterms retained.",
+      "dependencies": [
+        "PR307 unitary map/norm",
+        "THEOREM.md sections2-3"
+      ]
+    },
+    {
+      "id": "ERR2",
+      "type": "DERIVED_CONDITIONAL",
+      "statement": "Ideal observable-state error<=C*dataerror; implemented decoder error<=alphaX+beta*dataerror+algorithmerror, requiring independent full-state conformance BF\u2248P.",
+      "dependencies": [
+        "PR307 s61/27648",
+        "THEOREM.md section4",
+        "eight exact logical controls"
+      ]
+    },
+    {
+      "id": "ERR3",
+      "type": "EXACT_SOURCE_GAIN",
+      "statement": "For absolute top-weight errors supportedJ, ||DeltaK||=2 max|delta d_j| from selectedGram4I; allweighterroru givesnorm<=sqrt8*u<=3u.",
+      "dependencies": [
+        "pinned source complex",
+        "100selectedGram entries",
+        "THEOREM.md section6"
+      ]
+    },
+    {
+      "id": "ERR4",
+      "type": "DECLARED_CONDITIONAL_EXAMPLE",
+      "statement": "Specified unsupported input bounds imply observable-chain error<2^-40<2^-39. Actual accuracy/acquisition/decoder admission HOLD.",
+      "dependencies": [
+        "CONDITIONAL_ERROR_CONTRACT.json",
+        "Fraction checks",
+        "all errorpremises UNSUPPLIED"
+      ]
+    }
+  ],
+  "no_gate_transfer": [
+    "sixratio q calibration",
+    "nominal Hankel2029 family",
+    "actual321column floating estimator",
+    "physical acquisition/source/noise evidence"
+  ],
+  "external_promotion_review": "PENDING",
+  "physical_promotion": 0
+}

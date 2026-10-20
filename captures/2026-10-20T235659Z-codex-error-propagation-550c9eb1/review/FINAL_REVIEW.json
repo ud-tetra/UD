@@ -1,0 +1,76 @@
+{
+  "artifact_type": "C28_INDEPENDENT_CONDITIONAL_ERROR_AND_DECODER_REVIEW",
+  "capture_allowlist": [
+    "CONTROLS_AND_EXAMPLE.json",
+    "CONTROLS_FREEZE.json",
+    "ERROR_LEMMAS.md",
+    "ERROR_LEMMAS_FREEZE.json",
+    "FINAL_BINDING.json",
+    "FINAL_REVIEW.json",
+    "PLAN.md",
+    "PLAN_FREEZE.json",
+    "REVIEW.md",
+    "ROOT_CONTROLS_CHECKS.json",
+    "ROOT_CONTROLS_FREEZE.json",
+    "ROOT_PROFILE_CHECKS.json",
+    "ROOT_PROFILE_FREEZE.json",
+    "VERIFICATION_HASH_MANIFEST.sha256",
+    "WEIGHT_GAIN_CHECKS.json",
+    "WEIGHT_GAIN_FREEZE.json",
+    "check_controls.py",
+    "check_root_controls.py",
+    "check_root_profile.py",
+    "check_weight_gain.py",
+    "final_bind.py"
+  ],
+  "conditional_profile": {
+    "actual_error_budget_admission": "HOLD",
+    "actual_floating_estimator_conformance": "NOT_SUPPLIED_HOLD",
+    "four_exact_rational_pairs_match": true,
+    "implemented_observable_state_error": "<2^-40<2^-39 IF all stated bounds are established",
+    "input_evidence": "UNSUPPLIED_HOLD",
+    "normalized_data_error": "<2^-50",
+    "target_distinct_from_six_ratio_q": true
+  },
+  "independent_checks": {
+    "no_producer_archived_program_or_actual_estimator_execution": true,
+    "root_control_receipt_sha256": "c7bee2a25c6e8204b15d38130c344c86ef6c4901c7e2a1873c03b5cc57d5f9bc",
+    "root_logical_countermodels": 8,
+    "root_profile_receipt_sha256": "bfa648be505011c5429412904d0fdb351dad020e68dc4ed2d1b117946d4075d8",
+    "scientific_replay_JSON_files_byte_identical": 4,
+    "selected_Gram_entries": 100,
+    "source_boundary_columns": 600,
+    "source_gain_receipt_sha256": "0f49477279f75df61e4a607db0fc95cf26fc29ea70c0b5fe7fdca7e05518a8b2"
+  },
+  "mathematics": {
+    "all_weight_gain_upper": "sqrt8<=3",
+    "arbitrary_Q_trial_condition_certificate_implies_decoder_conformance": false,
+    "clock_affine_moments": "EXACT_INDEPENDENT_MATCH",
+    "conservative_map_error": "b<=rho_RMS+T_RMS*xi+(5+xi)*eta_RMS",
+    "full_kernel_preservation_from_small_norm": "NOT_IMPLIED",
+    "ideal_observable_error": "<=C*D",
+    "implemented_observable_error": "<=alpha*X+beta*D+eps_alg",
+    "nominal_quotient_continuity": "VALID_WITH_FIXED_LINEAR_MAP_AND_b<s",
+    "observation_error": "D=p+(X+p)b+nu+enc",
+    "source_selected_Gram": "4I10",
+    "source_selected_weight_gain": "EXACT_2"
+  },
+  "review_history": {
+    "mathematical_retractions": 0,
+    "minor_prefinal_zero_endpoint_inequality_wording_corrected": true,
+    "no_actual_accuracy_pass_issued": true
+  },
+  "review_markdown_sha256": "a5454c51052d51e573507df5c78b30cb92d1403006fdf19477a01bbcad3b38fb",
+  "root_checker_sha256": "81fdf396cbdfd9609391a365f87c6ca0f056696ab3ec5805851f1f879f65a0a2",
+  "root_theorem_sha256": "946d40156db42380406f476508236beea027c734deef46680b2bc944be18106c",
+  "scope": {
+    "all_input_backend_or_actual_implementation_guarantee": "NOT_ESTABLISHED",
+    "external_promotion_review": "PENDING",
+    "inherited_PR307_condition_rank_kernel_premises": true,
+    "no_new_acquisition_or_noise_tolerance_measurement": true,
+    "norms_and_units": "Declared unit Euclidean chain/model-time coordinates",
+    "physical_promotion": 0,
+    "same_team_development_no_registry_entry": true
+  },
+  "status": "PASS"
+}
