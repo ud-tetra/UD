@@ -1,0 +1,47 @@
+{
+  "status": "PARAMETERS_FROZEN_BEFORE_GENERATION",
+  "center": [
+    "8983/2000",
+    "9/50"
+  ],
+  "frozen_at_utc": "2026-10-20T21:05:29.612204+00:00",
+  "base_commit": "c0abb0109619ccfbad3d0b0eae3e3f931dcb6e0a",
+  "source_placement_capture": "captures/2026-10-20T205157Z-codex-j1-gap-17-795c0022",
+  "source_placement_sha256": "fa0e02238bcb5a4483f3a7e00842ab370007326a3eda3b1cdd9dd2e171e8a1d3",
+  "source_selected_formula_lower": "48305263817873454745151871034425317982030986731275444294725649653151539672250109798867221812890962001825162632079657022914482275618868795084212726907/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "mesh": "unchanged meanfree conforming P2,18673 DOF,12288 tetrahedra",
+  "provisional_cover_goal": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/10",
+      "9/50"
+    ]
+  },
+  "finite_algorithm_budget": {
+    "max_depth": 24,
+    "max_leaves": 4096
+  },
+  "placement_probe_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "9/50",
+      "19/100"
+    ]
+  },
+  "placement_grid": {
+    "omega_samples": 129,
+    "gamma_subdivisions": 8,
+    "exclude_lower_gamma_row": true,
+    "expected_probes": 1032
+  },
+  "candidate_only": "No new state/flux or uniform coverage before exact posterior and floating audits. Finite-grid placement is not global optimum or actual-error lower.",
+  "quantization_note": "Both center constants are nonbinary. Nearest frequency lies above exact lower boundary and is first accepted frequency word; nearest damping lies below exact upper boundary and is last accepted damping word. These directions differ from the previous damping center and must be checked, not inherited.",
+  "independent_review": false,
+  "physical_promotion": 0
+}

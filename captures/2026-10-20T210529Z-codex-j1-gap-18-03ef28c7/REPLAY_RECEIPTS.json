@@ -1,0 +1,51 @@
+{
+  "status": "PASS_SCOPED_STATE_POINT_AND_DIAGNOSTIC_REPRODUCTION",
+  "completed_at_utc": "2026-10-20T21:20:04.465735+00:00",
+  "components": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/candidate",
+      "exit_code": 0,
+      "log_sha256": "3ea2525971ad14e0f789f50c3a55c9290aa39dfde76e397bc06f05a481e311d0",
+      "matched_results": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 replay.py --scalar-only",
+      "working_directory": "captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7",
+      "exit_code": 0,
+      "log_sha256": "16b7f431431da98d22458cbdc8e13437879ddbe1a3f604c4967a22c971955017",
+      "matched_results": [
+        "DIAGNOSTIC_RESULTS.json",
+        "REFINEMENT_DIAGNOSTIC_RESULTS.json",
+        "SCOUT_RESULTS.json",
+        "LOCAL_SCOUT_RESULTS.json",
+        "POINT_AUDIT_RESULTS.json"
+      ]
+    }
+  ],
+  "execution_shape": "Saved candidate state/flux and final scalar components executed separately; final default composing wrapper not separately executed.",
+  "failed_cover_attempts": [
+    {
+      "budget_depth": 24,
+      "max_leaves": 4096,
+      "exit_code": 1,
+      "log": "SCALAR_GENERATION.log"
+    },
+    {
+      "budget_depth": 30,
+      "max_leaves": 4096,
+      "exit_code": 1,
+      "log": "REFINEMENT_GENERATION.log"
+    }
+  ],
+  "uniform_extension_passed": false,
+  "global_native_evaluator_executed": false,
+  "native_point_node_comparisons": 16,
+  "coefficient_regeneration": false,
+  "independent_review": false,
+  "physical_promotion": 0
+}

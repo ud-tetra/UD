@@ -1,0 +1,107 @@
+read-only replay matches DIAGNOSTIC_RESULTS.json
+PASS reproduced expected unresolved depth budget; midpoint=(10144969832714471/2251799813685248,3242014488102175/18014398509481984); minimum formula lower=0.09993902122966859; all twenty above target=False
+read-only replay matches SCOUT_RESULTS.json
+PASS post-state scout selected=(461339/102400,9/50) lower=0.09986519130436054 all20 above=False
+Traceback (most recent call last):
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/replay.py", line 12, in <module>
+    planner.main()
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 71, in main
+    cover=create_cover(contract);save_or_compare('COVER.json',cover);probe=placement(contract);save_or_compare('PLACEMENT_RESULTS.json',probe);q=probe['recommended_new_state'];print('PASS complete rectangle leaves='+str(cover['leaf_count'])+' radius='+str(float(F(cover['uniform_total_radius'])))+' next=('+q['omega']+','+q['gamma']+')',flush=True)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 46, in create_cover
+    root=visit((wl,wu,gl,gu),(wf,wt,gf,gt),0)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 40, in visit
+    left=visit((wl,q,gl,gu),(wf,cut,gf,gt),depth+1);right=visit((q,wu,gl,gu),(cut+1,wt,gf,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 43, in visit
+    left=visit((wl,wu,gl,q),(wf,wt,gf,cut),depth+1);right=visit((wl,wu,q,gu),(wf,wt,cut+1,gt),depth+1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T210529Z-codex-j1-gap-18-03ef28c7/planner.py", line 35, in visit
+    assert depth<budget['max_depth'],'unresolved cell at depth budget'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unresolved cell at depth budget
