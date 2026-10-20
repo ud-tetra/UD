@@ -1,0 +1,57 @@
+{
+  "access_UTC": "2026-10-20",
+  "paper": {
+    "url": "https://arxiv.org/html/2108.01086v1",
+    "version": "2108.01086v1",
+    "retrieval": "Firecrawl maxAge0",
+    "HTTP_status": 200,
+    "scope": "Rendered paper retrieved; relevant Appendix A/B/C/F passages inspected; only limited paraphrases retained; not exact TeX source or experimental raw",
+    "findings": [
+      {
+        "section": "Appendix A, Dissipation and Simulation",
+        "paraphrase": "Driven simulations add empirical dissipation; k=0.0045 is adjusted to match the reported observations. This is a fitted comparison, not an untouched external prediction."
+      },
+      {
+        "section": "Appendix F, equation49 and following",
+        "paraphrase": "Frequency-shift predictions use measured site amplitudes. Reusing those amplitudes for a new score requires an explicit conditioning and data-partition contract."
+      },
+      {
+        "section": "Appendices B and C",
+        "paraphrase": "Feedback is tuned; energy reconstruction uses voltage envelopes and removes background. These procedures do not supply the source-bound joint gain, clock, aliasing and numerical error intervals required by the native contract."
+      }
+    ]
+  },
+  "deposit": {
+    "url": "https://heidata.uni-heidelberg.de/api/datasets/:persistentId/?persistentId=doi:10.11588/DATA/6MEKHI",
+    "retrieval": "Firecrawl maxAge0",
+    "HTTP_status": 200,
+    "scope": "All71 published file metadata entries only; no archive/notebook contents acquired"
+  },
+  "failures": [
+    {
+      "route": "web_run",
+      "url": "https://raw.githubusercontent.com/tychon/U1CircuitsData/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/utility.c",
+      "error": "DisabledError",
+      "resolved": "Exact-commit Github fetch_file succeeded"
+    },
+    {
+      "route": "web_run",
+      "url": "https://arxiv.org/html/2108.01086v1",
+      "error": "DisabledError",
+      "resolved": "Firecrawl succeeded"
+    },
+    {
+      "route": "web_run",
+      "url": "https://heidata.uni-heidelberg.de/api/datasets/:persistentId/?persistentId=doi:10.11588/DATA/6MEKHI",
+      "error": "URL not accessible",
+      "resolved": "Firecrawl succeeded"
+    },
+    {
+      "route": "Firecrawl web search",
+      "query": "\"U1CircuitsData\" calibration clock uncertainty",
+      "results": 0,
+      "inference": "No absence claim; exact-query search returned no hits"
+    }
+  ],
+  "physical_promotion": 0
+}
