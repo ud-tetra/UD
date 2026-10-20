@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-20T16:43:16.511358Z",
+  "components": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate",
+      "exit_code": 0,
+      "log_sha256": "cd1b1d195b1dc3fb3c5b8bb4d9bcf5661055a3bbd3936177e5fd5b71b0974c63",
+      "matched_results": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 replay.py --scalar-only",
+      "working_directory": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420",
+      "exit_code": 0,
+      "log_sha256": "d68c4b9ec440cb4cd276ecddfc78527ba359806eea0df91bac2dbed3ce3294d6",
+      "matched_results": [
+        "COVER.json",
+        "PLACEMENT_RESULTS.json",
+        "AUDIT_RESULTS.json"
+      ]
+    }
+  ],
+  "execution_shape": "Saved state/flux component and scalar-only replay executed separately; default composing wrapper was not separately executed.",
+  "coefficient_regeneration": false,
+  "independent_review": false,
+  "physical_promotion": 0
+}

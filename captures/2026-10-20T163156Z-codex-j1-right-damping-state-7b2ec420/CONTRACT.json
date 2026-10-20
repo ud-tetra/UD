@@ -1,0 +1,1102 @@
+{
+  "name": "Certified right damping J1 state and complete rectangle v0.1",
+  "classification": "DERIVED / EXACT CONDITIONAL IEEE BINARY64 RN",
+  "source_dependencies": [
+    {
+      "path": "captures/2026-10-19T213000Z-codex-j1-center-state-2786e1d9/center_mesh.py",
+      "size_bytes": 2008,
+      "sha256": "bb5dde9bb78a437ec055e5900270dfe0072bdee44afbe2c037ab0a541c5c40a0"
+    },
+    {
+      "path": "captures/2026-10-19T213000Z-codex-j1-center-state-2786e1d9/center_solve.py",
+      "size_bytes": 7243,
+      "sha256": "1124c19f8340bcf2ddc6534ec11b964347e131c155aacfcf5d1a3b06e40a9a86"
+    },
+    {
+      "path": "captures/2026-10-19T213000Z-codex-j1-center-state-2786e1d9/curl_interface.py",
+      "size_bytes": 6959,
+      "sha256": "59904d199f3d47ea18f59285a48c3c57032da47c0cc2a2da6db55b2249eb7fe0"
+    },
+    {
+      "path": "captures/2026-10-19T213000Z-codex-j1-center-state-2786e1d9/fine_flux_core.py",
+      "size_bytes": 2330,
+      "sha256": "edd086b69b066f2106354a77c7ba208b890b392d5f395b762af13fb4d1537b3c"
+    },
+    {
+      "path": "captures/2026-10-19T213000Z-codex-j1-center-state-2786e1d9/level2_check.py",
+      "size_bytes": 6323,
+      "sha256": "30231ea4c0b5cec162b2d5c9268f2a69e8ced6ab3baf78507e3aaa66cca74709"
+    },
+    {
+      "path": "captures/2026-10-19T213000Z-codex-j1-center-state-2786e1d9/patch_flux.py",
+      "size_bytes": 13926,
+      "sha256": "21c2015afa1cf7279359bd098b78d6a4a33d1cf937845ddb8e53d055e3a7c629"
+    },
+    {
+      "path": "captures/2026-10-19T213000Z-codex-j1-center-state-2786e1d9/red_mesh.py",
+      "size_bytes": 3980,
+      "sha256": "cdd326012eeba774fc17969c674f00fde31123a62056bbf09b074b50ceab1783"
+    },
+    {
+      "path": "captures/2026-10-19T214921Z-codex-j1-p2-riesz-44ebda6e/riesz_lower.py",
+      "size_bytes": 11094,
+      "sha256": "2904c5aba46cb90700d47faa848ee010a1aeea42e2a4ff5e83a002b8540f0f1f"
+    },
+    {
+      "path": "captures/2026-10-19T220433Z-codex-j1-p2-state-8d4041af/P2_RESULTS.json",
+      "size_bytes": 8123,
+      "sha256": "95637b4984c64b47ae52637be8e5c404df9585009b46c37cdbdde6a245366717"
+    },
+    {
+      "path": "captures/2026-10-19T220433Z-codex-j1-p2-state-8d4041af/P2_WITNESS.json",
+      "size_bytes": 895,
+      "sha256": "33170c1856b62ac5ea60100fb0d2dfe38535f135fc2563e149a00af37f151878"
+    },
+    {
+      "path": "captures/2026-10-19T220433Z-codex-j1-p2-state-8d4041af/p2_state.py",
+      "size_bytes": 14515,
+      "sha256": "c18e7706a20918ea1eaab49280254e8bb46479449019fc104b82dd5e589eec57"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/CONTRACT.json",
+      "size_bytes": 7227,
+      "sha256": "95bfa2edb7988a9d224bd6cef3ca7727ee7d84acc47c0747a6d5365f34d3e446"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/MANIFEST.json",
+      "size_bytes": 4500,
+      "sha256": "cbe45ce394f9757b4380ffb5743bc7c4ba57b7b3c5dd8621b944bbb03421ffd0"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/REPLAY.log",
+      "size_bytes": 2666,
+      "sha256": "ff6dad7f4aeabd9bfe95f0225709c24cbe898a7d6d12f04a58c0bb455a95a14c"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/UPPER_RESULTS.json",
+      "size_bytes": 8312,
+      "sha256": "f2101b0f0f24dfa2e636b13c26f7c232ead06831fe5fa64bb830a683a044e8c0"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/projected_curl.py",
+      "size_bytes": 9583,
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d"
+    },
+    {
+      "path": "captures/2026-10-19T225423Z-codex-j1-p2-projected-flux-8a5ce1f3/projected_flux.py",
+      "size_bytes": 18377,
+      "sha256": "eef59ca45b43f4ee16542efde0a9685e49f259406d8d496d2a21f4de9fc01806"
+    },
+    {
+      "path": "captures/2026-10-19T231026Z-codex-j1-floating-band-2bbebc9d/CONTRACT.json",
+      "size_bytes": 4348,
+      "sha256": "bee2b4943c314f0f701d063b4f06c67f73c4d7f7f2fbfd4f63080cc44945c3c4"
+    },
+    {
+      "path": "captures/2026-10-19T231026Z-codex-j1-floating-band-2bbebc9d/EVALUATOR_WITNESS.json",
+      "size_bytes": 1556,
+      "sha256": "125c31a57c87e28009ea269a3b8306ff58b0bf1fbb37cf3554e48b1ef6c9118b"
+    },
+    {
+      "path": "captures/2026-10-19T231026Z-codex-j1-floating-band-2bbebc9d/FLOATING_BAND_RESULTS.json",
+      "size_bytes": 46755,
+      "sha256": "d6531153dee4cceb3902754ad20a5958ce2a6a0613df306a868615afc1441350"
+    },
+    {
+      "path": "captures/2026-10-19T231026Z-codex-j1-floating-band-2bbebc9d/MANIFEST.json",
+      "size_bytes": 3815,
+      "sha256": "1c772a2c4e6f2ed9bcad995c4285af89837d541825302c77401dc48ea12de08d"
+    },
+    {
+      "path": "captures/2026-10-19T231026Z-codex-j1-floating-band-2bbebc9d/REPLAY.log",
+      "size_bytes": 215,
+      "sha256": "c2266de7b16c2eb230e34a94b615b17174a6d669383542ea6d1e1d83ce01749f"
+    },
+    {
+      "path": "captures/2026-10-19T231026Z-codex-j1-floating-band-2bbebc9d/audit.py",
+      "size_bytes": 11062,
+      "sha256": "06d05686ccecfde757445da0c07cea8403c0e85b4468b172c7d910135569dfb7"
+    },
+    {
+      "path": "captures/2026-10-19T231026Z-codex-j1-floating-band-2bbebc9d/evaluator.py",
+      "size_bytes": 1102,
+      "sha256": "3bdf7a8230f94ef0952d681f65fd679c105c7d8c83be737c50cc04ff68e3c7a2"
+    },
+    {
+      "path": "captures/2026-10-19T231026Z-codex-j1-floating-band-2bbebc9d/rounding.py",
+      "size_bytes": 846,
+      "sha256": "fd63e7c1f40c19557bbda26d6b3b7e7663396e5e52374cf1bd0085a7b905395c"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/P2_WITNESS.json",
+      "size_bytes": 898,
+      "sha256": "a96af36bf0c411d0b7f3546e6931a8f65038d9e6d15abc50f2fd4d47e394da53"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/UPPER_RESULTS.json",
+      "size_bytes": 8375,
+      "sha256": "54c61014509cbf227d7adeba8950538c81bfe61a96ae4674447709966f82f57e"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/UPPER_WITNESS.json.gz",
+      "size_bytes": 793932,
+      "sha256": "841dd5c6503bdccf38a8fe8b7aa43cf4e44328e0befcfc695d3b2c1dc587bc73"
+    },
+    {
+      "path": "captures/2026-10-20T001957Z-codex-j1-neighbor-join-9a48fd6a/neighbor_flux.py",
+      "size_bytes": 18261,
+      "sha256": "aeae7c9fcfc5f755997b5fe76cc25a483e5f23c8879cdab92f49ce3892d3a7c0"
+    },
+    {
+      "path": "captures/2026-10-20T004900Z-codex-j1-damping-region-57f89a2c/CONTRACT.json",
+      "size_bytes": 5349,
+      "sha256": "57fabc603ae48c87f0cb728a37ffd342cec4ea63c145701838633d4f654f4943"
+    },
+    {
+      "path": "captures/2026-10-20T004900Z-codex-j1-damping-region-57f89a2c/EVALUATOR_WITNESS.json",
+      "size_bytes": 2459,
+      "sha256": "a97598233f180b5b9496f05f85ffaf29afdaa3b183413dce92e7c0235651b62d"
+    },
+    {
+      "path": "captures/2026-10-20T004900Z-codex-j1-damping-region-57f89a2c/MANIFEST.json",
+      "size_bytes": 3331,
+      "sha256": "ac831e84d56cd7a995b97b0984914acaf1e71e4532422a05de23f502caaf0385"
+    },
+    {
+      "path": "captures/2026-10-20T004900Z-codex-j1-damping-region-57f89a2c/RECTANGLE_RESULTS.json",
+      "size_bytes": 33268,
+      "sha256": "74daf64e264a656069f8746e1c1b95fe212cb73edfb66c36a1ee1fec69e9f3da"
+    },
+    {
+      "path": "captures/2026-10-20T004900Z-codex-j1-damping-region-57f89a2c/REPLAY.log",
+      "size_bytes": 179,
+      "sha256": "090fa1432891282d42366ac1432cb4bd39ee0817a2f7e9e73541069232c39e77"
+    },
+    {
+      "path": "captures/2026-10-20T004900Z-codex-j1-damping-region-57f89a2c/audit.py",
+      "size_bytes": 15804,
+      "sha256": "5248ec003395dbff7e04b9e685ffd14ac3af9d1e6505ad29825e09e014e35aaf"
+    },
+    {
+      "path": "captures/2026-10-20T004900Z-codex-j1-damping-region-57f89a2c/evaluator.py",
+      "size_bytes": 2251,
+      "sha256": "42e2d1f5b1f3fc9dfe94135a2e1655d0e461794ba50605def3f37ee0a800d89c"
+    },
+    {
+      "path": "captures/2026-10-20T004900Z-codex-j1-damping-region-57f89a2c/rounding.py",
+      "size_bytes": 846,
+      "sha256": "fd63e7c1f40c19557bbda26d6b3b7e7663396e5e52374cf1bd0085a7b905395c"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/CONTRACT.json",
+      "size_bytes": 17102,
+      "sha256": "4a60d521153d53217c45f9b6d77da919d2e62b0989610115f1e0ca3ea9ee2fc8"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/EVALUATOR_WITNESS.json",
+      "size_bytes": 2496,
+      "sha256": "0973b8388cbe4e6ad3961abbcb4f862e50536583ae3e29df8fbc173e073ed08f"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/JOINED_RESULTS.json",
+      "size_bytes": 5332,
+      "sha256": "b444b64e125d2822257a88f54797531737933efb67d21c6178d883aa10c9c70c"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/MANIFEST.json",
+      "size_bytes": 12167,
+      "sha256": "267e526fa68a35b08c800e86d1376ed07edf0c66091d6c25eb8dcece1bf56e6b"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/PROVENANCE_CORRECTION.json",
+      "size_bytes": 1536,
+      "sha256": "d2822f3c5744cf89d06368b25356cf9c0239ba120908eeda92129cd744196104"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/RECTANGLE_RESULTS.json",
+      "size_bytes": 33344,
+      "sha256": "1e6bced8d8f6b0e3edeefa202978cb374b6a1834b3e238734a573f1630a1ea14"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/REPLAY_RECEIPTS.json",
+      "size_bytes": 1909,
+      "sha256": "b1180833f78d3593a1332adbf642474d66af3f41d388f08dc06bb86754ba534a"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/SCALAR_REPLAY.log",
+      "size_bytes": 398,
+      "sha256": "c759d247cd4b1af5e97cb6490075f8d356fd4ec99dc6b253fe9aa667dceb4d97"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/CURL_COEFFICIENTS.bin.gz",
+      "size_bytes": 1155298,
+      "sha256": "ddf040e7e03f0537e6f87c41f3890471b219d9bd65ec5ca2567ebfa7c4fce0e7"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/CURL_CORRECTION_RESULTS.json",
+      "size_bytes": 2539,
+      "sha256": "9e2b54fa5e0e3f6e4cb5780b0fc12f67c6eb1d7398f46f1833607d41f5aedff8"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/CURL_WITNESS.json",
+      "size_bytes": 1279,
+      "sha256": "8d307d4497056cc7458d9ed317a46832327dff9a97ed668f03a35cf9f1feda04"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/FLUX_GENERATION.log",
+      "size_bytes": 2349,
+      "sha256": "0e8a2fccecc7a6bbe39887cc46afe90e8492164126c758ded5ef5bcec5f5646b"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/P2_RESULTS.json",
+      "size_bytes": 3122,
+      "sha256": "46b8287ca44232db71c062540c662987bc2bbbfc36abeaa8d903607cc453a8f7"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/P2_STATE.bin.gz",
+      "size_bytes": 570556,
+      "sha256": "52397c020d5573e5e9af746cd78e537e8bf8e7f4651e280dbc01b215449de955"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/P2_WITNESS.json",
+      "size_bytes": 902,
+      "sha256": "1d5cb3fac3b4a11de14e04880b3d4735c6450b3fa8c7e494878f9e43667cb478"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/STATE_GENERATION.log",
+      "size_bytes": 839,
+      "sha256": "96129191ea24df3a19826c9271252f61fd549904f8adeaf8b61aeafc72453fec"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/UPPER_RESULTS.json",
+      "size_bytes": 8496,
+      "sha256": "a109de9142bcacde7f5d0eebeb4561af488cee9a3d3829c2ed4462dd183f646c"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/UPPER_WITNESS.json.gz",
+      "size_bytes": 793531,
+      "sha256": "cf52f89f95f1f6cc73454b31543e36c6acd43e62c8da9df180dc15ee48ee69a2"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/curl.py",
+      "size_bytes": 9583,
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/flux.py",
+      "size_bytes": 18303,
+      "sha256": "3af43d0105594f18a78948fbbb4be6640853fe1d0fb327cc849f6cad0bbf51b2"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/replay.py",
+      "size_bytes": 156,
+      "sha256": "b10e7508f215a1678e06bd618ffe21179952db14a707f823011bd0756abb7412"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor/state.py",
+      "size_bytes": 9392,
+      "sha256": "4bdfb206055db4c087bb2754f3e3fb365d093ce2af9df3796cf89df39cf52dd2"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/CURL_COEFFICIENTS.bin.gz",
+      "size_bytes": 1155178,
+      "sha256": "7b74a28d128352c6df11eb1253d496b40754d2f1f0f5878266f8fd2eb2f08ea5"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/CURL_CORRECTION_RESULTS.json",
+      "size_bytes": 2488,
+      "sha256": "468f0028446026fff935568b2400a009e72843d8637a49dfd2dc161eb0fa1dd7"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/CURL_WITNESS.json",
+      "size_bytes": 1275,
+      "sha256": "822075f193983526d38a22b75c5319f1b356e59191efd4098f8618e48ece1326"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/FLUX_GENERATION.log",
+      "size_bytes": 2347,
+      "sha256": "63cea12b05c59084251b14b009a071248167bd5f31b34bcdc339f5f350889b62"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/P2_RESULTS.json",
+      "size_bytes": 3043,
+      "sha256": "326ffbea1b4ed409103558585077a9a79f3f78d1065d3ff616a02f96239ca13b"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/P2_STATE.bin.gz",
+      "size_bytes": 570422,
+      "sha256": "c296b0ec1b6bcba27e7c3fc0e6bbff1799b2266b67beb239f9b7456e4d1af14d"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/P2_WITNESS.json",
+      "size_bytes": 899,
+      "sha256": "0001964542de93483694f95bcda7089ab4a1b1250380816611c28676f483ff27"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/STATE_GENERATION.log",
+      "size_bytes": 838,
+      "sha256": "5b0da8994ec788e0301bb3c204ccca2b43948ddcb82e8274bcee1e6848d0ffa5"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/UPPER_RESULTS.json",
+      "size_bytes": 8249,
+      "sha256": "c3f5bbda598d13219414aa32f8936fde759955d3299e89c367a6a3b677211acd"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/UPPER_WITNESS.json.gz",
+      "size_bytes": 793472,
+      "sha256": "35d45fc2e3e2f369e0b46efc848491ee2a63aa23576e1837996cc51cda5f1333"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/curl.py",
+      "size_bytes": 9583,
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/flux.py",
+      "size_bytes": 18303,
+      "sha256": "3af43d0105594f18a78948fbbb4be6640853fe1d0fb327cc849f6cad0bbf51b2"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/replay.py",
+      "size_bytes": 156,
+      "sha256": "b10e7508f215a1678e06bd618ffe21179952db14a707f823011bd0756abb7412"
+    },
+    {
+      "path": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original/state.py",
+      "size_bytes": 9389,
+      "sha256": "faa461344fc10fa4cbf9a3fe7e0326b0bac2570f62688193cb12efb314e9279a"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/AUDIT_RESULTS.json",
+      "size_bytes": 3618,
+      "sha256": "f2134d01006169b1c682b9c2c7545bfa7037f46e76aea311fa32547d37c5ebcd"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/BANK.json",
+      "size_bytes": 8049,
+      "sha256": "a479befacc96ec5b2e4497fc17d1e6301a923df8c8cfe652ae91df50c3649ccd"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/CONTRACT.json",
+      "size_bytes": 7359,
+      "sha256": "3c46b0bd4bc0045660826665ed93ae5c217a4c9a132cb1b5d14adb1106bd53ad"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/COVER.json",
+      "size_bytes": 34851,
+      "sha256": "841f0eb0f5b6c71ccb4fbf205ea2bdd90168a62620cd0da3c2816b22dc02de5d"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/MANIFEST.json",
+      "size_bytes": 5138,
+      "sha256": "0c3293353b8dbb8ba32d1f1e1a4c33ec1a8686eda6b0187bdf6798ffac3422c5"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/PLACEMENT_RESULTS.json",
+      "size_bytes": 177283,
+      "sha256": "8a5511cc2aef4036242c41ff3a75d29f9461014c57b9a3c46cc56dee23dd9933"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/REPLAY.log",
+      "size_bytes": 436,
+      "sha256": "cbf27d52da96d48e9a698e2ce70f14be815f6dbe9639a238c5cc47bf667dec9a"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/audit.py",
+      "size_bytes": 10376,
+      "sha256": "dd6ff890bd6e08a896e1ced843a9bc8c0ef63c6b57b8a37ccd9855ea9b8b8ff8"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/evaluator.py",
+      "size_bytes": 1187,
+      "sha256": "aa82d178d887e59af78d66d794bb4b68f9f6aa9c651d3b165ab6bac7b7de8884"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/kernel.py",
+      "size_bytes": 3625,
+      "sha256": "62df5c88105d525399efea7108991e617288c8ed3992a459df1fe8970dd63622"
+    },
+    {
+      "path": "captures/2026-10-20T023053Z-codex-j1-adaptive-cover-7993ac19/planner.py",
+      "size_bytes": 5491,
+      "sha256": "730f9b978bfb254a28e2009ac94a8956c84979e3b3bcf47a4ad0e48085dbea3e"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/AUDIT_RESULTS.json",
+      "size_bytes": 8287,
+      "sha256": "859809d031a983124b516dd43d2b87092ab4b627d41d68df2e58db4820f5a4b4"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/BANK.json",
+      "size_bytes": 10047,
+      "sha256": "e5e3978ac50a3748f9ca59c5087fb58b81e2bee3045ddb08da4a09810faad226"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/CONTRACT.json",
+      "size_bytes": 24937,
+      "sha256": "31832a64d42df3f9848c14650434691966f07b98e44f3b4d78282180ca00cc0f"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/COVER.json",
+      "size_bytes": 38299,
+      "sha256": "ae34e70f290a2c1b14837f88ebdf86fcd234ef562198a1da6c0f12bddd2bf20a"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/EXTENSION_COVER.json",
+      "size_bytes": 18021,
+      "sha256": "4842ca7828ef40387b91f201bfeb3a57a6689f8af1538280be0c850155526395"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/MANIFEST.json",
+      "size_bytes": 9083,
+      "sha256": "9d9aa76770125a40deeda93db94a34b0ccf052c947ff14879e3466b0817578bb"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/PLACEMENT_RESULTS.json",
+      "size_bytes": 161570,
+      "sha256": "7ccd3a743fcb4683810a40677571da6d26a558361818c6becfd3087085c31cc7"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/SCALAR_REPLAY.log",
+      "size_bytes": 451,
+      "sha256": "eec3c56d0de46d9ac2a1ffa3e8b03c0d6a4568c3dafbe0c94b27df1df36e084b"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/audit.py",
+      "size_bytes": 14206,
+      "sha256": "31e5df0fc5170d196add52e9b3a5c972d8f2140e6e07d517378defbe6267e71a"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/CURL_COEFFICIENTS.bin.gz",
+      "size_bytes": 1154889,
+      "sha256": "963d8c4baf46a4e85f5eb6489c90b5063f5d9c52aa1e7386de3449f31db32c62"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/CURL_CORRECTION_RESULTS.json",
+      "size_bytes": 2527,
+      "sha256": "30354a3c9bdd3f55e73aba9487ff61051c3ba1b1e7ef041861fb0bfa387e7aa7"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/CURL_WITNESS.json",
+      "size_bytes": 1277,
+      "sha256": "be2e556bb106684e2aaa36545163fbb9c27eabe1e4953778b2849defff076b22"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/FLUX_GENERATION.log",
+      "size_bytes": 2350,
+      "sha256": "a2be4728436d70b00e47216a7411705d8fe316e7cd0bf1b301aa8267eda6b27a"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/P2_RESULTS.json",
+      "size_bytes": 3093,
+      "sha256": "1e6cd867d7574d46663e68f75b84ec39fa9efe486e1fe781bd0894ff3fbd9e73"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/P2_STATE.bin.gz",
+      "size_bytes": 568737,
+      "sha256": "625991986c8e2190ba86264230593d52c56370091b0a187d7df58d47f6a07c76"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/P2_WITNESS.json",
+      "size_bytes": 903,
+      "sha256": "7ff10d79b24e0dc500c658b99db056050ff00880b89c67f0a714ef775224ddac"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/STATE_GENERATION.log",
+      "size_bytes": 839,
+      "sha256": "37aae17c2ed6e0d67deceb84dfd99faaf20d500f1f4fe479837aa0fd6131a48a"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/UPPER_RESULTS.json",
+      "size_bytes": 8410,
+      "sha256": "d0d1d435bfda495119a8aad189c8441f975e1a82a039956e14f8a48c26283620"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/UPPER_WITNESS.json.gz",
+      "size_bytes": 793037,
+      "sha256": "b6c03306d7231fc38e63290ebf0fdb9c801b2a8885cc31d6a60f21a06fb70d51"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/curl.py",
+      "size_bytes": 9583,
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/flux.py",
+      "size_bytes": 18303,
+      "sha256": "3af43d0105594f18a78948fbbb4be6640853fe1d0fb327cc849f6cad0bbf51b2"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/replay.py",
+      "size_bytes": 156,
+      "sha256": "b10e7508f215a1678e06bd618ffe21179952db14a707f823011bd0756abb7412"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/candidate/state.py",
+      "size_bytes": 9385,
+      "sha256": "165219b211e19c646df50348a6039a0f73e85b326afddcb8b69d1b36948853bc"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/evaluator.py",
+      "size_bytes": 1984,
+      "sha256": "35d73c08cfba83aac8e7b8ee036aeb5ff32e57d9f0b4694d50201ba0109b61f4"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/kernel.py",
+      "size_bytes": 3625,
+      "sha256": "62df5c88105d525399efea7108991e617288c8ed3992a459df1fe8970dd63622"
+    },
+    {
+      "path": "captures/2026-10-20T024931Z-codex-j1-left-state-cb629795/planner.py",
+      "size_bytes": 5598,
+      "sha256": "8cc07d58fdfa8d26ded375370aacd269a60bfdc9fb06363935cd06f74607d4ce"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/AUDIT_RESULTS.json",
+      "size_bytes": 9720,
+      "sha256": "c7ec3847d3f4bf5c6b8b1b2d9a721f652b241f4e7b3d01466eaacf4b564c635f"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/BANK.json",
+      "size_bytes": 12102,
+      "sha256": "a1959cb630ae3483f6c3e07f58c03eab551d4a2960fa67d663b1cb7df3a2efd5"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/CONTRACT.json",
+      "size_bytes": 30989,
+      "sha256": "670a569c3789cb3fae05255268138f3f2ccbb69ffe0752626a11d8e8899b49aa"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/COVER.json",
+      "size_bytes": 84860,
+      "sha256": "f8fc85caf1e7694b88bdefd459b866411bc5f1e15c124ee1f867e377f853af1a"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/EXTENSION_COVER.json",
+      "size_bytes": 14453,
+      "sha256": "1a492a9dc50d9148a336e038725b663575a2f937fb9cc4e4bb5377c32ee14eb7"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/MANIFEST.json",
+      "size_bytes": 9796,
+      "sha256": "aac0795b2a7d5aa831adec26399f63bcb6d66ca4ff18dcfa811dc20ecfc4a4a6"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/PLACEMENT_RESULTS.json",
+      "size_bytes": 160230,
+      "sha256": "b6d77988fb7751cc913c0ecc4f078a9cb1a7a8c2c87533ee62d51f5ccce79cf3"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/REPLAY_RECEIPTS.json",
+      "size_bytes": 1309,
+      "sha256": "d077c172111b72c8c7293b2958b02dbb9ce41a13ac6404ce449e97a993c66ef0"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/RIGHT_COVER.json",
+      "size_bytes": 3776,
+      "sha256": "15fe379af8516db13f44fbccdbed439935f5677220a74cd6eaaa6318f2352a3d"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/SCALAR_REPLAY.log",
+      "size_bytes": 550,
+      "sha256": "42d2cd52ca5fa879ef26084c0dd09f22011b9ef8e318feb76f07922192fa6037"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/audit.py",
+      "size_bytes": 16465,
+      "sha256": "29b09cc6ad478d61f4fc7beb98cd466b0fd6d12e50643ddf879dea7416c9e1f3"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/CURL_COEFFICIENTS.bin.gz",
+      "size_bytes": 1155273,
+      "sha256": "be1b0f7b4916cd78f861408a98576095e6b17c50da8b0f2b4a9b1799aad95116"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/CURL_CORRECTION_RESULTS.json",
+      "size_bytes": 2557,
+      "sha256": "310dafaec6975ac20cf8437ad352bef9504f80c5f99b8958d7cf4ef331d0ffaf"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/CURL_WITNESS.json",
+      "size_bytes": 1279,
+      "sha256": "e53bdbfde80439efe79582ddb66c984b1a6c6cdb7a9780829c8e7cdeb2c0d873"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/FLUX_GENERATION.log",
+      "size_bytes": 2351,
+      "sha256": "82b68760782ab4fe0d6ef4d61de7a1e74f617a3fc3c234575f1d9f481b8d710f"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/P2_RESULTS.json",
+      "size_bytes": 3171,
+      "sha256": "303ef980b6c214605ebeafe52bae1fd6fac5293739924c8912d8200f470f960b"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/P2_STATE.bin.gz",
+      "size_bytes": 569114,
+      "sha256": "b77da2b5b1c52fa0a1f2a5c81745a845d861988e7cbf2b9e5477bb4be1e55ce4"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/P2_WITNESS.json",
+      "size_bytes": 904,
+      "sha256": "0bea07c692cdf4064b825717c465d9adb724e0044ab6c6d4d724586d737c110c"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/STATE_GENERATION.log",
+      "size_bytes": 839,
+      "sha256": "963c028da147824c6a9d22a2f949630c1f725f805be0bf26dbc87dc32c7436fa"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/UPPER_RESULTS.json",
+      "size_bytes": 8612,
+      "sha256": "2830e98e18601a90c116f0a0c0e34a4998a989d963a52e03a33ef9f11d470af5"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/UPPER_WITNESS.json.gz",
+      "size_bytes": 793516,
+      "sha256": "fbd3fcc2049126925f419e2d1b04fe11328e420fb99e62e1d84bc869593dc11c"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/curl.py",
+      "size_bytes": 9583,
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/flux.py",
+      "size_bytes": 18303,
+      "sha256": "3af43d0105594f18a78948fbbb4be6640853fe1d0fb327cc849f6cad0bbf51b2"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/replay.py",
+      "size_bytes": 156,
+      "sha256": "b10e7508f215a1678e06bd618ffe21179952db14a707f823011bd0756abb7412"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/candidate/state.py",
+      "size_bytes": 9386,
+      "sha256": "ff7de4f10efa056d16ee6ced6c4461f84c55cc576150849be3b1d7be93d16b95"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/evaluator.py",
+      "size_bytes": 2063,
+      "sha256": "561a38abae1dd0d5fe3062b135187af4c4d7e328489d97cf74723d4d1e54c0f2"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/kernel.py",
+      "size_bytes": 3625,
+      "sha256": "62df5c88105d525399efea7108991e617288c8ed3992a459df1fe8970dd63622"
+    },
+    {
+      "path": "captures/2026-10-20T030556Z-codex-j1-right-state-b0eeb8a7/planner.py",
+      "size_bytes": 6664,
+      "sha256": "8ab96b89e5a569a19b9b4510a74f3fafa16e2725395555fac848f7b6d30b0af3"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/AUDIT_RESULTS.json",
+      "size_bytes": 7771,
+      "sha256": "319983b30c1c9aa0c252fed8922bc2a8506b30af8125c61ed918ca0f398b6993"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/BANK.json",
+      "size_bytes": 14151,
+      "sha256": "750dd7bca2d788c9bdddaeb116e346d2aee9b4c5d266bfa761b87f5edf87c7b6"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/CONTRACT.json",
+      "size_bytes": 36767,
+      "sha256": "3300ccf763e5ee5463e7c302c84670ed856c4147cb2ffc73b6ac64e64675b023"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/COVER.json",
+      "size_bytes": 86078,
+      "sha256": "5799e450cf0d2d4244a82a2a6edb9e6f45181bf0cc11b382df84f87f021dc62f"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/MANIFEST.json",
+      "size_bytes": 8841,
+      "sha256": "152898ff4d246ad310dfb7375a9338dc2df0af280b1f9eec1a6c0d7b4b5246a4"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/PARAMETER_FREEZE.json",
+      "size_bytes": 1241,
+      "sha256": "e86bce6fe2163c8e9f4b5d23fb1ea8d00638affbc880f8de06ebad2ab649e8b9"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/PLACEMENT_RESULTS.json",
+      "size_bytes": 222743,
+      "sha256": "28d5ec86da58c97f76e71d0e8edc219ea7550fbb89aa0d59dbcc232b5b6cb52c"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/REPLAY_RECEIPTS.json",
+      "size_bytes": 1213,
+      "sha256": "077c4e02c4739ade893987870fcf616ff73672de706d51cecc596489497cb1fe"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/SCALAR_REPLAY.log",
+      "size_bytes": 408,
+      "sha256": "4565755e28b429b67950c9278ff8bafc1d11bab623a68d51c2970683d51a3022"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/audit.py",
+      "size_bytes": 15941,
+      "sha256": "0b0b8ce66963731e556ba6a3ccfc09d6728294682e577d9910106a7eadee1542"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/CURL_COEFFICIENTS.bin.gz",
+      "size_bytes": 1155176,
+      "sha256": "007ef6d8d82e5e5180de86b51f9a1f55bb0426775b6f8c3b1b259332a4da4209"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/CURL_CORRECTION_RESULTS.json",
+      "size_bytes": 2531,
+      "sha256": "eb54ddaf6da241816088d923ae9626fe0c3544608553a0c75a625cfebac88cc2"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/CURL_WITNESS.json",
+      "size_bytes": 1278,
+      "sha256": "afd83c6fab707e2e66ac6d8e5811ff26ebcdef6147e97e1c2602abd6492eeffe"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/FLUX_GENERATION.log",
+      "size_bytes": 2349,
+      "sha256": "a8778ac3210bf52b94f7f1c73e265185ee7349383672c381adb401e3ee94043a"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/P2_RESULTS.json",
+      "size_bytes": 3122,
+      "sha256": "1dea5f70d27a29af0198a2b81976a2b6f82b1985a0338a8d8597db612fb3dc20"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/P2_STATE.bin.gz",
+      "size_bytes": 570677,
+      "sha256": "aa1fb20e792b76949ffebc4b7b1bf3aab564d414ab4548a53c1f20d931dcdc9d"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/P2_WITNESS.json",
+      "size_bytes": 901,
+      "sha256": "ad0e58b5b3945b7cceaa8e061b489eb7fb6fdd5df7b587e0157df7cf18550002"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/STATE_GENERATION.log",
+      "size_bytes": 839,
+      "sha256": "283821aaef30cebb952c9972018891b3f80dbed708aa306de4cf3df7ad97f9f0"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/UPPER_RESULTS.json",
+      "size_bytes": 8550,
+      "sha256": "f26e5833aafbfe43b313b7c7f8b7e9a2b599819d048c0e644b04837b6c89f210"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/UPPER_WITNESS.json.gz",
+      "size_bytes": 793454,
+      "sha256": "d177b6786b799f3e451d8e5b6ca407e943ab2a78ed5286659d057fd898d8541c"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/curl.py",
+      "size_bytes": 9583,
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/flux.py",
+      "size_bytes": 18303,
+      "sha256": "3af43d0105594f18a78948fbbb4be6640853fe1d0fb327cc849f6cad0bbf51b2"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/replay.py",
+      "size_bytes": 156,
+      "sha256": "b10e7508f215a1678e06bd618ffe21179952db14a707f823011bd0756abb7412"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/candidate/state.py",
+      "size_bytes": 9383,
+      "sha256": "134963fd46a4026b2907b768a90f201fa4ac576e68a934698c29f72e99a8788c"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/evaluator.py",
+      "size_bytes": 1807,
+      "sha256": "ce68ecafe7dfc31703fb0c71fa1473e8e5e5655ea82e1ad6faf9df3921c83e60"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/kernel.py",
+      "size_bytes": 3625,
+      "sha256": "62df5c88105d525399efea7108991e617288c8ed3992a459df1fe8970dd63622"
+    },
+    {
+      "path": "captures/2026-10-20T132011Z-codex-j1-central-state-bbd52602/planner.py",
+      "size_bytes": 5323,
+      "sha256": "7b046134bb9303a7d923ce2f1d3f39c0950c4ae7fab5e822ee44733fe5f39cbd"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/AUDIT_RESULTS.json",
+      "size_bytes": 9630,
+      "sha256": "25236ca61a798f127900764150ff1556fe064bf6438e50a0100ed99d7f8915ee"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/BANK.json",
+      "size_bytes": 16238,
+      "sha256": "1a4c4f350ecac67e2452081b83daf4b3547414ffd17167090a7aa9515a7d9d4d"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/CONTRACT.json",
+      "size_bytes": 42971,
+      "sha256": "2d29c0702d407ae4966cd63b09b6367cfcb3fc6d302fcbbe08fb56586c5ca41e"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/COVER.json",
+      "size_bytes": 103774,
+      "sha256": "ef3a0b6a60999755356aae4c7815b1b4fb8135c70dea04a3ecfa4f4eaf9a8a2d"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/EXTENSION_COVER.json",
+      "size_bytes": 7194,
+      "sha256": "861eebb83acdfd36e469a8130f717090c6b636ec6b453911405e299c866e4086"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/MANIFEST.json",
+      "size_bytes": 9472,
+      "sha256": "e88c68dade37f0a08078e9efb079e987000c444cc9ff240c580fa57dd9108cd2"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/PARAMETER_FREEZE.json",
+      "size_bytes": 1495,
+      "sha256": "d4bb21a08122d32fafe52b9397da2d9bc7c07b028018f6382ddec3c359dbafc5"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/PLACEMENT_RESULTS.json",
+      "size_bytes": 223645,
+      "sha256": "84514d58be2d03f6bc07053f6a73a0ff445b98ae0be6ed217e4aea9433910bd5"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/REPLAY_RECEIPTS.json",
+      "size_bytes": 1253,
+      "sha256": "e8577cd52d03a38281f2ec93e92976aac89d7f888fefc3b33e4fa5212bc301e9"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/SCALAR_REPLAY.log",
+      "size_bytes": 450,
+      "sha256": "51faab10e5a18b288d83efb345a03d3613ba4f9580076f76c402e09639c5de0c"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/audit.py",
+      "size_bytes": 16822,
+      "sha256": "60202edb2e84773a376dd3adb8980a4897db0f5f4ac79ab8d55660bedeeae9db"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/CURL_COEFFICIENTS.bin.gz",
+      "size_bytes": 1154855,
+      "sha256": "6d108a6c871739e51918c1d0b80591af76ccbb6f3e106cf9c645f1bd8ad9d83a"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/CURL_CORRECTION_RESULTS.json",
+      "size_bytes": 2574,
+      "sha256": "5331f7280e7d3b00bccd15483f793864ea52d45557a28f100315dba8f78430a5"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/CURL_WITNESS.json",
+      "size_bytes": 1279,
+      "sha256": "a92867f69cec9c6df3aa95a2a6283f03c2ee035e254ff4067e1e9fbce7d40acd"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/FLUX_GENERATION.log",
+      "size_bytes": 2350,
+      "sha256": "ca180fed12b33a476a2ac260b8666b440092b688636c9012c2c416567403e0b0"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/P2_RESULTS.json",
+      "size_bytes": 3203,
+      "sha256": "3221664e62bdfa2d1c6006a8de56b3bb462811d97a8bf89cf90134bb4a2852cb"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/P2_STATE.bin.gz",
+      "size_bytes": 570890,
+      "sha256": "0277c27b68dd0a3adcb24c2da1b32bcd8adafa657c1853a3f5b054d54c33a1fe"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/P2_WITNESS.json",
+      "size_bytes": 904,
+      "sha256": "359b6254df34a1831cd32a4ada86971859f6a76c9b25cf46ec16c21be6c8a960"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/STATE_GENERATION.log",
+      "size_bytes": 838,
+      "sha256": "48bd0426d2217cd5358706d99b95b9b105f3a661ce6d25b7b7bdfc712f57702c"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/UPPER_RESULTS.json",
+      "size_bytes": 8754,
+      "sha256": "c2fe092b000431d76d4f57971e364c774a25014b2eaf04e17c76601f2486ae01"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/UPPER_WITNESS.json.gz",
+      "size_bytes": 792906,
+      "sha256": "bcf2acf8091d337d782a8b6be34f31e25b2aa306f5b5746c8c412095787107cd"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/curl.py",
+      "size_bytes": 9583,
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/flux.py",
+      "size_bytes": 18303,
+      "sha256": "3af43d0105594f18a78948fbbb4be6640853fe1d0fb327cc849f6cad0bbf51b2"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/replay.py",
+      "size_bytes": 156,
+      "sha256": "b10e7508f215a1678e06bd618ffe21179952db14a707f823011bd0756abb7412"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/candidate/state.py",
+      "size_bytes": 9386,
+      "sha256": "a2c257c73a3a75f90b2ef64eebded776061fa681962e189b5dd2c319a2f5b901"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/evaluator.py",
+      "size_bytes": 1988,
+      "sha256": "eca70af781b8c84c2f5aeb93de30ead85dec5f29fff276eb436c7bd2d4cef264"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/kernel.py",
+      "size_bytes": 3625,
+      "sha256": "62df5c88105d525399efea7108991e617288c8ed3992a459df1fe8970dd63622"
+    },
+    {
+      "path": "captures/2026-10-20T134030Z-codex-j1-damping-extension-da40d810/planner.py",
+      "size_bytes": 5604,
+      "sha256": "88f7f9be048ae55820a0637ad2b4d5ddda4fbbf99c7bf4484eb3e9b331d4b2f8"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/PARAMETER_FREEZE.json",
+      "size_bytes": 1250,
+      "sha256": "29600fff6308c16c85bece372b81b8e7da8d0d0db75de106ab6d5bd8c9de2ec9"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/CURL_COEFFICIENTS.bin.gz",
+      "size_bytes": 1155171,
+      "sha256": "50174d4d25435f6c02f465bbc997982cee92af40d02609fd53e9a71e2750fe37"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/CURL_CORRECTION_RESULTS.json",
+      "size_bytes": 2571,
+      "sha256": "1ab73cee5c47c35aefd4813519e80ae3551cb4cbfdc5cc2dcc7c8f9d4e56dffe"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/CURL_WITNESS.json",
+      "size_bytes": 1278,
+      "sha256": "81ade096b97606a47d56b5c95e5fb4d12adb130cc3813c7fa739eb7e34173ad4"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/FLUX_GENERATION.log",
+      "size_bytes": 2351,
+      "sha256": "1d7a5fd9e152c82cb4f19fd4374f8da24ad37880a723a739ac08064fc8d5990d"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/P2_RESULTS.json",
+      "size_bytes": 3166,
+      "sha256": "c7de050184c0430382af8c177f088d1b0029c9f081d30974e07e25cdfc091d30"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/P2_STATE.bin.gz",
+      "size_bytes": 569382,
+      "sha256": "b6d126a4702f7e2048d10146631748b4e7c3ec061f8148b5953fc2e38c6766f7"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/P2_WITNESS.json",
+      "size_bytes": 904,
+      "sha256": "8f967c0d25999ea645503ce919e8362386853629f72faad06c349899d5d6179b"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/STATE_GENERATION.log",
+      "size_bytes": 839,
+      "sha256": "6befa165786a24a06c0b66055c1cb96661bebf151722b82822eb659563e1af71"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/UPPER_RESULTS.json",
+      "size_bytes": 8679,
+      "sha256": "40e8277b2c56ab153842cbcce34e411b39869159372f85e00e346ce35b8c4f00"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/UPPER_WITNESS.json.gz",
+      "size_bytes": 793038,
+      "sha256": "0d5b456463b1a9a3d97eabe522e63cd235c60f8e196474faae087369b3141634"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/curl.py",
+      "size_bytes": 9583,
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/flux.py",
+      "size_bytes": 18303,
+      "sha256": "3af43d0105594f18a78948fbbb4be6640853fe1d0fb327cc849f6cad0bbf51b2"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/replay.py",
+      "size_bytes": 156,
+      "sha256": "b10e7508f215a1678e06bd618ffe21179952db14a707f823011bd0756abb7412"
+    },
+    {
+      "path": "captures/2026-10-20T163156Z-codex-j1-right-damping-state-7b2ec420/candidate/state.py",
+      "size_bytes": 9386,
+      "sha256": "552ec06ddde1ee957d08a00b3cb887e0e0614d522d4019c23989617579b02963"
+    }
+  ],
+  "target": "1/10",
+  "complete_cover_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/10",
+      "3/25"
+    ]
+  },
+  "finite_algorithm_budget": {
+    "max_depth": 18,
+    "max_leaves": 4096
+  },
+  "axis_rule": "Choose largest squared z-variation score:4*(wu^2+gu^2)*(wu-wl)^2 for omega versus4*wu^2*(gu-gl)^2 for gamma; deterministic omega tie. Split represented word indices at integer midpoint. Closed proof boxes share exact dyadic cut; runtime right child starts at next word.",
+  "owner_rule": "Minimum certified rational total upper radius among nine states; lexicographic state ID tie. Accept only if upper<=1/10. Failed acceptance is unresolved, not actual-error NO-GO.",
+  "placement_probe_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "3/25",
+      "13/100"
+    ]
+  },
+  "placement_rule": "Frozen9x9 rational grid above certified rectangle; exclude gamma<=3/25. Recommend maximum minimum downward-enclosed transported-upper formula, rational lexicographic tie; a finite-grid diagnostic, not actual-error lower or global optimality.",
+  "rectangle_formula": "kappaQ*(sqrt(d2)+sqrt(nu2)+deltaZQ*sqrt(mass)/2)^2 + evaluator_errorQ; kappaQ=sqrt(1+(wu/(2gl))^2); deltaZQ^2=max(|wl^2-wc^2|,|wu^2-wc^2|)^2+4max(|gl*wl-gc*wc|,|gu*wu-gc*wc|)^2. Positive parameter ranges, CP<=1/2.",
+  "rounding_model": "Sixteen explicit primitive binary64 RN ties-to-even operations without FMA/contraction. Seven frozen constant quantizations, additive2^-1075 underflow term and magnitude<16 overflow exclusion. Exact represented inputs; integer selector adds no output arithmetic. Conditional model, not every-platform formal verification.",
+  "input_document_provenance": [
+    {
+      "filename": "20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "role": "Source data; not a native derivation of the benchmark scalar-wave action/damping"
+    },
+    {
+      "filename": "21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4",
+      "role": "Source data; not a native derivation of the benchmark scalar-wave action/damping"
+    }
+  ],
+  "governance_amendment_status": "Proposal, not enacted by citation",
+  "scope": "New actual saved P2 state at exact(144511/32000,3/25) and its own projected-source RT1/curl/local-lift certificate, added to prior eight-state bank. Complete rectangular cover is conditional on exact posterior and primitive binary64 RN audit; no native UD or physical identification.",
+  "lane": "Development \u2014 no registry entry",
+  "registry_entry": null,
+  "scientific_status": "OPEN",
+  "independent_review": false,
+  "physical_promotion": 0,
+  "supersedes": [],
+  "missing_not_read": [
+    "Gap2_FINAL_Finite_Genesis.png",
+    "Notes Backup 17-04-2026 07-13.txt",
+    "ASTER_Project_Folder_Instruction_Block_v1.md"
+  ],
+  "join_rule": "One complete rectangular domain and one integer-word adaptive tree. Both prior component domains are subsets; no former upper-right gap or component switch remains in the runtime guard."
+}
