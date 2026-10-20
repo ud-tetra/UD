@@ -1,0 +1,151 @@
+{
+  "artifact_type": "SAME_TEAM_SCOPED_PRIMARY_SOURCE_APPLICABILITY_REVIEW",
+  "challenges_or_corrections": {
+    "forbidden_inference_all_paper_predictions_fitted": true,
+    "forbidden_inference_distinct_archive_proves_independence": true,
+    "forbidden_inference_helper_config_replaces_drive1": true,
+    "forbidden_inference_measured_covariates_always_circular": true,
+    "forbidden_inference_publication_or_render_date_proves_pretarget_freeze": true,
+    "frozen_source_or_mathematical_retractions": 0,
+    "qualification_gates_closed_by_this_review": 0,
+    "request_modified": false
+  },
+  "findings": [
+    {
+      "finding": "Recovered utility.c resolves the previous failed retrieval, not metrological qualification.",
+      "id": "C23-F1",
+      "status": "EXACT_SOURCE_OBSERVATION"
+    },
+    {
+      "finding": "drive1 has direct /64, EXT_NE, delay7992 and averaging1 setup; it does not call the adaptive-decimation or two-channel acquisition helpers. Helper acquire_2channels separately resets, applies its decimation argument, sets delay8192 and NOW.",
+      "id": "C23-F2",
+      "status": "EXACT_SOURCE_OBSERVATION"
+    },
+    {
+      "finding": "A helper oversampling target, program source, trigger chain or latency comment cannot substitute for selected-binary/runtime, clock/skew, anti-alias or joint-error evidence.",
+      "id": "C23-F3",
+      "status": "SCOPE_LIMIT"
+    },
+    {
+      "finding": "Appendix A adjusts k=.0045 to Fig8 observations and limits that dissipation term to driven simulations. No claim that all nondriven predictions are fitted.",
+      "id": "C23-F4",
+      "status": "PAPER_SOURCE_OBSERVATION"
+    },
+    {
+      "finding": "Appendix F uses measured amplitudes and an observed hierarchy for scoped driven predictions. This is not automatically untouched/prefrozen validation; separately measured covariates can legitimately support conditional predictions with independent held-out evidence.",
+      "id": "C23-F5",
+      "status": "PAPER_SOURCE_OBSERVATION_AND_SCOPE_LIMIT"
+    },
+    {
+      "finding": "Pretarget chronology, exposure/custody separation and independent target-specific validation are not established by the enumerated sources. No exhaustive absence statement or rejection of the paper conclusions.",
+      "id": "C23-F6",
+      "status": "OPEN_QUALIFICATION"
+    },
+    {
+      "finding": "Prior release1.0 inventory has32gzip records; distinct candidate metadata is not independent-acquisition evidence. Parent current71file/32gzip reconciliation not independently repeated by this reviewer.",
+      "id": "C23-F7",
+      "status": "INHERITED_METADATA_SCOPE"
+    }
+  ],
+  "paper_binding": {
+    "full_remote_source_or_PDF_bytes_hashed": false,
+    "locations": [
+      "Appendix A: dissipation and simulation paragraphs, Fig8",
+      "Appendix F: introductory hierarchy, Fig7, frequency-shift paragraph and Eqs49-50"
+    ],
+    "render_date_not_acquisition_timestamp": true,
+    "retrieval": "Firecrawl version-specific HTML, HTTP200",
+    "scrape_id": "01a15b4a-a0a4-7752-8583-131f79c87c65",
+    "url": "https://arxiv.org/html/2108.01086v1",
+    "version": "2108.01086v1"
+  },
+  "primary_code_bindings": [
+    {
+      "bytes": 3100,
+      "commit": "265b6671dde799d7c73f32247fa3ee93ae70e0f2",
+      "file": "utility.c",
+      "git_blob_and_sha256_independently_recomputed": true,
+      "git_blob_sha1": "785ebb6c4303fe6060baeed49e96a42cff67022a",
+      "path": "redpitaya-measurements/c/utility.c",
+      "repository": "tychon/U1CircuitsData",
+      "retrieval": "GitHub fetch_file at exact commit",
+      "sha256": "8348e6f79e5c854f4b543e0de586bd0420be457767546523f17b622e3579ec79",
+      "url": "https://github.com/tychon/U1CircuitsData/blob/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/utility.c"
+    },
+    {
+      "bytes": 8200,
+      "commit": "265b6671dde799d7c73f32247fa3ee93ae70e0f2",
+      "file": "u1_drive1.c",
+      "git_blob_and_sha256_independently_recomputed": true,
+      "git_blob_sha1": "043e2731b643596f566eec0176557e877aaebc7a",
+      "path": "redpitaya-measurements/c/u1_drive1.c",
+      "repository": "tychon/U1CircuitsData",
+      "retrieval": "GitHub fetch_file at exact commit",
+      "sha256": "17bfd371ab475cce39acc9c0ad50cd4b856bfe3e60209b7701499890ffc7a1fa",
+      "url": "https://github.com/tychon/U1CircuitsData/blob/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/u1_drive1.c"
+    },
+    {
+      "bytes": 1607,
+      "commit": "265b6671dde799d7c73f32247fa3ee93ae70e0f2",
+      "file": "utility.h",
+      "git_blob_and_sha256_independently_recomputed": true,
+      "git_blob_sha1": "f20a9a86fd80af20afbf330c02fc0ff7ade7cd98",
+      "path": "redpitaya-measurements/c/utility.h",
+      "repository": "tychon/U1CircuitsData",
+      "retrieval": "GitHub fetch_file at exact commit",
+      "sha256": "a94bdf898508c1787a1f1051e4212e19308eb9496e501f57eccdd6c5661dd4a8",
+      "url": "https://github.com/tychon/U1CircuitsData/blob/265b6671dde799d7c73f32247fa3ee93ae70e0f2/redpitaya-measurements/c/utility.h"
+    }
+  ],
+  "prior_evidence_bindings": {
+    "BLOCKER_MAP.json": {
+      "repository_path": "captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/evidence/BLOCKER_MAP.json",
+      "sha256": "3bb59d72fe00cd3464ea942fe2b42cfef95ecd2822377cf0ebce9eeb5eb2d18b"
+    },
+    "CANDIDATE_INTAKE_FREEZE.json": {
+      "repository_path": "captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/evidence/CANDIDATE_INTAKE_FREEZE.json",
+      "sha256": "600facafa16b90785d3606a1f9c0fd457cf5734a835d8ebde33aea109a6a046c"
+    },
+    "RAW_METADATA_INVENTORY.json": {
+      "repository_path": "captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/evidence/RAW_METADATA_INVENTORY.json",
+      "sha256": "2a60300c30586d2fc57de8480d947d34b728b2f9b8e2423abb3b1051a0a76ea2"
+    },
+    "SOURCE_EVIDENCE.json": {
+      "repository_path": "captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/evidence/SOURCE_EVIDENCE.json",
+      "sha256": "e97ccb856e8cc56d46b4ca913f51c66a01e9e3fc4feda6693efe0c89aa16e2cc"
+    }
+  },
+  "public_capture_allowlist": [
+    "REVIEW.md",
+    "REVIEW.json"
+  ],
+  "public_capture_exclusions": [
+    "sources/",
+    "paper full text",
+    "raw archives",
+    "notebooks"
+  ],
+  "review_markdown_sha256": "b949abf6cc83fcdd16eeff357131c56957fb371c1060fdf0261f61d203b8aa25",
+  "scope": {
+    "actual_independent_replicate_established": false,
+    "exhaustive_absence_claim": false,
+    "external_promotion_review": "PENDING",
+    "fresh_preparation": "NOT_ESTABLISHED",
+    "fresh_validation_admitted": false,
+    "independent_acquisition": "NOT_ESTABLISHED",
+    "limited_enumerated_primary_sources": true,
+    "new_acquisitions": 0,
+    "new_estimator_calls": 0,
+    "new_fits": 0,
+    "new_numerical_wrappers": 0,
+    "notebooks_or_C_sources_executed": 0,
+    "numerical_gate_changes": 0,
+    "paper_scientific_conclusions_rejected": false,
+    "physical_calibration_evidence_obtained": false,
+    "physical_promotion": 0,
+    "provenance_status": "HOLD_PROVENANCE_NOT_ESTABLISHED",
+    "raw_records_opened": 0,
+    "registry_entry": "NONE_DEVELOPMENT"
+  },
+  "status": "SOURCE_CLARIFIED_QUALIFICATION_HOLD"
+}
