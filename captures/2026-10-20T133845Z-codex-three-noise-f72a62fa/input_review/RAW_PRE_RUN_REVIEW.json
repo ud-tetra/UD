@@ -1,0 +1,70 @@
+{
+  "status": "PASS_SAME_TEAM_PROSPECTIVE_THREE_CASE_RAW_ONLY_REVIEW",
+  "campaign_freeze_sha256": "65e8c3ffa40e9275749d3a7afbc4e5e976074c6b4e22a653547b99190597e1dd",
+  "protocol_sha256": "03407e1876c915e5ef3785921691766e41f3c3dc802cb2090a4816a24d51de91",
+  "data_driver_freeze_sha256": "d59e2074ff83cac57eeceafa191c336010993bd4012e13f88f0cdc106d10cfe8",
+  "review_driver_sha256": "387e9ce0f38b73e9c73c249edb21083befede80f6c386a4e23c27038006eb7d5",
+  "case_reviews": [
+    {
+      "case": "block257_port17",
+      "freeze_sha256": "31fd9fb7c7784380af7bccc6d23f9b610d2c4ad82715b2e4d13739b57c030db0",
+      "formula_positions_checked": 303067,
+      "independent_channel_sign_stream_sha256": "0ba665dbb8676db6b669abad68bf20db31c8326896fa272e1a6fd412e943910a",
+      "unchanged_numerical_modules": [
+        "estimator.py",
+        "certify.py",
+        "exact_math.py",
+        "numeric_math.py",
+        "proof_math.py",
+        "phase.py"
+      ],
+      "actual_raw_or_fit_observed": false
+    },
+    {
+      "case": "affine62_qr13",
+      "freeze_sha256": "32d17cce2c7bea675bb3b10ca561e547b0575c4ed5aee367fc31551b60051740",
+      "formula_positions_checked": 303067,
+      "independent_channel_sign_stream_sha256": "87d58c5b223a9a16238ec54278005e2f18635b6d14af187fe41cebbd548bcc66",
+      "unchanged_numerical_modules": [
+        "estimator.py",
+        "certify.py",
+        "exact_math.py",
+        "numeric_math.py",
+        "proof_math.py",
+        "phase.py"
+      ],
+      "actual_raw_or_fit_observed": false
+    },
+    {
+      "case": "prep_port_period7",
+      "freeze_sha256": "2a598c759dde8e18eb7b73f7815d346c3a9c312d064681c94abf95e7739b9e01",
+      "formula_positions_checked": 303067,
+      "independent_channel_sign_stream_sha256": "4cc64f3a36dd98ab8b332c54a6c3ea654165fe99e8a3ff6a999ac8da6c76538d",
+      "unchanged_numerical_modules": [
+        "estimator.py",
+        "certify.py",
+        "exact_math.py",
+        "numeric_math.py",
+        "proof_math.py",
+        "phase.py"
+      ],
+      "actual_raw_or_fit_observed": false
+    }
+  ],
+  "pure_pattern_positions_checked": 909201,
+  "independent_pure_controls": 29,
+  "pure_control_receipt_sha256": "2bde220b7fa0522904346cd333447a4b2b0cb05bc4eb7f497d6de2831c1aa8b5",
+  "pre_freeze_control_correction": "One hand-expected last-time period7 sign corrected from +1 to -1; recipe unchanged; no raw/fit observed",
+  "raw_only_release_recommended": true,
+  "fit_release_recommended": false,
+  "fit_blocked_until": "All three concrete DATA_FREEZE records, independent all-scalar/norm/projection audits, bounded metadata exposure and digest distinctness receipts, frozen independent post-audit and root all-data release",
+  "driver_assessment": "Producer case fit requires campaign all-data Boolean/root case-specific release and protocol/data hashes; root remains responsible for truthful all-case release and invocation order. Releases are custody records, not cryptographic authentication. Exclusive intents block retries. All outcome HOLDs retained.",
+  "source_scope": "Source-aware deterministic computational perturbations of exposed baseline/preparations/targets; coefficients are protocol controls; not blind, empirical, new-preparation or independent physical freshness",
+  "numerical_outputs_unknown_at_review": true,
+  "newcase_full_reconstruction_sigma210_lower": "NOT_EVALUATED",
+  "source_H_fullfactor_frame_target_proofs": "Inherited hash-bound, not rederived",
+  "new_raw_records": 0,
+  "new_estimator_calls": 0,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
