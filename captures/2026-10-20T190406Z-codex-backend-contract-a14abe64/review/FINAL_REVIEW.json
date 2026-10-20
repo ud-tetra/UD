@@ -1,0 +1,65 @@
+{
+  "status": "PASS_INDEPENDENT_ACTIVE_V3_CONDITIONAL_BACKEND_REVIEW",
+  "created_utc": "2026-10-20T19:01:57.332496+00:00",
+  "active_producer_freeze_sha256": "0eb2ff7a14fececa5fb2b821fb7eb359597c69bcdadb1bf4e37697f8f8e9f704",
+  "active_theorems_sha256": "baf6ac44bb8927719385141b382aae6b13eff8b9b8a0ef609d2f83fbb549251e",
+  "active_certificate_sha256": "41b196267bd20e7a1293b56d033f4585bc5b864493eaf3a8e170bc02a5b82f5d",
+  "active_controls_sha256": "2f2981d96aaede294d9010ef81aa6900d7e4f869ae4cc2eaf8387ec2ca7c5926",
+  "active_obligations_sha256": "782c2718deb359a9be90460311dc6c48f5ee76ee7695865d83eb1f29fbdcd0cc",
+  "active_correction_chain_sha256": "fe75e79e1daf4747a0aa4dc46f6f4be178a65ed6a647ada07cb1a806b7b843d1",
+  "independent_exact_rank_floor_controls": 18,
+  "independent_illustrative_fullfactor_rows": 54,
+  "rank_sufficient_rows": 54,
+  "floor_sufficient_rows": 22,
+  "root_logical_controls_verified": 16,
+  "root_primary_replay_byte_identity": {
+    "CERTIFICATE.json": "41b196267bd20e7a1293b56d033f4585bc5b864493eaf3a8e170bc02a5b82f5d",
+    "CONTROLS.json": "2f2981d96aaede294d9010ef81aa6900d7e4f869ae4cc2eaf8387ec2ca7c5926"
+  },
+  "phase_conditional_reporting_upper": [
+    "903",
+    "2500000000"
+  ],
+  "phase_endpoint_six_pairs_exact_matches": true,
+  "source_signs_denominators_and_strict_margins_checked": true,
+  "monotonicity_proof_reviewed": true,
+  "monotonicity_statement_path": "CAP_ENVELOPE_THEOREM.md",
+  "preserved_version_chain": [
+    {
+      "source": "c16_primary_v1_superseded/CERTIFICATE.json",
+      "sha256": "7143ab37d05108f18966ed7a66680938c05927c6e6f470806706aa3ffe02fcb9",
+      "mathematical_budget_and_conditional_phase_fields_unchanged": true
+    },
+    {
+      "source": "c16_primary_v2/CERTIFICATE.json",
+      "sha256": "5e021a8a69e95ded3ea9107ae0a3502a8578fef647ca44ca31bdecd72790590b",
+      "mathematical_budget_and_conditional_phase_fields_unchanged": true
+    }
+  ],
+  "corrections_closed": [
+    {
+      "id": "UR16-01",
+      "severity": "MATHEMATICAL_ILLUSTRATION",
+      "finding": "V1 confused actual polar correction alpha=1/5 with conservative d(11/25); reported wrong numerical envelope and overstated simplification counterexample",
+      "resolution": "V3 separates generic alpha formula and exact toy from conservative d(eta) envelope; earlier bytes/calc preserved"
+    },
+    {
+      "id": "UR16-02",
+      "severity": "TYPED_DOMAIN_NOTATION",
+      "finding": "Raw-history domain and projected matrix family used same symbol",
+      "resolution": "V3 separates H and D=Z(H); no projected-image cardinality/injectivity claim"
+    }
+  ],
+  "review_scope": "Independent conditional mathematics, exact rational budgets/54syntheticrows, separately implemented phase-cap formula and positive-domain monotonicity, version/custody/replay identities; not sourceproof oractualbackend conformance",
+  "source_H_fullfactor_frame_targets": "Inherited hash-bound; not independently rederived",
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "new_factor_copies": 0,
+  "actual_fixed_backend_bug_exhibited": false,
+  "universal_backend_success_established": false,
+  "physical_acquisition_or_freshness_established": false,
+  "same_team_independent_implementation_only": true,
+  "external_promotion_review": "PENDING",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0
+}

@@ -1,0 +1,75 @@
+{
+  "status": "PASS_INDEPENDENT_CONDITIONAL_CAP_ENVELOPE_AND_STRICT_MARGINS",
+  "producer_freeze_sha256": "0eb2ff7a14fececa5fb2b821fb7eb359597c69bcdadb1bf4e37697f8f8e9f704",
+  "producer_certificate_sha256": "41b196267bd20e7a1293b56d033f4585bc5b864493eaf3a8e170bc02a5b82f5d",
+  "independent_phase_bounds_exactly_match": true,
+  "nonnegative_source_and_caps": {
+    "C": true,
+    "delta": true,
+    "source_r": true,
+    "source_sigma": true,
+    "source_M": true,
+    "source_eta0": true,
+    "source_h0": true,
+    "source_rho0": true,
+    "source_d0": true,
+    "source_LJ": true,
+    "source_sep": true,
+    "etaU": true,
+    "etaV": true,
+    "xi": true,
+    "sA": true,
+    "rho": true,
+    "h": true,
+    "eV": true,
+    "a": true
+  },
+  "strict_premises": {
+    "source_Gram_and_inverse_debits_below1": true,
+    "proposed_floor_positive": true,
+    "t_below1": true,
+    "beta_exceeds_polar_frame_distance": true,
+    "R_below1": true,
+    "R_below_half_chord": true,
+    "phase_below_half_chord": true,
+    "phase_below_3p612e_neg7": true
+  },
+  "validated_endpoint_bounds": {
+    "offspan_sine_upper": [
+      2305176610370836662390561578612105126987527620,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "polar_distance_upper": [
+      2305176610370836663042526436333134047034587105,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "shift_distance_upper": [
+      4966475299273542370864359654410394772631189176,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "eigenvalue_radius_upper": [
+      553455135318395250279447235093742541222499114836,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "phase_error_upper": [
+      553455136679536748848186690243513976152708893017,
+      1532495540865888858358347027150309183618739122183602176
+    ],
+    "phase_matching_margin_lower": [
+      4788814167234157327676779200734462047170311847,
+      1532495540865888858358347027150309183618739122183602176
+    ]
+  },
+  "reported_phase_upper": [
+    "903",
+    "2500000000"
+  ],
+  "phase_units": "radians per TWOstep modulo2pi; not SI or six-ratio error",
+  "counterexample_scope": "No fixed-implementation bug or uniform backend success asserted",
+  "monotonicity_scope": "Analytic proof for nonnegative quality metrics at fixed source constants and positive denominators; endpoint signs/margins independently checked here",
+  "source_proof_premises": "Inherited hash-bound; not independently rederived",
+  "new_estimator_calls": 0,
+  "new_raw_or_factor_copies": 0,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
