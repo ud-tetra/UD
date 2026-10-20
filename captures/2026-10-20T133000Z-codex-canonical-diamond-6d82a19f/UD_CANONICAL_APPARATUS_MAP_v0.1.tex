@@ -1,0 +1,267 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,enumitem,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\R}{\mathbb R}
+\pagestyle{fancy}\fancyhf{}\lhead{UD / Canonical apparatus map}\rhead{CAM v0.1}\cfoot{\thepage}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist{itemsep=3pt,topsep=4pt}
+\begin{document}
+\begin{center}
+{\Large\bfseries A Canonical Apparatus Map for the Finite\protect\\ U(1) Rotor--Matter Hamiltonian}\par
+\vspace{7pt}{\large One instrumented incidence-diamond test}\par
+\vspace{6pt}Benjamin Walker Mayes / AI-assisted development manuscript\par
+20 October 2026 UTC / version 0.1
+\end{center}
+\begin{abstract}
+We specify a scaled canonical map from ideal electrical flux--charge coordinates to the declared classical rank-one link--matter model. A shared action scale fixes the relation between laboratory energy and model time. The second species uses the conjugated complex coordinate, preserving ordinary positive canonical hardware pairs while producing the required opposite complex Poisson bracket. We derive reciprocal currents, a local Gauss-source law and the reduced pure-field pendulum on one incidence diamond. The appendix specifies an instrumented component test with raw data, controls and explicit engineering acceptance gates. The canonical transformation is standard Hamiltonian mathematics specialized to this model; no general novelty claim is made. Actual nonlinear circuit realization and calibration remain experimental obligations.
+\end{abstract}
+\textbf{Status: DERIVED CONDITIONAL mathematics / CANDIDATE apparatus.}
+Development, no registry entry. Constructor checks; independent review pending. Physical promotion: \textbf{0}. No experiment has been run. The specified test is a design contract, not a CRL-2b pre-registration; the supplied governance requires non-constructor review before that status.
+
+\section{Fixed model and raw variables}
+For an oriented finite graph, let $R$ have head $+1$, tail $-1$, and $b_e=\pm1$ be the separate simplicial incidence signs. A diamond row $c_d^T$ satisfies $Rc_d=0$. With $U_e=e^{\ii\theta_e}$ define
+\[
+D_U[i,j]=b_eU_e,\qquad h_U=\ii(D_U^\dagger-D_U),
+\]
+\begin{equation}
+\begin{split}
+H={}&\frac a2\sum_e E_e^2+\kappa\sum_d(1-\cos(c_d^T\theta))\\
+&+\psi^\dagger(\mu I+g h_U)\psi+w^\dagger(\mu I+g h_U)w.
+\end{split}\tag{1}
+\end{equation}
+Here $a>0$, $\kappa\ge0$; $g=1$ is the frozen hopping convention. Switching $g$ is a declared component-calibration change. The field $w=\bar\chi$ has the opposite complex bracket to $\psi$. Both $\psi$ and $w$ transform by $e^{\ii\alpha_i}$; the independent canonical field $\chi$ transforms by $e^{-\ii\alpha_i}$. In normalized notation $\psi=\sqrt{n_q}q$, $w=\sqrt{n_w}w_{\rm unit}$, with actual positive norm weights. Equation (1) uses raw fields, so it also defines component calibrations at zero matter amplitude.
+
+The full tetrahedral target has 15 nodes, 28 links and 18 diamonds. The four-node graph below is a component Hamiltonian obtained by retaining one diamond and disabling all other channels. It is a separate declared test, not an autonomous invariant subsystem of the full coupled carrier. Its trapping constants and stationary stability are not inherited from the full tetrahedral theorem.
+
+\newpage
+\section{Scaled canonical equivalence}
+Let every apparatus channel have an independently justified physical canonical pair $(\Phi_c,Q_c)$, with
+\[
+\{\Phi_c,Q_{c'}\}_{\rm phys}=\delta_{cc'}.
+\]
+Electrical units are $[\Phi]={\rm V\,s}$ and $[Q]={\rm C}$, so $[\Phi Q]={\rm J\,s}$. This is an assumption about actual state and dynamics, not a property of two arbitrary ADC outputs.
+
+For each link choose positive scales $\Phi_{0e},Q_{0e}$, and for each matter pair choose positive scales $\Phi_{0si},Q_{0si}$. Require the common action product
+\[
+\Phi_{0c}Q_{0c}=S_0>0\quad\hbox{for every channel }c.
+\tag{2}
+\]
+The scales may differ by channel; their products agree. Define
+\begin{equation}\begin{aligned}
+\theta_e&=\Phi_e/\Phi_{0e}\pmod{2\pi},& E_e&=Q_e/Q_{0e},\\
+\psi_i&=\frac1{\sqrt2}\left(\frac{\Phi_{\psi i}}{\Phi_{0\psi i}}+\ii\frac{Q_{\psi i}}{Q_{0\psi i}}\right),&
+w_i&=\frac1{\sqrt2}\left(\frac{\Phi_{\chi i}}{\Phi_{0\chi i}}-\ii\frac{Q_{\chi i}}{Q_{0\chi i}}\right).
+\end{aligned}\tag{3}\end{equation}
+An unbounded electrical flux gives a covering of the rotor angle. The local canonical statement is exact on each lift. Global identification requires that all implemented forces depend periodically on link flux with the stated period.
+
+\begin{theorem}[Canonical map and laboratory time]\label{th:map}
+Suppose the apparatus has the stated canonical pairs and, in their calibrated coordinates, its actual Hamiltonian is
+\[
+\mathcal H_{\rm phys}(\xi)=E_0 H(F\xi)+C,\qquad E_0>0,
+\tag{4}
+\]
+with constant calibration, constant $C$, and no unaccounted actuation. Then the mapped trajectory solves the Hamilton equations of (1) at
+\[
+\tau=t/t_0,\qquad t_0=S_0/E_0,
+\tag{5}
+\]
+with brackets $\{\theta_e,E_f\}=\delta_{ef}$, $\{\psi_i,\bar\psi_j\}=-\ii\delta_{ij}$ and $\{w_i,\bar w_j\}=+\ii\delta_{ij}$. Conversely, the map (3) scales the physical canonical structure uniformly by $S_0$ only if the products in (2) agree. A single common time rescaling cannot in general remove unequal channel action products.
+\end{theorem}
+\begin{proof}
+Writing normalized real pairs as $(x_c,y_c)$, the physical canonical one-form pulls back as
+\[
+\sum_c Q_c\,\dd\Phi_c
+=S_0\left[\sum_e E_e\,\dd\theta_e+
+\frac{\ii}{2}(\psi^\dagger\dd\psi-\dd\psi^\dagger\psi)
+-\frac{\ii}{2}(w^\dagger\dd w-\dd w^\dagger w)\right]+\dd K.
+\]
+Indeed $\frac{\ii}{2}(\bar\psi\dd\psi-\psi\dd\bar\psi)=\frac12(y\dd x-x\dd y)$, which differs from $y\dd x$ by an exact differential. Conjugating the second complex coordinate reverses this sign. Substituting (4) and $t=t_0\tau$ in the action leaves $S_0$ times the model action, modulo boundary and constant terms. The displayed brackets and equations follow. Directly, each mapped real pair has physical bracket $1/(\Phi_{0c}Q_{0c})$; uniform scaling requires all these products to equal $S_0$.
+\end{proof}
+The theorem establishes a coordinate and dynamics contract. It does not prove that a proposed controller supplies (4). An ideal link capacitor gives the useful dimensional check $E_0 a=Q_{0e}^2/C_e$; all four links must satisfy their assigned kinetic coefficients. Stray inductive flux energy, damping, gain, delays and feedback forces require explicit inclusion or bounded residuals. Choosing coordinate scales cannot remove the simultaneous constraints on kinetic, hopping and plaquette coefficients.
+
+The model $E$ is a dimensionless canonical electric variable. The map does not identify it with a laboratory Maxwell electric field. The physical generator of a model frame change is $S_0\sum_i\alpha_iG_i$, with units of action; a physical electric-charge or Kirchhoff-law identification needs a separate correspondence.
+
+\newpage
+\section{Reciprocal equations, current and source balance}
+Write $A=\mu I+g h_U$ and
+\[
+j_e=2g b_e\Rea(\bar\psi_iU_e\psi_j+\bar w_iU_ew_j),\qquad e=(i\leftarrow j).
+\]
+The canonical equations are
+\begin{equation}\begin{aligned}
+\theta'_e&=aE_e,&E'_e&=-\kappa\sum_d c_{de}\sin(c_d^T\theta)-j_e,\\
+\ii\psi'&=A\psi,&-\ii w'&=Aw.
+\end{aligned}\tag{6}\end{equation}
+The signs in (6) are experimentally discriminating. With $j=j^\psi+j^w$ and $\rho^\psi_i=|\psi_i|^2$, $\rho^w_i=|w_i|^2$,
+\[
+(\rho^\psi)'=-Rj^\psi,\qquad (\rho^w)'=+Rj^w,\qquad
+G=RE-\rho^\psi+\rho^w.
+\tag{7}
+\]
+Consequently $G'=0$, because $Rc_d=0$. Both total matter norms are conserved. The generator $\sum_i\alpha_iG_i$ produces $\delta\theta=R^T\alpha$, $\delta\psi_i=\ii\alpha_i\psi_i$ and $\delta w_i=\ii\alpha_iw_i$. This verifies the same local frame action as the frozen rank-one model.
+
+\begin{proposition}[Raw forcing and the measured Gauss source]
+Add implementation residuals or known sources $(A_e,F_e,f_i,\ell_i)$ to the four equations: $\theta'=aE+A$, $E'=\cdots+F$, $\psi'=-\ii A\psi+f$, $w'=+\ii Aw+\ell$. Then
+\[
+G'_i=(RF)_i-2\Rea(\bar\psi_i f_i)+2\Rea(\bar w_i\ell_i).
+\tag{8}
+\]
+There is no direct angular-source term in rank one, since $G$ is independent of $\theta$. Link phase residuals can still alter currents and subsequent state evolution.
+\end{proposition}
+\begin{proof}
+Differentiate (7), use (6), and cancel the Hamiltonian currents using $Rc_d=0$. The remaining density derivatives are the two real bilinear forcing terms in (8).
+\end{proof}
+For nonzero raw norms, the translation to the frozen SDW inputs is
+\[
+\dot n_\psi=2\Rea\langle\psi,f\rangle,\qquad
+p=\frac f{\sqrt{n_\psi}}-\frac{\dot n_\psi}{2n_\psi}q,
+\tag{9}
+\]
+and similarly for the second species. Thus radial loss, phase error and tangent error have different effects. To invoke SDW, translate residuals using (9), retain positive norm floors, and certify its actual initial energy, geometry, coefficient and every-prefix work gates. Passing the component test does not itself satisfy those gates.
+
+\section{Calibration errors and readout}
+If channel $c$ has actual product $S_c$, model time (5) gives an effective real Poisson block multiplier $S_0/S_c$. With $|S_0/S_c-1|\le\delta$, an otherwise exact target has a velocity defect bounded by $\delta\|X_H\|$ in the displayed raw real coordinates. For an additional Hamiltonian discrepancy $\Delta H$ and extra forcing $f_{\rm raw}$, a sufficient raw-coordinate bound is
+\[
+\|Y_{\rm raw}\|\le\delta\|X_H\|+(1+\delta)\|X_{\Delta H}\|+\|f_{\rm raw}\|.
+\tag{10}
+\]
+This is not yet a bound in the normalized SDW metric; (9) and the angle/electric metric supply that conversion. Time-dependent calibration adds the derivative of the reconstruction map and must be included in the residual. A calibrated invertible observation map $r=M\xi+b$ reconstructs state; invertibility alone does not establish the physical Poisson structure or Hamiltonian.
+
+\newpage
+\section{One incidence diamond and its exact controls}
+Fix nodes $(i,j,h,k)=(0,01,02,012)$ and link order
+\[
+e_1=(0\leftarrow01),\ e_2=(01\leftarrow012),\ e_3=(0\leftarrow02),\ e_4=(02\leftarrow012).
+\]
+The separate signs and cycle are
+\[
+b=(-1,1,-1,-1),\quad c=(1,1,-1,-1)^T,\quad
+R=\begin{pmatrix}1&0&1&0\\-1&1&0&0\\0&0&-1&1\\0&-1&0&-1\end{pmatrix}.
+\tag{11}
+\]
+Here $\rank R=3$, $Rc=0$, $c^Tc=4$ and $b_1b_2+b_3b_4=0$. The holonomy is $W=e^{\ii\phi}$, $\phi=c^T\theta$. The four links form one loop even though their directions are downward in simplex dimension.
+
+\begin{theorem}[Diamond component identities]\label{th:diamond}
+For $g=0$, $\mu=0$ and constant parameters,
+\[
+\phi'=a c^TE,\qquad \phi''=-4a\kappa\sin\phi,\qquad
+(I-cc^T/4)E=\text{constant}.
+\tag{12}
+\]
+The small-amplitude angular frequency is $2\sqrt{a\kappa}$ in model time and $2\sqrt{a\kappa}/t_0$ in laboratory time. For a zero-velocity oscillation of amplitude $0<A<\pi$, its exact model period is
+\[
+T_A=\frac{2}{\sqrt{a\kappa}}K(\sin(A/2)),\qquad
+K(m)=\int_0^{\pi/2}\frac{\dd u}{\sqrt{1-m^2\sin^2u}}.
+\tag{13}
+\]
+For $g=1$, $\mu=0$, $\psi_i=w_i=1/2$, $E=0$, $\theta=0$, the ideal initial electric acceleration is $E'(0)=-b$ and $G'(0)=0$. If the second species is incorrectly evolved with the same complex sign as $\psi$ while retaining the same force law, then $G'(0)=(2,-2,0,0)^T$. If electric backreaction is disabled while keeping the correct matter evolution, $G'(0)=(-2,2,0,0)^T$.
+\end{theorem}
+\begin{proof}
+At $g=0$, differentiate $\phi$ using $E'=-\kappa c\sin\phi$; $c^Tc=4$ gives (12), while the orthogonal projection annihilates the force. The standard pendulum energy integral, with $\sin(\phi/2)=\sin(A/2)\sin u$, gives (13); its $A\to0$ limit is $\pi/\sqrt{a\kappa}$. At the stated matter preparation $j^\psi=j^w=b/2$. Equation (7) gives $\rho_\psi'=-Rb/2$ and $\rho_w'=+Rb/2$. Since $Rb=(-2,2,0,0)^T$, the three Gauss derivatives follow directly after substituting the two controlled alterations.
+\end{proof}
+The test uses the exact finite-amplitude equation (12); equating a measured finite-amplitude period to its linear limit would introduce a known bias. The two altered laws are deliberately injected diagnostic controls, not alternate descriptions of the target.
+
+\section{Implementation boundary}
+Equation (4) requires an electric-square term, independent signed electric coordinates, periodic four-link energy and reciprocal matter--link forces. An amplitude-bearing complex link oscillator has $b_{\rm osc}=\sqrt I e^{\ii\theta}$, so its hopping amplitude varies with action $I$. Replacing it by $e^{\ii\theta}$ while retaining arbitrary action dynamics changes the Hamiltonian. The published circuit experiment supplies valuable measurement precedents, but it does not by itself establish this apparatus map. This theorem closes the canonical coordinate construction; realizing and bounding (4) remains open.
+
+\newpage
+\appendix
+\section{Instrumented closed-diamond test: frozen design values}
+\textbf{Design status.} Proposed component protocol CD-1 v0.1. The following values are engineering targets selected before new measurements. They are not consequences of UD or inherited endpoint tolerances. No sample has been acquired. Non-constructor review and a complete calibration return are required before freezing an executable pre-registration.
+
+\textbf{Nominal component coefficients:}
+$a=1$, $\kappa=1/16$, $\mu=0$, $g\in\{0,1\}$, $n_\psi(0)=n_w(0)=1$. Use the node/link/sign order (11). The apparatus selects $E_0,S_0$ through independent calibration; $t_0=S_0/E_0$ is recorded in seconds, with a simultaneous interval. No numerical voltage, capacitance, energy or laboratory clock is inferred from the dimensionless design values.
+
+\begin{center}\small
+\begin{tabular}{p{.16\linewidth}p{.36\linewidth}p{.38\linewidth}}
+\toprule
+Recorded channels & Reconstruction & Purpose\\\midrule
+4 link fluxes, 4 charges & $\theta_e=\Phi_e/\Phi_{0e}$, $E_e=Q_e/Q_{0e}$ & Independent angle and signed electric state\\
+8 matter flux--charge pairs (16 real channels) & $\psi=(x+\ii y)/\sqrt2$, $w=(u-\ii v)/\sqrt2$ & Both complex fields, their norms and densities\\
+4 complex coupling witnesses (8 real outputs) & Independently probe the implemented link transfer $\widehat U_e^{\rm cpl}$ & Unit modulus and phase of actual coupling, including dependence on $E$\\
+Clock and all applied drives & Calibrated time stamps; source/feedback histories & Time conversion, source balance and implementation residual\\
+\bottomrule
+\end{tabular}
+\end{center}
+There are 24 state coordinates and eight additional coupling-witness outputs. This is a readout specification; it does not assert that 32 dedicated ADCs or physical oscillators are required. All channels used jointly must have bounded skew and reconstruction error. The identity $|e^{\ii\widehat\theta}|=1$ is algebraic and cannot serve as the unit-modulus measurement of the implemented coupling. Use an independent weak-probe or calibrated coupler-output measurement, and bound its backaction.
+
+\textbf{Measurement prerequisites.} Return flux/charge scales and their action products, voltage-to-charge and phase calibration, detector offsets and gains, cross-talk, phase convention, bandwidth and delay, saturation/headroom, clock skew, probe disturbance and all uncertainty correlations. For baseband IQ readout, demonstrate its canonical relation to the underlying pair in the selected rotating frame, including the local-oscillator phase and frequency. Freeze calibration on separate records; do not refit these quantities against held-out test trajectories.
+
+\textbf{Sampling proposal.} Model sample interval at most $1/1000$; record horizon $8\pi$ per run, covering two small-amplitude pure-field periods at the chosen coefficients. Save actual nonuniform timestamps when present. Proposed operating ranges are $|E_e|\le4$ and matter quadratures within $[-2,2]$ in model units, with a global angle lift or documented wrapping. Reaching a range or saturation boundary produces HOLD. For ideal condition C, $\|h_U\|\le2$, conserved norms and initial $H=0$ imply $\sum E_e^2\le8$; the range therefore contains that ideal trajectory. This does not bound an actual faulty apparatus.
+
+\textbf{Repetitions.} Acquire 20 independent preparations per listed condition after separate calibration, randomized and blinded by condition label. Twenty is a declared initial design count, not a power calculation. The acceptance rule below concerns simultaneous bounded reconstruction of each run; it does not estimate a rare-failure rate from 20 runs. A pilot can determine a new version's sampling/power requirements before held-out acquisition.
+
+\newpage
+\section{Conditions, controls and exact predicted signatures}
+Each condition uses the same instrumented diamond. Write $\mathbf u=(1/2,1/2,1/2,1/2)^T$. Set $\psi=w=\mathbf u$ initially except where stated. All main preparations have $G(0)=0$.
+\begin{enumerate}[label=\textbf{\Alph*.},leftmargin=*]
+\item \textbf{Rotor calibration:} $g=0$, $\kappa=0$, $\theta(0)=0$, $E(0)=\epsilon c$, $\epsilon=\pm1/20$. Predict $E(\tau)=\epsilon c$, $\phi(\tau)=4\epsilon\tau$, and zero Gauss drift. This independently tests signed electric response and $a/t_0$.
+\item \textbf{Plaquette response:} $g=0$, $\kappa=1/16$, $E(0)=0$, $\theta(0)=\pm c/20$. Thus $\phi(0)=\pm1/5$. Predict $\phi''=-\sin\phi/4$ and use (13) for the finite-amplitude period. A matching $\kappa=0$ control has constant $\phi$ at these initial data.
+\item \textbf{Reciprocal matter dynamics:} $g=1$, $\kappa=1/16$, $E(0)=0$, $\theta(0)=0$. Predict (6), $E'(0)=-b$, conserved $H,n_\psi,n_w,G$, and the two local continuity equations. Compare held-out trajectories with a separately verified solver using calibration-fixed parameters and a certified numerical enclosure; a plotted floating trajectory alone is not an enclosure.
+\item \textbf{Relative-equilibrium and cycle kick:} use $U_e^*=-\ii b_e$, $E(0)=\epsilon c$ with $\epsilon=0,\pm1/20$, $g=1$. At $\epsilon=0$, $h_U\mathbf u=-2\mathbf u$, so $\psi=e^{2\ii\tau}\mathbf u$, $w=e^{-2\ii\tau}\mathbf u$, fixed links, $E=0$, and $W=-1$. The kicks preserve initial Gauss neutrality and give $\phi'(0)=4\epsilon$. Their subsequent dynamics are predicted by the component equations; no full-carrier stability boundary is asserted.
+\item \textbf{Known-source return:} repeat C with $f=-\gamma\psi/2$, $\ell=0$, $F=0$, $\gamma=1/20$ for $1\le\tau\le2$ and zero otherwise. Predict $G'_i=\gamma|\psi_i|^2$ during the source and
+\[
+\sum_iG_i(\tau)=1-\exp[-\gamma\,\operatorname{length}([0,\tau]\cap[1,2])].
+\]
+Smooth the switching only if its measured pulse area replaces the interval length in this formula. This intentionally creates charge imbalance and tests (8); it is not a zero-source preparation.
+\item \textbf{Gauge-frame replication:} repeat C after $\alpha=(0,1/7,-1/9,1/11)$, $\theta\mapsto\theta+R^T\alpha$, $\psi_i,w_i\mapsto e^{\ii\alpha_i}(\psi_i,w_i)$. Predict equal invariant histories and frame-transformed raw trajectories. Bound preparation differences in the comparison.
+\item \textbf{Blinded fault controls:} from initial condition C, reverse only the implemented second-species evolution sign, or disable only electric backreaction. The short-time Gauss slopes are respectively $(2,-2,0,0)$ and $(-2,2,0,0)$. Confirm the injected alteration independently. Also run an injection-command control with the physical source blocked.
+\end{enumerate}
+Nonzero coupling/current signatures must exceed uncertainty; a noisy test that cannot resolve a control is inconclusive. An intentionally faulty run is accepted as a \emph{detected control} only when its violation is resolved, never as a passing target trajectory.
+
+\newpage
+\section{Reviewable engineering gates and raw data contract}
+\textbf{Fixed engineering targets.} Use dimensionless absolute tolerances
+\[
+\varepsilon_z=1/100,\quad \varepsilon_G=1/100,\quad
+\varepsilon_U=1/100,\quad\varepsilon_S=1/100,
+\quad\varepsilon_H=1/100,
+\]
+and a relative channel-action mismatch target $1/1000$. These values define CD-1 and require a feasibility return before execution. They do not weaken any frozen endpoint theorem. Engineering compatibility at this accuracy is distinct from meeting the far smaller sufficient endpoint gates.
+
+\textbf{Observation coverage.} Supply one joint coverage statement, target at least $99\%$, for the finite collection of calibration, reconstructed states, clocks, independently measured couplings and integration errors used in a run's decision. Either use rigorous deterministic bounds, or a declared statistical construction with its assumptions and multiple-comparison allocation. A standard deviation, covariance matrix or an unvalidated bootstrap is insufficient by itself. Preserve correlations. Missing coverage, saturation, missing channels or unbounded solver error produces HOLD.
+
+\textbf{State consistency.} For every component $z_j$ of a continuous reconstruction, form the weak residual
+\[
+\mathcal R_j(\tau)=z_j(\tau)-z_j(0)
+-\int_0^\tau [X_H(z(s))+f_{\rm declared}(s)]_j\,\dd s.
+\tag{14}
+\]
+Require a certified simultaneous upper bound $\max_j|\mathcal R_j(\tau)|\le\varepsilon_z(1+\tau)$ at all declared prefixes. Use recorded interpolation and a validated quadrature/reconstruction remainder, with calibration uncertainty inside the integral. Sample-wise checks cover only those samples unless an intersample bound is supplied. At a minimum, report every sample prefix. A continuous-time certificate additionally needs the interpolation/bandwidth and remainder assumptions to cover between samples. Integral agreement alone does not bound absolute defect path length or every-prefix signed energy work for SDW.
+
+\textbf{Additional decision channels.} Require simultaneous bounds for:
+\begin{itemize}[leftmargin=*]
+\item preparation $\|G(0)\|_\infty\le\varepsilon_G$; no-source drift $\|G(\tau)-G(0)\|_\infty\le\varepsilon_G(1+\tau)$;
+\item known-source mismatch in the integrated version of (8) at most $\varepsilon_S(1+\tau)$, including the trace return in E;
+\item $\big||\widehat U_e^{\rm cpl}|-1\big|\le\varepsilon_U$ and $|\widehat U_e^{\rm cpl}-e^{\ii\theta_e}|\le2\varepsilon_U$ over the frozen operating range and both electric signs;
+\item no-source energy drift $|H(\tau)-H(0)|\le\varepsilon_H(1+\tau)$, and species norm drift at most $\varepsilon_G(1+\tau)$; independently calibrate the Hamiltonian coefficients entering these quantities;
+\item fault detection: for at least one frozen prefix, the simultaneous \emph{lower} bound on the intended control residual exceeds the corresponding upper acceptance tolerance. An unresolved control gives HOLD.
+\end{itemize}
+Record raw waveforms and timestamps; channel/edge/species order; $b,R,c$; unwrapping and frame conventions; independent initial conditions; coefficients and units; calibration version and hashes; source/feedback histories; coupling-probe records and disturbance; uncertainty and interpolation procedures; train/test split; all attempted runs and HOLD reasons. Each run is assigned PASS-COMPONENT, FAIL-COMPONENT or HOLD against the complete frozen rule. Summaries report all attempts and fault-control outcomes separately. A failed target run cannot be removed as an outlier after unblinding.
+
+\section{Return needed before physical execution}
+Provide an actual Hamiltonian and actuator diagram demonstrating the reciprocal terms in (1), calibrated $S_0,E_0,t_0$, gains and operating envelope, noise and delay bounds, the joint-coverage method, a solver certificate and attainable error allocation. Obtain an attributable non-constructor review, resolve its findings and freeze a new executable protocol version. This manuscript supplies the canonical theorem and a concrete proposed component test. No apparatus has yet satisfied these inputs; physical promotion remains 0.
+
+\newpage
+\section{Verification and sources}
+The accompanying symbolic verifier checks the real/complex Hamiltonian equality, complex bracket signs, all matter and rotor equations, gauge generators, four local Gauss identities, both norm identities, raw source law and pure-field pendulum. These are constructor algebra checks. They neither establish calibrated physical canonical variables nor constitute independent review. Exact analytic proofs are given above; numerical fixtures, when used, retain their numerical labels.
+
+The model commitments are the UD joint Hamiltonian v0.1 (15 October 2026), GPC/ERA/SDW v0.1 (18 October 2026) and the measurable-realization audit MRA v0.1 (18 October 2026). Their exact repository paths, hashes and unchanged source status accompany the capture. The common-action calibration, physical circuit architecture and protocol error targets are newly supplied inputs.
+
+\begin{thebibliography}{9}
+\bibitem{udj} UD workstream. \emph{Joint gauge--matter Hamiltonian on the tetrahedral incidence carrier}, v0.1, 15 October 2026. Capture \texttt{2026-10-15T022222Z-codex-joint-hamiltonian-f51873da}. Declared action and conditional closure theorem; independent review pending.
+\bibitem{sdw} UD workstream. \emph{Controlled source and defect work at the quartic endpoint}, v0.1, 18 October 2026. Capture \texttt{2026-10-18T020504Z-codex-source-work-7b9e1534}. Conditional input contract.
+\bibitem{mra} UD workstream. \emph{Measurable Realization and Published-Data Audit}, v0.1, 18 October 2026. Capture \texttt{2026-10-18T141800Z-codex-measurable-audit-a7c392e1}. Dataset-scoped audit, physical promotion 0.
+\bibitem{circuit} H. Riechert et al. \emph{Engineering a U(1) lattice gauge theory in classical electric circuits}. Phys. Rev. B 105, 205141 (2022), DOI \href{https://doi.org/10.1103/PhysRevB.105.205141}{10.1103/PhysRevB.105.205141}. Data: \href{https://doi.org/10.11588/DATA/6MEKHI}{10.11588/DATA/6MEKHI}. Used as the previously audited experimental precedent, not an exact realization of (1).
+\end{thebibliography}
+\vspace{8pt}\textbf{Development footer.} Canonical transformation: DERIVED CONDITIONAL. Apparatus and CD-1: CANDIDATE / PROPOSED. Execution: none. Independent review: pending. Empirical UD identification: OPEN. Physical promotion: 0.
+\end{document}

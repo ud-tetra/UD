@@ -1,0 +1,24 @@
+{
+  "title": "Check for new gauge-simulator datasets",
+  "enabled": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART;TZID=America/Chicago:20261026T090000\nRRULE:FREQ=WEEKLY;BYDAY=MO;BYHOUR=9;BYMINUTE=0;BYSECOND=0\nEND:VEVENT",
+  "timezone": "America/Chicago",
+  "cadence": "Weekly, Mondays 09:00 local",
+  "notify_only": "Meaningful new or improved experimental releases with accessible primary data",
+  "baseline_datasets": [
+    "10.11588/DATA/6MEKHI v1.0",
+    "10.7910/DVN/3RXD5F v1.1",
+    "10.5061/dryad.8gtht76k2"
+  ],
+  "fit_fields": [
+    "phase/quadratures",
+    "independent signed electric variables",
+    "dynamical matter",
+    "plaquette or closed-loop observables",
+    "two species",
+    "Gauss source",
+    "raw calibration and covariance"
+  ],
+  "authority": "Read and notify only; no automated writes or author contact",
+  "physical_promotion": 0
+}

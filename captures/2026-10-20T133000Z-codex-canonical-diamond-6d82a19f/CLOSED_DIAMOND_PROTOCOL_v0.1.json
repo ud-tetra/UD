@@ -1,0 +1,260 @@
+{
+  "protocol_id": "CD-1",
+  "version": "0.1",
+  "status": "PROPOSED_COMPONENT_DESIGN_NOT_PREREGISTERED",
+  "lane": "development; no registry entry",
+  "physical_promotion": 0,
+  "reviewers": [],
+  "execution": "none",
+  "canonical_map": {
+    "physical_pairs": "Flux Phi [V s], charge Q [C]; actual canonical structure must be established",
+    "common_action": "Phi0_c*Q0_c=S0 [J s] on all channels",
+    "energy": "H_phys=E0*H_model+constant",
+    "clock": "tau=t/t0; t0=S0/E0 [s]",
+    "link": "theta=Phi/Phi0 modulo 2pi; E=Q/Q0",
+    "psi": "(Phi/Phi0+i Q/Q0)/sqrt(2)",
+    "w": "(Phi/Phi0-i Q/Q0)/sqrt(2); w=conjugate(chi)",
+    "calibration_values": "OPEN; no physical time, energy, voltage or capacitance assigned"
+  },
+  "carrier": {
+    "nodes": [
+      "0",
+      "01",
+      "02",
+      "012"
+    ],
+    "edges": [
+      [
+        "0",
+        "01"
+      ],
+      [
+        "01",
+        "012"
+      ],
+      [
+        "0",
+        "02"
+      ],
+      [
+        "02",
+        "012"
+      ]
+    ],
+    "b": [
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "cycle": [
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "R": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        1
+      ],
+      [
+        0,
+        -1,
+        0,
+        -1
+      ]
+    ],
+    "real_state_coordinates": 24,
+    "coupling_witness_real_outputs": 8
+  },
+  "coefficients": {
+    "a": "1",
+    "kappa": "1/16",
+    "mu": "0",
+    "g": "1 except calibration conditions",
+    "initial_species_norms": [
+      "1",
+      "1"
+    ],
+    "status": "declared component design values, not frozen tetrahedral endpoint coefficients"
+  },
+  "readout": {
+    "state_channels": [
+      "4 link flux",
+      "4 link charge",
+      "8 matter flux",
+      "8 matter charge"
+    ],
+    "extra": [
+      "4 independent complex coupling witnesses",
+      "clock timestamps",
+      "all actuation/source/feedback histories"
+    ],
+    "unit_modulus": "Measured coupling transfer; exp(i measured theta) alone cannot test this",
+    "operating_bounds": {
+      "abs_E": "4",
+      "matter_quadratures": [
+        "-2",
+        "2"
+      ],
+      "theta": "global lift or documented wrapping"
+    }
+  },
+  "sampling": {
+    "max_model_interval": "1/1000",
+    "model_horizon": "8*pi",
+    "independent_preparations_per_condition": 20,
+    "condition_means": "each distinct setting, including each sign and each separate fault/control setting",
+    "expanded_setting_ids": ["A_plus", "A_minus", "B_plus", "B_minus", "B_kappa0_plus", "B_kappa0_minus", "C", "D_zero", "D_plus", "D_minus", "E", "F", "G_wrong_species_sign", "G_no_electric_backreaction", "G_source_physically_blocked"],
+    "planned_held_out_runs": 300,
+    "condition_order": "randomized and blinded",
+    "power_calculation": "not supplied; per-run bounded reconstruction design",
+    "physical_sample_rate": "must be selected after t0 calibration"
+  },
+  "conditions": [
+    {
+      "id": "A",
+      "g": "0",
+      "kappa": "0",
+      "theta0": "0",
+      "E0": "epsilon*c; epsilon=+/-1/20",
+      "prediction": "E constant; phi=4*epsilon*tau"
+    },
+    {
+      "id": "B",
+      "g": "0",
+      "kappa": "1/16",
+      "theta0": "+/-c/20",
+      "E0": "0",
+      "prediction": "phi''=-sin(phi)/4; finite-amplitude elliptic period",
+      "control": "same initial condition, kappa=0"
+    },
+    {
+      "id": "C",
+      "g": "1",
+      "theta0": "0",
+      "E0": "0",
+      "psi0": "1/2 on every node",
+      "w0": "1/2 on every node",
+      "prediction": "full reciprocal equations; E'(0)=-b; G'=0"
+    },
+    {
+      "id": "D",
+      "g": "1",
+      "U0": "-i*b",
+      "E0": "epsilon*c; epsilon=0,+/-1/20",
+      "prediction": "epsilon=0 relative equilibrium psi=exp(2i tau)/2, w=exp(-2i tau)/2, W=-1; kicked trajectories follow full component equations"
+    },
+    {
+      "id": "E",
+      "base": "C",
+      "source": "f_psi=-gamma*psi/2 for tau in [1,2], gamma=1/20; other sources zero",
+      "prediction": "G_i'=gamma*|psi_i|^2; sum G=1-exp(-gamma*elapsed source duration)"
+    },
+    {
+      "id": "F",
+      "base": "C",
+      "frame_alpha": [
+        "0",
+        "1/7",
+        "-1/9",
+        "1/11"
+      ],
+      "prediction": "invariant histories agree; raw trajectories transform by the declared local frame"
+    },
+    {
+      "id": "G",
+      "base": "C",
+      "alterations": [
+        "reverse second-species evolution sign",
+        "disable electric backreaction",
+        "source command with physical source blocked"
+      ],
+      "prediction_first_two_G_slopes": [
+        [
+          2,
+          -2,
+          0,
+          0
+        ],
+        [
+          -2,
+          2,
+          0,
+          0
+        ]
+      ],
+      "purpose": "detected fault controls, never accepted as target trajectories"
+    }
+  ],
+  "acceptance": {
+    "status": "engineering targets; actual noise/feasibility return required",
+    "epsilon_z": "1/100",
+    "epsilon_G": "1/100",
+    "epsilon_U": "1/100",
+    "epsilon_S": "1/100",
+    "epsilon_H": "1/100",
+    "channel_action_relative_mismatch": "1/1000",
+    "simultaneous_coverage_target": "at least 99 percent per run across every quantity used for that run",
+    "residual": "max_j |z_j(tau)-z_j(0)-integral(X_H+declared source)_j| <= epsilon_z*(1+tau) at all declared prefixes",
+    "gauss_no_source": "norm_inf(G(tau)-G(0))<=epsilon_G*(1+tau)",
+    "gauss_known_source": "integrated source mismatch <=epsilon_S*(1+tau)",
+    "coupler": "||U_cpl|-1|<=epsilon_U and |U_cpl-exp(i theta)|<=2epsilon_U",
+    "energy_norms": "no-source H/norm drift <= relevant epsilon*(1+tau)",
+    "fault_detection": "lower bound on control violation exceeds upper target tolerance at a frozen prefix",
+    "outcomes": [
+      "PASS-COMPONENT",
+      "FAIL-COMPONENT",
+      "HOLD"
+    ],
+    "hold_reasons": [
+      "missing calibration or joint coverage",
+      "saturation/range exit",
+      "missing channels",
+      "unbounded reconstruction or solver error",
+      "unresolved fault control"
+    ],
+    "continuous_claim": "requires validated intersample bounds; sample-only checks remain sample-only",
+    "SDW_transfer": "requires separate initial geometry/energy and every-prefix source-work certificate; weak residual alone is insufficient"
+  },
+  "raw_record_required": [
+    "raw waveform bytes and hashes",
+    "actual timestamps and channel map",
+    "b/R/c and frame/unwrapping conventions",
+    "initial conditions",
+    "independent calibration set and version",
+    "all coefficient/source schedules",
+    "detector and coupling probe backaction",
+    "covariance and joint coverage assumptions",
+    "numerical enclosure and quadrature/reconstruction error",
+    "all attempts and HOLD reasons"
+  ],
+  "pre_execution_gates": [
+    "Hamiltonian and actuator design satisfying retained-coordinate map",
+    "calibrated S0 E0 t0 and attainable uncertainties",
+    "validated solver/reconstruction and coverage procedure",
+    "attributable non-constructor review and resolved findings",
+    "freeze executable later protocol version"
+  ],
+  "limits": [
+    "Component graph is not an invariant full-carrier subsystem",
+    "No inherited tetrahedral stability radius",
+    "No full-GUT or Standard Model identification",
+    "No experiment executed"
+  ]
+}
