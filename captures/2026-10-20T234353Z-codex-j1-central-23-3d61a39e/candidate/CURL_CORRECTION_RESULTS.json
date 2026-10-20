@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_curl_witness_sha256": "a3ade6a19183466b6784f43521069bcb46c1a693b35de60ab4a19abf0d357fd5",
+  "source_coefficient_payload_sha256": "96aaffde959a2660a0553415bb07312aed784cc50c89e55b5bd11b4877a56727",
+  "mesh": {
+    "nodes": 2809,
+    "tetrahedra": 12288,
+    "interior_edges": 13560,
+    "interior_faces": 23808,
+    "potential_coefficients_per_component": 74736,
+    "unequal_volumes": [
+      "1/4096",
+      "1/8192"
+    ]
+  },
+  "checks": {
+    "local_basis_divergence_identities": 230016,
+    "actual_affine_divergence_checks": 24576,
+    "correction_face_vertex_component_checks": 152064,
+    "gradient_orthogonality": 2,
+    "exact_flux_norm_nonincrease": 2,
+    "old_parent_interface_faces": 7424,
+    "nonzero_old_parent_face_vertex_components": 44544
+  },
+  "prior_affine_projection_norm_squared": [
+    "27744588963282161657265791714923436256199462064112644937689660607440089033522645274543723259345576729664856861196475342904604426696409862992280861954207/2180516172886820671647971423664013603060924082061954180844470597541917864340193769978573152141290696682287564818798533800603804885843968000000000000000",
+    "4672505839883903589850160049763921604890612907789638885662282402094264362026751124505917920058057460193192109496224228592465908152945112679638383233/1330881453177991132597638808388680177649489796180391956081830198695018227746700299059187714929986997486747781261473714477907595755520000000000000000"
+  ],
+  "exact_flux_norm_changes": [
+    "-892940283389619592687542953589770119841129291359569123247347424929688207458146633422240725191098459/19555545372811066428177078608730030346094096579192988006106948313802060477728032379360614809600000000",
+    "-26830915512439001048750321595154743046097864494692451909068306516817126253714654020831021635468409/2444443171601383303522134826091253793261762072399123500763368539225257559716004047420076851200000000"
+  ],
+  "controls": [
+    "truncated coefficient payload",
+    "nonfinite coefficient payload",
+    "corrupted exterior affine trace"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 3.5606461795575033,
+        "normal_residual_norm": 1.1065430347964108e-09
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 1.8707910630212767,
+        "normal_residual_norm": 5.477007423061849e-10
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
