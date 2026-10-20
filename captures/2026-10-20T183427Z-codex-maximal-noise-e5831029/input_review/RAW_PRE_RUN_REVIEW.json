@@ -1,0 +1,48 @@
+{
+  "status": "PASS_PROSPECTIVE_BOUNDARY_RAW_ONLY_REVIEW",
+  "created_utc": "2026-10-20T18:26:39.315520+00:00",
+  "campaign_freeze_sha256": "916ddee3d051a163a6cabf9bda64da98e7de173f69ab1005fbbffa569a65d8e6",
+  "data_driver_freeze_sha256": "40bec19863a227eacda68513aa1a93bd6f90cd6202dfa0e74a9ac35702dfde21",
+  "review_code_freeze_sha256": "3a4ffcfd044cd0a7b908c5b78382b50c6232a81d64d7765757d475b26af76b60",
+  "review_source_sha256": "4c9cbb67b32d966be3eb2fc57b2e4ca6ee198e5b65617ee8b9adc487d475bb6b",
+  "cases": [
+    {
+      "case": "boundary_pair_block",
+      "producer_freeze_sha256": "a7103b781bab30793e19529bec81de3a7eca624a01c503a3c74892ad56802be4",
+      "independently_matched_channel_sign_values": 1212268,
+      "independently_matched_vectors": 303067,
+      "complete_pattern_sha256": "4c5a1658895929f3d2d817198d59574bdefe64dbdd53aba022b8222abccf74e5",
+      "all_numerical_modules_and_driver_byte_identical_PR269": true,
+      "raw_generation_recommended": true,
+      "fit_recommended_now": false
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "producer_freeze_sha256": "68ccc8d3917aa83fa970a0759ee1528259603c8553ed87e60b1cf54560c64374",
+      "independently_matched_channel_sign_values": 1212268,
+      "independently_matched_vectors": 303067,
+      "complete_pattern_sha256": "61290c95ffd06e61d8ef51498c03954743af80192646f86ac8a75379e8527e00",
+      "all_numerical_modules_and_driver_byte_identical_PR269": true,
+      "raw_generation_recommended": true,
+      "fit_recommended_now": false
+    }
+  ],
+  "independent_pure_controls": 33,
+  "exact_lattice_classification": "7689 distinct allowed pointwise vectors; maximum squared radius ratio8/9; no whole-trajectory guarantee",
+  "lattice_theorem_check_sha256": "c07c02f95bb4e7bbddfafb08fc6331a7e1e57c3c79369b782f5b3b67743ec229",
+  "all_raw_records_at_review": 0,
+  "actual_estimator_calls_at_review": 0,
+  "numerical_outputs_unknown": true,
+  "raw_generation_recommended": true,
+  "fit_recommended_now": false,
+  "fit_prerequisites": [
+    "both full actual raw audits",
+    "both exact projection digests",
+    "distinctness and bounded prior digest exposure",
+    "frozen independent post-output audit",
+    "root all-data fit release"
+  ],
+  "custody_limits": "Source hashes and truthful releases; no cryptographic caller authentication",
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

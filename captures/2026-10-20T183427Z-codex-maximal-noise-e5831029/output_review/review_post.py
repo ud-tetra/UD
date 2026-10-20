@@ -1,0 +1,57 @@
+"""Independent one-new-tuple exact arithmetic. Zero reviewer fits or raw generation."""
+import os
+os.environ['OPENBLAS_NUM_THREADS']='1';os.environ['OMP_NUM_THREADS']='1'
+import argparse,gzip,hashlib,importlib.util,json
+from pathlib import Path
+from fractions import Fraction as F
+import numpy as np
+P=Path(__file__).resolve().parent;CASES=('boundary_pair_block','boundary_pair_rotating');OLD='captures/2026-10-19T222108Z-codex-uniform-phase-evidence-4a6f6bda/phase'
+SHA=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest();R=lambda p:json.loads(Path(p).read_text());q=lambda p:F(int(p[0]),int(p[1]))
+def module(name,path):
+ s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--repo',required=True);ap.add_argument('--case',choices=CASES,required=True);ap.add_argument('--data-review',required=True);ap.add_argument('--out',required=True);ap.add_argument('--producer',required=True);ap.add_argument('--baseline',required=True);ap.add_argument('--raw',required=True);ap.add_argument('--primary',required=True);ap.add_argument('--fit-release',required=True);args=ap.parse_args();repo=Path(args.repo);producer=Path(args.producer);raw=Path(args.raw);baseline=Path(args.baseline);primary=Path(args.primary);CASE=args.case;target=Path(args.out);assert not target.exists();f=R(P/'POST_DRIVER_FREEZE.json');assert SHA(__file__)==f['driver_sha256']and SHA(P/'post_math.py')==f['post_math_sha256']and SHA(P/'metric_bindings.py')==f['metric_bindings_sha256'];assert set(f['cases'])==set(CASES) and SHA(producer/'FREEZE.json')==f['cases'][CASE];campaign=producer.parent.parent;assert SHA(campaign/'CAMPAIGN_FREEZE.json')==f['campaign_freeze_sha256'];allrelease=R(campaign/'ALL_DATA_FIT_RELEASE.json');assert allrelease['all_inputs_independently_checked']is True;release=R(args.fit_release);assert release['one_estimator_call_released']is True and release['independent_data_review_sha256']==SHA(args.data_review) and release['all_data_release_sha256']==SHA(campaign/'ALL_DATA_FIT_RELEASE.json')
+ for name,h in R(producer/'FREEZE.json')['files'].items():assert SHA(producer/name)==h
+ for name,h in R(producer/'FREEZE.json')['repository_sources'].items():assert SHA(repo/name)==h
+ data=R(producer/'DATA_FREEZE.json');audit=R(args.data_review);runs=R(producer/'RUN_EXECUTIONS.json');cert=R(primary/'CERTIFICATE.json');assert SHA(producer/'DATA_FREEZE.json')==allrelease['case_data_freeze_sha256'][CASE]==runs['data_freeze_sha256']==cert['data_freeze_sha256'];assert len(runs['rows'])==1;run=runs['rows'][0];result=cert['row'];assert run['case']==result['case']==CASE and run['record_sha256']==audit['record_sha256']==SHA(raw);assert raw.stat().st_mode&0o222==0 and SHA(baseline)==audit['baseline_sha256'];assert cert['newcase_full_reconstruction_and_sigma210_lower']=='NOT_EVALUATED'
+ output={'case':CASE,'record_sha256':audit['record_sha256'],'new_estimator_calls':0,'new_raw_or_factor_copies':0,'new_case_full_reconstruction':'NOT_EVALUATED','source_H_fullfactor_proofs':'Inherited hash-bound, not recomputed','external_review':'PENDING','physical_promotion':0}
+ if run['execution_status']!='COMPLETED'or run.get('learned_order')!=209 or 'measured'not in result:
+  assert result['status'].startswith('HOLD');output.update(status='RETAINED_UNQUALIFIED_FRESH_OUTPUT_NO_REVIEW_PROMOTION',producer_status=result['status']);assert not target.exists();target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(output,indent=2)+'\n');return
+ case=producer/'results'/CASE;assert R(case/'RUN.json')==run;assert set(run['numeric_witnesses'])=={'SVD_META.npz','U_0.npz','U_1.npz','U_2.npz','PHASE_META.npz','PHASE_PROPOSAL.npz'}
+ for name,h in run['numeric_witnesses'].items():assert SHA(case/name)==h
+ assert result['saved_witness_set']==run['numeric_witnesses'];m=module('independent_fresh_postmath',P/'post_math.py');small=R(repo/OLD/'inputs/NULL_VECTOR.json')['vector'];v=np.zeros(2294,np.int64);v[:len(small)]=small;A=np.column_stack((2*np.random.default_rng(172026).choice([-1.,1.],(2294,160)).astype(np.int64),v,2*np.random.default_rng(184052).choice([-1.,1.],(2294,160)).astype(np.int64)));Y=np.memmap(raw,dtype='<i8',mode='r',shape=(37,8191,62));X=np.asarray(Y.transpose(1,2,0).reshape(8191,2294),dtype=np.int64);maxint=max(abs(int(X.min())),abs(int(X.max())));assert maxint*int(np.abs(A).sum(axis=0).max())<2**63;N=X@A;del X;assert max(abs(int(N.min())),abs(int(N.max())))<2**53;assert hashlib.sha256(N.astype('<i8').tobytes()).hexdigest()==audit['integer_projection_sha256']==data['record']['projection']['integer_bytes_sha256']==run['projection']['integer_bytes_sha256']
+ assert hashlib.sha256((N.astype(float)/2.**55).astype('<f8').tobytes()).hexdigest()==audit['dyadic_projection_sha256'];z=np.load(case/'SVD_META.npz',allow_pickle=False);s=z['singular'];vt=z['right_transpose'];assert s.shape==(321,)and vt.shape==(321,321)and np.all(s[:-1]>=s[1:])and np.all(s>=0);allsi,allbs=m.decode(s);vals=[F(int(x),1<<allbs)for x in allsi];cutoff=F(1,1<<24);assert all(x!=cutoff for x in vals);rank=sum(x>cutoff for x in vals);assert rank==209==run['learned_order']==result['independent_saved_rank'];U=np.vstack([np.load(case/f'U_{k}.npz',allow_pickle=False)['basis']for k in range(3)]);T=np.load(case/'PHASE_META.npz',allow_pickle=False)['shift'];assert U.shape==(8191,209)and T.shape==(209,209);Ui,bu=m.decode(U);Vi,bv=m.decode(vt[:209].T.copy());si,bs=m.decode(s[:209].copy());Ti,bt=m.decode(T)
+ exact={'left_Gram_F':m.gram(Ui,bu)[1],'right_Gram_F':m.gram(Vi,bv)[1],'singular_equation_F':m.eq_quadratic(N,Vi,bv,Ui,bu,si,bs),'raw_lag_F':m.lag_quadratic(Ui,bu,Ti,bt)}
+ for key,value in exact.items():assert value==q(result['measured']['exact_squared'][key]),key
+ for metric,key in [('etaU','left_Gram_F'),('etaV','right_Gram_F'),('xi','singular_equation_F')]:assert q(m.upper(m.aa(exact[key]).sqrt()))==q(result['measured'][metric])
+ assert vals[208]==q(result['measured']['proposed_smin']);lag,bLag,Gamma,bGamma,normal,bNormal=m.lag_and_normal(Ui,bu,Ti,bt);assert F(m.trace(lag),1<<bLag)==exact['raw_lag_F'];gramF2=F(m.normint(lag),1<<(2*bLag));lagUp=m.upper(m.aa(gramF2).sqrt().sqrt());assert q(result['measured']['lag']['Gram_Frobenius_squared'])==gramF2 and q(result['measured']['sA'])==q(lagUp)==q(result['measured']['lag']['operator_norm_upper']);assert result['measured']['lag']['route']=='PRESELECTED_GRAM_FROBENIUS_ONLY'
+ path=primary/result['matrix_witness_file'];assert SHA(path)==result['matrix_witness_sha256'];body=gzip.decompress(path.read_bytes());assert hashlib.sha256(body).hexdigest()==result['canonical_matrix_payload_sha256'];payload=json.loads(body);assert payload['case']==CASE and payload['record_sha256']==audit['record_sha256']and payload['saved_witness_set']==run['numeric_witnesses']and payload['matrix_shape']==[209,209]
+ for key,value in [('U_denominator_bits',bu),('T_denominator_bits',bt),('lag_Gram_denominator_bits',bLag),('LS_Gram_denominator_bits',bGamma),('LS_normal_denominator_bits',bNormal)]:assert payload[key]==value
+ for key,value in [('lag_Gram_integer_numerators',lag),('LS_Gram_integer_numerators',Gamma),('LS_normal_integer_numerators',normal)]:assert m.mat([[int(x)for x in row]for row in payload[key]])==value
+ ls=m.ls_exact(Gamma,bGamma,normal,bNormal)
+ for key,value in ls.items():assert q(result['measured']['LS'][key])==q(value),key
+ ls_pass=q(ls['gamma_squared_lower'])>0;assert(result['measured']['LS']['status']=='CERTIFIED_FINITE_SAVED_LS_STEP_DISTANCE')==ls_pass
+ ph=m.phase_audit(case,R(producer/'inputs/SOURCE_PHASE.json'),result);bindings=module('independent_phase_metric_enclosures',P/'metric_bindings.py').validate(case,result,ph,m);caps=R(producer/'inputs/EQUATION_CAPS.json')['quality_caps'];g={key:result['measured'][key]for key in ['etaU','etaV','xi','sA','proposed_smin']}
+ for own,other in [('rho','inverse_residual'),('h','proposed_inverse_norm'),('eV','eigenpair_residual'),('a','emitted_argument_error')]:g[own]=result['phase']['metrics'][other]
+ Cpair=R(repo/OLD/'primary/CERTIFICATE.json')['sketch']['per_62_vector_noise_multiplier_upper'];order=R(producer/'inputs/PARENT_ORDER.json');floor=q(order['qth_sigma_lower'])-q(Cpair)*F(3,1<<49)-q(caps['singular_floor_debit']);assert 0<=floor-q(result['required_singular_floor_lower'])<F(1,1<<179)
+ gates={key:0<=q(g[key])<=q(caps[key])for key in ['etaU','etaV','xi','sA','rho','h','eV','a']};gates['positive_proposed_singular_floor']=floor>0 and q(g['proposed_smin'])>=floor
+ imp=result['conditional_implication'];gates['conditional_phase_implication']=imp['status']=='CERTIFIED_UNIFORM_PHASE_TARGET_BIJECTION'
+ if gates['conditional_phase_implication']:
+  own=m.implication(g,m.aa(Cpair),R(repo/OLD/'inputs/PARENT_UNIFORM.json'),R(repo/OLD/'inputs/PARENT_PHASE.json')['metrics'],order);assert own['certified']
+  for key,value in own.items():
+   if key!='certified':assert abs(m.aa(value)-m.aa(imp[key]))<m.aa([1,1<<170]),key
+  gates['strict_eigenvalue_disks']=bool(0<=q(imp['eigenvalue_radius_upper'])<1 and q(imp['eigenvalue_radius_upper'])<q(imp['source_half_chord_lower'])and q(imp['phase_matching_margin_lower'])>0)
+ else:gates['strict_eigenvalue_disks']=False
+ expected={'inverse_residual','proposed_inverse_norm','eigenpair_residual','emitted_argument_error','emission_ties_even_consistency','finite_observed_bijection'};gates['finite_phase_and_encoding']=set(result['phase']['gates'])==expected and all(value is True for value in result['phase']['gates'].values())and ph['all_209_nearest_even_and_unique'];gates['finite_LS_posterior']=ls_pass;gates['fixed_lag_route']=True;assert gates==result['gates'];expected_status='CERTIFIED_FRESH_COMPUTATIONAL_OPERATOR_POSTERIOR_PROFILE'if all(gates.values())else'HOLD_FRESH_COMPUTATIONAL_POSTERIOR_GATE';assert result['status']==expected_status;assert SHA(raw)==audit['record_sha256']and SHA(baseline)==audit['baseline_sha256']
+ output.update(status='PASS_INDEPENDENT_FRESH_RAW_BOUND_FULL_EXACT_TUPLE_AUDIT',producer_status_preserved=result['status'],actual_saved_rank_counted=rank,exact_squared={key:m.pair(value)for key,value in exact.items()},full_exact_matrix_entries_checked=3*209*209,fresh_complex_phase_and_encoding=ph,advertised_phase_metric_enclosures=bindings,LS=ls,gates=gates,raw_unchanged_after_fit_and_audit=True,source_certificate_sha256=SHA(primary/'CERTIFICATE.json'),data_review_sha256=SHA(args.data_review),all_data_release_sha256=SHA(campaign/'ALL_DATA_FIT_RELEASE.json'),post_driver_freeze_sha256=SHA(P/'POST_DRIVER_FREEZE.json'),exposure='Same exposed nominal/targets; bounded metadata novelty only, no blinded/physical acquisition lineage');assert not target.exists();target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(output,indent=2)+'\n');print(json.dumps({'status':output['status'],'producer_status':result['status'],'all_gates':all(gates.values()),'exact_matrix_entries':3*209*209}))
+if __name__=='__main__':
+ try:main()
+ except Exception as exc:
+  import sys
+  if '--out'in sys.argv:
+   target=Path(sys.argv[sys.argv.index('--out')+1])
+   if not target.exists():
+    target.parent.mkdir(parents=True,exist_ok=True)
+    with target.open('x')as out:json.dump({'status':'HOLD_INDEPENDENT_POST_AUDIT_EXCEPTION','exception':{'type':type(exc).__name__,'message':str(exc)},'new_estimator_calls':0,'no_retry_or_tolerance_change':True,'external_promotion_review':'PENDING','physical_promotion':0},out,indent=2);out.write('\n')
+  raise

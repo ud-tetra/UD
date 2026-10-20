@@ -1,0 +1,43 @@
+{
+  "status": "PASS_EXACT_QUANTIZED_ALPHABET_CLASSIFICATION",
+  "dimension": 62,
+  "quantum": [
+    1,
+    281474976710656
+  ],
+  "radius_over_quantum": [
+    3,
+    2
+  ],
+  "squared_radius_over_quantum": [
+    9,
+    4
+  ],
+  "integer_squared_norm_allowed": [
+    0,
+    1,
+    2
+  ],
+  "counts_by_squared_norm": {
+    "0": 1,
+    "1": 124,
+    "2": 7564
+  },
+  "total_per_vector_alphabet": 7689,
+  "maximum_integer_squared_norm": 2,
+  "maximum_norm_symbolic": "sqrt(2)*2^-48",
+  "maximum_squared_radius_ratio": [
+    8,
+    9
+  ],
+  "global_trajectory_configurations_symbolic": "7689^303067",
+  "whole_trajectory_estimator_guarantee": false,
+  "proof": "Sum of integer squares is an integer <=9/4 iff <=2. A coordinate of magnitude>=2 contributes>=4 and is excluded. The remaining unit coordinates contribute exactly their count, so at most two are nonzero. Conversely each listed sparse vector satisfies the inequality. Count=1+2*62+4*binomial(62,2).",
+  "crosscheck_dimension": 4,
+  "crosscheck_integer_coordinates": [
+    -2,
+    2
+  ],
+  "crosscheck_vectors": 625,
+  "physical_promotion": 0
+}
