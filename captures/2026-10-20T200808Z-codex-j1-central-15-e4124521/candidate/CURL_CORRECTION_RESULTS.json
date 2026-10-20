@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_curl_witness_sha256": "ba3c8d858cf78734f39a8bb73ddddfbb0ca7f463261d0c3bbf4471038c9085d3",
+  "source_coefficient_payload_sha256": "2a696bc2b3e9d424b27e9a439684dd0486ecf56bc37b1e345a2339042b4d6519",
+  "mesh": {
+    "nodes": 2809,
+    "tetrahedra": 12288,
+    "interior_edges": 13560,
+    "interior_faces": 23808,
+    "potential_coefficients_per_component": 74736,
+    "unequal_volumes": [
+      "1/4096",
+      "1/8192"
+    ]
+  },
+  "checks": {
+    "local_basis_divergence_identities": 230016,
+    "actual_affine_divergence_checks": 24576,
+    "correction_face_vertex_component_checks": 152064,
+    "gradient_orthogonality": 2,
+    "exact_flux_norm_nonincrease": 2,
+    "old_parent_interface_faces": 7424,
+    "nonzero_old_parent_face_vertex_components": 44544
+  },
+  "prior_affine_projection_norm_squared": [
+    "13807027647750628514859486460936907880166343605732598727240895740957175059820042751218926814399/839232961441514958637207543747760167669519754470524273180782961007206651208650071212032000000",
+    "481615201874028289285558034088623935335242930870869839349084849444065800561232793176072760339/251769888432454487591162263124328050300855926341157281954234888302161995362595021363609600000"
+  ],
+  "exact_flux_norm_changes": [
+    "-375904442576945122281222942851541494981042387165848358256443176276798963/6470387200116153550720083620884711361672914661409737395464866459811840000",
+    "-77448070991641091941099030569199304249120103095412370808756780810573/12940774400232307101440167241769422723345829322819474790929732919623680"
+  ],
+  "controls": [
+    "truncated coefficient payload",
+    "nonfinite coefficient payload",
+    "corrupted exterior affine trace"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 4.048933749774991,
+        "normal_residual_norm": 1.2625656743835672e-09
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 1.3809175901212372,
+        "normal_residual_norm": 4.043191023609424e-10
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
