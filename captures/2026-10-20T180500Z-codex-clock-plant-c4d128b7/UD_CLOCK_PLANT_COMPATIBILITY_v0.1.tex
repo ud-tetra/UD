@@ -1,0 +1,147 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,fancyhdr,enumitem}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{UD: clock--plant compatibility}\fancyhead[R]{CPC v0.1}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\newcommand{\norm}[1]{\left\|#1\right\|_\infty}
+\newtheorem{theorem}{Theorem}
+\title{Clock--Plant Compatibility and Filtered Readout\\for the Proposed UD Diamond Apparatus}
+\author{Ben W. Mayes research workstream\\Codex-assisted mathematical development}
+\date{20 October 2026 --- Version 0.1}
+\begin{document}
+\maketitle
+\begin{abstract}
+We derive an exact compatibility interval linking acquisition period, filter history, actuator rate and the LC plant. Slowing the target cannot be treated as a free remedy for converter noise: under the inherited normalized plant bound, every LC product must grow as the square of the physical model clock. A filtered-readout theorem charges the absolute first moment of its history. A preliminary manufacturer audit motivates an alternative input/command error allocation that still fits the earlier Gauss-discrimination tolerance. All hardware admission remains HOLD.
+\end{abstract}
+\noindent\textbf{Status.} DERIVED CONDITIONAL; CANDIDATE component route; development, no registry entry; constructor verification only; independent review pending; no experimental execution; physical promotion 0.
+\section{The clock and plant must be designed together}
+For each canonical pair use $\Phi_{0c}Q_{0c}=S_{\rm action}$ and
+$t_0=S_{\rm action}/E_{\rm energy}$. For $L_c,C_c>0$, the normalized free plant has
+\begin{equation}
+\alpha_c=\frac{\Phi_{0c}^2}{E_{\rm energy}L_c},\quad
+\beta_c=\frac{Q_{0c}^2}{E_{\rm energy}C_c},\quad
+\lambda=\max_c(\alpha_c,\beta_c).
+\end{equation}
+The common action has physical units; it is not the structural coefficient-ledger object with a similar symbol.
+\begin{theorem}[Exact clock--plant compatibility]
+For fixed $t_0$ and physical components,
+\begin{equation}
+\alpha_c\beta_c=\frac{t_0^2}{L_cC_c},\qquad
+\min_{\Phi_{0c}Q_{0c}=S_{\rm action}}\lambda
+=\max_c\frac{t_0}{\sqrt{L_cC_c}} .
+\end{equation}
+Thus $\lambda\leq1$ is achievable by scale selection if and only if
+$t_0\leq\min_c\sqrt{L_cC_c}$.
+\end{theorem}
+\begin{proof}
+Multiply (1), then use $\max(\alpha_c,\beta_c)\geq\sqrt{\alpha_c\beta_c}$.
+Equality on every channel is attained by
+$\Phi_{0c}^2=S_{\rm action}\sqrt{L_c/C_c}$ and
+$Q_{0c}^2=S_{\rm action}\sqrt{C_c/L_c}$.
+These choices preserve the same common action across channels.
+\end{proof}
+With physical output period $T_p$, absolute filter-history moment $\mu_p$, additional electronics latency $\ell_p$, and actuator time constant $\tau_p$, the SAC allocation requires
+\begin{equation}
+400000\max(T_p,\mu_p+\ell_p,\tau_p)
+\leq t_0\leq\min_c\sqrt{L_cC_c}.
+\end{equation}
+The lower bound is a sufficient timing allocation once these quantities are justified, not a measured capability. A nonempty interval is necessary for this particular contract. Common-action calibration and actual loading remain separate gates.
+\newpage
+\section{A filtered ADC is a history measurement}
+\begin{theorem}[Filtered-readout error]
+Suppose physical state speed is at most $M/t_0$. Let
+$y(t)=\sum_jw_j[z(t-s_j)+e_j]$, where $s_j\geq0$,
+$\sum_jw_j=1$, and $\norm{e_j}\leq\nu_{\rm raw}$. Then
+\begin{equation}
+\norm{y(t)-z(t)}
+\leq\frac{M}{t_0}\sum_j|w_j|s_j+
+\nu_{\rm raw}\sum_j|w_j|.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Subtract $z(t)$, use the unit sum, bound each state difference by $Ms_j/t_0$, and apply the triangle inequality.
+\end{proof}
+For nonnegative weights the absolute first moment is the mean age and the noise-bound amplification is one. For signed FIR weights a signed group delay can cancel. Weights $(2,-2,1)$ at ages $(0,1,2)$ have unit sum and zero signed mean age, but absolute moment four.
+
+Charge output holding, electronics latency and filter history once as
+$M(T_p+\ell_p+\mu_p)/t_0$ in the command-age budget; charge static/noise reconstruction separately. Published group delay can serve as an absolute moment only with a justified nonnegative, unit-gain history and correct aperture/availability timing. Analog filtering, startup tails, crosstalk and unrecorded timestamps need bounds. Typical RMS noise is not a simultaneous hard bound.
+\subsection*{Arbitrary slowing also costs control accuracy}
+Let $r=\min_c\sqrt{L_cC_c}$ and $A=T_p+\ell_p+\mu_p+\tau_p$. Within the existing conservative SAC formula $K_U=L_F+\lambda$, use the smallest possible scalar plant bound $\lambda=t_0/r$ from (2). Its steady tracking-budget expression is
+\begin{equation}
+B(t_0)=\frac{L_FMA}{t_0}+\frac{MA}{r}
++L_F\nu+\frac{\nu t_0}{r}+q+\epsilon_a,\quad L_F=97/4 .
+\end{equation}
+For $\nu>0$, arithmetic--geometric mean gives
+\begin{equation}
+B(t_0)\geq\frac{MA}{r}+L_F\nu+q+\epsilon_a+
+2\sqrt{\frac{L_FMA\nu}{r}},\quad
+t_0^*=\sqrt{\frac{L_FMAr}{\nu}} .
+\end{equation}
+Other timing, range and plant restrictions can exclude this unconstrained optimum. Bounds must be revalidated after any change of physical scales. Even dropping the positive terms, $A\geq1.6$ ms and $r\leq1$ s give $B\geq81/6250=0.01296$, above the inherited tracking allocation $1/400$ for every clock choice.
+
+\textbf{Scope.} $B$ is the value of this conservative sufficient certificate, not a lower bound on actual apparatus error. Sharper sensitivity estimates, predictors, different readouts or different plants can change the conclusion. Equation (3) under $\lambda\leq1$ is an exact compatibility restriction, not a universal no-go for LC simulation.
+\newpage
+\section{Manufacturer audit and an alternative budget}
+These are supplier facts under stated conditions, not apparatus observations. Documents were accessed on 20 October 2026.
+\begin{center}
+\begin{tabular}{p{0.23\linewidth}p{0.66\linewidth}}
+\toprule
+Candidate & Scoped finding and implication\\
+\midrule
+AD5791B DAC [1] & 20-bit output; maximum INL one LSB for $\pm10$ V references at $0$--$105^\circ$C. Settling depends on step size and buffer; it does not identify a first-order plant.\\
+LTC2500-32 ADC [2] & Filtered output is 32 bits; the no-latency composite contains 24 differential bits. Maximum INL is 2 ppm. Averaging at 1 MHz and DF=1024 gives spacing 1.024 ms and listed group delay 512 $\mu$s.\\
+ADS127L21 [3] & Alternative filtered ADC route; operating mode, noise and history require a separate audit before selection.\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are screened candidates, not a purchasing recommendation or an admitted bill of materials. References, buffers, voltage/current drivers, synchronized channel acquisition and the canonical plant remain unspecified.
+
+For nominal DAC span $[-10,10]$, nearest-code quantization plus one-LSB INL has conservative interior-range allowance
+\begin{equation}
+\frac{10}{2^{20}}+\frac{20}{2^{20}}
+=\frac{15}{524288}<\frac1{25000}.
+\end{equation}
+Endpoint representability also needs checking; SAC commands lie well inside this span. Gain, offset, reference, noise, drift, computation and driver errors must fit the remainder after calibration. No calibration is supplied.
+
+A 2-ppm-of-span ADC INL on normalized $[-1,1]$ contributes $4/10^6$. Consider the \emph{alternative} supplied bounds $\nu=1/100000$ and $q=1/25000$, retaining the other SAC values. Its tracking and total residual are
+\begin{equation}
+b=\frac{29383}{16000000},\qquad
+p+\max(\sigma,b)=\frac{149383}{16000000}
+=0.0093364375<0.01 .
+\end{equation}
+Slack is $10617/16000000$. The prior Gauss theorem retains conservative $\delta=1/100$ and its preparation, endpoint reconstruction and clock-error requirements. With the same hold radius and ten-time-constant preload, release tracking is below $6449/8000000<1/1000$. This alternative does not correct or supersede SAC's earlier valid example.
+\subsection*{A screen that prevents premature component selection}
+The illustrated averaging output spacing alone requires
+$t_0\geq400000(1.024\text{ ms})=2048/5$ s. Under $\lambda\leq1$, every pair needs
+\begin{equation}
+L_cC_c\geq4194304/25\ {\rm s}^2 .
+\end{equation}
+The illustrative choice $t_0=512$ s requires $L_cC_c\geq262144$ s$^2$ and makes the $1/100$ prefix last 5.12 s. This does not establish feasible components. If each pair has $L_cC_c\leq1$ s$^2$, the clock interval is empty.
+\newpage
+\section{An instrumented identification plan}
+The next physical return is a calibration packet, not an execution claim.
+\begin{enumerate}[leftmargin=*,itemsep=4pt]
+\item \textbf{Clock and plant.} Return actual $L_c,C_c$, loading, action products and energy scales with units and joint intervals. Evaluate (3) on worst-case intervals. Reject a route with no admissible clock.
+\item \textbf{Readout history.} Freeze mode, filter coefficients, aperture times and output timestamps. Return the absolute first moment, coefficient absolute sum, startup history, channel skew and total acquisition-to-command latency. Unknown history yields HOLD.
+\item \textbf{Static accuracy.} Measure traceable code/voltage maps, gain, offset, drift and crosstalk. Supply a finite cover and separately justified regularity bounds. Add simultaneous noise/reconstruction uncertainty at required joint coverage; do not infer peak bounds from RMS statistics.
+\item \textbf{Actuator model.} Independently measure actual commands $c$, outputs $a$ and physical derivatives. Over each held-command segment bound
+\[
+r_a(t)=\dot a(t)/\omega_p+a(t)-c(t).
+\]
+SAC requires $\norm{r_a}\leq\epsilon_a$. Charge derivative reconstruction, output/command uncertainty, rate uncertainty and regularity times cover radius. Include one-sided endpoints, code-change glitches, tails, cross-channel loads, range and slew.
+\item \textbf{Release and blinded test.} Bound hold radius, prehistory speed and release tracking; reset the clock at release and record holding work. After premises and non-constructor review are on record, evaluate nominal and fault runs under the frozen rule.
+\end{enumerate}
+No component was purchased, researcher contacted, or experiment executed. Exact calculations and inherited-budget replay verify algebra only; hardware remains HOLD. Non-constructor review and physical promotion have not occurred.
+\subsection*{Source and dependency record}
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item Analog Devices, \emph{AD5791}, Rev. F, Table 3 p.3; terminology p.17.
+\href{https://www.analog.com/media/en/technical-documentation/data-sheets/AD5791.pdf}{Manufacturer data sheet (analog.com).}
+\item Analog Devices/Linear Technology, \emph{LTC2500-32}, Rev. B, electrical characteristics p.4 and Table 2 p.33.
+\href{https://www.analog.com/media/en/technical-documentation/data-sheets/250032fb.pdf}{Manufacturer data sheet (analog.com).}
+\item Texas Instruments, \emph{ADS127L21}, Rev. C, August 2025.
+\href{https://www.ti.com/lit/ds/symlink/ads127l21.pdf}{Manufacturer data sheet (ti.com).}
+\end{enumerate}
+Internal dependencies: CAM/CD-1, FCAL and SAC v0.1 retain their assumptions and statuses. Citation does not strengthen physical evidence. The elementary clock-product and filter inequalities carry no general novelty claim.
+\vfill\noindent\textbf{Claim footer.} DERIVED CONDITIONAL; CANDIDATE component route; hardware HOLD; development, no registry entry; constructor checks only; independent review pending; execution NONE; physical promotion 0.
+\end{document}

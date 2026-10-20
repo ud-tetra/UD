@@ -1,0 +1,54 @@
+{
+  "origin": "User: continue next steps after sampled-actuator certificate",
+  "constructor": "Codex",
+  "reviewers": [],
+  "lane": "development; no registry entry",
+  "physical_promotion": 0,
+  "repo_derivation_base": "d01945104084db51877ff15df8fff890120771be",
+  "site_source_base": "f9368b468e8dc78f3c07fa0cbf91b5020fc3b356",
+  "dependencies": [
+    {
+      "path": "captures/2026-10-20T163500Z-codex-sampled-actuator-9c71de42/UD_SAMPLED_ACTUATOR_THEOREM_v0.1.tex",
+      "sha256": "daa2c8cbec01ba3913312f60d00744708d508aff38507adeec3efc7ae05c39e4"
+    },
+    {
+      "path": "captures/2026-10-20T163500Z-codex-sampled-actuator-9c71de42/sampled_actuator_certificate.py",
+      "sha256": "323ed24cee1f08874cccae033696060a6432b7d5a2a8c19c0bb64aa44029ed1a"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/UD_FINITE_CALIBRATION_FAULT_CERTIFICATE_v0.1.tex",
+      "sha256": "f59a48e42f7c03deb86e72b0dd226e8d58b56b2c75ee039b76bf75226381c171"
+    }
+  ],
+  "governance_sources": [
+    {
+      "name": "20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "name": "21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "external_sources": [
+    "https://www.analog.com/media/en/technical-documentation/data-sheets/AD5791.pdf",
+    "https://www.analog.com/media/en/technical-documentation/data-sheets/250032fb.pdf",
+    "https://www.ti.com/lit/ds/symlink/ads127l21.pdf"
+  ],
+  "external_source_role": "Manufacturer facts only; no actual apparatus data or physical promotion",
+  "added_premises": [
+    "Physical component values and loading",
+    "Calibrated clock and mode-specific timing/history",
+    "Filtered reconstruction model and error coverage",
+    "Alternate input/command allocation",
+    "Identified actuator and derivative regularity bounds"
+  ],
+  "verification": "Ten exact arithmetic controls; inherited SAC and FCAL replay; analytic proofs; four-page visual PDF QA",
+  "limits": [
+    "Conservative-certificate obstruction is not physical impossibility",
+    "No component or apparatus admitted",
+    "No experiment or independent review",
+    "No dependency status strengthened by citation"
+  ],
+  "unavailable_attachment": "Gap2_FINAL_Finite_Genesis.png unavailable and unused"
+}

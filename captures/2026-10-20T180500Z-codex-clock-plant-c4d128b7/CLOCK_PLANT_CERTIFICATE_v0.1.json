@@ -1,0 +1,112 @@
+{
+  "status": "PASS_CONDITIONAL_MATHEMATICS_HARDWARE_HOLD",
+  "physical_promotion": 0,
+  "alternative_budget": {
+    "input_error": {
+      "exact": "1/100000",
+      "decimal": 1e-05
+    },
+    "command_error": {
+      "exact": "1/25000",
+      "decimal": 4e-05
+    },
+    "tracking": {
+      "exact": "29383/16000000",
+      "decimal": 0.0018364375
+    },
+    "total_residual": {
+      "exact": "149383/16000000",
+      "decimal": 0.0093364375
+    },
+    "slack": {
+      "exact": "10617/16000000",
+      "decimal": 0.0006635625
+    },
+    "preload_tracking_upper": {
+      "exact": "6449/8000000",
+      "decimal": 0.000806125
+    },
+    "endpoint_Gauss_parameters_unchanged": true
+  },
+  "supplier_screen": {
+    "AD5791B_quantization_plus_INL": {
+      "exact": "15/524288",
+      "decimal": 2.86102294921875e-05
+    },
+    "AD5791B_other_error_allowance": {
+      "exact": "18661/1638400000",
+      "decimal": 1.13897705078125e-05
+    },
+    "AD5791B_conditions": "+/-10V references; B grade; 0 to 105 C; affine errors independently calibrated",
+    "LTC2500_32_INL_normalized": {
+      "exact": "1/250000",
+      "decimal": 4e-06
+    },
+    "LTC2500_32_other_input_error_allowance": {
+      "exact": "3/500000",
+      "decimal": 6e-06
+    },
+    "note": "Neither remaining allowance has been empirically demonstrated"
+  },
+  "clock_screen": {
+    "output_period_seconds": {
+      "exact": "16/15625",
+      "decimal": 0.001024
+    },
+    "assumed_absolute_filter_moment_seconds": {
+      "exact": "8/15625",
+      "decimal": 0.000512
+    },
+    "assumed_other_latency_seconds": {
+      "exact": "1/10000",
+      "decimal": 0.0001
+    },
+    "required_t0_lower_seconds": {
+      "exact": "2048/5",
+      "decimal": 409.6
+    },
+    "required_each_LC_product_seconds_squared": {
+      "exact": "4194304/25",
+      "decimal": 167772.16
+    },
+    "illustrative_t0_seconds": {
+      "exact": "512",
+      "decimal": 512.0
+    },
+    "LC_at_illustrative_t0_seconds_squared": {
+      "exact": "262144",
+      "decimal": 262144.0
+    },
+    "illustrative_prefix_seconds": {
+      "exact": "128/25",
+      "decimal": 5.12
+    },
+    "LC_le_one_seconds_squared_has_no_clock_overlap": true
+  },
+  "certificate_floor_example": {
+    "scope": "Inherited conservative L+lambda certificate; not a lower bound on actual physical error",
+    "A_seconds_lower": {
+      "exact": "1/625",
+      "decimal": 0.0016
+    },
+    "r_seconds_upper": {
+      "exact": "1",
+      "decimal": 1.0
+    },
+    "clock_independent_cost_lower": {
+      "exact": "81/6250",
+      "decimal": 0.01296
+    },
+    "tracking_allocation": {
+      "exact": "1/400",
+      "decimal": 0.0025
+    },
+    "fails_this_sufficient_allocation": true
+  },
+  "controls": {
+    "status": "PASS",
+    "exact_controls": 10,
+    "constructor_only": true
+  },
+  "hardware_status": "HOLD: canonical scales, calibrated residuals, finite-record identification, noise/latency coverage and independent review OPEN"
+}
