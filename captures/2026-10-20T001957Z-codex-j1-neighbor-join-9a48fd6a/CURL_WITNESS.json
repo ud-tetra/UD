@@ -1,0 +1,34 @@
+{
+  "topology_sha256": "4e846a2b7caa9d50e2b3374e189f91557abb3339020ac8dab15fd5f8734000c9",
+  "nodes": 2809,
+  "tetrahedra": 12288,
+  "interior_edges": 13560,
+  "interior_faces": 23808,
+  "coefficients_per_component": 74736,
+  "components": 2,
+  "coefficient_format": "gzip of 2*n little-endian IEEE754 binary64 words; real component then imaginary; sorted interior edges (two modes each), then sorted interior faces (two modes each)",
+  "coefficient_payload_sha256": "dfca905de04fd4dae6ae006f5fdc62569d2357dece5b8a3efa37045e533a1ba6",
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 4.229161926286684,
+        "normal_residual_norm": 1.3174894610543577e-09
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 0.9464391676344833,
+        "normal_residual_norm": 2.771031764084629e-10
+      }
+    ]
+  }
+}
