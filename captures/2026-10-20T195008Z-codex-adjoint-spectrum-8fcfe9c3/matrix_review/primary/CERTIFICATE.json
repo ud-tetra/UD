@@ -1,0 +1,288 @@
+{
+  "status": "COMPLETE_SAME_TEAM_DETERMINISTIC_ADJOINT_MATRIX_AUDIT",
+  "rows": [
+    {
+      "case": "boundary_pair_block",
+      "status": "PASS_DETERMINISTIC_ALL_ENTRY_ADJOINT_CRT_AND_EXACT_NORM",
+      "record_sha256": "1cc53470e0edcab5ac884eff8f37766d30bb6da3beb4a06a91e96d321a908f11",
+      "witness_compressed_sha256": "83e961c78afe1eb79341587cb3ea17b98625cad343589a35ad8156f9ceccd682",
+      "canonical_N_payload_sha256": "94ab098c7b9488fc2c3777f6a7282caf142cc71ffbf01bcaf003e7e2e57fdf10",
+      "source_used_numeric_witnesses": {
+        "U_0.npz": "fe4c0154cce722d79bba90381df900efca17bc6a9895ddbd315f256ead5b3cc1",
+        "U_1.npz": "d4909c3f5bb81766dfc657122198296cc1ef3c6860f5573edad4f8e86d51d051",
+        "U_2.npz": "50c37cd7589c45cb7f8cdd62569757f879d9051a7f4ed5694ecc8df06616746f",
+        "SVD_META.npz": "c5c5aab0ae349112250ae81aba129f9d7c5725b294566b07603422b54c40dc27"
+      },
+      "independent_denominator_bits": {
+        "U": 80,
+        "V": 71,
+        "S": 61,
+        "D": 135
+      },
+      "entrywise_difference_bound": "1351988205366475091912383324290742373140480",
+      "difference_bound_terms": {
+        "inner_length": 8191,
+        "N_max_abs": 2504646576089754,
+        "U_integer_max_abs": 63089940358504200011776,
+        "V_integer_max_abs": 575031588849493671936,
+        "S_integer_max_abs": 12534690061937534976,
+        "saved_D_max_abs": 90351498125079720379107328,
+        "Ntranspose_U_integer_scale": "1",
+        "VS_integer_scale": "8"
+      },
+      "difference_bound_summands": [
+        "1294325463430059809710086593247608636964864",
+        "57662741936415191850798605963413357068288",
+        "90351498125079720379107328"
+      ],
+      "CRT_product": "22300388967603114152165719208796738180561187",
+      "CRT_product_gt_twice_difference_bound": true,
+      "all_prime_residue_checks": [
+        {
+          "prime": 16777213,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305560434859704304",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281474842492944",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "11e5bc87bcb6f985ea43a7717e7b95cec924d895a1c2c7448f7203ff92ad3ef5",
+          "saved_residue_int64le_sha256": "11e5bc87bcb6f985ea43a7717e7b95cec924d895a1c2c7448f7203ff92ad3ef5",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777199,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305556587041291964",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281474372731204",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "609329edb442284452cc24c8df7fe3fcad21a4d4b24fd346fc98c1c022498897",
+          "saved_residue_int64le_sha256": "609329edb442284452cc24c8df7fe3fcad21a4d4b24fd346fc98c1c022498897",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777183,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305552189538466684",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281473835861124",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "51f7571ec4561be470f70ebf2619b932d76019c2230777c016c2b72d6581daa4",
+          "saved_residue_int64le_sha256": "51f7571ec4561be470f70ebf2619b932d76019c2230777c016c2b72d6581daa4",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777153,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305543944231972864",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281472829231104",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "36b94a72f5169549449ff24b59eaf6fe77876fee18ccbecfbc03b96396f43e1c",
+          "saved_residue_int64le_sha256": "36b94a72f5169549449ff24b59eaf6fe77876fee18ccbecfbc03b96396f43e1c",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777141,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305540646113503600",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281472426579600",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "6e51b1e45bc005a0fd55a08ee4fd193b3ea2b6a50eebf621a7bb0e3d162b2bec",
+          "saved_residue_int64le_sha256": "6e51b1e45bc005a0fd55a08ee4fd193b3ea2b6a50eebf621a7bb0e3d162b2bec",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777139,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305540096427321404",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281472359471044",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "1ad6d81be04619d9f0f8eb21978018a308735ce20fc00d4b1fb4c2c1c41a3be6",
+          "saved_residue_int64le_sha256": "1ad6d81be04619d9f0f8eb21978018a308735ce20fc00d4b1fb4c2c1c41a3be6",
+          "first_mismatch": null
+        }
+      ],
+      "checked_matrix_entries_per_prime": 67089,
+      "proof": "Every integer difference is divisible by each distinct prime. Their product exceeds2B while abs(difference)<=B, hence all differences are zero. This is deterministic all-entry equality, not a probabilistic sketch.",
+      "norm": {
+        "exact_Frobenius_squared": [
+          "1127358112187073639866647213692515052068177884810221185",
+          "474284397516047136454946754595585670566993857190463750305618264096412179005177856"
+        ],
+        "root_norm_upper": [
+          "37357753488259409587627539563912614707313",
+          "766247770432944429179173513575154591809369561091801088"
+        ],
+        "root_norm_upper_squared_dominates_exact_norm": true
+      }
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "status": "PASS_DETERMINISTIC_ALL_ENTRY_ADJOINT_CRT_AND_EXACT_NORM",
+      "record_sha256": "f6197f09efb5d1a1893d2fa6c8edd962276866a7f708a5847859d13b615f1fc3",
+      "witness_compressed_sha256": "28705ec01e7874971468474c617bdd8d0b04c73d09323098f5f6d54251e621e5",
+      "canonical_N_payload_sha256": "febd7fb82cf9648e05610ba836275c9f6feba621542c9b0f6b18032c24ea28dd",
+      "source_used_numeric_witnesses": {
+        "U_0.npz": "a7bfd5a17a20ac7ea6bf3e778060132f0d4392ee80a3dcdb46a644b080aeb3b4",
+        "U_1.npz": "79e0dd60a63dc5305190f98332b229a06f9b01dccc9810356591d82a51769664",
+        "U_2.npz": "c934c78ac8a2d9fec4eebdaf705917a56849237ef8c4b3c5d28cc1a5000ca3f1",
+        "SVD_META.npz": "cc65486754ed64294a11d4d88e6fce662d982314fb972e811681f4df5bf1fb32"
+      },
+      "independent_denominator_bits": {
+        "U": 80,
+        "V": 67,
+        "S": 61,
+        "D": 135
+      },
+      "entrywise_difference_bound": "1351988205366494285522757961320499548718080",
+      "difference_bound_terms": {
+        "inner_length": 8191,
+        "N_max_abs": 2504646576089762,
+        "U_integer_max_abs": 63089940358505282142208,
+        "V_integer_max_abs": 35939474303088902144,
+        "S_integer_max_abs": 12534690061937537024,
+        "saved_D_max_abs": 83404127452818730628350976,
+        "Ntranspose_U_integer_scale": "1",
+        "VS_integer_scale": "128"
+      },
+      "difference_bound_summands": [
+        "1294325463430086144379617281736007258996736",
+        "57662741936408057739013226765761661370368",
+        "83404127452818730628350976"
+      ],
+      "CRT_product": "22300388967603114152165719208796738180561187",
+      "CRT_product_gt_twice_difference_bound": true,
+      "all_prime_residue_checks": [
+        {
+          "prime": 16777213,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305560434859704304",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281474842492944",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "e3b1e3c871c9ca0360a8aa2e87761c3a7f778f2f381843a57bcd857266479a44",
+          "saved_residue_int64le_sha256": "e3b1e3c871c9ca0360a8aa2e87761c3a7f778f2f381843a57bcd857266479a44",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777199,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305556587041291964",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281474372731204",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "fb58808cab8ed8a789b0e6a0ec953fafc5fd6ae1249c3286321e7ec53a4dc9c0",
+          "saved_residue_int64le_sha256": "fb58808cab8ed8a789b0e6a0ec953fafc5fd6ae1249c3286321e7ec53a4dc9c0",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777183,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305552189538466684",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281473835861124",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "c0ff58f767b382518c5c9a5e30a5f91e864cbff700138790eb58303c661dd7f8",
+          "saved_residue_int64le_sha256": "c0ff58f767b382518c5c9a5e30a5f91e864cbff700138790eb58303c661dd7f8",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777153,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305543944231972864",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281472829231104",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "42ceb6a7e82b41e051bac240f8b1cc4a0040b8b01766e842639b910a28a75cc3",
+          "saved_residue_int64le_sha256": "42ceb6a7e82b41e051bac240f8b1cc4a0040b8b01766e842639b910a28a75cc3",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777141,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305540646113503600",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281472426579600",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "a317e6a6fe237f1409587284d1e426d3ebf1f5e5f2147f2ba8335ae6537b70f6",
+          "saved_residue_int64le_sha256": "a317e6a6fe237f1409587284d1e426d3ebf1f5e5f2147f2ba8335ae6537b70f6",
+          "first_mismatch": null
+        },
+        {
+          "prime": 16777139,
+          "prime_proved_by_trial_division": true,
+          "dot_inner_length": 8191,
+          "maximum_possible_int64_dot": "2305540096427321404",
+          "int64_limit_exclusive": "9223372036854775808",
+          "elementwise_product_upper": "281472359471044",
+          "entry_count": 67089,
+          "matching_entries": 67089,
+          "all_entries_match": true,
+          "computed_residue_int64le_sha256": "42543d8f7780e6ea0540c1fc09bceecabb9bc31ba70b20041d2c2e443ed60edc",
+          "saved_residue_int64le_sha256": "42543d8f7780e6ea0540c1fc09bceecabb9bc31ba70b20041d2c2e443ed60edc",
+          "first_mismatch": null
+        }
+      ],
+      "checked_matrix_entries_per_prime": 67089,
+      "proof": "Every integer difference is divisible by each distinct prime. Their product exceeds2B while abs(difference)<=B, hence all differences are zero. This is deterministic all-entry equality, not a probabilistic sketch.",
+      "norm": {
+        "exact_Frobenius_squared": [
+          "4741789894942047639092848412773340177864935176398007769",
+          "1897137590064188545819787018382342682267975428761855001222473056385648716020711424"
+        ],
+        "root_norm_upper": [
+          "76616261777951406788191597434058663305331",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "root_norm_upper_squared_dominates_exact_norm": true
+      }
+    }
+  ],
+  "freeze_sha256": "7bd879b58b8aa084f855c79746fedcc5546e3d8d24610b2c8eddbb9e5a5f1aee",
+  "source_bindings_sha256": "6a0165eb275da0142dab1d875774c5ebb6f0e1f06d5ac9f9838a81c2660f6b93",
+  "method": "All-entry independent binary64/dyadic encoding and bounded CRT exact equality",
+  "independent_raw_projection_claimed": false,
+  "N_scope": "Temporary N payload/dimensions hash-matched to original accepted projection; raw recovery/projection proof inherited from root/source receipts",
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "new_factor_or_matrix_copies": 0,
+  "same_team_review": true,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}

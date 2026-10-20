@@ -1,0 +1,22 @@
+"""Aggregate conditional math review with explicit distinct CRT dependency."""
+from pathlib import Path
+import json,hashlib
+P=Path(__file__).resolve().parent;W=P.parent
+names=['BLOCK_REVIEW.json','BUDGET_PREVIEW.json','CONTROLS.json','CRT_DEPENDENCY_REVIEW.json','REPLAY_REVIEW.json','ROOT_SOURCE_REVIEW.json','ROTATING_REVIEW.json','THEOREM.md','THEOREM_FREEZE.json','budget_preview.py','review_actual.py','review_crt_dependency.py','review_replay.py','scalar_theorem.py','REVIEW_SUMMARY.md','finalize_review.py']
+def read(n):return json.loads((P/n).read_text())
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+for name,key,count in [('CONTROLS.json','controls',26),('BLOCK_REVIEW.json','checks',76),('ROTATING_REVIEW.json','checks',76),('CRT_DEPENDENCY_REVIEW.json','checks',82)]:
+ j=read(name);assert len(j[key])==count and all(x['pass']for x in j[key])
+for n,h in read('THEOREM_FREEZE.json')['proof_and_scalar_code_sha256'].items():assert sha(P/n)==h
+for n in ['BLOCK_REVIEW.json','ROTATING_REVIEW.json']:
+ for path,h in read(n)['source_files_sha256'].items():assert sha(W/path)==h
+for path,h in read('CRT_DEPENDENCY_REVIEW.json')['dependency_sha256'].items():assert sha(W/path)==h
+replay=read('REPLAY_REVIEW.json');assert len(replay['files'])==6
+for x in replay['files']:
+ a=W/'c18_primary'/x['case']/x['file'];b=W/'c18_replay'/x['case']/x['file'];assert a.read_bytes()==b.read_bytes()and sha(a)==x['primary_and_replay_sha256']
+result={'status':'PASS_INDEPENDENT_FINITE_TWO_SIDED_RETAINED_SPECTRUM_REVIEW','active_producer':'c18_adjoint','proof_frozen_before_adjoint_measurement':True,'mathematical_error_found_in_proposed_formulas':False,'independent_proof_controls':26,'independent_block_checks':76,'independent_rotating_checks':76,'distinct_CRT_dependency_scalar_and_identity_checks':82,'root_scientific_replay_files_byte_identical':6,'exact_consequence_pairs_per_case':10,'actual_retained209_two_sided_error_below_2neg41':True,'mixed_all321_error_below_2neg25':True,'actual_cutoff_count209_and_no_tie':True,'original_actual_proposal_floor_condition':True,'ambient_leading209_condition_below_reporting1888':True,'full321_error_below_2neg41_established':False,'algebraic_rank209_established':False,'all_input_backend_conformance':'OPEN','new_adjoint_identity_scope':'Distinct same-team deterministic all-entry modular/CRT audit of supplied original-projection N and saved factors. All67089 entries at each of6 distinct proved primes per case; product>2*full difference bound. This reviewer independently checked norm squares, minimal180-bit ceilings, all downstream rational bounds, and the CRT scalar proof/identities, without rerunning producer or modular matrix products.','distinct_matrix_audit_certificate_sha256':read('CRT_DEPENDENCY_REVIEW.json')['reviewed_dependency_certificate_sha256'],'inherited_premises':['Existing saved forward singular-equation and left/right Gram norm certificates','Original-radius actual source-tail and sigma209-lower enclosures','Root recovery of original raw/projection identity, hash-matched by both reviews'],'not_established':['Fresh recomputation of inherited forward/Gram/source norm proofs','Independent raw/projection derivation by math or CRT reviewer','Independent physical freshness or SI calibration','Exact spectrum(T) or primitive-frequency unaliasing','Physical six-ratio accuracy','Native1893 or747-dimensional interpretation'],'prior_HOLD_or_NOGO_verdicts_changed':False,'new_fits':0,'new_preparations':0,'new_record_identities':0,'new_reviewer_factor_copies':0,'repository_or_git_mutations_by_reviewer':False,'review_relationship':'Same-team independent derivation, Fraction implementation and distinct all-entry matrix audit; not external promotion authority','lane':'development — no registry entry','external_promotion_review':'PENDING','physical_promotion':0,'evidence_sha256':{n:sha(P/n)for n in names}}
+with(P/'FINAL_REVIEW.json').open('x')as f:json.dump(result,f,indent=2);f.write('\n')
+names.append('FINAL_REVIEW.json');manifest=''.join(sha(P/n)+'  '+n+'\n'for n in sorted(names))
+with(P/'VERIFICATION_HASH_MANIFEST.sha256').open('x')as f:f.write(manifest)
+for line in manifest.splitlines():h,n=line.split('  ',1);assert sha(P/n)==h
+print(json.dumps({'status':result['status'],'manifest_public_files':len(names),'final_review_sha256':sha(P/'FINAL_REVIEW.json'),'manifest_sha256':sha(P/'VERIFICATION_HASH_MANIFEST.sha256')}))
