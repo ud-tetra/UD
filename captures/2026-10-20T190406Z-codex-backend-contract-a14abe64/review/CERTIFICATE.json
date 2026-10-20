@@ -1,0 +1,173 @@
+{
+  "status": "PASS_EXACT_CONDITIONAL_UNIVERSAL_RANK_AND_FLOOR_OBLIGATIONS",
+  "source_scope": "Inherited source singular bounds and sketch perturbation multiplier, not rederived; no actual solver error bound established",
+  "source_rank": 209,
+  "returned_array_length": 321,
+  "cutoff": [
+    "1",
+    "16777216"
+  ],
+  "noise_radius": [
+    "3",
+    "562949953421312"
+  ],
+  "noise_multiplier_upper": [
+    "457535015436362347689908097036520697675537953115909855545",
+    "766247770432944429179173513575154591809369561091801088"
+  ],
+  "source_s209_lower": [
+    "1825687440852296265441309581",
+    "633825300114114700748351602688"
+  ],
+  "source_s210_upper": [
+    "65524641340209970665",
+    "633825300114114700748351602688"
+  ],
+  "perturbed_s209_lower": [
+    "1242498485889495386251367341480976981478890423896250395305803953237",
+    "431359146674410236714672241392314090778194310760649159697657763987456"
+  ],
+  "perturbed_s210_upper": [
+    "45966365140093531582106681950364349187295096868398283443115",
+    "431359146674410236714672241392314090778194310760649159697657763987456"
+  ],
+  "lower_cutoff_margin": [
+    "1242472774880787242406958670087499522877250068648349870620439131221",
+    "431359146674410236714672241392314090778194310760649159697657763987456"
+  ],
+  "upper_cutoff_margin": [
+    "25665042343003750877089286795508237291167952803656287081378901",
+    "431359146674410236714672241392314090778194310760649159697657763987456"
+  ],
+  "strict_rank_epsilon_margin": [
+    "25665042343003750877089286795508237291167952803656287081378901",
+    "431359146674410236714672241392314090778194310760649159697657763987456"
+  ],
+  "largest_sufficient_dyadic_rank_budget": [
+    1,
+    33554432
+  ],
+  "source_scale_floor": [
+    "1242498485693335957020533567611108562003650848393051787666302874709",
+    "431359146674410236714672241392314090778194310760649159697657763987456"
+  ],
+  "sufficient_absolute_singular_error_for_floor": [
+    "1",
+    "2199023255552"
+  ],
+  "rank_to_floor_dyadic_budget_ratio": 65536,
+  "scalar_rank_floor_countermodel": {
+    "scope": "Bound-premise scalar model only; not an actual profile raw or fixed backend output",
+    "error_budget": [
+      "1",
+      "33554432"
+    ],
+    "returned_s209": [
+      "1242485630385141314329163005784238252178070246272300132963121542229",
+      "431359146674410236714672241392314090778194310760649159697657763987456"
+    ],
+    "required_floor": [
+      "1242498485693335957020533567611108562003650848393051787666302874709",
+      "431359146674410236714672241392314090778194310760649159697657763987456"
+    ],
+    "rank": 209,
+    "floor_satisfied": false
+  },
+  "finite_blackbox_countermodel": {
+    "scope": "Logical non-entailment from finite tests; altered function is not actual implementation",
+    "domain": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "tested": [
+      0,
+      1
+    ],
+    "untested_counterpoint": 2,
+    "actual_implementation_bug_exhibited": false
+  },
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "new_factor_copies": 0,
+  "backend_success_established": false,
+  "all14gates_established_by_rank": false,
+  "independent_physical_freshness": false,
+  "external_review": "PENDING",
+  "physical_promotion": 0,
+  "controls": [
+    {
+      "id": "rank_budget_2neg25_qualifies",
+      "pass": true
+    },
+    {
+      "id": "rank_budget_2neg24_does_not_qualify",
+      "pass": true
+    },
+    {
+      "id": "rank_budget_negative_refused",
+      "pass": true
+    },
+    {
+      "id": "rank_strict_margin_equality_refused",
+      "pass": true
+    },
+    {
+      "id": "required_floor_budget_at2neg41",
+      "pass": true
+    },
+    {
+      "id": "required_floor_budget_above_refused",
+      "pass": true
+    },
+    {
+      "id": "floor_budget_implies_strict_rank_budget",
+      "pass": true
+    },
+    {
+      "id": "dyadic_rank_budget65536times_floor_budget",
+      "pass": true
+    },
+    {
+      "id": "scalar_countermodel_max_error_budget",
+      "pass": true
+    },
+    {
+      "id": "scalar_countermodel_sorted_nonnegative",
+      "pass": true
+    },
+    {
+      "id": "scalar_countermodel_rank209",
+      "pass": true
+    },
+    {
+      "id": "scalar_countermodel_source_floor_fails",
+      "pass": true
+    },
+    {
+      "id": "upper_margin_exact_tail_cutoff",
+      "pass": true
+    },
+    {
+      "id": "equality_HOLD_distinct_from_incorrect_count",
+      "pass": true
+    },
+    {
+      "id": "larger_tail_error_can_create_rank210",
+      "pass": true
+    },
+    {
+      "id": "rank_does_not_imply_left_Gram",
+      "pass": true
+    },
+    {
+      "id": "finite_countermodel_agrees_on_all_tests",
+      "pass": true
+    },
+    {
+      "id": "finite_countermodel_disagrees_on_untested",
+      "pass": true
+    }
+  ]
+}

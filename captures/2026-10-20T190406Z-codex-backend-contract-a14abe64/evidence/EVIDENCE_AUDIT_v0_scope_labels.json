@@ -1,0 +1,944 @@
+{
+  "status": "BOUNDED_EVIDENCE_AUDIT_COMPLETE_NO_QUALIFIED_ACQUISITION_RETURN_IN_SCOPE",
+  "audit_created_utc": "2026-10-20T18:53:47.505819+00:00",
+  "pinned_repository": "ud-tetra/UD",
+  "pinned_commit": "065f44b7a9b432efb94fc7cb4d274abb6ecd461d",
+  "delta_base": "f24550979dba3251c95ea52a10e18e006a0bf2a6",
+  "scope": {
+    "candidate": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720",
+    "candidate_payloads_hash_checked": 18,
+    "candidate_semantic_sources": [
+      "FINITE_CALIBRATION_RETURN_v0.1.json",
+      "PROVENANCE_v0.1.json",
+      "MANIFEST.json",
+      "RATIONAL_CERTIFICATE_v0.1.json",
+      "UD_FINITE_CALIBRATION_FAULT_CERTIFICATE_v0.1.tex"
+    ],
+    "delta_files": 38,
+    "delta_capture": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7",
+    "delta_semantic_sources": [
+      "MANIFEST.json",
+      "REPORT.md",
+      "SOURCE_CONTEXT.json",
+      "event"
+    ],
+    "requested_return_path_inventory": {
+      "matches": [],
+      "interpretation": "No conventional returned/ paths in pinned tree; not proof that every possible external return under another name is absent"
+    },
+    "issues": [
+      {
+        "issue_number": 241,
+        "url": "https://github.com/ud-tetra/UD/issues/241",
+        "body_updated_at": "2026-10-20T18:41:07Z",
+        "body_bytes": 31413,
+        "snapshot_sha256": "2dd5b976997cd0fefd6f273d3eddefbe417d3bdda1f03a54716c8a21bd4b34a9",
+        "all_page_comments_count": 0,
+        "retrieved_utc": "2026-10-20T18:51:34.805Z",
+        "interpretation": "Status/progress narrative and unresolved/UNSENT snapshot; no attributable acquired-return packet in body or comments"
+      },
+      {
+        "issue_number": 270,
+        "url": "https://github.com/ud-tetra/UD/issues/270",
+        "body_updated_at": "2026-10-20T18:41:09Z",
+        "body_bytes": 5416,
+        "snapshot_sha256": "8d37f118c733274ad41867d4507178fb641e87badaa069e5dbe7995d723fc7d6",
+        "all_page_comments_count": 0,
+        "retrieved_utc": "2026-10-20T18:51:35.741Z",
+        "interpretation": "Status/progress narrative and unresolved/UNSENT snapshot; no attributable acquired-return packet in body or comments"
+      },
+      {
+        "issue_number": 130,
+        "url": "https://github.com/ud-tetra/UD/issues/130",
+        "body_updated_at": "2026-10-20T18:41:10Z",
+        "body_bytes": 55584,
+        "snapshot_sha256": "443a31007dd1b0699c82e180cba919e9e0352c8ca280056dd6b3876e18d1bba8",
+        "all_page_comments_count": 0,
+        "retrieved_utc": "2026-10-20T18:51:36.441Z",
+        "interpretation": "Status/progress narrative and unresolved/UNSENT snapshot; no attributable acquired-return packet in body or comments"
+      }
+    ],
+    "excluded": [
+      "Other issue/mail/chat surfaces",
+      "Any unexported material",
+      "Broad public dataset search",
+      "Full semantic re-audit of every prior capture",
+      "Re-execution of conditional CD-1 mathematics or J1 numerics"
+    ]
+  },
+  "candidate": {
+    "classification": "PLANNING_ONLY_NOT_AN_ACQUIRED_RETURN",
+    "explicit_disclosures": {
+      "explicit_open_return": true,
+      "explicit_illustrative_no_measurements": true,
+      "explicit_no_execution": true,
+      "review_pending": true,
+      "all_required_groups_open": true
+    },
+    "required_groups": [
+      {
+        "candidate_group": "port_design",
+        "candidate_status": "OPEN",
+        "conceptually_related_roles": [
+          "R02",
+          "R08",
+          "R09",
+          "R10"
+        ],
+        "actual_records_disclosed": false,
+        "requirements": [
+          "actual flux-charge port equations",
+          "component values with units",
+          "loading and actuator topology",
+          "input saturation and controller work"
+        ],
+        "mapping_status": "Content-topic crosswalk only; source/lane/domain identity not established"
+      },
+      {
+        "candidate_group": "canonical_scale",
+        "candidate_status": "OPEN",
+        "conceptually_related_roles": [
+          "R03",
+          "R04",
+          "R08",
+          "R09"
+        ],
+        "actual_records_disclosed": false,
+        "requirements": [
+          "Phi0 and Q0 per channel",
+          "common action S0 and mismatch bounds",
+          "physical energy E0",
+          "t0 in seconds",
+          "joint uncertainty and traceability"
+        ],
+        "mapping_status": "Content-topic crosswalk only; source/lane/domain identity not established"
+      },
+      {
+        "candidate_group": "finite_calibration",
+        "candidate_status": "OPEN",
+        "conceptually_related_roles": [
+          "R03",
+          "R05",
+          "R06"
+        ],
+        "actual_records_disclosed": false,
+        "requirements": [
+          "domain and module decomposition",
+          "crosstalk remainder",
+          "nodes with true-residual uncertainty intervals",
+          "cover radii",
+          "independently justified derivative bounds",
+          "drift over planned experiment interval"
+        ],
+        "mapping_status": "Content-topic crosswalk only; source/lane/domain identity not established"
+      },
+      {
+        "candidate_group": "control_timing",
+        "candidate_status": "OPEN",
+        "conceptually_related_roles": [
+          "R04",
+          "R10"
+        ],
+        "actual_records_disclosed": false,
+        "requirements": [
+          "timestamped sensing and actuation",
+          "maximum coordinate input age",
+          "initialization and prehistory speed",
+          "mode-switch transients",
+          "plant Lipschitz bound"
+        ],
+        "mapping_status": "Content-topic crosswalk only; source/lane/domain identity not established"
+      },
+      {
+        "candidate_group": "metrology",
+        "candidate_status": "OPEN",
+        "conceptually_related_roles": [
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R09"
+        ],
+        "actual_records_disclosed": false,
+        "requirements": [
+          "raw state records",
+          "independent coupling witnesses",
+          "preparation bound",
+          "endpoint reconstruction bound",
+          "clock bound",
+          "joint systematic and statistical uncertainty",
+          "missing channels and saturation flags"
+        ],
+        "mapping_status": "Content-topic crosswalk only; source/lane/domain identity not established"
+      },
+      {
+        "candidate_group": "blinded_controls",
+        "candidate_status": "OPEN",
+        "conceptually_related_roles": [
+          "R11",
+          "R12",
+          "R13"
+        ],
+        "actual_records_disclosed": false,
+        "requirements": [
+          "nominal law",
+          "wrong entire second-species sign",
+          "frozen electric response",
+          "unrounded decision inputs",
+          "same preparation and budget"
+        ],
+        "mapping_status": "Content-topic crosswalk only; source/lane/domain identity not established"
+      },
+      {
+        "candidate_group": "review",
+        "candidate_status": "OPEN",
+        "conceptually_related_roles": [
+          "R01",
+          "R14"
+        ],
+        "actual_records_disclosed": false,
+        "requirements": [
+          "attributable non-constructor review",
+          "premise audit",
+          "joint coverage statement"
+        ],
+        "mapping_status": "Content-topic crosswalk only; source/lane/domain identity not established"
+      }
+    ],
+    "rational_design_certificate": "PASS_CONDITIONAL_DESIGN with explicitly illustrative inputs; this remains a valid conditional claim within its own stated scope",
+    "own_declared_lane": "Short-window CD-1 Gauss discriminator, not full campaign/endpoint admission",
+    "independent_review": "PENDING",
+    "experimental_execution": "NONE",
+    "physical_promotion": 0,
+    "role_R07_note": "Constructor conditional computation may inform a future design. It does not supply source-specific validated numerical/calibration evidence for an actual acquired record."
+  },
+  "delta_finding": {
+    "classification": "CONDITIONAL_COMPUTATIONAL_J1_STATE_NOT_EMPIRICAL_ACQUISITION",
+    "independent_review": false,
+    "scientific_status": "OPEN",
+    "physical_promotion": 0,
+    "does_not_close_R01_R14": true
+  },
+  "role_requirements": [
+    {
+      "id": "R01",
+      "title": "Authority and independence",
+      "requested_path": "returned/01_authority_and_independence.json",
+      "required_content": "Actual calibrating body, scope, reference standards/methods, acquisition/device identity, independence/conflict declaration, and the externally accepted authority decision with its date and grounds. A name, URL, accreditation label or self-asserted hash alone does not establish acceptance.",
+      "required_sections": [
+        "authority_identity",
+        "scope_and_reference_method",
+        "device_and_acquisition_binding",
+        "independence_conflicts",
+        "external_acceptance_decision"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 1,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R02",
+      "title": "Custody, configuration and domain",
+      "requested_path": "returned/02_custody_and_domain.json",
+      "required_content": "Exact acquisition/source IDs; SHA-256 and byte counts accepted through independent custody; record/group/sample counts, channel ordering, crop/time-grid definition and units; compiled acquisition binary, API/firmware, devices, wiring, trigger and filter settings; pre-read manifest and prior exposure history. All source counts and crop lengths are acquisition-specific, not inherited.",
+      "required_sections": [
+        "source_manifest",
+        "record_group_sample_counts",
+        "channel_and_wiring_map",
+        "crop_and_grid_domain",
+        "binary_firmware_devices_configuration",
+        "custody_and_prior_exposure"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 1,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R03",
+      "title": "Per-channel amplitude calibration",
+      "requested_path": "returned/03_channel_calibration.json",
+      "required_content": "One row per actual channel: applied gain and offset, intervals about them, valid nominal-input range, calibrated nonlinearity and noise/quantization in post-decoder volts, supporting methods/data and proof every claimed sample is covered. Separate serialization, ADC, analog front-end and physical-source errors.",
+      "required_sections": [
+        "channels",
+        "applied_transform_and_intervals",
+        "nonlinearity_noise_quantization",
+        "valid_domain_and_sample_coverage",
+        "calibration_evidence"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 80,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R04",
+      "title": "Clock and time-to-voltage propagation",
+      "requested_path": "returned/04_clock_and_time_domain.json",
+      "required_content": "Actual calibrated rate interval, common-grid model or explicit device grids, cropped-start/trigger convention, origin/skew/jitter bounds, domain and source-bound derivative or band proof, and a justified waveform-vector error enclosure. Shared trigger does not prove shared clocks.",
+      "required_sections": [
+        "rate_and_grid",
+        "origin_skew_jitter",
+        "crop_origin_convention",
+        "band_or_derivative_domain",
+        "warp_to_vector_error",
+        "clock_evidence"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 8,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R05",
+      "title": "Passband and alias budget",
+      "requested_path": "returned/05_transfer_and_alias.json",
+      "required_content": "Actual analog/digital transfer for the acquisition, declared input band below the lower calibrated Nyquist rate, bounded in-band distortion and out-of-band alias contribution, validity domain and supporting measurements/proofs. An averaging flag or nominal sample rate is insufficient.",
+      "required_sections": [
+        "declared_input_band",
+        "actual_transfer_and_domain",
+        "inband_vector_error",
+        "outofband_alias_vector_error",
+        "transfer_evidence"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 4,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R06",
+      "title": "Joint error coverage and allocation",
+      "requested_path": "returned/06_joint_coverage_and_budget.json",
+      "required_content": "Choose a simultaneous deterministic enclosure OR a justified statistical joint-coverage route. Define population/record/bin/component domain, dependence and coverage event, use all errors exactly once, and return exact per-vector and aggregate score error budgets in the declared coordinates. No default independence, covariance, confidence level or root-sum-square cancellation.",
+      "required_sections": [
+        "route",
+        "covered_domain",
+        "per_vector_and_aggregate_budget",
+        "no_double_count_allocation",
+        "deterministic_proof",
+        "statistical_population_dependence_coverage",
+        "statistical_simultaneous_coverage"
+      ],
+      "conditional_sections": {
+        "DETERMINISTIC_SIMULTANEOUS_ENCLOSURE": [
+          "deterministic_proof"
+        ],
+        "JUSTIFIED_STATISTICAL_SIMULTANEOUS_COVERAGE": [
+          "statistical_population_dependence_coverage",
+          "statistical_simultaneous_coverage"
+        ]
+      },
+      "original_128_lineage_path_count": 8,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R07",
+      "title": "Validated computation",
+      "requested_path": "returned/07_validated_numerics.json",
+      "required_content": "Exact operators, source/version/precision, parsing and serialization, mean removal, window representation, FFT/normalization and comparison rounding, and separately justified DC/RMS/spectral and prediction solver error bounds. Reproducible proof commands and logs; FFT agreement and bin width are not error enclosures.",
+      "required_sections": [
+        "operators_versions_precision",
+        "parser_window_fft_normalization",
+        "dc_rms_spectral_error",
+        "prediction_solver_error",
+        "proof_commands_logs"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 6,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R08",
+      "title": "Primary physical model",
+      "requested_path": "returned/08_primary_model.json",
+      "required_content": "Versioned equations, parameter domains and units with independent source/calibration; complex link amplitude retained; actual state/action structure, constitutive assumptions and validity domain. Mathematical group vocabulary or a nominal frequency is not a UD physical identification.",
+      "required_sections": [
+        "family_and_equations",
+        "parameters_domains_units",
+        "complex_link_amplitude",
+        "constitutive_assumptions",
+        "source_and_calibration"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 3,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R09",
+      "title": "State, preparation and readout",
+      "requested_path": "returned/09_state_preparation_readout.json",
+      "required_content": "Physical realization and independently justified mapping between model states/actions and measured voltages, including missing quadratures/phase, units, uncertainty and validity domain. Initial-state/preparation ranges and their independent lineage; propagate state-estimation error separately.",
+      "required_sections": [
+        "physical_realization",
+        "state_action_readout_unit_map",
+        "quadratures_and_observability",
+        "initial_state_preparation",
+        "state_estimation_uncertainty"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 3,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R10",
+      "title": "Drive, feedback, loss and energy",
+      "requested_path": "returned/10_drive_feedback_loss_energy.json",
+      "required_content": "Actual drive amplitude/frequency/phase/history, feedback and loss with uncertainties; source-work/energy balance and explicit model-discrepancy allowance. Public filename amplitudes, default code or residual-zero assumptions do not supply these.",
+      "required_sections": [
+        "drive_history",
+        "feedback_loss_history",
+        "source_work_energy",
+        "model_discrepancy",
+        "acquisition_binding"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 2,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R11",
+      "title": "Justified physical comparator",
+      "requested_path": "returned/11_comparator_model.json",
+      "required_content": "Explicit alternative equations, parameter domains/units and readout in the same measured coordinates; scientific justification for this alternative and the question it discriminates. Descriptive median/interpolation is not a physical null; do not invent a gauge-breaking model.",
+      "required_sections": [
+        "alternative_equations_parameters",
+        "same_observation_coordinates",
+        "physical_justification",
+        "comparison_question"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 2,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R12",
+      "title": "Pre-outcome model and score freeze",
+      "requested_path": "returned/12_frozen_analysis_protocol.json",
+      "required_content": "Before any new fit or scored outcome access: source selection, train/validation/test lineage, solver/bounds/initialization/precision/termination/ties/failures, physical model and comparator hashes, voltage-vector L2 and global max-absolute scores and error conventions, predeclared margin and its independent rationale. Retain every failure/HOLD; no outcome-selected retries or zero imputation.",
+      "required_sections": [
+        "model_comparator_source_freeze",
+        "selection_training_exposure",
+        "solver_and_failure_rules",
+        "score_observable_aggregation",
+        "error_allocation",
+        "selection_margin_and_rationale"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 6,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R13",
+      "title": "Genuinely fresh source and error coverage",
+      "requested_path": "returned/13_fresh_source_lineage.json",
+      "required_content": "Independent custody/exposure review for a new acquisition or demonstrably unseen source, selection independent of relevant outcomes, and model/score freeze before access. Separate calibration/time/alias/numerical and joint coverage for that source or a proved extension. Existing 05-21 and 05-28 exposure cannot be erased by new labels/hashes.",
+      "required_sections": [
+        "fresh_source_identity",
+        "custody_exposure_independence",
+        "pre_outcome_freeze",
+        "source_specific_calibration_coverage",
+        "selection_independent_of_outcomes"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 3,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    },
+    {
+      "id": "R14",
+      "title": "Attributable external content review",
+      "requested_path": "returned/14_external_review_return.json",
+      "required_content": "Actual reviewer identity, nonconstructor/conflict scope, inspected source hashes, methods/commands/versions/logs, reproduced results/HOLDs, discrepancies, limitations and dated attributable verdict. Separate authority acceptance and custodian ruling; the blank return form is not an attestation.",
+      "required_sections": [
+        "reviewer_identity_independence_conflicts",
+        "reviewed_artifact_hashes",
+        "commands_versions_logs",
+        "findings_discrepancies",
+        "dated_verdict_and_limitations",
+        "custodian_decision"
+      ],
+      "conditional_sections": null,
+      "original_128_lineage_path_count": 1,
+      "candidate_contribution": "Planning or conditional-mathematics context only; no actual accepted return for this role",
+      "newly_qualified_in_audited_scope": false,
+      "qualification_status": "NOT_CLOSED_BY_THIS_AUDIT"
+    }
+  ],
+  "historical_request_snapshot": {
+    "original_path_count": 128,
+    "count_is_not_independent_gate_count": true,
+    "counts_by_role": {
+      "R01": 1,
+      "R02": 1,
+      "R03": 80,
+      "R04": 8,
+      "R05": 4,
+      "R06": 8,
+      "R07": 6,
+      "R08": 3,
+      "R09": 3,
+      "R10": 2,
+      "R11": 2,
+      "R12": 6,
+      "R13": 3,
+      "R14": 1
+    },
+    "outreach_sent": false,
+    "interpretation": "Preserved original ten-channel request lineage only. New CD-1/native/fresh-source domains need independent source-specific maps and counts. This audit does not globally re-prove absence of all128 requested facts."
+  },
+  "new_qualified_R01_R14_returns_in_audited_scope": 0,
+  "physical_qualification_blockers_closed": 0,
+  "next_gate": {
+    "priority": "Supply attributable acquisition/source identity and source-specific physical-unit/readout map, then actual calibration/time/transfer/joint-coverage records, prospective model/comparator/holdout freeze and attributable external content review.",
+    "minimal_first_bundle": [
+      "R01 actual authority/independence decision",
+      "R02 actual acquisition/custody/domain identity",
+      "R08/R09 independently supported physical model/state/readout/unit map",
+      "R13 fresh selection/exposure/pre-outcome lineage",
+      "R14 attributable external review and separate custodian ruling"
+    ],
+    "warning_on_order": "This lists content dependencies, not permission to operate hardware, obtain private records, or send outreach. No authorization is granted by this audit."
+  },
+  "controls": [
+    {
+      "id": "original_design_is_not_acquired_return",
+      "pass": true
+    },
+    {
+      "id": "success_label_cannot_override_no_measurements",
+      "pass": true
+    },
+    {
+      "id": "self_asserted_execution_does_not_override_design_kind",
+      "pass": true
+    },
+    {
+      "id": "empty_unknown_document_not_qualified",
+      "pass": true
+    },
+    {
+      "id": "complete_labels_alone_not_qualified",
+      "pass": true
+    }
+  ],
+  "source_files": [
+    {
+      "path": "captures/2026-10-15T022222Z-codex-joint-hamiltonian-f51873da/UD_JOINT_HAMILTONIAN_THEOREM_v0.1.tex",
+      "sha256": "e02fd675126f544e9689435a458996764d41b5fcbfd864671e7e968a5bba39d2",
+      "size_bytes": 18905,
+      "inspection_scope": "Provenance dependency identity checked; no physical claim admitted"
+    },
+    {
+      "path": "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/evidence_return/BLOCKER_RETURN_CROSSWALK.json",
+      "sha256": "0fb9547f2c6f479df2aff47048f42c75dceb4c1c124de3c77f51c95cf8c9c23a",
+      "size_bytes": 147467,
+      "inspection_scope": "Content inspected"
+    },
+    {
+      "path": "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/evidence_return/RETURN_PROFILE.json",
+      "sha256": "86fad0f70664568ad8417b9a9d0869085955412b994280e888e7809501560c6a",
+      "size_bytes": 13683,
+      "inspection_scope": "Content inspected"
+    },
+    {
+      "path": "captures/2026-10-20T002112Z-codex-actual-equation-returns-c0caa77d/evidence_return/RETURN_REVIEW_GUIDE.md",
+      "sha256": "1d0f710cd4a6cbc70e70a75e02385f295f7cf8abed34c2f39e43dbe903f567a5",
+      "size_bytes": 7319,
+      "inspection_scope": "Content inspected"
+    },
+    {
+      "path": "captures/2026-10-20T133000Z-codex-canonical-diamond-6d82a19f/CLOSED_DIAMOND_PROTOCOL_v0.1.json",
+      "sha256": "80db173bee83c308804f2b82d3728017b336f1102d0e7f17097d5383eab828d1",
+      "size_bytes": 7366,
+      "inspection_scope": "Provenance dependency identity checked; no physical claim admitted"
+    },
+    {
+      "path": "captures/2026-10-20T133000Z-codex-canonical-diamond-6d82a19f/MANIFEST.json",
+      "sha256": "10729ab38b55b8980f5319257c17caff682577a6d3d3b6db86a01aeb18885634",
+      "size_bytes": 4871,
+      "inspection_scope": "Content inspected"
+    },
+    {
+      "path": "captures/2026-10-20T133000Z-codex-canonical-diamond-6d82a19f/UD_CANONICAL_APPARATUS_MAP_v0.1.tex",
+      "sha256": "4614028f5cd1da5af656e6e96533ea507809474248ec7bf8a1f55354dbcd5bdb",
+      "size_bytes": 26479,
+      "inspection_scope": "Provenance dependency identity checked; no physical claim admitted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/FINITE_CALIBRATION_RETURN_v0.1.json",
+      "sha256": "dc4fe4bc5d2efe53c32a27caab898305bd28e92e636c1423de04ee32fd919e29",
+      "size_bytes": 3588,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/MANIFEST.json",
+      "sha256": "b877b34330e3a357be4b0ae52ca541ecabc6437787d47edcd6d54b5f16da45b9",
+      "size_bytes": 5440,
+      "inspection_scope": "Content inspected"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/PDF_QA_v0.1.json",
+      "sha256": "2f0bc022322b870c8cacc36aa53aa6855f2faded8660943cf77a206d33a9adf4",
+      "size_bytes": 227,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/PROVENANCE_v0.1.json",
+      "sha256": "ee8d1c0d84409688d2b0a11ac0f8f9e6b262547666d1ebd4afab055c35e58035",
+      "size_bytes": 1833,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/RATIONAL_CERTIFICATE_v0.1.json",
+      "sha256": "88007a8e0e0b89de18d266699a9b525740a77980d231a859c48b664e862c96d7",
+      "size_bytes": 10534,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/SITE_RELEASE_v0.1.json",
+      "sha256": "192efefe5597e8dd0f2f7534aeeddeef8b5b5ecb655836293a96a8c685d83b99",
+      "size_bytes": 892,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/SITE_SOURCE_CHANGE.patch",
+      "sha256": "0365f51347d196148378de094debd9fea599500958bfdd2d3b4e412fa9624148",
+      "size_bytes": 912836,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/SITE_VALIDATION_v0.1.json",
+      "sha256": "87721cba19b9c5561ddb93da3a08fbafb12d74da0d7e74825b0a175414bf5b80",
+      "size_bytes": 308,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/SYMBOLIC_VERIFICATION_v0.1.json",
+      "sha256": "0148bc6d439d29e1c5bf8575d253b8a5971bd918f3fcbaf14b34dca88873442d",
+      "size_bytes": 908,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/UD_FINITE_CALIBRATION_FAULT_CERTIFICATE_v0.1.pdf",
+      "sha256": "b2e261b3ebd1c2d7e87983262b1e042770176b56a35fab1f5c4b667bdbb852de",
+      "size_bytes": 255638,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/UD_FINITE_CALIBRATION_FAULT_CERTIFICATE_v0.1.tex",
+      "sha256": "f59a48e42f7c03deb86e72b0dd226e8d58b56b2c75ee039b76bf75226381c171",
+      "size_bytes": 18154,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/UD_FINITE_CALIBRATION_FAULT_CERTIFICATE_v0.1_RELEASE.zip",
+      "sha256": "e314c0750ac70bdbd14e84145fcb1f66c265ccc8019c0d90707fd420484e15d1",
+      "size_bytes": 266083,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/check_finite_site.py",
+      "sha256": "9cf524dee16283c9ad4de1e33fda0f9e426675fc0492e39cc1a82e3926af2bf2",
+      "size_bytes": 2072,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/finite_record_certificate.py",
+      "sha256": "97ab04942d963bdd3db45f777439f4d1627649da1983e7c6049c27ac2ce0cbd4",
+      "size_bytes": 3991,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/prepare_finite_capture.py",
+      "sha256": "7f3d427c1d66a9b05a7e8601b674bf779d8bcf5efca006851c33e78782503cc7",
+      "size_bytes": 5518,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/publish_finite.py",
+      "sha256": "651c320818b81e99ee7bc9e0b92fa41180901eb00cae4dc81ff795ebd6573394",
+      "size_bytes": 10314,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/requirements.txt",
+      "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc",
+      "size_bytes": 14,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/seal_finite.py",
+      "sha256": "1c54d2fe93e65293bcb0d9bc0dac7742962ef327a58f865149a526aadfd3bc93",
+      "size_bytes": 3352,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/verify_finite_record.py",
+      "sha256": "b92963c1585271634894cac074e37a44734503d1630515e8ef6164765ea2240f",
+      "size_bytes": 3557,
+      "inspection_scope": "Manifest payload identity checked; opaque payloads not executed or interpreted"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/AUDIT_RESULTS.json",
+      "sha256": "f31a7d6ab90b233c2e295a7d61c92e0c72d5492b746d84e439ae6b8eb031791e",
+      "size_bytes": 9409,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/BANK.json",
+      "sha256": "97ba7f5403754dfb6d0480a818b8efa981defcba958450ae2f433fcabd96c1c0",
+      "size_bytes": 24403,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/CONTRACT.json",
+      "sha256": "9347cea0148f40993471cbcfaa79d01072b595e10c8949fe21a638d43466831a",
+      "size_bytes": 68031,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/COVER.json",
+      "sha256": "47c94b4c900bf98defbf40318a25541dbbdc83cedf5ca93d11501eb1265aac1e",
+      "size_bytes": 142720,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/COVER.png",
+      "sha256": "5d425c2f9c3b62fa3cd4ee8e003334cbaae25c53e3b956d2bf8165e59f48cdb3",
+      "size_bytes": 111061,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/COVER.svg",
+      "sha256": "43ccb314bf5d129936cf0332def2d22907a5b89aa61dbbfdb38512d02880b06f",
+      "size_bytes": 79049,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/MANIFEST.json",
+      "sha256": "fa9fba3b038fe898073259f03bf82739b310a4a3ba92be09e796f2550fb1c40e",
+      "size_bytes": 9345,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/PARAMETER_FREEZE.json",
+      "sha256": "40875fb86eed69f6965b5fa55ef56f7e19a5e4cf119edf23313157c04ab5355e",
+      "size_bytes": 1456,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/PLACEMENT_RESULTS.json",
+      "sha256": "2c3ce901b4cc3031cea955f0b363b638f4484ca8587b23df7b71b3b899d986ed",
+      "size_bytes": 337763,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/PROJECT_IN_REVIEW.jpg",
+      "sha256": "315abf30dae751f04c38a227f6cee4fbbc8628e19defc3eff0319da7af3215ab",
+      "size_bytes": 180638,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/PROJECT_RECEIPT.json",
+      "sha256": "4703193e4ae4e43ff07880d0871afa1fce9b409be9e317c70b96ef0c2658616e",
+      "size_bytes": 628,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/REPLAY_RECEIPTS.json",
+      "sha256": "e6bc90f72881ea88f788a3e027d6da343decef8cef763b3dfa59fbf8954daaf5",
+      "size_bytes": 1208,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/REPORT.md",
+      "sha256": "2f48ed85f0dbd5896e112b377c769a21bde9ce8f8e419cb6e38a84c37d21004c",
+      "size_bytes": 8393,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/SCALAR_GENERATION.log",
+      "sha256": "90bde8eb77816a44ed94b5462b8d192e61bec7c5ab283c9f0c9e9ca053787ae1",
+      "size_bytes": 241,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/SCALAR_REPLAY.log",
+      "sha256": "a078d3efb1bbe41f54b8c499cf530de3c85f65e08b9a631bde36b98d4047bb6a",
+      "size_bytes": 369,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/SOURCE_CONTEXT.json",
+      "sha256": "f1f2c5b57ad017c3bdb508f487915123b76e20a34fa28ae75775a3216f973cad",
+      "size_bytes": 942,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/audit.py",
+      "sha256": "d540a4c74e01bf3cfc9d5106d66dc7323140484aee707a5831634cd28c5cf50d",
+      "size_bytes": 15739,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/CURL_COEFFICIENTS.bin.gz",
+      "sha256": "2c6b016f9ec65263a0d66b97467965949c1bde23073f425f5eae54b4955a9e14",
+      "size_bytes": 1154851,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/CURL_CORRECTION_RESULTS.json",
+      "sha256": "2988bcc299bbbfa5725887eb37152cc9308083725a9e5f5094ee6a7c43a32046",
+      "size_bytes": 2531,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/CURL_WITNESS.json",
+      "sha256": "2a48be29c1c311d452c6003adc0136ef25cd8dfea15af8efca4024194e9fb626",
+      "size_bytes": 1277,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/FLUX_GENERATION.log",
+      "sha256": "ca02d2f157b1f0f661fa7bc7486946a1510d90a0442d4de44b6d0e3b7a824c70",
+      "size_bytes": 2346,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/P2_RESULTS.json",
+      "sha256": "d8ec40d121f90561becfb519f229ed2366eefa517cf7bac083b4718698c86a1e",
+      "size_bytes": 3103,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/P2_STATE.bin.gz",
+      "sha256": "7f49254d0780e5f3d29b7b4e810a75d508a8270c38df3275f6ee498e42d253a9",
+      "size_bytes": 570854,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/P2_WITNESS.json",
+      "sha256": "a0cbc63f4a23658bb978c0802d3230c945b7983881b73078226d5a439b6dd8bd",
+      "size_bytes": 901,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/REPLAY.log",
+      "sha256": "0ab949f8ba121e4cf92f4bcfb0f67cbd1ccef39c85c6b6d7d38449c125b1c286",
+      "size_bytes": 3148,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/STATE_GENERATION.log",
+      "sha256": "0573d6aa6b3f6094ee6aff3f9089a576232e44d5d2c0002c1db05ee37135491c",
+      "size_bytes": 838,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/UPPER_RESULTS.json",
+      "sha256": "e0162c258503ed654c06cce78bda71bed870b5f690ce2e2455de9234e07a117a",
+      "size_bytes": 8508,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/UPPER_WITNESS.json.gz",
+      "sha256": "6a745ae07f41f4236a492005fd71398b909ad9a9846c5b4dbef80b8466c87276",
+      "size_bytes": 792699,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/curl.py",
+      "sha256": "34c4a20eced21a4de10489bf570008238c9833aee73a0902b9d839a0f4a8304d",
+      "size_bytes": 9583,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/flux.py",
+      "sha256": "3af43d0105594f18a78948fbbb4be6640853fe1d0fb327cc849f6cad0bbf51b2",
+      "size_bytes": 18303,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/replay.py",
+      "sha256": "b10e7508f215a1678e06bd618ffe21179952db14a707f823011bd0756abb7412",
+      "size_bytes": 156,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/candidate/state.py",
+      "sha256": "93f5c77105caded2c4f78d89fbbf4a1ac7065e9634af52c686ee2af6d4c5ab84",
+      "size_bytes": 9383,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/evaluator.py",
+      "sha256": "ce68ecafe7dfc31703fb0c71fa1473e8e5e5655ea82e1ad6faf9df3921c83e60",
+      "size_bytes": 1807,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/kernel.py",
+      "sha256": "62df5c88105d525399efea7108991e617288c8ed3992a459df1fe8970dd63622",
+      "size_bytes": 3625,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/planner.py",
+      "sha256": "0f252890d92e76bb2553186aaa35f798dcc6c8947003e60398b1faa9d6668d75",
+      "size_bytes": 5248,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/replay.py",
+      "sha256": "2aabed23174bd18d151cc6454ec587b73c0097677af96df5766201baabde41d5",
+      "size_bytes": 661,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "captures/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7/rounding.py",
+      "sha256": "fd63e7c1f40c19557bbda26d6b3b7e7663396e5e52374cf1bd0085a7b905395c",
+      "size_bytes": 846,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    },
+    {
+      "path": "events/2026-10-20T183614Z-codex-j1-upper-central-e9ee47d7.json",
+      "sha256": "1a1211ad2fff9f6a01465ec24a7f2858a70edd2f616c66127818ca87f37bd714",
+      "size_bytes": 1214,
+      "inspection_scope": "Complete delta payload identity inventoried; semantic inspection limited to manifest/report/context/event"
+    }
+  ],
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "archive_code_executed": false,
+  "external_outreach_sent": false,
+  "hardware_operation": false,
+  "public_site_or_project_board_updated": false,
+  "lane": "Development \u2014 no registry entry",
+  "same_team_implementation_review": true,
+  "external_promotion_review": "PENDING",
+  "physical_promotion": 0,
+  "audit_code_sha256": "f6d2ea6761bdf6ba781e3b5783a5d05e31fe596fd963c60d996b802aa09b82ea"
+}
