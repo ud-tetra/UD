@@ -1,0 +1,54 @@
+{
+  "additional_capture_allowlist": [
+    "FINAL_BINDING.json"
+  ],
+  "artifact_type": "APPEND_ONLY_C25_FINAL_THEOREM_SOURCE_REPLAY_BINDING",
+  "final_compute_sha256": "d81b349bfe7655e76f553b22dd6efab6f683c91ea5b91247d632ea4db413ade1",
+  "final_theorem": {
+    "findings": [
+      "GR1 proves equality for all constant nonzero grade rates, including weighted-frequency collisions, by downward closure rather than commutation alone.",
+      "GR2 gives old-hidden inclusion only for arbitrary locally integrable rates and allows zero-rate rank loss.",
+      "Local whole-column weights prove reciprocal hidden-subspace differences, not kernel dimension reduction.",
+      "Orbit symmetry, odd parity and adjacency/weighted-chain properties are distinguished from a physical constitutive law.",
+      "Skew odd-part integral remainder yields the finite scalar response without an exponential factor.",
+      "Strict finite bounds assume0<|epsilon|<=1/2; conditional scalar disjointness requires independently justified total error under both hypotheses.",
+      "Metric relation transports preparations; ker(H^-1A)=kerA is stationary-generator equality, not complete dynamic observer-kernel equality.",
+      "No finite-sample or estimator condition gate transferred from continuous uniform-rate invariance."
+    ],
+    "path": "c25_math/THEOREM.md",
+    "remaining_mathematical_concerns": [],
+    "sha256": "163aafc85a03c3c6be88017259850e4f908309209fcf964ccce0e51df15468f9",
+    "status": "PASS_CONDITIONAL_MATH_WITH_SCOPE"
+  },
+  "previous_review_and_manifest_unchanged": true,
+  "prior_REVIEW_sha256": "f375a09d83d2f1567393f293fe4674db658ce47a6b1ace1e43288a2626968683",
+  "prior_manifest_sha256": "e1d4dc4730343d1ca1c645ce6d7c7d4df06dd46db04e09fa7b542878759ac255",
+  "reciprocal_witness_assert_present_and_reviewed": "B3 D^-1 h0=\u2212epsilon/(1+epsilon)*B3P_Jh0; hence RA z=+epsilon/((1+epsilon)sqrt600) at face1680",
+  "same_compute_bytes_as_independent96check_comparison": true,
+  "scientific_replays": [
+    {
+      "byte_identical": true,
+      "path": "RESULT.json",
+      "sha256": "052d637c539d22df31af7de96e58c8f0bb90b89413090be1693b070eaacaab29"
+    },
+    {
+      "byte_identical": true,
+      "path": "WITNESS.json",
+      "sha256": "acb30ac723f8f1a8d59b417515311ce0d930e0785c88e96446f9466e990f98cb"
+    },
+    {
+      "byte_identical": true,
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "a05ba72b3e86fec8d643c6bd87d0b0dc6e9e38e45788eb55f31e7cd914dc588f"
+    }
+  ],
+  "scope": {
+    "external_promotion_review": "PENDING",
+    "native_and_weighted_full_history_ranks_not_rerun": true,
+    "new_error_budget_or_physical_gate_admitted": false,
+    "physical_promotion": 0,
+    "raw_acquisitions_or_estimator_calls": 0,
+    "weighted_total_history_rank": "NOT_COMPUTED"
+  },
+  "status": "PASS_FINAL_THEOREM_AND_THREE_BYTE_REPLAYS"
+}
