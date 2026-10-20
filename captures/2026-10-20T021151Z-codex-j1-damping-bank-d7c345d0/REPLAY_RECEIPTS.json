@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-20T02:22:50.937884Z",
+  "components": [
+    {
+      "component": "original saved state/flux",
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/original",
+      "exit_code": 0,
+      "saved_results_matched": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ],
+      "replay_log_sha256": "348bf9c4b23b6744e0e934ddfd6fb09868786cdf267f368123a862e67fca68c1"
+    },
+    {
+      "component": "neighbor saved state/flux",
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0/neighbor",
+      "exit_code": 0,
+      "saved_results_matched": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ],
+      "replay_log_sha256": "f0ce37b15a8d92fef62ce7ed9bc70d3b37126e833495edce43409b2377ab841d"
+    },
+    {
+      "component": "new floating proof, previous floating proof, metadata correction and exact four-state join",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 replay.py --scalar-only",
+      "working_directory": "captures/2026-10-20T021151Z-codex-j1-damping-bank-d7c345d0",
+      "exit_code": 0,
+      "replay_log_sha256": "c759d247cd4b1af5e97cb6490075f8d356fd4ec99dc6b253fe9aa667dceb4d97"
+    }
+  ],
+  "execution_shape": "Both saved state/flux component replays executed in parallel; scalar-only root replay executed separately while they ran. Default replay wrapper composes these same component checks; no claim that the default wrapper was executed in this capture.",
+  "coefficient_regeneration": false,
+  "independent_review": false,
+  "physical_promotion": 0
+}
