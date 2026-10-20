@@ -1,0 +1,1038 @@
+{
+  "status": "PASS_FROZEN38_FIXTURES",
+  "root_package_sha256": {
+    "verifier.py": "d82ed7673b6328f9b4718d7b3cf128bc0d00cc8b3077de3e6d72512540320274",
+    "PROTOCOL.json": "e45505f7aa50c24772ef694367a46f746aa09c2c44c1b7f2a151dc5b55728e59",
+    "SEAL.json": "e8de63bf9bd111f77d85b52084146d726c0f2bd89991e130e520de72e1cd3aa6"
+  },
+  "fixture_freeze_sha256": "f3f458ea4bc5255389b7400eaf7e18c6ec942d7ed1b31f3f4a0ec17662a6813b",
+  "cases": [
+    {
+      "case": "exact_q1",
+      "expected": "CERTIFIED",
+      "returncode": 0,
+      "status": "CERTIFIED_FINITE_SUPPLIED_RECORD",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [
+        {
+          "id": "direct_small_integer_matrix_M",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_K",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_A",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_B",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_E",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_H",
+          "pass": true
+        },
+        {
+          "id": "canonical_witness",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_a_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_b_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_eta_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_r_fourth",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_f_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_g_squared",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_a",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_b",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_eta",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_r",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_f",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_g",
+          "pass": true
+        },
+        {
+          "id": "expected_full_bound",
+          "pass": true
+        },
+        {
+          "id": "expected_condition",
+          "pass": true
+        },
+        {
+          "id": "all_fresh_metric_gates_true",
+          "pass": true
+        },
+        {
+          "id": "supplied_bytes_scope",
+          "pass": true
+        },
+        {
+          "id": "manifest_and_payload_identity",
+          "pass": true
+        },
+        {
+          "id": "source_seal_binding",
+          "pass": true
+        },
+        {
+          "id": "witness_hash_binding",
+          "pass": true
+        }
+      ],
+      "stdout": "{\"status\": \"CERTIFIED_FINITE_SUPPLIED_RECORD\", \"dimensions\": {\"m\": 2, \"n\": 2, \"q\": 1}, \"readable\": {\"direct_tail_upper\": 0.0, \"compression_upper\": 0.0, \"offdiagonal_upper\": 0.0, \"retained_abs_error_upper\": 0.0, \"discarded_abs_error_upper\": 0.0, \"full_abs_error_upper\": 0.0, \"matching_gap\": 2.0, \"ambient_sigma_q_lower\": 2.0, \"ambient_leading_condition_upper\": 1.0}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.12392143000033684
+    },
+    {
+      "case": "exact_q2",
+      "expected": "CERTIFIED",
+      "returncode": 0,
+      "status": "CERTIFIED_FINITE_SUPPLIED_RECORD",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [
+        {
+          "id": "direct_small_integer_matrix_M",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_K",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_A",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_B",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_E",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_H",
+          "pass": true
+        },
+        {
+          "id": "canonical_witness",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_a_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_b_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_eta_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_r_fourth",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_f_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_g_squared",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_a",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_b",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_eta",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_r",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_f",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_g",
+          "pass": true
+        },
+        {
+          "id": "expected_full_bound",
+          "pass": true
+        },
+        {
+          "id": "expected_condition",
+          "pass": true
+        },
+        {
+          "id": "all_fresh_metric_gates_true",
+          "pass": true
+        },
+        {
+          "id": "supplied_bytes_scope",
+          "pass": true
+        },
+        {
+          "id": "manifest_and_payload_identity",
+          "pass": true
+        },
+        {
+          "id": "source_seal_binding",
+          "pass": true
+        },
+        {
+          "id": "witness_hash_binding",
+          "pass": true
+        }
+      ],
+      "stdout": "{\"status\": \"CERTIFIED_FINITE_SUPPLIED_RECORD\", \"dimensions\": {\"m\": 3, \"n\": 3, \"q\": 2}, \"readable\": {\"direct_tail_upper\": 0.0, \"compression_upper\": 0.0, \"offdiagonal_upper\": 0.0, \"retained_abs_error_upper\": 0.0, \"discarded_abs_error_upper\": 0.0, \"full_abs_error_upper\": 0.0, \"matching_gap\": 2.0, \"ambient_sigma_q_lower\": 2.0, \"ambient_leading_condition_upper\": 2.0}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11251597999944352
+    },
+    {
+      "case": "small_tail",
+      "expected": "CERTIFIED",
+      "returncode": 0,
+      "status": "CERTIFIED_FINITE_SUPPLIED_RECORD",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [
+        {
+          "id": "direct_small_integer_matrix_M",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_K",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_A",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_B",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_E",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_H",
+          "pass": true
+        },
+        {
+          "id": "canonical_witness",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_a_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_b_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_eta_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_r_fourth",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_f_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_g_squared",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_a",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_b",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_eta",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_r",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_f",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_g",
+          "pass": true
+        },
+        {
+          "id": "expected_full_bound",
+          "pass": true
+        },
+        {
+          "id": "expected_condition",
+          "pass": true
+        },
+        {
+          "id": "all_fresh_metric_gates_true",
+          "pass": true
+        },
+        {
+          "id": "supplied_bytes_scope",
+          "pass": true
+        },
+        {
+          "id": "manifest_and_payload_identity",
+          "pass": true
+        },
+        {
+          "id": "source_seal_binding",
+          "pass": true
+        },
+        {
+          "id": "witness_hash_binding",
+          "pass": true
+        }
+      ],
+      "stdout": "{\"status\": \"CERTIFIED_FINITE_SUPPLIED_RECORD\", \"dimensions\": {\"m\": 2, \"n\": 2, \"q\": 1}, \"readable\": {\"direct_tail_upper\": 3.552713678800501e-15, \"compression_upper\": 0.0, \"offdiagonal_upper\": 0.0, \"retained_abs_error_upper\": 0.0, \"discarded_abs_error_upper\": 3.552713678800501e-15, \"full_abs_error_upper\": 3.552713678800501e-15, \"matching_gap\": 1.9999999999999964, \"ambient_sigma_q_lower\": 2.0, \"ambient_leading_condition_upper\": 1.0}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.12380811199909658
+    },
+    {
+      "case": "small_retained_residual",
+      "expected": "CERTIFIED",
+      "returncode": 0,
+      "status": "CERTIFIED_FINITE_SUPPLIED_RECORD",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [
+        {
+          "id": "direct_small_integer_matrix_M",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_K",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_A",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_B",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_E",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_H",
+          "pass": true
+        },
+        {
+          "id": "canonical_witness",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_a_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_b_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_eta_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_r_fourth",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_f_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_g_squared",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_a",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_b",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_eta",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_r",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_f",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_g",
+          "pass": true
+        },
+        {
+          "id": "expected_full_bound",
+          "pass": true
+        },
+        {
+          "id": "nonzero_retained_condition",
+          "pass": true
+        },
+        {
+          "id": "all_fresh_metric_gates_true",
+          "pass": true
+        },
+        {
+          "id": "supplied_bytes_scope",
+          "pass": true
+        },
+        {
+          "id": "manifest_and_payload_identity",
+          "pass": true
+        },
+        {
+          "id": "source_seal_binding",
+          "pass": true
+        },
+        {
+          "id": "witness_hash_binding",
+          "pass": true
+        }
+      ],
+      "stdout": "{\"status\": \"CERTIFIED_FINITE_SUPPLIED_RECORD\", \"dimensions\": {\"m\": 2, \"n\": 2, \"q\": 1}, \"readable\": {\"direct_tail_upper\": 0.0, \"compression_upper\": 3.552713678800501e-15, \"offdiagonal_upper\": 3.552713678800501e-15, \"retained_abs_error_upper\": 7.105427357601002e-15, \"discarded_abs_error_upper\": 0.0, \"full_abs_error_upper\": 7.105427357601002e-15, \"matching_gap\": 1.999999999999993, \"ambient_sigma_q_lower\": 1.999999999999993, \"ambient_leading_condition_upper\": 1.000000000000007}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11392154700297397
+    },
+    {
+      "case": "int64_min",
+      "expected": "CERTIFIED",
+      "returncode": 0,
+      "status": "CERTIFIED_FINITE_SUPPLIED_RECORD",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [
+        {
+          "id": "direct_small_integer_matrix_M",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_K",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_A",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_B",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_E",
+          "pass": true
+        },
+        {
+          "id": "direct_small_integer_matrix_H",
+          "pass": true
+        },
+        {
+          "id": "canonical_witness",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_a_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_b_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_eta_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_r_fourth",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_f_squared",
+          "pass": true
+        },
+        {
+          "id": "direct_rational_norm_g_squared",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_a",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_b",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_eta",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_r",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_f",
+          "pass": true
+        },
+        {
+          "id": "minimal_dyadic_metric_g",
+          "pass": true
+        },
+        {
+          "id": "expected_full_bound",
+          "pass": true
+        },
+        {
+          "id": "expected_condition",
+          "pass": true
+        },
+        {
+          "id": "all_fresh_metric_gates_true",
+          "pass": true
+        },
+        {
+          "id": "supplied_bytes_scope",
+          "pass": true
+        },
+        {
+          "id": "manifest_and_payload_identity",
+          "pass": true
+        },
+        {
+          "id": "source_seal_binding",
+          "pass": true
+        },
+        {
+          "id": "witness_hash_binding",
+          "pass": true
+        }
+      ],
+      "stdout": "{\"status\": \"CERTIFIED_FINITE_SUPPLIED_RECORD\", \"dimensions\": {\"m\": 2, \"n\": 2, \"q\": 1}, \"readable\": {\"direct_tail_upper\": 0.0, \"compression_upper\": 0.0, \"offdiagonal_upper\": 0.0, \"retained_abs_error_upper\": 0.0, \"discarded_abs_error_upper\": 0.0, \"full_abs_error_upper\": 0.0, \"matching_gap\": 9.223372036854776e+18, \"ambient_sigma_q_lower\": 9.223372036854776e+18, \"ambient_leading_condition_upper\": 1.0}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.13545161000001826
+    },
+    {
+      "case": "large_tail",
+      "expected": "NUMERICAL_HOLD",
+      "returncode": 2,
+      "status": "HOLD_NUMERICAL",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_NUMERICAL\", \"dimensions\": {\"m\": 2, \"n\": 2, \"q\": 1}, \"readable\": {\"direct_tail_upper\": 1.0, \"compression_upper\": 0.0, \"offdiagonal_upper\": 0.0, \"retained_abs_error_upper\": 0.0, \"discarded_abs_error_upper\": 1.0, \"full_abs_error_upper\": 1.0, \"matching_gap\": 1.0, \"ambient_sigma_q_lower\": 2.0, \"ambient_leading_condition_upper\": 1.0}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.12476154099931591
+    },
+    {
+      "case": "zero_record_wrong_spectrum",
+      "expected": "NUMERICAL_HOLD",
+      "returncode": 2,
+      "status": "HOLD_NUMERICAL",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_NUMERICAL\", \"dimensions\": {\"m\": 2, \"n\": 2, \"q\": 1}, \"readable\": {\"direct_tail_upper\": 0.0, \"compression_upper\": 2.0, \"offdiagonal_upper\": 2.0, \"retained_abs_error_upper\": 4.0, \"discarded_abs_error_upper\": 0.0, \"full_abs_error_upper\": 4.0, \"matching_gap\": -2.0, \"ambient_sigma_q_lower\": -2.0}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11565628300013486
+    },
+    {
+      "case": "record_hash_mismatch",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"input SHA256 mismatch\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11473542300154804
+    },
+    {
+      "case": "payload_hash_mismatch",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"record payload SHA256 mismatch\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10993410499941092
+    },
+    {
+      "case": "wrong_N_float_dtype",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"NPY dtype/order\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.13641285900303046
+    },
+    {
+      "case": "wrong_N_vector_shape",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"record must be matrix\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11737596599778044
+    },
+    {
+      "case": "factor_NaN",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"nonfinite or wrong SVD dtype\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.125978097999905
+    },
+    {
+      "case": "singular_Inf",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"nonfinite or wrong SVD dtype\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.12815338899963535
+    },
+    {
+      "case": "singular_unsorted",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"singular order/sign\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10599406799883582
+    },
+    {
+      "case": "singular_negative",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"singular order/sign\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11970112999915727
+    },
+    {
+      "case": "singular_exact_cutoff_tie",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"singular value equals strict cutoff\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11100367800099775
+    },
+    {
+      "case": "q_zero",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"retained order profile\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10866530099883676
+    },
+    {
+      "case": "q_equals_n",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"retained order profile\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1190457270022307
+    },
+    {
+      "case": "right_wrong_shape",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"SVD dimensions\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1183465440008149
+    },
+    {
+      "case": "right_complex_dtype",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"NPY dtype/order\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1267529970027681
+    },
+    {
+      "case": "right_object_dtype",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"NPY dtype/order\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.0997825960002956
+    },
+    {
+      "case": "U_wrong_columns",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"left chunk dimensions\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1035528920001525
+    },
+    {
+      "case": "U_wrong_declared_extent",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"left chunk dimensions\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11067083699890645
+    },
+    {
+      "case": "U_overlap",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"chunk intervals must cover rows exactly in order\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10012337900116108
+    },
+    {
+      "case": "U_gap",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"chunk intervals must cover rows exactly in order\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10165825500007486
+    },
+    {
+      "case": "U_boolean_extent",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"chunk start\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.12119568699927186
+    },
+    {
+      "case": "negative_denominator_exponent",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"record exponent\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11007395100023132
+    },
+    {
+      "case": "boolean_denominator_exponent",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"record exponent\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.09997487899818225
+    },
+    {
+      "case": "missing_manifest_field",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"schema keys\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10550311699989834
+    },
+    {
+      "case": "unknown_claim_field",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"schema keys\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10799312299786834
+    },
+    {
+      "case": "truncated_oversized_header",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"NPY shape limit\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.112183790999552
+    },
+    {
+      "case": "relative_path_escape",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"path escape\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10961468299865373
+    },
+    {
+      "case": "symlink_input_file",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"symlink path component\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10972933200173429
+    },
+    {
+      "case": "symlink_input_ancestor",
+      "expected": "INTAKE_HOLD",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": false,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"symlink path component\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1124048829988169
+    },
+    {
+      "case": "existing_output_sentinel",
+      "expected": "OUTPUT_REJECTION",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"output already exists\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.11691817700193496
+    },
+    {
+      "case": "output_is_input_directory",
+      "expected": "OUTPUT_REJECTION",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"output already exists\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1042072130003362
+    },
+    {
+      "case": "output_is_input_file",
+      "expected": "OUTPUT_REJECTION",
+      "returncode": 2,
+      "status": "HOLD_INTAKE_OR_INPUT_IO",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"output already exists\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10778943799959961
+    },
+    {
+      "case": "wrong_U_numerical",
+      "expected": "NUMERICAL_HOLD",
+      "returncode": 2,
+      "status": "HOLD_NUMERICAL",
+      "pass": true,
+      "input_and_sentinel_bytes_unchanged": true,
+      "output_exists": true,
+      "positive_checks": [],
+      "stdout": "{\"status\": \"HOLD_NUMERICAL\", \"dimensions\": {\"m\": 2, \"n\": 2, \"q\": 1}, \"readable\": {}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1349408410023898
+    }
+  ],
+  "case_count": 38,
+  "passed": 38,
+  "positive_exact_checks": 130,
+  "all_frozen_input_bytes_and_root_source_unchanged": true,
+  "scope": "Finite independent synthetic intake and small exact witness tests, not universal program or backend proof",
+  "new_fits": 0,
+  "actual_saved_arrays_copied": false,
+  "physical_promotion": 0
+}

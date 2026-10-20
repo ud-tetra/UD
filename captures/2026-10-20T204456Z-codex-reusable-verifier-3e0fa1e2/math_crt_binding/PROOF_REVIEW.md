@@ -1,0 +1,17 @@
+# Binding addendum: finite six-matrix identity audit
+
+Development — no registry entry. Same-team independent review; external promotion review PENDING. Physical Promotion = 0.
+
+This addendum preserves the earlier sealed c20_math_review receipt, whose matrix dependency was correctly PENDING when issued. It reviews the distinct completed CRT audit and, if its explicit identities/bindings pass, discharges that dependency **only for the two supplied fixed bundles**.
+
+Let x,u,v,d be maximum absolute integers in the supplied N, independently decoded retained Ui, retained Vi and discarded Di. The per-entry true absolute bounds are m*x^2 for M=N^TN, m*x*u for K=N^TUi, m*u^2 for A=Ui^TUi, n*v^2 for B=Vi^TVi, and n*d^2+2^(2bD) for E=Di^TDi-2^(2bD)I. Adding the maximum absolute supplied matrix entry bounds each true-minus-supplied difference. No assumption that a residual is small enters these bounds.
+
+For H=Di^T M Di the true bound is n^2*maxAbs(M)*d^2. Its supplied M can be used **only after M's own independent CRT identity has passed**. The audit code enforces this order and returns dependency HOLD if M fails. Thus the proof is noncircular: M is established directly from N, then H is established from that exact M and independently encoded Di.
+
+Each matrix uses its own deterministic shortest nonempty descending prime prefix below2^24, with product P>2B for that matrix's complete difference bound B. Every expanded matrix entry is compared at every selected prime. Equal residues imply the integer difference is divisible by P; since its absolute value is at most B<P/2, that difference is zero. Symmetric upper storage is losslessly expanded before comparison; K is full. Checking only a PASS string, only a packed norm, or one random vector would not establish this identity.
+
+Each modular multiplication uses nonnegative int64 residues. Products for M/K/A have inner length m; B/E and both stages of H have inner length n. The complete dot-product bound is inner*(p-1)^2<2^63, so all constituent multiplications and partial sums are safe regardless of grouping. H reduces modulo p between its M*Di and Di^T product. E subtracts a reduced identity scalar and reduces again. Each report records the correct inner lengths and bound values.
+
+The binding review independently recomputes source integer maxima/exponents, every true/difference bound, prime prefix/product, full entry/prime coverage, overflow limits and finite scalar comparisons. It does not rerun the modular matrix products. The distinct audit executes those full products, then re-evaluates the six exact norm fractions, five trace integers, minimal180-bit roots, nine rational bounds and eight gates. Those scalar results are cross-bound to the earlier independent Python/Fraction scalar review and active producer witnesses.
+
+The finite matrix dependency can therefore be closed without changing the earlier receipt or claiming a universal verifier proof. The stable-input assumption still applies. Before/after digests do not prove atomic snapshots or exclude modify-and-restore races. Acquisition/projection authenticity remains SUPPLIED_BYTES_ONLY; physical correspondence is not established. All-input backend conformance, universal intake/whole-program correctness, race guarantees and external promotion remain OPEN/PENDING. The diagnostic CRC correction remains one diagnostic correction with zero mathematical retractions.

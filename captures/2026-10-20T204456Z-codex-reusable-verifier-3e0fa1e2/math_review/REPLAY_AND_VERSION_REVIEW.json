@@ -1,0 +1,62 @@
+{
+  "status": "PASS_ACTIVE_REPLAY_AND_DIAGNOSTIC_VERSION_MATH_IDENTITY",
+  "checks": [
+    {
+      "id": "boundary_pair_block_active_replay_CERTIFICATE.json",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_active_replay_WITNESS.json.gz",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_v1_v1_1_witness_byte_identity",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_block_certificate_only_package_identity_changes",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_active_replay_CERTIFICATE.json",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_active_replay_WITNESS.json.gz",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_v1_v1_1_witness_byte_identity",
+      "pass": true
+    },
+    {
+      "id": "boundary_pair_rotating_certificate_only_package_identity_changes",
+      "pass": true
+    }
+  ],
+  "count": 8,
+  "active_scientific_files_byte_compared": 4,
+  "v1_to_v1_1_witnesses_byte_compared": 2,
+  "v1_to_v1_1_certificate_differences_only": [
+    "protocol_sha256",
+    "seal_sha256"
+  ],
+  "source_sha256": {
+    "c20_primary_v1_1/boundary_pair_block/CERTIFICATE.json": "44385d203e37fb9f0e9bf6fa0ff77d5e9fd4330f9049aeb4f22ab12fab7967b2",
+    "c20_replay_v1_1/boundary_pair_block/CERTIFICATE.json": "44385d203e37fb9f0e9bf6fa0ff77d5e9fd4330f9049aeb4f22ab12fab7967b2",
+    "c20_primary_v1_1/boundary_pair_block/WITNESS.json.gz": "de218f054ef3f705543d68d34f9e9dd1ae80d26f64391ed184f81e49fa1af40f",
+    "c20_replay_v1_1/boundary_pair_block/WITNESS.json.gz": "de218f054ef3f705543d68d34f9e9dd1ae80d26f64391ed184f81e49fa1af40f",
+    "c20_v1_primary/boundary_pair_block/WITNESS.json.gz": "de218f054ef3f705543d68d34f9e9dd1ae80d26f64391ed184f81e49fa1af40f",
+    "c20_primary_v1_1/boundary_pair_rotating/CERTIFICATE.json": "f45c52dacd70ed3552af933db209ad3cfb081ee272e90d617cf4fbe25afddd2c",
+    "c20_replay_v1_1/boundary_pair_rotating/CERTIFICATE.json": "f45c52dacd70ed3552af933db209ad3cfb081ee272e90d617cf4fbe25afddd2c",
+    "c20_primary_v1_1/boundary_pair_rotating/WITNESS.json.gz": "9c672f467e40dc200f2d531de5e595850eed3bfbd82fe73fb0762eb4124bd650",
+    "c20_replay_v1_1/boundary_pair_rotating/WITNESS.json.gz": "9c672f467e40dc200f2d531de5e595850eed3bfbd82fe73fb0762eb4124bd650",
+    "c20_v1_primary/boundary_pair_rotating/WITNESS.json.gz": "9c672f467e40dc200f2d531de5e595850eed3bfbd82fe73fb0762eb4124bd650"
+  },
+  "excluded": [
+    "RESOURCE.json: host-dependent timing/RSS"
+  ],
+  "mathematical_retractions": 0,
+  "new_fits": 0,
+  "physical_promotion": 0
+}

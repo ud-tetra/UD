@@ -1,0 +1,26 @@
+{
+  "status": "PASS_CRC_CLASSIFICATION_REGRESSION_INTAKE_HOLD_NO_OUTPUT",
+  "timing": "Active v1.1 regression after the v1 diagnostic classification finding; original frozen38 inputs and v1 results unchanged",
+  "package_sha256": {
+    "verifier.py": "030ba57a032867ddd036d7b8ef58f8c9f881810d2591a18db000bec3c16d01ab",
+    "PROTOCOL.json": "4d95b6a117b6dc87ea4f300a29e8ae6f6c05e087fb64b6c73efb821a4569b3a2",
+    "SEAL.json": "c7309f50a6889580ddc9038ef168aa14ae0d801dec966e6f73ac501d69755284"
+  },
+  "fixture_manifest_sha256": "9038ab47f968cc433c19321a441b5437f670a7d32abda687f8b0b029e14ff963",
+  "source_files_before_after_unchanged": true,
+  "fixture": "600x2 int64 record, valid600x1 float64 left-factor NPY inside stored ZIP; final payload byte flipped without CRC update, archive SHA updated in manifest",
+  "changed_archive_offset": 4966,
+  "uncompressed_member_bytes": 4928,
+  "expected_structured_intake_exit": 2,
+  "observed_exit": 2,
+  "observed_status": "HOLD_INTAKE_OR_INPUT_IO",
+  "stdout": "{\"status\": \"HOLD_INTAKE_OR_INPUT_IO\", \"reason\": \"Bad CRC-32 for file 'basis.npy'\"}\n",
+  "stderr": "",
+  "output_directory_created": false,
+  "false_acceptance": false,
+  "classification_gap_observed": false,
+  "scientific_result_affected": false,
+  "interpretation": "Malformed payload is rejected before output mutation. If exit3, decoder exception is classified as execution HOLD rather than structured intake HOLD; document this bounded diagnostic limitation without claiming universal malformed-input classification.",
+  "new_fits": 0,
+  "physical_promotion": 0
+}

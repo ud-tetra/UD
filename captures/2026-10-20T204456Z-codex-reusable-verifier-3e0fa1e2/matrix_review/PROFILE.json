@@ -1,0 +1,20 @@
+{
+  "version": "1.1",
+  "cutoff_denominator_bits": 24,
+  "accuracy_denominator_bits": 41,
+  "root_ceiling_bits": 180,
+  "block_rows": 512,
+  "profile": {
+    "max_m": 8191,
+    "max_n": 321,
+    "max_header_bytes": 16384,
+    "max_entry_bytes": 67108864,
+    "max_file_bytes": 67108864,
+    "max_total_bytes": 134217728,
+    "max_denominator_bits": 256,
+    "max_encoded_integer_bits": 512
+  },
+  "classification": "O03 finite computational acceptance controls, not theory constants",
+  "condition_number_policy": "report leading-q enclosure; no generic condition-number acceptance ceiling",
+  "source_policy": "only explicit manifest, projected integer NPY and saved SVD/left-factor NPZ inputs"
+}
