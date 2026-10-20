@@ -1,0 +1,140 @@
+{
+  "all_generated_inputs_synthetic": true,
+  "case_count": 11,
+  "check_count": 88,
+  "estimator_calls": 0,
+  "external_promotion_review": "PENDING",
+  "input_sentinel_bytes_unchanged": true,
+  "physical_promotion": 0,
+  "results": [
+    {
+      "case": "exact_q1",
+      "pass": true,
+      "returncode": 0,
+      "rollup_sha256": "1a0728de1aa4909ba29af08eed9220a86db4ef59a44fa1ce2dd3e84b4fcfcee5",
+      "stages_invoked": [
+        "identity",
+        "numerical",
+        "audit"
+      ],
+      "stderr": "",
+      "stdout": "{\"workflow_status\": \"NUMERICAL_PASS_PROVENANCE_HOLD\", \"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"stages_invoked\": [\"identity\", \"numerical\", \"audit\"], \"reason\": null}\n",
+      "workflow_status": "NUMERICAL_PASS_PROVENANCE_HOLD"
+    },
+    {
+      "case": "distinct_exact_q1",
+      "pass": true,
+      "returncode": 0,
+      "rollup_sha256": "3e697d22d8e725b412053fa4320442e4436537dd420e71c30ba2f07ed2b9db26",
+      "stages_invoked": [
+        "identity",
+        "numerical",
+        "audit"
+      ],
+      "stderr": "",
+      "stdout": "{\"workflow_status\": \"NUMERICAL_PASS_PROVENANCE_HOLD\", \"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"stages_invoked\": [\"identity\", \"numerical\", \"audit\"], \"reason\": null}\n",
+      "workflow_status": "NUMERICAL_PASS_PROVENANCE_HOLD"
+    },
+    {
+      "case": "numerical_hold",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": "eb1c0f0a347c1c870d4eec63d20e73c60c67996b63690dd0950609c009c9fe38",
+      "stages_invoked": [
+        "identity",
+        "numerical"
+      ],
+      "stderr": "",
+      "stdout": "{\"workflow_status\": \"HOLD_NUMERICAL_STEP\", \"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"stages_invoked\": [\"identity\", \"numerical\"], \"reason\": \"HandoffError: numerical child failed or held\"}\n",
+      "workflow_status": "HOLD_NUMERICAL_STEP"
+    },
+    {
+      "case": "hash_mismatch",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": null,
+      "stages_invoked": [],
+      "stderr": "",
+      "stdout": "{\"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"independent_acquisition\": \"NOT_ESTABLISHED\", \"fresh_preparation\": \"NOT_ESTABLISHED\", \"external_promotion_review\": \"PENDING\", \"physical_promotion\": 0, \"all_input_backend_conformance\": \"OPEN\", \"workflow_status\": \"HOLD_INTAKE_OR_SETUP\", \"reason\": \"IntakeError: input SHA256 mismatch\"}\n",
+      "workflow_status": "HOLD_INTAKE_OR_SETUP"
+    },
+    {
+      "case": "missing_field",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": null,
+      "stages_invoked": [],
+      "stderr": "",
+      "stdout": "{\"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"independent_acquisition\": \"NOT_ESTABLISHED\", \"fresh_preparation\": \"NOT_ESTABLISHED\", \"external_promotion_review\": \"PENDING\", \"physical_promotion\": 0, \"all_input_backend_conformance\": \"OPEN\", \"workflow_status\": \"HOLD_INTAKE_OR_SETUP\", \"reason\": \"IntakeError: schema keys\"}\n",
+      "workflow_status": "HOLD_INTAKE_OR_SETUP"
+    },
+    {
+      "case": "unknown_field",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": null,
+      "stages_invoked": [],
+      "stderr": "",
+      "stdout": "{\"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"independent_acquisition\": \"NOT_ESTABLISHED\", \"fresh_preparation\": \"NOT_ESTABLISHED\", \"external_promotion_review\": \"PENDING\", \"physical_promotion\": 0, \"all_input_backend_conformance\": \"OPEN\", \"workflow_status\": \"HOLD_INTAKE_OR_SETUP\", \"reason\": \"IntakeError: schema keys\"}\n",
+      "workflow_status": "HOLD_INTAKE_OR_SETUP"
+    },
+    {
+      "case": "relative_escape",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": null,
+      "stages_invoked": [],
+      "stderr": "",
+      "stdout": "{\"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"independent_acquisition\": \"NOT_ESTABLISHED\", \"fresh_preparation\": \"NOT_ESTABLISHED\", \"external_promotion_review\": \"PENDING\", \"physical_promotion\": 0, \"all_input_backend_conformance\": \"OPEN\", \"workflow_status\": \"HOLD_INTAKE_OR_SETUP\", \"reason\": \"IntakeError: path escape\"}\n",
+      "workflow_status": "HOLD_INTAKE_OR_SETUP"
+    },
+    {
+      "case": "symlink_record",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": null,
+      "stages_invoked": [],
+      "stderr": "",
+      "stdout": "{\"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"independent_acquisition\": \"NOT_ESTABLISHED\", \"fresh_preparation\": \"NOT_ESTABLISHED\", \"external_promotion_review\": \"PENDING\", \"physical_promotion\": 0, \"all_input_backend_conformance\": \"OPEN\", \"workflow_status\": \"HOLD_INTAKE_OR_SETUP\", \"reason\": \"IntakeError: symlink path component\"}\n",
+      "workflow_status": "HOLD_INTAKE_OR_SETUP"
+    },
+    {
+      "case": "existing_output",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": null,
+      "stages_invoked": [],
+      "stderr": "",
+      "stdout": "{\"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"independent_acquisition\": \"NOT_ESTABLISHED\", \"fresh_preparation\": \"NOT_ESTABLISHED\", \"external_promotion_review\": \"PENDING\", \"physical_promotion\": 0, \"all_input_backend_conformance\": \"OPEN\", \"workflow_status\": \"HOLD_INTAKE_OR_SETUP\", \"reason\": \"HandoffError: output exists\"}\n",
+      "workflow_status": "HOLD_INTAKE_OR_SETUP"
+    },
+    {
+      "case": "output_is_input",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": null,
+      "stages_invoked": [],
+      "stderr": "",
+      "stdout": "{\"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"independent_acquisition\": \"NOT_ESTABLISHED\", \"fresh_preparation\": \"NOT_ESTABLISHED\", \"external_promotion_review\": \"PENDING\", \"physical_promotion\": 0, \"all_input_backend_conformance\": \"OPEN\", \"workflow_status\": \"HOLD_INTAKE_OR_SETUP\", \"reason\": \"HandoffError: output exists\"}\n",
+      "workflow_status": "HOLD_INTAKE_OR_SETUP"
+    },
+    {
+      "case": "source_pin_changed",
+      "pass": true,
+      "returncode": 2,
+      "rollup_sha256": null,
+      "stages_invoked": [],
+      "stderr": "",
+      "stdout": "{\"provenance_status\": \"HOLD_PROVENANCE_NOT_ESTABLISHED\", \"independent_acquisition\": \"NOT_ESTABLISHED\", \"fresh_preparation\": \"NOT_ESTABLISHED\", \"external_promotion_review\": \"PENDING\", \"physical_promotion\": 0, \"all_input_backend_conformance\": \"OPEN\", \"workflow_status\": \"HOLD_INTAKE_OR_SETUP\", \"reason\": \"HandoffError: dependency bytes changed: captures/2026-10-20T210354Z-codex-canonical-record-72c3a5bf/identity_screen/screen_record.py\"}\n",
+      "workflow_status": "HOLD_INTAKE_OR_SETUP"
+    }
+  ],
+  "root_pinned_sources_unchanged": true,
+  "source_pins": {
+    "DEPENDENCIES.json": "53154e08344f08e879851407d8bf8fd22a901e6b68fbc223c097820112d600c8",
+    "PROTOCOL.json": "34e48ebf004f1749da147305804cbb514f57f2b158926d7d383cdaec7acee315",
+    "SEAL.json": "f6ad6937ddbbb2c0546fe108160f778101254e3d0677cbe2baa7a9bd55f397e2",
+    "run_submission.py": "da0867e51316c9d9068ce0a6fd59bb755fe90e81cf5c41c1144b618f6df982c1"
+  },
+  "status": "PASS_FROZEN11_C22_INTEGRATION_CASES"
+}

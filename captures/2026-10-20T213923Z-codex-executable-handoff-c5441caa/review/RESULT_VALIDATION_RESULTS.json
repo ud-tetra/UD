@@ -1,0 +1,213 @@
+{
+  "case_count": 28,
+  "external_promotion_review": "PENDING",
+  "negative_cases": 27,
+  "physical_promotion": 0,
+  "positive_cases": 1,
+  "results": [
+    {
+      "case": "unmodified_actual_small_child_reports",
+      "expected_reject": false,
+      "pass": true,
+      "reason": null,
+      "rejected": false
+    },
+    {
+      "case": "identity_missing_file",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: missing/oversize JSON: deliberately_absent_report.json",
+      "rejected": true
+    },
+    {
+      "case": "numerical_missing_certificate",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: missing/oversize JSON: deliberately_absent_report.json",
+      "rejected": true
+    },
+    {
+      "case": "audit_missing_certificate",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: missing/oversize JSON: deliberately_absent_report.json",
+      "rejected": true
+    },
+    {
+      "case": "identity_bad_status",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: identity class",
+      "rejected": true
+    },
+    {
+      "case": "identity_record_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: identity input binding",
+      "rejected": true
+    },
+    {
+      "case": "identity_catalog_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: identity source/catalog binding",
+      "rejected": true
+    },
+    {
+      "case": "identity_protocol_or_seal_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: identity source/catalog binding",
+      "rejected": true
+    },
+    {
+      "case": "identity_matching_ID_class_inconsistency",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: identity catalog/class consistency",
+      "rejected": true
+    },
+    {
+      "case": "identity_acquisition_promotion",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: identity provenance escalation",
+      "rejected": true
+    },
+    {
+      "case": "identity_physical_promotion",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: identity provenance escalation",
+      "rejected": true
+    },
+    {
+      "case": "numerical_status_HOLD",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical result is not certified",
+      "rejected": true
+    },
+    {
+      "case": "numerical_false_gate",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical gates",
+      "rejected": true
+    },
+    {
+      "case": "numerical_nonboolean_gate",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical gates",
+      "rejected": true
+    },
+    {
+      "case": "numerical_manifest_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical input binding",
+      "rejected": true
+    },
+    {
+      "case": "numerical_payload_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical input binding",
+      "rejected": true
+    },
+    {
+      "case": "numerical_witness_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical witness hash",
+      "rejected": true
+    },
+    {
+      "case": "numerical_protocol_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical source binding",
+      "rejected": true
+    },
+    {
+      "case": "numerical_dimensions_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical input binding",
+      "rejected": true
+    },
+    {
+      "case": "numerical_estimator_or_prior_call_claim",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical scope",
+      "rejected": true
+    },
+    {
+      "case": "numerical_physical_or_universal_claim",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: numerical scope",
+      "rejected": true
+    },
+    {
+      "case": "audit_exit_zero_but_HOLD_status",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: distinct audit did not pass",
+      "rejected": true
+    },
+    {
+      "case": "audit_manifest_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: audit input binding",
+      "rejected": true
+    },
+    {
+      "case": "audit_witness_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: audit artifact/source binding",
+      "rejected": true
+    },
+    {
+      "case": "audit_producer_certificate_hash_mismatch",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: audit artifact/source binding",
+      "rejected": true
+    },
+    {
+      "case": "audit_one_matrix_nonPASS",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: audit matrix proof incomplete",
+      "rejected": true
+    },
+    {
+      "case": "audit_scalar_status_HOLD",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: audit scalar/result mismatch",
+      "rejected": true
+    },
+    {
+      "case": "audit_scalar_false_gate",
+      "expected_reject": true,
+      "pass": true,
+      "reason": "HandoffError: audit scalar gate types",
+      "rejected": true
+    }
+  ],
+  "scope": "Copied dictionary/file-validator controls; no forged child source, no subprocess false-acceptance injection, no adversarially complete forged-report security claim. Witness control exercises run() condition in addition to numerical helper.",
+  "source_pins": {
+    "DEPENDENCIES.json": "53154e08344f08e879851407d8bf8fd22a901e6b68fbc223c097820112d600c8",
+    "PROTOCOL.json": "34e48ebf004f1749da147305804cbb514f57f2b158926d7d383cdaec7acee315",
+    "SEAL.json": "f6ad6937ddbbb2c0546fe108160f778101254e3d0677cbe2baa7a9bd55f397e2",
+    "run_submission.py": "da0867e51316c9d9068ce0a6fd59bb755fe90e81cf5c41c1144b618f6df982c1"
+  },
+  "status": "PASS_FROZEN28_RESULT_CONTENT_CONTROLS"
+}
