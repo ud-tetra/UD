@@ -1,0 +1,83 @@
+{
+  "adversarial_scope_checks": [
+    "Without skewness an unstable hidden diagonal can amplify weak transfer.",
+    "Without perpendicularity to the sampled kernel a small test-vector output does not upper-bound the smallest positive singular value.",
+    "Without nonaliasing a half-period grid can conceal the sine coordinate.",
+    "Using B=S/10 requires numerator1/10-B, not1-B, in the squared condition ratio.",
+    "A plane singular-value lower bound does not lower-bound the full map minimum.",
+    "A generic allowed skew perturbation is not automatically a native incidence/locality/Pachner or physical law."
+  ],
+  "artifact_type": "SAME_TEAM_CONDITIONAL_HIDDEN_VISIBLE_COUPLING_MATH_REVIEW",
+  "capture_allowlist": [
+    "REVIEW.md",
+    "REVIEW.json",
+    "derive_review.py",
+    "FREEZE.json",
+    "EXACT_RESULTS.json",
+    "compare_root.py",
+    "ROOT_COMPARISON.json"
+  ],
+  "independent_checks": {
+    "Rh_zero": true,
+    "Ru_squared": "1/10",
+    "both_harmonics_signed_T_fixed": true,
+    "central_moments_directly_summed": true,
+    "exact_rational_moments_match_root": true,
+    "fundamental_cycle_closed": true,
+    "native_history_and_character_ranks_rerun": false,
+    "q_nonzero_positive_root_band": "52 distinct roots strictly in(0,16)",
+    "q_rebuilt_from_low_degree_factors": true,
+    "root_comparison_checks": 37,
+    "root_directed160bit_enclosures_verified": true,
+    "three_epsilon_q_values_nonzero": true
+  },
+  "independent_exact_result_sha256": "9f3b911c5ee2136c393e894df99d9bbf0390c5e1bf3cae20b546cb970f7d2192",
+  "pre_freeze_clarifications": {
+    "S_vs_B_factor10": true,
+    "frozen_mathematical_retractions": 0,
+    "parity_terminology": true
+  },
+  "proof_findings": {
+    "C10_commutation_specific_to_checked_perturbation": true,
+    "arbitrary_hidden_skew_modification_exactly_output_invisible": true,
+    "centered_two_plane_Gram_diagonal": true,
+    "full2640_condition_infinite": true,
+    "full_map_sigma_min_positive_has_upper_bound_only": true,
+    "harmonic_perturbation_sign_correct": true,
+    "not_native_adjacent_degree_or_local_coupling": true,
+    "odd_parity_anticommutation_not_state_subspace_preservation": true,
+    "positive_condition_lower_bound_correct": true,
+    "rank1894_kernel746_conditional_on_inherited_source_and_noncolliding_epsilon": true,
+    "sampled_kernel_equality_proved_by_nonaliasing_and106sample_Vandermonde": true,
+    "sinclip_transfer_bound_valid_for_unitary_skew_evolution_and_offdiagonal_norm": true
+  },
+  "review_markdown_sha256": "1bbfe8cc998ae195aeb949fccaa60f34767f075b3c47285415e2dc73e0c325a2",
+  "root_comparison_sha256": "a861fa8ce3d515df94125463a3f8ac3ce0f707f0448e6a03170c503633821e1c",
+  "root_source_and_result_bindings": {
+    "compute_sha256": "9fd36f6cd83ba3d36f5054b3544b29e97d1dddb6cf6b56e04a734674ac2fa4b6",
+    "result_sha256": "33e36a5b735543294023e2bb72738799951b6bb0ff8c262569a52797f7c23b7d"
+  },
+  "scope": {
+    "Hankel_or321column_condition_claim": false,
+    "SVD_or_fit_or_estimator_calls": 0,
+    "archived_scripts_executed": 0,
+    "external_physical_review_claim": false,
+    "external_promotion_review": "PENDING",
+    "lane": "development \u2014 no registry entry",
+    "native_rank1893_and_hidden747_inherited_not_rerun": true,
+    "new_source_structural_checks_only": true,
+    "numerical_gate_changes": 0,
+    "physical_promotion": 0,
+    "raw_acquisitions": 0
+  },
+  "source_bindings": {
+    "JSON_members": {
+      "HIDDEN_WITNESSES.json": "0d40036b19b513bda2e7629e9fd8b89e3a20835cdcb7806f49ee763b7455d82c",
+      "modular_results.json": "e7955b36d396b77ab35a97d02af8e1badac6ac031181653dfac682b248647ee5",
+      "sources/COMPLEX_AND_ACTION.json": "1e8a15425fa80e5d500370a51a1b7c8605dfab5befe61824d47c07ec8fb35575"
+    },
+    "archive_sha256": "d80fc253a77b59b72a387a0db63eb5a60563c2d1f7563e12f9570172d69e087b",
+    "report_sha256": "1faf7d9c68be870e71fc1356b4c3d2b5f82a774051fa6acaac860ced13487623"
+  },
+  "status": "PASS_WITH_EXPLICIT_SCOPE_AND_SAMPLED_NULLSPACE_CONDITIONS"
+}
