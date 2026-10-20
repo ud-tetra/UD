@@ -1,0 +1,16 @@
+{
+  "scope": "Constructor development corrections before capture freeze",
+  "corrections": [
+    {
+      "finding": "Inherited changed-domain negative control initially set gamma upper to3/25, which equals this new valid domain, so it correctly failed to reject the no-op mutation.",
+      "change": "Set the corruption-control upper to13/100; the verifier rejects it. Scalar generation and saved read-only replay then PASS.",
+      "scientific_effect": "No change to the certified domain, flux witness or numerical values."
+    },
+    {
+      "finding": "Initial coverage annotation overlapped the figure title.",
+      "change": "Moved it within the former-gap region and visually inspected the revised PNG."
+    }
+  ],
+  "independent_review": false,
+  "physical_promotion": 0
+}
