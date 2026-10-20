@@ -1,0 +1,65 @@
+exact P2 stiffness/mass assembly 2048/12288
+exact P2 stiffness/mass assembly 4096/12288
+exact P2 stiffness/mass assembly 6144/12288
+exact P2 stiffness/mass assembly 8192/12288
+exact P2 stiffness/mass assembly 10240/12288
+exact P2 stiffness/mass assembly 12288/12288
+P2 nested mass, source and positive mass lower certificate PASS
+neighbor projected-source volume residual 2048/12288
+neighbor projected-source volume residual 4096/12288
+neighbor projected-source volume residual 6144/12288
+neighbor projected-source volume residual 8192/12288
+neighbor projected-source volume residual 10240/12288
+neighbor projected-source volume residual 12288/12288
+read-only neighbor state replay matches P2_RESULTS.json
+PASS neighbor P2 J=(-4.355586339010205-1.8463452100509996j) algebraic corrected budget=9.4109e-14
+exact P2 projection, energy, mass and lift budget 2048/12288
+exact P2 projection, energy, mass and lift budget 4096/12288
+exact P2 projection, energy, mass and lift budget 6144/12288
+exact P2 projection, energy, mass and lift budget 8192/12288
+exact P2 projection, energy, mass and lift budget 10240/12288
+exact P2 projection, energy, mass and lift budget 12288/12288
+P2 exact state and projected source complete
+reference operators [(103, 17), (143, 37)]
+three exact L2 projection levels checked
+level 2 patches 128/128
+level 3 patches 128/1024
+level 3 patches 256/1024
+level 3 patches 384/1024
+level 3 patches 512/1024
+level 3 patches 640/1024
+level 3 patches 768/1024
+level 3 patches 896/1024
+level 3 patches 1024/1024
+coupled basis and exact affine projections 2048/12288
+coupled basis and exact affine projections 4096/12288
+coupled basis and exact affine projections 6144/12288
+coupled basis and exact affine projections 8192/12288
+coupled basis and exact affine projections 10240/12288
+coupled basis and exact affine projections 12288/12288
+global coupled curl space: 74736 coefficients per real component; interior edges 13560 faces 23808
+exact coupled affine correction 2048/12288
+exact coupled affine correction 4096/12288
+exact coupled affine correction 6144/12288
+exact coupled affine correction 8192/12288
+exact coupled affine correction 10240/12288
+exact coupled affine correction 12288/12288
+read-only replay matches CURL_CORRECTION_RESULTS.json
+exact coupled changes [-0.056235918072406646, -0.008915950076564151]
+direct final divergence verified
+direct final normal traces verified
+degree4 exact flux moments 1024/12288
+degree4 exact flux moments 2048/12288
+degree4 exact flux moments 3072/12288
+degree4 exact flux moments 4096/12288
+degree4 exact flux moments 5120/12288
+degree4 exact flux moments 6144/12288
+degree4 exact flux moments 7168/12288
+degree4 exact flux moments 8192/12288
+degree4 exact flux moments 9216/12288
+degree4 exact flux moments 10240/12288
+degree4 exact flux moments 11264/12288
+degree4 exact flux moments 12288/12288
+independent degree-three direct defect norms/covariance match projected-mass identities
+read-only replay matches UPPER_RESULTS.json
+PASS defect²=0.000490380447244055 own phase radius=0.003537604207693804 J radius=0.0066065032279925395 phase center=(-4.353230170426647-1.8483023524519822j)
