@@ -1,0 +1,153 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,fancyhdr,enumitem}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{UD: sampled actuator certificate}\fancyhead[R]{SAC v0.1}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\newcommand{\norm}[1]{\left\|#1\right\|_\infty}
+\newtheorem{theorem}{Theorem}
+\title{A Sampled-Controller and Finite-Bandwidth\\Actuator Certificate for the UD Diamond}
+\author{Ben W. Mayes research workstream\\Codex-assisted mathematical development}
+\date{20 October 2026 --- Version 0.1}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a sufficient continuous-time tracking bound for a sampled active-port realization of the proposed CD-1 diamond test. Input age, reconstruction, command formation, first-order actuator bandwidth and startup mismatch enter one explicit budget. A rational design allocation fits the earlier finite-calibration residual tolerance and therefore preserves its short-window Gauss fault separation. A conditional preload rule and conservative output range close startup and saturation gaps. All apparatus values remain supplied design inputs, not measurements.
+\end{abstract}
+\noindent\textbf{Status.} DERIVED CONDITIONAL; candidate implementation; development, no registry entry; constructor checks only; independent review pending; physical promotion 0. This is an active classical simulator contract, not a physical identification of UD variables or an autonomous Hamiltonian realization.
+
+\section{Model and control architecture}
+Use the CAM/CD-1 normalized coordinates $z=(\theta,E,x,y,u,v)\in K=[-1,1]^{24}$ and model time $\tau=t/t_0$, $t_0=S_0/E_0$. Let $F_s$ denote the nominal CD-1 field or one of its two specified diagnostic fault laws. The prior finite-calibration manuscript supplies
+\begin{equation}
+\operatorname{Lip}(F_s)\leq L=97/4,\qquad
+\sup_K\norm{F_s}\leq129/16 .
+\end{equation}
+For a normalized LC plant $F_0(X,Y)=(\beta Y,-\alpha X)$, assume
+$\lambda=\max(\alpha,\beta)\leq1$. Define $U_s=F_s-F_0$; then
+\begin{equation}
+\operatorname{Lip}(U_s)\leq K_U:=L+\lambda\leq101/4,
+\qquad \sup_K\norm{U_s}\leq145/16 .
+\end{equation}
+Here $K_U$ is a Lipschitz constant; $K$ denotes the state box.
+
+The candidate physical chain is: calibrated flux--charge readout, timestamped sampling, digital command calculation, held command, first-order voltage/current actuation, and LC plant. Independently record the actual coupling witnesses and applied work. A sample-driven target cannot validate itself merely by reproducing a computed coupling.
+
+Write the normalized realization as
+\begin{equation}
+z'=F_0(z)+a+r,\qquad
+a'=\omega(c-a)+\xi,\quad
+\norm{r}\leq p,\quad \norm{\xi}\leq\omega\epsilon_a .
+\end{equation}
+The additive residual $r$ includes the separately certified static plant/calibration remainder. The actuator model is a premise requiring system identification over the actual input domain. Higher-order dynamics, ringing, transport delay, crosstalk and saturation must satisfy these bounds or receive an explicit new model.
+\newpage
+\section{Uniform tracking theorem}
+At each time $\tau$, the held command $c(\tau)$ is formed from reconstructed sample coordinates $\widehat z$ obeying
+\begin{equation}
+\norm{\widehat z-z(\tau)}\leq M d+\nu,\qquad
+\norm{c-U_s(\widehat z)}\leq q,\qquad \widehat z\in K .
+\end{equation}
+Here $d$ is the maximum true coordinate input age, $M$ bounds actual history speed, $\nu$ bounds sample reconstruction, and $q$ includes command computation and output quantization. A maximum sample period $T$ and additional worst-case acquisition-to-application latency $\ell$ give $d\leq T+\ell$ only if timestamps, jitter, dropped frames and holding intervals support that bound.
+
+\begin{theorem}[Sampled finite-bandwidth tracking]
+Suppose (1)--(4) hold, the relevant history remains in $K$, and
+$\norm{a(0)-U_s(z(0))}\leq\sigma$. Then, for the fixed selected law,
+\begin{equation}
+\begin{split}
+\norm{a(\tau)-U_s(z(\tau))}
+&\leq \sigma e^{-\omega\tau}+b(1-e^{-\omega\tau}),\\
+b&=K_U(Md+\nu)+q+\epsilon_a+K_UM/\omega .
+\end{split}
+\end{equation}
+Consequently $\norm{z'-F_s(z)}\leq p+\max(\sigma,b)$.
+\end{theorem}
+\begin{proof}
+Put $e=a-U_s(z)$. Almost everywhere along the absolutely continuous state,
+$e'=-\omega e+\omega(c-U_s(z))+\xi-DU_s(z)z'$.
+The forcing is bounded by
+$\omega[K_U(Md+\nu)+q+\epsilon_a]+K_UM$.
+Variation of constants, followed by the infinity norm, gives (5). Piecewise held commands need not be differentiable; bounded measurable forcing suffices. The CD-1 command is smooth, so its chain rule is valid on the stated domain.
+\end{proof}
+The same uniform conclusion holds for independent first-order channels with rates $\omega_c\geq\omega$, by applying the scalar estimate with each actual rate and taking the largest bound. A law switch is a new initial condition: its tracking mismatch must be bounded again.
+
+\section{An exact illustrative allocation}
+The following values are requirements to substantiate, not hardware observations:
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Quantity & Proposed upper/lower bound\\
+\midrule
+Sample period $T$; extra latency $\ell$ & Each at most $1/400000$\\
+Coordinate input reconstruction $\nu$ & At most $1/1000000$\\
+Total command-formation error $q$ & At most $1/100000$\\
+Actuator distortion $\epsilon_a$ & At most $1/100000$\\
+Actuator rate $\omega$ & At least $400000$\\
+Initial tracking $\sigma$ & At most $1/1000$\\
+Static/other continuous residual $p$ & At most $3/400$\\
+Actual and prehistory speed $M$ & At most $81/10$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The three prior non-delay allocations (node, interpolation and other) each remain at most $1/400$. The new bound replaces the earlier ideal-delay allocation; do not add both descriptions of the same control error.
+\newpage
+For this allocation $d\leq1/200000$ and
+\begin{equation}
+b=\frac{25267}{16000000}=0.0015791875,\quad
+p+\max(\sigma,b)=\frac{145267}{16000000}=0.0090791875 .
+\end{equation}
+The total residual slack below $1/100$ is
+$14733/16000000=0.0009208125$. Keep the earlier conservative $\delta=1/100$ when applying the finite-calibration Gauss theorem.
+
+\subsection*{Closing the speed and state assumptions}
+Use the tracking barrier $\rho=1/400$. While the state stays in $K$ and tracking error is at most $\rho$, actual speed is at most $129/16+p+\rho<81/10$. With the certified prehistory, (5) then keeps tracking strictly below $\rho$ because $\max(\sigma,b)<\rho$. This excludes a first exit through the tracking barrier. The earlier prefix theorem with $e_0=m=1/10000$, $h_\pm=1/100\pm1/100000$ gives
+$\eta=2001/7572575$ and an interior tube
+$3/4+3h_++\eta+m<1$, excluding the other first exit through the state box. Both assumptions close on this prefix, and (5) gives the sharper bound (6). Histories before release and command sample arguments in $K$ must still be supplied.
+
+The earlier fault gaps are therefore preserved. The approximate slacks are $0.00551444195$ for nominal passage, $0.00449467027$ for wrong-sign detection, and $0.00529178327$ for frozen-response detection. These concern the specified diagnostic laws, not a full $8\pi$ campaign certificate.
+
+\section{Startup and saturation}
+A cold actuator cannot be assumed initialized to the desired command. One conditional procedure holds the state within radius $r_h=10^{-6}$ of a fixed center, starts the actuator at zero output, and preloads for at least $10/\omega$. The same selected law applies throughout; every sample history used in preload must lie in the hold tube. For final release state $z_0$, any such sample state differs from $z_0$ by at most $2r_h$. Comparing the linear filter to the fixed $U_s(z_0)$ gives
+\begin{equation}
+\norm{a-U_s(z_0)}
+\leq\frac{145}{16}e^{-10}
+K_U(2r_h+\nu)+q+\epsilon_a
+<\frac{4391}{8000000}<\frac1{1000}.
+\end{equation}
+The strict coarse bound uses $e^{10}>20000$, verified by the exact positive Taylor partial sum through degree 24. Holding dynamics, release kicks, final state error and speed over the last input-age interval require records. Holding within a radius alone does not imply a speed bound. The experiment clock begins at release; preload work is recorded separately.
+
+All reconstructed command arguments must be in $K$. Hence
+$\norm c\leq145/16+q$. With the first-order model, output magnitude stays at most
+\begin{equation}
+\max(145/16+\sigma,\;145/16+q+\epsilon_a)
+\leq 9.0635<10 .
+\end{equation}
+This is a conservative invariant actuator range, given an unsaturated identified model. Demonstrating model validity and at least this bidirectional output range is a separate apparatus gate. Clipping, slew limits or unmodeled release transients invalidate the certificate unless charged.
+\newpage
+\section{Instrument and component requirements}
+\begin{center}
+\begin{tabular}{p{0.26\linewidth}p{0.64\linewidth}}
+\toprule
+Instrument/property & Evidence required\\
+\midrule
+Input chain & Bound $\nu\leq10^{-6}$ in normalized state coordinates, including calibration, noise, drift and quantization; no missing or saturated channels.\\
+Controller & True period and latency each bounded by $t_0/400000$ seconds; complete command error at most $10^{-5}$.\\
+Actuation & Identified first-order rate at least $400000/t_0$ per second; distortion at most $10^{-5}$ in the stated model; bidirectional normalized range at least 10.\\
+Physical ports & Voltage range at least $10\Phi_{0c}/t_0$ and current range at least $10Q_{0c}/t_0$, with correct port units and loading.\\
+Startup & Preload duration at least $t_0/40000$ in the example; hold radius, tracking at release, prehistory speed and switching disturbance bounded.\\
+Independent readout & Endpoint reconstruction at most $10^{-4}$, clock radius at most $10^{-5}$ model units, independent coupling witnesses, raw work/source records.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Physical rates cannot be assigned numerical hertz until $t_0$ is calibrated. If $t_0$ is uncertain, use worst-case normalized rates and ages over its joint calibration interval. Changing $t_0$ also changes the required physical target dynamics; it is not a retrospective fitting freedom.
+
+\subsection*{Quantization is only one part of an error budget}
+For ideal uniform midrise quantizers, $b$ bits over $[-1,1]$ contribute at most $2^{-b}$ input error, and $b$ bits over $[-10,10]$ contribute at most $10\,2^{-b}$ command error. With 22 bits these are $1/4194304$ and $5/2097152$, respectively. Their remaining allowances must cover every other input/command error. Nominal bit count alone does not establish an effective bounded error or adequate update rate. The calculator rejects the proposed input budget with only 16 ideal bits.
+
+\subsection*{Verification, dependencies and scope}
+The accompanying exact-fraction calculator checks nine allocations and negative controls, including insufficient bandwidth, excessive sample period, cold startup, insufficient input resolution and insufficient output range. Its Taylor bound certifies only the stated mathematical preload model. This is constructor verification, not an independently measured actuator response.
+
+Dependencies are CAM/CD-1 v0.1 (canonical map and target model) and FCAL v0.1 (finite-cover regularity assumptions, box majorants and robust Gauss prefix). Their mathematical assumptions and physical status are unchanged. The common action scale $S_0$ here has physical action units; it is not the coefficient-ledger structural object with the same symbol.
+
+This manuscript supplies a functional implementation and instrument specification. Actual component selection, port construction, calibration, identified dynamics, blinded execution and attributable non-constructor adversarial review remain OPEN. No experiment or researcher contact was performed. The linear-filter argument is standard; novelty is not asserted for that general result.
+
+\vfill\noindent\textbf{Claim footer.} DERIVED CONDITIONAL mathematics; CANDIDATE apparatus; development, no registry entry; constructor verification only; independent review pending; experimental execution NONE; physical promotion 0.
+\end{document}

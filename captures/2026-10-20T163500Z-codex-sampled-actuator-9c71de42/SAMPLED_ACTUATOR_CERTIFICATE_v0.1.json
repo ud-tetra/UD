@@ -1,0 +1,812 @@
+{
+  "certificate": {
+    "status": "PASS_CONDITIONAL_DESIGN",
+    "input_kind": "Illustrative supplied bounds; no apparatus observations",
+    "physical_promotion": 0,
+    "constants": {
+      "target_L": {
+        "exact": "97/4",
+        "decimal": 24.25
+      },
+      "plant_L": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "command_L": {
+        "exact": "101/4",
+        "decimal": 25.25
+      },
+      "speed": {
+        "exact": "81/10",
+        "decimal": 8.1
+      }
+    },
+    "inputs": {
+      "period": {
+        "exact": "1/400000",
+        "decimal": 2.5e-06
+      },
+      "latency": {
+        "exact": "1/400000",
+        "decimal": 2.5e-06
+      },
+      "input_error": {
+        "exact": "1/1000000",
+        "decimal": 1e-06
+      },
+      "command_error": {
+        "exact": "1/100000",
+        "decimal": 1e-05
+      },
+      "actuator_distortion": {
+        "exact": "1/100000",
+        "decimal": 1e-05
+      },
+      "actuator_pole": {
+        "exact": "400000",
+        "decimal": 400000.0
+      },
+      "initial_tracking_error": {
+        "exact": "1/1000",
+        "decimal": 0.001
+      },
+      "other_residual": {
+        "exact": "3/400",
+        "decimal": 0.0075
+      },
+      "actuator_range": {
+        "exact": "10",
+        "decimal": 10.0
+      },
+      "input_bits": 22,
+      "output_bits": 22
+    },
+    "max_sample_age": {
+      "exact": "1/200000",
+      "decimal": 5e-06
+    },
+    "held_command_error": {
+      "exact": "8463/8000000",
+      "decimal": 0.001057875
+    },
+    "actuator_lag_error": {
+      "exact": "8181/16000000",
+      "decimal": 0.0005113125
+    },
+    "steady_tracking_bound": {
+      "exact": "25267/16000000",
+      "decimal": 0.0015791875
+    },
+    "uniform_tracking_bound": {
+      "exact": "25267/16000000",
+      "decimal": 0.0015791875
+    },
+    "total_residual": {
+      "exact": "145267/16000000",
+      "decimal": 0.0090791875
+    },
+    "command_range_bound": {
+      "exact": "906251/100000",
+      "decimal": 9.06251
+    },
+    "actuator_range_bound": {
+      "exact": "18127/2000",
+      "decimal": 9.0635
+    },
+    "input_quantization": {
+      "exact": "1/4194304",
+      "decimal": 2.384185791015625e-07
+    },
+    "output_quantization": {
+      "exact": "5/2097152",
+      "decimal": 2.384185791015625e-06
+    },
+    "margins": {
+      "tracking_allocation": {
+        "exact": "14733/16000000",
+        "decimal": 0.0009208125
+      },
+      "total_residual": {
+        "exact": "14733/16000000",
+        "decimal": 0.0009208125
+      },
+      "speed_bootstrap": {
+        "exact": "454733/16000000",
+        "decimal": 0.0284208125
+      },
+      "saturation": {
+        "exact": "1873/2000",
+        "decimal": 0.9365
+      },
+      "input_nonquantization_allowance": {
+        "exact": "49911/65536000000",
+        "decimal": 7.615814208984375e-07
+      },
+      "command_nonquantization_allowance": {
+        "exact": "49911/6553600000",
+        "decimal": 7.615814208984375e-06
+      }
+    }
+  },
+  "startup": {
+    "status": "PASS_CONDITIONAL_DESIGN",
+    "assumptions": [
+      "zero initial actuator output",
+      "state held within r of one fixed center",
+      "all sampled true states in the hold tube and all reconstructed arguments in K",
+      "same selected law and actuator distortion bound throughout preload",
+      "speed at most 81/10 in the input prehistory at release",
+      "no unbudgeted switching kick at release"
+    ],
+    "hold_radius": {
+      "exact": "1/1000000",
+      "decimal": 1e-06
+    },
+    "preload_duration": "10/omega; 1/40000 in the example",
+    "exp10_Taylor_lower": {
+      "exact": "5213029432132397209/236682282155319",
+      "decimal": 22025.43166586263
+    },
+    "exp10_coarse_lower": 20000,
+    "tracking_floor": {
+      "exact": "383/4000000",
+      "decimal": 9.575e-05
+    },
+    "tracking_bound_at_release": {
+      "exact": "4391/8000000",
+      "decimal": 0.000548875
+    }
+  },
+  "controls": {
+    "status": "PASS",
+    "exact_controls": 9,
+    "scope": "Exact algebraic allocations, negative controls and Taylor startup bound; constructor checks only"
+  },
+  "negative_examples": {
+    "readout_spacing_used_as_control_period": {
+      "status": "HOLD_NOT_CERTIFIED",
+      "input_kind": "Illustrative supplied bounds; no apparatus observations",
+      "physical_promotion": 0,
+      "constants": {
+        "target_L": {
+          "exact": "97/4",
+          "decimal": 24.25
+        },
+        "plant_L": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "command_L": {
+          "exact": "101/4",
+          "decimal": 25.25
+        },
+        "speed": {
+          "exact": "81/10",
+          "decimal": 8.1
+        }
+      },
+      "inputs": {
+        "period": {
+          "exact": "1/1000",
+          "decimal": 0.001
+        },
+        "latency": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "input_error": {
+          "exact": "1/1000000",
+          "decimal": 1e-06
+        },
+        "command_error": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_distortion": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_pole": {
+          "exact": "400000",
+          "decimal": 400000.0
+        },
+        "initial_tracking_error": {
+          "exact": "1/1000",
+          "decimal": 0.001
+        },
+        "other_residual": {
+          "exact": "3/400",
+          "decimal": 0.0075
+        },
+        "actuator_range": {
+          "exact": "10",
+          "decimal": 10.0
+        },
+        "input_bits": 22,
+        "output_bits": 22
+      },
+      "max_sample_age": {
+        "exact": "401/400000",
+        "decimal": 0.0010025
+      },
+      "held_command_error": {
+        "exact": "656229/3200000",
+        "decimal": 0.2050715625
+      },
+      "actuator_lag_error": {
+        "exact": "8181/16000000",
+        "decimal": 0.0005113125
+      },
+      "steady_tracking_bound": {
+        "exact": "1644743/8000000",
+        "decimal": 0.205592875
+      },
+      "uniform_tracking_bound": {
+        "exact": "1644743/8000000",
+        "decimal": 0.205592875
+      },
+      "total_residual": {
+        "exact": "1704743/8000000",
+        "decimal": 0.213092875
+      },
+      "command_range_bound": {
+        "exact": "906251/100000",
+        "decimal": 9.06251
+      },
+      "actuator_range_bound": {
+        "exact": "18127/2000",
+        "decimal": 9.0635
+      },
+      "input_quantization": {
+        "exact": "1/4194304",
+        "decimal": 2.384185791015625e-07
+      },
+      "output_quantization": {
+        "exact": "5/2097152",
+        "decimal": 2.384185791015625e-06
+      },
+      "margins": {
+        "tracking_allocation": {
+          "exact": "-1624743/8000000",
+          "decimal": -0.203092875
+        },
+        "total_residual": {
+          "exact": "-1624743/8000000",
+          "decimal": -0.203092875
+        },
+        "speed_bootstrap": {
+          "exact": "-1404743/8000000",
+          "decimal": -0.175592875
+        },
+        "saturation": {
+          "exact": "1873/2000",
+          "decimal": 0.9365
+        },
+        "input_nonquantization_allowance": {
+          "exact": "49911/65536000000",
+          "decimal": 7.615814208984375e-07
+        },
+        "command_nonquantization_allowance": {
+          "exact": "49911/6553600000",
+          "decimal": 7.615814208984375e-06
+        }
+      }
+    },
+    "insufficient_actuator_bandwidth": {
+      "status": "HOLD_NOT_CERTIFIED",
+      "input_kind": "Illustrative supplied bounds; no apparatus observations",
+      "physical_promotion": 0,
+      "constants": {
+        "target_L": {
+          "exact": "97/4",
+          "decimal": 24.25
+        },
+        "plant_L": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "command_L": {
+          "exact": "101/4",
+          "decimal": 25.25
+        },
+        "speed": {
+          "exact": "81/10",
+          "decimal": 8.1
+        }
+      },
+      "inputs": {
+        "period": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "latency": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "input_error": {
+          "exact": "1/1000000",
+          "decimal": 1e-06
+        },
+        "command_error": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_distortion": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_pole": {
+          "exact": "10000",
+          "decimal": 10000.0
+        },
+        "initial_tracking_error": {
+          "exact": "1/1000",
+          "decimal": 0.001
+        },
+        "other_residual": {
+          "exact": "3/400",
+          "decimal": 0.0075
+        },
+        "actuator_range": {
+          "exact": "10",
+          "decimal": 10.0
+        },
+        "input_bits": 22,
+        "output_bits": 22
+      },
+      "max_sample_age": {
+        "exact": "1/200000",
+        "decimal": 5e-06
+      },
+      "held_command_error": {
+        "exact": "8463/8000000",
+        "decimal": 0.001057875
+      },
+      "actuator_lag_error": {
+        "exact": "8181/400000",
+        "decimal": 0.0204525
+      },
+      "steady_tracking_bound": {
+        "exact": "172163/8000000",
+        "decimal": 0.021520375
+      },
+      "uniform_tracking_bound": {
+        "exact": "172163/8000000",
+        "decimal": 0.021520375
+      },
+      "total_residual": {
+        "exact": "232163/8000000",
+        "decimal": 0.029020375
+      },
+      "command_range_bound": {
+        "exact": "906251/100000",
+        "decimal": 9.06251
+      },
+      "actuator_range_bound": {
+        "exact": "18127/2000",
+        "decimal": 9.0635
+      },
+      "input_quantization": {
+        "exact": "1/4194304",
+        "decimal": 2.384185791015625e-07
+      },
+      "output_quantization": {
+        "exact": "5/2097152",
+        "decimal": 2.384185791015625e-06
+      },
+      "margins": {
+        "tracking_allocation": {
+          "exact": "-152163/8000000",
+          "decimal": -0.019020375
+        },
+        "total_residual": {
+          "exact": "-152163/8000000",
+          "decimal": -0.019020375
+        },
+        "speed_bootstrap": {
+          "exact": "67837/8000000",
+          "decimal": 0.008479625
+        },
+        "saturation": {
+          "exact": "1873/2000",
+          "decimal": 0.9365
+        },
+        "input_nonquantization_allowance": {
+          "exact": "49911/65536000000",
+          "decimal": 7.615814208984375e-07
+        },
+        "command_nonquantization_allowance": {
+          "exact": "49911/6553600000",
+          "decimal": 7.615814208984375e-06
+        }
+      }
+    },
+    "cold_start_without_preload": {
+      "status": "HOLD_NOT_CERTIFIED",
+      "input_kind": "Illustrative supplied bounds; no apparatus observations",
+      "physical_promotion": 0,
+      "constants": {
+        "target_L": {
+          "exact": "97/4",
+          "decimal": 24.25
+        },
+        "plant_L": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "command_L": {
+          "exact": "101/4",
+          "decimal": 25.25
+        },
+        "speed": {
+          "exact": "81/10",
+          "decimal": 8.1
+        }
+      },
+      "inputs": {
+        "period": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "latency": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "input_error": {
+          "exact": "1/1000000",
+          "decimal": 1e-06
+        },
+        "command_error": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_distortion": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_pole": {
+          "exact": "400000",
+          "decimal": 400000.0
+        },
+        "initial_tracking_error": {
+          "exact": "145/16",
+          "decimal": 9.0625
+        },
+        "other_residual": {
+          "exact": "3/400",
+          "decimal": 0.0075
+        },
+        "actuator_range": {
+          "exact": "10",
+          "decimal": 10.0
+        },
+        "input_bits": 22,
+        "output_bits": 22
+      },
+      "max_sample_age": {
+        "exact": "1/200000",
+        "decimal": 5e-06
+      },
+      "held_command_error": {
+        "exact": "8463/8000000",
+        "decimal": 0.001057875
+      },
+      "actuator_lag_error": {
+        "exact": "8181/16000000",
+        "decimal": 0.0005113125
+      },
+      "steady_tracking_bound": {
+        "exact": "25267/16000000",
+        "decimal": 0.0015791875
+      },
+      "uniform_tracking_bound": {
+        "exact": "145/16",
+        "decimal": 9.0625
+      },
+      "total_residual": {
+        "exact": "907/100",
+        "decimal": 9.07
+      },
+      "command_range_bound": {
+        "exact": "906251/100000",
+        "decimal": 9.06251
+      },
+      "actuator_range_bound": {
+        "exact": "145/8",
+        "decimal": 18.125
+      },
+      "input_quantization": {
+        "exact": "1/4194304",
+        "decimal": 2.384185791015625e-07
+      },
+      "output_quantization": {
+        "exact": "5/2097152",
+        "decimal": 2.384185791015625e-06
+      },
+      "margins": {
+        "tracking_allocation": {
+          "exact": "-453/50",
+          "decimal": -9.06
+        },
+        "total_residual": {
+          "exact": "-453/50",
+          "decimal": -9.06
+        },
+        "speed_bootstrap": {
+          "exact": "-3613/400",
+          "decimal": -9.0325
+        },
+        "saturation": {
+          "exact": "-65/8",
+          "decimal": -8.125
+        },
+        "input_nonquantization_allowance": {
+          "exact": "49911/65536000000",
+          "decimal": 7.615814208984375e-07
+        },
+        "command_nonquantization_allowance": {
+          "exact": "49911/6553600000",
+          "decimal": 7.615814208984375e-06
+        }
+      }
+    },
+    "sixteen_bit_input_quantization": {
+      "status": "HOLD_NOT_CERTIFIED",
+      "input_kind": "Illustrative supplied bounds; no apparatus observations",
+      "physical_promotion": 0,
+      "constants": {
+        "target_L": {
+          "exact": "97/4",
+          "decimal": 24.25
+        },
+        "plant_L": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "command_L": {
+          "exact": "101/4",
+          "decimal": 25.25
+        },
+        "speed": {
+          "exact": "81/10",
+          "decimal": 8.1
+        }
+      },
+      "inputs": {
+        "period": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "latency": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "input_error": {
+          "exact": "1/1000000",
+          "decimal": 1e-06
+        },
+        "command_error": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_distortion": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_pole": {
+          "exact": "400000",
+          "decimal": 400000.0
+        },
+        "initial_tracking_error": {
+          "exact": "1/1000",
+          "decimal": 0.001
+        },
+        "other_residual": {
+          "exact": "3/400",
+          "decimal": 0.0075
+        },
+        "actuator_range": {
+          "exact": "10",
+          "decimal": 10.0
+        },
+        "input_bits": 16,
+        "output_bits": 22
+      },
+      "max_sample_age": {
+        "exact": "1/200000",
+        "decimal": 5e-06
+      },
+      "held_command_error": {
+        "exact": "8463/8000000",
+        "decimal": 0.001057875
+      },
+      "actuator_lag_error": {
+        "exact": "8181/16000000",
+        "decimal": 0.0005113125
+      },
+      "steady_tracking_bound": {
+        "exact": "25267/16000000",
+        "decimal": 0.0015791875
+      },
+      "uniform_tracking_bound": {
+        "exact": "25267/16000000",
+        "decimal": 0.0015791875
+      },
+      "total_residual": {
+        "exact": "145267/16000000",
+        "decimal": 0.0090791875
+      },
+      "command_range_bound": {
+        "exact": "906251/100000",
+        "decimal": 9.06251
+      },
+      "actuator_range_bound": {
+        "exact": "18127/2000",
+        "decimal": 9.0635
+      },
+      "input_quantization": {
+        "exact": "1/65536",
+        "decimal": 1.52587890625e-05
+      },
+      "output_quantization": {
+        "exact": "5/2097152",
+        "decimal": 2.384185791015625e-06
+      },
+      "margins": {
+        "tracking_allocation": {
+          "exact": "14733/16000000",
+          "decimal": 0.0009208125
+        },
+        "total_residual": {
+          "exact": "14733/16000000",
+          "decimal": 0.0009208125
+        },
+        "speed_bootstrap": {
+          "exact": "454733/16000000",
+          "decimal": 0.0284208125
+        },
+        "saturation": {
+          "exact": "1873/2000",
+          "decimal": 0.9365
+        },
+        "input_nonquantization_allowance": {
+          "exact": "-14601/1024000000",
+          "decimal": -1.42587890625e-05
+        },
+        "command_nonquantization_allowance": {
+          "exact": "49911/6553600000",
+          "decimal": 7.615814208984375e-06
+        }
+      }
+    },
+    "insufficient_actuator_range": {
+      "status": "HOLD_NOT_CERTIFIED",
+      "input_kind": "Illustrative supplied bounds; no apparatus observations",
+      "physical_promotion": 0,
+      "constants": {
+        "target_L": {
+          "exact": "97/4",
+          "decimal": 24.25
+        },
+        "plant_L": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "command_L": {
+          "exact": "101/4",
+          "decimal": 25.25
+        },
+        "speed": {
+          "exact": "81/10",
+          "decimal": 8.1
+        }
+      },
+      "inputs": {
+        "period": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "latency": {
+          "exact": "1/400000",
+          "decimal": 2.5e-06
+        },
+        "input_error": {
+          "exact": "1/1000000",
+          "decimal": 1e-06
+        },
+        "command_error": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_distortion": {
+          "exact": "1/100000",
+          "decimal": 1e-05
+        },
+        "actuator_pole": {
+          "exact": "400000",
+          "decimal": 400000.0
+        },
+        "initial_tracking_error": {
+          "exact": "1/1000",
+          "decimal": 0.001
+        },
+        "other_residual": {
+          "exact": "3/400",
+          "decimal": 0.0075
+        },
+        "actuator_range": {
+          "exact": "9",
+          "decimal": 9.0
+        },
+        "input_bits": 22,
+        "output_bits": 22
+      },
+      "max_sample_age": {
+        "exact": "1/200000",
+        "decimal": 5e-06
+      },
+      "held_command_error": {
+        "exact": "8463/8000000",
+        "decimal": 0.001057875
+      },
+      "actuator_lag_error": {
+        "exact": "8181/16000000",
+        "decimal": 0.0005113125
+      },
+      "steady_tracking_bound": {
+        "exact": "25267/16000000",
+        "decimal": 0.0015791875
+      },
+      "uniform_tracking_bound": {
+        "exact": "25267/16000000",
+        "decimal": 0.0015791875
+      },
+      "total_residual": {
+        "exact": "145267/16000000",
+        "decimal": 0.0090791875
+      },
+      "command_range_bound": {
+        "exact": "906251/100000",
+        "decimal": 9.06251
+      },
+      "actuator_range_bound": {
+        "exact": "18127/2000",
+        "decimal": 9.0635
+      },
+      "input_quantization": {
+        "exact": "1/4194304",
+        "decimal": 2.384185791015625e-07
+      },
+      "output_quantization": {
+        "exact": "5/2097152",
+        "decimal": 2.384185791015625e-06
+      },
+      "margins": {
+        "tracking_allocation": {
+          "exact": "14733/16000000",
+          "decimal": 0.0009208125
+        },
+        "total_residual": {
+          "exact": "14733/16000000",
+          "decimal": 0.0009208125
+        },
+        "speed_bootstrap": {
+          "exact": "454733/16000000",
+          "decimal": 0.0284208125
+        },
+        "saturation": {
+          "exact": "-127/2000",
+          "decimal": -0.0635
+        },
+        "input_nonquantization_allowance": {
+          "exact": "49911/65536000000",
+          "decimal": 7.615814208984375e-07
+        },
+        "command_nonquantization_allowance": {
+          "exact": "49911/6553600000",
+          "decimal": 7.615814208984375e-06
+        }
+      }
+    }
+  }
+}
