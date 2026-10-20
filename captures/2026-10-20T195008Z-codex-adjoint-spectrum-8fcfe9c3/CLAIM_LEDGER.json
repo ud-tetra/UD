@@ -1,0 +1,59 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "constructor": "Codex root",
+  "reviewers": [
+    "Separate same-team theorem/scalar reviewer",
+    "Separate same-team deterministic CRT matrix auditor"
+  ],
+  "origin": "PR279 actual saved computational records; original forward/Gram/source statements inherited; new exact adjoint computation",
+  "claims": [
+    {
+      "id": "C18-ADJOINT",
+      "type": "EXACT_FINITE_COMPUTATIONAL",
+      "statement": "New adjoint residual integer matrices have134178 entries, independently certified via six proved primes/case, full difference bounds and exact norm sums. Original projected input identity is replayed/hash-bound, not independently rederived by reviewers.",
+      "dependencies": [
+        "primary/",
+        "matrix_review/source/FINAL_REVIEW_RECEIPT.json"
+      ]
+    },
+    {
+      "id": "C18-RETAINED",
+      "type": "DERIVED_FINITE_CONDITIONAL",
+      "statement": "Leading209 ordered singular proposals have two-sided absolute error at most c+e, below2^-41 in both cases, conditional on inherited Gram/forward/source-tail premises and new exact adjoint.",
+      "dependencies": [
+        "adjoint/THEOREM.md",
+        "primary/",
+        "math_review/FINAL_REVIEW.json"
+      ]
+    },
+    {
+      "id": "C18-LEADING-CONDITION",
+      "type": "DERIVED_FINITE_CONDITIONAL",
+      "statement": "Ambient leading209 spectral condition is below1888 for both normalized projected matrices. This now addresses the leading-spectrum object, but not full matrix/native/full-Hankel conditioning.",
+      "dependencies": [
+        "adjoint/THEOREM.md",
+        "primary/"
+      ]
+    },
+    {
+      "id": "C18-MIXED",
+      "type": "DERIVED_FINITE_CONDITIONAL",
+      "statement": "All321 absolute errors have a mixed bound approximately1.0656170268898675e-10<2^-25. No full3212^-41claim. Original rank/no-tie and qth-floor sufficient budgets hold on these two records only. Cutoff count209 is not algebraic rank.",
+      "dependencies": [
+        "adjoint/THEOREM.md",
+        "primary/",
+        "math_review/FINAL_REVIEW.json"
+      ]
+    },
+    {
+      "id": "C18-OPEN",
+      "type": "OPEN",
+      "statement": "Actual all-input backend conformance B0\u2013B6, whole-program/library correctness, original full source proofs, native1893/747 identification, exact spectrum(T), physical freshness/calibration and SI/six-ratio accuracy remain open.",
+      "dependencies": [
+        "adjoint/THEOREM.md"
+      ]
+    }
+  ],
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}

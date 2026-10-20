@@ -1,0 +1,85 @@
+{
+  "artifact_type": "SAME_TEAM_FINAL_ADJOINT_MATRIX_REVIEW",
+  "status": "PASS_DETERMINISTIC_ALL_ENTRY_ADJOINT_CRT_AND_EXACT_NORM_BOTH_CASES",
+  "source_freeze_sha256": "7bd879b58b8aa084f855c79746fedcc5546e3d8d24610b2c8eddbb9e5a5f1aee",
+  "source_bindings_sha256": "6a0165eb275da0142dab1d875774c5ebb6f0e1f06d5ac9f9838a81c2660f6b93",
+  "input_ready_receipt_sha256": "c10280bdf8c99e3be8b3f7bbfd9c6c15f50983147ab730f31eeccff2e6ad9950",
+  "audit_certificate_sha256": "3a6461db60ec3d7be5021aac5c9e7521c5f0144fa4f5510e0ac1ae10b49673da",
+  "controls_sha256": "6a624281b9f2a22e27414413922f3eda760adb7c9b1ef9ea04effb1ceccecae9",
+  "control_count": 19,
+  "rows": [
+    {
+      "case": "boundary_pair_block",
+      "matrix_entries": 67089,
+      "prime_count": 6,
+      "primes": [
+        16777213,
+        16777199,
+        16777183,
+        16777153,
+        16777141,
+        16777139
+      ],
+      "full_difference_bound_B": "1351988205366475091912383324290742373140480",
+      "CRT_product": "22300388967603114152165719208796738180561187",
+      "product_strictly_greater_than_2B": true,
+      "all_entries_all_primes_match": true,
+      "norm": {
+        "exact_Frobenius_squared": [
+          "1127358112187073639866647213692515052068177884810221185",
+          "474284397516047136454946754595585670566993857190463750305618264096412179005177856"
+        ],
+        "root_norm_upper": [
+          "37357753488259409587627539563912614707313",
+          "766247770432944429179173513575154591809369561091801088"
+        ],
+        "root_norm_upper_squared_dominates_exact_norm": true
+      }
+    },
+    {
+      "case": "boundary_pair_rotating",
+      "matrix_entries": 67089,
+      "prime_count": 6,
+      "primes": [
+        16777213,
+        16777199,
+        16777183,
+        16777153,
+        16777141,
+        16777139
+      ],
+      "full_difference_bound_B": "1351988205366494285522757961320499548718080",
+      "CRT_product": "22300388967603114152165719208796738180561187",
+      "product_strictly_greater_than_2B": true,
+      "all_entries_all_primes_match": true,
+      "norm": {
+        "exact_Frobenius_squared": [
+          "4741789894942047639092848412773340177864935176398007769",
+          "1897137590064188545819787018382342682267975428761855001222473056385648716020711424"
+        ],
+        "root_norm_upper": [
+          "76616261777951406788191597434058663305331",
+          "1532495540865888858358347027150309183618739122183602176"
+        ],
+        "root_norm_upper_squared_dominates_exact_norm": true
+      }
+    }
+  ],
+  "total_exact_matrix_entries": 134178,
+  "total_modular_entry_comparisons": 805068,
+  "scalar_bound_assumptions": [
+    "D denominator is canonical max(55+bU,bV+bS), independently matched to exact saved binary64 ratio encodings",
+    "N payload/dimensions hash-match original accepted integer projection; original raw/projection identity is inherited, not newly established by this review",
+    "Each full integer difference is bounded using8191*maxN*maxUi*2^scale +maxVi*maxsi*2^scale +maxSavedD; tiny residuals are not assumed",
+    "Distinct primes independently proved by exhaustive trial division; each modular integer dot upper bound is below2^63 and operands are nonnegative residues",
+    "After exact matrix identity, root norm upper is nonnegative and its exact rational square dominates recomputed sum(Dij\u00b2)/2^(2bD)"
+  ],
+  "new_estimator_calls": 0,
+  "new_raw_records": 0,
+  "new_factor_or_matrix_copies": 0,
+  "independent_raw_projection_claimed": false,
+  "all_frozen_sources_unchanged": true,
+  "same_team_review": true,
+  "external_review": "PENDING",
+  "physical_promotion": 0
+}
