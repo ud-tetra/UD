@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_curl_witness_sha256": "9db999f7feaff76ec9e8442b6707f8e6887c82b6f416401658255cc296e85719",
+  "source_coefficient_payload_sha256": "efb682994d79ac293a62d835039e6331ed45b21d434126e169d00ad8821a6fc4",
+  "mesh": {
+    "nodes": 2809,
+    "tetrahedra": 12288,
+    "interior_edges": 13560,
+    "interior_faces": 23808,
+    "potential_coefficients_per_component": 74736,
+    "unequal_volumes": [
+      "1/4096",
+      "1/8192"
+    ]
+  },
+  "checks": {
+    "local_basis_divergence_identities": 230016,
+    "actual_affine_divergence_checks": 24576,
+    "correction_face_vertex_component_checks": 152064,
+    "gradient_orthogonality": 2,
+    "exact_flux_norm_nonincrease": 2,
+    "old_parent_interface_faces": 7424,
+    "nonzero_old_parent_face_vertex_components": 44544
+  },
+  "prior_affine_projection_norm_squared": [
+    "97148988786064602670480203064029158928536430554696928002572091705222307439513364621100782139782041236019499/6445309143870834882333753935982798087701911714333626418028413140535347081282432546908405760000000000000000",
+    "7477526553212381058495471701583895739997794241847577103964462124710877482084836066492291620417673011842259/3437498210064445270578002099190825646774352914311267422948487008285518443350630691684483072000000000000000"
+  ],
+  "exact_flux_norm_changes": [
+    "-207752288915507015973004679724702861430682092098375542997858830854527381893189/3882232320069692130432050172530826817003748796845842437278919875887104000000000",
+    "-28172148500700155155355437516158522017778051484116137508453333806295863458277/4141047808074338272460853517366215271470665383302231933097514534279577600000000"
+  ],
+  "controls": [
+    "truncated coefficient payload",
+    "nonfinite coefficient payload",
+    "corrupted exterior affine trace"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 3.8754750725966494,
+        "normal_residual_norm": 1.2072763439082102e-09
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 1.4725754444432013,
+        "normal_residual_norm": 4.3130709828897115e-10
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
