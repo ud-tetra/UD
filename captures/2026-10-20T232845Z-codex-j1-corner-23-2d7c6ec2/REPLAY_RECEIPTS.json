@@ -1,0 +1,50 @@
+{
+  "status": "PASS_SCOPED_STATE_POINT_AND_DIAGNOSTIC_REPRODUCTION",
+  "completed_at_utc": "2026-10-20T23:38:33.089487+00:00",
+  "components": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-20T232845Z-codex-j1-corner-23-2d7c6ec2/candidate",
+      "exit_code": 0,
+      "log_sha256": "b3a3d15d245063b764ca2370690d985f5c49895ffa500f61c6293adbcba68aaa",
+      "matched_results": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 replay.py --scalar-only",
+      "working_directory": "captures/2026-10-20T232845Z-codex-j1-corner-23-2d7c6ec2",
+      "exit_code": 0,
+      "log_sha256": "f9b8e3e40946099294bfe69208417ccd889975e760e39ee8af931a9601589518",
+      "matched_results": [
+        "DIAGNOSTIC_RESULTS.json",
+        "LOCAL_SCOUT_RESULTS.json",
+        "POINT_AUDIT_RESULTS.json"
+      ]
+    }
+  ],
+  "execution_shape": "Saved candidate state/flux and scalar components executed separately;default composing wrapper not separately executed.",
+  "failed_cover_attempts": [
+    {
+      "budget_depth": 30,
+      "max_leaves": 4096,
+      "exit_code": 1,
+      "log": "SCALAR_GENERATION.log"
+    }
+  ],
+  "prefinal_packaging_stop": {
+    "exit_code": 1,
+    "log": "FINAL_SCALAR_GENERATION.log",
+    "corrected_generation_exit_code": 0,
+    "corrected_generation_log": "FINAL_SCALAR_GENERATION_v0_2.log",
+    "one_filename_only_source_correction_verified": true
+  },
+  "uniform_extension_passed": false,
+  "global_native_evaluator_executed": false,
+  "native_point_node_comparisons": 16,
+  "coefficient_regeneration": false,
+  "independent_review": false,
+  "physical_promotion": 0
+}

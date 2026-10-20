@@ -1,0 +1,17 @@
+read-only replay matches DIAGNOSTIC_RESULTS.json
+PASS reproduced expected unresolved depth budget; midpoint=(1268262193137189/281474976710656,16450285494610167/72057594037927936); minimum formula lower=0.09999243993723342; all 26 above target=False
+PASS local257 scout lower=0.10155876996842828 obstruction=True next=(158523806250434577/35184372088832000,23/100)
+Traceback (most recent call last):
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T232845Z-codex-j1-corner-23-2d7c6ec2/replay.py", line 10, in <module>
+    for m in [diagnostic,local_scout,point_audit]:m.main()
+                                                  ^^^^^^^^
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T232845Z-codex-j1-corner-23-2d7c6ec2/point_audit.py", line 14, in main
+    old=REPO/'captures/2026-10-20T230318Z-codex-j1-corner-22-5dcc4763';contract=json.loads((HERE/'INITIAL_CONTRACT.json').read_text());freeze=json.loads((HERE/'PARAMETER_FREEZE.json').read_text());assert freeze['center']==['36193/8000','23/100'] and freeze['provisional_cover_goal']==contract['complete_cover_domain'] and freeze['finite_algorithm_budget']==contract['finite_algorithm_budget'];assert len(K.BANK)==26
+                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-20T232845Z-codex-j1-corner-23-2d7c6ec2/INITIAL_CONTRACT.json'

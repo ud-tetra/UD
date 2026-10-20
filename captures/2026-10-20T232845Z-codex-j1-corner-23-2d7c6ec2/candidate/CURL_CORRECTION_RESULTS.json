@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_curl_witness_sha256": "76b91ca324e5fc8f82b291499b30ce5158e10168883cae890ba077a8912a2a9d",
+  "source_coefficient_payload_sha256": "2c46f847d5eaea2d0b796c1bea56620e2505869b3aad9b6b849189b362d80fee",
+  "mesh": {
+    "nodes": 2809,
+    "tetrahedra": 12288,
+    "interior_edges": 13560,
+    "interior_faces": 23808,
+    "potential_coefficients_per_component": 74736,
+    "unequal_volumes": [
+      "1/4096",
+      "1/8192"
+    ]
+  },
+  "checks": {
+    "local_basis_divergence_identities": 230016,
+    "actual_affine_divergence_checks": 24576,
+    "correction_face_vertex_component_checks": 152064,
+    "gradient_orthogonality": 2,
+    "exact_flux_norm_nonincrease": 2,
+    "old_parent_interface_faces": 7424,
+    "nonzero_old_parent_face_vertex_components": 44544
+  },
+  "prior_affine_projection_norm_squared": [
+    "9282698288387989593635699247365900474509901002673937540491458179064732009759413471323150401863017/768340723975996361057013742444848786318530048648551275495101587836187729988388126720000000000000",
+    "4751411337778771551554728758499859300109161327671209609730319937594053526485255437141167302458074169/1536681447951992722114027484889697572637060097297102550990203175672375459976776253440000000000000000"
+  ],
+  "exact_flux_norm_changes": [
+    "-515636111456948782612974684423933165466951640524454727763828576799821513/11847632812712683503515778114412923635875698232561775016109984972800000000",
+    "-146528657337750729602084292169899938653851840382123261739723006922666352783/15164970000272234884500195986448542253920893737679072020620780765184000000000"
+  ],
+  "controls": [
+    "truncated coefficient payload",
+    "nonfinite coefficient payload",
+    "corrupted exterior affine trace"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 303,
+        "residual_norm": 3.4695769880246274,
+        "normal_residual_norm": 1.0123359339581172e-09
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 1.755657335189992,
+        "normal_residual_norm": 5.133831711471272e-10
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
