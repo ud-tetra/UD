@@ -1,0 +1,243 @@
+{
+  "status": "DERIVED_GRADE_RATE_INVARIANCE_AND_WEIGHTED_KERNEL_MOTION",
+  "new_exact_checks": {
+    "chain_dimensions": [
+      120,
+      720,
+      1200,
+      600
+    ],
+    "boundary_squared_columns": 1800,
+    "vanishing_cross_channel_columns": 15840,
+    "cochain_restriction_entries": [
+      60,
+      60
+    ],
+    "max_abs_row_sum_A": 12,
+    "source_fundamental_cycle_closed": true,
+    "metric_transform_triplet_checks": 19200,
+    "orbit_length": 10,
+    "all_selected_boundary_columns_orthogonal": true,
+    "finite_sample_relative_remainder_upper": "1183/24576",
+    "relative_remainder_less_than": "1/16"
+  },
+  "inherited_premises_not_rerun": {
+    "nominal_dynamic_rank": 1893,
+    "nominal_dynamic_kernel": 747,
+    "nominal_observer_largest_invariant_kernel": true
+  },
+  "derived_rate_result": {
+    "all_constant_nonzero_rates": "same N, dimension747 and historyrank1893; even at weighted-frequency collisions",
+    "arbitrary_locally_integrable_rates": "nominal N remains invariant/invisible; no equality claim",
+    "all_rates_zero": {
+      "snapshot_and_history_rank": 62,
+      "kernel": 2578
+    },
+    "physical_rate_selection": "OPEN"
+  },
+  "weighted_cases": [
+    {
+      "label": "single_tetrahedron",
+      "tetrahedron_indices": [
+        0
+      ],
+      "selected_count": 1,
+      "preserves_C10": false,
+      "selected_boundary_Gram": "4*identity",
+      "perturbation_operator_norm": "2*abs(epsilon)",
+      "observed_derivative_coefficients": {
+        "1680": -1
+      },
+      "unnormalized_weighted_boundary_h_norm_squared": 4,
+      "weighted_fundamental_cycle": "z_i=h0_i/(1+epsilon) on selected tetrahedra; h0_i otherwise",
+      "kernel_dimension": "NOT_COMPUTED; changing a hidden line does not prove shrinkage",
+      "rows": [
+        {
+          "epsilon": "1/2",
+          "new_dark_line_sine_squared": "599/3237000",
+          "new_dark_line_sine_bracket": [
+            "4970285963311016760214087402797937643981870603/365375409332725729550921208179070754913983135744",
+            "19881143853244067040856349611191750575927482413/1461501637330902918203684832716283019655932542976"
+          ],
+          "sample_time": "1/64",
+          "named_face_global_index": 1680,
+          "signed_derivative": "-epsilon/sqrt600",
+          "finite_signal_magnitude_lower": "218501786480887880284107934975763254140131345/730750818665451459101842416358141509827966271488",
+          "finite_signal_magnitude_upper": "123817679005836465494327829819599177346074429/365375409332725729550921208179070754913983135744",
+          "finite_signal_display_interval": [
+            "0.0002990099783670871701900982",
+            "0.0003388779754826987928821112"
+          ],
+          "conditional_disjoint_scalar_error_sufficient_upper": "218501786480887880284107934975763254140131345/1461501637330902918203684832716283019655932542976",
+          "scope": "Model response for exact initial h; total scalar error bound must be independently supplied under each hypothesis; no actual instrument gate"
+        },
+        {
+          "epsilon": "-1/2",
+          "new_dark_line_sine_squared": "599/361800",
+          "new_dark_line_sine_bracket": [
+            "29733664756812705062758043182329600232634622411/730750818665451459101842416358141509827966271488",
+            "59467329513625410125516086364659200465269244823/1461501637330902918203684832716283019655932542976"
+          ],
+          "sample_time": "1/64",
+          "named_face_global_index": 1680,
+          "signed_derivative": "-epsilon/sqrt600",
+          "finite_signal_magnitude_lower": "218501786480887880284107934975763254140131345/730750818665451459101842416358141509827966271488",
+          "finite_signal_magnitude_upper": "123817679005836465494327829819599177346074429/365375409332725729550921208179070754913983135744",
+          "finite_signal_display_interval": [
+            "0.0002990099783670871701900982",
+            "0.0003388779754826987928821112"
+          ],
+          "conditional_disjoint_scalar_error_sufficient_upper": "218501786480887880284107934975763254140131345/1461501637330902918203684832716283019655932542976",
+          "scope": "Model response for exact initial h; total scalar error bound must be independently supplied under each hypothesis; no actual instrument gate"
+        },
+        {
+          "epsilon": "1/1048576",
+          "new_dark_line_sine_squared": "599/395824939716148200",
+          "new_dark_line_sine_bracket": [
+            "28427007534927394663488705467011771229159/730750818665451459101842416358141509827966271488",
+            "56854015069854789326977410934023542458319/1461501637330902918203684832716283019655932542976"
+          ],
+          "sample_time": "1/64",
+          "named_face_global_index": 1680,
+          "signed_derivative": "-epsilon/sqrt600",
+          "finite_signal_magnitude_lower": "833518167422820588241988887694409386215/1461501637330902918203684832716283019655932542976",
+          "finite_signal_magnitude_upper": "59040870192449791667140879545020664857/91343852333181432387730302044767688728495783936",
+          "finite_signal_display_interval": [
+            "5.703162734357589153100932E-10",
+            "6.463584432271934373514390E-10"
+          ],
+          "conditional_disjoint_scalar_error_sufficient_upper": "833518167422820588241988887694409386215/2923003274661805836407369665432566039311865085952",
+          "scope": "Model response for exact initial h; total scalar error bound must be independently supplied under each hypothesis; no actual instrument gate"
+        },
+        {
+          "epsilon": "1/1099511627776",
+          "new_dark_line_sine_squared": "599/435213295062056831852269108200",
+          "new_dark_line_sine_bracket": [
+            "3388766598680623977470299693520281/91343852333181432387730302044767688728495783936",
+            "54220265578889983639524795096324497/1461501637330902918203684832716283019655932542976"
+          ],
+          "sample_time": "1/64",
+          "named_face_global_index": 1680,
+          "signed_derivative": "-epsilon/sqrt600",
+          "finite_signal_magnitude_lower": "397452434264574331398958629462437/730750818665451459101842416358141509827966271488",
+          "finite_signal_magnitude_upper": "439888761881364819907701608129/713623846352979940529142984724747568191373312",
+          "finite_signal_display_interval": [
+            "5.438959822042073395825321E-16",
+            "6.164154464981016515268698E-16"
+          ],
+          "conditional_disjoint_scalar_error_sufficient_upper": "397452434264574331398958629462437/1461501637330902918203684832716283019655932542976",
+          "scope": "Model response for exact initial h; total scalar error bound must be independently supplied under each hypothesis; no actual instrument gate"
+        }
+      ]
+    },
+    {
+      "label": "C10_tetrahedron_orbit",
+      "tetrahedron_indices": [
+        0,
+        9,
+        227,
+        432,
+        447,
+        582,
+        538,
+        347,
+        332,
+        141
+      ],
+      "selected_count": 10,
+      "preserves_C10": true,
+      "selected_boundary_Gram": "4*identity",
+      "perturbation_operator_norm": "2*abs(epsilon)",
+      "observed_derivative_coefficients": {
+        "1680": -1,
+        "1689": -1
+      },
+      "unnormalized_weighted_boundary_h_norm_squared": 40,
+      "weighted_fundamental_cycle": "z_i=h0_i/(1+epsilon) on selected tetrahedra; h0_i otherwise",
+      "kernel_dimension": "NOT_COMPUTED; changing a hidden line does not prove shrinkage",
+      "rows": [
+        {
+          "epsilon": "1/2",
+          "new_dark_line_sine_squared": "59/32100",
+          "new_dark_line_sine_bracket": [
+            "62657461489858289711979230192175790206876023853/1461501637330902918203684832716283019655932542976",
+            "31328730744929144855989615096087895103438011927/730750818665451459101842416358141509827966271488"
+          ],
+          "sample_time": "1/64",
+          "named_face_global_index": 1680,
+          "signed_derivative": "-epsilon/sqrt600",
+          "finite_signal_magnitude_lower": "218501786480887880284107934975763254140131345/730750818665451459101842416358141509827966271488",
+          "finite_signal_magnitude_upper": "123817679005836465494327829819599177346074429/365375409332725729550921208179070754913983135744",
+          "finite_signal_display_interval": [
+            "0.0002990099783670871701900982",
+            "0.0003388779754826987928821112"
+          ],
+          "conditional_disjoint_scalar_error_sufficient_upper": "218501786480887880284107934975763254140131345/1461501637330902918203684832716283019655932542976",
+          "scope": "Model response for exact initial h; total scalar error bound must be independently supplied under each hypothesis; no actual instrument gate"
+        },
+        {
+          "epsilon": "-1/2",
+          "new_dark_line_sine_squared": "59/3780",
+          "new_dark_line_sine_bracket": [
+            "182591018920153680365578159318865279106817976627/1461501637330902918203684832716283019655932542976",
+            "45647754730038420091394539829716319776704494157/365375409332725729550921208179070754913983135744"
+          ],
+          "sample_time": "1/64",
+          "named_face_global_index": 1680,
+          "signed_derivative": "-epsilon/sqrt600",
+          "finite_signal_magnitude_lower": "218501786480887880284107934975763254140131345/730750818665451459101842416358141509827966271488",
+          "finite_signal_magnitude_upper": "123817679005836465494327829819599177346074429/365375409332725729550921208179070754913983135744",
+          "finite_signal_display_interval": [
+            "0.0002990099783670871701900982",
+            "0.0003388779754826987928821112"
+          ],
+          "conditional_disjoint_scalar_error_sufficient_upper": "218501786480887880284107934975763254140131345/1461501637330902918203684832716283019655932542976",
+          "scope": "Model response for exact initial h; total scalar error bound must be independently supplied under each hypothesis; no actual instrument gate"
+        },
+        {
+          "epsilon": "1/1048576",
+          "new_dark_line_sine_squared": "59/3958249283915220",
+          "new_dark_line_sine_bracket": [
+            "89216204957763393495596792924162114715237/730750818665451459101842416358141509827966271488",
+            "178432409915526786991193585848324229430475/1461501637330902918203684832716283019655932542976"
+          ],
+          "sample_time": "1/64",
+          "named_face_global_index": 1680,
+          "signed_derivative": "-epsilon/sqrt600",
+          "finite_signal_magnitude_lower": "833518167422820588241988887694409386215/1461501637330902918203684832716283019655932542976",
+          "finite_signal_magnitude_upper": "59040870192449791667140879545020664857/91343852333181432387730302044767688728495783936",
+          "finite_signal_display_interval": [
+            "5.703162734357589153100932E-10",
+            "6.463584432271934373514390E-10"
+          ],
+          "conditional_disjoint_scalar_error_sufficient_upper": "833518167422820588241988887694409386215/2923003274661805836407369665432566039311865085952",
+          "scope": "Model response for exact initial h; total scalar error bound must be independently supplied under each hypothesis; no actual instrument gate"
+        },
+        {
+          "epsilon": "1/1099511627776",
+          "new_dark_line_sine_squared": "59/4352132950620449571266891220",
+          "new_dark_line_sine_bracket": [
+            "85083283064684063489000862124295083/730750818665451459101842416358141509827966271488",
+            "170166566129368126978001724248590167/1461501637330902918203684832716283019655932542976"
+          ],
+          "sample_time": "1/64",
+          "named_face_global_index": 1680,
+          "signed_derivative": "-epsilon/sqrt600",
+          "finite_signal_magnitude_lower": "397452434264574331398958629462437/730750818665451459101842416358141509827966271488",
+          "finite_signal_magnitude_upper": "439888761881364819907701608129/713623846352979940529142984724747568191373312",
+          "finite_signal_display_interval": [
+            "5.438959822042073395825321E-16",
+            "6.164154464981016515268698E-16"
+          ],
+          "conditional_disjoint_scalar_error_sufficient_upper": "397452434264574331398958629462437/1461501637330902918203684832716283019655932542976",
+          "scope": "Model response for exact initial h; total scalar error bound must be independently supplied under each hypothesis; no actual instrument gate"
+        }
+      ]
+    }
+  ],
+  "source_supported_physical_constitutive_law": false,
+  "new_fit_or_estimator_calls": 0,
+  "new_raw_acquisitions": 0,
+  "physical_promotion": 0,
+  "external_review": "PENDING"
+}
