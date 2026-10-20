@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_curl_witness_sha256": "374ce8e5f2c50975c00ad1960d7569b8434f948a1d8a0d16bd4ebbbbe2581fd9",
+  "source_coefficient_payload_sha256": "2ebe5d0ae5774dc2a4e16244bc8ab7a4d80d49856c43dbfbed4db746d903bb31",
+  "mesh": {
+    "nodes": 2809,
+    "tetrahedra": 12288,
+    "interior_edges": 13560,
+    "interior_faces": 23808,
+    "potential_coefficients_per_component": 74736,
+    "unequal_volumes": [
+      "1/4096",
+      "1/8192"
+    ]
+  },
+  "checks": {
+    "local_basis_divergence_identities": 230016,
+    "actual_affine_divergence_checks": 24576,
+    "correction_face_vertex_component_checks": 152064,
+    "gradient_orthogonality": 2,
+    "exact_flux_norm_nonincrease": 2,
+    "old_parent_interface_faces": 7424,
+    "nonzero_old_parent_face_vertex_components": 44544
+  },
+  "prior_affine_projection_norm_squared": [
+    "10746669872899117640517661370577873167669625786490444149727239911989373774155914974570421869618331373/655650751126183561435318393552937630991812308180097088422486688286880196256757868134400000000000000",
+    "20217117916079488414735103712813276281732136364962164102910639020572645656712655165681357641281116813533/12588494421622724379558113156216402515042796317057864097711744415108099768129751068180480000000000000000"
+  ],
+  "exact_flux_norm_changes": [
+    "-1404869491925591392433374245865483523512032303217685750418308153760343068527/24263952000435575815200313578317667606273429980286515232993249224294400000000",
+    "-2167125546363220382658116176102151242388050004131692894687396689834962355339/431359146674410236714672241392314090778194310760649159697657763987456000000000"
+  ],
+  "controls": [
+    "truncated coefficient payload",
+    "nonfinite coefficient payload",
+    "corrupted exterior affine trace"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 4.0414039152066845,
+        "normal_residual_norm": 1.2616954780603175e-09
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 1.2652966945295794,
+        "normal_residual_norm": 3.706055262099576e-10
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
