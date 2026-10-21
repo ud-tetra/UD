@@ -57,3 +57,20 @@ The curvature receipts \(\|B_1N_z\|_F^2\) and \(\|N_zB_3\|_F^2\), variational fu
 
 ## Reproduction
 [Exact independent counterexample test](verify_thm534_quadrature_flux_typing_v0_6_1.py); constructor execution PASS on 2026-10-21 with three exact independent controls. Results preserved append-only. Physical promotion 0.
+
+
+## THM-534-S16 — Compatibility of the two covariant closure defects (EXACT)
+
+For any independently specified linear coupling \(N:C_2\to C_1\) with **fixed** original simplicial \(B_1:C_1\to C_0\) and \(B_3:C_3\to C_2\), define the typed nilpotency defects
+\[
+F_\downarrow=B_1N:C_2\to C_0,\qquad F_\uparrow=NB_3:C_3\to C_1.
+\]
+Then the following source/curvature *square-compatibility identity* holds:
+\[
+\boxed{B_1F_\uparrow=F_\downarrow B_3:C_3\to C_0.}
+\]
+**Proof:** Both sides are \(B_1NB_3\) by associativity; no assumption that \(B_1N=0\) or \(NB_3=0\) is required. For a single marked incidence \(N_z=B_2+(z-1)q|e\rangle\langle f|\), both sides are explicitly \((z-1)q(B_3)_f B_1|e\rangle\), nonzero for \(z\ne1\). QED.
+
+**Typing:** This is a *commuting defect square*, not a proof of a covariant Bianchi identity, dynamic curvature propagation, divergence-free physical stress-energy or conserved packet burden. It prevents treating the lower and upper nilpotency defects as unrelated bookkeeping entries, but its equality alone cannot select \(z\), construct a current, or derive \(T\).
+
+**Independent constructor check:** \(B_1(N_zB_3)=(B_1N_z)B_3\) verified symbolically in the v0.6 exact script (additional control), and independently follows from matrix associativity. Physical promotion 0.
