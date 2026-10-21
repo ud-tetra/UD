@@ -1,0 +1,254 @@
+{
+  "actual_UD_inputs_read": false,
+  "application_data_allowlist": [
+    "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame",
+    "/workspace/scratch/f3d1c2f040c9/c33_storage_review"
+  ],
+  "checks": {
+    "all_1999_rows_and_metadata_byte_identical": true,
+    "authenticated_trailing_bytes": true,
+    "authenticated_wrong_magic": true,
+    "corrupt_part": true,
+    "forged_output_path": true,
+    "forged_part_path": true,
+    "forged_start_row": true,
+    "independent_verbatim_part_parse": true,
+    "missing_last_part": true,
+    "wrong_index_hash": true,
+    "wrong_metadata_hash": true,
+    "wrong_pack_hash": true
+  },
+  "cleanup_verified_test_only_row_counts": {
+    "authenticated_trailing_bytes": 64,
+    "authenticated_wrong_magic": 0,
+    "corrupt_part": 0,
+    "forged_output_path": 0,
+    "forged_part_path": 0,
+    "forged_start_row": 0,
+    "missing_last_part": 1984,
+    "positive_unpack": 1999
+  },
+  "external_promotion_review": "PENDING",
+  "invocations": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_pack.py",
+        "--frame",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame",
+        "--frame-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/wrong_pack_hash"
+      ],
+      "elapsed_seconds": 0.03745430200069677,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_pack.py",
+        "--frame",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame",
+        "--frame-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/parts"
+      ],
+      "elapsed_seconds": 0.40666135199717246,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/parts",
+        "--index-sha256",
+        "cad99e1767d0ab44ccefb62e26a8bdd7ede3cfcc981b83ceed602428f2549faf",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/positive_unpack"
+      ],
+      "elapsed_seconds": 0.37099411199596943,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/parts",
+        "--index-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/wrong_index_hash"
+      ],
+      "elapsed_seconds": 0.04498486399825197,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/parts",
+        "--index-sha256",
+        "cad99e1767d0ab44ccefb62e26a8bdd7ede3cfcc981b83ceed602428f2549faf",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/wrong_metadata_hash"
+      ],
+      "elapsed_seconds": 0.042544274001556914,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/variants/corrupt_part",
+        "--index-sha256",
+        "cad99e1767d0ab44ccefb62e26a8bdd7ede3cfcc981b83ceed602428f2549faf",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/corrupt_part"
+      ],
+      "elapsed_seconds": 0.043523433996597305,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/variants/authenticated_wrong_magic",
+        "--index-sha256",
+        "0d72c71a70503fc171d0dec0f5e0c870a181c0bde1245053f02b7a2c94646d4a",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/authenticated_wrong_magic"
+      ],
+      "elapsed_seconds": 0.040668964000360575,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/variants/authenticated_trailing_bytes",
+        "--index-sha256",
+        "dc1f4f021f067f6bc87de7ef53d11c1d6b9795098bb9a733d4247077d268e1c0",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/authenticated_trailing_bytes"
+      ],
+      "elapsed_seconds": 0.05704781800159253,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/variants/forged_part_path",
+        "--index-sha256",
+        "599c646e6d8cd7660555bf8dcb141351284c1a89c8f64b70a2042e1c08f24f2b",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/forged_part_path"
+      ],
+      "elapsed_seconds": 0.04678517200227361,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/variants/forged_start_row",
+        "--index-sha256",
+        "c6714ff25b258655c644543364e5e8548b0248b287833fe9a6213e9a09e13244",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/forged_start_row"
+      ],
+      "elapsed_seconds": 0.044963185995584354,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/variants/missing_last_part",
+        "--index-sha256",
+        "f21df8b8fc299071ffe1609a867eef94ea3c8f21fdcecb2cbcd78ec290813c6d",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame/FULL_FRAME.json",
+        "--metadata-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/missing_last_part"
+      ],
+      "elapsed_seconds": 0.4927099010019447,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_unpack.py",
+        "--parts",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/variants/forged_output_path",
+        "--index-sha256",
+        "ba860b4d602c803f309e741452ab0d4092a56a21fa7cf8ba39717c715ab3ec41",
+        "--metadata",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/variants/forged_output_path/metadata.json",
+        "--metadata-sha256",
+        "a0174aa71dca0e5b4051d275469ef7f32f8fdc56dc23bb882019c4d76f5a9814",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_storage_review/outputs/forged_output_path"
+      ],
+      "elapsed_seconds": 0.03733456700138049,
+      "returncode": 1
+    }
+  ],
+  "packed_index_sha256": "cad99e1767d0ab44ccefb62e26a8bdd7ede3cfcc981b83ceed602428f2549faf",
+  "parts": 32,
+  "physical_promotion": 0,
+  "retention": "All restored row bytes independently hashed then test-created duplicates removed; originals and verbatim packed32parts retained; partial hashes and all CLI logs retained",
+  "rows": 1999,
+  "scope": "Integrity codec testing only; trusted index, metadata, source commit/root remain external premises; no actual UD or physical source admission",
+  "source_hashes": {
+    "c33_pack.py": "b5124c2b10411656718b08d2d68bd975f7561e9b6be265173d5a32237841cbd2",
+    "c33_unpack.py": "8bce1d79f7614a78fa8c897123148f52c960441199e560874d246b60250fd2fe"
+  },
+  "status": "PASS_SYNTHETIC_ACTUAL_STORAGE_CLI_BYTE_AND_REJECTION_TESTS",
+  "synthetic_frame_sha256": "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5"
+}

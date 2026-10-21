@@ -1,0 +1,7 @@
+# C33 independent full-frame review plan
+
+Review the fixed C31/C32 source map and complete1999-row construction, without independently rerunning all native adjoints. Before new results, check source-slice regeneration, exact row identities/coverage, reused16-row provenance, shared phase-cache semantics, bounded worker queue, input/output norms, endpoint source/build/operator bindings and full-frame completion predicates.
+
+Independently verify residual scaling for Gint/2^96 and encoded RHS zint/2^192: with coefficients aint/2^p, residual numerator is Gint(Gint^T aint)−zint2^p and squared denominator2^(384+2p). Validate exact lift, refinement acceptance and solve/Gram bindings. Floating Gram/factorization is a proposal; exact certified residual and finite lift decide record acceptance. Design a checker that recomputes saved-data products by a distinct implementation/route, and state finite scope rather than treating a producer replay as independent proof.
+
+The full C32 frame error bound applies only after all1999 source-authenticated rows have validated contracts;16 reused rows must match authenticated C32 payloads, and1983 new calls must not be silently relabeled repeats. No full8192 execution, Hankel allocation, external acquisition, hidden-state recovery or physical promotion is claimed. Work only in c33_review; capture safe scripts/reports, excluding generated raw inputs, large row matrices and binaries.

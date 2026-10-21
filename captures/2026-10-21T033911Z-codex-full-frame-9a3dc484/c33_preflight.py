@@ -1,0 +1,8 @@
+"""Conformance check: cached C33 encoding reproduces all16 pinned C32 inputs."""
+from pathlib import Path
+from flint import arb,ctx
+import ast,json,hashlib,argparse
+ap=argparse.ArgumentParser();ap.add_argument('--source',type=Path,required=True);ap.add_argument('--slice',type=Path,required=True);ap.add_argument('--reuse',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();assert not a.out.exists();ctx.prec=192;S=2**96;H=lambda b:hashlib.sha256(b).hexdigest();data=[(((13*i+7)%17)-8)*3*S//4096 for i in range(253952)];cache={};ns=globals().copy();tree=ast.parse(a.source.read_text());defs=ast.Module(body=[n for n in tree.body if isinstance(n,ast.FunctionDef)and n.name in ['phases','encode']],type_ignores=[]);assert len(defs.body)==2;exec(compile(defs,str(a.source),'exec'),ns);cols=json.loads(a.slice.read_text())['columns'];rb=(a.reuse/'PARTIAL_FRAME.json').read_bytes();assert H(rb)=='1c8e2f214c7e832afbaff324524a12dc3dbdd9bb126e031d2a71f84c437fe015';checks=[]
+for row in json.loads(rb)['rows']:
+ c=row['column'];txt,n,ph,z=ns['encode'](cols[c]);assert H(txt.encode())==row['input_text_sha256'];assert n==row['phase_enclosure_checks']and ph==row['phase_table_sha256']and z==int(row['rhs_dot_integer']);checks.append(c)
+o={'status':'PASS_CACHED_ENCODING_MATCHES_ALL16_PINNED_C32_INPUTS_PHASES_AND_RHS','source_sha256':H(a.source.read_bytes()),'slice_sha256':H(a.slice.read_bytes()),'reuse_receipt_sha256':H(rb),'columns':checks,'logical_encoded_coordinates_checked':16*253952,'native_adjoint_calls':0,'producer_conformance_not_independent_review':True};a.out.write_text(json.dumps(o,indent=2,sort_keys=True)+'\n');print(json.dumps(o))

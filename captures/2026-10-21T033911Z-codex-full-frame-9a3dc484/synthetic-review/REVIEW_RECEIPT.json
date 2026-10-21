@@ -1,0 +1,129 @@
+{
+  "actual_UD_frames_read": false,
+  "actual_UD_solves_executed": 0,
+  "exact_coefficient_lift_error_squared": "4268017728912451083479682030908807677355006647298121/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408",
+  "exact_finite_lift_quantization_squared": "156156846446749157/1766847064778384329583297500742918515827483896875618958121606201292619776",
+  "exact_ideal_diagonal_solution_lift_error_squared": "1741198275821427614101783145690201554216555004051478502926409/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408",
+  "exact_oracle_triangle_squared_upper": "1741207026075530259968542527963237042677239457632975300552777/9850501549098619803069760025035903451269934817616361666987073351061430442874302652853566563721228910201656997576704",
+  "exact_residual_squared": "6828828509645411988640288327858056449009349332012823/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+  "external_promotion_review": "PENDING",
+  "final_residual_gate": true,
+  "fixture_dimensions": [
+    1999,
+    2640
+  ],
+  "frame_sha256": "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5",
+  "initial_residual_gate": false,
+  "invocations": [
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_solve.py",
+        "--frame",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/runs/missing_trusted_hash"
+      ],
+      "certificate_exists": false,
+      "cpu_affinity": [
+        0,
+        1
+      ],
+      "elapsed_seconds": 0.34049593999952776,
+      "output_exists": false,
+      "returncode": 2
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_solve.py",
+        "--frame",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/runs/wrong_trusted_hash",
+        "--frame-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "certificate_exists": false,
+      "cpu_affinity": [
+        0,
+        1
+      ],
+      "elapsed_seconds": 0.40296148999914294,
+      "output_exists": true,
+      "returncode": 1
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_solve.py",
+        "--frame",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/missing_coverage",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/runs/missing_coverage",
+        "--frame-sha256",
+        "876d47e5caf00f5a8d140c89dfd627fffdaeb262093ccc32a0612b956a6de700"
+      ],
+      "certificate_exists": false,
+      "cpu_affinity": [
+        0,
+        1
+      ],
+      "elapsed_seconds": 0.37539678499888396,
+      "output_exists": true,
+      "returncode": 1
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_solve.py",
+        "--frame",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/corrupt_row",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/runs/corrupt_row",
+        "--frame-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5"
+      ],
+      "certificate_exists": false,
+      "cpu_affinity": [
+        0,
+        1
+      ],
+      "elapsed_seconds": 0.39309849799610674,
+      "output_exists": true,
+      "returncode": 1
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/f3d1c2f040c9/c33_solve.py",
+        "--frame",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame",
+        "--out",
+        "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/runs/synthetic_refinement",
+        "--frame-sha256",
+        "c7d1d18e5721cd36f114d23dc9e2a62688fa8f6a34db9e373513d9d98fe6cfc5"
+      ],
+      "certificate_exists": true,
+      "cpu_affinity": [
+        0,
+        1
+      ],
+      "elapsed_seconds": 9.957787768005801,
+      "output_exists": true,
+      "returncode": 0
+    }
+  ],
+  "one_unit_oracle_corruption_controls": 2,
+  "physical_promotion": 0,
+  "refinement_iterations": 1,
+  "rejection_controls": 4,
+  "safe_input_allowlist": [
+    "/workspace/scratch/f3d1c2f040c9/c33_solve.py",
+    "/workspace/scratch/f3d1c2f040c9/c33_estimator_review/synthetic_frame"
+  ],
+  "scope": "SYNTHETIC/source-excluded acceptance proves a record residual and finite lift certificate only; no UD source admission, physical accuracy, or external promotion",
+  "solver_sha256": "c7ff09a9139b89bf1bd27f5832c45b68706bd0a934c33c5204eb9df8f2bceec7",
+  "stable_input_premise": "Exclusive synthetic fixture; hashes checked before/after; no universal concurrent snapshot claim",
+  "status": "PASS_SYNTHETIC_ACTUAL_CLI_INDEPENDENT_INTEGER_RATIONAL_AUDIT"
+}
