@@ -1,0 +1,65 @@
+{
+  "status": "PARAMETERS_FROZEN_BEFORE_GENERATION",
+  "center": [
+    "1264331734346891259/281474976710656000",
+    "27/100"
+  ],
+  "state_key": "gap_27",
+  "binary64_centers": {
+    "omega": {
+      "hex": "0x1.1f79caf9db22dp+2",
+      "stored_minus_exact": "-9/281474976710656000"
+    },
+    "gamma": {
+      "hex": "0x1.147ae147ae148p-2",
+      "stored_minus_exact": "1/56294995342131200"
+    }
+  },
+  "frozen_at_utc": "2026-10-21T02:01:23.744181+00:00",
+  "base_commit": "0f42f8589cb288971b5aa0d291b337569d262eab",
+  "constructor_capture": "captures/2026-10-21T014039Z-codex-j1-corner-27-41506396",
+  "source_placement_capture": "captures/2026-10-21T014039Z-codex-j1-corner-27-41506396",
+  "source_placement_file": "LOCAL_SCOUT_RESULTS.json",
+  "source_placement_sha256": "fa125caeb95fb19cc16c35616456add801d26d95cb80f7e9825ee8e9c5a2689d",
+  "source_selected_formula_lower": "416376906163253148610868194239606105178289698459422026357927349693030714179982668673063180120376461650265836684301363138717498459329506025300677510929/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "source_score_input": "represented omega and greatest binary64 gamma <=27/100; not exact rational center",
+  "previous_uniform_capture": "captures/2026-10-21T012822Z-codex-j1-bank-26-5b4bbc69",
+  "previous_uniform_cover_sha256": "fb77576169a0b45d4d6d85cec19804bad5b09f0b399f2a46df9b4c4aafb2a16a",
+  "previous_uniform_upper_gamma": "13/50",
+  "mesh": "unchanged meanfree conforming P2,18673 nodal coefficients,one exact mean constraint,12288 tetrahedra",
+  "provisional_cover_goal": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/10",
+      "27/100"
+    ]
+  },
+  "finite_algorithm_budget": {
+    "max_depth": 30,
+    "max_leaves": 4096
+  },
+  "placement_probe_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "27/100",
+      "7/25"
+    ]
+  },
+  "placement_grid": {
+    "omega_samples": 129,
+    "gamma_subdivisions": 8,
+    "exclude_lower_gamma_row": true,
+    "expected_probes": 1032
+  },
+  "retry_lineage": "Adds an own state/upper to prior30-state bank after same goal/budget exhausted in PR317. Prior complete uniform cover through13/50 remains authoritative until new audit passes. Constructor/placement/bank parent and last complete uniform parent bound separately.",
+  "candidate_only": "No new state/flux or uniform coverage before exact posterior and floating audits. Selected at finite local-grid endpoint;not global optimum or actual-error lower.",
+  "quantization_note": "Both center constants nonbinary. Frequency nearest word lies below exact interior center,distinct from guard endpoints. Damping nearest word lies above exact upper guard,one beyond last accepted damping word. Both quantization errors included.",
+  "independent_review": false,
+  "physical_promotion": 0
+}
