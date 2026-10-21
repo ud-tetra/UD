@@ -1,0 +1,64 @@
+{
+  "status": "PARAMETERS_FROZEN_BEFORE_GENERATION",
+  "center": [
+    "1269899393868235009/281474976710656000",
+    "1/4"
+  ],
+  "state_key": "central_25",
+  "binary64_centers": {
+    "omega": {
+      "hex": "0x1.20bddf916872cp+2",
+      "stored_minus_exact": "-9/281474976710656000"
+    },
+    "gamma": {
+      "hex": "0x1.0000000000000p-2",
+      "stored_minus_exact": "0"
+    }
+  },
+  "frozen_at_utc": "2026-10-21T01:11:36.706605+00:00",
+  "base_commit": "6fc5ff4a576885026edbdcf0479ccdbc8a9fa6fd",
+  "constructor_capture": "captures/2026-10-21T005546Z-codex-j1-left-25-88b09d86",
+  "source_placement_capture": "captures/2026-10-21T005546Z-codex-j1-left-25-88b09d86",
+  "source_placement_file": "LOCAL_SCOUT_RESULTS.json",
+  "source_placement_sha256": "e31207a20e2a26ca4173de4d6936f3913c1cbd40696961123f6f36b3ed49ed75",
+  "source_selected_formula_lower": "91287030091374883722186692933514415491423528243945002918180421831692049936896396584329193165508516603054264663389527548318532065818287050194495059797/800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "previous_uniform_capture": "captures/2026-10-21T000423Z-codex-j1-bank-24-11c33657",
+  "previous_uniform_cover_sha256": "42c3153dab1f5cc4af1e28936ebf8b1c4533de7d3444e93b5a4e472496294837",
+  "previous_uniform_upper_gamma": "6/25",
+  "mesh": "unchanged meanfree conforming P2,18673 nodal coefficients,one exact mean constraint,12288 tetrahedra",
+  "provisional_cover_goal": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/10",
+      "1/4"
+    ]
+  },
+  "finite_algorithm_budget": {
+    "max_depth": 30,
+    "max_leaves": 4096
+  },
+  "placement_probe_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/4",
+      "13/50"
+    ]
+  },
+  "placement_grid": {
+    "omega_samples": 129,
+    "gamma_subdivisions": 8,
+    "exclude_lower_gamma_row": true,
+    "expected_probes": 1032
+  },
+  "retry_lineage": "Adds an own state/upper to prior28-state bank after same goal/budget exhausted in PR312. Prior complete uniform cover through6/25 remains authoritative until new audit passes. Constructor/placement/bank parent and last complete uniform parent bound separately.",
+  "candidate_only": "No new state/flux or uniform coverage before exact posterior and floating audits. Selected at finite local-grid endpoint;not global optimum or actual-error lower.",
+  "quantization_note": "Frequency constant nonbinary;nearest word lies below exact interior center,distinct from guard endpoints. Damping1/4 exactly binary64,equals upper guard and last accepted damping word;zero damping quantization error.",
+  "independent_review": false,
+  "physical_promotion": 0
+}

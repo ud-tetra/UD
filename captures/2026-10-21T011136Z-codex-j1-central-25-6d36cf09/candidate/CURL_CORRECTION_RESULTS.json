@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_curl_witness_sha256": "0cfe03f493be5f6fb40c411ee95055d760aceb5ca63b1c20e996ef9c5c83856b",
+  "source_coefficient_payload_sha256": "7ea24caa3ba80259e43db7a4975bcb1ec53a3fe1d168d63bf78b4b585dea8067",
+  "mesh": {
+    "nodes": 2809,
+    "tetrahedra": 12288,
+    "interior_edges": 13560,
+    "interior_faces": 23808,
+    "potential_coefficients_per_component": 74736,
+    "unequal_volumes": [
+      "1/4096",
+      "1/8192"
+    ]
+  },
+  "checks": {
+    "local_basis_divergence_identities": 230016,
+    "actual_affine_divergence_checks": 24576,
+    "correction_face_vertex_component_checks": 152064,
+    "gradient_orthogonality": 2,
+    "exact_flux_norm_nonincrease": 2,
+    "old_parent_interface_faces": 7424,
+    "nonzero_old_parent_face_vertex_components": 44544
+  },
+  "prior_affine_projection_norm_squared": [
+    "28457166767245050603860342315531862345488003444733222955036073191857274376097269306383921213860537158376051098016855973201276351805115690174487227224347/2453080694497673255603967851622015303443539592319698453450029422234657597382717991225894796158952033767573510421148350525679280496574464000000000000000",
+    "17373127880173348038407114534586809058143184206980710944293200279925399585689202065105258883292959463622595790153485883973847410646134275079224905126773199/4709914933435532650759618275114269382611596017253821030624056490690542586974818543153718008625187904833741140008604833009304218553422970880000000000000000"
+  ],
+  "exact_flux_norm_changes": [
+    "-12290673398117312412146647422056720245192563346032530903730506038541160630480462389357508113509313611/293333180592165996422656179130950455191411448687894820091604224707030907165920485690409222144000000000",
+    "-108205855700758298252779140126952758093680016094399566286771328544160149147069958879111943546638236497/9386661778949311885524997732190414566125166358012634242931335190624989029309455542093095108608000000000"
+  ],
+  "controls": [
+    "truncated coefficient payload",
+    "nonfinite coefficient payload",
+    "corrupted exterior affine trace"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 303,
+        "residual_norm": 3.399806345303812,
+        "normal_residual_norm": 9.932386520766919e-10
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 302,
+        "residual_norm": 1.917576904298075,
+        "normal_residual_norm": 5.613629878902572e-10
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
