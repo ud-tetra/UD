@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-10-21T21:20:34.387103+00:00",
+  "main_observed": "b9f6c239546b39f6ea5dea00798dd0aa5b3e7d12",
+  "purpose": "Diagnose remaining matrix-column and directional finite-difference failures; do not replace original qualifications",
+  "inputs": [
+    {
+      "case": "21_dir_0",
+      "columns": [
+        32,
+        50
+      ],
+      "selection": "two largest refined column discrepancies, exposed-data diagnostic",
+      "files": {
+        "RELAXED.npz": "a841943400addd02b6fae350492ac6c028ee29f8b420726a0423e09c004c8db8",
+        "HESSIAN.npz": "e6da26b7084bdebfedf8970e667825cc2b884485e56954d789f7477897a3b29f",
+        "REFINED_HESSIAN.npz": "804073a31d1b8e1489986cba07f55fb68537f3e193f1c14de163eb017ea5ce0c"
+      }
+    },
+    {
+      "case": "21_dir_10024",
+      "columns": [
+        51,
+        50
+      ],
+      "selection": "two largest refined column discrepancies, exposed-data diagnostic",
+      "files": {
+        "RELAXED.npz": "119c0a10bb0ceaff91e24aa3108e4ce604f226803ec6b7124297f7b4b5201a02",
+        "HESSIAN.npz": "5d33e2ba03c390356d1a8ad9379011da35c9bf559febac8b04af77f074418d6c",
+        "REFINED_HESSIAN.npz": "4bc59f65e7d5dfc76093b2bd0b63d4c9f2e1e8a31a27760def2307ca5ca19e1b"
+      }
+    },
+    {
+      "case": "31_dir_10084",
+      "columns": [
+        13,
+        63
+      ],
+      "selection": "two largest refined column discrepancies, exposed-data diagnostic",
+      "files": {
+        "RELAXED.npz": "12ec14c8e9ab10937059a73d25fcdeefbbaa52a2b4749aafc50414dbe617cbf6",
+        "HESSIAN.npz": "9d898838a7a85c0bc219f33fe189217852e2d6cf2ce3d9c52201baadfb0b1873",
+        "REFINED_HESSIAN.npz": "49ba7b4ccd1a13b47fa1001f3199c355606c127ab1a527809fe278173e67f461"
+      }
+    },
+    {
+      "case": "31_dir_10134",
+      "columns": [
+        45,
+        8
+      ],
+      "selection": "two largest refined column discrepancies, exposed-data diagnostic",
+      "files": {
+        "RELAXED.npz": "8f689da0f9a6d6b2f5031df6eb89b7348a53c6fe302ec9f1b28b7a7a145512a3",
+        "HESSIAN.npz": "2302063b0d8f70f124e2aad2566e394a18e05d119b30a26bbd5d8bbbf73448be",
+        "REFINED_HESSIAN.npz": "96785e99f6be67cfcbaa63a6a3a12385f451f0a6bf4129e6a496770d9d78addc"
+      }
+    }
+  ],
+  "steps_A": [
+    5e-05,
+    2.5e-05,
+    1.25e-05,
+    6.25e-06,
+    3.125e-06,
+    1.5625e-06,
+    7.8125e-07
+  ],
+  "directions": "all3 original sin((i+1)*arange(1,m+1)) normalized vectors in all4 cases, plus2 exposed largest-discrepancy coordinate columns",
+  "raw_data": "positive/negative projected force arrays, actual displacement rounding residuals, central derivative and one-sided derivatives, fixed source geometry",
+  "checks": {
+    "old_force_reproduction_absolute": 1e-08,
+    "original_absolute_derivative_limit": 1e-06,
+    "original_relative_directional_limit": 1e-05,
+    "diagnostic_stable_pair_absolute": 1e-06
+  },
+  "stable_window_rule": "Report ALL adjacent-pair max changes below1e-6; a range requires3 consecutive ladder values with both adjacent changes below1e-6. No best-step selection or all-column qualification from selected columns.",
+  "repeatability": "repeat first-case baseline twice at start and finish; source arrays hashed unchanged",
+  "interpretation": "small-step worsening, central/one-sided behavior and displacement rounding are diagnostics only; no source attribution to roundoff or spline kinks without additional evidence",
+  "physical_promotion": 0,
+  "physical_bath": "HOLD",
+  "review": "constructor only; adaptive numerical diagnostic, not physical preregistration",
+  "rounding_diagnostic": "Project actual (xplus-xminus)/(2h) into tangent coordinates, compare both nominal-Hw and effective-Hqdir errors; retain orthogonal Cartesian direction residual. This uses the exposed approximate H and is diagnostic, not independent validation or a force-error bound."
+}
