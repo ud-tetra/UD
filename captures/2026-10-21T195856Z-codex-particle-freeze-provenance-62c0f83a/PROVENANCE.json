@@ -1,0 +1,38 @@
+{
+  "source_repository": "ud-tetra/UD",
+  "source_commit": "c6b66d68a25b655627d6eb6f1bf6f96a13e2121b",
+  "source_paths": "SOURCE_INVENTORY.json; docs and Docs are case-distinct",
+  "constructor": "Codex current session",
+  "reviewers": [],
+  "lane": "development; no registry entry",
+  "physical_promotion": 0,
+  "freeze": "FROZEN_OPERATORS.json with FREEZE_RECEIPT.json SHA256; not particle preregistration",
+  "exposure": "Historical datasets and particle comparisons previously exposed; no fresh particle targets fetched or scored",
+  "execution": "Static AST/data ingestion; newly written exact matrix and finite graph verifiers only; no archived script imported or executed",
+  "governance": [
+    "AGENTS.md",
+    "docs/UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md"
+  ],
+  "corrections": [
+    {
+      "id": "THM565a_entrywise",
+      "origin": "previous exact audit; retained in frozen specification",
+      "replacement": "Full-rank coupling invariant, permitted zero entries; not mass law"
+    },
+    {
+      "id": "THMLS1_metric",
+      "origin": "previous exact audit; metric transformation now explicit",
+      "replacement": "Fixed-metric unitary invariance; general coordinate change transports metric"
+    },
+    {
+      "id": "R6b_connectedness",
+      "source": [
+        "docs/hmulti_r6b.py",
+        "docs/r6b_version_b.py"
+      ],
+      "found_by": "current constructor source audit and new exact finite witness",
+      "replacement": "N/64 connected components at L>=3; component-aware/subspace diagnostic required"
+    }
+  ],
+  "supersession_links": []
+}
