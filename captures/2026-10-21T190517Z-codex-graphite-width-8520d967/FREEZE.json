@@ -1,0 +1,58 @@
+{
+  "model_id": "KCz-C2-width-sensitivity-v0.2",
+  "status": "CONSTRUCTOR_FROZEN_BEFORE_NEW_WIDTH_RESULTS; independent review pending",
+  "energy": "U_new(r,rho)=S(r)*U_KCz_unshifted(r,rho)",
+  "switch": "S(t)=1-10t^3+15t^4-6t^5, t=(r-(rc-w))/w, with constant extensions",
+  "force": "F=S F_raw-U_raw*dS_dr*r_vector/r; dS_dr=-30*t^2*(1-t)^2/w",
+  "change": "Separate constitutive model; no energy offset inside switch; preserves raw forces below switch onset, not exact legacy total energy",
+  "cutoffs_A": [
+    16,
+    20,
+    24
+  ],
+  "cases": [
+    "21_dir_0",
+    "21_dir_10024",
+    "31_dir_10084",
+    "31_dir_10134"
+  ],
+  "relaxation": "Original source initial structures; z-only CG; same legacy settings, no load or bath",
+  "force_steps_A": [
+    0.0001,
+    5e-05
+  ],
+  "K_step_relative_F_max": 1e-05,
+  "K_step_absolute_max_eV_per_A2": 1e-06,
+  "g_step_absolute_max_eV_per_A2": 1e-07,
+  "symmetry_relative_F_max": 1e-06,
+  "translation_null_relative_max": 1e-06,
+  "sector_relative_leakage_max": 1e-05,
+  "retained_stability": "Positive minimum eigenvalue after uniform translation removed, not interval proof",
+  "energy_controls": "At every case and cutoff: first/last Helmert and breathing; curvature, first derivative and x/y mixed derivatives; h=.002,.001,.0005 A; both .001 and .0005 must pass",
+  "energy_K_tolerance": "1e-5+1e-4*abs(reference)",
+  "energy_g_tolerance": "2e-5+1e-3*abs(reference)",
+  "energy_first_abs_tolerance_eV_per_A": 2e-07,
+  "cutoff_endpoint_gate": "20 versus24 A relative Frobenius K<=1e-4, g<=1e-3; all local and energy gates also required",
+  "baseline_comparison": "Report same-cutoff K/g relative differences and equilibrium geometry against unchanged legacy arrays; no selection by closeness",
+  "pair_implementation_gate": "Independent analytic switched energies and forces at contact, onset, interior and both cutoff sides, <=1e-12 absolute metal units; finite energy derivatives <=1e-8 absolute",
+  "scope": "Numerical robustness to declared widths1,2,3 A at finite cutoffs16,20,24 A; no arbitrary-width/infinite-range/physical conclusion",
+  "physical_promotion": 0,
+  "bath_inference": "HOLD",
+  "switch_widths_A": [
+    1,
+    2,
+    3
+  ],
+  "new_widths_A": [
+    1,
+    3
+  ],
+  "width2_policy": "Reuse previous model matrices, raw energy controls and logs by SHA256, no rerun and no overwrites",
+  "width_sensitivity_gate": "For every case and cutoff, all3 unordered width pairs must satisfy relative Frobenius differences K<=1e-4, g<=1e-3; denominator is larger width matrix norm. All local/energy/endpoint gates must also pass.",
+  "response_diagnostic": "Report constrained K inverse g norm changes across widths; no extra acceptance threshold",
+  "new_jobs": 24,
+  "retained_total_configurations": 36,
+  "expected_new_fine_energy_controls": 576,
+  "expected_inherited_fine_energy_controls": 288,
+  "main_observed": "06d75de17187a453a3590f3c92a7c56be7e707c5"
+}
