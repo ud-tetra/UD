@@ -1,0 +1,133 @@
+{
+  "actual_600cell_decoder_run": false,
+  "actual_600cell_forward_or_adjoint_calls": 0,
+  "decoder_source_sha256": "705808468795a308ee47b9f4cdb6a156307d9205ccda81975d4442ccecde5bf5",
+  "external_promotion_review": "PENDING",
+  "failure_controls": {
+    "bad_oracle_call": 17,
+    "bad_oracle_rejected_by_independent_control_audit": true,
+    "initial_hidden_state_must_be_zero": true,
+    "wide_arithmetic_ball_rejected": true
+  },
+  "full_8192_cases": [
+    {
+      "arithmetic_receipt": {
+        "actual_600cell_admission": "NOT_ESTABLISHED_BY_THIS_MODULE",
+        "adjoint_action_calls": 1,
+        "coefficient_precision_bits": 192,
+        "data_dimension": 4,
+        "data_norm_bound": 2,
+        "normal_action_calls": 8191,
+        "oracle_truth": "CALLER_OBLIGATION_NOT_VERIFIED_BY_THIS_MODULE",
+        "state_dimension": 4,
+        "state_dyadic_bits": 96,
+        "status": "PASS_WHOLE_STEP_ARITHMETIC_ENCLOSURES",
+        "steps": 8192,
+        "whole_step_coordinates_checked": 32768,
+        "whole_update_arithmetic_defect": "<2^-67"
+      },
+      "computed_hidden_component": "-138641/39614081257132168796771975168",
+      "dimension": 4,
+      "final_error_squared": "191934532522836204170290639246059085/5839273889343459780558243110938931683579216152212668105621504",
+      "g_error_squared": "3488953/59238164063563417517578890572064618179378491162808875080549924864",
+      "max_normal_action_error_squared": "4563494423733346733/18339354901423620048790570451021823417380349016396012006310635180100608327680",
+      "name": "weak_unit_data",
+      "output_dyadic_integers": [
+        21545903972403733077832448244340,
+        0,
+        0,
+        -28727871963204977437109931454590
+      ],
+      "reference_minimum_norm_output": [
+        "1283496232731082269015411995427/4719646399775512298052911104",
+        "0",
+        "0",
+        "-427832077577027423005137331809/1179911599943878074513227776"
+      ],
+      "scope": "EXPLICIT_SMALL_RATIONAL_PROXY_NOT_600CELL",
+      "status": "PASS_FULL8192_SMALL_OPERATOR_REFERENCE",
+      "steps": 8192,
+      "verified_error_bound": "2399/4292493394837504"
+    },
+    {
+      "arithmetic_receipt": {
+        "actual_600cell_admission": "NOT_ESTABLISHED_BY_THIS_MODULE",
+        "adjoint_action_calls": 1,
+        "coefficient_precision_bits": 192,
+        "data_dimension": 4,
+        "data_norm_bound": 2,
+        "normal_action_calls": 8191,
+        "oracle_truth": "CALLER_OBLIGATION_NOT_VERIFIED_BY_THIS_MODULE",
+        "state_dimension": 4,
+        "state_dyadic_bits": 96,
+        "status": "PASS_WHOLE_STEP_ARITHMETIC_ENCLOSURES",
+        "steps": 8192,
+        "whole_step_coordinates_checked": 32768,
+        "whole_update_arithmetic_defect": "<2^-67"
+      },
+      "computed_hidden_component": "-8994463/396140812571321687967719751680",
+      "dimension": 4,
+      "final_error_squared": "195660870685453957490871109814047/9868372872990447029143430857486794545248875297239409098500341760",
+      "g_error_squared": "2446698193/10011249726742217560470832506678920472314965006514699888612937302016",
+      "max_normal_action_error_squared": "6206081796752638061/18339354901423620048790570451021823417380349016396012006310635180100608327680",
+      "name": "rotated_hidden_and_inconsistent_data",
+      "output_dyadic_integers": [
+        11884224377139645885304716278,
+        -26409387504754783835788300350,
+        15845632502852861180408220272,
+        -15845632502852861180409286525
+      ],
+      "reference_minimum_norm_output": [
+        "46016552397811244906015882613/306777015985408299373439221760",
+        "-171661018780906064786011892393/514983056342718194358035677184",
+        "15845632502852867518708790067/79228162514264337593543950336",
+        "-15338850799270414968671960871/76694253996352074843359805440"
+      ],
+      "scope": "EXPLICIT_SMALL_RATIONAL_PROXY_NOT_600CELL",
+      "status": "PASS_FULL8192_SMALL_OPERATOR_REFERENCE",
+      "steps": 8192,
+      "verified_error_bound": "2399/4292493394837504"
+    },
+    {
+      "arithmetic_receipt": {
+        "actual_600cell_admission": "NOT_ESTABLISHED_BY_THIS_MODULE",
+        "adjoint_action_calls": 1,
+        "coefficient_precision_bits": 192,
+        "data_dimension": 4,
+        "data_norm_bound": 2,
+        "normal_action_calls": 8191,
+        "oracle_truth": "CALLER_OBLIGATION_NOT_VERIFIED_BY_THIS_MODULE",
+        "state_dimension": 4,
+        "state_dyadic_bits": 96,
+        "status": "PASS_WHOLE_STEP_ARITHMETIC_ENCLOSURES",
+        "steps": 8192,
+        "whole_step_coordinates_checked": 32768,
+        "whole_update_arithmetic_defect": "<2^-67"
+      },
+      "computed_hidden_component": "155724600156699/24758800785707605497982484480",
+      "dimension": 4,
+      "final_error_squared": "768662134563303217776132559459199953/23357095557373839122232972443755726734316864608850672422486016",
+      "g_error_squared": "42501297079189422003385/59238164063563417517578890572064618179378491162808875080549924864",
+      "max_normal_action_error_squared": "65789211594591668823254423332836217/91696774507118100243952852255109117086901745081980060031553175900503041638400",
+      "name": "coherent_hidden_oracle_errors",
+      "output_dyadic_integers": [
+        21545903972403733476487424896395,
+        0,
+        0,
+        -28727871963204977138118699026132
+      ],
+      "reference_minimum_norm_output": [
+        "1283496232731082269015411995427/4719646399775512298052911104",
+        "0",
+        "0",
+        "-427832077577027423005137331809/1179911599943878074513227776"
+      ],
+      "scope": "EXPLICIT_SMALL_RATIONAL_PROXY_NOT_600CELL",
+      "status": "PASS_FULL8192_SMALL_OPERATOR_REFERENCE",
+      "steps": 8192,
+      "verified_error_bound": "2399/4292493394837504"
+    }
+  ],
+  "physical_promotion": 0,
+  "status": "PASS_REFERENCE_ARITHMETIC_AND_ADVERSARIAL_CONTROLS"
+}

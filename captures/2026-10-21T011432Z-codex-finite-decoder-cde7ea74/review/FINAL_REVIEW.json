@@ -1,0 +1,80 @@
+{
+  "artifact_type": "C29_INDEPENDENT_FINITE_DECODER_AND_REFERENCE_REVIEW",
+  "capture_allowlist": [
+    "ARB_REFERENCE_CHECKS.json",
+    "ARB_REFERENCE_FREEZE.json",
+    "DECODER_LEMMAS.md",
+    "DECODER_LEMMAS_FREEZE.json",
+    "FINAL_BINDING.json",
+    "FINAL_REVIEW.json",
+    "PARENT_REFERENCE_CHECKS.json",
+    "PARENT_REFERENCE_FREEZE.json",
+    "PLAN.md",
+    "PLAN_FREEZE.json",
+    "REFERENCE_CHECKS.json",
+    "REFERENCE_FREEZE.json",
+    "REVIEW.md",
+    "VERIFICATION_HASH_MANIFEST.sha256",
+    "check_parent_reference.py",
+    "check_reference.py",
+    "final_bind.py",
+    "reference_arb.py"
+  ],
+  "conditional_C28_profile": {
+    "actual600cell_decoder_execution": "NOT_RUN_HOLD",
+    "actual_weighted_action_error_certificates": "NOT_VALIDATED_HOLD",
+    "comparison": "<2^-40 IF all stated action/update/input bounds are established",
+    "composed_error_upper": "22949952114723939224913941797353291777/46768052394588893382517914646921056628989841375232",
+    "input_evidence": "UNSUPPLIED_HOLD"
+  },
+  "independent_checks": {
+    "disclosed_rotated_full8192_proxy_cases_reimplemented": 3,
+    "exact_small_scalar_and_Green_controls": 176,
+    "five_scientific_replay_files_byte_identical": true,
+    "no_producer_module_or_driver_execution_by_reviewer": true,
+    "own_diagonal_coordinate_defect_checks": 49152,
+    "own_diagonal_full8192_proxy_cases": 2,
+    "own_proxy_receipt_sha256": "4353ef640c80fbe39fa66ef4f0e63bd0e39e3d7e1eac8fbae427489d930e36a5",
+    "reference_constant_receipt_sha256": "e9442064c9d983227ab3648c9f5d93370900a515818a03b3fbd53227eb8de4dc",
+    "rotated_action_norm_audits": 24573,
+    "rotated_coordinate_defect_checks": 98304,
+    "rotated_proxy_receipt_sha256": "d5ec4ae1e45be1e22a5fa3c0c15728f88adf971e0bee6be77b2fc9c723f8153a"
+  },
+  "mathematics": {
+    "N": 8192,
+    "all_error_insertion_indices": "1..N includinginitialandfinal",
+    "computed_iterate_domain": "state norm<2048 for data norm<=2",
+    "conditional_implementation_error": "<11*2^-46<2^-42",
+    "full_space_Green_bound": "767788681/3373056<256",
+    "full_state_projection_defect": "<2^-51",
+    "ideal_decoder_gain": "<512",
+    "initialization": "EXACT_ZERO_INCLUDING_HIDDEN_DIRECTIONS",
+    "matrix_free_given_action_oracles": true,
+    "q_at_zero": "NONZERO; oracle/arithmetic hidden errors explicitly bounded"
+  },
+  "review_markdown_sha256": "efd6f24f96c32887133690cf7da3715b377aa65ce68cd8ff5b5aba765611f8d9",
+  "root_checker_sha256": "99988680da17d2def6f04b3bc34b57de93c3be4f53a2c75db57143675a77e9d3",
+  "root_decoder_sha256": "705808468795a308ee47b9f4cdb6a156307d9205ccda81975d4442ccecde5bf5",
+  "root_reference_sha256": "7e3bf3da8c9b7ca572e4c3260fb5da80b5195aba39cd0a49793b2d2980a11a2f",
+  "root_reference_tests_sha256": "7e3bf3da8c9b7ca572e4c3260fb5da80b5195aba39cd0a49793b2d2980a11a2f",
+  "root_source_sha256": {
+    "c29_THEOREM.md": "557cb551863076c4d92614de940f655b32be1ec0486637a4ceed5838625ccf86",
+    "c29_certify.py": "99988680da17d2def6f04b3bc34b57de93c3be4f53a2c75db57143675a77e9d3",
+    "c29_decoder.py": "705808468795a308ee47b9f4cdb6a156307d9205ccda81975d4442ccecde5bf5",
+    "c29_reference_tests.py": "7e3bf3da8c9b7ca572e4c3260fb5da80b5195aba39cd0a49793b2d2980a11a2f"
+  },
+  "root_theorem_sha256": "557cb551863076c4d92614de940f655b32be1ec0486637a4ceed5838625ccf86",
+  "scope": {
+    "actual_backend_storage_and_runtime": "NOT_BENCHMARKED",
+    "coefficient_and_whole_update_error_contract_explicit": true,
+    "external_promotion_review": "PENDING",
+    "inherited_PR307_rank1999_kernel641_and_singular_bound": true,
+    "mathematical_retractions": 0,
+    "opaque_callback_truth_not_certified_by_arithmetic_receipt": true,
+    "physical_or_estimator_gate_transfer": false,
+    "physical_promotion": 0,
+    "same_team_development_no_registry_entry": true,
+    "small_proxy_tests_not_actual600cell_validation": true
+  },
+  "status": "PASS"
+}
