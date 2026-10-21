@@ -1,0 +1,64 @@
+{
+  "verification": "PASS_SCOPED",
+  "exact_anchor_cases": [
+    {
+      "case": "length_time",
+      "action": "NONIDENTIFIED",
+      "ambiguity": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "energy_time",
+      "action": "IDENTIFIED_CONDITIONAL",
+      "certificate": [
+        1,
+        1
+      ]
+    },
+    {
+      "case": "direct_action",
+      "action": "IDENTIFIED_CONDITIONAL",
+      "certificate": [
+        1
+      ]
+    },
+    {
+      "case": "base_units",
+      "action": "IDENTIFIED_CONDITIONAL",
+      "certificate": [
+        1,
+        2,
+        -1
+      ]
+    },
+    {
+      "case": "dimensionless_only",
+      "action": "NONIDENTIFIED",
+      "ambiguity": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "negative_controls": [
+    "wrong energy-only certificate rejected",
+    "action does not fix mass",
+    "incomplete registration refused"
+  ],
+  "missing_release_fields": [
+    "native_predictor",
+    "species_assignment",
+    "dimensional_map",
+    "heldout_dataset",
+    "scoring_rule",
+    "uncertainty_rule",
+    "reviewer",
+    "custodian_ruling"
+  ],
+  "registration": "HOLD",
+  "physical_promotion": 0
+}
