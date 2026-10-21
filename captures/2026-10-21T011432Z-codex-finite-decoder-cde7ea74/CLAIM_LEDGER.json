@@ -1,0 +1,50 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "origin": "Pinned PR307/PR309 model certificates plus new exact Chebyshev construction",
+  "claims": [
+    {
+      "id": "DEC1",
+      "type": "DERIVED_CONDITIONAL",
+      "statement": "N8192 polynomial B=h(F^TF)F^T has full-state projection defect<2^-51 and gain<512.",
+      "dependencies": [
+        "PR307 spectral interval",
+        "exact integer power witness",
+        "THEOREM sections2-3"
+      ]
+    },
+    {
+      "id": "DEC2",
+      "type": "DERIVED_CONDITIONAL",
+      "statement": "Full-space Green gain<256 controls hidden and visible additive errors; specified absolute action and aggregate arithmetic budgets imply implementation error<11*2^-46<2^-42.",
+      "dependencies": [
+        "THEOREM sections4-6",
+        "oracle truths UNSUPPLIED_HOLD for actual600cell"
+      ]
+    },
+    {
+      "id": "DEC3",
+      "type": "EXECUTED_PROXY_REFERENCE",
+      "statement": "Three full8192-step rotated rational controls, exact action audits and per-coordinate Arb update checks pass; separate implementation reproduces outputs.",
+      "dependencies": [
+        "REFERENCE_RESULTS.json",
+        "review receipts"
+      ],
+      "scope": "Small rational proxies, not600cell execution"
+    },
+    {
+      "id": "DEC4",
+      "type": "CONDITIONAL_PROFILE",
+      "statement": "Prior declared X<=1 and D<2^-50 plus new certified action/update obligations imply observable-chain error<2^-40.",
+      "scope": "Actual input evidence and actual600cell actions HOLD"
+    }
+  ],
+  "hidden_space": "641 nominal components not reconstructed",
+  "no_gate_transfer": [
+    "sixratio calibration",
+    "old Hankel native family",
+    "actual floating estimator",
+    "physical acquisition"
+  ],
+  "external_promotion_review": "PENDING",
+  "physical_promotion": 0
+}

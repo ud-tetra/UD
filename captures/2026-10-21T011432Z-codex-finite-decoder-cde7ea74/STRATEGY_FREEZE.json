@@ -1,0 +1,12 @@
+{
+ "status":"IMPLEMENTATION_STRATEGY_FROZEN_BEFORE_FULL_REFERENCE_TESTS",
+ "model":"Unchanged PR307 weighted sample map; rank1999/kernel641; s61/27648",
+ "construction":"B_N=q_(N-1)(Ftranspose F) Ftranspose; Chebyshev residual; N8192; exact zero start",
+ "goals":["full-state projection defect alpha<2^-51","gain beta<512","full-space local arithmetic/action error amplification including hidden injections"],
+ "arithmetic":"Arb192 coefficient balls, exact dyadic96-bit state values; whole-update coefficient/rounding defect checked per coordinate2^-80, n<=2640",
+ "oracle_contract":{"adjoint_g_error":"2^-67","normal_A_action_error":"2^-67 absolute on iterateball2048","data_norm_max":2,"status":"ACTUAL_600CELL_ORACLE_NOT_VALIDATED_HOLD"},
+ "tests":"Full8192steps on small explicit rational rank-deficient rotated observation operator, exact Fraction action audit; coherent hidden oracle perturbations; failure controls",
+ "scope":"Mathematical finite decoder and executable reference arithmetic; no physical acquisition or actual weighted600F/Ftranspose performance/conformance claim",
+ "physical_promotion":0,
+ "external_review":"PENDING"
+}
