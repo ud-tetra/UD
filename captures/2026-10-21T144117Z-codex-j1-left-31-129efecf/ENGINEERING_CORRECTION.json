@@ -1,0 +1,11 @@
+{
+  "status": "CORRECTED_BEFORE_FULL_AUDIT",
+  "initial_attempt_exit_code": 1,
+  "log_sha256": "a1d9e90f1204d4b3fa06773e01f6ce4facfdc4a8550f97bf53aaa06bb5d15fc9",
+  "problem": "New root wrapper imported audit/evaluator before planner generated COVER.json.",
+  "repair": "Run planner.main() before importing audit,then run audit.main().",
+  "scope": "No rectangle computation or coverage claim completed in first import-failure attempt. State/flux sources and exact certificate math unchanged. Final generation and saved replay outcomes recorded separately.",
+  "found_by": "construction",
+  "independent_review": false,
+  "physical_promotion": 0
+}
