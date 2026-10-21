@@ -27,3 +27,17 @@ With **all eight contacts off**, no independent source and a reset driven only b
 - [Unified Dynamics GitHub Project #1](https://github.com/users/ud-tetra/projects/1): intended board tracking; authenticated item insertion **not verified**.
 
 **Next:** native Q173 face-contact admission and positive-stock reset, with true source/reservoir accounting and independent review. Physical promotion 0.
+
+
+## Final exact-source replay files (added at closeout)
+
+Both **full** source scripts are now archived on this same research branch and their Git blob SHA-1 objects match the frozen ZIP-internal Git blob identities:
+
+- [Full executed SymPy script](verify_face_reset_v1_2_FULL_EXECUTED.py): Git blob SHA c23df1c8964f3f701a154c264a153b11a31e9012; ZIP-source SHA-256 cb9b3d7ad802837ef6f290e60d18da7a239de789cf8d427361500db1af8dfba2.
+- [Full executed Fraction script](verify_face_reset_fraction_v1_2_FULL_EXECUTED.py): Git blob SHA e1904c301f4279a44db1aeda2dd39ed8a84bc5ad; ZIP-source SHA-256 a5b08a61156b60378a1d6e4b50e0a9e4a5dfd0374439ebf5f41acf22e0f97043.
+- [Archived SymPy console receipt](sympy_receipt_v1_2.txt): Git blob SHA 618e567c9d82b692c8578c5b94ddfd838e79bc73, byte-identical to ZIP receipt.
+- [Archived Fraction console receipt](fraction_receipt_v1_2.txt): Git blob SHA ad2a3c303b01bd9ed6eea5b98dfeffe65537d130, byte-identical to ZIP receipt.
+
+The shorter compact-code and browseable Markdown copies remain separately labeled. **The original archive manifest in the frozen ZIP is the byte authority**; this GitHub manifest is a reconstructed status mirror and does not assert identical SHA. The actual full scripts and stdout receipts above **do** match the archived original bytes.
+
+Status: source fidelity for full executable and stdout files PASS; theorem-text/ledger origin remains canonical ZIP version; independent reviewer still pending. Physical promotion 0.
