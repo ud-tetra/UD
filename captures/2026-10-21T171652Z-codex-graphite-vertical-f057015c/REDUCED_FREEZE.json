@@ -1,0 +1,40 @@
+{
+  "cases": [
+    [
+      "21",
+      "dir_0"
+    ],
+    [
+      "21",
+      "dir_10024"
+    ],
+    [
+      "31",
+      "dir_10084"
+    ],
+    [
+      "31",
+      "dir_10134"
+    ]
+  ],
+  "steps_A": [
+    0.0001,
+    5e-05
+  ],
+  "scope": "primitive-periodic vertical sector only; omitted Bloch sectors untested",
+  "K": "negative central derivative of vertical Cartesian force with respect to each vertical coordinate",
+  "g": "negative central derivative of vertical force under rigid lateral translation of layer2; separate laboratory x,y columns",
+  "constraints": "fixed lateral coordinates except imposed sliding; all z free; one global z translation removed",
+  "K_units": "eV/Angstrom^2",
+  "g_units": "eV/Angstrom^2",
+  "step_relative_Fro_tolerance": 1e-05,
+  "step_absolute_max_tolerance": 1e-06,
+  "g_absolute_max_tolerance": 1e-07,
+  "symmetry_relative_Fro_tolerance": 1e-06,
+  "null_relative_2_tolerance": 1e-06,
+  "positive_test": "minimum projected eigenvalue positive; no interval or physical stability certificate",
+  "runtime_version": 20250722,
+  "physical_promotion": 0,
+  "review": "constructor only",
+  "lane": "Development \u2014 no registry entry"
+}
