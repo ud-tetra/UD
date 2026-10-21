@@ -1,0 +1,88 @@
+{
+  "status": "PASS_OBJECTION_CHECKS",
+  "meaning": "Review inaccuracies identified; not a non-constructor review or a retraction of source claims",
+  "physical_promotion": 0,
+  "review_acceptance": "REVISION_REQUIRED",
+  "reviewer_provenance": "UNVERIFIED",
+  "source_spectrum_correct": [
+    "40089475140625/782757789696",
+    "54483031620625/1043677052928",
+    "50884642500625/1043677052928"
+  ],
+  "component_controls": [
+    {
+      "L": 3,
+      "N": 64,
+      "components": 1,
+      "component_size": 64
+    },
+    {
+      "L": 4,
+      "N": 256,
+      "components": 4,
+      "component_size": 64
+    },
+    {
+      "L": 5,
+      "N": 1024,
+      "components": 16,
+      "component_size": 64
+    }
+  ],
+  "complement_Rayleigh_counterexample": "49/36864",
+  "unscaled_uniform_IPR": "1/64",
+  "frozen_uniform_F": "1",
+  "weighted_variance_control": {
+    "pair_sum": "87",
+    "weighted_variance": "87/16",
+    "total_weight": 16
+  },
+  "positive_shift_counterexample": {
+    "sigma": "1/10",
+    "eigenvalues": [
+      "-1",
+      "10"
+    ],
+    "transformed": [
+      "-10/11",
+      "10/99"
+    ]
+  },
+  "actual_replay_coverage": [
+    {
+      "sigma": 0.00133,
+      "negative_return_count": 0
+    },
+    {
+      "sigma": 1e-08,
+      "negative_return_count": 4
+    }
+  ],
+  "audit_gap_and_error_controls": [
+    {
+      "module": 0,
+      "row_sum_error_lower": "581772383504190376469045817816300351933888939138023/10000000000000000000000000000000000000000000000000000000000000000",
+      "actual_certified_second_eigenvalue_lower": "23180466885935511745586991833527/17763086495282268024161967871623168"
+    },
+    {
+      "module": 1,
+      "row_sum_error_lower": "5817584972487767303664279190520380670907402561852307/100000000000000000000000000000000000000000000000000000000000000000",
+      "actual_certified_second_eigenvalue_lower": "71499147677875354471/107581411437874105024512"
+    },
+    {
+      "module": 2,
+      "row_sum_error_lower": "5817584972487767303664279190520380670907402561852307/100000000000000000000000000000000000000000000000000000000000000000",
+      "actual_certified_second_eigenvalue_lower": "71499147677875354471/107581411437874105024512"
+    },
+    {
+      "module": 3,
+      "row_sum_error_lower": "5817584972487767303664279190520380670907402561852307/100000000000000000000000000000000000000000000000000000000000000000",
+      "actual_certified_second_eigenvalue_lower": "71499147677875354471/107581411437874105024512"
+    }
+  ],
+  "input_hashes": {
+    "submitted_review": "71ab408c1eb20c077b8907808758967f74ffcaad9ab1469422cc657fe52136a3",
+    "PR352_RESULTS": "55a96515fe67fbdb13f94f561e928d7d961c812b2a4fdb67a595e803ef8d80e6",
+    "PR358_AUDIT": "51ac642191636707186617ebe641a520935a056f4b1f18b72f8845fc98a44620"
+  }
+}
