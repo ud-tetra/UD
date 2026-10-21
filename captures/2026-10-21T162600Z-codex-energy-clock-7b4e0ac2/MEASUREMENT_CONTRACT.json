@@ -1,0 +1,40 @@
+{
+  "status": "PROPOSED_NOT_PREREGISTERED",
+  "source_domain": "Nonzero active sector of the filled tetrahedron, A=2J, J^2=-I",
+  "same_carrier_conditions": [
+    "z=M*x with an independently specified injective map on the active sector",
+    "K*M=M*A/tau0 and physical time t=tau0*s",
+    "Calibrated subsystem energy E=z^T*G*z/2 with removed baseline",
+    "M^T*G*M=(2*A0/tau0)*I"
+  ],
+  "required_independent_certificates": [
+    "Carrier/mode and leakage certificate",
+    "Energy functional and baseline uncertainty",
+    "Readout function, phase/sign reference and primitive period ratio rho",
+    "Absolute amplitude map or physical support law fixing a independently of the action target",
+    "Joint intervals E, T_read, rho and a with a_lower>0",
+    "Calibration dependency and target-blindness record",
+    "Frozen estimator and non-constructor review before empirical scoring"
+  ],
+  "identified_without_norm_anchor": "A0*a=E*T_state/pi",
+  "action_estimator_if_certified": "A0=E*T_read/(pi*rho*a)",
+  "matrix_extraction_if_absolute_map_certified": "For LM=I, check KM=M(LKM), LKM=gamma*A, M^TGM=lambda*I with gamma,lambda>0; tau0=1/gamma and A0=lambda/(2*gamma)",
+  "interval": {
+    "lower": "E_lower*T_lower/(pi*rho_upper*a_upper)",
+    "upper": "E_upper*T_upper/(pi*rho_lower*a_lower)",
+    "assumptions": "All lower bounds positive and intervals jointly certified"
+  },
+  "failure_modes": [
+    "Unknown a leaves A0 unidentifiable",
+    "Quadratic nonconstant readout has rho=1/2; signed state readout has rho=1",
+    "Conserved energy alone supplies no recurrence clock",
+    "Unit ray normalization alone supplies no physical support calibration"
+  ],
+  "admitted_apparatus": null,
+  "admitted_dataset": null,
+  "independent_support_certificate": null,
+  "empirical_score": null,
+  "QPB1": "QUARANTINED",
+  "EXIT03": "HOLD",
+  "physical_promotion": 0
+}
