@@ -1,0 +1,46 @@
+{
+  "parameters_found": [],
+  "input_count": 24246,
+  "variants": [
+    {
+      "count": 23010,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 all lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-15 1.0e-15 30000 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 104,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\ngroup fixed_atoms id 1 632\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 fixed_atoms lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-18 1.0e-18 30000 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 104,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 all lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-15 1.0e-15 0 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 404,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\n\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-15 1.0e-15 0 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 104,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\ngroup fixed_atoms id 1 1473\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 fixed_atoms lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-18 1.0e-18 30000 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 104,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\ngroup fixed_atoms id 1 724\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 fixed_atoms lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-16 1.0e-16 30000 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 104,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\ngroup fixed_atoms id 1 1756\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 fixed_atoms lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-18 1.0e-18 30000 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 104,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\ngroup fixed_atoms id 1 2028\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 fixed_atoms lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-18 1.0e-18 30000 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 104,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\ngroup fixed_atoms id 1 549\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 fixed_atoms lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-18 1.0e-18 30000 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    },
+    {
+      "count": 104,
+      "text": "#KC potential\n\nunits metal\nboundary p p p\natom_style full\nbox tilt large\nread_data struct.inp.data\n\ngroup fixed_atoms id 1 760\n\npair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0\npair_coeff * * rebo 1 CH.rebo C NULL\npair_coeff * * rebo 2 CH.rebo NULL C\npair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C\n\nneighbor\t3.0 nsq\nneigh_modify one 4096\n\nthermo_modify format float %18.18g\nfix 2 fixed_atoms lineforce 0.0 0.0 1.0\n\nmin_style cg\nmin_modify dmax 0.005\nminimize 1.0e-18 1.0e-18 30000 30000  # 15000\n\nwrite_dump all xyz system.xyz modify element C C\n\n"
+    }
+  ]
+}
