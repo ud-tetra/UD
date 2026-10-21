@@ -1,0 +1,131 @@
+LAMMPS (22 Jul 2025 - Update 4)
+  using 1 OpenMP thread(s) per MPI task
+units metal
+boundary p p p
+atom_style full
+box tilt large
+
+The 'box' command has been removed and will be ignored
+
+read_data struct.inp.data
+Reading data file ...
+  triclinic box = (0 0 0) to (44.351664 38.409667 100) with tilt (22.175832 0 0)
+WARNING: Triclinic box skew is large. LAMMPS will run inefficiently. (src/src/domain.cpp:221)
+  1 by 1 by 1 MPI processor grid
+  reading atom labelmap ...
+  reading atoms ...
+  1300 atoms
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     0 = max # of 1-2 neighbors
+     0 = max # of 1-3 neighbors
+     0 = max # of 1-4 neighbors
+     1 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.005 seconds
+pair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0
+pair_coeff * * rebo 1 /workspace/scratch/9a7ae24f2263/lammps-runtime/lammps/share/lammps/potentials/CH.rebo C NULL
+Reading rebo potential file /workspace/scratch/9a7ae24f2263/lammps-runtime/lammps/share/lammps/potentials/CH.rebo with DATE: 2018-7-3
+pair_coeff * * rebo 2 /workspace/scratch/9a7ae24f2263/lammps-runtime/lammps/share/lammps/potentials/CH.rebo NULL C
+Reading rebo potential file /workspace/scratch/9a7ae24f2263/lammps-runtime/lammps/share/lammps/potentials/CH.rebo with DATE: 2018-7-3
+pair_coeff 1 2 kolmogorov/crespi/z /workspace/scratch/9a7ae24f2263/lammps-runtime/lammps/share/lammps/potentials/CC.KC C C
+Reading kolmogorov/crespi/z potential file /workspace/scratch/9a7ae24f2263/lammps-runtime/lammps/share/lammps/potentials/CC.KC with DATE: 2017-02-28
+neighbor 3.0 nsq
+neigh_modify one 4096
+thermo_modify format float %18.18g
+fix 2 all lineforce 0.0 0.0 1.0
+min_style cg
+min_modify dmax 0.005
+minimize 1.0e-15 1.0e-15 30000 30000
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+
+- Type Label Framework: https://doi.org/10.1021/acs.jpcb.3c08419
+
+@Article{Gissinger24,
+ author = {Jacob R. Gissinger, Ilia Nikiforov, Yaser Afshar, Brendon Waters, Moon-ki Choi, Daniel S. Karls, Alexander Stukowski, Wonpil Im, Hendrik Heinz, Axel Kohlmeyer, and Ellad B. Tadmor},
+ title = {Type Label Framework for Bonded Force Fields in LAMMPS},
+ journal = {J. Phys. Chem. B},
+ year =    2024,
+ volume =  128,
+ number =  13,
+ pages =   {3282--3297}
+}
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 4096, page size: 100000
+  master list distance cutoff = 19
+  ghost atom cutoff = 19
+  5 neighbor lists, perpetual/occasional/extra = 5 0 0
+  (1) pair rebo, perpetual, skip from (5)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (2) pair rebo, perpetual, skip from (5)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (3) pair kolmogorov/crespi/z, perpetual, skip from (4)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (4) neighbor class addition, perpetual
+      attributes: half, newton on
+      pair build: half/nsq/newton/tri
+      stencil: none
+      bin: none
+  (5) neighbor class addition, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/nsq/ghost
+      stencil: none
+      bin: none
+Per MPI rank memory allocation (min/avg/max) = 18.76 | 18.76 | 18.76 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0                   0 -9639.15516334135646                  0 -9639.15516334135646 -160.614735277588778
+        29                   0 -9639.17245097656996                  0 -9639.17245097656996 -160.850284860332295
+Loop time of 0.811979 on 1 procs for 29 steps with 1300 atoms
+
+100.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -9639.15516334136  -9639.17245097657  -9639.17245097657
+  Force two-norm initial, final = 0.74066188 9.826598e-06
+  Force max component initial, final = 0.046626942 6.7747095e-07
+  Final line search alpha, max atom move = 1 6.7747095e-07
+  Iterations, force evaluations = 29 57
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.80568    | 0.80568    | 0.80568    |   0.0 | 99.22
+Bond    | 2.477e-05  | 2.477e-05  | 2.477e-05  |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.0034368  | 0.0034368  | 0.0034368  |   0.0 |  0.42
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0.00038816 | 0.00038816 | 0.00038816 |   0.0 |  0.05
+Other   |            | 0.002449   |            |       |  0.30
+
+Nlocal:           1300 ave        1300 max        1300 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           8980 ave        8980 max        8980 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 0
+Ave neighs/atom = 0
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+Total wall time: 0:00:01
