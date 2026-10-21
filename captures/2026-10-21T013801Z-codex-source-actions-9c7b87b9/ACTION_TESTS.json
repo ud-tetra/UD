@@ -1,0 +1,60 @@
+{
+  "actual_floating_estimator_calls": 0,
+  "actual_full8192_decoder_run": false,
+  "actual_full_actions": [
+    {
+      "input_dimension": 2640,
+      "input_norm_squared": "105557/512",
+      "input_sha256": "35f8a625d1a489a54ca5765ba6b7611fccc0f86e5f89e94b8173506e1c2646de",
+      "mode": "forward",
+      "output_dimension": 253952,
+      "output_sha256": "27665396c246a45f0fde239fe4ce44fe01103f5382c7bd1ec6d0570eeef37381"
+    },
+    {
+      "input_dimension": 2640,
+      "input_norm_squared": "3377824",
+      "input_sha256": "72d01d2a5124b32824975c32f3ead2af430ff9d96e0465c8fa6be3fffd0943a1",
+      "mode": "forward_boundary",
+      "output_dimension": 253952,
+      "output_sha256": "53ea292f9c2390d3d5f8a86011b5120723460f3e57ca9015379a5e099e0d4a26"
+    },
+    {
+      "input_dimension": 253952,
+      "input_norm_squared": "27426717/8",
+      "input_sha256": "3589c540a113e9da2cf5ea1c0489bac8fad0f646530fa61f73e4656e08e2b428",
+      "mode": "adjoint",
+      "output_dimension": 2640,
+      "output_sha256": "f3beaa0e6213fc38d1632ea3040a8d21679b57a8cee219d00868fa3d8b17a92a"
+    }
+  ],
+  "adapter_sha256": "42eda8f3783c13453323190b2d72a64c80d0a715ea7447567156d620eab20eec",
+  "duality_absolute_upper": "127835621659017369361114912423489634468896663/86935734126964375253483921442446997011027667541996622933189984256",
+  "duality_residual": "3805/2535301200456458802993406410752",
+  "external_promotion_review": "PENDING",
+  "failure_controls": {
+    "changed_operator_adapter_rejected": true,
+    "outside_forward_domain_rejected": true,
+    "wrong_expected_executable_hash_rejected": true
+  },
+  "halfstep_controls": [
+    {
+      "compiled_output_coordinates_compared": 2640,
+      "mode": "step+",
+      "output_sha256": "7909f352c4d3d68b3609b70d397474213c62889e3b1262087ef79bbf595c23e0",
+      "reference_term_coordinates_evaluated": 105600,
+      "status": "PASS_ALL2640_COMPILED_OUTPUTS_FROM40_TERM_REFERENCE"
+    },
+    {
+      "compiled_output_coordinates_compared": 2640,
+      "mode": "step-",
+      "output_sha256": "93a992a87f0a1b4a137bc364899712731e398f1b23929f928a30cb6546c5d83d",
+      "reference_term_coordinates_evaluated": 105600,
+      "status": "PASS_ALL2640_COMPILED_OUTPUTS_FROM40_TERM_REFERENCE"
+    }
+  ],
+  "operator_sha256": "cca3ed7e671b8397c3940921d9845399425fd2558cc62708941c00fc4b899950",
+  "physical_promotion": 0,
+  "scale128_discrepancy_squared": "1369228877/6277101735386680763835789423207666416102355444464034512896",
+  "source_sha256": "c8bc21ef9edef1d60e98e48bb61044afae4a7d283700c4523969bb6f9755de27",
+  "status": "PASS_ACTUAL_SOURCE_FORWARD_ADJOINT_AND_INTEGER_CONTROLS"
+}
