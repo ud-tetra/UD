@@ -1,0 +1,15 @@
+"""Explicit full construction or a fresh solve/verification of captured row data."""
+from pathlib import Path
+import argparse,subprocess,json,hashlib,shutil
+ap=argparse.ArgumentParser();ap.add_argument('--repo',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--construct',action='store_true');ap.add_argument('--capture',type=Path);ap.add_argument('--parts',type=Path);ap.add_argument('--metadata',type=Path);ap.add_argument('--index-sha256');ap.add_argument('--metadata-sha256');a=ap.parse_args();a.out.mkdir(parents=True,exist_ok=False);P=Path(__file__).resolve().parent;O=a.out;H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();run=lambda v:subprocess.run(list(map(str,v)),check=True)
+run(['python',P/'c33_prepare.py','--repo',a.repo,'--out',O/'source']);slhash=H(O/'source/FULL_SLICE.json')
+if a.construct:
+ parent=a.repo/'captures/2026-10-21T015546Z-codex-native-actions-6a0c79b1';receipt=json.loads((parent/'BUILD_RECEIPT.json').read_text());assert H(parent/'c31_action.cpp')==receipt['source_sha256'];run(['c++','-O3','-std=c++17',parent/'c31_action.cpp','-Wl,-l:libgmp.so.10','-o',O/'native_action']);assert H(O/'native_action')==receipt['executable_sha256'],'Rebuilt binary differs from approved receipt; a new build admission is required';shutil.copyfile(parent/'BUILD_RECEIPT.json',O/'APPROVED_BUILD_RECEIPT.json');(O/'REBUILD_PROBE.json').write_text(json.dumps({'source_sha256':H(parent/'c31_action.cpp'),'rebuilt_executable_sha256':H(O/'native_action'),'matches_inherited_approved_receipt':True},indent=2)+'\n');run(['python',P/'c33_construct.py','--slice',O/'source/FULL_SLICE.json','--slice-sha256',slhash,'--operator',O/'source/OPERATOR.txt','--executable',O/'native_action','--build-receipt',O/'APPROVED_BUILD_RECEIPT.json','--reuse',a.repo/'captures/2026-10-21T022602Z-codex-reusable-compression-8fd46991/frame','--out',O/'frame'])
+else:
+ if a.capture is not None:
+  m=json.loads((a.capture/'MANIFEST.json').read_text());inventory={Path(x['path']).relative_to('captures/'+m['capture_id']).as_posix():x['sha256']for x in m['files']};parts=a.capture/'frame-parts';metadata=a.capture/'FULL_FRAME.json';ih=inventory['frame-parts/FRAME_INDEX.json'];mh=inventory['FULL_FRAME.json']
+ else:
+  assert a.parts and a.metadata and a.index_sha256 and a.metadata_sha256,'Supply a trusted capture or explicit packed-witness hashes, or --construct';parts=a.parts;metadata=a.metadata;ih=a.index_sha256;mh=a.metadata_sha256
+ run(['python',P/'c33_unpack.py','--parts',parts,'--index-sha256',ih,'--metadata',metadata,'--metadata-sha256',mh,'--out',O/'frame'])
+
+fh=H(O/'frame/FULL_FRAME.json');run(['python',P/'c33_solve.py','--frame',O/'frame','--frame-sha256',fh,'--out',O/'solve']);run(['python',P/'c33_certify.py','--repo',a.repo,'--source',O/'source','--frame',O/'frame','--frame-sha256',fh,'--solve',O/'solve','--solve-sha256',H(O/'solve/FULL_SOLVE.json'),'--out',O/'certificate']);print('PASS fullframe finite record verification; physical/input truth remainsHOLD')

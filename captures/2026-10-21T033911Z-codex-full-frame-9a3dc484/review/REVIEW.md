@@ -1,0 +1,17 @@
+# C33 final independent review
+
+PASS within the finite source/runtime scope below. The complete1999-row frame and one saved floating proposal satisfy the declared computational gates. Physical/input truth remains HOLD; this is same-team development review, with external review PENDING and Physical Promotion=0.
+
+The independent source route reconstructs1999 trial rows from pinned Q/observer bytes, checks119 nonzero phase groups at Arb256 with974848 scalar enclosures, and saves1999 true-RHS intervals for the fixed synthetic period17 datum. All1999 delivered rows were checked:5,277,360 signed integer coordinates, source/mode/frequency/phase bindings, packed/decoded hashes, norms,16 authenticated reused rows and1983 new-row identities. This review did not independently rerun1983 native adjoints; the admitted C31 implementation/build/runtime error theorem remains a premise.
+
+A separate Python-bigint replay performs10,554,720 integer products, recomputes all1999 final residual components and2640 mathematical-floor output coordinates, and matches the saved coefficients/lift/receipt. The actual direct true-RHS/residual/lift enclosure gives an implementation-error upper bound1.80345795313×10^-20 relative to the exact compressed decoder BG applied to this synthetic datum. The fixed theorem budget is<2^-46; its exact nominal-decoder comparison is<2^-44 relative to B0*y. None is a physical state-truth claim. All10 producer certificate fractions and the datum norm match independent arithmetic.
+
+The32 bounded parts store51,893,314 bytes and preserve every original compressed row. The independent parser checks all headers, hashes, lengths and1999 payloads; the16,248-byte format overhead agrees exactly. All1999 freshly restored row payloads and8 source/frame/solve/certificate scientific files match the primary bytes. Eight planned and10 gap-related source-bound native reexecutions reproduce saved payloads exactly. These are producer reproducibility observations, not a separate native backend proof or second full1999 native construction.
+
+The original progress journal has1989 unique entries. All match final metadata, but progress lines for307,309,336,337,615,1008,1046,1079,1617,1977 are absent. Cause UNDETERMINED; original bytes are preserved without repair. All1999 final payloads pass separate checks. The10 gap reexecutions support repeatability; they do not reconstruct original chronology or establish why lines are missing. This evidence qualification remains visible.
+
+The proof review verifies the compression perturbation, residual/lift scaling and nominal-reference comparison. Sixteen exact rational budget/scaling checks and the review auditor's nonzero signed full-shape fixture with4 tamper controls pass. Separate same-team synthetic solver/codec controls are bound only as finite software evidence.
+
+The authenticated manifest or Git commit is a trusted root. The result concerns this admitted constructor, source inputs and stable runtime. It is not a universal arbitrary-metadata validator, hostile-input/race guarantee, compiler/runtime attestation, floating-backend completeness theorem, independent acquisition, hidden-state recovery, full8192-step run, or full spectral/Hankel benchmark. Inherited rank/kernel and real-model correspondence remain explicit premises; physical truth inputs are UNSUPPLIED_HOLD.
+
+Development — no registry entry. Ledger0.39/CRL-2. External review PENDING. Physical Promotion=0.

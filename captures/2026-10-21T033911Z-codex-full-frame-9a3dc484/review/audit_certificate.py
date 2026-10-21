@@ -1,0 +1,15 @@
+"""Independent receipt binding and Fraction comparison, after own row/solve audits."""
+from pathlib import Path
+from fractions import Fraction as Q
+import argparse,json,hashlib
+ap=argparse.ArgumentParser();ap.add_argument('--certificate',type=Path,required=True);a=ap.parse_args();P=Path(__file__).resolve().parent;H=lambda b:hashlib.sha256(b).hexdigest()
+raw=a.certificate.read_bytes();cert=json.loads(raw);rows=json.loads((P/'ROWS_CHECKS.json').read_text());solve=json.loads((P/'SOLVE_CHECKS.json').read_text());bounds=json.loads((P/'BOUND_CHECKS.json').read_text())['exact'];get=lambda k:Q(*bounds[k])
+assert rows['status']=='PASS_FULL1999_ROWS_AND_TRUE_RHS'and solve['status']=='PASS_INDEPENDENT_BIGINT_RESIDUAL_AND_FINITE_LIFT'and cert['status']=='PASS_FULL1999_CONSTRUCTION_AND_ONE_ACTUAL_FLOAT_RECORD_CERTIFIED';assert cert['frame_rows']==1999 and cert['source_state_dim']==2640 and cert['nominal_unobservable_dim']==641
+assert cert['full_frame_receipt_sha256']==solve['frame_sha256']==rows['frame_or_checkpoint_prefix_sha256'] and cert['full_solve_receipt_sha256']==solve['solve_sha256'] and cert['source_slice_sha256']==rows['source_slice_sha256'];assert cert['physical_input_status']=='UNSUPPLIED_HOLD'and cert['physical_promotion']==0 and cert['external_promotion_review']=='PENDING'
+expected={'frame_sigma_lower':get('h')-get('delta'),'projection_operator_defect_upper':get('alpha'),'ideal_compressed_decoder_gain_upper':get('beta'),'true_RHS_encoding_error_upper':2*get('eta'),'one_record_implementation_error_upper':get('fixed_record_implementation'),'exact_nominal_decoder_record_error_upper':get('exact_B0_record_comparison'),'conditional_state_truth_error_upper':get('conditional_truth_profile'),'actual_normal_residual_squared':Q(int(solve['residual_squared_integer']),2**704),'actual_lift_error_squared':Q(int(solve['finite_lift_error_squared_integer']),2**512),'actual_lift_error_upper':Q(52,2**96)}
+for key,value in expected.items():assert Q(cert[key])==value,key
+assert cert['encoded_RHS_arithmetic_error']=='EXACT_ZERO';assert Q(*solve['actual_composed_implementation_error_upper'])<get('fixed_record_implementation')
+# Independently evaluate synthetic data norm without integer-grid scaling.
+dn=sum((3*(((13*i+7)%17)-8))**2 for i in range(253952));assert Q(cert['data_norm_squared'])==Q(dn,4096**2)<4
+out={'status':'PASS_PRODUCER_CERTIFICATE_BOUND_TO_INDEPENDENT_ARITHMETIC','certificate_sha256':H(raw),'independent_rows_receipt_sha256':H((P/'ROWS_CHECKS.json').read_bytes()),'independent_solve_receipt_sha256':H((P/'SOLVE_CHECKS.json').read_bytes()),'exact_fraction_fields_compared':list(expected),'synthetic_data_norm_recomputed':str(Q(dn,4096**2)),'frame_sha256':solve['frame_sha256'],'solve_sha256':solve['solve_sha256'],'scope':{'all1999_row_and_final_solve_tuple_checks_are_finite':True,'prior_model_and_runtime_remain_premises':True,'physical_input_status':'UNSUPPLIED_HOLD','external_review':'PENDING','physical_promotion':0}}
+(P/'CERTIFICATE_BINDING.json').write_text(json.dumps(out,sort_keys=True,indent=2)+'\n');print(out['status'])

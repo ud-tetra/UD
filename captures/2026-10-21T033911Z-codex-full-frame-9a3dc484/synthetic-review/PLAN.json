@@ -1,0 +1,32 @@
+{
+  "actual_cli": "unchanged c33_solve.py",
+  "coefficient_bits": 160,
+  "execution": "two-core CPU affinity; BLAS env2; internal source threadpool8 unchanged",
+  "external_promotion_review": "PENDING",
+  "independent_oracles": [
+    "Python-int exact normal residual and coefficient-to-lift truncation",
+    "Fraction exact ideal diagonal solution",
+    "two one-unit corruption controls"
+  ],
+  "negative_invocations": [
+    "missing mandatory trusted hash",
+    "wrong trusted hash",
+    "missing final row coverage",
+    "corrupt first packed row witness"
+  ],
+  "no_new_source_admission": true,
+  "physical_promotion": 0,
+  "positive_invocations": 1,
+  "recipe": {
+    "diagonal_integer": "D_i=2^(96-(i mod13)) at column i; all other coordinates zero",
+    "rhs_integer": "(-1)^i floor(D_i^2/3)",
+    "scale_bits": 96,
+    "shape": [
+      1999,
+      2640
+    ]
+  },
+  "required_final_gate": "exact residual norm <2^-64; finite lift truncation norm <2^-44",
+  "required_initial_gate": "iteration0 residual fail",
+  "scope": "SYNTHETIC SOURCE-EXCLUDED ONLY; no actual UD frame or actual UD solve"
+}

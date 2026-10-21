@@ -1,0 +1,35 @@
+{
+  "auditor_source_sha256": "dc795aaf4c30b91a8f2f6514d19aee7c65a4aebeebd1c27dfd4558f68d189c50",
+  "negative_cases": [
+    {
+      "name": "residual_square_tamper",
+      "no_acceptance_receipt": true,
+      "nonzero_exit": true
+    },
+    {
+      "name": "coefficient_payload_tamper",
+      "no_acceptance_receipt": true,
+      "nonzero_exit": true
+    },
+    {
+      "name": "lift_payload_tamper",
+      "no_acceptance_receipt": true,
+      "nonzero_exit": true
+    },
+    {
+      "name": "frame_admission_hash_tamper",
+      "no_acceptance_receipt": true,
+      "nonzero_exit": true
+    }
+  ],
+  "physical_promotion": 0,
+  "positive_nonzero_signed_fullshape_fixture": {
+    "all10554720_matvec_products_replayed": true,
+    "columns": 2640,
+    "finite_lift_error_squared_integer": "2063363476699599136126081063859116558377466456038681825226138902649248937341505360339931525288034304",
+    "residual_squared_integer": "24013119254324455016652125919591423853753991221253191351867739983990108430699488537809699012110808103217550555784595636224",
+    "rows": 1999
+  },
+  "scope": "synthetic audit-logic fixture only; fake source-admission precondition intentionally supplied, not a600cell frame or physical certificate",
+  "status": "PASS"
+}
