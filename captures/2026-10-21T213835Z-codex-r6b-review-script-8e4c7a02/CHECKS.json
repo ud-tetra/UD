@@ -1,0 +1,50 @@
+{
+  "status": "PASS_INTAKE_DEFECT_CONTROLS",
+  "review_script_verification_status": "INSUFFICIENT_FOR_FULL_C01_C08_CERTIFICATE",
+  "physical_promotion": 0,
+  "reviewer": "Devin Ramos; user-attested non-constructor, AI-assisted",
+  "script_binding": {
+    "claimed_sha256": "627cfd3b28693b2f8e7574dccc35ac231b0fd4b958c589a234a96cb29807f660",
+    "actual_sha256": "507fb13d83438a8462d74adff20f66b823397facf71115a1b31c41b9fb343e81",
+    "match": false,
+    "bytes": 7858
+  },
+  "fresh_execution": {
+    "returncode": 0,
+    "runtime_python_version": [
+      3,
+      12,
+      14
+    ],
+    "stdout_sha256": "b2ada46f280e84501d2af39697230f8ec626243eb0b6d04d3ead1d3387627d43",
+    "stderr_bytes": 0,
+    "meaning": "constructor reproduction now; not proof of a prior external execution"
+  },
+  "assertions_by_check_function": {
+    "check_r01_c01_topology": 1,
+    "check_r02_c02_c03_spectrum_and_diagnostic": 4,
+    "check_r03_c04_coupled_complement_counterexample": 1,
+    "check_r04_c07_shift_invert_mechanics": 0,
+    "check_r05_c06_weighted_variance": 2,
+    "check_r06_r07_c08_residuals_and_perturbation": 1
+  },
+  "exact_controls": {
+    "sample_Temple_bound": "1/16615125000000000000000",
+    "sample_bound_exceeds_1e_minus23": true,
+    "sample_bound_decimal": 6.018612559339758e-23,
+    "reported_infinity_norm_sample": "52.20296",
+    "pinned_full_infinity_norm_exact": "28105596915389682213/288230376151711744",
+    "pinned_full_infinity_norm_display": 97.51087755093563
+  },
+  "payload_sha256": "fa6f6c4fa3dc9d1c13d0a9d0418cef93d1fd6d03cdfa0370055796164767fd3f",
+  "coverage_limits": [
+    "topology function computes the expected count without constructing edges or components",
+    "spectrum formulas and ranks are stipulated; no independent Laplacian or projectors assembled",
+    "rho trial norm and orthogonality printed but not computed",
+    "no32/6-coordinate embeddings, source eigenvalue intervals or channel weights checked",
+    "no pinned files, commits, payload hashes or eigenpair residuals read by submitted program",
+    "shift-invert uses example values; no serialized probe coverage or ARPACK execution",
+    "sample Temple assertion absent; footer prints all8 passed unconditionally"
+  ],
+  "scope": "attribution retained; file received and run; binding and full independent-audit coverage remain open"
+}
