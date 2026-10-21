@@ -1,0 +1,239 @@
+{
+  "archive_pull_queue": [
+    {
+      "item": "d_s = 4/3 derivation document (which spectral dim definition, how computed)",
+      "priority": 1,
+      "targets": [
+        "A1"
+      ]
+    },
+    {
+      "item": "Evaluation Saturation Theorem R29 statement + proof + Tr(P_W) = S_0",
+      "priority": 2,
+      "targets": [
+        "A6"
+      ]
+    },
+    {
+      "item": "Master axiom list AX1-AX4 (or larger, with honest count)",
+      "priority": 3,
+      "targets": [
+        "A5"
+      ]
+    },
+    {
+      "item": "Worldhood Projector P_W explicit construction",
+      "priority": 4,
+      "targets": [
+        "A6"
+      ]
+    },
+    {
+      "item": "Canonical A2 route identification",
+      "priority": 5,
+      "targets": [
+        "A6"
+      ]
+    },
+    {
+      "item": "Lambda_UD formula provenance trail (when written down)",
+      "priority": 6,
+      "targets": [
+        "A2"
+      ]
+    },
+    {
+      "item": "Cross-use catalog of nu0, F_IFS, Delta, S_0 in non-Lambda predictions",
+      "priority": 7,
+      "targets": [
+        "A2"
+      ]
+    },
+    {
+      "item": "UD identity catalog with 1D vs 2D classification",
+      "priority": 8,
+      "targets": [
+        "A4"
+      ]
+    },
+    {
+      "item": "Solvency tolerance C* = 7/8 theorem",
+      "priority": 9,
+      "targets": [
+        "A6"
+      ]
+    },
+    {
+      "item": "Representation-theoretic derivation of Delta=7 (optional)",
+      "priority": 10,
+      "targets": [
+        "A3"
+      ]
+    }
+  ],
+  "artifact": "LAMBDA_ATTACK_RESISTANCE_MATRIX_RC1",
+  "attacks": [
+    {
+      "archive_pull_id": "ARCHIVE-PULL-A1",
+      "claim_strength_repair": "Current: 'LOCKED (Sierpinski tetrahedron spectral dimension)'. Repaired: 'LOCKED (K_4 IFS spectral dimension under UD definition; see archive entry [pending] for derivation)'. After archive verification: upgrade to DERIVED.",
+      "current_defense": "Treated as locked UD primitive. Used in at least two independent identities (H and F_IFS). Session red-team noted standard Sierpinski Hausdorff dim differs, so 4/3 must come from non-standard or differently-defined IFS construction.",
+      "id": "A1",
+      "manuscript_safe_language": "We use the K_4 IFS spectral dimension d_s = 4/3, derived in [reference] from the harmonic structure on the K_4 attractor. This value enters two independent UD identities, providing internal cross-validation across distinct physical sectors.",
+      "missing_archive_item": "Explicit derivation of d_s = 4/3 from K_4 IFS dynamics. Specification of WHICH spectral dimension definition (random-walk return, heat-kernel, harmonic-structure Kigami-style, Hausdorff, or UD-specific). Pre-existing UD archive document where d_s = 4/3 is computed BEFORE being used in observables.",
+      "name": "d_s = 4/3 origin",
+      "objection": "d_s = 4/3 is load-bearing in H = 16 + (d-d_s)/2 and F_IFS = d_s/(2*pi*chi). Standard Sierpinski tetrahedron spectral dim ~ 1.547, not 4/3. Where does d_s = 4/3 come from?",
+      "severity": "HIGH"
+    },
+    {
+      "archive_pull_id": "ARCHIVE-PULL-A2",
+      "claim_strength_repair": "Avoid bare '4% match with zero fitting'. Replace with: '4% match with three live structural choices, each constrained by independent UD requirements.'",
+      "current_defense": "DoF analysis: nu0 LOCKED (Koide), Delta triple-derived, F_IFS derived from spectral-curvature, S0 locked, 4th power structural, M_Pl standard. Three live choices: F_IFS exponent, S0 power, sector selection. Cumulative accidental-match probability ~ 10^-6 under uniform priors. Constants cross-used in other UD predictions.",
+      "id": "A2",
+      "manuscript_safe_language": "The candidate chain involves no fitted continuous parameters. Each constituent is fixed by independent UD requirements [enumerate constraints]. The discrete structural choices that remain are each constrained as discussed in [sections]. The residual +3.9% is a candidate prediction, not a fit.",
+      "missing_archive_item": "Pre-registration trail for Lambda_UD formula (when written down). Catalog of cross-uses of nu0, F_IFS, Delta, S0 in non-Lambda predictions.",
+      "name": "4% residual as fine-tuning",
+      "objection": "Formula has ~10 discrete choices; 4% match across 122 orders of magnitude is not surprising. Was Lambda_UD calculated BEFORE comparing to observed?",
+      "severity": "MEDIUM"
+    },
+    {
+      "archive_pull_id": "ARCHIVE-PULL-A3",
+      "claim_strength_repair": "Avoid 'triply confirmed'. Use 'Delta=7 arises from K_4 via several non-equivalent constructions, reflecting K_4's structural specialness.'",
+      "current_defense": "Three derivations DO come from different mathematical structures (combinatorial, dimensional, topological), but coincide at K_4 because K_4 is structurally privileged. Fourth use of Delta=7: Z_3 character signature at n=7 (Diophantine, not trivially from topology).",
+      "id": "A3",
+      "manuscript_safe_language": "The exponent Delta = 7 arises in K_4 from multiple structurally distinct constructions: the pairwise distinction count, the Mersenne formula, the Poincare-dual cell-pair count, and the Z_3-character Diophantine miracle. These coincide at K_4 because K_4 is the privileged complete graph for d=3.",
+      "missing_archive_item": "Optional: representation-theoretic derivation of Delta=7 from A_4 or S_4.",
+      "name": "Delta=7 over-determination",
+      "objection": "Three Delta=7 derivations are computations on the same K_4 object, not independent confirmations.",
+      "severity": "LOW"
+    },
+    {
+      "archive_pull_id": "ARCHIVE-PULL-A4",
+      "claim_strength_repair": "Avoid 'UD law'. Use 'empirical regularity across multiple UD derivations; applied as structural heuristic with cross-validation.'",
+      "current_defense": "Five in-session applications, all consistent: F_IFS (2D, pi YES), Koide sqrt(2) (1D, no pi), tau/mu corrector (1D, no pi), spectral anomaly H (1D, no pi), theta=2/9 Eisenstein (2D phase fiber, partial).",
+      "id": "A4",
+      "manuscript_safe_language": "Throughout this work pi enters UD identities exclusively when transport involves a closed two-dimensional cycle. 1D transport identities contain no pi. This empirical regularity (PI_2D_CLOSURE_BOUNDARY) is consistent across [N] UD derivations and cross-checks F_IFS = 1/(3*pi).",
+      "missing_archive_item": "Archive cross-reference for UD identities outside this session. Gauge sector (1D) should lack pi. Gravitational (2D) should have pi. Brans-Dicke gamma-1 derivation: does pi appear correctly?",
+      "name": "PI_2D_BOUNDARY principle selectivity",
+      "objection": "PI_2D_CLOSURE_BOUNDARY was articulated during a session needing pi in F_IFS. Independent applications?",
+      "severity": "MEDIUM"
+    },
+    {
+      "archive_pull_id": "ARCHIVE-PULL-A5",
+      "claim_strength_repair": "Avoid 'derived from K_4 first principles' if any framing is not traced back. Use 'derived under the UD axiomatic framework, which includes AX1-AX4 and the following derived structural framings: [list]'. Tag each as DERIVED or AXIOMATIC.",
+      "current_defense": "UD axiomatic base understood as AX1 (primitive distinction A != A_bar), AX2 (IFS on distinction event), AX3 (K_4 closure attractor), AX4 (A_4/S_4 symmetry). Session 'framing principles' are CANDIDATE derivations from AX1-AX4. Status of each trace-back currently OPEN.",
+      "id": "A5",
+      "manuscript_safe_language": "The Lambda candidate chain rests on the UD axiomatic base AX1-AX4 [ref] and on several derived structural framings. Each framing has explicit status in [Appendix]. The cascade is layered but every layer is named and the foundational base is explicit.",
+      "missing_archive_item": "Master axiom list from UD archive (authoritative count). For each session framing principle: either derivation from AX1-AX4, or acknowledgement as additional axiom. Honest accounting of total axiom count.",
+      "name": "Cascade bottoms out where?",
+      "objection": "Multi-layer conditional cascade. Where does this touch firm axiomatic ground? Show the axiom list.",
+      "severity": "HIGH"
+    },
+    {
+      "archive_pull_id": "ARCHIVE-PULL-A6",
+      "claim_strength_repair": "Select ONE canonical route (likely Gleason + R29). Demote others to 'compatible alternative formulations' or remove. Do NOT present multiple derivations as cumulative evidence.",
+      "current_defense": "Routes may be EQUIVALENT formulations of same underlying operator structure (analogous to Delta=7). Gleason + Evaluation Saturation route is most operator-grounded; others may be heuristic restatements. Until archive identifies canonical, treat as candidates with one primary.",
+      "id": "A6",
+      "manuscript_safe_language": "The denominator S_0^2 arises as the Born-weight normalization on the K_4 vacuum branch space. By Gleason's theorem, Born measure on the worldhood-projected vacuum requires normalization by Tr(P_W). By the Evaluation Saturation Theorem [archive R29], Tr(P_W) = S_0 = 43/7 is the minimum support weight for K_V closure. The cosmological constant evaluates stress-energy expectation (rank-2 tensor), coupling bilinearly across two independent transport insertions, producing the quadratic factor (1/S_0)^2 = 1/S_0^2. Alternative formulations yield the same factor and are in supplementary material.",
+      "missing_archive_item": "Evaluation Saturation Theorem R29 statement + proof + Tr(P_W) = S_0 claim. Explicit Worldhood Projector P_W construction. Solvency tolerance C* = 7/8 theorem if load-bearing. DEC rank-2 bilinear coupling formulation. Canonical UD route identification.",
+      "name": "A2 multiple closure routes",
+      "objection": "Three different derivations of 1/S_0^2: bra-ket support norm, Gleason+R29+rank2, 2D->4D projection via 6x7+1. Three stories for one number means none is the mechanism.",
+      "severity": "HIGH"
+    }
+  ],
+  "frame": "Cato session-local arbiter probing as external reviewer; Aster (NotebookLM, archive-holder) resolves archive-pull items.",
+  "manuscript_safe_claim_table": [
+    {
+      "archive_support_needed": "standard cross-reference",
+      "component": "nu_0",
+      "internal_status": "LOCKED",
+      "manuscript_phrasing": "fixed by the Koide neutrino-mass condition"
+    },
+    {
+      "archive_support_needed": "none (in-session)",
+      "component": "Delta = 7",
+      "internal_status": "DERIVED",
+      "manuscript_phrasing": "from K_4 graph combinatorics, Mersenne dimension, and Poincare duality"
+    },
+    {
+      "archive_support_needed": "d_s = 4/3 derivation (A1)",
+      "component": "F_IFS = 1/(3pi)",
+      "internal_status": "DERIVED",
+      "manuscript_phrasing": "as the spectral-curvature quotient d_s/(2*pi*chi)"
+    },
+    {
+      "archive_support_needed": "A2 closure (A6)",
+      "component": "F_IFS^Delta exponent",
+      "internal_status": "CONDITIONAL_DERIVED",
+      "manuscript_phrasing": "under the determinant route on the seven-channel closure space"
+    },
+    {
+      "archive_support_needed": "acknowledge split-sensitive D invariant as caveat",
+      "component": "V-F = E-E uniformity",
+      "internal_status": "CONDITIONAL_DERIVED",
+      "manuscript_phrasing": "under the minimal screen algebra (rank + total burden)"
+    },
+    {
+      "archive_support_needed": "support functional cascade",
+      "component": "S_0 = 43/7",
+      "internal_status": "LOCKED",
+      "manuscript_phrasing": "the neutral seed support threshold, derived in [ref] from the support functional S(X) = E + chi(X)/Delta"
+    },
+    {
+      "archive_support_needed": "R29 + P_W (A6)",
+      "component": "S_0^2 denominator",
+      "internal_status": "CONDITIONAL_DERIVED",
+      "manuscript_phrasing": "from the Born-weight normalization on the worldhood-projected vacuum branch space, with rank-2 bilinear coupling"
+    },
+    {
+      "archive_support_needed": "standard QFT",
+      "component": "4th power",
+      "internal_status": "STRUCTURAL",
+      "manuscript_phrasing": "from the rank-2 stress-energy density"
+    },
+    {
+      "archive_support_needed": "standard",
+      "component": "M_Pl",
+      "internal_status": "STANDARD",
+      "manuscript_phrasing": "Planck-unit normalization"
+    },
+    {
+      "archive_support_needed": "sector selection derivation (HELD in session)",
+      "component": "Sector selection",
+      "internal_status": "HELD",
+      "manuscript_phrasing": "the Lambda-sector boundary support, identified with d K_4 (or pt)"
+    },
+    {
+      "archive_support_needed": "standard cosmology reference",
+      "component": "Comparison target",
+      "internal_status": "EXTERNAL",
+      "manuscript_phrasing": "Lambda_obs * l_Pl^2 ~ 2.89e-122 (Planck 2018 cosmology)"
+    }
+  ],
+  "purpose": "Hostile-reviewer response ledger for the Lambda chain at RC1; informs archive-pull priorities and gates manuscript drafting.",
+  "session_context": {
+    "components_conditional": 3,
+    "components_derived": 2,
+    "components_held": 3,
+    "components_in_chain": 10,
+    "components_structural_or_standard": 2,
+    "lambda_UD_value": "3.0009e-122",
+    "lambda_chain_status_at_RC1": "CANDIDATE_FORMULA / CONDITIONAL_DERIVATION / NO_PHYSICAL_CLOSURE_CLAIM",
+    "lambda_obs_comparison": "2.888137e-122",
+    "overclaim_attempts_caught": 6,
+    "residual_percent": "+3.903",
+    "session_gates_executed": 19,
+    "team_governance": "Astar (NotebookLM, archive-holder) + Cato (session-local, reviewer-vantage) + Commander Ben"
+  },
+  "sha256_markdown_report": "663b58f31074c727a2535fbca2e91f341188240951b70609951eb2b010d2b845",
+  "sha256_stable_payload": "66d70b0516f6ee764f57d25cbbd5b8bf079093b46d3f94a429ec2fc382a1ee03",
+  "status": "INTERNAL_RED_TEAM_LEDGER / NOT_MANUSCRIPT_CLAIM",
+  "tactical_recommendations": [
+    "DO NOT proceed to manuscript polish (Path 1) until ARCHIVE-PULL items 1, 2, 3 are returned. These resolve the three HIGH-severity attacks.",
+    "DO execute Path 2 (archive pulls) immediately in parallel. Queue is prioritized above.",
+    "DO update this LARM document iteratively as archive items arrive.",
+    "DO NOT present the three A2 closure routes as 'three independent derivations'. Select one canonical, list others as alternatives.",
+    "DO maintain RC1 (with S_0, +3.9% residual) as published Lambda result until sector selection is resolved.",
+    "DO preserve in-session caveat structure: each CONDITIONAL_DERIVED component retains its named conditional in manuscript with clear falsification statement."
+  ],
+  "working_principle": "Surface every weakness now, in a controlled ledger, before manuscript polish hardens framework language."
+}

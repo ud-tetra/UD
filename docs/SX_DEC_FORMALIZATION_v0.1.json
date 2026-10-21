@@ -1,0 +1,90 @@
+{
+  "R29_DEC_interpretation": {
+    "E_component": "dim(C^1) = edge diagonal = 6",
+    "E_squared_component": "dim(C^1 tensor C^1) = pairwise edge tensor product = 36",
+    "denominator": "Delta = E + 1 = 7 = coherence-capacity normalization",
+    "interpretation": "R29's '+1' = connected-component Betti invariant beta_0(K_4)",
+    "numerator_decomposition": "E^2 + E + 1",
+    "unit_component": "dim(H^0; R) = beta_0 = connected components = 1"
+  },
+  "artifact": "SX_DEC_FORMALIZATION_v0.1",
+  "candidate_future_gates": [
+    "SX_INDEX_THEOREM_v0.1 (formalize discrete Atiyah-Singer connection via Hodge Laplacian)",
+    "TWO_COMPLEX_R29_DERIVATION_v0.1 (independent tensor-algebra logic for 2-complexes)"
+  ],
+  "claim_count": {
+    "closure_claims": 0,
+    "future_gates_suggested": 2,
+    "held_items_logged": 3,
+    "new_derivations": 0,
+    "structural_clarifications": 1
+  },
+  "connections_to_standard_math": [
+    "Euler-Poincare valuation uniqueness (McMullen)",
+    "Hodge-Euler identity chi = sum (-1)^p beta_p",
+    "Truncated tensor algebra T_<=2(A_E) = R + A_E + (A_E tensor A_E)",
+    "Discrete Gauss-Bonnet for triangulated 2-manifolds"
+  ],
+  "crown": "OFF",
+  "earned": [
+    "Clean DEC-language expression of S(X)",
+    "Identification of R29's '+1' as beta_0 invariant",
+    "Explicit framing of '+1 -> +chi' as structural choice",
+    "Manuscript-safe statement for external presentation",
+    "Three standard-math connections flagged for future work"
+  ],
+  "generalization_question": {
+    "K4_consistency": "chi(K_4 as filled 3-simplex) = 1 = beta_0(K_4), so K_4 case is consistent with either +1 or +chi reading",
+    "current_status": "Replacement +1 -> +chi is a STRUCTURAL CHOICE, not independently derived",
+    "extension_question": "For 2-complexes, should unit slot be +beta_0 or +chi = sum_p (-1)^p beta_p?",
+    "issue": "Replacing '+1' with '+chi(X)' for higher-dimensional support spaces"
+  },
+  "held_items_registered": {
+    "HELD-M3-alpha": "Independent derivation of support capacity for a 2-complex via tensor-algebra logic",
+    "HELD-M3-beta": "Topological equivalence between 18-channel S_3 macroscopic shell and dK_4",
+    "HELD-M3-gamma": "Sector-identification: macroscopic Lambda couples to boundary-exposed complex"
+  },
+  "manuscript_safe_excerpt_provided": true,
+  "not_earned": [
+    "Derivation of S_Lambda = 44/7 from first principles",
+    "Closure of M3-alpha, M3-beta, or M3-gamma",
+    "Promotion of SRGD v0.1 beyond VERIFIED_WITHIN_NARROW_SCOPE",
+    "Any new direct-pass count for the catalog"
+  ],
+  "scope": "Express S(X) = E + chi(X)/Delta in DEC language; identify derived vs structural-choice components",
+  "session_position": {
+    "generates": "New candidate gates and held items only",
+    "parallel_to": [
+      "RC1 Lambda chain",
+      "RG_DEPTH_OBSERVABLE_CATALOG_v0.2",
+      "LARM_RC1"
+    ],
+    "supports": "Path alpha partial manuscript Section 4.4 (S(X) sub-section)"
+  },
+  "sha256_markdown": "500327d026911e4274a2445e05640b3d39ecd2f96d5baa806a3acfb4ac4fffa6",
+  "sha256_stable_payload": "564df8338a988082b08a5285874c044dc1753632f70eb4187b038dd802282693",
+  "status": "MANUSCRIPT_GRADE_FORMALIZATION / NO_CLOSURE_CLAIMS",
+  "support_functional": {
+    "K4_boundary": {
+      "S": "44/7",
+      "chi": 2,
+      "decimal": 6.285714285714286
+    },
+    "K4_constants": {
+      "Delta": 7,
+      "E": 6,
+      "F": 4,
+      "V": 4
+    },
+    "K4_pointlike": {
+      "S": "43/7",
+      "chi": 1,
+      "decimal": 6.142857142857143
+    },
+    "form": "S(X) = E + chi(X)/Delta"
+  },
+  "validation_pending": {
+    "Aster": "cross-validation of DEC notation consistency",
+    "Lumi": "archive cross-reference vs Distinction Theory v2.2/v2.3 conventions"
+  }
+}

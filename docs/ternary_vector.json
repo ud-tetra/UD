@@ -1,0 +1,336 @@
+{
+  "version": "2026-04-21",
+  "total_nodes": 50,
+  "gauge": {
+    "gauge_SU3xSU2xU1": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "evidence": "S\u2084 face/edge/vertex decomposition"
+    },
+    "sin2_W_UV": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "evidence": "3/11 from coupling ratio"
+    },
+    "sin2_W_mZ": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": 0.247,
+      "measured": 0.231,
+      "error_pct": 5.6
+    },
+    "alpha_s_mZ": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "value": 0.119,
+      "measured": 0.118,
+      "error_pct": 0.8
+    },
+    "F_IFS": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": "1/(3\u03c0)",
+      "note": "universal loop factor"
+    },
+    "mass_gap": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "evidence": "Hodge Laplacian on K\u2084"
+    },
+    "confinement": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "\u03c3=9/(4\u03c0\u00b2a\u2080)"
+    },
+    "d_s": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "4/3",
+      "evidence": "decimation"
+    },
+    "kappa_C": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "3/(4\u03c0)",
+      "error_pct": 0.5
+    },
+    "g_xs": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "21/(64\u03c0)"
+    },
+    "lambda_NL": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "441/(2048\u03c0\u00b2)"
+    }
+  },
+  "matter": {
+    "m_tau_m_mu": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "H=101/6",
+      "error_pct": 0.09
+    },
+    "m_mu_m_e": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "value": 206.3,
+      "measured": 206.77,
+      "error_pct": 0.2
+    },
+    "N_gen": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": 3,
+      "evidence": "F-1=3 active faces"
+    },
+    "Koide_Q": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "2/3"
+    },
+    "m_nu1": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": "35 meV",
+      "testable": true
+    },
+    "theta_23": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "value": 45.0,
+      "measured": 49.0,
+      "error_pct": 8.2,
+      "evidence": "TBM from S\u2084\u2192S\u2083"
+    },
+    "theta_12": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "value": 35.3,
+      "measured": 33.4,
+      "error_pct": 5.6,
+      "evidence": "arcsin(1/\u221a3) from S\u2084\u2192S\u2083"
+    },
+    "theta_13": {
+      "truth": 0.3,
+      "status": "STRUCTURAL_HYPOTHESIS",
+      "value": 7.4,
+      "measured": 8.6,
+      "error_pct": 14,
+      "evidence": "\u03b8\u2081\u2082\u00d7g_\u03c7\u03c3/J_\u03c3"
+    },
+    "m_u": {
+      "truth": 0.3,
+      "status": "STRUCTURAL_HYPOTHESIS",
+      "value": "1.99 MeV",
+      "measured": 2.16,
+      "error_pct": 8
+    },
+    "m_d": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "value": "4.65 MeV",
+      "measured": 4.67,
+      "error_pct": 0.5,
+      "formula": "m_u\u00d7\u0394/d"
+    },
+    "m_s": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": "93.9 MeV",
+      "measured": 93.4,
+      "error_pct": 0.5,
+      "formula": "m_d\u00d7H\u00d7E/(V+1)"
+    },
+    "m_c": {
+      "truth": 0.3,
+      "status": "STRUCTURAL_HYPOTHESIS",
+      "value": "1129 MeV",
+      "measured": 1270,
+      "error_pct": 11
+    },
+    "m_b": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": "4215 MeV",
+      "measured": 4180,
+      "error_pct": 0.8,
+      "formula": "m_s\u00d7H\u00d7(\u0394+1)/d"
+    },
+    "m_t": {
+      "truth": 0.3,
+      "status": "STRUCTURAL_HYPOTHESIS",
+      "value": "152 GeV",
+      "measured": 173,
+      "error_pct": 12
+    },
+    "color_2n": {
+      "truth": 0.3,
+      "status": "STRUCTURAL_HYPOTHESIS",
+      "evidence": "face/edge coupling ratio g\u2083\u00b2/g\u2082\u00b2=2"
+    }
+  },
+  "boson": {
+    "v_VEV": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": "249.8 GeV",
+      "measured": 246.2,
+      "error_pct": 1.5,
+      "formula": "\u03bd\u2080\u00d74^(52/9)"
+    },
+    "m_H": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": "118 GeV",
+      "measured": 125.3,
+      "error_pct": 5.6,
+      "formula": "\u221a(2F_IFS)v"
+    },
+    "m_W": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": "90 GeV",
+      "measured": 80.4,
+      "error_pct": 12
+    },
+    "m_Z": {
+      "truth": 0.5,
+      "status": "WORKING",
+      "value": "104 GeV",
+      "measured": 91.2,
+      "error_pct": 14
+    },
+    "lambda_H": {
+      "truth": 0.3,
+      "status": "STRUCTURAL_HYPOTHESIS",
+      "value": "F_IFS=1/(3\u03c0)",
+      "note": "Higgs quartic = loop factor"
+    }
+  },
+  "dark_matter": {
+    "n_dark_n_baryon": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "value": "2/(V+1)=2/5",
+      "evidence": "eigenstate classification DERIVED"
+    },
+    "Omega_DM_Omega_b": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "value": 5.35,
+      "measured": 5.4,
+      "error_pct": 1.0
+    },
+    "m_DM": {
+      "truth": 0.3,
+      "status": "STRUCTURAL_HYPOTHESIS",
+      "value": "12.5 GeV",
+      "formula": "d\u00d7m_b",
+      "testable": true
+    },
+    "DM_stability": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "evidence": "H_dark\u2194baryon=0 THEOREM"
+    },
+    "binding_equipartition": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "evidence": "\u03a3_dark\u2248\u03a3_baryon to 0.1%"
+    },
+    "sector_formula": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "2:(V+1):(2^V-V-3)",
+      "evidence": "eigenstate decomposition"
+    },
+    "Tr_H_N": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "-(E+V+1)/2\u00b3=-11/8"
+    }
+  },
+  "cosmology": {
+    "n_s": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "185/192=0.9635",
+      "measured": 0.965,
+      "error_pct": 0.1
+    },
+    "r_T": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "value": "7/192=0.0365",
+      "testable": true
+    },
+    "BH_info": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "evidence": "carrier unitarity"
+    },
+    "d_spatial": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": 3,
+      "evidence": "4 simultaneous conditions"
+    },
+    "d_max": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "\u22487",
+      "evidence": "coherence ceiling"
+    },
+    "regime_2n": {
+      "truth": 0.8,
+      "status": "OPERATOR_GRAMMAR",
+      "evidence": "confirmed in H_min spectrum gaps"
+    },
+    "alpha_0_inv": {
+      "truth": 1.0,
+      "status": "EXACT_STRUCTURAL",
+      "value": "960/7",
+      "error_pct": 0.08
+    }
+  },
+  "expelled": {
+    "sin2_W_quarter": {
+      "truth": -1.0,
+      "reason": "gives 0.25 not 0.231"
+    },
+    "m_mu_256": {
+      "truth": -1.0,
+      "reason": "wrong mass ratio"
+    },
+    "d_s_range": {
+      "truth": -1.0,
+      "reason": "d_s is exact 4/3 not a range"
+    },
+    "DM_thermal": {
+      "truth": -1.0,
+      "reason": "not thermal relic"
+    },
+    "single_Tc": {
+      "truth": -1.0,
+      "reason": "two-stage transition"
+    },
+    "three_F_model": {
+      "truth": -1.0,
+      "reason": "d_H/d_s/d_W three separate F factors"
+    },
+    "VEV_x4": {
+      "truth": -1.0,
+      "reason": "VEV=\u221a(M_Pl\u00b7\u03bd\u2080)\u00d7x\u2074 wrong"
+    },
+    "lambda_H_21_43": {
+      "truth": -1.0,
+      "reason": "gives m_H=231 GeV (85% off)"
+    },
+    "lambda_H_3_S0": {
+      "truth": -1.0,
+      "reason": "same as 21/43, naive framing potential"
+    }
+  }
+}

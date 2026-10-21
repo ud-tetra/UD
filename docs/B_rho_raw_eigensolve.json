@@ -1,0 +1,1802 @@
+[
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V2-burden-20260407T230241Z",
+    "timestamp": "2026-04-07T23:02:41.522472+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V2",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 1024,
+    "ifs_level": 5,
+    "background": "burden",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 10,
+    "IPR_sigma1": 0.12720809910209,
+    "IPR_baseline": 0.0009765625,
+    "F": 130.2611,
+    "regime": "strong",
+    "IPR_sigma2": 0.12542001892815,
+    "F_sigma2": 128.4301,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.02023526907814,
+    "F_std": 20.7209,
+    "F_min": 97.629,
+    "F_max": 151.1818,
+    "all_F_values": [
+      151.1818,
+      99.7317,
+      146.668,
+      97.629,
+      129.0023,
+      141.7432,
+      146.5271,
+      146.8033,
+      108.6064,
+      134.7182
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 151.1818,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 134.204,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 140.0761,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 99.7317,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 131.5025,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 140.3571,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 146.668,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 142.7578,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 94.2172,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 97.629,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 141.4924,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 144.6123,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 129.0023,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 142.0511,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 138.2809,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 141.7432,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 128.274,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 143.4667,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 146.5271,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 131.0784,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 128.4199,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 146.8033,
+          "overlap": 0.030583
+        },
+        {
+          "rank": 2,
+          "F": 128.9658,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 133.725,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 108.6064,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 134.6745,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 137.9644,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 134.7182,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 69.3006,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 130.2958,
+          "overlap": 0.0
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "P1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 1024\u00d71024 IFS Hamiltonian",
+      "Connectivity: d=1 siblings (\u03b7^1) + d=2 cousins (\u03b7^2)",
+      "Burden disorder: \u03c3 = 0.12 \u00d7 \u0394/N, Gaussian on-site",
+      "Eigenpairs: k=30 near defect energy via shift-invert",
+      "\u03c3\u2081 candidate: eigenstate with highest |<\u03c8|defect>|\u00b2 overlap",
+      "N_runs = 10",
+      "Seed = 2026"
+    ]
+  },
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V3-burden+repair-20260407T230242Z",
+    "timestamp": "2026-04-07T23:02:42.614437+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V3",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 1024,
+    "ifs_level": 5,
+    "background": "burden+repair",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 10,
+    "IPR_sigma1": 0.12693325963501,
+    "IPR_baseline": 0.0009765625,
+    "F": 129.9797,
+    "regime": "strong",
+    "IPR_sigma2": 0.1183308340167,
+    "F_sigma2": 121.1708,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.028676156671,
+    "F_std": 29.3644,
+    "F_min": 66.3855,
+    "F_max": 153.8948,
+    "all_F_values": [
+      142.3767,
+      133.3247,
+      144.3879,
+      87.0151,
+      66.3855,
+      136.5497,
+      153.8948,
+      134.608,
+      152.7014,
+      148.5527
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 142.3767,
+          "overlap": 0.187217
+        },
+        {
+          "rank": 2,
+          "F": 153.5192,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 155.0028,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 133.3247,
+          "overlap": 0.085251
+        },
+        {
+          "rank": 2,
+          "F": 84.4821,
+          "overlap": 0.037201
+        },
+        {
+          "rank": 3,
+          "F": 131.8419,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 144.3879,
+          "overlap": 0.003211
+        },
+        {
+          "rank": 2,
+          "F": 71.527,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 127.6176,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 87.0151,
+          "overlap": 0.040947
+        },
+        {
+          "rank": 2,
+          "F": 141.947,
+          "overlap": 0.004396
+        },
+        {
+          "rank": 3,
+          "F": 65.8462,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 66.3855,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 132.1749,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 141.36,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 136.5497,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 70.7288,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 134.7784,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 153.8948,
+          "overlap": 0.018364
+        },
+        {
+          "rank": 2,
+          "F": 145.0202,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 153.1226,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 134.608,
+          "overlap": 0.003311
+        },
+        {
+          "rank": 2,
+          "F": 130.2396,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 145.3118,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 152.7014,
+          "overlap": 0.027964
+        },
+        {
+          "rank": 2,
+          "F": 147.8388,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 151.0006,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 148.5527,
+          "overlap": 0.013703
+        },
+        {
+          "rank": 2,
+          "F": 134.2302,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 146.4441,
+          "overlap": 0.0
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "P1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 1024\u00d71024 IFS Hamiltonian",
+      "Connectivity: d=1 siblings + d=2 cousins + repair coupling",
+      "Burden disorder: \u03c3 = 0.12 \u00d7 \u0394/N, Gaussian on-site",
+      "Repair: L_repair = 0.034 coupling between damaged sibling pairs",
+      "Damaged = |burden_noise| > \u03c3_burden (> 1 std dev)",
+      "Eigenpairs: k=30 near defect energy",
+      "N_runs = 10",
+      "Seed = 2026"
+    ]
+  },
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V1-symmetric-20260407T230243Z",
+    "timestamp": "2026-04-07T23:02:43.097035+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V1",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 1024,
+    "ifs_level": 5,
+    "background": "symmetric",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 10,
+    "IPR_sigma1": 0.00568363700483,
+    "IPR_baseline": 0.0009765625,
+    "F": 5.82,
+    "regime": "intermediate",
+    "IPR_sigma2": 0.00700602918097,
+    "F_sigma2": 7.1742,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.00292643345124,
+    "F_std": 2.9967,
+    "F_min": 2.5494,
+    "F_max": 13.0601,
+    "all_F_values": [
+      5.4624,
+      5.6122,
+      13.0601,
+      2.5494,
+      5.1508,
+      4.3839,
+      7.6317,
+      6.9018,
+      4.6688,
+      2.7794
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 5.4624,
+          "overlap": 0.002222
+        },
+        {
+          "rank": 2,
+          "F": 4.2807,
+          "overlap": 0.001521
+        },
+        {
+          "rank": 3,
+          "F": 3.0484,
+          "overlap": 0.000686
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 5.6122,
+          "overlap": 0.006151
+        },
+        {
+          "rank": 2,
+          "F": 6.82,
+          "overlap": 0.006039
+        },
+        {
+          "rank": 3,
+          "F": 10.6613,
+          "overlap": 0.005101
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 13.0601,
+          "overlap": 0.013415
+        },
+        {
+          "rank": 2,
+          "F": 6.2704,
+          "overlap": 0.010719
+        },
+        {
+          "rank": 3,
+          "F": 8.8875,
+          "overlap": 0.003216
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2.5494,
+          "overlap": 0.000672
+        },
+        {
+          "rank": 2,
+          "F": 9.9291,
+          "overlap": 0.000561
+        },
+        {
+          "rank": 3,
+          "F": 17.2413,
+          "overlap": 0.000285
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 5.1508,
+          "overlap": 0.004348
+        },
+        {
+          "rank": 2,
+          "F": 2.7286,
+          "overlap": 0.00395
+        },
+        {
+          "rank": 3,
+          "F": 12.3329,
+          "overlap": 0.00318
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 4.3839,
+          "overlap": 0.001143
+        },
+        {
+          "rank": 2,
+          "F": 9.0964,
+          "overlap": 0.000345
+        },
+        {
+          "rank": 3,
+          "F": 9.0724,
+          "overlap": 0.000193
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 7.6317,
+          "overlap": 0.004447
+        },
+        {
+          "rank": 2,
+          "F": 5.1153,
+          "overlap": 0.004012
+        },
+        {
+          "rank": 3,
+          "F": 5.6021,
+          "overlap": 0.002567
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 6.9018,
+          "overlap": 0.007136
+        },
+        {
+          "rank": 2,
+          "F": 18.3801,
+          "overlap": 0.005404
+        },
+        {
+          "rank": 3,
+          "F": 7.7255,
+          "overlap": 0.004082
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 4.6688,
+          "overlap": 0.002181
+        },
+        {
+          "rank": 2,
+          "F": 3.0927,
+          "overlap": 0.002143
+        },
+        {
+          "rank": 3,
+          "F": 6.2349,
+          "overlap": 0.001525
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2.7794,
+          "overlap": 0.000857
+        },
+        {
+          "rank": 2,
+          "F": 6.0285,
+          "overlap": 0.000163
+        },
+        {
+          "rank": 3,
+          "F": 7.4134,
+          "overlap": 0.00011
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "C1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 1024\u00d71024 IFS Hamiltonian",
+      "Connectivity: d=1 siblings (\u03b7^1) + d=2 cousins (\u03b7^2)",
+      "No disorder: uniform on-site potential -\u0394/N",
+      "Eigenpairs: k=30 near defect energy",
+      "N_runs = 10",
+      "Seed = 2026"
+    ]
+  },
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V2-burden-20260407T230248Z",
+    "timestamp": "2026-04-07T23:02:48.362132+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V2",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 4096,
+    "ifs_level": 6,
+    "background": "burden",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 10,
+    "IPR_sigma1": 0.13810298892691,
+    "IPR_baseline": 0.000244140625,
+    "F": 565.6698,
+    "regime": "strong",
+    "IPR_sigma2": 0.13665091469374,
+    "F_sigma2": 559.7221,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.00642660089718,
+    "F_std": 26.3234,
+    "F_min": 518.4385,
+    "F_max": 595.5913,
+    "all_F_values": [
+      539.0621,
+      589.6743,
+      595.5913,
+      518.4385,
+      565.8303,
+      577.4892,
+      592.2923,
+      572.9265,
+      569.8471,
+      535.5468
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 539.0621,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 544.2331,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 584.0357,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 589.6743,
+          "overlap": 0.012043
+        },
+        {
+          "rank": 2,
+          "F": 586.2889,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 516.8162,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 595.5913,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 558.1659,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 591.8123,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 518.4385,
+          "overlap": 0.000432
+        },
+        {
+          "rank": 2,
+          "F": 592.6877,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 532.4454,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 565.8303,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 554.6631,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 595.4209,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 577.4892,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 540.4134,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 585.2281,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 592.2923,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 578.3101,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 587.3765,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 572.9265,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 533.6479,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 517.6343,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 569.8471,
+          "overlap": 0.177738
+        },
+        {
+          "rank": 2,
+          "F": 593.3787,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 580.1945,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 535.5468,
+          "overlap": 0.165602
+        },
+        {
+          "rank": 2,
+          "F": 515.4326,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 514.9253,
+          "overlap": 0.0
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "P1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 4096\u00d74096 IFS Hamiltonian",
+      "Connectivity: d=1 siblings (\u03b7^1) + d=2 cousins (\u03b7^2)",
+      "Burden disorder: \u03c3 = 0.12 \u00d7 \u0394/N, Gaussian on-site",
+      "Eigenpairs: k=30 near defect energy via shift-invert",
+      "\u03c3\u2081 candidate: eigenstate with highest |<\u03c8|defect>|\u00b2 overlap",
+      "N_runs = 10",
+      "Seed = 2026"
+    ]
+  },
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V3-burden+repair-20260407T230252Z",
+    "timestamp": "2026-04-07T23:02:52.261103+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V3",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 4096,
+    "ifs_level": 6,
+    "background": "burden+repair",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 10,
+    "IPR_sigma1": 0.1434336918844,
+    "IPR_baseline": 0.000244140625,
+    "F": 587.5044,
+    "regime": "strong",
+    "IPR_sigma2": 0.14126557486122,
+    "F_sigma2": 578.6238,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.00972243753113,
+    "F_std": 39.8231,
+    "F_min": 531.4961,
+    "F_max": 629.8635,
+    "all_F_values": [
+      614.8415,
+      629.8635,
+      609.0905,
+      531.8409,
+      531.4961,
+      613.8255,
+      570.3876,
+      539.6532,
+      614.5923,
+      619.4528
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 614.8415,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 527.3725,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 594.9964,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 629.8635,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 597.4478,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 597.3053,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 609.0905,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 616.1976,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 620.4737,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 531.8409,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 545.9231,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 595.9252,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 531.4961,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 621.5796,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 535.6122,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 613.8255,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 532.7277,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 613.6895,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 570.3876,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 594.6129,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 596.9104,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 539.6532,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 600.1015,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 594.7886,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 614.5923,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 531.0012,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 604.4536,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 619.4528,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 619.2741,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 610.5554,
+          "overlap": 0.0
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "P1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 4096\u00d74096 IFS Hamiltonian",
+      "Connectivity: d=1 siblings + d=2 cousins + repair coupling",
+      "Burden disorder: \u03c3 = 0.12 \u00d7 \u0394/N, Gaussian on-site",
+      "Repair: L_repair = 0.034 coupling between damaged sibling pairs",
+      "Damaged = |burden_noise| > \u03c3_burden (> 1 std dev)",
+      "Eigenpairs: k=30 near defect energy",
+      "N_runs = 10",
+      "Seed = 2026"
+    ]
+  },
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V1-symmetric-20260407T230254Z",
+    "timestamp": "2026-04-07T23:02:54.118230+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V1",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 4096,
+    "ifs_level": 6,
+    "background": "symmetric",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 10,
+    "IPR_sigma1": 0.00276269902359,
+    "IPR_baseline": 0.000244140625,
+    "F": 11.316,
+    "regime": "strong",
+    "IPR_sigma2": 0.00365120041765,
+    "F_sigma2": 14.9553,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.00134647073616,
+    "F_std": 5.5151,
+    "F_min": 2.9097,
+    "F_max": 21.8392,
+    "all_F_values": [
+      15.0074,
+      10.0874,
+      11.4622,
+      2.9097,
+      13.5351,
+      21.8392,
+      12.4727,
+      11.114,
+      11.8208,
+      2.9117
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 15.0074,
+          "overlap": 0.000244
+        },
+        {
+          "rank": 2,
+          "F": 8.5453,
+          "overlap": 0.000114
+        },
+        {
+          "rank": 3,
+          "F": 9.8128,
+          "overlap": 9.4e-05
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 10.0874,
+          "overlap": 0.008602
+        },
+        {
+          "rank": 2,
+          "F": 7.4956,
+          "overlap": 0.003113
+        },
+        {
+          "rank": 3,
+          "F": 16.6363,
+          "overlap": 0.001551
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 11.4622,
+          "overlap": 0.004009
+        },
+        {
+          "rank": 2,
+          "F": 23.7046,
+          "overlap": 0.001238
+        },
+        {
+          "rank": 3,
+          "F": 9.7953,
+          "overlap": 0.0011
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2.9097,
+          "overlap": 0.001065
+        },
+        {
+          "rank": 2,
+          "F": 7.7579,
+          "overlap": 0.000217
+        },
+        {
+          "rank": 3,
+          "F": 10.9325,
+          "overlap": 0.000156
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 13.5351,
+          "overlap": 0.000654
+        },
+        {
+          "rank": 2,
+          "F": 15.1947,
+          "overlap": 0.000412
+        },
+        {
+          "rank": 3,
+          "F": 30.3271,
+          "overlap": 0.000154
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 21.8392,
+          "overlap": 3.8e-05
+        },
+        {
+          "rank": 2,
+          "F": 23.4202,
+          "overlap": 2.2e-05
+        },
+        {
+          "rank": 3,
+          "F": 9.6961,
+          "overlap": 1.1e-05
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 12.4727,
+          "overlap": 0.001384
+        },
+        {
+          "rank": 2,
+          "F": 9.8557,
+          "overlap": 0.000514
+        },
+        {
+          "rank": 3,
+          "F": 51.9292,
+          "overlap": 0.000419
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 11.114,
+          "overlap": 0.001737
+        },
+        {
+          "rank": 2,
+          "F": 12.927,
+          "overlap": 0.001628
+        },
+        {
+          "rank": 3,
+          "F": 15.8318,
+          "overlap": 0.001497
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 11.8208,
+          "overlap": 0.002738
+        },
+        {
+          "rank": 2,
+          "F": 16.8841,
+          "overlap": 0.001607
+        },
+        {
+          "rank": 3,
+          "F": 18.7492,
+          "overlap": 0.001236
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2.9117,
+          "overlap": 0.00022
+        },
+        {
+          "rank": 2,
+          "F": 23.7682,
+          "overlap": 5.9e-05
+        },
+        {
+          "rank": 3,
+          "F": 48.155,
+          "overlap": 4.7e-05
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "P1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 4096\u00d74096 IFS Hamiltonian",
+      "Connectivity: d=1 siblings (\u03b7^1) + d=2 cousins (\u03b7^2)",
+      "No disorder: uniform on-site potential -\u0394/N",
+      "Eigenpairs: k=30 near defect energy",
+      "N_runs = 10",
+      "Seed = 2026"
+    ]
+  },
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V2-burden-20260407T230312Z",
+    "timestamp": "2026-04-07T23:03:12.420106+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V2",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 16384,
+    "ifs_level": 7,
+    "background": "burden",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 5,
+    "IPR_sigma1": 0.13634983559511,
+    "IPR_baseline": 6.103515625e-05,
+    "F": 2233.9557,
+    "regime": "strong",
+    "IPR_sigma2": 0.14515235549307,
+    "F_sigma2": 2378.1762,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.00860268455122,
+    "F_std": 140.9464,
+    "F_min": 2052.3144,
+    "F_max": 2393.5842,
+    "all_F_values": [
+      2252.7429,
+      2052.3144,
+      2393.5842,
+      2134.0043,
+      2337.1327
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 2252.7429,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2354.9114,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2157.1103,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2052.3144,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2383.9748,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2379.8854,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2393.5842,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2371.3079,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2138.2104,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2134.0043,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2393.1559,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2380.4339,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2337.1327,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2387.531,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2353.8068,
+          "overlap": 0.0
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "P1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 16384\u00d716384 IFS Hamiltonian",
+      "Connectivity: d=1 siblings (\u03b7^1) + d=2 cousins (\u03b7^2)",
+      "Burden disorder: \u03c3 = 0.12 \u00d7 \u0394/N, Gaussian on-site",
+      "Eigenpairs: k=30 near defect energy via shift-invert",
+      "\u03c3\u2081 candidate: eigenstate with highest |<\u03c8|defect>|\u00b2 overlap",
+      "N_runs = 5",
+      "Seed = 2026"
+    ]
+  },
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V3-burden+repair-20260407T230319Z",
+    "timestamp": "2026-04-07T23:03:19.806867+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V3",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 16384,
+    "ifs_level": 7,
+    "background": "burden+repair",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 5,
+    "IPR_sigma1": 0.14027549090657,
+    "IPR_baseline": 6.103515625e-05,
+    "F": 2298.2736,
+    "regime": "strong",
+    "IPR_sigma2": 0.14344257959236,
+    "F_sigma2": 2350.1632,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.00477186988393,
+    "F_std": 78.1823,
+    "F_min": 2212.4449,
+    "F_max": 2380.8433,
+    "all_F_values": [
+      2212.4449,
+      2380.8433,
+      2223.6678,
+      2308.3264,
+      2366.0858
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 2212.4449,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2313.2905,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2378.0849,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2380.8433,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2373.4043,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2388.5682,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2223.6678,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2310.0221,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2384.8911,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2308.3264,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2380.5928,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2367.5058,
+          "overlap": 0.0
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 2366.0858,
+          "overlap": 0.0
+        },
+        {
+          "rank": 2,
+          "F": 2373.5065,
+          "overlap": 0.0
+        },
+        {
+          "rank": 3,
+          "F": 2281.9996,
+          "overlap": 0.0
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "P1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 16384\u00d716384 IFS Hamiltonian",
+      "Connectivity: d=1 siblings + d=2 cousins + repair coupling",
+      "Burden disorder: \u03c3 = 0.12 \u00d7 \u0394/N, Gaussian on-site",
+      "Repair: L_repair = 0.034 coupling between damaged sibling pairs",
+      "Damaged = |burden_noise| > \u03c3_burden (> 1 std dev)",
+      "Eigenpairs: k=30 near defect energy",
+      "N_runs = 5",
+      "Seed = 2026"
+    ]
+  },
+  {
+    "version": "1.0",
+    "schema": "B_rho_raw",
+    "run_id": "OSCAR-EIGENSOLVE-V1-symmetric-20260407T230323Z",
+    "timestamp": "2026-04-07T23:03:23.234552+00:00",
+    "executor": "Oscar (Cato-executed, true eigensolve)",
+    "profile": "H_SIGMA1-EIGENSOLVE-V1",
+    "method": "sparse eigsh (ARPACK/Lanczos) on explicit IFS Hamiltonian",
+    "N_sites": 16384,
+    "ifs_level": 7,
+    "background": "symmetric",
+    "eta": 0.963542,
+    "r": 0.629961,
+    "L_repair": 0.034,
+    "N_runs_averaged": 5,
+    "IPR_sigma1": 0.00039979004242,
+    "IPR_baseline": 6.103515625e-05,
+    "F": 6.5502,
+    "regime": "intermediate",
+    "IPR_sigma2": 0.00209913017935,
+    "F_sigma2": 34.3921,
+    "IPR_sigma3": null,
+    "loc_radius_sigma1": null,
+    "mode_gap": null,
+    "peak_site": "varies per run (eigenvector argmax)",
+    "IPR_sigma1_std": 0.0001551644068,
+    "F_std": 2.5422,
+    "F_min": 3.4461,
+    "F_max": 9.8938,
+    "all_F_values": [
+      5.9801,
+      8.2414,
+      9.8938,
+      3.4461,
+      5.1895
+    ],
+    "top3_sigma1_candidates": [
+      [
+        {
+          "rank": 1,
+          "F": 5.9801,
+          "overlap": 6e-06
+        },
+        {
+          "rank": 2,
+          "F": 37.0879,
+          "overlap": 3e-06
+        },
+        {
+          "rank": 3,
+          "F": 127.7157,
+          "overlap": 2e-06
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 8.2414,
+          "overlap": 0.000308
+        },
+        {
+          "rank": 2,
+          "F": 37.0437,
+          "overlap": 0.000191
+        },
+        {
+          "rank": 3,
+          "F": 55.5221,
+          "overlap": 0.00018
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 9.8938,
+          "overlap": 2e-05
+        },
+        {
+          "rank": 2,
+          "F": 40.1298,
+          "overlap": 9e-06
+        },
+        {
+          "rank": 3,
+          "F": 21.4342,
+          "overlap": 8e-06
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 3.4461,
+          "overlap": 0.000153
+        },
+        {
+          "rank": 2,
+          "F": 50.538,
+          "overlap": 0.000137
+        },
+        {
+          "rank": 3,
+          "F": 29.7988,
+          "overlap": 7.9e-05
+        }
+      ],
+      [
+        {
+          "rank": 1,
+          "F": 5.1895,
+          "overlap": 6e-06
+        },
+        {
+          "rank": 2,
+          "F": 7.1614,
+          "overlap": 3e-06
+        },
+        {
+          "rank": 3,
+          "F": 9.3073,
+          "overlap": 2e-06
+        }
+      ]
+    ],
+    "evidence_quality": "ANOMALOUS",
+    "gate_passed": [
+      "C1"
+    ],
+    "gate_failed": [
+      "C2"
+    ],
+    "notes": [
+      "True eigensolve: scipy.sparse.linalg.eigsh on 16384\u00d716384 IFS Hamiltonian",
+      "Connectivity: d=1 siblings (\u03b7^1) + d=2 cousins (\u03b7^2)",
+      "No disorder: uniform on-site potential -\u0394/N",
+      "Eigenpairs: k=30 near defect energy",
+      "N_runs = 5",
+      "Seed = 2026"
+    ]
+  }
+]

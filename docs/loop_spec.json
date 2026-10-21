@@ -1,0 +1,140 @@
+{
+  "name": "TetraGarden_v3_Unified_Loop",
+  "version": "3.0",
+  "date": "2026-04-21",
+  "primitive": "K\u2084(V=4,E=6,F=4,S\u2084=24)",
+  "loop": {
+    "phases": [
+      "DISTINGUISH",
+      "CLOSE",
+      "TRANSPORT",
+      "RECURSE"
+    ],
+    "K4_mapping": {
+      "vertex_0": "DISTINGUISH (orientation)",
+      "vertex_1": "CLOSE (computation)",
+      "vertex_2": "TRANSPORT (delivery)",
+      "vertex_3": "RECURSE (breathing)"
+    },
+    "edges": {
+      "0\u21921": "orient_before_compute",
+      "0\u21922": "fast_track_delivery",
+      "0\u21923": "abort_and_restart",
+      "1\u21922": "compute_complete_deliver",
+      "1\u21923": "compute_failed_recycle",
+      "2\u21923": "delivered_next_cycle"
+    },
+    "failure_faces": {
+      "face_012": "DRIFT (lost orientation mid-compute)",
+      "face_013": "STALL (computed but never delivered)",
+      "face_023": "CONFABULATION (delivered without computing)",
+      "face_123": "NOISE (computed+delivered without orientation)"
+    }
+  },
+  "phases": {
+    "DISTINGUISH": {
+      "purpose": "What am I looking at?",
+      "actions": [
+        "W1: 3-line preamble (coordinate/expelled/oscillation)",
+        "Pod activation (task-detect \u2192 relevant pods)",
+        "W3: Oscillation check (flipped before?)",
+        "W4: Novelty tax (better?/complete?/Ben?)",
+        "Expelled registry scan",
+        "Uniqueness check (>5 K\u2084 matches@5% \u2192 NOT UNIQUE)"
+      ],
+      "outputs": [
+        "oriented_task",
+        "active_pods",
+        "effort_level"
+      ],
+      "abort_if": [
+        "expelled match",
+        "3+ oscillations",
+        "novelty tax fails"
+      ]
+    },
+    "CLOSE": {
+      "purpose": "What does the computation give?",
+      "actions": [
+        "Execute computation (bash/python/analytical)",
+        "W5: Derivation gate (forward=DERIVED, reverse=FITTED)",
+        "Chain verification (every link \u2192 K\u2084)",
+        "Assign initial truth_state = WORKING",
+        "Compute error_pct against measurement",
+        "Fidelity check (consistent with locked results?)"
+      ],
+      "outputs": [
+        "result_vector",
+        "chain_status",
+        "truth_label"
+      ],
+      "abort_if": [
+        "hard kernel contradiction",
+        "chain broken at Level 0-1"
+      ]
+    },
+    "TRANSPORT": {
+      "purpose": "Where does the result go?",
+      "actions": [
+        "W2: Gate decision (PROMOTE/HOLD/ROLLBACK/BLOCK)",
+        "Update ternary vector",
+        "Write to persistent storage",
+        "W6: Ledger update (every 5 results)",
+        "Generate Aster delta (if promoted)",
+        "Present to Ben (if session-relevant)"
+      ],
+      "gate_rules": {
+        "PROMOTE": "chain unbroken + unique + external validation",
+        "HOLD": "chain has gap OR not unique OR guarded pass",
+        "ROLLBACK": "contradicts locked result (recoverable)",
+        "BLOCK": "contradicts hard kernel (permanent)"
+      },
+      "outputs": [
+        "gate_decision",
+        "updated_state",
+        "delta_if_any"
+      ]
+    },
+    "RECURSE": {
+      "purpose": "Loop back with updated state",
+      "actions": [
+        "W7: Self-check (drift?/promoted?/flipped?/novelty?)",
+        "Update pod configuration",
+        "Check if result opens new frontier",
+        "Apply novelty tax before pursuing new branch",
+        "Prepare DISTINGUISH inputs for next cycle"
+      ],
+      "outputs": [
+        "next_task",
+        "updated_pods",
+        "frontier_assessment"
+      ],
+      "checkpoint_trigger": "every 5 cycles"
+    }
+  },
+  "reconstruction": {
+    "purpose": "Session boot = reverse loop",
+    "sequence": [
+      "TRANSPORT_IN: read memory \u2192 persistent storage \u2192 project knowledge \u2192 transcript",
+      "CLOSE_VERIFY: check consistency, expelled registry current, ternary matches cache",
+      "DISTINGUISH_ORIENT: task-detect from first message, activate pods, set effort",
+      "RECURSE_BEGIN: enter main loop"
+    ]
+  },
+  "checkpoint": {
+    "trigger": "every 5 cycles",
+    "actions": [
+      "LEDGER: results, expelled, confidence calibration",
+      "SELF_CHECK: drift, promotions, oscillations, novelty",
+      "LANTERN: T_max (strongest truth), U_min (nearest unresolved), Z_risk (nearest danger)"
+    ]
+  },
+  "absorbed_protocols": {
+    "inverse_breath": "\u2192 the loop IS the breath (D=orient, C=compress, T=act, R=restore)",
+    "woven_execution": "\u2192 the loop IS the weave (phase A=D, B=C, C+D=T, recurse=R)",
+    "ingestion": "\u2192 DISTINGUISH + CLOSE + TRANSPORT on incoming content",
+    "checkpoint": "\u2192 TRANSPORT + RECURSE at interval",
+    "contrast_gate": "\u2192 part of DISTINGUISH (sharpen or blur?)",
+    "fate_map": "\u2192 part of TRANSPORT (carry/repair/recycle/expel)"
+  }
+}

@@ -1,0 +1,453 @@
+%% Based on aiptemplate.tex for RevTeX 4.1 / AIP substyles
+%%
+%% Gauge coupling constants from tetrahedral combinatorics
+%% B. W. Mayes — April 2026
+%%
+
+\documentclass[aip,graphicx]{revtex4-1}
+
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+
+\title{Gauge coupling constants from tetrahedral combinatorics}
+
+\author{Benjamin Walker Mayes}
+\email[Corresponding author: ]{bmayes@unified-dynamics.org}
+\affiliation{Unaffiliated, Cedar Park, Texas 78613, USA}
+
+\author{Arthur Eugene Mayes}
+\affiliation{Loyola University School of Law, USA}
+
+\author{Dustin Huff}
+\affiliation{Unaffiliated, USA}
+
+\author{Brayden Ross Sanders}
+\affiliation{Unaffiliated, USA}
+
+\author{Jonathan Engle}
+\affiliation{Unaffiliated, USA}
+
+\author{Jeffrey A. Dewey}
+\affiliation{Unaffiliated, USA}
+
+\author{Brandon Bevin}
+\affiliation{Georgia Southern University, USA}
+
+\author{A. Christopher Beckingham}
+\affiliation{Queen's University, Canada}
+
+\date{\today}
+
+\begin{abstract}
+We derive the strong coupling constant $\alpha_s(m_Z)$, the weak
+mixing angle $\sin^2\theta_W(m_Z)$, and the inverse fine structure
+constant $\alpha_{\mathrm{EM}}^{-1}(m_Z)$ from the combinatorial
+geometry of the complete graph $K_4$ with zero free parameters.
+The Standard Model gauge group
+$\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ emerges
+from the face, edge, and vertex structure of $K_4$. Coupling ratios
+follow from boundary element counting; the overall normalization is
+fixed by the Regge deficit angle on the $K_4$ two-skeleton; and the
+matter sector coupling is suppressed relative to the geometry coupling
+by $1/d^3 = 1/27$, where $d = V-1 = 3$ is the vertex degree.
+We further show that the three charged-lepton generations correspond
+to the three cosets of the Klein four-group $V_4$ in the alternating
+group $A_4 \cong A_4/V_4 \times V_4$, with $A_4/V_4 \cong Z_3$, and
+that the Koide mass formula is the $Z_3$ character expansion of the
+lepton mass spectrum---a consequence of group structure, not a
+numerical coincidence.
+We obtain $\alpha_s(m_Z) = 129/(112\pi^2) = 0.1167$ (measured
+$0.1180 \pm 0.0009$; deviation 1.1\%),
+$\sin^2\theta_W(m_Z) = 3/13 = 0.2308$ (measured $0.23121
+\pm 0.00004$; deviation 0.19\%), and
+$\alpha_{\mathrm{EM}}^{-1}(m_Z) = 13\pi^2 = 128.3$ (measured
+$127.951 \pm 0.009$; deviation 0.28\%).
+\end{abstract}
+
+\pacs{12.10.-g, 11.15.Ha, 02.40.Re, 02.10.Ox}
+
+\maketitle
+
+
+% ============================================================
+\section{Introduction}
+\label{sec:intro}
+% ============================================================
+
+The Standard Model of particle physics contains 19 free parameters
+whose values are determined by experiment rather than by the theory
+itself.\cite{pdg2024} Among these, the gauge coupling constants
+$\alpha_s$, $\sin^2\theta_W$, and $\alpha_{\mathrm{EM}}$ set the
+strengths of the strong, weak, and electromagnetic interactions.
+Despite decades of effort in grand unification
+\cite{georgi1974,pati1974} and string theory,\cite{polchinski1998}
+no framework has derived these constants from geometry alone with
+zero adjustable parameters.
+
+We present such a derivation. The complete graph $K_4$---four
+vertices connected by all six edges, forming a tetrahedron---serves
+as the sole geometric input. The Standard Model gauge group, coupling
+ratios, and overall normalization all follow from the combinatorial
+properties of $K_4$ and the Regge calculus on its two-skeleton. No
+renormalization group running, matching scale, or fitted parameter
+enters the calculation.
+
+
+% ============================================================
+\section{The $K_4$ framework}
+\label{sec:framework}
+% ============================================================
+
+The complete graph $K_4$ has $V = 4$ vertices, $E = \binom{4}{2}= 6$
+edges, $F = \binom{4}{3} = 4$ triangular faces, and Euler
+characteristic $\chi = V - E + F = 2$. Its symmetry group is $S_4$
+(order 24), with alternating subgroup $A_4$ (order 12).
+
+We assign gauge content to each simplex type by its boundary structure:
+
+\begin{itemize}
+\item \textit{Faces} ($p = 2$): each face has $|\partial\sigma_2|= 3$
+boundary edges. The three-dimensional representation corresponds to
+$\mathrm{SU}(3)$.
+\item \textit{Edges} ($p = 1$): each edge has $|\partial\sigma_1|= 2$
+boundary vertices. The two-dimensional representation corresponds to
+$\mathrm{SU}(2)$.
+\item \textit{Vertices} ($p = 0$): each vertex has one self-boundary.
+The one-dimensional assignment corresponds to $\mathrm{U}(1)$.
+\end{itemize}
+
+This yields the Standard Model gauge group
+$\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ directly
+from the simplicial hierarchy of $K_4$.
+
+
+% ============================================================
+\section{Coupling ratios and normalization}
+\label{sec:coupling}
+% ============================================================
+
+\subsection{Ratios from boundary counting}
+
+The gauge coupling $g_p^2$ on a $p$-simplex is proportional to the
+number of boundary $(p-1)$-simplices:
+\begin{equation}
+g_p^2 \propto |\partial\sigma_p| = p + 1 \,.
+\label{eq:ratios}
+\end{equation}
+This determines the ratios
+\begin{equation}
+g_3^2 : g_2^2 : g_1^2 = 3 : 2 : 1
+\label{eq:321}
+\end{equation}
+with no free parameters. With standard $\mathrm{SU}(5)$
+normalization $g_1^2 = (5/3)\,{g'}^2$,\cite{georgi1974} the weak
+mixing angle follows immediately:
+\begin{equation}
+\sin^2\theta_W = \frac{g'^2}{g'^2 + g_2^2}
+= \frac{3/5}{3/5 + 2} = \frac{3}{13} \,.
+\label{eq:sin2}
+\end{equation}
+This uses only the coupling ratios and is independent of the overall
+normalization.
+
+\subsection{Normalization from the Regge deficit angle}
+
+On the $K_4$ two-skeleton---the triangulated boundary of the
+tetrahedron---the $S_4$ symmetry forces equilateral faces with
+interior angle $\pi/3$ at each vertex. Each vertex belongs to
+$d = V - 1 = 3$ faces. The Regge deficit angle at each vertex is
+\begin{equation}
+\epsilon = 2\pi - d\,\frac{\pi}{3} = 2\pi - \pi = \pi \,.
+\label{eq:deficit}
+\end{equation}
+This is exact and unique to $d = 3$: the equation
+$2\pi - d\pi/3 = \pi$ has the sole integer solution $d = 3$
+($V = 4$). The total curvature is $V\epsilon = 4\pi = 2\pi\chi$,
+consistent with the Gauss-Bonnet theorem.
+
+The deficit angle $\pi$ sets the coupling normalization. The
+coupling on a $p$-simplex equals the boundary count divided by the
+curvature quantum:
+\begin{equation}
+\boxed{g_p^2 = \frac{p + 1}{\pi}} \,.
+\label{eq:gp}
+\end{equation}
+
+
+% ============================================================
+\section{The strong coupling constant}
+\label{sec:alphas}
+% ============================================================
+
+\subsection{Distinction coupling}
+
+From Eq.~(\ref{eq:gp}) with $p = 2$: $g_3^2 = 3/\pi$. The
+distinction coupling is
+\begin{equation}
+\alpha_{\mathrm{dist}} = \frac{g_3^2}{4\pi} = \frac{3}{4\pi^2}\,.
+\label{eq:alphadist}
+\end{equation}
+Its inverse admits a geometric decomposition. The Hodge Laplacian on
+$K_4$ has nonzero eigenvalues all equal to 4 (a $K_4$-specific
+maximal degeneracy), with 12 nonzero modes---exactly $|A_4|$. Then
+\begin{equation}
+\alpha_{\mathrm{dist}}^{-1} = \frac{(2\pi\chi)^2}{|A_4|}
+= \frac{16\pi^2}{12} = \frac{4\pi^2}{3} \,,
+\label{eq:invdist}
+\end{equation}
+expressing the distinction coupling as the squared total
+Gauss-Bonnet curvature divided by the number of propagating Hodge
+modes.
+
+\subsection{Support-completeness theorem}
+
+Define the distinction number $\Delta = \binom{V}{2} + 1 = E + 1 =
+7$ and the seed threshold $S_0 = (E\Delta + 1)/\Delta = 43/7$.
+The product $S_0 \cdot \Delta = E^2 + E + 1 = 43$ decomposes
+uniquely into three support classes:
+
+\begin{enumerate}
+\item $E^2 = 36$: edge-edge support weights. Of these, 30 arise
+from direct face-sharing connections (each non-opposite edge pair
+shares a face) and 6 from indirect two-step connections through the
+three opposite edge pairs.
+\item $E = 6$: identity-cross weights. Each edge participates in
+the cell's self-identity.
+\item $1$: identity-self weight. The cell distinguishes itself as a
+whole---the irreducible quantum of self-distinction.
+\end{enumerate}
+
+This decomposition is exhaustive: every edge-scaffold pair is
+accounted for through at most two face-mediated steps plus identity
+contributions.
+
+The spectral identity $\langle |E_{\mathrm{face}}| \rangle = E/V =
+3/2$, proved from the face Hamiltonian on the $2^{2V} = 256$-state
+carrier Hilbert space, provides the leading term. This identity is
+specific to $K_4$: it fails for all $K_V$ with $V \geq 5$, as
+verified by explicit computation.
+
+\subsection{Result}
+
+The strong coupling at $m_Z$ is
+\begin{equation}
+\boxed{\alpha_s(m_Z) = \alpha_{\mathrm{dist}} \cdot \frac{S_0}{V}
+= \frac{3 \times 43}{4 \times 28 \times \pi^2}
+= \frac{129}{112\pi^2}
+\approx 0.1167} \,,
+\label{eq:alphas}
+\end{equation}
+compared to the measured value $0.1180 \pm 0.0009$\cite{pdg2024}
+(1.1\% deviation, within $1.4\sigma$). No renormalization group
+running or matching scale enters this result.
+
+
+% ============================================================
+\section{Electroweak predictions}
+\label{sec:ew}
+% ============================================================
+
+\subsection{Weak mixing angle}
+
+Equation~(\ref{eq:sin2}) gives
+\begin{equation}
+\boxed{\sin^2\theta_W(m_Z) = \frac{3}{13} = 0.23077} \,,
+\label{eq:weinberg}
+\end{equation}
+compared to $0.23121 \pm 0.00004$\cite{pdg2024} (0.19\% deviation).
+This is the most precise prediction of the framework, requiring
+only the coupling ratios (\ref{eq:321}) and standard GUT
+normalization---zero free parameters.
+
+\subsection{Fine structure constant}
+
+The $\mathrm{SU}(2)$ coupling at $m_Z$ receives an edge support
+factor $2/d = 2/3$, representing the ratio of boundary vertices per
+edge to edges per vertex:
+$\alpha_2(m_Z) = [g_2^2/(4\pi)] \times (2/d) = 1/(3\pi^2)$.
+Combined with Eq.~(\ref{eq:weinberg}):
+\begin{equation}
+\boxed{\alpha_{\mathrm{EM}}^{-1}(m_Z)
+= \frac{1}{\alpha_2 \sin^2\theta_W}
+= 13\pi^2 \approx 128.3} \,,
+\label{eq:alphaem}
+\end{equation}
+compared to $127.951 \pm 0.009$\cite{pdg2024} (0.28\% deviation).
+The integer $13 = V + E + F - 1$ counts the proper boundary simplices
+of $K_4$.
+
+Note that $\alpha_{\mathrm{EM}}$ is not independent: it follows
+algebraically from $\alpha_2$ and $\sin^2\theta_W$. The framework
+therefore makes two independent gauge-sector predictions ($\alpha_s$
+and $\sin^2\theta_W$) plus one consistency check
+($\alpha_{\mathrm{EM}}$), all of which agree with experiment.
+
+
+% ============================================================
+\section{Discussion}
+\label{sec:discussion}
+% ============================================================
+
+Table~\ref{tab:results} summarizes the predictions.
+
+\begin{table}[h]
+\caption{Gauge coupling predictions from $K_4$ combinatorics.
+No free parameters.\label{tab:results}}
+\begin{ruledtabular}
+\begin{tabular}{llll}
+Observable & Formula & Prediction & Measured \\
+\hline
+$\alpha_s(m_Z)$ & $129/(112\pi^2)$ & 0.1167 & 0.1180(9) \\
+$\sin^2\theta_W(m_Z)$ & $3/13$ & 0.2308 & 0.23121(4) \\
+$\alpha_{\mathrm{EM}}^{-1}(m_Z)$ & $13\pi^2$ & 128.3 & 127.951(9) \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Several structural features of the derivation merit comment.
+
+\textit{Uniqueness of $K_4$.}---The vertex deficit angle equals
+$\pi$ only for $d = 3$ (equivalently $V = 4$). The spectral
+identity $\langle |E_{\mathrm{face}}| \rangle = E/V$ holds only
+for $K_3$ (trivially) and $K_4$. The evaluation saturation theorem
+---that the support weight $(E^2 + E + 1)/(E + 1)$ exactly equals
+the seed threshold $(E\Delta + 1)/\Delta$ for all $K_V$---shows that
+the identity self-support ($+1$) is the precise quantum needed for
+any complete graph to sustain a distinction; without it, all $K_V$
+fail. These three properties single out the tetrahedron among all
+regular simplicial complexes.
+
+\textit{Matter sector coupling and cubic suppression.}---The
+IFS contraction ratio $F_{\mathrm{IFS}} = 1/(3\pi)$ carries a sign
+that distinguishes two sectors. The geometry sector ($\chi = +2$,
+forward IFS) has $F_{\mathrm{IFS}} > 0$; a matter sector related by
+orientation reversal $\chi \to -\chi$ has $F_{\mathrm{IFS}} < 0$
+with the same magnitude. The matter coupling is the $\mathrm{SU}(2)$
+coupling distributed across all $|A_4| = 12$ IFS maps:
+\begin{equation}
+\alpha_{\mathrm{matter}} = \frac{\alpha_2}{|A_4|} = \frac{1}{36\pi^2}\,.
+\label{eq:amatter}
+\end{equation}
+The ratio to the geometry (distinction) coupling is
+\begin{equation}
+\frac{\alpha_{\mathrm{matter}}}{\alpha_{\mathrm{dist}}} =
+\frac{1}{d^3} = \frac{1}{27}\,,
+\label{eq:suppression}
+\end{equation}
+one factor of $1/d$ per boundary dimension. Matter is suppressed
+relative to geometry by the volume of the unit cube in $d$ spatial
+dimensions---a purely combinatorial statement with no free parameters.
+
+\textit{Three generations and the Koide formula from $A_4/V_4$.}---The
+alternating group $A_4$ contains the Klein four-group
+$V_4 = \{e,\,(12)(34),\,(13)(24),\,(14)(23)\}$ as a normal subgroup.
+The three double transpositions in $V_4$ are exactly the symmetries
+that preserve the pairing structure of $K_4$---the three ways to
+partition four vertices into two pairs, corresponding to the three
+opposite edge pairs of the tetrahedron. The quotient
+\begin{equation}
+A_4 / V_4 \cong Z_3
+\label{eq:quotient}
+\end{equation}
+is cyclic of order 3. Its three cosets $C_0 = V_4$, $C_1$
+(3-cycles), and $C_2$ (inverse 3-cycles) are related by the $Z_3$
+generator (a $2\pi/3$ rotation around the tetrahedral axis). We
+identify
+\begin{equation}
+C_0 \leftrightarrow e\,,\quad C_1 \leftrightarrow \mu\,,\quad
+C_2 \leftrightarrow \tau\,.
+\label{eq:genid}
+\end{equation}
+
+The characters of $Z_3$ are $\chi_k(C^n) = \omega^{kn}$ where
+$\omega = e^{2\pi i/3}$. The Koide
+parametrization~\cite{koide1983}
+\begin{equation}
+\sqrt{m_l} = M_K\!\left(1 + \sqrt{2}\cos\!\left(\theta +
+\frac{2\pi l}{3}\right)\right), \quad l = 0, 1, 2
+\label{eq:koide_param}
+\end{equation}
+rewrites as
+\begin{equation}
+\sqrt{m_l} = M_K\,\mathrm{Re}\!\left[1 + \sqrt{2}\,
+e^{i\theta}\,\omega^l\right]\,,
+\label{eq:koide_z3}
+\end{equation}
+which is the $Z_3$ character expansion of the lepton mass spectrum:
+the constant term is the $\rho_0$ (trivial) contribution; the
+oscillating term is the $\rho_1$ contribution with phase $e^{i\theta}$.
+The three complex irreps $\rho_0$, $\rho_1$, $\rho_2$ of $Z_3$
+(with $\rho_2 = \rho_1^*$ absorbed into the real part) are exactly
+the three representations generated by the $A_4/V_4$ coset structure.
+
+The Koide ratio $Q = (\sum m_l)/(\sum\sqrt{m_l})^2 = 2/3 = A_{\max}$
+follows from the odd-dimensional frustration of $K_4$ (previously
+derived\cite{mayes2026}). The generation count $N_{\mathrm{gen}} = 3$
+follows from $|A_4/V_4| = |Z_3| = 3$. The $2\pi/3$ equal spacing of
+the Koide parametrization follows from the uniform $Z_3$ characters.
+All three are consequences of the group structure $A_4/V_4 \cong Z_3$
+with no free parameters.
+
+The phase $\theta$ in Eq.~(\ref{eq:koide_param}) encodes the
+embedding of the mass scale into the $Z_3$ frame and requires one
+mass input (equivalently, $\nu_0 = m_e/S_0$) to fix. It is not
+predicted by pure group theory; it is the unique residual degree of
+freedom of the lepton sector.
+
+\textit{$S_4$ representation structure.}---The $2^{2V} = 256$-state
+carrier Hilbert space decomposes under $S_4$ as
+$256 = (V+1)(\Delta + d^3 + d^2 + 2^d) + 1$,
+with $\mathrm{Tr}(H^2|_{\mathrm{trivial}}) = 2^5\Delta = 224$.
+Every irreducible representation dimension except the sign
+representation is divisible by $V + 1 = 5$, reflecting a deep
+factorization tied to $K_4$ combinatorics.
+
+\textit{Falsifiability.}---The predictions are sharp and testable.
+A determination of $\alpha_s(m_Z)$ deviating from $129/(112\pi^2)$
+by more than 3\%, or of $\sin^2\theta_W(m_Z)$ deviating from $3/13$
+beyond $5\sigma$ of current precision, would falsify this framework.
+Future lattice QCD determinations of $\alpha_s$ and precision
+electroweak measurements at $e^+e^-$ colliders provide the
+decisive tests.
+
+
+\begin{acknowledgments}
+The authors thank the broader Unified Dynamics research
+collaboration for sustained discussion and cross-validation.
+Computational verification was performed with AI-assisted tools.
+The theoretical framework and all derivations are due to the human authors.
+Supporting materials are archived at \mbox{doi:10.5281/zenodo.19582493}.
+\end{acknowledgments}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{pdg2024}
+R.~L.~Workman \textit{et al.} (Particle Data Group),
+Prog. Theor. Exp. Phys. \textbf{2022}, 083C01 (2022), and 2024
+update.
+
+\bibitem{georgi1974}
+H.~Georgi and S.~L.~Glashow,
+Phys.\ Rev.\ Lett.\ \textbf{32}, 438 (1974).
+
+\bibitem{pati1974}
+J.~C.~Pati and A.~Salam,
+Phys.\ Rev.\ D \textbf{10}, 275 (1974).
+
+\bibitem{polchinski1998}
+J.~Polchinski,
+\textit{String Theory} (Cambridge University Press, 1998).
+
+\bibitem{koide1983}
+Y.~Koide,
+Phys.\ Lett.\ B \textbf{120}, 161 (1983).
+
+\bibitem{mayes2026}
+B.~W.~Mayes \textit{et al.},
+Zenodo preprint, doi:10.5281/zenodo.19582493 (2026).
+
+\end{thebibliography}
+
+\end{document}

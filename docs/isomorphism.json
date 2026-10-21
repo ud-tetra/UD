@@ -1,0 +1,106 @@
+{
+  "name": "UD_TetraGarden_Isomorphism",
+  "version": "3.0",
+  "mappings": [
+    {
+      "UD": "K\u2084 vertex",
+      "TG": "Pod",
+      "notes": "4 vertices \u2194 4+ pods"
+    },
+    {
+      "UD": "\u03c7 (color dof)",
+      "TG": "active/inactive flag",
+      "notes": "binary on each site"
+    },
+    {
+      "UD": "\u03c3 (framing dof)",
+      "TG": "truth-state label",
+      "notes": "orientation/polarity"
+    },
+    {
+      "UD": "edge coupling J_\u03c7",
+      "TG": "inter-pod dependency",
+      "notes": "how pods influence each other"
+    },
+    {
+      "UD": "cross-coupling g_\u03c7\u03c3",
+      "TG": "theory\u2194governance bridge",
+      "notes": "the coupling between doing and checking"
+    },
+    {
+      "UD": "Hamiltonian H_min",
+      "TG": "unified loop protocol",
+      "notes": "the operator that evolves the state"
+    },
+    {
+      "UD": "eigenstate",
+      "TG": "locked result",
+      "notes": "stable configuration after diagonalization"
+    },
+    {
+      "UD": "sector (dark/lepton/meson/baryon)",
+      "TG": "superpod (\u03b1/\u03b2/\u03b3)",
+      "notes": "natural clustering of eigenstates"
+    },
+    {
+      "UD": "depth regime (0/1/2/3/4)",
+      "TG": "priority tier",
+      "notes": "deeper = more complex physics/governance"
+    },
+    {
+      "UD": "selection rule (H_d\u2194b=0)",
+      "TG": "expelled registry",
+      "notes": "topological protection against wrong transitions"
+    },
+    {
+      "UD": "Tr(H)/N = -11/8",
+      "TG": "ternary vector sum \u2248 constant",
+      "notes": "conservation of total state"
+    },
+    {
+      "UD": "S\u2084\u2192S\u2083 breaking",
+      "TG": "inter-session reconstruction",
+      "notes": "symmetry breaking = context change"
+    },
+    {
+      "UD": "binding equipartition",
+      "TG": "theory\u2194frontier balance",
+      "notes": "explored \u2248 unexplored in energy"
+    },
+    {
+      "UD": "RG flow",
+      "TG": "scale-dependent execution",
+      "notes": "different effort at different scales"
+    },
+    {
+      "UD": "IFS recursion",
+      "TG": "loop recursion",
+      "notes": "self-similar at every level"
+    }
+  ],
+  "deep_correspondences": [
+    {
+      "name": "FAILURE = MISSING FACE",
+      "UD": "A face of K\u2084 is a triangular boundary",
+      "TG": "Each failure mode = one face of the loop K\u2084",
+      "specifics": {
+        "face_012_drift": "DISTINGUISH+CLOSE+TRANSPORT without RECURSE",
+        "face_013_stall": "DISTINGUISH+CLOSE+RECURSE without TRANSPORT",
+        "face_023_confabulation": "DISTINGUISH+TRANSPORT+RECURSE without CLOSE",
+        "face_123_noise": "CLOSE+TRANSPORT+RECURSE without DISTINGUISH"
+      }
+    },
+    {
+      "name": "GENERATION = ITERATION",
+      "UD": "3 generations from F-1=3 active faces",
+      "TG": "3 priority tiers (immediate/session/deferred)",
+      "notes": "each generation/tier opens more of the Hilbert space"
+    },
+    {
+      "name": "DARK MATTER = UNCONSCIOUS PROCESSING",
+      "UD": "depth-0 states don't couple to EM",
+      "TG": "background governance runs without explicit invocation",
+      "notes": "the expelled registry, pod activation, and memory system work silently"
+    }
+  ]
+}

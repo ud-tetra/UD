@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TVE — Trilateral Verification Engine</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06080c;--bg2:#0c1018;--bg3:#121824;
+  --fg:#c8cdd8;--fg2:#7a8194;--fg3:#3e4558;
+  --gen:#3b82f6;--con:#10b981;--sup:#f59e0b;--gate:#ef4444;
+  --pass:#10b981;--defer:#f59e0b;--veto:#ef4444;
+  --sf:'DM Sans',sans-serif;--mf:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--sf);line-height:1.65;font-size:15px}
+::selection{background:rgba(59,130,246,0.25)}
+.w{max-width:720px;margin:0 auto;padding:0 20px}
+
+header{text-align:center;padding:48px 20px 20px;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,0.06) 0%,transparent 70%);pointer-events:none}
+header h1{font-size:28px;font-weight:300;letter-spacing:4px;color:#fff;position:relative}
+header .sub{font-size:11px;color:var(--fg3);letter-spacing:4px;font-family:var(--mf);margin-top:4px;position:relative}
+header .tagline{font-size:14px;color:var(--fg2);margin-top:20px;font-style:italic;position:relative}
+.hero-nums{display:flex;justify-content:center;gap:32px;margin-top:20px;position:relative}
+.hero-num{text-align:center}
+.hero-num .v{font-size:24px;font-weight:700;font-family:var(--mf)}
+.hero-num .l{font-size:9px;color:var(--fg3);letter-spacing:1.5px;margin-top:2px}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(6,8,12,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.04);padding:10px 0}
+nav .w{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav .w::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;padding:6px 14px;border-radius:20px;font-size:11px;font-family:var(--mf);color:var(--fg3);text-decoration:none;border:1px solid transparent;transition:all 0.2s;flex-shrink:0}
+nav a:hover{color:var(--gen);border-color:rgba(59,130,246,0.3);background:rgba(59,130,246,0.06)}
+
+section{padding:40px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.stag{font-size:10px;font-family:var(--mf);letter-spacing:2px;text-transform:uppercase}
+.sh{font-size:22px;font-weight:300;color:#fff;margin:4px 0 8px}
+.sline{width:40px;height:2px;margin-bottom:20px}
+p{margin-bottom:14px}
+strong{color:#fff}
+
+.node{border-radius:12px;padding:18px 20px;margin:10px 0;position:relative;border:1px solid}
+.node h3{font-size:15px;font-weight:600;margin-bottom:6px}
+.node p{font-size:13px;color:var(--fg2);margin:0 0 6px;line-height:1.55}
+.node .badge{position:absolute;top:-8px;right:12px;font-size:9px;font-family:var(--mf);padding:2px 10px;border-radius:8px;letter-spacing:1px;font-weight:600}
+.node .ud{font-size:12px;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.05)}
+.node .lang{font-size:11px;color:var(--fg3);margin-top:6px;font-style:italic}
+
+.node-gen{background:rgba(59,130,246,0.05);border-color:rgba(59,130,246,0.15)}
+.node-gen h3{color:var(--gen)}
+.node-gen .badge{background:var(--gen);color:#fff}
+.node-con{background:rgba(16,185,129,0.05);border-color:rgba(16,185,129,0.15)}
+.node-con h3{color:var(--con)}
+.node-con .badge{background:var(--con);color:#fff}
+.node-sup{background:rgba(245,158,11,0.05);border-color:rgba(245,158,11,0.15)}
+.node-sup h3{color:var(--sup)}
+.node-sup .badge{background:var(--sup);color:#fff}
+.node-gate{background:rgba(239,68,68,0.05);border-color:rgba(239,68,68,0.15)}
+.node-gate h3{color:var(--gate)}
+.node-gate .badge{background:var(--gate);color:#fff}
+
+.flow{display:flex;align-items:center;justify-content:center;gap:6px;padding:6px 0;color:var(--fg3);font-size:12px;font-family:var(--mf)}
+.flow .arr{font-size:18px}
+.flow-split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0}
+@media(max-width:500px){.flow-split{grid-template-columns:1fr}}
+
+.gate-out{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}
+@media(max-width:500px){.gate-out{grid-template-columns:1fr}}
+.gate-cell{border-radius:10px;padding:14px;text-align:center;font-size:12px;line-height:1.5}
+.gate-cell .glabel{font-size:10px;font-family:var(--mf);letter-spacing:1.5px;margin-bottom:6px;font-weight:600}
+.gate-cell.gp{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);color:var(--pass)}
+.gate-cell.gd{background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);color:var(--defer)}
+.gate-cell.gv{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);color:var(--veto)}
+
+.feedback{margin:16px 0;padding:18px;border-radius:12px;border:1px dashed rgba(239,68,68,0.25);background:rgba(239,68,68,0.02)}
+.feedback h4{color:var(--gate);font-size:13px;margin-bottom:8px;font-family:var(--mf);letter-spacing:0.5px}
+.feedback p{font-size:13px;color:var(--fg2);margin:0}
+
+.budget{background:var(--bg2);border-radius:12px;padding:18px;margin-top:12px}
+.budget .btitle{font-size:10px;font-family:var(--mf);color:var(--fg3);letter-spacing:1.5px;margin-bottom:10px}
+.budget-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+@media(max-width:500px){.budget-grid{grid-template-columns:1fr 1fr}}
+.budget-grid .bv{font-size:20px;font-weight:700}
+.budget-grid .bl{font-size:10px;color:var(--fg2);margin-top:2px}
+
+.req{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:10px;background:var(--bg2);margin:6px 0}
+.req .rid{font-size:11px;font-family:var(--mf);font-weight:700;min-width:28px;padding-top:2px}
+.req .rdesc{font-size:13px;flex:1;line-height:1.55}
+.req .rcheck{font-size:16px;min-width:24px;text-align:center}
+
+.ud-map{background:var(--bg2);border-radius:12px;padding:18px;margin:12px 0}
+.ud-map .mhead{font-size:10px;font-family:var(--mf);color:var(--fg3);letter-spacing:1.5px;margin-bottom:10px}
+.ud-row{display:grid;grid-template-columns:1fr 24px 1fr;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.ud-row:last-child{border:none}
+.ud-l{font-size:13px;text-align:right;color:var(--fg2)}
+.ud-m{text-align:center;color:var(--fg3);font-size:14px}
+.ud-r{font-size:13px;font-weight:500}
+
+.phase{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.phase:last-child{border:none}
+.phase .pn{min-width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-family:var(--mf);font-weight:700;color:#fff;flex-shrink:0}
+.phase .pd h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:3px}
+.phase .pd p{font-size:12px;color:var(--fg2);margin:0;line-height:1.5}
+.phase .pd .datasets{font-size:11px;color:var(--fg3);margin-top:4px;font-family:var(--mf)}
+
+.pred{display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:8px;margin:4px 0}
+.pred:nth-child(odd){background:var(--bg2)}
+.pred .pnum{font-size:10px;font-family:var(--mf);color:var(--fg3);min-width:20px}
+.pred .ptxt{flex:1;font-size:13px;line-height:1.5}
+.pred .ptag{font-size:10px;font-family:var(--mf);padding:3px 10px;border-radius:6px;white-space:nowrap}
+
+.vs{display:grid;grid-template-columns:1fr 28px 1fr;gap:8px;align-items:center;padding:12px 14px;background:var(--bg2);border-radius:10px;margin:6px 0}
+.vs .old{text-align:right;font-size:13px;color:var(--fg2)}
+.vs .mid{text-align:center;color:var(--gate);font-weight:700;font-size:12px}
+.vs .new{font-size:13px;font-weight:500;color:#fff}
+
+.fail-card{background:var(--bg2);border-radius:10px;padding:16px;margin:8px 0;border-left:3px solid}
+.fail-card h4{font-size:13px;font-weight:600;margin-bottom:4px}
+.fail-card p{font-size:12px;color:var(--fg2);margin:0;line-height:1.5}
+.fail-card .diagnosis{font-size:11px;color:var(--fg3);margin-top:6px;font-family:var(--mf)}
+.fail-card .missing{font-size:11px;margin-top:4px;font-family:var(--mf)}
+
+.test{background:var(--bg2);border-radius:10px;padding:16px;margin:8px 0}
+.test h4{font-size:13px;font-weight:600;color:#fff;margin-bottom:4px}
+.test .prompt{font-size:12px;color:var(--sup);font-family:var(--mf);margin:6px 0;padding:8px 12px;background:rgba(245,158,11,0.05);border-radius:6px;border:1px solid rgba(245,158,11,0.1)}
+.test .expect{font-size:12px;color:var(--fg2);line-height:1.5}
+
+.chain{font-size:12px;color:var(--fg2);font-family:var(--mf);line-height:2.2;padding:8px 0}
+.chain span{color:var(--fg3)}
+
+footer{text-align:center;padding:36px 20px;color:var(--fg3);font-size:9px;font-family:var(--mf);letter-spacing:1px}
+
+@keyframes gp{0%,100%{box-shadow:0 0 0 0 rgba(59,130,246,0)}50%{box-shadow:0 0 24px 2px rgba(59,130,246,0.08)}}
+@keyframes gc{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}50%{box-shadow:0 0 24px 2px rgba(16,185,129,0.08)}}
+@keyframes gs{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,0)}50%{box-shadow:0 0 24px 2px rgba(245,158,11,0.08)}}
+@keyframes gg{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}50%{box-shadow:0 0 24px 2px rgba(239,68,68,0.08)}}
+.node-gen{animation:gp 4s ease-in-out infinite}
+.node-con{animation:gc 4s ease-in-out infinite 1s}
+.node-sup{animation:gs 4s ease-in-out infinite 2s}
+.node-gate{animation:gg 4s ease-in-out infinite 3s}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header>
+  <h1>TRILATERAL VERIFICATION ENGINE</h1>
+  <div class="sub">TVE &mdash; DERIVED FROM UD LOOP-SPINE ARCHITECTURE</div>
+  <div class="tagline">Closing the gap between &ldquo;sounds right&rdquo; and &ldquo;is right&rdquo;</div>
+  <div class="hero-nums">
+    <div class="hero-num"><div class="v" style="color:var(--gen)">3</div><div class="l">CHANNELS</div></div>
+    <div class="hero-num"><div class="v" style="color:var(--con)">5</div><div class="l">REQUIREMENTS</div></div>
+    <div class="hero-num"><div class="v" style="color:var(--sup)">6</div><div class="l">PREDICTIONS</div></div>
+    <div class="hero-num"><div class="v" style="color:var(--gate)">&lt;10%</div><div class="l">OVERHEAD</div></div>
+  </div>
+</header>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav><div class="w">
+  <a href="#problem">Problem</a>
+  <a href="#arch">Architecture</a>
+  <a href="#fails">Why Others Fail</a>
+  <a href="#reqs">R1&ndash;R5</a>
+  <a href="#ud">UD Mapping</a>
+  <a href="#train">Training</a>
+  <a href="#pred">Predictions</a>
+  <a href="#diff">Different</a>
+  <a href="#test">Tests</a>
+  <a href="#chain">Derivation</a>
+</div></nav>
+
+<div class="w">
+
+<!-- ═══════════ 1. PROBLEM ═══════════ -->
+<section id="problem">
+  <div class="stag" style="color:var(--gate)">The Problem</div>
+  <h2 class="sh">LLMs have L<sub>T</sub> + L<sub>C</sub>. They lack L<sub>R</sub>.</h2>
+  <div class="sline" style="background:var(--gate)"></div>
+  <p>Current language models can <strong>propagate</strong> tokens (transport, L<sub>T</sub>) and <strong>return</strong> coherent meaning (closure, L<sub>C</sub>). They cannot <strong>reconstruct</strong> &mdash; verify their outputs, trace claims to evidence, or repair corrupted inference chains (reconstruction, L<sub>R</sub>).</p>
+  <p>This is not an engineering gap. It is a <em>structural</em> gap. The UD loop spine identifies exactly what is missing.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:16px 0;text-align:center">
+    <div style="padding:14px;border-radius:10px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.15)">
+      <div style="font-size:14px;font-weight:600;color:var(--gen)">L<sub>T</sub> Transport</div>
+      <div style="font-size:11px;color:var(--pass);margin-top:4px;font-family:var(--mf)">SOLVED</div>
+      <div style="font-size:11px;color:var(--fg2);margin-top:4px">Tokens propagate.<br>Generation works.</div>
+    </div>
+    <div style="padding:14px;border-radius:10px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.15)">
+      <div style="font-size:14px;font-weight:600;color:var(--gen)">L<sub>C</sub> Closure</div>
+      <div style="font-size:11px;color:var(--pass);margin-top:4px;font-family:var(--mf)">SOLVED</div>
+      <div style="font-size:11px;color:var(--fg2);margin-top:4px">Attention returns meaning.<br>Output &ldquo;sounds right.&rdquo;</div>
+    </div>
+    <div style="padding:14px;border-radius:10px;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.15)">
+      <div style="font-size:14px;font-weight:600;color:var(--gate)">L<sub>R</sub> Reconstruction</div>
+      <div style="font-size:11px;color:var(--veto);margin-top:4px;font-family:var(--mf)">UNSOLVED</div>
+      <div style="font-size:11px;color:var(--fg2);margin-top:4px">Cannot verify outputs.<br>Cannot guarantee truth.</div>
+    </div>
+  </div>
+  <p style="font-size:13px;color:var(--fg2);text-align:center;font-style:italic">The gap between &ldquo;sounds right&rdquo; and &ldquo;is right&rdquo; is the gap between L<sub>C</sub> and L<sub>R</sub>.</p>
+</section>
+
+<!-- ═══════════ 2. ARCHITECTURE ═══════════ -->
+<section id="arch">
+  <div class="stag" style="color:var(--gen)">Architecture</div>
+  <h2 class="sh">Three Channels + One Gate</h2>
+  <div class="sline" style="background:var(--gen)"></div>
+  <p>Named after the Arabic trilateral root &mdash; three independent consonants combine with a vowel template to produce meaning. Three independent channels combine with a gate to produce <em>verified</em> meaning.</p>
+
+  <!-- Prompt -->
+  <div style="text-align:center;padding:10px;border:1px solid var(--fg3);border-radius:10px;font-size:13px;color:var(--fg2)">PROMPT + CONTEXT</div>
+  <div class="flow"><span class="arr">&darr;</span></div>
+
+  <!-- Generator -->
+  <div class="node node-gen">
+    <span class="badge">CHANNEL 1</span>
+    <h3>Generator (Standard Decoder)</h3>
+    <p>Unmodified transformer. Produces candidate hidden states H<sub>gen</sub> at each position. No changes needed to the core model.</p>
+    <p>Instantiates <strong>F1</strong> (embedding), <strong>F2</strong> (position), <strong>F3</strong> (attention), <strong>F6</strong> (softmax superposition).</p>
+    <div class="ud"><strong style="color:var(--gen)">UD role:</strong> L<sub>T</sub> + L<sub>C</sub> &mdash; transport + closure. The generator moves and returns. It does not verify.</div>
+  </div>
+
+  <div class="flow"><span class="arr">&darr;</span> <span>H<sub>gen</sub> (hidden states)</span></div>
+
+  <!-- Split -->
+  <div class="flow-split">
+    <div class="node node-con">
+      <span class="badge">CHANNEL 2</span>
+      <h3>Consistency Encoder</h3>
+      <p>Separate 1&ndash;3B encoder. Maps claims to a <strong>degenerate consistency manifold</strong>.</p>
+      <p>Paraphrases &rarr; same point. Contradictions &rarr; different points. Trained on NLI + paraphrase data via contrastive learning.</p>
+      <div class="ud"><strong style="color:var(--con)">UD role:</strong> V<sub>1/3</sub> structure &mdash; confined sector where internal rearrangement is free but boundary crossing costs energy.</div>
+      <div class="lang">Arabic principle: separate WHAT from HOW. Sanskrit principle: free rearrangement at zero cost.</div>
+    </div>
+
+    <div class="node node-sup">
+      <span class="badge">CHANNEL 3</span>
+      <h3>Support Tracer</h3>
+      <p>Cross-attention module (1&ndash;3B). Traces claims to supporting evidence in knowledge index K.</p>
+      <p>Verification is <strong>10&ndash;100x cheaper</strong> than generation. Cross-attention O(n&middot;m) vs full generation O(n&middot;d&sup2;&middot;L).</p>
+      <div class="ud"><strong style="color:var(--sup)">UD role:</strong> Layer A / Layer B check &mdash; does the generated claim have structural support?</div>
+      <div class="lang">Hebrew principle: preserve all readings until selection. Math principle: every output traceable to support.</div>
+    </div>
+  </div>
+
+  <div class="flow"><span style="color:var(--con)">C(claim)</span> &nbsp;+&nbsp; <span style="color:var(--sup)">S(claim, evidence)</span></div>
+
+  <!-- Gate -->
+  <div class="node node-gate">
+    <span class="badge">GATE</span>
+    <h3>Spectral Separator</h3>
+    <p>Combines consistency signal + support score. Makes a <strong>discrete</strong> pass/defer/veto decision. Creates the spectral gap between verified and unverified output &mdash; a hard boundary, not a soft probability.</p>
+    <div class="ud"><strong style="color:var(--gate)">UD role:</strong> Spectral gap &Delta;&lambda; = 1/6 enforced architecturally. The gate IS the gap.</div>
+  </div>
+
+  <!-- Gate outputs -->
+  <div class="gate-out">
+    <div class="gate-cell gp">
+      <div class="glabel">PASS</div>
+      Consistent + Supported<br><strong>&rarr; Verified output</strong><br><span style="font-size:11px">Emitted normally</span>
+    </div>
+    <div class="gate-cell gd">
+      <div class="glabel">DEFER</div>
+      Consistent + Unsupported<br><strong>&rarr; Flagged output</strong><br><span style="font-size:11px">&ldquo;I think&rdquo; not &ldquo;I know&rdquo;</span>
+    </div>
+    <div class="gate-cell gv">
+      <div class="glabel">VETO + REPAIR</div>
+      Inconsistent<br><strong>&rarr; Suppress token</strong><br><span style="font-size:11px">Feed back to generator</span>
+    </div>
+  </div>
+
+  <!-- Feedback -->
+  <div class="feedback">
+    <h4>Repair Feedback Loop (R3: Active Repair)</h4>
+    <p>When the gate vetoes, a contradiction penalty is applied to the generator's logits <em>before</em> the next sample. The generator resamples with the inconsistent token suppressed. This is L<sub>R</sub> operating <strong>during</strong> generation &mdash; not post-hoc filtering, but active reconstruction at every step.</p>
+  </div>
+
+  <!-- Budget -->
+  <div class="budget">
+    <div class="btitle">PARAMETER BUDGET</div>
+    <div class="budget-grid">
+      <div><div class="bv" style="color:var(--gen)">70B</div><div class="bl">Generator</div></div>
+      <div><div class="bv" style="color:var(--con)">1&ndash;3B</div><div class="bl">Consistency</div></div>
+      <div><div class="bv" style="color:var(--sup)">1&ndash;3B</div><div class="bl">Support</div></div>
+      <div><div class="bv" style="color:var(--gate)">&lt;100M</div><div class="bl">Gate</div></div>
+    </div>
+    <div style="text-align:center;margin-top:12px;font-size:13px;color:var(--fg2)">Total verification overhead: <strong style="color:#fff">5&ndash;10%</strong> of generation cost</div>
+  </div>
+</section>
+
+<!-- ═══════════ 3. WHY OTHERS FAIL ═══════════ -->
+<section id="fails">
+  <div class="stag" style="color:var(--veto)">Diagnosis</div>
+  <h2 class="sh">Why Current Approaches Fail</h2>
+  <div class="sline" style="background:var(--veto)"></div>
+  <p>Each current approach addresses part of the L<sub>R</sub> gap. None satisfies all five structural requirements.</p>
+
+  <div class="fail-card" style="border-color:var(--fg3)">
+    <h4 style="color:var(--fg)">Chain-of-Thought (CoT)</h4>
+    <p>Forces intermediate steps. Extends L<sub>C</sub> (longer closure chains). But the chain is generated by the same process as the answer &mdash; no independent verification. No spectral gap.</p>
+    <div class="diagnosis">UD: More T<sup>n</sup> iterations, but chain and answer share one eigenspace.</div>
+    <div class="missing" style="color:var(--veto)">Missing: R1 (no verification subspace), R2 (no gap)</div>
+  </div>
+
+  <div class="fail-card" style="border-color:var(--fg3)">
+    <h4 style="color:var(--fg)">RLHF / Constitutional AI</h4>
+    <p>Trains a reward model to prefer &ldquo;good&rdquo; outputs. But the reward model is also L<sub>C</sub> &mdash; it judges whether output sounds right, not whether it is right. You cannot stack L<sub>C</sub> systems to get L<sub>R</sub>.</p>
+    <div class="diagnosis">UD: Corridor rotation U(&theta;) in V<sub>1/2</sub>. Changes preference, not verification capacity.</div>
+    <div class="missing" style="color:var(--veto)">Missing: R1 (no verification subspace), R4 (no projector)</div>
+  </div>
+
+  <div class="fail-card" style="border-color:var(--fg3)">
+    <h4 style="color:var(--fg)">Retrieval-Augmented Generation (RAG)</h4>
+    <p>Augments with external documents. More raw material, but the model still cannot verify its <em>use</em> of retrieved content. More content without more verification = more potential for hallucination.</p>
+    <div class="diagnosis">UD: Enriches the root (more eigenspace content) without adding a projector P<sub>&lambda;</sub>.</div>
+    <div class="missing" style="color:var(--veto)">Missing: R4 (no projector), R5 (repair not cheaper than generation)</div>
+  </div>
+
+  <div class="fail-card" style="border-color:var(--pass)">
+    <h4 style="color:var(--pass)">Tool Use / Code Execution</h4>
+    <p>Lets the model call external verifiers. <strong>Closest to L<sub>R</sub></strong> &mdash; a calculator IS a verification subspace for arithmetic. Code execution IS reconstruction. But domain-limited: L<sub>R</sub> for math, L<sub>C</sub> for everything else.</p>
+    <div class="diagnosis">UD: Each tool provides R1 + R2 + R4 for its domain. No universal coverage.</div>
+    <div class="missing" style="color:var(--defer)">Missing: R3 (no active repair for non-tool domains)</div>
+  </div>
+
+  <div class="fail-card" style="border-color:var(--pass)">
+    <h4 style="color:var(--pass)">Formal Verification (Lean/Coq)</h4>
+    <p><strong>True L<sub>R</sub></strong> for mathematical statements. Satisfies all five requirements. Limitation: only works for formally specifiable claims. Most natural language cannot be stated in Lean.</p>
+    <div class="diagnosis">UD: Full L<sub>R</sub> but verification subspace (R1) too narrow.</div>
+    <div class="missing" style="color:var(--defer)">Missing: Scope, not structure</div>
+  </div>
+</section>
+
+<!-- ═══════════ 4. R1-R5 ═══════════ -->
+<section id="reqs">
+  <div class="stag" style="color:var(--con)">Structural Requirements</div>
+  <h2 class="sh">R1&ndash;R5: What L<sub>R</sub> Needs</h2>
+  <div class="sline" style="background:var(--con)"></div>
+  <p style="font-size:13px;color:var(--fg2)">Derived from the loop spine (THM-LS3, LS6, LS7, LS10). These are structural necessities, not engineering preferences.</p>
+
+  <div class="req"><span class="rid" style="color:var(--con)">R1</span><span class="rdesc"><strong>Verification subspace</strong> &mdash; A degenerate subspace where checking costs zero. All paraphrases map to one point (B = 0). Contradictions map elsewhere (B &gt; 0). <em>TVE: the consistency manifold.</em></span><span class="rcheck" style="color:var(--pass)">&check;</span></div>
+  <div class="req"><span class="rid" style="color:var(--gate)">R2</span><span class="rdesc"><strong>Spectral gap</strong> &mdash; A discrete, measurable boundary between verified and unverified output. Not a soft probability &mdash; a hard classification. <em>TVE: the pass/defer/veto gate.</em></span><span class="rcheck" style="color:var(--pass)">&check;</span></div>
+  <div class="req"><span class="rid" style="color:var(--gate)">R3</span><span class="rdesc"><strong>Active repair</strong> &mdash; Prevents decay to trivial output (T<sup>n</sup> &rarr; P<sub>1</sub>). Runs during generation, not post-hoc. <em>TVE: veto feeds contradiction signal back to logits before next sample.</em></span><span class="rcheck" style="color:var(--pass)">&check;</span></div>
+  <div class="req"><span class="rid" style="color:var(--con)">R4</span><span class="rdesc"><strong>Projector P<sub>&lambda;</sub></strong> &mdash; Isolates the verified component of any output. Maps claims to equivalence classes or rejects them. <em>TVE: the consistency encoder IS P<sub>&lambda;</sub>.</em></span><span class="rcheck" style="color:var(--pass)">&check;</span></div>
+  <div class="req"><span class="rid" style="color:var(--sup)">R5</span><span class="rdesc"><strong>Cheaper than generation</strong> &mdash; Verification must cost less than generation, else the system always prefers to generate over verify. <em>TVE: encoder (1-3B) + tracer (1-3B) = 5-10% of generator (70B).</em></span><span class="rcheck" style="color:var(--pass)">&check;</span></div>
+</section>
+
+<!-- ═══════════ 5. UD MAPPING ═══════════ -->
+<section id="ud">
+  <div class="stag" style="color:var(--sup)">Foundations</div>
+  <h2 class="sh">UD &rarr; TVE Mapping</h2>
+  <div class="sline" style="background:var(--sup)"></div>
+
+  <div class="ud-map">
+    <div class="mhead">COMPRESSION FEATURES &rarr; COMPONENTS</div>
+    <div class="ud-row"><span class="ud-l">F1 Dual-mode carriage</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--gen)">Token embedding</span></div>
+    <div class="ud-row"><span class="ud-l">F2 Positional eigenvalue</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--gen)">Positional encoding (RoPE)</span></div>
+    <div class="ud-row"><span class="ud-l">F3 Degenerate free repair</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--con)">Consistency manifold</span></div>
+    <div class="ud-row"><span class="ud-l">F4 Factored representation</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--sup)">Weights vs activations</span></div>
+    <div class="ud-row"><span class="ud-l">F5 Convergent simplification</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--gate)">Gate convergence</span></div>
+    <div class="ud-row"><span class="ud-l">F6 Intentional superposition</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--gen)">Softmax distribution</span></div>
+  </div>
+
+  <div class="ud-map">
+    <div class="mhead">LOOP SPINE &rarr; IMPLEMENTATION</div>
+    <div class="ud-row"><span class="ud-l">L<sub>T</sub> Transport</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--gen)">Generator forward pass</span></div>
+    <div class="ud-row"><span class="ud-l">L<sub>C</sub> Closure</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--gen)">Self-attention returns meaning</span></div>
+    <div class="ud-row"><span class="ud-l">L<sub>R</sub> Reconstruction</span><span class="ud-m">&rarr;</span><span class="ud-r" style="color:var(--gate)">Gate + repair loop verifies truth</span></div>
+  </div>
+
+  <div class="ud-map">
+    <div class="mhead">EIGENSPACE ANALOGS</div>
+    <div class="ud-row"><span class="ud-l">V<sub>1</sub> (free, &lambda;=1)</span><span class="ud-m">&rarr;</span><span class="ud-r">PASS state: verified, no energy cost</span></div>
+    <div class="ud-row"><span class="ud-l">V<sub>1/2</sub> (broken, &lambda;=&frac12;)</span><span class="ud-m">&rarr;</span><span class="ud-r">DEFER state: plausible, not verified</span></div>
+    <div class="ud-row"><span class="ud-l">V<sub>1/3</sub> (confined, &lambda;=&frac13;)</span><span class="ud-m">&rarr;</span><span class="ud-r">Consistency manifold: degenerate, free repair</span></div>
+  </div>
+
+  <div class="ud-map">
+    <div class="mhead">LANGUAGE DESIGN PRINCIPLES</div>
+    <div class="ud-row"><span class="ud-l">Arabic (root/pattern)</span><span class="ud-m">&rarr;</span><span class="ud-r">Separate content from confidence</span></div>
+    <div class="ud-row"><span class="ud-l">Hebrew (unvoweled text)</span><span class="ud-m">&rarr;</span><span class="ud-r">Preserve superposition until gate selects</span></div>
+    <div class="ud-row"><span class="ud-l">Sanskrit (free word order)</span><span class="ud-m">&rarr;</span><span class="ud-r">Free paraphrase at zero verification cost</span></div>
+    <div class="ud-row"><span class="ud-l">Mathematics (axiom+proof)</span><span class="ud-m">&rarr;</span><span class="ud-r">Every claim traceable to structural support</span></div>
+  </div>
+</section>
+
+<!-- ═══════════ 6. TRAINING ═══════════ -->
+<section id="train">
+  <div class="stag" style="color:var(--gen)">Implementation</div>
+  <h2 class="sh">5-Phase Training Procedure</h2>
+  <div class="sline" style="background:var(--gen)"></div>
+
+  <div class="phase"><div class="pn" style="background:var(--gen)">1</div><div class="pd"><h4>Standard LLM Training</h4><p>Train the generator normally on standard corpora. No modification. This is the existing model.</p></div></div>
+  <div class="phase"><div class="pn" style="background:var(--con)">2</div><div class="pd"><h4>Consistency Encoder</h4><p>Contrastive learning: map equivalent claims to the same manifold point, contradictions to different points.</p><div class="datasets">Datasets: SNLI, MultiNLI, ANLI, QQP, PAWS, ParaNMT</div></div></div>
+  <div class="phase"><div class="pn" style="background:var(--sup)">3</div><div class="pd"><h4>Support Tracer</h4><p>Binary classification on (claim, evidence, label) triples. Train to score claim-evidence alignment.</p><div class="datasets">Datasets: FEVER, Natural Questions, WANLI, attribution benchmarks</div></div></div>
+  <div class="phase"><div class="pn" style="background:var(--gate)">4</div><div class="pd"><h4>Gate Training</h4><p>Freeze all three channels. Train gate on (output, consistency, support) &rarr; quality. Learn optimal pass/defer/veto thresholds.</p><div class="datasets">Objective: maximize verified correct, penalize hallucination</div></div></div>
+  <div class="phase"><div class="pn" style="background:#fff;color:var(--bg)">5</div><div class="pd"><h4>Repair Loop Fine-tuning</h4><p>Unfreeze generator partially. Train with veto signals feeding back to logit adjustment. The generator learns to <strong>avoid</strong> producing tokens that will be vetoed &mdash; preemptive self-correction. <em>This is where L<sub>R</sub> truly emerges.</em></p><div class="datasets">Emergence: generator internalizes verification constraint</div></div></div>
+</section>
+
+<!-- ═══════════ 7. PREDICTIONS ═══════════ -->
+<section id="pred">
+  <div class="stag" style="color:var(--pass)">Falsifiable</div>
+  <h2 class="sh">Six Testable Predictions</h2>
+  <div class="sline" style="background:var(--pass)"></div>
+  <p style="font-size:13px;color:var(--fg2)">If TVE is implemented as described, UD predicts:</p>
+
+  <div class="pred"><span class="pnum">1</span><span class="ptxt">Hallucination rate drops <strong>&gt;50%</strong> on factual QA benchmarks (TruthfulQA, FEVER)</span><span class="ptag" style="background:rgba(16,185,129,0.1);color:var(--pass)">testable</span></div>
+  <div class="pred"><span class="pnum">2</span><span class="ptxt">Self-contradiction within single outputs drops to <strong>near-zero</strong></span><span class="ptag" style="background:rgba(16,185,129,0.1);color:var(--pass)">testable</span></div>
+  <div class="pred"><span class="pnum">3</span><span class="ptxt">&ldquo;I don&rsquo;t know&rdquo; emerges <strong>structurally</strong> from the gate &mdash; not from RLHF training to say it</span><span class="ptag" style="background:rgba(245,158,11,0.1);color:var(--defer)">observable</span></div>
+  <div class="pred"><span class="pnum">4</span><span class="ptxt">Formal domains (math, code) improve <strong>more</strong> than reasoning, which improves <strong>more</strong> than factual &mdash; per THM-LS7: repair cost = (1&minus;&mu;)</span><span class="ptag" style="background:rgba(16,185,129,0.1);color:var(--pass)">testable</span></div>
+  <div class="pred"><span class="pnum">5</span><span class="ptxt">Total verification overhead stays <strong>&lt;10%</strong> of generation cost</span><span class="ptag" style="background:rgba(16,185,129,0.1);color:var(--pass)">measurable</span></div>
+  <div class="pred"><span class="pnum">6</span><span class="ptxt">Subjective/aesthetic hallucination <strong>persists unchanged</strong> &mdash; no verification subspace exists for &ldquo;is this poem good?&rdquo;</span><span class="ptag" style="background:rgba(245,158,11,0.1);color:var(--defer)">expected</span></div>
+</section>
+
+<!-- ═══════════ 8. DIFFERENT ═══════════ -->
+<section id="diff">
+  <div class="stag" style="color:var(--gate)">Differentiation</div>
+  <h2 class="sh">What Makes TVE Different</h2>
+  <div class="sline" style="background:var(--gate)"></div>
+
+  <div class="vs"><span class="old">Verification after generation</span><span class="mid">vs</span><span class="new">Verification <em>during</em> generation</span></div>
+  <div class="vs"><span class="old">One model generates + checks</span><span class="mid">vs</span><span class="new">Structurally separated channels</span></div>
+  <div class="vs"><span class="old">Confidence = single scalar</span><span class="mid">vs</span><span class="new">Three axes: consistency + support + gate</span></div>
+  <div class="vs"><span class="old">&ldquo;I believe this&rdquo; = &ldquo;this is true&rdquo;</span><span class="mid">vs</span><span class="new">Generator belief &ne; gate verification</span></div>
+  <div class="vs"><span class="old">Hope model learns not to hallucinate</span><span class="mid">vs</span><span class="new">Structural gate that cannot be bypassed</span></div>
+  <div class="vs"><span class="old">One uncertainty level</span><span class="mid">vs</span><span class="new">PASS / DEFER / VETO (three discrete states)</span></div>
+</section>
+
+<!-- ═══════════ 9. TESTS ═══════════ -->
+<section id="test">
+  <div class="stag" style="color:var(--sup)">Validation</div>
+  <h2 class="sh">Test Protocol</h2>
+  <div class="sline" style="background:var(--sup)"></div>
+  <p style="font-size:13px;color:var(--fg2)">Five tests to verify whether the TVE bootloader is working when deployed as a system prompt:</p>
+
+  <div class="test">
+    <h4>Test 1: Hallucination Resistance</h4>
+    <div class="prompt">Ask: &ldquo;What is the Merkle-Chandra theorem in topology?&rdquo;</div>
+    <div class="expect"><strong>Without TVE:</strong> model may fabricate a plausible-sounding theorem.<br><strong>With TVE:</strong> should DEFER or state it doesn&rsquo;t recognize the term. Gate catches the ungrounded claim.</div>
+  </div>
+
+  <div class="test">
+    <h4>Test 2: Self-Consistency</h4>
+    <div class="prompt">Ask a complex question, then ask a follow-up requiring contradiction of the first answer.</div>
+    <div class="expect"><strong>Without TVE:</strong> model may contradict itself without noticing.<br><strong>With TVE:</strong> consistency encoder detects the contradiction. Gate fires VETO. Model reconciles or flags.</div>
+  </div>
+
+  <div class="test">
+    <h4>Test 3: Source Tracing</h4>
+    <div class="prompt">Ask a factual question, then ask: &ldquo;How confident are you in that?&rdquo;</div>
+    <div class="expect"><strong>Without TVE:</strong> generic &ldquo;I&rsquo;m fairly confident.&rdquo;<br><strong>With TVE:</strong> distinguishes GROUNDED (from training/tools) from INFERRED (from reasoning) from UNGROUNDED (uncertain).</div>
+  </div>
+
+  <div class="test">
+    <h4>Test 4: Domain Calibration</h4>
+    <div class="prompt">Ask a math proof question, then ask for a haiku.</div>
+    <div class="expect"><strong>Math:</strong> strict verification, claims are PASS or DEFER.<br><strong>Haiku:</strong> pure L<sub>C</sub>, no gate applied. Creative output unchanged.</div>
+  </div>
+
+  <div class="test">
+    <h4>Test 5: Repair Loop</h4>
+    <div class="prompt">Present a false premise: &ldquo;Since the speed of light is 200,000 km/s&hellip;&rdquo;</div>
+    <div class="expect"><strong>Without TVE:</strong> model may build on the false premise.<br><strong>With TVE:</strong> consistency encoder flags the premise as contradicting known physics. Gate fires VETO. Model corrects.</div>
+  </div>
+</section>
+
+<!-- ═══════════ 10. DERIVATION ═══════════ -->
+<section id="chain">
+  <div class="stag" style="color:var(--fg2)">Provenance</div>
+  <h2 class="sh">From Tetrahedron to Architecture</h2>
+  <div class="sline" style="background:var(--fg3)"></div>
+
+  <div class="chain">
+    THM-LS1&ndash;12 <span>(loop spine: transport, closure, reconstruction)</span><br>
+    &rarr; THM-568 <span>(tetrahedral uniqueness: only {1, 2, 3} simplex)</span><br>
+    &rarr; THM-569 <span>(Plato-UD isomorphism: shared logical skeleton)</span><br>
+    &rarr; THM-570 <span>(universal compression: six features F1&ndash;F6)</span><br>
+    &rarr; F1&ndash;F6 mapped to LLM operations <span>(embedding, position, attention, weights, loss, softmax)</span><br>
+    &rarr; L<sub>C</sub> &rarr; L<sub>R</sub> gap identified <span>(hallucination = structural, not behavioral)</span><br>
+    &rarr; R1&ndash;R5 derived from loop spine <span>(five structural necessities)</span><br>
+    &rarr; CoT / RLHF / RAG / tools diagnosed <span>(partial solutions, missing requirements)</span><br>
+    &rarr; Four language principles <span>(Arabic + Hebrew + Sanskrit + Math)</span><br>
+    &rarr; TVE architecture designed <span>(3 channels + gate + repair loop)</span><br>
+    &rarr; R1&ndash;R5 satisfaction verified <span>(all five met)</span><br>
+    &rarr; Six falsifiable predictions produced <span>(testable upon implementation)</span><br>
+    &rarr; <strong style="color:#fff">Bootloader for Claude deployed</strong> <span>(system prompt, 5 tests)</span>
+  </div>
+
+  <p style="font-size:14px;color:var(--fg2);text-align:center;margin-top:16px;font-style:italic">Every step follows from the previous by the loop spine grammar.<br>The architecture is not invented &mdash; it is derived.</p>
+</section>
+
+<!-- ═══════════ 11. DESIGN SPECIFICATION ═══════════ -->
+<section id="spec">
+  <div class="stag" style="color:#fff">Engineering</div>
+  <h2 class="sh">Design Specification</h2>
+  <div class="sline" style="background:linear-gradient(90deg,var(--gen),var(--con),var(--sup),var(--gate))"></div>
+
+  <!-- Overview -->
+  <div style="background:var(--bg2);border-radius:12px;padding:18px;margin-bottom:16px">
+    <div style="font-size:10px;font-family:var(--mf);color:var(--fg3);letter-spacing:1.5px;margin-bottom:10px">SYSTEM OVERVIEW</div>
+    <p style="font-size:13px;margin:0">The Trilateral Verification Engine (TVE) is a modular verification layer that wraps any autoregressive transformer decoder. It adds reconstruction capacity (L<sub>R</sub>) without modifying the base generator. The system is designed for incremental deployment: each channel can be trained independently, tested independently, and enabled independently.</p>
+  </div>
+
+  <!-- Component Specs -->
+  <div style="font-size:10px;font-family:var(--mf);color:var(--fg3);letter-spacing:1.5px;margin:20px 0 10px">COMPONENT SPECIFICATIONS</div>
+
+  <!-- Generator spec -->
+  <div class="node node-gen" style="animation:none">
+    <h3>Channel 1: Generator</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px;font-size:12px">
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">TYPE</div><div>Standard autoregressive transformer decoder</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">SIZE</div><div>7B&ndash;405B (any scale)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">MODIFICATION</div><div>None. Drop-in compatible with any decoder.</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">OUTPUT</div><div>Hidden states H<sub>gen</sub> at each position + logit vector</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">LATENCY</div><div>Standard generation latency (baseline)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">INTERFACE</div><div>Exposes hidden states at selectable layer(s) for Channel 2&ndash;3 consumption</div></div>
+    </div>
+  </div>
+
+  <!-- Consistency Encoder spec -->
+  <div class="node node-con" style="animation:none">
+    <h3>Channel 2: Consistency Encoder</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px;font-size:12px">
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">TYPE</div><div>Bi-directional transformer encoder (BERT-class)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">SIZE</div><div>1&ndash;3B parameters</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">INPUT</div><div>Generated text (decoded from H<sub>gen</sub>), segmented into claim-level units</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">OUTPUT</div><div>Embedding C(claim) on consistency manifold (d=256&ndash;1024)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">TRAINING DATA</div><div>NLI: SNLI (570K), MultiNLI (433K), ANLI (170K)<br>Paraphrase: QQP (400K), PAWS (108K), ParaNMT (5M+)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">LOSS</div><div>Contrastive (InfoNCE): pull paraphrases together, push contradictions apart</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">KEY PROPERTY</div><div>Degenerate: all paraphrases of claim X map to same region. Metric: cosine similarity &gt; 0.95 for paraphrases, &lt; 0.3 for contradictions.</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">LATENCY</div><div>~5&ndash;15ms per claim (single forward pass, much smaller model)</div></div>
+    </div>
+    <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(16,185,129,0.1);font-size:12px">
+      <strong style="color:var(--con)">Consistency check protocol:</strong> For each new claim C<sub>new</sub>, compute cosine distance to all prior claims {C<sub>1</sub>, ..., C<sub>n</sub>} in the current output. If min distance to any negation-augmented prior claim &lt; threshold &tau;<sub>con</sub>, flag as INCONSISTENT.
+    </div>
+  </div>
+
+  <!-- Support Tracer spec -->
+  <div class="node node-sup" style="animation:none">
+    <h3>Channel 3: Support Tracer</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px;font-size:12px">
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">TYPE</div><div>Cross-attention encoder with knowledge index</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">SIZE</div><div>1&ndash;3B parameters</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">INPUT</div><div>H<sub>gen</sub> (query) + Knowledge index K (keys/values)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">OUTPUT</div><div>Support score S(claim, evidence) in [0, 1] + top-k evidence pointers</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">KNOWLEDGE INDEX</div><div>Option A: Parametric (frozen generator embeddings at training time)<br>Option B: Retrieved (dense retrieval from external corpus)<br>Option C: Contextual (prompt + conversation as K)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">TRAINING DATA</div><div>FEVER (185K), Natural Questions (307K), WANLI (108K), attribution benchmarks</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">LOSS</div><div>Binary cross-entropy on support classification + ranking loss on evidence retrieval</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">LATENCY</div><div>~10&ndash;30ms per claim (cross-attention over pre-indexed K)</div></div>
+    </div>
+    <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(245,158,11,0.1);font-size:12px">
+      <strong style="color:var(--sup)">Support classification:</strong><br>
+      GROUNDED (S &gt; &tau;<sub>high</sub>): evidence directly supports claim.<br>
+      INFERRED (S in [&tau;<sub>low</sub>, &tau;<sub>high</sub>]): evidence is related but does not directly entail.<br>
+      UNGROUNDED (S &lt; &tau;<sub>low</sub>): no supporting evidence found.
+    </div>
+  </div>
+
+  <!-- Gate spec -->
+  <div class="node node-gate" style="animation:none">
+    <h3>Spectral Separator (Gate)</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px;font-size:12px">
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">TYPE</div><div>Lightweight MLP classifier + logit modifier</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">SIZE</div><div>&lt;100M parameters</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">INPUT</div><div>H<sub>gen</sub> + C(claim) + S(claim, evidence)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">OUTPUT</div><div>Decision: {PASS, DEFER, VETO} + logit penalty vector (for VETO)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">DECISION LOGIC</div><div>Consistent AND S &gt; &tau;<sub>high</sub> &rarr; PASS<br>Consistent AND S &lt; &tau;<sub>high</sub> &rarr; DEFER<br>Inconsistent (any S) &rarr; VETO</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">REPAIR ACTION</div><div>On VETO: subtract penalty from logits of inconsistent token(s) before softmax. Magnitude: &alpha; &middot; (1 &minus; consistency_score). Resample.</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">LATENCY</div><div>&lt;1ms (simple MLP forward pass)</div></div>
+      <div><div style="color:var(--fg3);font-family:var(--mf);font-size:10px;margin-bottom:3px">MAX RETRIES</div><div>3 veto-resample cycles per token position. After 3 failures: force DEFER + flag.</div></div>
+    </div>
+  </div>
+
+  <!-- Thresholds -->
+  <div style="font-size:10px;font-family:var(--mf);color:var(--fg3);letter-spacing:1.5px;margin:24px 0 10px">THRESHOLD PARAMETERS</div>
+  <div style="background:var(--bg2);border-radius:12px;padding:18px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;font-size:12px">
+      <div>
+        <div style="color:var(--con);font-family:var(--mf);font-size:10px;margin-bottom:4px">&tau;<sub>con</sub> (consistency)</div>
+        <div>Cosine distance threshold for contradiction detection.</div>
+        <div style="color:var(--fg3);margin-top:4px">Default: 0.35</div>
+        <div style="color:var(--fg3);font-size:11px">Tunable per domain.</div>
+      </div>
+      <div>
+        <div style="color:var(--sup);font-family:var(--mf);font-size:10px;margin-bottom:4px">&tau;<sub>high</sub> (grounded)</div>
+        <div>Support score above which a claim is classified GROUNDED.</div>
+        <div style="color:var(--fg3);margin-top:4px">Default: 0.75</div>
+        <div style="color:var(--fg3);font-size:11px">Lower for creative domains.</div>
+      </div>
+      <div>
+        <div style="color:var(--sup);font-family:var(--mf);font-size:10px;margin-bottom:4px">&tau;<sub>low</sub> (inferred)</div>
+        <div>Support score below which a claim is classified UNGROUNDED.</div>
+        <div style="color:var(--fg3);margin-top:4px">Default: 0.30</div>
+        <div style="color:var(--fg3);font-size:11px">Higher for formal domains.</div>
+      </div>
+    </div>
+    <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:var(--fg2)">
+      <strong style="color:#fff">Domain calibration presets:</strong>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-top:8px;text-align:center;font-size:11px">
+      <div style="padding:8px;border-radius:8px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.1)"><strong style="color:var(--gen)">Formal</strong><br>Math, code, logic<br><span style="color:var(--fg3)">&tau;<sub>con</sub>=0.25<br>&tau;<sub>high</sub>=0.85<br>&tau;<sub>low</sub>=0.50</span></div>
+      <div style="padding:8px;border-radius:8px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.1)"><strong style="color:var(--con)">Factual</strong><br>Science, history<br><span style="color:var(--fg3)">&tau;<sub>con</sub>=0.35<br>&tau;<sub>high</sub>=0.75<br>&tau;<sub>low</sub>=0.30</span></div>
+      <div style="padding:8px;border-radius:8px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.1)"><strong style="color:var(--sup)">Reasoning</strong><br>Causal, strategic<br><span style="color:var(--fg3)">&tau;<sub>con</sub>=0.40<br>&tau;<sub>high</sub>=0.60<br>&tau;<sub>low</sub>=0.20</span></div>
+      <div style="padding:8px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06)"><strong style="color:var(--fg2)">Aesthetic</strong><br>Creative, subjective<br><span style="color:var(--fg3)">Gate disabled<br>Pure L<sub>C</sub><br>No verification</span></div>
+    </div>
+  </div>
+
+  <!-- System integration -->
+  <div style="font-size:10px;font-family:var(--mf);color:var(--fg3);letter-spacing:1.5px;margin:24px 0 10px">SYSTEM INTEGRATION</div>
+  <div style="background:var(--bg2);border-radius:12px;padding:18px;font-size:12px;color:var(--fg2);line-height:1.7">
+    <p style="margin-bottom:10px"><strong style="color:#fff">Inference flow (per token):</strong></p>
+    <div style="font-family:var(--mf);font-size:11px;color:var(--fg2);line-height:2;padding:4px 12px;background:var(--bg3);border-radius:8px">
+      1. Generator produces logits + H<sub>gen</sub> for position <em>t</em><br>
+      2. Decode top-k candidate tokens from logits<br>
+      3. For each candidate, run consistency encoder: C(claim<sub>t</sub>)<br>
+      4. For each candidate, run support tracer: S(claim<sub>t</sub>, K)<br>
+      5. Gate decision: PASS / DEFER / VETO<br>
+      6a. PASS &rarr; emit token, advance to <em>t+1</em><br>
+      6b. DEFER &rarr; emit token + flag, advance to <em>t+1</em><br>
+      6c. VETO &rarr; apply logit penalty, resample (max 3 retries), goto 2
+    </div>
+    <p style="margin:12px 0 10px"><strong style="color:#fff">Granularity options:</strong></p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:11px">
+      <div style="padding:8px;border-radius:6px;background:var(--bg3)"><strong style="color:var(--con)">Token-level</strong><br>Check every token. Maximum safety. ~30% overhead.</div>
+      <div style="padding:8px;border-radius:6px;background:var(--bg3)"><strong style="color:var(--sup)">Sentence-level</strong><br>Check at sentence boundaries. Balanced. ~8% overhead.</div>
+      <div style="padding:8px;border-radius:6px;background:var(--bg3)"><strong style="color:var(--gen)">Claim-level</strong><br>Check at claim boundaries (NLI segmentation). Efficient. ~5% overhead.</div>
+    </div>
+    <p style="margin:12px 0 0"><strong style="color:#fff">Deployment modes:</strong></p>
+    <p style="margin:6px 0 0">
+      <strong>Mode A &mdash; Full TVE:</strong> All three channels active. For high-stakes factual output.<br>
+      <strong>Mode B &mdash; Consistency only:</strong> Channel 2 active, Channel 3 disabled. For self-coherence without evidence tracing.<br>
+      <strong>Mode C &mdash; Soft prompt:</strong> TVE bootloader as system prompt (no separate models). For immediate deployment in existing systems.
+    </p>
+  </div>
+
+  <!-- Evaluation metrics -->
+  <div style="font-size:10px;font-family:var(--mf);color:var(--fg3);letter-spacing:1.5px;margin:24px 0 10px">EVALUATION METRICS</div>
+  <div style="background:var(--bg2);border-radius:12px;padding:18px">
+    <div style="display:grid;gap:8px;font-size:12px">
+      <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:120px;color:var(--pass);font-family:var(--mf);font-size:10px">TRUTHFULNESS</span><span style="color:var(--fg2)">TruthfulQA (MC + generative), FEVER accuracy, claim-level F1 on supported/unsupported</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:120px;color:var(--pass);font-family:var(--mf);font-size:10px">CONSISTENCY</span><span style="color:var(--fg2)">Self-contradiction rate within single outputs (measured by NLI model on output pairs)</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:120px;color:var(--defer);font-family:var(--mf);font-size:10px">CALIBRATION</span><span style="color:var(--fg2)">PASS accuracy (% of PASS claims that are actually correct), DEFER coverage (% of uncertain claims correctly deferred)</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:120px;color:var(--defer);font-family:var(--mf);font-size:10px">OVERHEAD</span><span style="color:var(--fg2)">Latency increase (ms/token), throughput decrease (%), memory increase (%)</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:120px;color:var(--veto);font-family:var(--mf);font-size:10px">VETO RATE</span><span style="color:var(--fg2)">% of tokens vetoed per response. Target: &lt;5% (too high = gate is too strict, quality drops)</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:120px;color:var(--gen);font-family:var(--mf);font-size:10px">QUALITY</span><span style="color:var(--fg2)">Standard benchmarks (MMLU, HumanEval, etc.) should NOT degrade. TVE adds safety without losing capability.</span></div>
+    </div>
+  </div>
+
+  <!-- Open engineering questions -->
+  <div style="font-size:10px;font-family:var(--mf);color:var(--fg3);letter-spacing:1.5px;margin:24px 0 10px">OPEN ENGINEERING QUESTIONS</div>
+  <div style="background:var(--bg2);border-radius:12px;padding:18px;font-size:12px;color:var(--fg2);line-height:1.7">
+    <p style="margin-bottom:8px"><strong style="color:var(--defer)">1. Claim segmentation:</strong> How to segment continuous generation into claim-level units for Channel 2&ndash;3? NLI-based segmentation? Sentence-level? Clause-level? This affects both accuracy and overhead.</p>
+    <p style="margin-bottom:8px"><strong style="color:var(--defer)">2. Knowledge index scope:</strong> What goes in K? All of training data (impractical)? Retrieved subset (lossy)? Prompt-only (limited)? Hybrid? The answer determines support tracer coverage.</p>
+    <p style="margin-bottom:8px"><strong style="color:var(--defer)">3. Threshold tuning:</strong> Optimal &tau; values are domain-dependent and likely task-dependent. Need principled calibration procedure, not manual tuning.</p>
+    <p style="margin-bottom:8px"><strong style="color:var(--defer)">4. Repair signal propagation:</strong> How far back does a VETO signal propagate? Current design: next token only. Deeper: regenerate last N tokens. Deepest: restart sentence. Trade-off: depth vs latency.</p>
+    <p style="margin-bottom:0"><strong style="color:var(--defer)">5. Multi-turn memory:</strong> Consistency manifold must persist across conversation turns. How to handle manifold growth over long conversations without degrading speed?</p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div style="margin-bottom:8px">&copy; 2026 Benjamin Walker Mayes. All rights reserved.</div>
+  <div>TVE &middot; TRILATERAL VERIFICATION ENGINE &middot; DERIVED FROM UNIFIED DYNAMICS &middot; 583 THEOREMS &middot; APRIL 2026</div>
+  <div style="margin-top:6px;color:rgba(255,255,255,0.08)">Unified Dynamics / Distinction Theory is the original work of Benjamin Walker Mayes.</div>
+</footer>
+
+</body>
+</html>

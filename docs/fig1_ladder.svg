@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="280" viewBox="0 0 500 280">
+<style>
+text { font-family: serif; fill: #111; }
+.label { font-size: 13px; }
+.small { font-size: 11px; }
+.title { font-size: 14px; font-weight: bold; }
+.math { font-style: italic; font-size: 13px; }
+line, path, rect, circle, polygon { stroke-linecap: round; stroke-linejoin: round; }
+</style>
+<rect width="500" height="280" fill="white"/>
+
+<text x="250" y="25" text-anchor="middle" class="title">Fig. 1. Foundational ontological ladder</text>
+<g transform="translate(70,50)">
+  <rect x="0" y="0" width="120" height="35" rx="5" fill="#e8f0fe" stroke="#1a3a6b" stroke-width="1.5"/>
+  <text x="60" y="22" text-anchor="middle" class="label">Distinction</text>
+  <line x1="60" y1="35" x2="60" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="55" width="120" height="35" rx="5" fill="#e8f5e9" stroke="#1a5c3a" stroke-width="1.5"/>
+  <text x="60" y="77" text-anchor="middle" class="label">Relation</text>
+  <line x1="60" y1="90" x2="60" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="110" width="120" height="35" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="60" y="132" text-anchor="middle" class="label">Closure</text>
+  <line x1="60" y1="145" x2="60" y2="165" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="165" width="120" height="35" rx="5" fill="#fce4ec" stroke="#880e4f" stroke-width="1.5"/>
+  <text x="60" y="187" text-anchor="middle" class="label">Object</text>
+  <line x1="120" y1="182" x2="180" y2="182" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="180" y1="182" x2="180" y2="17" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="180" y1="17" x2="120" y2="17" stroke="#888" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow2)"/>
+  <text x="195" y="105" class="small" fill="#888">object⁽ⁿ⁾→node⁽ⁿ⁺¹⁾</text>
+</g>
+<g transform="translate(290,65)">
+  <text x="0" y="0" class="small" fill="#555">separability</text>
+  <text x="0" y="55" class="small" fill="#555">admissible linkage</text>
+  <text x="0" y="110" class="small" fill="#555">self-maintaining completion</text>
+  <text x="0" y="165" class="small" fill="#555">persistent stable closure</text>
+</g>
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6" fill="none" stroke="#333" stroke-width="1"/>
+  </marker>
+  <marker id="arrow2" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+    <path d="M8,0 L0,3 L8,6" fill="none" stroke="#888" stroke-width="1"/>
+  </marker>
+</defs>
+
+</svg>

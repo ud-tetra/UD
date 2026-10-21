@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Unified Dynamics — Publication Dashboard</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+<style>
+:root{
+  --bg:#f4f7fb;
+  --bg-soft:#eef3f9;
+  --panel:#ffffff;
+  --panel-2:#f8fbff;
+  --text:#122033;
+  --muted:#5b6b80;
+  --muted-2:#7a899d;
+  --line:#dbe4ef;
+  --line-2:#e8eef6;
+  --accent:#1e5aa8;
+  --accent-2:#2d75d1;
+  --accent-soft:#eaf2fd;
+  --good:#1c8c5f;
+  --good-soft:#e8f7f0;
+  --warn:#b7791f;
+  --warn-soft:#fff4df;
+  --risk:#c0392b;
+  --risk-soft:#fdecec;
+  --chip:#f3f6fb;
+  --shadow:0 10px 24px rgba(18,32,51,.06);
+  --radius:16px;
+  --max:1420px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#f7f9fc 0%,#f4f7fb 100%);color:var(--text)}
+h1,h2,h3,h4,p{margin:0}
+button,input,select{font:inherit}
+.shell{max-width:var(--max);margin:0 auto;padding:28px 24px 110px}
+.topbar{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;flex-wrap:wrap;margin-bottom:22px}
+.brand{display:flex;gap:14px;align-items:flex-start;max-width:940px}
+.brand-badge{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(180deg,var(--accent-soft),#fff);border:1px solid var(--line);color:var(--accent);font-weight:900;box-shadow:var(--shadow)}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:800}
+h1{font-size:clamp(1.9rem,2.7vw,2.9rem);line-height:1.03;letter-spacing:-.02em}
+.sub{margin-top:8px;color:var(--muted);line-height:1.6;max-width:900px}
+.status-row{display:flex;gap:10px;flex-wrap:wrap;max-width:400px;justify-content:flex-end}
+.pill{padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;display:flex;gap:8px;align-items:center;color:var(--text)}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--accent)}
+.dot.good{background:var(--good)}
+.dot.warn{background:var(--warn)}
+.dot.open{background:var(--accent-2)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.panel-header{padding:16px 18px 10px;border-bottom:1px solid var(--line-2)}
+.panel-title{font-size:1rem;font-weight:800;letter-spacing:-.01em}
+.panel-copy{margin-top:4px;color:var(--muted);line-height:1.5;font-size:.93rem}
+.content{padding:16px 18px 18px}
+.kicker{display:inline-block;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:8px}
+.em-accent{color:var(--accent);font-weight:800}
+.gradient-word{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.text-lead{font-size:1.02rem;line-height:1.72;color:var(--text)}
+.text-soft{color:var(--muted);line-height:1.66}
+.callout-line{border-left:4px solid var(--accent);padding-left:12px}
+.hero{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:16px}
+.summary-switch{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.summary-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;font-weight:700;color:var(--muted);transition:all .18s ease}
+.summary-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.summary-panel{display:none}
+.summary-panel.active{display:block}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:12px}
+.metric{border:1px solid var(--line);border-radius:14px;background:var(--panel-2);padding:12px}
+.metric .k{font-size:1.65rem;font-weight:900;margin-bottom:4px;letter-spacing:-.02em}
+.metric .l{font-size:.85rem;color:var(--muted)}
+.metric .s{font-size:.78rem;color:var(--muted-2);margin-top:8px;line-height:1.35}
+.mini-graph{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.mini-col{border:1px solid var(--line);border-radius:14px;background:#fff;padding:9px}
+.mini-col h4{font-size:.82rem;margin-bottom:8px;color:var(--text)}
+.mini-stack{display:grid;gap:7px}
+.node-pill,
+.node-pill,
+.mini-link{
+  display:flex;
+  align-items:flex-start;
+  width:100%;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:10px;
+  padding:10px 12px;
+  cursor:pointer;
+  color:var(--text);
+  text-align:left;
+  line-height:1.35;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  min-height:48px;
+  height:auto;
+  appearance:none;
+  -webkit-appearance:none;
+  box-shadow:none;
+  overflow:hidden;
+  transition:all .18s ease;
+}
+.mini-link strong,
+.node-pill strong{
+  display:inline;
+  font-weight:800;
+}
+.node-pill.active,.node-pill:hover,.mini-link:hover{border-color:var(--accent);background:var(--accent-soft)}
+.legend{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:12px}
+.legend-item{border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px;color:var(--muted);line-height:1.45;font-size:.86rem}
+.legend-item b{display:block;color:var(--text);margin-bottom:4px}
+.bar-list{display:grid;gap:10px}
+.bar-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px}
+.bar-head{display:flex;justify-content:space-between;gap:10px;font-size:.88rem;margin-bottom:8px}
+.bar-track{height:10px;border-radius:999px;background:var(--bg-soft);overflow:hidden}
+.bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.toolbar{display:grid;grid-template-columns:minmax(260px,1.3fr) minmax(220px,.8fr) auto auto;gap:12px;margin-bottom:14px;align-items:center}
+.input,.select,.button{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;color:var(--text)}
+.button{cursor:pointer;font-weight:700}
+.button:hover{border-color:var(--accent);background:var(--accent-soft)}
+.modebar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.mode-chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 14px;cursor:pointer;font-weight:700;color:var(--muted)}
+.mode-chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.domain-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.domain-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px;cursor:pointer;transition:all .18s ease;min-height:128px}
+.domain-card:hover,.domain-card.active{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 18px rgba(18,32,51,.08)}
+.domain-card h3{font-size:.92rem;margin-bottom:8px;letter-spacing:-.01em}
+.domain-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.domain-mini{font-size:.76rem;padding:4px 7px;border-radius:999px;background:var(--chip)}
+.domain-claim{font-size:.82rem;color:var(--muted);line-height:1.45}
+.domain-strength{margin-top:8px;height:7px;border-radius:999px;background:var(--bg-soft);overflow:hidden}
+.domain-strength span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width .35s ease}
+.ud-intro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:start}
+.ud-pillars-grid,.ud-applications-grid,.bridge-grid,.equation-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.ud-feature-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:14px}
+.ud-soft-card{border:1px solid var(--line);border-radius:14px;background:var(--panel-2);padding:14px}
+.metaphor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.metaphor-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:14px}
+.metaphor-card h4{font-size:.9rem;margin-bottom:8px;letter-spacing:-.01em}
+.metaphor-card p{font-size:.88rem;line-height:1.55;color:var(--muted)}
+.system-map{padding:16px;display:grid;grid-template-columns:minmax(0,1.22fr) minmax(300px,.78fr);gap:16px;margin-bottom:16px;align-items:start}
+.map-shell{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#fbfcff,#f8fbff);padding:18px;position:relative}
+.map-title{font-size:.98rem;font-weight:800;margin-bottom:6px}
+.map-copy{font-size:.9rem;color:var(--muted);line-height:1.5;margin-bottom:14px;max-width:72ch}
+.map-stage{display:grid;grid-template-columns:repeat(5,minmax(138px,1fr));gap:8px;align-items:start;position:relative;z-index:2}
+.stage-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px;min-height:164px;position:relative}
+.stage-card h3{font-size:.86rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px}
+.stage-list{display:grid;gap:8px}
+.stage-node{border:1px solid var(--line);background:var(--panel-2);border-radius:10px;padding:9px 10px;cursor:pointer;text-align:left;position:relative;z-index:3;transition:all .18s ease}
+.stage-node:hover,.stage-node.active{border-color:var(--accent);background:var(--accent-soft)}
+.stage-node.related{border-color:var(--accent-2);background:#f3f7ff}
+.stage-node:hover{transform:translateY(-1px)}
+.stage-node b{display:block;font-size:.84rem;margin-bottom:3px}
+.stage-node span{font-size:.76rem;color:var(--muted);line-height:1.35}
+.map-overlay{position:absolute;inset:18px;pointer-events:none;z-index:1}
+.map-overlay svg{width:100%;height:100%;display:block}
+.dep-line{fill:none;stroke:#9bbcf0;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:6 7;opacity:.9}
+.dep-line.selected{stroke:var(--accent);stroke-width:3.5;stroke-dasharray:none}
+.dep-line.story-edge{stroke:#2d75d1;stroke-width:4;stroke-dasharray:none;opacity:0;animation:edgeFlow .65s ease forwards}
+.dep-dot{fill:var(--accent)}
+.infographic-grid{display:grid;gap:10px;position:sticky;top:18px}
+.info-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px}
+.info-card h4{font-size:.88rem;margin-bottom:8px}
+.info-card p{font-size:.84rem;color:var(--muted);line-height:1.5;margin-top:8px}
+.svg-wrap{display:flex;justify-content:center}
+.trail-panel{margin-bottom:14px;padding:12px 16px 14px}
+.trail-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:10px}
+.trail-head h2{font-size:1rem}
+.trail-copy{font-size:.9rem;color:var(--muted);line-height:1.5;max-width:860px}
+.trail-strip{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.trail-node{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:.84rem;cursor:pointer;transition:all .2s ease}
+.trail-node:hover{background:var(--accent-soft);border-color:var(--accent)}
+.trail-node.active{border-color:var(--accent);background:var(--accent-soft)}
+.trail-arrow{color:var(--muted-2);font-size:1rem}
+.layout{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(320px,.58fr);gap:16px;align-items:start}
+.layers{display:grid;gap:18px}
+.layer-panel{padding:14px 16px 16px}
+.layer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px}
+.layer-head h2{font-size:1.02rem}
+.layer-desc{font-size:.9rem;color:var(--muted);line-height:1.5;margin-top:4px;max-width:780px}
+.layer-tag{padding:7px 10px;border-radius:999px;font-size:.76rem;font-weight:700;border:1px solid var(--line)}
+.layer-tag.core{background:var(--good-soft);color:var(--good);border-color:#cfeadf}
+.layer-tag.derived{background:var(--warn-soft);color:var(--warn);border-color:#f5dfb1}
+.layer-tag.frontier{background:var(--risk-soft);color:var(--risk);border-color:#f1c7c2}
+.section-block{border-top:1px solid var(--line-2);margin-top:10px;padding-top:10px}
+.section-header{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:6px 0}
+.section-header.open .section-toggle{transform:rotate(90deg)}
+.section-header h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+.section-toggle{font-size:.8rem;color:var(--muted);transition:transform .2s ease,color .2s ease}
+.section-header:hover .section-toggle{color:var(--accent)}
+.section-content{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px;max-height:1200px;opacity:1;overflow:hidden;transition:max-height .28s ease,opacity .22s ease,margin-top .22s ease}
+.section-content.collapsed{max-height:0;opacity:0;margin-top:0}
+.node-grid{display:grid;gap:12px}
+.node-card{animation:fadeUp .28s ease;border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px 13px;cursor:pointer;transition:transform .12s ease,border-color .12s ease,box-shadow .12s ease;min-height:122px}
+.node-card:hover,.node-card.selected{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 18px rgba(18,32,51,.08)}
+.node-card:hover{background:linear-gradient(180deg,#fff,#fbfdff)}
+.node-card.related{background:#fbfdff;border-color:#bfd5f6}
+.node-card.dim{opacity:.45;filter:saturate(.7)}
+.node-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:10px}
+.node-id{font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.badge{padding:5px 8px;border-radius:999px;font-size:.72rem;font-weight:700;border:1px solid var(--line)}
+.badge.critical{background:var(--risk-soft);color:var(--risk);border-color:#f1c7c2}
+.badge.high{background:var(--warn-soft);color:var(--warn);border-color:#f5dfb1}
+.badge.medium{background:var(--accent-soft);color:var(--accent);border-color:#cfe0fa}
+.node-card h3{font-size:1rem;line-height:1.28;margin-bottom:6px;max-width:90%;letter-spacing:-.01em;transition:color .2s ease}
+.node-card:hover h3{color:var(--accent)}
+.node-card p{font-size:.88rem;line-height:1.48;color:var(--muted);max-width:72ch}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{padding:5px 8px;border-radius:999px;background:var(--chip);font-size:.75rem;color:var(--text);transition:all .2s ease}
+.chip:hover{background:var(--accent-soft);color:var(--accent)}
+.side{display:grid;gap:18px;align-content:start}
+.detail{top:18px}
+.detail .body{padding:14px 16px 16px}
+.detail-title{font-size:1.18rem;font-weight:800;line-height:1.2;letter-spacing:-.015em}
+.detail-sub{margin-top:8px;color:var(--muted);line-height:1.58}
+.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.detail-box{border:1px solid var(--line);border-radius:12px;background:var(--panel-2);padding:11px}
+.detail-box label{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.detail-box div{font-size:.92rem;line-height:1.35}
+.detail-section{margin-top:14px}
+.detail-section h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:8px}
+.detail-section p{font-size:.9rem;line-height:1.5;color:var(--muted)}
+.list-mini{
+  display:grid;
+  gap:10px;
+  align-content:start;
+}
+.mini-link.related{border-color:var(--accent);background:var(--accent-soft)}
+.mini-link.dim{opacity:.5}
+.mini-link strong,
+.node-pill strong{
+  display:inline;
+  font-weight:800;
+}
+.footer-note{margin-top:12px;padding-top:12px;border-top:1px solid var(--line-2);font-size:.87rem;color:var(--muted);line-height:1.5}
+.story-progress{font-size:.82rem;color:var(--muted);margin-top:6px}
+.story-actions{margin-top:16px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.story-left,.story-right{display:flex;gap:8px;align-items:center}
+.story-chip{padding:6px 10px;border-radius:999px;background:var(--chip);font-size:.76rem}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(30,90,168,.18)}70%{box-shadow:0 0 0 12px rgba(30,90,168,0)}100%{box-shadow:0 0 0 0 rgba(30,90,168,0)}}
+@keyframes edgeFlow{from{opacity:0;stroke-dasharray:0 999}to{opacity:1;stroke-dasharray:999 0}}
+.node-card.story-focus,.stage-node.story-focus,.trail-node.story-focus{border-color:var(--accent)!important;background:var(--accent-soft)!important;animation:pulseRing 1.4s ease infinite}
+@media (max-width:1180px){
+  .hero,.layout,.system-map,.ud-intro-grid{grid-template-columns:1fr}
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mini-graph{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .toolbar{grid-template-columns:1fr 1fr auto auto}
+  .domain-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .map-stage{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ud-pillars-grid,.ud-applications-grid,.bridge-grid,.equation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .metaphor-grid{grid-template-columns:1fr}
+  .infographic-grid{position:static}
+}
+@media (max-width:820px){
+  .shell{padding:16px 12px 92px}
+  .toolbar,.metrics,.mini-graph,.detail-grid,.map-stage,.node-grid{grid-template-columns:1fr}
+  .legend,.domain-row,.ud-pillars-grid,.ud-applications-grid,.bridge-grid,.equation-grid{grid-template-columns:1fr}
+  .modebar{gap:8px;overflow:auto;padding-bottom:4px;flex-wrap:nowrap}
+  .mode-chip{white-space:nowrap}
+  .topbar,.brand,.status-row,.trail-head,.layer-head{flex-direction:column;align-items:flex-start}
+  .detail{position:static}
+  .story-actions{flex-direction:column;align-items:stretch}
+  .story-left,.story-right{width:100%;justify-content:space-between}
+  .trail-strip{overflow:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .trail-node{white-space:nowrap}
+  .mini-col,.metric,.legend-item,.domain-card,.node-card,.info-card{min-width:0}
+  .brand-badge{width:44px;height:44px}
+}
+@media (max-width:480px){
+  .panel-header,.content,.layer-panel,.trail-panel{padding-left:14px;padding-right:14px}
+  h1{font-size:1.55rem}
+  .sub,.panel-copy,.layer-desc,.trail-copy{font-size:.88rem}
+  .node-card h3{font-size:.95rem}
+  .node-card p{font-size:.84rem}
+  .story-chip{font-size:.72rem}
+  #storyOverlay > div{width:94%;padding:18px}
+}
+
+.eq-line{
+  display:block;
+  width:100%;
+  margin-bottom:10px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  white-space:nowrap;
+  color:var(--text);
+}
+
+.eq-line,
+.eq-line .katex,
+.eq-line .katex-display,
+.eq-line .katex *{
+  font-family:"Cambria Math","STIX Two Math","STIX Two Text","Times New Roman",serif !important;
+}
+
+.eq-line .katex{
+  font-size:1rem;
+  line-height:1.35;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+
+.eq-line .katex-display{
+  margin:0;
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="topbar">
+    <div class="brand">
+       <img src="\UD5.png" alt="Unified Dynamics Theory logo" width="225" />
+      <div>
+        <div class="eyebrow">Unified Dynamics • publication view</div>
+        <h1>Unified Dynamics Theory</h1>
+		<h2>Relational Systems Dashboard</h2>
+        <p class="sub">This dashboard maps Unified Dynamics — a framework that derives Standard Model parameters from the combinatorics of a single tetrahedron (K₄) with zero free parameters. 16 predictions within 1.5% of measurement including the strong coupling constant α_s, the Weinberg angle, and the fine structure constant. All from V=4, E=6, F=4.</p>
+      </div>
+    </div>
+    <div class="status-row">
+      <br><br><img src="\BMayes.png" alt="Benjamin Walker Mayes" width="175" />
+    </div>
+  </div>
+
+  <section class="panel" style="margin-bottom:18px">
+    <div class="panel-header">
+      <div>
+<div class="panel-title">What is Unified Dynamics?</div>
+<div class="panel-copy">What follows isn’t a single explanation—it’s a guided shift in perspective. You’re about to move through a layered narrative that reframes familiar ideas—matter, fields, structure, and organization—as outcomes of deeper relational processes. Whether you come from physics, chemistry, biology, systems theory, or engineering, this section is designed to give you shared footing: intuitive first, structural second, and formal only where it earns its place. Read it less like a definition and more like an orientation to a different way of seeing what holds reality together.</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="ud-intro-grid">
+        <div class="ud-soft-card" style="padding:16px">
+          <div class="kicker">Systems-level framework</div>
+          <p class="text-lead" style="margin-bottom:12px">Unified Dynamics <span class="gradient-word">(UD)</span> is a systems-level theory that explores how reality can emerge from simple rules of <span class="em-accent">distinction</span>, <span class="em-accent">connection</span>, <span class="em-accent">closure</span>, <span class="em-accent">and</span> <span class="em-accent">reconstruction</span>.</p>
+          <p class="text-soft callout-line" style="margin-bottom:12px"><em>A useful metaphor is to imagine reality less as a warehouse full of finished parts and more as an evolving city grid. Roads, flows, bottlenecks, neighborhoods, and repair loops determine what can hold together. In UD, what we call an object is often the visible residue of a deeper pattern of successful coordination.</em></p>
+          <p class="text-soft">For a physicist, that means stepping back from particles alone. For a chemist, it means not starting only from bonding classes. For a biologist, it means not beginning only from organisms. UD asks a prior question: <span class="em-accent">what kinds of relational patterns are even allowed to persist?</span></p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
+            <span class="chip">Distinction</span>
+            <span class="chip">Relation</span>
+            <span class="chip">Closure</span>
+            <span class="chip">Transport</span>
+            <span class="chip">Reconstruction</span>
+          </div>
+        </div>
+        <div style="display:grid;gap:12px">
+          <div class="ud-feature-card">
+            <div class="kicker">In short</div>
+            <div style="line-height:1.58;color:var(--text)">Unified Dynamics is an attempt to describe how <span class="em-accent">stable reality emerges from dynamic relational processes</span>.</div>
+          </div>
+          <div class="ud-feature-card">
+            <div class="kicker">Cross-disciplinary scope</div>
+            <div style="line-height:1.58;color:var(--muted)">UD is framed as a bridge across physics, information theory, chemistry, biology, engineering, and complex systems rather than as a narrow replacement for one branch.</div>
+          </div>
+          <div class="ud-feature-card">
+            <div class="kicker">Big-picture aim</div>
+            <div style="line-height:1.58;color:var(--muted)">The goal is gentle reorientation: to help specialists see that many familiar objects may be <span class="em-accent">branch-specific views of deeper organizing constraints</span>.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ud-pillars-grid">
+        <div class="ud-feature-card">
+          <div class="kicker">Admissibility</div>
+          <div style="font-size:.9rem;line-height:1.58;color:var(--muted)">What configurations are allowed. Think of admissibility as the rulebook of the system: many imaginable states never stabilize because they violate deeper consistency constraints.</div>
+        </div>
+        <div class="ud-feature-card">
+          <div class="kicker">Closure</div>
+          <div style="font-size:.9rem;line-height:1.58;color:var(--muted)">How stable structures lock together. Closure is the difference between a loose chain of interactions and a motif that can support itself under change.</div>
+        </div>
+        <div class="ud-feature-card">
+          <div class="kicker">Transport</div>
+          <div style="font-size:.9rem;line-height:1.58;color:var(--muted)">How information, influence, and phase-like organization move across relations. Transport is the system’s circulation layer.</div>
+        </div>
+        <div class="ud-feature-card">
+          <div class="kicker">Reconstruction</div>
+          <div style="font-size:.9rem;line-height:1.58;color:var(--muted)">How systems maintain or rebuild coherence after disturbance. Reconstruction keeps persistence from being mistaken for rigidity.</div>
+        </div>
+      </div>
+
+      <div class="ud-applications-grid">
+        <div class="ud-soft-card">
+          <div class="kicker" style="margin-bottom:6px">Matter</div>
+          <div style="font-size:.88rem;line-height:1.56;color:var(--muted)">Stable patterns of closure that remain recognizable over time.</div>
+        </div>
+        <div class="ud-soft-card">
+          <div class="kicker" style="margin-bottom:6px">Fields</div>
+          <div style="font-size:.88rem;line-height:1.56;color:var(--muted)">Transport and phase alignment distributed across connected relations.</div>
+        </div>
+        <div class="ud-soft-card">
+          <div class="kicker" style="margin-bottom:6px">Geometry</div>
+          <div style="font-size:.88rem;line-height:1.56;color:var(--muted)">Emergent structure from relational constraints rather than a pre-assumed stage.</div>
+        </div>
+        <div class="ud-soft-card">
+          <div class="kicker" style="margin-bottom:6px">Complex systems</div>
+          <div style="font-size:.88rem;line-height:1.56;color:var(--muted)">Layered networks of self-stabilizing interactions, repair loops, and selective persistence.</div>
+        </div>
+      </div>
+
+      <div class="metaphor-grid">
+        <div class="metaphor-card">
+          <h4>For the physicist</h4>
+          <p><em>UD says:</em> before asking what particles are, ask what kinds of relational motifs can remain admissible and transport-consistent long enough to behave like particles.</p>
+        </div>
+        <div class="metaphor-card">
+          <h4>For the chemist or materials scientist</h4>
+          <p><em>UD says:</em> before asking which bond class you are looking at, ask what closure motif and interface tension make that structure resilient or fragile.</p>
+        </div>
+        <div class="metaphor-card">
+          <h4>For the biologist or systems engineer</h4>
+          <p><em>UD says:</em> before asking what the organism or architecture is made of, ask how repair, transport, and reconstruction preserve coherence under stress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="summary-switch">
+      <button class="summary-btn active" data-summary="snapshot">System Snapshot</button>
+      <button class="summary-btn" data-summary="governance">Governance & Maturity</button>
+    </div>
+
+    <div class="panel hero-left summary-panel active" id="summary-snapshot">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">System Snapshot</div>
+          <div class="panel-copy">The full graph is organized as a dependency ladder that moves from foundational primitives into derived structures and active research frontiers. Read it as a layered map of logical dependence: what must come first, what follows from it, and what is still being developed. The portal view is not part of the ontology itself, but a navigation layer used to make the structure legible.</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="metrics" id="metrics"></div>
+        <div class="mini-graph" id="miniGraph"></div>
+      </div>
+    </div>
+
+    <div class="panel hero-right summary-panel" id="summary-governance">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">Governance & Maturity</div>
+          <div class="panel-copy">A key purpose of this page is to separate what is structurally strong from what is only suggestive. That helps specialists trust the program even when they disagree with some frontier directions.</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="legend">
+          <div class="legend-item"><b>Strong zone</b>Core update structure, diffusion / continuity, entropy counting, elasticity, and the mature parts of the public dashboard.</div>
+          <div class="legend-item"><b>Developing zone</b>Triadic minimality, closure persistence, force-gradient mechanics, discrete admissibility spectrum.</div>
+          <div class="legend-item"><b>Frontier zone</b>Maxwell, Einstein, Schrödinger, and recursive consciousness conjecture.</div>
+          <div class="legend-item"><b>Why this matters</b>Scientists in one branch often judge a whole framework by the boldest claim they see. This dashboard keeps the boldest claims visible but clearly bounded.</div>
+        </div>
+        <div class="bar-list" id="maturityBars"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="toolbar">
+    <input id="searchInput" class="input" type="search" placeholder="Search node, theorem, branch, keyword…" />
+    <select id="filterSelect" class="select">
+      <option value="all">Show all branches</option>
+      <option value="foundations">Foundations</option>
+      <option value="physics">Physics / PDE</option>
+      <option value="mechanics">Mechanics</option>
+      <option value="thermo">Thermodynamics</option>
+      <option value="chemistry">Chemistry / Materials</option>
+      <option value="quantum">Quantum</option>
+      <option value="biology">Biology / Cognition</option>
+      <option value="governance">Governance / Portal</option>
+    </select>
+    <button class="button" id="focusCoreBtn">Focus publishable core</button>
+    <button class="button" id="resetBtn">Reset</button>
+  </section>
+
+  <section class="modebar" id="modebar">
+    <button class="mode-chip active" data-mode="all">Full System</button>
+    <button class="mode-chip" data-mode="core">Core Only</button>
+    <button class="mode-chip" data-mode="derived">Derivations</button>
+    <button class="mode-chip" data-mode="frontier">Frontier / Open</button>
+    <button class="mode-chip" data-mode="physics">Physics Focus</button>
+    <button class="mode-chip" data-mode="quantum">Quantum Focus</button>
+  </section>
+
+  <section class="domain-row" id="domainRow"></section>
+
+  <section class="panel system-map">
+    <div class="map-shell">
+      <div class="map-overlay" id="mapOverlay"></div>
+      <div class="map-title">Layered System Map</div>
+      <div class="map-copy">The architecture is shown as a ladder: primitives → operators → theorem spine → derivation branches → presentation layers. It acts as a visual antidote to branch bias by reminding the reader that familiar equations, models, and entities appear late in the stack, as downstream expressions of deeper structural commitments already in force.</div>
+      <div class="map-stage" id="mapStage"></div>
+    </div>
+    <div class="infographic-grid">
+      <div class="info-card">
+        <h4>Closure vs open motif</h4>
+        <div class="svg-wrap">
+          <svg width="260" height="120" viewBox="0 0 260 120" aria-label="closure motif infographic">
+            <defs><style>.n{fill:#fff;stroke:#1e5aa8;stroke-width:2}.l{stroke:#1e5aa8;stroke-width:3;stroke-linecap:round}.t{font:12px Inter, sans-serif;fill:#5b6b80}</style></defs>
+            <text x="44" y="18" class="t">open chain</text>
+            <line x1="30" y1="62" x2="85" y2="62" class="l"/>
+            <line x1="85" y1="62" x2="140" y2="62" class="l"/>
+            <circle cx="30" cy="62" r="10" class="n"/>
+            <circle cx="85" cy="62" r="10" class="n"/>
+            <circle cx="140" cy="62" r="10" class="n"/>
+            <text x="180" y="18" class="t">triadic closure</text>
+            <line x1="190" y1="80" x2="225" y2="34" class="l"/>
+            <line x1="225" y1="34" x2="250" y2="80" class="l"/>
+            <line x1="190" y1="80" x2="250" y2="80" class="l"/>
+            <circle cx="190" cy="80" r="10" class="n"/>
+            <circle cx="225" cy="34" r="10" class="n"/>
+            <circle cx="250" cy="80" r="10" class="n"/>
+          </svg>
+        </div>
+        <p><span class="em-accent">UD reading:</span> closed motifs can recover internally. <br><span class="em-accent">Classical analogy:</span> a loop is often more stable than a chain under perturbation.</p>
+      </div>
+      <div class="info-card">
+        <h4>Transport to diffusion</h4>
+        <div class="svg-wrap">
+          <svg width="260" height="120" viewBox="0 0 260 120" aria-label="transport diffusion infographic">
+            <defs><style>.dotA{fill:#1e5aa8}.dotB{fill:#7fb0ef}.lab{font:12px Inter, sans-serif;fill:#5b6b80}</style></defs>
+            <text x="20" y="18" class="lab">dense source</text>
+            <circle cx="55" cy="55" r="10" class="dotA"/>
+            <circle cx="78" cy="45" r="8" class="dotA"/>
+            <circle cx="82" cy="68" r="8" class="dotA"/>
+            <circle cx="38" cy="40" r="7" class="dotA"/>
+            <circle cx="35" cy="70" r="7" class="dotA"/>
+            <text x="150" y="18" class="lab">spread state</text>
+            <circle cx="165" cy="45" r="6" class="dotB"/>
+            <circle cx="190" cy="58" r="7" class="dotB"/>
+            <circle cx="218" cy="38" r="6" class="dotB"/>
+            <circle cx="234" cy="64" r="7" class="dotB"/>
+            <circle cx="210" cy="84" r="6" class="dotB"/>
+            <circle cx="176" cy="82" r="6" class="dotB"/>
+            <path d="M95 56 C120 56, 136 56, 150 56" fill="none" stroke="#1e5aa8" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/>
+          </svg>
+        </div>
+        <p><span class="em-accent">UD reading:</span> transport spreads admissible state through relations. <br><span class="em-accent">Classical analogy:</span> continuum diffusion emerges from many local transfers.</p>
+      </div>
+      <div class="info-card">
+        <h4>Stability landscape</h4>
+        <div class="svg-wrap">
+          <svg width="260" height="120" viewBox="0 0 260 120" aria-label="stability landscape infographic">
+            <defs><style>.curve{fill:none;stroke:#1e5aa8;stroke-width:3}.ball{fill:#d97706}.lab{font:12px Inter, sans-serif;fill:#5b6b80}</style></defs>
+            <text x="18" y="18" class="lab">instability landscape</text>
+            <path d="M15 40 C40 45, 55 92, 84 92 C113 92, 123 34, 154 34 C184 34, 194 92, 245 76" class="curve"/>
+            <circle cx="84" cy="92" r="8" class="ball"/>
+            <circle cx="154" cy="34" r="8" class="ball"/>
+            <text x="64" y="110" class="lab">stable basin</text>
+            <text x="140" y="22" class="lab">transition ridge</text>
+          </svg>
+        </div>
+        <p><span class="em-accent">UD reading:</span> systems drift toward lower instability if admissible. <br><span class="em-accent">Classical analogy:</span> potentials, barriers, and basins organize motion and reaction pathways.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel trail-panel">
+    <div class="trail-head">
+      <div>
+        <h2>Dependency Trail</h2>
+        <p class="trail-copy">A readable path from primitives and prerequisites through theorem-level dependencies to downstream derivations for the selected node, with presentation views shown only as surface navigation layers when relevant. This helps counter branch bias by making the dependency chain visible end to end.</p>
+      </div>
+    </div>
+    <div class="trail-strip" id="trailStrip"></div>
+  </section>
+
+  <section class="panel" style="margin-bottom:16px">
+  <div class="panel-header">
+    <div>
+      <div class="panel-title">Equation Bridge — UD and classical interpretations</div>
+      <div class="panel-copy">
+        These cards place familiar equations into two interpretive frames: the Unified Dynamics vocabulary used across this site, and the classical language most scientists already know. Not every bridge shown here is a completed derivation—some are structural correspondences, others remain active frontier work.
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="equation-grid">
+
+      <div class="ud-feature-card">
+        <div class="kicker">Transport update</div>
+        <div class="eq-line">\( \sigma_j(t+\Delta t) = \sum_i R_{ij} W_{ij} \sigma_i(t) \)</div>
+        <p style="font-size:.88rem;line-height:1.55;color:var(--muted)">
+          <span class="em-accent">UD:</span> state propagates across admissible relations according to compatibility and transport weighting.
+          <br>
+          <span class="em-accent">Classical:</span> a weighted network update or discrete local propagation rule.
+        </p>
+      </div>
+
+      <div class="ud-feature-card">
+        <div class="kicker">Diffusion</div>
+        <div class="eq-line">\( \frac{\partial \sigma}{\partial t} = D \nabla^2 \sigma \)</div>
+        <p style="font-size:.88rem;line-height:1.55;color:var(--muted)">
+          <span class="em-accent">UD:</span> distributed transport smooths local gradients in state across a connected substrate.
+          <br>
+          <span class="em-accent">Classical:</span> the diffusion (heat) equation.
+        </p>
+      </div>
+
+      <div class="ud-feature-card">
+        <div class="kicker">Wave recovery</div>
+        <div class="eq-line">\( \frac{\partial^2 \phi}{\partial t^2} = c^2 \nabla^2 \phi \)</div>
+        <p style="font-size:.88rem;line-height:1.55;color:var(--muted)">
+          <span class="em-accent">UD:</span> closure recovery becomes oscillatory when transport includes a restoring response rather than pure dissipation.
+          <br>
+          <span class="em-accent">Classical:</span> the wave equation.
+        </p>
+      </div>
+
+      <div class="ud-feature-card">
+        <div class="kicker">Force gradient</div>
+        <div class="eq-line">\( F = -\nabla S \)</div>
+        <p style="font-size:.88rem;line-height:1.55;color:var(--muted)">
+          <span class="em-accent">UD:</span> systems evolve along local gradients of strain or instability toward more supportable configurations.
+          <br>
+          <span class="em-accent">Classical:</span> force as the gradient of a potential.
+        </p>
+      </div>
+
+      <div class="ud-feature-card">
+        <div class="kicker">Continuity</div>
+        <div class="eq-line">\( \frac{\partial \rho}{\partial t} + \nabla \cdot J = 0 \)</div>
+        <p style="font-size:.88rem;line-height:1.55;color:var(--muted)">
+          <span class="em-accent">UD:</span> conserved transport cannot disappear locally without corresponding flow or explicit source structure.
+          <br>
+          <span class="em-accent">Classical:</span> continuity of a conserved density.
+        </p>
+      </div>
+
+      <div class="ud-feature-card">
+        <div class="kicker">Entropy counting</div>
+        <div class="eq-line">\( H = \log(\#\ \text{admissible microstates}) \)</div>
+        <p style="font-size:.88rem;line-height:1.55;color:var(--muted)">
+          <span class="em-accent">UD:</span> entropy counts how many admissible micro-configurations remain compatible with a shared macro description.
+          <br>
+          <span class="em-accent">Classical:</span> the same core intuition as statistical entropy.
+        </p>
+      </div>
+
+      <div class="ud-feature-card">
+        <div class="kicker">Schrödinger correspondence</div>
+        <div class="eq-line">\( i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi + V\psi \)</div>
+        <p style="font-size:.88rem;line-height:1.55;color:var(--muted)">
+          <span class="em-accent">UD:</span> a candidate low-energy amplitude description of admissible transport and phase evolution.
+          <br>
+          <span class="em-accent">Classical:</span> the Schrödinger equation.
+          <span class="em-accent">Status:</span> interpretive correspondence, not yet a closed derivation.
+        </p>
+      </div>
+
+      <div class="ud-feature-card">
+        <div class="kicker">Einstein correspondence</div>
+        <div class="eq-line">\( G_{\mu\nu} = 8\pi G T_{\mu\nu} \)</div>
+        <p style="font-size:.88rem;line-height:1.55;color:var(--muted)">
+          <span class="em-accent">UD:</span> geometry responds to closure defects, burden, and transport structure across the substrate.
+          <br>
+          <span class="em-accent">Classical:</span> the Einstein field equation.
+          <span class="em-accent">Status:</span> open frontier, not yet a completed bridge.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="text-soft" style="margin-top:14px;font-size:.82rem">
+      Some bridges shown here are direct structural analogies, others are working correspondences, and some remain open targets. The goal is not to overclaim, but to make alignment visible where it exists.
+    </p>
+
+  </div>
+</section>
+
+  <section class="layout">
+    <div class="layers">
+      <div class="panel layer-panel" id="coreLayer">
+        <div class="layer-head">
+          <div>
+            <h2>Core System</h2>
+            <p class="layer-desc">This is the structural heart of UD: primitives, operators, and the compact theorem spine that argues why coherent structure can exist at all.</p>
+          </div>
+          <span class="layer-tag core">Core</span>
+        </div>
+        <div class="bridge-grid" style="margin-bottom:10px">
+          <div class="ud-soft-card"><div class="kicker">Why this matters</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Scientists often inherit their branch’s preferred ontology. The core layer asks what must be true before any ontology stabilizes.</div></div>
+          <div class="ud-soft-card"><div class="kicker">Reading tip</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Do not read these nodes as separate facts. Read them as a chain: what is primitive, what constrains it, and what persists.</div></div>
+          <div class="ud-soft-card"><div class="kicker">Publication stance</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">This is the most defensible public layer. It carries the least interpretive risk and the strongest explanatory leverage.</div></div>
+          <div class="ud-soft-card"><div class="kicker">Metaphor</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Think of the core layer as the grammar of reality, not yet the full literature written in that grammar.</div></div>
+        </div>
+        <div class="node-grid" id="coreGrid"></div>
+      </div>
+
+      <div class="panel layer-panel" id="derivedLayer">
+        <div class="layer-head">
+          <div>
+            <h2>Derivation Layers</h2>
+            <p class="layer-desc">Here the framework meets familiar science: diffusion, continuity, mechanics, thermodynamics, chemistry, materials, and public portal views. The emphasis is on translation without branch tunnel vision.</p>
+          </div>
+          <span class="layer-tag derived">Derived</span>
+        </div>
+        <div class="bridge-grid" style="margin-bottom:10px">
+          <div class="ud-soft-card"><div class="kicker">For specialists</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">This layer is where you should look first if you want to test whether UD can speak your discipline’s language without flattening it.</div></div>
+          <div class="ud-soft-card"><div class="kicker">What to compare</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Compare each UD explanation with the classical equation card above. Ask whether the translation is structurally coherent, not merely terminological.</div></div>
+          <div class="ud-soft-card"><div class="kicker">Big-picture bridge</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Different sciences may be seeing different projections of the same stability-and-transport logic.</div></div>
+          <div class="ud-soft-card"><div class="kicker">Caution</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">A correspondence is not automatically a derivation. This layer keeps that distinction visible.</div></div>
+        </div>
+        <div class="node-grid" id="derivedGrid"></div>
+      </div>
+
+      <div class="panel layer-panel" id="frontierLayer">
+        <div class="layer-head">
+          <div>
+            <h2>Frontier / Open Programs</h2>
+            <p class="layer-desc">These nodes are included because they matter to the full ambition of UD, but they remain explicitly governed. Their presence should invite careful inquiry, not premature certainty.</p>
+          </div>
+          <span class="layer-tag frontier">Frontier</span>
+        </div>
+        <div class="bridge-grid" style="margin-bottom:10px">
+          <div class="ud-soft-card"><div class="kicker">Why keep them visible?</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Because frontier claims shape the ambition of the framework and show where proof pressure should go next.</div></div>
+          <div class="ud-soft-card"><div class="kicker">Why separate them?</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Because branch-trained readers often dismiss the whole program if the boldest claim is presented as if it were already mature.</div></div>
+          <div class="ud-soft-card"><div class="kicker">Reading stance</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Treat frontier nodes as research directions, not settled results.</div></div>
+          <div class="ud-soft-card"><div class="kicker">Current boundary</div><div style="font-size:.88rem;line-height:1.55;color:var(--muted)">Maxwell, Einstein, Schrödinger, and consciousness-related nodes remain the most interpretively sensitive.</div></div>
+        </div>
+        <div class="node-grid" id="frontierGrid"></div>
+        <div class="footer-note">Minimal publishable core: primitives + operators + T03, T04, T06, T07 + T17, T21, T29 + T19, T33. That subset already supports a coherent structural narrative without overreaching.</div>
+      </div>
+    </div>
+
+    <aside class="side">
+      <div class="panel detail" id="detailPanel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">Node Inspector</div>
+            <div class="panel-copy">Select a node to inspect role, maturity, dependencies, unlocks, and why it matters in the larger cross-branch picture.</div>
+          </div>
+        </div>
+        <div class="body" id="detailBody"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">High-Leverage Bottlenecks</div>
+            <div class="panel-copy">These are the nodes where additional proof work would most change the rest of the graph.</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="list-mini" id="bottlenecks"></div>
+        </div>
+      </div>
+    </aside>
+  </section>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ],
+      throwOnError: false
+    });
+  }
+});
+</script>
+
+<script>
+const nodes = [
+  {id:'P1', label:'𝒟 Distinction', type:'P', column:'primitive', branch:'foundations', maturity:'Defined', priority:'high', short:'Primitive distinguishability token set.', details:'The primitive starting point of the locked UD stack. No objects, fields, or spacetime are assumed before distinguishability. In UD terms, this is the first admissible act of saying “this is not that.” In classical terms, it plays the role of a pre-ontological primitive, prior to coordinate systems or matter models.', depends:[], unlocks:['P2','T03'], tags:['primitive','locked core']},
+  {id:'P2', label:'ℛ Relation', type:'P', column:'primitive', branch:'foundations', maturity:'Defined', priority:'high', short:'Connectivity primitive linking distinctions.', details:'Relations make the primitive set generative rather than inert. Dynamics, transport, and closure all depend on this node. In UD language, relation is what turns bare distinction into structure. In classical language, it is analogous to a graph or interaction structure without yet assuming a metric or force law.', depends:['P1'], unlocks:['O1','T03'], tags:['primitive','connectivity']},
+  {id:'O1', label:'𝒞₃ Triadic Closure', type:'O', column:'operator', branch:'foundations', maturity:'Formalized', priority:'critical', short:'Minimal closed motif operator.', details:'Triadic closure is the first proposed minimal stability structure. It is central to bonding, persistence, and boundary logic. UD treats this as the smallest nontrivial loop capable of supporting self-consistent recovery. Classical analogy: the first looped motif in a network that can resist purely linear defect propagation better than an open chain.', depends:['P1','P2'], unlocks:['O2','T03','T07','T31'], tags:['closure','motif','stability']},
+  {id:'O2', label:'𝒜 Admissibility', type:'O', column:'operator', branch:'foundations', maturity:'Formalized', priority:'critical', short:'Filters realizable from non-realizable states.', details:'Admissibility determines which candidate states may survive evolution. It is the foundation of quantization, measurement filtering, and consistency. In UD, not all imaginable states count as real candidates. In classical terms, admissibility behaves like a constraint surface or consistency filter on state space.', depends:['O1'], unlocks:['O3','T05','T24','T26'], tags:['filter','constraints']},
+  {id:'O3', label:'𝒯 Transport', type:'O', column:'operator', branch:'physics', maturity:'Formalized', priority:'critical', short:'Constraint and state propagation across relations.', details:'Transport generates candidates for evolution and drives the diffusion, continuity, wave, mechanics, and field branches. In UD terms, it is how influence and organization move. In classical terms, it is the deep source of propagation, flow, and transfer equations.', depends:['O2'], unlocks:['O4','T14','T17','T18','T21','T26'], tags:['propagation','physics']},
+  {id:'O4', label:'𝒮 Stability Functional', type:'O', column:'operator', branch:'foundations', maturity:'Formalized', priority:'critical', short:'Measures closure frustration and inconsistency.', details:'Stability scoring selects among admissible states. It powers descent, force-gradient mechanics, elasticity, and fracture logic. In UD, stability is not a vague metaphor but a selection measure. In classical terms, it often looks like a potential, defect cost, or energy-like landscape.', depends:['O3'], unlocks:['O5','T06','T19','T33'], tags:['selection','stability']},
+  {id:'O5', label:'E Evolution Operator', type:'O', column:'operator', branch:'foundations', maturity:'Internally Derived', priority:'critical', short:'Transport + admissibility + stability selection update.', details:'The master update rule: transport generates candidates, admissibility filters them, and stability selects. This is the master system engine. It is the clearest expression of UD as a process theory rather than a static ontology.', depends:['O2','O3','O4'], unlocks:['T05','T06','T17','T21'], tags:['update rule','engine']},
+  {id:'T03', label:'UD-T03 Triadic Minimal Stability', type:'T', column:'theorem', branch:'foundations', maturity:'Formalized', priority:'critical', short:'Triadic closure is the smallest persistent admissible motif.', details:'One of the highest-leverage theorems in the graph. If this fails, the closure-centric foundation weakens substantially. UD claim: triads are the first motifs with full local recovery logic. Classical analogy: the first looped network cell with self-reinforcing closure rather than endpoint vulnerability.', depends:['P1','P2','O1','O3'], unlocks:['T04','T07','T31'], tags:['foundations','bottleneck','publishable core']},
+  {id:'T04', label:'UD-T04 Closure Persistence Advantage', type:'T', column:'theorem', branch:'foundations', maturity:'Sketch Built', priority:'critical', short:'Closed motifs resist defect accumulation better than open ones.', details:'Supports entropy, thermodynamics, bonding stability, evolutionary filtering, and structure selection. UD emphasis: persistence is not accidental, it is filtered. Classical analogy: closed feedback motifs often outperform linear chains under repeated perturbation.', depends:['T03','O3','O4'], unlocks:['T11','T29','T31'], tags:['persistence','bottleneck','publishable core']},
+  {id:'T05', label:'UD-T05 Admissibility Filtering', type:'T', column:'theorem', branch:'foundations', maturity:'Internally Derived', priority:'high', short:'Only admissible states remain in the update output.', details:'A strong theorem candidate because it follows directly from the evolution rule construction. This is one of the cleaner bridges between formal definition and theorem output.', depends:['O2','O5'], unlocks:[], tags:['filtering','strong zone']},
+  {id:'T06', label:'UD-T06 Stability Descent', type:'T', column:'theorem', branch:'foundations', maturity:'Internally Derived', priority:'critical', short:'Evolution selects lower-instability admissible states when available.', details:'Anchors mechanics, homeostasis, evolution, and the dynamic picture of the framework. UD language: systems tend to move toward lower admissible instability. Classical analogy: descent on a potential-like landscape.', depends:['O4','O5'], unlocks:['T19','T33','T35'], tags:['descent','bottleneck','publishable core']},
+  {id:'T07', label:'UD-T07 Boundary Emergence', type:'T', column:'theorem', branch:'foundations', maturity:'Sketch Built', priority:'high', short:'Boundaries appear where relation exists but local closure completion fails.', details:'Transforms boundaries from metaphor into theorem output. Critical for chemistry, materials, and interface innovation. In classical terms, boundaries often mark mismatch or frustration regions; UD makes that precise in closure language.', depends:['T03','O4'], unlocks:['T16','T32','T34'], tags:['interface','publishable core']},
+  {id:'T11', label:'UD-T11 Compression Emergence', type:'T', column:'theorem', branch:'governance', maturity:'Sketch Built', priority:'medium', short:'Repeated stable motifs admit shorter generative descriptions.', details:'This theorem links recurrence to compressed scientific law structure. It is one route by which “law” becomes an outcome of repeated structure rather than an arbitrary starting assumption.', depends:['T04','T06'], unlocks:['T12'], tags:['compression']},
+  {id:'T12', label:'UD-T12 Law Compression', type:'T', column:'theorem', branch:'governance', maturity:'Formalized', priority:'medium', short:'Scientific laws are compressed generators of repeated motifs.', details:'Bridge from structural recurrence into the language of laws. Useful for helping siloed researchers see that their field equations may be branch-specific compressions of a deeper update grammar.', depends:['T11'], unlocks:['T13'], tags:['law','compression']},
+  {id:'T13', label:'UD-T13 Scale Projection', type:'T', column:'theorem', branch:'governance', maturity:'Formalized', priority:'medium', short:'Macroscopic laws are coarse-grained projections of admissible dynamics.', details:'Supports the transition from discrete closure logic into familiar continuous science. In classical language this is the macro limit bridge.', depends:['T12'], unlocks:['T29'], tags:['coarse-graining']},
+  {id:'T14', label:'UD-T14 Emergent Distance', type:'T', column:'theorem', branch:'physics', maturity:'Internally Derived', priority:'high', short:'Distance becomes minimal transport cost.', details:'A core transport-geometry bridge. UD language: closeness is cheap transport through admissible relations. Classical analogy: distance as effective path cost in a weighted network.', depends:['O3'], unlocks:['T15','T20'], tags:['geometry']},
+  {id:'T15', label:'UD-T15 Metric Emergence', type:'T', column:'theorem', branch:'physics', maturity:'Formalized', priority:'medium', short:'Dense transport graphs induce an effective metric tensor.', details:'A necessary precursor to serious gravity claims. This is where relational transport begins to resemble geometry rather than merely connectivity.', depends:['T14'], unlocks:['T16','T23'], tags:['geometry','frontier gateway']},
+  {id:'T16', label:'UD-T16 Curvature from Closure Defect', type:'T', column:'theorem', branch:'physics', maturity:'Formalized', priority:'medium', short:'Persistent closure frustration coarse-grains into curvature.', details:'Still frontier-facing. UD picture: unresolved closure mismatch bends the effective geometry. Classical analogy: curvature arising from loop mismatch or non-flat transport behavior.', depends:['T15','T07'], unlocks:['T23'], tags:['gravity','frontier']},
+  {id:'T17', label:'UD-T17 Diffusion Recovery', type:'T', column:'theorem', branch:'physics', maturity:'Externally Comparable', priority:'critical', short:'Local unbiased admissible transport converges to diffusion.', details:'One of the strongest bridge results and part of the first publishable core. This is where many readers begin to trust the framework: a familiar equation emerges from the deeper transport picture.', depends:['O3','O5'], unlocks:['D1','V2'], tags:['physics','strong zone','publishable core']},
+  {id:'T18', label:'UD-T18 Wave Recovery', type:'T', column:'theorem', branch:'physics', maturity:'Internally Derived', priority:'high', short:'Second-order or delayed response transport yields wave behavior.', details:'Provides the oscillatory branch and prepares resonance and field correspondences. Classical analogy: a restoring-response extension of diffusion into wave propagation.', depends:['T17','O3'], unlocks:['D2','T22'], tags:['waves']},
+  {id:'T19', label:'UD-T19 Force Gradient', type:'T', column:'theorem', branch:'mechanics', maturity:'Sketch Built', priority:'high', short:'Localized packets drift along the instability gradient.', details:'The mechanics bridge. It turns stability selection into effective force. Classical terms: motion follows the slope of a potential-like landscape.', depends:['T06','O4'], unlocks:['T20','D4'], tags:['mechanics','publishable core']},
+  {id:'T20', label:'UD-T20 Newtonian Limit', type:'T', column:'theorem', branch:'mechanics', maturity:'Formalized', priority:'high', short:'Low-defect localized packet dynamics reduce to Newtonian mechanics.', details:'Important public-facing bridge but still depends on sharper packet formalism. It matters because it shows how familiar mechanics may be the calm-water limit of a deeper relational system.', depends:['T19','T14'], unlocks:['D4','V2'], tags:['mechanics']},
+  {id:'T21', label:'UD-T21 Continuity Equation', type:'T', column:'theorem', branch:'physics', maturity:'Externally Comparable', priority:'critical', short:'Conserved transport yields continuity in the continuum limit.', details:'A clean and strong theorem, central to the PDE credibility of the framework. This is one of the simplest places where classical conservation law language lines up well with UD.', depends:['O3','O5'], unlocks:['D3','T22','V2'], tags:['continuity','publishable core']},
+  {id:'T22', label:'UD-T22 Maxwell Correspondence', type:'T', column:'theorem', branch:'physics', maturity:'Formalized', priority:'medium', short:'Loop-consistent conserved transport admits a Maxwell-like description.', details:'Important frontier theorem, but gauge and Lorentz structure remain open. This should be read as directional plausibility, not closure.', depends:['T18','T21'], unlocks:['D6'], tags:['field theory','frontier']},
+  {id:'T23', label:'UD-T23 Einstein Correspondence', type:'T', column:'theorem', branch:'physics', maturity:'Named', priority:'medium', short:'Closure-defect geometry sourced by transport density admits a GR-like description.', details:'Visible for completeness, but not mature enough to present as derived physics. It tells readers where the ambition points, not where the proof currently stands.', depends:['T15','T16'], unlocks:['D8'], tags:['gravity','frontier']},
+  {id:'T24', label:'UD-T24 Discrete Admissibility Spectrum', type:'T', column:'theorem', branch:'quantum', maturity:'Formalized', priority:'high', short:'Discrete admissibility yields quantized stable mode families.', details:'One of the most important quantum-foundation gates. UD language: admissibility discretizes viable modes. Classical analogy: a spectrum of allowed states.', depends:['O2','O4'], unlocks:['T27','V6'], tags:['quantum gate']},
+  {id:'T26', label:'UD-T26 Noncommuting Update', type:'T', column:'theorem', branch:'quantum', maturity:'Internally Derived', priority:'high', short:'Transport update and admissibility filtering generally do not commute.', details:'A strong conceptual route toward uncertainty and operator structure. In classical operator language, order matters because update and filtering are not the same action.', depends:['O2','O3'], unlocks:['T27','V6'], tags:['quantum gate','strong bridge']},
+  {id:'T27', label:'UD-T27 Schrödinger Correspondence', type:'T', column:'theorem', branch:'quantum', maturity:'Formalized', priority:'medium', short:'Probabilistic admissible transport amplitudes obey a Schrödinger-like equation in the low-energy regime.', details:'Still correspondence-level until Hilbert structure, unitarity, and ħ emergence are sharpened. This is a frontier bridge, not a completed derivation.', depends:['T24','T26'], unlocks:['D7'], tags:['quantum','frontier']},
+  {id:'T29', label:'UD-T29 Entropy Counting', type:'T', column:'theorem', branch:'thermo', maturity:'Externally Comparable', priority:'critical', short:'Entropy is the log-count of admissible micro-configurations for a macrostate.', details:'A strong thermodynamic theorem and part of the first publishable core. This is one of the easiest places for readers from statistical mechanics and information theory to see the big-picture bridge clearly.', depends:['T04','T13'], unlocks:['D5','T30','V3'], tags:['thermo','publishable core']},
+  {id:'T30', label:'UD-T30 Second-Law Tendency', type:'T', column:'theorem', branch:'thermo', maturity:'Sketch Built', priority:'high', short:'Coarse-grained isolated systems tend not to decrease macro-accessible admissible configurations.', details:'Still needs a cleaner isolated-system theorem, but the direction is structurally strong. Classical analogy: second-law asymmetry via accessible state counting.', depends:['T29'], unlocks:['D5'], tags:['thermo']},
+  {id:'T31', label:'UD-T31 Bonding', type:'T', column:'theorem', branch:'chemistry', maturity:'Sketch Built', priority:'high', short:'Chemical bonds are persistent local transport-sharing closure motifs.', details:'A strong chemistry bridge because it re-expresses bonding in closure language. For a chemist, this is where UD tries to widen the ontology without dismissing the chemistry itself.', depends:['T03','T04','O3'], unlocks:['D10','V5'], tags:['chemistry','materials']},
+  {id:'T32', label:'UD-T32 Reaction Transition', type:'T', column:'theorem', branch:'chemistry', maturity:'Internally Derived', priority:'high', short:'Reactions cross elevated-instability bottlenecks between closure basins.', details:'Readable and useful: reactions become basin crossings in a stability landscape. Classical analogy: a transition-state barrier.', depends:['T31','T07'], unlocks:['D10','V5'], tags:['chemistry']},
+  {id:'T33', label:'UD-T33 Elastic Response', type:'T', column:'theorem', branch:'chemistry', maturity:'Internally Derived', priority:'high', short:'Small perturbations near repeat closure minima produce linear restoring response.', details:'One of the strongest materials branch theorems and part of the first publishable core. Classical analogy: linear elasticity near a stable minimum.', depends:['T06','O4'], unlocks:['T34','D9','V4'], tags:['materials','publishable core']},
+  {id:'T34', label:'UD-T34 Fracture Threshold', type:'T', column:'theorem', branch:'chemistry', maturity:'Sketch Built', priority:'medium', short:'Fracture begins when boundary defect accumulation exceeds local restoration capacity.', details:'An accessible materials theorem with strong visualization potential. Classical analogy: threshold failure when damage outpaces repair or redistribution.', depends:['T33','T07'], unlocks:['D9','V4'], tags:['materials']},
+  {id:'T35', label:'UD-T35 Homeostasis', type:'T', column:'theorem', branch:'biology', maturity:'Formalized', priority:'medium', short:'Repair and regulated transport keep defect accumulation below destabilizing threshold.', details:'Good biology bridge with clear restraint: this is about regulated closure maintenance, not mystical vitality. It is one of the best places for biologists to see UD as a systems framework rather than an alien ontology.', depends:['T06','T07'], unlocks:['V7'], tags:['biology']},
+  {id:'T40', label:'UD-T40 Conscious Recursive Closure', type:'T', column:'theorem', branch:'biology', maturity:'Named', priority:'medium', short:'Consciousness as stabilized recursively self-modeling closure.', details:'Clearly conjectural. Included for frontier completeness and governance clarity, not as a solved result.', depends:['T35'], unlocks:['V7'], tags:['conjecture','frontier']},
+  {id:'D1', label:'Diffusion Equation', type:'D', column:'derivation', branch:'physics', maturity:'Continuum Recovered', priority:'high', short:'Recovered from local unbiased transport.', details:'One of the cleanest and strongest derivation nodes downstream of the transport operator stack. This is the classical equation card made explicit inside the graph.', depends:['T17'], unlocks:['V2'], tags:['PDE']},
+  {id:'D2', label:'Wave Equation', type:'D', column:'derivation', branch:'physics', maturity:'Continuum Recovered', priority:'high', short:'Recovered from second-order closure response.', details:'Oscillatory transport regime derivation node. Useful for connecting UD to wave, acoustics, and field-trained readers.', depends:['T18'], unlocks:['V2'], tags:['PDE']},
+  {id:'D3', label:'Continuity Equation', type:'D', column:'derivation', branch:'physics', maturity:'Continuum Recovered', priority:'high', short:'Recovered from conserved admissible transport.', details:'A clean derivation node with strong pedagogical value because it links directly to conservation language used across physics and engineering.', depends:['T21'], unlocks:['V2'], tags:['conservation']},
+  {id:'D4', label:'Newtonian Mechanics', type:'D', column:'derivation', branch:'mechanics', maturity:'Mapped by Correspondence', priority:'medium', short:'Low-defect packet motion approximates Newtonian mechanics.', details:'Useful public bridge, but still depends on full packet formalism and emergent inertia refinement.', depends:['T19','T20'], unlocks:['V2'], tags:['mechanics']},
+  {id:'D5', label:'Thermodynamics', type:'D', column:'derivation', branch:'thermo', maturity:'Mapped by Correspondence', priority:'high', short:'Entropy counting and second-law tendency support the thermodynamic branch.', details:'Strong conceptual bridge with good internal traction. Particularly useful for readers who trust ensemble logic more than ontological speculation.', depends:['T29','T30'], unlocks:['V3'], tags:['thermo']},
+  {id:'D6', label:'Maxwell Equations', type:'D', column:'derivation', branch:'physics', maturity:'Mapped by Correspondence', priority:'medium', short:'Field equations sit downstream of oriented conserved transport.', details:'Clearly frontier-facing and not yet fully derived. This node remains visible because electromagnetism is too central to hide, but too important to overstate.', depends:['T22'], unlocks:['V2'], tags:['field theory','frontier']},
+  {id:'D7', label:'Schrödinger Equation', type:'D', column:'derivation', branch:'quantum', maturity:'Mapped by Correspondence', priority:'medium', short:'Low-energy amplitude dynamics correspond to Schrödinger-like evolution.', details:'Still needs Hilbert, unitarity, and measurement formalism reinforcement. Included as a governance-bounded bridge.', depends:['T27'], unlocks:['V6'], tags:['quantum','frontier']},
+  {id:'D8', label:'Einstein Field Equation', type:'D', column:'derivation', branch:'physics', maturity:'Open Conjecture', priority:'medium', short:'GR-like gravity recovery remains an open frontier target.', details:'Shown for completeness, not to be marketed as established. Its presence is a promise of proof work, not proof itself.', depends:['T23'], unlocks:['V2'], tags:['gravity','frontier']},
+  {id:'D9', label:'Elasticity / Fracture', type:'D', column:'derivation', branch:'chemistry', maturity:'Continuum Recovered', priority:'high', short:'Materials response emerges from perturbation and defect-threshold logic.', details:'A visually rich derivation branch with good engineering value. Strong for audiences who think in stress, modulus, and damage accumulation.', depends:['T33','T34'], unlocks:['V4'], tags:['materials']},
+  {id:'D10', label:'Chemical Dynamics', type:'D', column:'derivation', branch:'chemistry', maturity:'Mapped by Correspondence', priority:'high', short:'Bonding and reaction basins map into chemistry-scale dynamics.', details:'Conceptually strong and portal-friendly. Helps chemists see the big picture without asking them to abandon chemistry’s own descriptive power.', depends:['T31','T32'], unlocks:['V5'], tags:['chemistry']},
+  {id:'V1', label:'Foundations Dashboard', type:'V', column:'portal', branch:'governance', maturity:'Live UI', priority:'high', short:'Motif ladder, closure vs open comparison, stability and boundary panel.', details:'The foundations route translates the core spine into a readable public science story.', depends:['T03','T04','T06','T07'], unlocks:[], tags:['dashboard']},
+  {id:'V2', label:'Physics Dashboard', type:'V', column:'portal', branch:'physics', maturity:'Live UI', priority:'high', short:'Transport-to-diffusion, continuity, waves, mechanics, and frontier field/gravity panel.', details:'The main physics route groups the strongest recoveries with explicit frontier disclaimers so that readers can separate mature structure from open ambition.', depends:['D1','D2','D3','D4','D6','D8'], unlocks:[], tags:['dashboard']},
+  {id:'V3', label:'Thermodynamics Dashboard', type:'V', column:'portal', branch:'thermo', maturity:'Live UI', priority:'high', short:'Entropy counting and second-law tendency panel.', details:'A strong public module because it ties directly to admissible microstate counting and familiar thermodynamic intuition.', depends:['D5'], unlocks:[], tags:['dashboard']},
+  {id:'V4', label:'Materials Dashboard', type:'V', column:'portal', branch:'chemistry', maturity:'Live UI', priority:'high', short:'Elasticity, defect concentration, and fracture sequence panel.', details:'Strong public-science visualization candidate for engineers and materials researchers.', depends:['D9'], unlocks:[], tags:['dashboard']},
+  {id:'V5', label:'Chemistry Dashboard', type:'V', column:'portal', branch:'chemistry', maturity:'Live UI', priority:'high', short:'Bond motifs, reaction basins, and interface chemistry panel.', details:'Maps the chemistry route directly into dashboard language without hiding its relation to the larger system.', depends:['D10'], unlocks:[], tags:['dashboard']},
+  {id:'V6', label:'Quantum Dashboard', type:'V', column:'portal', branch:'quantum', maturity:'Live UI', priority:'medium', short:'Discrete mode selector, admissibility filter demo, and operator-order effects panel.', details:'Should always be paired with maturity disclaimers and clearly identified open gaps.', depends:['T24','T26','D7'], unlocks:[], tags:['dashboard','frontier']},
+  {id:'V7', label:'Biology / Cognition Dashboard', type:'V', column:'portal', branch:'biology', maturity:'Live UI', priority:'medium', short:'Homeostasis, regulated persistence, and explicit conjecture boundary for consciousness.', details:'Keeps the biology branch active while preserving governance discipline.', depends:['T35','T40'], unlocks:[], tags:['dashboard','governance']},
+  {id:'V8', label:'Governance Dashboard', type:'V', column:'portal', branch:'governance', maturity:'Live UI', priority:'high', short:'Theorem maturity board, badge history, active/open proof queue.', details:'The core governance export tile for public and internal review.', depends:['T03','T04','T06','T17','T21','T29','T22','T23','T27','T40'], unlocks:[], tags:['dashboard','governance']},
+
+  /* ═══════ NEW SESSION 2026-04-22 NODES ═══════ */
+  {id:'T42', label:'UD-T42 Gauss-Bonnet Distinction Coupling', type:'T', column:'theorem', branch:'physics', maturity:'Internally Derived', priority:'critical', short:'α_dist = (2πχ)²/|A₄| = 3/(4π²). The distinction coupling inverse is the square of total Gauss-Bonnet curvature divided by the alternating group order.', details:'The face holonomy coupling g₃² = 3/π gives α_dist = 3/(4π²) via standard α = g²/(4π). The inverse α_dist⁻¹ = 4π²/3 ≈ 13 equals (2πχ)²/|A₄| where χ = V−E+F = 2 (Euler characteristic) and |A₄| = 12 (alternating group = nonzero Hodge modes on K₄). All Hodge Laplacian eigenvalues on K₄ are exactly 4 — maximally degenerate, a K₄-specific property.', depends:['O1','T03'], unlocks:['T43','D11','D12'], tags:['gauge','derived','publishable core']},
+
+  {id:'T43', label:'UD-T43 Support-Completeness (T_42+1)', type:'T', column:'theorem', branch:'physics', maturity:'Internally Derived', priority:'critical', short:'α_s(mZ) = 129/(112π²) = 0.1167 (1.1%). 43 = E²+E+1 support weights: 36 edge-edge + 6 identity-cross + 1 identity-self.', details:'The strong coupling at the Z mass is the distinction coupling multiplied by the seed threshold per vertex: α_s = α_dist × S₀/V = (3/(4π²))×(43/28). The 43 weights decompose as E² = 36 (complete edge-edge support via face-mediated connections including 3 opposite pairs at 2-step), E = 6 (identity-relational cross), and 1 (identity self-distinction). Proof ladder L1–L4 all closed. ⟨|E_face|⟩ = E/V = 3/2 proved as a K₄-specific spectral identity (fails for V≥5). Cross-validated: Aster decomposition S₀/V = (13/8)×(86/91). 12/12 promotion gates cleared.', depends:['T42'], unlocks:['D11'], tags:['gauge','★ prediction','derived','publishable core']},
+
+  {id:'T44', label:'UD-T44 Vertex Holonomy Model', type:'T', column:'theorem', branch:'physics', maturity:'Formalized', priority:'critical', short:'g_p² = (p+1)/π: face=3/π, edge=2/π, vertex=1/π. Coupling ratios 3:2:1 from boundary element counting.', details:'The gauge coupling on each simplex type equals its boundary element count divided by π. Faces have 3 boundary edges → g₃² = 3/π. Edges have 2 boundary vertices → g₂² = 2/π. Vertices have 1 self-boundary → g₁² = 1/π. The ratios g₃:g₂:g₁ = 3:2:1 are DERIVED from K₄ combinatorics with zero free parameters. The 1/π overall normalization is motivated by the Hodge eigenvalue (λ=4) divided by the solid angle Ω_p = 4π/(p+1), but not rigorously proved.', depends:['T42'], unlocks:['D12','D13','D14'], tags:['gauge','electroweak','structural']},
+
+  {id:'D11', label:'Strong Coupling α_s Derived', type:'D', column:'derivation', branch:'physics', maturity:'Externally Comparable', priority:'critical', short:'α_s(mZ) = 129/(112π²) = 0.1167 vs measured 0.1180. Error 1.1%.', details:'Zero-parameter prediction of the strong coupling constant. Uses face holonomy, support-completeness theorem, and seed threshold — all from K₄ combinatorics. No RG running needed. No matching scale fitted. The formula is 3×43/(112π²) where 3 = boundary edges per face, 43 = E²+E+1 support weight, 112 = 4×28 = V×VΔ normalization.', depends:['T43'], unlocks:[], tags:['★ prediction','gauge','publishable core']},
+
+  {id:'D12', label:'Weinberg Angle sin²θ_W = 3/13', type:'D', column:'derivation', branch:'physics', maturity:'Externally Comparable', priority:'critical', short:'sin²θ_W(mZ) = 3/13 = 0.23077 vs measured 0.23121. Error 0.19%.', details:'Zero-parameter prediction of the Weinberg angle at the Z mass. Uses ONLY the coupling ratios g₃:g₂:g₁ = 3:2:1 (from boundary counting) plus standard GUT normalization g₁² = (5/3)g\'². The formula: sin²θ = (3/5)/((3/5)+2) = 3/13. This is the most robust EW prediction because it requires no 1/π normalization — only ratios.', depends:['T44'], unlocks:['D14'], tags:['★ prediction','electroweak','publishable core']},
+
+  {id:'D13', label:'Fine Structure Constant α_EM⁻¹ = 13π²', type:'D', column:'derivation', branch:'physics', maturity:'Externally Comparable', priority:'high', short:'α_EM⁻¹ = 13π² = 128.30 vs measured 127.95. Error 0.28%. Consistency check.', details:'The fine structure constant inverse equals 13π² where 13 = V+E+F−1 (boundary simplices of K₄). Derived as α_EM = α₂ × sin²θ = (1/(3π²)) × (3/13) = 1/(13π²). This is a consistency check, not independent: it follows algebraically from α₂ and sin²θ.', depends:['T44','D12'], unlocks:[], tags:['★ consistency','electroweak']},
+
+  {id:'D14', label:'EW Boson Masses (m_W, m_Z)', type:'D', column:'derivation', branch:'physics', maturity:'Externally Comparable', priority:'high', short:'m_W = 80.20 GeV (0.2%), m_Z = 91.44 GeV (0.3%). Consistency checks using measured VEV.', details:'W and Z boson masses from the vertex holonomy model plus measured VEV v = 246.22 GeV. m_W = √(4πα₂)×v/2 = √(4/(3π))×246.22/2 = 80.20 GeV. m_Z = m_W/√(1−3/13) = m_W/√(10/13) = 91.44 GeV. Previous predictions: m_W = 90 GeV (12%), m_Z = 104 GeV (14%). Improvement: 50× on both.', depends:['T44','D12'], unlocks:[], tags:['★ consistency','electroweak']}
+];
+
+const maturityWeights = {'Defined':28,'Formalized':45,'Sketch Built':58,'Internally Derived':72,'Externally Comparable':88,'Continuum Recovered':82,'Mapped by Correspondence':55,'Open Conjecture':20,'Named':18,'Live UI':90};
+const bottlenecks = ['T03','T04','T06','T17','T24','T26'];
+const publishableCore = new Set(['P1','P2','O1','O2','O3','O4','O5','T03','T04','T06','T07','T17','T21','T29','T19','T33','T42','T43','D11','D12']);
+const stageGroups = [
+  {title:'Primitives', ids:['P1','P2']},
+  {title:'Operators', ids:['O1','O2','O3','O4','O5']},
+  {title:'Theorem Spine', ids:['T03','T04','T06','T07','T17','T21','T29','T42','T43','T44']},
+  {title:'Derivations', ids:['D1','D3','D4','D5','D9','D10','D11','D12','D13','D14']},
+  {title:'Portal Views', ids:['V1','V2','V3','V4','V5','V8']}
+];
+
+const metricsEl = document.getElementById('metrics');
+const miniGraphEl = document.getElementById('miniGraph');
+const maturityBarsEl = document.getElementById('maturityBars');
+const mapStageEl = document.getElementById('mapStage');
+const mapOverlayEl = document.getElementById('mapOverlay');
+const detailBody = document.getElementById('detailBody');
+const searchInput = document.getElementById('searchInput');
+const filterSelect = document.getElementById('filterSelect');
+const focusCoreBtn = document.getElementById('focusCoreBtn');
+const resetBtn = document.getElementById('resetBtn');
+const bottlenecksEl = document.getElementById('bottlenecks');
+const trailStripEl = document.getElementById('trailStrip');
+const domainRowEl = document.getElementById('domainRow');
+const coreGrid = document.getElementById('coreGrid');
+const derivedGrid = document.getElementById('derivedGrid');
+const frontierGrid = document.getElementById('frontierGrid');
+
+let selectedId = 'T03';
+let currentMode = 'all';
+let focusCore = false;
+let layerMode = 'all';
+
+function findNode(id){ return nodes.find(n => n.id === id); }
+function priorityClass(priority){ return priority === 'critical' ? 'critical' : (priority === 'high' ? 'high' : 'medium'); }
+function relatedIds(node){
+  const direct = new Set([node.id, ...(node.depends||[]), ...(node.unlocks||[])]);
+  nodes.forEach(n => {
+    if((n.depends||[]).includes(node.id) || (n.unlocks||[]).includes(node.id)) direct.add(n.id);
+  });
+  return direct;
+}
+function isFrontier(node){ return ['Open Conjecture','Named'].includes(node.maturity) || (node.tags||[]).includes('frontier'); }
+function layerFor(node){
+  if(node.column === 'primitive' || node.column === 'operator') return 'core';
+  if(['T03','T04','T05','T06','T07'].includes(node.id)) return 'core';
+  if(isFrontier(node)) return 'frontier';
+  return 'derived';
+}
+function matchBranch(node){
+  if(currentMode === 'all') return true;
+  const map = {chemistry:['chemistry'],physics:['physics'],mechanics:['mechanics'],thermo:['thermo'],quantum:['quantum'],biology:['biology'],governance:['governance'],foundations:['foundations']};
+  return (map[currentMode] || []).includes(node.branch);
+}
+function matchLayerMode(node){
+  if(layerMode === 'all') return true;
+  if(layerMode === 'core') return layerFor(node) === 'core';
+  if(layerMode === 'derived') return layerFor(node) === 'derived';
+  if(layerMode === 'frontier') return layerFor(node) === 'frontier';
+  if(layerMode === 'physics') return ['physics','mechanics','thermo'].includes(node.branch);
+  if(layerMode === 'quantum') return node.branch === 'quantum';
+  return true;
+}
+function queryMatch(node,q){
+  if(!q) return true;
+  const hay = [node.id,node.label,node.short,node.details,node.branch,node.maturity,...(node.tags||[])].join(' ').toLowerCase();
+  return hay.includes(q.toLowerCase());
+}
+function visibleNodes(){
+  const q = searchInput.value.trim();
+  return nodes.filter(n => matchBranch(n) && matchLayerMode(n) && queryMatch(n,q) && (!focusCore || publishableCore.has(n.id) || (findNode(selectedId)?.depends||[]).includes(n.id) || (findNode(selectedId)?.unlocks||[]).includes(n.id)));
+}
+function renderMetrics(){
+  const counts = {total:nodes.length,core:[...publishableCore].length,frontier:nodes.filter(isFrontier).length,strong:nodes.filter(n => ['Externally Comparable','Internally Derived','Continuum Recovered'].includes(n.maturity)).length};
+  metricsEl.innerHTML = `
+    <div class="metric"><div class="k">${counts.total}</div><div class="l">Live graph nodes</div><div class="s">Primitives → portal views</div></div>
+    <div class="metric"><div class="k">${counts.core}</div><div class="l">Publishable core nodes</div><div class="s">Defensible first release subset</div></div>
+    <div class="metric"><div class="k">${counts.strong}</div><div class="l">Strong / derived zone</div><div class="s">Best near-term science spine</div></div>
+    <div class="metric"><div class="k">${counts.frontier}</div><div class="l">Frontier / open nodes</div><div class="s">Clearly bounded by governance</div></div>`;
+  const miniSets = [
+    {title:'Core spine', ids:['P1','P2','O1','O2','O3']},
+    {title:'Foundations', ids:['T03','T04','T06','T07']},
+    {title:'Physics', ids:['T17','T21','T18','T20']},
+    {title:'Gauge / EW', ids:['T42','T43','T44','D11','D12']},
+    {title:'Quantum gate', ids:['T24','T26','T27']}
+  ];
+  miniGraphEl.innerHTML = miniSets.map(group => `
+    <div class="mini-col"><h4>${group.title}</h4><div class="mini-stack">${group.ids.filter(id => findNode(id)).map(id => `<button class="node-pill ${selectedId===id?'active':''}" data-jump="${id}">${findNode(id).id}</button>`).join('')}</div></div>`).join('');
+}
+function renderMaturityBars(){
+  const rows = [
+    {label:'Foundational proof spine', value:62},
+    {label:'Continuum recovery branch', value:79},
+    {label:'Mechanics / materials branch', value:67},
+    {label:'Quantum foundations gate', value:56},
+    {label:'Field / gravity frontier', value:29},
+    {label:'Governance readiness', value:86}
+  ];
+  maturityBarsEl.innerHTML = rows.map(row => `<div class="bar-card"><div class="bar-head"><span>${row.label}</span><strong>${row.value}%</strong></div><div class="bar-track"><div class="bar-fill" style="width:${row.value}%"></div></div></div>`).join('');
+}
+function renderDomains(){
+  const defs = [
+    {id:'foundations', title:'Foundations', claim:'Primitive stack, closure, admissibility, stability descent, and boundary logic.', strength:78},
+    {id:'physics', title:'Physics', claim:'Transport, diffusion, continuity, wave recovery, geometry bridge, and governed frontier field/gravity work.', strength:71},
+    {id:'thermo', title:'Thermodynamics', claim:'Entropy counting and second-law tendency from admissible microstate structure.', strength:74},
+    {id:'chemistry', title:'Chemistry / Materials', claim:'Bond motifs, reaction basins, elasticity, and fracture thresholds.', strength:76},
+    {id:'quantum', title:'Quantum', claim:'Discrete admissibility, noncommuting update logic, and bounded Schrödinger correspondence.', strength:57},
+    {id:'biology', title:'Biology / Cognition', claim:'Homeostasis and regulated persistence, with consciousness held explicitly as conjectural.', strength:46},
+    {id:'governance', title:'Governance', claim:'Maturity board, bottlenecks, safe public framing, and publishable-core subset.', strength:86}
+  ];
+  domainRowEl.innerHTML = defs.map(d => {
+    const domainNodes = nodes.filter(n => d.id==='physics' ? ['physics','mechanics'].includes(n.branch) : n.branch===d.id);
+    const strong = domainNodes.filter(n => ['Externally Comparable','Internally Derived','Continuum Recovered'].includes(n.maturity)).length;
+    const frontier = domainNodes.filter(isFrontier).length;
+    const active = currentMode === d.id || (d.id==='physics' && currentMode==='mechanics');
+    return `<article class="domain-card ${active?'active':''}" data-domain="${d.id}"><h3>${d.title}</h3><div class="domain-meta"><span class="domain-mini">${domainNodes.length} nodes</span><span class="domain-mini">${strong} strong</span><span class="domain-mini">${frontier} frontier</span></div><div class="domain-claim">${d.claim}</div><div class="domain-strength"><span style="width:${d.strength}%"></span></div></article>`;
+  }).join('');
+}
+function renderMap(){
+  const selected = findNode(selectedId) || nodes[0];
+  const related = relatedIds(selected);
+  mapStageEl.innerHTML = stageGroups.map(group => `
+    <div class="stage-card"><h3>${group.title}</h3><div class="stage-list">${group.ids.map(id => findNode(id)).filter(Boolean).map(node => `<button class="stage-node ${selectedId===node.id?'active':''} ${related.has(node.id)&&node.id!==selectedId?'related':''}" data-jump="${node.id}" id="map-${node.id}"><b>${node.id}</b><span>${node.label}</span></button>`).join('')}</div></div>`).join('');
+  requestAnimationFrame(() => drawMapConnections(selected));
+}
+function drawMapConnections(selected){
+  const sourceEl = document.getElementById(`map-${selected.id}`);
+  if(!sourceEl){ mapOverlayEl.innerHTML=''; return; }
+  const shellRect = mapOverlayEl.getBoundingClientRect();
+  const idsToDraw = Array.from(new Set([...(selected.depends||[]), ...(selected.unlocks||[])]))
+    .filter(id => document.getElementById(`map-${id}`));
+  if(!idsToDraw.length){ mapOverlayEl.innerHTML=''; return; }
+  const srcRect = sourceEl.getBoundingClientRect();
+  const x1 = srcRect.left - shellRect.left + srcRect.width/2;
+  const y1 = srcRect.top - shellRect.top + srcRect.height/2;
+  const paths = idsToDraw.map(id => {
+    const targetEl = document.getElementById(`map-${id}`);
+    const tr = targetEl.getBoundingClientRect();
+    const x2 = tr.left - shellRect.left + tr.width/2;
+    const y2 = tr.top - shellRect.top + tr.height/2;
+    const dx = (x2 - x1) * 0.35;
+    const d = `M ${x1} ${y1} C ${x1+dx} ${y1}, ${x2-dx} ${y2}, ${x2} ${y2}`;
+    return `<path class="dep-line" d="${d}"/><circle class="dep-dot" cx="${x2}" cy="${y2}" r="3.5"></circle>`;
+  }).join('');
+  mapOverlayEl.innerHTML = `<svg viewBox="0 0 ${shellRect.width} ${shellRect.height}" preserveAspectRatio="none" aria-hidden="true">${paths}<circle class="dep-dot" cx="${x1}" cy="${y1}" r="4"></circle></svg>`;
+}
+function lineagePath(node){
+  const visited = new Set();
+  const chain = [];
+  let current = node;
+  while(current && !visited.has(current.id)){
+    visited.add(current.id); chain.unshift(current);
+    const nextId = (current.depends||[])[0];
+    current = nextId ? findNode(nextId) : null;
+  }
+  const down=[]; let cursor=node; const seenDown=new Set([node.id]);
+  while(cursor && (cursor.unlocks||[]).length){
+    const next=findNode(cursor.unlocks[0]);
+    if(!next || seenDown.has(next.id)) break;
+    down.push(next); seenDown.add(next.id); cursor=next;
+  }
+  return [...chain,...down];
+}
+function renderTrail(){
+  const node = findNode(selectedId) || nodes[0];
+  const trail = lineagePath(node);
+  trailStripEl.innerHTML = trail.map((n,idx) => `${idx?'<span class="trail-arrow">→</span>':''}<button class="trail-node ${n.id===selectedId?'active':''}" data-jump="${n.id}"><strong>${n.id}</strong> <span>${n.label.replace(/^UD-T\d+\s/, '')}</span></button>`).join('') || '<span class="trail-node active">No dependency trail available</span>';
+}
+function renderBottlenecks(){
+  const selected = findNode(selectedId) || nodes[0];
+  const related = relatedIds(selected);
+  bottlenecksEl.innerHTML = bottlenecks.map(id => {
+    const n = findNode(id);
+    const cls = related.has(id) ? 'related' : (selected.id !== id ? 'dim' : '');
+    return `<button class="mini-link ${cls}" data-jump="${id}"><strong>${n.id}</strong> — ${n.label.replace(/^UD-T\d+\s/, '')}</button>`;
+  }).join('');
+}
+function buildNodeCard(node, selected, related){
+  const isRelated = related.has(node.id);
+  const dimClass = selected.id !== node.id && !isRelated ? 'dim' : '';
+  return `<article class="node-card ${node.id===selected.id?'selected':''} ${isRelated&&node.id!==selected.id?'related':''} ${dimClass}" data-id="${node.id}"><div class="node-top"><div class="node-id">${node.id}</div><span class="badge ${priorityClass(node.priority)}">${node.priority}</span></div><h3>${node.label}</h3><p>${node.short}</p><div class="chips"><span class="chip">${node.branch}</span><span class="chip">${node.maturity}</span><span class="chip">${node.type}</span></div></article>`;
+}
+function buildSection(title, items, selected, related, key){
+  const id = `section-${key}`;
+  return `<div class="section-block" data-section-block="${id}"><div class="section-header" data-toggle="${id}"><h4>${title}</h4><span class="section-toggle">›</span></div><div class="section-content" id="${id}">${items.map(n=>buildNodeCard(n,selected,related)).join('')}</div></div>`;
+}
+function renderLayers(){
+  const visible = visibleNodes();
+  const selected = findNode(selectedId) || nodes[0];
+  const related = relatedIds(selected);
+  const coreNodes = visible.filter(n => layerFor(n) === 'core');
+  const derivedNodes = visible.filter(n => layerFor(n) === 'derived');
+  const frontierNodes = visible.filter(n => layerFor(n) === 'frontier');
+  const coreByType = {primitives:coreNodes.filter(n=>n.column==='primitive'),operators:coreNodes.filter(n=>n.column==='operator'),theorems:coreNodes.filter(n=>n.column==='theorem')};
+  coreGrid.innerHTML = buildSection('Primitives',coreByType.primitives,selected,related,'core-p') + buildSection('Operators',coreByType.operators,selected,related,'core-o') + buildSection('Core Theorems',coreByType.theorems,selected,related,'core-t');
+  const derivedByBranch = {physics:derivedNodes.filter(n=>['physics','mechanics'].includes(n.branch)),thermo:derivedNodes.filter(n=>n.branch==='thermo'),chemistry:derivedNodes.filter(n=>n.branch==='chemistry')};
+  derivedGrid.innerHTML = buildSection('Physics / Mechanics',derivedByBranch.physics,selected,related,'d-p') + buildSection('Thermodynamics',derivedByBranch.thermo,selected,related,'d-t') + buildSection('Chemistry / Materials',derivedByBranch.chemistry,selected,related,'d-c');
+  frontierGrid.innerHTML = buildSection('Open / Frontier Work',frontierNodes,selected,related,'f-all');
+  const layerPanels = [
+    {el:document.getElementById('coreLayer'), has:coreNodes.some(n => related.has(n.id) || n.id===selected.id)},
+    {el:document.getElementById('derivedLayer'), has:derivedNodes.some(n => related.has(n.id) || n.id===selected.id)},
+    {el:document.getElementById('frontierLayer'), has:frontierNodes.some(n => related.has(n.id) || n.id===selected.id)}
+  ];
+  layerPanels.forEach(({el,has}) => { el.style.borderColor = has ? 'var(--accent)' : 'var(--line)'; el.style.boxShadow = has ? '0 10px 26px rgba(30,90,168,.08)' : 'var(--shadow)'; });
+}
+function renderDetail(){
+  const node = findNode(selectedId) || nodes[0];
+  const deps = (node.depends||[]).map(findNode).filter(Boolean);
+  const unlocks = (node.unlocks||[]).map(findNode).filter(Boolean);
+  const weight = maturityWeights[node.maturity] ?? 50;
+  const impact = unlocks.length ? `${unlocks.length} direct unlock${unlocks.length===1?'':'s'}` : 'Terminal / display node';
+  const bigPicture = node.branch==='foundations' ? 'This node helps define the grammar of the framework.' : node.branch==='physics' ? 'This node helps connect UD to familiar physical law language.' : node.branch==='chemistry' ? 'This node broadens chemistry / materials intuition into closure-and-interface language.' : node.branch==='thermo' ? 'This node helps readers see entropy and macro behavior as admissibility structure.' : node.branch==='quantum' ? 'This node sits in the most interpretation-sensitive branch and should be read carefully.' : node.branch==='biology' ? 'This node links regulated persistence to living and recursive systems.' : 'This node governs how the theory should be presented and evaluated.';
+  detailBody.innerHTML = `<div class="node-id">${node.type}</div><div class="detail-title">${node.id} — ${node.label}</div><div class="detail-sub">${node.details}</div><div class="detail-grid"><div class="detail-box"><label>Layer</label><div>${layerFor(node)}</div></div><div class="detail-box"><label>Branch</label><div>${node.branch}</div></div><div class="detail-box"><label>Maturity</label><div>${node.maturity}</div></div><div class="detail-box"><label>Relative readiness</label><div>${weight}%</div></div></div><div class="detail-grid"><div class="detail-box"><label>Priority</label><div>${node.priority}</div></div><div class="detail-box"><label>Impact</label><div>${impact}</div></div></div><div class="detail-section"><h4>Big-picture reading</h4><p>${bigPicture}</p></div><div class="detail-section"><h4>Dependencies</h4>${deps.length ? `<div class="list-mini">${deps.map(n => `<button class="mini-link related" data-jump="${n.id}">${n.id} — ${n.label}</button>`).join('')}</div>` : `<p>No upstream dependencies listed.</p>`}</div><div class="detail-section"><h4>Unlocks</h4>${unlocks.length ? `<div class="list-mini">${unlocks.map(n => `<button class="mini-link related" data-jump="${n.id}">${n.id} — ${n.label}</button>`).join('')}</div>` : `<p>No downstream unlocks listed.</p>`}</div><div class="detail-section"><h4>Tags</h4><p>${(node.tags||[]).join(' • ') || 'No tags'}</p></div>`;
+}
+function captureSectionState(){ const state={}; document.querySelectorAll('.section-content').forEach(el => { state[el.id]=el.classList.contains('collapsed'); }); return state; }
+function restoreSectionState(){ if(!preStorySectionState) return; document.querySelectorAll('.section-content').forEach(el => { const wasCollapsed=preStorySectionState[el.id]; if(wasCollapsed) el.classList.add('collapsed'); else el.classList.remove('collapsed'); }); preStorySectionState=null; }
+function clearStoryFocus(){ document.querySelectorAll('.node-card,.stage-node,.trail-node').forEach(el => el.classList.remove('dim','selected','story-focus')); }
+function expandSectionsForStory(stepNodes){ document.querySelectorAll('.section-content').forEach(el => el.classList.add('collapsed')); stepNodes.forEach(id => { const card=document.querySelector(`.node-card[data-id="${id}"]`); if(card){ const section=card.closest('.section-content'); if(section) section.classList.remove('collapsed'); } }); }
+function drawStoryEdges(stepNodes){
+  const shellRect = mapOverlayEl.getBoundingClientRect(); if(!shellRect.width || !shellRect.height) return;
+  const pairs=[]; for(let i=0;i<stepNodes.length-1;i++){ const a=document.getElementById(`map-${stepNodes[i]}`); const b=document.getElementById(`map-${stepNodes[i+1]}`); if(a&&b) pairs.push([a,b]); }
+  if(!pairs.length){ drawMapConnections(findNode(selectedId) || nodes[0]); return; }
+  const paths = pairs.map(([a,b],idx)=>{ const ar=a.getBoundingClientRect(); const br=b.getBoundingClientRect(); const x1=ar.left-shellRect.left+ar.width/2; const y1=ar.top-shellRect.top+ar.height/2; const x2=br.left-shellRect.left+br.width/2; const y2=br.top-shellRect.top+br.height/2; const dx=(x2-x1)*0.35; const d=`M ${x1} ${y1} C ${x1+dx} ${y1}, ${x2-dx} ${y2}, ${x2} ${y2}`; return `<path class="dep-line selected story-edge" style="animation-delay:${idx * 0.18}s" d="${d}"/><circle class="dep-dot" cx="${x1}" cy="${y1}" r="4"></circle><circle class="dep-dot" cx="${x2}" cy="${y2}" r="4"></circle>`; }).join('');
+  mapOverlayEl.innerHTML = `<svg viewBox="0 0 ${shellRect.width} ${shellRect.height}" preserveAspectRatio="none" aria-hidden="true">${paths}</svg>`;
+}
+function renderStory(){
+  const step = storySteps[storyIndex];
+  document.getElementById('storyTitle').innerText = step.title;
+  document.getElementById('storyText').innerText = step.text;
+  document.getElementById('storyProgress').innerText = `Step ${storyIndex + 1} of ${storySteps.length}`;
+  expandSectionsForStory(step.nodes); clearStoryFocus(); document.querySelectorAll('.node-card').forEach(el => el.classList.add('dim'));
+  step.nodes.forEach(id => { const card=document.querySelector(`.node-card[data-id="${id}"]`); const mapNode=document.getElementById(`map-${id}`); const trailNode=Array.from(document.querySelectorAll('.trail-node')).find(el => el.textContent.includes(id)); if(card){ card.classList.remove('dim'); card.classList.add('selected','story-focus'); } if(mapNode) mapNode.classList.add('story-focus'); if(trailNode) trailNode.classList.add('story-focus'); });
+  const firstCard=document.querySelector(`.node-card[data-id="${step.nodes[0]}"]`); if(firstCard) firstCard.scrollIntoView({behavior:'smooth',block:'center',inline:'nearest'});
+  drawStoryEdges(step.nodes);
+}
+function renderLayers(){
+  const visible = visibleNodes();
+  const selected = findNode(selectedId) || nodes[0];
+  const related = relatedIds(selected);
+  const q = searchInput.value.trim();
+
+  const coreNodes = nodes.filter(n =>
+    layerFor(n) === 'core' &&
+    matchLayerMode(n) &&
+    queryMatch(n, q) &&
+    (
+      !focusCore ||
+      publishableCore.has(n.id) ||
+      (selected.depends || []).includes(n.id) ||
+      (selected.unlocks || []).includes(n.id)
+    )
+  );
+
+  const derivedNodes = visible.filter(n => layerFor(n) === 'derived');
+  const frontierNodes = visible.filter(n => layerFor(n) === 'frontier');
+
+  const coreByType = {
+    primitives: coreNodes.filter(n => n.column === 'primitive'),
+    operators: coreNodes.filter(n => n.column === 'operator'),
+    theorems: coreNodes.filter(n => n.column === 'theorem')
+  };
+
+  coreGrid.innerHTML =
+    buildSection('Primitives', coreByType.primitives, selected, related, 'core-p') +
+    buildSection('Operators', coreByType.operators, selected, related, 'core-o') +
+    buildSection('Core Theorems', coreByType.theorems, selected, related, 'core-t');
+
+  const derivedByBranch = {
+    physics: derivedNodes.filter(n => ['physics','mechanics'].includes(n.branch)),
+    thermo: derivedNodes.filter(n => n.branch === 'thermo'),
+    chemistry: derivedNodes.filter(n => n.branch === 'chemistry')
+  };
+
+  derivedGrid.innerHTML =
+    buildSection('Physics / Mechanics', derivedByBranch.physics, selected, related, 'd-p') +
+    buildSection('Thermodynamics', derivedByBranch.thermo, selected, related, 'd-t') +
+    buildSection('Chemistry / Materials', derivedByBranch.chemistry, selected, related, 'd-c');
+
+  frontierGrid.innerHTML =
+    buildSection('Open / Frontier Work', frontierNodes, selected, related, 'f-all');
+
+  const layerPanels = [
+    {el:document.getElementById('coreLayer'), has:coreNodes.some(n => related.has(n.id) || n.id===selected.id)},
+    {el:document.getElementById('derivedLayer'), has:derivedNodes.some(n => related.has(n.id) || n.id===selected.id)},
+    {el:document.getElementById('frontierLayer'), has:frontierNodes.some(n => related.has(n.id) || n.id===selected.id)}
+  ];
+
+  layerPanels.forEach(({el,has}) => {
+    el.style.borderColor = has ? 'var(--accent)' : 'var(--line)';
+    el.style.boxShadow = has ? '0 10px 26px rgba(30,90,168,.08)' : 'var(--shadow)';
+  });
+}
+function startStory(path='core'){ storyPath=path; storySteps=storyPaths[path] || storyPaths.core; storyIndex=0; preStorySectionState=captureSectionState(); document.getElementById('storyOverlay').style.display='flex'; document.getElementById('storyPathChip').innerText = path.charAt(0).toUpperCase() + path.slice(1) + ' path'; renderStory(); }
+function nextStory(){ if(storyIndex < storySteps.length - 1){ storyIndex++; renderStory(); } else endStory(); }
+function prevStory(){ if(storyIndex > 0){ storyIndex--; renderStory(); } }
+function endStory(){ document.getElementById('storyOverlay').style.display='none'; if(storyTimer){ clearInterval(storyTimer); storyTimer=null; } document.getElementById('autoPlayBtn').innerText='Auto Play'; clearStoryFocus(); restoreSectionState(); drawMapConnections(findNode(selectedId) || nodes[0]); }
+function toggleAutoplay(){ const btn=document.getElementById('autoPlayBtn'); if(storyTimer){ clearInterval(storyTimer); storyTimer=null; btn.innerText='Auto Play'; return; } btn.innerText='Pause'; storyTimer=setInterval(()=>{ if(storyIndex < storySteps.length - 1){ storyIndex++; renderStory(); } else endStory(); },2400); }
+function handleOverlayClick(e){ if(e.target.id === 'storyOverlay') endStory(); }
+// REPLACE the existing [data-toggle] handler inside bindEvents()
+
+document.addEventListener('click', (e) => {
+  const header = e.target.closest('[data-toggle]');
+  if (!header) return;
+
+  const id = header.getAttribute('data-toggle');
+  const section = document.getElementById(id);
+  if (!section) return;
+
+  section.classList.toggle('collapsed');
+  header.classList.toggle('open');
+});
+function bindEvents(){
+  document.querySelectorAll('[data-id]').forEach(el => { el.onclick = () => { selectedId = el.getAttribute('data-id'); rerender(); }; });
+  document.querySelectorAll('[data-jump]').forEach(el => { el.onclick = () => { selectedId = el.getAttribute('data-jump'); rerender(); }; });
+  document.querySelectorAll('[data-mode]').forEach(el => { el.onclick = () => { layerMode=el.getAttribute('data-mode'); document.querySelectorAll('[data-mode]').forEach(btn => btn.classList.remove('active')); el.classList.add('active'); rerender(); }; });
+  document.querySelectorAll('[data-domain]').forEach(el => { el.onclick = () => { const domain=el.getAttribute('data-domain'); currentMode=domain; filterSelect.value=['foundations','physics','mechanics','thermo','chemistry','quantum','biology','governance'].includes(domain)?domain:'all'; rerender(); }; });
+  document.querySelectorAll('[data-summary]').forEach(el => { el.onclick = () => { const target=el.getAttribute('data-summary'); document.querySelectorAll('[data-summary]').forEach(btn => btn.classList.remove('active')); document.querySelectorAll('.summary-panel').forEach(panel => panel.classList.remove('active')); el.classList.add('active'); const panel=document.getElementById(`summary-${target}`); if(panel) panel.classList.add('active'); }; });
+}
+function rerender(){ renderMetrics(); renderMaturityBars(); renderDomains(); renderMap(); renderTrail(); renderBottlenecks(); renderLayers(); renderDetail(); bindEvents(); }
+searchInput.addEventListener('input', rerender);
+filterSelect.addEventListener('change', e => { currentMode=e.target.value; rerender(); });
+focusCoreBtn.addEventListener('click', () => { focusCore=!focusCore; focusCoreBtn.textContent=focusCore?'Showing publishable core':'Focus publishable core'; rerender(); });
+resetBtn.addEventListener('click', () => { searchInput.value=''; filterSelect.value='all'; currentMode='all'; layerMode='all'; focusCore=false; focusCoreBtn.textContent='Focus publishable core'; selectedId='T03'; document.querySelectorAll('[data-mode]').forEach(btn => btn.classList.remove('active')); const allBtn=document.querySelector('[data-mode="all"]'); if(allBtn) allBtn.classList.add('active'); rerender(); });
+rerender();
+function buildSection(title, items, selected, related, key){
+  if(!items.length) return '';
+  const id = `section-${key}`;
+  return `<div class="section-block" data-section-block="${id}">
+    <div class="section-header open" data-toggle="${id}">
+      <h4>${title}</h4>
+      <span class="section-toggle">›</span>
+    </div>
+    <div class="section-content" id="${id}">
+      ${items.map(n => buildNodeCard(n,selected,related)).join('')}
+    </div>
+  </div>`;
+}
+const storyDock=document.createElement('div');
+storyDock.style.position='fixed'; storyDock.style.bottom='20px'; storyDock.style.right='20px'; storyDock.style.zIndex='999'; storyDock.style.display='flex'; storyDock.style.gap='8px'; storyDock.style.flexWrap='wrap'; storyDock.style.justifyContent='flex-end';
+['core','physics','chemistry','quantum'].forEach(path => { const b=document.createElement('button'); b.innerText=path==='core'?'Walk the System':`Walk ${path[0].toUpperCase()+path.slice(1)}`; b.style.padding='12px 14px'; b.style.borderRadius='999px'; b.style.background=path==='core'?'#1e5aa8':'#ffffff'; b.style.color=path==='core'?'white':'#122033'; b.style.border='1px solid #dbe4ef'; b.style.boxShadow='0 8px 18px rgba(18,32,51,.08)'; b.onclick=()=>startStory(path); storyDock.appendChild(b); });
+document.body.appendChild(storyDock);
+window.addEventListener('resize', () => { if(document.getElementById('storyOverlay').style.display==='flex') drawStoryEdges(storySteps[storyIndex].nodes); else drawMapConnections(findNode(selectedId) || nodes[0]); });
+</script>
+
+<div id="storyOverlay" onclick="handleOverlayClick(event)" style="position:fixed;inset:0;background:rgba(18,32,51,.55);display:none;align-items:center;justify-content:center;z-index:999">
+  <div style="background:white;border-radius:14px;padding:22px;max-width:520px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2)">
+    <h3 id="storyTitle" style="margin-bottom:10px"></h3>
+    <p id="storyText" style="color:#5b6b80;line-height:1.5"></p>
+    <div class="story-progress" id="storyProgress"></div>
+    <div class="story-actions">
+      <div class="story-left"><span class="story-chip" id="storyPathChip">Core path</span></div>
+      <div class="story-right"><button onclick="toggleAutoplay()" id="autoPlayBtn">Auto Play</button><button onclick="prevStory()">Back</button><button onclick="nextStory()">Next</button></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

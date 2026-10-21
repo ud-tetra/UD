@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unified Dynamics — Distinction Theory</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080810;
+  --bg2: #0e0e1a;
+  --fg: #d4d4d8;
+  --fg2: #888;
+  --fg3: #444;
+  --accent: #d4a853;
+  --teal: #5cd2c4;
+  --coral: #d45c5c;
+  --gold: #d4a853;
+  --sf: 'Cormorant Garamond', Georgia, serif;
+  --mf: 'IBM Plex Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+::selection { background: rgba(212,168,83,0.25); }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--fg); font-family: var(--sf); line-height: 1.7; font-size: 17px; }
+
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header { text-align: center; padding: 48px 20px 32px; }
+header h1 { font-size: 32px; font-weight: 300; letter-spacing: 6px; color: #fff; }
+header .sub { font-size: 12px; color: var(--fg3); letter-spacing: 4px; font-family: var(--mf); margin-top: 4px; }
+.hero-stats { display: flex; justify-content: center; gap: 36px; margin-top: 24px; }
+.hero-stat { text-align: center; }
+.hero-stat .num { font-size: 28px; font-weight: 600; font-family: var(--mf); }
+.hero-stat .lbl { font-size: 9px; color: var(--fg3); letter-spacing: 2px; margin-top: 2px; }
+
+/* Navigation */
+nav { position: sticky; top: 0; z-index: 100; background: rgba(8,8,16,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.04); padding: 10px 0; }
+nav .wrap { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+nav .wrap::-webkit-scrollbar { display: none; }
+nav a { white-space: nowrap; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-family: var(--mf); color: var(--fg3); text-decoration: none; border: 1px solid transparent; transition: all 0.2s; flex-shrink: 0; }
+nav a:hover, nav a.active { color: var(--gold); border-color: rgba(212,168,83,0.3); background: rgba(212,168,83,0.06); }
+
+/* Sections */
+section { padding: 48px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.sec-num { font-size: 11px; color: var(--gold); font-family: var(--mf); letter-spacing: 2px; }
+.sec-title { font-size: 26px; font-weight: 300; color: #fff; margin: 4px 0 6px; }
+.sec-lead { font-size: 14px; color: var(--fg2); font-family: var(--mf); line-height: 1.5; margin-bottom: 20px; font-style: italic; }
+.gold-line { width: 40px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin-bottom: 24px; }
+
+p { margin-bottom: 16px; color: var(--fg); }
+strong { color: #fff; font-weight: 600; }
+
+/* Callouts */
+.anchor { background: rgba(212,168,83,0.05); border-left: 3px solid var(--gold); padding: 14px 18px; margin: 20px 0; border-radius: 0 8px 8px 0; font-style: italic; color: var(--fg2); font-size: 15px; }
+.remember { background: rgba(92,210,196,0.04); border-left: 3px solid var(--teal); padding: 14px 18px; margin: 20px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: var(--fg2); }
+.remember::before { content: 'Remember: '; color: var(--teal); font-weight: 600; font-family: var(--mf); font-size: 11px; letter-spacing: 1px; }
+
+/* Result cards */
+.result { background: var(--bg2); border-radius: 10px; padding: 16px 18px; margin: 14px 0; }
+.result-label { font-size: 10px; font-family: var(--mf); letter-spacing: 1.5px; margin-bottom: 6px; }
+.result-label.exact { color: var(--teal); }
+.result-label.bridge { color: var(--gold); }
+.result-label.open { color: var(--coral); }
+
+/* Equation lines */
+.eq { font-family: var(--sf); font-style: italic; font-size: 18px; color: #ccc; text-align: center; padding: 12px 0; line-height: 1.4; }
+
+/* Spectrum bars */
+.spectrum-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.spectrum-label { min-width: 44px; font-weight: 600; font-size: 16px; }
+.spectrum-bar { flex: 1; height: 28px; background: rgba(255,255,255,0.03); border-radius: 5px; overflow: hidden; }
+.spectrum-fill { height: 100%; border-radius: 5px; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; }
+.spectrum-fill span { font-size: 11px; font-family: var(--mf); color: #000; font-weight: 600; }
+.spectrum-meta { text-align: right; min-width: 55px; font-size: 11px; color: var(--fg2); }
+.pill { display: inline-block; font-size: 10px; padding: 2px 9px; border-radius: 10px; font-family: var(--mf); font-weight: 600; }
+
+/* Lists */
+.chain { list-style: none; padding: 0; }
+.chain li { padding: 8px 0 8px 24px; position: relative; color: var(--fg2); font-size: 15px; }
+.chain li::before { content: ''; position: absolute; left: 6px; top: 16px; width: 8px; height: 8px; border-radius: 50%; border: 2px solid var(--fg3); }
+.chain li strong { color: #fff; }
+
+/* Prediction table */
+.pred-row { display: flex; align-items: center; gap: 8px; padding: 8px 10px; margin-bottom: 3px; border-radius: 6px; }
+.pred-row:nth-child(odd) { background: rgba(255,255,255,0.01); }
+.pred-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.pred-name { flex: 1; font-size: 14px; }
+.pred-val { font-size: 11px; font-family: var(--mf); color: var(--fg3); min-width: 70px; text-align: right; }
+.pred-err { font-size: 11px; font-family: var(--mf); min-width: 55px; text-align: right; font-weight: 600; }
+
+/* Generation circles */
+.gen-row { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 20px 0; }
+.gen-circle { width: 72px; height: 72px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.gen-arrow { text-align: center; min-width: 32px; }
+
+/* Simplex table */
+.simp-row { display: grid; grid-template-columns: 1fr 35px 85px 30px; padding: 8px 12px; font-size: 13px; }
+.simp-head { font-size: 10px; font-family: var(--mf); color: var(--fg3); background: rgba(255,255,255,0.03); }
+
+/* Footer */
+footer { text-align: center; padding: 32px 20px; color: var(--fg3); font-size: 10px; font-family: var(--mf); letter-spacing: 1px; }
+
+/* Tetrahedron SVG animation */
+@keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+.tet-edge { animation: pulse 3s ease-in-out infinite; }
+.tet-edge:nth-child(2) { animation-delay: 0.5s; }
+.tet-edge:nth-child(3) { animation-delay: 1s; }
+.tet-edge:nth-child(4) { animation-delay: 1.5s; }
+.tet-edge:nth-child(5) { animation-delay: 2s; }
+.tet-edge:nth-child(6) { animation-delay: 2.5s; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header>
+  <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom:8px">
+    <defs><filter id="g"><feGaussianBlur stdDeviation="3"/></filter></defs>
+    <line class="tet-edge" x1="60" y1="17" x2="17" y2="88" stroke="#d45c5c" stroke-width="2" filter="url(#g)"/>
+    <line class="tet-edge" x1="60" y1="17" x2="103" y2="88" stroke="#d4a853" stroke-width="2" filter="url(#g)"/>
+    <line class="tet-edge" x1="60" y1="17" x2="60" y2="55" stroke="#5cd2c4" stroke-width="2" filter="url(#g)"/>
+    <line class="tet-edge" x1="17" y1="88" x2="103" y2="88" stroke="#d45c5c" stroke-width="2" filter="url(#g)"/>
+    <line class="tet-edge" x1="17" y1="88" x2="60" y2="55" stroke="#d4a853" stroke-width="2" filter="url(#g)"/>
+    <line class="tet-edge" x1="103" y1="88" x2="60" y2="55" stroke="#5cd2c4" stroke-width="2" filter="url(#g)"/>
+    <circle cx="60" cy="17" r="4" fill="#fff" opacity="0.85"/>
+    <circle cx="17" cy="88" r="4" fill="#fff" opacity="0.85"/>
+    <circle cx="103" cy="88" r="4" fill="#fff" opacity="0.85"/>
+    <circle cx="60" cy="55" r="4" fill="#fff" opacity="0.85"/>
+  </svg>
+  <h1>UNIFIED DYNAMICS</h1>
+  <div class="sub">DISTINCTION THEORY</div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num" style="color:var(--teal)">581</div><div class="lbl">THEOREMS</div></div>
+    <div class="hero-stat"><div class="num" style="color:var(--gold)">0</div><div class="lbl">FREE PARAMS</div></div>
+    <div class="hero-stat"><div class="num" style="color:var(--coral)">1</div><div class="lbl">GEOMETRY</div></div>
+  </div>
+</header>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav><div class="wrap">
+  <a href="#s0">Origin</a>
+  <a href="#s1">Substrate</a>
+  <a href="#s2">Spine</a>
+  <a href="#s3">Spectrum</a>
+  <a href="#s4">Matter</a>
+  <a href="#s5">Chirality</a>
+  <a href="#s6">Mass</a>
+  <a href="#s7">Mixing</a>
+  <a href="#s8">Forces</a>
+  <a href="#s9">Cosmos</a>
+  <a href="#s10">Results</a>
+  <a href="#s11">Gaps</a>
+  <a href="#s12">Claims</a>
+</div></nav>
+
+<div class="wrap">
+
+<!-- ═══════════ 0. ORIENTATION ═══════════ -->
+<section id="s0">
+  <div class="sec-num">SECTION 0</div>
+  <div class="sec-title">Orientation</div>
+  <div class="sec-lead">Reality begins when distinction becomes relation and relation becomes stable return.</div>
+  <div class="gold-line"></div>
+  
+  <p>Unified Dynamics begins from the smallest possible logical event: a <strong>distinction</strong>.</p>
+  <p>Something is. Or it is not. That is the first mark. The primitive event is the difference between affirmation and negation &mdash; the <em>Omega loop</em>: existence encountering non-existence.</p>
+  <p>That first distinction immediately forces <strong>contrast</strong>. If something is, it is only intelligible against what it is not. So the primitive distinction generates its complement.</p>
+  <p>This creates the first loop: marked &rarr; unmarked &rarr; return. At this stage, existence is not yet matter or geometry. It is a <strong>self-differentiating loop</strong>. The loop detects itself by encountering its not-self. That is the first relation.</p>
+  
+  <div class="anchor">The theory's claim is not that geometry comes first, nor that particles come first. Both co-emerge from recursive Omega-relations.</div>
+
+  <p>The logic develops in stages:</p>
+  <ul class="chain">
+    <li><strong>Distinction</strong> &mdash; a mark appears</li>
+    <li><strong>Contrast</strong> &mdash; the mark implies its complement</li>
+    <li><strong>Self-relation</strong> &mdash; distinction becomes real by detecting itself</li>
+    <li><strong>Relational node</strong> &mdash; relation itself becomes stable</li>
+    <li><strong>Relational triad</strong> &mdash; three relations close into a minimal loop</li>
+    <li><strong>Shell emergence</strong> &mdash; closed triads generate the first boundary</li>
+    <li><strong>Geometric substrate</strong> &mdash; repeated closure produces the tetrahedron</li>
+    <li><strong>Loop energy</strong> &mdash; the substrate carries transport, closure, reconstruction</li>
+    <li><strong>Matter and structure</strong> &mdash; stable patterns appear as physics</li>
+  </ul>
+
+  <p>The ontological order:</p>
+  <div class="eq">Distinction &rarr; Relation &rarr; Loop &rarr; Shell &rarr; Graph &rarr; Geometry &rarr; Matter</div>
+  
+  <div class="remember">Graph, geometry, and matter are not primitive layers. They are meta-layers built over recursive relational loop structure.</div>
+</section>
+
+<!-- ═══════════ 1. SUBSTRATE ═══════════ -->
+<section id="s1">
+  <div class="sec-num">SECTION 1</div>
+  <div class="sec-title">The Substrate</div>
+  <div class="sec-lead">The first stable 3D closure is tetrahedral, so geometry enters as the minimum shell that can carry recurrence.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">The theory does not start from particles. It starts from the smallest shell that can hold recurring relation in three dimensions.</div>
+
+  <p>Once distinction becomes relation and relation closes into shell, the question becomes unavoidable: <strong>what kind of substrate can actually carry stable recurrence?</strong></p>
+  <p>The minimal stable volumetric closure is <strong>tetrahedral</strong>. A planar shell can carry contrast but not full 3D closure. The first shell capable of supporting volumetric relation, transport between nodes, and repeated return without collapse is the tetrahedron.</p>
+
+  <div class="result">
+    <div class="result-label exact">EXACT STRUCTURAL &mdash; THM-568</div>
+    <p style="margin:0;color:var(--fg)"><strong>Tetrahedral Uniqueness.</strong> The edge representation of the <em>n</em>-simplex under S<sub>n+1</sub> decomposes into irreps of dimensions 1, <em>n</em>, <em>n</em>(<em>n</em>&minus;1)/2 &minus; 1. For <em>n</em> = 3 and only <em>n</em> = 3, these equal {1, 2, 3}.</p>
+    <p style="margin:8px 0 0;color:var(--fg2);font-size:14px">No other simplex, Platonic solid, or symmetric graph produces this decomposition. The tetrahedron is not a choice &mdash; it is uniquely forced.</p>
+  </div>
+
+  <p>At the base level: reality is a network of interacting tetrahedral units. Each unit supports transport (<em>T</em>), symmetry (<em>S</em>), and duality (*). These operations generate a finite spectral structure.</p>
+
+  <div class="result">
+    <div class="result-label exact">CORE RESULT</div>
+    <p style="margin:0;color:var(--fg)">The system produces <strong>three spatial dimensions</strong>. The fundamental eigenvalues are <strong>1, &frac12;, &frac13;</strong> with dimensions <strong>1, 2, 3</strong>.</p>
+  </div>
+
+  <div class="remember">The tetrahedron is not a decorative choice. It is the only geometry that can carry the rest of the theory.</div>
+</section>
+
+<!-- ═══════════ 2. LOOP SPINE ═══════════ -->
+<section id="s2">
+  <div class="sec-num">SECTION 2</div>
+  <div class="sec-title">The Loop Spine</div>
+  <div class="sec-lead">Transport, closure, and reconstruction are the three behaviors that decide whether structure survives.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">If the substrate exists, these are the only three questions that matter: can a state move, can it return, and can it recover?</div>
+
+  <p>Once the tetrahedral substrate exists, the question is not what objects sit on it, but <strong>how the substrate behaves</strong>. The loop spine gives the universal grammar:</p>
+
+  <p><strong>Transport (T):</strong> moves states along the substrate<br>
+  <strong>Closure (C):</strong> determines whether a state returns to itself<br>
+  <strong>Reconstruction (R):</strong> repairs structure after perturbation</p>
+
+  <p>These three functions define three nested loop classes:</p>
+  <div class="eq">L<sub>R</sub> &sub; L<sub>C</sub> &sub; L<sub>T</sub></div>
+  <p style="text-align:center;color:var(--fg2);font-size:14px">Every reconstructive state retains identity. Every identity-retaining state propagates.</p>
+
+  <p>From these, measurable quantities emerge:</p>
+  <ul class="chain">
+    <li><strong>Retention fidelity</strong> R(&psi;, n) &mdash; how well identity survives transport</li>
+    <li><strong>Repair burden</strong> B &mdash; the energy cost of restoring a perturbed state</li>
+    <li><strong>Spectral gap</strong> &Delta;&lambda; &mdash; the minimum energy separation between sectors</li>
+  </ul>
+
+  <div class="result">
+    <div class="result-label exact">12 LOCKED RESULTS (LS1&ndash;LS12)</div>
+    <p style="margin:0;color:var(--fg)">All evolution trends toward the lowest-cost mode (&lambda; = 1) at rate (&frac12;)<sup>n</sup>. Structure exists only where closure and reconstruction balance transport. Repair cost depends only on the target eigenspace: C(&lambda; &rarr; &mu;) = 1 &minus; &mu;.</p>
+  </div>
+
+  <p>The first universal law of UD: <strong>persistence is not primitive; it is earned by stable recurrence under transport.</strong></p>
+
+  <div class="remember">UD reduces the behavior of reality to one survival grammar: move, return, repair.</div>
+</section>
+
+<!-- ═══════════ 3. SPECTRUM ═══════════ -->
+<section id="s3">
+  <div class="sec-num">SECTION 3</div>
+  <div class="sec-title">Spectrum and Geometry</div>
+  <div class="sec-lead">One transport operator decomposes into the 1, 2, 3 pattern that generates the gauge-like skeleton.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">The familiar interaction pattern does not enter as a postulate. It appears as the preserved structure of one operator.</div>
+
+  <p>Once transport acts on the tetrahedral substrate, it decomposes into a small, rigid spectral structure:</p>
+
+  <!-- Spectrum bars -->
+  <div style="margin:20px 0">
+    <div class="spectrum-row">
+      <div class="spectrum-label" style="color:var(--teal)">V<sub>1</sub></div>
+      <div class="spectrum-bar"><div class="spectrum-fill" style="width:100%;background:linear-gradient(90deg,rgba(92,210,196,0.2),rgba(92,210,196,0.8))"><span>&lambda; = 1</span></div></div>
+      <div class="spectrum-meta">dim 1<br><span class="pill" style="background:rgba(92,210,196,0.15);color:var(--teal)">FREE</span></div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-label" style="color:var(--gold)">V<sub>1/2</sub></div>
+      <div class="spectrum-bar"><div class="spectrum-fill" style="width:50%;background:linear-gradient(90deg,rgba(212,168,83,0.2),rgba(212,168,83,0.8))"><span>&lambda; = &frac12;</span></div></div>
+      <div class="spectrum-meta">dim 2<br><span class="pill" style="background:rgba(212,168,83,0.15);color:var(--gold)">BROKEN</span></div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-label" style="color:var(--coral)">V<sub>1/3</sub></div>
+      <div class="spectrum-bar"><div class="spectrum-fill" style="width:33%;background:linear-gradient(90deg,rgba(212,92,92,0.2),rgba(212,92,92,0.8))"><span>&lambda; = &frac13;</span></div></div>
+      <div class="spectrum-meta">dim 3<br><span class="pill" style="background:rgba(212,92,92,0.15);color:var(--coral)">CONFINED</span></div>
+    </div>
+  </div>
+
+  <p>These dimensions are forced by S<sub>4</sub> representation theory. The eigenvalues are forced by the tetrahedral transport weights. Neither is inserted by hand.</p>
+
+  <div class="result">
+    <div class="result-label exact">EXACT STRUCTURAL OUTCOMES</div>
+    <p style="margin:0;color:var(--fg)"><strong>3 colors</strong> (SU(3)) &middot; <strong>2 weak modes</strong> (SU(2)) &middot; <strong>1 scalar mode</strong> (U(1)-like)</p>
+    <p style="margin:8px 0 0;font-size:14px;color:var(--fg2)">The algebra preserving T has structure gl(1) &times; gl(2) &times; gl(3) &mdash; the Standard Model gauge skeleton.</p>
+  </div>
+
+  <div class="result">
+    <div class="result-label exact">BINARY ORBIT GENERATION</div>
+    <p style="margin:0;color:var(--fg)">The 13 admissible binary edge configurations decompose into 3 orbits under S<sub>4</sub>. After vacuum subtraction: <strong style="color:var(--coral)">Stars &minus; V<sub>1</sub> = V<sub>1/3</sub></strong> (the full color sector) and <strong style="color:var(--gold)">4-Cycles &minus; V<sub>1</sub> = V<sub>1/2</sub></strong> (the full weak sector).</p>
+    <p style="margin:8px 0 0;font-size:14px;color:var(--fg2)">The discrete combinatorics generates the continuous eigenspaces. The gauge sectors are not imposed &mdash; they are born from the binary structure of the tetrahedron itself.</p>
+  </div>
+
+  <div class="remember">The 1, 2, 3 pattern is not guessed. It is what the tetrahedral transport operator naturally becomes when decomposed.</div>
+</section>
+
+<!-- ═══════════ 4. MATTER ═══════════ -->
+<section id="s4">
+  <div class="sec-num">SECTION 4</div>
+  <div class="sec-title">Particle Structure</div>
+  <div class="sec-lead">Matter appears when recurrence becomes stable enough to behave like a thing.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">A particle is not a primitive object. It is a successful reconstruction pattern.</div>
+
+  <p>Matter is what appears when transport patterns become stable enough to hold identity under recurrence. Particles are the first reconstructible packets of the substrate.</p>
+
+  <div class="eq">C<sup>8</sup> = C<sup>6</sup> &oplus; C<sup>2</sup></div>
+  <p style="text-align:center;color:var(--fg2);font-size:14px">C<sup>6</sup> &rarr; quark sector &nbsp;&middot;&nbsp; C<sup>2</sup> &rarr; lepton sector</p>
+
+  <div class="result">
+    <div class="result-label exact">EXACT RESULTS</div>
+    <p style="margin:0;color:var(--fg)"><strong>3 generations</strong> from dihedral stability &middot; <strong>8 gluons</strong> from SU(3) &middot; <strong>Massless gluons</strong> from degenerate eigenspace protection (B = 0 in V<sub>1/3</sub>)</p>
+  </div>
+
+  <p>Degeneracy protects certain modes. If repair burden vanishes inside a degenerate eigenspace, transport within that sector does not generate mass. This explains massless gauge carriers without a separate symmetry-breaking story.</p>
+
+  <div class="remember">Matter is what the substrate looks like when recurrence stops dissolving and starts holding identity.</div>
+</section>
+
+<!-- ═══════════ 5. CHIRALITY ═══════════ -->
+<section id="s5">
+  <div class="sec-num">SECTION 5</div>
+  <div class="sec-title">Chirality and Interaction</div>
+  <div class="sec-lead">Dual structure splits the substrate into sectors that decide what can and cannot couple.</div>
+  <div class="gold-line"></div>
+
+  <p>The substrate carries not only transport but duality. The Hodge star (*) splits the state space into four sectors with dimensions <strong>(2, 1, 1, 2)</strong>. This creates left/right asymmetry and selection rules for interactions.</p>
+
+  <div class="result">
+    <div class="result-label exact">EXACT RESULTS</div>
+    <p style="margin:0;color:var(--fg)">Nonzero Higgs coupling exists (THM-565a). Lepton edge coupling vanishes (THM-565b). Chirality is geometric, not added by hand.</p>
+  </div>
+
+  <div class="remember">The same substrate that carries transport also carries orientation-sensitive structure. Chirality is not appended &mdash; it appears.</div>
+</section>
+
+<!-- ═══════════ 6. MASS ═══════════ -->
+<section id="s6">
+  <div class="sec-num">SECTION 6</div>
+  <div class="sec-title">Mass and Coupling</div>
+  <div class="sec-lead">The substrate carries a built-in coupling hierarchy before phenomenology begins.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">The theory fixes a hierarchy before it tries to fit a mass.</div>
+
+  <p>Mass emerges from how states couple across eigenspaces. The Higgs-like coupling geometry is not arbitrary &mdash; it is fixed by the internal structure of the tetrahedral substrate.</p>
+
+  <div class="result">
+    <div class="result-label exact">EXACT STRUCTURAL &mdash; THM-566</div>
+    <p style="margin:0;color:var(--fg)">Yukawa singular values: 1/&radic;3 and 1/3. <strong>Mass ratio = &radic;3.</strong></p>
+    <p style="margin:6px 0 0;font-size:14px;color:var(--fg2)">Both det(Y) = 1/(3&radic;3) and tr(Y<sup>T</sup>Y) = 4/9 are basis-independent. The ratio is invariant under all V<sub>1/2</sub> rotations. Zero parameters.</p>
+  </div>
+
+  <div class="result">
+    <div class="result-label exact">EXACT STRUCTURAL &mdash; THM-567</div>
+    <p style="margin:0;color:var(--fg)">Intra-generation coupling angle &isin; <strong>[60&deg;, 120&deg;]</strong>. The 60&deg; floor is the tetrahedral angle arccos(&frac12;), forced by the singular value ratio &radic;3.</p>
+  </div>
+
+  <div class="remember">The hierarchy appears before the fit.</div>
+</section>
+
+<!-- ═══════════ 7. MIXING ═══════════ -->
+<section id="s7">
+  <div class="sec-num">SECTION 7</div>
+  <div class="sec-title">Mixing</div>
+  <div class="sec-lead">Local packet geometry is rigid, so small generation mixing must come from extension structure.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">The single tetrahedron tells you what local geometry <em>cannot</em> do. That is why mixing becomes an extension problem.</div>
+
+  <p>The critical insight: the 60&deg; coupling floor is <strong>intra-generation</strong>. The CKM mixing matrix is <strong>inter-generation</strong>. These are different angles measuring different things. The floor does not constrain CKM.</p>
+
+  <p>Inter-generation mixing comes from shell deformation. Each generation (IFS level n = 4, 5, 6) has a deformation parameter &epsilon;(n) that rotates the V<sub>1/2</sub> basis:</p>
+
+  <div class="gen-row">
+    <div class="gen-circle" style="border:2px solid var(--coral);background:rgba(212,92,92,0.04)"><span style="font-size:11px;font-weight:700;color:var(--coral)">n = 4</span><span style="font-size:9px;color:var(--fg3)">&epsilon; = 30&deg;</span></div>
+    <div class="gen-arrow"><div style="color:var(--fg3)">&rarr;</div><div style="font-size:9px;color:var(--gold);font-family:var(--mf)">&Delta;&epsilon; = 18&deg;</div></div>
+    <div class="gen-circle" style="border:2px solid var(--gold);background:rgba(212,168,83,0.04)"><span style="font-size:11px;font-weight:700;color:var(--gold)">n = 5</span><span style="font-size:9px;color:var(--fg3)">&epsilon; = 12&deg;</span></div>
+    <div class="gen-arrow"><div style="color:var(--fg3)">&rarr;</div><div style="font-size:9px;color:var(--gold);font-family:var(--mf)">&Delta;&epsilon; = 12&deg;</div></div>
+    <div class="gen-circle" style="border:2px solid var(--teal);background:rgba(92,210,196,0.04)"><span style="font-size:11px;font-weight:700;color:var(--teal)">n = 6</span><span style="font-size:9px;color:var(--fg3)">&epsilon; = 0&deg;</span></div>
+  </div>
+
+  <div class="result">
+    <div class="result-label bridge">WORKING STRUCTURAL</div>
+    <p style="margin:0;color:var(--fg)"><strong>Cabibbo angle:</strong> sin(&Delta;&epsilon;<sub>23</sub>) = sin(12&deg;) = 0.208 &nbsp;(exp: 0.225, <span style="color:var(--gold)">7.6%</span>)<br>
+    <strong>V<sub>cb</sub>:</strong> &lambda;&sup2; = 0.043 &nbsp;(exp: 0.041, <span style="color:var(--gold)">5.4%</span>)</p>
+  </div>
+
+  <div class="result">
+    <div class="result-label open">OPEN</div>
+    <p style="margin:0;color:var(--fg)"><strong>V<sub>ub</sub>:</strong> &lambda;&sup3; &asymp; 0.009 vs exp 0.0036 (2.5&times; overshoot). Needs full 3-generation Yukawa with CP phase &delta; = &pi;/30 = 6&deg;.</p>
+  </div>
+
+  <div class="remember">The small angles are not missing locally. They are waiting in the extension.</div>
+</section>
+
+<!-- ═══════════ 8. FORCES ═══════════ -->
+<section id="s8">
+  <div class="sec-num">SECTION 8</div>
+  <div class="sec-title">Forces as Transport Modes</div>
+  <div class="sec-lead">Forces are not separate primitives but different transport regimes of one substrate.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">UD does not add four forces on top of reality. It reads four interaction regimes out of one transport system.</div>
+
+  <p>The <strong>Corridor Selection Dynamic</strong> explains why different eigenspaces carry different physics. The IFS corridor rotation U(&theta;) respects the spin operator S, which separates P<sub>+</sub> from P<sub>&minus;</sub>:</p>
+
+  <div class="result">
+    <div class="result-label exact">SELECTION LAW</div>
+    <p style="margin:0;color:var(--fg)">
+      <strong style="color:var(--coral)">V<sub>1/3</sub></strong> = P<sub>&minus;</sub>: corridor-invariant &middot; degenerate &rarr; <strong>CONFINED</strong> (color/strong)<br>
+      <strong style="color:var(--gold)">V<sub>1/2</sub></strong> &sub; P<sub>+</sub>: corridor-rotated &middot; degenerate &rarr; <strong>BROKEN</strong> (weak/flavor)<br>
+      <strong style="color:var(--teal)">V<sub>1</sub></strong> &sub; P<sub>+</sub>: corridor-invariant &middot; singleton &rarr; <strong>FREE</strong> (vacuum/gravity)
+    </p>
+  </div>
+
+  <p>Color confines because P<sub>&minus;</sub> is invisible to the corridor. Weak breaks because V<sub>1/2</sub> is rotated at each generation boundary. Gravity is free because V<sub>1</sub> is trivially invariant. This is not a choice &mdash; it is forced by the (S, *) algebra.</p>
+
+  <div class="remember">If UD is right, the forces are not separate ingredients of nature. They are different behaviors of the same substrate.</div>
+</section>
+
+<!-- ═══════════ 9. COSMOS ═══════════ -->
+<section id="s9">
+  <div class="sec-num">SECTION 9</div>
+  <div class="sec-title">Cosmological Layer</div>
+  <div class="sec-lead">The same loop grammar scales upward into fields, sinks, emitters, clusters, circulations, and ruptures.</div>
+  <div class="gold-line"></div>
+
+  <p>The same grammar persists at every scale. Six archetypes describe large-scale structure:</p>
+  <ul class="chain">
+    <li><strong>Field</strong> &mdash; transport-dominated, no closure (nebulae, dark matter)</li>
+    <li><strong>Sink</strong> &mdash; convergence to &lambda; = 1 (black holes)</li>
+    <li><strong>Emitter</strong> &mdash; reconstruction failure releasing transport (pulsars, supernovae)</li>
+    <li><strong>Cluster</strong> &mdash; multiple stable packets in shared transport (star clusters)</li>
+    <li><strong>Circulation</strong> &mdash; large-scale closure (spiral galaxies)</li>
+    <li><strong>Rupture</strong> &mdash; eigenspace boundary failure (shear seams, fragmentation)</li>
+  </ul>
+
+  <div class="remember">The same rules governing particles also govern galaxies.</div>
+</section>
+
+<!-- ═══════════ 10. RESULTS ═══════════ -->
+<section id="s10">
+  <div class="sec-num">SECTION 10</div>
+  <div class="sec-title">What Works</div>
+  <div class="sec-lead">The strongest results are the ones the geometry produces before there is room to tune them.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">The best evidence for UD is not one miracle number. It is that the right kinds of structure keep appearing too early to be comfortably accidental.</div>
+
+  <div style="margin:16px 0">
+    <div class="pred-row"><span class="pred-dot" style="background:var(--teal)"></span><span class="pred-name">Spatial dimensions d = 3</span><span class="pred-val">3</span><span class="pred-err" style="color:var(--teal)">exact</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--teal)"></span><span class="pred-name">Generations N = 3</span><span class="pred-val">3</span><span class="pred-err" style="color:var(--teal)">exact</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--teal)"></span><span class="pred-name">Colors N<sub>c</sub> = 3</span><span class="pred-val">3</span><span class="pred-err" style="color:var(--teal)">exact</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--teal)"></span><span class="pred-name">Gluons = 8</span><span class="pred-val">8</span><span class="pred-err" style="color:var(--teal)">exact</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--teal)"></span><span class="pred-name">Graviton polarizations = 2</span><span class="pred-val">2</span><span class="pred-err" style="color:var(--teal)">exact</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--teal)"></span><span class="pred-name">Fine structure &alpha;</span><span class="pred-val">1/137</span><span class="pred-err" style="color:var(--teal)">0.026%</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--gold)"></span><span class="pred-name">Spectral tilt n<sub>s</sub></span><span class="pred-val">185/192</span><span class="pred-err" style="color:var(--gold)">0.14%</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--gold)"></span><span class="pred-name">Muon mass</span><span class="pred-val">105.9 MeV</span><span class="pred-err" style="color:var(--gold)">0.2%</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--gold)"></span><span class="pred-name">Tau mass</span><span class="pred-val">1762 MeV</span><span class="pred-err" style="color:var(--gold)">0.8%</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--gold)"></span><span class="pred-name">Cabibbo angle</span><span class="pred-val">sin 12&deg;</span><span class="pred-err" style="color:var(--gold)">7.6%</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--gold)"></span><span class="pred-name">V<sub>cb</sub></span><span class="pred-val">&lambda;&sup2; = 0.043</span><span class="pred-err" style="color:var(--gold)">5.4%</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--gold)"></span><span class="pred-name">sin&sup2;&theta;<sub>W</sub> (bare)</span><span class="pred-val">1/4</span><span class="pred-err" style="color:var(--gold)">8.1%</span></div>
+    <div class="pred-row"><span class="pred-dot" style="background:var(--gold)"></span><span class="pred-name">Mass ratio &radic;3</span><span class="pred-val">1.73</span><span class="pred-err" style="color:var(--gold)">~19%</span></div>
+    <div class="pred-row" style="background:rgba(212,92,92,0.04)"><span class="pred-dot" style="background:var(--coral)"></span><span class="pred-name">Higgs ratio m<sub>H</sub>/m<sub>W</sub></span><span class="pred-val">3.9</span><span class="pred-err" style="color:var(--coral)">FAILS</span></div>
+    <div class="pred-row" style="background:rgba(212,92,92,0.04)"><span class="pred-dot" style="background:var(--coral)"></span><span class="pred-name">V<sub>ub</sub></span><span class="pred-val">&lambda;&sup3;</span><span class="pred-err" style="color:var(--coral)">2.5&times;</span></div>
+  </div>
+
+  <div style="display:flex;gap:24px;justify-content:center;margin:20px 0">
+    <div style="text-align:center"><div style="font-size:28px;font-weight:700;color:var(--teal);font-family:var(--mf)">5</div><div style="font-size:10px;color:var(--fg3)">exact</div></div>
+    <div style="text-align:center"><div style="font-size:28px;font-weight:700;color:var(--gold);font-family:var(--mf)">8</div><div style="font-size:10px;color:var(--fg3)">&le;20%</div></div>
+    <div style="text-align:center"><div style="font-size:28px;font-weight:700;color:var(--coral);font-family:var(--mf)">2</div><div style="font-size:10px;color:var(--fg3)">fail</div></div>
+  </div>
+
+  <div class="remember">The theory is strongest where the geometry speaks before interpretation has a chance to help it.</div>
+</section>
+
+<!-- ═══════════ 11. GAPS ═══════════ -->
+<section id="s11">
+  <div class="sec-num">SECTION 11</div>
+  <div class="sec-title">What Is In Progress</div>
+  <div class="sec-lead">The open problems are real, but they are localized rather than vague.</div>
+  <div class="gold-line"></div>
+
+  <div class="anchor">UD is not &ldquo;almost done.&rdquo; It is strong in some places and unfinished in specific named places.</div>
+
+  <ul class="chain">
+    <li><strong style="color:var(--coral)">Higgs mass ratio</strong> &mdash; predicted 3.9, observed 1.56 (fails)</li>
+    <li><strong style="color:var(--coral)">V<sub>ub</sub> mixing</strong> &mdash; 2.5&times; overshoot; needs full 3-gen Yukawa with CP phase</li>
+    <li><strong>Hypercharge normalization</strong> &mdash; gap = &plusmn;1 not derived from algebra</li>
+    <li><strong>Full Yukawa mechanism</strong> &mdash; matrix elements exist; full derivation open</li>
+    <li><strong>RG running</strong> &mdash; bare values correct; running to M<sub>Z</sub> not computed</li>
+  </ul>
+
+  <div class="remember">The honest case for UD is not that it is complete. It is that its remaining problems are narrow enough to name.</div>
+</section>
+
+<!-- ═══════════ 12. CLAIMS ═══════════ -->
+<section id="s12">
+  <div class="sec-num">SECTIONS 12 &amp; 13</div>
+  <div class="sec-title">What This Theory Claims &mdash; and Does Not</div>
+  <div class="sec-lead">UD claims a geometric information substrate whose spectrum generates physics.</div>
+  <div class="gold-line"></div>
+
+  <p><strong>Three central claims:</strong></p>
+  <ul class="chain">
+    <li><strong>Reality is a geometric information system</strong> &mdash; built from recursive distinction and closure</li>
+    <li><strong>Physics emerges from transport + closure + reconstruction</strong> &mdash; structure appears where the three balance</li>
+    <li><strong>Gauge structure is spectral, not imposed</strong> &mdash; the familiar interaction skeleton is the algebra preserving T</li>
+  </ul>
+
+  <p><strong>The theory is NOT claiming:</strong></p>
+  <ul class="chain">
+    <li>A complete derivation of the Standard Model</li>
+    <li>Experimental validation (not yet achieved)</li>
+    <li>Closure of every bridge from algebra to physics</li>
+    <li>That two known failures (Higgs ratio, V<sub>ub</sub>) are resolved</li>
+  </ul>
+
+  <div class="result" style="background:rgba(92,210,196,0.03);border-left:3px solid var(--teal)">
+    <p style="margin:0;color:var(--fg);font-size:16px;line-height:1.6">Unified Dynamics proposes that a single recursive relational loop structure generates graph, geometry, matter, forces, and structure across scales. The core is mathematically tight. The bridge to physics is partially successful. The remaining gaps are clear and bounded.</p>
+  </div>
+
+  <p style="text-align:center;font-size:18px;font-style:italic;color:var(--fg2);margin:32px 0 16px">If UD is wrong, it is wrong in a very specific language.<br>If it is right, much of physics may be the spectrum of one small geometric fact.</p>
+</section>
+
+</div><!-- end wrap -->
+
+<footer>
+  UNIFIED DYNAMICS &middot; DISTINCTION THEORY &middot; 581 LOCKED THEOREMS &middot; APRIL 2026
+</footer>
+
+</body>
+</html>

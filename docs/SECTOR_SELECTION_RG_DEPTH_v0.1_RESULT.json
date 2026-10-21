@@ -1,0 +1,136 @@
+{
+  "archive_pulls_required": [
+    "Koide / lepton mass derivation: which support sector?",
+    "tau/mu corrector: which support sector?",
+    "Any other UD observable explicitly tagged with S_0 or S_Lambda?",
+    "Brans-Dicke gamma constraint: which sector?"
+  ],
+  "artifact": "SECTOR_SELECTION_RG_DEPTH_v0.1",
+  "candidates_preregistered": {
+    "C0": "All observables use S_0 = 43/7",
+    "C1": "All observables use S_Lambda = 44/7",
+    "C2": "UV/local use S_0, IR/global use S_Lambda (proposal under test)",
+    "C3": "Sector support interpolates continuously",
+    "C4": "Framing torsion content determines sector (M1)",
+    "C5": "Homology/open-boundary status determines sector (M3)"
+  },
+  "earned": [
+    "Pre-registration discipline followed (C0-C5, T1-T5, F1-F3)",
+    "Rule C2 internally consistent under non-circular classification",
+    "Lambda classified as IR/global -> S_Lambda before numerical evaluation",
+    "Lambda evaluation with S_Lambda produces -0.773% residual (improvement)",
+    "Structural rationale (boundary residue 1/Delta) is natural and explanatory",
+    "Falsifier F3 structurally not-triggered",
+    "Triple-convergence intuition (M1+M2+M3) partially formalized via M2"
+  ],
+  "falsifier_results": {
+    "F1": "PENDING_ARCHIVE_VERIFICATION",
+    "F2": "PENDING_ARCHIVE_VERIFICATION",
+    "F3": "NOT_TRIGGERED (Lambda evaluation explicitly uses boundary data through F_IFS)"
+  },
+  "falsifiers_preregistered": {
+    "F1": "Deep-IR UD observable uses S_0 successfully -> rule weakens",
+    "F2": "UV/local seed observable requires S_Lambda -> rule weakens",
+    "F3": "Lambda can be evaluated entirely at depth 0 -> rule fails for Lambda"
+  },
+  "implications_for_Lambda_chain": {
+    "if_archive_breaks_C2": "Rule weakens or fails; alternative formulations (M1 framing, M3 homology) may still hold; RC1 with S_0 remains published",
+    "if_archive_supports_C2": "Lambda chain upgrades from RC1 (S_0, +3.9%) to candidate RC2 (S_Lambda, -0.77%); sector selection structurally resolved; RG-depth rule becomes transferable UD principle"
+  },
+  "loki_firewall_compliance": {
+    "note": "Loki seed acknowledged as inspiration, NOT as primary evidence. Gate evaluated on own pre-registered standards.",
+    "step_1": "Loki output: raw conjecture, no derivation claim, labeled speculative seed",
+    "step_2": "Salvage audit (Cato + Aster): identified M2 as highest-priority for formalization",
+    "step_3": "Gate construction (Aster): pre-registration of C0-C5, T1-T5, F1-F3",
+    "step_4": "Gate execution (Cato): pre-classification, numerical verification, falsifier application",
+    "step_5": "Status determination: CONDITIONAL_PASS_PENDING_ARCHIVE_VERIFICATION"
+  },
+  "not_yet_earned": [
+    "Status DERIVED (requires archive completion of T3 and F1/F2)",
+    "Operational definition of 'depth' beyond intuitive UV/IR",
+    "Operational definition of 'requires boundary data'",
+    "Manuscript-ready promotion",
+    "RC1 update to use S_Lambda as canonical Lambda sector"
+  ],
+  "numerical_results": {
+    "Delta": 7,
+    "F_IFS": 0.1061032954,
+    "Lambda_UD_with_S0": 3.000665e-122,
+    "Lambda_UD_with_SLambda": 2.865821e-122,
+    "Lambda_obs_lPl2": 2.888137e-122,
+    "M_Pl_eV": 1.22091e+28,
+    "S_0": "43/7 = 6.142857",
+    "S_Lambda": "44/7 = 6.285714",
+    "nu_0_eV": 83190.0,
+    "numerator_fourth_power": 1.132292e-120,
+    "residual_S0_percent": "+3.896",
+    "residual_SLambda_percent": "-0.773"
+  },
+  "observable_classifications": [
+    {
+      "class": "UV/local",
+      "name": "Koide neutrino mass (nu_0)",
+      "predicted_sector": "S_0",
+      "verified": "PENDING_ARCHIVE"
+    },
+    {
+      "class": "UV/local",
+      "name": "tau/mu corrector (61 = d^2*Delta - 2)",
+      "predicted_sector": "S_0",
+      "verified": "PENDING_ARCHIVE"
+    },
+    {
+      "class": "IR/global",
+      "name": "Spectral anomaly H = 101/6",
+      "predicted_sector": "S_Lambda",
+      "verified": "consistent (uses asymptotic d_s)"
+    },
+    {
+      "class": "IR/global",
+      "name": "F_IFS = 1/(3*pi)",
+      "predicted_sector": "S_Lambda",
+      "verified": "consistent (uses chi(boundary K_4))"
+    },
+    {
+      "class": "IR/global",
+      "name": "Brans-Dicke gamma constraint",
+      "predicted_sector": "S_Lambda",
+      "verified": "PENDING_ARCHIVE"
+    },
+    {
+      "class": "IR/global",
+      "name": "Cosmological constant Lambda",
+      "predicted_sector": "S_Lambda",
+      "verified": "TARGET_OBSERVABLE"
+    },
+    {
+      "class": "UV/structural",
+      "name": "Z_3 character signature n=7",
+      "predicted_sector": "S_0 (or out of scope)",
+      "verified": "tentative"
+    }
+  ],
+  "proposal": {
+    "rule": "C2",
+    "statement": "UV/local/depth-0 observables couple to S_0 = 43/7; IR/global/depth >= 1 observables couple to S_Lambda = 44/7",
+    "structural_rationale": "S_Lambda - S_0 = chi(boundary K_4)/Delta - chi(pt)/Delta = (2-1)/7 = 1/7 is exactly the boundary closure residue; observables that require boundary data see this residue"
+  },
+  "sha256_stable_payload": "300895ab6531ca4195a8962d9104480cc4e0ae6d793f99fedbe3a81866d62c79",
+  "source": "Loki seed M2 (depth-test response), validated for gate formation by Cato/Aster, not promoted as claim evidence",
+  "status": "CONDITIONAL_PASS_PENDING_ARCHIVE_VERIFICATION",
+  "test_results": {
+    "T1": "PASSED (classification done before numerical evaluation)",
+    "T2": "PASSED (Lambda classified as IR/global before computing residual)",
+    "T3": "PARTIAL (UV-observable sector verification requires archive pull)",
+    "T4": "PASSED (structural explanation: S_Lambda - S_0 = boundary residue 1/Delta)",
+    "T5": "PASSED (F1, F2, F3 pre-registered with clear failure conditions)"
+  },
+  "tests_preregistered": {
+    "T1": "Must not use observed Lambda residual to determine the rule",
+    "T2": "Must classify Lambda-sector BEFORE numerical evaluation",
+    "T3": "Must classify known UD observables consistently",
+    "T4": "Must explain why S_Lambda appears only when boundary data required",
+    "T5": "Must produce falsifiers"
+  },
+  "type": "disciplined gate / conditional derivation attempt"
+}

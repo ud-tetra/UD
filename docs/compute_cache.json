@@ -1,0 +1,104 @@
+{
+  "version": "2026-04-21",
+  "locked_constants": {
+    "V": 4,
+    "E": 6,
+    "F": 4,
+    "S4": 24,
+    "N": 192,
+    "Delta": 7,
+    "x": 0.036458333333333336,
+    "eta_R": 0.9635416666666666,
+    "S0": 6.142857142857143,
+    "H": 16.833333333333332,
+    "alpha_0": 0.007291666666666667,
+    "kappa_C": 0.238732414637843,
+    "d_s": 1.3333333333333333,
+    "d_W": 3,
+    "d_H": 2,
+    "F_IFS": 0.1061032953945969,
+    "g_xs": 0.10444543140405632,
+    "lambda_NL": 0.021817696282358866,
+    "sigma": "9/(4\u03c0\u00b2a\u2080)",
+    "C_star": 0.875,
+    "eta_O": 0.5,
+    "nu0_keV": 83.2,
+    "nu0_GeV": 8.32e-05
+  },
+  "mass_predictions": {
+    "leptons": {
+      "m_e_MeV": 0.511,
+      "note": "input",
+      "m_mu_m_e": 206.3,
+      "m_mu_MeV": 105.4,
+      "m_tau_m_mu": 16.833333333333332,
+      "m_tau_MeV": 1774.2
+    },
+    "quarks_MeV": {
+      "m_u": 1.99,
+      "formula": "\u03bd\u2080\u00d7|S\u2084|",
+      "m_d": 4.65,
+      "formula_d": "m_u\u00d7\u0394/d",
+      "m_s": 93.9,
+      "formula_s": "m_d\u00d7H\u00d7E/(V+1)",
+      "m_c": 1129,
+      "formula_c": "m_u\u00d7H\u00b2\u00d72",
+      "m_b": 4215,
+      "formula_b": "m_s\u00d7H\u00d7(\u0394+1)/d",
+      "m_t": 152027,
+      "formula_t": "m_c\u00d7H\u00d78"
+    },
+    "bosons_GeV": {
+      "v_VEV": 249.8,
+      "formula_v": "\u03bd\u2080\u00d74^(52/9)",
+      "m_H": 118.0,
+      "formula_H": "\u221a(2F_IFS)\u00d7v",
+      "m_W": 90.0,
+      "m_Z": 104.0
+    },
+    "dark_matter_GeV": {
+      "m_DM": 12.5,
+      "formula": "d\u00d7m_b"
+    },
+    "neutrinos": {
+      "m_nu1_meV": 35,
+      "theta_12_deg": 35.3,
+      "theta_23_deg": 45.0,
+      "theta_13_deg": 7.4
+    }
+  },
+  "carrier_spectrum": {
+    "n_states": 256,
+    "n_levels": 57,
+    "E0_nu0": -7.7259,
+    "E_max_nu0": 1.4546,
+    "E_span_nu0": 9.1805,
+    "Tr_H": -352.0,
+    "Tr_H_over_N": -1.375,
+    "eigenstate_census": {
+      "vacuum": 3,
+      "pure_color": 29,
+      "leptonic": 28,
+      "mesonic": 116,
+      "baryonic": 80,
+      "total": 256
+    },
+    "sector_ratio": "2:9:5 per 2^V",
+    "dark_baryon_number_ratio": "2/(V+1)=2/5",
+    "binding_dark_nu0": 186.55,
+    "binding_baryon_nu0": 186.73,
+    "H_dark_baryon_mixing": 0.0
+  },
+  "RG_cache": {
+    "F_universal": 0.1061032953945969,
+    "b3_SM": 7,
+    "b3_F": 0.7427230677621782,
+    "best_Lambda_GeV": 36000000.0,
+    "alpha_s_mZ": 0.119,
+    "sin2_W_mZ": 0.247,
+    "matter_only_F": {
+      "b3": 9.666666666666666,
+      "Lambda_gauge_GeV": 1900
+    }
+  }
+}
