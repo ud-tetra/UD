@@ -1,0 +1,30 @@
+{
+  "fixtures": {
+    "compression_rhs_mismatch_at_zero_C_error_produces_defect_one": true,
+    "nonzero_solve_residual": {
+      "RHS_error_l1_cap": "1/2048",
+      "budget": "941/245760",
+      "error_squared": "1421/268435456",
+      "lift_error_l1_cap": "3/8192",
+      "solve_residual_l1_cap": "723/262144"
+    },
+    "q2_cross_rotation": {
+      "D_operator_error_exact": "1/16",
+      "nominal_hidden_input_still_gives_zero_exact_data": true,
+      "orthogonal_combination_bound_covers": true,
+      "single_debit_bound_fails": true,
+      "visible_input_can_have_spurious_nominal_hidden_output": true,
+      "visible_input_error_squared": "171/21931"
+    },
+    "range_angle_and_scale": {
+      "BF_equals_full_projection": true,
+      "gain_squared": "25/9",
+      "nonzero_trial_scaling_changes_no_decoder": true,
+      "omitting_angle_bound_fails": true
+    },
+    "rank_loss_at_error_equal_floor_rejected": true
+  },
+  "physical_promotion": 0,
+  "scope": "independent exact rational small matrices; no full source compression or actual inverse computed",
+  "status": "PASS"
+}

@@ -1,0 +1,38 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "claims": [
+    {
+      "id": "CMP1",
+      "type": "DERIVED_CONDITIONAL_THEOREM",
+      "statement": "C=Y^T F is a minimal1999-dimensional real linear nominal observable reconstruction statistic, kerC=kerF (641), B0F=P_V, gain<454.",
+      "dependencies": [
+        "Pinned PR307 real model/rank/conditioning/trial bounds"
+      ]
+    },
+    {
+      "id": "CMP2",
+      "type": "CONDITIONAL_FINITE_ALGORITHM_PROFILE",
+      "statement": "If all1999 rows G satisfy constructed per-row bounds, full projection defect<2^-55 and gain<455; certified per-record RHS/normal/lift residual gates give implementation error<2^-43.",
+      "status": "FULL1999_CONSTRUCTION_AND_SOLVE_NOT_RUN_HOLD"
+    },
+    {
+      "id": "CMP3",
+      "type": "EXECUTED_PARTIAL_CONSTRUCTION",
+      "statement": "16 source-bound rows,122880 logical phase checks, exact16x16 Gram solve with16 positive pivots/residual0 and2640-coordinate finite lift verified; fresh rebuilt workflow and byte replays PASS."
+    },
+    {
+      "id": "CMP4",
+      "type": "NO_GO",
+      "statement": "Any rank<=16 decoder has full rank1999 projection operator defect>=1; partial prototype cannot certify complete reconstruction."
+    }
+  ],
+  "review": "Separate same-team non-constructor proof/input/Gram/lift/replay audit; not external promotion authority; native adjoint outputs not independently reexecuted by reviewer",
+  "open": [
+    "Remaining1983 rows",
+    "Full1999 solve and per-record residuals",
+    "Physical/input evidence",
+    "Complete extraction/performance"
+  ],
+  "external_promotion_review": "PENDING",
+  "physical_promotion": 0
+}
