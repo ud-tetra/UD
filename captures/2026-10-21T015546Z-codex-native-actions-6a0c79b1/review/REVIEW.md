@@ -1,0 +1,21 @@
+# C31 independent review
+
+The native104 signed128 action algorithm meets the declared absolute action budget for the same source-bound600-cell map. The mathematical sufficient bounds, implementation arithmetic and finite compiled probes agree. This conclusion is scoped to the pinned source operator, admitted norm domains, final source/build bindings and reference Linux/GMP/compiler model.
+
+The internal grid changed from128 to104; external coordinates remain96-bit dyadics, Taylor degree40 and all4096 halfsteps remain unchanged. The immutable operator header128 is retained source-format metadata. No model, observer, sample grid, nominal rank or kernel was changed.
+
+My own Fraction derivation checks the partial term and output sums, signed128 overflow margins, Taylor tail, state-domain bootstrap and output normalization. Forward error is at most1.277547002679302e-24 and adjoint error at most1.2718419606127436e-24 (decimal displays only; exact rational pairs are authoritative), both strictly below2^-79 and the required2^-68. The normal composition therefore meets2^-67 on the declared2048 state ball. The exact-source ||K||<5 premise comes from the inherited chain-channel bound, not maxrow24 alone.
+
+I independently implemented Python-bigint104-grid Taylor propagation and executed eight compiled halfsteps against it, including positive/negative norm2048 top-grade boundary seeds. All21,120 delivered coordinates matched exactly. My reference evaluates844,800 term-coordinate divisions; compiled intermediate terms are not exported and are not claimed compared. A separate nine-case negative suite rejected parse-cap excesses, signed128 boundary strings, one-grid-unit domain excess, malformed sign, missing/extra input and a truncated operator, all without an output file. These are finite probes, not a universal language/runtime/input proof.
+
+Complete native forward and adjoint outputs were compared with existing C30 outputs under the sum of their independently derived error bounds. Both passed. Byte equality across different internal grids is unnecessary:7,315 forward and2,206 adjoint output coordinates differ. The final numerical outputs remain byte-identical to the initial native outputs after the diagnostic reader correction.
+
+Two development corrections are explicit. First, the initial native reader inherited an unchecked extraction into the incidence-count variable. Initial source and probes are preserved; final source initializes and checks that extraction. The numerical action algorithm is unchanged, and the final eight-probe rerun plus the new truncated-source rejection pass. Second, the initial resource helper used cumulative child peakRSS. Its first native forward peak is preliminary and is not action-only RSS authority. The final helper uses os.wait4 for the specific action child, and final per-child receipts supersede that timing-method interpretation. Neither correction changes the arithmetic theorem.
+
+The final sixteen-step actual2640-state integration is finite wiring, arithmetic-enclosure and domain evidence:15forward+16adjoint actions,42,240 checked whole-step coordinates. It does not execute the8192-step decoder or establish its convergence target. The uniform early-iterate bound uses alpha_k<=1 and4C<2048 for data norm2; the8192 small-alpha gain must not be transferred automatically to every early iterate.
+
+Assumptions remain visible: correct native signed-integer execution under proved bounds; GNU compiler/build provenance, minimal documented GMP Linux64 ABI and runtime correctness; intended stable source/executable/input bytes; and inherited exact-source model claims. SHA binding is not a trusted-computing attestation or a concurrent-mutation proof. Rounded actions need not be exactly linear or exact transposes, and computational hidden-direction errors remain covered by full-state error bounds. No hidden-state recovery or new physical correspondence follows.
+
+The final binding receipt records authoritative source and theorem hashes, build and executable hashes, final integration/output bindings and finite replay checks. Only explicit safe review files are intended for capture; generated inputs, runtime vectors and binaries are excluded.
+
+Development — no registry entry. External review PENDING. Full8192 execution and physical/input evidence HOLD. Physical Promotion=0.

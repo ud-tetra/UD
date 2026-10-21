@@ -1,0 +1,65 @@
+{
+  "benchmark_pairs": [
+    {
+      "baseline_rss_kib": 14856,
+      "corresponding_output_bytes_match_reference_files": true,
+      "mode": "forward",
+      "native_rss_kib": 11392,
+      "new_wall_seconds": 9.415966380001919,
+      "observed_speed_ratio": 6.7408186296000485,
+      "old_wall_seconds": 63.47132159000466
+    },
+    {
+      "baseline_rss_kib": 14216,
+      "corresponding_output_bytes_match_reference_files": true,
+      "mode": "adjoint",
+      "native_rss_kib": 11264,
+      "new_wall_seconds": 8.122354715997062,
+      "observed_speed_ratio": 6.425763569670946,
+      "old_wall_seconds": 52.192331033998926
+    }
+  ],
+  "benchmark_sha256": "3fadff41012e1b302e9e8c13a0886a7c84f16c9c2e1d156794ac482ccde1758d",
+  "final_conformance_exact_fractions_match_own_checks": true,
+  "four_scientific_replay_files_identical": [
+    {
+      "file": "NATIVE_CONSTANTS.json",
+      "sha256": "f790cd79ccf187a1de4f8da1af480cd384818f4a060c494d697f2bc87ebee253"
+    },
+    {
+      "file": "SOURCE_BINDINGS.json",
+      "sha256": "2dee226bc55450f965e485083ade2680d32f3c892f7fc984232f9771d9eba811"
+    },
+    {
+      "file": "OPERATOR.txt",
+      "sha256": "cca3ed7e671b8397c3940921d9845399425fd2558cc62708941c00fc4b899950"
+    },
+    {
+      "file": "CONFORMANCE.json",
+      "sha256": "e82d575c4d84e651dd4f017f35b9848a12d3ea9e066e260348c8b36c9a3bf26b"
+    }
+  ],
+  "root_theorem_sha256": "6ee74fc711998c7ae45ddf0eb2b4a329db1f736dae410d225bb421ca687fc091",
+  "scope": {
+    "full8192_run_not_claimed": true,
+    "no_worst_case_or_external_replication_claim": true,
+    "physical_promotion": 0,
+    "timing_n_equals_one_per_backend_per_mode": true
+  },
+  "source_hashes": {
+    "c31_THEOREM.md": "6ee74fc711998c7ae45ddf0eb2b4a329db1f736dae410d225bb421ca687fc091",
+    "c31_action.cpp": "10fdad3cd8bc9484c357dd80ecbcd2c63e7cddef513b758953bfc40af2a71093",
+    "c31_benchmark.py": "5eb917a92f15295644e25fa0b61185e6badc85acf64188cc017df3172dd14f5a",
+    "c31_certify.py": "1b3e2a453f123ab011bc8d8281374fcd43520246c667d3a32d734151c0c629d8",
+    "c31_integration.py": "9367be9d3f10b76273412da68551e4b3feaf2403e202f3cab20a982f104f889d",
+    "c31_reproduce.py": "abf6658670faa299ef739df040ff7782d44c5324a27b23fca8a681456ac6981f",
+    "c31_run_timed.py": "ea24ffd0bae1a8ec8f5ce41841bf41dfaacb995ffc85e5d7ea9c2b6f5aa35789",
+    "c31_tests.py": "e37146bf329c693455615f95339a636246cee9f6bcf57c42c23bb3478ea2e140"
+  },
+  "source_review": {
+    "final_replay_field_name_describes_replay_not_diagnostic_history": true,
+    "reproduce_orchestrator_read_not_executed_by_reviewer": true,
+    "theorem_domain_phrase_scoped_to_cap": true
+  },
+  "status": "PASS"
+}
