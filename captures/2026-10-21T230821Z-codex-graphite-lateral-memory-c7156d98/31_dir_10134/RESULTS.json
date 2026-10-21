@@ -1,0 +1,124 @@
+{
+  "case": "31_dir_10134",
+  "all_checks_pass": true,
+  "model_checks": {
+    "SPD": true,
+    "algebra": true,
+    "transfer": true,
+    "positive_type": true,
+    "K0_PSD": true
+  },
+  "scale_h_star_eV_per_A2": 126.25337250579244,
+  "lateral_dimension": 100,
+  "vertical_dimension": 51,
+  "S_min_eigenvalue": 0.002225977664418871,
+  "K0_norm_F": 2.559620440715718e-05,
+  "algebra_relative_error": 2.6089479553211203e-15,
+  "transfer_relative_errors": [
+    7.269724965878367e-16,
+    7.229385704338609e-16,
+    2.3349614828223926e-16,
+    1.7333935991792624e-16
+  ],
+  "positive_type_relative_identity_error": 0.0,
+  "positive_type_quadratic_value": 2.846813413386403e-06,
+  "preparations": [
+    {
+      "preparation": "vertical_unrelaxed",
+      "all_checks_pass": true,
+      "checks": {
+        "trajectory_absolute": true,
+        "trajectory_relative": true,
+        "direct_history_residual": true,
+        "quadrature_pair": true,
+        "energy_drift": true,
+        "initial_acceleration": true,
+        "source_ablation": true
+      },
+      "z_error_max": 8.655770544763186e-12,
+      "vertical_velocity_error_max": 4.650554247254135e-12,
+      "z_error_relative": 3.610979251976476e-11,
+      "vertical_velocity_error_relative": 5.989880410860084e-11,
+      "full_position_reconstruction_error": 8.655770544763186e-12,
+      "full_velocity_reconstruction_error": 4.650554247254135e-12,
+      "energy_relative_drift": 2.6863342585348827e-11,
+      "direct_history_residual_max": 1.3358446761562224e-16,
+      "quadrature_pair_change_max": 1.1837285437878847e-19,
+      "initial_acceleration_error": 1.0408340855860843e-17,
+      "omitting_initial_source_error": 2.3033672133757066e-05
+    },
+    {
+      "preparation": "conditional_lateral_equilibrium",
+      "all_checks_pass": true,
+      "checks": {
+        "trajectory_absolute": true,
+        "trajectory_relative": true,
+        "direct_history_residual": true,
+        "quadrature_pair": true,
+        "energy_drift": true,
+        "initial_acceleration": true,
+        "source_ablation": true
+      },
+      "z_error_max": 8.65726934584643e-12,
+      "vertical_velocity_error_max": 4.648920137739765e-12,
+      "z_error_relative": 3.6115631272460335e-11,
+      "vertical_velocity_error_relative": 5.987708375412276e-11,
+      "full_position_reconstruction_error": 8.65726934584643e-12,
+      "full_velocity_reconstruction_error": 4.648920137739765e-12,
+      "energy_relative_drift": 2.6675989311715217e-11,
+      "direct_history_residual_max": 1.2632172919317805e-16,
+      "quadrature_pair_change_max": 1.1710230495790702e-19,
+      "initial_acceleration_error": 1.0408340855860843e-17,
+      "omitting_initial_source_error": 8.65726934584643e-12
+    },
+    {
+      "preparation": "hidden_displacement",
+      "all_checks_pass": true,
+      "checks": {
+        "trajectory_absolute": true,
+        "trajectory_relative": true,
+        "direct_history_residual": true,
+        "quadrature_pair": true,
+        "energy_drift": true,
+        "initial_acceleration": true,
+        "source_ablation": true
+      },
+      "z_error_max": 8.940227030906911e-13,
+      "vertical_velocity_error_max": 3.8649270416024617e-13,
+      "z_error_relative": 5.000220314324291e-10,
+      "vertical_velocity_error_relative": 4.972318813589689e-10,
+      "full_position_reconstruction_error": 8.940227030906911e-13,
+      "full_velocity_reconstruction_error": 3.8649270416024617e-13,
+      "energy_relative_drift": 1.7298734104704679e-12,
+      "direct_history_residual_max": 1.2354483755472323e-16,
+      "quadrature_pair_change_max": 1.3102540902839958e-21,
+      "initial_acceleration_error": 4.0657581468206416e-19,
+      "omitting_initial_source_error": 0.001787966623249691
+    },
+    {
+      "preparation": "hidden_velocity",
+      "all_checks_pass": true,
+      "checks": {
+        "trajectory_absolute": true,
+        "trajectory_relative": true,
+        "direct_history_residual": true,
+        "quadrature_pair": true,
+        "energy_drift": true,
+        "initial_acceleration": true,
+        "source_ablation": true
+      },
+      "z_error_max": 8.186048952411873e-13,
+      "vertical_velocity_error_max": 3.8691852456348985e-13,
+      "z_error_relative": 2.459655776899029e-10,
+      "vertical_velocity_error_relative": 2.9789423061413545e-10,
+      "full_position_reconstruction_error": 8.186048952411873e-13,
+      "full_velocity_reconstruction_error": 3.8691852456348985e-13,
+      "energy_relative_drift": 1.0134115768778429e-12,
+      "direct_history_residual_max": 1.5478680078125084e-16,
+      "quadrature_pair_change_max": 1.9190590211230242e-21,
+      "initial_acceleration_error": 0.0,
+      "omitting_initial_source_error": 0.0033281278743533373
+    }
+  ],
+  "physical_promotion": 0
+}
