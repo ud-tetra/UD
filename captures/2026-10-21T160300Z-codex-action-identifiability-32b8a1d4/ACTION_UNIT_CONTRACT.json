@@ -1,0 +1,529 @@
+{
+  "version": "0.1",
+  "scope": "Action subsystem only; manual source-to-AST transcription, not automatic prose parsing. O13 uses explicit correction proposal.",
+  "dimension_basis": [
+    "M",
+    "L",
+    "T"
+  ],
+  "unit_declarations": {
+    "B0": [
+      1,
+      0,
+      0
+    ],
+    "a0": [
+      0,
+      1,
+      0
+    ],
+    "tau0": [
+      0,
+      0,
+      1
+    ],
+    "A0": [
+      1,
+      2,
+      -1
+    ],
+    "hbar": [
+      1,
+      2,
+      -1
+    ],
+    "eta": [
+      0,
+      0,
+      0
+    ],
+    "xi_np": [
+      0,
+      0,
+      0
+    ],
+    "xi_pn": [
+      0,
+      0,
+      0
+    ],
+    "a": [
+      0,
+      0,
+      0
+    ],
+    "phi": [
+      0,
+      0,
+      0
+    ],
+    "n": [
+      0,
+      0,
+      0
+    ],
+    "pi": [
+      0,
+      0,
+      0
+    ],
+    "I": [
+      0,
+      0,
+      0
+    ],
+    "S": [
+      1,
+      2,
+      -1
+    ],
+    "alpha": [
+      1,
+      2,
+      -1
+    ],
+    "H": [
+      0,
+      0,
+      0
+    ],
+    "E": [
+      1,
+      2,
+      -2
+    ],
+    "omega": [
+      0,
+      0,
+      -1
+    ],
+    "G": [
+      -1,
+      3,
+      -2
+    ],
+    "gammaG": [
+      0,
+      0,
+      0
+    ]
+  },
+  "declaration_limit": "a0 length, tau0 time, support and phase dimensionless are explicit hypotheses; O15 supplies B0 mass type. Energy, action and clock physical correspondences remain gated.",
+  "source_bindings": [
+    {
+      "id": "G06",
+      "source_row_sha256": "1a6b1a1835783695f2ba3924d201be7b43c40fef616e2741d77bb7c26e4001fc",
+      "source_claim_bin": "SOURCE_STRATUM"
+    },
+    {
+      "id": "O09",
+      "source_row_sha256": "ddcde54a0532d0b1c85030a3ba1efba20273f345e5fe739a519f2cd2accafe9a",
+      "source_claim_bin": "NOT_A_COEFFICIENT"
+    },
+    {
+      "id": "O10",
+      "source_row_sha256": "12f5326a2abe4a21535352e13c87cbba0b1bcd2f91d2ed5adb23f88f0eda237f",
+      "source_claim_bin": "NOT_A_COEFFICIENT"
+    },
+    {
+      "id": "O11",
+      "source_row_sha256": "fcb92da33b92aff9f08c7041db1ee9358773d368ab04cc62495cc735e5ec9396",
+      "source_claim_bin": "NOT_A_COEFFICIENT"
+    },
+    {
+      "id": "O12",
+      "source_row_sha256": "6cc0a680b43863ebfb77c1d9f7cb001e53617b83347a8e5231ae3770957282ef",
+      "source_claim_bin": "NOT_A_COEFFICIENT"
+    },
+    {
+      "id": "O13",
+      "source_row_sha256": "0dcbf7d74b05fd22a5ea897e530e382b68819a7a305e330bdc824685c4d7dcff",
+      "source_claim_bin": "NOT_A_COEFFICIENT"
+    },
+    {
+      "id": "O14",
+      "source_row_sha256": "b86b573ae0e730aaa47ca83f57d494f9d33e60f918dbdb0b19e3e91ea2d35122",
+      "source_claim_bin": "NOT_A_COEFFICIENT"
+    },
+    {
+      "id": "O15",
+      "source_row_sha256": "ce1d7addd66a315d9d1296d991bd1bdf437d2b6f8e814bb0aa6c2b76ab7eafc8",
+      "source_claim_bin": "NOT_A_COEFFICIENT"
+    },
+    {
+      "id": "Q282",
+      "source_row_sha256": "0e947695ae358f0d086946a0284a8729148d67298c5170ef57ce42c5c8da04d4",
+      "source_claim_bin": "LOCKED_INTERNAL_MATHEMATICS"
+    },
+    {
+      "id": "Q283",
+      "source_row_sha256": "b08283ff40cc31d9cc5414745f111df315a823a9a999ef80b92e89f678c64531",
+      "source_claim_bin": "LOCKED_INTERNAL_MATHEMATICS"
+    },
+    {
+      "id": "Q284",
+      "source_row_sha256": "e08c80346e2228f2a63265140020245d8b2be2b2389da49c0add724b472c7eb3",
+      "source_claim_bin": "EXACT_CONDITIONAL"
+    },
+    {
+      "id": "Q285",
+      "source_row_sha256": "442cb316b83c8a48af7443879193bbbdfaa10092fa8c8a41fbdae3e2e10b37f1",
+      "source_claim_bin": "EXACT_CONDITIONAL"
+    },
+    {
+      "id": "Q286",
+      "source_row_sha256": "3eec20b23bc587c998e41bd9dca9878041685e4c2557e0267e2b38806cdca074",
+      "source_claim_bin": "LOCKED_INTERNAL_MATHEMATICS"
+    },
+    {
+      "id": "Q287",
+      "source_row_sha256": "49e7c0acdb9fdbfabaf0202f1d16e392532850e5dca802aec17a254bd30f64db",
+      "source_claim_bin": "QUARANTINED_CANDIDATE"
+    },
+    {
+      "id": "Q288",
+      "source_row_sha256": "25a0829edf06b18c4d8c34362c29ae32f41ad2db3997cb93ad37d48fb98b6eca",
+      "source_claim_bin": "QUARANTINED_CANDIDATE"
+    },
+    {
+      "id": "O54",
+      "source_row_sha256": "7ad677502a4eae1dd30645d51b3431178aa378bc28abd4e6005de7a80a2f08f0",
+      "source_claim_bin": "LOCKED_STATUS"
+    },
+    {
+      "id": "O55",
+      "source_row_sha256": "8200b7892e4295f7125564ec66bd1f87c24c38c9ab0906e8affd98a8bceb0d7f",
+      "source_claim_bin": "PROTOCOL_CONTROL"
+    }
+  ],
+  "typed_equalities": [
+    {
+      "source_row": "O09",
+      "lhs": "I",
+      "rhs": [
+        "mul",
+        [
+          "mul",
+          0.5,
+          "a"
+        ],
+        "phi"
+      ],
+      "dimension": [
+        "0",
+        "0",
+        "0"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O09",
+      "lhs": "I",
+      "rhs": [
+        "mul",
+        [
+          "mul",
+          "pi",
+          "n"
+        ],
+        "a"
+      ],
+      "dimension": [
+        "0",
+        "0",
+        "0"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O10",
+      "lhs": "A0",
+      "rhs": [
+        "div",
+        [
+          "mul",
+          "B0",
+          [
+            "pow",
+            "a0",
+            2
+          ]
+        ],
+        "tau0"
+      ],
+      "dimension": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O11",
+      "lhs": "S",
+      "rhs": [
+        "mul",
+        "pi",
+        "A0"
+      ],
+      "dimension": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O12",
+      "lhs": "xi_pn",
+      "rhs": [
+        "div",
+        "hbar",
+        "A0"
+      ],
+      "dimension": [
+        "0",
+        "0",
+        "0"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O13",
+      "lhs": "xi_np",
+      "rhs": [
+        "div",
+        "A0",
+        "hbar"
+      ],
+      "dimension": [
+        "0",
+        "0",
+        "0"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O13",
+      "lhs": "xi_np",
+      "rhs": [
+        "div",
+        1,
+        "xi_pn"
+      ],
+      "dimension": [
+        "0",
+        "0",
+        "0"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O13",
+      "lhs": "A0",
+      "rhs": [
+        "mul",
+        "xi_np",
+        "hbar"
+      ],
+      "dimension": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O14",
+      "lhs": "eta",
+      "rhs": [
+        "div",
+        "A0",
+        "hbar"
+      ],
+      "dimension": [
+        "0",
+        "0",
+        "0"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "O15",
+      "lhs": "G",
+      "rhs": [
+        "div",
+        [
+          "mul",
+          "gammaG",
+          [
+            "pow",
+            "a0",
+            3
+          ]
+        ],
+        [
+          "mul",
+          "B0",
+          [
+            "pow",
+            "tau0",
+            2
+          ]
+        ]
+      ],
+      "dimension": [
+        "-1",
+        "3",
+        "-2"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "Q282",
+      "lhs": "alpha",
+      "rhs": [
+        "div",
+        "S",
+        [
+          "mul",
+          "a",
+          "phi"
+        ]
+      ],
+      "dimension": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "Q282",
+      "lhs": "alpha",
+      "rhs": [
+        "div",
+        "A0",
+        2
+      ],
+      "dimension": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "Q283",
+      "lhs": "H",
+      "rhs": "a",
+      "dimension": [
+        "0",
+        "0",
+        "0"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "Q284",
+      "lhs": "omega",
+      "rhs": [
+        "div",
+        2,
+        "tau0"
+      ],
+      "dimension": [
+        "0",
+        "0",
+        "-1"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "Q285",
+      "lhs": [
+        "div",
+        "E",
+        [
+          "mul",
+          "a",
+          "omega"
+        ]
+      ],
+      "rhs": [
+        "div",
+        "A0",
+        2
+      ],
+      "dimension": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "Q286",
+      "lhs": "S",
+      "rhs": [
+        "mul",
+        "pi",
+        "A0"
+      ],
+      "dimension": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "bridge_status": "DECLARED_CONDITIONAL_SCOPE",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "Q287",
+      "lhs": "hbar",
+      "rhs": [
+        "div",
+        "A0",
+        2
+      ],
+      "dimension": [
+        "1",
+        "2",
+        "-1"
+      ],
+      "bridge_status": "CANDIDATE_ONLY",
+      "physical_identity_established": false
+    },
+    {
+      "source_row": "Q288",
+      "lhs": "eta",
+      "rhs": 2,
+      "dimension": [
+        "0",
+        "0",
+        "0"
+      ],
+      "bridge_status": "CANDIDATE_ONLY",
+      "physical_identity_established": false
+    }
+  ],
+  "full_ledger_objects": 723,
+  "subsystem_source_rows": 17,
+  "remaining_outside_this_contract": 706,
+  "physical_promotion": 0
+}

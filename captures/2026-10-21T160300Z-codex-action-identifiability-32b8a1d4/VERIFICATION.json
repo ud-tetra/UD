@@ -1,0 +1,134 @@
+{
+  "status": "PASS_SCOPED",
+  "typed_equalities_passed": 18,
+  "source_rows_bound": 17,
+  "negative_controls_rejected": [
+    "O13 literal final equality",
+    "add",
+    "sin",
+    "energy-typed B0 branch"
+  ],
+  "anchor_banks_checked": 2952,
+  "examples": {
+    "none": {
+      "W": [],
+      "action_identified": false,
+      "rank": 0,
+      "ambiguity_witness": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    "length_time": {
+      "W": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "action_identified": false,
+      "rank": 2,
+      "ambiguity_witness": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    "energy_time": {
+      "W": [
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "action_identified": true,
+      "rank": 2,
+      "ambiguity_witness": null,
+      "row_span_certificate_c": [
+        1,
+        1
+      ]
+    },
+    "direct_action": {
+      "W": [
+        [
+          1,
+          2,
+          -1
+        ]
+      ],
+      "action_identified": true,
+      "rank": 1,
+      "ambiguity_witness": null,
+      "row_span_certificate_c": [
+        1
+      ]
+    },
+    "mass_length_time": {
+      "W": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "action_identified": true,
+      "rank": 3,
+      "ambiguity_witness": null,
+      "row_span_certificate_c": [
+        1,
+        2,
+        -1
+      ]
+    },
+    "length_frequency": {
+      "W": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "action_identified": false,
+      "rank": 2,
+      "ambiguity_witness": [
+        "1",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "O13_original": "REJECTED_LITERAL_DIMENSIONAL_CHAIN",
+  "O13_overlay": "DIMENSIONALLY_VALID; source amendment not approved",
+  "QPB1": "DIMENSIONALLY_VALID_CANDIDATE_ONLY",
+  "EXIT03": "HOLD; specification and global typing unresolved",
+  "physical_promotion": 0
+}
