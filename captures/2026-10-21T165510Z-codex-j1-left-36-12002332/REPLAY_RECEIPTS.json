@@ -1,0 +1,41 @@
+{
+  "status": "PASS_SAVED_REPLAYS",
+  "completed_at_utc": "2026-10-21T17:07:29.451114+00:00",
+  "components": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-21T165510Z-codex-j1-left-36-12002332/candidate",
+      "exit_code": 0,
+      "log_sha256": "b6f682285665cbad4d5c8d52bb37746be68b0e06ed2cfb2936052325d191b660",
+      "matched_results": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 replay.py --scalar-only",
+      "working_directory": "captures/2026-10-21T165510Z-codex-j1-left-36-12002332",
+      "exit_code": 0,
+      "log_sha256": "04c21426347fa54add3b0defeeb6185b808e9802b929ca6b986fcd2e5e8be9a3",
+      "matched_results": [
+        "COVER.json",
+        "PLACEMENT_RESULTS.json",
+        "POINT_AUDIT_RESULTS.json",
+        "AUDIT_RESULTS.json"
+      ]
+    }
+  ],
+  "generation_exit_codes": {
+    "state_generation": 0,
+    "flux_generation": 0,
+    "scalar_generation": 0,
+    "candidate_replay": 0,
+    "scalar_replay": 0
+  },
+  "execution_shape": "Saved candidate state/flux and scalar replay components executed separately;default composing wrapper not separately executed.",
+  "coefficient_regeneration_during_replay": false,
+  "prior_36_state_flux_replays_reused_by_hash": true,
+  "independent_review": false,
+  "physical_promotion": 0
+}
