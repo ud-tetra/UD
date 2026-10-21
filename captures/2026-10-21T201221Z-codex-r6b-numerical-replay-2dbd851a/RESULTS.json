@@ -1,0 +1,2485 @@
+{
+  "checks": {
+    "theta_dense": {
+      "max_absolute_residual": 1.1644921667510927e-13,
+      "max_scaled_residual": 7.961496783222905e-16,
+      "orthogonality_frobenius": 1.6802676163093426e-14,
+      "residual_pass": true,
+      "orthogonality_pass": true
+    },
+    "coupled_dense": {
+      "max_absolute_residual": 1.1984318620299549e-13,
+      "max_scaled_residual": 8.320959461171523e-16,
+      "orthogonality_frobenius": 3.28396676630251e-14,
+      "residual_pass": true,
+      "orthogonality_pass": true
+    },
+    "blockwise_dense": {
+      "max_absolute_residual": 9.055801260592537e-14,
+      "max_scaled_residual": 6.161813564700021e-16,
+      "orthogonality_frobenius": 2.71981232951469e-14,
+      "residual_pass": true,
+      "orthogonality_pass": true
+    }
+  },
+  "theta": {
+    "exact_spectrum_comparison": [
+      {
+        "expected_eigenvalue": 0.0,
+        "expected_rank": 4,
+        "returned_rank": 4,
+        "max_eigenvalue_error": 6.579049974768703e-14,
+        "projector_error_frobenius": 1.7943180008103754e-15,
+        "pass": true
+      },
+      {
+        "expected_eigenvalue": 48.755160763446774,
+        "expected_rank": 192,
+        "returned_rank": 192,
+        "max_eigenvalue_error": 1.4210854715202004e-13,
+        "projector_error_frobenius": 9.102539515419391e-14,
+        "pass": true
+      },
+      {
+        "expected_eigenvalue": 51.2156834059672,
+        "expected_rank": 12,
+        "returned_rank": 12,
+        "max_eigenvalue_error": 6.394884621840902e-14,
+        "projector_error_frobenius": 1.1485055887430423e-13,
+        "pass": true
+      },
+      {
+        "expected_eigenvalue": 52.20296016643724,
+        "expected_rank": 48,
+        "returned_rank": 48,
+        "max_eigenvalue_error": 1.4210854715202004e-13,
+        "projector_error_frobenius": 1.3079820597486342e-13,
+        "pass": true
+      }
+    ],
+    "zero_modes": [
+      {
+        "W": 1.0000000000000004,
+        "defined": true,
+        "global_F": 4.000000000000002,
+        "component_IPR": 1.0,
+        "effective_components": 1.0,
+        "conditioned_F": 1.0000000000000004,
+        "component_weights": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "F_per_component": [
+          1.0000000000000004,
+          null,
+          null,
+          null
+        ],
+        "low_weight_numerical_flag": false
+      },
+      {
+        "W": 1.0000000000000004,
+        "defined": true,
+        "global_F": 4.000000000000002,
+        "component_IPR": 1.0,
+        "effective_components": 1.0,
+        "conditioned_F": 1.0000000000000004,
+        "component_weights": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "F_per_component": [
+          null,
+          1.0000000000000004,
+          null,
+          null
+        ],
+        "low_weight_numerical_flag": false
+      },
+      {
+        "W": 1.0000000000000004,
+        "defined": true,
+        "global_F": 4.000000000000002,
+        "component_IPR": 1.0,
+        "effective_components": 1.0,
+        "conditioned_F": 1.0000000000000004,
+        "component_weights": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "F_per_component": [
+          null,
+          null,
+          1.0000000000000004,
+          null
+        ],
+        "low_weight_numerical_flag": false
+      },
+      {
+        "W": 1.0,
+        "defined": true,
+        "global_F": 4.000000000000001,
+        "component_IPR": 1.0000000000000004,
+        "effective_components": 0.9999999999999996,
+        "conditioned_F": 0.9999999999999998,
+        "component_weights": [
+          0.0,
+          0.0,
+          0.0,
+          1.0000000000000002
+        ],
+        "F_per_component": [
+          null,
+          null,
+          null,
+          0.9999999999999998
+        ],
+        "low_weight_numerical_flag": false
+      }
+    ],
+    "zero_projector_density": {
+      "W": 1.0000000000000004,
+      "defined": true,
+      "global_F": 1.0000000000000002,
+      "component_IPR": 0.24999999999999997,
+      "effective_components": 4.000000000000001,
+      "conditioned_F": 1.0000000000000004,
+      "component_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.24999999999999994
+      ],
+      "F_per_component": [
+        1.0000000000000004,
+        1.0000000000000004,
+        1.0000000000000004,
+        0.9999999999999998
+      ],
+      "low_weight_numerical_flag": false
+    }
+  },
+  "coupled": {
+    "dimension": 512,
+    "numerical_clusters": [
+      {
+        "id": 0,
+        "indices": [
+          0,
+          0
+        ],
+        "rank": 1,
+        "lambda_min": -1.614521431691867e-08,
+        "lambda_max": -1.614521431691867e-08,
+        "gap_left": null,
+        "gap_right": 1.5639355856740652e-08,
+        "relative_projector_error_global_vs_blockwise": 1.028169800597442e-12,
+        "theta_weight_mean": 0.9999999956569343,
+        "rho_weight_mean": 4.343066396694341e-09,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 0.9999999999999998,
+          "defined": true,
+          "global_F": 4.0,
+          "component_IPR": 1.0,
+          "effective_components": 1.0,
+          "conditioned_F": 1.0,
+          "component_weights": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            1.0,
+            null,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999956569341,
+            0.9999999956569341
+          ],
+          "global_F": [
+            4.0,
+            4.0
+          ],
+          "conditioned_F": [
+            1.0,
+            1.0
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999956569344,
+            0.9999999956569344
+          ],
+          "global_F": [
+            4.000000000000001,
+            4.000000000000001
+          ],
+          "conditioned_F": [
+            1.0000000000000002,
+            1.0000000000000002
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "id": 1,
+        "indices": [
+          1,
+          3
+        ],
+        "rank": 3,
+        "lambda_min": -5.058584601780162e-10,
+        "lambda_max": -5.058070410625891e-10,
+        "gap_left": 1.5639355856740652e-08,
+        "gap_right": 0.0013292105366709218,
+        "relative_projector_error_global_vs_blockwise": 8.80709178592875e-12,
+        "theta_weight_mean": 0.9999999998638264,
+        "rho_weight_mean": 1.3617301394867861e-10,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 1.0,
+          "defined": true,
+          "global_F": 1.3333333333333335,
+          "component_IPR": 0.3333333333333333,
+          "effective_components": 3.0,
+          "conditioned_F": 1.0000000000000002,
+          "component_weights": [
+            4.015894052115992e-32,
+            0.3333333333333337,
+            0.33333333333333254,
+            0.33333333333333376
+          ],
+          "F_per_component": [
+            2.9945399288673027,
+            1.0,
+            1.0000000000000002,
+            0.9999999999999998
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999998638242,
+            0.9999999998638276
+          ],
+          "global_F": [
+            4.0,
+            4.000000000000001
+          ],
+          "conditioned_F": [
+            1.0,
+            1.0000000000000002
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999998638271,
+            0.9999999998638271
+          ],
+          "global_F": [
+            4.0,
+            4.0
+          ],
+          "conditioned_F": [
+            1.0,
+            1.0
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "indices": [
+          4,
+          51
+        ],
+        "rank": 48,
+        "lambda_min": 0.0013292100308638808,
+        "lambda_max": 0.0013292100309233335,
+        "gap_left": 0.0013292105366709218,
+        "gap_right": 0.001280748792160214,
+        "relative_projector_error_global_vs_blockwise": 2.2905500908019295e-12,
+        "theta_weight_mean": 7.906537973212203e-13,
+        "rho_weight_mean": 0.9999999999992095,
+        "projector_pass": true
+      },
+      {
+        "id": 3,
+        "indices": [
+          52,
+          63
+        ],
+        "rank": 12,
+        "lambda_min": 0.0026099588230835474,
+        "lambda_max": 0.0026099588231209333,
+        "gap_left": 0.001280748792160214,
+        "gap_right": 0.0012340535091226448,
+        "relative_projector_error_global_vs_blockwise": 2.905401146528759e-12,
+        "theta_weight_mean": 1.0912158470944979e-11,
+        "rho_weight_mean": 0.9999999999890882,
+        "projector_pass": true
+      },
+      {
+        "id": 4,
+        "indices": [
+          64,
+          66
+        ],
+        "rank": 3,
+        "lambda_min": 0.003844012332243578,
+        "lambda_max": 0.0038440123322994748,
+        "gap_left": 0.0012340535091226448,
+        "gap_right": 0.001189059684078599,
+        "relative_projector_error_global_vs_blockwise": 5.258952059907705e-12,
+        "theta_weight_mean": 4.767369495278469e-11,
+        "rho_weight_mean": 0.9999999999523262,
+        "projector_pass": true
+      },
+      {
+        "id": 5,
+        "indices": [
+          67,
+          67
+        ],
+        "rank": 1,
+        "lambda_min": 0.005033072016378074,
+        "lambda_max": 0.005033072016378074,
+        "gap_left": 0.001189059684078599,
+        "gap_right": 3.709946311622415,
+        "relative_projector_error_global_vs_blockwise": 9.214106999149342e-16,
+        "theta_weight_mean": 1.300875174519276e-10,
+        "rho_weight_mean": 0.9999999998699141,
+        "projector_pass": true
+      },
+      {
+        "id": 6,
+        "indices": [
+          68,
+          208
+        ],
+        "rank": 141,
+        "lambda_min": 3.714979383638793,
+        "lambda_max": 3.7149793836418197,
+        "gap_left": 3.709946311622415,
+        "gap_right": 5.446167961054016e-10,
+        "relative_projector_error_global_vs_blockwise": 3.98653361055302e-06,
+        "theta_weight_mean": 8.88001683742357e-13,
+        "rho_weight_mean": 0.999999999999112,
+        "projector_pass": true
+      },
+      {
+        "id": 7,
+        "indices": [
+          209,
+          211
+        ],
+        "rank": 3,
+        "lambda_min": 3.7149793841864365,
+        "lambda_max": 3.714979384186464,
+        "gap_left": 5.446167961054016e-10,
+        "gap_right": 0.0012807482038765805,
+        "relative_projector_error_global_vs_blockwise": 2.7330297487068e-05,
+        "theta_weight_mean": 1.3617301390212678e-10,
+        "rho_weight_mean": 0.999999999863827,
+        "projector_pass": true
+      },
+      {
+        "id": 8,
+        "indices": [
+          212,
+          246
+        ],
+        "rank": 35,
+        "lambda_min": 3.7162601323903406,
+        "lambda_max": 3.7162601324313282,
+        "gap_left": 0.0012807482038765805,
+        "gap_right": 5.632646793429785e-09,
+        "relative_projector_error_global_vs_blockwise": 1.1899042208665262e-11,
+        "theta_weight_mean": 1.226116882943707e-11,
+        "rho_weight_mean": 0.9999999999877389,
+        "projector_pass": true
+      },
+      {
+        "id": 9,
+        "indices": [
+          247,
+          247
+        ],
+        "rank": 1,
+        "lambda_min": 3.716260138063975,
+        "lambda_max": 3.716260138063975,
+        "gap_left": 5.632646793429785e-09,
+        "gap_right": 0.0012340476877339412,
+        "relative_projector_error_global_vs_blockwise": 1.589475089978547e-11,
+        "theta_weight_mean": 1.4113454691559455e-09,
+        "rho_weight_mean": 0.9999999985886547,
+        "projector_pass": true
+      },
+      {
+        "id": 10,
+        "indices": [
+          248,
+          253
+        ],
+        "rank": 6,
+        "lambda_min": 3.717494185751709,
+        "lambda_max": 3.7174941857517223,
+        "gap_left": 0.0012340476877339412,
+        "gap_right": 1.7888890369022192e-10,
+        "relative_projector_error_global_vs_blockwise": 3.6589060281867976e-05,
+        "theta_weight_mean": 5.5859848171369765e-11,
+        "rho_weight_mean": 0.9999999999441403,
+        "projector_pass": true
+      },
+      {
+        "id": 11,
+        "indices": [
+          254,
+          255
+        ],
+        "rank": 2,
+        "lambda_min": 3.717494185930611,
+        "lambda_max": 3.717494185930616,
+        "gap_left": 1.7888890369022192e-10,
+        "gap_right": 6.125672857848485e-09,
+        "relative_projector_error_global_vs_blockwise": 6.337411141031994e-05,
+        "theta_weight_mean": 4.819792773916178e-11,
+        "rho_weight_mean": 0.9999999999518019,
+        "projector_pass": true
+      },
+      {
+        "id": 12,
+        "indices": [
+          256,
+          256
+        ],
+        "rank": 1,
+        "lambda_min": 3.717494192056289,
+        "lambda_max": 3.717494192056289,
+        "gap_left": 6.125672857848485e-09,
+        "gap_right": 0.0011890530482534523,
+        "relative_projector_error_global_vs_blockwise": 1.632129451107866e-11,
+        "theta_weight_mean": 1.577576423373817e-09,
+        "rho_weight_mean": 0.9999999984224233,
+        "projector_pass": true
+      },
+      {
+        "id": 13,
+        "indices": [
+          257,
+          258
+        ],
+        "rank": 2,
+        "lambda_min": 3.7186832451045424,
+        "lambda_max": 3.7186832451045535,
+        "gap_left": 0.0011890530482534523,
+        "gap_right": 6.057992329999706e-09,
+        "relative_projector_error_global_vs_blockwise": 2.2815556256509043e-06,
+        "theta_weight_mean": 1.5242573941063165e-10,
+        "rho_weight_mean": 0.9999999998475743,
+        "projector_pass": true
+      },
+      {
+        "id": 14,
+        "indices": [
+          259,
+          259
+        ],
+        "rank": 1,
+        "lambda_min": 3.718683251162546,
+        "lambda_max": 3.718683251162546,
+        "gap_left": 6.057992329999706e-09,
+        "gap_right": 45.03647751232277,
+        "relative_projector_error_global_vs_blockwise": 3.2266069099779446e-06,
+        "theta_weight_mean": 1.521651924882638e-09,
+        "rho_weight_mean": 0.9999999984783479,
+        "projector_pass": true
+      },
+      {
+        "id": 15,
+        "indices": [
+          260,
+          403
+        ],
+        "rank": 144,
+        "lambda_min": 48.755160763485314,
+        "lambda_max": 48.75516076348866,
+        "gap_left": 45.03647751232277,
+        "gap_right": 4.901110628452443e-10,
+        "relative_projector_error_global_vs_blockwise": 1.4708261606011031e-05,
+        "theta_weight_mean": 0.9999999999991191,
+        "rho_weight_mean": 8.811584600509816e-13,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 0.9999999999999999,
+          "defined": true,
+          "global_F": 1.3333333330448893,
+          "component_IPR": 0.33333333326122233,
+          "effective_components": 3.000000000648999,
+          "conditioned_F": 1.0,
+          "component_weights": [
+            1.0816647973422714e-10,
+            0.33333333323525016,
+            0.33333333332453985,
+            0.3333333333320435
+          ],
+          "F_per_component": [
+            1.6823163911066124,
+            1.0000000000000002,
+            0.9999999999999999,
+            0.9999999999999999
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999990723,
+            0.9999999999992106
+          ],
+          "global_F": [
+            3.801148483567866,
+            42.211288475089056
+          ],
+          "conditioned_F": [
+            1.7127643034975109,
+            15.993553266338974
+          ],
+          "effective_components": [
+            1.0000000001705105,
+            2.9814418868545416
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999990721,
+            0.9999999999992101
+          ],
+          "global_F": [
+            8.344375016815594,
+            128.00644741713842
+          ],
+          "conditioned_F": [
+            2.0860937542038984,
+            32.001611854284604
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            1.0000000000000004
+          ]
+        }
+      },
+      {
+        "id": 16,
+        "indices": [
+          404,
+          439
+        ],
+        "rank": 36,
+        "lambda_min": 48.75516076397877,
+        "lambda_max": 48.755160764022726,
+        "gap_left": 4.901110628452443e-10,
+        "gap_right": 1.7482548742009385e-09,
+        "relative_projector_error_global_vs_blockwise": 3.165941441249836e-05,
+        "theta_weight_mean": 0.9999999999878385,
+        "rho_weight_mean": 1.2161289766746442e-11,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 1.0,
+          "defined": true,
+          "global_F": 5.33333332823962,
+          "component_IPR": 0.9999999991347388,
+          "effective_components": 1.0000000008652612,
+          "conditioned_F": 1.3333333332135866,
+          "component_weights": [
+            0.9999999995673694,
+            3.92297284634325e-10,
+            3.517396644078886e-11,
+            5.159419453703824e-12
+          ],
+          "F_per_component": [
+            1.3333333332135866,
+            1.3491323893382778,
+            4.397236533181994,
+            3.279687232419344
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999872111,
+            0.9999999999890886
+          ],
+          "global_F": [
+            13.365921820583377,
+            61.73114168001224
+          ],
+          "conditioned_F": [
+            3.3414804625207037,
+            15.432785422731946
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            1.0000000044731159
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999872129,
+            0.9999999999890887
+          ],
+          "global_F": [
+            14.495465927287508,
+            104.85648673906624
+          ],
+          "conditioned_F": [
+            3.623866481821877,
+            26.214121684766567
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            1.0000000000000002
+          ]
+        }
+      },
+      {
+        "id": 17,
+        "indices": [
+          440,
+          442
+        ],
+        "rank": 3,
+        "lambda_min": 48.75516076577098,
+        "lambda_max": 48.755160765771,
+        "gap_left": 1.7482548742009385e-09,
+        "gap_right": 1.9161205955242622e-10,
+        "relative_projector_error_global_vs_blockwise": 5.689105443247563e-05,
+        "theta_weight_mean": 0.9999999999523265,
+        "rho_weight_mean": 4.7673694946199826e-11,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 1.0,
+          "defined": true,
+          "global_F": 21.33333337364078,
+          "component_IPR": 1.0,
+          "effective_components": 1.0,
+          "conditioned_F": 5.333333343410195,
+          "component_weights": [
+            1.0,
+            1.787559888128429e-21,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            5.333333343410195,
+            2.9162301646986553,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999523261,
+            0.9999999999523268
+          ],
+          "global_F": [
+            22.954812054370137,
+            37.35124327154544
+          ],
+          "conditioned_F": [
+            5.738703013592537,
+            9.337810817886362
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            1.0000000000000004
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999523255,
+            0.9999999999523265
+          ],
+          "global_F": [
+            36.98549075705021,
+            63.99812047816132
+          ],
+          "conditioned_F": [
+            9.246372689262552,
+            15.999530119540333
+          ],
+          "effective_components": [
+            1.0,
+            1.0000000000000002
+          ]
+        }
+      },
+      {
+        "id": 18,
+        "indices": [
+          443,
+          448
+        ],
+        "rank": 6,
+        "lambda_min": 48.755160765962614,
+        "lambda_max": 48.75516076596265,
+        "gap_left": 1.9161205955242622e-10,
+        "gap_right": 3.82594578240969e-09,
+        "relative_projector_error_global_vs_blockwise": 3.755139504120531e-05,
+        "theta_weight_mean": 0.9999999999441397,
+        "rho_weight_mean": 5.585984816858286e-11,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 0.9999999999999999,
+          "defined": true,
+          "global_F": 21.333333344956827,
+          "component_IPR": 0.9999999999995772,
+          "effective_components": 1.0000000000004228,
+          "conditioned_F": 5.333333336241462,
+          "component_weights": [
+            0.9999999999997886,
+            2.1149053581747182e-13,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            5.333333336241462,
+            2.1924208746581972,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999441385,
+            0.9999999999441403
+          ],
+          "global_F": [
+            44.10092666140697,
+            120.26540004317565
+          ],
+          "conditioned_F": [
+            11.025231665351743,
+            30.066350010815736
+          ],
+          "effective_components": [
+            1.0,
+            1.0000000000017535
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999441394,
+            0.9999999999441413
+          ],
+          "global_F": [
+            36.5913940896485,
+            89.27838853672492
+          ],
+          "conditioned_F": [
+            9.147848522412126,
+            22.31959713418123
+          ],
+          "effective_components": [
+            1.0,
+            1.0000000000000004
+          ]
+        }
+      },
+      {
+        "id": 19,
+        "indices": [
+          449,
+          449
+        ],
+        "rank": 1,
+        "lambda_min": 48.755160769788596,
+        "lambda_max": 48.755160769788596,
+        "gap_left": 3.82594578240969e-09,
+        "gap_right": 5.229381372373609e-10,
+        "relative_projector_error_global_vs_blockwise": 2.8516495914904305e-05,
+        "theta_weight_mean": 0.9999999998699115,
+        "rho_weight_mean": 1.3008751747248347e-10,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 1.0,
+          "defined": true,
+          "global_F": 64.00000023893202,
+          "component_IPR": 1.0,
+          "effective_components": 1.0,
+          "conditioned_F": 16.000000059733004,
+          "component_weights": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            16.000000059733004,
+            null,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999998699115,
+            0.9999999998699115
+          ],
+          "global_F": [
+            64.000000238932,
+            64.000000238932
+          ],
+          "conditioned_F": [
+            16.000000059733,
+            16.000000059733
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999998699126,
+            0.9999999998699126
+          ],
+          "global_F": [
+            64.00000015077894,
+            64.00000015077894
+          ],
+          "conditioned_F": [
+            16.00000003769474,
+            16.00000003769474
+          ],
+          "effective_components": [
+            1.0000000000000002,
+            1.0000000000000002
+          ]
+        }
+      },
+      {
+        "id": 20,
+        "indices": [
+          450,
+          451
+        ],
+        "rank": 2,
+        "lambda_min": 48.755160770311534,
+        "lambda_max": 48.755160770311555,
+        "gap_left": 5.229381372373609e-10,
+        "gap_right": 2.4605226356952272,
+        "relative_projector_error_global_vs_blockwise": 2.0358645449737898e-05,
+        "theta_weight_mean": 0.999999999847574,
+        "rho_weight_mean": 1.524257393979261e-10,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 0.9999999999999998,
+          "defined": true,
+          "global_F": 64.00000005961927,
+          "component_IPR": 1.0000000000000004,
+          "effective_components": 0.9999999999999996,
+          "conditioned_F": 16.00000001490481,
+          "component_weights": [
+            1.0000000000000002,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            16.00000001490481,
+            null,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999998475736,
+            0.9999999998475743
+          ],
+          "global_F": [
+            128.0000000005559,
+            128.00000010517647
+          ],
+          "conditioned_F": [
+            32.000000000138975,
+            32.00000002629412
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999998475739,
+            0.9999999998475749
+          ],
+          "global_F": [
+            128.00000000040956,
+            128.0000000480293
+          ],
+          "conditioned_F": [
+            32.0000000001024,
+            32.00000001200731
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            1.0000000000000004
+          ]
+        }
+      },
+      {
+        "id": 21,
+        "indices": [
+          452,
+          460
+        ],
+        "rank": 9,
+        "lambda_min": 51.21568340600678,
+        "lambda_max": 51.215683406006875,
+        "gap_left": 2.4605226356952272,
+        "gap_right": 5.06339858930005e-10,
+        "relative_projector_error_global_vs_blockwise": 3.1807083215806785e-14,
+        "theta_weight_mean": 0.9999999999991671,
+        "rho_weight_mean": 8.329209256624725e-13,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 0.9999999999999999,
+          "defined": true,
+          "global_F": 1.3333333333333337,
+          "component_IPR": 0.33333333333333337,
+          "effective_components": 2.9999999999999996,
+          "conditioned_F": 1.0000000000000002,
+          "component_weights": [
+            1.6251112838553777e-29,
+            0.3333333333333335,
+            0.33333333333333326,
+            0.3333333333333333
+          ],
+          "F_per_component": [
+            2.756835827917211,
+            1.0,
+            1.0000000000000002,
+            1.0
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.999999999999166,
+            0.9999999999991682
+          ],
+          "global_F": [
+            7.9999999999999005,
+            9.333333333333336
+          ],
+          "conditioned_F": [
+            1.9999999999999751,
+            2.3333333333333344
+          ],
+          "effective_components": [
+            1.0,
+            1.0000000000000002
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999991664,
+            0.999999999999168
+          ],
+          "global_F": [
+            7.999999999999999,
+            8.927039337976804
+          ],
+          "conditioned_F": [
+            2.000000000000001,
+            2.231759834494201
+          ],
+          "effective_components": [
+            1.0,
+            1.0000000000000004
+          ]
+        }
+      },
+      {
+        "id": 22,
+        "indices": [
+          461,
+          462
+        ],
+        "rank": 2,
+        "lambda_min": 51.215683406513214,
+        "lambda_max": 51.21568340651329,
+        "gap_left": 5.06339858930005e-10,
+        "gap_right": 2.1527455373870907e-09,
+        "relative_projector_error_global_vs_blockwise": 9.569200953486932e-07,
+        "theta_weight_mean": 0.9999999999885043,
+        "rho_weight_mean": 1.1495521508441664e-11,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 1.0,
+          "defined": true,
+          "global_F": 5.333333333304089,
+          "component_IPR": 1.0,
+          "effective_components": 1.0,
+          "conditioned_F": 1.3333333333260222,
+          "component_weights": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            1.3333333333260222,
+            null,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999885041,
+            0.9999999999885044
+          ],
+          "global_F": [
+            8.000000004964729,
+            8.00001993419626
+          ],
+          "conditioned_F": [
+            2.0000000012411823,
+            2.000004983549065
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999885043,
+            0.9999999999885046
+          ],
+          "global_F": [
+            7.99999999891399,
+            8.000019030884797
+          ],
+          "conditioned_F": [
+            1.9999999997284974,
+            2.0000047577211992
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "id": 23,
+        "indices": [
+          463,
+          463
+        ],
+        "rank": 1,
+        "lambda_min": 51.21568340866604,
+        "lambda_max": 51.21568340866604,
+        "gap_left": 2.1527455373870907e-09,
+        "gap_right": 0.9872767578099442,
+        "relative_projector_error_global_vs_blockwise": 1.3532893769887196e-06,
+        "theta_weight_mean": 0.9999999999431807,
+        "rho_weight_mean": 5.6819416207242577e-11,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 0.9999999999999999,
+          "defined": true,
+          "global_F": 9.333333333664715,
+          "component_IPR": 1.0,
+          "effective_components": 1.0,
+          "conditioned_F": 2.3333333334161788,
+          "component_weights": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            2.3333333334161788,
+            null,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999431807,
+            0.9999999999431807
+          ],
+          "global_F": [
+            9.333333333664713,
+            9.333333333664713
+          ],
+          "conditioned_F": [
+            2.3333333334161783,
+            2.3333333334161783
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999431801,
+            0.9999999999431801
+          ],
+          "global_F": [
+            9.333333333593234,
+            9.333333333593234
+          ],
+          "conditioned_F": [
+            2.3333333333983086,
+            2.3333333333983086
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "id": 24,
+        "indices": [
+          464,
+          499
+        ],
+        "rank": 36,
+        "lambda_min": 52.20296016647598,
+        "lambda_max": 52.202960166476075,
+        "gap_left": 0.9872767578099442,
+        "gap_right": 4.960938326803443e-10,
+        "relative_projector_error_global_vs_blockwise": 1.723425932778835e-14,
+        "theta_weight_mean": 0.9999999999992009,
+        "rho_weight_mean": 7.993475870385346e-13,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 1.0,
+          "defined": true,
+          "global_F": 1.3333333333333335,
+          "component_IPR": 0.3333333333333333,
+          "effective_components": 3.0,
+          "conditioned_F": 1.0000000000000002,
+          "component_weights": [
+            4.806220915065811e-30,
+            0.33333333333333337,
+            0.33333333333333337,
+            0.33333333333333326
+          ],
+          "F_per_component": [
+            2.4244194969841497,
+            1.0000000000000002,
+            1.0,
+            1.0000000000000002
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999991984,
+            0.9999999999992024
+          ],
+          "global_F": [
+            7.036243685607351,
+            37.333333333333336
+          ],
+          "conditioned_F": [
+            1.7590609214018378,
+            9.333333333333334
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            1.0000000000000007
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999991998,
+            0.9999999999992014
+          ],
+          "global_F": [
+            10.316553985225998,
+            37.29013901186731
+          ],
+          "conditioned_F": [
+            2.5791384963064994,
+            9.322534752966828
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            1.0000000000000002
+          ]
+        }
+      },
+      {
+        "id": 25,
+        "indices": [
+          500,
+          508
+        ],
+        "rank": 9,
+        "lambda_min": 52.20296016697217,
+        "lambda_max": 52.20296016697223,
+        "gap_left": 4.960938326803443e-10,
+        "gap_right": 1.8019292724602565e-09,
+        "relative_projector_error_global_vs_blockwise": 9.43603994196378e-06,
+        "theta_weight_mean": 0.999999999988968,
+        "rho_weight_mean": 1.10321484405948e-11,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 0.9999999999999999,
+          "defined": true,
+          "global_F": 5.333333332850497,
+          "component_IPR": 1.0,
+          "effective_components": 1.0,
+          "conditioned_F": 1.3333333332126243,
+          "component_weights": [
+            1.0,
+            2.9169628779317504e-41,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            1.3333333332126243,
+            3.1089518599624193,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999889674,
+            0.9999999999889688
+          ],
+          "global_F": [
+            7.569758680746285,
+            24.19268755650485
+          ],
+          "conditioned_F": [
+            1.8924396701865713,
+            6.048171889126213
+          ],
+          "effective_components": [
+            1.0,
+            1.0000000000000002
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999889672,
+            0.999999999988969
+          ],
+          "global_F": [
+            10.776537890991971,
+            21.317351272221536
+          ],
+          "conditioned_F": [
+            2.6941344727479932,
+            5.329337818055387
+          ],
+          "effective_components": [
+            1.0,
+            1.0000000000000004
+          ]
+        }
+      },
+      {
+        "id": 26,
+        "indices": [
+          509,
+          510
+        ],
+        "rank": 2,
+        "lambda_min": 52.20296016877416,
+        "lambda_max": 52.2029601687742,
+        "gap_left": 1.8019292724602565e-09,
+        "gap_right": 3.029740014426352e-09,
+        "relative_projector_error_global_vs_blockwise": 2.0019293621082122e-05,
+        "theta_weight_mean": 0.9999999999518013,
+        "rho_weight_mean": 4.819792772228299e-11,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 1.0,
+          "defined": true,
+          "global_F": 21.333333324642602,
+          "component_IPR": 1.0,
+          "effective_components": 1.0,
+          "conditioned_F": 5.333333331160651,
+          "component_weights": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            5.333333331160651,
+            null,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999999518013,
+            0.9999999999518014
+          ],
+          "global_F": [
+            31.999999999977888,
+            32.00000052665622
+          ],
+          "conditioned_F": [
+            7.999999999994472,
+            8.00000013166406
+          ],
+          "effective_components": [
+            1.0,
+            1.0000000000000004
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999999518011,
+            0.9999999999518019
+          ],
+          "global_F": [
+            31.999999999913936,
+            32.0000043012641
+          ],
+          "conditioned_F": [
+            7.999999999978484,
+            8.000001075316021
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            1.0
+          ]
+        }
+      },
+      {
+        "id": 27,
+        "indices": [
+          511,
+          511
+        ],
+        "rank": 1,
+        "lambda_min": 52.20296017180394,
+        "lambda_max": 52.20296017180394,
+        "gap_left": 3.029740014426352e-09,
+        "gap_right": null,
+        "relative_projector_error_global_vs_blockwise": 5.026476640604282e-07,
+        "theta_weight_mean": 0.9999999998893128,
+        "rho_weight_mean": 1.1068800451086188e-10,
+        "projector_pass": true,
+        "theta_projector_density": {
+          "W": 1.0000000000000002,
+          "defined": true,
+          "global_F": 37.333333432152415,
+          "component_IPR": 0.9999999999999993,
+          "effective_components": 1.0000000000000007,
+          "conditioned_F": 9.33333335803811,
+          "component_weights": [
+            0.9999999999999997,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_per_component": [
+            9.33333335803811,
+            null,
+            null,
+            null
+          ],
+          "low_weight_numerical_flag": false
+        },
+        "global_theta_mode_ranges": {
+          "W": [
+            0.9999999998893128,
+            0.9999999998893128
+          ],
+          "global_F": [
+            37.333333432152436,
+            37.333333432152436
+          ],
+          "conditioned_F": [
+            9.333333358038109,
+            9.333333358038109
+          ],
+          "effective_components": [
+            1.0,
+            1.0
+          ]
+        },
+        "blockwise_theta_mode_ranges": {
+          "W": [
+            0.9999999998893117,
+            0.9999999998893117
+          ],
+          "global_F": [
+            37.33333343214885,
+            37.33333343214885
+          ],
+          "conditioned_F": [
+            9.333333358037208,
+            9.333333358037208
+          ],
+          "effective_components": [
+            0.9999999999999996,
+            0.9999999999999996
+          ]
+        }
+      }
+    ],
+    "global_vs_blockwise_eigenvalue_max_error": 6.642169453341396e-14,
+    "all_cluster_projectors_pass": true
+  },
+  "probes": [
+    {
+      "sigma": 0.00133,
+      "k": 10,
+      "which": "LM",
+      "mode": "normal",
+      "tol": 1e-12,
+      "maxiter": 12800,
+      "ncv": 64,
+      "v0_hash": "e4583988b71f1df2d8d44915f52c2c8eb18e531f58928b7ea9b5fea003ea9c97",
+      "rng": 20261021,
+      "warnings": [],
+      "solver_status": "RETURNED",
+      "checks": {
+        "max_absolute_residual": 7.259542645796341e-15,
+        "max_scaled_residual": 7.44475270013301e-17,
+        "orthogonality_frobenius": 4.10795857516392e-15,
+        "residual_pass": true,
+        "orthogonality_pass": true
+      },
+      "modes": [
+        {
+          "eigenvalue": 0.0013292100308985324,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.99999999999921,
+            "defined": true,
+            "global_F": 54.71078826174993,
+            "component_IPR": 0.8548560665914018,
+            "effective_components": 1.1697875690200525,
+            "conditioned_F": 15.99999999997082,
+            "component_weights": [
+              6.241836852684258e-32,
+              0.06842739845721023,
+              0.009573630101684563,
+              0.9219989714411053
+            ],
+            "F_per_component": [
+              3.414056871946942,
+              15.999999999905175,
+              15.999999993664431,
+              15.999999999971859
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.90653797315035e-13,
+            "defined": true,
+            "global_F": 54.710788261733185,
+            "component_IPR": 0.8548560665911402,
+            "effective_components": 1.1697875690204105,
+            "conditioned_F": 15.999999999970818,
+            "component_weights": [
+              9.987067410290816e-21,
+              0.06842739845731312,
+              0.00957363010173177,
+              0.9219989714409553
+            ],
+            "F_per_component": [
+              2.4747174301011308,
+              15.999999999905176,
+              15.999999993664424,
+              15.999999999971857
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308989678,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.99999999999921,
+            "defined": true,
+            "global_F": 29.720884545191772,
+            "component_IPR": 0.4643888210214483,
+            "effective_components": 2.153367942407498,
+            "conditioned_F": 15.999999999902604,
+            "component_weights": [
+              1.531526031123344e-31,
+              0.04742104941034931,
+              0.41134050863241545,
+              0.541238441957235
+            ],
+            "F_per_component": [
+              4.225022724106426,
+              15.999999996651844,
+              15.999999999957316,
+              15.999999999895952
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537973143937e-13,
+            "defined": true,
+            "global_F": 29.720884545210765,
+            "component_IPR": 0.4643888210217451,
+            "effective_components": 2.153367942406122,
+            "conditioned_F": 15.999999999902602,
+            "component_weights": [
+              2.529398201104251e-21,
+              0.04742104941011636,
+              0.41134050863215854,
+              0.5412384419577249
+            ],
+            "F_per_component": [
+              2.3487570387963395,
+              15.999999996651844,
+              15.999999999957321,
+              15.999999999895952
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308989678,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992092,
+            "defined": true,
+            "global_F": 29.483852560602674,
+            "component_IPR": 0.46068519626151827,
+            "effective_components": 2.1706796921521385,
+            "conditioned_F": 15.999999999927013,
+            "component_weights": [
+              4.3392020120862e-32,
+              0.5833816306718834,
+              0.33785770149331995,
+              0.0787606678347966
+            ],
+            "F_per_component": [
+              4.46692906100302,
+              15.999999999912005,
+              15.999999999986501,
+              15.999999999655774
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537973007425e-13,
+            "defined": true,
+            "global_F": 29.48385256077244,
+            "component_IPR": 0.4606851962641708,
+            "effective_components": 2.17067969213964,
+            "conditioned_F": 15.999999999927015,
+            "component_weights": [
+              4.698909934503541e-21,
+              0.5833816306778294,
+              0.3378577014868583,
+              0.07876066783531208
+            ],
+            "F_per_component": [
+              1.5765718905640769,
+              15.999999999912008,
+              15.999999999986501,
+              15.999999999655774
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308989678,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992084,
+            "defined": true,
+            "global_F": 21.99096802544815,
+            "component_IPR": 0.3436088753985984,
+            "effective_components": 2.9102857102860478,
+            "conditioned_F": 15.999999999954783,
+            "component_weights": [
+              3.345085690954e-29,
+              0.3691973199235577,
+              0.25080178986931756,
+              0.38000089020712474
+            ],
+            "F_per_component": [
+              4.940764974220731,
+              15.999999999967514,
+              15.999999999851662,
+              15.999999999987686
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537973233615e-13,
+            "defined": true,
+            "global_F": 21.990968025489614,
+            "component_IPR": 0.34360887539924634,
+            "effective_components": 2.9102857102805597,
+            "conditioned_F": 15.999999999954781,
+            "component_weights": [
+              1.760198082237995e-20,
+              0.3691973199236948,
+              0.2508017898667986,
+              0.3800008902095066
+            ],
+            "F_per_component": [
+              1.4375685801447684,
+              15.999999999967514,
+              15.999999999851626,
+              15.999999999987695
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308992451,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.999999999999209,
+            "defined": true,
+            "global_F": 55.63052688886562,
+            "component_IPR": 0.8692269826400981,
+            "effective_components": 1.150447489518452,
+            "conditioned_F": 15.999999999971049,
+            "component_weights": [
+              1.076004557980599e-31,
+              0.9300053940617672,
+              0.06555321259304264,
+              0.00444139334519019
+            ],
+            "F_per_component": [
+              2.7329970813347875,
+              15.99999999998225,
+              15.999999997781881,
+              15.999999985640395
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.90653797314388e-13,
+            "defined": true,
+            "global_F": 55.630526888879686,
+            "component_IPR": 0.8692269826403181,
+            "effective_components": 1.150447489518161,
+            "conditioned_F": 15.999999999971045,
+            "component_weights": [
+              4.7890221943741325e-21,
+              0.9300053940618873,
+              0.06555321259302173,
+              0.0044413933450910765
+            ],
+            "F_per_component": [
+              2.114684356101313,
+              15.99999999998225,
+              15.999999997781869,
+              15.999999985640374
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308992453,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992082,
+            "defined": true,
+            "global_F": 56.07492123048314,
+            "component_IPR": 0.8761706442267225,
+            "effective_components": 1.1413301810431744,
+            "conditioned_F": 15.999999999992268,
+            "component_weights": [
+              4.813448823057931e-30,
+              0.06429497119829504,
+              0.9338272188875516,
+              0.001877809914153389
+            ],
+            "F_per_component": [
+              4.925523997050411,
+              15.999999999776607,
+              15.999999999993332,
+              15.999999989651878
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537973232906e-13,
+            "defined": true,
+            "global_F": 56.074921230505566,
+            "component_IPR": 0.8761706442270727,
+            "effective_components": 1.1413301810427183,
+            "conditioned_F": 15.999999999992271,
+            "component_weights": [
+              5.774993092198276e-21,
+              0.06429497119896736,
+              0.9338272188876945,
+              0.0018778099133382224
+            ],
+            "F_per_component": [
+              3.0728607674692094,
+              15.999999999776614,
+              15.999999999993335,
+              15.999999989651947
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308992453,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992099,
+            "defined": true,
+            "global_F": 63.19580131310293,
+            "component_IPR": 0.9874343955172795,
+            "effective_components": 1.01272550818542,
+            "conditioned_F": 15.999999999999252,
+            "component_weights": [
+              6.056838184459908e-32,
+              0.0056996347345561905,
+              0.0006195685223355755,
+              0.9936807967431082
+            ],
+            "F_per_component": [
+              9.182370395519659,
+              15.999999999653108,
+              15.999999998576401,
+              15.999999999999263
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.90653797321743e-13,
+            "defined": true,
+            "global_F": 63.19580131302699,
+            "component_IPR": 0.9874343955160928,
+            "effective_components": 1.0127255081866373,
+            "conditioned_F": 15.999999999999254,
+            "component_weights": [
+              9.582748050426027e-21,
+              0.0056996347347368385,
+              0.0006195685227532333,
+              0.9936807967425098
+            ],
+            "F_per_component": [
+              11.673503515170298,
+              15.999999999653108,
+              15.999999998576476,
+              15.999999999999266
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308994119,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992109,
+            "defined": true,
+            "global_F": 38.17859719554936,
+            "component_IPR": 0.5965405811827619,
+            "effective_components": 1.676331890141151,
+            "conditioned_F": 15.999999999938225,
+            "component_weights": [
+              9.375574883388833e-33,
+              0.7513618952629447,
+              0.10102280840066713,
+              0.1476152963363882
+            ],
+            "F_per_component": [
+              17.659681984068094,
+              15.999999999947217,
+              15.999999999957794,
+              15.999999999696051
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537973141332e-13,
+            "defined": true,
+            "global_F": 38.17859719554802,
+            "component_IPR": 0.596540581182741,
+            "effective_components": 1.6763318901412096,
+            "conditioned_F": 15.999999999938225,
+            "component_weights": [
+              4.346742263913006e-22,
+              0.7513618952629156,
+              0.10102280840051454,
+              0.14761529633656983
+            ],
+            "F_per_component": [
+              1.5668032671195313,
+              15.99999999994722,
+              15.999999999957792,
+              15.999999999696053
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308994119,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992111,
+            "defined": true,
+            "global_F": 43.9943740473578,
+            "component_IPR": 0.6874120944901767,
+            "effective_components": 1.4547314602336987,
+            "conditioned_F": 15.999999999995088,
+            "component_weights": [
+              1.0370507317131751e-28,
+              0.08153895755884574,
+              0.09938461694393558,
+              0.8190764254972186
+            ],
+            "F_per_component": [
+              5.135997397058293,
+              15.999999999965466,
+              15.999999999837122,
+              15.999999999997707
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537973095614e-13,
+            "defined": true,
+            "global_F": 43.99437404777982,
+            "component_IPR": 0.6874120944967707,
+            "effective_components": 1.4547314602197443,
+            "conditioned_F": 15.99999999999509,
+            "component_weights": [
+              8.643134746345829e-20,
+              0.08153895755956515,
+              0.0993846169386175,
+              0.8190764255018175
+            ],
+            "F_per_component": [
+              1.1206948491804711,
+              15.999999999965462,
+              15.999999999836925,
+              15.99999999999771
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308994119,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992097,
+            "defined": true,
+            "global_F": 42.776310516877544,
+            "component_IPR": 0.6683798518262383,
+            "effective_components": 1.4961552136373713,
+            "conditioned_F": 15.999999999999362,
+            "component_weights": [
+              1.0869310817829603e-33,
+              0.16709914717737653,
+              0.7995925746556056,
+              0.033308278167017855
+            ],
+            "F_per_component": [
+              11.676692313727461,
+              15.999999999997412,
+              15.999999999999481,
+              15.999999999980307
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.90653797313968e-13,
+            "defined": true,
+            "global_F": 42.77631051688086,
+            "component_IPR": 0.6683798518262901,
+            "effective_components": 1.4961552136372551,
+            "conditioned_F": 15.999999999999362,
+            "component_weights": [
+              1.7317273224710738e-24,
+              0.16709914717734087,
+              0.7995925746556457,
+              0.033308278167013594
+            ],
+            "F_per_component": [
+              2.83218025890861,
+              15.99999999999741,
+              15.999999999999481,
+              15.999999999980298
+            ],
+            "low_weight_numerical_flag": true
+          }
+        }
+      ],
+      "cluster_coverage": [
+        {
+          "reference_cluster": 2,
+          "returned_rank": 10,
+          "reference_rank": 48,
+          "subspace_containment_error": 6.620920171080178e-13,
+          "coverage_status": "INCOMPLETE_EIGENSPACE"
+        }
+      ]
+    },
+    {
+      "sigma": 1e-08,
+      "k": 10,
+      "which": "LM",
+      "mode": "normal",
+      "tol": 1e-12,
+      "maxiter": 12800,
+      "ncv": 64,
+      "v0_hash": "e4583988b71f1df2d8d44915f52c2c8eb18e531f58928b7ea9b5fea003ea9c97",
+      "rng": 20261021,
+      "warnings": [],
+      "solver_status": "RETURNED",
+      "checks": {
+        "max_absolute_residual": 9.92278630005441e-12,
+        "max_scaled_residual": 1.0175942714924212e-13,
+        "orthogonality_frobenius": 4.761299267996162e-15,
+        "residual_pass": true,
+        "orthogonality_pass": true
+      },
+      "modes": [
+        {
+          "eigenvalue": -1.6145203624673996e-08,
+          "reference_cluster": 0,
+          "rho": {
+            "W": 4.343066396722325e-09,
+            "defined": true,
+            "global_F": 9.858435567064307,
+            "component_IPR": 0.9999999999999998,
+            "effective_components": 1.0000000000000002,
+            "conditioned_F": 2.464608891766077,
+            "component_weights": [
+              0.9999999999999999,
+              5.1689920091332885e-26,
+              3.188135101878274e-26,
+              2.7061141432365816e-26
+            ],
+            "F_per_component": [
+              2.464608891766077,
+              2.314288298455505,
+              3.0474102457908447,
+              5.431361975982219
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 0.9999999956569338,
+            "defined": true,
+            "global_F": 4.0,
+            "component_IPR": 1.0,
+            "effective_components": 1.0,
+            "conditioned_F": 1.0,
+            "component_weights": [
+              1.0,
+              3.081487924402684e-33,
+              1.1093356527849662e-31,
+              4.930380679044294e-32
+            ],
+            "F_per_component": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "low_weight_numerical_flag": false
+          }
+        },
+        {
+          "eigenvalue": -5.058405574487839e-10,
+          "reference_cluster": 1,
+          "rho": {
+            "W": 1.3617301395260307e-10,
+            "defined": true,
+            "global_F": 3.1520435584278346,
+            "component_IPR": 0.7880108896069588,
+            "effective_components": 1.269017996056852,
+            "conditioned_F": 0.9999999999999999,
+            "component_weights": [
+              2.556262461228396e-23,
+              0.10368599335958181,
+              0.014814929931243188,
+              0.8814990767091749
+            ],
+            "F_per_component": [
+              4.957228339925745,
+              1.0000000000000002,
+              1.0000000000000002,
+              0.9999999999999999
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 0.9999999998638269,
+            "defined": true,
+            "global_F": 3.152043558427825,
+            "component_IPR": 0.7880108896069563,
+            "effective_components": 1.269017996056856,
+            "conditioned_F": 0.9999999999999999,
+            "component_weights": [
+              6.159204940551113e-32,
+              0.10368599335959086,
+              0.01481492993123662,
+              0.8814990767091726
+            ],
+            "F_per_component": [
+              1.000000517119289,
+              0.9999999999999999,
+              1.0000000000000004,
+              1.0
+            ],
+            "low_weight_numerical_flag": false
+          }
+        },
+        {
+          "eigenvalue": -5.058405574487707e-10,
+          "reference_cluster": 1,
+          "rho": {
+            "W": 1.3617301395260046e-10,
+            "defined": true,
+            "global_F": 3.870797871297646,
+            "component_IPR": 0.9676994678244114,
+            "effective_components": 1.0333786813463965,
+            "conditioned_F": 1.0000000000000002,
+            "component_weights": [
+              3.631229715594562e-30,
+              0.005908678200911991,
+              0.9836439435250587,
+              0.010447378274029338
+            ],
+            "F_per_component": [
+              3.783725389446811,
+              1.0,
+              1.0,
+              1.0000000000000004
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 0.9999999998638274,
+            "defined": true,
+            "global_F": 3.870797871297646,
+            "component_IPR": 0.9676994678244116,
+            "effective_components": 1.0333786813463963,
+            "conditioned_F": 0.9999999999999999,
+            "component_weights": [
+              1.1166254724720815e-31,
+              0.005908678200911986,
+              0.9836439435250588,
+              0.010447378274029319
+            ],
+            "F_per_component": [
+              1.0000012832773255,
+              0.9999999999999998,
+              1.0,
+              1.0
+            ],
+            "low_weight_numerical_flag": false
+          }
+        },
+        {
+          "eigenvalue": -5.058405574487641e-10,
+          "reference_cluster": 1,
+          "rho": {
+            "W": 1.3617301395259785e-10,
+            "defined": true,
+            "global_F": 3.217998370300677,
+            "component_IPR": 0.8044995925751692,
+            "effective_components": 1.2430087090523467,
+            "conditioned_F": 1.0,
+            "component_weights": [
+              1.4286262123631575e-23,
+              0.890405328439497,
+              0.001541126543706642,
+              0.10805354501679654
+            ],
+            "F_per_component": [
+              3.5186379402782677,
+              1.0,
+              0.9999999999999998,
+              1.0
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 0.9999999998638276,
+            "defined": true,
+            "global_F": 3.2179983703006805,
+            "component_IPR": 0.8044995925751701,
+            "effective_components": 1.2430087090523454,
+            "conditioned_F": 1.0,
+            "component_weights": [
+              2.595841947209781e-34,
+              0.8904053284394974,
+              0.0015411265437046792,
+              0.10805354501679815
+            ],
+            "F_per_component": [
+              1.0001073759191692,
+              1.0,
+              0.9999999999999998,
+              1.0000000000000002
+            ],
+            "low_weight_numerical_flag": false
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308963134,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992099,
+            "defined": true,
+            "global_F": 55.95895787513277,
+            "component_IPR": 0.8743588156109594,
+            "effective_components": 1.1436952223112757,
+            "conditioned_F": 15.999998191826823,
+            "component_weights": [
+              6.795672734009222e-29,
+              0.0221283793790163,
+              0.04410286569585163,
+              0.9337687549251321
+            ],
+            "F_per_component": [
+              2.54315437269773,
+              15.999885548401263,
+              15.999924194544416,
+              15.999998420157388
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537973101614e-13,
+            "defined": true,
+            "global_F": 55.95895787511872,
+            "component_IPR": 0.8743588156107419,
+            "effective_components": 1.1436952223115602,
+            "conditioned_F": 15.999998191826785,
+            "component_weights": [
+              1.4895488044598188e-21,
+              0.02212837937893142,
+              0.0441028656960608,
+              0.9337687549250078
+            ],
+            "F_per_component": [
+              2.8282591497243343,
+              15.999885548402416,
+              15.99992419454504,
+              15.99999842015735
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308963137,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.99999999999921,
+            "defined": true,
+            "global_F": 35.65582612804099,
+            "component_IPR": 0.5571238280043127,
+            "effective_components": 1.794933100567831,
+            "conditioned_F": 15.999955636328025,
+            "component_weights": [
+              9.597180639574654e-28,
+              0.31467746707974,
+              0.6767783362518959,
+              0.008544196668364323
+            ],
+            "F_per_component": [
+              3.1782155134771903,
+              15.999898794863292,
+              15.999968186504544,
+              15.998314704328813
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537969406229e-13,
+            "defined": true,
+            "global_F": 35.655826119498784,
+            "component_IPR": 0.5571238278709496,
+            "effective_components": 1.7949331009974983,
+            "conditioned_F": 15.999955636324886,
+            "component_weights": [
+              3.1548988827291807e-16,
+              0.31467746708995453,
+              0.6767783361474287,
+              0.008544196762616365
+            ],
+            "F_per_component": [
+              3.149915262664861,
+              15.999898794840684,
+              15.999968186504521,
+              15.99831471127832
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308963258,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992089,
+            "defined": true,
+            "global_F": 33.27283668421033,
+            "component_IPR": 0.5208230511449431,
+            "effective_components": 1.9200379050075949,
+            "conditioned_F": 15.971276910202764,
+            "component_weights": [
+              5.710199657660637e-26,
+              0.6629789345178336,
+              0.2791685289301834,
+              0.05785253655198308
+            ],
+            "F_per_component": [
+              2.6403102669430147,
+              15.974043838549965,
+              15.95978315104445,
+              15.875543481344804
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537954728609e-13,
+            "defined": true,
+            "global_F": 33.272836745614526,
+            "component_IPR": 0.5208230519853969,
+            "effective_components": 1.9200379019092237,
+            "conditioned_F": 15.97127691390446,
+            "component_weights": [
+              3.446340102972085e-14,
+              0.662978933958425,
+              0.2791685323585023,
+              0.05785253368303829
+            ],
+            "F_per_component": [
+              3.1476683456747403,
+              15.974043839632355,
+              15.959783158282804,
+              15.875543744370791
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.001329210030896933,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992091,
+            "defined": true,
+            "global_F": 43.91408504304535,
+            "component_IPR": 0.6862356524809389,
+            "effective_components": 1.4572253662203545,
+            "conditioned_F": 15.998179664770886,
+            "component_weights": [
+              2.9733472669960238e-27,
+              0.1891995572834425,
+              0.004313883364820452,
+              0.8064865593517371
+            ],
+            "F_per_component": [
+              9.395890609617135,
+              15.99231683353185,
+              15.82603637256481,
+              15.998507256182979
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537973170266e-13,
+            "defined": true,
+            "global_F": 43.914085043036266,
+            "component_IPR": 0.6862356524806648,
+            "effective_components": 1.4572253662209365,
+            "conditioned_F": 15.998179664773968,
+            "component_weights": [
+              6.399450498273921e-20,
+              0.18919955728302057,
+              0.004313883365315884,
+              0.8064865593516635
+            ],
+            "F_per_component": [
+              10.216923366742904,
+              15.992316833542205,
+              15.826036372342637,
+              15.998507256185668
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308969382,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.9999999999992084,
+            "defined": true,
+            "global_F": 55.476966900063104,
+            "component_IPR": 0.8668352587039296,
+            "effective_components": 1.1536217406467464,
+            "conditioned_F": 15.999858780263184,
+            "component_weights": [
+              7.596583730702488e-29,
+              0.04169896352928648,
+              0.9296646783314024,
+              0.028636358139311056
+            ],
+            "F_per_component": [
+              6.285262351854255,
+              15.998466723508642,
+              15.999862140047561,
+              15.99926945710496
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537975744807e-13,
+            "defined": true,
+            "global_F": 55.47696690005573,
+            "component_IPR": 0.8668352587035913,
+            "effective_components": 1.1536217406471965,
+            "conditioned_F": 15.9998587802673,
+            "component_weights": [
+              1.2004007062229819e-16,
+              0.04169896361198937,
+              0.9296646783300158,
+              0.028636358057994565
+            ],
+            "F_per_component": [
+              3.144314301739388,
+              15.998466723313454,
+              15.99986214004989,
+              15.999269459423399
+            ],
+            "low_weight_numerical_flag": true
+          }
+        },
+        {
+          "eigenvalue": 0.0013292100308969416,
+          "reference_cluster": 2,
+          "rho": {
+            "W": 0.99999999999921,
+            "defined": true,
+            "global_F": 39.63238907783319,
+            "component_IPR": 0.6216866974154914,
+            "effective_components": 1.608527260044734,
+            "conditioned_F": 15.937444553098464,
+            "component_weights": [
+              1.524508903953614e-26,
+              0.7681349992399945,
+              0.06707233731566992,
+              0.16479266344433563
+            ],
+            "F_per_component": [
+              2.478176172124691,
+              15.9426734487999,
+              15.397347959339273,
+              15.913307499785645
+            ],
+            "low_weight_numerical_flag": false
+          },
+          "theta": {
+            "W": 7.906537957296641e-13,
+            "defined": true,
+            "global_F": 39.63238889152595,
+            "component_IPR": 0.6216866942096356,
+            "effective_components": 1.608527268339437,
+            "conditioned_F": 15.937444560363119,
+            "component_weights": [
+              1.0957178232765194e-14,
+              0.768134996730339,
+              0.06707233822381982,
+              0.16479266504583043
+            ],
+            "F_per_component": [
+              3.1469016481471703,
+              15.942673453241525,
+              15.397347976132837,
+              15.913307570442015
+            ],
+            "low_weight_numerical_flag": true
+          }
+        }
+      ],
+      "cluster_coverage": [
+        {
+          "reference_cluster": 0,
+          "returned_rank": 1,
+          "reference_rank": 1,
+          "subspace_containment_error": 5.543017879620094e-13,
+          "coverage_status": "COMPLETE",
+          "relative_projector_error": 7.839006826823219e-13
+        },
+        {
+          "reference_cluster": 1,
+          "returned_rank": 3,
+          "reference_rank": 3,
+          "subspace_containment_error": 5.858455635130738e-12,
+          "coverage_status": "COMPLETE",
+          "relative_projector_error": 8.285107305138932e-12
+        },
+        {
+          "reference_cluster": 2,
+          "returned_rank": 6,
+          "reference_rank": 48,
+          "subspace_containment_error": 1.0291151145569683e-12,
+          "coverage_status": "INCOMPLETE_EIGENSPACE"
+        }
+      ]
+    }
+  ],
+  "status": "PASS_NUMERICAL_SCOPED",
+  "failure_log": [],
+  "payload_sha256": "fa6f6c4fa3dc9d1c13d0a9d0418cef93d1fd6d03cdfa0370055796164767fd3f",
+  "pre_run_receipt_sha256": "d824b8274623f81402ec42b2a82cbfa10f11ed788d98c29d1c01439009a524d6",
+  "physical_promotion": 0,
+  "independent_review": "PENDING",
+  "scope": "Fresh source-faithful clean R6b L4 reconstruction; not recovered historical execution, not VersionB disorder, not experiment"
+}
