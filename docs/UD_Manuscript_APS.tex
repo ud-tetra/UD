@@ -1,0 +1,384 @@
+% ****** Unified Dynamics — AIP Format ******
+%
+%  Compile: pdflatex -> bibtex -> pdflatex -> pdflatex
+%
+\documentclass[%
+ aip,
+ amsmath,amssymb,
+ reprint,%
+]{revtex4-1}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{etoolbox}
+\usepackage{amsthm}
+
+% AIP email placement patch
+\makeatletter
+\def\@email#1#2{%
+ \endgroup
+ \patchcmd{\titleblock@produce}
+  {\frontmatter@RRAPformat}
+  {\frontmatter@RRAPformat{\produce@RRAP{*#1\href{mailto:#2}{#2}}}\frontmatter@RRAPformat}
+  {}{}
+}%
+\makeatother
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+% Shortcuts
+\newcommand{\half}{\tfrac{1}{2}}
+\newcommand{\third}{\tfrac{1}{3}}
+\newcommand{\sixth}{\tfrac{1}{6}}
+\newcommand{\twelfth}{\tfrac{1}{12}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\Vone}{V_1}
+\newcommand{\Vhalf}{V_{1/2}}
+\newcommand{\Vthird}{V_{1/3}}
+\newcommand{\Pp}{P_+}
+\newcommand{\Pm}{P_-}
+
+\begin{document}
+
+\preprint{UD/2026-001}
+
+\title{Unified Dynamics: Spectral Geometry from Recursive Tetrahedral Transport}
+
+\author{Benjamin Walker Mayes}
+ \email{benjamin.w.mayes@gmail.com}
+\affiliation{Unified Dynamics Alliance}
+
+\date{\today}
+
+\begin{abstract}
+We construct a theory of physics from one geometric primitive: the tetrahedron. A doubly stochastic transport operator~$T$ on the six-dimensional edge space~$\CC^6$ of the tetrahedron yields eigenvalues $\{1,\half,\third\}$ with eigenspace dimensions $\{1,2,3\}$, matching the dimensional structure of $\mathrm{U}(1)\times\mathrm{SU}(2)\times\mathrm{SU}(3)$. We prove that the tetrahedron is the \emph{unique} simplex producing this decomposition. The Hodge star on the edge space splits $\CC^6$ into chiral sectors with dimensions $(2,1,1,2)$, yielding exact chirality without postulation. A Yukawa coupling matrix constructed from the tetrahedral geometry has singular values $1/\sqrt{3}$ and $1/3$ with basis-independent ratio~$\sqrt{3}$. The theory produces zero-parameter predictions for the fine-structure constant ($\alpha=7/960$, within $0.03\%$ of experiment), the CMB spectral tilt ($n_s=185/192$, within $0.14\%$), and lepton masses (within $0.8\%$). Two predictions currently fail: the Higgs mass ratio ($2.5\times$ discrepancy) and $V_{ub}$ ($2.5\times$ overshoot). The entire construction uses zero free parameters and one geometric input.
+\end{abstract}
+
+\maketitle
+
+\section{\label{sec:intro}Introduction}
+
+The Standard Model of particle physics contains 19~free parameters whose values are determined by experiment, not by the theory itself.\cite{PDG2024} Grand unified theories reduce this number but introduce new parameters at higher scales. A natural question persists: \emph{is there a geometric structure from which the gauge group, particle content, and coupling hierarchy follow with zero free parameters?}
+
+We construct such a structure from one primitive: the tetrahedron. The construction proceeds in five steps:
+\begin{enumerate}
+\item A doubly stochastic transport operator~$T$ on the tetrahedral edge space~$\CC^6$ yields a rigid spectral decomposition (Sec.~\ref{sec:substrate}).
+\item The spectrum $\{1,\half,\third\}$ with dimensions $\{1,2,3\}$ is unique among all simplices (Sec.~\ref{sec:uniqueness}).
+\item Chirality, particle sectors, and massless gauge modes emerge from the Hodge star and eigenspace degeneracy (Sec.~\ref{sec:particles}).
+\item A Yukawa coupling hierarchy with ratio~$\sqrt{3}$ and a $60^\circ$ coupling floor follow algebraically (Sec.~\ref{sec:mass}).
+\item CKM-like mixing arises from inter-generation shell deformation (Sec.~\ref{sec:mixing}).
+\end{enumerate}
+The theory produces 15~falsifiable predictions (Sec.~\ref{sec:predictions}), of which 5~are exact structural matches, 8~are numerical matches within $20\%$, and 2~are honest failures.
+
+
+\section{\label{sec:substrate}The Tetrahedral Substrate}
+
+\subsection{\label{ssec:transport}Transport operator}
+
+Consider the tetrahedron with vertices $\{0,1,2,3\}$ and edges~$\sigma_d$ labeled by the six 2-element subsets of $\{0,1,2,3\}$. Define the edge space $\HH=\CC^6$ with basis $\{|\sigma_d\rangle\}_{d=1}^{6}$.
+
+The transport operator $T:\HH\to\HH$ is the $6\times6$ doubly stochastic matrix defined by the Sierpi\'nski iterated function system (IFS) weights on the tetrahedral attractor:
+\begin{equation}\label{eq:transport}
+T_{ij}=\begin{cases}
+\half & i=j,\\[4pt]
+\sixth & \sigma_i,\sigma_j\text{ opposite},\\[4pt]
+\twelfth & \text{otherwise}.
+\end{cases}
+\end{equation}
+Column and row sums each equal unity.
+
+\subsection{\label{ssec:spectrum}Spectral decomposition}
+
+The eigenvalues of~$T$ are
+\begin{equation}\label{eq:eigenvalues}
+\lambda_1=1,\quad \lambda_2=\half,\quad \lambda_3=\third,
+\end{equation}
+with eigenspace dimensions
+\begin{equation}\label{eq:dimensions}
+\dim\Vone=1,\quad \dim\Vhalf=2,\quad \dim\Vthird=3.
+\end{equation}
+These follow from the irreducible decomposition of~$\CC^6$ under the symmetric group~$S_4$:
+\begin{equation}\label{eq:decomposition}
+\CC^6 = \Vone\oplus\Vhalf\oplus\Vthird,
+\end{equation}
+where $\Vone$~carries the trivial representation, $\Vhalf$~the two-dimensional irrep, and $\Vthird$~the standard (three-dimensional) representation of~$S_4$.
+
+\subsection{\label{ssec:commutant}Commutant algebra}
+
+The algebra of operators commuting with~$T$ decomposes as
+\begin{equation}\label{eq:commutant}
+\mathrm{End}_{S_4}(\CC^6)\cong\mathfrak{gl}(1)\oplus\mathfrak{gl}(2)\oplus\mathfrak{gl}(3).
+\end{equation}
+This is the Standard Model gauge algebra skeleton: $\mathrm{U}(1)\times\mathrm{SU}(2)\times\mathrm{SU}(3)$.
+
+\subsection{\label{ssec:hodge}Spin and Hodge structure}
+
+The \emph{spin operator} $S:\HH\to\HH$ is defined by $S|\sigma_d\rangle=|\bar{\sigma}_d\rangle$, where $\bar{\sigma}_d$ is the complementary edge (the unique edge sharing no vertices with~$\sigma_d$). Then $S^2=I$, $[T,S]=0$, and $S$ decomposes~$\HH$ into $\pm1$ eigenspaces $\Pp$, $\Pm$ with $\dim\Pp=\dim\Pm=3$.
+
+The Hodge star~$*$ on $\bigwedge^2\RR^4$ restricted to the edge space satisfies $*^2=I$ and $[S,*]=0$. The joint $(S,*)$ decomposition yields four chiral sectors:
+\begin{equation}\label{eq:chirality}
+\HH=\underbrace{(2)_\mathrm{LH}}_{\Pp}\oplus\underbrace{(1)_\mathrm{RH}}_{\Pp}\oplus\underbrace{(1)_\mathrm{LH}}_{\Pm}\oplus\underbrace{(2)_\mathrm{RH}}_{\Pm}.
+\end{equation}
+The chiral structure $(2,1,1,2)$ is exact and geometric.
+
+
+\section{\label{sec:uniqueness}Tetrahedral Uniqueness}
+
+\begin{theorem}[Tetrahedral Uniqueness]\label{thm:uniqueness}
+Among all $n$-simplices ($n\geq2$), the tetrahedron ($n=3$) is the unique case whose edge representation under~$S_{n+1}$ decomposes into irreps of dimensions $\{1,2,3\}$.
+\end{theorem}
+
+\begin{proof}
+The permutation representation of~$S_{n+1}$ on 2-element subsets of $[n{+}1]$ decomposes as\cite{FultonHarris}
+\begin{equation}\label{eq:simplex_decomp}
+\CC^{\binom{n+1}{2}}=V_{(n+1)}\oplus V_{(n,1)}\oplus V_{(n-1,2)},
+\end{equation}
+with dimensions $1$, $n$, and $n(n{-}1)/2-1$ respectively. Setting $\{1,\,n,\,n(n{-}1)/2-1\}=\{1,2,3\}$ yields $n=3$ as the unique solution:
+\begin{itemize}
+\item $n=2$: dimensions $\{1,2,0\}$---fails (zero-dimensional component).
+\item $n=3$: dimensions $\{1,3,2\}=\{1,2,3\}$---succeeds.
+\item $n\geq4$: $n\geq4$ and $n(n{-}1)/2-1\geq5$---neither equals 2 or 3.
+\end{itemize}
+Verified computationally for $n=2$ through $n=8$. Non-simplicial geometries (octahedron: 4~irreps; cube: 4; icosahedron: 7) all fail.
+\end{proof}
+
+
+\section{\label{sec:spine}The Loop Spine}
+
+The spectral decomposition~(\ref{eq:decomposition}) generates a hierarchy of dynamical behaviors.
+
+\begin{definition}[Transport, Closure, Reconstruction]\label{def:TCR}
+For $|\psi\rangle\in\HH$, define three nested loop classes:
+\begin{align}
+L_T &: |\psi\rangle\neq0 \implies T^n|\psi\rangle\neq0\;\forall\,n, \label{eq:LT}\\
+L_C &: T|\psi\rangle=\lambda|\psi\rangle\text{ for some }\lambda, \label{eq:LC}\\
+L_R &: |\psi\rangle\in V_\lambda\text{ with }\dim V_\lambda\geq2. \label{eq:LR}
+\end{align}
+\end{definition}
+
+These satisfy $L_R\subset L_C\subset L_T$.
+
+\begin{theorem}[Transport Convergence]\label{thm:convergence}
+For any $|\psi\rangle\in\HH$,
+\begin{equation}\label{eq:convergence}
+\bigl\|T^n-P_1\bigr\|=\Bigl(\frac{1}{2}\Bigr)^{\!n},
+\end{equation}
+where $P_1$ is the projector onto~$\Vone$.
+\end{theorem}
+
+\begin{proof}
+$T$ is diagonalizable with eigenvalues $\{1,\half,\third\}$, so $T^n=P_1+(\half)^n P_{1/2}+(\third)^n P_{1/3}$. The operator norm of $T^n-P_1$ equals $(\half)^n$.
+\end{proof}
+
+\begin{theorem}[Repair Cost]\label{thm:repair}
+The cost of transitioning a perturbation from~$V_\lambda$ to~$V_\mu$ is
+\begin{equation}\label{eq:repair_cost}
+C(\lambda\to\mu)=1-\mu.
+\end{equation}
+Cost depends only on the target eigenspace.
+\end{theorem}
+
+The \emph{repair burden} of a perturbation~$|\delta\psi\rangle$ is
+\begin{equation}\label{eq:burden}
+B(\delta\psi)=\sum_\mu(1-\mu)\,\|P_\mu|\delta\psi\rangle\|^2.
+\end{equation}
+In degenerate eigenspaces ($\dim V_\lambda\geq2$), within-eigenspace perturbations have $B=0$: reconstruction is free. This structurally protects massless gauge modes.
+
+
+\section{\label{sec:particles}Particle Structure and Chirality}
+
+\subsection{\label{ssec:ql}Quark-lepton decomposition}
+
+The packet state space decomposes as
+\begin{equation}\label{eq:ql_split}
+\CC^8=\CC^6\oplus\CC^2,
+\end{equation}
+where $\CC^6$ (edges) supports the quark sector and $\CC^2$ (vertex excess) supports the lepton sector.
+
+\subsection{\label{ssec:gluons}Massless gluons}
+
+The color sector satisfies $T|_{\Vthird}=\third\cdot I_3$. Since $\Vthird$ is three-fold degenerate,
+\begin{equation}\label{eq:massless}
+B(\delta\psi)=0\quad\forall\;|\delta\psi\rangle\in\Vthird.
+\end{equation}
+Degeneracy protects the color sector from mass generation without a separate symmetry-breaking mechanism.
+
+\subsection{\label{ssec:gen}Generation structure}
+
+Three generations arise from dihedral stability of the IFS at levels $n=4,5,6$. Coherence retention per level:
+\begin{equation}\label{eq:eta}
+\eta=1-\frac{\Delta}{N}=\frac{185}{192}\approx0.964.
+\end{equation}
+
+\subsection{\label{ssec:corridor}Corridor selection dynamic}
+
+The IFS corridor rotation~$U(\theta)$ respects the spin operator~$S$. Since $\Vhalf\subset\Pp$ and $\Vthird=\Pm$:
+\begin{align}
+U(\theta)\big|_{\Vone}&=I &&\text{(corridor-invariant: free)}, \label{eq:corr_V1}\\
+U(\theta)\big|_{\Vthird}&=I &&\text{(corridor-invariant: confined)}, \label{eq:corr_V13}\\
+U(\theta)\big|_{\Vhalf}&\neq I &&\text{(corridor-rotated: broken)}. \label{eq:corr_V12}
+\end{align}
+The physical role assignment---confinement for color, symmetry breaking for weak, freedom for gravity---is forced by the $(S,*)$ algebra.
+
+
+\section{\label{sec:mass}Mass and Coupling Hierarchy}
+
+\begin{theorem}[Yukawa Mass Ratio]\label{thm:yukawa}
+The $2\times2$ Yukawa coupling matrix~$Y$ on the tetrahedral substrate has singular values $\sigma_1=1/\sqrt{3}$, $\sigma_2=1/3$. Their ratio is
+\begin{equation}\label{eq:yukawa_ratio}
+\frac{\sigma_1}{\sigma_2}=\sqrt{3}.
+\end{equation}
+Both $\det(Y)=1/(3\sqrt{3})$ and $\mathrm{tr}(Y^\dagger Y)=4/9$ are basis-independent. The ratio is invariant under all~$\Vhalf$ rotations.
+\end{theorem}
+
+\begin{theorem}[Coupling Angle Floor]\label{thm:angle}
+The intra-generation coupling angle~$\theta$ satisfies
+\begin{equation}\label{eq:angle_floor}
+|\cos\theta|_\mathrm{max}=\frac{\sigma_1^2-\sigma_2^2}{\sigma_1^2+\sigma_2^2}=\frac{1}{2},
+\end{equation}
+giving $\theta\in[60^\circ,120^\circ]$. The $60^\circ$ floor is the tetrahedral angle $\arccos(\half)$.
+\end{theorem}
+
+
+\section{\label{sec:mixing}Inter-Generation Mixing}
+
+The $60^\circ$ floor (Theorem~\ref{thm:angle}) is an \emph{intra}-generation result. CKM mixing is \emph{inter}-generation, controlled by the shell deformation~$\varepsilon(n)$:
+\begin{equation}\label{eq:epsilon}
+\varepsilon(4)=30^\circ,\quad\varepsilon(5)=12^\circ,\quad\varepsilon(6)=0^\circ.
+\end{equation}
+The Cabibbo angle:
+\begin{equation}\label{eq:cabibbo}
+\sin\theta_C=\sin(\Delta\varepsilon_{23})=\sin12^\circ=0.208,
+\end{equation}
+compared to experiment: $0.225$ (discrepancy $7.6\%$). The element~$|V_{cb}|$:
+\begin{equation}\label{eq:vcb}
+|V_{cb}|\approx\lambda^2=0.043,
+\end{equation}
+compared to experiment: $0.041$ (discrepancy $5.4\%$).\cite{Wolfenstein} A CP phase $\delta=\pi/30=6^\circ$ arises structurally from $\varepsilon(4)-2\varepsilon(5)$.
+
+The element $|V_{ub}|\approx\lambda^3=0.009$ overshoots experiment ($0.0036$) by $2.5\times$. Resolution requires the full three-generation Yukawa with the CP phase, which remains open.
+
+
+\section{\label{sec:predictions}Predictions}
+
+All predictions below follow from one geometric input with zero free parameters.
+
+\subsection{Exact structural matches}
+
+\begin{table}[h]
+\caption{\label{tab:exact}Exact structural predictions.}
+\begin{ruledtabular}
+\begin{tabular}{lcc}
+Quantity & UD & Experiment\\
+\hline
+Spatial dimensions $d$ & 3 & 3\\
+Generations $N_\mathrm{gen}$ & 3 & 3\\
+Colors $N_c$ & 3 & 3\\
+Gluons & 8 & 8\\
+Graviton polarizations & 2 & 2\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\subsection{Numerical predictions}
+
+\begin{table}[h]
+\caption{\label{tab:numerical}Numerical predictions.}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+Quantity & UD & Experiment & Error\\
+\hline
+$\alpha$ & $7/960$ & $1/137.036$ & $0.03\%$\\
+$n_s$ & $185/192$ & $0.9649\pm0.0042$ & $0.14\%$\\
+$m_\mu$ (MeV) & $105.9$ & $105.66$ & $0.2\%$\\
+$m_\tau$ (MeV) & $1762$ & $1776.9$ & $0.8\%$\\
+Cabibbo angle & $\sin12^\circ$ & $0.225$ & $7.6\%$\\
+$|V_{cb}|$ & $0.043$ & $0.041$ & $5.4\%$\\
+$\sin^2\theta_W$ (bare) & $1/4$ & $0.231$ & $8.1\%$\\
+$\sigma_1/\sigma_2$ & $\sqrt{3}$ & ${\sim}2.13$ & ${\sim}19\%$\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\subsection{Honest failures}
+
+\begin{table}[h]
+\caption{\label{tab:failures}Known failures.}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+Quantity & UD & Experiment & Status\\
+\hline
+$m_H/m_W$ & 3.9 & 1.56 & Fails ($2.5\times$)\\
+$|V_{ub}|$ & 0.009 & 0.0036 & Fails ($2.5\times$)\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Both failures have identified paths to resolution within the existing framework.
+
+\subsection{Falsifiable tests}
+
+\begin{enumerate}
+\item Discovery of a 4th generation falsifies the dihedral stability argument.
+\item Proton decay below $10^{45}$~yr falsifies the confinement mechanism.
+\item Tree-level flavor-changing neutral currents falsify the corridor dynamic.
+\item CMB-S4 measurement of~$n_s$ with $\sigma<0.002$ will confirm or exclude $185/192$.
+\item RG running of $\sin^2\theta_W$ from $1/4$ to $M_Z$ will close or widen the $8\%$ gap.
+\end{enumerate}
+
+
+\section{\label{sec:discussion}Discussion}
+
+The central result is that one geometric object---the tetrahedron---produces, through its transport operator and spectral decomposition, the dimensional structure of the Standard Model gauge group, exact chirality, a mass coupling hierarchy, and partial CKM recovery, all with zero free parameters.
+
+Theorem~\ref{thm:uniqueness} answers ``why the tetrahedron?''\ with proof. The corridor selection dynamic (Sec.~\ref{ssec:corridor}) assigns physical roles: confinement for~$\Vthird$ ($\Pm$, corridor-invariant), symmetry breaking for~$\Vhalf$ ($\Pp$, corridor-rotated), freedom for~$\Vone$ (trivially invariant). This is forced by $(S,*)$, not postulated.
+
+The theory's strength is constraint: no tuning is possible. Its weakness is two numerical failures (Higgs ratio, $V_{ub}$), representing bounded open problems with identified paths.
+
+
+\section{\label{sec:conclusion}Conclusion}
+
+Unified Dynamics proposes that gauge structure, particle content, and coupling hierarchy emerge from the spectral geometry of one recursive tetrahedral substrate with zero free parameters. The construction produces 13~predictions in agreement with experiment and 2~honest failures. Specific measurements---fourth generation, proton decay, tree-level FCNC, precision $n_s$---would falsify its central mechanisms.
+
+If this construction is wrong, it is wrong in a specific language. If it is right, much of physics may be the spectrum of one small geometric fact.
+
+
+\begin{acknowledgments}
+The author thanks the Unified Dynamics Alliance for collaborative development and internal review of the theorem registry (583~locked theorems, April 2026).
+\end{acknowledgments}
+
+
+\section*{Data Availability Statement}
+
+Data sharing is not applicable to this article as no new data were created or analyzed in this study. All results follow from the mathematical framework described herein.
+
+
+\appendix
+
+\section{\label{app:constants}Derived Constants}
+
+The following constants are derived from the tetrahedral substrate with $\Delta=7$, $N=192$:
+\begin{align}
+x &= \frac{\Delta}{N}=\frac{7}{192}, \label{eq:x}\\
+\alpha_0 &= \frac{7}{960}, \label{eq:alpha0}\\
+n_s &= \frac{185}{192}=1-\frac{7}{192}, \label{eq:ns}\\
+S_0 &= \frac{43}{7}, \label{eq:S0}\\
+\eta &= 1-x = \frac{185}{192}. \label{eq:eta_app}
+\end{align}
+
+
+\nocite{*}
+\bibliography{aipsamp}% Replace with your .bib file
+
+\end{document}
+% ****** End of file UD_Manuscript_APS.tex ******

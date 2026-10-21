@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UD — The Master Equation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0f; --bg2: #12121a; --bg3: #1a1a28;
+  --fg: #d8d4ce; --fg2: #8a8680; --fg3: #555250;
+  --gold: #c9a84c; --gold2: #a08030; --gold3: #705818;
+  --green: #3ddc84; --red: #e85050; --blue: #4a90d9; --cyan: #40d0d0;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --mono: 'Fira Code', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--serif); line-height: 1.85; font-size: 17px; }
+::selection { background: rgba(201,168,76,0.25); }
+
+.w { max-width: 740px; margin: 0 auto; padding: 0 28px; }
+
+/* Header */
+header { text-align: center; padding: 80px 28px 48px; position: relative; overflow: hidden; }
+header::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 1px; height: 60px; background: linear-gradient(var(--gold3), transparent); }
+header h1 { font-size: 14px; font-family: var(--mono); color: var(--gold); letter-spacing: 6px; font-weight: 400; text-transform: uppercase; }
+header .title { font-size: 42px; font-weight: 300; color: var(--fg); margin: 16px 0 8px; letter-spacing: 2px; font-style: italic; }
+header .sub { font-size: 15px; color: var(--fg2); font-weight: 300; max-width: 520px; margin: 0 auto; }
+header .line { width: 60px; height: 1px; background: var(--gold3); margin: 24px auto 0; }
+
+/* Navigation */
+nav { border-bottom: 1px solid var(--bg3); padding: 14px 0; position: sticky; top: 0; background: rgba(10,10,15,0.95); backdrop-filter: blur(8px); z-index: 50; }
+nav .w { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; justify-content: center; }
+nav .w::-webkit-scrollbar { display: none; }
+nav a { padding: 6px 14px; border-radius: 3px; font-size: 11px; font-family: var(--mono); color: var(--fg3); text-decoration: none; letter-spacing: 1px; transition: all .2s; }
+nav a:hover { color: var(--gold); background: rgba(201,168,76,0.06); }
+
+/* Sections */
+section { padding: 48px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.snum { font-size: 11px; font-family: var(--mono); color: var(--gold3); letter-spacing: 3px; }
+.sh { font-size: 26px; font-weight: 300; color: var(--fg); margin: 6px 0 4px; letter-spacing: 1px; }
+.slead { font-size: 15px; color: var(--fg2); font-style: italic; margin-bottom: 20px; font-weight: 300; }
+p { margin-bottom: 16px; }
+
+/* Equation blocks */
+.eq { text-align: center; padding: 20px 16px; margin: 18px 0; background: rgba(201,168,76,0.03); border-left: 2px solid var(--gold3); border-radius: 0 6px 6px 0; font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--fg); letter-spacing: 0.5px; }
+.eq.master { border-left-color: var(--gold); background: rgba(201,168,76,0.06); font-size: 22px; padding: 28px 20px; }
+.eq .label { display: block; font-size: 10px; font-family: var(--mono); color: var(--gold2); letter-spacing: 2px; margin-bottom: 8px; font-style: normal; }
+.eq .note { display: block; font-size: 12px; color: var(--fg3); margin-top: 8px; font-style: normal; }
+
+/* Cards */
+.card { background: var(--bg2); border-radius: 6px; padding: 18px 20px; margin: 14px 0; border-left: 2px solid var(--bg3); }
+.card.gold { border-color: var(--gold3); background: rgba(201,168,76,0.03); }
+.card.green { border-color: var(--green); background: rgba(61,220,132,0.03); }
+.card.sat { border-color: var(--gold); background: rgba(201,168,76,0.06); }
+.card h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--fg); }
+.card p, .card li { font-size: 14px; color: var(--fg2); line-height: 1.7; }
+.card ul { margin: 8px 0 0 16px; list-style: none; }
+.card ul li::before { content: "→ "; color: var(--gold3); }
+
+/* Saturation table */
+.stable { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 13px; }
+.stable th { text-align: left; font-family: var(--mono); font-size: 10px; color: var(--fg3); letter-spacing: 1px; padding: 10px 12px; border-bottom: 1px solid var(--bg3); }
+.stable td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: top; }
+.stable .check { color: var(--green); font-weight: 600; }
+.stable .val { font-family: var(--mono); font-size: 12px; color: var(--gold); }
+
+/* Decision tree */
+.dtree { display: grid; gap: 2px; margin: 16px 0; }
+.dtree .row { display: grid; grid-template-columns: 140px 1fr; gap: 12px; padding: 8px 14px; background: var(--bg2); border-radius: 4px; align-items: center; font-size: 13px; }
+.dtree .row .dn { font-family: var(--mono); color: var(--gold2); font-size: 12px; letter-spacing: 1px; }
+.dtree .row .effect { color: var(--fg2); }
+
+/* Footer */
+footer { text-align: center; padding: 40px 28px; font-size: 11px; color: var(--fg3); }
+footer .sig { font-size: 13px; color: var(--fg2); font-style: italic; margin-bottom: 6px; }
+
+@media (max-width: 640px) {
+  header .title { font-size: 28px; }
+  .sh { font-size: 22px; }
+  .eq { font-size: 16px; padding: 14px 12px; }
+  .eq.master { font-size: 18px; }
+  .w { padding: 0 16px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Unified Dynamics</h1>
+  <div class="title">The Master Equation</div>
+  <div class="sub">A recursive operator on structured zeros, whose unique fixed point is the tetrahedron, and whose eigenvalues are the coupling constants of nature.</div>
+  <div class="line"></div>
+</header>
+
+<nav><div class="w">
+  <a href="#field">The Field</a>
+  <a href="#operator">The Operator</a>
+  <a href="#cascade">The Cascade</a>
+  <a href="#fixedpoint">Fixed Point</a>
+  <a href="#eigenvalues">Eigenvalues</a>
+  <a href="#saturation">Saturation</a>
+</div></nav>
+
+<div class="w">
+
+<!-- ═══ §0: THE FIELD ═══ -->
+<section id="field">
+  <div class="snum">§0</div>
+  <h2 class="sh">The Field</h2>
+  <div class="slead">The field is the zero. Not empty — structured. Not absent — balanced.</div>
+
+  <div class="eq master">
+    <span class="label">DEFINITION</span>
+    0<sub>n</sub> := 𝒵<sub>n</sub>
+    <span class="note">The zero at level n is a structured object carrying the full state of the cascade.</span>
+  </div>
+
+  <p>Unified Dynamics begins not with a particle, not with a field in the usual sense, but with a <em>structured zero</em> — a state of balanced signed equilibrium between inflow and outflow.</p>
+
+  <div class="eq">
+    <span class="label">GROUND STATE</span>
+    𝒵<sub>0</sub> = 0
+    <span class="note">Balanced signed equilibrium. No structure. The state from which all distinction emerges.</span>
+  </div>
+
+  <p>A perturbation Δ<sub>n</sub> disturbs the zero. The perturbation equals the directional flow across the boundary between interior and exterior:</p>
+
+  <div class="eq">
+    N<sub>n</sub><sup>(in/out)</sup> = 0 + Δ<sub>n</sub>
+    <span class="note">N = 0 → balance. N ≠ 0 → difference. The perturbation IS the inflow/outflow imbalance.</span>
+  </div>
+
+  <p>The branch <em>B<sub>n</sub></em> = sgn(Δ<sub>n</sub>) determines the character of the perturbation: repair (−1), balance (0), or formation (+1). The system responds by measuring two quantities — agreement and coherence — that determine whether the perturbation survives.</p>
+</section>
+
+<!-- ═══ §1: THE OPERATOR ═══ -->
+<section id="operator">
+  <div class="snum">§1</div>
+  <h2 class="sh">The Operator</h2>
+  <div class="slead">Sense. Decide. Update. The same operator at every level.</div>
+
+  <div class="eq master">
+    <span class="label">MASTER EQUATION</span>
+    𝒵<sub>n+1</sub> = Ω<sub>0</sub>(𝒵<sub>n</sub>, Δ<sub>n</sub>; Ξ<sub>n</sub>)
+    <span class="note">The next level's zero is produced by the master operator acting on the current zero, the perturbation, and the context.</span>
+  </div>
+
+  <p>The master operator decomposes into three stages:</p>
+
+  <div class="eq">
+    Ω<sub>0</sub> = 𝒰<sub>0</sub> ∘ Φ<sub>0</sub> ∘ Ψ<sub>0</sub>
+    <span class="note">Ψ₀ senses. Φ₀ decides. 𝒰₀ updates. Applied right to left.</span>
+  </div>
+
+  <div class="card gold">
+    <h4>Ψ<sub>0</sub> — The Sensory Evaluation (six-fold test)</h4>
+    <p>Ψ<sub>0</sub> = Ψ<sub>A</sub> ∧ Ψ<sub>P</sub> ∧ Ψ<sub>B</sub> ∧ Ψ<sub>C</sub> ∧ Ψ<sub>𝓑</sub> ∧ Ψ<sub>R</sub></p>
+    <ul>
+      <li><strong>Ψ<sub>A</sub></strong> — Agreement: is the inflow/outflow balanced?</li>
+      <li><strong>Ψ<sub>P</sub></strong> — Perturbation: is the disturbance within bounds?</li>
+      <li><strong>Ψ<sub>B</sub></strong> — Branch: is the direction well-defined?</li>
+      <li><strong>Ψ<sub>C</sub></strong> — Coherence: is the system stable under perturbation?</li>
+      <li><strong>Ψ<sub>𝓑</sub></strong> — Burden: is the load manageable?</li>
+      <li><strong>Ψ<sub>R</sub></strong> — Reserve: does healing capacity exist?</li>
+    </ul>
+    <p style="margin-top:10px">All six must pass (conjunction). This is the evaluation gate.</p>
+  </div>
+
+  <div class="card gold">
+    <h4>Φ<sub>0</sub> — The Decision Function</h4>
+    <p>Φ<sub>0</sub> : (B<sub>n</sub>, Ψ<sub>0</sub>, 𝓑<sub>n</sub>, ℛ<sub>n</sub>) ↦ (D<sub>n</sub>, ρ<sub>n</sub>, Π<sub>n</sub>)</p>
+    <p style="margin-top:6px">Maps branch, sensory result, burden, and reserve into a decision D, confidence ρ, and promotion payload Π.</p>
+  </div>
+
+  <p>The decision D<sub>n</sub> takes one of six values:</p>
+  <div class="dtree">
+    <div class="row"><span class="dn">Hold</span><span class="effect">Perturbation noted. Zero unchanged. No action.</span></div>
+    <div class="row"><span class="dn">Repair</span><span class="effect">Internal adjustment. Zero preserved. Healing activated.</span></div>
+    <div class="row"><span class="dn">Promote</span><span class="effect">Perturbation passes. Zero advances by Π<sub>n</sub>.</span></div>
+    <div class="row"><span class="dn">RelayPromote</span><span class="effect">Cascade of sub-promotions. Zero advances by Σ Π<sub>n,j</sub>.</span></div>
+    <div class="row"><span class="dn">Defer</span><span class="effect">Viable but mistimed. Zero unchanged. Queued.</span></div>
+    <div class="row"><span class="dn">Reject</span><span class="effect">Evaluation failed. Zero unchanged. Perturbation expelled.</span></div>
+  </div>
+
+  <div class="card gold">
+    <h4>𝒰<sub>0</sub> — The Update Rule</h4>
+    <p>Only Promote and RelayPromote change the zero. All other decisions preserve it. Most perturbations are filtered. The cascade advances only through the narrowest gate.</p>
+  </div>
+</section>
+
+<!-- ═══ §2: THE CASCADE ═══ -->
+<section id="cascade">
+  <div class="snum">§2</div>
+  <h2 class="sh">The Cascade</h2>
+  <div class="slead">Balance → Difference → Evaluation → Agreement → Coherence.</div>
+
+  <div class="eq">
+    0 → Δ → B → A → C
+    <span class="note">Ground → perturbation → branch → agreement → coherence. Five stages. One direction.</span>
+  </div>
+
+  <p>Each cascade stage maps to a specific structural level of the simplicial complex that emerges at the fixed point:</p>
+
+  <div class="card"><h4>Stage 0: Balance</h4><p>𝒵<sub>0</sub> = 0. No structure. Pre-distinction ground. The structured zero before any perturbation.</p></div>
+  <div class="card"><h4>Stage 1: Difference</h4><p>Δ ≠ 0. Vertices emerge — V = 4 points of imbalance. Each vertex is a site where the zero is disturbed. The (in/out) direction gives each vertex a sign.</p></div>
+  <div class="card"><h4>Stage 2: Evaluation</h4><p>The identity gate. Ψ<sub>0</sub> tests the perturbation. The system must recognize itself as a system (+1 in the support weight). Without self-recognition, the distinction collapses.</p></div>
+  <div class="card"><h4>Stage 3: Agreement</h4><p>E = 6 edges form (pairwise differences). F = 4 faces close (triadic agreements). Local compatibility of evaluated differences. The agreement threshold A<sub>c</sub> = (d−1)/d = 2/3.</p></div>
+  <div class="card"><h4>Stage 4: Coherence</h4><p>All agreements hold simultaneously. The body closes. K<sub>4</sub> = the tetrahedron. The first 3-dimensional closed structure where every local agreement is globally compatible.</p></div>
+
+  <p>The cascade produces <strong>13 = V+E+F−1 transition levels</strong> between ground and coherence. This number appears in the fine structure constant: α<sub>EM</sub><sup>−1</sup> = 13π².</p>
+</section>
+
+<!-- ═══ §3: THE FIXED POINT ═══ -->
+<section id="fixedpoint">
+  <div class="snum">§3</div>
+  <h2 class="sh">The Fixed Point</h2>
+  <div class="slead">The tetrahedron is not assumed. It is derived as the unique terminal state of the cascade.</div>
+
+  <div class="eq master">
+    <span class="label">FIXED POINT THEOREM</span>
+    𝒵* = K<sub>4</sub>
+    <span class="note">K₄ is the unique fixed point of Ω₀ subject to nontrivial coherence, physical dimension, spectral identity, and topological closure.</span>
+  </div>
+
+  <p><strong>Proof.</strong> Four conditions, each independently necessary:</p>
+  <div class="card green">
+    <h4>Condition (i): Nontrivial coherence</h4>
+    <p>F > 1 (more than one face). Local agreement must be distinguishable from global coherence. Requires V ≥ 4.</p>
+  </div>
+  <div class="card green">
+    <h4>Condition (ii): Physical dimension</h4>
+    <p>d = V−1 = 3 (three spatial dimensions). The first dimension where an interior exists. Requires V = 4.</p>
+  </div>
+  <div class="card green">
+    <h4>Condition (iii): Spectral identity</h4>
+    <p>⟨|E<sub>face</sub>|⟩ = E/V. The average absolute face magnetization equals the edge-to-vertex ratio. Holds for V = 3 (trivially) and V = 4. Fails for V ≥ 5. K₄-specific.</p>
+  </div>
+  <div class="card green">
+    <h4>Condition (iv): Topological closure</h4>
+    <p>χ = V−E+F = 2. Closed orientable surface. Gauss-Bonnet curvature: 2πχ = 4π. Holds for all simplicial spheres.</p>
+  </div>
+
+  <p>Conjunction of (i)–(iv): <strong>V = 4 uniquely.</strong> ∎</p>
+
+  <p>At the fixed point, no perturbation can advance 𝒵* further. Every evaluation threshold is saturated with zero margin. The tetrahedron is the tightest possible structure that passes all six sensory tests simultaneously.</p>
+</section>
+
+<!-- ═══ §4: THE EIGENVALUES ═══ -->
+<section id="eigenvalues">
+  <div class="snum">§4</div>
+  <h2 class="sh">The Eigenvalues</h2>
+  <div class="slead">The coupling constants of nature are the eigenvalues of Ω₀ at its fixed point.</div>
+
+  <p>At 𝒵* = K<sub>4</sub>, the transition rates between cascade levels give the gauge couplings. Each coupling measures how many boundary connections exist between adjacent levels, normalized by the Gauss-Bonnet curvature per face (= π):</p>
+
+  <div class="eq">
+    g<sub>p</sub>² = (p + 1) / π
+    <span class="note">p = 0: vertex → U(1). p = 1: edge → SU(2). p = 2: face → SU(3). Ratios 1:2:3 from boundary counting.</span>
+  </div>
+
+  <p>The support-completeness theorem gives the face coupling its full strength:</p>
+
+  <div class="eq">
+    <span class="label">T₄₂₊₁ THEOREM</span>
+    α<sub>s</sub>(m<sub>Z</sub>) = 129/(112π²) = 0.1167
+    <span class="note">Measured: 0.1180. Error: 1.1%. Derived from 43 = E² + E + 1 support weights.</span>
+  </div>
+
+  <div class="eq">
+    <span class="label">WEINBERG ANGLE</span>
+    sin²θ<sub>W</sub> = 3/13 = 0.23077
+    <span class="note">Measured: 0.23121. Error: 0.19%. From coupling ratios alone. Zero free parameters.</span>
+  </div>
+
+  <div class="eq">
+    <span class="label">FINE STRUCTURE CONSTANT</span>
+    α<sub>EM</sub><sup>−1</sup> = 13π² = 128.30
+    <span class="note">Measured: 127.95. Error: 0.28%. The 13 = V+E+F−1 cascade levels, each weighted by π².</span>
+  </div>
+
+  <p>The agreement threshold at the fixed point gives the Koide ratio:</p>
+
+  <div class="eq">
+    A<sub>c</sub> = (d−1)/d = 2/3 = Q<sub>Koide</sub>
+    <span class="note">Maximum achievable agreement for d = 3 faces (odd). The lepton mass ratio saturates this bound.</span>
+  </div>
+</section>
+
+<!-- ═══ §5: SATURATION ═══ -->
+<section id="saturation">
+  <div class="snum">§5</div>
+  <h2 class="sh">Saturation</h2>
+  <div class="slead">Every threshold met with zero margin. The tightest structure that survives.</div>
+
+  <p>The tetrahedron does not merely pass evaluation — it passes at exact saturation. Seven conditions, each met with nothing to spare:</p>
+
+  <table class="stable">
+    <tr><th>CONDITION</th><th>VALUE</th><th>THRESHOLD</th><th>MARGIN</th></tr>
+    <tr><td>Support weight</td><td class="val">W = 43/7</td><td class="val">S₀ = 43/7</td><td class="check">0 (exact)</td></tr>
+    <tr><td>Agreement</td><td class="val">A = 2/3</td><td class="val">A<sub>max</sub> = 2/3</td><td class="check">0 (odd-d frustration)</td></tr>
+    <tr><td>Spectral identity</td><td class="val">⟨|E|⟩ = 3/2</td><td class="val">E/V = 3/2</td><td class="check">0 (K₄-specific)</td></tr>
+    <tr><td>Dimension</td><td class="val">d = 3</td><td class="val">d = 3</td><td class="check">0 (physical space)</td></tr>
+    <tr><td>Topology</td><td class="val">χ = 2</td><td class="val">χ = 2</td><td class="check">0 (closed surface)</td></tr>
+    <tr><td>Koide spread</td><td class="val">ε = 1</td><td class="val">ε ≤ 1</td><td class="check">0 (physical boundary)</td></tr>
+    <tr><td>Identity</td><td class="val">+1 present</td><td class="val">+1 required</td><td class="check">0 (irreducible quantum)</td></tr>
+  </table>
+
+  <div class="card sat">
+    <h4>The Evaluation Saturation Theorem</h4>
+    <p>For every complete graph K<sub>V</sub> (V ≥ 3), the support weight W = (E²+E+1)/(E+1) exactly equals the seed threshold S₀ = (EΔ+1)/Δ. Without the identity self-support (+1), every complete graph fails. With it, all pass at exact saturation. The identity is the quantum that tips the balance.</p>
+  </div>
+
+  <p>This is the principle of the theory: <strong>the tetrahedron lives at saturation.</strong> Every constraint is met at boundary. One quantum less and the structure collapses. One quantum more and it's overconstrained. The physical universe exists at the tightest possible margin of existence.</p>
+
+  <div class="card" style="border-color: var(--gold); margin-top: 28px; text-align: center;">
+    <p style="font-size: 18px; color: var(--fg); line-height: 2; margin: 0; font-weight: 300; letter-spacing: 0.5px;">
+      <em>The field is the zero.<br>
+      The dynamics is the recursion.<br>
+      The physics is the fixed point.<br>
+      Every constant — a property of saturation.</em>
+    </p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="sig">Unified Dynamics / Distinction Theory</div>
+  <div>The original work of Benjamin Walker Mayes · April 2026</div>
+  <div style="margin-top: 4px; font-size: 10px;">★16 predictions within 1.5% · Zero free parameters · One tetrahedron</div>
+  <div style="margin-top: 4px; font-size: 9px; color: var(--fg3);">Zenodo DOI: 10.5281/zenodo.19582493</div>
+</footer>
+
+</body>
+</html>

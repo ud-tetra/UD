@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UD Journal Submission Program</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg2:#f7f6f3;--bg3:#eeece7;--ink:#111;--ink2:#333;--ink3:#666;--ink4:#999;--rule:#ccc;--rule2:#e4e1da;--acc:#1a3a6b;--green:#1a5c3a;--red:#8b1a1a;--amber:#7a5c00;--gsoft:#e8f5e9;--rsoft:#fef0f0;--asoft:#fff8e1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:15px;line-height:1.7;max-width:780px;margin:0 auto;padding:40px 24px 120px}
+h1{font-family:"Source Sans 3",sans-serif;font-size:1.5rem;font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:6px}
+h2{font-family:"Source Sans 3",sans-serif;font-size:1.1rem;font-weight:700;color:var(--acc);margin:28px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--rule)}
+h3{font-family:"Source Sans 3",sans-serif;font-size:.92rem;font-weight:600;margin:16px 0 6px}
+p{margin-bottom:10px}
+.meta{font-family:"Source Sans 3",sans-serif;font-size:.82rem;color:var(--ink3);margin-bottom:24px;display:grid;grid-template-columns:auto 1fr;gap:3px 14px}
+.mk{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink4)}
+.tag{display:inline-block;font-family:"Source Code Pro",monospace;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:3px;margin-right:4px}
+.tg{background:var(--gsoft);color:var(--green);border:1px solid #b8e0c8}
+.tr{background:var(--rsoft);color:var(--red);border:1px solid #e0b8b8}
+.ta{background:var(--asoft);color:var(--amber);border:1px solid #e0d8a8}
+table{width:100%;border-collapse:collapse;font-family:"Source Sans 3",sans-serif;font-size:.82rem;margin:12px 0}
+th{background:var(--bg2);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:7px 10px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);text-align:left;color:var(--ink2)}
+td{padding:6px 10px;border-bottom:1px solid var(--rule2);color:var(--ink2);vertical-align:top}
+td:first-child{font-family:"Source Code Pro",monospace;font-size:.78rem;color:var(--ink);white-space:nowrap}
+tr:last-child td{border-bottom:2px solid var(--ink)}
+.note{margin:12px 0;padding:9px 13px;border:1px solid var(--rule);border-left:3px solid var(--rule);background:var(--bg2);font-family:"Source Sans 3",sans-serif;font-size:.82rem;color:var(--ink3);line-height:1.6}
+.nh{font-weight:700;color:var(--ink2);display:block;margin-bottom:3px}
+.ngreen{border-left-color:var(--green)}.ngreen .nh{color:var(--green)}
+.nred{border-left-color:var(--red)}.nred .nh{color:var(--red)}
+.namber{border-left-color:var(--amber)}.namber .nh{color:var(--amber)}
+ol,ul{padding-left:22px;font-family:"Source Sans 3",sans-serif;font-size:.88rem;margin:8px 0}
+li{margin-bottom:4px}
+code{font-family:"Source Code Pro",monospace;font-size:.82rem;background:var(--bg2);padding:1px 4px;border-radius:2px}
+.cb{display:flex;align-items:baseline;gap:8px;padding:4px 0;font-family:"Source Sans 3",sans-serif;font-size:.85rem}
+.cb input{margin:0;flex-shrink:0}
+hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
+@media(max-width:600px){body{padding:20px 14px}h1{font-size:1.25rem}table{font-size:.78rem}}
+</style>
+</head>
+<body>
+
+<h1>UD Journal Submission Program</h1>
+<div class="meta">
+  <span class="mk">Authority</span><span>UD-Theory.html RC2 (authoritative source)</span>
+  <span class="mk">Target</span><span>American Journal of Physics (AJP) — REVTeX 4.1, PRB preprint format</span>
+  <span class="mk">Author</span><span>Benjamin Walker Mayes</span>
+  <span class="mk">Version</span><span>JSP v1.1 — April 2026 (aligned to AJP Author Guidelines)</span>
+  <span class="mk">Status</span><span>Governance layer — maps manuscript content to journal format</span>
+  <span class="mk">TruthCore</span><span>TC ≈ 0.84 → CAUTION (Born-facing dynamics and core uniqueness proofs open)</span>
+</div>
+
+<h2>1. Submission Architecture</h2>
+<p>The AJP submission is restricted to <strong>Layer I physics only</strong> (per §31.4 Epistemic Firewall). The manuscript maps UD-Theory.html Parts I–VII + Part X (verification) into AJP REVTeX format. Parts VIII–IX (Retained Existence, Quantum Bridge) are held for a second submission after the physics core is established.</p>
+
+<div class="note ngreen"><span class="nh">Inclusion rule</span>A section enters the AJP manuscript if and only if it contains: (1) an explicit equation or derivation, (2) a falsifiable prediction or quantitative comparison, or (3) a structural theorem with proof sketch. Governance, portal design, cognitive mappings, and cross-domain grammar are excluded.</div>
+
+<div class="note nred"><span class="nh">Quarantine rule (§31.4)</span>The following are explicitly excluded from the AJP submission: retained-existence engine (Part VIII), quantum world-selection bridge (Part IX), 12-gate Omega admissibility, cognitive/consciousness conjectures, relational systems dashboards, biology/ecology analogies, cross-domain grammar applications. These are reserved for subsequent publications.</div>
+
+<h3>1.1 AJP-Specific Constraints</h3>
+<table>
+<thead><tr><th>Constraint</th><th>AJP Requirement</th><th>UD Action</th></tr></thead>
+<tbody>
+<tr><td>Length</td><td>4,000–6,000 words + equations/tables/figures; ≤6 journal pages (x double-spaced pages ÷ 3)</td><td>Target 5,500 words. Longer derivations → supplementary material. Verification engine (Part X) condensed to essentials; full tables in supplement.</td></tr>
+<tr><td>Anonymous review</td><td>Omit author names, affiliations, and acknowledgments until conditional acceptance</td><td>Comment out <code>\author{}</code>, <code>\affiliation{}</code>, <code>\begin{acknowledgments}</code>. Remove any self-citations that identify the author; use "the authors" or "Ref. [X]" instead.</td></tr>
+<tr><td>Abstract</td><td>Self-contained. No endnote references. Readable by any physicist regardless of specialization.</td><td>Abstract states: substrate → grammar → predictions → falsifiers. No jargon without inline definition. No citations. Under 200 words.</td></tr>
+<tr><td>Introduction</td><td>Background for any physicist, not just specialists. Motivate the paper. End with organization outline.</td><td>Open with the problem (why a relational substrate?), contextualize against existing approaches (LQG, CDT, string theory), state what UD adds, end with section roadmap.</td></tr>
+<tr><td>Conclusion</td><td>Provide additional insights, not a summary. "Summaries are not appropriate in AJP."</td><td>Conclude with: (1) what the program changes about how we think about the geometry/matter interface, (2) the strongest falsifier, (3) what a positive LIGO/CMB signal would mean.</td></tr>
+<tr><td>SI units</td><td>Preferred but not mandatory</td><td>Use SI throughout. Natural units (ℏ = c = 1) stated explicitly when used in equations.</td></tr>
+<tr><td>Citation philosophy</td><td>"Carefully curated list useful to readers." NOT comprehensive. Make clear WHY each ref is cited.</td><td>Target 25–35 references. Each citation annotated in the JSP reference protocol with its purpose. No padding.</td></tr>
+</tbody>
+</table>
+
+<h3>1.2 Supplementary Material Strategy</h3>
+<p>AJP supports supplementary material hosted on Figshare (assigned DOI). This is the correct home for content that supports reproducibility but exceeds the 6-page target:</p>
+<table>
+<thead><tr><th>Supplement</th><th>Content</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>Full 13-layer gap architecture with all closure evidence and caveats</td><td>§35–§38 (condensed version in main text)</td></tr>
+<tr><td>S2</td><td>Complete symbol table and operator identity sheet</td><td>Appendix A + B</td></tr>
+<tr><td>S3</td><td>Full dressing hierarchy table with all 6 active rows + constraint protocol</td><td>§18 + §18.1</td></tr>
+<tr><td>S4</td><td>Merged scorecard (23 rows) with full source annotations</td><td>§39 Table 13</td></tr>
+<tr><td>S5</td><td>Proof dependency matrix</td><td>Appendix D</td></tr>
+<tr><td>S6</td><td>Simulation code and data for IFS overlap measurement, Monte Carlo η verification</td><td>DT v2.4 session artifacts</td></tr>
+</tbody>
+</table>
+
+<h3>1.3 Author Declarations (added at conditional acceptance)</h3>
+<p><strong>Conflict of Interest:</strong> The authors have no conflicts of interest to disclose.</p>
+<p><strong>Data Availability:</strong> The simulation data and computational artifacts supporting this work are available as supplementary material (S6). The theoretical framework is fully specified in the manuscript and supplementary materials; no external datasets are required for reproduction.</p>
+<p><strong>Author Contributions:</strong> [To be completed at acceptance. Format: "B.W.M. developed the theoretical framework and performed all derivations. B.R.S. and J.A.D. contributed to [specific contributions]."]</p>
+
+<h2>2. Section Map: UD-Theory.html → AJP</h2>
+<table>
+<thead><tr><th>AJP §</th><th>AJP Title</th><th>Source (UD-Theory.html)</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Title</td><td><em>Unified Dynamics: Emergent Geometry, Gravity, and Observable Signatures from Packet Transport Closure</em></td><td>Title page</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>Abstract</td><td>Program identity + core predictions (Λ, n<sub>s</sub>, α, lepton masses, GR limit)</td><td>§2 Abstract</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>I</td><td>Introduction — distinction/closure substrate, program scope</td><td>§4 Executive Overview + §4b Ontological Grammar</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>II</td><td>Foundational Axiom Grammar</td><td>§5 Foundational Axiom Block (6 axioms)</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>III</td><td>Typed Matter Grammar + Weighted Generative Grammar</td><td>§7 + §8</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>IV</td><td>Packet Action and Effective Continuum Limit</td><td>§9–§9c (action, holonomy, worldline)</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>V</td><td>Corrected Einstein Equation and Gravity</td><td>§10–§14 (corrected field eq, accommodation, dictionary, hierarchy, falsifiability)</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>VI</td><td>Gauge Emergence</td><td>§13b–§13c (transport symmetry, defect structure)</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>VII</td><td>Particle Bridge: Master Scalar and Lepton Family</td><td>§15–§22 (scalar, bridges, fine-structure, dressing, operators, leptons)</td><td><span class="tag ta">CAUTION</span></td></tr>
+<tr><td>VIII</td><td>Neutral Dynamics and Oscillation</td><td>§23–§27 (neutral seed, mixing, interaction, oscillation, interpretation)</td><td><span class="tag ta">CAUTION</span></td></tr>
+<tr><td>IX</td><td>Cosmology: Genesis and Expansion</td><td>§27b (genesis, inflation, burden fluid, tilt)</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>X</td><td>Quantitative Predictions and Falsifiability</td><td>§4.3 Falsifiers (F1–F7) + §39 Scorecard + Table 13</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>XI</td><td>Verification and Gap Architecture</td><td>§35–§38 (13-layer stack, gap fills, DPD bridge, verification engine)</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>XII</td><td>Conclusion and Open Frontiers</td><td>§29 Final Program Block + Appendix E open tiers</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>App. A</td><td>Symbol Table</td><td>Appendix A</td><td><span class="tag tg">READY</span></td></tr>
+<tr><td>App. B</td><td>Dressing Constraint Protocol</td><td>§18.1 (5 constraints)</td><td><span class="tag tg">READY</span></td></tr>
+</tbody>
+</table>
+
+<h2>3. Equation Extraction Protocol</h2>
+<p>Every displayed equation in the AJP manuscript must be extracted from UD-Theory.html and converted from KaTeX inline format to REVTeX <code>\begin{equation}</code> format. The following rules apply:</p>
+<ol>
+  <li><strong>Fraction-first:</strong> All exact ratios stay symbolic (7/192, not 0.03646). Decimals appear only in comparison columns.</li>
+  <li><strong>Label every displayed equation:</strong> Use descriptive labels (<code>\label{corrected-einstein}</code>, not <code>\label{eq7}</code>).</li>
+  <li><strong>Punctuate equations:</strong> AJP requires correct punctuation before and after every displayed equation, treating each as part of a sentence.</li>
+  <li><strong>No built-up fractions inline:</strong> Use slashed form (a/b) in running text; save built-up fractions for displayed equations only.</li>
+  <li><strong>Use eqnarray for aligned multi-line equations</strong> (e.g., the corrected field equation channels).</li>
+</ol>
+
+<h3>Priority equations for AJP (from UD-Theory.html)</h3>
+<table>
+<thead><tr><th>#</th><th>Equation</th><th>Source</th><th>Type</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Universal dressing rule: Q<sub>obs</sub> = Q<sub>0</sub>(1+z<sub>Q</sub>)</td><td>§2, §5.6</td><td>Core</td></tr>
+<tr><td>2</td><td>Corrected Einstein field equation</td><td>§10</td><td>Core</td></tr>
+<tr><td>3</td><td>Packet action: S = Σ κTr(I−U<sub>C</sub>) + …</td><td>§9</td><td>Core</td></tr>
+<tr><td>4</td><td>Yang-Mills from holonomy: F<sub>μν</sub></td><td>§13b, §37</td><td>Derived</td></tr>
+<tr><td>5</td><td>Dirac from framing: (iΓ<sup>μ</sup>D<sub>μ</sub> − m)ψ = 0</td><td>§37</td><td>Derived</td></tr>
+<tr><td>6</td><td>Unified action (DPD eq. 13)</td><td>§37</td><td>Derived</td></tr>
+<tr><td>7</td><td>Einstein gravity: g<sub>μν</sub> = e<sup>a</sup><sub>μ</sub> e<sup>b</sup><sub>ν</sub> δ<sub>ab</sub></td><td>§37</td><td>Derived</td></tr>
+<tr><td>8</td><td>Quantum commutator: [U<sub>ij</sub>, E<sub>ij</sub>] = iℏU<sub>ij</sub></td><td>§37</td><td>Derived</td></tr>
+<tr><td>9</td><td>IFS compression: ε<sub>k</sub>(x), Moran equation</td><td>§36</td><td>Structural</td></tr>
+<tr><td>10</td><td>Coherence retention: η = 185/192</td><td>§36</td><td>Structural</td></tr>
+<tr><td>11</td><td>Elastic storage density</td><td>§10</td><td>Accommodation</td></tr>
+<tr><td>12</td><td>Lepton mass formula: m<sub>ℓ</sub> from S<sub>0</sub>, H ladder</td><td>§19–§22</td><td>Bridge</td></tr>
+<tr><td>13</td><td>Neutral mixing matrix</td><td>§24</td><td>Bridge</td></tr>
+<tr><td>14</td><td>Fine-structure: α<sub>0</sub> = 7/960</td><td>§17</td><td>Candidate</td></tr>
+</tbody>
+</table>
+
+<h2>4. Table Extraction Protocol</h2>
+<p>AJP uses <code>ruledtabular</code> + <code>tabular</code> environments. Captions go above tables. No vertical lines in the body.</p>
+<table>
+<thead><tr><th>#</th><th>Table</th><th>Source</th><th>Rows</th></tr></thead>
+<tbody>
+<tr><td>I</td><td>Exact bare spines and dressings (Table 1)</td><td>§16</td><td>10</td></tr>
+<tr><td>II</td><td>Accommodation dictionary (Table 2–3)</td><td>§12–§13</td><td>~8</td></tr>
+<tr><td>III</td><td>Dressing hierarchy (Table 4)</td><td>§18</td><td>6</td></tr>
+<tr><td>IV</td><td>Quantitative predictions (from UD.html)</td><td>§39 / UD.html</td><td>10</td></tr>
+<tr><td>V</td><td>Layer status (Table 11)</td><td>§35</td><td>13</td></tr>
+<tr><td>VI</td><td>Formal gap closures (Table 12)</td><td>§38</td><td>5</td></tr>
+<tr><td>VII</td><td>Merged scorecard (Table 13)</td><td>§39</td><td>23</td></tr>
+</tbody>
+</table>
+
+<h2>5. Figure Requirements</h2>
+<p>AJP requires vector graphics (.eps or .pdf) for line drawings. Raster (.jpg/.png) only for photographs. Figures must have captions.</p>
+<div class="note namber"><span class="nh">Figures to create</span>
+(1) Ontological ladder diagram: distinction → relation → closure → object → recursive scale law. Vector/EPS.
+(2) Tetrahedral IFS attractor at 3 refinement levels. Raster from simulation or vector schematic.
+(3) Corrected Einstein equation channel decomposition schematic. Vector.
+(4) Dressing hierarchy plot: |z<sub>Q</sub>| vs observable, log scale. Vector.
+(5) Lepton mass ladder: bare spine vs observed with dressing arrows. Vector.
+(6) Predictions table as figure (if preferred over in-text table).
+</div>
+
+<h2>6. Reference Protocol</h2>
+<p>AJP uses <code>\begin{thebibliography}</code> with <code>\bibitem</code> (no BibTeX). Article titles in double quotes. Book titles in italics. Include beginning <em>and ending</em> page numbers for all articles. Issue numbers encouraged. Authors: "First M. Last and First M. Last" for two; "First M. Last, First M. Last, and First M. Last" for three; "First M. Last et al." for four+.</p>
+
+<div class="note namber"><span class="nh">AJP citation philosophy</span>"References should be a carefully curated list of resources that will be most useful to readers." Each citation must serve one of three purposes: (1) recognize where an idea was first developed, (2) give readers essential background, (3) point to specific additional information. The paper must make clear WHY each reference is cited. Target: 25–35 references. No padding.</div>
+
+<h3>Curated citation list with purpose</h3>
+<table>
+<thead><tr><th>#</th><th>Citation</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Mayes, Sanders, Dewey — companion APS manuscript</td><td>Self-cite: companion paper with LIGO falsifiers</td></tr>
+<tr><td>2</td><td>J. E. Hutchinson, "Fractals and self-similarity," Indiana Univ. Math. J. <strong>30</strong> (5), 713–747 (1981)</td><td>First development: IFS theory, Moran equation</td></tr>
+<tr><td>3</td><td>K. Falconer, <em>Fractal Geometry</em>, 3rd ed. (Wiley, 2014)</td><td>Background: attractor theory, address uniqueness, Hausdorff dimension</td></tr>
+<tr><td>4</td><td>J. Ambjørn, J. Jurkiewicz, R. Loll, "Spectral dimension of the universe," Phys. Rev. Lett. <strong>95</strong>, 171301 (2005)</td><td>Context: CDT spectral dimension UV/IR flow</td></tr>
+<tr><td>5</td><td>J. Kogut, L. Susskind, "Hamiltonian formulation of Wilson's lattice gauge theories," Phys. Rev. D <strong>11</strong> (2), 395–408 (1975)</td><td>Background: lattice gauge theory foundation</td></tr>
+<tr><td>6</td><td>A. M. Gleason, "Measures on the closed subspaces of a Hilbert space," J. Math. Mech. <strong>6</strong> (6), 885–893 (1957)</td><td>First development: Born rule from partial trace</td></tr>
+<tr><td>7</td><td>Planck Collaboration, "Planck 2018 results. VI.," Astron. Astrophys. <strong>641</strong>, A6 (2020)</td><td>Data: CMB parameters for n<sub>s</sub> comparison</td></tr>
+<tr><td>8</td><td>LIGO/Virgo Collaboration, "Observation of gravitational waves from a binary black hole merger," Phys. Rev. Lett. <strong>116</strong>, 061102 (2016)</td><td>Context: gravitational wave detection for falsifiability</td></tr>
+<tr><td>9</td><td>N. D. Mermin, "What's wrong with these equations?," Phys. Today <strong>42</strong> (10), 9–11 (1989)</td><td>Style: equation punctuation standard</td></tr>
+<tr><td>10</td><td><em>AIP Style Manual</em>, 4th ed. (AIP, New York, 1990)</td><td>Style: formatting authority</td></tr>
+<tr><td>11</td><td>C. Brans, R. H. Dicke, "Mach's principle and a relativistic theory of gravitation," Phys. Rev. <strong>124</strong> (3), 925–935 (1961)</td><td>Context: Brans-Dicke gravity framework for screening comparison</td></tr>
+<tr><td>12</td><td>T. Appelquist, J. Carazzone, "Infrared singularities and massive fields," Phys. Rev. D <strong>11</strong> (10), 2856–2861 (1975)</td><td>Background: decoupling theorem for universality argument</td></tr>
+<tr><td>13</td><td>M. Reed, B. Simon, <em>Methods of Modern Mathematical Physics, Vol. IV</em> (Academic Press, 1978)</td><td>Background: spectral theory for operator convergence</td></tr>
+<tr><td>14</td><td>S. Akiyama, J.-Y. Lee, "Algorithm for determining pure pointedness of self-affine tilings," Adv. Math. <strong>226</strong> (4), 2855–2883 (2011)</td><td>First development: self-similarity → zero running</td></tr>
+</tbody>
+</table>
+
+<h2>7. Dressing Constraint Pre-Registration</h2>
+<p>Per TruthCore v1.2 V2 and §18.1, the following constraints must appear explicitly in the AJP manuscript:</p>
+<ol>
+  <li>Magnitude bound: |z<sub>Q</sub>| &lt; 10<sup>−1</sup></li>
+  <li>Derivation requirement: dressings from partition function, not fitted</li>
+  <li>Channel traceability: each dressing → named accommodation channel</li>
+  <li>Hierarchy consistency: magnitude ordering structurally derivable</li>
+  <li>Sign predictability: sign from channel physics</li>
+</ol>
+
+<h2>8. Falsifiability Block</h2>
+<p>The following falsifiers must appear in the AJP manuscript (from §4.4):</p>
+<table>
+<thead><tr><th>ID</th><th>Falsifier</th><th>Type</th></tr></thead>
+<tbody>
+<tr><td>F1</td><td>Large clean non-GR deviations in ordinary isotropic weak-field matter</td><td>Gravity</td></tr>
+<tr><td>F2</td><td>No controlled GR limit exists</td><td>Gravity</td></tr>
+<tr><td>F3</td><td>Compact-object data excludes BCD hierarchy</td><td>Gravity</td></tr>
+<tr><td>F4</td><td>Non-GR residuals cannot be organized into BCD family</td><td>Gravity</td></tr>
+<tr><td>F5</td><td>Bare-spine + dressing rule fails systematically</td><td>Program</td></tr>
+<tr><td>F6</td><td>No stable closure-capable packets in simulation</td><td>Substrate</td></tr>
+<tr><td>F7</td><td>No viable primordial spectrum consistent with CMB</td><td>Cosmology</td></tr>
+</tbody>
+</table>
+
+<h2>9. Submission Checklist</h2>
+
+<h3>Pre-submission (content)</h3>
+<div class="cb"><input type="checkbox"> Abstract under 200 words, self-contained, no endnote references, readable by any physicist</div>
+<div class="cb"><input type="checkbox"> Introduction provides background for non-specialists, motivates the paper, ends with section roadmap</div>
+<div class="cb"><input type="checkbox"> Total word count 4,000–6,000 (check with <code>texcount</code>); longer derivations in supplementary material</div>
+<div class="cb"><input type="checkbox"> Conclusion provides additional insights, NOT a summary</div>
+<div class="cb"><input type="checkbox"> All equations punctuated as sentences (correct punctuation before and after)</div>
+<div class="cb"><input type="checkbox"> All displayed equations numbered</div>
+<div class="cb"><input type="checkbox"> All equations fraction-first (symbolic ratios, not decimals)</div>
+<div class="cb"><input type="checkbox"> No built-up fractions in running text (use slashed form inline)</div>
+<div class="cb"><input type="checkbox"> Every displayed equation labeled with descriptive name</div>
+<div class="cb"><input type="checkbox"> Falsifiers F1–F7 stated explicitly</div>
+<div class="cb"><input type="checkbox"> Dressing constraints 1–5 pre-registered</div>
+<div class="cb"><input type="checkbox"> Quantitative predictions table with UD value / observed / agreement / params columns</div>
+<div class="cb"><input type="checkbox"> Open frontiers honestly listed (not hidden)</div>
+<div class="cb"><input type="checkbox"> Born rule labeled "Bridge" not "Derived"</div>
+<div class="cb"><input type="checkbox"> No cognitive/consciousness content (§31.4 quarantine)</div>
+<div class="cb"><input type="checkbox"> No alliance/governance language or internal builder terminology</div>
+<div class="cb"><input type="checkbox"> SI units throughout; natural units explicitly stated when used</div>
+<div class="cb"><input type="checkbox"> Each citation serves a clear purpose (first development / background / additional info)</div>
+<div class="cb"><input type="checkbox"> Citation count 25–35 (curated, not comprehensive)</div>
+<div class="cb"><input type="checkbox"> Supplementary material S1–S6 prepared and uploaded as .zip</div>
+
+<h3>Pre-submission (format)</h3>
+<div class="cb"><input type="checkbox"> REVTeX 4.1 / PRB preprint <code>\documentclass[prb,preprint]{revtex4-1}</code></div>
+<div class="cb"><input type="checkbox"> <code>\usepackage{amsmath, amsfonts, graphicx}</code></div>
+<div class="cb"><input type="checkbox"> Author names, affiliations, acknowledgments commented out (anonymous review)</div>
+<div class="cb"><input type="checkbox"> Self-citations anonymized ("the authors" or "Ref. [X]" instead of name)</div>
+<div class="cb"><input type="checkbox"> All pages numbered</div>
+<div class="cb"><input type="checkbox"> Figures in .eps or .pdf (vector for line drawings, .jpg/.png for photos)</div>
+<div class="cb"><input type="checkbox"> Figure captions present; figures numbered in order of first reference</div>
+<div class="cb"><input type="checkbox"> Tables use <code>ruledtabular</code> + <code>tabular</code>; Roman numeral numbering; captions above</div>
+<div class="cb"><input type="checkbox"> References in <code>thebibliography</code> (no BibTeX); ordered by first citation</div>
+<div class="cb"><input type="checkbox"> Article titles in double quotes; book titles in italics</div>
+<div class="cb"><input type="checkbox"> Page ranges with en-dash (--), not hyphen; ending page numbers included</div>
+<div class="cb"><input type="checkbox"> Superscript citations placed after punctuation, not before</div>
+<div class="cb"><input type="checkbox"> Single PDF upload containing all text, endnotes, figures, and tables (figures integrated into text)</div>
+
+<h3>Post-acceptance</h3>
+<div class="cb"><input type="checkbox"> Uncomment author names, affiliations, acknowledgments</div>
+<div class="cb"><input type="checkbox"> Add Author Contributions statement to Author Declarations section</div>
+<div class="cb"><input type="checkbox"> Add Conflict of Interest and Data Availability statements</div>
+<div class="cb"><input type="checkbox"> Add Supplementary Material section before acknowledgments with Figshare placeholder</div>
+<div class="cb"><input type="checkbox"> Move figures to end, after references</div>
+<div class="cb"><input type="checkbox"> Move tables to end, after references but before figure captions</div>
+<div class="cb"><input type="checkbox"> Convert raster images to .tiff for production</div>
+<div class="cb"><input type="checkbox"> Provide editable .tex source file</div>
+<div class="cb"><input type="checkbox"> Verify supplementary material contains no identifying information (or consult editor)</div>
+
+<h2>10. Publication Sequence</h2>
+<p>Per §31.4 Epistemic Firewall:</p>
+<table>
+<thead><tr><th>Order</th><th>Scope</th><th>Target</th><th>Content</th></tr></thead>
+<tbody>
+<tr><td>1st</td><td>Layer I — Physics</td><td>AJP / APS / CQG</td><td>Packet transport, metrics, holonomy, gauge, GR, predictions, falsifiers</td></tr>
+<tr><td>2nd</td><td>Layer II — Cross-domain</td><td>Foundations of Physics / Phil. Sci.</td><td>Retained existence engine, selector grammar, admissibility cascade</td></tr>
+<tr><td>3rd</td><td>Layer III — Cognitive</td><td>Complexity / Cognitive Sci.</td><td>Mind-substrate mapping, recursive self-modeling, consciousness conjecture</td></tr>
+</tbody>
+</table>
+
+<hr>
+<div class="note ngreen"><span class="nh">Governance note</span>This document is a governance layer, not a manuscript. It maps UD-Theory.html RC2 (authoritative source, 1,677 lines, 13 parts, 63 sections) to AJP submission format. The manuscript itself must be written in LaTeX following this program. No content decisions are made here that aren't already locked in UD-Theory.html. The TruthCore self-audit score (TC ≈ 0.84, CAUTION) is carried through: the submission must not overclaim beyond what the manuscript honestly supports.</div>
+
+</body>
+</html>

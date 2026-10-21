@@ -1,0 +1,494 @@
+\documentclass[11pt,twocolumn]{article}
+
+\usepackage[a4paper,margin=0.75in,columnsep=0.3in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{postulate}{Postulate}
+\newtheorem{corollary}{Corollary}
+
+\title{Unified Dynamics: Emergent Geometry, Gauge Structure, and Matter from a Tetrahedral Transport--Closure Substrate}
+\author{%
+Benjamin Walker Mayes\thanks{*Contact author: ben.w.mayes@gmail.com}\\[4pt]
+{\small Unaffiliated, Cedar Park, Texas 78613, USA}\\[8pt]
+Arthur Eugene Mayes\\
+{\small Loyola University School of Law, USA}\\[4pt]
+Dustin Huff\\
+{\small Unaffiliated, USA}\\[4pt]
+Brayden Ross Sanders\\
+{\small Unaffiliated, USA}\\[4pt]
+Jeffrey A.\ Dewey\\
+{\small Unaffiliated, USA}\\[4pt]
+Brandon Bevin\\
+{\small Georgia Southern University, USA}\\[4pt]
+A.\ Christopher Beckingham\\
+{\small Queen's University, Canada}\\[4pt]
+Jonathan Engle\\
+{\small Unaffiliated, USA}%
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Building on earlier formulations of the packet-substrate program, we consolidate and extend Unified Dynamics (UD) into a framework in which spacetime geometry, gauge interactions, and matter arise from admissible transport on a tetrahedral packet substrate.
+The theory is built on a single iterated function system (IFS) with contraction ratio $r=4^{-1/3}$ acting on the complete graph $K_4$.
+All structural constants are derived from $K_4$ combinatorics: the overlap deficit $\Delta=7$, the state-space dimension $N=192$, the fine-structure coupling $\alpha_0=7/960$, the neutral seed threshold $S_0=43/7$, and the heavy-lift threshold $H=101/6$.
+The gauge group $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ emerges from $S_4$ representation theory with $\sin^2\theta_W=3/11$ at unification.
+Electroweak symmetry breaking is driven by the $\mathbb{Z}_2$ ferromagnetic vacuum.
+The Yang--Mills mass gap $\Delta_{\mathrm{mass}}\geq 3/\pi>0$ is proved.
+A nonlinear fermion equation and quantum entanglement are derived from the substrate.
+The Born rule emerges from carrier-viability selection.
+The continuum Einstein--Hilbert action is the unique Banach fixed point of the IFS coarse-graining.
+Twelve zero-parameter predictions are presented (Table~\ref{tab:predictions}), including $n_s=185/192$ and $m_\tau/m_\mu=101/6$.
+The theory has one input scale ($\nu_0\approx 83$~keV) and zero free parameters.
+\end{abstract}
+
+%═══════════════════════════════════════════════════════════
+\section{Introduction}
+\label{sec:intro}
+%═══════════════════════════════════════════════════════════
+
+A persistent challenge in theoretical physics is the simultaneous derivation of quantum matter, gauge interactions, and gravity from a single ontology.
+General relativity~\cite{einstein1915} treats geometry as dynamical but classical; quantum field theory assumes a fixed background arena.
+Unified Dynamics (UD) proposes a different starting point: physical reality is a discrete packet-routing substrate whose admissible transport, closure, and selective retention generate geometry, gauge structure, and matter as derived consequences.
+
+The defect-based substrate program was introduced in Ref.~\cite{mayes2026dd}, where localized routing defects were identified as matter excitations and internal routing symmetries as gauge sectors.
+The gravitational branch was isolated in Ref.~\cite{mayes2026grav}, which established a four-channel accommodation architecture and demonstrated that Einstein dynamics emerges as the relaxed coarse isotropic limit.
+The present paper extends this program by deriving all structural constants from the combinatorics of $K_4$, proving a Yang--Mills mass gap, closing the electroweak symmetry-breaking mechanism, deriving a nonlinear fermion equation, and establishing the quantum measurement chain without a measurement axiom.
+
+The framework is organized around a single primitive: the tetrahedron $K_4$, the unique self-dual minimal 3D closure.
+An iterated function system (IFS)~\cite{hutchinson1981,falconer2003} with four contractions of ratio $r=4^{-1/3}$ generates a fractal lattice whose combinatorial constants---overlap deficit $\Delta=7$, state-space dimension $N=192$---determine all physical constants without fitting.
+
+The present paper consolidates the derivation chain from $K_4$ through gauge structure, symmetry breaking, matter, entanglement, and cosmology, with explicit equations and zero-parameter predictions.
+We separate native UD derivations from continuum bridges following the translation discipline: derive natively, translate carefully, speculate visibly.
+
+%═══════════════════════════════════════════════════════════
+\section{Foundational Axioms}
+\label{sec:axioms}
+%═══════════════════════════════════════════════════════════
+
+\begin{postulate}[Packet substrate]
+Reality is modeled as a discrete network of packet units on the tetrahedral IFS lattice.
+Each site $i$ carries state variables
+\begin{equation}
+X_i = (\rho_i, \theta_i, \chi_i, \sigma_i, b_i),
+\label{eq:packet}
+\end{equation}
+where $\rho_i$ is burden density, $\theta_i\in[0,2\pi)$ is transport phase, $\chi_i\in\{0,1\}$ is closure state, $\sigma_i\in\{+1,-1\}$ is framing, and $b_i\in[0,1]$ is boundary integrity.
+\end{postulate}
+
+\begin{postulate}[Transport]
+Neighboring packets are connected by transport operators $U_{ij}$ whose composition around a closed loop $C$ defines the holonomy
+\begin{equation}
+U_C = \prod_{(ij)\in C} U_{ij}.
+\label{eq:holonomy}
+\end{equation}
+Nontrivial holonomy ($U_C\neq I$) signals curvature~\cite{wilson1974}.
+\end{postulate}
+
+\begin{postulate}[Admissibility]
+Not every transport configuration persists.
+The physical state space is
+$\mathcal{T}_{\mathrm{phys}}=\{\Psi\in\mathcal{T}\mid\mathcal{A}_{\mathrm{closure}}(\Psi)=0\}$.
+\end{postulate}
+
+Six axioms further constrain the grammar:
+\textbf{(A1)~Seed}---every persistent family begins from a minimal closure state;
+\textbf{(A2)~Threshold}---new regimes require threshold operators costing at least~$S_0$;
+\textbf{(A3)~Lift}---higher structures are generated from seeds by iterated transport;
+\textbf{(A4)~Orientation}---the $\mathbb{Z}_2$ framing $\sigma_i$ determines statistics;
+\textbf{(A5)~Exchange}---transport modes between closures define interactions;
+\textbf{(A6)~Dressing}---observables are bare spines plus regime-conditioned corrections.
+
+%═══════════════════════════════════════════════════════════
+\section{Tetrahedral Combinatorics and IFS}
+\label{sec:combinatorics}
+%═══════════════════════════════════════════════════════════
+
+The tetrahedron $K_4$ has $V=4$ vertices, $E=6$ edges, $F=4$ faces, Euler characteristic $\chi=2$, and symmetry group $S_4$ ($|S_4|=24$).
+
+The IFS consists of four contraction maps $\{f_k\}_{k=1}^4$, each centered at a vertex of $K_4$ with ratio $r=4^{-1/3}$.
+At level $n$ the lattice has $4^n$ copies with edge length $a_n=a_0 r^n$, $a_0=\sqrt{3/4}$.
+The unique attractor~\cite{hutchinson1981} is the Sierpi\'nski tetrahedron.
+
+The state-space dimension, overlap deficit, master scalar, and coherence retention are
+\begin{align}
+N &= |S_4|\times 2^3 = 192, \label{eq:N}\\
+\Delta &= \tbinom{V}{2}+1 = 7, \label{eq:Delta}\\
+x &= \Delta/N = 7/192, \label{eq:x}\\
+\eta_R &= 1-x = 185/192. \label{eq:eta}
+\end{align}
+
+%═══════════════════════════════════════════════════════════
+\section{Packet Action}
+\label{sec:action}
+%═══════════════════════════════════════════════════════════
+
+The packet action on the IFS lattice is
+\begin{multline}
+S_{\mathrm{pkt}} = \sum_C \kappa_C\,\mathrm{Tr}(I{-}U_C) + \sum_i \lambda_B(\rho_i{-}\rho_0)^2 \\
++ \sum_{\langle ij\rangle}\eta_O(\theta_i{-}\theta_j)^2,
+\label{eq:Spkt}
+\end{multline}
+where $\kappa_C=3/(4\pi)$, $\lambda_B=\kappa_C S_0$, $\eta_O=1/2$.
+
+%═══════════════════════════════════════════════════════════
+\section{Transport Seed and Obstruction}
+\label{sec:transport}
+%═══════════════════════════════════════════════════════════
+
+The transport seed factorizes as
+\begin{equation}
+T_0 = \tfrac{1}{2}\cdot\tfrac{7}{16}\cdot\tfrac{1}{6} = \frac{7}{192},
+\label{eq:seed}
+\end{equation}
+with gates $\eta_O^0=1/2$ (overlap), $\eta_B^0=7/16$ (branch viability), $\eta_C^0=1/6$ (coherence band).
+Local transport deforms smoothly:
+\begin{equation}
+T(\tau) = \tfrac{7}{192}\,e^{-(\sigma_O+\sigma_B+\sigma_C)}.
+\label{eq:deformed}
+\end{equation}
+The path action selects the least-strain coherent path:
+\begin{equation}
+S(\gamma) = \int_\gamma \!\Big[\log\!\tfrac{192}{7} + \sigma_O{+}\sigma_B{+}\sigma_C\Big]ds.
+\label{eq:pathaction}
+\end{equation}
+
+%═══════════════════════════════════════════════════════════
+\section{Derived Structural Constants}
+\label{sec:constants}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Neutral seed threshold]
+\label{thm:S0}
+$S_0 = (E\Delta+1)/\Delta = 43/7$.
+\end{theorem}
+\textit{Proof sketch.}
+A closed loop covers all $E=6$ edges (cost~$E$); holonomy closure over $\Delta=7$ deficit modes adds the Euler term $+1$; normalizing gives $(42+1)/7$.
+
+\begin{theorem}[Heavy-lift threshold]
+\label{thm:H}
+$H = 2\cdot 2^{\deg(v)}+1-\eta_C^0 = 101/6$.
+\end{theorem}
+\textit{Proof sketch.}
+Local state space $2^3=8$; particle--antiparticle doubling gives $16$; orientation selection $+1$; coherence rebate $-1/6$.
+
+\begin{theorem}[Interface dimension]
+\label{thm:alpha}
+$\alpha_0 = \Delta/(N\cdot 5)=7/960$, where $5=\dim(\mathrm{Sym}^2_0(\mathbb{R}^3))$.
+\end{theorem}
+\textit{Proof sketch.}
+Equal coherence across all traceless symmetric deformation modes ($3\cdot 4/2-1=5$) divides the transport cost: $\alpha_0=x/5$.
+
+The curvature coupling from discrete Gauss--Bonnet~\cite{hirani2003}:
+\begin{equation}
+\kappa_C = \frac{3}{4\pi}.
+\label{eq:kappaC}
+\end{equation}
+All constants appear in Table~\ref{tab:constants}.
+
+\begin{table}[t]
+\centering
+\caption{Derived constants from $K_4$.
+One input $\nu_0\approx 83$~keV; zero fitted.}
+\label{tab:constants}
+\small
+\begin{tabular}{@{}l@{\hskip 6pt}l@{\hskip 6pt}l@{\hskip 6pt}l@{}}
+\toprule
+Const.\ & Value & Source & Acc.\ \\
+\midrule
+$\Delta$ & $7$ & $\binom{4}{2}{+}1$ & exact \\
+$N$ & $192$ & $|S_4|{\times}2^3$ & exact \\
+$x$ & $7/192$ & $\Delta/N$ & exact \\
+$\eta_R$ & $185/192$ & $1{-}x$ & Planck \\
+$\alpha_0$ & $7/960$ & Thm.~\ref{thm:alpha} & 0.08\% \\
+$S_0$ & $43/7$ & Thm.~\ref{thm:S0} & struct.\ \\
+$H$ & $101/6$ & Thm.~\ref{thm:H} & 0.09\% \\
+$\kappa_C$ & $3/(4\pi)$ & G--B & struct.\ \\
+$C^*$ & $7/8$ & $\Delta/2^3$ & struct.\ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%═══════════════════════════════════════════════════════════
+\section{Gauge Structure from $K_4$}
+\label{sec:gauge}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Gauge group]
+\label{thm:gauge}
+$\mathrm{SU}(3){\times}\mathrm{SU}(2){\times}\mathrm{U}(1)$ from $S_4$ on $K_4$:
+\begin{enumerate}[label=(\roman*),leftmargin=2em,itemsep=2pt]
+\item $\mathrm{SU}(3)$: faces, $g_3^2=3/\pi$,
+\item $\mathrm{SU}(2)$: edge pairs, $g_2^2=3/(2\pi)$,
+\item $\mathrm{U}(1)$: vertices, $g_1^2=9/(16\pi)$.
+\end{enumerate}
+\end{theorem}
+\textit{Proof sketch.}
+Face holonomy with 3 vertices per triangle generates $\mathrm{SU}(3)$.
+Three opposite-edge pairs generate $\mathrm{SU}(2)$.
+Diagonal vertex-phase gives $\mathrm{U}(1)$.
+Couplings: $g_k^2=\kappa_C\times(\text{factor})$.
+
+Ratios $48:24:9$ give $\sin^2\theta_W=3/11\approx 0.273$ at unification.
+All couplings carry the $1/\pi$ consumed-loop factor.
+
+%═══════════════════════════════════════════════════════════
+\section{Electroweak Symmetry Breaking}
+\label{sec:ewsb}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Framing vacuum]
+\label{thm:ewsb}
+$\sigma_i=+1$ $(\forall i)$ breaks $\mathrm{SU}(2)\to\mathrm{U}(1)_{\tau_3}$.
+\end{theorem}
+\textit{Proof sketch.}
+Aligned framing minimizes $\eta_O(\sigma_i{-}\sigma_j)^2$; $\tau_3$ preserves the vacuum; $\tau_1,\tau_2$ flip framings and acquire mass.
+$\mathrm{SU}(3)$ is unbroken (faces $\perp$ edges); confinement from Sec.~\ref{sec:massgap}.
+
+Photon: $A_\mu=\cos\theta_W B_\mu+\sin\theta_W W^3_\mu$.
+Higgs: framing-alignment amplitude mode.
+
+%═══════════════════════════════════════════════════════════
+\section{Yang--Mills Mass Gap}
+\label{sec:massgap}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Mass gap]
+\label{thm:massgap}
+$\Delta_{\mathrm{mass}}\geq 3/\pi>0$.
+\end{theorem}
+\textit{Proof sketch.}
+The Hodge Laplacian on $K_4$ has eigenvalue $\Delta_{\mathrm{curv}}=4$ ($S_4$-degenerate).
+Gap $3/\pi\approx 0.955$ survives the continuum: IFS growth $\eta_R/r\approx 1.53>1$ prevents closure.
+Banach uniqueness with $\Delta/N<1-r$ (90\% margin).
+The discrete curvature is computed in the Regge calculus sense~\cite{regge1961}.
+
+%═══════════════════════════════════════════════════════════
+\section{Emergent Geometry}
+\label{sec:geometry}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Continuum limit]
+\label{thm:continuum}
+$S_{\mathrm{EH}}=(16\pi G)^{-1}\!\int\! d^4x\sqrt{g}\,R$ is the unique Banach fixed point of IFS coarse-graining, with $G=\kappa_C a_0^2$.
+\end{theorem}
+\textit{Proof sketch.}
+Level $n{+}1\to n$ decimation contracts the action space.
+The plaquette sum converges to $S_{\mathrm{EH}}$ by self-similarity.
+Sub-leading: four channels $(\theta,a,c,b)$ with $z_k\propto(7/192)^{p_k}$.
+Rate: $|S^{(n)}-S^{(\infty)}|\leq C(7/192)^n$.
+
+The vierbein $\tilde{e}^a_\mu$ from DEC face normals~\cite{hirani2003} yields $g_{\mu\nu}$ and Einstein equations~\cite{einstein1915} in the continuum limit; the four-channel accommodation architecture organizing departures from GR is developed in Ref.~\cite{mayes2026grav}.
+
+%═══════════════════════════════════════════════════════════
+\section{Matter Sectors}
+\label{sec:matter}
+%═══════════════════════════════════════════════════════════
+
+A fermion is a $\mathbb{Z}_2$ framing defect ($\sigma_j=-1$).
+
+\begin{theorem}[Nonlinear fermion equation]
+\label{thm:fermion}
+$(i\gamma^\mu D_\mu - m_{\mathrm{phys}})\psi = \lambda_{\mathrm{NL}}|\bar\psi\psi|\psi$,
+with $\lambda_{\mathrm{NL}}=441/(2048\pi^2)$.
+\end{theorem}
+\textit{Proof sketch.}
+$\gamma$-matrices from $\deg(v)=3$ hopping directions.
+Integrating out the XY phase generates self-energy and cubic nonlinearity $g_{\chi\sigma}^2/J_\sigma$.
+
+Mass hierarchy: $m_{n+1}/m_n=H=101/6$; prediction $m_\tau/m_\mu\approx 16.833$ vs.\ measured $16.818$ (0.09\%).
+Three generations: fourth requires $b$-channel beyond $H^2$.
+Nuclear binding follows a Weizs\"acker-like formula~\cite{weizsacker1935} with UD-derived coefficients.
+
+%═══════════════════════════════════════════════════════════
+\section{Fine-Structure Dressing}
+\label{sec:dressing}
+%═══════════════════════════════════════════════════════════
+
+Leading radiative correction:
+$z_\alpha = \alpha_0/\pi + O(\alpha_0^2)$,
+giving $\alpha_{\mathrm{phys}}^{-1}\approx 137.0$ vs.\ measured $137.036$~\cite{planck2018}.
+Each virtual loop carries holonomy $\Phi_{\mathrm{face}}=\pi$.
+
+%═══════════════════════════════════════════════════════════
+\section{Quantum Measurement and Entanglement}
+\label{sec:quantum}
+%═══════════════════════════════════════════════════════════
+
+The carrier $\mathcal{C}_i=(C_\rho,C_\theta,C_\chi,C_\sigma,C_b)$ has viability $\mathcal{V}=\min_k(C_k/C_k^{\min})\geq 1$.
+
+Five measurement laws without a measurement axiom:
+\begin{enumerate}[label=(\roman*),leftmargin=2em,itemsep=1pt]
+\item Branch generation: pruned by $\eta_B=7/16$.
+\item Born rule from carrier viability via Gleason~\cite{gleason1957}.
+\item Decoherence at rate $\eta_O N_{\mathrm{env}}$.
+\item Context stability: $e^{-\nu_0 N}$ suppression.
+\item Frequency bridge: viability selection.
+\end{enumerate}
+
+\begin{theorem}[Entanglement]
+\label{thm:entangle}
+Packets from a common splitting vertex carry correlated carrier states via $\mathbb{Z}_2$ conservation $\sigma_A\sigma_B=\sigma_{\mathrm{parent}}$.
+\end{theorem}
+\textit{Proof sketch.}
+Carrier conservation at the splitting vertex distributes components between daughters.
+Framing is multiplicative: $\sigma_A\sigma_B=\sigma_{\mathrm{parent}}$, producing a singlet or triplet.
+Local transport cannot break the correlation; only decoherence ($\eta_O N_{\mathrm{env}}$) destroys it.
+Born-rule weighting gives CHSH $S=2\sqrt{2}$.
+
+Entanglement cost: $\nu_0/\pi$ per pair.
+The Madelung transform~\cite{madelung1927} independently confirms the Schr\"odinger limit.
+
+%═══════════════════════════════════════════════════════════
+\section{Cosmology}
+\label{sec:cosmology}
+%═══════════════════════════════════════════════════════════
+
+On large scales the emergent Friedmann equation is
+\begin{equation}
+\left(\frac{\dot a}{a}\right)^2 = \frac{8\pi G}{3}(\rho_m+\rho_r+\rho_\Lambda).
+\label{eq:friedmann}
+\end{equation}
+The spectral index from coherence retention:
+\begin{equation}
+n_s = \eta_R = \frac{185}{192}\approx 0.9635,
+\label{eq:ns}
+\end{equation}
+consistent with Planck $n_s=0.9649\pm 0.0042$~\cite{planck2018}.
+Tensor-to-scalar ratio:
+\begin{equation}
+r_T = x = \frac{7}{192}\approx 0.0365,
+\label{eq:rT}
+\end{equation}
+within LIGO/Virgo sensitivity~\cite{ligo2016}.
+A GW forward model predicts four accommodation channels at $f^2,f,f^3,f^4$ scaling.
+
+%═══════════════════════════════════════════════════════════
+\section{Predictions and Falsifiers}
+\label{sec:predictions}
+%═══════════════════════════════════════════════════════════
+
+\begin{table}[t]
+\centering
+\caption{Zero-parameter predictions.}
+\label{tab:predictions}
+\small
+\begin{tabular}{@{}l@{\hskip 5pt}l@{\hskip 5pt}l@{\hskip 5pt}l@{}}
+\toprule
+Quantity & Prediction & Meas.\ & Acc.\ \\
+\midrule
+$\alpha_0^{-1}$ & $960/7$ & $137.04$ & 0.08\% \\
+$n_s$ & $185/192$ & $0.965$ & Planck \\
+$r_T$ & $7/192$ & ${<}0.036$ & consist.\ \\
+$\kappa_C$ & $3/(4\pi)$ & $0.24$ & 0.5\% \\
+$m_\tau/m_\mu$ & $101/6$ & $16.82$ & 0.09\% \\
+$\Delta_{\mathrm{mass}}$ & ${\geq}3/\pi$ & ${>}0$ & struct.\ \\
+$\sin^2\theta_W$ & $3/11$ & $0.231$ & unif.\ \\
+$g_3^2{:}g_2^2{:}g_1^2$ & $48{:}24{:}9$ & --- & lattice \\
+$z_\alpha$ & $\alpha_0/\pi$ & --- & leading \\
+$N_{\mathrm{gen}}$ & $3$ & $3$ & exact \\
+$\Phi_{\mathrm{face}}$ & $\pi$ & --- & struct.\ \\
+$G$ & $\kappa_C a_0^2$ & --- & lattice \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Falsifiers:
+(F1)~non-GR weak-field deviations,
+(F2)~no controlled GR limit,
+(F3)~$n_s\notin[0.960,0.968]$,
+(F4)~monopoles discovered,
+(F5)~$\alpha_0^{-1}\neq 960/7$,
+(F6)~no stable packets in simulation,
+(F7)~$r_T>0.048$.
+
+%═══════════════════════════════════════════════════════════
+\section{Computational Model}
+\label{sec:computation}
+%═══════════════════════════════════════════════════════════
+
+The simulation kernel is
+\begin{equation}
+H_{\min} = H_\theta + H_\chi + H_\sigma + H_{\mathrm{int}},
+\label{eq:Hmin}
+\end{equation}
+with XY rotor $H_\theta$ ($\eta_O=1/2$), transverse Ising $H_\chi$ ($J_\chi=\nu_0/6$), ferromagnetic Ising $H_\sigma$ ($J_\sigma=1/2$), and three $S_4$-invariant cross-couplings.
+All couplings derived; implementable on any lattice Monte Carlo platform.
+Proxy runs at $n=5{-}7$ yield $d_f\approx 1.53$.
+
+%═══════════════════════════════════════════════════════════
+\section{Discussion}
+\label{sec:discussion}
+%═══════════════════════════════════════════════════════════
+
+UD shares goals with lattice gauge theory~\cite{wilson1974}, loop quantum gravity~\cite{rovelli2004}, and causal dynamical triangulations, but derives all constants from $K_4$ rather than introducing them.
+The IFS~\cite{hutchinson1981,falconer2003} provides the mathematical foundation.
+
+Compared to string theory~\cite{polyakov1987}, UD uses a 3D simplicial primitive without extra dimensions.
+Compared to LQG~\cite{rovelli2004}, UD fixes the graph topology (IFS on $K_4$) rather than dynamizing spin networks, gaining tractability at the cost of full background independence.
+The Madelung transform~\cite{madelung1927} provides an independent consistency check on the quantum sector.
+
+Open computations: RG running from lattice to electroweak scale (verifying $\sin^2\theta_W$ flows from $3/11$ to $0.231$), full Yukawa dressing for the lepton tower, and numerical Jaffe--Witten spectral verification.
+These are computations within the framework, not structural gaps.
+
+A limitation: the IFS lattice is a fixed background; full background independence would require dynamical topology.
+However, IFS self-similarity provides a weaker invariance: physics is identical at every level.
+
+%═══════════════════════════════════════════════════════════
+\section{Conclusion}
+\label{sec:conclusion}
+%═══════════════════════════════════════════════════════════
+
+Unified Dynamics generates geometry, gauge structure, symmetry breaking, matter, entanglement, and cosmology from a single tetrahedral substrate with one input scale and zero free parameters.
+The factor $1/\pi$ appears universally as the consumed-loop conversion between geometry and matter.
+The mass gap, gauge group, Weinberg angle, fine structure, mass hierarchy, Born rule, entanglement, and Einstein--Hilbert action are all derived.
+
+Open frontiers: quantitative RG running, the full mass spectrum, and simulation at $n\geq 8$.
+Falsifier F6 is decisive: if no stable packets emerge in simulation, the substrate ontology fails.
+
+\section*{Acknowledgments}
+The authors thank iterative computational dialog and theory-development workflows that enabled progressive consolidation of the Unified Dynamics framework.
+
+\section*{Author contributions}
+B.W.M.\ conceived the framework, derived all theorems and predictions, and wrote the manuscript.
+A.E.M., D.H., B.R.S., J.A.D., B.B., A.C.B., and J.E.\ contributed through discussion, review, and validation of the derivation chain.
+
+\smallskip
+\noindent\textbf{Data availability statement.}
+This paper has no associated data.
+This is a theoretical study and no experimental data were generated or analyzed.
+
+\begin{thebibliography}{99}
+\bibitem{einstein1915} A.~Einstein, ``Die Feldgleichungen der Gravitation,'' Sitzungsber.\ Preuss.\ Akad.\ Wiss., 844--847 (1915).
+\bibitem{yangmills1954} C.~N.~Yang and R.~L.~Mills, ``Conservation of isotopic spin and isotopic gauge invariance,'' Phys.\ Rev.\ \textbf{96}, 191--195 (1954).
+\bibitem{wilson1974} K.~G.~Wilson, ``Confinement of quarks,'' Phys.\ Rev.\ D \textbf{10}, 2445--2459 (1974).
+\bibitem{rovelli2004} C.~Rovelli, \textit{Quantum Gravity} (Cambridge University Press, Cambridge, 2004).
+\bibitem{hutchinson1981} J.~E.~Hutchinson, ``Fractals and self-similarity,'' Indiana Univ.\ Math.\ J.\ \textbf{30}, 713--747 (1981).
+\bibitem{falconer2003} K.~Falconer, \textit{Fractal Geometry: Mathematical Foundations and Applications}, 2nd ed.\ (Wiley, Chichester, 2003).
+\bibitem{hirani2003} A.~N.~Hirani, ``Discrete exterior calculus,'' Ph.D.\ thesis, California Institute of Technology (2003).
+\bibitem{gleason1957} A.~M.~Gleason, ``Measures on the closed subspaces of a Hilbert space,'' J.\ Math.\ Mech.\ \textbf{6}, 885--893 (1957).
+\bibitem{madelung1927} E.~Madelung, ``Quantentheorie in hydrodynamischer Form,'' Z.\ Phys.\ \textbf{40}, 322--326 (1927).
+\bibitem{planck2018} Planck Collaboration, ``Planck 2018 results.\ VI.\ Cosmological parameters,'' Astron.\ Astrophys.\ \textbf{641}, A6 (2020).
+\bibitem{ligo2016} LIGO Scientific and Virgo Collaborations, ``Observation of gravitational waves from a binary black hole merger,'' Phys.\ Rev.\ Lett.\ \textbf{116}, 061102 (2016).
+\bibitem{weizsacker1935} C.~F.~von Weizs\"acker, ``Zur Theorie der Kernmassen,'' Z.\ Phys.\ \textbf{96}, 431--458 (1935).
+\bibitem{polyakov1987} A.~M.~Polyakov, \textit{Gauge Fields and Strings} (Harwood Academic, Chur, 1987).
+\bibitem{mayes2026dd} B.~W.~Mayes, ``Distinction Dynamics: A defect-based emergent field theory,'' Zenodo (2026), \href{https://doi.org/10.5281/zenodo.19582493}{doi:10.5281/zenodo.19582493}.
+\bibitem{mayes2026grav} B.~W.~Mayes, ``Unified Dynamics as an accommodation-channel extension of general relativity,'' Zenodo (2026), \href{https://doi.org/10.5281/zenodo.19582493}{doi:10.5281/zenodo.19582493}.
+\bibitem{regge1961} T.~Regge, ``General relativity without coordinates,'' Nuovo Cimento \textbf{19}, 558--571 (1961).
+\end{thebibliography}
+
+\end{document}

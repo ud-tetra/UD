@@ -1,0 +1,73 @@
+{
+  "name": "UD_Result_Vector",
+  "version": "3.0",
+  "description": "Every result transported through the unified loop carries this vector",
+  "fields": {
+    "id": "unique result identifier (e.g., RES-2026-04-21-001)",
+    "value": "the computed number or expression",
+    "formula": "the K\u2084 formula (e.g., m_d = m_u \u00d7 \u0394/d)",
+    "chain": {
+      "description": "derivation chain from K\u2084 to result",
+      "format": "array of links, each: {from, to, status, level}",
+      "example": [
+        {
+          "from": "V=4",
+          "to": "\u0394=7",
+          "status": "DERIVED",
+          "level": 1
+        },
+        {
+          "from": "\u0394=7,d=3",
+          "to": "\u0394/d=7/3",
+          "status": "DERIVED",
+          "level": 1
+        },
+        {
+          "from": "m_u,\u0394/d",
+          "to": "m_d=4.65MeV",
+          "status": "STRUCTURAL",
+          "level": 4
+        }
+      ]
+    },
+    "truth_state": "ternary value from -1.0 to +1.0",
+    "status": "EXACT_STRUCTURAL / OPERATOR_GRAMMAR / WORKING / STRUCTURAL_HYPOTHESIS / OPEN / EXPELLED",
+    "error_pct": "percentage error vs measurement (null if no measurement)",
+    "measured": "experimental value (null if not yet measured)",
+    "dependencies": "list of result IDs this depends on",
+    "uniqueness": {
+      "rank": "rank among K\u2084 expressions within 5%",
+      "competitors": "number of competing expressions",
+      "verdict": "UNIQUE / SEMI-UNIQUE / NOT_UNIQUE"
+    },
+    "gate_status": "PROMOTE / HOLD / ROLLBACK / BLOCK",
+    "session": "session date when result was computed",
+    "phase": "which loop phase produced this (CLOSE usually)",
+    "notes": "free-form notes, caveats, warnings"
+  },
+  "transport_rules": {
+    "DISTINGUISH_checks": [
+      "dependencies not in expelled registry",
+      "uniqueness >= SEMI-UNIQUE or dynamically derived",
+      "no oscillation history on this result"
+    ],
+    "CLOSE_assigns": [
+      "value (computed)",
+      "formula (from derivation)",
+      "chain (traced to K\u2084)",
+      "truth_state = WORKING (always starts here)",
+      "error_pct (if measured value exists)"
+    ],
+    "TRANSPORT_decides": [
+      "gate_status based on chain + uniqueness + external validation",
+      "updates ternary vector",
+      "writes to persistent storage",
+      "generates Aster delta if PROMOTE"
+    ],
+    "RECURSE_updates": [
+      "dependencies of downstream results",
+      "frontier assessment",
+      "pod configuration for next cycle"
+    ]
+  }
+}

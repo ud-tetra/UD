@@ -1,0 +1,354 @@
+\documentclass[11pt,twocolumn]{article}
+
+\usepackage[a4paper,margin=0.75in,columnsep=0.3in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{postulate}{Postulate}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+
+\title{Unified Dynamics III: Dimensional Growth, Spectral Geometry, and the Mass Spectrum from the Tetrahedral Closure Ladder}
+\author{%
+Benjamin Walker Mayes\thanks{*Contact author: ben.w.mayes@gmail.com}\\[4pt]
+{\small Unaffiliated, Cedar Park, Texas 78613, USA}\\[8pt]
+Arthur Eugene Mayes\\
+{\small Loyola University School of Law, USA}\\[4pt]
+Dustin Huff\\
+{\small Unaffiliated, USA}\\[4pt]
+Brayden Ross Sanders\\
+{\small Unaffiliated, USA}\\[4pt]
+Jeffrey A.\ Dewey\\
+{\small Unaffiliated, USA}\\[4pt]
+Brandon Bevin\\
+{\small Georgia Southern University, USA}\\[4pt]
+A.\ Christopher Beckingham\\
+{\small Queen's University, Canada}\\[4pt]
+Jonathan Engle\\
+{\small Unaffiliated, USA}%
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Building on the tetrahedral transport--closure framework of Unified Dynamics (UD), we prove that $d=3$ is the unique stable minimal closure dimension among all simplex dimensions, derive the spectral dimension $d_s=4/3$ of the Sierpi\'nski tetrahedron from decimation, and extend the mass spectrum with new predictions.
+The $d$-simplex $K_{d+1}$ has state-space dimension $N(d)=(d{+}1)!\cdot 2^d$, overlap deficit $\Delta(d)=d(d{+}1)/2{+}1$, and master scalar $x(d)=\Delta/N$.
+We show that $d=3$ uniquely satisfies four simultaneous conditions: face--vertex balance, perturbative stability, binding viability, and optimal coherence retention.
+For $d\geq 4$, the nonlinear binding coupling falls below the critical threshold and lone primitives cannot self-bind; stable higher-dimensional structures require composites of $d=3$ closures with enhanced coupling $\lambda_{\mathrm{NL}}^{\mathrm{comp}}=n_c^2\lambda_{\mathrm{NL}}(d)$.
+The coherence ceiling at $n_c^{\max}=61$ caps the dimensional ladder at $d_{\max}\approx 7$.
+Additionally, we derive the cross-coupling $g_{\chi\sigma}=\Delta(\Delta{-}1)/(2^{E+1}\pi)$ from $K_4$ combinatorics, prove confinement via the string tension $\sigma=9/(4\pi^2 a_0)$, predict the dark-matter relic fraction $\Omega_{\mathrm{DM}}=43/228\approx 19\%$, present neutrino masses $m_{\nu_1}\approx 35$~meV and PMNS angles from generation-spacing mismatch, and sharpen the muon mass prediction to $0.2\%$.
+\end{abstract}
+
+%═══════════════════════════════════════════════════════════
+\section{Introduction}
+\label{sec:intro}
+%═══════════════════════════════════════════════════════════
+
+A foundational question for any theory of emergent geometry is: why three spatial dimensions?
+The companion papers established a transport--closure framework on the tetrahedron $K_4$~\cite{mayes2026ud} and derived its cosmological consequences~\cite{mayes2026cosmo}.
+The present paper addresses the dimensional question directly by generalizing the $K_4$ construction to the $d$-simplex $K_{d+1}$ and proving that $d=3$ is the unique stable closure dimension.
+
+We also close several gaps from the earlier papers: the spectral dimension of the IFS lattice is derived exactly ($d_s=4/3$), the cross-coupling $g_{\chi\sigma}$ is derived rather than stated, confinement is proved from the mass gap, the dark-matter abundance receives a structural prediction, and the matter sector is extended to neutrinos and sharpened for the muon.
+
+%═══════════════════════════════════════════════════════════
+\section{Simplex Combinatorics in Arbitrary Dimension}
+\label{sec:simplex}
+%═══════════════════════════════════════════════════════════
+
+The $d$-dimensional simplex $K_{d+1}$ has $V=d{+}1$ vertices, $E=d(d{+}1)/2$ edges, $F_2=\binom{d+1}{3}$ triangular faces, and symmetry group $S_{d+1}$.
+The UD state-space dimension and overlap deficit generalize to~\cite{hutchinson1981}
+\begin{align}
+N(d) &= (d{+}1)!\cdot 2^d, \label{eq:Nd}\\
+\Delta(d) &= \tbinom{d{+}1}{2}+1 = \tfrac{d(d{+}1)}{2}+1, \label{eq:Dd}\\
+x(d) &= \Delta(d)/N(d). \label{eq:xd}
+\end{align}
+The coherence retention is $\eta_R(d)=1-x(d)$, the binding coupling is $\lambda_{\mathrm{NL}}(d)=[\Delta(\Delta{-}1)]^2/(2^{2E+2}\pi^2 J_\sigma)$, and the critical binding threshold is $\lambda_{\mathrm{crit}}(d)=d/N(d)$, where the factor $d$ accounts for the increased kinetic energy cost of self-localization in $d$ dimensions.
+
+%═══════════════════════════════════════════════════════════
+\section{$D=3$ Uniqueness}
+\label{sec:d3}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Three-dimensional uniqueness]
+\label{thm:d3}
+$d=3$ is the unique dimension satisfying all four conditions:
+\begin{enumerate}[label=\textnormal{(\roman*)},leftmargin=2em,itemsep=2pt]
+\item Face--vertex balance: $F_2=V$, requiring $\binom{d+1}{3}=d+1$, solved uniquely by $d=3$.
+\item Perturbative stability: $x(d)\in(0.01,\,0.1)$.
+\item Binding viability: $\lambda_{\mathrm{NL}}(d)>\lambda_{\mathrm{crit}}(d)=d/N(d)$.
+\item Optimal coherence: $\eta_R(d)\in(0.9,\,0.99)$.
+\end{enumerate}
+\end{theorem}
+
+\textit{Proof sketch.}
+Condition~(i): $\binom{d+1}{3}=d+1$ gives $d^2-d-6=0$, so $d=3$.
+Condition~(ii): $x(1)=1/2$, $x(2)=1/6$, $x(3)=7/192\approx 0.036$, $x(4)\approx 0.006$; only $d=3$ lies in $(0.01,0.1)$.
+Condition~(iii): $\lambda_{\mathrm{NL}}(3)=0.022>3/192=0.0156$; $\lambda_{\mathrm{NL}}(4)=5.9\times 10^{-4}<4/1920=2.1\times 10^{-3}$. Binding holds for $d\leq 3$, fails for $d\geq 4$.
+Condition~(iv): $\eta_R(3)=185/192\approx 0.964$; $\eta_R(2)=5/6\approx 0.83$ (too lossy); $\eta_R(4)\approx 0.994$ (insufficient selection).
+
+%═══════════════════════════════════════════════════════════
+\section{$D=4$ Burden Regime}
+\label{sec:d4}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[$D=4$ burden]
+\label{thm:d4}
+The pentachoral regime $d=4$ has $N=1920$, $\Delta=11$, $E=10$, $\lambda_{\mathrm{NL}}=5.9\times 10^{-4}<\lambda_{\mathrm{crit}}=4/1920=2.1\times 10^{-3}$.
+Lone $d=4$ primitives cannot form bound states.
+\end{theorem}
+
+\textit{Proof sketch.}
+Transport burden $B(d)=d(d{+}1)/4$ gives $B(4)=5$ vs $B(3)=3$ (67\% increase).
+The symmetry group $S_5$ ($|S_5|=120$) introduces sorting, coordination, expression, and renewal-deficit burdens.
+With $x(4)=0.006$, selection pressure is $6\times$ weaker than $d=3$, preventing evolutionary self-correction for lone primitives.
+
+%═══════════════════════════════════════════════════════════
+\section{$D\geq 5$: Composite-First Stabilization}
+\label{sec:d5}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Composite binding enhancement]
+\label{thm:composite}
+A composite of $n_c$ tetrahedral ($d=3$) closures embedded in $d\geq 4$ space has enhanced coupling $\lambda_{\mathrm{NL}}^{\mathrm{comp}}=n_c^2\lambda_{\mathrm{NL}}(d)$ and effective selection pressure $x_{\mathrm{eff}}=n_c\,x(d)$.
+For $d=4$, binding requires $n_c\geq 2$; strong stability requires $n_c\geq 8$.
+\end{theorem}
+
+Three composite classes emerge:
+
+\textbf{Seed} ($n_c=4$): $\lambda^{\mathrm{comp}}/\lambda_{\mathrm{crit}}=4.5$, $x_{\mathrm{eff}}=0.023$.
+First admissible opener; high residual bonding hunger.
+
+\textbf{Stable composite} ($n_c=8$): ratio $=18$, $x_{\mathrm{eff}}=0.046$.
+Shell-satisfied; low bonding hunger; first reusable unit.
+
+\textbf{Shell molecule} ($n_c\geq 16$): ratio $\geq 70$, $x_{\mathrm{eff}}\geq 0.09$.
+Bonded composites with $B_{\mathrm{molecule}}<2B_{\mathrm{composite}}$; first molecular-scale higher-dimensional regime.
+
+The single lift mechanism governs each stage: rigid kernel $\to$ $\Omega$-tether $\to$ open channel $\to$ field $\to$ face completion $\to$ gate $\to$ next admissible geometry.
+
+%═══════════════════════════════════════════════════════════
+\section{Coherence Ceiling}
+\label{sec:ceiling}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Dimensional ceiling]
+\label{thm:ceiling}
+The maximum composite size is $n_c^{\max}=\lfloor N(3)\eta_R(3)/B(3)\rfloor=\lfloor 185/3\rfloor=61$.
+The dimensional ladder terminates at $d_{\max}\approx 7$, where $n_c^{\min}(d)$ exceeds $61$.
+\end{theorem}
+
+\textit{Proof sketch.}
+Each $d=3$ closure in the composite consumes $B(3)=3$ carrier units.
+The total carrier budget is $N(3)\eta_R(3)=185$.
+Maximum composites: $185/3\approx 61$.
+Since $n_c^{\min}(d)$ grows as $\sim\sqrt{(d+1)!}$, the bound $n_c^{\min}\leq 61$ is saturated near $d=7$.
+Beyond $d_{\max}$, composites rupture into $d=3$ remnants, incoherent residue, and kernel-bearing shards.
+
+%═══════════════════════════════════════════════════════════
+\section{Spectral Dimension}
+\label{sec:spectral}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Spectral dimension]
+\label{thm:ds}
+The spectral dimension of the Sierpi\'nski tetrahedron is $d_s=4/3$.
+\end{theorem}
+
+\textit{Proof sketch.}
+By the decimation method~\cite{rammal1984}, the resistance scaling of the $d=3$ Sierpi\'nski gasket is $\rho=2$.
+Then $d_s=2\ln V/\ln(V\rho)=2\ln 4/\ln 8=4/3$.
+
+The IFS loop-integral correction factor for renormalization group calculations is $F_{\mathrm{IFS}}=d_s/4=1/3$.
+This modifies the standard beta-function coefficients: $b_i^{\mathrm{IFS}}=b_i^{\mathrm{SM}}\cdot F_{\mathrm{IFS}}\cdot(\text{threshold corrections})$.
+
+%═══════════════════════════════════════════════════════════
+\section{Cross-Coupling Derivation}
+\label{sec:coupling}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Cross-coupling from $K_4$]
+\label{thm:gxs}
+The closure--framing cross-coupling is
+\begin{equation}
+g_{\chi\sigma} = \frac{\Delta(\Delta{-}1)}{2^{E+1}\pi} = \frac{21}{64\pi},
+\label{eq:gxs}
+\end{equation}
+giving $\lambda_{\mathrm{NL}}=g_{\chi\sigma}^2/J_\sigma = 441/(2048\pi^2)$.
+\end{theorem}
+
+\textit{Proof sketch.}
+The numerator $\Delta(\Delta{-}1)/2=\binom{7}{2}=21$ counts pairwise deficit-mode couplings.
+The denominator $2^E=64$ is the binary edge-state space.
+The factor $\pi$ is the consumed-loop phase per face.
+
+%═══════════════════════════════════════════════════════════
+\section{Confinement from the Mass Gap}
+\label{sec:confinement}
+%═══════════════════════════════════════════════════════════
+
+\begin{theorem}[Confinement]
+\label{thm:confine}
+The mass gap $\Delta_{\mathrm{mass}}\geq 3/\pi$ on the IFS lattice implies an area-law Wilson loop with string tension $\sigma=9/(4\pi^2 a_0)$.
+\end{theorem}
+
+\textit{Proof sketch.}
+The mass gap eliminates massless gauge modes~\cite{wilson1974}.
+Correlation functions decay as $\langle A_\mu(x)A_\nu(0)\rangle\sim e^{-\Delta_{\mathrm{mass}}|x|}$.
+For a Wilson loop of area $A$, $W(C)=\langle\mathrm{Tr}\,U_C\rangle\sim e^{-\sigma A}$ with $\sigma=\kappa_C\Delta_{\mathrm{mass}}/a_0 = (3/(4\pi))(3/\pi)/a_0=9/(4\pi^2 a_0)$.
+
+%═══════════════════════════════════════════════════════════
+\section{Dark-Matter Abundance}
+\label{sec:dm}
+%═══════════════════════════════════════════════════════════
+
+\begin{proposition}[Relic fraction]
+\label{prop:dm}
+The dark-matter fraction of total matter density is
+\begin{equation}
+\frac{\Omega_{\mathrm{DM}}}{\Omega_{\mathrm{total}}} = \frac{x\,S_0}{x\,S_0+(1{-}x)} = \frac{43}{228}\approx 0.189.
+\end{equation}
+\end{proposition}
+
+\textit{Argument.}
+Neutral packets have mass per site $\nu_0 S_0$ (threshold cost); charged packets have mass per site $\nu_0$.
+The mass-weighted neutral fraction is $x S_0/(x S_0+1{-}x)=43/228$.
+The measured value $\Omega_{\mathrm{DM}}/\Omega_{\mathrm{total}}\approx 0.27$ is $30\%$ above the structural prediction; the discrepancy may close with dressing corrections.
+
+%═══════════════════════════════════════════════════════════
+\section{Mass Spectrum Extensions}
+\label{sec:mass}
+%═══════════════════════════════════════════════════════════
+
+\textbf{Muon mass refinement.}
+Sub-leading IFS corrections improve the muon prediction~\cite{mayes2026ud}:
+\begin{equation}
+\frac{m_\mu}{m_e} = 4^4\!\left(\frac{185}{192}\right)^{\!6}\!\left(1+\frac{\Delta{+}C^*}{NE}+\frac{F}{NEd}\right)\approx 206.3,
+\label{eq:muon}
+\end{equation}
+where $C^*=7/8$ and $F=4$.
+The measured ratio $206.77$ is matched to $0.2\%$.
+
+\textbf{Neutrino masses.}
+Neutrinos couple at second order in $x$ (two overlap-deficit insertions for a framing-neutral particle) with consumed-loop suppression $1/\pi$:
+\begin{equation}
+m_{\nu_1} = \frac{\nu_0 x^2}{\pi}\approx 35\text{ meV}.
+\label{eq:neutrino}
+\end{equation}
+This is consistent with cosmological bounds $\sum m_\nu<0.12$~eV~\cite{planck2018}.
+
+\textbf{PMNS mixing angles.}
+The mismatch between charged-lepton generation spacings ($12{:}6$ IFS levels, ratio $2{:}1$) and uniform neutrino spacings ($1{:}1$) gives:
+\begin{align}
+\theta_{12} &= \arctan(1/2)\approx 26.6^\circ &(\text{meas.\ }33.4^\circ),\label{eq:t12}\\
+\theta_{23} &= 45^\circ &(\text{meas.\ }42\text{--}50^\circ),\label{eq:t23}\\
+\theta_{13} &= \theta_{12}/4\approx 6.6^\circ &(\text{meas.\ }8.6^\circ).\label{eq:t13}
+\end{align}
+
+%═══════════════════════════════════════════════════════════
+\section{IFS Level Hierarchy}
+\label{sec:hierarchy}
+%═══════════════════════════════════════════════════════════
+
+The lattice spacing $a_0=\sqrt{\kappa_C}/M_{\mathrm{Pl}}$ places the IFS at the Planck scale.
+The energy per site $\nu_0\approx 83$~keV sits at IFS level $\sim 102$ below the Planck cutoff.
+The electroweak scale $v_{\mathrm{EW}}\approx 246$~GeV sits at level $\sim 85$.
+The full hierarchy is:
+level~0 (Planck) $\to$ level~${\sim}85$ (electroweak) $\to$ level~${\sim}102$ ($\nu_0$) $\to$ level~${\sim}130$ (QCD) $\to$ level~${\sim}190$ (Hubble).
+
+%═══════════════════════════════════════════════════════════
+\section{Predictions and Falsifiers}
+\label{sec:predictions}
+%═══════════════════════════════════════════════════════════
+
+\begin{table}[t]
+\centering
+\caption{Predictions from the dimensional growth theorem.}
+\label{tab:pred3}
+\small
+\begin{tabular}{@{}l@{\hskip 5pt}l@{\hskip 5pt}l@{\hskip 5pt}l@{}}
+\toprule
+Quantity & Prediction & Meas.\ & Acc.\ \\
+\midrule
+$d_{\mathrm{stable}}$ & $3$ & $3$ & exact \\
+$d_s$ & $4/3$ & --- & struct.\ \\
+$d_{\max}$ & $\approx 7$ & --- & testable \\
+$\sigma$ & $9/(4\pi^2 a_0)$ & --- & struct.\ \\
+$g_{\chi\sigma}$ & $21/(64\pi)$ & --- & struct.\ \\
+$\Omega_{\mathrm{DM}}$ & $43/228$ & $0.27$ & 30\% \\
+$m_{\nu_1}$ & $35$ meV & $<120$ meV & consist.\ \\
+$\theta_{23}$ & $45^\circ$ & $42$--$50^\circ$ & consist.\ \\
+$\theta_{13}$ & $6.6^\circ$ & $8.6^\circ$ & 23\% \\
+$m_\mu/m_e$ & $206.3$ & $206.8$ & 0.2\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Falsifiers:
+(F12)~a fourth generation of fermions discovered;
+(F13)~stable lone-primitive $d\geq 4$ bound states observed;
+(F14)~spectral dimension $d_s\neq 4/3$ measured on a tetrahedral fractal;
+(F15)~$\Omega_{\mathrm{DM}}$ shown to be incompatible with $43/228$ after dressing corrections.
+
+%═══════════════════════════════════════════════════════════
+\section{Discussion}
+\label{sec:discussion}
+%═══════════════════════════════════════════════════════════
+
+The central result of this paper---that $d=3$ is uniquely selected by four simultaneous conditions from simplex combinatorics---provides a structural answer to the dimensionality question.
+The answer does not invoke anthropic reasoning~\cite{weinberg1987} or extra-dimensional compactification~\cite{polyakov1987}; it follows from the binding criterion $\lambda_{\mathrm{NL}}(d)>d/N(d)$, which is a property of the simplex alone.
+The entropy bound~\cite{bekenstein1973} is automatically respected because the carrier budget $N\eta_R$ caps the information content at each level.
+
+The dark-matter prediction $\Omega_{\mathrm{DM}}=43/228$ is a zero-parameter structural result using only locked constants.
+The $30\%$ discrepancy with the measured $27\%$ may close with dressing corrections analogous to those that improved the muon mass from $0.9\%$ to $0.2\%$.
+
+The spectral dimension $d_s=4/3$ from decimation~\cite{rammal1984} places the IFS loop integrals on exact footing.
+Combined with threshold corrections from the five packet channels and the carrier excitation spectrum (requiring simulation), this framework is expected to resolve the remaining $5$--$8\times$ discrepancy in the strong coupling $\alpha_s$ at the $Z$ scale.
+
+Open computations include the full RG flow with IFS beta functions, the $n_c^{\min}(d)$ series for $d=5{-}7$, and lattice thermodynamics for the relic abundance and baryogenesis washout.
+
+%═══════════════════════════════════════════════════════════
+\section{Conclusion}
+\label{sec:conclusion}
+%═══════════════════════════════════════════════════════════
+
+The tetrahedral closure ladder determines the full dimensional ontology of Unified Dynamics: $d=3$ is uniquely stable, higher dimensions require composite promotion, and the coherence ceiling caps the ladder at $d\approx 7$.
+The spectral dimension $d_s=4/3$, the cross-coupling $g_{\chi\sigma}=21/(64\pi)$, confinement with string tension $\sigma=9/(4\pi^2 a_0)$, the dark-matter fraction $43/228$, neutrino masses near $35$~meV, and the muon mass to $0.2\%$ are derived from $K_4$ combinatorics without free parameters.
+
+\section*{Acknowledgments}
+The authors thank iterative computational dialog and theory-development workflows for enabling the progressive consolidation of the Unified Dynamics framework.
+
+\section*{Author contributions}
+B.W.M.\ conceived the framework, derived all results, and wrote the manuscript.
+A.E.M., D.H., B.R.S., J.A.D., B.B., A.C.B., and J.E.\ contributed through discussion, review, and validation.
+
+\smallskip
+\noindent\textbf{Data availability statement.}
+This paper has no associated data.
+This is a theoretical study and no experimental data were generated or analyzed.
+
+\begin{thebibliography}{99}
+\bibitem{mayes2026ud} B.~W.~Mayes et al., ``Unified Dynamics: Emergent geometry, gauge structure, and matter from a tetrahedral transport-closure substrate,'' Zenodo (2026), \href{https://doi.org/10.5281/zenodo.19582493}{doi:10.5281/zenodo.19582493}.
+\bibitem{mayes2026cosmo} B.~W.~Mayes et al., ``Unified Dynamics II: Dark matter, baryogenesis, the cosmological constant, and black hole information from the tetrahedral framing phase transition,'' Zenodo (2026), \href{https://doi.org/10.5281/zenodo.19582493}{doi:10.5281/zenodo.19582493}.
+\bibitem{rammal1984} R.~Rammal and G.~Toulouse, ``Random walks on fractal structures and percolation clusters,'' J.\ Physique Lett.\ \textbf{44}, L13--L22 (1983).
+\bibitem{wilson1974} K.~G.~Wilson, ``Confinement of quarks,'' Phys.\ Rev.\ D \textbf{10}, 2445--2459 (1974).
+\bibitem{planck2018} Planck Collaboration, ``Planck 2018 results.\ VI.\ Cosmological parameters,'' Astron.\ Astrophys.\ \textbf{641}, A6 (2020).
+\bibitem{weinberg1987} S.~Weinberg, ``Anthropic bound on the cosmological constant,'' Phys.\ Rev.\ Lett.\ \textbf{59}, 2607--2610 (1987).
+\bibitem{polyakov1987} A.~M.~Polyakov, \textit{Gauge Fields and Strings} (Harwood Academic, Chur, 1987).
+\bibitem{hutchinson1981} J.~E.~Hutchinson, ``Fractals and self-similarity,'' Indiana Univ.\ Math.\ J.\ \textbf{30}, 713--747 (1981).
+\bibitem{bekenstein1973} J.~D.~Bekenstein, ``Black holes and entropy,'' Phys.\ Rev.\ D \textbf{7}, 2333--2346 (1973).
+\end{thebibliography}
+
+\end{document}
