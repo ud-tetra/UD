@@ -1,0 +1,66 @@
+{
+  "status": "PARAMETERS_FROZEN_BEFORE_GENERATION",
+  "center": [
+    "461339/102400",
+    "33/100"
+  ],
+  "state_key": "central_33",
+  "frozen_at_utc": "2026-10-21T16:01:58.822245+00:00",
+  "base_commit": "d6fedc3b63c9a67e4c6136bae0a109e5b04dcf1a",
+  "constructor_capture": "captures/2026-10-21T144117Z-codex-j1-left-31-129efecf",
+  "source_bank_capture": "captures/2026-10-21T150729Z-codex-j1-bank-32-b9fc603e",
+  "source_placement_capture": "captures/2026-10-21T150729Z-codex-j1-bank-32-b9fc603e",
+  "source_placement_file": "PLACEMENT_RESULTS.json",
+  "source_placement_sha256": "8e6e4f4e4182dc0d9017c4dd049eaca03a448dfbdc92fa8aa9c04ebac4d30812",
+  "source_selected_formula_lower": "10919512217335727565415138189394684641379215260368231694357506958050249928038752897401797904908838698728782664514159154641635192070203149146437707/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "previous_uniform_capture": "captures/2026-10-21T150729Z-codex-j1-bank-32-b9fc603e",
+  "previous_uniform_cover_sha256": "6123a2675f79ac0df2dec99869b942688b03c1132b7f6db58a78c838a37d1e4a",
+  "previous_uniform_upper_gamma": "8/25",
+  "mesh": "unchanged meanfree conforming P2,18673 nodal coefficients,one exact mean constraint,12288 tetrahedra",
+  "provisional_cover_goal": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/10",
+      "33/100"
+    ]
+  },
+  "finite_algorithm_budget": {
+    "max_depth": 30,
+    "max_leaves": 4096
+  },
+  "placement_probe_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "33/100",
+      "17/50"
+    ]
+  },
+  "placement_grid": {
+    "omega_samples": 129,
+    "gamma_subdivisions": 8,
+    "exclude_lower_gamma_row": true,
+    "expected_probes": 1032
+  },
+  "retry_lineage": "Adds one actual own state/flux to unchanged prior34 entries;prior complete8/25 cover remains current until new full audit passes. Constructor,bank/placement and uniform lineage bound explicitly.",
+  "candidate_only": "No new state/flux or uniform coverage before exact posterior and floating audits. Source selection is a rational finite-grid particular-formula diagnostic,not actual-error lower or global optimum.",
+  "quantization_note": "Both center constants nonbinary. Guard-relative word positions checked explicitly;center constant and selected represented test input remain distinct.",
+  "concurrent_track_preserved": "PR329 ledger recovery retained separately;not a scalar-wave mathematical dependency.",
+  "independent_review": false,
+  "physical_promotion": 0,
+  "binary64_centers": {
+    "omega": {
+      "hex": "0x1.20563d70a3d71p+2",
+      "stored_minus_exact": "9/28147497671065600"
+    },
+    "gamma": {
+      "hex": "0x1.51eb851eb851fp-2",
+      "stored_minus_exact": "7/450359962737049600"
+    }
+  }
+}
