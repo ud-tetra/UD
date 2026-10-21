@@ -1,0 +1,280 @@
+{
+  "certificate": {
+    "status": "PASS_CONDITIONAL_DESIGN",
+    "input_kind": "supplied bounds; catalogue screen only; no measurements",
+    "physical_promotion": 0,
+    "t0_seconds": {
+      "exact": "1/60",
+      "decimal": 0.016666666666666666
+    },
+    "tracking_bound": {
+      "exact": "53/25000",
+      "decimal": 0.00212
+    },
+    "total_residual": {
+      "exact": "481/50000",
+      "decimal": 0.00962
+    },
+    "local_trajectory_error": {
+      "exact": "2001/9599600",
+      "decimal": 0.00020844618525771907
+    },
+    "Gauss_decision_error": {
+      "exact": "8501/2999875",
+      "decimal": 0.002833784741030876
+    },
+    "clock_lower_seconds": {
+      "exact": "8/575",
+      "decimal": 0.01391304347826087
+    },
+    "clock_upper_seconds": {
+      "exact": "1/48",
+      "decimal": 0.020833333333333332
+    },
+    "startup_tracking_upper": {
+      "exact": "33/40000",
+      "decimal": 0.000825
+    },
+    "margins": {
+      "tracking": {
+        "exact": "19/50000",
+        "decimal": 0.00038
+      },
+      "residual": {
+        "exact": "19/50000",
+        "decimal": 0.00038
+      },
+      "clock_lower": {
+        "exact": "19/6900",
+        "decimal": 0.0027536231884057972
+      },
+      "clock_upper": {
+        "exact": "1/240",
+        "decimal": 0.004166666666666667
+      },
+      "lower_large_coordinate": {
+        "exact": "6419/375000",
+        "decimal": 0.01711733333333333
+      },
+      "upper_large_coordinate": {
+        "exact": "2973/125000",
+        "decimal": 0.023784
+      },
+      "small_coordinate": {
+        "exact": "473/125000",
+        "decimal": 0.003784
+      },
+      "angle": {
+        "exact": "94997/10000000",
+        "decimal": 0.0094997
+      },
+      "nominal_Gauss": {
+        "exact": "1743795001/239990000000",
+        "decimal": 0.007266115258969124
+      },
+      "wrong_sign_Gauss": {
+        "exact": "1199247996581696989/191992000000000000000",
+        "decimal": 0.0062463435798454986
+      },
+      "frozen_Gauss": {
+        "exact": "21129489320842333/2999875000000000000",
+        "decimal": 0.007043456584305123
+      },
+      "initial_Gauss": {
+        "exact": "11/1250",
+        "decimal": 0.0088
+      }
+    }
+  },
+  "controls": {
+    "status": "PASS",
+    "exact_controls": 12,
+    "constructor_only": true,
+    "conditional_noise_union_upper": {
+      "exact": "566929705014870312500000/1860768378498693256966276069",
+      "decimal": 0.00030467505336278394
+    },
+    "noise_tail_premise": "Every coordinate error has two-sided sub-Gaussian scale <=4ppm; not inferred from supplier RMS",
+    "input_error_partition": {
+      "deterministic": "6ppm",
+      "noise_allowance": "24ppm"
+    },
+    "input_noise_family_failure_budget": "less than 1/500; other run uncertainties need separate allocation"
+  },
+  "negative_examples": {
+    "too_fast_clock": {
+      "status": "HOLD_NOT_CERTIFIED",
+      "input_kind": "supplied bounds; catalogue screen only; no measurements",
+      "physical_promotion": 0,
+      "t0_seconds": {
+        "exact": "1/1000",
+        "decimal": 0.001
+      },
+      "tracking_bound": {
+        "exact": "161/5000",
+        "decimal": 0.0322
+      },
+      "total_residual": {
+        "exact": "397/10000",
+        "decimal": 0.0397
+      },
+      "local_trajectory_error": {
+        "exact": "2001/9599600",
+        "decimal": 0.00020844618525771907
+      },
+      "Gauss_decision_error": {
+        "exact": "8501/2999875",
+        "decimal": 0.002833784741030876
+      },
+      "clock_lower_seconds": {
+        "exact": "8/575",
+        "decimal": 0.01391304347826087
+      },
+      "clock_upper_seconds": {
+        "exact": "1/48",
+        "decimal": 0.020833333333333332
+      },
+      "startup_tracking_upper": {
+        "exact": "33/40000",
+        "decimal": 0.000825
+      },
+      "margins": {
+        "tracking": {
+          "exact": "-297/10000",
+          "decimal": -0.0297
+        },
+        "residual": {
+          "exact": "-297/10000",
+          "decimal": -0.0297
+        },
+        "clock_lower": {
+          "exact": "-297/23000",
+          "decimal": -0.01291304347826087
+        },
+        "clock_upper": {
+          "exact": "119/6000",
+          "decimal": 0.019833333333333335
+        },
+        "lower_large_coordinate": {
+          "exact": "6419/375000",
+          "decimal": 0.01711733333333333
+        },
+        "upper_large_coordinate": {
+          "exact": "2973/125000",
+          "decimal": 0.023784
+        },
+        "small_coordinate": {
+          "exact": "473/125000",
+          "decimal": 0.003784
+        },
+        "angle": {
+          "exact": "94997/10000000",
+          "decimal": 0.0094997
+        },
+        "nominal_Gauss": {
+          "exact": "1743795001/239990000000",
+          "decimal": 0.007266115258969124
+        },
+        "wrong_sign_Gauss": {
+          "exact": "1199247996581696989/191992000000000000000",
+          "decimal": 0.0062463435798454986
+        },
+        "frozen_Gauss": {
+          "exact": "21129489320842333/2999875000000000000",
+          "decimal": 0.007043456584305123
+        },
+        "initial_Gauss": {
+          "exact": "11/1250",
+          "decimal": 0.0088
+        }
+      }
+    },
+    "outside_plant_clock_envelope": {
+      "status": "HOLD_NOT_CERTIFIED",
+      "input_kind": "supplied bounds; catalogue screen only; no measurements",
+      "physical_promotion": 0,
+      "t0_seconds": {
+        "exact": "1/20",
+        "decimal": 0.05
+      },
+      "tracking_bound": {
+        "exact": "21/25000",
+        "decimal": 0.00084
+      },
+      "total_residual": {
+        "exact": "17/2000",
+        "decimal": 0.0085
+      },
+      "local_trajectory_error": {
+        "exact": "2001/9599600",
+        "decimal": 0.00020844618525771907
+      },
+      "Gauss_decision_error": {
+        "exact": "8501/2999875",
+        "decimal": 0.002833784741030876
+      },
+      "clock_lower_seconds": {
+        "exact": "8/575",
+        "decimal": 0.01391304347826087
+      },
+      "clock_upper_seconds": {
+        "exact": "1/48",
+        "decimal": 0.020833333333333332
+      },
+      "startup_tracking_upper": {
+        "exact": "33/40000",
+        "decimal": 0.000825
+      },
+      "margins": {
+        "tracking": {
+          "exact": "83/50000",
+          "decimal": 0.00166
+        },
+        "residual": {
+          "exact": "3/2000",
+          "decimal": 0.0015
+        },
+        "clock_lower": {
+          "exact": "83/2300",
+          "decimal": 0.03608695652173913
+        },
+        "clock_upper": {
+          "exact": "-7/240",
+          "decimal": -0.029166666666666667
+        },
+        "lower_large_coordinate": {
+          "exact": "6419/375000",
+          "decimal": 0.01711733333333333
+        },
+        "upper_large_coordinate": {
+          "exact": "2973/125000",
+          "decimal": 0.023784
+        },
+        "small_coordinate": {
+          "exact": "473/125000",
+          "decimal": 0.003784
+        },
+        "angle": {
+          "exact": "94997/10000000",
+          "decimal": 0.0094997
+        },
+        "nominal_Gauss": {
+          "exact": "1743795001/239990000000",
+          "decimal": 0.007266115258969124
+        },
+        "wrong_sign_Gauss": {
+          "exact": "1199247996581696989/191992000000000000000",
+          "decimal": 0.0062463435798454986
+        },
+        "frozen_Gauss": {
+          "exact": "21129489320842333/2999875000000000000",
+          "decimal": 0.007043456584305123
+        },
+        "initial_Gauss": {
+          "exact": "11/1250",
+          "decimal": 0.0088
+        }
+      }
+    }
+  }
+}

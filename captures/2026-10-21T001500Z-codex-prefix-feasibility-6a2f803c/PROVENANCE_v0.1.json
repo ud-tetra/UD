@@ -1,0 +1,55 @@
+{
+  "origin": "User: continue next steps after CPC theorem; find a plant/converter clock overlap",
+  "constructor": "Codex",
+  "reviewers": [],
+  "lane": "development; no registry entry",
+  "physical_promotion": 0,
+  "repo_derivation_base": "fa8176d24e45f2d30bca2b0f2bc9e669988e1892",
+  "site_source_base": "ebdf1ab2447a86a8b0225758214b2b7119abe6d9",
+  "dependencies": [
+    {
+      "path": "captures/2026-10-20T140000Z-codex-finite-calibration-f4b96720/UD_FINITE_CALIBRATION_FAULT_CERTIFICATE_v0.1.tex",
+      "sha256": "f59a48e42f7c03deb86e72b0dd226e8d58b56b2c75ee039b76bf75226381c171"
+    },
+    {
+      "path": "captures/2026-10-20T163500Z-codex-sampled-actuator-9c71de42/UD_SAMPLED_ACTUATOR_THEOREM_v0.1.tex",
+      "sha256": "daa2c8cbec01ba3913312f60d00744708d508aff38507adeec3efc7ae05c39e4"
+    },
+    {
+      "path": "captures/2026-10-20T180500Z-codex-clock-plant-c4d128b7/UD_CLOCK_PLANT_COMPATIBILITY_v0.1.tex",
+      "sha256": "83389da7d12d893932023dcdde3d364bf31cd04e8671525bfa492277e564f6a9"
+    }
+  ],
+  "governance_sources": [
+    {
+      "name": "20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+    },
+    {
+      "name": "21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md",
+      "sha256": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4"
+    }
+  ],
+  "external_sources": [
+    "https://www.hammfg.com/electronics/transformers/choke/193",
+    "https://www.nichicon.com/en-us/part/ues1c102mhm/5398/",
+    "https://www.analog.com/media/en/technical-documentation/data-sheets/ad4630-24_ad4632-24.pdf",
+    "https://www.analog.com/media/en/technical-documentation/data-sheets/AD5791.pdf"
+  ],
+  "verification": "Exact symbolic preparation-box majorants and twelve rational controls; five-page visual PDF QA. Constructor only.",
+  "added_premises": [
+    "Operating-band L C R and parasitic residual bounds",
+    "Fast SAR data path and1MHz command path",
+    "Two-microsecond complete latency",
+    "Qualified input noise tails and joint uncertainty",
+    "Identified actuator and release/prehistory bounds"
+  ],
+  "status_limits": [
+    "Clock overlap conditional, hardware HOLD",
+    "Supplier catalogue conditions are not operating measurements",
+    "No full-box/full-horizon replacement of CPC or SAC",
+    "No experiment or independent review",
+    "No physical/GUT promotion"
+  ],
+  "missing_attachment": "Gap2_FINAL_Finite_Genesis.png unavailable and unused"
+}
