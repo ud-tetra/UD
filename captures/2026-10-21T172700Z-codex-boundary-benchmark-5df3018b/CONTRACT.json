@@ -1,0 +1,17 @@
+{
+ "version":"0.1", "lane":"development — no registry entry", "physical_promotion":0,
+ "freeze":"Written before executing benchmark; constructor only; not independently preregistered.",
+ "sample_rate_hz":1953125, "samples":16184, "guard_samples":1024,
+ "carrier_bin":257, "noninteger_offset_bins":0.37, "phase_rad":0.73, "half_bandwidth_hz":5000,
+ "methods":["periodic","zero_pad","reflect_pad","hann_divide"],
+ "padding":"One original record length on each side. Reflection excludes endpoint replication (numpy reflect).",
+ "preprocessing":"Subtract original record mean before any extension. No retuning; positive DFT band doubled, zero all other bins; no decimation.",
+ "hann_divide":"Use original-length symmetric Hann taper, then divide complex reconstruction by its original weight only in reported interior; no endpoint estimate where weight=0.",
+ "synthetic_cases":["exact_bin","off_bin","smooth_AM_PM","smooth_turnon","narrow_pulse","omitted_sideband"],
+ "known_generators":"Explicit complex phasors with real part as observed voltage. Smooth transient phasor is a declared generative reference, not asserted identical to an infinite-line analytic transform.",
+ "targets":"Primary full injected complex phasor; omitted-sideband case also separately reports desired fundamental target. Neither target is inferred from filtered data.",
+ "metrics":["interior normalized complex RMS vs full truth","interior max amplitude error vs full truth","interior max phase error where true amplitude >=0.2","full-truth omitted-band error","fundamental-only error in sideband control"],
+ "gate":"Synthetic recovery diagnostic only: interior complex relative RMS <=0.01 AND max phase error <=0.02 rad on true-amplitude-eligible points. No empirical gate revision or physical promotion.",
+ "empirical_followup":"None in this milestone. Preserve v0.1 empirical 0/891 failure; do not select and apply a winner to reused data.",
+ "boundary_uncertainty":"No finite guard alone certifies a nonlocal DFT projection. Compare outcomes; a physical continuation/noise bound remains necessary."
+}
