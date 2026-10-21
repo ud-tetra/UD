@@ -1,0 +1,57 @@
+{
+  "lane": "Development \u2014 no registry entry",
+  "origin": "PR316 exact source action proof plus new native104 overflow/rounding proof and actual execution",
+  "constructor": "Codex root",
+  "reviewer": "Separate same-team source/arithmetic/backend review, not external promotion authority",
+  "claims": [
+    {
+      "id": "NAT1",
+      "type": "DERIVED_ALGORITHM_CERTIFICATE",
+      "statement": "Native signed128 propagation at grid104 has finite safe-overflow bounds and unchanged absolute action errors<2^-68 on domains2048/2049.",
+      "dependencies": [
+        "Pinned source H/observer",
+        "Exact rational bounds",
+        "Correct audited build/runtime",
+        "NATIVE_CONSTANTS.json"
+      ]
+    },
+    {
+      "id": "NAT2",
+      "type": "EXECUTED_CONFORMANCE",
+      "statement": "Full native/reference action differences meet the sum of proved errors; native exact replays pass.",
+      "dependencies": [
+        "CONFORMANCE.json",
+        "Separate own compiled halfstep/rejection probes"
+      ]
+    },
+    {
+      "id": "NAT3",
+      "type": "EMPIRICAL_STANDALONE_PERFORMANCE",
+      "statement": "Paired observed speedups6.7408forward/6.4258adjoint; specific-child peak RSS11392/11264KiB.",
+      "dependencies": [
+        "BENCHMARK.json",
+        "wait4 perchild methodology"
+      ],
+      "scope": "This measured environment, not worstcase or full-pipeline benchmark"
+    },
+    {
+      "id": "NAT4",
+      "type": "EXECUTED_FINITE_INTEGRATION",
+      "statement": "Actual2640-state16-step decoder passes42240 arithmetic checks,15forward+16adjoint actions.",
+      "dependencies": [
+        "INTEGRATION.json",
+        "Pinned C29 decoder and C30 adapter",
+        "Native buildreceipt"
+      ],
+      "scope": "N16 only; no8192 convergence/gain/accuracy promotion"
+    }
+  ],
+  "open": [
+    "Full8192 extraction and runtime",
+    "Physical/input error evidence",
+    "New compressed/preconditioned method or different floating implementation"
+  ],
+  "hidden_space": "641 nominal dimensions unrecovered",
+  "external_promotion_review": "PENDING",
+  "physical_promotion": 0
+}

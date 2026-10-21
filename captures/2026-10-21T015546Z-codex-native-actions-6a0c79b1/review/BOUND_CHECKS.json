@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "checks": {
+    "tau_lt_2^-110": true,
+    "coefficient_max_25_over_8": true,
+    "polynomial_abs_sum_lt_13": true,
+    "all_partial_row_accumulators_lt_2^123": true,
+    "all_partial_output_sums_lt_2^121": true,
+    "accum_lt_1": true,
+    "forward_lt_2^-68": true,
+    "adjoint_lt_2^-68": true,
+    "forward_lt_2^-79": true,
+    "adjoint_lt_2^-79": true,
+    "state_bootstrap_2050_lt_cap": true,
+    "input96_domain2049_lt_2^108": true,
+    "shifted_input104_domain2049_lt_2^116": true
+  },
+  "exact": {
+    "tau": [
+      23283064365386962890625,
+      35422280133279891846141978754727692522410866384975167488
+    ],
+    "coordinate_vector_rounding": [
+      13,
+      5070602400912917605986812821504
+    ],
+    "step_rounding": [
+      195,
+      633825300114114700748351602688
+    ],
+    "local_cap_error": [
+      46108972470727389811525724999717905,
+      148571811252136383489840686058869379657517986521966884895588352
+    ],
+    "accumulated_error": [
+      46108972470727389811525724999717905,
+      36272414856478609250449386244841157142948727178214571507712
+    ],
+    "forward_error": [
+      2965741752309403335415216249597239397,
+      2321434550814630992028760719669834057148718539405732576493568
+    ],
+    "adjoint_error": [
+      5904995741084487721862727848297206367,
+      4642869101629261984057521439339668114297437078811465152987136
+    ],
+    "term_norm": [
+      83076749736557242056487941267521575,
+      5070602400912917605986812821504
+    ],
+    "row_integer_bound": [
+      7975367974709495237422842361682071200,
+      1
+    ],
+    "sum_norm": [
+      33749929580476379585448226139930819,
+      633825300114114700748351602688
+    ],
+    "sum_integer_bound": [
+      1079997746575244146734343236477786208,
+      1
+    ]
+  },
+  "display_only": {
+    "forward_error": 1.277547002679302e-24,
+    "adjoint_error": 1.2718419606127436e-24,
+    "row_integer_log2_upper": 123,
+    "sum_integer_log2_upper": 121
+  },
+  "scope": "mathematical sufficient bounds; not an implementation or physical attestation",
+  "physical_promotion": 0
+}

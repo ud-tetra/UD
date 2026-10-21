@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "exit_code": 1,
+      "name": "positive_parse_cap",
+      "no_output": true,
+      "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nREJECT input scalar out of range"
+    },
+    {
+      "exit_code": 1,
+      "name": "negative_parse_cap",
+      "no_output": true,
+      "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nREJECT input scalar out of range"
+    },
+    {
+      "exit_code": 1,
+      "name": "positive_signed128_boundary",
+      "no_output": true,
+      "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nREJECT input scalar out of range"
+    },
+    {
+      "exit_code": 1,
+      "name": "negative_signed128_boundary",
+      "no_output": true,
+      "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nREJECT input scalar out of range"
+    },
+    {
+      "exit_code": 1,
+      "name": "domain_one_grid_excess",
+      "no_output": true,
+      "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nREJECT input exceeds certified domain"
+    },
+    {
+      "exit_code": 1,
+      "name": "malformed_double_sign",
+      "no_output": true,
+      "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nREJECT bad integer"
+    },
+    {
+      "exit_code": 1,
+      "name": "truncated_input",
+      "no_output": true,
+      "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nREJECT invalid input length/value"
+    },
+    {
+      "exit_code": 1,
+      "name": "extra_input",
+      "no_output": true,
+      "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nREJECT extra input"
+    },
+    {
+      "exit_code": 1,
+      "name": "truncated_operator_before_ne",
+      "no_output": true,
+      "stderr": "REJECT bad incidence count"
+    }
+  ],
+  "physical_promotion": 0,
+  "scope": "finite negative probes only, not universal malformed-input proof",
+  "source_bindings": {
+    "executable": "a85b53a56a6fe716bbc57285930c890174a78655b1d9ce62c1ca8154656caf3b",
+    "operator": "cca3ed7e671b8397c3940921d9845399425fd2558cc62708941c00fc4b899950",
+    "source": "10fdad3cd8bc9484c357dd80ecbcd2c63e7cddef513b758953bfc40af2a71093"
+  },
+  "status": "PASS"
+}

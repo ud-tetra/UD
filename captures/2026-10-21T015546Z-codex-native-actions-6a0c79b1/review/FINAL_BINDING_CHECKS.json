@@ -1,0 +1,59 @@
+{
+  "complete_action_replays": [
+    {
+      "initial_final_exact_match": true,
+      "name": "Fxb",
+      "sha256": "ea3f57714d0eff9c78d1492ca66607a5943ced2c9cdac9c0ba106592337337cc"
+    },
+    {
+      "initial_final_exact_match": true,
+      "name": "Fty",
+      "sha256": "88dc84fca45e49553574351f3e0a1ac11b2beedcd05d10fe3576826ccc88a6c6"
+    }
+  ],
+  "final_action_timings": [
+    {
+      "mode": "forward",
+      "receipt_sha256": "8fb52a281b635c65abb65af16d6db72222db1b6c390d570bf814396f25982aa2",
+      "specific_child_peak_rss_kib": 11392,
+      "wall_seconds_observed": 9.315205097002035
+    },
+    {
+      "mode": "adjoint",
+      "receipt_sha256": "1a45a2d2011ca1c9643d762b7a6c38546a839525bf141ed973a30f4b95a318d5",
+      "specific_child_peak_rss_kib": 11264,
+      "wall_seconds_observed": 9.774897010000132
+    }
+  ],
+  "final_probe_and_rejection_bindings_match": true,
+  "integration": {
+    "adjoint_actions": 16,
+    "build_source_adapter_decoder_bindings_match": true,
+    "data_norm_rule_independently_recomputed": true,
+    "forward_actions": 15,
+    "output_sha256": "669bc4e608b45ec9f2cca264cbe51ff7d8beeeb739f1f13cb0e0688f564fcd85",
+    "receipt_sha256": "845bcad0f2d53f0c3fe7062b6acfcae4a627b103b7f4d13f0bed68dc145cd3f9",
+    "steps": 16,
+    "whole_step_coordinate_checks": 42240
+  },
+  "reader_diagnostic_only_delta_verified": true,
+  "scalar_fraction_matches": 5,
+  "scope": {
+    "does_not_independently_reexecute_whole_decoder": true,
+    "external_review": "PENDING",
+    "full8192_execution_not_claimed": true,
+    "physical_promotion": 0,
+    "producer_driver_not_executed_by_this_script": true,
+    "raw_large_data_not_for_capture": true
+  },
+  "source_hashes": {
+    "c29_decoder.py": "705808468795a308ee47b9f4cdb6a156307d9205ccda81975d4442ccecde5bf5",
+    "c30_oracles.py": "42eda8f3783c13453323190b2d72a64c80d0a715ea7447567156d620eab20eec",
+    "c31_THEOREM.md": "6cf1e63b67165ecc00de6cfc60ff3c2ef84944972df9ede0327073502c9c1474",
+    "c31_action.cpp": "10fdad3cd8bc9484c357dd80ecbcd2c63e7cddef513b758953bfc40af2a71093",
+    "c31_certify.py": "1b3e2a453f123ab011bc8d8281374fcd43520246c667d3a32d734151c0c629d8",
+    "c31_integration.py": "9367be9d3f10b76273412da68551e4b3feaf2403e202f3cab20a982f104f889d",
+    "c31_run_timed.py": "ea24ffd0bae1a8ec8f5ce41841bf41dfaacb995ffc85e5d7ea9c2b6f5aa35789"
+  },
+  "status": "PASS"
+}

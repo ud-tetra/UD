@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "coordinates": 253952,
+      "difference_grid_denominator": 6277101735386680763835789423207666416102355444464034512896,
+      "difference_norm_le_joint_proved_bounds": true,
+      "difference_numerator_squared": 7315,
+      "different_coordinates": 7315,
+      "input_sha256": "72d01d2a5124b32824975c32f3ead2af430ff9d96e0465c8fa6be3fffd0943a1",
+      "joint_error_budget": [
+        93139953574178294666261256209053478264597,
+        46811549145288509751875957699779152236707205599536643117871529984
+      ],
+      "mode": "forward",
+      "new_output_sha256": "ea3f57714d0eff9c78d1492ca66607a5943ced2c9cdac9c0ba106592337337cc",
+      "observed_runtime": {
+        "executable_sha256": "5d4324c70bbe20bf6dd0978a6852a8298a6e4927de8f672453646c37217cbb59",
+        "mode": "forward",
+        "output_sha256": "ea3f57714d0eff9c78d1492ca66607a5943ced2c9cdac9c0ba106592337337cc",
+        "peak_child_rss_kib": 115116,
+        "scope": "Observed Linux reference runtime, not worst-case bound or full decoder benchmark",
+        "status": "PASS_ACTUAL_ACTION_EXECUTION",
+        "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nforward 0/4096\nforward 512/4096\nforward 1024/4096\nforward 1536/4096\nforward 2048/4096\nforward 2560/4096\nforward 3072/4096\nforward 3584/4096\n",
+        "stdout": "PASS forward input=2640 output=253952 seconds=7.99746\n",
+        "wall_seconds": 8.002669933004654
+      },
+      "old_output_sha256": "53ea292f9c2390d3d5f8a86011b5120723460f3e57ca9015379a5e099e0d4a26",
+      "runtime_receipt_sha256": "a76a116b89e59c96f6587334439426f358cf8043866320b8de13c69f8aeb0940"
+    },
+    {
+      "coordinates": 2640,
+      "difference_grid_denominator": 6277101735386680763835789423207666416102355444464034512896,
+      "difference_norm_le_joint_proved_bounds": true,
+      "difference_numerator_squared": 19129,
+      "different_coordinates": 2206,
+      "input_sha256": "3589c540a113e9da2cf5ea1c0489bac8fad0f646530fa61f73e4656e08e2b428",
+      "joint_error_budget": [
+        92605829860029024931015874054836971872021,
+        46811549145288509751875957699779152236707205599536643117871529984
+      ],
+      "mode": "adjoint",
+      "new_output_sha256": "88dc84fca45e49553574351f3e0a1ac11b2beedcd05d10fe3576826ccc88a6c6",
+      "observed_runtime": {
+        "executable_sha256": "5d4324c70bbe20bf6dd0978a6852a8298a6e4927de8f672453646c37217cbb59",
+        "mode": "adjoint",
+        "output_sha256": "88dc84fca45e49553574351f3e0a1ac11b2beedcd05d10fe3576826ccc88a6c6",
+        "peak_child_rss_kib": 11008,
+        "scope": "Observed Linux reference runtime, not worst-case bound or full decoder benchmark",
+        "status": "PASS_ACTUAL_ACTION_EXECUTION",
+        "stderr": "Native104/GMPdomain 6.3.0 longbits=64\nadjoint 3584/4096\nadjoint 3072/4096\nadjoint 2560/4096\nadjoint 2048/4096\nadjoint 1536/4096\nadjoint 1024/4096\nadjoint 512/4096\nadjoint 0/4096\n",
+        "stdout": "PASS adjoint input=253952 output=2640 seconds=8.12308\n",
+        "wall_seconds": 8.180094973999076
+      },
+      "old_output_sha256": "f3beaa0e6213fc38d1632ea3040a8d21679b57a8cee219d00868fa3d8b17a92a",
+      "runtime_receipt_sha256": "d417a09e440c05389e386f1d5f2c1c8f0e33fe44af3e95c4a715ce0328679cd4"
+    }
+  ],
+  "scope": {
+    "compares_supplied_existing_outputs_not_independent_full_action_rerun": true,
+    "no_bit_equality_required_between_distinct_grids": true,
+    "not_full8192_decoder_benchmark": true,
+    "not_worst_case_runtime": true,
+    "physical_promotion": 0
+  },
+  "status": "PASS"
+}
