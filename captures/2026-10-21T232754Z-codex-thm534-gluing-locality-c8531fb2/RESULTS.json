@@ -1,0 +1,136 @@
+{
+  "status": "PASS_EXACT_CONDITIONAL",
+  "physical_promotion": 0,
+  "censuses": [
+    {
+      "name": "single_tetrahedron",
+      "f_vector": [
+        4,
+        6,
+        4,
+        1
+      ],
+      "dimension": 15,
+      "face_adjacency_components": 1,
+      "live23_binary_pairs_accounted": 1024,
+      "second_identity_face_masks": 2,
+      "both_identities_pairs": 66
+    },
+    {
+      "name": "K_minus_shared_face",
+      "f_vector": [
+        5,
+        9,
+        7,
+        2
+      ],
+      "dimension": 23,
+      "face_adjacency_components": 1,
+      "live23_binary_pairs_accounted": 65536,
+      "second_identity_face_masks": 2,
+      "both_identities_pairs": 514
+    },
+    {
+      "name": "K_plus_three_cells",
+      "f_vector": [
+        5,
+        10,
+        9,
+        3
+      ],
+      "dimension": 27,
+      "face_adjacency_components": 1,
+      "live23_binary_pairs_accounted": 524288,
+      "second_identity_face_masks": 2,
+      "both_identities_pairs": 1026
+    },
+    {
+      "name": "boundary_4simplex",
+      "f_vector": [
+        5,
+        10,
+        10,
+        5
+      ],
+      "dimension": 30,
+      "face_adjacency_components": 1,
+      "live23_binary_pairs_accounted": 1048576,
+      "second_identity_face_masks": 2,
+      "both_identities_pairs": 1026
+    },
+    {
+      "name": "two_disjoint_tetrahedra",
+      "f_vector": [
+        8,
+        12,
+        8,
+        2
+      ],
+      "dimension": 30,
+      "face_adjacency_components": 2,
+      "live23_binary_pairs_accounted": 1048576,
+      "second_identity_face_masks": 4,
+      "both_identities_pairs": 4356
+    }
+  ],
+  "local_conflict": {
+    "first_cell_local_completion": 0,
+    "second_cell_local_completion": 1,
+    "shared_face": "012",
+    "global_maximal_completion": "all seven face columns off",
+    "AND_OR_controls": [
+      {
+        "policy": "AND",
+        "face_mask": "0010101",
+        "second_defect_frobenius_squared": 3
+      },
+      {
+        "policy": "OR",
+        "face_mask": "1010101",
+        "second_defect_frobenius_squared": 3
+      }
+    ]
+  },
+  "global_support_receipts": {
+    "dimension": 23,
+    "norm_preserved_despite_chain_defect": true,
+    "equal_top_star_weights_sum_to_one": true,
+    "shared_face_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "cell_delta_receipts": [
+      "14761631352961527/169578464169687364",
+      "-14761631352961527/169578464169687364"
+    ]
+  },
+  "locality_control": {
+    "stacked_cells": 8,
+    "changed_edge": [
+      0,
+      1
+    ],
+    "remote_face": [
+      8,
+      9,
+      10
+    ],
+    "first_cell_only_edge": true,
+    "instantaneous_global_completion_changes_remote_output": true
+  },
+  "local_transition_barrier_controls": [
+    {
+      "complex": "shared_face_pair",
+      "single_bit_neighbors_checked": 23,
+      "chain_compatible_neighbors": 0
+    },
+    {
+      "complex": "stacked_chain_8",
+      "single_bit_neighbors_checked": 77,
+      "chain_compatible_neighbors": 0
+    }
+  ],
+  "native_requirement_for_effective_chain_identities": "OPEN",
+  "maximal_contact_preference": "CANDIDATE",
+  "outside_peer_review": false
+}
