@@ -1,0 +1,18 @@
+{
+  "version": "0.1", "status": "CONSTRUCTOR_FROZEN_BEFORE_EXTENSION", "physical_promotion": 0,
+  "source_doi": "10.11588/DATA/6MEKHI", "source_file_id": 6385,
+  "source_sha256": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c",
+  "source_shape": [1000,16390], "metadata_columns": 6, "trigger_sample": 200,
+  "sample_rate_hz": 1953125, "channels": [1,2,3,4,5,6,7,8,9],
+  "training": "Per-channel record 0 already explored in prior audit; fixed carrier is its demeaned Hann-window FFT peak in 10–200 kHz after sample 200.",
+  "evaluation": "Per-channel records 1–99; varying drive-frequency settings, not repeated identical trials. This extension is not blinded, preregistered or independent.",
+  "window_samples": [200,16384], "interior_guard_samples": 1024,
+  "analytic_signal": "On unwindowed demeaned post-trigger samples, DFT: retain DC/Nyquist once, double positive bins, zero negative bins. Even N=16184.",
+  "carrier_half_bandwidth_hz": 5000,
+  "filter": "Rectangular positive-frequency DFT band within 5000 Hz of fixed carrier. No per-record carrier fitting. Retain complex signal; demodulate by exp(-2pi i fc t), t=(sample_index-200)/fs. No decimation.",
+  "endpoint_caveat": "Finite DFT assumes periodic extension. Interior guard is a diagnostic choice, not an edge-error certificate; whole-record residual supplies a conservative pointwise bound on finite-DFT truncation anywhere.",
+  "phase_floor": "Accept a point only if abs(filtered analytic signal) > 10*max_abs(full analytic minus filtered analytic), calculated over the entire post-trigger window. No calibrated instrument noise bound is inferred.",
+  "record_gate": "Relative signed RMS reconstruction residual <= 0.05 AND >=0.95 of interior points pass phase floor; thresholds are diagnostic design choices, not UD model acceptance.",
+  "energy": "Envelope squared is a voltage-squared proxy. If C=20 nF, C*abs(envelope)^2/2 is a nominal capacitor-envelope proxy only. No full Hamiltonian, native support, action or cross-device phase calibration.",
+  "next_gates": ["independent review", "gain and timing-skew calibration", "full energy and baseline", "absolute apparatus-to-native map", "formal EXIT-03 specification"]
+}
