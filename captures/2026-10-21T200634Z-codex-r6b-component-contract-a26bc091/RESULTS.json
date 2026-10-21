@@ -1,0 +1,63 @@
+{
+  "status": "PASS_EXACT_SCOPED",
+  "contract_sha256": "75942451ae44fc907450f72500ac27db4b81e8e0cd27e5d8a5023cd6622a6e10",
+  "theta_module_spectrum": [
+    {
+      "eigenvalue": "0",
+      "multiplicity": 1,
+      "formula": "0"
+    },
+    {
+      "eigenvalue": "40089475140625/782757789696",
+      "multiplicity": 3,
+      "formula": "64 eta^6"
+    },
+    {
+      "eigenvalue": "54483031620625/1043677052928",
+      "multiplicity": 12,
+      "formula": "16 eta^4+48 eta^6"
+    },
+    {
+      "eigenvalue": "50884642500625/1043677052928",
+      "multiplicity": 48,
+      "formula": "12 eta^4+48 eta^6"
+    }
+  ],
+  "spectral_certificate": "four rational64x64 projectors; orthogonal/idempotent/sum-to-I and direct Laplacian reconstruction checked",
+  "controls": [
+    {
+      "name": "global_uniform",
+      "global_F": "1",
+      "component_IPR": "1/4",
+      "conditioned_F": "1",
+      "effective_components": "4"
+    },
+    {
+      "name": "one_component_uniform",
+      "global_F": "4",
+      "component_IPR": "1",
+      "conditioned_F": "1",
+      "effective_components": "1"
+    },
+    {
+      "name": "two_components_uniform",
+      "global_F": "2",
+      "component_IPR": "1/2",
+      "conditioned_F": "1",
+      "effective_components": "2"
+    },
+    {
+      "name": "one_site",
+      "global_F": "256",
+      "component_IPR": "1",
+      "conditioned_F": "64",
+      "effective_components": "1"
+    }
+  ],
+  "degenerate_Hadamard_rotation": "PASS; same subspace projector with individual global F changing4 to1",
+  "zero_channel": "undefined by frozen contract",
+  "future_solver_executed": false,
+  "source_scripts_executed": false,
+  "independent_review": "PENDING",
+  "physical_promotion": 0
+}
