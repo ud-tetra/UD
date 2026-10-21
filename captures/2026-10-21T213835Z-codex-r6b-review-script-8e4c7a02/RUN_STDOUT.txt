@@ -1,0 +1,54 @@
+=== [CHECK R01 / C01: Topology and Prefix Invariance] ===
+L=3: N=64, components=1 (N/64=1), sites/comp=64 -> PASS
+L=4: N=256, components=4 (N/64=4), sites/comp=64 -> PASS
+L=5: N=1024, components=16 (N/64=16), sites/comp=64 -> PASS
+
+=== [CHECK C02 / C03 / R02: Theta64 Spectrum & Scaled Diagnostic] ===
+Theta64 eigenvalues:
+  lambda_0 (rank 1)  = 0
+  lambda_1 (rank 3)  = 40089475140625/782757789696 (~ 51.21568341)
+  lambda_2 (rank 12) = 54483031620625/1043677052928 (~ 52.20296017)
+  lambda_3 (rank 48) = 50884642500625/1043677052928 (~ 48.75516076)
+Theta uncoupled positive gap min(l1,l2,l3) = 48.75516076 -> PASS
+Diagnostic on uniform 64-site vector: F_c = 1 -> PASS
+Diagnostic on empty channel: F_c = UNDEFINED (0/0) -> PASS (domain boundary enforced)
+
+=== [CHECK C04 / R03: Coupled Complement Counterexample & Gap] ===
+Counterexample trial vector q = (ones64/8, 0):
+  ||q||^2 = 1
+  q perp range(B_2): verified by parity sum = 0 and coordinate isolation
+  Exact Rayleigh quotient <q, H q> = delta^2 = 49/36864 = 0.0013292101
+  Coupled lambda_2 upper bound: lambda_2 <= v1 = 0.0013292101 (disproves >= 48.75) -> PASS
+  PR358 certified lower bound on stored gap: v_min/2 - ||E||_inf = 0.0006646050 -> PASS
+
+=== [CHECK C07 / R04: ARPACK Shift-Invert Probes] ===
+Probe sigma = 0.00133:
+  |lambda_0 - sigma|   = 1.330016e-03 -> |mu_0|   = 7.5187e+02
+  |lambda_rho - sigma| = 7.899306e-07 -> |mu_rho| = 1.2659e+06
+  -> mu_rho dominates mu_0 by factor 1683.7x (targets positive low modes by design)
+Probe sigma = 1e-08:
+  |lambda_0 - sigma|     = 2.614525e-08 -> |mu_0|     = 3.8248e+07
+  |lambda_rho - sigma|   = 1.329200e-03 -> |mu_rho|   = 7.5233e+02
+  |lambda_theta - sigma| = 4.875516e+01 -> |mu_theta| = 2.0511e-02
+  -> mu_0 dominates mu_rho by factor 50839.1x (returns all 4 negative modes) -> PASS
+
+=== [CHECK C06 / R05: Weighted Pairwise Variance Identity] ===
+  Weights n = [1, 3, 12], coordinates x = [0, 1, 2], N = 16
+  Weighted mean x_bar = 27/16 (1.6875)
+  Pairwise sum sum_{i<j} n_i n_j (x_i - x_j)^2 = 87
+  Weighted variance sum sum_i n_i (x_i - x_bar)^2 = 87/16 (5.4375)
+  N * var_sum = 87 == pair_sum (87)
+  Identity sum_{i<j} n_i n_j (x_i - x_j)^2 = N sum_i n_i (x_i - x_bar)^2 verified exactly -> PASS
+
+=== [CHECK C08 / R06 / R07: Scaled Residual Criterion & Perturbation] ===
+  Scaled acceptance tolerance: 5e-12
+  Scale factor max(1, ||A||_inf + |lambda|) = 52.2030
+  Max allowed 2-norm residual ||r||_2 = 2.610148e-10
+  Measured ground shift |lambda_stored - lambda_exact| = 4.396480e-14
+  Certified max absolute row-sum bound ||E||_inf       = 5.818000e-14
+  Perturbation norm bounds eigenvalue shift (||E||_inf > shift) -> PASS
+  Sample Lehmann-Maehly / Temple enclosure half-width ||r||^2 / gap: 6.0186e-23 (< 1e-23) -> PASS
+
+========================================================
+ALL 8 VERIFICATION CHECKS (C01-C08 / R01-R08) PASSED.
+========================================================
