@@ -1,0 +1,17 @@
+{
+ "version":"0.1", "lane":"development — no registry entry", "physical_promotion":0,
+ "freeze":"Constructor fixed before evaluation; no empirical rerun or independent preregistration.",
+ "base_certificate":"captures/2026-10-21T184955Z-codex-quadrature-budget-49ce210d/CERTIFICATE.json",
+ "source":"u=u_in+u_tail; in-band spectral support±50Hz and TV<=1V; tail spectral-measure TV<=1/1000V. Full-envelope amplitude>=1/2V at phase centers.",
+ "target":"Full complex envelope including tail, not only its in-band component.",
+ "tail_coefficient":"H0+1 for full-state error; H0 if separately targeting in-band state only. No tail estimate inferred from the output FFT.",
+ "input_error_V":"1/4000 total: noise+quantization1/10000, gain1/20000, timing1/20000, nonconstant baseline1/20000.",
+ "gain_requirement":"Relative gain error<=1/100000 on voltage magnitude<=5V.",
+ "timing_requirement":"Time error<=1/5000000000s with clean-voltage derivative<=250000V/s. This is an illustrative sufficient allocation, not calibrated hardware capability.",
+ "timing_source_premise":"For this timing allocation, full physical tail frequencies have absolute magnitude<=200000Hz; baseline derivative is budgeted separately. The generic leakage theorem does not require this cutoff.",
+ "baseline_constant_V":"3", "absolute_target_V":"1/100", "phase_target_rad":"1/50", "delay_cap_s":"3/5000", "floating_allowance_V":"1/1073741824",
+ "phase_certificate":"For d/(1/2)<=1/10, phase<=100/99*d/(1/2). Thus joint error allowance d<=99/10000V.",
+ "rounding":"Round inherited rational upper bounds upward to denominator10^12 before new exact Fraction calculations.",
+ "negative_controls":["tail TV1/500 fails sufficient joint budget","input error1/1000 fails sufficient joint budget","H0-only tail coefficient is not a full-state certificate"],
+ "open":"Spectral TV, finite physical bandwidth, gain/skew/noise/baseline and independent review unverified. No promotion, action estimate or change to prior gates."
+}

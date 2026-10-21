@@ -1,0 +1,99 @@
+{
+  "status": "PASS_EXACT_CONDITIONAL_LEAKAGE_BUDGET",
+  "physical_promotion": 0,
+  "contract_sha256": "6468526742dbe867f5fff3865ad0abc53b5b17432f99008611e05df4c9e79e5e",
+  "base_certificate_sha256": "89521d17089a6b5f78034b6c7855bb0700f7b621b3533b870c1689b924ddc093",
+  "kernel_sha256": "5beebe40fa2bfe744a0a64ee57401e77334b925bf0a23c0d2f24cafcd60ff254",
+  "inherited_rounded_upper": {
+    "R": {
+      "fraction": "902906663/200000000000",
+      "approximation": 0.004514533315
+    },
+    "H0": {
+      "fraction": "1273238842219/500000000000",
+      "approximation": 2.546477684438
+    },
+    "constant_baseline_leak": {
+      "fraction": "1/1000000000000",
+      "approximation": 1e-12
+    }
+  },
+  "fixed_error_V": {
+    "fraction": "1183458066254417/262144000000000000",
+    "approximation": 0.0045145342493225745
+  },
+  "tail_contribution_V": {
+    "fraction": "1773238842219/500000000000000",
+    "approximation": 0.003546477684438
+  },
+  "instrument_contribution_V": {
+    "fraction": "1273238842219/2000000000000000",
+    "approximation": 0.0006366194211095
+  },
+  "full_error_upper_V": {
+    "fraction": "57000796847276521/6553600000000000000",
+    "approximation": 0.008697631354870075
+  },
+  "phase_upper_rad": {
+    "fraction": "57000796847276521/3244032000000000000",
+    "approximation": 0.01757097243408096
+  },
+  "joint_error_cap_V": {
+    "fraction": "99/10000",
+    "approximation": 0.0099
+  },
+  "unallocated_output_margin_V": {
+    "fraction": "7879843152723479/6553600000000000000",
+    "approximation": 0.0012023686451299255
+  },
+  "max_tail_at_frozen_input_V": {
+    "fraction": "155610196527281779/116210980763664384000",
+    "approximation": 0.0013390317808584947
+  },
+  "max_input_at_frozen_tail_V": {
+    "fraction": "60259960954533491/83442980763664384000",
+    "approximation": 0.0007221693233276005
+  },
+  "allocation": {
+    "noise_and_quantization_V": {
+      "fraction": "1/10000",
+      "approximation": 0.0001
+    },
+    "gain_V": {
+      "fraction": "1/20000",
+      "approximation": 5e-05
+    },
+    "timing_V": {
+      "fraction": "1/20000",
+      "approximation": 5e-05
+    },
+    "baseline_variation_V": {
+      "fraction": "1/20000",
+      "approximation": 5e-05
+    }
+  },
+  "timing_source_derivative_upper_V_per_s": {
+    "fraction": "5565990375/28322",
+    "approximation": 196525.3292493468
+  },
+  "availability_delay_s": {
+    "fraction": "1024/1953125",
+    "approximation": 0.000524288
+  },
+  "negative_controls": {
+    "tail_1over500_sufficient_bound": {
+      "fraction": "401214965000046989/32768000000000000000",
+      "approximation": 0.012244109039308075
+    },
+    "input_1over1000_sufficient_bound": {
+      "fraction": "347586219809130893/32768000000000000000",
+      "approximation": 0.010607489618198575
+    },
+    "target_missing_tail_difference_V": {
+      "fraction": "1/1000",
+      "approximation": 0.001
+    },
+    "frontier_equality_and_beyond": "PASS_EXACT"
+  },
+  "limits": "All source/instrument numbers are proposed requirements, not measurements; generic tail theorem permits aliasing.200kHz physical cutoff is used only for illustrative timing slope. Prior empirical gates unchanged."
+}
