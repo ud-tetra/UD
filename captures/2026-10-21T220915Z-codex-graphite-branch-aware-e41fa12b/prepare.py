@@ -1,0 +1,9 @@
+from pathlib import Path
+import numpy as np,json,hashlib,datetime
+p=Path(__file__).resolve().parent;r=p.parent
+cases=['21_dir_0','21_dir_10024','31_dir_10084','31_dir_10134']
+f={'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'main_observed':'f0a2ee841cb0feed3ec5e700bfc0a6521cbda2f4','purpose':'Exposed-data numerical recalibration; no physical preregistration or UD promotion','rule':'For each coordinate select the largest fine h in the declared ladder below 0.9 times the nearest numerically located angular branch crossing. Coarse=2h, audit=h/2. Coarse may cross; retained fine and audit must not. Require both adjacent full-vector absolute and relative discrepancies below unchanged thresholds. No response-adaptive reselection; failure is HOLD.','fine_ladder_A':[6.25e-6,3.125e-6,1.5625e-6,7.8125e-7],'branch_knots':[-.6666666667,-.5,-.3333333333],'guard':'Polynomial roots for affine bonds and cosine knot, sign checked; numerical guard, not interval arithmetic proof. Other REBO branches not certified. Fixed-graph bond-length guard <1.7 Angstrom.','direction_rule':'Three old sine regression vectors plus three previously unused cos(sqrt(2/3/5)*index) unit vectors. Fixed coarse/fine/audit steps 2.5e-5,1.25e-5,6.25e-6; all require adjacent absolute/relative stability and agreement with symmetrized retained H. No directional step reselection.','thresholds':{'absolute':1e-6,'relative':1e-5,'antisymmetry_relative':1e-6,'stationarity':1e-7},'physical_promotion':0,'inputs':{}}
+for c in cases:
+ f['inputs'][c]={fn:hashlib.sha256((r/'graphite-stationary'/c/fn).read_bytes()).hexdigest() for fn in ['RELAXED.npz','HESSIAN.npz']}
+f['source_hashes']={str(z.relative_to(r)):hashlib.sha256(z.read_bytes()).hexdigest() for z in [r/'graphite-step-audit/IMAGE_GAUGE_CORRECTION.json',r/'graphite-step-audit/sources/CH.rebo',r/'graphite-width/plugin/kcz_width2.so']}
+(p/'FREEZE.json').write_text(json.dumps(f,indent=2)+'\n')
