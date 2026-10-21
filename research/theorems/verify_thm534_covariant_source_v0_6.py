@@ -15,6 +15,7 @@ j=s.symbols('j',real=True)
 z=(3+s.I*j)/s.sqrt(9+j**2)
 N=B2.copy();N[e,f]=q*z
 Fdown=B1*N;Fup=N*B3
+assert B1*Fup==Fdown*B3  # S16 exact sourced-defect compatibility square
 assert s.simplify(z*s.conjugate(z))==1
 assert s.simplify(Fdown.norm()**2-2*(z-1)*s.conjugate(z-1))==0
 assert s.simplify(Fup.norm()**2-(z-1)*s.conjugate(z-1))==0
