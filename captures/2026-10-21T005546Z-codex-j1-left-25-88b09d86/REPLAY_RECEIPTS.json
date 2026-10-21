@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-21T01:06:00.188632+00:00",
+  "components": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-21T005546Z-codex-j1-left-25-88b09d86/candidate",
+      "exit_code": 0,
+      "log_sha256": "a0830d28c2dd74d6f994bc59a20aa3e89a5733e068a48961661bf13b1200b5bf",
+      "matched_results": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 replay.py --scalar-only",
+      "working_directory": "captures/2026-10-21T005546Z-codex-j1-left-25-88b09d86",
+      "exit_code": 0,
+      "log_sha256": "48ac45871db926a3ac01e07c39ad6330ae2ebca07ec59ad4f5032a2c1eb04489",
+      "matched_results": [
+        "DIAGNOSTIC_RESULTS.json",
+        "LOCAL_SCOUT_RESULTS.json",
+        "POINT_AUDIT_RESULTS.json"
+      ]
+    }
+  ],
+  "execution_shape": "Saved candidate state/flux and scalar-only replay components executed separately;default composing wrapper not separately executed.",
+  "coefficient_regeneration": false,
+  "independent_review": false,
+  "physical_promotion": 0
+}
