@@ -44,4 +44,3 @@ print('PASS pure Fraction 14-step actual midpoint face receipts, delayed edge pe
 print('PASS n0 all-off, n1 open, n4 closed, n7 reopen; 3 and 5 typed totals conserved')
 print('PASS first face receipt',first,'core stock gain',sum(first))
 print('Governance: candidate sign rule, h_face=1 supplied; no global all-off reset')
-
