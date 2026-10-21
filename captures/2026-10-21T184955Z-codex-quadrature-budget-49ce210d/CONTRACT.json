@@ -1,0 +1,16 @@
+{
+ "version":"0.1", "lane":"development — no registry entry", "physical_promotion":0,
+ "status":"Constructor-fixed requirements before evaluation; no empirical rerun or independent preregistration.",
+ "kernel_source":"captures/2026-10-21T173313Z-codex-local-quadrature-8ba1d409/KERNEL.csv",
+ "kernel_policy":"Unchanged binary64 coefficients parsed from prior CSV and treated as exact dyadic rationals. No optimization.",
+ "source_class":"u(t)=integral[-B,B] exp(2pi i f t) dmu(f), complex finite measure with total variation<=1 V. B=50 Hz relative to fixed carrier. |u(t)|>=1/2 V required at phase-reported centers.",
+ "baseline":"Unknown constant magnitude<=3 V; any baseline variation must fit input-error allowance.",
+ "input_error_V":"1/2000 total, including noise, residual gain, timing and nonconstant baseline effects. This is a proposed requirement, not a measured capability.",
+ "max_availability_delay_s":"3/5000", "absolute_error_target_V":"1/100", "phase_error_target_rad":"1/50",
+ "sample_rate_hz":1953125, "record_samples":16184, "half_window":1024,
+ "continuum_certificate":"Taylor bound D0+B*D1+(2pi)^2*H2*B^2/2 for |A(f)-1|+|Bimage(f)|, with exact rational directed enclosures for moments. No sampled-grid interpolation assumption.",
+ "arithmetic":"160-bit fixed-point integer interval arithmetic; Machin pi enclosure; small-angle Taylor remainder; interval rotation recurrence. Coefficient/input roundoff budget checked separately for declared sequential binary64 algorithm.",
+ "floating_allowance_V":"1/1073741824; declared serial real/imaginary multiply-add evaluation, round-to-nearest, no overflow, max input magnitude<=5 V; conditional numerical budget, not an all-platform runtime validation.",
+ "negative_controls":["600 Hz source extension uses a certified lower transfer bound","input error 1/100 V must fail the sufficient budget","delay cap1/2000 s fails unchanged kernel"],
+ "promotion":"No source-bandwidth, gain/skew, energy, support or action calibration inferred. Prior2/6 and0/891 results preserved."
+}
