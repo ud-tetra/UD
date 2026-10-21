@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_curl_witness_sha256": "f736795f96db6d4cab31eef38523f9010f2636e34ffbaa143abdbdcbafb0c455",
+  "source_coefficient_payload_sha256": "7a361198d17764a1fe3b6ebc281065b725cdfdbe4e5507ba331b826c8ce5cff2",
+  "mesh": {
+    "nodes": 2809,
+    "tetrahedra": 12288,
+    "interior_edges": 13560,
+    "interior_faces": 23808,
+    "potential_coefficients_per_component": 74736,
+    "unequal_volumes": [
+      "1/4096",
+      "1/8192"
+    ]
+  },
+  "checks": {
+    "local_basis_divergence_identities": 230016,
+    "actual_affine_divergence_checks": 24576,
+    "correction_face_vertex_component_checks": 152064,
+    "gradient_orthogonality": 2,
+    "exact_flux_norm_nonincrease": 2,
+    "old_parent_interface_faces": 7424,
+    "nonzero_old_parent_face_vertex_components": 44544
+  },
+  "prior_affine_projection_norm_squared": [
+    "920150670568764768708659597540815938787770209939143602167199750383517450716075272546366858011029774315897201/137499928402577810823120083967633025870974116572450696917939480331420737734025227667379322880000000000000000",
+    "8417950379474866795143726524130658063297075600602760958184739584787182236178788839989906244157012948697949/1718749105032222635289001049595412823387176457155633711474243504142759221675315345842241536000000000000000"
+  ],
+  "exact_flux_norm_changes": [
+    "-3140251801971654013147714857253669130839526738946463547964182365936312565142613/124231434242230148173825605520986458144119961499066957992925436028387328000000000",
+    "-94877711824200067231946539386835602184060917082510091476367959995151544796707/6211571712111507408691280276049322907205998074953347899646271801419366400000000"
+  ],
+  "controls": [
+    "truncated coefficient payload",
+    "nonfinite coefficient payload",
+    "corrupted exterior affine trace"
+  ],
+  "backend": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "solver": "scipy.sparse.linalg.lsmr, positive diagonal column normalization",
+    "scope": "Weighted least-squares proposal only; exact posterior validity and decrease, no global optimality/rank or all-input IEEE claim",
+    "unequal_cell_measures_included": true,
+    "diagnostics": [
+      {
+        "component": 0,
+        "stop_code": 2,
+        "iterations": 303,
+        "residual_norm": 2.5820013416100345,
+        "normal_residual_norm": 7.709347064983865e-10
+      },
+      {
+        "component": 1,
+        "stop_code": 2,
+        "iterations": 301,
+        "residual_norm": 2.2096254854801747,
+        "normal_residual_norm": 6.893664636308133e-10
+      }
+    ]
+  },
+  "independent_review": false,
+  "physical_promotion": 0
+}
