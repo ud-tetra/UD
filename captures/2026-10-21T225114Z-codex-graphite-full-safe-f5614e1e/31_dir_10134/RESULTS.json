@@ -1,0 +1,124 @@
+{
+  "case": "31_dir_10134",
+  "status": "NUMERICAL_PASS",
+  "all_checks_pass": true,
+  "checks": {
+    "feasibility": true,
+    "matrix_step_absolute": true,
+    "matrix_step_relative": true,
+    "antisymmetry": true,
+    "directional_agreement": true,
+    "directional_step_stability": true,
+    "all_middle_repeats": true,
+    "stationarity": true,
+    "baseline_repeats": true,
+    "local_positive_stability": true
+  },
+  "matrix_pairs": [
+    {
+      "max_abs": 1.428013973736597e-07,
+      "relative_F": 1.8082779566611865e-09,
+      "max_column_relative": 3.450638738346826e-09,
+      "worst_entry_0based": [
+        46,
+        46
+      ]
+    },
+    {
+      "max_abs": 1.9313611687721277e-07,
+      "relative_F": 2.2748088936619763e-09,
+      "max_column_relative": 4.105625209268938e-09,
+      "worst_entry_0based": [
+        36,
+        36
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "name": "regression_sine_0",
+      "index_0based": 0,
+      "agreement_abs": 6.903960869664161e-08,
+      "agreement_relative": 3.3852804200794854e-09,
+      "step_abs": 7.94324019892656e-08,
+      "step_relative": 5.052330453734159e-09
+    },
+    {
+      "name": "regression_sine_1",
+      "index_0based": 1,
+      "agreement_abs": 7.314744898678782e-08,
+      "agreement_relative": 3.901359422581403e-09,
+      "step_abs": 1.204706592261573e-07,
+      "step_relative": 6.090621909598977e-09
+    },
+    {
+      "name": "regression_sine_2",
+      "index_0based": 2,
+      "agreement_abs": 5.631965915853243e-08,
+      "agreement_relative": 2.212297826592766e-09,
+      "step_abs": 9.172519721545314e-08,
+      "step_relative": 3.505597194979051e-09
+    },
+    {
+      "name": "regression_cos_sqrt_2",
+      "index_0based": 3,
+      "agreement_abs": 5.268760472354472e-08,
+      "agreement_relative": 3.05284524662487e-09,
+      "step_abs": 9.75530651814438e-08,
+      "step_relative": 5.993481918434812e-09
+    },
+    {
+      "name": "regression_cos_sqrt_3",
+      "index_0based": 4,
+      "agreement_abs": 6.105839123193846e-08,
+      "agreement_relative": 2.78041213029894e-09,
+      "step_abs": 9.857383442835044e-08,
+      "step_relative": 5.091775577849473e-09
+    },
+    {
+      "name": "regression_cos_sqrt_5",
+      "index_0based": 5,
+      "agreement_abs": 5.037310835120934e-08,
+      "agreement_relative": 3.104184940845797e-09,
+      "step_abs": 1.0066721856105687e-07,
+      "step_relative": 5.157835203470961e-09
+    },
+    {
+      "name": "fresh_cos_sqrt_7",
+      "index_0based": 6,
+      "agreement_abs": 6.120672857434784e-08,
+      "agreement_relative": 2.7402599036217906e-09,
+      "step_abs": 1.0609064737820972e-07,
+      "step_relative": 4.279380131478659e-09
+    },
+    {
+      "name": "fresh_cos_sqrt_11",
+      "index_0based": 7,
+      "agreement_abs": 5.09743003362928e-08,
+      "agreement_relative": 2.3896610350411712e-09,
+      "step_abs": 1.0524983728998905e-07,
+      "step_relative": 3.827025062122216e-09
+    },
+    {
+      "name": "fresh_cos_sqrt_13",
+      "index_0based": 8,
+      "agreement_abs": 6.516756112517896e-08,
+      "agreement_relative": 3.937884944034712e-09,
+      "step_abs": 1.1298081004085248e-07,
+      "step_relative": 6.151158839671029e-09
+    }
+  ],
+  "all_failed_columns": [],
+  "antisymmetry_relative": 1.7864507909104452e-09,
+  "stationarity_max": 1.2417520301180886e-10,
+  "baseline_repeat_max": 0.0,
+  "middle_repeat_max": 0.0,
+  "eigenvalue_min": 0.28103670430000505,
+  "eigenvalue_max": 126.25337250579244,
+  "spectral_step_uncertainty": 6.247327538493632e-07,
+  "stability_threshold": 6.247327538493631e-06,
+  "lateral_vertical_coupling_ratio": 0.00702720600062307,
+  "coupling_step_diagnostic": 1.4907285538418908e-09,
+  "coupling_status": "RESOLVED_NONZERO",
+  "physical_promotion": 0
+}
