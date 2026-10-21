@@ -74,3 +74,25 @@ Then the following source/curvature *square-compatibility identity* holds:
 **Typing:** This is a *commuting defect square*, not a proof of a covariant Bianchi identity, dynamic curvature propagation, divergence-free physical stress-energy or conserved packet burden. It prevents treating the lower and upper nilpotency defects as unrelated bookkeeping entries, but its equality alone cannot select \(z\), construct a current, or derive \(T\).
 
 **Independent constructor check:** \(B_1(N_zB_3)=(B_1N_z)B_3\) verified symbolically in the v0.6 exact script (additional control), and independently follows from matrix associativity. Physical promotion 0.
+
+
+## THM-534-S17 — Native chain-norm bound on candidate source quadrature (EXACT CONDITIONAL)
+
+For a state \(\psi\in\mathbb C^{15}\) of conserved total chain-amplitude norm \(M=\|\psi\|_2^2\), the phase quadrature at a marked incidence obeys
+\[
+|q^{(\mathrm{quad})}_{ef}|=2|\operatorname{Im}(\bar\psi_e(B_2)_{ef}\psi_f)|
+\le2|\psi_e||\psi_f|\le |\psi_e|^2+|\psi_f|^2\le M.
+\]
+**Proof:** \(|(B_2)_{ef}|=1\), elementary triangle bound and \(2xy\le x^2+y^2\). By S11 the Cayley update preserves \(M\) even for state-dependent phase selection, so the bound holds at every step. QED.
+
+For unit-normalized \(M=1\) under the **postulated** \(z_*(q)=(3+iq)/\sqrt{9+q^2}\),
+\[
+|\arg z_n|\le\arctan(1/3),\quad
+\|B_1N_{z_n}\|_F^2\le4(1-3/\sqrt{10}),\quad
+\|N_{z_n}B_3\|_F^2\le2(1-3/\sqrt{10}).
+\]
+Equality of the quadrature bound is attained by the two-component complex witness in S14, but these curvature bounds are not empirical energy scales. The numerator 3 is fixed **within this chosen frustration functional** and does not prove the native action normalization.
+
+**NUMERICAL robustness:** 70 independently initialized unit-normalized complex states, 15 Cayley steps each, cycling \(h\in\{0.03,0.2,0.7\}\), reproducible seed 534061, were checked against the frozen formulas. Maximum norm drift \(1.999\times10^{-15}\); maximum local flux residual \(3.340\times10^{-16}\); no sample exceeded the analytic source/curvature bounds. These are constructed finite checks, not independent experimental evidence or an independently sourced UD physical current. Exact bound is analytical and does not depend on the sampled runs.
+
+**Reproduction:** [source-normalization bound verification](verify_thm534_source_norm_bound_v0_6_1.py) (NumPy/SciPy). The full protocol selects one incidence and one dimensionless source rule; neither is known to be uniquely native. Physical promotion 0.
