@@ -1,0 +1,87 @@
+{
+  "rows_screened": 723,
+  "pattern": "quark|lepton|koide|electron|muon|tauon|yukawa|weinberg|generation|fermion",
+  "hits": [
+    {
+      "id": "C10",
+      "symbol": "Q_agree / Q_Koide",
+      "exact_form": "2/3",
+      "claim_bin": "SOURCE_STRATUM",
+      "status": "NOTATION COLLISION / CONTEXT QUALIFICATION REQUIRED",
+      "next_gate": "split symbols by mechanism and re-audit each route",
+      "use_class": "SOURCE_STRATUM",
+      "claim_bin_meaning": "Historical/source-layer object preserved for provenance; must be rebuilt/rebased before current canonical physical use.",
+      "display_symbol": "Q_agree / Q_Koide",
+      "reconciliation_notes": "historical/source-layer; not current physical canon; COLLISION-04: 2/3 notation/value collision"
+    },
+    {
+      "id": "Q86",
+      "symbol": "J_E,alpha",
+      "exact_form": "-(1/4) D^T R_E,alpha",
+      "claim_bin": "EXACT_CONDITIONAL",
+      "status": "AUTO_LOCK / structural current representation",
+      "next_gate": "apparatus-specific burden record generation",
+      "use_class": "CURRENT_CONDITIONAL",
+      "claim_bin_meaning": "Exact if the stated source/addendum/assumptions hold; not unconditional canon outside that scope.",
+      "display_symbol": "J_E,alpha",
+      "reconciliation_notes": ""
+    },
+    {
+      "id": "Q92",
+      "symbol": "K_RB(alpha,beta)",
+      "exact_form": "2 R_a^T R_b/(\\|\\|R_a\\|\\|^2+\\|\\|R_b\\|\\|^2)=M_RB (u_a^T u_b)",
+      "claim_bin": "EXACT_CONDITIONAL",
+      "status": "AUTO_LOCK / nonzero burden records; common-scale invariant",
+      "next_gate": "physical null completion / apparatus burden-record generation",
+      "use_class": "CURRENT_CONDITIONAL",
+      "claim_bin_meaning": "Exact if the stated source/addendum/assumptions hold; not unconditional canon outside that scope.",
+      "display_symbol": "K_RB(alpha,beta)",
+      "reconciliation_notes": ""
+    },
+    {
+      "id": "Q94",
+      "symbol": "Gamma_pair+RB",
+      "exact_form": "Gamma_pair sech(Delta q_B)\\|u_a^T u_b\\|",
+      "claim_bin": "EXACT_CONDITIONAL",
+      "status": "AUTO_LOCK / nonzero burden records",
+      "next_gate": "physical burden-record generation and null completion",
+      "use_class": "CURRENT_CONDITIONAL",
+      "claim_bin_meaning": "Exact if the stated source/addendum/assumptions hold; not unconditional canon outside that scope.",
+      "display_symbol": "Gamma_pair+RB",
+      "reconciliation_notes": ""
+    },
+    {
+      "id": "Q473",
+      "symbol": "public phase-slip calorimetry receipt",
+      "exact_form": "time-resolved electron temperature/calibrated heat is a physical event receipt",
+      "claim_bin": "LOCKED_STATUS",
+      "status": "AUTO_LOCK / PHYSICAL CALORIMETRY EXISTS",
+      "next_gate": "measurement ontology bridge separate",
+      "use_class": "LOCKED_STATUS",
+      "claim_bin_meaning": "Locked status statement.",
+      "display_symbol": "public phase-slip calorimetry receipt",
+      "reconciliation_notes": "v0.79 calorimetry measurement bridge + native C4 bench; physical promotion 0"
+    },
+    {
+      "id": "Q489",
+      "symbol": "blind energy-bench emulation",
+      "exact_form": "source hash precommit -> event generation -> burden extraction -> score -> reveal",
+      "claim_bin": "PROTOCOL_CONTROL",
+      "status": "PASS METHOD VALIDATION ONLY",
+      "next_gate": "real hardware next",
+      "use_class": "PROTOCOL_CONTROL",
+      "claim_bin_meaning": "Method/control only.",
+      "display_symbol": "blind energy-bench emulation",
+      "reconciliation_notes": "v0.80 SI energy bench + E_B calibration + matched fluxoid calorimetry frontier; physical promotion 0"
+    }
+  ],
+  "interpretation": {
+    "C10": "legacy particle-relation exposure",
+    "Q86": "record-generation lexical false positive",
+    "Q92": "record-generation lexical false positive",
+    "Q94": "record-generation lexical false positive",
+    "Q473": "electron calorimetry context; not particle species derivation",
+    "Q489": "event-generation lexical false positive"
+  },
+  "scope_limit": "Does not prove absence of implicit particle content or certify all rows dimensionally."
+}
