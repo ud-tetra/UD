@@ -1,0 +1,95 @@
+{
+  "case": "21_dir_0",
+  "all_checks_pass": true,
+  "checks": {
+    "stationarity": true,
+    "step_absolute": true,
+    "step_relative": true,
+    "antisymmetry": true,
+    "directional_agreement": true,
+    "directional_step_stability": true
+  },
+  "status": "NUMERICAL_PASS",
+  "stationarity_max": 2.2848804008716073e-12,
+  "antisymmetry_relative": 3.0718811108179548e-09,
+  "matrix_step_pairs": [
+    {
+      "max_abs": 2.617810395122433e-07,
+      "relative_F": 2.587940619406335e-09,
+      "worst_entry": [
+        45,
+        45
+      ],
+      "worst_column_relative": 5.057652529407131e-09
+    },
+    {
+      "max_abs": 5.094721302612015e-07,
+      "relative_F": 5.314190452557025e-09,
+      "worst_entry": [
+        32,
+        32
+      ],
+      "worst_column_relative": 1.2401080636606973e-08
+    }
+  ],
+  "directions": [
+    {
+      "index": 0,
+      "role": "old_regression",
+      "max_abs_error": 1.2166058027673898e-07,
+      "relative_error": 4.760740022606671e-09,
+      "adjacent_max_abs": 1.9973879616941304e-07,
+      "adjacent_max_relative": 8.772048816621082e-09
+    },
+    {
+      "index": 1,
+      "role": "old_regression",
+      "max_abs_error": 1.5645224493709975e-07,
+      "relative_error": 7.340283566512727e-09,
+      "adjacent_max_abs": 2.0216747742551888e-07,
+      "adjacent_max_relative": 1.2588787395578138e-08
+    },
+    {
+      "index": 2,
+      "role": "old_regression",
+      "max_abs_error": 1.544479566462087e-07,
+      "relative_error": 4.025569745925438e-09,
+      "adjacent_max_abs": 2.234737692674571e-07,
+      "adjacent_max_relative": 7.0133409067863436e-09
+    },
+    {
+      "index": 3,
+      "role": "fresh_cosine",
+      "max_abs_error": 1.1148240375291607e-07,
+      "relative_error": 4.119610468171891e-09,
+      "adjacent_max_abs": 2.0290686819635084e-07,
+      "adjacent_max_relative": 8.784922832119316e-09
+    },
+    {
+      "index": 4,
+      "role": "fresh_cosine",
+      "max_abs_error": 1.6763739729697136e-07,
+      "relative_error": 7.166686312485235e-09,
+      "adjacent_max_abs": 1.9654541016933536e-07,
+      "adjacent_max_relative": 1.1420791890706063e-08
+    },
+    {
+      "index": 5,
+      "role": "fresh_cosine",
+      "max_abs_error": 1.3545996724317888e-07,
+      "relative_error": 6.354878001552752e-09,
+      "adjacent_max_abs": 2.1583417231241242e-07,
+      "adjacent_max_relative": 1.2536197522892426e-08
+    }
+  ],
+  "eigenvalue_min": 0.28052110378487116,
+  "eigenvalue_max": 124.95994592229167,
+  "spectral_step_uncertainty": 1.6095744046378363e-06,
+  "stability_threshold": 1.6095744046378363e-05,
+  "stability": "POSITIVE_RESOLVED",
+  "lateral_vertical_coupling_ratio": 0.008549216979159772,
+  "fine_step_counts": {
+    "6.25e-06": 79
+  },
+  "physical_promotion": 0
+}
