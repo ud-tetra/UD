@@ -1,0 +1,80 @@
+{
+  "artifact": "THM534_SUPPORT_GATE_v1.0_RELEASE",
+  "date": "2026-10-21",
+  "lane": "development_no_registry",
+  "physical_promotion": 0,
+  "pr": "https://github.com/ud-tetra/UD/pull/346",
+  "github_branch": "research/thm-534-theorem-session-audit-20261021",
+  "verification": {
+    "sympy": "PASS_SCOPED",
+    "pure_fraction": "PASS_SCOPED",
+    "independent_nonconstructor_review": "PENDING",
+    "confirmed_native_chi_b_tau": "NO",
+    "exact_mask_controls": 64,
+    "S4_relabelings": 24,
+    "exact_dynamical_steps": 8,
+    "edge02_sequence": "open_n0_closed_n3_reopen_n5"
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "files": [
+    {
+      "name": "THM534_SUPPORT_READINESS_GATE_v1.0.md",
+      "bytes": 13401,
+      "sha256": "2fffc41f7e2ca6480d799c95f58a5206e5560dfd8d70040cc21126b279757621",
+      "git_blob_sha1_if_exact_upload": "5816fbc88209c900649983f1fb505e97896a195d"
+    },
+    {
+      "name": "verify_thm534_support_gate_v1_0.py",
+      "bytes": 5180,
+      "sha256": "8bbc97f80244fabf9ed532683d28327d9d99c5038c3c3a656a67fddd013f1ffd",
+      "git_blob_sha1_if_exact_upload": "912cff39ed44ac7900c519770dd6550bc229be43"
+    },
+    {
+      "name": "verify_thm534_support_gate_fraction_v1_0.py",
+      "bytes": 2815,
+      "sha256": "d329982f52a707271b4fc8c54965e554de8ecd2b718f2883d0151ef25f761e9a",
+      "git_blob_sha1_if_exact_upload": "b8bea7bbdc3568bb7cc5706eda4b1917dfb8225e"
+    },
+    {
+      "name": "THM534_SUPPORT_GATE_CLAIM_LEDGER_DELTA_v1.0.md",
+      "bytes": 4663,
+      "sha256": "56dad1c3fa17339f17a210664210d1da589ded01d09a75a4291b3b8c66834d59",
+      "git_blob_sha1_if_exact_upload": "5753865d7d67d31575c75d72f8303c6b6f7be70e"
+    },
+    {
+      "name": "THM534_SUPPORT_GATE_EXECUTION_RECEIPT_v1.0.md",
+      "bytes": 3617,
+      "sha256": "cc732e7a76a2fdc2c5dcd90b6977c12126027ff6c290de23ea2a2ddf19b0adc3",
+      "git_blob_sha1_if_exact_upload": "282c59358cfc42b0e49d42f14ab2608821c4c768"
+    },
+    {
+      "name": "verify_thm534_support_gate_v1_0_executed_stdout.txt",
+      "bytes": 2449,
+      "sha256": "2ee67ccd6d049a614cda751f95e4488ca2e7ea6d8755db02afc706a07a00027a",
+      "git_blob_sha1_if_exact_upload": "e2f9402a278eec450c7a42250d62e22c1664c75c"
+    },
+    {
+      "name": "verify_thm534_support_gate_fraction_v1_0_executed_stdout.txt",
+      "bytes": 344,
+      "sha256": "a931510bd54382893cccfc04dcc935d8182180dfd3877d2899c49aeab27782a6",
+      "git_blob_sha1_if_exact_upload": "49675b23ac0ecc9704d411f293648f9ee070247a"
+    }
+  ],
+  "scripts": [
+    {
+      "script": "verify_thm534_support_gate_v1_0.py",
+      "exit": 0,
+      "stdout_file": "verify_thm534_support_gate_v1_0_executed_stdout.txt",
+      "stdout_sha256": "2ee67ccd6d049a614cda751f95e4488ca2e7ea6d8755db02afc706a07a00027a"
+    },
+    {
+      "script": "verify_thm534_support_gate_fraction_v1_0.py",
+      "exit": 0,
+      "stdout_file": "verify_thm534_support_gate_fraction_v1_0_executed_stdout.txt",
+      "stdout_sha256": "a931510bd54382893cccfc04dcc935d8182180dfd3877d2899c49aeab27782a6"
+    }
+  ]
+}
