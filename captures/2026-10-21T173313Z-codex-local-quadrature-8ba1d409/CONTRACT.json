@@ -1,0 +1,13 @@
+{
+ "version":"0.1", "lane":"development — no registry entry", "physical_promotion":0,
+ "freeze":"Constructor-fixed before execution; no independent preregistration or empirical rerun.",
+ "sample_rate_hz":1953125, "record_samples":16184, "half_window":1024, "window":"symmetric Hann, length2049",
+ "carrier_hz":"257*1953125/16184", "design_columns":["cos(omega*k/fs)","-sin(omega*k/fs)","1"],
+ "estimator":"Weighted least squares with fixed design. Complex estimate = coefficient0+i*coefficient1; coefficient2 is local constant baseline. No full-record demeaning, padding, carrier refit, taper division or decimation.",
+ "valid_centers":"1024 through15159 inclusive, 14136 outputs. Real-time availability delayed1024 samples; timestamps refer to window centers.",
+ "transfer_offsets_hz":[0,200,600,1000,5000,12000],
+ "synthetic_bank":"Same six explicit generators as boundary benchmark v0.1; frozen source formulas copied into new standalone verifier. Add constant offset, bounded noise, constant phasor with arbitrary phase, and deliberately wrong carrier controls.",
+ "synthetic_gate":"complex relative RMS <=1/100 and maximum phase error <=1/50 radians where true amplitude>=1/5 V; no empirical gate revision.",
+ "error_contract":"For local model V[j+k]=Re(u[j+k]*exp(i*omega*(j+k)/fs))+b[j]+e[j+k], if |u[j+k]-u[j]|<=L[j]*|k|/fs and |e|<=epsilon[j], then |zhat[j]-u[j]*exp(i*omega*j/fs)| <= L[j]*sum|h[k]|*|k|/fs + epsilon[j]*sum|h[k]|. Unknown L/epsilon remain open.",
+ "empirical_status":"No experimental data analyzed; 0/891 prior gate preserved. Gain, skew, source envelope regularity and full energy/native support uncalibrated."
+}
