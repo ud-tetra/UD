@@ -1,0 +1,113 @@
+{
+  "source_path": "captures/2026-10-18T183151Z-codex-proof-provenance-2b503846/sources/L65.txt",
+  "sha256": "a74d3b63a68237b56a5e56221c8d17385f3b029ffaf2b82fde2b0ce71303ab14",
+  "base_commit": "ed2290e8ff6105a173a0eba4f242b840926cafb6",
+  "scientific_revision": "v0.43",
+  "source_baseline": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.64_REMAINING_BE_CORRECTION_AUDIT",
+  "declared_rows": 448,
+  "actual_rows": 448,
+  "unique_ids": 448,
+  "inspected_rows": {
+    "G06": {
+      "id": "G06",
+      "symbol": "xi_hbar^(action-normalization provenance)",
+      "exact_form": "HISTORICAL BARE-SYMBOL COLLISION: xi_hbar^(A)=eta_A for A0=xi_hbar^(A) hbar; xi_hbar^(B)=eta_A^(-1) for hbar=xi_hbar^(B) A0; current canonical ratio is eta_A=A0/hbar",
+      "claim_bin": "SOURCE_STRATUM",
+      "status": "AUTO_FREEZE BARE xi_hbar / HISTORICAL RECIPROCAL ALIASES ONLY / CURRENT CANON MOVED TO eta_A",
+      "next_gate": "recover primitive quantum-holonomy normalization and test whether its xi_act is identified with the current unit-map normalization; numerical eta_A remains target-blind/open",
+      "use_class": "SOURCE_STRATUM",
+      "claim_bin_meaning": "Historical/source-layer object preserved for provenance; must be rebuilt/rebased before current canonical physical use.",
+      "display_symbol": "xi_hbar^(action-normalization provenance)",
+      "reconciliation_notes": "v0.43: v0.42 historical recovery failure preserved, but current convention ambiguity is closed by the 2026-08-29 PASS_REPAIR defining eta_A=A0/hbar."
+    },
+    "O09": {
+      "id": "O09",
+      "symbol": "I_loop->Hodge",
+      "exact_form": "I_lift = (1/2) sum_{omega>0} a_omega Delta_phi_tilde_omega; closed history = pi sum_{omega>0} n_omega a_omega",
+      "claim_bin": "NOT_A_COEFFICIENT",
+      "status": "AUTO_LOCK / CURRENT MAINLINE LIFTED LOOP-HISTORY TO CANONICAL HODGE ACTION MAP / TEMPORALLY ADDITIVE / ORTHOGONAL-HODGE-INTERTWINER COVARIANT",
+      "next_gate": "extend to contractive/open-system action defect; test Q136 as a possible sufficient compression; dimensional physical action remains downstream through G06",
+      "use_class": "NON_COEFFICIENT",
+      "claim_bin_meaning": "State, input, constraint, map, or family; must not be treated as a free theory coefficient.",
+      "display_symbol": "\\mathcal I_{\\rm loop\\to Hodge}",
+      "reconciliation_notes": "NEW v0.40 mainline action map replacing universal scalar G05 use; physical promotion 0."
+    },
+    "O10": {
+      "id": "O10",
+      "symbol": "A_0^(native action unit)",
+      "exact_form": "A_0 = B_0 a_0^2 / tau_0",
+      "claim_bin": "NOT_A_COEFFICIENT",
+      "status": "AUTO_LOCK / NATIVE ACTION-DIMENSION UNIT OBJECT / B0 MASS-LIKE / NO SI IDENTIFICATION",
+      "next_gate": "authorize native-to-physical unit mapping only after B_e/normalization provenance gates; B_0,a_0,tau_0 remain native unit anchors rather than empirical targets",
+      "use_class": "NON_COEFFICIENT",
+      "claim_bin_meaning": "State, input, constraint, map, unit object, or family; must not be treated as a free theory coefficient.",
+      "display_symbol": "\\mathcal A_0",
+      "reconciliation_notes": "v0.43: A0=B0 a0^2/tau0; dimensional closure requires [B0]=M. Current physical action-ratio direction is eta_A=A0/hbar."
+    },
+    "O11": {
+      "id": "O11",
+      "symbol": "A_spinor,rec^(native)",
+      "exact_form": "pi A_0 = pi B_0 a_0^2 / tau_0, conditional on canonical native-unit lift S_native := A_0 I_loop->Hodge",
+      "claim_bin": "NOT_A_COEFFICIENT",
+      "status": "AUTO_LOCK CONDITIONAL / NATIVE UNIT-SPINOR RECURRENCE ACTION ANCHOR / NOT PHYSICAL h OR hbar",
+      "next_gate": "compare only through a frozen native-to-physical unit bridge after G06 convention/provenance is resolved; no target backsolve",
+      "use_class": "NON_COEFFICIENT",
+      "claim_bin_meaning": "State, input, constraint, map, unit object, or family; must not be treated as a free theory coefficient.",
+      "display_symbol": "\\mathcal A_{\\rm spinor,rec}^{\\rm native}",
+      "reconciliation_notes": "v0.41: O09 gives I_spinor=pi for a unit-support one-winding recurrence. Multiplication by the declared native action unit A_0 gives the parameter-free native dimensional anchor."
+    },
+    "O12": {
+      "id": "O12",
+      "symbol": "xi_hbar^[phys/native]",
+      "exact_form": "hbar/A_0; equivalently hbar = xi_hbar^[phys/native] A_0",
+      "claim_bin": "NOT_A_COEFFICIENT",
+      "status": "AUTO_LOCK AS EXPLICIT CONVENTION ALIAS / SOURCE-STRATUM SEMANTICS ONLY / NUMERICAL VALUE OPEN",
+      "next_gate": "may become canonical only via recovered provenance or explicit source amendment; physical unit map remains downstream",
+      "use_class": "NON_COEFFICIENT",
+      "claim_bin_meaning": "State, input, constraint, map, unit object, convention alias, or family; must not be treated as a free theory coefficient.",
+      "display_symbol": "\\xi_\\hbar^{[\\rm phys/native]}",
+      "reconciliation_notes": "v0.42 convention-qualified alias C1. Prevents silent reciprocal reuse."
+    },
+    "O13": {
+      "id": "O13",
+      "symbol": "xi_hbar^[native/phys]",
+      "exact_form": "A_0/hbar; equivalently A_0 = xi_hbar^[native/phys] hbar = 1/xi_hbar^[phys/native]",
+      "claim_bin": "NOT_A_COEFFICIENT",
+      "status": "AUTO_LOCK AS EXPLICIT RECIPROCAL CONVENTION ALIAS / SOURCE-STRATUM SEMANTICS ONLY / NUMERICAL VALUE OPEN",
+      "next_gate": "may become canonical only via recovered provenance or explicit source amendment; physical unit map remains downstream",
+      "use_class": "NON_COEFFICIENT",
+      "claim_bin_meaning": "State, input, constraint, map, unit object, convention alias, or family; must not be treated as a free theory coefficient.",
+      "display_symbol": "\\xi_\\hbar^{[\\rm native/phys]}",
+      "reconciliation_notes": "v0.42 convention-qualified alias C2. Exact reciprocal of O12."
+    },
+    "O14": {
+      "id": "O14",
+      "symbol": "eta_A",
+      "exact_form": "A_0/hbar; equivalently A_0 = eta_A hbar",
+      "claim_bin": "NOT_A_COEFFICIENT",
+      "status": "AUTO_LOCK / CURRENT CANONICAL ACTION-RATIO DIRECTION / NUMERICAL VALUE OPEN / NO PHYSICAL PROMOTION",
+      "next_gate": "derive/recover numerical native-to-physical action ratio target-blind and independently reconstruct primitive quantum-holonomy normalization before identifying eta_A with xi_act-related quantities",
+      "use_class": "NON_COEFFICIENT",
+      "claim_bin_meaning": "State, input, constraint, map, unit object, convention ratio, or family; must not be treated as a free theory coefficient.",
+      "display_symbol": "\\eta_{\\mathcal A}",
+      "reconciliation_notes": "v0.43 current canonical replacement for unqualified bare xi_hbar; historical xi conventions translate as eta_A and eta_A^(-1)."
+    },
+    "O15": {
+      "id": "O15",
+      "symbol": "B_0^(native mass unit)",
+      "exact_form": "[B_0]=M; required jointly by A_0=B_0 a_0^2/tau_0 and G_SI=gamma_G a_0^3/(B_0 tau_0^2)",
+      "claim_bin": "NOT_A_COEFFICIENT",
+      "status": "AUTO_LOCK / MASS-LIKE NATIVE UNIT TYPE / ENERGY-TYPED B0 BRANCH FROZEN",
+      "next_gate": "physical matter-anchor identity and numerical B_e remain downstream/open",
+      "use_class": "NON_COEFFICIENT",
+      "claim_bin_meaning": "State, input, constraint, map, unit object, convention ratio, or family; must not be treated as a free theory coefficient.",
+      "display_symbol": "B_0",
+      "reconciliation_notes": "v0.43 dimensional repair from ACTION_UNIT_XI_HBAR_RECIPROCAL_AND_B0_DIMENSION_REPAIR_v0.1."
+    }
+  },
+  "full_dimensional_audit": false,
+  "literal_O13_equality_chain": "DIMENSIONAL_TEXT_DEFECT_FLAGGED",
+  "v085_recovered": false,
+  "EXIT-03_specification_recovered": false,
+  "physical_promotion": 0
+}
