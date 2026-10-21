@@ -1,0 +1,158 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,fancyhdr,enumitem}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{UD: preparation-prefix feasibility}\fancyhead[R]{PFX v0.1}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\newcommand{\norm}[1]{\left\|#1\right\|_\infty}
+\newtheorem{theorem}{Theorem}
+\title{A Local Prefix Certificate and a Conditional\\Clock Overlap for the UD Diamond}
+\author{Ben W. Mayes research workstream\\Codex-assisted mathematical development}
+\date{20 October 2026 --- Version 0.1}
+\begin{document}
+\maketitle
+\begin{abstract}
+We replace the full-box sensitivity estimate by a preparation-specific bound for the short CD-1 Gauss discriminator. Exact symbolic majorants give target Lipschitz constant four and actual speed bound $8/5$ on an explicit box. A joint tracking/state barrier closes the use of that box. The resulting controller allocation admits a conditional physical clock interval containing $1/60$ second, with a fast SAR acquisition route and catalogue LC values. This closes the timing-overlap design question under stated premises; calibration, parasitics, noise-tail qualification and actuator identification remain OPEN.
+\end{abstract}
+\noindent\textbf{Status.} DERIVED CONDITIONAL; CANDIDATE component route; development, no registry entry; constructor checks only; independent review pending; no experiment; physical promotion 0.
+\section{An explicit preparation box}
+Use CAM/CD-1's real coordinates $z=(\theta,E,x,y,u,v)$, four entries per block, and the same Hamiltonian and graph as FCAL. The three laws are nominal, entire second-species sign reversed, and electric response frozen. The initial reference is
+$\theta=E=y=v=0$, $x=u=(1,1,1,1)/\sqrt2$.
+Consider the convex lifted-angle box
+\begin{equation}
+D=\{|\theta_e|\leq1/100,\ |E_e|,|y_i|,|v_i|\leq1/50,\
+2/3\leq x_i,u_i\leq3/4\}.
+\end{equation}
+\begin{theorem}[Local majorants]
+On $D$ all three laws satisfy
+\begin{equation}
+\operatorname{Lip}_\infty(F_s)\leq8801/2500<4,\qquad
+\sup_D\norm{F_s}\leq3751/2500 .
+\end{equation}
+The local Gauss generator has Lipschitz constant at most $177/50<4$.
+\end{theorem}
+\begin{proof}
+Differentiate the explicit CD-1 Hamiltonian in real canonical coordinates. Expand each Jacobian entry into monomials; weight state factors by (1), bound cosine by one, and bound sine of each linear phase by that phase's absolute coefficient sum on $D$. Sum coefficient magnitudes rowwise. The largest electric row is $1716029/500000$; the largest matter row is $8801/2500$. The speed maximum is $3751/2500$. Each Gauss row is at most $2+2(3/4)+2(1/50)=177/50$. Reversing matter signs or zeroing electric rows cannot increase these majorants.
+\end{proof}
+The accompanying symbolic program verifies every row exactly. These are conservative analytic inequalities, not trajectory samples. We adopt $L=4$, $L_G=4$ and actual speed $M=8/5$ below.
+\newpage
+\section{Closing the local and tracking assumptions}
+Assume preparation error $e_0=1/10000$, endpoint reconstruction error $m=1/10000$, input error $\nu=3/100000$, and continuous field defect at most $\delta=1/100$. Put $h_\pm=1/100\pm1/100000$. Under the SAC controller model with plant Lipschitz bound $\lambda\leq1$, the command $U_s=F_s-F_0$ has bound $K_U\leq5$ on $D$.
+
+\begin{theorem}[Prefix closure and robust decisions]
+Suppose prehistory lies in the same box with speed at most $8/5$, reconstructed prehistory arguments lie in $D$, all sample ages and numerical errors obey the specified budgets, and the static residual is $p\leq3/400$. If the initial tracking mismatch and the actuator's steady tracking bound are both strictly below $\rho=1/400$, then the local state/speed assumptions close through $h_+$. Both controller arguments and reconstructed decision endpoints remain in $D$.
+\end{theorem}
+\begin{proof}
+Until a first exit from the state/reconstruction box or tracking barrier, the field defect is at most $p+\rho=1/100$. Therefore actual speed is at most $3751/2500+1/100<8/5$. SAC's tracking inequality with this speed keeps error strictly below $\rho$, excluding the tracking exit.
+
+For all non-angle coordinates, displacement from the reference preparation, including the larger reconstruction radius, is at most
+\[
+d_* = e_0+(8/5)h_++\max(m,\nu)=0.016216.
+\]
+Use $7/10<1/\sqrt2<71/100$ to check the large-coordinate bounds in (1); the small-coordinate margin is $0.02-d_*=0.003784>0$. For angles, use $\theta'_e=E_e$ in each ideal law and charge the actual defect:
+$|\theta_e|\leq e_0+(1/50+\delta)h_++\max(m,\nu)<1/100$.
+Thus a first state exit is also impossible. The prehistory and release premises remain actual instrument requirements; bounded hold radius alone does not establish speed.
+\end{proof}
+The perturbation and certified Gauss-decision errors sharpen to
+\begin{equation}
+\eta=\frac{e_0+\delta h_+}{1-4h_+}=\frac{2001}{9599600},
+\qquad B=4(\eta+e_0)+16m=\frac{8501}{2999875}.
+\end{equation}
+The $16m$ includes both observed endpoint uncertainty and the additional certified decision-interval radius. Retaining FCAL's exact ideal fault bounds
+$q_w(h)=2h-8h^2-11h^3/8$ and $q_f(h)=2h-8h^3/3$, the nominal/fault slacks against $T(h)=(1+h)/100$ are approximately:
+\begin{center}
+\begin{tabular}{lr}\toprule
+Nominal passage & $0.00726611526$\\
+Wrong-species-sign detection & $0.00624634358$\\
+Frozen-electric detection & $0.00704345658$\\\bottomrule
+\end{tabular}
+\end{center}
+The initial certified Gauss upper bound is $4e_0+8m=0.0012<0.01$. This theorem concerns only the stated short preparation prefix.
+\newpage
+\section{A conditional clock interval with series resistance}
+Include measured series loss in the physical plant:
+\begin{equation}
+\dot\Phi=Q/C-(R/L)\Phi+V,\qquad \dot Q=-\Phi/L+I .
+\end{equation}
+Balanced common-action scales give $\alpha=\beta=t_0/\sqrt{LC}$ and $\gamma=Rt_0/L$. The normalized plant has
+$F_0(X,Y)=(-\gamma X+\beta Y,-\alpha X)$ and
+$\lambda\leq\gamma+\alpha$.
+The active commands cancel the retained loss term as well as the reactive plant; unmodeled loss remains in $p$.
+
+As a \emph{conditional catalogue-corner screen}, require actual operating-band bounds
+\begin{equation}
+L\geq17/20\ {\rm H},\quad C\geq1/1250\ {\rm F},\quad
+R\leq529/80\ \Omega .
+\end{equation}
+Then $R/L<8$ s$^{-1}$ and $1/\sqrt{LC}<40$ s$^{-1}$, so $\lambda<48t_0$ and $\lambda\leq1$ is guaranteed when $t_0\leq1/48$ s.
+
+Propose a 1 $\mu$s command-update period, at most 2 $\mu$s additional true sensing-to-command latency, and an identified actuator time constant at most 1 $\mu$s. Thus age plus actuator time constant is at most 4 $\mu$s. With $\nu=3/100000$, $q=1/25000$ and $\epsilon_a=1/100000$, SAC's local tracking bound is
+\begin{equation}
+b(t_0)\leq \frac{8(4\,\mu{\rm s})}{t_0}
++5\nu+q+\epsilon_a .
+\end{equation}
+The sufficient tracking allocation $b<1/400$ therefore gives the nonempty interval
+\begin{equation}
+\boxed{\quad 8/575<t_0\leq1/48\ {\rm s}\quad}.
+\end{equation}
+At $t_0=1/60$ s, $b=53/25000$ and total residual is
+\begin{equation}
+p+\max(\sigma,b)=\frac{481}{50000}=0.00962<0.01,
+\qquad \sigma\leq1/1000 .
+\end{equation}
+The slack is $19/50000$. The $1/100$ prefix lasts $1/6000$ s, approximately $166.667$ $\mu$s. This interval replaces neither CPC's full-box allocation nor its exact LC identity; it uses a smaller, proved preparation region and a different timing budget.
+
+\subsection*{A concrete source-screened route}
+Hammond 193S is listed as 1 H, 5.75 $\Omega$, with series tolerances of 15\%; inductance is specified at rated DC current [1]. Nichicon UES1C102MHM is a bipolar 1000 $\mu$F capacitor with 20\% tolerance at the catalogue measurement conditions [2]. These motivate (5), but do not prove it at the small operating bias or over the transient spectrum. Inductor hysteresis, capacitance dispersion, ESR, leakage, temperature and actual loading need measurement.
+
+Nominal common scales can use $Q_0=10^{-4}$ C and $\Phi_0=\sqrt{10}/1000$ Wb. Then $S_{\rm action}=\sqrt{10}/10^7$ J\,s. Actual channel scales must be rebalanced after calibration while retaining a common action; nominal values cannot simply be reused across unequal components.
+\newpage
+\section{Converter, startup and noise gates}
+AD4630-24 supports two simultaneous 24-bit channels at a listed maximum 2 MSPS; its conversion-time maximum is 300 ns under the specified conditions [3]. It is a candidate for unaveraged acquisition. The AD5791 uses a 24-bit write word and up to 35 MHz serial clock [4]. A frame needs at least $24/(35\,{\rm MHz})$, so fresh 2 MHz writes are not supported by that interface. The proposed command rate is 1 MHz; the complete 2 $\mu$s latency still needs timing closure over all channels. DAC settling entries do not establish the required first-order model.
+
+The controller needs 24 state coordinates (twelve dual-channel ADC devices for fully parallel acquisition); additional independent coupling witnesses and actuator/work sensing remain required. Parallel transfers, timestamp skew, code evaluation, lookup error, synchronization and command latching are part of the latency/error budget. No complete FPGA or analog-driver design has been admitted.
+
+\subsection*{A conditional preload rule}
+On $D$, $\norm{U_s}\leq3751/2500+3/4<5/2$. Starting the actuator at zero and holding the state within $r_h=1/20000$ of a fixed center, with every used history in that tube, a ten-time-constant preload gives
+\begin{equation}
+\norm{a-U_s(z_0)}
+<\frac{5/2}{20000}+5(2r_h+\nu)+q+\epsilon_a
+=\frac{33}{40000}<\frac1{1000}.
+\end{equation}
+The exact positive Taylor bound $e^{10}>20000$ is inherited from SAC. With the proposed time constant this preload lasts at least 10 $\mu$s. Hold work, release kicks and prehistory speed require separate records.
+
+\subsection*{A noise-family certificate, only with a tail premise}
+Suppose at most $N=10000$ controller-coordinate errors enter the prefix decision, deterministic error is at most 6 ppm, and every random error has two-sided sub-Gaussian scale at most 4 ppm. Then a 24-ppm noise allowance gives
+\begin{equation}
+\Pr(\text{any input error}>30\ {\rm ppm})
+\leq 2N e^{-18}<1/500 .
+\end{equation}
+No independence is needed. The calculator proves $e^{18}>10^7$ by a positive Taylor partial sum. Supplier RMS/SNR figures do not establish the tail premise. Calibration uncertainty, witness readout, clocks, endpoints and the rest of the run need their own joint failure allocation; this input-family bound is not whole-campaign coverage.
+
+\subsection*{Why hardware remains HOLD}
+The capacitor's listed leakage limit is 480 $\mu$A under its rated-voltage test [2]. At the nominal scales above, the entire $p=3/400$ allowance corresponds to only 45 $\mu$A in a charge-current port, before other errors. The catalogue limit cannot certify that budget; neither can it predict leakage at the much smaller test voltage. A measured charge/voltage/leakage map or bounded compensation is required. ESR and dielectric memory also require a valid retained-state map.
+
+The next return must substantiate operating-band $L,C,R$, canonical readout, input tails and gain/offset drift, full latency, actual actuator residual, range/slew, leakage/parasitics, startup and independent witnesses. No parts were purchased and no experiment was executed.
+\newpage
+\section{Reproducibility, provenance and scope}
+\texttt{verify\_prefix\_box.py} checks all local Hamiltonian Jacobian, speed and Gauss majorants in exact symbolic arithmetic, including both fault laws. \texttt{prefix\_feasibility\_certificate.py} checks twelve exact arithmetic controls: clock interval, residual and barrier margins, startup, negative clocks, catalogue-corner inequalities, preparation anchors, a conditional noise union bound and serial-frame timing. Exact calculations are constructor checks, not independent review.
+
+Dependencies are CAM/CD-1, FCAL, SAC and CPC v0.1. The Hamiltonian, fault definitions and engineering Gauss gate are unchanged. This manuscript re-derives the local constants against the explicit source model and does not improve physical status by citing conditional results. No full-horizon CD-1 or SDW admission, autonomous hardware Hamiltonian, or grand-unification correspondence is asserted.
+
+\subsection*{Primary manufacturer sources}
+Accessed during the 20 October 2026 Chicago work session (21 October UTC).
+\begin{enumerate}[leftmargin=*,itemsep=6pt]
+\item Hammond Manufacturing, \emph{193 Series DC Filter Chokes}, 193S row and measurement conditions.
+\href{https://www.hammfg.com/electronics/transformers/choke/193}{Manufacturer specification.}
+\item Nichicon, \emph{UES1C102MHM} and UES series data sheet, catalogue measurement conditions.
+\href{https://www.nichicon.com/en-us/part/ues1c102mhm/5398/}{Part specification.}
+\href{https://www.nichicon.com/getmedia/069aeeb2-784e-41be-9621-207263576a6d/e-ues.pdf}{Series data sheet.}
+\item Analog Devices, \emph{AD4630-24/AD4632-24}, Rev. B, specifications and transfer timing.
+\href{https://www.analog.com/media/en/technical-documentation/data-sheets/ad4630-24_ad4632-24.pdf}{Manufacturer data sheet.}
+\item Analog Devices, \emph{AD5791}, Rev. F, serial interface and conditional settling specifications.
+\href{https://www.analog.com/media/en/technical-documentation/data-sheets/AD5791.pdf}{Manufacturer data sheet.}
+\end{enumerate}
+The circuit values are a source-screened candidate route. Supplier tolerances, catalogue test frequencies and bias conditions are not automatically operating-band guarantees. Identification data and non-constructor adversarial review remain OPEN.
+
+\vfill\noindent\textbf{Claim footer.} DERIVED CONDITIONAL mathematics; CANDIDATE clock-compatible route; hardware HOLD; development, no registry entry; constructor verification only; independent review pending; empirical execution NONE; physical promotion 0.
+\end{document}
