@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "serialized payload hashes, matrix/source bindings, all retained eigenpair residuals and orthogonality; not independent scientific review",
+  "array_checks": [
+    {
+      "array": "theta_eigenvectors",
+      "columns": 256,
+      "max_scaled_residual": 7.961496783222905e-16,
+      "orthogonality_frobenius": 1.6802676163093426e-14
+    },
+    {
+      "array": "coupled_eigenvectors",
+      "columns": 512,
+      "max_scaled_residual": 8.320959461171523e-16,
+      "orthogonality_frobenius": 3.28396676630251e-14
+    },
+    {
+      "array": "blockwise_eigenvectors",
+      "columns": 512,
+      "max_scaled_residual": 6.161813564700021e-16,
+      "orthogonality_frobenius": 2.71981232951469e-14
+    },
+    {
+      "array": "probe0_eigenvectors",
+      "columns": 10,
+      "max_scaled_residual": 7.44475270013301e-17,
+      "orthogonality_frobenius": 4.10795857516392e-15
+    },
+    {
+      "array": "probe1_eigenvectors",
+      "columns": 10,
+      "max_scaled_residual": 1.0175942714924212e-13,
+      "orthogonality_frobenius": 4.761299267996162e-15
+    }
+  ],
+  "physical_promotion": 0
+}
