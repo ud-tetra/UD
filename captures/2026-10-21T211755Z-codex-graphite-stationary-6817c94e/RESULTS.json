@@ -1,0 +1,273 @@
+{
+  "status": "HOLD_DERIVATIVE_QUALIFICATION",
+  "failed_checks": {
+    "21_dir_0": [
+      "step_absolute",
+      "directional"
+    ],
+    "21_dir_10024": [
+      "step_absolute",
+      "directional"
+    ],
+    "31_dir_10084": [
+      "step_absolute",
+      "symmetry",
+      "directional"
+    ],
+    "31_dir_10134": [
+      "step_absolute",
+      "directional"
+    ]
+  },
+  "stationarity_pass_count": 4,
+  "fully_qualified_case_count": 0,
+  "cases": 4,
+  "stability": {
+    "POSITIVE_RESOLVED": 4
+  },
+  "coupling": {
+    "RESOLVED_NONZERO": 4
+  },
+  "ranges": {
+    "final_projected_force_max_eV_per_A": [
+      2.2848789227361557e-12,
+      4.249315603232465e-10
+    ],
+    "energy_change_eV": [
+      -0.0018555452224973124,
+      -0.0017442242860852275
+    ],
+    "max_atom_displacement_A": [
+      0.0003441097806843134,
+      0.0004981295543643548
+    ],
+    "max_constraint_error_A": [
+      1.184568316452734e-16,
+      2.685542966909154e-16
+    ],
+    "eigenvalue_min": [
+      0.28052110362004995,
+      0.2810367045999027
+    ],
+    "coupling_relative": [
+      0.006962642333217619,
+      0.008650289546914016
+    ]
+  },
+  "maximum_hessian_step_relative": 3.5413318717681487e-06,
+  "maximum_hessian_step_absolute": 0.0008709485253035609,
+  "maximum_hessian_asymmetry": 1.061725506753845e-06,
+  "rows": [
+    {
+      "case": "21_dir_0",
+      "folder": "graphite-smooth/21_dir_0/cutoff_24",
+      "sha256": "785a43ca7a750a5714b2b396799a0db7f0fd396e4a668e844fd18f65bd92bab0",
+      "dimension": 79,
+      "vertical_dimension": 27,
+      "lateral_dimension": 52,
+      "initial_projected_force_max_eV_per_A": 0.16689735497499372,
+      "final_projected_force_max_eV_per_A": 2.2848789227361557e-12,
+      "max_individual_lateral_force_eV_per_A": 3.06473951577034e-12,
+      "energy_change_eV": -0.0018555452224973124,
+      "max_atom_displacement_A": 0.00045066273336604525,
+      "max_constraint_error_A": 2.685542966909154e-16,
+      "hessian_step_relative": 2.0260327525939475e-06,
+      "hessian_step_max_abs": 0.0005069632575924743,
+      "hessian_asymmetry_relative": 8.187627207166241e-08,
+      "eigenvalue_min": 0.28052110362004995,
+      "eigenvalue_max": 124.95994591190679,
+      "spectral_step_diagnostic": 0.0006299555142012057,
+      "stability_threshold": 0.006299555142012057,
+      "stability": "POSITIVE_RESOLVED",
+      "coupling_relative": 0.008549217092109321,
+      "coupling_step_relative": 2.97911763775002e-10,
+      "coupling": "RESOLVED_NONZERO",
+      "directional_checks": [
+        {
+          "relative_error": 9.982755001852875e-08,
+          "max_abs_error": 5.810562122565699e-06
+        },
+        {
+          "relative_error": 8.136842069684489e-08,
+          "max_abs_error": 3.485315266615885e-06
+        },
+        {
+          "relative_error": 6.392130600071593e-08,
+          "max_abs_error": 3.659313900783445e-06
+        }
+      ],
+      "checks": {
+        "stationarity": true,
+        "constraints": true,
+        "orthogonality": true,
+        "step_relative": true,
+        "step_absolute": false,
+        "symmetry": true,
+        "directional": false
+      },
+      "all_numerical_checks_pass": false,
+      "physical_promotion": 0,
+      "bath": "HOLD",
+      "seconds": 279.92294430732727
+    },
+    {
+      "case": "21_dir_10024",
+      "folder": "graphite-smooth/21_dir_10024/cutoff_24",
+      "sha256": "1c07d8c19758346d12595723a16615e6777dc584ab527732f4a70fc8fa9ba91a",
+      "dimension": 79,
+      "vertical_dimension": 27,
+      "lateral_dimension": 52,
+      "initial_projected_force_max_eV_per_A": 0.14103185180523162,
+      "final_projected_force_max_eV_per_A": 1.8469104843171812e-11,
+      "max_individual_lateral_force_eV_per_A": 0.00016509755344828566,
+      "energy_change_eV": -0.0018318971160624642,
+      "max_atom_displacement_A": 0.0004981295543643548,
+      "max_constraint_error_A": 1.184568316452734e-16,
+      "hessian_step_relative": 1.7091766287363306e-06,
+      "hessian_step_max_abs": 0.0006913006507858199,
+      "hessian_asymmetry_relative": 6.770079908001496e-07,
+      "eigenvalue_min": 0.2805977465195583,
+      "eigenvalue_max": 124.9549197942551,
+      "spectral_step_diagnostic": 0.0008484160393900797,
+      "stability_threshold": 0.008484160393900797,
+      "stability": "POSITIVE_RESOLVED",
+      "coupling_relative": 0.008650289546914016,
+      "coupling_step_relative": 2.681378851415184e-10,
+      "coupling": "RESOLVED_NONZERO",
+      "directional_checks": [
+        {
+          "relative_error": 1.2216514621944417e-06,
+          "max_abs_error": 8.637244994957882e-05
+        },
+        {
+          "relative_error": 1.610150799851893e-06,
+          "max_abs_error": 8.284205981645698e-05
+        },
+        {
+          "relative_error": 9.168135127832801e-07,
+          "max_abs_error": 7.943144071731467e-05
+        }
+      ],
+      "checks": {
+        "stationarity": true,
+        "constraints": true,
+        "orthogonality": true,
+        "step_relative": true,
+        "step_absolute": false,
+        "symmetry": true,
+        "directional": false
+      },
+      "all_numerical_checks_pass": false,
+      "physical_promotion": 0,
+      "bath": "HOLD",
+      "seconds": 274.8523666858673
+    },
+    {
+      "case": "31_dir_10084",
+      "folder": "graphite-smooth/31_dir_10084/cutoff_24",
+      "sha256": "c0e314bebca9c7b5d3a1901ea649ea60184a0e34b1a6794d8514f5d90c727619",
+      "dimension": 151,
+      "vertical_dimension": 51,
+      "lateral_dimension": 100,
+      "initial_projected_force_max_eV_per_A": 0.12500873420012018,
+      "final_projected_force_max_eV_per_A": 4.249315603232465e-10,
+      "max_individual_lateral_force_eV_per_A": 6.942274230249592e-05,
+      "energy_change_eV": -0.0017442242860852275,
+      "max_atom_displacement_A": 0.0004054445637338265,
+      "max_constraint_error_A": 2.362212989317833e-16,
+      "hessian_step_relative": 3.5413318717681487e-06,
+      "hessian_step_max_abs": 0.0008709485253035609,
+      "hessian_asymmetry_relative": 1.061725506753845e-06,
+      "eigenvalue_min": 0.2809458304396806,
+      "eigenvalue_max": 126.2308244949785,
+      "spectral_step_diagnostic": 0.0012299799093667785,
+      "stability_threshold": 0.012299799093667785,
+      "stability": "POSITIVE_RESOLVED",
+      "coupling_relative": 0.006962642333217619,
+      "coupling_step_relative": 3.8959311079662776e-10,
+      "coupling": "RESOLVED_NONZERO",
+      "directional_checks": [
+        {
+          "relative_error": 1.1528075371467969e-06,
+          "max_abs_error": 3.629036075913916e-05
+        },
+        {
+          "relative_error": 2.1621205478938016e-06,
+          "max_abs_error": 8.895119663510087e-05
+        },
+        {
+          "relative_error": 9.761640660992862e-07,
+          "max_abs_error": 5.4196093337566253e-05
+        }
+      ],
+      "checks": {
+        "stationarity": true,
+        "constraints": true,
+        "orthogonality": true,
+        "step_relative": true,
+        "step_absolute": false,
+        "symmetry": false,
+        "directional": false
+      },
+      "all_numerical_checks_pass": false,
+      "physical_promotion": 0,
+      "bath": "HOLD",
+      "seconds": 618.0713748931885
+    },
+    {
+      "case": "31_dir_10134",
+      "folder": "graphite-smooth/31_dir_10134/cutoff_24",
+      "sha256": "f188963186a14bea0e72fdba9327b81bc615f3bb06e20a3153bde5fb27f0d14c",
+      "dimension": 151,
+      "vertical_dimension": 51,
+      "lateral_dimension": 100,
+      "initial_projected_force_max_eV_per_A": 0.13226792044793398,
+      "final_projected_force_max_eV_per_A": 1.2417520301180886e-10,
+      "max_individual_lateral_force_eV_per_A": 1.527827452511145e-05,
+      "energy_change_eV": -0.0017701551478239708,
+      "max_atom_displacement_A": 0.0003441097806843134,
+      "max_constraint_error_A": 1.4074211881401984e-16,
+      "hessian_step_relative": 2.5846899630687788e-06,
+      "hessian_step_max_abs": 0.000619210178157914,
+      "hessian_asymmetry_relative": 6.678354801915732e-07,
+      "eigenvalue_min": 0.2810367045999027,
+      "eigenvalue_max": 126.25337377287087,
+      "spectral_step_diagnostic": 0.0009500329406804766,
+      "stability_threshold": 0.009500329406804765,
+      "stability": "POSITIVE_RESOLVED",
+      "coupling_relative": 0.007027205900989282,
+      "coupling_step_relative": 3.7940081764170765e-10,
+      "coupling": "RESOLVED_NONZERO",
+      "directional_checks": [
+        {
+          "relative_error": 6.272956002101351e-07,
+          "max_abs_error": 1.6842407897232903e-05
+        },
+        {
+          "relative_error": 6.69246353390257e-07,
+          "max_abs_error": 2.1786976898141575e-05
+        },
+        {
+          "relative_error": 5.541947117010198e-07,
+          "max_abs_error": 3.293947147131604e-05
+        }
+      ],
+      "checks": {
+        "stationarity": true,
+        "constraints": true,
+        "orthogonality": true,
+        "step_relative": true,
+        "step_absolute": false,
+        "symmetry": true,
+        "directional": false
+      },
+      "all_numerical_checks_pass": false,
+      "physical_promotion": 0,
+      "bath": "HOLD",
+      "seconds": 604.0804750919342
+    }
+  ],
+  "physical_promotion": 0,
+  "bath": "HOLD",
+  "review": "constructor only"
+}
