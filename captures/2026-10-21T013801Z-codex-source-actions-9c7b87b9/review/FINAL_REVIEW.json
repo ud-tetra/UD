@@ -1,0 +1,92 @@
+{
+  "artifact_type": "C30_INDEPENDENT_SOURCE_ACTION_AND_BACKEND_REVIEW",
+  "build_binding": {
+    "backend_binary_sha256": "0571dbccdcee70f2cadaee18bb414678534514dfda7c34c1d5ec2f9f1baf7520",
+    "build_receipt_sha256": "01fc7150debd2f944a61b00deb47f3267a534c8c7f6b9a2f8cce95051cc1c7a2",
+    "expected_executable_and_operator_checked_before_each_call": true,
+    "initial_unbound_adapter_corrected_and_preserved": true,
+    "not_trusted_computing_attestation": true,
+    "stable_intended_file_assumption": true,
+    "trusted_build_and_GMP_correctness_assumed": true
+  },
+  "capture_allowlist": [
+    "ACTION_LEMMAS.md",
+    "ACTION_LEMMAS_FREEZE.json",
+    "ARTIFACT_CHECKS.json",
+    "ARTIFACT_CHECK_FREEZE.json",
+    "BACKEND_CHECKS.json",
+    "BACKEND_FREEZE.json",
+    "FINAL_REVIEW.json",
+    "PLAN.md",
+    "PLAN_FREEZE.json",
+    "REVIEW.md",
+    "SOURCE_BOUND_CHECKS.json",
+    "SOURCE_BOUND_FREEZE.json",
+    "VERIFICATION_HASH_MANIFEST.sha256",
+    "check_artifacts.py",
+    "check_backend.py",
+    "check_source_bounds.py"
+  ],
+  "independent_checks": {
+    "actual_full_forward_prefix_components": 372,
+    "actual_two_step_integration": {
+      "Arb_coordinate_checks": 5280,
+      "adjoint_calls": 2,
+      "forward_calls": 1,
+      "output_sha256": "3ae42d11b5dd1600336fcf361bc2c9eabef950fe2127bab140fe39756645bfc4",
+      "state_dimension": 2640,
+      "steps": 2
+    },
+    "adapter_failure_probes": 3,
+    "artifact_and_integration_receipt_sha256": "122e672a6936aa5d9a3cafe28db8a35f081b87493872283d3f9d632513066707",
+    "binary_intermediate_terms_compared": false,
+    "compiled_output_components_compared": 15840,
+    "own_actual_binary_halfstep_probes": 6,
+    "own_backend_probe_receipt_sha256": "ef8bb4f9fc88c19f9046c7c332f2b2fdb8cb04d77f63b335a54c7bdc588dfd17",
+    "own_reference_term_divisions_evaluated": 633600,
+    "replay_pairs_byte_identical": 6,
+    "root_fullsize_duality_and_scale_controls": "EXACT_RECOMPUTATION_PASS",
+    "source_and_constant_fraction_pairs_match": 5,
+    "source_bound_receipt_sha256": "0b200e75b7183a7898f41649b42be0e6aa838601024c5d8b0ab554237701a572",
+    "source_entries_reconstructed": 14880,
+    "weighted_chain_columns": 1800
+  },
+  "review_markdown_sha256": "e29045eddbd2af972c18b66602972157a6cc20fb2906a15a52cee20da2a7ba84",
+  "root_adapter_sha256": "42eda8f3783c13453323190b2d72a64c80d0a715ea7447567156d620eab20eec",
+  "root_backend_sha256": "c8bc21ef9edef1d60e98e48bb61044afae4a7d283700c4523969bb6f9755de27",
+  "root_checker_sha256": "67ccdc4cd9e02decc1561673b3a4c4afebf60a6bf6551ee8bba6259bb06e8ed1",
+  "root_theorem_sha256": "76f8be1ace8f457adb50185c2bb3e1d7d8762a1db73980804f997bb7c5bfd601",
+  "scope": {
+    "actual_full8192_decoder_execution_and_accuracy": "NOT_RUN_HOLD",
+    "actual_full_decoder_performance": "NOT_BENCHMARKED_HOLD",
+    "actual_measurements_or_physical_correspondence": false,
+    "external_promotion_review": "PENDING",
+    "mathematical_retractions": 0,
+    "physical_input_and_error_evidence": "UNSUPPLIED_HOLD",
+    "physical_promotion": 0,
+    "reference_Linux64_GMP_model": true,
+    "same_team_development_no_registry_entry": true,
+    "uniform_algorithm_error_proof_not_formal_all_runtime_or_ABI_verification": true
+  },
+  "source_hashes": {
+    "c30_THEOREM.md": "76f8be1ace8f457adb50185c2bb3e1d7d8762a1db73980804f997bb7c5bfd601",
+    "c30_action.cpp": "c8bc21ef9edef1d60e98e48bb61044afae4a7d283700c4523969bb6f9755de27",
+    "c30_certify.py": "67ccdc4cd9e02decc1561673b3a4c4afebf60a6bf6551ee8bba6259bb06e8ed1",
+    "c30_integration.py": "192fc144763ada5bd4c5c0d5681c61395db25f82f0e60f3f6ec1bcbd15a5b905",
+    "c30_oracles.py": "42eda8f3783c13453323190b2d72a64c80d0a715ea7447567156d620eab20eec",
+    "c30_reproduce.py": "422a1d4e4cb293b218e5869552f79c650d375f234f7cc40f01102cef8621b0a4",
+    "c30_run_timed.py": "4881081437153d3cb3aca4fd7de19cfa4c8bd0d50e98cecb224105a847f6eeeb",
+    "c30_tests.py": "27d171f2feeebd50fc9177982845a5738a0cea37b2ea672ff4eba7ca30180291"
+  },
+  "status": "PASS",
+  "uniform_mathematical_bounds": {
+    "adjoint": "<2^-68 absolute on exact dyadic96 data ball2049",
+    "degree": 40,
+    "external_bits": 96,
+    "fixed_source_and_audited_build_required": true,
+    "forward": "<2^-68 absolute on exact dyadic96 state ball2048",
+    "internal_bits": 128,
+    "normal_composition": "<=2^-67",
+    "source_operator_sha256": "cca3ed7e671b8397c3940921d9845399425fd2558cc62708941c00fc4b899950"
+  }
+}
