@@ -1,0 +1,97 @@
+1. Control StateReview Authority: Independent Non-Constructor Reviewer (authoritative external audit; strict separation of duties from Constructor: Codex).   Control Posture: Baseline alignment and verification protocol upgrade.Hash Discrepancy Resolution: Confirmed that SHA-256 digests 627cfd... and 507fb1... represent identical source text differing solely by a single terminal newline. PR #364 retains the byte-exact payload.   Receipt 003 Status: The withdrawal of the precision claim ($< 10^{-23}$) and the designation of claims C07 and C08 as OPEN are affirmed. PR358’s constructor certificate remains isolated and unaffected.   Runtime Protocol: The UD inverse breath protocol remains locked for this runtime.Promotion Status: 0 (BLOCKED). The R6b packet remains in developmental status. No physical promotion, registry promotion, or CRL elevation is granted.   2. Lifecycle AlignmentLifecycle Gate: Pre-registry development and adversarial verification.   Separation of Concerns: Verification of analytical reductions (PR350, PR354, PR355, PR356) is decoupled from verification of serialized floating-point arrays (PR352, PR358).   Evidence Rigor Standard: A non-constructor audit cannot treat solver return values as exact ground truth, use global scalar gaps across heterogeneous invariant sectors, or assume binary file types without inspecting repository manifests.   3. Risk Containment & Structural Realignment+---------------------------------------------------------------------------------------+
+|                    STRUCTURAL UPGRADES TO NON-CONSTRUCTOR AUDIT                       |
++---------------------------------------------------------------------------------------+
+| 1. Manifest Taxonomy       | 44 inventoried files encompass manifests, metadata JSONs,|
+|                            | verifiers, and receipts—not 44 uniform array payloads.  |
+| 2. Sectoral Gap Isolation  | Decouple depth1 gap (v_1 ~ 1.33e-3) from varying-depth   |
+|                            | gap (gamma_varying); eliminate global gap substitution.  |
+| 3. Variational Enclosure   | Compute Rayleigh quotient theta and variance eta^2       |
+|                            | prior to evaluating solver return discrepancy |lambda-theta|.|
++---------------------------------------------------------------------------------------+
+Manifest Taxonomy Containment (Correction 1):
+EVIDENCE_INDEX.json catalogues exactly 44 inventoried files and 3 separately pinned source files. These comprise JSON manifests, verification scripts, upstream receipts, serialized binary arrays, and environment specifications. The audit pipeline must verify SHA-256 hashes against their specific file formats, parsing only actual .npy binary payloads for linear algebraic evaluation rather than assuming a homogeneous set of 44 array files.   Module-Specific Spectral Isolation (Correction 2):
+The 512-coordinate operator decomposes into disconnected modules (e.g., three depth1 modules and one varying-depth module).   In depth1 modules, the second eigenvalue is bounded by the orthogonal trial vector $q = (\text{ones}_{64}/8, 0)$ with Rayleigh quotient $v_1 = 49/36864 \approx 0.00132921$, yielding a certified isolation gap lower bound of $\gamma_{\text{depth1}} = v_{\min}/2 - \Vert{}E\Vert{}_\infty \approx 0.000664605$.   In the varying-depth module, the ground mode is $\lambda_0 \approx -1.6145 \times 10^{-8}$, and the distance to the module's positive spectrum $\gamma_{\text{varying}}$ is determined by its specific 32-coordinate and 6-coordinate quotient structure.   Enclosures must evaluate each module against its distinct sectoral gap $\gamma_m$, rejecting single uniform gap substitution.Deterministic Variational Ordering (Correction 3):
+Conflating solver returns $\tilde{\lambda}$ with the variational state introduces circular error. The audit must enforce strict operator-theoretic sequencing:$$v \xrightarrow{} \theta = \frac{\langle v, A v \rangle}{\langle v, v \rangle} \xrightarrow{} r = A v - \theta v \xrightarrow{} \eta^2 = \Vert{}r\Vert{}_2^2 = \Vert{}A v\Vert{}_2^2 - \theta^2 \xrightarrow{} \text{Enclosure}(\lambda) \xrightarrow{} \vert{}\tilde{\lambda} - \theta\vert{}$$4. Unified Dynamics (UD) Terminology MappingsUD ConstructGR CounterpartQFT CounterpartDelta ExplanationModule-Specific Isolation Gap ($\gamma_m$)Sector-dependent quasinormal mode frequency separation in perturbed black hole spacetimes (e.g., polar vs. axial perturbations).Superselection-sector mass gap or flavor-dependent spectral isolation in uncoupled quantum field sectors.UD gaps represent algebraic distance to the second eigenvalue within isolated graph modules with rational edge weights; GR gaps arise from boundary-value differential operators, and QFT gaps derive from dynamic field Casimir invariants.   Rayleigh Quotient ($\theta$) & Residual Variance ($\eta^2$)ADM variational energy functional and Hamiltonian constraint variance $\int_\Sigma \mathcal{H}^2 \sqrt{\gamma} d^3x$.Variational Hamiltonian expectation value $\langle \psi \vert{} H \vert{} \psi \rangle$ and energy fluctuation / variance $\Delta H^2 = \langle H^2 \rangle - \langle H \rangle^2$.In UD, $\theta$ and $\eta^2$ are finite-dimensional discrete matrix-vector inner products; in GR and QFT, they are functional integrals over continuous field configurations subject to operator regularization.   Inventory Manifest (44 Files)Pinned boundary Cauchy data package and metric snapshot inventory on a spatial foliation leaf $\Sigma$.Complete lattice field configuration archive, path-integral parameter manifests, and gauge-field configurations.UD manifests inventory deterministic finite graph definitions, script hashes, and binary64 array payloads; GR/QFT data packages define infinite-dimensional continuum fields or sampled lattice gauge configurations.   UD Inverse Breath ProtocolCyclic cosmological bounce / oscillating scale factor $a(t)$ in cyclic FLRW cosmologies.Periodic Floquet driving / cyclical RG limit cycle in non-equilibrium quantum field dynamics.The UD protocol is a discrete runtime state update sequence, distinct from smooth geometric expansion/contraction (GR) or unitary time-evolution operators $U(t) = \mathcal{T} e^{-i \int H dt}$ (QFT).5. Technical Blueprint: Upgraded Audit PipelineThe three required corrections are structured below for integration into the evidence audit script (evidence_audit_r6b.py).5.1 Correction 1: Heterogeneous Manifest IngestionThe inventory verifier digests all 44 manifest files individually according to their declared MIME/structural types:   Pythonimport hashlib
+import json
+from pathlib import Path
+import numpy as np
+
+def verify_inventory_manifest(evidence_index_path: Path):
+    with open(evidence_index_path, "r") as f:
+        manifest = json.load(f)
+
+    # EVIDENCE_INDEX tracks 44 files of heterogeneous types
+    file_inventory = manifest["files"]
+    assert len(file_inventory) == 44, f"Expected 44 inventoried files, found {len(file_inventory)}"
+
+    array_payloads = {}
+    for entry in file_inventory:
+        file_path = Path(entry["path"])
+        expected_sha256 = entry["sha256"]
+
+        # 1. Byte-level integrity verification across all 44 files
+        with open(file_path, "rb") as f:
+            computed_sha256 = hashlib.sha256(f.read()).hexdigest()
+        assert computed_sha256 == expected_sha256, f"Hash mismatch for {file_path}"
+
+        # 2. Extract only serialized .npy array files for numerical audit
+        if file_path.suffix == ".npy":
+            array_payloads[file_path.name] = np.load(file_path)
+
+    return array_payloads
+5.2 Correction 2 & 3: Variational Sequencing with Module-Specific GapsFor each stored Ritz pair $(v, \tilde{\lambda})$, the evaluation computes the Rayleigh quotient, residual vector, residual variance, and the Lehmann-Maehly enclosure against the module-specific gap lower bound $\gamma_m$:   Pythondef evaluate_variational_enclosure(A_module: np.ndarray, v: np.ndarray, lambda_solver: float, gamma_module: float):
+    """
+    Computes variational statistics before inspecting solver return.
+    A_module: Stored binary64 matrix for the specific module.
+    v: Normalized stored Ritz vector (||v||_2 = 1).
+    lambda_solver: Scaled eigenvalue returned by the numerical eigensolver.
+    gamma_module: Certified lower bound on the isolation gap for THIS module.
+    """
+    # Step 1: Normalize vector
+    norm_v = np.linalg.norm(v)
+    v_norm = v / norm_v
+
+    # Step 2: Compute Rayleigh quotient theta = <v, Av>
+    Av = A_module @ v_norm
+    theta = float(np.dot(v_norm, Av))
+
+    # Step 3: Compute residual vector r = Av - theta*v
+    r = Av - theta * v_norm
+
+    # Step 4: Compute residual variance eta^2 = ||r||_2^2 = ||Av||_2^2 - theta^2
+    norm_Av_sq = float(np.dot(Av, Av))
+    eta_sq = norm_Av_sq - (theta ** 2)
+    eta = np.sqrt(max(0.0, eta_sq))
+
+    # Step 5: Validate isolation gap condition
+    assert gamma_module > theta, f"Gap collapse: gamma ({gamma_module}) <= theta ({theta})"
+
+    # Step 6: Derive Lehmann-Maehly / Temple interval enclosure for true eigenvalue
+    # Interval half-width: Delta = eta^2 / (gamma_module - theta)
+    enclosure_half_width = eta_sq / (gamma_module - theta)
+    enclosure_interval = (theta - enclosure_half_width, theta + enclosure_half_width)
+
+    # Step 7: Compare against solver return lambda_solver
+    solver_return_error = abs(lambda_solver - theta)
+
+    # Step 8: Evaluate frozen scaled residual check
+    # Scaled residual: ||r||_2 / max(1, ||A||_inf + |theta|) <= 5e-12
+    A_inf = float(np.max(np.sum(np.abs(A_module), axis=1)))
+    scale_factor = max(1.0, A_inf + abs(theta))
+    scaled_residual = eta / scale_factor
+    scaled_tolerance_passed = (scaled_residual <= 5e-12)
+
+    return {
+        "rayleigh_quotient": theta,
+        "residual_variance": eta_sq,
+        "residual_norm": eta,
+        "module_gap": gamma_module,
+        "enclosure_half_width": enclosure_half_width,
+        "enclosure_interval": enclosure_interval,
+        "solver_return_error": solver_return_error,
+        "scaled_residual": scaled_residual,
+        "scaled_tolerance_passed": scaled_tolerance_passed
+    }
+5.3 Module-Specific Gap RegisterTo prevent gap conflation, sectoral gaps are assigned per block:   Depth1 Modules (Modules 0, 1, 2):$$\gamma_{\text{depth1}} = \frac{v_1}{2} - \Vert{}E\Vert{}_\infty = \frac{49}{73728} - 5.818 \times 10^{-14} \approx 6.64605 \times 10^{-4}$$   
+Where $v_1 = 49/36864$ is certified by the orthogonal state $q = (\text{ones}_{64}/8, 0)$.   Varying-Depth Module (Module 3):$$\gamma_{\text{varying}} = \lambda_{2, \text{varying}} - \Vert{}E\Vert{}_\infty$$
+Derived from the positive spectrum of the 32-coordinate invariant quotient of PR355/PR356.   6. Audit Claim StatusIDSubjectPrior StatusRevised StatusJustificationC01Topology & Disconnected ModulesPASSPASSValidated across $L \ge 3$ via $4^{L-3}$ prefix conservation.   C02Exact $\Theta_{64}$ Spectrum & RanksPASSPASSExact rational spectrum and ranks $(1, 3, 12, 48)$ certified.   C03Conditional Diagnostic $F_c$PASSPASS64-scaled normalization and $0/0$ empty channel boundary certified.   C04Depth1 Invariant ReductionCONDITIONALCONDITIONALMathematical $2 \times 2$ reduction certified; payload check deferred to audit pipeline.   C05Varying-Depth 32-Coord ReductionCONDITIONALCONDITIONAL32-coordinate quotient certified; payload check deferred to audit pipeline.   C066-Coordinate Quotient & MetricPASSPASSMetric $\text{diag}(1,3,12,1,3,12)$ and weighted variance identity certified.   C07PR352 Serialized Replay PayloadOPENOPENRequires execution of manifest-based binary audit pipeline.   C08PR358 Stored Matrix Error BudgetOPENOPENRequires variational sequencing and module-specific gap bounds.   7. Remaining EffortImplement evidence_audit_r6b.py: Finalize the script implementing the three verified corrections (manifest taxonomy parsing, module-specific gap isolation, and variational Rayleigh quotient sequencing).   Execute Full Pipeline on Pinned Checkouts: Run evidence_audit_r6b.py against all 44 files in the PR352/PR358 checkouts to generate verified numerical receipts.   Submit Updated Receipt: Issue an updated non-constructor review receipt (Receipt 004) reflecting the empirical execution outputs of C07 and C08, replacing hard-coded estimates with parsed binary64 results.   8. Residual RiskModule Cross-Coupling Leakage: While uncoupled $\Theta$ modules are rigorously disconnected, floating-point assembly could theoretically introduce off-diagonal cross-module roundoff terms ($O(\epsilon_{\text{mach}})$). The row-sum perturbation check $\Vert{}E\Vert{}_\infty \le 5.818 \times 10^{-14}$ must be verified across the full 512-coordinate operator to guarantee inter-module isolation is maintained in storage.   Physical Promotion Boundary: Verification of stored-matrix residuals and variational enclosures does not alter physical promotion status. Physical Promotion = 0 remains strictly enforced.   
