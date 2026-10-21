@@ -1,0 +1,55 @@
+{
+  "status": "AUDIT_FROZEN_BEFORE_EXECUTION",
+  "frozen_at_utc": "2026-10-21T20:12:39.420655+00:00",
+  "base_commit": "c6b66d68a25b655627d6eb6f1bf6f96a13e2121b",
+  "source_capture": "captures/2026-10-21T185108Z-codex-j1-central-38-8f391e43",
+  "source_assessment_sha256": "1d7609f1b3465ce624039faef510fba4a00ab5846fac4662867823689d2dfb90",
+  "source_placement_sha256": "a5e03a2ffdf44256fe6932d94f5b84af922f985b7196a47ce8d9dfa319db109a",
+  "source_cover_sha256": "85358c617a518b6534231784a6651b774175e4b3599b3c0c9be1d73a1e320b28",
+  "bank_sha256": "9ff69b767c2085681a43b698bbf97724e6fe39f13b6422da5e9c45d840c67672",
+  "formula_count": 38,
+  "complete_cover_goal": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "1/10",
+      "39/100"
+    ]
+  },
+  "finite_algorithm_budget": {
+    "max_depth": 30,
+    "max_leaves": 4096
+  },
+  "placement_probe_domain": {
+    "omega": [
+      "8983/2000",
+      "36193/8000"
+    ],
+    "gamma": [
+      "39/100",
+      "2/5"
+    ]
+  },
+  "placement_grid": {
+    "omega_samples": 129,
+    "gamma_subdivisions": 8,
+    "exclude_lower_gamma_row": true,
+    "expected_probes": 1032
+  },
+  "upper_gamma_guard_representation": {
+    "exact": "39/100",
+    "nearest_hex": "0x1.8f5c28f5c28f6p-2",
+    "stored_minus_exact": "3/225179981368524800",
+    "nearest_is_last_accepted_word": false,
+    "nearest_is_first_excluded_word": true,
+    "last_accepted_hex": "0x1.8f5c28f5c28f5p-2",
+    "last_accepted_minus_exact": "-19/450359962737049600"
+  },
+  "bank_policy": "Unchanged38-state bank;no coefficient or flux generation or state/flux solver replays. Reuse prior results/receipts by hash.",
+  "scope": "Proposed full rectangle;no coverage before exact posterior and actual-estimator audit. Future scout finite-grid diagnostic only.",
+  "concurrent_track_preserved": "PR345 leakage-budget work and three document-upload commits retained separately;its claims are not dependencies of this scalar-wave benchmark.",
+  "independent_review": false,
+  "physical_promotion": 0
+}

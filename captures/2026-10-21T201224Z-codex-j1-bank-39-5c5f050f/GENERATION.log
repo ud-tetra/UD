@@ -1,0 +1,8 @@
+PASS complete rectangle leaves=136 radius=0.0996631585503925 next=(8983/2000,2/5)
+Traceback (most recent call last):
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-21T201224Z-codex-j1-bank-39-5c5f050f/replay.py", line 7, in <module>
+    audit.main()
+  File "/workspace/scratch/b53ad92e84b9/UD-j1-next/captures/2026-10-21T201224Z-codex-j1-bank-39-5c5f050f/audit.py", line 117, in main
+    assert (HERE/'BANK.json').read_bytes()==(old/'BANK.json').read_bytes() and hashlib.sha256((HERE/'BANK.json').read_bytes()).hexdigest()==freeze['bank_sha256']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
