@@ -1,0 +1,164 @@
+{
+  "status": "DERIVED CONDITIONAL / NUMERICAL SYNTHETIC",
+  "physical_promotion": 0,
+  "contract_sha256": "82017420cba8c3479d8faa7321d26db18a9649bdf48b0de1dd3aec8d46bc1594",
+  "valid_outputs": 14136,
+  "half_window_samples": 1024,
+  "availability_delay_seconds": 0.000524288,
+  "gram_eigenvalues": [
+    511.99991838711867,
+    512.0000814380115,
+    1024.0000001748683
+  ],
+  "gram_condition": 2.000000319141908,
+  "moment_error": 4.440893492621676e-16,
+  "noise_l1_gain": 2.0000000000427067,
+  "envelope_moment_seconds": 0.00031180190850674196,
+  "synthetic_passes": 2,
+  "rows": [
+    {
+      "case": "exact_bin",
+      "complex_relative_rms": 5.83851067911968e-14,
+      "max_phase_rad": 1.994807629942385e-13,
+      "max_amplitude_error_V": 1.887379141862766e-15,
+      "eligible_phase_points": 14136,
+      "synthetic_gate": true,
+      "fundamental_relative_rms": 5.83851067911968e-14
+    },
+    {
+      "case": "off_bin",
+      "complex_relative_rms": 0.001413060188047861,
+      "max_phase_rad": 1.6599414612564812e-07,
+      "max_amplitude_error_V": 0.0014132260333610258,
+      "eligible_phase_points": 14136,
+      "synthetic_gate": true,
+      "fundamental_relative_rms": 0.001413060188047861
+    },
+    {
+      "case": "smooth_AM_PM",
+      "complex_relative_rms": 0.03356449443213392,
+      "max_phase_rad": 0.012015978478652834,
+      "max_amplitude_error_V": 0.05035516136675322,
+      "eligible_phase_points": 14136,
+      "synthetic_gate": false,
+      "fundamental_relative_rms": null
+    },
+    {
+      "case": "smooth_turnon",
+      "complex_relative_rms": 0.025599866604887906,
+      "max_phase_rad": 0.03522069129422987,
+      "max_amplitude_error_V": 0.09537032279860136,
+      "eligible_phase_points": 13613,
+      "synthetic_gate": false,
+      "fundamental_relative_rms": null
+    },
+    {
+      "case": "narrow_pulse",
+      "complex_relative_rms": 0.5493147068342306,
+      "max_phase_rad": 0.03458774395331934,
+      "max_amplitude_error_V": 0.6190740615558916,
+      "eligible_phase_points": 646,
+      "synthetic_gate": false,
+      "fundamental_relative_rms": null
+    },
+    {
+      "case": "omitted_sideband",
+      "complex_relative_rms": 0.2874216144174366,
+      "max_phase_rad": 0.3047346234440931,
+      "max_amplitude_error_V": 0.3014570363083956,
+      "eligible_phase_points": 14136,
+      "synthetic_gate": false,
+      "fundamental_relative_rms": 0.0014137225783520241
+    }
+  ],
+  "transfer": [
+    {
+      "offset_hz": 0,
+      "A_real": 1.0000000000000009,
+      "A_imag": 2.902014286632038e-19,
+      "image_abs_B": 1.695692197767329e-16,
+      "relative_error_bound_abs_Aminus1_plus_abs_B": 1.0577476868867394e-15
+    },
+    {
+      "offset_hz": 200,
+      "A_real": 0.9719561254240994,
+      "A_imag": 0.0,
+      "image_abs_B": 6.647261680992229e-07,
+      "relative_error_bound_abs_Aminus1_plus_abs_B": 0.028044539302068728
+    },
+    {
+      "offset_hz": 600,
+      "A_real": 0.7694223675836065,
+      "A_imag": 0.0,
+      "image_abs_B": 8.39280395287809e-07,
+      "relative_error_bound_abs_Aminus1_plus_abs_B": 0.2305784716967888
+    },
+    {
+      "offset_hz": 1000,
+      "A_real": 0.4637255354033166,
+      "A_imag": 0.0,
+      "image_abs_B": 3.900083057993683e-07,
+      "relative_error_bound_abs_Aminus1_plus_abs_B": 0.5362748546049891
+    },
+    {
+      "offset_hz": 5000,
+      "A_real": 0.0015841070241909422,
+      "A_imag": 2.0816681711721685e-17,
+      "image_abs_B": 7.191375963595901e-07,
+      "relative_error_bound_abs_Aminus1_plus_abs_B": 0.9984166121134054
+    },
+    {
+      "offset_hz": 12000,
+      "A_real": -0.00015536589614363952,
+      "A_imag": -1.0408340855860843e-17,
+      "image_abs_B": 6.27238717898753e-07,
+      "relative_error_bound_abs_Aminus1_plus_abs_B": 1.0001559931348616
+    }
+  ],
+  "transfer_identity_max_error": 1.994067878109311e-13,
+  "conditional_bounds": [
+    {
+      "case": "exact_bin",
+      "envelope_L_V_per_s": 0.0,
+      "conditional_complex_error_bound_V": 0.0,
+      "observed_max_complex_error_V": 1.9949985662006296e-13
+    },
+    {
+      "case": "off_bin",
+      "envelope_L_V_per_s": 280.56000569337283,
+      "conditional_complex_error_bound_V": 0.08747914522585604,
+      "observed_max_complex_error_V": 0.0014132260333610978
+    },
+    {
+      "case": "smooth_AM_PM",
+      "envelope_L_V_per_s": 1316.8489147520627,
+      "conditional_complex_error_bound_V": 0.4105960048347251,
+      "observed_max_complex_error_V": 0.050355163493860655
+    },
+    {
+      "case": "smooth_turnon",
+      "envelope_L_V_per_s": 2530.5600056933727,
+      "conditional_complex_error_bound_V": 0.7890334393660254,
+      "observed_max_complex_error_V": 0.09610922840646499
+    },
+    {
+      "case": "narrow_pulse",
+      "envelope_L_V_per_s": 7442.620380650597,
+      "conditional_complex_error_bound_V": 2.3206232389780306,
+      "observed_max_complex_error_V": 0.619074062699597
+    },
+    {
+      "case": "omitted_sideband",
+      "envelope_L_V_per_s": 22984.195113247893,
+      "conditional_complex_error_bound_V": 7.1665159018020255,
+      "observed_max_complex_error_V": 0.3014571903769019
+    }
+  ],
+  "controls": {
+    "constant_baseline_and_four_phases_max_error_V": 2.220016628971951e-13,
+    "bounded_noise_max_error_V": 1.7570049216541216e-10,
+    "bounded_noise_error_limit_V": 0.010000000000213534,
+    "wrong_carrier_1000Hz_error_bound": 0.5362748546049891
+  },
+  "empirical_status": "NOT RUN; prior0/891 preserved; no calibrated source regularity or physical phase bound."
+}
