@@ -1,0 +1,49 @@
+{
+  "status": "PASS_OWN_STATE_AND_DIAGNOSTIC_SAVED_REPLAYS__FULL_RECTANGLE_UNRESOLVED",
+  "completed_at_utc": "2026-10-21T20:44:46.935790+00:00",
+  "actual_exit_codes": {
+    "state": 0,
+    "flux": 0,
+    "generation": 1,
+    "candidate_replay": 0,
+    "diagnostic_generation": 0,
+    "diagnostic_replay": 0
+  },
+  "components": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 replay.py",
+      "working_directory": "captures/2026-10-21T203029Z-codex-j1-left-41-cfb98764/candidate",
+      "exit_code": 0,
+      "log_sha256": "28c449d5b70f96e910e1a636ef61f42e2fef4826c2a3a57423e5c9aeebabbc0b",
+      "matched_results": [
+        "P2_RESULTS.json",
+        "CURL_CORRECTION_RESULTS.json",
+        "UPPER_RESULTS.json"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 diagnostic_replay.py",
+      "working_directory": "captures/2026-10-21T203029Z-codex-j1-left-41-cfb98764",
+      "exit_code": 0,
+      "log_sha256": "ee4efb8b08b6b536c63cf44ba943b7616c38da065095802a6fff50b27644c2ca",
+      "matched_results": [
+        "POINT_AUDIT_RESULTS.json",
+        "IN_GOAL_PLACEMENT_RESULTS.json",
+        "DIAGNOSTIC_RESULTS.json"
+      ],
+      "interpretation": "Expected frozen full-cover failure reproduced;not full-cover PASS."
+    }
+  ],
+  "full_rectangle_attempt": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 replay.py --scalar-only",
+    "exit_code": 1,
+    "log_sha256": "7101ed6e4439854fc888498c4d9654eda0d8b02d187c6d5fe5ac11949a41914a",
+    "failure": "unresolved cell at depth budget",
+    "full_actual_evaluator_audit_reached": false
+  },
+  "coefficient_regeneration_during_replay": false,
+  "prior_38_state_flux_replays_reused_by_hash": true,
+  "default_composing_wrapper_executed": false,
+  "independent_review": false,
+  "physical_promotion": 0
+}
