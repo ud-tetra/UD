@@ -1,0 +1,13 @@
+{
+  "purpose": "Post-failure diagnosis, not prospective hypothesis confirmation",
+  "targets": "Three failed local g steps at cutoffs 20/24 A and three failed breathing energy mixed stencils at cutoff 16 A",
+  "method": "Enumerate unlike-layer periodic pairs in a 0.005 A cutoff shell; retain actual membership at all stencil corners; evaluate fixed-normal KCz shifted energies and vertical forces independently",
+  "energy_attribution_tolerance_eV_per_A2": 0.000005,
+  "local_g_residual_tolerance_eV_per_A2": 0.0000001,
+  "image_completeness": "Derive integer bounds from inverse lateral lattice and coordinate extrema; include every image that can enter radius cutoff+0.005 A",
+  "membership_rule": "r squared < cutoff squared, matching source",
+  "interpretation": "Subtract crossing-pair contribution only to diagnose residual; never replace saved derivatives or reopen original gates",
+  "model_changes": 0,
+  "physical_promotion": 0,
+  "bath_inference": "HOLD"
+}
