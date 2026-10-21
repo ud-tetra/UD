@@ -105,4 +105,3 @@ print('PASS first midpoint face transfer:',receipts[0],'core gain',sum(receipts[
 print('PASS 24 signed S4 relabelings x four epochs, dual conserved totals 3 & 5')
 print('PASS full-off face-gate and zero-carrier no-restart, symmetric-mode null controls')
 print('Nonzero burden-face curl events:',nnonzero,'of 14; PHYSICAL PROMOTION 0')
-
