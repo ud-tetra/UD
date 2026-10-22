@@ -1,0 +1,186 @@
+{
+  "receipt_id": "2026-10-22T213252Z-codex-graphite-c3-bath-7a2d9e16-275252f3-45bf-4752-9517-22de924a34f4-bath",
+  "method": "user-uploaded UD_MATHEMATICAL_METHOD_v1.0; local receipt schema because referenced template unavailable",
+  "date_utc": "2026-10-22",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "question": "C3 allowed linear coupling and conditional passive shear-bath damping on harmonic relative port",
+  "coefficient_domain": {
+    "geometry": "Q exact in triangular direct basis; R for orthonormal Cartesian",
+    "response": "real symbolic functions of load, low-frequency expansion",
+    "clock": "lab seconds imported for material dynamics; closed UD chain clock OPEN"
+  },
+  "objects": [
+    {
+      "id": "K7_H1",
+      "domain": "real 2D harmonic relative-translation plane",
+      "basis": "physical Cartesian x via I_X",
+      "metric": "Euclidean x; unit-edge lift norm 7/4 |x|\u00b2",
+      "units": "x m",
+      "source": "PR #419 corrected capture",
+      "origin": "imported conditional geometry"
+    },
+    {
+      "id": "C3_E",
+      "domain": "R\u00b2 lateral/shear",
+      "codomain": "R\u00b2",
+      "map": "rotation 2pi/3",
+      "units": "dimensionless",
+      "source": "ideal honeycomb point symmetry",
+      "origin": "imported geometric assumption"
+    },
+    {
+      "id": "A1_z",
+      "domain": "R scalar height/breathing",
+      "units": "m",
+      "origin": "assumed local bath classification"
+    },
+    {
+      "id": "E_y",
+      "domain": "R\u00b2 material shear bath",
+      "units": "m",
+      "origin": "hypothesis, existence/material source OPEN"
+    },
+    {
+      "id": "C",
+      "map": "E_y\u2192E_x force/displacement",
+      "expression": "aI+bJ",
+      "units": "J m^-2 per top Bravais cell",
+      "origin": "derived form under C3; a,b OPEN"
+    },
+    {
+      "id": "K_bath",
+      "expression": "kappa I",
+      "units": "J m^-2 per top Bravais cell",
+      "origin": "assumed one E bath, kappa>0"
+    },
+    {
+      "id": "D_bath",
+      "expression": "d I",
+      "units": "N s m^-1 per top Bravais cell",
+      "origin": "assumed passive bath, d>=0"
+    },
+    {
+      "id": "k0",
+      "expression": "clamped lateral curvature",
+      "units": "J m^-2 per top Bravais cell",
+      "origin": "conventional imported; cannot reuse relaxed Hessian"
+    },
+    {
+      "id": "gamma0",
+      "expression": "bare lateral Rayleigh damping",
+      "units": "N s m^-1 per top Bravais cell",
+      "origin": "OPEN material input"
+    }
+  ],
+  "quantities": [
+    {
+      "id": "scalar_coupling",
+      "exact_expression": "Hom_C3(A1,E)=0",
+      "origin": "derived",
+      "dependencies": [
+        "C3_E",
+        "A1_z"
+      ],
+      "normalization": "stationary C3-fixed registry",
+      "units": "linear coupling J m^-2 forced zero",
+      "source": "note \u00a71"
+    },
+    {
+      "id": "rho2",
+      "exact_expression": "a\u00b2+b\u00b2>=0",
+      "origin": "derived",
+      "dependencies": [
+        "C",
+        "C3_E"
+      ],
+      "normalization": "Cartesian Euclidean",
+      "units": "J\u00b2 m^-4",
+      "source": "note \u00a71"
+    },
+    {
+      "id": "dynamic_response",
+      "exact_expression": "k0-mx \u03c9\u00b2-i\u03c9 gamma0-rho\u00b2/(kappa-mb \u03c9\u00b2-i\u03c9 d)",
+      "origin": "derived conditional",
+      "dependencies": [
+        "C",
+        "K_bath",
+        "D_bath",
+        "k0",
+        "gamma0"
+      ],
+      "normalization": "Fourier e^-i\u03c9t",
+      "units": "J m^-2",
+      "source": "note Eq. 3"
+    },
+    {
+      "id": "static_softening",
+      "exact_expression": "rho\u00b2/kappa",
+      "origin": "derived conditional",
+      "dependencies": [
+        "C",
+        "K_bath"
+      ],
+      "units": "J m^-2",
+      "source": "note Eq. 4"
+    },
+    {
+      "id": "damping_add",
+      "exact_expression": "d rho\u00b2/kappa\u00b2",
+      "origin": "derived conditional",
+      "dependencies": [
+        "C",
+        "K_bath",
+        "D_bath"
+      ],
+      "units": "N s m^-1",
+      "source": "note Eq. 4"
+    },
+    {
+      "id": "time_ratio",
+      "exact_expression": "gamma_add/Delta_k=d/kappa when Delta_k>0",
+      "origin": "derived conditional",
+      "dependencies": [
+        "static_softening",
+        "damping_add"
+      ],
+      "units": "s",
+      "source": "note Eq. 5"
+    }
+  ],
+  "techniques": {
+    "representation": "C3 fixed vectors and real E commutant",
+    "chain": "previous exact K7 harmonic port",
+    "rational": "exact rational R,G verification",
+    "operator": "Schur complement and small-omega expansion",
+    "projection": "lateral E port retained, scalar mode excluded from bilinear coupling",
+    "physical_units": "explicit J,m,s,N",
+    "fit_null_sensitivity": "no fit; conventional shear bath null must be included first",
+    "clock": "N/A for native UD; imported lab seconds in conditional bath",
+    "prime_factorization": "N/A",
+    "modular_arithmetic": "N/A"
+  },
+  "assumptions": [
+    "local C3-fixed ideal registry",
+    "one passive isotropic E bath",
+    "positive kappa, nonnegative d, k0*kappa>rho\u00b2 for stability",
+    "low-frequency |mb \u03c9\u00b2+i\u03c9d|<kappa",
+    "clamped k0 excludes eliminated y",
+    "lab time and Rayleigh law imported, not native UD"
+  ],
+  "checks": {
+    "proof": "selection and elimination in GRAPHITE_C3_BATH_SELECTION_AND_RESPONSE.md",
+    "exact_constructor": "verify_c3_bath.py, stdlib Fraction, passed",
+    "independent_review": false,
+    "empirical_test": false,
+    "repository_verifier": "integrity only"
+  },
+  "counterexamples": [
+    "broken C3 permits scalar linear coupling",
+    "nonlinear z|x|\u00b2 permitted despite linear no-go",
+    "relaxed k0 would double-count static softening",
+    "zero coupling rho=0 makes time ratio undefined",
+    "nonlinear rate-independent friction outside model"
+  ],
+  "status": "EXACT_CONDITIONAL_SELECTION_AND_RESPONSE; OPEN_SOURCE_AND_RESIDUAL"
+}
