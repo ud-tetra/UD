@@ -1,0 +1,84 @@
+{
+  "lane": "EXACT conditional scalar spring Schur response; physical promotion 0",
+  "primary_article": "https://doi.org/10.1103/ly48-b4l2",
+  "article_target_correction": "Sharp friction peaks at 21.8 and 38.2 degrees with negligible load dependence; small residual barrier, not zero angular signal",
+  "static_centroid_old": "-3ab/(2a+b+mu) < 0 for a,b>0,mu>=0",
+  "required_metric_centroid_old": "+1/4 each under S4 and unit coarse pullback",
+  "dynamic_centroid_old_laplace": "-3ab/(2a+b+mu+eta*s+m*s^2)",
+  "dynamic_centroid_self_laplace": "6b-6b^2/(2a+b+mu+eta*s+m*s^2)",
+  "low_frequency_center_viscous_coefficient": "6b^2*eta/(2a+b+mu)^2",
+  "example_gamma": "189/32",
+  "exact_rational_controls": [
+    {
+      "parameters_a_b_c_mu_m_eta_s": [
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "denominator": "4",
+      "centroid_old": "-3/4",
+      "centroid_self": "9/2"
+    },
+    {
+      "parameters_a_b_c_mu_m_eta_s": [
+        "2",
+        "3",
+        "0",
+        "1",
+        "4",
+        "7",
+        "0"
+      ],
+      "denominator": "8",
+      "centroid_old": "-9/4",
+      "centroid_self": "45/4"
+    },
+    {
+      "parameters_a_b_c_mu_m_eta_s": [
+        "2",
+        "3",
+        "5",
+        "1",
+        "4",
+        "7",
+        "0"
+      ],
+      "denominator": "8",
+      "centroid_old": "-9/4",
+      "centroid_self": "45/4"
+    },
+    {
+      "parameters_a_b_c_mu_m_eta_s": [
+        "2",
+        "3",
+        "5",
+        "1",
+        "4",
+        "7",
+        "1"
+      ],
+      "denominator": "19",
+      "centroid_old": "-18/19",
+      "centroid_self": "288/19"
+    },
+    {
+      "parameters_a_b_c_mu_m_eta_s": [
+        "5",
+        "2",
+        "1",
+        "3",
+        "2",
+        "6",
+        "1/2"
+      ],
+      "denominator": "37/2",
+      "centroid_old": "-60/37",
+      "centroid_self": "396/37"
+    }
+  ],
+  "scope": "Scalar passive pairwise springs, midpoint viscous bath, direct H0=K_eff identification only; no twist-angle selector, friction force, load coefficient or UD metric identification."
+}
