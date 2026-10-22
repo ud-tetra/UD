@@ -1,0 +1,53 @@
+{
+  "capture_id": "2026-10-22T220841Z-codex-graphite-kc-load-proxy-33d4dbeb-99e0-4561-9d30-774746b200c3",
+  "created_at_utc": "2026-10-22T22:09:21.036897+00:00",
+  "status": "NUMERICAL_CONVENTIONAL_KC_LOAD_PROXY",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "ee85c09f6be29f4a32156299be15261cd2271a90",
+    "parent_draft_PR": 426,
+    "sources": [
+      "Minkin et al. PRB 108 085411 (2023), arXiv source SI Eq S1/Table S1, source tar SHA adea7468f311c648a0d25abf4f5eecacd8eebe1b6fc7761ffcea7d073b2f460b",
+      "Mendeley Data DOI 10.17632/svnpzbjc3t.1 archive SHA b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875",
+      "LAMMPS official KC/z potential documentation as independent formula interpretation",
+      "focused graphite manuscript v11"
+    ]
+  },
+  "verification_scope": "Read-only source parameter extraction; independently coded flat rigid pair sum, analytic derivatives versus finite differences, first-shell regression of E/Ez/Ezz, pressure unit conversion and 14/16/18 \u00c5 cutoff sensitivity. The reconstructed 3.46 \u00c5 potential differs from deposited grid and no measured friction is used.",
+  "scientific_status": "NUMERICAL_CONDITIONAL_CONVENTIONAL_PRESSURE_PROXY; OPEN_EXACT_SOURCE_IMPLEMENTATION_AND_DISSIPATIVE_FRICTION",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-22T220257Z-codex-graphite-angular-controls-5df2d853-b2c1-473f-b1bd-bb5933e0ff81/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v11.md"
+  ],
+  "supersession_reason": "Adds independently reconstructed conventional height response with explicit source mismatch and pressure types.",
+  "files": [
+    {
+      "path": "captures/2026-10-22T220841Z-codex-graphite-kc-load-proxy-33d4dbeb-99e0-4561-9d30-774746b200c3/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v12.md",
+      "sha256": "700c29e14c5c887ba196d1eb6d6b61c7f81149df89e161c8f22b682c29e9f164",
+      "size_bytes": 37208
+    },
+    {
+      "path": "captures/2026-10-22T220841Z-codex-graphite-kc-load-proxy-33d4dbeb-99e0-4561-9d30-774746b200c3/JOURNAL_HANDOFF.md",
+      "sha256": "b3e81e5f5ae776b0437c005714cc458fbcb52e4315facacd357214a1ee10f7f7",
+      "size_bytes": 703
+    },
+    {
+      "path": "captures/2026-10-22T220841Z-codex-graphite-kc-load-proxy-33d4dbeb-99e0-4561-9d30-774746b200c3/KC_HEIGHT_RECONSTRUCTION_AND_SCOPE.md",
+      "sha256": "8afd5eb1c592a3ce3dd39dab4e212c2e573e577c5c3a53be056f4983fbc4d556",
+      "size_bytes": 4339
+    },
+    {
+      "path": "captures/2026-10-22T220841Z-codex-graphite-kc-load-proxy-33d4dbeb-99e0-4561-9d30-774746b200c3/KC_LOAD_PROXY_RESULTS.json",
+      "sha256": "a63b8d5462a4526288b8a1bcaf542e3cfa70d80672bb6e730c791be4a784ebb8",
+      "size_bytes": 4154
+    },
+    {
+      "path": "captures/2026-10-22T220841Z-codex-graphite-kc-load-proxy-33d4dbeb-99e0-4561-9d30-774746b200c3/derive_kc_load_proxy.py",
+      "sha256": "1e58f6c5d7983034b18236cea553b7e5767898305143c18470256ab2abf86971",
+      "size_bytes": 6389
+    }
+  ]
+}
