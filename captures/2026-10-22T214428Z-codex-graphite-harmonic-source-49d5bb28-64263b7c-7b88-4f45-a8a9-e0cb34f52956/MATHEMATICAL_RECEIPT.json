@@ -1,0 +1,182 @@
+{
+  "receipt_id": "2026-10-22T214428Z-codex-graphite-harmonic-source-49d5bb28-64263b7c-7b88-4f45-a8a9-e0cb34f52956-source",
+  "method": "user-provided UD mathematical analysis protocol v1.0; local compatible schema (referenced template unavailable)",
+  "date_utc": "2026-10-22",
+  "question": "Exact harmonic projection of incidence versus seven-orbit weighted gradient, and conditional passive bilayer bath",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "coefficient_domain": {
+    "geometry": "Q exact for B1,B2,M,G and Q; real weights as formal symbols",
+    "response": "R symbolic positive material stiffness and damping",
+    "clock": "physical seconds imported, no native UD clock"
+  },
+  "objects": [
+    {
+      "id": "K7",
+      "type": "oriented periodic cellular torus",
+      "counts": [
+        14,
+        21,
+        7
+      ],
+      "basis": "A-to-B oriented edges",
+      "source": "captures/2026-10-22T211409Z-codex-graphite-honeycomb-5e20b9a6-101b-4fce-8c91-a1d4070ba2d8",
+      "origin": "imported exact"
+    },
+    {
+      "id": "H",
+      "type": "ker(B1) cap ker(B2^T)",
+      "dimension": 2,
+      "metric": "unit edge Euclidean",
+      "source": "captures/2026-10-22T211409Z-codex-graphite-honeycomb-5e20b9a6-101b-4fce-8c91-a1d4070ba2d8",
+      "origin": "derived exact"
+    },
+    {
+      "id": "M",
+      "type": "geometric lateral map",
+      "domain": "direct physical displacement R2, m",
+      "codomain": "edge R21, m",
+      "expression": "M^TM=(7/2)G",
+      "source": "captures/2026-10-22T211409Z-codex-graphite-honeycomb-5e20b9a6-101b-4fce-8c91-a1d4070ba2d8",
+      "origin": "derived exact"
+    },
+    {
+      "id": "W",
+      "type": "C3 invariant diagonal edge weights",
+      "domain": "edge R21",
+      "parameters": "seven real orbit weights w0..w6",
+      "units": "dimensionless",
+      "origin": "assumed source variable, material law OPEN"
+    },
+    {
+      "id": "K_w",
+      "type": "weighted gradient coupling",
+      "domain": "vertex bath R14, m",
+      "codomain": "lateral dual R2",
+      "expression": "M^T W B1^T",
+      "units": "dimensionless geometric form",
+      "origin": "derived conditional"
+    },
+    {
+      "id": "Q",
+      "type": "seven-by-seven quadratic form",
+      "expression": "exact matrix in Eq. 4",
+      "units": "dimensionless",
+      "origin": "derived exact conditional on unit metrics"
+    },
+    {
+      "id": "g_c",
+      "type": "material bilinear coefficient",
+      "units": "J m^-2 per top Bravais cell",
+      "origin": "assumed OPEN"
+    },
+    {
+      "id": "bath",
+      "type": "two independent vertex baths",
+      "metric": "unit vertex Euclidean",
+      "parameters": "kappa>0 J m^-2; d>=0 N s m^-1",
+      "origin": "assumed conditional"
+    }
+  ],
+  "quantities": [
+    {
+      "id": "incidence_overlap",
+      "exact_expression": "M^T B1^T=0 and M^T B2=0",
+      "source": "captures/2026-10-22T211409Z-codex-graphite-honeycomb-5e20b9a6-101b-4fce-8c91-a1d4070ba2d8",
+      "origin": "derived",
+      "assumptions": [
+        "unit edge Hodge splitting"
+      ],
+      "units": "zero linear map"
+    },
+    {
+      "id": "harmonic_projector",
+      "exact_expression": "(2/7) M G^-1 M^T",
+      "source": "this capture Eq. 1",
+      "origin": "derived",
+      "units": "dimensionless",
+      "normalization": "M^TM=7G/2"
+    },
+    {
+      "id": "alpha",
+      "exact_expression": "w^T Q w=(1/4) sum_(i<j) c_ij (w_i-w_j)^2",
+      "source": "this capture Eq. 4",
+      "origin": "derived conditional",
+      "units": "dimensionless",
+      "dependencies": [
+        "K7",
+        "M",
+        "W",
+        "unit vertex metric"
+      ],
+      "assumptions": [
+        "C3 orbit constant W"
+      ]
+    },
+    {
+      "id": "kernel_alpha",
+      "exact_expression": "span[(1,1,1,1,1,1,1)]",
+      "source": "this capture Eq. 4",
+      "origin": "derived exact",
+      "units": "weight direction"
+    },
+    {
+      "id": "bilayer_coupling_norm",
+      "exact_expression": "C C^T=(g_c^2/2) alpha(w) I",
+      "source": "this capture Eq. 5",
+      "origin": "derived conditional",
+      "units": "J^2 m^-4",
+      "assumptions": [
+        "two identical independent vertex baths",
+        "equal-layer lift"
+      ]
+    },
+    {
+      "id": "bath_response",
+      "exact_expression": "Delta k=g_c\u00b2 alpha/(2 kappa); gamma_add=d g_c\u00b2 alpha/(2 kappa\u00b2)",
+      "source": "this capture Eq. 6",
+      "origin": "derived conditional",
+      "units": "J m^-2 and N s m^-1",
+      "dependencies": [
+        "bilayer_coupling_norm",
+        "material kappa,d"
+      ],
+      "assumptions": [
+        "clamped baseline excludes bath",
+        "stable passive low-frequency regime"
+      ]
+    }
+  ],
+  "techniques": {
+    "chain_homology": "exact H1 orthogonality and projector",
+    "rational_algebra": "seven C3 orbit K matrices and 4Q integer Laplacian",
+    "group": "C3 invariant edge-orbit weights",
+    "operator": "rank-six PSD Gram and connected orbit graph",
+    "projection": "zero exact/coexact, nonzero weighted source",
+    "physical_units": "m,J,N,s explicit",
+    "fit_null_sensitivity": "uniform weights null; nonuniform weights activate; no graphite weights fitted",
+    "clock": "N/A native clock",
+    "prime_factorization": "N/A",
+    "modular_arithmetic": "N/A"
+  },
+  "checks": {
+    "proof": "Gram/laplacian and bilayer lift in GRAPHITE_HARMONIC_SOURCE_SELECTION.md",
+    "exact_constructor": "verify_harmonic_source.py passes, imports immutable earlier carrier verifier",
+    "independent_review": false,
+    "empirical_test": false,
+    "CI_scope": "repository integrity only"
+  },
+  "failed_alternatives": [
+    "plain incidence gradients have zero harmonic projection",
+    "C3 symmetry by itself does not select one of seven orbit weights",
+    "overall uniform weights cannot activate this mechanism",
+    "Q diagonals 1/2 or 1 are illustrative orbit choices, not physical coefficients"
+  ],
+  "interpretation_limits": [
+    "weight law and overall coupling unsourced",
+    "bath vertex metric/stiffness/damping assumed",
+    "conventional baseline may already include same bath",
+    "no physical friction prediction or promotion"
+  ],
+  "status": "EXACT_CONDITIONAL_SOURCE_GEOMETRY; OPEN_MATERIAL"
+}
