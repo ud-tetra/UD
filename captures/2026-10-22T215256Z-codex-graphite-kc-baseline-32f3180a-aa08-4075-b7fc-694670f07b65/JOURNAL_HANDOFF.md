@@ -1,0 +1,3 @@
+# Journal handoff: physical baseline before UD residual
+
+A directly matched 2023 primary conventional calculation fixes a negative (2,1) first-star coefficient at a specified height. We checked the per-atom versus per-cell translation and the distinct global, sliding, rotational and force quantities. The conventional model itself accounts for a finite commensurate signal and a small shear scale. Revised focused manuscript v8 adds a numerical comparator and explicit benchmark gate. No Chen friction trace, vertical PES sweep or source-derived bath coefficient is available here. This capture is not experimental corroboration or a physical promotion.
