@@ -1,0 +1,3 @@
+# Handoff: index-seven raw PES
+
+Downloaded the public 2023 KC PES archive, verified its SHA, fitted only the (2,1) X/Y/Z text grids. Recovered the published negative first-harmonic amplitude and 1.04% RMS mismatch. The next ordinary common reciprocal shell explains about 79.8% of its squared remainder on interlaced held-out pixels. Flagged a source metadata versus plotting-script 1000× Z-unit discrepancy. Manuscript v9 places the raw benchmark before any UD friction claim. This is a single-height conventional simulation; no 2026 force trace, vertical derivative or physical bath source was obtained.
