@@ -1,0 +1,53 @@
+{
+  "capture_id": "2026-10-22T221419Z-codex-graphite-two-shell-load-d14b7c38-a6c5ece8-3f05-492f-8931-6f8a637ad397",
+  "created_at_utc": "2026-10-22T22:14:19.314304+00:00",
+  "status": "NUMERICAL_CONDITIONAL_CONVENTIONAL_EQUILIBRIUM",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "3e456386f522e70f6979bda9776d56a73e3f2f68",
+    "parent_draft_PR": 427,
+    "sources": [
+      "Minkin et al. PRB 108 085411 (2023), source SI Eq S1/Table S1",
+      "Mendeley Data 10.17632/svnpzbjc3t.1 ZIP SHA b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875",
+      "Chen et al. PRL 137 166201 (2026), public abstract",
+      "focused graphite manuscript v12"
+    ]
+  },
+  "verification_scope": "Analytic KC normal derivatives previously finite-difference checked; two-shell E/Ez/Ezz regression, x/y/z stationary roots, Hessian index, three neighboring saddles, centered +/-5 MPa finite difference versus envelope, 14/16/18 \u00c5 cutoffs; reconstructed grid not exactly matched.",
+  "scientific_status": "NUMERICAL_CONDITIONAL_KC_EQUILIBRIUM; OPEN_EXPERIMENTAL_FORCE_AND_UD_DISSIPATIVE_LAW",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-22T220841Z-codex-graphite-kc-load-proxy-33d4dbeb-99e0-4561-9d30-774746b200c3/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v12.md"
+  ],
+  "supersession_reason": "Adds two-shell locally relaxed saddle load derivative and reference-load qualification.",
+  "files": [
+    {
+      "path": "captures/2026-10-22T221419Z-codex-graphite-two-shell-load-d14b7c38-a6c5ece8-3f05-492f-8931-6f8a637ad397/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v13.md",
+      "sha256": "0717f32221786a8f82d503b38c9af176379cd3a20c7b8b493ae2bf83d6ee8745",
+      "size_bytes": 40450
+    },
+    {
+      "path": "captures/2026-10-22T221419Z-codex-graphite-two-shell-load-d14b7c38-a6c5ece8-3f05-492f-8931-6f8a637ad397/JOURNAL_HANDOFF.md",
+      "sha256": "3570d7eb254cd9e40c2dd0c345cfe3b3600f1e5b0bfcb61452b496889beea791",
+      "size_bytes": 340
+    },
+    {
+      "path": "captures/2026-10-22T221419Z-codex-graphite-two-shell-load-d14b7c38-a6c5ece8-3f05-492f-8931-6f8a637ad397/TWO_SHELL_LOAD_AUDIT.md",
+      "sha256": "cce27c64d2785c2fd34c9c0f9149813a918c6fb9dbae9d932985d419bdfa4a8f",
+      "size_bytes": 2133
+    },
+    {
+      "path": "captures/2026-10-22T221419Z-codex-graphite-two-shell-load-d14b7c38-a6c5ece8-3f05-492f-8931-6f8a637ad397/TWO_SHELL_LOAD_RESULTS.json",
+      "sha256": "45ceb4fd94f51bff684af5ae0d7ee38778afe2eae332c39c2b5f6c8ee4fd1c79",
+      "size_bytes": 4881
+    },
+    {
+      "path": "captures/2026-10-22T221419Z-codex-graphite-two-shell-load-d14b7c38-a6c5ece8-3f05-492f-8931-6f8a637ad397/derive_kc_two_shell_load.py",
+      "sha256": "9d5668721bf376cafb681e26d0827dac6a0243f2633e27f4bb07fb6fc292efb7",
+      "size_bytes": 8024
+    }
+  ]
+}
