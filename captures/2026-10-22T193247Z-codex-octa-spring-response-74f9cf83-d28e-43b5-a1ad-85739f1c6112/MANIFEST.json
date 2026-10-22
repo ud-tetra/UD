@@ -1,0 +1,43 @@
+{
+  "capture_id": "2026-10-22T193247Z-codex-octa-spring-response-74f9cf83-d28e-43b5-a1ad-85739f1c6112",
+  "created_at_utc": "2026-10-22T19:33:43.396225+00:00",
+  "status": "EXACT_CONDITIONAL_PASSIVE_SCALAR_STIFFNESS_SIGN_NO_GO",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "4bb373be0a82ce3f96de7ebba65e6469fb7d2fae",
+    "parent_draft_PR": 410,
+    "extends": [
+      "captures/2026-10-22T192713Z-codex-octa-zero-locality-463c4c55-8dec-46ce-87ef-6a2d9b4ec52a"
+    ],
+    "sources": [
+      "Chen et al., Physical Review Letters 137, 166201 (2026), DOI 10.1103/ly48-b4l2, abstract",
+      "UD coefficient provenance ledger v0.39(2)",
+      "CRL-2 subdivision governance proposal"
+    ]
+  },
+  "verification_scope": "Exact scalar spring graph Schur response, centroid-to-corner sign and multiplicity, rational controls, conditional low-frequency midpoint bath damping; source abstract correction. No full-text data, physical selector, graphite fit or independent review.",
+  "scientific_status": "EXACT_CONDITIONAL_SIGN_NO_GO_CANDIDATE_RESPONSE",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [],
+  "correction_of_conversation_claim": "At 21.8\u00b0/38.2\u00b0 the paper reports sharp friction peaks with negligible load dependence, not identically vanishing angular friction.",
+  "files": [
+    {
+      "path": "captures/2026-10-22T193247Z-codex-octa-spring-response-74f9cf83-d28e-43b5-a1ad-85739f1c6112/OCTAHEDRAL_SPRING_RESPONSE_SIGN_TEST.md",
+      "size_bytes": 5458,
+      "sha256": "8f4921ae2bde82425307cf546785a3f1fdd4ebcfb816b466e8479feca83bebf3"
+    },
+    {
+      "path": "captures/2026-10-22T193247Z-codex-octa-spring-response-74f9cf83-d28e-43b5-a1ad-85739f1c6112/RESULTS.json",
+      "size_bytes": 2106,
+      "sha256": "d6a8fb2dc0203f4f5fb8406d225278c36922611056104c22867985b6b21dd01d"
+    },
+    {
+      "path": "captures/2026-10-22T193247Z-codex-octa-spring-response-74f9cf83-d28e-43b5-a1ad-85739f1c6112/verify_spring_response.py",
+      "size_bytes": 4734,
+      "sha256": "63e77f53e325cff4a340dd93d678123ea63481b12864302f1c80f5563088d3f5"
+    }
+  ]
+}
