@@ -1,0 +1,30 @@
+{
+  "receipt_id": "2026-10-22T212912Z-codex-graphite-star-orientation-f35ed2c0-043c52cd-41cb-42df-a5bf-a410d294cd17-orientation",
+  "status": "EXACT_CORRECTION_OF_TYPED_ORIENTATION",
+  "supersedes": [
+    "captures/2026-10-22T212436Z-codex-graphite-method-curvature-6c41e9d2-32a902bf-4e8a-4a8e-9c1f-d090114741c9/GRAPHITE_METHOD_BOOT_AND_CURVATURE.md",
+    "captures/2026-10-22T212436Z-codex-graphite-method-curvature-6c41e9d2-32a902bf-4e8a-4a8e-9c1f-d090114741c9/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v3.md"
+  ],
+  "source_receipt": "captures/2026-10-22T212436Z-codex-graphite-method-curvature-6c41e9d2-32a902bf-4e8a-4a8e-9c1f-d090114741c9/MATHEMATICAL_RECEIPT.json",
+  "changed_object": {
+    "id": "reciprocal_star",
+    "previous": "g3=g1+g2 was described as oriented 120-degree triple; actually unoriented cosine axes",
+    "corrected": "g3=-(g1+g2), pairwise angle 120 degrees; cosine third term unchanged"
+  },
+  "dependencies_rechecked": [
+    "S and its Hessian depend on cos(g3\u00b7x), invariant under g3 sign",
+    "sum_j gj gj^T invariant under sign",
+    "k_x and load derivatives unchanged",
+    "physical interpretation and friction status unchanged"
+  ],
+  "normalization": "same gstar, energy per top Bravais cell and unit-edge metric",
+  "units": "g_j m^-1; U J per Bravais cell",
+  "origin": "derived exact correction by constructor self-review",
+  "method": "user-supplied UD_MATHEMATICAL_METHOD_v1.0, typed objects and assumption propagation",
+  "checks": {
+    "exact": "verify_curvature_port_oriented.py",
+    "independent_review": false,
+    "empirical": false
+  },
+  "physical_promotion": 0
+}
