@@ -1,0 +1,205 @@
+{
+  "receipt_id": "2026-10-22T212436Z-codex-graphite-method-curvature-6c41e9d2-32a902bf-4e8a-4a8e-9c1f-d090114741c9-curvature",
+  "method": "User-supplied UD_MATHEMATICAL_METHOD_v1.0.md, section 8; referenced template was not supplied, so this is a local method-compatible schema",
+  "date_utc": "2026-10-22",
+  "question": "Conditional local stiffness and load derivative on the harmonic relative-translation port, following conventional paired-angle explanation",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "coefficient_domain": {
+    "cellular": "Q exact for oriented boundary and Gram",
+    "material": "real symbolic differentiable V(z), E0(z)",
+    "clock": "N/A, no physical time law"
+  },
+  "objects": [
+    {
+      "id": "K7",
+      "type": "periodic oriented honeycomb cellular torus",
+      "basis": "14 A/B vertices, 21 A-to-B bonds, 7 faces",
+      "boundaries": "periodic",
+      "source": "captures/2026-10-22T211409Z-codex-graphite-honeycomb-5e20b9a6-101b-4fce-8c91-a1d4070ba2d8",
+      "origin": "imported exact construction"
+    },
+    {
+      "id": "H1",
+      "type": "real harmonic 1-cochains of K7",
+      "dimension": 2,
+      "metric": "unit edge Euclidean",
+      "source": "captures/2026-10-22T211409Z-codex-graphite-honeycomb-5e20b9a6-101b-4fce-8c91-a1d4070ba2d8",
+      "origin": "derived conditional on metric"
+    },
+    {
+      "id": "M_X",
+      "type": "linear map",
+      "domain": "physical Cartesian lateral R\u00b2 (m)",
+      "codomain": "single-layer edge R\u00b2\u00b9 (m)",
+      "normalization": "bond vector divided by primitive length a",
+      "source": "this capture Eq. 1, K7 bonds",
+      "origin": "derived"
+    },
+    {
+      "id": "I_X",
+      "type": "linear map",
+      "domain": "relative Cartesian R\u00b2 (m)",
+      "codomain": "bilayer edge R\u2074\u00b2 (m)",
+      "normalization": "(-M_X/2,+M_X/2), equal layer weights",
+      "source": "this capture Eq. 1",
+      "origin": "assumed equal-layer geometric lift"
+    },
+    {
+      "id": "V",
+      "type": "real Fourier amplitude",
+      "units": "J per top Bravais cell",
+      "source": "captures/2026-10-22T211956Z-codex-graphite-saddle-bc6b8d85-b918-41a4-9cee-e8fb590d02fa",
+      "origin": "imported parameter, sign and magnitude OPEN"
+    },
+    {
+      "id": "gstar",
+      "type": "reciprocal magnitude",
+      "expression": "sqrt(7) g0",
+      "units": "m^-1",
+      "source": "captures/2026-10-22T211956Z-codex-graphite-saddle-bc6b8d85-b918-41a4-9cee-e8fb590d02fa",
+      "origin": "derived conventional lattice"
+    },
+    {
+      "id": "L",
+      "type": "compressive load",
+      "units": "N per top Bravais cell",
+      "normalization": "enthalpy E+L z",
+      "source": "captures/2026-10-22T211956Z-codex-graphite-saddle-bc6b8d85-b918-41a4-9cee-e8fb590d02fa",
+      "origin": "assumed sign convention"
+    },
+    {
+      "id": "Gamma",
+      "type": "lateral damping",
+      "units": "N s/m",
+      "source": "earlier conditional passive bath, PR #415",
+      "origin": "OPEN material input"
+    }
+  ],
+  "quantities": [
+    {
+      "id": "relative_gram",
+      "exact_expression": "I_X^T I_X=(7/4)I_2",
+      "units": "dimensionless operator for q,x both in m",
+      "origin": "derived",
+      "dependencies": [
+        "K7",
+        "M_X",
+        "I_X"
+      ],
+      "assumptions": [
+        "unit edge metric",
+        "seven cells",
+        "equal layers"
+      ],
+      "source": "this capture Eq. 1"
+    },
+    {
+      "id": "kx_positive",
+      "exact_expression": "(3/2) V gstar^2 for V>0",
+      "units": "J/m^2 per top Bravais cell",
+      "origin": "derived conditional",
+      "dependencies": [
+        "V",
+        "gstar"
+      ],
+      "assumptions": [
+        "rigid first shell",
+        "stable S=-3/2"
+      ],
+      "source": "this capture Eq. 2"
+    },
+    {
+      "id": "kx_negative",
+      "exact_expression": "3 |V| gstar^2 for V<0",
+      "units": "J/m^2 per top Bravais cell",
+      "origin": "derived conditional",
+      "dependencies": [
+        "V",
+        "gstar"
+      ],
+      "assumptions": [
+        "rigid first shell",
+        "stable S=3"
+      ],
+      "source": "this capture Eq. 2"
+    },
+    {
+      "id": "kq",
+      "exact_expression": "(4/7)kx",
+      "units": "J/m^2 per top Bravais cell",
+      "origin": "derived coordinate conversion",
+      "dependencies": [
+        "relative_gram",
+        "kx_positive or kx_negative"
+      ],
+      "assumptions": [
+        "orthonormal coordinates on im I_X"
+      ],
+      "source": "this capture Eq. 2"
+    },
+    {
+      "id": "kx_over_barrier",
+      "exact_expression": "(3/2)gstar^2 if V>0; (3/8)gstar^2 if V<0",
+      "units": "m^-2",
+      "origin": "derived conventional baseline",
+      "dependencies": [
+        "kx_positive or kx_negative",
+        "fixed-height saddle barrier, captures/2026-10-22T211956Z-codex-graphite-saddle-bc6b8d85-b918-41a4-9cee-e8fb590d02fa"
+      ],
+      "assumptions": [
+        "same V, same fixed height",
+        "V nonzero"
+      ],
+      "source": "this capture Eq. 3"
+    },
+    {
+      "id": "load_log_slope",
+      "exact_expression": "-partial_z(log|V|)/K_z^m, K_z^m=E0''+2 S_m V''>0",
+      "units": "N^-1",
+      "origin": "derived conditional",
+      "dependencies": [
+        "V",
+        "L",
+        "stable vertical minimum"
+      ],
+      "assumptions": [
+        "smooth fixed-sign branch",
+        "separable first-shell energy"
+      ],
+      "source": "this capture Eq. 5"
+    }
+  ],
+  "techniques": {
+    "chain_homology": "prior exact K7 ranks and harmonic plane; cited without recomputation",
+    "rational_algebra": "Fraction direct-coordinate Gram and reciprocal-star check",
+    "group": "C3 star isotropy",
+    "spectral_operator": "Hodge-Dirac kernel; no frequency identified",
+    "projection": "rank-two relative lift, 40-dimensional orthogonal kernel in bilayer edge carrier",
+    "physical_units": "explicit m,J,N normalizations",
+    "fit_null_sensitivity": "no fit; both sign branches retained; higher shells and vertical response are controls",
+    "clock": "N/A",
+    "prime_factorization": "N/A",
+    "modular_arithmetic": "N/A",
+    "hierarchy": "N/A"
+  },
+  "checks": {
+    "proof": "symbolic Hessian and implicit differentiation in GRAPHITE_METHOD_BOOT_AND_CURVATURE.md",
+    "exact_constructor": "verify_curvature_port.py uses stdlib Fraction, passed",
+    "independent_review": false,
+    "empirical_test": false,
+    "CI_scope": "repository file integrity only"
+  },
+  "failed_alternatives": [
+    "Prior 9|V| global range misidentified as saddle barrier, corrected in S2",
+    "SymPy-based verification attempted but both installed Python runtimes lacked SymPy; replaced with dependency-free rational check"
+  ],
+  "interpretation_limits": [
+    "V sign and scale unknown",
+    "q metric is an assumed unit-edge geometric convention",
+    "no dissipative bath or physical clock",
+    "no friction estimator or raw curve",
+    "no UD-specific residual prediction"
+  ],
+  "status": "EXACT_CONDITIONAL_GEOMETRY_AND_FIRST_SHELL; OPEN_MATERIAL_AND_FRICTION"
+}
