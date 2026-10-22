@@ -3,6 +3,7 @@ from fractions import Fraction as Q
 from itertools import product
 FACES=[(0,1,2),(0,1,3),(0,1,4),(0,2,3),(0,2,4),(1,2,3),(1,2,4)]
 CELLS=[(0,1,2,3),(0,1,2,4)]
+# second 3-cell oriented negatively to oppose the first on shared face
 D=[[Q(-1),Q(1)],[Q(1),Q(0)],[Q(0),Q(-1)],
    [Q(-1),Q(0)],[Q(0),Q(1)],[Q(1),Q(0)],[Q(0),Q(-1)]]
 CONTACTS=[(f,k) for f in range(7) for k in range(2) if D[f][k]]
@@ -11,6 +12,7 @@ W=[[Q(0) for _ in range(7)] for _ in range(2)]
 for f, face in enumerate(FACES):
     own=[k for k,c in enumerate(CELLS) if set(face).issubset(c)]
     for k in own:W[k][f]=Q(1,len(own))
+
 def linear_solve(A,b):
     A=[list(A[i])+[b[i]] for i in range(len(b))]
     n=len(b)
@@ -23,6 +25,7 @@ def linear_solve(A,b):
             f=A[r][c]
             if f:A[r]=[A[r][j]-f*A[c][j] for j in range(n+1)]
     return [A[i][-1] for i in range(n)]
+
 def evolve(z,t,mask):
     M=[[D[f][k]*mask[f][k] for k in range(2)] for f in range(7)]
     A=[[Q(0) for _ in range(9)] for _ in range(9)]
@@ -42,6 +45,7 @@ def evolve(z,t,mask):
         assert own1[k]-own0[k]==sum(J[f][k]-W[k][f]*sum(J[f]) for f in range(7))
     assert sum(own0)==sum(own1)
     return n[:7],n[7:],J,own0,own1
+
 z=[Q(0)]*7;z[0]=1;z[1]=1;t=[Q(0)]*2
 h=[[Q(0)]*2 for _ in range(7)]
 assert evolve(z,t,h)[:2]==(z,t)
@@ -55,6 +59,8 @@ assert J2[0][0]==Q(-61824,511225)
 assert b2[0]-a2[0]==J2[0][0]/2
 assert b2[1]-a2[1]==-J2[0][0]/2
 assert evolve(z1,t1,h)[2][0][0]==0
+
+# Exhaustive mask test; binary contact assignments over all 8 face-cell incidences.
 positive_shared=0
 for bits in product((0,1),repeat=8):
     mask=[[Q(0)]*2 for _ in range(7)]
