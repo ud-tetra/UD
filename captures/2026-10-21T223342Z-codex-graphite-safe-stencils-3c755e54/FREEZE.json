@@ -1,0 +1,121 @@
+{
+  "created_utc": "2026-10-21T22:30:31.322508+00:00",
+  "main_observed": "f0a2ee841cb0feed3ec5e700bfc0a6521cbda2f4",
+  "status": "FROZEN_BEFORE_FIVE_PROBE_FORCE_COLLECTION",
+  "purpose": "Numerical calibration of five exposed failures only. Not a physical preregistration or full-family qualification.",
+  "step_rule": "Numerically locate nearest angular branch crossing c up to cap. h_top=min(cap,0.8*c); coarse/middle/audit=h_top*[1,0.8,0.6]. All three centered stencils must be branch safe. No response-adaptive selection or fallback.",
+  "branch_knots": [
+    -0.6666666667,
+    -0.5,
+    -0.3333333333
+  ],
+  "branch_guard_scope": "Floating point quartic-root geometry guard and nine-point check of actual rounded positions at every stencil. Three internal gC knots only, not every REBO branch or interval proof.",
+  "roundoff_rule": "Extended-precision affine construction, one rounding to native double; no derivative correction. Minimum step1e-6 Angstrom. Norm of actual Cartesian central direction minus nominal <=1e-6. Middle derivative repeated with reversed sampling order: max absolute difference <1e-7 eV/Angstrom^2. All projected baseline forces <=1e-7 eV/Angstrom and repeat differences <=1e-12. Actual input errors are diagnostics, not a rigorous force-error bound; adjacent derivative agreement remains mandatory.",
+  "thresholds": {
+    "absolute_eV_per_A2": 1e-06,
+    "relative": 1e-05,
+    "stationarity_eV_per_A": 1e-07,
+    "min_step_A": 1e-06,
+    "input_direction_norm_error": 1e-06,
+    "repeat_derivative_absolute": 1e-07,
+    "baseline_repeat_absolute": 1e-12
+  },
+  "agreement": "Middle derivative compared with nominal Hsym*v from the unchanged prior branch-aware H_fine. Both adjacent step changes require unchanged absolute/relative tolerances. No correction using approximate H.",
+  "scope": "Four failed matrix columns plus one fresh cosine direction. Full-suite status remains 2/4 whatever this probe result.",
+  "physical_promotion": 0,
+  "inputs": {
+    "graphite-branch-aware/geometry.py": "a20f3adffea7120f5c5757be600fc363ddcca48f91d3964e83dc89c3e6e02353",
+    "graphite-map/MAPS.npz": "f57ec53fa28226449089ae1526f64d290414d4dacccbe4f451f427202c32ef5b",
+    "graphite-width/plugin/kcz_width2.so": "d912c9b762c78ebbfb04f0994a9cd3b812c149b36b350b4ebc5b2a4d3db7acdc",
+    "lammps-runtime/lammps/share/lammps/potentials/CH.rebo": "70b77656397c0468631af41883d3b781f30432189f749eb0c3d724141055cbd4",
+    "lammps-runtime/lammps/share/lammps/potentials/CC.KC": "d469e4423c3cb31cb6ddac91787d4c1c04fb7675c9fe50001cd9d2ab0ac86fb6",
+    "graphite-branch-aware-addendum/FAILURE_REGISTER.json": "c42a5799af5750f0e9e1ea8079b698f925e039a3f917ae99e98ecfc8a847dbc4",
+    "project_sources/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+    "project_sources/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4",
+    "graphite-stationary/31_dir_10084/RELAXED.npz": "12ec14c8e9ab10937059a73d25fcdeefbbaa52a2b4749aafc50414dbe617cbf6",
+    "graphite-stationary/31_dir_10084/HESSIAN.npz": "9d898838a7a85c0bc219f33fe189217852e2d6cf2ce3d9c52201baadfb0b1873",
+    "graphite-branch-aware/31_dir_10084/MATRIX_RAW.npz": "eaa4960399f339d96a8126c3248378445456dd98c9884c062389301e83bd81f5",
+    "graphite-target-replay/selected/31/dir_10084/struct.inp.data": "be1d0e62d797f7edda6d38db8ae11ff888c40d872aa75d564f035bd33f733c10",
+    "graphite-stationary/31_dir_10134/RELAXED.npz": "8f689da0f9a6d6b2f5031df6eb89b7348a53c6fe302ec9f1b28b7a7a145512a3",
+    "graphite-stationary/31_dir_10134/HESSIAN.npz": "2302063b0d8f70f124e2aad2566e394a18e05d119b30a26bbd5d8bbbf73448be",
+    "graphite-branch-aware/31_dir_10134/MATRIX_RAW.npz": "976f3be1646ff7e6434c487ec0b41d10653e4ca8b3bd69ea96094eb499309fe3",
+    "graphite-target-replay/selected/31/dir_10134/struct.inp.data": "88f7c93accc3bdb8373ce95539cbcbba3c47650dbf6ebbad7f3ac8442ed09306"
+  },
+  "probes": [
+    {
+      "id": "31_dir_10084_column_12",
+      "case": "31_dir_10084",
+      "kind": "column",
+      "index_0based": 12,
+      "nearest_crossing_A": 4.168841862701811e-06,
+      "cap_A": 1.25e-05,
+      "steps_A": [
+        3.335073490161449e-06,
+        2.6680587921291593e-06,
+        2.0010440940968693e-06
+      ],
+      "max_root_cosine_residual": 2.220446049250313e-16,
+      "polynomials_checked": 50
+    },
+    {
+      "id": "31_dir_10084_column_60",
+      "case": "31_dir_10084",
+      "kind": "column",
+      "index_0based": 60,
+      "nearest_crossing_A": 4.146657323872205e-06,
+      "cap_A": 1.25e-05,
+      "steps_A": [
+        3.317325859097764e-06,
+        2.6538606872782113e-06,
+        1.990395515458658e-06
+      ],
+      "max_root_cosine_residual": 2.220446049250313e-16,
+      "polynomials_checked": 25
+    },
+    {
+      "id": "31_dir_10084_column_91",
+      "case": "31_dir_10084",
+      "kind": "column",
+      "index_0based": 91,
+      "nearest_crossing_A": 7.581724900228437e-06,
+      "cap_A": 1.25e-05,
+      "steps_A": [
+        6.06537992018275e-06,
+        4.8523039361462e-06,
+        3.63922795210965e-06
+      ],
+      "max_root_cosine_residual": 3.3306690738754696e-16,
+      "polynomials_checked": 50
+    },
+    {
+      "id": "31_dir_10084_direction_4",
+      "case": "31_dir_10084",
+      "kind": "direction",
+      "index_0based": 4,
+      "nearest_crossing_A": 1.4279539627023042e-05,
+      "cap_A": 2.5e-05,
+      "steps_A": [
+        1.1423631701618434e-05,
+        9.138905361294748e-06,
+        6.85417902097106e-06
+      ],
+      "max_root_cosine_residual": 5.551115123125783e-16,
+      "polynomials_checked": 125
+    },
+    {
+      "id": "31_dir_10134_column_84",
+      "case": "31_dir_10134",
+      "kind": "column",
+      "index_0based": 84,
+      "nearest_crossing_A": 8.552197738026735e-06,
+      "cap_A": 1.25e-05,
+      "steps_A": [
+        6.841758190421388e-06,
+        5.473406552337111e-06,
+        4.105054914252833e-06
+      ],
+      "max_root_cosine_residual": 3.3306690738754696e-16,
+      "polynomials_checked": 25
+    }
+  ]
+}

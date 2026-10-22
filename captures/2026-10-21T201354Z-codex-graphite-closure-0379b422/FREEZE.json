@@ -1,0 +1,18 @@
+{
+ "purpose":"Test autonomous second-order closure of geometry-fixed axial vector and its graph-cycle projection",
+ "input_scope":"36 already exposed primitive-periodic vertical stiffness matrices and4 fixed intralayer graphs; no new force model or physical bath",
+ "maps":"C maps constrained material displacement into signed axial bond-vector increments; C_cycle applies graph P_cycle to each Cartesian component. Geometry frozen at each relaxed equilibrium. Same linear map applies to rates.",
+ "dynamics":"qddot=-H q with H=Q^T Ksym Q, common scalar carbon mass absorbed into time. State observation is(Cq,Cqdot); full first-order velocity-only closure is not asserted.",
+ "exact_criterion":"Exists L on range(C) with C H=L C iff ker(C) is H-invariant; equivalently C H N=0. For symmetric H, rowspace projector Pc satisfies Pc H(I-Pc)=0.",
+ "rank_threshold":"singular value > max(1e-12,1e-8*smax)",
+ "rank_diagnostics_relative":[0.000001,0.00000001,0.0000000001],
+ "closure_relative_F_tolerance":0.00000001,
+ "closure_statistic":"||Pc H N||F/||H||F where N is orthonormal hidden-space basis",
+ "uncertainty_diagnostic":"Compare coarse/fine stiffness closure; resolved nonclosure requires leakage>1e-8 and>10 times(||Hfine-Hcoarse||F+||Hfine-Hfine^T||F)/||Hfine||F",
+ "witness":"Relative-layer uniform breathing b, normalized in translation quotient, lies in ker(C) and ker(C_cycle); report visible acceleration C H b normalized by ||C||2||H||2. Also preserve SVD hidden-space witness of maximal coupling.",
+ "verification":"Check map agreement against earlier response arrays, kernel residual<=1e-10, algebraic factorization residual via least squares, coarse/fine classification, independent projector/gauge calculation and all source hashes",
+ "rank_warning":"Full column-rank observable closes by invertible encoding and is not evidence of a smaller independent channel",
+ "physical_promotion":0,
+ "physical_bath":"HOLD",
+ "native_UD_correspondence":"OPEN"
+}

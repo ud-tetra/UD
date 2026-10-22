@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-21T21:57:37.428392+00:00",
+  "main_observed": "f0a2ee841cb0feed3ec5e700bfc0a6521cbda2f4",
+  "purpose": "Exposed-data numerical recalibration; no physical preregistration or UD promotion",
+  "rule": "For each coordinate select the largest fine h in the declared ladder below 0.9 times the nearest numerically located angular branch crossing. Coarse=2h, audit=h/2. Coarse may cross; retained fine and audit must not. Require both adjacent full-vector absolute and relative discrepancies below unchanged thresholds. No response-adaptive reselection; failure is HOLD.",
+  "fine_ladder_A": [
+    6.25e-06,
+    3.125e-06,
+    1.5625e-06,
+    7.8125e-07
+  ],
+  "branch_knots": [
+    -0.6666666667,
+    -0.5,
+    -0.3333333333
+  ],
+  "guard": "Polynomial roots for affine bonds and cosine knot, sign checked; numerical guard, not interval arithmetic proof. Other REBO branches not certified. Fixed-graph bond-length guard <1.7 Angstrom.",
+  "direction_rule": "Three old sine regression vectors plus three previously unused cos(sqrt(2/3/5)*index) unit vectors. Fixed coarse/fine/audit steps 2.5e-5,1.25e-5,6.25e-6; all require adjacent absolute/relative stability and agreement with symmetrized retained H. No directional step reselection.",
+  "thresholds": {
+    "absolute": 1e-06,
+    "relative": 1e-05,
+    "antisymmetry_relative": 1e-06,
+    "stationarity": 1e-07
+  },
+  "physical_promotion": 0,
+  "inputs": {
+    "21_dir_0": {
+      "RELAXED.npz": "a841943400addd02b6fae350492ac6c028ee29f8b420726a0423e09c004c8db8",
+      "HESSIAN.npz": "e6da26b7084bdebfedf8970e667825cc2b884485e56954d789f7477897a3b29f"
+    },
+    "21_dir_10024": {
+      "RELAXED.npz": "119c0a10bb0ceaff91e24aa3108e4ce604f226803ec6b7124297f7b4b5201a02",
+      "HESSIAN.npz": "5d33e2ba03c390356d1a8ad9379011da35c9bf559febac8b04af77f074418d6c"
+    },
+    "31_dir_10084": {
+      "RELAXED.npz": "12ec14c8e9ab10937059a73d25fcdeefbbaa52a2b4749aafc50414dbe617cbf6",
+      "HESSIAN.npz": "9d898838a7a85c0bc219f33fe189217852e2d6cf2ce3d9c52201baadfb0b1873"
+    },
+    "31_dir_10134": {
+      "RELAXED.npz": "8f689da0f9a6d6b2f5031df6eb89b7348a53c6fe302ec9f1b28b7a7a145512a3",
+      "HESSIAN.npz": "2302063b0d8f70f124e2aad2566e394a18e05d119b30a26bbd5d8bbbf73448be"
+    }
+  },
+  "source_hashes": {
+    "graphite-step-audit/IMAGE_GAUGE_CORRECTION.json": "2c2f7345c34d55bb4635cfd813e9ef1c101f8359f492749d544d707095830719",
+    "graphite-step-audit/sources/CH.rebo": "70b77656397c0468631af41883d3b781f30432189f749eb0c3d724141055cbd4",
+    "graphite-width/plugin/kcz_width2.so": "d912c9b762c78ebbfb04f0994a9cd3b812c149b36b350b4ebc5b2a4d3db7acdc"
+  }
+}

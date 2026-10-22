@@ -1,0 +1,26 @@
+{
+  "type": "DERIVED",
+  "polynomial": "1-10t^3+15t^4-6t^5",
+  "coefficients_ascending": [
+    "1",
+    "0",
+    "0",
+    "-10",
+    "15",
+    "-6"
+  ],
+  "constraints": [
+    "S(0)=1",
+    "S_prime(0)=0",
+    "S_second(0)=0",
+    "S(1)=0",
+    "S_prime(1)=0",
+    "S_second(1)=0"
+  ],
+  "unique_degree_at_most_5": true,
+  "method": "Exact rational Gaussian elimination; rank6",
+  "dS_dr_for_width_2A": "-15 t^2 (1-t)^2 per A",
+  "force_product_rule": "F_new=S F_raw-U_raw S_prime r_vector/r",
+  "scope": "Polynomial algebra only. Width2A is an imposed diagnostic choice, not UD-derived or fitted. C2 pair regularity away from r=0 does not prove physical correctness.",
+  "physical_promotion": 0
+}

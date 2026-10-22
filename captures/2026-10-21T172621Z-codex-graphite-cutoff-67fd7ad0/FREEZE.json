@@ -1,0 +1,30 @@
+{
+  "cases": [
+    "21_dir_0",
+    "21_dir_10024",
+    "31_dir_10084",
+    "31_dir_10134"
+  ],
+  "cutoffs_A": [
+    16,
+    20,
+    24
+  ],
+  "baseline": "16A matrices from previous capture; not regenerated",
+  "force_steps_A": [
+    0.0001,
+    5e-05
+  ],
+  "cutoff_acceptance": "20A versus24A relative Frobenius K<=1e-4, g<=1e-3; numerical finite-range test, not infinite-cutoff proof",
+  "energy_steps_A": [
+    0.002,
+    0.001,
+    0.0005
+  ],
+  "energy_directions": "first and last Helmert columns, and layer-opposition breathing vector; normalized in sector coordinates",
+  "energy_K_tolerance": "1e-5 + 1e-4*abs(reference), both two finest steps",
+  "energy_g_tolerance": "2e-5 + 1e-3*abs(reference), both two finest steps",
+  "first_derivative_abs_tolerance_eV_per_A": 2e-07,
+  "scope": "four pointwise primitive-periodic vertical sectors, fixed-normal legacy KCz+REBO; no bath/friction/native UD claim",
+  "physical_promotion": 0
+}

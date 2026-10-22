@@ -1,0 +1,32 @@
+{
+  "physical_promotion": 0,
+  "lane": "Development \u2014 no registry entry",
+  "constructor": "Codex root",
+  "reviewers": [],
+  "claims": [
+    {
+      "id": "GRA-BRANCH-AWARE-STATIONARY-HESSIAN",
+      "type": "NUMERICAL",
+      "status": "PASS_2_OF_4",
+      "scope": "Four fixed-cell affine-constrained stationary references; cutoff24,width2, imposed smooth KCz and REBO. No physical bath, friction, native clock, or UD-specific discrimination."
+    },
+    {
+      "id": "GRA-ANGULAR-BRANCH-GUARD",
+      "type": "NUMERICAL",
+      "status": "SIX_COLUMNS_REDUCED",
+      "scope": "Three internal gC knots numerically guarded in retained stencils, not all REBO branches or rigorous interval certification"
+    },
+    {
+      "id": "GRA-INDEPENDENT-REVIEW",
+      "type": "OPEN",
+      "status": "PENDING",
+      "scope": "Constructor recomputation does not supply non-constructor review"
+    },
+    {
+      "id": "GRA-PHYSICAL-BATH",
+      "type": "OPEN",
+      "status": "HOLD",
+      "scope": "No material map, native clock, source-selected loss, or physical friction prediction"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-21T21:10:31.656077+00:00",
+  "purpose": "Separate finer full-matrix qualification after primary failure; no overwrites of original data or gates",
+  "selection_basis": "Exposed eight-column step ladder supports6.25e-6/3.125e-6 pair; this is adaptive numerical refinement, not preregistered held-out validation",
+  "hessian_steps_A": [
+    6.25e-06,
+    3.125e-06
+  ],
+  "directional_step_A": 1.5625e-06,
+  "thresholds": "All absolute/relative/symmetry/stability/coupling criteria unchanged from FREEZE.json; fresh directions use same three deterministic vectors at the declared finer step",
+  "inputs": {
+    "21_dir_0/RELAXED.npz": "a841943400addd02b6fae350492ac6c028ee29f8b420726a0423e09c004c8db8",
+    "21_dir_10024/RELAXED.npz": "119c0a10bb0ceaff91e24aa3108e4ce604f226803ec6b7124297f7b4b5201a02",
+    "31_dir_10084/RELAXED.npz": "12ec14c8e9ab10937059a73d25fcdeefbbaa52a2b4749aafc50414dbe617cbf6",
+    "31_dir_10134/RELAXED.npz": "8f689da0f9a6d6b2f5031df6eb89b7348a53c6fe302ec9f1b28b7a7a145512a3"
+  },
+  "physical_promotion": 0
+}
