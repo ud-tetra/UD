@@ -1,0 +1,110 @@
+{
+  "format": "UD_QUADRATURE_EVIDENCE_1",
+  "profile": {
+    "dataset_doi": "10.11588/DATA/6MEKHI",
+    "waveform_sha256": "7966700a6208e2bd2b5829a32b38cce7016f0c3460ace2708c85bac8577c282c",
+    "kernel_sha256": "5beebe40fa2bfe744a0a64ee57401e77334b925bf0a23c0d2f24cafcd60ff254",
+    "apparatus_run": "UNRESOLVED_RIECHERT_FILE6385",
+    "channels": [
+      1
+    ],
+    "start_s": "0",
+    "end_s": "16183/1953125",
+    "sample_rate_nominal_Hz": "1953125",
+    "carrier_Hz": "501953125/16184",
+    "target": "full_complex_envelope_including_tail",
+    "spectral_measure": "complex_measure_total_variation_V",
+    "sample_window": 2049,
+    "timing_scope": "all_displaced_sample_intervals; common epoch required for cross-channel extension",
+    "implementation": "declared_serial_binary64_dot_products_only"
+  },
+  "synthetic_fixture": true,
+  "artifacts": {
+    "bounds/inband_tv.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"V\",\"value\":\"1\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"inband_tv\",\"inputs\":[],\"origin\":\"independent_source_bound\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/inband_tv.json\",\"role\":\"inband_tv\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/inband_tv.json": "{\"evidence_sha256\":\"3067f1779a5e2ee80f25978c5b1e8323dccbbf5f93ae001863ed510de8ac48b6\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"inband_tv\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/envelope_band.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"Hz\",\"value\":\"50\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"envelope_band\",\"inputs\":[],\"origin\":\"independent_source_bound\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/envelope_band.json\",\"role\":\"envelope_band\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/envelope_band.json": "{\"evidence_sha256\":\"9eabbe702eaea99683dd24b6543a1ae576c059508b434f0916f802e69f38c446\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"envelope_band\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/tail_tv.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"V\",\"value\":\"1/1000\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"tail_tv\",\"inputs\":[],\"origin\":\"independent_source_bound\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/tail_tv.json\",\"role\":\"tail_tv\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/tail_tv.json": "{\"evidence_sha256\":\"41f52f267f9964312e9e6ea7b2d507da3425217b020bdf03042c2ab279412cce\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"tail_tv\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/full_amplitude.json": "{\"bound\":{\"direction\":\"lower\",\"meaning\":\"deterministic_uniform\",\"unit\":\"V\",\"value\":\"1/2\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"full_amplitude\",\"inputs\":[],\"origin\":\"independent_source_bound\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/full_amplitude.json\",\"role\":\"full_amplitude\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/full_amplitude.json": "{\"evidence_sha256\":\"056f5f174c1634f37fb1bf0416d7027d87a28aa90939f02eadfb3106cef0c834\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"full_amplitude\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/tail_absolute_frequency.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"Hz\",\"value\":\"200000\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"tail_absolute_frequency\",\"inputs\":[],\"origin\":\"independent_source_bound\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/tail_absolute_frequency.json\",\"role\":\"tail_absolute_frequency\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/tail_absolute_frequency.json": "{\"evidence_sha256\":\"70cb7e77280b5d93d3c498305f6de2a201c3f3036b612eaf29cdafb403e00e90\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"tail_absolute_frequency\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/constant_baseline.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"V\",\"value\":\"3\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"constant_baseline\",\"inputs\":[],\"origin\":\"external_calibration\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/constant_baseline.json\",\"role\":\"constant_baseline\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/constant_baseline.json": "{\"evidence_sha256\":\"d8f63267e614b9304f5862409f8a7518cedd17fffb454b86f6f217d995bd9483\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"constant_baseline\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/noise_quantization.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"V\",\"value\":\"1/10000\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"noise_quantization\",\"inputs\":[],\"origin\":\"external_calibration\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/noise_quantization.json\",\"role\":\"noise_quantization\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/noise_quantization.json": "{\"evidence_sha256\":\"a5956010815fc949c545608e59baccc1b1f005ebadc4287d482ee092d9afc21d\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"noise_quantization\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/relative_gain.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"1\",\"value\":\"1/100000\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"relative_gain\",\"inputs\":[],\"origin\":\"external_calibration\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/relative_gain.json\",\"role\":\"relative_gain\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/relative_gain.json": "{\"evidence_sha256\":\"9495662a32e7e43bb0532c436dd73275dbf330abb44ba36a435e317197409f0a\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"relative_gain\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/time_error.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"s\",\"value\":\"1/5000000000\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"time_error\",\"inputs\":[],\"origin\":\"external_calibration\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/time_error.json\",\"role\":\"time_error\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/time_error.json": "{\"evidence_sha256\":\"3dd5160f9f962f58e4ad03db86e54bb65c8a7cca01bb019a0de181a34bf2a3f1\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"time_error\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/clean_slope.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"V/s\",\"value\":\"250000\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"clean_slope\",\"inputs\":[],\"origin\":\"external_calibration\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/clean_slope.json\",\"role\":\"clean_slope\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/clean_slope.json": "{\"evidence_sha256\":\"bfdd95376eab6e6efdc0c28bf5017fff140410ab192105e085d60638c4e02140\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"clean_slope\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/baseline_variation.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"V\",\"value\":\"1/20000\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"baseline_variation\",\"inputs\":[],\"origin\":\"external_calibration\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/baseline_variation.json\",\"role\":\"baseline_variation\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/baseline_variation.json": "{\"evidence_sha256\":\"39d394a54aa4baad2170c866da1707f7637218f73208779eb1b6f10fdc887f76\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"baseline_variation\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}",
+    "bounds/input_magnitude.json": "{\"bound\":{\"direction\":\"upper\",\"meaning\":\"deterministic_uniform\",\"unit\":\"V\",\"value\":\"5\"},\"constructor_id\":\"SYNTHETIC_CONSTRUCTOR\",\"id\":\"input_magnitude\",\"inputs\":[],\"origin\":\"external_calibration\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_path\":\"reviews/input_magnitude.json\",\"role\":\"input_magnitude\",\"synthetic_fixture\":true,\"validity\":{\"end_s\":\"16183/1953125\",\"start_s\":\"0\"}}",
+    "reviews/input_magnitude.json": "{\"evidence_sha256\":\"3dc6c466663333ee4f575622218e71f92d956b7f6024f7ee74fe7c7d9f3e4eee\",\"profile_sha256\":\"eac14098c206f0c7ce9126cfa13a3bb5a1b4d829a0c2db2a60e0b7d7d0c47aee\",\"review_basis\":\"inspected_method_and_witness_bytes\",\"reviewer_id\":\"SYNTHETIC_REVIEWER\",\"role\":\"input_magnitude\",\"synthetic_fixture\":true,\"verdict\":\"SCOPED_BOUND_SUPPORTED\"}"
+  },
+  "evidence": [
+    {
+      "id": "inband_tv",
+      "path": "bounds/inband_tv.json",
+      "sha256": "3067f1779a5e2ee80f25978c5b1e8323dccbbf5f93ae001863ed510de8ac48b6"
+    },
+    {
+      "id": "envelope_band",
+      "path": "bounds/envelope_band.json",
+      "sha256": "9eabbe702eaea99683dd24b6543a1ae576c059508b434f0916f802e69f38c446"
+    },
+    {
+      "id": "tail_tv",
+      "path": "bounds/tail_tv.json",
+      "sha256": "41f52f267f9964312e9e6ea7b2d507da3425217b020bdf03042c2ab279412cce"
+    },
+    {
+      "id": "full_amplitude",
+      "path": "bounds/full_amplitude.json",
+      "sha256": "056f5f174c1634f37fb1bf0416d7027d87a28aa90939f02eadfb3106cef0c834"
+    },
+    {
+      "id": "tail_absolute_frequency",
+      "path": "bounds/tail_absolute_frequency.json",
+      "sha256": "70cb7e77280b5d93d3c498305f6de2a201c3f3036b612eaf29cdafb403e00e90"
+    },
+    {
+      "id": "constant_baseline",
+      "path": "bounds/constant_baseline.json",
+      "sha256": "d8f63267e614b9304f5862409f8a7518cedd17fffb454b86f6f217d995bd9483"
+    },
+    {
+      "id": "noise_quantization",
+      "path": "bounds/noise_quantization.json",
+      "sha256": "a5956010815fc949c545608e59baccc1b1f005ebadc4287d482ee092d9afc21d"
+    },
+    {
+      "id": "relative_gain",
+      "path": "bounds/relative_gain.json",
+      "sha256": "9495662a32e7e43bb0532c436dd73275dbf330abb44ba36a435e317197409f0a"
+    },
+    {
+      "id": "time_error",
+      "path": "bounds/time_error.json",
+      "sha256": "3dd5160f9f962f58e4ad03db86e54bb65c8a7cca01bb019a0de181a34bf2a3f1"
+    },
+    {
+      "id": "clean_slope",
+      "path": "bounds/clean_slope.json",
+      "sha256": "bfdd95376eab6e6efdc0c28bf5017fff140410ab192105e085d60638c4e02140"
+    },
+    {
+      "id": "baseline_variation",
+      "path": "bounds/baseline_variation.json",
+      "sha256": "39d394a54aa4baad2170c866da1707f7637218f73208779eb1b6f10fdc887f76"
+    },
+    {
+      "id": "input_magnitude",
+      "path": "bounds/input_magnitude.json",
+      "sha256": "3dc6c466663333ee4f575622218e71f92d956b7f6024f7ee74fe7c7d9f3e4eee"
+    }
+  ]
+}
