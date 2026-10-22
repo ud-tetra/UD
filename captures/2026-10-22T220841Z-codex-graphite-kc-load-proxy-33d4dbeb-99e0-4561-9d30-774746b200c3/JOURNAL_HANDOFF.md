@@ -1,0 +1,3 @@
+# Load-proxy handoff
+
+Recovered the supplemental KC pair law/parameters from a SHA-recorded arXiv source tar and independently reconstructed the index-seven flat rigid interface. Analytic z derivatives give a conditional conventional first-shell local stiffness logarithmic pressure slope 4.45×10^-4 MPa^-1 at z=3.46 Å and spherical cutoff 16 Å, with 14/18 Å cutoffs giving 4.56/4.50×10^-4. The 3.46 Å surface spatial correlation with source grid is 0.99935 but corrugation magnitude is 3.8% low and mean energy offset 0.501 meV/atom; exact source implementation not recovered. Manuscript v12 distinguishes this equilibrium load proxy from measured friction and UD damping. No physical promotion.
