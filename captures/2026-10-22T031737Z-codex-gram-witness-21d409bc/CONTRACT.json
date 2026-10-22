@@ -1,0 +1,10 @@
+{
+ "version":"0.1", "status":"CONSTRUCTOR_FROZEN_CONDITIONAL_DESIGN", "physical_promotion":0,
+ "nominal_mode_integers":"100 through199 inclusive", "nominal_interval_s":"1", "per_mode_frequency_error_Hz":"1/200", "relative_interval_error":"1/100000000",
+ "source_class":"Constant distinct frequencies over actual monitor interval; common frequency shift arbitrary; independent frequency and duration bounds. Time warping/nonstationarity must be separately bounded in monitor error or a new model.",
+ "gram_bound":"q_lm=abs(n_l-n_m)*rho+2*eta*T0*(1+rho); offdiag<=q_lm/(abs(n_l-n_m)-q_lm) when denominator positive; lambda_lower=1-max_row_sum.",
+ "acceptance_lambda_floor":"9/10", "norm_factor_upper":"211/20", "monitor_RMS_V":"11/200000", "total_waveform_monitor_error_RMS_V":"1/50000", "outside_model_TV_V":"1/5000", "tail_target_V":"1/1000",
+ "monitor_error_scope":"Normalized L2 error of isolated finite-mode waveform estimate; include projected outside-model contamination, clock normalization, gain, numerical and reference uncertainty. Not merely electronics noise.",
+ "negative_controls":["prior60uV RMS does not fit this robust sufficient budget","50mHz mode errors fail selected lambda/TV sufficient gate","500mHz errors permit adjacent collision and return HOLD","outside-model300uV exceeds chosen tail budget","near-collision distinct tones have small RMS and large TV"],
+ "claim_scope":"Source/monitor design only; no measured offsets, experiment or admission; original orthogonal theorem remains a special case."
+}
