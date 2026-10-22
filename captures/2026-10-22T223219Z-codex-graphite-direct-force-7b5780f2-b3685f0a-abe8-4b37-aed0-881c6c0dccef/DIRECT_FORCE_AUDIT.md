@@ -1,0 +1,9 @@
+# Direct two-shell driven straight-path calculation
+
+Status: NUMERICAL_CONDITIONAL_CONVENTIONAL_DYNAMIC_SURROGATE; development — no registry entry; physical promotion 0.
+
+The 2023 Minkin PRB 108 085411 source SI Eq S1/Table S1 supplies the flat-layer KC pair law. Data archive DOI 10.17632/svnpzbjc3t.1, SHA-256 b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875, supplies X/Y/Z grid positions and source comparison. Reconstructed E/Ez/Ezz at 16 Å are fitted to the first and norm-three allowed common reciprocal shells. The fit and its source mismatch are inherited from manuscript v13. No imported source archive program is run.
+
+For each straight periodic path, analytically eliminate height from the quadratic Taylor potential, use its envelope tangential derivative, and compute the depinning threshold. Solve the overdamped periodic traversal integral at prescribed gamma*v for three reduced rates. The absolute gamma and physical time are not inferred from UD or experiment. At a reference tensile equivalent of -10.74 MPa, the three depinning shear strengths are 15.551–15.582 MPa. Fixed-gamma pressure slopes range 0.006850 to 0.000683 shear MPa per normal MPa as reduced speed rises 0.1 to 10. This is a conditional conventional mechanism for speed-dependent load response.
+
+Verification: analytic envelope gradient agrees with centered spatial differences; vertical curvature remains positive along each path; three nearest directions calculated; uniform quadrature 2048/4096/8192 samples and pressure halfspans 1/2/5 MPa checked. The manuscript table rounds results. The path is fixed straight and not optimized or finite-contact; source PES mismatch, tensile reference, temperature, instrument estimator, material damping and experimental load/rate traces remain open. No UD-specific coefficient is extracted.
