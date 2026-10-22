@@ -1,0 +1,45 @@
+{
+  "status": "EXACT_CONDITIONAL_WASHBOARD_WITH_NUMERICAL_QUADRATURE_CHECK",
+  "input_status": "Two-shell barrier and local load derivative are a qualified conventional KC reconstruction, not experimental friction.",
+  "model": "U(x,P)=Delta(P)/2*(1-cos(2*pi*x/ell)); gamma(P)*dx/dt=F-\u2202xU; constant-force, deterministic, overdamped, 1D, F>Fc.",
+  "barrier_microev_per_atom": 75.18,
+  "barrier_slope_microev_per_atom_per_mpa": 0.033228,
+  "period_a": 0.9296082124053275,
+  "depinning_force_microev_per_a_per_atom": 254.0693300092097,
+  "depinning_force_slope_microev_per_a_per_atom_per_mpa": 0.11229337187478078,
+  "depinning_shear_mpa": 15.54046668126985,
+  "estimator_note": "F is total drive force; F-gamma*v is excess over bare drag; these are distinct load slopes if gamma depends on pressure.",
+  "rows": [
+    {
+      "reduced_speed_gamma_v_over_fc": 0.1,
+      "drive_force_microev_per_a_per_atom": 255.33651657340747,
+      "excess_force_microev_per_a_per_atom": 229.92958357248648,
+      "load_slope_microev_per_a_per_atom_per_mpa": 0.11173608122948729,
+      "load_slope_shear_mpa_per_mpa": 0.006834476429640544,
+      "ratio_to_depinning_slope": 0.9950371902099892,
+      "log_gamma_slope_per_mpa_for_zero_total_force_slope": -0.04419792498004787,
+      "log_gamma_slope_per_mpa_for_zero_excess_force_slope": 0.0048838157374116115
+    },
+    {
+      "reduced_speed_gamma_v_over_fc": 1,
+      "drive_force_microev_per_a_per_atom": 359.30829228206994,
+      "excess_force_microev_per_a_per_atom": 105.23896227286025,
+      "load_slope_microev_per_a_per_atom_per_mpa": 0.07940340473496021,
+      "load_slope_shear_mpa_per_mpa": 0.0048568080437662595,
+      "ratio_to_depinning_slope": 0.7071067811865475,
+      "log_gamma_slope_per_mpa_for_zero_total_force_slope": -0.0004419792498004788,
+      "log_gamma_slope_per_mpa_for_zero_excess_force_slope": 0.001067032299155802
+    },
+    {
+      "reduced_speed_gamma_v_over_fc": 10,
+      "drive_force_microev_per_a_per_atom": 2553.365165734075,
+      "excess_force_microev_per_a_per_atom": 12.671865641978002,
+      "load_slope_microev_per_a_per_atom_per_mpa": 0.011173608122948729,
+      "load_slope_shear_mpa_per_mpa": 0.0006834476429640545,
+      "ratio_to_depinning_slope": 0.09950371902099892,
+      "log_gamma_slope_per_mpa_for_zero_total_force_slope": -4.419792498004788e-06,
+      "log_gamma_slope_per_mpa_for_zero_excess_force_slope": 0.0008861628985615764
+    }
+  ],
+  "physical_promotion": 0
+}
