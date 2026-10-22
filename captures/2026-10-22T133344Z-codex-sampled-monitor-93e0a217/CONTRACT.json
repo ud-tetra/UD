@@ -1,0 +1,14 @@
+{
+ "version":"0.1", "status":"CONSTRUCTOR_FROZEN_CONDITIONAL_SAMPLED_MONITOR", "physical_promotion":0,
+ "monitor_samples":1024, "nominal_span_s":"1", "nominal_modes":"100..199 inclusive", "per_mode_frequency_error_Hz":"1/200", "relative_affine_clock_error":"1/100000000", "per_sample_time_residual_s":"1/100000000",
+ "sample_times":"t_j=t_epoch+(1+alpha)*j*T0/N+xi_j, j=0..N-1; abs(alpha)<=rho and abs(xi_j)<=tau. Epoch arbitrary. No unbounded time warp.",
+ "source":"p=sum a_l exp(2pi i f_l t), f_l=f_common+n_l/T0+e_l, abs(e_l)<=eta; fixed coefficients/frequencies throughout the witness interval. True residual tail is p+r_out with outside-model spectral TV<=1/100000V.",
+ "complex_sample_error_V":"1/50000 weighted RMS total, excluding outside-model signal accounted separately; includes I/Q calibration, acquisition/quantization, baseline and numerical error.",
+ "calibration_allocation_V":{"acquisition_quantization":"1/100000","quadrature_matrix":"1/200000","baseline":"3/1000000","numerical":"1/500000"},
+ "quadrature_matrix_requirement":"operator norm calibration error<=1/1000000 with raw two-component vector norm<=5V gives5uV; full applicable frequency/voltage/path response needs independent evidence.",
+ "digital_RMS_ceiling_V":"11/200000", "outside_model_TV_V":"1/100000", "lambda_floor":"9/10", "norm_factor":"211/20", "tail_target_V":"1/1000",
+ "tail_bound":"T_tail<=C*(r_d+epsilon_samples+T_out)+T_out. Direct total-tail samples; no isolation assumption hidden in epsilon.",
+ "arithmetic":"Gram bound and digital RMS over exact serialized binary64 dyadics use Fraction/integer arithmetic. Numerical fixture waveform generation is synthetic diagnostic only; no measured I/Q accuracy is inferred.",
+ "negative_controls":["64-sample bank permits alias/rank loss","excess clock jitter fails selected Gram gate","old200uV outside bound fails sufficient raw-monitor budget","tampered large sample fails exact RMS ceiling","malformed/nonfinite/wrong-length sampled records return HOLD","integer modes100 and1124 alias on1024 nominal samples"],
+ "limits":"Independent complex monitor, source class, stationarity, time bounds, matrix calibration, source completeness and10uV outside-TV cap unverified. Old contracts retained; no empirical admission or action estimate."
+}
