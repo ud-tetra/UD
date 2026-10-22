@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ud:quadrature-evidence:1",
+  "title": "UD quadrature evidence packet structure v0.1",
+  "description": "Structural JSON schema. Exact units/bounds, profile matching, byte hashes, review allowlist, dependency acyclicity and provenance constraints are additionally enforced by admit.py. No empirical admission.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "profile",
+    "synthetic_fixture",
+    "artifacts",
+    "evidence"
+  ],
+  "properties": {
+    "format": {
+      "const": "UD_QUADRATURE_EVIDENCE_1"
+    },
+    "profile": {
+      "type": "object"
+    },
+    "synthetic_fixture": {
+      "type": "boolean"
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "maxLength": 199999
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_]{0,63}$"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    }
+  }
+}
