@@ -1,0 +1,134 @@
+{
+  "receipt_id": "2026-10-22T214903Z-codex-graphite-identifiability-623c4b92-ec0cc8df-242d-4c1b-b6cc-25a083755248-inverse",
+  "method": "user supplied UD mathematical analysis protocol v1.0; local JSON schema as referenced template unavailable",
+  "date_utc": "2026-10-22",
+  "question": "Whether isotropic damping/stiffness or full lateral frequency response identifies C3 orbit weights",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "coefficient_domain": {
+    "exact": "Q for seven-orbit K_i and Q; R for weights and material coefficients",
+    "frequency": "real omega, complex response with e^-i\u03c9t",
+    "clock": "lab seconds imported; native UD clock OPEN"
+  },
+  "objects": [
+    {
+      "id": "K_i",
+      "type": "seven 2x14 geometric coupling matrices",
+      "domain": "vertex bath R14, m",
+      "codomain": "lateral dual R2",
+      "metric": "unit vertex and Euclidean physical lateral",
+      "source": "captures/2026-10-22T214428Z-codex-graphite-harmonic-source-49d5bb28-64263b7c-7b88-4f45-a8a9-e0cb34f52956",
+      "origin": "imported exact"
+    },
+    {
+      "id": "Q",
+      "type": "rank-six rational orbit-contrast Laplacian",
+      "units": "dimensionless",
+      "source": "captures/2026-10-22T214428Z-codex-graphite-harmonic-source-49d5bb28-64263b7c-7b88-4f45-a8a9-e0cb34f52956",
+      "origin": "imported exact"
+    },
+    {
+      "id": "w",
+      "type": "seven C3 orbit weights",
+      "units": "dimensionless",
+      "origin": "OPEN material input; uniform gauge unobservable"
+    },
+    {
+      "id": "alpha",
+      "expression": "w^TQw",
+      "units": "dimensionless",
+      "origin": "derived geometric scalar"
+    },
+    {
+      "id": "D_eff",
+      "type": "complex frequency response",
+      "units": "J/m\u00b2 per top Bravais cell",
+      "normalization": "Fourier e^-i\u03c9t; two independent identical vertex baths",
+      "origin": "derived conditional"
+    },
+    {
+      "id": "g_c_kappa_d",
+      "type": "physical source and bath parameters",
+      "units": "g_c and kappa J/m\u00b2; d N s/m",
+      "origin": "OPEN imported material inputs"
+    }
+  ],
+  "quantities": [
+    {
+      "id": "observable_factorization",
+      "exact_expression": "D_eff(\u03c9,w)=D0(\u03c9)-(g_c\u00b2/2) alpha(w)/(kappa-m_b\u03c9\u00b2-i\u03c9d)",
+      "source": "note Eq.1",
+      "origin": "derived conditional",
+      "dependencies": [
+        "Q",
+        "isotropic degenerate vertex bath"
+      ],
+      "units": "J/m\u00b2"
+    },
+    {
+      "id": "Jacobian",
+      "exact_expression": "column(g_c\u00b2/kappa,d g_c\u00b2/kappa\u00b2) (Qw)^T; rank 1 for nonuniform w, 0 at uniform",
+      "source": "note Eq.2",
+      "origin": "derived conditional",
+      "units": "mixed per-weight response",
+      "assumptions": [
+        "g_c nonzero",
+        "kappa positive"
+      ]
+    },
+    {
+      "id": "counterexample",
+      "exact_expression": "alpha(e1)=alpha(e2)=1; equal sum/norm, inequivalent by weighted graph degree",
+      "source": "note \u00a71",
+      "origin": "derived exact",
+      "units": "dimensionless"
+    },
+    {
+      "id": "inverse_cross_hessian",
+      "exact_expression": "b_i=1/2 tr(G^-1 K_i K(w)^T)=sum_j Q_ij w_j; solve Qw=b and 1^T w=0",
+      "source": "note Eq.3",
+      "origin": "derived conditional",
+      "units": "dimensionless after calibrated g_c",
+      "assumptions": [
+        "site-resolved mapped bath",
+        "known coupling prefactor"
+      ]
+    },
+    {
+      "id": "intervention",
+      "exact_expression": "w=w0*1+epsilon(e1-e2); alpha=(5/2)epsilon\u00b2",
+      "source": "note Eq.4",
+      "origin": "derived conditional",
+      "units": "dimensionless epsilon, gamma in N s/m",
+      "assumptions": [
+        "C3 preservation",
+        "fixed bath parameters"
+      ]
+    }
+  ],
+  "techniques": {
+    "rational": "exact Fraction rank/Gram and explicit collision",
+    "group": "C3 orbit graph and weighted-edge distinction",
+    "projection": "full matrix versus isotropic Gram",
+    "fit_null_sensitivity": "identifiability no-go and frozen perturbation; no graphite fit",
+    "physical_units": "J,m,N,s explicit",
+    "clock": "no UD native clock",
+    "prime_factorization": "N/A",
+    "modular_arithmetic": "N/A"
+  },
+  "checks": {
+    "proof": "GRAPHITE_WEIGHT_IDENTIFIABILITY_AND_INTERVENTION.md",
+    "exact_constructor": "verify_weight_identifiability.py passes",
+    "independent_review": false,
+    "empirical_test": false,
+    "CI_scope": "repository integrity only"
+  },
+  "interpretation_limits": [
+    "nondegenerate bath can expose additional combinations",
+    "site-resolved bath requires physical vertex map",
+    "g_c unknown leaves scale ambiguity",
+    "total friction has additional channels",
+    "Q exact under chosen carrier and unit metrics only"
+  ],
+  "status": "EXACT_CONDITIONAL_IDENTIFIABILITY_NO_GO; OPEN_MATERIAL_SOURCE"
+}
