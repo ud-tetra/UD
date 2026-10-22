@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "status": "UNSCORED_DATA_CONTRACT",
+  "observable": {
+    "name": "lateral friction force or consistently defined estimator",
+    "unit": "must be supplied",
+    "arguments": [
+      "twist_angle_deg",
+      "normal_load",
+      "sliding_speed",
+      "temperature",
+      "contact_preparation_id"
+    ]
+  },
+  "baseline": {
+    "name": "conventional_honeycomb_moire_contact_model",
+    "freeze_before_held_out_data": true,
+    "must_include_2_1_peak": true,
+    "calibration_data_disjoint_from_test": true
+  },
+  "test": {
+    "theta_plus_exact": "acos(13/14) degrees",
+    "theta_minus_exact": "60 degrees - theta_plus",
+    "R": "F_observed - F_baseline",
+    "R_even": "(R_plus + R_minus)/2",
+    "R_odd": "(R_plus - R_minus)/2",
+    "load_derivative": "requires measured load series and uncertainties",
+    "UD_numeric_prediction": null
+  },
+  "required_inputs": [
+    "raw_force_traces",
+    "angular_registration",
+    "normal_load_calibration",
+    "velocity",
+    "temperature",
+    "contact_area_or_geometry",
+    "uncertainties",
+    "detection_limit",
+    "baseline_model_and_frozen_parameters",
+    "held_out_partition"
+  ],
+  "admission": "No UD empirical score until material coupling, damping, readout and signed dimensioned residual are frozen before held-out evaluation."
+}
