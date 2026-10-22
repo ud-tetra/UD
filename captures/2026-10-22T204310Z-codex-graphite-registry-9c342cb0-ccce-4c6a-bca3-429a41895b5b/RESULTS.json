@@ -1,0 +1,33 @@
+{
+  "status": "EXACT_CONDITIONAL_GRAPHITE_COMMON_FOURIER_SHELL",
+  "physical_promotion": 0,
+  "coincidence_filter": "h1-3*h2 congruent 0 modulo 7",
+  "primitive_first_reciprocal_shell": "all six cancel in infinite rigid periodic average",
+  "first_surviving_shell": {
+    "norm_squared_ratio": 7,
+    "C3_positive_orbit": [
+      [
+        3,
+        1
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        -2,
+        -3
+      ]
+    ],
+    "basis_product": "omega^2",
+    "basis_modulus": 1
+  },
+  "first_shell_barrier_per_top_Bravais_cell": "Delta E_1(z)=9*abs(V_star(z)); assumes only this shell and real isotropic pair Fourier coefficient",
+  "equilibrium_load_identity": "d Delta H / d L = z_top - z_bottom on smooth relaxed branches, compressive L per cell",
+  "weak_corrugation_slope": "d Delta H / d L = -9 d_z abs(V_star)/k_z + higher corrugation",
+  "exponential_specialization": "d_L ln Delta H ~= kappa/k_z when V_star=V_0 exp(-kappa z)",
+  "friction_caveat": "barrier slope is not measured friction slope without a dynamics/readout law",
+  "empirical_fit": false,
+  "verification": "exact rational shell/coset/basis enumeration and solvable equilibrium load identity; analytical first-shell range",
+  "source": "Chen et al., Phys. Rev. Lett. 137, 166201 (2026), DOI 10.1103/ly48-b4l2, public abstract only"
+}
