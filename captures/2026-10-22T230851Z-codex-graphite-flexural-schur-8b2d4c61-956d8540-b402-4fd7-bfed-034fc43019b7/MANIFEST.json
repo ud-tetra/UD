@@ -1,0 +1,54 @@
+{
+  "capture_id": "2026-10-22T230851Z-codex-graphite-flexural-schur-8b2d4c61-956d8540-b402-4fd7-bfed-034fc43019b7",
+  "created_at_utc": "2026-10-22T23:10:33.334144+00:00",
+  "status": "NUMERICAL_CONDITIONAL_FLEXURAL_SCHUR_RESPONSE",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "7b49292",
+    "parent_draft_PR": 433,
+    "sources": [
+      "UD v18 three-neighbor local-normal source projection",
+      "Minkin et al. PRB 108 085411 (2023) public PES SHA b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875",
+      "Wei et al. Nano Lett. 13 26\u201330 (2013) bending rigidity",
+      "Han et al. Nat. Mater. 19 305\u2013309 (2020) monolayer bending range",
+      "user-supplied UD ledger v0.39 and governance v1.0"
+    ]
+  },
+  "verification_scope": "14-site graph spectrum/symmetry; 0.001/0.003 \u00c5 four-point height Hessian check; 0.0001/0.0003 \u00c5 lateral derivative and cutoff-crossing control; positive definiteness threshold; source/complement Schur algebra and parameter sweep; SHA-checked replay; repository verifier.",
+  "scientific_status": "EXACT_CONDITIONAL_PLATE_AND_SCHUR_ALGEBRA; NUMERICAL_CONVENTIONAL_STATIC_RESPONSE; OPEN_DAMPING_AND_UD_FRICTION",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-22T225658Z-codex-graphite-three-neighbor-kc-46d38a7f-1ef8f60e-1510-42e1-81d1-332643cb9319/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v18.md"
+  ],
+  "supersession_reason": "Adds a declared discrete flexural stiffness and tests how the previously derived static mixed Hessian changes a quadratic local response.",
+  "files": [
+    {
+      "path": "captures/2026-10-22T230851Z-codex-graphite-flexural-schur-8b2d4c61-956d8540-b402-4fd7-bfed-034fc43019b7/FLEXURAL_SCHUR_AUDIT.md",
+      "sha256": "48f25de47b3718ad930eef67df7abee661691353cb391f1e05e0dd1c3e374a6b",
+      "size_bytes": 3290
+    },
+    {
+      "path": "captures/2026-10-22T230851Z-codex-graphite-flexural-schur-8b2d4c61-956d8540-b402-4fd7-bfed-034fc43019b7/FLEXURAL_SCHUR_SWEEP.json",
+      "sha256": "11f5b06953cc1af7d8d781af9b152e4e661c0a42b02caf6ea518687a1ffa1dca",
+      "size_bytes": 31806
+    },
+    {
+      "path": "captures/2026-10-22T230851Z-codex-graphite-flexural-schur-8b2d4c61-956d8540-b402-4fd7-bfed-034fc43019b7/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v19.md",
+      "sha256": "1ba8a5a4e05d5021a927dc7ff8f93a7e718c504321dc9b59298855ab3b01fcdb",
+      "size_bytes": 65223
+    },
+    {
+      "path": "captures/2026-10-22T230851Z-codex-graphite-flexural-schur-8b2d4c61-956d8540-b402-4fd7-bfed-034fc43019b7/JOURNAL_HANDOFF.md",
+      "sha256": "02b89a9115341dd521d6b10615ab8051b43393c95a3a58265faf10d311a36fa2",
+      "size_bytes": 622
+    },
+    {
+      "path": "captures/2026-10-22T230851Z-codex-graphite-flexural-schur-8b2d4c61-956d8540-b402-4fd7-bfed-034fc43019b7/derive_graphite_flexural_schur.py",
+      "sha256": "299a8dd4e61573d5cb23bfceb7b023a4af7f50c9c135207129eae1c0a99b4dc7",
+      "size_bytes": 6568
+    }
+  ]
+}
