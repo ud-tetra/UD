@@ -1,0 +1,354 @@
+{
+  "status": "BLANK_PENDING_NOT_EVIDENCE",
+  "instructions": "Replace nulls only from actual applicable evidence; changing required_constraint is a new contract. Never re-use synthetic receipt approvals.",
+  "templates": [
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "inband_tv",
+      "required_constraint": {
+        "value": "1",
+        "unit": "V",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "inband_tv",
+        "role": "inband_tv",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "V",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/inband_tv.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "envelope_band",
+      "required_constraint": {
+        "value": "50",
+        "unit": "Hz",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "envelope_band",
+        "role": "envelope_band",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "Hz",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/envelope_band.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "tail_tv",
+      "required_constraint": {
+        "value": "1/1000",
+        "unit": "V",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "tail_tv",
+        "role": "tail_tv",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "V",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/tail_tv.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "full_amplitude",
+      "required_constraint": {
+        "value": "1/2",
+        "unit": "V",
+        "direction": "lower"
+      },
+      "bound_record": {
+        "id": "full_amplitude",
+        "role": "full_amplitude",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "V",
+          "direction": "lower",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/full_amplitude.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "tail_absolute_frequency",
+      "required_constraint": {
+        "value": "200000",
+        "unit": "Hz",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "tail_absolute_frequency",
+        "role": "tail_absolute_frequency",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "Hz",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/tail_absolute_frequency.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "constant_baseline",
+      "required_constraint": {
+        "value": "3",
+        "unit": "V",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "constant_baseline",
+        "role": "constant_baseline",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "V",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/constant_baseline.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "noise_quantization",
+      "required_constraint": {
+        "value": "1/10000",
+        "unit": "V",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "noise_quantization",
+        "role": "noise_quantization",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "V",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/noise_quantization.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "relative_gain",
+      "required_constraint": {
+        "value": "1/100000",
+        "unit": "1",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "relative_gain",
+        "role": "relative_gain",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "1",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/relative_gain.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "time_error",
+      "required_constraint": {
+        "value": "1/5000000000",
+        "unit": "s",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "time_error",
+        "role": "time_error",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "s",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/time_error.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "clean_slope",
+      "required_constraint": {
+        "value": "250000",
+        "unit": "V/s",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "clean_slope",
+        "role": "clean_slope",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "V/s",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/clean_slope.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "baseline_variation",
+      "required_constraint": {
+        "value": "1/20000",
+        "unit": "V",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "baseline_variation",
+        "role": "baseline_variation",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "V",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/baseline_variation.json",
+        "synthetic_fixture": false
+      }
+    },
+    {
+      "template_status": "BLANK_PENDING_NOT_EVIDENCE",
+      "role": "input_magnitude",
+      "required_constraint": {
+        "value": "5",
+        "unit": "V",
+        "direction": "upper"
+      },
+      "bound_record": {
+        "id": "input_magnitude",
+        "role": "input_magnitude",
+        "profile_sha256": null,
+        "bound": {
+          "value": null,
+          "unit": "V",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "validity": {
+          "start_s": null,
+          "end_s": null
+        },
+        "origin": null,
+        "inputs": [],
+        "constructor_id": null,
+        "review_path": "reviews/input_magnitude.json",
+        "synthetic_fixture": false
+      }
+    }
+  ]
+}
