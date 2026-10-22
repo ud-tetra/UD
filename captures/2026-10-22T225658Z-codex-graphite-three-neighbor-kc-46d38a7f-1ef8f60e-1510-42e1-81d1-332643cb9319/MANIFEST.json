@@ -1,0 +1,53 @@
+{
+  "capture_id": "2026-10-22T225658Z-codex-graphite-three-neighbor-kc-46d38a7f-1ef8f60e-1510-42e1-81d1-332643cb9319",
+  "created_at_utc": "2026-10-22T22:58:14.134499+00:00",
+  "status": "NUMERICAL_CONVENTIONAL_THREE_NEIGHBOR_KC_LOCAL_NORMAL_PROJECTION",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "d7c287f",
+    "parent_draft_PR": 432,
+    "sources": [
+      "Kolmogorov and Crespi PRB 71 235415 (2005) local-normal definition",
+      "Minkin et al. PRB 108 085411 (2023) flat KC SI and public PES SHA b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875",
+      "UD v17 fixed-normal projection and exact seven-orbit carrier",
+      "user-supplied ledger v0.39 and governance amendment v1.0"
+    ]
+  },
+  "verification_scope": "All 42 three-neighbor normal finite differences; independent full nonlinear pair-energy height gradients at two lateral points; 28 four-point mixed energy derivatives; C3 label scan; 14/16/18 Angstrom cutoff and lateral-difference sensitivities; repository verifier.",
+  "scientific_status": "EXACT_CONDITIONAL_LOCAL_NORMAL_TILT; NUMERICAL_CONVENTIONAL_STATIC_HESSIAN; OPEN_INTRA_STIFFNESS_DAMPING_AND_UD_RESIDUAL",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-22T225121Z-codex-graphite-normal-audit-9c37e2a1-c9449dd7-fd4d-4867-a151-3941100f3c94/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v17.md"
+  ],
+  "supersession_reason": "Computes the local-normal term left open in v17 for one three-neighbor prescription; preserves its fixed-normal results as conditional controls.",
+  "files": [
+    {
+      "path": "captures/2026-10-22T225658Z-codex-graphite-three-neighbor-kc-46d38a7f-1ef8f60e-1510-42e1-81d1-332643cb9319/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v18.md",
+      "sha256": "30a987ed076c730b10b690be57537976b3c5987bb0baac335d527a2ea5be0a15",
+      "size_bytes": 58852
+    },
+    {
+      "path": "captures/2026-10-22T225658Z-codex-graphite-three-neighbor-kc-46d38a7f-1ef8f60e-1510-42e1-81d1-332643cb9319/JOURNAL_HANDOFF.md",
+      "sha256": "7147b0027a9a458daa676d8063c3a75921b2478a6c2bab610cb9428566c6d3f1",
+      "size_bytes": 537
+    },
+    {
+      "path": "captures/2026-10-22T225658Z-codex-graphite-three-neighbor-kc-46d38a7f-1ef8f60e-1510-42e1-81d1-332643cb9319/THREE_NEIGHBOR_KC_PROJECTION.json",
+      "sha256": "e43c886d0913c5609dd16615fad7240448603c5648583b5827ae076a06d256c1",
+      "size_bytes": 11057
+    },
+    {
+      "path": "captures/2026-10-22T225658Z-codex-graphite-three-neighbor-kc-46d38a7f-1ef8f60e-1510-42e1-81d1-332643cb9319/THREE_NEIGHBOR_NORMAL_AUDIT.md",
+      "sha256": "e5a26692766a6cdc5b3d18f1997f8ec35399dd20bd53664d4620cd41f1b51e30",
+      "size_bytes": 2860
+    },
+    {
+      "path": "captures/2026-10-22T225658Z-codex-graphite-three-neighbor-kc-46d38a7f-1ef8f60e-1510-42e1-81d1-332643cb9319/derive_three_neighbor_kc_projection.py",
+      "sha256": "0078bfc8af5d7ea373438b2ff80a34897965ef8ec80672da032ef463a3fec1e3",
+      "size_bytes": 6195
+    }
+  ]
+}
