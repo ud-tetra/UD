@@ -1,0 +1,52 @@
+diff --git a/lammps-source/src/MANYBODY/pair_airebo.cpp b/graphite-trace/pair_airebo_trace.cpp
+index 5d1bae6..aa12ef6 100644
+--- a/lammps-source/src/MANYBODY/pair_airebo.cpp
++++ b/graphite-trace/pair_airebo_trace.cpp
+@@ -38,8 +38,23 @@
+ 
+ #include <cmath>
+ #include <cstring>
++#include <array>
++#include <vector>
++#include <algorithm>
+ 
+ using namespace LAMMPS_NS;
++
++// Serial diagnostic API: 3 atom tags, cos, Nij, spline segment, g, dgdc,
++// and three Cartesian direct-angular force vectors on center/bond/angle atoms.
++static std::vector<std::array<double,17>> ud_angle_records;
++extern "C" size_t ud_trace_count() { return ud_angle_records.size(); }
++extern "C" size_t ud_trace_copy(double *out, size_t cap) {
++  size_t n = std::min(cap,ud_angle_records.size());
++  for (size_t i=0;i<n;++i) std::copy(ud_angle_records[i].begin(),ud_angle_records[i].end(),out+17*i);
++  return n;
++}
++static int ud_segment(double c) { return c < -0.6666666667 ? 0 : c < -0.5 ? 1 : c < -0.3333333333 ? 2 : 3; }
++
+ using namespace MathSpecial;
+ 
+ namespace {
+@@ -418,6 +433,7 @@ void PairAIREBO::REBO_neigh()
+ 
+ void PairAIREBO::FREBO(int eflag)
+ {
++  ud_angle_records.clear();
+   int i,j,k,m,ii,inum,itype,jtype;
+   tagint itag,jtag;
+   double delx,dely,delz,evdwl,fpair,xtmp,ytmp,ztmp;
+@@ -1385,6 +1401,7 @@ double PairAIREBO::bondorder(int i, int j, double rij[3], double rijmag, double
+       fk[0] = -tmp2*dcosjikdrk[0];
+       fk[1] = -tmp2*dcosjikdrk[1];
+       fk[2] = -tmp2*dcosjikdrk[2];
++      ud_angle_records.push_back({double(atom->tag[atomi]),double(atom->tag[atomj]),double(atom->tag[atomk]),cosjik,NijC+NijH,double(ud_segment(cosjik)),g,dgdc,fi[0],fi[1],fi[2],fj[0],fj[1],fj[2],fk[0],fk[1],fk[2]});
+ 
+       tmp2 = VA*.5*(tmp*wik*g*exp(lamdajik)*4.0*kronecker(itype,1));
+       fj[0] -= tmp2*(-rij[0]/rijmag);
+@@ -1527,6 +1544,7 @@ double PairAIREBO::bondorder(int i, int j, double rij[3], double rijmag, double
+       fl[0] = -tmp2*dcosijldrl[0];
+       fl[1] = -tmp2*dcosijldrl[1];
+       fl[2] = -tmp2*dcosijldrl[2];
++      ud_angle_records.push_back({double(atom->tag[atomj]),double(atom->tag[atomi]),double(atom->tag[atoml]),cosijl,NjiC+NjiH,double(ud_segment(cosijl)),g,dgdc,fj[0],fj[1],fj[2],fi[0],fi[1],fi[2],fl[0],fl[1],fl[2]});
+ 
+       tmp2 = VA*.5*(tmp*wjl*g*exp(lamdaijl)*4.0*kronecker(jtype,1));
+       fi[0] -= tmp2*(rij[0]/rijmag);
