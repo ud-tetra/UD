@@ -1,0 +1,153 @@
+{
+  "status": "NUMERICAL_CONDITIONAL_TWO_SHELL_DRIVEN_STRAIGHT_PATH",
+  "source_archive_sha256": "b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875",
+  "cutoff_a": 16,
+  "input_grid_points": 272,
+  "reference_min_height_a": 3.46,
+  "reference_load_mev_per_a_per_atom": -0.17555131581488984,
+  "reference_load_equiv_mpa": -10.73781465151848,
+  "model": "Rigid KC pair sum -> two-shell x,y Fourier and quadratic-z Taylor -> exact local vertical relaxation on a declared straight periodic path -> deterministic overdamped constant-force transport. Gamma*v fixed in reduced force units; gamma not measured.",
+  "pressure_probe_mpa": [
+    -5,
+    0,
+    5
+  ],
+  "quadrature": "uniform periodic trapezoidal quadrature over 1/(F-dUeff/ds); root solve for prescribed gamma*v",
+  "paths": [
+    {
+      "path_index": 0,
+      "path_period_a": 0.9296082124053275,
+      "reference_depinning_mev_per_a_per_atom": 0.254341259392265,
+      "reference_depinning_shear_mpa": 15.557099580317033,
+      "local_depinning_slope_mev_per_a_per_atom_per_mpa": 0.00011254102973824453,
+      "vertical_excursion_a": 0.002032411170144584,
+      "rates": [
+        {
+          "reduced_speed_gamma_v_over_fc": 0.1,
+          "drive_force_mev_per_a_per_atom": 0.2556001179636364,
+          "excess_force_mev_per_a_per_atom": 0.2301659920244099,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 0.00011198419493741452,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.006849652613287226,
+          "fraction_of_depinning_force_slope": 0.995052161845994
+        },
+        {
+          "reduced_speed_gamma_v_over_fc": 1,
+          "drive_force_mev_per_a_per_atom": 0.35956267701289346,
+          "excess_force_mev_per_a_per_atom": 0.10522141762062848,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 7.948741586404351e-05,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.004861946689002689,
+          "fraction_of_depinning_force_slope": 0.706297214881725
+        },
+        {
+          "reduced_speed_gamma_v_over_fc": 10,
+          "drive_force_mev_per_a_per_atom": 2.5560764343864215,
+          "excess_force_mev_per_a_per_atom": 0.01266384046377178,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 1.1170069874655297e-05,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.0006832312216049232,
+          "fraction_of_depinning_force_slope": 0.09925331144237257
+        }
+      ]
+    },
+    {
+      "path_index": 1,
+      "path_period_a": 0.9296082124053275,
+      "reference_depinning_mev_per_a_per_atom": 0.2547542518648995,
+      "reference_depinning_shear_mpa": 15.582360778748022,
+      "local_depinning_slope_mev_per_a_per_atom_per_mpa": 0.0001125469780647259,
+      "vertical_excursion_a": 0.002032458265869993,
+      "rates": [
+        {
+          "reduced_speed_gamma_v_over_fc": 0.1,
+          "drive_force_mev_per_a_per_atom": 0.2560114504261352,
+          "excess_force_mev_per_a_per_atom": 0.23053602523964525,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 0.000111993016787304,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.006850192212711799,
+          "fraction_of_depinning_force_slope": 0.9950779551175215
+        },
+        {
+          "reduced_speed_gamma_v_over_fc": 1,
+          "drive_force_mev_per_a_per_atom": 0.3600664106665053,
+          "excess_force_mev_per_a_per_atom": 0.10531215880160583,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 7.950295003930074e-05,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.004862896856159807,
+          "fraction_of_depinning_force_slope": 0.7063979096229354
+        },
+        {
+          "reduced_speed_gamma_v_over_fc": 10,
+          "drive_force_mev_per_a_per_atom": 2.56020270065551,
+          "excess_force_mev_per_a_per_atom": 0.012660182006515086,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 1.1160581235269973e-05,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.0006826508371712221,
+          "fraction_of_depinning_force_slope": 0.0991637574564775
+        }
+      ]
+    },
+    {
+      "path_index": 2,
+      "path_period_a": 0.9296082124053274,
+      "reference_depinning_mev_per_a_per_atom": 0.2542449801200004,
+      "reference_depinning_shear_mpa": 15.551210538838982,
+      "local_depinning_slope_mev_per_a_per_atom_per_mpa": 0.00011254117312714529,
+      "vertical_excursion_a": 0.0020324374328616777,
+      "rates": [
+        {
+          "reduced_speed_gamma_v_over_fc": 0.1,
+          "drive_force_mev_per_a_per_atom": 0.25550506846542687,
+          "excess_force_mev_per_a_per_atom": 0.23008057045342684,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 0.00011198293782748724,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.0068495757205944375,
+          "fraction_of_depinning_force_slope": 0.995039723825987
+        },
+        {
+          "reduced_speed_gamma_v_over_fc": 1,
+          "drive_force_mev_per_a_per_atom": 0.3594619339603985,
+          "excess_force_mev_per_a_per_atom": 0.10521695384039809,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 7.948283780597199e-05,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.004861666666384756,
+          "fraction_of_depinning_force_slope": 0.7062556360255363
+        },
+        {
+          "reduced_speed_gamma_v_over_fc": 10,
+          "drive_force_mev_per_a_per_atom": 2.555119200412577,
+          "excess_force_mev_per_a_per_atom": 0.01266939921257304,
+          "pressure_slope_mev_per_a_per_atom_per_mpa": 1.1174402389313442e-05,
+          "pressure_slope_shear_mpa_per_normal_mpa": 0.0006834962252544726,
+          "fraction_of_depinning_force_slope": 0.09929168213564801
+        }
+      ]
+    }
+  ],
+  "grid_check": [
+    {
+      "samples": 2048,
+      "depinning_mev_per_a_per_atom": 0.2543410210584288,
+      "force_slope_at_u1_mev_per_a_per_atom_per_mpa": 7.948745322407525e-05
+    },
+    {
+      "samples": 4096,
+      "depinning_mev_per_a_per_atom": 0.254341259392265,
+      "force_slope_at_u1_mev_per_a_per_atom_per_mpa": 7.948741586403796e-05
+    },
+    {
+      "samples": 8192,
+      "depinning_mev_per_a_per_atom": 0.254341259392265,
+      "force_slope_at_u1_mev_per_a_per_atom_per_mpa": 7.948741586404351e-05
+    }
+  ],
+  "pressure_check": [
+    {
+      "halfspan_mpa": 1,
+      "force_slope_at_u1_mev_per_a_per_atom_per_mpa": 7.948736772367404e-05
+    },
+    {
+      "halfspan_mpa": 2,
+      "force_slope_at_u1_mev_per_a_per_atom_per_mpa": 7.948737374120773e-05
+    },
+    {
+      "halfspan_mpa": 5,
+      "force_slope_at_u1_mev_per_a_per_atom_per_mpa": 7.948741586404351e-05
+    }
+  ],
+  "source_mismatch_note": "Reconstructed PES differs from deposited simulation; finite cutoff and run identity unresolved. Straight path and drive model are not the experimental force estimator.",
+  "physical_promotion": 0
+}
