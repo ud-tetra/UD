@@ -1,0 +1,22 @@
+{
+  "status": "CANDIDATE_BOUNDED_INTERACTION_POTENTIAL_NOT_NATIVE_RESERVOIR",
+  "potential_profile": "U(q)=2*beta/(1+(q+1)^2), beta>0 supplied",
+  "positive_stock": "R_e=U(q_e)*S_e/2",
+  "global_potential_bound": "sum R_e <= max_i(sum_{e incident i} beta_e)*norm(x)^2",
+  "canonical_auxiliary_source": "-sum U_e P_e x",
+  "isolated_preparation": {
+    "contacts": 1,
+    "q0": 0,
+    "p0": 0,
+    "original_support": "S>0",
+    "burden": "ell conserved",
+    "sufficient_opening": "delta=beta*S/2-(25/8)*max(ell,0)>0",
+    "time_bound": "2*sqrt(5/(6*delta))"
+  },
+  "zero_dual_funding": "K+R=beta*S/2; at opening K=3*beta*S/10,R=beta*S/5",
+  "complete_depletion": "asymptotic, gate coasts",
+  "network_limit": "Coupling C=y^T A x remains indefinite; R can replenish through support transport. No initial-R-only work cap proved.",
+  "reset": "OPEN",
+  "native_parameters_and_units": "OPEN",
+  "physical_promotion": 0
+}
