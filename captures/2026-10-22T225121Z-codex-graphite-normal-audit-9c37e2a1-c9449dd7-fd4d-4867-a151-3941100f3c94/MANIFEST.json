@@ -1,0 +1,54 @@
+{
+  "capture_id": "2026-10-22T225121Z-codex-graphite-normal-audit-9c37e2a1-c9449dd7-fd4d-4867-a151-3941100f3c94",
+  "created_at_utc": "2026-10-22T22:52:02.969857+00:00",
+  "status": "CORRECTION_FIXED_NORMAL_SCOPE_AND_NUMERICAL_CUTOFF_CHECK",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "19d5e71",
+    "parent_draft_PR": 431,
+    "sources": [
+      "Kolmogorov and Crespi PRB 71 235415 (2005)",
+      "LAMMPS official KC/z and KC/full pair styles",
+      "Minkin et al. PRB 108 085411 (2023) SI Eq S1/Table S1",
+      "Mendeley DOI 10.17632/svnpzbjc3t.1 SHA b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875",
+      "UD v16 source projection and governance ledger"
+    ]
+  },
+  "verification_scope": "Exact chain-rule derivation for a specified normal field, public primary-source comparison, SHA-checked 16 Angstrom pair-shift replay, repository verifier. Full KC atom-height Hessian and material damping untested.",
+  "scientific_status": "EXACT_CONDITIONAL_NORMAL_DERIVATIVE; NUMERICAL_CUTOFF_CHECK; OPEN_FULL_KC_AND_FRICTION_RESIDUAL",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-22T224639Z-codex-graphite-material-projection-fcd6e90e-4531aa0e-8487-4d43-b0dd-cfe246d1b6b4/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v16.md"
+  ],
+  "supersession_reason": "The prior off-plane atom-height calculation freezes local surface normals; full KC includes local normal rotations.",
+  "files": [
+    {
+      "path": "captures/2026-10-22T225121Z-codex-graphite-normal-audit-9c37e2a1-c9449dd7-fd4d-4867-a151-3941100f3c94/CUTOFF_SHIFT_SENSITIVITY.json",
+      "sha256": "53e783e81f240607cb17a722259e28863c9a230d81461460fe512b0698f84c4a",
+      "size_bytes": 654
+    },
+    {
+      "path": "captures/2026-10-22T225121Z-codex-graphite-normal-audit-9c37e2a1-c9449dd7-fd4d-4867-a151-3941100f3c94/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v17.md",
+      "sha256": "a500d0349c0e636bbd66344481692a3697307a0eacf9bd0d8e0f0aa1c3b97703",
+      "size_bytes": 54558
+    },
+    {
+      "path": "captures/2026-10-22T225121Z-codex-graphite-normal-audit-9c37e2a1-c9449dd7-fd4d-4867-a151-3941100f3c94/JOURNAL_HANDOFF.md",
+      "sha256": "855bd3a00eb86a2b8e323689a95b91447e256436c6b889b937d304343298c754",
+      "size_bytes": 526
+    },
+    {
+      "path": "captures/2026-10-22T225121Z-codex-graphite-normal-audit-9c37e2a1-c9449dd7-fd4d-4867-a151-3941100f3c94/NORMAL_RESPONSE_CORRECTION_AUDIT.md",
+      "sha256": "28c394812c71129fe24c6afe17e325dd3ef35c13680801005b7d6eb56c82bc03",
+      "size_bytes": 2161
+    },
+    {
+      "path": "captures/2026-10-22T225121Z-codex-graphite-normal-audit-9c37e2a1-c9449dd7-fd4d-4867-a151-3941100f3c94/audit_cutoff_shift.py",
+      "sha256": "da4d203f44f0454e518f1562087d678b634db63570c9a03b0a59470d5be1d71b",
+      "size_bytes": 1568
+    }
+  ]
+}
