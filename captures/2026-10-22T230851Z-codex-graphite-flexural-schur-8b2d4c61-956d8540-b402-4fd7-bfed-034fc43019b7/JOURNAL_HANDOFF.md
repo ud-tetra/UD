@@ -1,0 +1,3 @@
+# Journal handoff: manuscript v19
+
+Adds a specified 14-site flexural stiffness and an exact conditional quadratic Schur reduction to the three-neighbor KC static cross-Hessian. Quantifies cutoff-sensitive derivative selection and the difference between source-space overlap and response coverage. At illustrative D=1.44 eV, the local-normal response softens 14.218% in the quadratic tangent, and source-only softening is only 51.295% of the full result. A Rayleigh factor is normalized per unknown bath damping d; physical dissipation and moving-contact friction remain open. Draft review, no merge or physical promotion.
