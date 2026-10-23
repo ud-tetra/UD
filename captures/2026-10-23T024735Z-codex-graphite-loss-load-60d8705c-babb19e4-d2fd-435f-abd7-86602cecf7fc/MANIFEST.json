@@ -1,0 +1,53 @@
+{
+  "capture_id": "2026-10-23T024735Z-codex-graphite-loss-load-60d8705c-babb19e4-d2fd-435f-abd7-86602cecf7fc",
+  "created_at_utc": "2026-10-23T02:48:56.936867+00:00",
+  "status": "NUMERICAL_CONDITIONAL_GRAPHITE_LOSS_LOAD_SUSCEPTIBILITY",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "e05647a",
+    "parent_draft_PR": 436,
+    "sources": [
+      "UD v20 fixed-roster nonlinear KC stationary model",
+      "UD v21 finite-mode selection and closed harmonic no-go",
+      "Minkin et al PRB 108 085411 (2023) public PES archive SHA b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875",
+      "user-supplied UD coefficient provenance ledger v0.39 and CRL2 governance v1.0"
+    ]
+  },
+  "verification_scope": "Five-point stationary pressure sweep with fixed pair roster at 14,16,18 Å; two Hessian step choices; direct centered slope and independent matrix product rule; four active modes preserved; repository verifier.",
+  "scientific_status": "NUMERICAL_CONVENTIONAL_PER_UNIT_LOSS_LOAD_SUSCEPTIBILITY; OPEN_PRESSURE_DEPENDENT_MATERIAL_DAMPING_AND_UD_FRICTION_RESIDUAL",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-23T023854Z-codex-graphite-finite-spectrum-4c8b18e3-68bdd1a3-441a-4a35-ac05-a26af9803d0c/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v21.md"
+  ],
+  "supersession_reason": "Adds the conditional pressure derivative of the per-unit Rayleigh loss tensor and product-rule audit to v21 finite-height spectrum; does not change v21 no-go.",
+  "files": [
+    {
+      "path": "captures/2026-10-23T024735Z-codex-graphite-loss-load-60d8705c-babb19e4-d2fd-435f-abd7-86602cecf7fc/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v22.md",
+      "sha256": "8652a46800d0bf0959b850cc8bec4092951e1002ca08332f6515ee74401591cb",
+      "size_bytes": 79130
+    },
+    {
+      "path": "captures/2026-10-23T024735Z-codex-graphite-loss-load-60d8705c-babb19e4-d2fd-435f-abd7-86602cecf7fc/PRESSURE_LOSS_14A_RESULTS.json",
+      "sha256": "7ebcb29fdfe01a9b64dafa023894ed932d873e380fd7ae8973ef1576ff10b866",
+      "size_bytes": 8173
+    },
+    {
+      "path": "captures/2026-10-23T024735Z-codex-graphite-loss-load-60d8705c-babb19e4-d2fd-435f-abd7-86602cecf7fc/PRESSURE_LOSS_16A_RESULTS.json",
+      "sha256": "273e167dc4a67b0d2c4355b3a97b45853ca938fa9085fc8e7267f84624bc1485",
+      "size_bytes": 8185
+    },
+    {
+      "path": "captures/2026-10-23T024735Z-codex-graphite-loss-load-60d8705c-babb19e4-d2fd-435f-abd7-86602cecf7fc/PRESSURE_LOSS_18A_RESULTS.json",
+      "sha256": "a7cc9725e3a4ef4c115a99e94b2677a81f51550b02f99708d37f7a1cf65ece77",
+      "size_bytes": 8182
+    },
+    {
+      "path": "captures/2026-10-23T024735Z-codex-graphite-loss-load-60d8705c-babb19e4-d2fd-435f-abd7-86602cecf7fc/derive_pressure_loss_susceptibility.py",
+      "sha256": "5f968442d0c57bbfa0591ee3cd3aaa2230290426d17b71bd81fee249ce50abda",
+      "size_bytes": 5692
+    }
+  ]
+}
