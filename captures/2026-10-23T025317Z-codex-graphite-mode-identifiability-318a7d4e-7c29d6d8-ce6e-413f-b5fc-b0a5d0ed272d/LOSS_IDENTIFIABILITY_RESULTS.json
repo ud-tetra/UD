@@ -1,0 +1,190 @@
+{
+  "model": "two E-doublet per-unit-loss identifiability, conditional v21/v22 finite KC model",
+  "source_captures": [
+    "2026-10-23T023854Z-codex-graphite-finite-spectrum-4c8b18e3-68bdd1a3-441a-4a35-ac05-a26af9803d0c",
+    "2026-10-23T024735Z-codex-graphite-loss-load-60d8705c-babb19e4-d2fd-435f-abd7-86602cecf7fc"
+  ],
+  "status": "conditional numerical design, not experimental friction",
+  "pressure_only_identifiability": {
+    "14": {
+      "pressure_MPa": [
+        -5.0,
+        -2.5,
+        0.0,
+        2.5,
+        5.0
+      ],
+      "mode_pair_coefficients": [
+        [
+          0.0004930948144689622,
+          3.3320948227523586e-05
+        ],
+        [
+          0.0004940899712863459,
+          3.3389934098379546e-05
+        ],
+        [
+          0.000495085711423288,
+          3.345896722875389e-05
+        ],
+        [
+          0.0004960820491202955,
+          3.3528049213285555e-05
+        ],
+        [
+          0.0004970789748930188,
+          3.359717847441698e-05
+        ]
+      ],
+      "raw_two_parameter_condition": 201765.80703213572,
+      "unit_column_condition": 27147.562435324697,
+      "unit_column_singular_values": [
+        1.414213561413643,
+        5.209357432302848e-05
+      ],
+      "ratio_at_minus5_and_plus5": [
+        14.798342805312448,
+        14.795259526675023
+      ],
+      "coefficient_log_slopes_per_MPa": [
+        0.0008047405885428261,
+        0.0008255790680073078
+      ]
+    },
+    "16": {
+      "pressure_MPa": [
+        -5.0,
+        -2.5,
+        0.0,
+        2.5,
+        5.0
+      ],
+      "mode_pair_coefficients": [
+        [
+          0.0004930947371166183,
+          3.33211188667359e-05
+        ],
+        [
+          0.0004940898840272457,
+          3.339010460717768e-05
+        ],
+        [
+          0.0004950856207363589,
+          3.345913760170739e-05
+        ],
+        [
+          0.0004960819440549312,
+          3.352821858994757e-05
+        ],
+        [
+          0.0004970788426815164,
+          3.359734658080206e-05
+        ]
+      ],
+      "raw_two_parameter_condition": 201778.85317487776,
+      "unit_column_condition": 27149.459671752433,
+      "unit_column_singular_values": [
+        1.414213561413777,
+        5.208993396230242e-05
+      ],
+      "ratio_at_minus5_and_plus5": [
+        14.798264700795185,
+        14.795181562509269
+      ],
+      "coefficient_log_slopes_per_MPa": [
+        0.0008047335427446593,
+        0.0008255680969066056
+      ]
+    },
+    "18": {
+      "pressure_MPa": [
+        -5.0,
+        -2.5,
+        0.0,
+        2.5,
+        5.0
+      ],
+      "mode_pair_coefficients": [
+        [
+          0.000493095564851515,
+          3.332104131042709e-05
+        ],
+        [
+          0.0004940907035469811,
+          3.339002641787817e-05
+        ],
+        [
+          0.0004950864364444014,
+          3.34590593820046e-05
+        ],
+        [
+          0.0004960827566586412,
+          3.352814012363285e-05
+        ],
+        [
+          0.0004970796586749981,
+          3.359726807356359e-05
+        ]
+      ],
+      "raw_two_parameter_condition": 201749.55010322414,
+      "unit_column_condition": 27145.40961069933,
+      "unit_column_singular_values": [
+        1.414213561413491,
+        5.2097705715079e-05
+      ],
+      "ratio_at_minus5_and_plus5": [
+        14.798323985667624,
+        14.795240422126202
+      ],
+      "coefficient_log_slopes_per_MPa": [
+        0.0008047294229939518,
+        0.000825568371052083
+      ]
+    }
+  },
+  "two_frequency_weak_loss_design": {
+    "doublets": [
+      {
+        "mode_numbers": [
+          5,
+          6
+        ],
+        "height_stiffness": 307.97429233751336,
+        "scalar_lateral_residue": 46.9579625163995,
+        "per_unit_dc_loss_weight": 0.0004950856207363588,
+        "illustrative_frequency_THz": 9.370902241313892
+      },
+      {
+        "mode_numbers": [
+          8,
+          9
+        ],
+        "height_stiffness": 2297.2933376422634,
+        "scalar_lateral_residue": 176.58249512934407,
+        "per_unit_dc_loss_weight": 3.3459137601707405e-05,
+        "illustrative_frequency_THz": 25.59366027023916
+      }
+    ],
+    "measurement_frequencies_model_THz": [
+      0.0,
+      18.741804482627785
+    ],
+    "measurement_frequency_ratio_to_first_active_pole": 2.0,
+    "unknowns": "t_i=a_i*d_i, mode-pair contributions to DC damping",
+    "normalized_measurement_matrix": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        0.1111111111111111,
+        4.649547032390929
+      ]
+    ],
+    "matrix_determinant": 4.538435921279818,
+    "two_norm_condition_in_t_coordinates": 5.007061143874048,
+    "equal_weight_nonzero_frequency_model_THz": 12.444528880247848,
+    "weak_loss_requirement": "|omega*d_i| much smaller than |kappa_i-mu*omega^2| at both samples",
+    "observable": "Im Sigma(omega)/omega from a calibrated dynamic lateral susceptibility, conventional background separately measured"
+  }
+}
