@@ -1,0 +1,49 @@
+{
+  "constants": {
+    "carbon_12_kg": 1.9926468827039998e-26,
+    "mev_Aminus2_to_N_per_m": 0.01602176634,
+    "c_cm_per_s": 29979245800.0
+  },
+  "collective_14_atom_energy": "E=14*(k_per_upper_atom*x*x/2); mass_relative=7*m_C if both 14-atom layers move, mass_fixed=14*m_C",
+  "our_KC_plate": {
+    "clamped": {
+      "k_meV_per_A2_per_upper_atom": 1.911869,
+      "nu_fixed_lower_cm_minus1": 6.582161276783899,
+      "nu_both_mobile_cm_minus1": 9.308581747354797
+    },
+    "relaxed_height": {
+      "k_meV_per_A2_per_upper_atom": 1.6825303207477915,
+      "nu_fixed_lower_cm_minus1": 6.174771673720135,
+      "nu_both_mobile_cm_minus1": 8.73244584553223
+    }
+  },
+  "published_comparators": {
+    "minkin_2023_KC_fixed_height": {
+      "nu_both_mobile_cm_minus1": 9.153,
+      "curvature_inverted_meV_per_A2_per_upper_atom": 1.848493901148075
+    },
+    "lebedeva_2025_vdW_DF3_rigid": {
+      "nu_both_mobile_cm_minus1": 0.404,
+      "curvature_inverted_meV_per_A2_per_upper_atom": 0.003601254612323762
+    },
+    "lebedeva_2025_vdW_DF3_out_of_plane": {
+      "nu_both_mobile_cm_minus1": 0.51,
+      "curvature_inverted_meV_per_A2_per_upper_atom": 0.005738936897518688
+    },
+    "lebedeva_2025_vdW_DF3_two_atoms_constrained": {
+      "nu_both_mobile_cm_minus1": 0.59,
+      "curvature_inverted_meV_per_A2_per_upper_atom": 0.007680599515671877
+    }
+  },
+  "comparisons": {
+    "our_relaxed_vs_minkin_KC_frequency_ratio": 0.9540528619613492,
+    "our_relaxed_vs_DFT_out_of_plane_curvature_ratio": 293.1780486165056,
+    "KC_Minkin_vs_DFT_rigid_frequency_ratio": 22.655940594059405
+  },
+  "sources": [
+    "https://arxiv.org/pdf/2308.06302 Eq(4), Table II",
+    "https://arxiv.org/pdf/2511.01338 Tables 2, 4, 6"
+  ],
+  "caveat": "Curvature inversions are a common-unit comparison of differing models and reference separations; no friction rate, measured shear frequency, or UD residual follows."
+}
+
