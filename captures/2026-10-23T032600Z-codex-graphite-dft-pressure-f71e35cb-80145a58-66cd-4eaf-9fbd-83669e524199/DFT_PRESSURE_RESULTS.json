@@ -1,0 +1,137 @@
+{
+  "assumptions": "Uniform ideal rigid bilayer, fixed in-plane a, compression-positive P, local linear pressure response, type II first harmonic, no contact or relaxation corrections. Static strength and rigid shear frequency only; NOT kinetic friction or UD-specific loss.",
+  "complete_counts": {
+    "aa": 31,
+    "ab": 31,
+    "opt-dist": 21,
+    "sp": 31
+  },
+  "delta_fits": [
+    {
+      "degree": 2,
+      "derivative_microeV_per_atom_per_A": -4.743699124679025,
+      "log_derivative_per_A": -13.80942703125233,
+      "n": 5,
+      "value_microeV_per_atom": 0.3435116543172635,
+      "window_A": 0.04
+    },
+    {
+      "degree": 3,
+      "derivative_microeV_per_atom_per_A": -4.838044068409254,
+      "log_derivative_per_A": -14.092651899128338,
+      "n": 5,
+      "value_microeV_per_atom": 0.34330260216733927,
+      "window_A": 0.04
+    },
+    {
+      "degree": 2,
+      "derivative_microeV_per_atom_per_A": -4.905501397682345,
+      "log_derivative_per_A": -14.289517195413703,
+      "n": 7,
+      "value_microeV_per_atom": 0.3432937117887224,
+      "window_A": 0.06
+    },
+    {
+      "degree": 3,
+      "derivative_microeV_per_atom_per_A": -4.628104446718244,
+      "log_derivative_per_A": -13.457465184768438,
+      "n": 7,
+      "value_microeV_per_atom": 0.34390610588065806,
+      "window_A": 0.06
+    }
+  ],
+  "excluded_incomplete_counts": {
+    "aa": 0,
+    "ab": 0,
+    "opt-dist": 0,
+    "sp": 0
+  },
+  "normal_stiffness_fits": [
+    {
+      "degree": 2,
+      "local_energy_slope_meV_per_atom_A": 0.008262847285434013,
+      "n": 11,
+      "normal_stiffness_meV_per_atom_A2": 140.25211219983538,
+      "window_A": 0.0005
+    },
+    {
+      "degree": 2,
+      "local_energy_slope_meV_per_atom_A": 0.00640857081907168,
+      "n": 17,
+      "normal_stiffness_meV_per_atom_A2": 146.1463845593986,
+      "window_A": 0.0008
+    },
+    {
+      "degree": 2,
+      "local_energy_slope_meV_per_atom_A": 0.005887557835110176,
+      "n": 19,
+      "normal_stiffness_meV_per_atom_A2": 150.1927604962305,
+      "window_A": 0.001
+    },
+    {
+      "degree": 3,
+      "local_energy_slope_meV_per_atom_A": 0.008934411067362423,
+      "n": 19,
+      "normal_stiffness_meV_per_atom_A2": 146.5941149463185,
+      "window_A": 0.001
+    },
+    {
+      "degree": 4,
+      "local_energy_slope_meV_per_atom_A": 0.00852352528718359,
+      "n": 19,
+      "normal_stiffness_meV_per_atom_A2": 142.70607867707315,
+      "window_A": 0.001
+    }
+  ],
+  "registry_samples_microeV_per_atom": {
+    "3.4": {
+      "AA_minus_AB": 0.3540403243887857,
+      "SP_minus_AB": 0.05160345161935107
+    },
+    "3.5": {
+      "AA_minus_AB": 0.048404748810080715,
+      "SP_minus_AB": -0.0008052689990282697
+    },
+    "3.54": {
+      "AA_minus_AB": 0.00652567855643901,
+      "SP_minus_AB": -0.011618478791083737
+    },
+    "3.56": {
+      "AA_minus_AB": -0.019633603924445308,
+      "SP_minus_AB": -0.0128313264877062
+    }
+  },
+  "selected": {
+    "area_per_upper_atom_A2": 2.6332177901880813,
+    "at_d_A": 3.4022,
+    "dd_dP_A_per_MPa": -0.00011245747051519164,
+    "delta_fit": {
+      "degree": 2,
+      "derivative_microeV_per_atom_per_A": -4.743699124679025,
+      "log_derivative_per_A": -13.80942703125233,
+      "n": 5,
+      "value_microeV_per_atom": 0.3435116543172635,
+      "window_A": 0.04
+    },
+    "dln_rigid_shear_frequency_dP_per_MPa": 0.0007764866165993747,
+    "dln_static_strength_dP_per_MPa": 0.0015529732331987494,
+    "normal_force_meV_per_atom_A_per_MPa": 0.016435252732490427,
+    "stiffness_fit": {
+      "degree": 2,
+      "local_energy_slope_meV_per_atom_A": 0.00640857081907168,
+      "n": 17,
+      "normal_stiffness_meV_per_atom_A2": 146.1463845593986,
+      "window_A": 0.0008
+    }
+  },
+  "source": {
+    "energies": "QE XML etot in Hartree; completed JOB DONE records only; rigid 28-atom cells, 14 upper atoms, 30 A vacuum",
+    "record": "https://zenodo.org/records/16318186",
+    "sha256": {
+      "aa": "6abb5cd8064d7f3edbabbafb8d7f2c68f6468b7b5bf8c15e035e0c1efa01e12a",
+      "ab": "c2c03213386df2e090dd42357d9ab4a3b4ad0e38907fb2265c0515e750d489d8",
+      "opt-dist": "1a7e4d6c1ea466448436db2507da75c33216c7b09995547f7fd8a0731f873de0",
+      "sp": "75a1e5d2a311d45ee8985b17d6567e05f38e7cec17d1dec6dc4d766b580734b4"
+    }
+  }
+}
