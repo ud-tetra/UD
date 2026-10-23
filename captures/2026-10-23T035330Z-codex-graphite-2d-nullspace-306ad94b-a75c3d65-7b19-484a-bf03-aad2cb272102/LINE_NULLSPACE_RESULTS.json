@@ -1,0 +1,73 @@
+{
+  "AB_minimum_hessian_change": "zero: F vanishes to sixth order at AB",
+  "D6_symmetry_error_sample": 2.220446049250313e-15,
+  "archived_line": "u=3t, v=2pi/3+t for 0<=t<=pi; F=0 for every t",
+  "caveats": "8-neighbor periodic minimax grid, not continuum proof or physical graphite PES; AB remains local minimum exactly, and sampled global minimum is -1.5 U1 on each grid; 1D path cannot certify transverse stability or 2D barrier without first-harmonic/source assumption.",
+  "classification": "EXACT symmetry and line nullspace; NUMERICAL grid minimax counterexample; NO-GO 1D profile alone identifies 2D MEP; not a material law",
+  "eps_minus_0p2_saddle_transverse_curvature_over_U1_ky2": -3.6000000000000014,
+  "finite_difference_saddle_hessian_check": [
+    5.9999984998171385,
+    47.99987999989458
+  ],
+  "first_shell": "f(u,v)=2 cos(v) cos(u)+cos(2v)",
+  "grid_960_barrier_change_fraction": -0.1393333657188247,
+  "grid_960_barriers_microeV_per_upper": [
+    0.03966983268977498,
+    0.03414250138360598
+  ],
+  "max_abs_F_on_37_samples": 0.0,
+  "minimax_grids": [
+    {
+      "barrier_over_U1": 0.5,
+      "epsilon_over_U1": 0.0,
+      "grid_n": 120,
+      "sampled_global_min_over_U1": -1.5
+    },
+    {
+      "barrier_over_U1": 0.4302384439490572,
+      "epsilon_over_U1": -0.2,
+      "grid_n": 120,
+      "sampled_global_min_over_U1": -1.5
+    },
+    {
+      "barrier_over_U1": 0.5,
+      "epsilon_over_U1": 0.0,
+      "grid_n": 240,
+      "sampled_global_min_over_U1": -1.5
+    },
+    {
+      "barrier_over_U1": 0.43032086350234056,
+      "epsilon_over_U1": -0.2,
+      "grid_n": 240,
+      "sampled_global_min_over_U1": -1.5
+    },
+    {
+      "barrier_over_U1": 0.5,
+      "epsilon_over_U1": 0.0,
+      "grid_n": 480,
+      "sampled_global_min_over_U1": -1.5
+    },
+    {
+      "barrier_over_U1": 0.4303231492111008,
+      "epsilon_over_U1": -0.2,
+      "grid_n": 480,
+      "sampled_global_min_over_U1": -1.5
+    },
+    {
+      "barrier_over_U1": 0.5,
+      "epsilon_over_U1": 0.0,
+      "grid_n": 960,
+      "sampled_global_min_over_U1": -1.5
+    },
+    {
+      "barrier_over_U1": 0.43033331714058765,
+      "epsilon_over_U1": -0.2,
+      "grid_n": 960,
+      "sampled_global_min_over_U1": -1.5
+    }
+  ],
+  "periodicity_error_sample": 2.4424906541753444e-15,
+  "perturbation": "F(u,v)=[1-cos(u-3v)][1-cos(u+3v)][1-cos(2u)] = [cos(u)-cos(3v)]^2[1-cos(2u)]",
+  "saddle_transverse_curvature_over_U1_ky2": "6+48*(epsilon/U1)",
+  "saddle_transverse_stability_threshold_epsilon_over_U1": -0.125
+}
