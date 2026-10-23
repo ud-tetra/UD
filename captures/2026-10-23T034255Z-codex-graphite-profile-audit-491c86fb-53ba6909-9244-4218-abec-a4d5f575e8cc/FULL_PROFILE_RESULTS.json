@@ -1,0 +1,82 @@
+{
+  "cross_separation": {
+    "U1_ratio_3p34_over_3p4022": 2.104023484482037,
+    "max_non_scaling_residual_fraction_of_3p34_peak": 0.019204013607436916,
+    "profile_scale_3p34_over_3p4022": 2.1033238379426575,
+    "rms_non_scaling_residual_microeV_per_atom": 0.004787836849850333,
+    "secant_dlnU1_dd_per_A": -11.959026634071236
+  },
+  "finite_ln_static_strength_ratio_per_MPa": 0.0010283553685245192,
+  "first_harmonic_shape": "f_i-f_0 = 2 cos(2pi/3+i*pi/36) cos(i*pi/12) + cos(4pi/3+i*pi/18) + 3/2; from source scan displacement and Eq. 2 of Lebedeva et al.",
+  "pressure_at_3p34_fits": [
+    {
+      "compression_pressure_MPa": 726.86010519445,
+      "degree": 2,
+      "energy_slope_meV_per_atom_A": -11.946129530035364,
+      "n": 3,
+      "window_A": 0.02
+    },
+    {
+      "compression_pressure_MPa": 735.3062936959255,
+      "degree": 2,
+      "energy_slope_meV_per_atom_A": -12.084944772683368,
+      "n": 5,
+      "window_A": 0.04
+    },
+    {
+      "compression_pressure_MPa": 723.3408599855023,
+      "degree": 3,
+      "energy_slope_meV_per_atom_A": -11.888289845598702,
+      "n": 5,
+      "window_A": 0.04
+    },
+    {
+      "compression_pressure_MPa": 723.7356091844831,
+      "degree": 3,
+      "energy_slope_meV_per_atom_A": -11.8947776484499,
+      "n": 7,
+      "window_A": 0.06
+    },
+    {
+      "compression_pressure_MPa": 723.3889089574668,
+      "degree": 3,
+      "energy_slope_meV_per_atom_A": -11.889079542596475,
+      "n": 9,
+      "window_A": 0.08
+    }
+  ],
+  "pressure_at_3p34_nominal_MPa": 723.3408599855023,
+  "profiles": {
+    "3.34": {
+      "U1_fit_microeV_per_upper": 0.16693251920951954,
+      "d_A": 3.34,
+      "endpoint_mismatch_microeV_per_upper": 0.0012517383720231571,
+      "observed_max_minus_index0_microeV_per_upper": 0.7409126099388169,
+      "peak_gap_U1_proxy_microeV_per_upper": 0.16464724665307043,
+      "peak_index": 12,
+      "points": 37,
+      "relative_rms_to_observed_peak": 0.012141268325752746,
+      "rms_residual_microeV_per_upper": 0.008995618803200957,
+      "tau_from_U1_Pa": 29174.69910740823
+    },
+    "3.4022": {
+      "U1_fit_microeV_per_upper": 0.07933966537954996,
+      "d_A": 3.4022,
+      "endpoint_mismatch_microeV_per_upper": 0.004567002722622289,
+      "observed_max_minus_index0_microeV_per_upper": 0.345493214590497,
+      "peak_gap_U1_proxy_microeV_per_upper": 0.07677626990899933,
+      "peak_index": 12,
+      "points": 37,
+      "relative_rms_to_observed_peak": 0.01649241865755729,
+      "rms_residual_microeV_per_upper": 0.005698018738371758,
+      "tau_from_U1_Pa": 13866.147085611248
+    }
+  },
+  "scope": "Two discrete spacings constrain a finite rigid static change; they do not determine dU1/dd at 3.4022 A. Pressure at 3.34 A inferred from AB normal-energy scan. No kinetic friction or UD-specific damping.",
+  "sha256": {
+    "3.34": "5d6efcbd67db3093711ed92bd06d7098254fbe21680a869dd941664ad6190443",
+    "3.4022": "05e5e995d70ad83a98f8b534addb3dcff51ff3422c8f24dcba25453c3e76e228",
+    "ab": "c2c03213386df2e090dd42357d9ab4a3b4ad0e38907fb2265c0515e750d489d8"
+  },
+  "source": "https://doi.org/10.5281/zenodo.16318186"
+}
