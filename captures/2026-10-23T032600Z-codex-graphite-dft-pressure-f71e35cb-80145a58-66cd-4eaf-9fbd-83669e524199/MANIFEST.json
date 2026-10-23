@@ -1,0 +1,54 @@
+{
+  "capture_id": "2026-10-23T032600Z-codex-graphite-dft-pressure-f71e35cb-80145a58-66cd-4eaf-9fbd-83669e524199",
+  "created_at_utc": "2026-10-23T03:28:59.979727+00:00",
+  "status": "DEVELOPMENT_DFT_PRESSURE_BRIDGE",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "4991021fc190deb71fc0bdf7a13940b13160b31f",
+    "parent_draft_PR": 442,
+    "sources": [
+      "Lebedeva et al arXiv:2511.01338, public raw archive DOI:10.5281/zenodo.16318186 (four SHA-256-pinned QE data tarballs)",
+      "Chen et al PRL 137 166201 (2026) public abstract only",
+      "prior UD graphite captures and governance attachments"
+    ]
+  },
+  "verification_scope": "SHA-256 archive verification, completed 28-atom rigid DFT XML data, registry scan and local-fit sensitivity, analytic enthalpy derivative, independent output replay, repository verifier; no new DFT, measured friction or UD-specific material rate",
+  "scientific_status": "NUMERICAL_SAME_SOURCE_VDWDF3_REPLAY; DERIVED_CONDITIONAL_IDEAL_STATIC_PRESSURE_RESPONSE; OPEN_KINETIC_AND_UD_RESIDUAL",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-23T031839Z-codex-graphite-oscillatory-port-7c5a4309-c9bb0a5a-6656-424b-afdb-f343962ecbfa/UD_GRAPHITE_SHORT_PAPER_DRAFT_v4.md"
+  ],
+  "related_to": [
+    "https://doi.org/10.5281/zenodo.16318186"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-10-23T032600Z-codex-graphite-dft-pressure-f71e35cb-80145a58-66cd-4eaf-9fbd-83669e524199/DFT_PRESSURE_BRIDGE_AUDIT.md",
+      "sha256": "d493c26974d9b21f5ca552c33123a45f451d1173b13ffabf3919f2789765f99c",
+      "size_bytes": 5636
+    },
+    {
+      "path": "captures/2026-10-23T032600Z-codex-graphite-dft-pressure-f71e35cb-80145a58-66cd-4eaf-9fbd-83669e524199/DFT_PRESSURE_RESULTS.json",
+      "sha256": "d0bbaf00e4ed013c223bfc3830b23d8c1bc1fd9e9fc570e2b68bd1bd60570cca",
+      "size_bytes": 4250
+    },
+    {
+      "path": "captures/2026-10-23T032600Z-codex-graphite-dft-pressure-f71e35cb-80145a58-66cd-4eaf-9fbd-83669e524199/DFT_REGISTRY_SCAN.csv",
+      "sha256": "7584b98716951f293f9bf66a135f742959dfd9c76299eedc9f47a85cee1b9256",
+      "size_bytes": 1025
+    },
+    {
+      "path": "captures/2026-10-23T032600Z-codex-graphite-dft-pressure-f71e35cb-80145a58-66cd-4eaf-9fbd-83669e524199/UD_GRAPHITE_SHORT_PAPER_DRAFT_v5.md",
+      "sha256": "f26768bf734bbd4bc49859e99403eb29ba8417c0199396d6b73a77bc867a50c4",
+      "size_bytes": 28915
+    },
+    {
+      "path": "captures/2026-10-23T032600Z-codex-graphite-dft-pressure-f71e35cb-80145a58-66cd-4eaf-9fbd-83669e524199/replay_dft_pressure.py",
+      "sha256": "d6659ca243fb44116c33ad5b88a806af4deb012bac30c5bde72ba6a403b9c278",
+      "size_bytes": 6849
+    }
+  ]
+}
