@@ -1,0 +1,68 @@
+{
+  "capture_id": "2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0",
+  "created_at_utc": "2026-10-23T01:59:55.878176+00:00",
+  "status": "NUMERICAL_CONDITIONAL_NONLINEAR_GRAPHITE_RELAXATION",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "2365533",
+    "parent_draft_PR": 434,
+    "sources": [
+      "UD v18 three-neighbor KC local-normal projection",
+      "UD v19 14-site conditional plate Schur calculation",
+      "Minkin et al. PRB 108 085411 (2023) public PES archive SHA b1ccf62a3e75928e1382cbdd6c669b99675fef9ad5f077e79057a142a0a07875",
+      "user-supplied UD ledger v0.39 and governance v1.0"
+    ]
+  },
+  "verification_scope": "16-coordinate numerical minimization and stationary gradient; fixed pair roster equality at stationary pressure points; Hessian step sensitivity; independent minimized-energy curvature; pressure differences at \u00b12.5/\u00b15 MPa; 14/16/18 \u00c5 cutoff checks; seven-orbit source/complement split; repository verifier.",
+  "scientific_status": "NUMERICAL_CONVENTIONAL_STATIC_TANGENT_AND_NONLINEAR_RELAXATION; OPEN_PHYSICAL_DAMPING_AND_UD_FRICTION_RESIDUAL",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-22T230851Z-codex-graphite-flexural-schur-8b2d4c61-956d8540-b402-4fd7-bfed-034fc43019b7/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v19.md"
+  ],
+  "supersession_reason": "Adds nonlinear local relaxation and load-derivative check to the prior flat-reference tangent model.",
+  "files": [
+    {
+      "path": "captures/2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0/GRAPHITE_PLANAR_HARMONIC_MANUSCRIPT_DRAFT_v20.md",
+      "sha256": "ccdac8d69525758c6d07352382e73a0a181a7b62ce55b420632b26a68ace00b9",
+      "size_bytes": 70420
+    },
+    {
+      "path": "captures/2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0/NONLINEAR_14A_RESULTS.json",
+      "sha256": "d9c0da2d0c22f2c1d43989b65ccf1be8622a6d47b330c0e0ad3eb25c1d69819a",
+      "size_bytes": 1557
+    },
+    {
+      "path": "captures/2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0/NONLINEAR_14A_RESULTS.txt",
+      "sha256": "02c945c2b81fde68b3c952549050cac397b04724957a349566fa364ba29e8187",
+      "size_bytes": 914
+    },
+    {
+      "path": "captures/2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0/NONLINEAR_16A_RESULTS.json",
+      "sha256": "d252b7a9c881b376cd2ebc64ebefa988e99b6c9c1beae590f64fc8a3bf0aa740",
+      "size_bytes": 3895
+    },
+    {
+      "path": "captures/2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0/NONLINEAR_16A_RESULTS.txt",
+      "sha256": "1b2317faefcfb94ca1a9ce38f4def924a95369eb999e674c9d84167b0746a47c",
+      "size_bytes": 3116
+    },
+    {
+      "path": "captures/2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0/NONLINEAR_18A_RESULTS.json",
+      "sha256": "965f988ebd41135299c2fcaef9edcd80a5789cc65276c683e03b77c8af9ec599",
+      "size_bytes": 1558
+    },
+    {
+      "path": "captures/2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0/NONLINEAR_18A_RESULTS.txt",
+      "sha256": "d0f8f3932cfc1fc24b439017d31dc765657a513c555ec27ef1d41ad221d543e5",
+      "size_bytes": 908
+    },
+    {
+      "path": "captures/2026-10-23T015602Z-codex-graphite-nonlinear-relax-a7f309c2-f7597bc1-0620-488b-97f4-3eabbc7815d0/derive_nonlinear_graphite_relaxation.py",
+      "sha256": "627cf60c6244a6f29bcaa67e7967f987b968c927f62842018e09b2369e3b99b0",
+      "size_bytes": 7754
+    }
+  ]
+}
