@@ -1,0 +1,49 @@
+{
+  "capture_id": "2026-10-23T035330Z-codex-graphite-2d-nullspace-306ad94b-a75c3d65-7b19-484a-bf03-aad2cb272102",
+  "created_at_utc": "2026-10-23T03:56:11.432943+00:00",
+  "status": "DEVELOPMENT_2D_LINE_NULLSPACE_NO_GO",
+  "provenance": {
+    "contributor": "Codex",
+    "repository": "ud-tetra/UD",
+    "derivation_base": "1038873dad0a4d02050f5322671c3b0166c471a6",
+    "parent_draft_PR": 444,
+    "sources": [
+      "Lebedeva et al arXiv:2511.01338 first-shell Eq. 2 and Table 5",
+      "prior UD graphite 37-point DFT replay",
+      "attached coefficient provenance ledger v0.39 and CRL2 governance v1.0"
+    ]
+  },
+  "verification_scope": "Algebraic periodic and point-symmetry construction, exact line cancellation and unchanged AB Hessian, analytic saddle transverse curvature threshold, finite-difference Hessian check, deterministic 8-neighbor periodic minimax grid convergence, repository verifier; no physical PES coefficient or continuum minimax proof",
+  "scientific_status": "EXACT_CONDITIONAL_SYMMETRY_NULLSPACE; NUMERICAL_ILLUSTRATIVE_2D_MINIMAX; NO_GO_ONE_LINE_IDENTIFIES_GENERAL_2D_PES; OPEN_MATERIAL_HARMONICS_AND_KINETIC_LOSS",
+  "independent_review": false,
+  "registry_entry": null,
+  "physical_promotion": 0,
+  "supersedes": [
+    "captures/2026-10-23T034255Z-codex-graphite-profile-audit-491c86fb-53ba6909-9244-4218-abec-a4d5f575e8cc/UD_GRAPHITE_SHORT_PAPER_DRAFT_v6.md"
+  ],
+  "related_to": [
+    "https://arxiv.org/abs/2511.01338"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-10-23T035330Z-codex-graphite-2d-nullspace-306ad94b-a75c3d65-7b19-484a-bf03-aad2cb272102/LINE_NULLSPACE_RESULTS.json",
+      "sha256": "4b02deec98aa7e98ad3faa6cdcd0ae68d3840acad6a3fec927eefdaf41e2fe54",
+      "size_bytes": 2510
+    },
+    {
+      "path": "captures/2026-10-23T035330Z-codex-graphite-2d-nullspace-306ad94b-a75c3d65-7b19-484a-bf03-aad2cb272102/LINE_TO_SURFACE_NO_GO.md",
+      "sha256": "f9dab0d9727d9dd57373c8a963d5df6bc93613e45784a30d52bd69a2afa3ce2e",
+      "size_bytes": 4999
+    },
+    {
+      "path": "captures/2026-10-23T035330Z-codex-graphite-2d-nullspace-306ad94b-a75c3d65-7b19-484a-bf03-aad2cb272102/UD_GRAPHITE_SHORT_PAPER_DRAFT_v7.md",
+      "sha256": "8568ae1970535c2ca946b6e087d9ffc474f926cb54869dc404455b0693ad8b72",
+      "size_bytes": 33292
+    },
+    {
+      "path": "captures/2026-10-23T035330Z-codex-graphite-2d-nullspace-306ad94b-a75c3d65-7b19-484a-bf03-aad2cb272102/verify_2d_line_nullspace.py",
+      "sha256": "dc209b5cf2c5ad7195a1bbf20ab552569e72a7962aae11c57d1cef44a583fb0b",
+      "size_bytes": 5691
+    }
+  ]
+}
