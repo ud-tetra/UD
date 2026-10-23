@@ -1,0 +1,775 @@
+{
+  "status": "PASS_CONSTRUCTOR_SOFTWARE_CHECKS",
+  "cases": 57,
+  "positive_fixture_count": 1,
+  "hold_controls": 56,
+  "results": [
+    {
+      "case": "complete_author_controlled_fixture",
+      "expected_gate": null,
+      "status": "STRUCTURALLY_READY_FIXTURE",
+      "reasons": [],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": {
+        "format": "UD_UNSIGNED_MONITOR_TAIL_PROPOSAL_1",
+        "status": "AWAITING_INDEPENDENT_REVIEW_NOT_V01_ADMISSION",
+        "synthetic_fixture": true,
+        "acquisition_profile_sha256": "01b8b10c79cb07535cf9326afafb79b99bd48bc261cbe62dc6228062b378e480",
+        "binding_sha256": "80740938be0654b86535312c4bedc804a815795d71449fe9eb36b8b14864baff",
+        "packet_sha256": "9557aa396ce3e63d0bab5f4c857a51d18f78482c39f1ab80337622b95dd36f42",
+        "config_sha256": "986a890f2ffb2249f82c3501b86a64a85596005a1288c8e4158a3ac520c059ff",
+        "bound": {
+          "value": "3627/4000000",
+          "unit": "V",
+          "direction": "upper",
+          "meaning": "deterministic_uniform"
+        },
+        "dependency_roles": [
+          "clock",
+          "computation",
+          "error_budget",
+          "iq_path",
+          "outside_tv",
+          "samples",
+          "source_class",
+          "tail_tv",
+          "transfer"
+        ],
+        "validity": {
+          "start_s": "0",
+          "end_s": "16183/1953125"
+        },
+        "empirical_admission": false,
+        "physical_promotion": 0
+      },
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "binding_apparatus_run",
+      "expected_gate": "run/channel/epoch/units/kernel/source binding mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "run/channel/epoch/units/kernel/source binding mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "binding_acquisition_channels",
+      "expected_gate": "run/channel/epoch/units/kernel/source binding mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "run/channel/epoch/units/kernel/source binding mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "binding_monitor_channels",
+      "expected_gate": "run/channel/epoch/units/kernel/source binding mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "run/channel/epoch/units/kernel/source binding mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "binding_monitor_epoch_s",
+      "expected_gate": "run/channel/epoch/units/kernel/source binding mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "run/channel/epoch/units/kernel/source binding mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "binding_voltage_unit",
+      "expected_gate": "run/channel/epoch/units/kernel/source binding mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "run/channel/epoch/units/kernel/source binding mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "binding_kernel_sha256",
+      "expected_gate": "run/channel/epoch/units/kernel/source binding mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "run/channel/epoch/units/kernel/source binding mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "binding_source_preparation",
+      "expected_gate": "run/channel/epoch/units/kernel/source binding mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "run/channel/epoch/units/kernel/source binding mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "binding_source_contract_sha256",
+      "expected_gate": "run/channel/epoch/units/kernel/source binding mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "run/channel/epoch/units/kernel/source binding mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "stale_calibration",
+      "expected_gate": "coverage gap",
+      "status": "HOLD",
+      "reasons": [
+        "coverage gap"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "clock_excess",
+      "expected_gate": "clock bounds",
+      "status": "HOLD",
+      "reasons": [
+        "clock bounds"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "clock_epoch",
+      "expected_gate": "epoch mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "epoch mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "IQ_wrong_product",
+      "expected_gate": "IQ accounting",
+      "status": "HOLD",
+      "reasons": [
+        "IQ accounting"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "IQ_incomplete_path",
+      "expected_gate": "IQ response scope",
+      "status": "HOLD",
+      "reasons": [
+        "IQ response scope"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "IQ_undercharged",
+      "expected_gate": "IQ allocation undercharged",
+      "status": "HOLD",
+      "reasons": [
+        "IQ allocation undercharged"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "negative_error",
+      "expected_gate": "allocation exceeded",
+      "status": "HOLD",
+      "reasons": [
+        "allocation exceeded"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "excess_error",
+      "expected_gate": "allocation exceeded",
+      "status": "HOLD",
+      "reasons": [
+        "allocation exceeded"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "float_bound",
+      "expected_gate": "rational encoding",
+      "status": "HOLD",
+      "reasons": [
+        "rational encoding"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "statistical_outside",
+      "expected_gate": "outside TV type",
+      "status": "HOLD",
+      "reasons": [
+        "outside TV type"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "outside_wrong_unit",
+      "expected_gate": "outside TV type",
+      "status": "HOLD",
+      "reasons": [
+        "outside TV type"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "old_outside200uV",
+      "expected_gate": "outside TV exceeded",
+      "status": "HOLD",
+      "reasons": [
+        "outside TV exceeded"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "same_monitor_FFT",
+      "expected_gate": "circular outside evidence",
+      "status": "HOLD",
+      "reasons": [
+        "circular outside evidence"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "model_assumption_root",
+      "expected_gate": "unsupported/circular origin",
+      "status": "HOLD",
+      "reasons": [
+        "unsupported/circular origin"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "nonstationary",
+      "expected_gate": "nonstationary source",
+      "status": "HOLD",
+      "reasons": [
+        "nonstationary source"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "aliased_extra_mode",
+      "expected_gate": "mode family",
+      "status": "HOLD",
+      "reasons": [
+        "mode family"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "wrong_frequency_bound",
+      "expected_gate": "frequency error",
+      "status": "HOLD",
+      "reasons": [
+        "frequency error"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "unproven_transfer",
+      "expected_gate": "unproven historical transfer",
+      "status": "HOLD",
+      "reasons": [
+        "unproven historical transfer"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "transfer_profile",
+      "expected_gate": "transfer profile mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "transfer profile mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "transfer_interval",
+      "expected_gate": "transfer interval mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "transfer interval mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "wrong_source_code",
+      "expected_gate": "computation source mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "computation source mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "wrong_energy",
+      "expected_gate": "digital computation mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "digital computation mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "wrong_lambda",
+      "expected_gate": "Gram/tail computation mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "Gram/tail computation mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "forged_tail",
+      "expected_gate": "tail export mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "tail export mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "unknown_dependency",
+      "expected_gate": "unknown dependency",
+      "status": "HOLD",
+      "reasons": [
+        "unknown dependency"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "self_cycle",
+      "expected_gate": "cyclic dependencies",
+      "status": "HOLD",
+      "reasons": [
+        "cyclic dependencies"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "missing_required_dependency",
+      "expected_gate": "required dependency set",
+      "status": "HOLD",
+      "reasons": [
+        "required dependency set"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "duplicate_dependency",
+      "expected_gate": "dependency list",
+      "status": "HOLD",
+      "reasons": [
+        "dependency list"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "sample_reference",
+      "expected_gate": "sample unit/reference",
+      "status": "HOLD",
+      "reasons": [
+        "sample unit/reference"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "sample_indices",
+      "expected_gate": "sample indices",
+      "status": "HOLD",
+      "reasons": [
+        "sample indices"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "transitive_cycle_via_computation",
+      "expected_gate": "cyclic dependencies",
+      "status": "HOLD",
+      "reasons": [
+        "cyclic dependencies"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "circular_calibration_ancestor",
+      "expected_gate": "unsupported/circular origin",
+      "status": "HOLD",
+      "reasons": [
+        "unsupported/circular origin"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "timestamp_jitter",
+      "expected_gate": "sample timestamp residual",
+      "status": "HOLD",
+      "reasons": [
+        "sample timestamp residual"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "repeated_timestamp",
+      "expected_gate": "sample timestamp residual",
+      "status": "HOLD",
+      "reasons": [
+        "sample timestamp residual"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "large_sample",
+      "expected_gate": "digital RMS exceeded",
+      "status": "HOLD",
+      "reasons": [
+        "digital RMS exceeded"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "nonfinite_sample",
+      "expected_gate": "nonfinite sample",
+      "status": "HOLD",
+      "reasons": [
+        "nonfinite sample"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "short_sample",
+      "expected_gate": "sample count",
+      "status": "HOLD",
+      "reasons": [
+        "sample count"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "changed_bytes_unrebound",
+      "expected_gate": "witness hash mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "witness hash mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "missing_role",
+      "expected_gate": "missing monitor roles",
+      "status": "HOLD",
+      "reasons": [
+        "missing monitor roles"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "duplicate_node",
+      "expected_gate": "duplicate id",
+      "status": "HOLD",
+      "reasons": [
+        "duplicate id"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "unsafe_path",
+      "expected_gate": "unsafe artifact path",
+      "status": "HOLD",
+      "reasons": [
+        "unsafe artifact path"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "unapproved_receipts",
+      "expected_gate": "unapproved review receipt",
+      "status": "HOLD",
+      "reasons": [
+        "unapproved review receipt"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "constructor_review_label",
+      "expected_gate": "constructor-only review",
+      "status": "HOLD",
+      "reasons": [
+        "constructor-only review"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "fixture_laundering",
+      "expected_gate": "fixture mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "fixture mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "duplicate_JSON_key",
+      "status": "HOLD",
+      "reasons": [
+        "duplicate JSON key"
+      ]
+    },
+    {
+      "case": "low_RMS_changed_sample_stale_computation",
+      "expected_gate": "digital computation mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "digital computation mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "missing_method_bytes",
+      "expected_gate": "witness hash mismatch",
+      "status": "HOLD",
+      "reasons": [
+        "witness hash mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    },
+    {
+      "case": "validator_source_pin",
+      "status": "HOLD",
+      "reasons": [
+        "validator source mismatch"
+      ],
+      "empirical_admission": false,
+      "physical_promotion": 0,
+      "independent_review": "PENDING",
+      "tail_proposal": null,
+      "scope": "Structural bindings, exact arithmetic and external receipt allowlist only. Does not authenticate reviewers, methods, calibration truth or scientific independence."
+    }
+  ],
+  "historical_candidate": "HOLD",
+  "independent_review": "PENDING",
+  "empirical_admission": false,
+  "physical_promotion": 0
+}

@@ -1,0 +1,64 @@
+{
+  "version": "0.1",
+  "status": "CONSTRUCTOR_FROZEN_STRUCTURAL_CONTRACT",
+  "physical_promotion": 0,
+  "independent_review": "PENDING",
+  "packet_format": "UD_MONITOR_GRAPH_1",
+  "config_authority": "Separate externally controlled review process; packet must not choose config/catalog. Shipped fixture config/catalog are author controlled and convey no independent review.",
+  "artifact_encoding": "Embedded UTF-8 strings, canonical relative POSIX paths, SHA256 over exact UTF-8 bytes; no external file fetching or execution. JSON duplicate keys and nonfinite tokens rejected. Bounds use rational strings. Samples use canonical finite binary64 hex pairs.",
+  "binding_fields": [
+    "apparatus_run",
+    "source_preparation",
+    "acquisition_profile_sha256",
+    "acquisition_channels",
+    "monitor_channels",
+    "monitor_epoch_s",
+    "time_unit",
+    "voltage_unit",
+    "monitor_reference",
+    "kernel_sha256",
+    "source_contract_sha256"
+  ],
+  "roles": {
+    "samples": "1024 signed complex residual samples in V, ordered indices and reviewed original sample bytes",
+    "clock": "Reviewed timestamp bytes and calibration supporting true sample times, affine error <=10ppb, total per-sample residual <=10ns",
+    "iq_path": "Full path including extraction, frequency response, voltage, loading and conditioning; operator error <=1e-6 at two-vector norm <=5V",
+    "error_budget": "Deterministic complex sample RMS triangle shares <=10/5/3/2 microvolts; matrix share >=IQ output error",
+    "source_class": "Fixed coefficients/frequencies over monitor and acquisition coverage; modes100..199, T0=1s, per-mode error <=5mHz; independent preparation/completeness witness",
+    "outside_tv": "Independent complex spectral-measure TV <=10microvolts; same-output FFT/statistical/model-only evidence unsupported",
+    "transfer": "Reviewed simultaneous same preparation and epoch; same residual complex spectral measure on entire coverage, not a later monitor applied to a historical file",
+    "computation": "Pinned inherited method/contract/theorem hashes, exact recomputed sample energy/RMS, rational Gram floor9/10, norm factor211/20, design-tail calculation",
+    "tail_tv": "Derived deterministic uniform bound; only unsigned proposal output"
+  },
+  "receipt_fields": [
+    "node_sha256",
+    "binding_sha256",
+    "role",
+    "verdict",
+    "reviewer_id",
+    "review_basis",
+    "witness_sha256",
+    "synthetic_fixture"
+  ],
+  "review_scope": "Every node needs an allowlisted receipt binding exact node and witness bytes, role, run/profile and fixture designation. Different reviewer label is necessary but cannot authenticate nonconstructor independence.",
+  "dependencies": "All references resolve, are unique and acyclic; exact required edges enforced by DEPS in admit_monitor.py. Source/outside/clock/IQ roots cannot depend on target output.",
+  "coverage": {
+    "start_s": "-1/100000000",
+    "end_s": "100000001/100000000"
+  },
+  "acquisition_interval": {
+    "start_s": "0",
+    "end_s": "16183/1953125"
+  },
+  "success_meaning": "STRUCTURALLY_READY_FIXTURE or STRUCTURALLY_READY_FOR_REVIEW; empirical_admission always false, Physical Promotion0; independently reviewed scientific acceptance remains separate.",
+  "integration": "Output is UD_UNSIGNED_MONITOR_TAIL_PROPOSAL_1, not an admissible v0.1 acquisition packet. Requires independent bridge review and policy/version change or reviewed evidence import before discharging tail_tv. Other eleven acquisition roles remain required.",
+  "limits": [
+    "No measurement performed",
+    "No reviewer identity authentication",
+    "No verification of scientific witness text or calibration truth",
+    "No proof that arbitrary uploaded timestamps are true physical times",
+    "No outside-TV conclusion from samples alone",
+    "No prospective monitor applied to historical data",
+    "No universal production service/resource-hardening claim"
+  ]
+}

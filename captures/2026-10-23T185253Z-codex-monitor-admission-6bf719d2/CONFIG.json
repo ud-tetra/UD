@@ -1,0 +1,36 @@
+{
+  "version": "UD_MONITOR_GRAPH_CONFIG_1",
+  "binding": {
+    "apparatus_run": "SYNTHETIC_PROSPECTIVE_MONITOR_001",
+    "source_preparation": "SYNTHETIC_FIXED_PREPARATION_001",
+    "acquisition_profile_sha256": "01b8b10c79cb07535cf9326afafb79b99bd48bc261cbe62dc6228062b378e480",
+    "acquisition_channels": [
+      1
+    ],
+    "monitor_channels": [
+      "I",
+      "Q"
+    ],
+    "monitor_epoch_s": "0",
+    "time_unit": "s",
+    "voltage_unit": "V",
+    "monitor_reference": "signed_complex_full_tail_residual",
+    "kernel_sha256": "5beebe40fa2bfe744a0a64ee57401e77334b925bf0a23c0d2f24cafcd60ff254",
+    "source_contract_sha256": "ae0d3f00fabb008253bb0228a5c0734765de6417074212be9f537e9df9985966"
+  },
+  "coverage": {
+    "start_s": "-1/100000000",
+    "end_s": "100000001/100000000"
+  },
+  "acquisition_interval": {
+    "start_s": "0",
+    "end_s": "16183/1953125"
+  },
+  "computation_hashes": {
+    "method_sha256": "0e7037b4ac9b5de3d617e0efcac34d3d8ae128e5f3ebd1da1fd0eed5e5ee7c12",
+    "contract_sha256": "ae0d3f00fabb008253bb0228a5c0734765de6417074212be9f537e9df9985966",
+    "theorem_sha256": "76f48a8ffe2d680a31d3fa704749afa2efaa6be35c3b9344c7283158e72473ec"
+  },
+  "validator_sha256": "ebf5d7ba35cb7aad583aca90574283f13869d92399431a2e27a97204692aacc0",
+  "policy": "external_review_authority_supplies_config_and_catalog; constructor_fixture_allowlist_is_not_independent_review"
+}
