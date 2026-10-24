@@ -1,0 +1,27 @@
+{
+  "carrier": "Finite pure tetrahedral simplicial complex, triangular face valence one or two",
+  "fixed_input": "Original real face/core coordinates, unit metric and supplied hard face mask; other grades unchanged",
+  "generator": "H_tau=sum_{f subset tau} h_f G_f / n3(f)",
+  "event": "Cayley(t H_tau) on W_tau only",
+  "reference_step": "t=1 in closed-complex controls, a supplied dimensionless model convention",
+  "read_write_bound_real_coordinates": 9,
+  "permission_read_bound_face_bits": 4,
+  "local_topology": "Four central faces and their cofaces",
+  "declared_conflict_graph": "square of tetrahedron dual graph",
+  "maximum_conflict_degree": 16,
+  "conditional_color_count": 17,
+  "scheduler": "OPEN_NATIVE_SOURCE; supplied coloring/order is a conditional implementation",
+  "positive_claim": "fixed-mask orthogonality, signed receipts and complete generator partition",
+  "no_liveness_claim": true,
+  "verification_counts": {
+    "generator_partition_masks": 1024,
+    "norm_receipt_ownership_controls": 1104,
+    "inverse_controls": 1024,
+    "odd_controls": 80,
+    "signed_covariance_controls": 600,
+    "locality_controls": 30,
+    "graph_pair_controls": 84,
+    "disjoint_strip_commutation_controls": 10
+  },
+  "physical_promotion": 0
+}
