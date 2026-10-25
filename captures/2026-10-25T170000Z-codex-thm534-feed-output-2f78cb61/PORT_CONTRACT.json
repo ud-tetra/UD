@@ -1,0 +1,32 @@
+{
+  "status": "CANDIDATE_KINEMATIC_COMPLETION; NATIVE_COMPILATION_OPEN",
+  "native_worker": "Original 15-coordinate tetrahedron with frozen unit metric and supplied native face mask",
+  "added_ports": {
+    "count": 2,
+    "names": [
+      "feed",
+      "output"
+    ],
+    "native_simplex_grade": "UNASSIGNED",
+    "ownership": "NOT_DERIVED",
+    "metric": "Candidate Euclidean product extension; original worker metric unchanged"
+  },
+  "matched_input": "worker x0, feed c=(C_h x0)_core, output zero",
+  "ordered_phases": [
+    "native worker conversion C_h",
+    "added proper quarter-turn core/output extraction",
+    "added rational rank-two skew Cayley restoration on worker/feed"
+  ],
+  "result": "(x0,c,0) -> (x0,0,c)",
+  "support_balance": "Output gain c^2 equals feed debit c^2; worker restored",
+  "control_scope": "Fixed operators designed for a known matched template; orthogonal on generic inputs but not a universal reset",
+  "native_coupling_gap": "Restoration has nonincident worker couplings, e.g. S_edge01,face023=-1/3 while native B2 entry is zero",
+  "open": [
+    "Native geometric port realization and compiler",
+    "Predictive gate and phase rule",
+    "Prepared incoming feed and outgoing capacity",
+    "Controller and record reset",
+    "Physical cost, action, clock and particle bridge"
+  ],
+  "physical_promotion": 0
+}
