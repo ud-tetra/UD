@@ -1,0 +1,37 @@
+{
+  "status": "EXACT_FORMAL_LIE_AND_NATIVE_CHECKPOINT_COMPATIBILITY; FINITE_COMPILER_OPEN",
+  "carrier": "Original Kminus, 23 real coordinates, dimensions 5+9+7+2",
+  "native_operator_family": "A_h=A0+sum h_f G_f, complete shared-face stars",
+  "formal_generating_masks": "all-off and seven single-face masks; algebraic differences do not create executable drift-free pulses",
+  "source_assumption": "Mask realizability and controllable durations are supplied, not derived native readiness",
+  "invariant_split": {
+    "active": "ker B1 in edges plus all faces and cores; dimension 14",
+    "uncontrolled": "vertices plus edge gradients; dimension 9"
+  },
+  "formal_lie_rank": 92,
+  "active_skew_rank": 91,
+  "topological_closure_rank": "NOT_ASSERTED_BY_FORMAL_RANK",
+  "feed_coordinate": [
+    0,
+    1,
+    4
+  ],
+  "output_coordinate": [
+    0,
+    2,
+    4
+  ],
+  "abstract_ports_added": 0,
+  "checkpoint_scope": "Known-state transitions, not faithful implementation of the prior isolated-worker operator on every input",
+  "reachability": "Conditional arbitrary-accuracy existence on active sector if masks/durations are available; no finite word/error/time budget supplied",
+  "continuous_obstruction": "No positive-duration exact identity on all gradient inputs under unmodified drift, because sqrt3/sqrt5 is irrational",
+  "finite_cayley_scope": "The continuous obstruction is not asserted for finite rational Cayley products",
+  "open": [
+    "Native admissible masks and predictive selection",
+    "Explicit finite schedule and checkpoint-error certificate",
+    "Actual signed/ownership receipts and switching resource budget",
+    "Clock, outgoing records, reset and renewal",
+    "Physical action and particle bridge"
+  ],
+  "physical_promotion": 0
+}
