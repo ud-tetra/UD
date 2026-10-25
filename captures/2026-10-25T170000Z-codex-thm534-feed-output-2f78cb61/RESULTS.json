@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact fractions.Fraction",
+  "physical_promotion": 0,
+  "review": "CONSTRUCTOR_ONLY; INDEPENDENT_REVIEW_PENDING",
+  "matched_native_masks": 14,
+  "matched_cycle_length_controls": 56,
+  "signed_covariance_controls": 336,
+  "feed_error_controls": 42,
+  "global_norm_controls_on_generic_inputs": 56,
+  "minimum_nonnative_worker_contact_pairs": 6,
+  "examples": [
+    {
+      "mask": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "worker_stock": "3",
+      "feed_amplitude": "24/37",
+      "feed_debit_and_output_stock": "576/1369",
+      "reset_generator_edge01_face023_entry": "-1/3; native incidence is zero",
+      "nonnative_worker_contact_pairs": [
+        [
+          4,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          12
+        ]
+      ]
+    }
+  ],
+  "added_abstract_ports": 2,
+  "source_status": "KINEMATIC_COMPLETION_ONLY; PORT_AND_RESTORATION_GENERATORS_NOT_NATIVE_DERIVED",
+  "balance": "worker restored, output stock equals feed debit, feed emptied",
+  "limits": [
+    "Prepared matched feed and empty output are external resources",
+    "Fixed template does not restore every unknown input state",
+    "No autonomous mask control, native compilation or record reset supplied",
+    "No action, energy or particle bridge"
+  ]
+}
