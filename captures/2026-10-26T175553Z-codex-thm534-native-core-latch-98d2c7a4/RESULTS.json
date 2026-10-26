@@ -1,0 +1,97 @@
+{
+  "status": "PASS_EXACT_RATIONAL_ENCLOSURE",
+  "native_dimension": 23,
+  "all_mask_skew_checks": 128,
+  "positive_rational_cayley_steps": 256,
+  "stage_steps": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "checkpoint_certificates": [
+    {
+      "checkpoint": 1,
+      "pulse": 64,
+      "accumulated_solve_error_l1_bound": "258440973093263/59200000000000000000000000",
+      "target_distance_l1": "58369/3700000000000000",
+      "certified_checkpoint_l2_error_bound": "1192344973093263/59200000000000000000000000",
+      "checkpoint_error_decimal_display": 2.0140962383332147e-11,
+      "owned_q": [
+        "21486486486502094594594714947/10000000000000000000000000000",
+        "795060262964707135682987287/625000000000000000000000000"
+      ],
+      "owned_actual_error_bound": "61198822428551470136573392689938495987169/3504640000000000000000000000000000000000000000000000",
+      "elapsed_model_step_sum": "6163735721293/125000000000",
+      "timing_jitter_error_coefficient": "640",
+      "target_owned_error_bound": "282347289629906364934860774067442495987169/3504640000000000000000000000000000000000000000000000"
+    },
+    {
+      "checkpoint": 2,
+      "pulse": 128,
+      "accumulated_solve_error_l1_bound": "33240722166843937/3700000000000000000000000000",
+      "target_distance_l1": "62301/1850000000000000",
+      "certified_checkpoint_l2_error_bound": "157842722166843937/3700000000000000000000000000",
+      "checkpoint_error_decimal_display": 4.266019518022809e-11,
+      "owned_q": [
+        "43197589481340903761871049/25000000000000000000000000",
+        "33063310354301686478497801/19531250000000000000000000"
+      ],
+      "owned_actual_error_bound": "491962688070395213210173309882241927313659969/13690000000000000000000000000000000000000000000000000000",
+      "elapsed_model_step_sum": "99561708556873/1000000000000",
+      "timing_jitter_error_coefficient": "1280",
+      "target_owned_error_bound": "2336072288094204592541039486358389927313659969/13690000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checkpoint": 3,
+      "pulse": 192,
+      "accumulated_solve_error_l1_bound": "5076175186613079/370000000000000000000000000",
+      "target_distance_l1": "135647/3700000000000000",
+      "certified_checkpoint_l2_error_bound": "18640875186613079/370000000000000000000000000",
+      "checkpoint_error_decimal_display": 5.038074374760292e-11,
+      "owned_q": [
+        "29999999999980600000001115613/20000000000000000000000000000",
+        "38414901387897287801315660317/20000000000000000000000000000"
+      ],
+      "owned_actual_error_bound": "7512739276213124474525186327410091253860241/136900000000000000000000000000000000000000000000000000",
+      "elapsed_model_step_sum": "77863779322103/500000000000",
+      "timing_jitter_error_coefficient": "1920",
+      "target_owned_error_bound": "27588495276534839147722887192832691253860241/136900000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checkpoint": 4,
+      "pulse": 256,
+      "accumulated_solve_error_l1_bound": "136141704088902063/7400000000000000000000000000",
+      "target_distance_l1": "5417/148000000000000",
+      "certified_checkpoint_l2_error_bound": "406991704088902063/7400000000000000000000000000",
+      "checkpoint_error_decimal_display": 5.499887893093271e-11,
+      "owned_q": [
+        "29999999999969800000000641001/20000000000000000000000000000",
+        "38414901387906725639154231941/20000000000000000000000000000"
+      ],
+      "owned_actual_error_bound": "4029794441050035628392230172699774280805655969/54760000000000000000000000000000000000000000000000000000",
+      "elapsed_model_step_sum": "42180482992893/200000000000",
+      "timing_jitter_error_coefficient": "2560",
+      "target_owned_error_bound": "12046954441197143311997188420226874280805655969/54760000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "norm_squared_exact": "4683/1369",
+  "exact_norm_preserved": true,
+  "max_checkpoint_error_strict_upper_bound": "1/10000000000",
+  "per_pulse_owned_cut_defect_identities": 512,
+  "certificate_sha256": "dd72f8e221c158ae9d5a0d6633d8dd7cba5a658bb32d659da02e2aa9b60cf9ee",
+  "signed_receipts_sha256": "f51f5bd4965d342b86790a04d3cc7470b14f6b97e9c771afdbf072f3c1e8bdd2",
+  "timing_jitter_bound": "initial_l2_error + timing_coefficient * max_abs_step_error + checkpoint_error",
+  "timing_coefficient_final": "2560",
+  "source_type": "Constructed known-preparation schedule; supplied masks and dimensionless Cayley steps",
+  "not_claimed": [
+    "Continuous-flow execution",
+    "Finite physical clock",
+    "Native autonomous selection or mask realization",
+    "Universal unknown-input reset",
+    "Automatic latch trigger or fresh-port renewal",
+    "Parameter-free action map",
+    "Independent review"
+  ],
+  "physical_promotion": 0
+}

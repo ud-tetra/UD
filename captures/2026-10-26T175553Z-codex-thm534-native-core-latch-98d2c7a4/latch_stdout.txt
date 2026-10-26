@@ -1,0 +1,77 @@
+{
+  "status": "PASS_EXACT_CONDITIONAL_NATIVE_CORE_LATCH",
+  "original_dimension": 23,
+  "output_core_index": 22,
+  "incident_face_indices": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "incident_faces": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      2,
+      4
+    ],
+    [
+      1,
+      2,
+      4
+    ]
+  ],
+  "all_mask_isolation_equivalence_controls": 128,
+  "isolating_masks": 8,
+  "finite_cayley_hold_and_norm_controls": 72,
+  "single_gate_reopen_counterexamples": 4,
+  "old_face_output_min_generator_speed_squared": "22263/1369",
+  "old_face_output_instantaneous_derivative": 1,
+  "old_face_output_after_unit_alloff_cayley": "1444/2331",
+  "alloff_kernel_dimension": 5,
+  "allmask_common_kernel_dimension": 1,
+  "common_kernel": "uniform vertex amplitude only; orthogonal to nonzero active-sector states",
+  "worker_local_observation_coordinates": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    10,
+    12,
+    14,
+    15,
+    17,
+    19,
+    21
+  ],
+  "ideal_start_end_alias": true,
+  "parking_checkpoint_error_bound": "406991704088902063/7400000000000000000000000000",
+  "parked_core_stock_target": "576/1369",
+  "parked_core_target_stock_error_bound": "3907120359419102051997188420226874280805655969/54760000000000000000000000000000000000000000000000000000",
+  "early_nonzero_trigger_core_interval": [
+    "115875380197789681756796383/925000000000000000000000000",
+    "115875380197886318243203617/925000000000000000000000000"
+  ],
+  "gate_error_exposure_bound": "abs(core change) <= 2 * sum(t_n * count_open_incident_faces_n) at fixed total norm 4683/1369",
+  "open": [
+    "Autonomous latch trigger and clock",
+    "Core/output role selection",
+    "Geometric mask realization",
+    "Output isolation while supplying future loading",
+    "Fresh feed and renewal"
+  ],
+  "physical_promotion": 0
+}
