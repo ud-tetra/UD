@@ -1,0 +1,100 @@
+{
+  "status": "PASS_EXACT_RESIDUAL_CERTIFIED_ACTIVE_OPERATOR_WRITES",
+  "field_dimension": 23,
+  "certified_sector_dimension": 14,
+  "basis_edge_face_columns": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "basis_condition_rational_multiplier": "7/5",
+  "mask_invariance_controls": 128,
+  "gradient_modal_witness_controls": 256,
+  "programs": [
+    {
+      "u": "1/2",
+      "positive_rational_steps": 160,
+      "sum_cayley_parameters": "136213206340557/1000000000000",
+      "rational_residual_frobenius_bound": "32260141022069131/2000000000000000000000000000",
+      "rational_final_basis_mismatch_l1": "60557/200000000000000",
+      "certified_active_operator_2_norm_error_bound": "4464810987154483917/10000000000000000000000000000",
+      "operator_error_decimal_display": 4.464810987154484e-10,
+      "intermediate_outside_record_plane_stock_lower_bound": "3986123925160329645976370148183331300046018137615233391/4000000000000000000000000000000000000000000000000000000",
+      "intermediate_leakage_decimal_display": 0.9965309812900824,
+      "leakage_witness_pulse": 72,
+      "gradient_identity_counterexamples": {
+        "3": {
+          "cosine_interval": [
+            "196254304980579/200000000000000",
+            "61329470306431/62500000000000"
+          ],
+          "unit_witness_identity_error_squared_interval": [
+            "1170529693569/31250000000000",
+            "37456950194209/1000000000000000"
+          ]
+        },
+        "5": {
+          "cosine_interval": [
+            "942579200070109/1000000000000000",
+            "94257920007011/100000000000000"
+          ],
+          "unit_witness_identity_error_squared_interval": [
+            "114841599859781/1000000000000000",
+            "57420799929891/500000000000000"
+          ]
+        }
+      }
+    },
+    {
+      "u": "-1/2",
+      "positive_rational_steps": 160,
+      "sum_cayley_parameters": "16361393099457/125000000000",
+      "rational_residual_frobenius_bound": "16055212955327081/1000000000000000000000000000",
+      "rational_final_basis_mismatch_l1": "9983/62500000000000",
+      "certified_active_operator_2_norm_error_bound": "1230482490687289567/5000000000000000000000000000",
+      "operator_error_decimal_display": 2.460964981374579e-10,
+      "intermediate_outside_record_plane_stock_lower_bound": "3996207923349938636790050823115861310719834673870927351/4000000000000000000000000000000000000000000000000000000",
+      "intermediate_leakage_decimal_display": 0.9990519808374847,
+      "leakage_witness_pulse": 47,
+      "gradient_identity_counterexamples": {
+        "3": {
+          "cosine_interval": [
+            "39446161109661/62500000000000",
+            "631138577754577/1000000000000000"
+          ],
+          "unit_witness_identity_error_squared_interval": [
+            "737722844490847/1000000000000000",
+            "23053838890339/31250000000000"
+          ]
+        },
+        "5": {
+          "cosine_interval": [
+            "161195218325259/200000000000000",
+            "100747011453287/125000000000000"
+          ],
+          "unit_witness_identity_error_squared_interval": [
+            "388047816747409/1000000000000000",
+            "38804781674741/100000000000000"
+          ]
+        }
+      }
+    }
+  ],
+  "write_then_unwrite_active_error_bound": "6925775968529063051/10000000000000000000000000000",
+  "holding_mask_controls": 8,
+  "uniform_step_parameter_error_coefficient_per_program": 800,
+  "exact_owned_cut_defect_identities": 640,
+  "scope": "Two fixed preprogrammed writer angles on the active sector; not clock generation or an arbitrary-angle native controller.",
+  "not_claimed": [
+    "Identity on the uncontrolled gradient sector",
+    "Isolation during writing",
+    "Continuous-flow execution",
+    "Generation or recovery of omitted event time",
+    "Autonomous programme or mode source",
+    "Unknown-receipt erasure/reset",
+    "Physical clock or action map"
+  ],
+  "physical_promotion": 0
+}
