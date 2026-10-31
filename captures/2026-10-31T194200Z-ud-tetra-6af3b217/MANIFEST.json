@@ -1,0 +1,85 @@
+{
+  "schema": "UD_MANIFEST_v0.1",
+  "capture_id": "2026-10-31T194200Z-ud-tetra-6af3b217",
+  "created_utc": "2026-10-31T19:42:00Z",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "status": "NO_GO_SCOPED__EXACT_BURDEN_CYCLE_PERSISTENCE__PHYSICAL_PROMOTION_0",
+  "claim_strength": "EXACT_CONDITIONAL_CUT_CYCLE_PROJECTION_AND_SOURCE_FREE_NO_GO",
+  "physical_promotion": 0,
+  "lane": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "independent_nonconstructor_review": "PENDING",
+  "sources": [
+    {
+      "name": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md",
+      "version": "v0.39, 2026-08-22",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "rows": [
+        "Q153",
+        "Q156",
+        "Q162",
+        "Q163"
+      ]
+    },
+    {
+      "name": "library_LEDGER_v0.85.json",
+      "url": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/ledger-recovery-v0.1/library_LEDGER_v0.85.json",
+      "scope": "recovered 2026-10-21, inherited scientific revision v0.43",
+      "rows": [
+        "O09",
+        "G05",
+        "Q140",
+        "Q153",
+        "Q156",
+        "Q162",
+        "Q163"
+      ]
+    },
+    {
+      "name": "UD_O09_CUBIC_CURRENT_GATE_v0.1.zip",
+      "sha256": "7def5fd8a7e9fee1addf09f8ee9bf74a3af946f98df85823485cbefc808c4ce7",
+      "url": "https://github.com/ud-tetra/UD/pull/472"
+    }
+  ],
+  "local_full_release": {
+    "filename": "UD_O09_BURDEN_PHASE_SOURCE_AUDIT_v0.1.zip",
+    "sha256": "34ebaa245def6059424a7f1d1bda935c4d28d5456134bc20150d0f970b61af15",
+    "manifest_sha256": "cebd70a9ae8229d531cbc2559162721946a72d232d9954772037d2275084879e",
+    "included_files_count": 15,
+    "git_mirrored": false,
+    "pdf_sha256": "0ba9efe6e453eb1e0f7baabec192a5cf6dd740d4f81d893295d029220235d600"
+  },
+  "verified_in_local_release": [
+    "5 executable exact checks passed",
+    "64 hard gate incidence/rank/spectra tests passed",
+    "continuous and discrete switching-gate bounds symbolically checked",
+    "15 claim ledger rows; physical promotion all 0",
+    "4-page A4 PDF rendered and inspected",
+    "ZIP file manifest hashes checked"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-10-31T194200Z-ud-tetra-6af3b217/TECHNICAL_NOTE.md",
+      "sha256": "bbbfcf14c8ee19a576455d40d68cd3036b9e992ed234b3b665862d222836aad3",
+      "size_bytes": 15330,
+      "provenance": "generated local scientific capture; unchanged source bytes"
+    },
+    {
+      "path": "captures/2026-10-31T194200Z-ud-tetra-6af3b217/README.md",
+      "sha256": "862cf39e2debc77e107cdc38a0860c2ba8f66cb7e238c83b0124baca6da8c356",
+      "size_bytes": 2501,
+      "provenance": "generated local scientific capture; unchanged source bytes"
+    },
+    {
+      "path": "captures/2026-10-31T194200Z-ud-tetra-6af3b217/CLAIM_DEPENDENCY_LEDGER.csv",
+      "sha256": "7d9e4542dab9a1d592d82f8e718146ac9718fd82b8983ce336d200acfc901b5e",
+      "size_bytes": 3353,
+      "provenance": "generated local scientific capture; unchanged source bytes"
+    }
+  ],
+  "note": "Only the three text outputs plus GitHub manifest/event are mirrored. Complete five-script release and PDF remain local. Physical promotion remains 0. No earlier evidence overwritten.",
+  "supersedes": [],
+  "original_artifacts_unchanged": true,
+  "website_updated": false,
+  "full_repository_integrity_script": "NOT_RUN",
+  "main_merged": false
+}
