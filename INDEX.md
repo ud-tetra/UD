@@ -17,3 +17,12 @@ Physical promotion 0; independent review pending. Captured files retain their or
 [Complete activity record, recovered packages and open gates](captures/2026-10-17T184000Z-codex-session-publication-7f4a2d91/README.md). Computational completion, independent review HOLD, and physical promotion 0 remain separate.
 
 [GitHub publication receipt and source-to-remote commit mapping](captures/2026-10-17T185600Z-codex-publication-receipt-39ac4d70/README.md).
+
+
+## Predictive-discovery program (proposed v1.0)
+
+- [Governance protocol](docs/UD_PREDICTIVE_DISCOVERY_PROTOCOL_v1.0.md)
+- [First three prediction candidates](docs/UD_FIRST_THREE_PREDICTION_CANDIDATES_v1.0.md)
+- [Program bootloader](BOOTLOADER.md)
+
+This is navigation and process development only; physical promotion 0.

@@ -7,3 +7,6 @@ An artifact correction is a new capture referencing the prior version in `supers
 Run the integrity workflow. If main advanced, update your branch and repeat the checks; never resolve a conflict by discarding another contribution. Administrative configuration changes require review and an event explaining them.
 
 The repository currently contains a historical import, not a new scientific approval. Statements and audits inside snapshots retain their original scope and may have later amendments. Consult source versions and accepted governance before reuse.
+
+
+For observables, consult `docs/UD_PREDICTIVE_DISCOVERY_PROTOCOL_v1.0.md`; PRs must report target exposure, independent reviewer, falsifier, units/readout, tests actually run and any cross-repo impact. New process documents do not change historical captures or promote claims.
