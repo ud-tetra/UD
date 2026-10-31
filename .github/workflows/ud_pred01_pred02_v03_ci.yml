@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - "captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/**"
+      - "captures/2026-10-31T191938Z-gpt6-pred-v031-replay-fix-94c27a1a/**"
       - ".github/workflows/ud_pred01_pred02_v03_ci.yml"
   workflow_dispatch:
 
@@ -18,7 +19,9 @@ jobs:
       - name: Regenerate complete 27-class preparation and carrier results
         run: |
           python3 captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/carrier_and_preparation.py --m 8 --exact-ranks --seed 20261031 --out /tmp/ud_pred_v03_replay.json
-          cmp /tmp/ud_pred_v03_replay.json captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/RESULTS.json
+          python3 captures/2026-10-31T191938Z-gpt6-pred-v031-replay-fix-94c27a1a/compare_replay.py captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/RESULTS.json /tmp/ud_pred_v03_replay.json
+      - name: Typed replay comparator regression tests
+        run: python3 -m unittest discover -s captures/2026-10-31T191938Z-gpt6-pred-v031-replay-fix-94c27a1a/ -p 'test_compare_replay.py' -v
       - name: Scope guard
         run: |
           python3 - <<'PY'
