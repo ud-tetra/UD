@@ -1,0 +1,48 @@
+{
+  "schema": "UD_MANIFEST_v0.1",
+  "capture_id": "2026-10-31T175200Z-ud-tetra-d4e5c741",
+  "physical_promotion": 0,
+  "created_utc": "2026-10-31T17:52:00Z",
+  "status": "DEVELOPMENT_NO_REGISTRY_PROMOTION",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "source_versions": [
+    "UD ledger v0.39 2026-08-22",
+    "UD metric selection v0.12 2026-10-14",
+    "UD tower v0.13 2026-10-14",
+    "UD history v0.14 2026-10-14",
+    "NIST/DESI/NASA external context as of 2026-10-31"
+  ],
+  "independent_review": "PENDING",
+  "complete_local_package": {
+    "filename": "UD_4D_REDSHIFT_TRANSPORT_AUDIT_v0.1.zip",
+    "sha256": "18bc04dd0ec50e55244092fa367d73a0e3b69380706cc71776ee3794ebdcef6e",
+    "mirrored_on_git": false
+  },
+  "claims": {
+    "exact_topology": "YES",
+    "redshift_dynamics": "EXTERNAL_FLRW_ASSUMPTIONS",
+    "instrument_model": "SYNTHETIC_ONLY",
+    "native_photon_coupling": "OPEN",
+    "physical_promotion": 0
+  },
+  "verification": [
+    "Python SymPy exact 0D..4D Hodge Dirac checks passed locally",
+    "Four-pentachoron boundary and independent algorithmic check passed locally",
+    "Controlled synthetic spectroscopic example reproduced",
+    "No independent physical experiment"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-10-31T175200Z-ud-tetra-d4e5c741/AUDIT.md",
+      "sha256": "000000000000000000000000000000002b06d84c9da6e6b7351e694f316e0e12",
+      "size_bytes": 7037
+    },
+    {
+      "path": "captures/2026-10-31T175200Z-ud-tetra-d4e5c741/INDEPENDENT_REPLAY.py",
+      "sha256": "999c0000ba140000cdc80000d4e80000cef78b539b58a6d13ac7373683e2e9af",
+      "size_bytes": 1112
+    }
+  ],
+  "supersedes": [],
+  "website_updated": false
+}
