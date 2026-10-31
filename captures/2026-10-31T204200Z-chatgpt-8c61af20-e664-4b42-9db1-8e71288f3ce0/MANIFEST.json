@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "capture_id": "2026-10-31T204200Z-chatgpt-8c61af20-e664-4b42-9db1-8e71288f3ce0",
+  "source_project": "Unified Dynamics",
+  "repo": "ud-tetra/UD",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "branch": "contrib/chatgpt/2026-10-31-simplex-fill-ladder-8c61af20",
+  "created_utc": "2026-10-31",
+  "status": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "physical_promotion": 0,
+  "version": "v0.6",
+  "scope": "point-edge-triangle-tetrahedron filling, homology, geometrical volume, conservative refinement",
+  "source_provenance": [
+    {
+      "path": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "scope": "P01–P09 F01–F05 G05 Q153–Q179"
+    },
+    {
+      "path": "UD_K4_K5_NATIVE_BIRTH_J34_CURVED_METRIC_AUDIT_v0.3.md",
+      "sha256": "a4d8bb0c4e23a8930e73817d51a7bb564d8f38ff65c8edcda9851ee1dca330e2"
+    },
+    {
+      "path": "UD_TETRAHEDRAL_SPACETIME_4_OVER_3_FOLD_AND_ENERGY_AUDIT_v0.5.md",
+      "sha256": "ce02d83c983b3a00167e3aedf6a186986dd877a796d115464e36b51d1ec7b964"
+    }
+  ],
+  "verification": {
+    "assertion_groups": 110,
+    "method": "exact Python/SymPy and independent direct integration; mod-2 exhaustive facet controls",
+    "constructor_verified": true,
+    "independent_review": false,
+    "repository_verify_script": "NOT_RUN_CONNECTOR_ONLY",
+    "physical_bridge": "NOT_TESTED"
+  },
+  "claim_bins": {
+    "EXACT": [
+      "Pascal-simplex increments",
+      "cone shell-first fill identity",
+      "sphere-to-ball homology change",
+      "binary facet-cooperative closure",
+      "facet-to-volume ratio (d+1)/d",
+      "boundary flux volume",
+      "refinement energy additivity"
+    ],
+    "NO_GO": [
+      "No unsourced positive bulk energy under unchanged closed stock",
+      "No inference of cell occupancy from metric boundary readout"
+    ],
+    "OPEN": [
+      "native Omega0 fill selection",
+      "physical unit/time/energy bridge",
+      "native fractal mechanism"
+    ]
+  },
+  "prior_dependency": "UD_TETRAHEDRAL_SPACETIME_4_OVER_3_FOLD_AND_ENERGY_AUDIT_v0.5.md",
+  "supersedes": [],
+  "files": [
+    {
+      "path": "captures/2026-10-31T204200Z-chatgpt-8c61af20-e664-4b42-9db1-8e71288f3ce0/UD_SIMPLEX_FILL_LADDER_AND_VOLUME_CLOSURE_AUDIT_v0.6.md",
+      "size_bytes": 17043,
+      "sha256": "181b70d3d49d716e23cdc11591997206afe1fa019ddf9549576cd94e9e97603e",
+      "git_blob_sha": "7884667ad91dfc967bbaa85c8a5c88ef6c8d47e0"
+    },
+    {
+      "path": "captures/2026-10-31T204200Z-chatgpt-8c61af20-e664-4b42-9db1-8e71288f3ce0/UD_SIMPLEX_FILL_LADDER_VERIFY_v0.6.py",
+      "size_bytes": 14658,
+      "sha256": "f9032bf5c4da035a70f9d25592d1710b7d51e99bd119c87648795095f2c69e8a",
+      "git_blob_sha": "a1019a783f8689e0d7b12a0f75ac6cb57a198ada"
+    },
+    {
+      "path": "captures/2026-10-31T204200Z-chatgpt-8c61af20-e664-4b42-9db1-8e71288f3ce0/UD_SIMPLEX_FILL_LADDER_RESULTS_v0.6.json",
+      "size_bytes": 13476,
+      "sha256": "5de5f3bc4c8bd9864185a0fad33f5c1e17333aab6f2e5e71e2310ae6368f3095",
+      "git_blob_sha": "b0edc862d9eacc10b0bdd3ebff962103ced60f83"
+    },
+    {
+      "path": "captures/2026-10-31T204200Z-chatgpt-8c61af20-e664-4b42-9db1-8e71288f3ce0/UD_SIMPLEX_FILL_LADDER_README_v0.6.md",
+      "size_bytes": 1319,
+      "sha256": "f7f735f079598b91adc62d60248ff4dbc35ada14d0b3571ee40eca3e13c0b55e",
+      "git_blob_sha": "807b072df978216f7c2cf2b94c232219b2e298d1"
+    }
+  ],
+  "local_bundle": {
+    "name": "UD_SIMPLEX_FILL_LADDER_RESEARCH_RELEASE_v0.6.zip",
+    "sha256": "96f6cb08601b29567a17f55a171ee50d9f7c82a7e6d16a61bd0852a1e864567f",
+    "note": "Local binary ZIP included in conversation; GitHub connector captured text/code/results separately."
+  }
+}
