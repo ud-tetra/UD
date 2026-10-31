@@ -10,3 +10,8 @@ The repository currently contains a historical import, not a new scientific appr
 
 
 For observables, consult `docs/UD_PREDICTIVE_DISCOVERY_PROTOCOL_v1.0.md`; PRs must report target exposure, independent reviewer, falsifier, units/readout, tests actually run and any cross-repo impact. New process documents do not change historical captures or promote claims.
+
+
+## Proof-first mathematical contributions
+
+Before describing a contribution as research closure, state the exact theorem and proof hypotheses, then capture its immutable proof ID, theorem-quality argument, counterexamples, verification and append-only ledger receipt in proofs/. CI is supporting reproduction, not proof authority. Proof status, independent review and physical promotion are separate. Record the theorem or obstruction first, code second.

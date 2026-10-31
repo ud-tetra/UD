@@ -1,6 +1,6 @@
 # Unified Dynamics (UD)
 
-Collaborative research record and append-only artifact mirror.
+Proof-led mathematical research program and append-only theorem/artifact archive.
 
 Start with [the artifact index](INDEX.md), [contribution workflow](CONTRIBUTING.md), and [capture instructions](AGENTS.md).
 
@@ -19,3 +19,8 @@ Many Archive documents are located in Docs folder.  Whenever a pdf or docx file 
 ## Predictive discovery governance (proposed 31 October 2026)
 
 Read [UD Predictive Discovery Protocol v1.0](docs/UD_PREDICTIVE_DISCOVERY_PROTOCOL_v1.0.md) and [first three prediction candidates](docs/UD_FIRST_THREE_PREDICTION_CANDIDATES_v1.0.md). Discovery may include explicit FIT models, alternative assumptions and negative results; confirmation requires a frozen measurable bridge, a non-constructor review, held-out testing and replication. Earlier frozen proofs and the v1.1 errata remain intact. Physical promotion **0**; program adoption awaits reviewed integration.
+
+
+## Proof-first tracking (31 October 2026)
+
+Scientific milestones are theorems, conditional proofs, scoped no-go results, counterexamples and material corrections, **not code releases or CI passes**. Read [proof-first governance](docs/UD_PROOF_FIRST_RESEARCH_GOVERNANCE_v1.0.md) and [proof milestone archive](proofs/README.md). Each proved milestone receives a formal statement, complete proof, immutable ledger entry, dependency record and hash-verified capture. Physical promotion remains 0.

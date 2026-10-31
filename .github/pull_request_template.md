@@ -18,3 +18,14 @@ Existing artifacts were not modified or removed. Constructor checks are not inde
 
 
 For prediction-policy edits: source versions / candidate lane / fit exposure / frozen readout & null / falsifier / non-constructor review / evidence rung / cross-repo PR links:
+
+
+## Proof milestone status (when mathematics is claimed)
+
+Theorem, object, domain and hypothesis statement:
+
+Proof ID/file and immutable ledger receipt:
+
+Mathematical proof, counterexamples, independent verification and review status:
+
+Distinct scientific proof status versus CI and physical bridge status:
