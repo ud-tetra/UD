@@ -1,0 +1,68 @@
+{
+  "artifact": "UD_PRED01_PRED02_ASSUMPTION_SCOPED_RESULTS_v0.2",
+  "date": "2026-10-31",
+  "lane": "D0_DEVELOPMENT",
+  "physical_promotion": 0,
+  "external_review": "DEFERRED",
+  "carrier_n3": "ASSUMED_ONLY",
+  "exact": {
+    "A": 1,
+    "C_nonnegative_grid": [
+      "0",
+      "1/2",
+      "1",
+      "3/2",
+      "2"
+    ],
+    "kappa_nonnegative_grid": [
+      "0",
+      "1/2",
+      "1",
+      "3/2",
+      "2"
+    ],
+    "grid_cases": 25,
+    "RB_equals_three": 5,
+    "nonlinear_same_two_event_score": 4,
+    "positive_nonidentifiable_case": {
+      "A": "1",
+      "C": "-2",
+      "kappa": "2",
+      "increments": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "WBX1_four_event_invariant": "(e1-e0)(e3-e2)-(e2-e1)^2=0 necessary; singular branch requires e3=e0",
+    "PRED02": {
+      "state_count": 27,
+      "shell_class_counts": [
+        8,
+        12,
+        6,
+        1
+      ],
+      "iid_N24_minimum_expected_replay_pairs": "92/9",
+      "iid_skew_expected_replay_pairs": "145383/650",
+      "deterministic_N24_distinct_pairs": 0,
+      "deterministic_two_pass_all27_pairs": 27
+    }
+  },
+  "synthetic": {
+    "replicates_per_event": 12,
+    "relative_class_noise": "1/10",
+    "seed": 20261031,
+    "draws": 10000,
+    "null_sigma_D2_over_A": "sqrt(31/600)",
+    "nominal_null_three_sigma": 0.6819090848492928,
+    "model_detection_fractions": {
+      "HCB1_affine": 0.0027,
+      "WBX1_k_half": 0.9042,
+      "WBX1_k_one": 1,
+      "WBX1_k_two": 1
+    },
+    "warning": "synthetic Gaussian class mean model, not physical power"
+  }
+}
