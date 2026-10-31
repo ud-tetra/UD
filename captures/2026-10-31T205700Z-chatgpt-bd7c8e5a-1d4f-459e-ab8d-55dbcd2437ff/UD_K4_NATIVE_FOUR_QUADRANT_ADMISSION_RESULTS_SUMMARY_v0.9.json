@@ -1,0 +1,172 @@
+{
+  "artifact": "UD_K4_NATIVE_FOUR_QUADRANT_ADMISSION_AUDIT_v0.9",
+  "date": "2026-10-31",
+  "status": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "physical_promotion": 0,
+  "exact_assertion_groups": 4119,
+  "k4_laplacian_spectrum": {
+    "0": 1,
+    "4": 3
+  },
+  "vertex_gram": "4I4-J4",
+  "coordinate_carrier": "H={x in R^4 | sum(x)=0}",
+  "graph_symmetry": {
+    "order": 24,
+    "proper": 12,
+    "improper": 12
+  },
+  "face_masks": [
+    {
+      "mask": "0000",
+      "closed": true,
+      "exposed_edge_count": 0
+    },
+    {
+      "mask": "0001",
+      "closed": false,
+      "exposed_edge_count": 3
+    },
+    {
+      "mask": "0010",
+      "closed": false,
+      "exposed_edge_count": 3
+    },
+    {
+      "mask": "0011",
+      "closed": false,
+      "exposed_edge_count": 4
+    },
+    {
+      "mask": "0100",
+      "closed": false,
+      "exposed_edge_count": 3
+    },
+    {
+      "mask": "0101",
+      "closed": false,
+      "exposed_edge_count": 4
+    },
+    {
+      "mask": "0110",
+      "closed": false,
+      "exposed_edge_count": 4
+    },
+    {
+      "mask": "0111",
+      "closed": false,
+      "exposed_edge_count": 3
+    },
+    {
+      "mask": "1000",
+      "closed": false,
+      "exposed_edge_count": 3
+    },
+    {
+      "mask": "1001",
+      "closed": false,
+      "exposed_edge_count": 4
+    },
+    {
+      "mask": "1010",
+      "closed": false,
+      "exposed_edge_count": 4
+    },
+    {
+      "mask": "1011",
+      "closed": false,
+      "exposed_edge_count": 3
+    },
+    {
+      "mask": "1100",
+      "closed": false,
+      "exposed_edge_count": 4
+    },
+    {
+      "mask": "1101",
+      "closed": false,
+      "exposed_edge_count": 3
+    },
+    {
+      "mask": "1110",
+      "closed": false,
+      "exposed_edge_count": 3
+    },
+    {
+      "mask": "1111",
+      "closed": true,
+      "exposed_edge_count": 0
+    }
+  ],
+  "all_or_none_closure": true,
+  "binary_double_coboundary_gate": {
+    "vertex_masks_tested": 16,
+    "edge_masks_tested": 64,
+    "exact_flat_edge_patterns": 8,
+    "distinct_face_parity_syndromes": 8,
+    "verdict": "NO_GO as selective trigger if edge labels are only delta b"
+  },
+  "S4_invariant_nonempty_face_subsets": [
+    "1111"
+  ],
+  "coordinate_quadrants": 4,
+  "cone_solid_angle_steradians": "pi each, under unweighted counting metric",
+  "weighted_metric_control": {
+    "weights": {
+      "(0, 1)": "2",
+      "(0, 2)": "1",
+      "(0, 3)": "1",
+      "(1, 2)": "3",
+      "(1, 3)": "1",
+      "(2, 3)": "1"
+    },
+    "resistance_squared_lengths": {
+      "(0, 1)": "7/23",
+      "(0, 2)": "17/46",
+      "(0, 3)": "21/46",
+      "(1, 2)": "11/46",
+      "(1, 3)": "19/46",
+      "(2, 3)": "10/23"
+    },
+    "affine_gram_det": "1/46",
+    "rank": 3
+  },
+  "curved_nonabelian_control": {
+    "group": "S3",
+    "nonflat_faces": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "gauge_transforms_checked": 1296
+  },
+  "rational_coordinate_grid_points": 343,
+  "candidate_admission_gate": "all four oriented triangles closed AND separately admitted filled C3 cell",
+  "source_blockers": [
+    "Omega0 face activation law",
+    "native causal/energy source trigger",
+    "physical metric and frame scale",
+    "choice of global chart transition/gauge",
+    "chirality and absolute orientation"
+  ],
+  "no_go": [
+    "S4 cannot select a single face/direction from symmetric K4",
+    "fixed carrier cannot create a new simplex",
+    "closed 2-shell does not force a filled 3-cell",
+    "delta(delta(b))=0 cannot be an informative face admission selector if edge cochain is solely vertex coboundary"
+  ],
+  "full_assertion_ledger_sha256": "09156bc0adf95ccb946da16d9fdf338a200970f192afffc559790cecf08a84ec",
+  "full_assertion_ledger_file": "UD_K4_NATIVE_FOUR_QUADRANT_ADMISSION_RESULTS_v0.9.json",
+  "full_assertion_ledger_available_in_local_release": true
+}
