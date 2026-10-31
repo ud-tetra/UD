@@ -1,0 +1,347 @@
+{
+  "artifact": "UD_TETRAHEDRAL_3PLUS1_ENERGY_FOLD_VERIFY_v0.5",
+  "status": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "physical_promotion": 0,
+  "checks_count": 126,
+  "all_pass": true,
+  "cube3": {
+    "simplex_count": 6,
+    "volume_each": "1/6",
+    "volume_total": "1",
+    "cell_energy_exact": [
+      "7/12",
+      "5/8",
+      "5/8",
+      "17/24",
+      "17/24",
+      "3/4"
+    ],
+    "energy_total": "4",
+    "internal_adjacent_pairs": 6,
+    "conservative_updates": 12,
+    "exchange_parameter": "1/12 PROTOCOL_CONTROL",
+    "all_energy_totals": [
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4"
+    ]
+  },
+  "cube4": {
+    "simplex_count": 24,
+    "4simplex_hypervolume_each": "1/24",
+    "integrated_density_spacetime": "9/2",
+    "warning": "Energy-density integral over time has units energy*time, not energy"
+  },
+  "stellar_birth_3d": {
+    "child_tetrahedra": 4,
+    "child_volumes": [
+      "1/24",
+      "1/24",
+      "1/24",
+      "1/24"
+    ],
+    "child_energies_exact": [
+      "23/192",
+      "7/64",
+      "19/192",
+      "17/192"
+    ],
+    "parent_energy_exact": "5/12",
+    "resulting_dimension": "3 (not 4)"
+  },
+  "tetra_time_prism": {
+    "4simplex_count": 4,
+    "hypervolume_each": "1/24",
+    "total_4volume": "1/6 (3volume*unit time interval)"
+  },
+  "tetra_4_over_3_fold": {
+    "shape_factor": "4/3",
+    "inverse_factor": "3/4",
+    "analysis_T": [
+      [
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "-1/2",
+        "-1/2"
+      ],
+      [
+        "-1/2",
+        "1/2",
+        "-1/2"
+      ],
+      [
+        "-1/2",
+        "-1/2",
+        "1/2"
+      ]
+    ],
+    "normal_u": [
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    "sample_z": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "fold_x": [
+      "-5/2",
+      "-3/2",
+      "1/2"
+    ],
+    "fold_q": "11/2",
+    "quadratic_stock_original": "39",
+    "quadratic_stock_spatial": "35/4",
+    "quadratic_stock_normal": "121/4",
+    "S4_permutations_verified": 24,
+    "S4_rotations_12_reflections_12": true,
+    "Lorentzian_signature_sign_assignment": "ADDED_CHOICE_NOT_DERIVED",
+    "general_positive_energy_metric_requires_cross_terms": true,
+    "M_channel_diagonal": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "M_fold": [
+      [
+        "11/4",
+        "1/4",
+        "-3/4",
+        "-5/4"
+      ],
+      [
+        "1/4",
+        "11/4",
+        "-5/4",
+        "-3/4"
+      ],
+      [
+        "-3/4",
+        "-5/4",
+        "11/4",
+        "1/4"
+      ],
+      [
+        "-5/4",
+        "-3/4",
+        "1/4",
+        "11/4"
+      ]
+    ]
+  },
+  "3plus1_ADM": {
+    "h_det": "900",
+    "N": "7",
+    "beta": [
+      "1/2",
+      "1/3",
+      "1/5"
+    ],
+    "g_det": "-44100",
+    "g_matrix": [
+      [
+        "-46",
+        "2",
+        "3",
+        "5"
+      ],
+      [
+        "2",
+        "4",
+        "0",
+        "0"
+      ],
+      [
+        "3",
+        "0",
+        "9",
+        "0"
+      ],
+      [
+        "5",
+        "0",
+        "0",
+        "25"
+      ]
+    ],
+    "timelike_unit_normal": "PASS",
+    "induced_h": "PASS",
+    "reconstruction_requires_lapse_shift": "PASS"
+  },
+  "twist": {
+    "auxiliary_transport_R": [
+      [
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "metric_invariant": true,
+    "orientation_holonomy_detectable": true,
+    "spinor_2pi_returns_minus_identity": true,
+    "interpretation": "O(3) bundle monodromy on noncontractible spatial loop; no extra geometric spatial dimension"
+  },
+  "open": {
+    "native_omega0_birth_trigger": "OPEN",
+    "native_energy_density_metric": "OPEN",
+    "native_time_calibration": "OPEN",
+    "physical_global_energy_conservation_generic_GR": "NO-GO",
+    "4_over_3_frame_factor_spacetime_identification": "OPEN"
+  },
+  "checks": [
+    "cube3_cell_count",
+    "cube3_all_simplex_volume_exact",
+    "cube3_partition_total_volume",
+    "cube3_vertex_paths_coordinate_monotonicity",
+    "cube4_cell_count",
+    "cube4_all_simplex_volume_exact",
+    "cube4_partition_total_volume",
+    "cube4_vertex_paths_coordinate_monotonicity",
+    "3d_cube_total_energy_four_exact",
+    "3d_cube_density_linear_exact_quadrature",
+    "integral_cube_equals_tetra_sum",
+    "4d_integrated_density_is_nine_halves_not_3d_energy",
+    "tetrahedron_time_prism_has_four_4simplices",
+    "four_slab_simplex_volumes_equal_one_twentyfourth",
+    "slab_total_4volume_parent_3volume_times_duration",
+    "stellar_1_to_4_child_count",
+    "stellar_child_volumes_are_one_quarter",
+    "stellar_child_volume_additivity",
+    "stellar_affine_density_energy_preservation",
+    "stellar_nonuniform_density_changes_energy_allocation",
+    "all_slab_vertices_are_on_two_time_slices",
+    "cube_tetrahedral_dual_graph_has_six_adjacent_pairs",
+    "cube_tetrahedra_each_share_two_internal_faces",
+    "total_energy_conserved_update_00",
+    "positive_cell_energies_update_00",
+    "total_energy_conserved_update_01",
+    "positive_cell_energies_update_01",
+    "total_energy_conserved_update_02",
+    "positive_cell_energies_update_02",
+    "total_energy_conserved_update_03",
+    "positive_cell_energies_update_03",
+    "total_energy_conserved_update_04",
+    "positive_cell_energies_update_04",
+    "total_energy_conserved_update_05",
+    "positive_cell_energies_update_05",
+    "total_energy_conserved_update_06",
+    "positive_cell_energies_update_06",
+    "total_energy_conserved_update_07",
+    "positive_cell_energies_update_07",
+    "total_energy_conserved_update_08",
+    "positive_cell_energies_update_08",
+    "total_energy_conserved_update_09",
+    "positive_cell_energies_update_09",
+    "total_energy_conserved_update_10",
+    "positive_cell_energies_update_10",
+    "total_energy_conserved_update_11",
+    "positive_cell_energies_update_11",
+    "internal_exchange_is_not_trivial",
+    "tetrahedron_4_over_3_tight_frame",
+    "tetrahedron_face_normals_sum_zero",
+    "tetra_3_over_4_orthonormal_analysis",
+    "tetra_four_channel_orthogonal_split",
+    "tetra_spatial_projection_and_normal_complete",
+    "tetra_spatial_projection_kills_normal",
+    "tetra_fold_inverse_reconstructs_all_four_channels",
+    "tetra_fold_preserves_full_quadratic_stock",
+    "tetra_fold_spatial_projection_alone_loses_q_norm",
+    "tetra_fold_general_quadratic_form_preserved_with_full_tensor",
+    "tetra_fold_general_metric_has_nonzero_mixed_terms",
+    "tetra_fold_S4_equivariance_0123",
+    "tetra_fold_S4_orientation_0123",
+    "tetra_fold_S4_equivariance_0132",
+    "tetra_fold_S4_orientation_0132",
+    "tetra_fold_S4_equivariance_0213",
+    "tetra_fold_S4_orientation_0213",
+    "tetra_fold_S4_equivariance_0231",
+    "tetra_fold_S4_orientation_0231",
+    "tetra_fold_S4_equivariance_0312",
+    "tetra_fold_S4_orientation_0312",
+    "tetra_fold_S4_equivariance_0321",
+    "tetra_fold_S4_orientation_0321",
+    "tetra_fold_S4_equivariance_1023",
+    "tetra_fold_S4_orientation_1023",
+    "tetra_fold_S4_equivariance_1032",
+    "tetra_fold_S4_orientation_1032",
+    "tetra_fold_S4_equivariance_1203",
+    "tetra_fold_S4_orientation_1203",
+    "tetra_fold_S4_equivariance_1230",
+    "tetra_fold_S4_orientation_1230",
+    "tetra_fold_S4_equivariance_1302",
+    "tetra_fold_S4_orientation_1302",
+    "tetra_fold_S4_equivariance_1320",
+    "tetra_fold_S4_orientation_1320",
+    "tetra_fold_S4_equivariance_2013",
+    "tetra_fold_S4_orientation_2013",
+    "tetra_fold_S4_equivariance_2031",
+    "tetra_fold_S4_orientation_2031",
+    "tetra_fold_S4_equivariance_2103",
+    "tetra_fold_S4_orientation_2103",
+    "tetra_fold_S4_equivariance_2130",
+    "tetra_fold_S4_orientation_2130",
+    "tetra_fold_S4_equivariance_2301",
+    "tetra_fold_S4_orientation_2301",
+    "tetra_fold_S4_equivariance_2310",
+    "tetra_fold_S4_orientation_2310",
+    "tetra_fold_S4_equivariance_3012",
+    "tetra_fold_S4_orientation_3012",
+    "tetra_fold_S4_equivariance_3021",
+    "tetra_fold_S4_orientation_3021",
+    "tetra_fold_S4_equivariance_3102",
+    "tetra_fold_S4_orientation_3102",
+    "tetra_fold_S4_equivariance_3120",
+    "tetra_fold_S4_orientation_3120",
+    "tetra_fold_S4_equivariance_3201",
+    "tetra_fold_S4_orientation_3201",
+    "tetra_fold_S4_equivariance_3210",
+    "tetra_fold_S4_orientation_3210",
+    "tetra_fold_S4_even_odd_split",
+    "tetra_fold_Lorentz_metric_signature",
+    "tetra_fold_Lorentz_metric_involution",
+    "tetra_fold_Lorentz_metric_det_minus_one",
+    "tetra_fold_Lorentz_interval_decomposes",
+    "ADM_metric_Lorentzian_signature_by_Schur",
+    "ADM_unit_timelike_normal",
+    "ADM_normal_covariant_components",
+    "ADM_induced_spatial_metric_recovers_h",
+    "ADM_normal_projection_annihilates_timelike_normal",
+    "ADM_mixed_projection_encodes_nonzero_shift",
+    "same_spatial_metric_distinct_lapse_shift_spacetimes",
+    "Lorentzian_inertia_not_Euclidean_Gram",
+    "reflection_twist_is_orthogonal",
+    "reflection_twist_preserves_spatial_metric_h",
+    "reflection_twist_orientation_odd",
+    "reflection_twist_is_nontrivial_monodromy",
+    "spinor_2pi_sign_hidden_from_vector_metric",
+    "spinor_4pi_identity"
+  ]
+}
