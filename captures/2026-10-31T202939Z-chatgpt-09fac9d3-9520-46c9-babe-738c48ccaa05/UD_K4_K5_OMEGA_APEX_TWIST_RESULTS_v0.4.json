@@ -1,0 +1,270 @@
+{
+  "artifact": "UD_K4_K5_OMEGA_APEX_TWIST_VERIFY_v0.4",
+  "date": "2026-10-31",
+  "source_status": "development_no_registry_entry",
+  "physical_promotion": 0,
+  "verification_group_count": 94,
+  "checks_passed": true,
+  "f_vectors": {
+    "old": [
+      4,
+      6,
+      4,
+      1,
+      0
+    ],
+    "stellar": [
+      5,
+      10,
+      10,
+      4,
+      0
+    ],
+    "shell": [
+      5,
+      10,
+      10,
+      5,
+      0
+    ],
+    "filled": [
+      5,
+      10,
+      10,
+      5,
+      1
+    ]
+  },
+  "shell_Betti3": 1,
+  "filled_Betti3": 0,
+  "normal_metric": {
+    "det_G_full": "1/4",
+    "rank_G_full": 4,
+    "rank_G_visible": 3,
+    "rank_deficit": 1
+  },
+  "stellar_refinement": {
+    "counting_support_ratio": "4",
+    "boundary_cochain_preservation": true,
+    "each_child_volume_ratio": "1/4",
+    "volume_weighted_support_ratio": "1",
+    "metric_dependence": "declared_volume_weighted_measure"
+  },
+  "support_prep": {
+    "old_retained": "1/5",
+    "new_facets": "4/5",
+    "condition": "unweighted_C3_counting_norm_only"
+  },
+  "twist_cocycle": {
+    "edge_assignments": 1024,
+    "flat_assignments": 16,
+    "flat_nontrivial_gauge_classes": 0,
+    "curvature_hist": {
+      "0": 16,
+      "3": 160,
+      "4": 240,
+      "5": 192,
+      "6": 240,
+      "7": 160,
+      "10": 16
+    }
+  },
+  "twisted_graph": {
+    "Nx": 4,
+    "Nfiber": 4,
+    "fiber_laplacian_weight": 3,
+    "eigenvalues": [
+      {
+        "value": "0",
+        "multiplicity": 1
+      },
+      {
+        "value": "2",
+        "multiplicity": 2
+      },
+      {
+        "value": "4",
+        "multiplicity": 1
+      },
+      {
+        "value": "6",
+        "multiplicity": 1
+      },
+      {
+        "value": "8 - sqrt(2)",
+        "multiplicity": 2
+      },
+      {
+        "value": "8",
+        "multiplicity": 2
+      },
+      {
+        "value": "sqrt(2) + 8",
+        "multiplicity": 2
+      },
+      {
+        "value": "10",
+        "multiplicity": 1
+      },
+      {
+        "value": "12",
+        "multiplicity": 1
+      },
+      {
+        "value": "14",
+        "multiplicity": 2
+      },
+      {
+        "value": "16",
+        "multiplicity": 1
+      }
+    ],
+    "untwisted_eigenvalues": [
+      {
+        "value": "0",
+        "multiplicity": 1
+      },
+      {
+        "value": "2",
+        "multiplicity": 2
+      },
+      {
+        "value": "4",
+        "multiplicity": 1
+      },
+      {
+        "value": "6",
+        "multiplicity": 2
+      },
+      {
+        "value": "8",
+        "multiplicity": 4
+      },
+      {
+        "value": "10",
+        "multiplicity": 2
+      },
+      {
+        "value": "12",
+        "multiplicity": 1
+      },
+      {
+        "value": "14",
+        "multiplicity": 2
+      },
+      {
+        "value": "16",
+        "multiplicity": 1
+      }
+    ],
+    "visible_sector_eigenvalues": [
+      "0",
+      "2",
+      "2",
+      "4"
+    ],
+    "transverse_excitation_floor": "6",
+    "twist_is_detectable_in_odd_modes": true,
+    "four_dimensional_physical_promotion": false
+  },
+  "native_apex_birth_trigger": "OPEN__NOT_DERIVED_FROM_OMEGA0",
+  "native_open_system_support_law": "OPEN__Q153_Q160_Q169_179",
+  "native_metric_or_twist_selection": "OPEN",
+  "method": "exact rational and radical symbolic checks; exhaustive 2^10 Z2 assignments; exact 16x16 graph diagonalization",
+  "checks": [
+    "old_fvector",
+    "shell_fvector",
+    "stellar_fvector",
+    "filled_fvector",
+    "shell_increment",
+    "fill_increment",
+    "boundary_squared_old_2",
+    "boundary_squared_old_3",
+    "boundary_squared_old_4",
+    "boundary_squared_stellar_2",
+    "boundary_squared_stellar_3",
+    "boundary_squared_stellar_4",
+    "boundary_squared_shell_2",
+    "boundary_squared_shell_3",
+    "boundary_squared_shell_4",
+    "boundary_squared_filled_2",
+    "boundary_squared_filled_3",
+    "boundary_squared_filled_4",
+    "oriented_5_facet_cycle",
+    "oriented_cycle_unique",
+    "stellar_children_have_old_boundary",
+    "stellar_counting_norm_quadruples",
+    "unit_counting_stock_loses_half_boundary",
+    "same_two_skeleton_in_all_K5_branches",
+    "stars_vs_shell_3_skeleton_differs",
+    "shell_vs_filled_only_in_C4",
+    "stellar_each_child_quarter_parent_volume",
+    "stellar_volume_additive",
+    "volume_weighted_cell_stock_invariant",
+    "Betti3_shell",
+    "Betti3_filled",
+    "apex_equivariance_0123",
+    "apex_equivariance_0132",
+    "apex_equivariance_0213",
+    "apex_equivariance_0231",
+    "apex_equivariance_0312",
+    "apex_equivariance_0321",
+    "apex_equivariance_1023",
+    "apex_equivariance_1032",
+    "apex_equivariance_1203",
+    "apex_equivariance_1230",
+    "apex_equivariance_1302",
+    "apex_equivariance_1320",
+    "apex_equivariance_2013",
+    "apex_equivariance_2031",
+    "apex_equivariance_2103",
+    "apex_equivariance_2130",
+    "apex_equivariance_2301",
+    "apex_equivariance_2310",
+    "apex_equivariance_3012",
+    "apex_equivariance_3021",
+    "apex_equivariance_3102",
+    "apex_equivariance_3120",
+    "apex_equivariance_3201",
+    "apex_equivariance_3210",
+    "householder_maps_old_tet_to_closed_shell",
+    "householder_orthogonal",
+    "householder_involution",
+    "support_1_over_5_4_over_5",
+    "old_nonzero_boundary",
+    "closed_new_boundary",
+    "flat_twist_gauge_trivial_1",
+    "flat_twist_gauge_trivial_2",
+    "flat_twist_gauge_trivial_3",
+    "flat_twist_gauge_trivial_4",
+    "flat_twist_gauge_trivial_5",
+    "flat_twist_gauge_trivial_6",
+    "flat_twist_gauge_trivial_7",
+    "flat_twist_gauge_trivial_8",
+    "flat_twist_gauge_trivial_9",
+    "flat_twist_gauge_trivial_10",
+    "flat_twist_gauge_trivial_11",
+    "flat_twist_gauge_trivial_12",
+    "flat_twist_gauge_trivial_13",
+    "flat_twist_gauge_trivial_14",
+    "flat_twist_gauge_trivial_15",
+    "flat_twist_gauge_trivial_16",
+    "exact_16_flat_z2_assignments",
+    "flat_twist_all_from_vertex_gauge",
+    "four_dim_metric_full_rank",
+    "three_dim_readout_rank_three",
+    "missing_rank_one_normal_metric",
+    "normal_sign_reflection_invisible",
+    "twisted_graph_laplacian_symmetric",
+    "twisted_graph_laplacian_zero_mode",
+    "invariant_base_zero_mode",
+    "fibre_constant_sector_protected",
+    "twist_is_invisible_to_base_projection",
+    "twisted_spectrum_exact_Fourier_prediction",
+    "untwisted_spectrum_control",
+    "twist_shifts_odd_nonzero_modes",
+    "visible_base_low_modes_below_fibre_gap",
+    "twist_reflection_involution",
+    "twist_has_odd_fibre_sector"
+  ]
+}
