@@ -1,0 +1,41 @@
+{
+  "schema": "UD_MANIFEST_v0.1",
+  "capture_id": "2026-10-31T175445Z-ud-tetra-b72c6e81",
+  "physical_promotion": 0,
+  "created_utc": "2026-10-31T17:54:45Z",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "status": "DEVELOPMENT_NO_REGISTRY_PROMOTION__CORRECT_SHA256_MANIFEST",
+  "supersedes": [],
+  "source_versions": [
+    "UD v0.39 ledger 2026-08-22",
+    "UD metric-selection v0.12, refinement tower v0.13, history comparison v0.14 (2026-10-14)",
+    "External NIST/NASA/DESI references"
+  ],
+  "note": "Reissued clean capture after unmerged contributor branch d4e5c741 hash-generator self-test failed. Erroneous branch was never merged or publicized; immutable audit retained there, not adopted. This capture has corrected SHA256.",
+  "claim_strength": "EXACT_COMBINATORICS_CONDITIONAL_KINEMATICS_NO_PHYSICAL_PROMOTION",
+  "review": "CONSTRUCTOR_VERIFIED_INDEPENDENT_REVIEW_PENDING",
+  "full_local_archive": {
+    "filename": "UD_4D_REDSHIFT_TRANSPORT_AUDIT_v0.1.zip",
+    "sha256": "18bc04dd0ec50e55244092fa367d73a0e3b69380706cc71776ee3794ebdcef6e",
+    "published_to_git": false
+  },
+  "verification": [
+    "local exact SymPy 0D-4D simplex boundaries pass",
+    "local independent slab checker pass",
+    "synthetic dispersion and instrument controls pass",
+    "remote source mirrored as smaller text capture only"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-10-31T175445Z-ud-tetra-b72c6e81/AUDIT.md",
+      "size_bytes": 7037,
+      "sha256": "40904748287fc6f0563a1c1de5a0e9cfe336ee7d2114aa80c87694bed3f44ca1"
+    },
+    {
+      "path": "captures/2026-10-31T175445Z-ud-tetra-b72c6e81/INDEPENDENT_REPLAY.py",
+      "size_bytes": 1112,
+      "sha256": "ad40a4f9e4e99b2da3b097c058aae42d93c76306be9e790456eba75978421dde"
+    }
+  ],
+  "website_updated": false
+}
