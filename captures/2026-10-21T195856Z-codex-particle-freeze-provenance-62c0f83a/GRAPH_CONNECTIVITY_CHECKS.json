@@ -1,0 +1,69 @@
+{
+  "status": "EXACT_SOURCE_CODE_CONNECTIVITY_CLAIM_FALSIFIED",
+  "source_scripts": [
+    "docs/hmulti_r6b.py",
+    "docs/r6b_version_b.py"
+  ],
+  "symbolic_statement": "For level L>=3 and N=4^L, theta graph has4^(L-3) connected components, each64 sites. Rho sibling edges and pointwise cross coupling also preserve that prefix. Full2N graph has the same number of128-coordinate components.",
+  "proof": "Every source edge is within a shared great-grandparent (prefix L-3); depth3 edges connect its four16-site groups, and depth2 edges connect distinct4-site groups. Hence each64-site group is connected and no edge leaves it. Diagonal potentials and on-site rho/theta coupling add no cross-prefix edge.",
+  "explicit_graph_checks": [
+    {
+      "level": 3,
+      "N": 64,
+      "components": 1,
+      "component_size": 64,
+      "theta_edges": 1920
+    },
+    {
+      "level": 4,
+      "N": 256,
+      "components": 4,
+      "component_size": 64,
+      "theta_edges": 7680
+    },
+    {
+      "level": 5,
+      "N": 1024,
+      "components": 16,
+      "component_size": 64,
+      "theta_edges": 30720
+    }
+  ],
+  "theta_laplacian_zero_space": "dimension4^(L-3), because weights are positive and each block is connected",
+  "IPR_witness": "A unit vector constant on one64-site component has IPR=1/64 and F=N/64. A globally uniform unit vector has F=1. Both are theta Laplacian zero modes; rotations in this degenerate subspace change F. This statement is about H_theta, not an exact eigenvector assertion for coupled H_full.",
+  "versionB_comparison": [
+    {
+      "level": 5,
+      "N": 1024,
+      "component_count": 16,
+      "component_uniform_F": "16",
+      "reported_F_theta": "16",
+      "absolute_difference": "0"
+    },
+    {
+      "level": 6,
+      "N": 4096,
+      "component_count": 64,
+      "component_uniform_F": "64",
+      "reported_F_theta": "15999999999997641/250000000000000",
+      "absolute_difference": "2359/250000000000000"
+    },
+    {
+      "level": 7,
+      "N": 16384,
+      "component_count": 256,
+      "component_uniform_F": "256",
+      "reported_F_theta": "3199999999999671/12500000000000",
+      "absolute_difference": "329/12500000000000"
+    },
+    {
+      "level": 8,
+      "N": 65536,
+      "component_count": 1024,
+      "component_uniform_F": "1024",
+      "reported_F_theta": "10239999999998679/10000000000000",
+      "absolute_difference": "1321/10000000000000"
+    }
+  ],
+  "empirical_promotion": false
+}

@@ -1,0 +1,634 @@
+[
+  {
+    "path": "docs/hmulti_r6b.py",
+    "sha256": "b6fda755b2514834fe92b337f50417ce2c52801281878e2607d5d010590faee7",
+    "docstring": "OSCAR — H_MULTI R6b: Θ potential removed + connected Θ graph\n\nDiagnosis from R6: cousin-only graph is DISCONNECTED (64/256/1024\nseparate components). F_σ₂ > 1 is a graph-disconnection artifact.\n\nFix: add d=3 (great-grandparent) hopping at η⁶ to connect components.\nThis gives the Θ graph a CONNECTED hierarchical structure while\nkeeping it topologically distinct from the ρ sibling graph.\n\nH_ΘΘ: cousins (d=2, η⁴) + second-cousins (d=3, η⁶) + NO potential\nH_ρρ: siblings (d=1, η²) + potential λ_ρ(1−η^h)  [unchanged]",
+    "schemas": [
+      "Hmulti_R6b"
+    ],
+    "rng": [],
+    "eigensolvers": [
+      {
+        "line": 200,
+        "call": "eigsh(H_theta, k=k_p, sigma=0.0, which='LM', return_eigenvectors=False)",
+        "v0_supplied": false
+      },
+      {
+        "line": 203,
+        "call": "eigsh(H_theta, k=k_p, which='SM', return_eigenvectors=False)",
+        "v0_supplied": false
+      },
+      {
+        "line": 215,
+        "call": "eigsh(H_full, k=10, sigma=sigma, which='LM', maxiter=N * 50)",
+        "v0_supplied": false
+      },
+      {
+        "line": 195,
+        "call": "eigsh(H_rho, k=k_p, which='SM', return_eigenvectors=False)",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "site_to_address",
+        "line": 29
+      },
+      {
+        "name": "get_variable_depth",
+        "line": 38
+      },
+      {
+        "name": "compute_parity",
+        "line": 46
+      },
+      {
+        "name": "build_all_connectivity",
+        "line": 51
+      },
+      {
+        "name": "build_blocks_and_full",
+        "line": 119
+      },
+      {
+        "name": "analyze_mode",
+        "line": 173
+      },
+      {
+        "name": "run_level",
+        "line": 184
+      },
+      {
+        "name": "main",
+        "line": 266
+      }
+    ]
+  },
+  {
+    "path": "docs/hmulti_repaired_v11.py",
+    "sha256": "9e3e2deb28d145f873c4b33c33a4c73e8dda22cbb4e37065ccb72f5d1d57301f",
+    "docstring": "OSCAR EXECUTION — H_MULTI-REBUILD v1.1\nSame repaired operator (R1+R3). Fixed eigensolve strategy:\nsearch BOTH ρ-block and Θ-block spectral regions separately,\nthen merge and analyze channel weights.\n\nThe single sigma=0 approach only found Θ-block modes.\nNow we:\n1. Diagonalize H_ρρ alone → get its spectral range\n2. Diagonalize H_ΘΘ alone → get its spectral range  \n3. Use shift-invert at each block's minimum eigenvalue\n4. Merge and analyze the full 2-channel eigenstates",
+    "schemas": [
+      "Hmulti_A_repaired_v1.1"
+    ],
+    "rng": [],
+    "eigensolvers": [
+      {
+        "line": 173,
+        "call": "eigsh(H_rho, k=k_probe, which='SM', return_eigenvectors=False)",
+        "v0_supplied": false
+      },
+      {
+        "line": 174,
+        "call": "eigsh(H_rho, k=k_probe, which='LM', return_eigenvectors=False)",
+        "v0_supplied": false
+      },
+      {
+        "line": 180,
+        "call": "eigsh(H_theta, k=k_probe, which='SM', return_eigenvectors=False)",
+        "v0_supplied": false
+      },
+      {
+        "line": 181,
+        "call": "eigsh(H_theta, k=k_probe, which='LM', return_eigenvectors=False)",
+        "v0_supplied": false
+      },
+      {
+        "line": 205,
+        "call": "eigsh(H_full, k=n_per, sigma=mid, which='LM')",
+        "v0_supplied": false
+      },
+      {
+        "line": 194,
+        "call": "eigsh(H_full, k=n_per, sigma=sigma_target, which='LM')",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "site_to_address",
+        "line": 32
+      },
+      {
+        "name": "get_variable_depth",
+        "line": 41
+      },
+      {
+        "name": "compute_parity",
+        "line": 49
+      },
+      {
+        "name": "build_connectivity",
+        "line": 54
+      },
+      {
+        "name": "build_blocks_and_full",
+        "line": 94
+      },
+      {
+        "name": "analyze_mode",
+        "line": 148
+      },
+      {
+        "name": "run_level",
+        "line": 162
+      },
+      {
+        "name": "main",
+        "line": 292
+      }
+    ]
+  },
+  {
+    "path": "docs/hmulti_version_a.py",
+    "sha256": "c9c456afbd87ae134020f51dbc845c850f8c77949d3605af8bf122e70305fa00",
+    "docstring": "OSCAR EXECUTION — H_MULTI-EIGENSOLVE Version A\n2N×2N two-channel (ρ,Θ) Hamiltonian on tetrahedral IFS.\nNo burden. No damping. Clean channel structure only.\n\nPurpose: Resolve C2 — is σ₂ localization a scalar-lane artifact\nor a true multi-channel finding?\n\nOperator:\n  H_multi = [[H_ρρ,   H_ρΘ  ],\n             [H_ρΘᵀ,  H_ΘΘ  ]]\n\n  H_ρρ: hopping η², on-site λ_ρ(1-η^h)\n  H_ΘΘ: hopping η⁴, on-site λ_Θ(η^h - η^{2h})\n  H_ρΘ: diagonal only, μ·X_i·Y_i coupling",
+    "schemas": [
+      "Hmulti_A_raw"
+    ],
+    "rng": [],
+    "eigensolvers": [
+      {
+        "line": 259,
+        "call": "eigsh(H, k=n_modes, sigma=0.0, which='LM')",
+        "v0_supplied": false
+      },
+      {
+        "line": 262,
+        "call": "eigsh(H, k=n_modes, which='SM')",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "site_to_address",
+        "line": 41
+      },
+      {
+        "name": "get_depth",
+        "line": 50
+      },
+      {
+        "name": "get_variable_depth",
+        "line": 87
+      },
+      {
+        "name": "build_parent_child_pairs",
+        "line": 107
+      },
+      {
+        "name": "build_H_multi",
+        "line": 130
+      },
+      {
+        "name": "analyze_mode",
+        "line": 194
+      },
+      {
+        "name": "assign_sector",
+        "line": 228
+      },
+      {
+        "name": "run_eigensolve",
+        "line": 247
+      },
+      {
+        "name": "evaluate_gates",
+        "line": 340
+      },
+      {
+        "name": "build_output_block",
+        "line": 372
+      },
+      {
+        "name": "main",
+        "line": 421
+      }
+    ]
+  },
+  {
+    "path": "docs/ocpf_v3_analyze.py",
+    "sha256": "97bc9e0a1d148e57f51cee19000c708ff400c2edda94d34c58820b36d43471dd",
+    "docstring": "Analyze the N=5,6,7 OCPF v3 sweep data.\nTests:\n  1. Combinatorial closure baseline (vs archive)\n  2. Monotonicity of f_close(lambda/J)\n  3. 3pi clustering hypothesis (is 3pi a special point?)\n  4. Permutation test",
+    "schemas": [],
+    "rng": [
+      {
+        "line": 146,
+        "call": "np.random.seed(42)"
+      }
+    ],
+    "eigensolvers": [],
+    "functions": []
+  },
+  {
+    "path": "docs/ocpf_v3_efficient.py",
+    "sha256": "77b3d0b3c223f63d0c02c6ad63322d0fade463233f0eb746f55a9f74dacc6caf",
+    "docstring": "OCPF v3 sweep — efficient variant for in-session execution.\nSame operators and protocol as canonical ocpf_v3_sweep.py.\nUses sparse methods aggressively to fit in time budget.",
+    "schemas": [],
+    "rng": [],
+    "eigensolvers": [
+      {
+        "line": 84,
+        "call": "eigsh(H, k=k, which='SA', tol=1e-07)",
+        "v0_supplied": false
+      },
+      {
+        "line": 97,
+        "call": "np.linalg.eigh(H_dense)",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "build_K_operator",
+        "line": 22
+      },
+      {
+        "name": "build_V_diagonal",
+        "line": 36
+      },
+      {
+        "name": "get_closed_mask",
+        "line": 50
+      },
+      {
+        "name": "build_k2sym_state",
+        "line": 63
+      },
+      {
+        "name": "compute_f_close_sparse",
+        "line": 74
+      },
+      {
+        "name": "compute_f_close_dense",
+        "line": 92
+      },
+      {
+        "name": "run_sweep",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "path": "docs/ocpf_v3_sweep.py",
+    "sha256": "85e21a3eaed3aa6e940c891f02db89506d26e972d873c7155ec4c7a065108144",
+    "docstring": "OCPF Multi-N Sweep (v3 Pre-Registration Protocol)\nExecutes the primary computational falsifier for Unified Dynamics.\n\nFills in build_K_operator, build_V_diagonal, and get_closed_subspace_mask\nfrom the v3 pre-registration specification:\n\n  H = -J*K + lambda*V\n  K = sum_i (T_i + T_i†)  [Z3 shift per site]\n  V(s) = v_a(s) + v_b(s)  [closure violation count]\n  v_a(s) = 1 if 0 not in {s_1,...,s_N}\n  v_b(s) = 1 if |{s_1,...,s_N}| < 2\n  Initial: K2-sym = uniform over states with s_1=0\n\nLambda/J grid: 13 log-spaced points with 3*pi inserted exactly.",
+    "schemas": [],
+    "rng": [],
+    "eigensolvers": [
+      {
+        "line": 211,
+        "call": "np.linalg.eigh(H_dense)",
+        "v0_supplied": false
+      },
+      {
+        "line": 235,
+        "call": "eigsh(H, k=k, which='SA', tol=1e-08)",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "state_to_digits",
+        "line": 47
+      },
+      {
+        "name": "build_K_operator",
+        "line": 57
+      },
+      {
+        "name": "build_V_diagonal",
+        "line": 100
+      },
+      {
+        "name": "get_closed_subspace_mask",
+        "line": 133
+      },
+      {
+        "name": "build_k2sym_initial_state",
+        "line": 162
+      },
+      {
+        "name": "compute_f_close",
+        "line": 185
+      },
+      {
+        "name": "run_sweep",
+        "line": 258
+      }
+    ]
+  },
+  {
+    "path": "docs/r6b_version_b.py",
+    "sha256": "d4230b563e558e35199edc772d0e8b805c8d968d68689076dea6bf42404faee1",
+    "docstring": "OSCAR — R6b VERSION B: Burden in ρ channel only.\n\nH_ρρ: sibling (−η²), diagonal + λ_ρ(1−η^h) + σ_ρ·z_i  [BURDENED]\nH_ΘΘ: cousin+2nd-cousin (−η⁴,−η⁶), degree-only diagonal  [CLEAN]\nH_ρΘ: P_i·ν·X_i·Y_i  [UNCHANGED]\n\nσ_ρ = 0.12 × λ_ρ ≈ 0.004375\nN_runs ≥ 10 per level (fresh disorder each run)",
+    "schemas": [
+      "R6b_VersionB_raw"
+    ],
+    "rng": [
+      {
+        "line": 282,
+        "call": "np.random.default_rng(seed=2026)"
+      }
+    ],
+    "eigensolvers": [
+      {
+        "line": 195,
+        "call": "eigsh(H, k=5, sigma=sigma, which='LM', maxiter=N * 20)",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "site_to_address",
+        "line": 29
+      },
+      {
+        "name": "get_variable_depth",
+        "line": 38
+      },
+      {
+        "name": "compute_parity",
+        "line": 46
+      },
+      {
+        "name": "build_static_parts",
+        "line": 51
+      },
+      {
+        "name": "build_full_H",
+        "line": 142
+      },
+      {
+        "name": "analyze_mode",
+        "line": 175
+      },
+      {
+        "name": "run_single",
+        "line": 186
+      },
+      {
+        "name": "run_level",
+        "line": 212
+      },
+      {
+        "name": "main",
+        "line": 281
+      }
+    ]
+  },
+  {
+    "path": "docs/shell1_4x10.py",
+    "sha256": "cff375f93e75beff417bb654c00cdf788d8e9c98d3d04df80d20fc0942d9702e",
+    "docstring": "OSCAR EXECUTION — Shell 1 Discrete Simulation · 4^10 Run\nσ₁(ρ,X) localization on tetrahedral IFS substrate\nN = 1,048,576 = 4^10, burden (primary) + symmetric (secondary)\n\nCalibration from prior runs:\n  Level 7 burden:    F = 1.40\n  Level 9 symmetric: F = 4.63\n  Level 9 burden:    F = 6.41\n\nH_cluster growth model: L_op grows with IFS level.\nThe exponential decay profile on the IFS tree is:\n  ψ(shell h) ~ exp(-d(h)/ξ)\n  where d(h) = (1/r)^(level-h) in lattice spacings\n\nThis is the SAME physics as the level-9 run, just at level 10.",
+    "schemas": [],
+    "rng": [
+      {
+        "line": 183,
+        "call": "np.random.default_rng(seed=2026)"
+      }
+    ],
+    "eigensolvers": [],
+    "functions": [
+      {
+        "name": "run_single_ipr",
+        "line": 38
+      },
+      {
+        "name": "run_profile",
+        "line": 83
+      },
+      {
+        "name": "classify_regime",
+        "line": 105
+      },
+      {
+        "name": "build_block",
+        "line": 112
+      },
+      {
+        "name": "main",
+        "line": 182
+      }
+    ]
+  },
+  {
+    "path": "docs/shell1_eigensolve.py",
+    "sha256": "e1f1590854398787da6f8b5ba161b7385247b1cd68675d15e5a8f3df4b3ce438",
+    "docstring": "OSCAR EXECUTION — H_SIGMA1-EIGENSOLVE-v1.0\nTrue discrete Hamiltonian eigensolve on tetrahedral IFS substrate.\n\nThree versions:\n  V1: Static reactive-only (RECOMMENDED)\n  V2: Static + burden disorder (MANDATORY)\n  V3: Dynamical + repair (MANDATORY for gate attempt)\n\nApproach:\n  1. Build the actual N×N Hamiltonian H on the IFS lattice\n  2. Diagonalize H (find eigenvalues + eigenvectors)\n  3. Identify σ₁(ρ,X) candidate modes by overlap with defect insertion\n  4. Measure IPR from true eigenvectors\n  5. Report F = IPR × N\n\nCompute constraint:\n  Full diag of 1M×1M is impossible here.\n  We use N = 4^5 = 1024 (feasible exact diag) and N = 4^6 = 4096,\n  then N = 4^7 = 16384 via sparse Lanczos if memory allows.\n  This gives a SCALING SEQUENCE for extrapolation to 4^9, 4^10.\n\nLOCKED CONSTANTS — DO NOT CHANGE:\n  eta = 185/192 = 0.963542\n  r = 4^(-1/3) = 0.629961\n  Delta/N = 7/192 = 0.036458\n  L_repair = 0.034",
+    "schemas": [
+      "B_rho_raw"
+    ],
+    "rng": [
+      {
+        "line": 416,
+        "call": "np.random.default_rng(seed=2026)"
+      }
+    ],
+    "eigensolvers": [
+      {
+        "line": 267,
+        "call": "eigsh(H, k=n_eig, sigma=sigma_shift, which='LM')",
+        "v0_supplied": false
+      },
+      {
+        "line": 270,
+        "call": "eigsh(H, k=n_eig, which='SA')",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "site_to_address",
+        "line": 50
+      },
+      {
+        "name": "address_to_site",
+        "line": 60
+      },
+      {
+        "name": "hierarchical_distance",
+        "line": 68
+      },
+      {
+        "name": "build_hamiltonian_sparse",
+        "line": 80
+      },
+      {
+        "name": "insert_sigma1_defect",
+        "line": 210
+      },
+      {
+        "name": "measure_ipr",
+        "line": 225
+      },
+      {
+        "name": "run_eigensolve",
+        "line": 231
+      },
+      {
+        "name": "classify_regime",
+        "line": 329
+      },
+      {
+        "name": "build_result_block",
+        "line": 336
+      },
+      {
+        "name": "main",
+        "line": 415
+      }
+    ]
+  },
+  {
+    "path": "docs/shell1_hmulti_va.py",
+    "sha256": "d4863f318b62d493576e93482a5077657cc3bf25ad2cea0bc10fb7b3604dedb2",
+    "docstring": "OSCAR EXECUTION — H_MULTI-EIGENSOLVE-v1.0 · VERSION A\nMulti-component Hamiltonian on tetrahedral IFS substrate.\n\nThe scalar H was channel-blind: one degree of freedom per site.\nH_multi has THREE internal degrees of freedom per site: (ρ, θ, χ).\n\nState vector: Ψ = (ρ_1, θ_1, χ_1, ρ_2, θ_2, χ_2, ..., ρ_N, θ_N, χ_N)\nDimension: 3N × 3N\n\nSector coupling structure (from DT theory):\n  - ρ (density/reactive): strong localization expected\n    hopping: t_ρ = η (same as scalar)\n    on-site: V_ρ = -Δ/N\n    \n  - θ (angular/phase): WEAK localization or delocalized expected\n    hopping: t_θ = η × (b_Θ/d_Θ) where b_Θ/d_Θ < 1\n    The theory predicts S_Θ(n) < 1, meaning θ modes spread.\n    We use b_Θ/d_Θ = 0.6 (conservative estimate from theory bounds)\n    on-site: V_θ = -Δ/N × 0.6 (reduced coupling)\n    \n  - χ (internal coherence): intermediate\n    hopping: t_χ = η × 0.8\n    on-site: V_χ = -Δ/N × 0.8\n\nCross-sector coupling:\n  ρ-θ coupling: g_ρθ = 0.05 × η (weak mixing)\n  ρ-χ coupling: g_ρχ = 0.03 × η (very weak)\n  θ-χ coupling: g_θχ = 0.04 × η (weak)\n  \n  These are small compared to intra-sector hopping,\n  so sectors are approximately independent but not exactly.\n\nVERSION A SCOPE:\n  - Static (no disorder, no repair)\n  - Symmetric background only\n  - N = 4^5 = 1024 and 4^6 = 4096\n  - Channel-resolved outputs\n\nLOCKED CONSTANTS — DO NOT CHANGE:\n  eta = 185/192 = 0.963542\n  r = 4^(-1/3) = 0.629961\n  Delta/N = 7/192 = 0.036458",
+    "schemas": [
+      "B_rho_raw_multi_component"
+    ],
+    "rng": [
+      {
+        "line": 374,
+        "call": "np.random.default_rng(seed=2026)"
+      }
+    ],
+    "eigensolvers": [
+      {
+        "line": 272,
+        "call": "eigsh(H, k=n_eig, sigma=sigma_shift, which='LM')",
+        "v0_supplied": false
+      },
+      {
+        "line": 275,
+        "call": "eigsh(H, k=n_eig, which='SA')",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "site_to_address",
+        "line": 80
+      },
+      {
+        "name": "build_multi_hamiltonian",
+        "line": 89
+      },
+      {
+        "name": "channel_weight",
+        "line": 217
+      },
+      {
+        "name": "channel_ipr",
+        "line": 227
+      },
+      {
+        "name": "run_multi_eigensolve",
+        "line": 246
+      },
+      {
+        "name": "classify_regime",
+        "line": 366
+      },
+      {
+        "name": "main",
+        "line": 373
+      }
+    ]
+  },
+  {
+    "path": "docs/shell1_sector_resolved.py",
+    "sha256": "687c29929a677647978d0b43a3e59c264643fe9cb86e9686eab843ab41cec307",
+    "docstring": "OSCAR EXECUTION — H_SIGMA1-EIGENSOLVE-SECTOR-RESOLVED v1.0\nSame Hamiltonian as prior run. ONLY the mode-identification is changed.\n\nRepair:\n  OLD: σ₁ = argmax |<ψ_k|δ_i0>|²,  σ₂ = second-highest overlap\n  NEW: σ₁ = argmax |<ψ_k|P_ρ δ_i0>|²  (even-parity / reactive sector)\n       σ₂ = argmax |<ψ_k|P_Θ δ_i0>|²  (odd-parity / Θ-proxy sector)\n\nP_ρ and P_Θ constructed from sibling-group parity:\n  G = {i0, s1, s2, s3} = 4 siblings sharing parent\n  P_ρ|δ_i0⟩ = (1/2)(|δ_i0⟩ + (1/3)Σ_{j∈G\\i0} |δ_j⟩)  [symmetric]\n  P_Θ|δ_i0⟩ = (1/2)(|δ_i0⟩ − (1/3)Σ_{j∈G\\i0} |δ_j⟩)  [antisymmetric]\n\nLabels:\n  σ₁ = sector-resolved within current scalar operator\n  σ₂ = parity-odd Θ-proxy, not full Θ-sector closure",
+    "schemas": [
+      "B_rho_raw_sector_resolved"
+    ],
+    "rng": [
+      {
+        "line": 431,
+        "call": "np.random.default_rng(seed=2026)"
+      }
+    ],
+    "eigensolvers": [
+      {
+        "line": 214,
+        "call": "eigsh(H, k=n_eig, sigma=sigma_shift, which='LM')",
+        "v0_supplied": false
+      },
+      {
+        "line": 216,
+        "call": "eigsh(H, k=n_eig, which='SA')",
+        "v0_supplied": false
+      }
+    ],
+    "functions": [
+      {
+        "name": "site_to_address",
+        "line": 40
+      },
+      {
+        "name": "get_sibling_group",
+        "line": 49
+      },
+      {
+        "name": "build_sector_defects",
+        "line": 63
+      },
+      {
+        "name": "build_hamiltonian_sparse",
+        "line": 96
+      },
+      {
+        "name": "measure_ipr",
+        "line": 181
+      },
+      {
+        "name": "sector_overlap",
+        "line": 186
+      },
+      {
+        "name": "run_sector_eigensolve",
+        "line": 192
+      },
+      {
+        "name": "classify_regime",
+        "line": 332
+      },
+      {
+        "name": "build_block",
+        "line": 339
+      },
+      {
+        "name": "main",
+        "line": 430
+      }
+    ]
+  },
+  {
+    "path": "docs/shell1_sim.py",
+    "sha256": "9defefbbb04e71501190a5cd946a0b9e3cf4477e3d7fe5a2ddee6bd61077bf12",
+    "docstring": "OSCAR EXECUTION — Shell 1 Discrete Simulation\nσ₁(ρ,X) localization on tetrahedral IFS substrate\nSIMPACKET-B (N=16384, level 7) then SIMPACKET-A (N=262144, level 9)",
+    "schemas": [],
+    "rng": [
+      {
+        "line": 202,
+        "call": "np.random.default_rng(seed=42)"
+      }
+    ],
+    "eigensolvers": [],
+    "functions": [
+      {
+        "name": "run_single_ipr",
+        "line": 26
+      },
+      {
+        "name": "run_simpacket",
+        "line": 82
+      },
+      {
+        "name": "main",
+        "line": 201
+      }
+    ]
+  }
+]
