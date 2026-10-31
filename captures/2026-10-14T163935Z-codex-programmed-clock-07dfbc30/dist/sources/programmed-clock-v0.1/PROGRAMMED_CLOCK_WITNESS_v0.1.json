@@ -1,0 +1,1867 @@
+{
+  "version": "0.1",
+  "branches": {
+    "C": {
+      "branch": "C",
+      "version": "0.1",
+      "original_word_length": 9,
+      "word_length": 10,
+      "padding_gates": 1,
+      "clock_addresses": 11,
+      "data_bank_dimension": 3869835264,
+      "complete_joint_dimension": 42568187904,
+      "per_component_vertices": 6,
+      "per_component_edges": 5,
+      "weighted_path_components": 3869835264,
+      "kernel_dimension": 3869835264,
+      "unit_rate_vertex_metrics": [
+        "1",
+        "9/5",
+        "21/10",
+        "21/10",
+        "9/5",
+        "1"
+      ],
+      "unit_rate_edge_metrics": [
+        "1/10",
+        "3/40",
+        "7/100",
+        "3/40",
+        "1/10"
+      ],
+      "clock_spectrum_over_kappa": [
+        10,
+        8,
+        6,
+        4,
+        2,
+        0,
+        -2,
+        -4,
+        -6,
+        -8,
+        -10
+      ],
+      "characteristic_clock_coefficients": [
+        0,
+        -14745600,
+        0,
+        5395456,
+        0,
+        -489280,
+        0,
+        16368,
+        0,
+        -220,
+        0,
+        1
+      ],
+      "norm_over_kappa": 10,
+      "initial_variance_over_kappa_squared": 10,
+      "interaction_norm_upper_bound_over_kappa": 20,
+      "terminal_kappa_t": "pi/2",
+      "return_kappa_t": "pi",
+      "return_global_phase": 1,
+      "payload_reset_count": 1,
+      "history_cells": 8,
+      "receipt_cells": 8,
+      "prefixes": [
+        {
+          "address": 0,
+          "operation": "PREPARATION",
+          "active": {
+            "w": 0,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 1,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 1,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 2,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 3,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 4,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 5,
+          "operation": "RESET_EXPORT",
+          "active": {
+            "w": 0,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 6,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 1,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 7,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 8,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 9,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 10,
+          "operation": "IDENTITY_PADDING",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "specification": {
+        "states": [
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              1,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          }
+        ],
+        "successor": [
+          1,
+          2,
+          2
+        ],
+        "receipt": [
+          1,
+          2,
+          3
+        ],
+        "record_dimension": 4,
+        "record_dictionary": [
+          {
+            "id": 0,
+            "meaning": "BLANK"
+          },
+          {
+            "id": 1,
+            "pre_state_label": 0,
+            "post_state_label": 1,
+            "transition_kind": "INSPECTION",
+            "response_tag": "BIT_EVENT",
+            "changed": true,
+            "halt_reason": null,
+            "consumed_tokens": 1,
+            "event": {
+              "theta_prior_aligned": [
+                1,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                0,
+                1,
+                1
+              ],
+              "q_output": [
+                1,
+                0,
+                0
+              ],
+              "omega_output": [
+                1,
+                0,
+                0
+              ],
+              "h_output": [
+                0,
+                0,
+                0
+              ],
+              "viable_index": -1,
+              "mu_theta": -1,
+              "closure_capacity_change": 2,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                1,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 1,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 4,
+            "potential_after": 3
+          },
+          {
+            "id": 2,
+            "pre_state_label": 1,
+            "post_state_label": 2,
+            "transition_kind": "INSPECTION",
+            "response_tag": "BIT_EVENT",
+            "changed": true,
+            "halt_reason": null,
+            "consumed_tokens": 0,
+            "event": {
+              "theta_prior_aligned": [
+                0,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                1,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                1,
+                1,
+                1
+              ],
+              "q_output": [
+                0,
+                0,
+                0
+              ],
+              "omega_output": [
+                0,
+                0,
+                0
+              ],
+              "h_output": [
+                0,
+                0,
+                0
+              ],
+              "viable_index": 1,
+              "mu_theta": 1,
+              "closure_capacity_change": -2,
+              "close_mask": [
+                1,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                0,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 1,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 3,
+            "potential_after": 0
+          },
+          {
+            "id": 3,
+            "pre_state_label": 2,
+            "post_state_label": 2,
+            "transition_kind": "HALT",
+            "response_tag": "RESPONSE_NULL",
+            "changed": false,
+            "halt_reason": "EXHAUSTED_QUIESCENT",
+            "consumed_tokens": 0,
+            "event": {
+              "theta_prior_aligned": [
+                1,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                1,
+                1,
+                1
+              ],
+              "q_output": [
+                0,
+                0,
+                0
+              ],
+              "omega_output": [
+                0,
+                0,
+                0
+              ],
+              "h_output": [
+                0,
+                0,
+                0
+              ],
+              "viable_index": 0,
+              "mu_theta": 0,
+              "closure_capacity_change": 0,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                0,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 0,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 0,
+            "potential_after": 0
+          }
+        ],
+        "scope": "Prepared RSP trajectory closure only; source state, integrity, stock, queue and branch are encoded completely. No native selection or source calibration."
+      },
+      "phase_samples": [
+        {
+          "xi": 0,
+          "clock_probabilities": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "terminal_probability": 0.0,
+          "full_joint_terminal_trace_distance": 1.0,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.125,
+          "clock_probabilities": [
+            0.20526122593149468,
+            0.3521725871118843,
+            0.27190468510361476,
+            0.12440391631522389,
+            0.037352590826315306,
+            0.0076904296875,
+            0.001099557611184695,
+            0.00010780243477609652,
+            6.935990135211071e-06,
+            2.644506156067167e-07,
+            4.5372552482284445e-09
+          ],
+          "terminal_probability": 4.5372552482284445e-09,
+          "full_joint_terminal_trace_distance": 0.9999999977313724,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.25,
+          "clock_probabilities": [
+            0.0009765625000000013,
+            0.00976562500000001,
+            0.043945312500000035,
+            0.11718750000000003,
+            0.20507812500000006,
+            0.24609374999999994,
+            0.20507812499999986,
+            0.11718749999999992,
+            0.043945312499999944,
+            0.009765624999999986,
+            0.0009765624999999983
+          ],
+          "terminal_probability": 0.0009765624999999983,
+          "full_joint_terminal_trace_distance": 0.9995115994824673,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.375,
+          "clock_probabilities": [
+            4.537255248228458e-09,
+            2.644506156067174e-07,
+            6.935990135211087e-06,
+            0.00010780243477609673,
+            0.001099557611184697,
+            0.007690429687500011,
+            0.03735259082631535,
+            0.124403916315224,
+            0.2719046851036149,
+            0.3521725871118844,
+            0.20526122593149468
+          ],
+          "terminal_probability": 0.20526122593149468,
+          "full_joint_terminal_trace_distance": 0.891481224742566,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.5,
+          "clock_probabilities": [
+            0.0,
+            1.4643854632029506e-291,
+            1.7575440175405817e-258,
+            1.2500092617383078e-225,
+            5.834310889866676e-193,
+            1.8672785198744127e-160,
+            4.150172450862458e-128,
+            6.325085236168764e-96,
+            6.326098328502964e-64,
+            3.749399456654644e-32,
+            1.0
+          ],
+          "terminal_probability": 1.0,
+          "full_joint_terminal_trace_distance": 0.0,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.625,
+          "clock_probabilities": [
+            4.537255248228431e-09,
+            2.64450615606716e-07,
+            6.935990135211055e-06,
+            0.00010780243477609629,
+            0.001099557611184693,
+            0.00769042968749999,
+            0.03735259082631526,
+            0.1244039163152238,
+            0.27190468510361454,
+            0.3521725871118842,
+            0.20526122593149468
+          ],
+          "terminal_probability": 0.20526122593149468,
+          "full_joint_terminal_trace_distance": 0.891481224742566,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.75,
+          "clock_probabilities": [
+            0.0009765624999999983,
+            0.009765624999999986,
+            0.043945312499999944,
+            0.11718749999999992,
+            0.20507812499999986,
+            0.24609374999999994,
+            0.20507812500000006,
+            0.11718750000000004,
+            0.043945312500000035,
+            0.009765625000000012,
+            0.0009765625000000013
+          ],
+          "terminal_probability": 0.0009765625000000013,
+          "full_joint_terminal_trace_distance": 0.9995115994824673,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.875,
+          "clock_probabilities": [
+            0.20526122593149468,
+            0.3521725871118845,
+            0.2719046851036151,
+            0.1244039163152241,
+            0.03735259082631539,
+            0.0076904296875000226,
+            0.0010995576111846987,
+            0.00010780243477609694,
+            6.935990135211103e-06,
+            2.644506156067181e-07,
+            4.537255248228471e-09
+          ],
+          "terminal_probability": 4.537255248228471e-09,
+          "full_joint_terminal_trace_distance": 0.9999999977313724,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 1,
+          "clock_probabilities": [
+            1.0,
+            1.4997597826618576e-31,
+            1.0121757325604742e-62,
+            4.048054551148009e-94,
+            1.0624441474207892e-125,
+            1.9120932043513986e-157,
+            2.3897337404893903e-189,
+            2.0480151744320435e-221,
+            1.1518240473353956e-253,
+            3.838798628658743e-286,
+            5.7573e-319
+          ],
+          "terminal_probability": 5.7573e-319,
+          "full_joint_terminal_trace_distance": 1.0,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        }
+      ],
+      "status": "EXACT CONDITIONAL SUPPLIED WORD / CANDIDATE ENGINEERED GEOMETRY",
+      "physical_promotion": 0,
+      "independent_human_review": "PENDING"
+    },
+    "H": {
+      "branch": "H",
+      "version": "0.1",
+      "original_word_length": 9,
+      "word_length": 10,
+      "padding_gates": 1,
+      "clock_addresses": 11,
+      "data_bank_dimension": 3869835264,
+      "complete_joint_dimension": 42568187904,
+      "per_component_vertices": 6,
+      "per_component_edges": 5,
+      "weighted_path_components": 3869835264,
+      "kernel_dimension": 3869835264,
+      "unit_rate_vertex_metrics": [
+        "1",
+        "9/5",
+        "21/10",
+        "21/10",
+        "9/5",
+        "1"
+      ],
+      "unit_rate_edge_metrics": [
+        "1/10",
+        "3/40",
+        "7/100",
+        "3/40",
+        "1/10"
+      ],
+      "clock_spectrum_over_kappa": [
+        10,
+        8,
+        6,
+        4,
+        2,
+        0,
+        -2,
+        -4,
+        -6,
+        -8,
+        -10
+      ],
+      "characteristic_clock_coefficients": [
+        0,
+        -14745600,
+        0,
+        5395456,
+        0,
+        -489280,
+        0,
+        16368,
+        0,
+        -220,
+        0,
+        1
+      ],
+      "norm_over_kappa": 10,
+      "initial_variance_over_kappa_squared": 10,
+      "interaction_norm_upper_bound_over_kappa": 20,
+      "terminal_kappa_t": "pi/2",
+      "return_kappa_t": "pi",
+      "return_global_phase": 1,
+      "payload_reset_count": 1,
+      "history_cells": 8,
+      "receipt_cells": 8,
+      "prefixes": [
+        {
+          "address": 0,
+          "operation": "PREPARATION",
+          "active": {
+            "w": 0,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 1,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 1,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 2,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 3,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 4,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "address": 5,
+          "operation": "RESET_EXPORT",
+          "active": {
+            "w": 0,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 6,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 1,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 7,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 8,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 9,
+          "operation": "COMPUTE",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "address": 10,
+          "operation": "IDENTITY_PADDING",
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "specification": {
+        "states": [
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              1,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "H"
+          },
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "H"
+          },
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "H"
+          }
+        ],
+        "successor": [
+          1,
+          2,
+          2
+        ],
+        "receipt": [
+          1,
+          2,
+          3
+        ],
+        "record_dimension": 4,
+        "record_dictionary": [
+          {
+            "id": 0,
+            "meaning": "BLANK"
+          },
+          {
+            "id": 1,
+            "pre_state_label": 0,
+            "post_state_label": 1,
+            "transition_kind": "INSPECTION",
+            "response_tag": "BIT_EVENT",
+            "changed": true,
+            "halt_reason": null,
+            "consumed_tokens": 1,
+            "event": {
+              "theta_prior_aligned": [
+                1,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                0,
+                1,
+                1
+              ],
+              "q_output": [
+                1,
+                0,
+                0
+              ],
+              "omega_output": [
+                1,
+                0,
+                0
+              ],
+              "h_output": [
+                0,
+                0,
+                0
+              ],
+              "viable_index": -1,
+              "mu_theta": -1,
+              "closure_capacity_change": 2,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                1,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 1,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 4,
+            "potential_after": 3
+          },
+          {
+            "id": 2,
+            "pre_state_label": 1,
+            "post_state_label": 2,
+            "transition_kind": "INSPECTION",
+            "response_tag": "RESPONSE_NULL",
+            "changed": true,
+            "halt_reason": null,
+            "consumed_tokens": 0,
+            "event": {
+              "theta_prior_aligned": [
+                0,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                1,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                0,
+                1,
+                1
+              ],
+              "q_output": [
+                1,
+                0,
+                0
+              ],
+              "omega_output": [
+                0,
+                0,
+                0
+              ],
+              "h_output": [
+                1,
+                0,
+                0
+              ],
+              "viable_index": 1,
+              "mu_theta": 0,
+              "closure_capacity_change": 0,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                0,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 0,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 3,
+            "potential_after": 2
+          },
+          {
+            "id": 3,
+            "pre_state_label": 2,
+            "post_state_label": 2,
+            "transition_kind": "HALT",
+            "response_tag": "RESPONSE_NULL",
+            "changed": false,
+            "halt_reason": "LATCHED_OR_STRANDED",
+            "consumed_tokens": 0,
+            "event": {
+              "theta_prior_aligned": [
+                0,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                1,
+                0,
+                0
+              ],
+              "theta_output": [
+                0,
+                1,
+                1
+              ],
+              "q_output": [
+                1,
+                0,
+                0
+              ],
+              "omega_output": [
+                0,
+                0,
+                0
+              ],
+              "h_output": [
+                1,
+                0,
+                0
+              ],
+              "viable_index": 0,
+              "mu_theta": 0,
+              "closure_capacity_change": 0,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                0,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 0,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 2,
+            "potential_after": 2
+          }
+        ],
+        "scope": "Prepared RSP trajectory closure only; source state, integrity, stock, queue and branch are encoded completely. No native selection or source calibration."
+      },
+      "phase_samples": [
+        {
+          "xi": 0,
+          "clock_probabilities": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "terminal_probability": 0.0,
+          "full_joint_terminal_trace_distance": 1.0,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.125,
+          "clock_probabilities": [
+            0.20526122593149468,
+            0.3521725871118843,
+            0.27190468510361476,
+            0.12440391631522389,
+            0.037352590826315306,
+            0.0076904296875,
+            0.001099557611184695,
+            0.00010780243477609652,
+            6.935990135211071e-06,
+            2.644506156067167e-07,
+            4.5372552482284445e-09
+          ],
+          "terminal_probability": 4.5372552482284445e-09,
+          "full_joint_terminal_trace_distance": 0.9999999977313724,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.25,
+          "clock_probabilities": [
+            0.0009765625000000013,
+            0.00976562500000001,
+            0.043945312500000035,
+            0.11718750000000003,
+            0.20507812500000006,
+            0.24609374999999994,
+            0.20507812499999986,
+            0.11718749999999992,
+            0.043945312499999944,
+            0.009765624999999986,
+            0.0009765624999999983
+          ],
+          "terminal_probability": 0.0009765624999999983,
+          "full_joint_terminal_trace_distance": 0.9995115994824673,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.375,
+          "clock_probabilities": [
+            4.537255248228458e-09,
+            2.644506156067174e-07,
+            6.935990135211087e-06,
+            0.00010780243477609673,
+            0.001099557611184697,
+            0.007690429687500011,
+            0.03735259082631535,
+            0.124403916315224,
+            0.2719046851036149,
+            0.3521725871118844,
+            0.20526122593149468
+          ],
+          "terminal_probability": 0.20526122593149468,
+          "full_joint_terminal_trace_distance": 0.891481224742566,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.5,
+          "clock_probabilities": [
+            0.0,
+            1.4643854632029506e-291,
+            1.7575440175405817e-258,
+            1.2500092617383078e-225,
+            5.834310889866676e-193,
+            1.8672785198744127e-160,
+            4.150172450862458e-128,
+            6.325085236168764e-96,
+            6.326098328502964e-64,
+            3.749399456654644e-32,
+            1.0
+          ],
+          "terminal_probability": 1.0,
+          "full_joint_terminal_trace_distance": 0.0,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.625,
+          "clock_probabilities": [
+            4.537255248228431e-09,
+            2.64450615606716e-07,
+            6.935990135211055e-06,
+            0.00010780243477609629,
+            0.001099557611184693,
+            0.00769042968749999,
+            0.03735259082631526,
+            0.1244039163152238,
+            0.27190468510361454,
+            0.3521725871118842,
+            0.20526122593149468
+          ],
+          "terminal_probability": 0.20526122593149468,
+          "full_joint_terminal_trace_distance": 0.891481224742566,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.75,
+          "clock_probabilities": [
+            0.0009765624999999983,
+            0.009765624999999986,
+            0.043945312499999944,
+            0.11718749999999992,
+            0.20507812499999986,
+            0.24609374999999994,
+            0.20507812500000006,
+            0.11718750000000004,
+            0.043945312500000035,
+            0.009765625000000012,
+            0.0009765625000000013
+          ],
+          "terminal_probability": 0.0009765625000000013,
+          "full_joint_terminal_trace_distance": 0.9995115994824673,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 0.875,
+          "clock_probabilities": [
+            0.20526122593149468,
+            0.3521725871118845,
+            0.2719046851036151,
+            0.1244039163152241,
+            0.03735259082631539,
+            0.0076904296875000226,
+            0.0010995576111846987,
+            0.00010780243477609694,
+            6.935990135211103e-06,
+            2.644506156067181e-07,
+            4.537255248228471e-09
+          ],
+          "terminal_probability": 4.537255248228471e-09,
+          "full_joint_terminal_trace_distance": 0.9999999977313724,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        },
+        {
+          "xi": 1,
+          "clock_probabilities": [
+            1.0,
+            1.4997597826618576e-31,
+            1.0121757325604742e-62,
+            4.048054551148009e-94,
+            1.0624441474207892e-125,
+            1.9120932043513986e-157,
+            2.3897337404893903e-189,
+            2.0480151744320435e-221,
+            1.1518240473353956e-253,
+            3.838798628658743e-286,
+            5.7573e-319
+          ],
+          "terminal_probability": 5.7573e-319,
+          "full_joint_terminal_trace_distance": 1.0,
+          "scope": "Floating diagnostics of the exact binomial clock formulas; ideal arbitrary payload/spectator state, no continuous monitoring."
+        }
+      ],
+      "status": "EXACT CONDITIONAL SUPPLIED WORD / CANDIDATE ENGINEERED GEOMETRY",
+      "physical_promotion": 0,
+      "independent_human_review": "PENDING"
+    }
+  }
+}
