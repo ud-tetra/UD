@@ -1,0 +1,64 @@
+{
+  "checker": "independent planar Euler and raw 4-bit enumeration",
+  "topology": [
+    {
+      "grid": 4,
+      "planar_before": [
+        25,
+        56,
+        32
+      ],
+      "planar_after": [
+        24,
+        50,
+        26
+      ],
+      "euler_before": 1,
+      "euler_after": 0,
+      "star_triangles_removed": 6,
+      "expected_tetra_removed_height2": 36
+    },
+    {
+      "grid": 6,
+      "planar_before": [
+        49,
+        120,
+        72
+      ],
+      "planar_after": [
+        48,
+        114,
+        66
+      ],
+      "euler_before": 1,
+      "euler_after": 0,
+      "star_triangles_removed": 6,
+      "expected_tetra_removed_height2": 36
+    },
+    {
+      "grid": 8,
+      "planar_before": [
+        81,
+        208,
+        128
+      ],
+      "planar_after": [
+        80,
+        202,
+        122
+      ],
+      "euler_before": 1,
+      "euler_after": 0,
+      "star_triangles_removed": 6,
+      "expected_tetra_removed_height2": 36
+    }
+  ],
+  "pair_counts": {
+    "(0, 0)": 9,
+    "(0, 1)": 4,
+    "(1, 1)": 3
+  },
+  "iid_24_replay_expectation": "10272513/524288",
+  "physical_promotion": 0,
+  "note": "Checks Euler and raw enumeration independently. Integral homology proof uses the planar annulus x interval homeomorphism; not inferred solely from Euler characteristic."
+}

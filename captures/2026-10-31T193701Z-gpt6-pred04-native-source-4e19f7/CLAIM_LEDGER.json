@@ -1,0 +1,20 @@
+{
+  "version":"UD_PRED01_PRED02_CLAIM_LEDGER_v0.4",
+  "lane":"D0_DEVELOPMENT",
+  "physical_promotion":0,
+  "claims":[
+    {"id":"PRED01-C01","status":"EXACT_CONDITIONAL","claim":"Local selected trail + K4 packet-pruning makes H1=Z from H1=0", "assumptions":["tetrahedral ball","single boundary-to-boundary trail","star-pruning source rule"],"verification":"product topology + finite GF2 ranks"},
+    {"id":"PRED01-C02","status":"EXACT_CONDITIONAL","claim":"Integer cocycle and n=2,3 harmonic cochain sectors exist", "assumptions":["unit-edge metric","integer lift", "hole persists"],"verification":"signed simplicial d1=0, period=1, graph Hodge minimization"},
+    {"id":"PRED01-C03","status":"EXACT_CONDITIONAL","claim":"Distributed, staged single-edge source has Wpositive<=41/5 uniformly in N", "assumptions":["unit-gap calibrated lambda_N", "mu_N=lambda_N", "temporary curvature permitted", "triangle degree<=6"],"verification":"per-face total variation inequality + 3 grid refinements"},
+    {"id":"PRED01-C04","status":"NO-GO","claim":"No nonzero single-edge update remains flat at every intermediate state", "assumptions":["each edge in at least one triangular face", "strict one-edge source"],"verification":"incidence matrix rows nonzero"},
+    {"id":"PRED01-C05","status":"NO-GO","claim":"Fully equivariant deterministic selector cannot isolate one site from invariant data on a transitive orbit", "assumptions":["G-equivariant deterministic rule", "G-invariant data", "orbit size>1"],"verification":"group-action invariance argument"},
+    {"id":"PRED01-C06","status":"OPEN_GATED","claim":"A native K4 action generates the seed, excision, persistent lift and physical readout", "reopening":"source-bound generator and independent bridge test"},
+    {"id":"PRED02-C01","status":"EXACT_CONDITIONAL","claim":"Boolean 4-bit pair states have (omega,g) counts 9/4/3", "assumptions":["omega=TaTb(La or Lb)","g=(TaLa) or (TbLb)"],"verification":"16-state exact enumeration + independent audit"},
+    {"id":"PRED02-C02","status":"EXACT_CONDITIONAL","claim":"4096 raw microstates map onto 27 formal classes and permit 81 dual-control observations", "assumptions":["three independent pair control interfaces"],"verification":"full generation and exact schedule checks"},
+    {"id":"PRED02-C03","status":"EXACT_CONDITIONAL","claim":"Same class with different deterministic raw output need not imply temporal memory", "assumptions":["Boolean raw model","class discards bits"],"verification":"explicit two-microstate witness"},
+    {"id":"PRED02-C04","status":"OPEN_GATED","claim":"UD K4 supports source-qualified independent 12-bit controls and separate q/theta/leakage instruments", "reopening":"actual apparatus mapping and calibrated error/readout"}
+  ],
+  "prior_frozen_source_amended":false,
+  "nonconstructor_review":"DEFERRED_BY_USER",
+  "independent_empirical_test":"NOT_RUN"
+}

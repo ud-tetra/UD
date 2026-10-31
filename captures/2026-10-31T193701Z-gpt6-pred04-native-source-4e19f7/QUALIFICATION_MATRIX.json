@@ -1,0 +1,29 @@
+{
+  "version":"UD_PRED01_PRED02_QUALIFICATION_MATRIX_v0.4",
+  "date":"2026-10-31",
+  "physical_promotion":0,
+  "reviews":{"non_constructor":"DEFERRED_BY_USER","empirical_replication":"NOT_RUN"},
+  "PRED01": [
+    {"gate":"initial_3_ball_k4_tetrahedralization","status":"EXACT_CONDITIONAL","basis":"explicit triangulation"},
+    {"gate":"local_source_token_conservation","status":"EXACT_CONDITIONAL","basis":"assumed one-token neighbor transfer"},
+    {"gate":"star_excision_creates_integer_H1","status":"EXACT_CONDITIONAL","basis":"disk-minus-vertex-star times interval deformation retract; GF2 ranks"},
+    {"gate":"integral_seam_and_harmonic_n2_n3","status":"EXACT_CONDITIONAL","basis":"integer 1-cocycle period and convex quadratic cochain action"},
+    {"gate":"local_hodge_solver","status":"NUMERICAL","basis":"vertex graph-neighbor iteration with bounded residual"},
+    {"gate":"bounded_distributed_work","status":"EXACT_CONDITIONAL","basis":"sum positive action input <= 41/5 with calibrated lambda_N, mu_N=lambda_N, face valence <= 6"},
+    {"gate":"endogenous_K4_parity_or_burden_seed","status":"OPEN_GATED","reason":"seed and +z port stipulated; cannot select unique orbit on symmetric homogeneous source without symmetry breaking"},
+    {"gate":"native_seam_lift_and_defect_dynamics","status":"OPEN_GATED","reason":"integer cochain lift and irreversible K4-star excision not derived from source action"},
+    {"gate":"physical_time_and_energy_readout","status":"OPEN_GATED","reason":"dimensionless model action and algorithmic event index only"},
+    {"gate":"physical_n2_n3_persistence","status":"OPEN_GATED","reason":"fixed-sector mathematical minimizers do not meet native §7.13 persistence requirements"}
+  ],
+  "PRED02": [
+    {"gate":"boolean_raw_microstate_lift_9_4_3","status":"EXACT_CONDITIONAL","basis":"independent exhaustive enumeration"},
+    {"gate":"81_observation_dual_control_schedule","status":"EXACT_CONDITIONAL","basis":"27 classes x (identical raw, repeat raw, alternate raw)"},
+    {"gate":"iid_class_replay_estimate","status":"EXACT_CONDITIONAL","basis":"iid uniform 12-bit source assumption"},
+    {"gate":"class_sufficiency_vs_temporal_memory","status":"EXACT_CONDITIONAL","basis":"explicit same-class different-memoryless-raw-output counterexample"},
+    {"gate":"source_full_edge_mapping","status":"OPEN_GATED","reason":"Boolean 12-bit lift compatible with 4-of-16 count; not independently sourced as native K4 transport"},
+    {"gate":"actual_raw_state_preparation","status":"OPEN_GATED","reason":"no independently demonstrated physical control interface or fidelity"},
+    {"gate":"q_theta_plus_separation","status":"REQUIRED","reason":"substituting q for theta-plus can violate source V=0 null"},
+    {"gate":"leakage_independent_provider","status":"OPEN_GATED","reason":"Lambda_0..Lambda_3 not supplied by separately blinded physical measurement"},
+    {"gate":"instrument_units_error_and_clock","status":"OPEN_GATED","reason":"only digital benchmark contract and hypothetical iid input flip budget"}
+  ]
+}

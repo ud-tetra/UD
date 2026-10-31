@@ -1,0 +1,37 @@
+{
+  "schema":"UD_PREDICTIVE_DISCOVERY_BRIDGE_CONTRACT_v0.4",
+  "date":"2026-10-31",
+  "status":"DEVELOPMENT_ONLY_UNPREREGISTERED",
+  "physical_promotion":0,
+  "frozen_source_versions":{
+    "ud_packet_prereg_blob":"c5ddbb6f4df4ba3ff5c6b39895b58c6e955fc82b",
+    "ud_packet_errata_blob":"6961b917f4f1ca470127aa0b7d3c1b59693f4373",
+    "ud_external_review_blob":"c1ec2adc2e257e06d9681d1a13c6e11b15b7d750",
+    "prior_K4_annulus_PR":"https://github.com/ud-tetra/UD/pull/477"
+  },
+  "PRED01":{
+    "native_state":"integer lifted edge cochain a_n on selected K4 tetrahedral complex",
+    "generator":"local positive-stock marker move; topology-pruning rule; local Hodge relaxation; sequential edge injection with permitted temporary curvature",
+    "mathematical_observables":["H1(X;Z)","period_integral(a)","unit_gap_retained_action","sum_positive_injected_action","curvature_norm"],
+    "candidate_physical_readout":null,
+    "physical_units":null,
+    "calibration_parameters":{"lambda_N":"deliberately selected unit-gap normalization","mu_N":"set equal to lambda_N"},
+    "independent_baselines":["unexcised 3-ball H1=0","fixed-three-edge cut v0.3","quadratic-affine action HCB1","WBX1","nonstationary leakage PLB1","quartic action"],
+    "falsifiers":["no integer H1 after properly executed assumed excision","integer period not closed under selected orientation","positive injected action exceeds proved 41/5 bound under exact assumptions","held-out physical readout fails declared law once a bridge is calibrated"],
+    "target_blind":false,
+    "exposure_notes":"source packet and v0.3 numerical results examined; lambda_N chosen to demonstrate a unit gap, not independent physics derivation",
+    "acceptance":"NO PHYSICAL TEST UNTIL native source selector, sign/units readout, uncertainty, null, heldout and review are specified"
+  },
+  "PRED02":{
+    "mathematical_input":"12 raw Boolean bits (Ta,Tb,La,Lb) x 3 pairs, mapping to 27 classes",
+    "mathematical_outputs":["omega and g", "q gate vector", "theta-plus independent viable output", "Lambda leakage sidecar"],
+    "candidate_apparatus":"6 digitally controlled edge stations with separate source-blind input classifier, output sensors and leakage provider; currently ONLY A DESIGN",
+    "physical_units":null,
+    "sampling_plan":"A/B identical raw microstates, C changed within-class raw microstates; 81 formal observations",
+    "measurement_error_assumption":"iid raw input bit flip p<=1e-5 is illustrative, not measured",
+    "comparison_baselines":["class-only deterministic maps","memoryless full-raw-state maps","history-dependent maps","sensor drift and false classifications"],
+    "falsifiers":["9/4/3 count incorrect under candidate Boolean gate","raw A/B repeat mismatch beyond instrument noise","raw A/C mismatch rejects class sufficiency but alone does not identify memory"],
+    "leakage_provider":"independent blind Lambda_0..Lambda_3 data required to adjudicate PRED01 nonlinear source",
+    "acceptance":"NO CRL-2b before source-native map, apparatus, noise calibration, proper preregistration and non-constructor review"
+  }
+}
