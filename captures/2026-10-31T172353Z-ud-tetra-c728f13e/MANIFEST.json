@@ -1,0 +1,56 @@
+{
+  "schema": "UD_MANIFEST_v0.1",
+  "capture_id": "2026-10-31T172353Z-ud-tetra-c728f13e",
+  "physical_promotion": 0,
+  "created_utc": "2026-10-31T17:23:53Z",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "status": "SOURCE_RECOVERY_PARTIAL_6_OF_28__PHYSICAL_PROMOTION_ZERO",
+  "claim_strength": "SIX_SOURCE_VISIBLE_SCOPED_AUDIT_NOT_28_ROW_CERTIFICATION",
+  "independent_review": "PENDING",
+  "original_28_ids_recovered": 0,
+  "named_source_visible_rows": 6,
+  "claimed_total": 28,
+  "unrecovered_original_rows": 22,
+  "source_hashes": {
+    "v2.2_pdf": "01ac4d1daceed22cfac52233de05f7e16a49626d2d1e1ada1b57003f2f29f3ef",
+    "ledger_v0.39": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+  },
+  "companion_local_package": {
+    "name": "UD_28_PREDICTION_EVIDENCE_AUDIT_v0.1.zip",
+    "sha256": "97b0abc197d4a91b787e8a07bba8e4a9b1d540124b84a16979428392761f3f85",
+    "status": "LOCAL_USER_DOWNLOAD_ONLY_NOT_GITHUB_MIRRORED"
+  },
+  "verification": [
+    "original v2.2 Part VIII six rows inspected",
+    "fraction arithmetic rechecked in Python Fraction + SymPy in local package",
+    "external numeric context versioned and documented",
+    "local 28-slot CSV has six documentary rows and 22 missing placeholders",
+    "GitHub text capture limited, no PDF or raw external data committed"
+  ],
+  "limitations": [
+    "FULL_28_ITEM_IDENTITIES_NOT_RECOVERED",
+    "model-dependent CMB constraints not direct UD likelihood",
+    "F6 raw telemetry not recovered",
+    "no blind or independent non-constructor peer review"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-10-31T172353Z-ud-tetra-c728f13e/AUDIT.md",
+      "sha256": "e8260750bfbdd388ec67197cd1932df1c816740d54be617ba40b72f566e4fc04",
+      "size_bytes": 4147
+    },
+    {
+      "path": "captures/2026-10-31T172353Z-ud-tetra-c728f13e/SIX_SOURCE_VISIBLE_ROWS.csv",
+      "sha256": "ca0039d7476b81523643981333bca7a092c4deae1157f9e4078bf846d5316a66",
+      "size_bytes": 520
+    },
+    {
+      "path": "captures/2026-10-31T172353Z-ud-tetra-c728f13e/EXACT_CORE_REPLAY.py",
+      "sha256": "e23171b3318dbbace6355a554abbf78233e96895a8db8828bd68ff4e438fe682",
+      "size_bytes": 524
+    }
+  ],
+  "supersedes": [],
+  "site_updated": false,
+  "original_pdf_replaced": false
+}
