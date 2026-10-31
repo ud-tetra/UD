@@ -1,0 +1,40 @@
+name: UD PRED01-PRED02 v0.3 conditional model replay
+on:
+  pull_request:
+    paths:
+      - "captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/**"
+      - "captures/2026-10-31T191938Z-gpt6-pred-v031-replay-fix-94c27a1a/**"
+      - ".github/workflows/ud_pred01_pred02_v03_ci.yml"
+  workflow_dispatch:
+
+jobs:
+  conditional-model:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install declared mathematical dependencies
+        run: python3 -m pip install -r captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/requirements.txt
+      - name: Exact incidence, algebra, and finite numerical tests
+        run: python3 -m unittest discover -s captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a -p 'test_carrier_and_preparation.py' -v
+      - name: Regenerate complete 27-class preparation and carrier results
+        run: |
+          python3 captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/carrier_and_preparation.py --m 8 --exact-ranks --seed 20261031 --out /tmp/ud_pred_v03_replay.json
+          python3 captures/2026-10-31T191938Z-gpt6-pred-v031-replay-fix-94c27a1a/compare_replay.py captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/RESULTS.json /tmp/ud_pred_v03_replay.json
+      - name: Typed replay comparator regression tests
+        run: python3 -m unittest discover -s captures/2026-10-31T191938Z-gpt6-pred-v031-replay-fix-94c27a1a/ -p 'test_compare_replay.py' -v
+      - name: Scope guard
+        run: |
+          python3 - <<'PY'
+          import json
+          p='captures/2026-10-31T191555Z-gpt6-winding-response-v03-ae5f4c1a/'
+          x=json.load(open(p+'RESULTS.json'))
+          assert x['physics_promotion']==0
+          assert x['carrier']['betti']==[1,1,0,0]
+          assert x['carrier']['quadratic_D2']=='0'
+          assert x['carrier']['quartic_D2']=='153/1024'
+          assert x['seam_source']['gross_two_event_ratio']=='29/24'
+          assert x['seam_source']['retained_two_event_ratio']=='3'
+          assert x['capped_boundary_control']['betti']==[1,0,0]
+          assert x['preparation']['representative_endpoint_design']['min_pairwise_bit_distance_twelve']==6
+          print('PASS: exact conditional mathematical replay; physical tests NOT_RUN')
+          PY

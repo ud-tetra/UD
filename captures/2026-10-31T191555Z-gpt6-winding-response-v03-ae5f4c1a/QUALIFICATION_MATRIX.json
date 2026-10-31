@@ -1,0 +1,144 @@
+{
+  "PRED01_gates": [
+    {
+      "gate": "finite_K4_decorated_n2_n3_sectors",
+      "status": "EXACT_CONDITIONAL_PASS"
+    },
+    {
+      "betti": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "gate": "oriented_chain_complex",
+      "status": "EXACT_CONDITIONAL_PASS"
+    },
+    {
+      "gate": "closed_coclosed_integer_winding",
+      "status": "EXACT_CONDITIONAL_PASS"
+    },
+    {
+      "gate": "fixed_sector_quadratic_minimality",
+      "status": "EXACT_CONDITIONAL_PASS"
+    },
+    {
+      "gate": "local_seam_slip_source_receipt",
+      "status": "EXACT_CONDITIONAL_PASS"
+    },
+    {
+      "gate": "discrete_relaxation_convergence",
+      "status": "NUMERICAL_PASS_WITH_EXACT_STABILITY_HYPOTHESES"
+    },
+    {
+      "gate": "capped_boundary_winding",
+      "status": "NO_GO_UNDER_CAP_ASSUMPTION"
+    },
+    {
+      "gate": "continuum_finite_retained_gap_and_bounded_gross_injection",
+      "status": "NO_GO_FIXED_THREE_EDGE_SLIP_AND_STIFFNESS"
+    },
+    {
+      "gate": "endogenous_native_annulus_selector",
+      "status": "OPEN_GATED"
+    },
+    {
+      "gate": "native_n2_n3_persistence",
+      "status": "OPEN_GATED"
+    },
+    {
+      "gate": "physical_readout_selection_gross_vs_retained",
+      "status": "OPEN_GATED"
+    },
+    {
+      "gate": "empirical_units_and_independent_measurement",
+      "status": "OPEN_GATED"
+    }
+  ],
+  "PRED02_gates": [
+    {
+      "gate": "27_formal_state_space",
+      "status": "EXACT_CONDITIONAL_PASS"
+    },
+    {
+      "gate": "4_observation_shell_and_partial_plus_replay_schedule",
+      "status": "EXACT_CONDITIONAL_PASS"
+    },
+    {
+      "gate": "6_class_code_distance_3_for_five_X_table_representatives",
+      "status": "EXACT_CONDITIONAL_PASS_WITH_ADDITIONAL_VECTOR_RESPONSE_ASSUMPTION"
+    },
+    {
+      "gate": "12_observation_redundant_code_distance_6",
+      "status": "EXACT_CONDITIONAL_PASS_WITH_ADDITIONAL_VECTOR_RESPONSE_ASSUMPTION"
+    },
+    {
+      "gate": "10_orbit_S3_quotient_20_observation_schedule",
+      "status": "EXACT_CONDITIONAL_PASS_WITH_S3_EQUIVARIANCE_ASSUMPTION"
+    },
+    {
+      "gate": "54_observation_full_27_class_twopass_schedule",
+      "status": "EXACT_CONDITIONAL_PASS"
+    },
+    {
+      "gate": "native_source_complete_response_laws",
+      "status": "OPEN_GATED"
+    },
+    {
+      "gate": "physical_preparation_of_each_partial_class",
+      "status": "OPEN_GATED"
+    },
+    {
+      "gate": "apparatus_output_error_covariance",
+      "status": "OPEN_GATED"
+    },
+    {
+      "gate": "independent_replication",
+      "status": "DEFERRED"
+    }
+  ],
+  "artifact": "UD_PRED01_PRED02_CARRIER_AND_PREPARATION_QUALIFICATION_v0.3",
+  "date": "2026-10-31",
+  "lane": "D0_DEVELOPMENT",
+  "model": {
+    "action": "S0=1/2 sum_e a_e^2; proposed quartic branch S_gamma=S0+gamma sum a_e^4",
+    "boundaries": "open annular hole; cap negative control",
+    "carrier": "assumed_annulus_with_vertex_attached_filled_K4",
+    "clock": "discrete algorithmic index, not physical time",
+    "evolution": "a_next=a-eta B1.T B1 a",
+    "initial_conditions": "a_n harmonic or a_n+z",
+    "m": 8,
+    "n_values": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "seam_source": "integer three-edge closed cut cochain",
+    "state_space": "closed real 1-cochains with fixed integer lifted annulus period"
+  },
+  "native_carrier_found": false,
+  "non_constructor_review": "DEFERRED_NOT_WAIVED",
+  "physical_promotion": 0,
+  "provenance": [
+    {
+      "git_blob": "c5ddbb6f4df4ba3ff5c6b39895b58c6e955fc82b",
+      "name": "UD_PREREGISTRATION_PACKET_v1.0.md",
+      "sections": "A.1-A.5 B.1-B.3 D E"
+    },
+    {
+      "git_blob": "6961b917f4f1ca470127aa0b7d3c1b59693f4373",
+      "name": "UD_PACKET_v1.1_ERRATA.md",
+      "sections": "E.1-E.3"
+    },
+    {
+      "git_blob": "c1ec2adc2e257e06d9681d1a13c6e11b15b7d750",
+      "name": "UD_EXTERNAL_REVIEW_BRIEF.md"
+    },
+    {
+      "PR": "https://github.com/ud-tetra/UD/pull/475",
+      "name": "UD_PRED01_DEVELOPMENT_v0.2"
+    }
+  ]
+}
