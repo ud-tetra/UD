@@ -1,0 +1,186 @@
+{
+  "artifact": "UD_TETRAHEDRAL_QUADRANTS_3D_COVERING_v0.8",
+  "child_energies": [
+    "13/3",
+    "6",
+    "17/3",
+    "16/3"
+  ],
+  "child_volumes": [
+    "2/3",
+    "2/3",
+    "2/3",
+    "2/3"
+  ],
+  "classification": "DEVELOPMENT_ONLY",
+  "date": "2026-10-31",
+  "exact_assertion_groups": 109,
+  "four_quad_solid_angle_sr": "4*pi",
+  "fractal_counterexample": "Nested fixed-face barycentric children have volume V/4^n but constant diameter 2*sqrt(2)",
+  "internal_interfaces": {
+    "four_sector_shared_origin": 1,
+    "three_sector_shared_rays": 4,
+    "two_sector_shared_faces": 6
+  },
+  "no_physical_claims": [
+    "Native Omega0 selected the fan",
+    "Metric energy is physical energy",
+    "Global 3D universe is one tetrahedron",
+    "Fractal growth follows from cone partition",
+    "4/3 geometry equals another typed 4/3 coefficient"
+  ],
+  "parent_energy": "64/3",
+  "parent_volume": "8/3",
+  "physical_promotion": 0,
+  "quad_solid_angle_sr": "pi",
+  "quadrants": {
+    "0": {
+      "basis_vertices": [
+        1,
+        2,
+        3
+      ],
+      "determinant": "-4",
+      "gram": [
+        [
+          "3",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "3",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "3"
+        ]
+      ],
+      "parameter_rules": [
+        "-(y + z)/2",
+        "-(x + z)/2",
+        "-(x + y)/2"
+      ],
+      "volume_finite": "2/3"
+    },
+    "1": {
+      "basis_vertices": [
+        0,
+        2,
+        3
+      ],
+      "determinant": "4",
+      "gram": [
+        [
+          "3",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "3",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "3"
+        ]
+      ],
+      "parameter_rules": [
+        "(y + z)/2",
+        "-(x - y)/2",
+        "-(x - z)/2"
+      ],
+      "volume_finite": "2/3"
+    },
+    "2": {
+      "basis_vertices": [
+        0,
+        1,
+        3
+      ],
+      "determinant": "-4",
+      "gram": [
+        [
+          "3",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "3",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "3"
+        ]
+      ],
+      "parameter_rules": [
+        "(x + z)/2",
+        "(x - y)/2",
+        "-(y - z)/2"
+      ],
+      "volume_finite": "2/3"
+    },
+    "3": {
+      "basis_vertices": [
+        0,
+        1,
+        2
+      ],
+      "determinant": "4",
+      "gram": [
+        [
+          "3",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "3",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "3"
+        ]
+      ],
+      "parameter_rules": [
+        "(x + y)/2",
+        "(x - z)/2",
+        "(y - z)/2"
+      ],
+      "volume_finite": "2/3"
+    }
+  },
+  "scope": "Four regular-tetrahedral face cones, conical coordinates, positive-definite metrics, exact bounded 1-to-4 volumes, oriented boundaries, test energy and nonregular generalization.",
+  "test_energy_density": "8+x+2*y+3*z",
+  "vertices": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      1
+    ]
+  ]
+}
