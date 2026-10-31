@@ -1,0 +1,34 @@
+{
+  "schema": "UD_PROOF_MILESTONE_v1.0",
+  "proof_id": "UD-PM-PRED02-001",
+  "version": "v1.0",
+  "date_utc": "2026-10-31T21:01:28.719Z",
+  "kind": "THEOREM",
+  "proof_status": "VERIFIED_SCOPED",
+  "evidence_label": "EXACT_CONDITIONAL",
+  "review_status": "DEFERRED",
+  "physical_promotion": 0,
+  "statement": "E[M]=choose(N,2)*sum p_i^2>=choose(N,2)/27",
+  "assumptions": [
+    "27 formal classes",
+    "fixed iid p_i probabilities",
+    "N integer>=2"
+  ],
+  "source_refs": [
+    "UD preregistration v1.0 Part B",
+    "UD errata v1.1",
+    "UD PR #475 unmerged"
+  ],
+  "proof_file": "proofs/milestones/UD-PM-PRED02-001_v1.0.md",
+  "verification": [
+    {
+      "method": "separate symbolic algebra/exact fraction check",
+      "status": "PASS_SCOPED",
+      "reviewer": "NOT_RUN"
+    }
+  ],
+  "physical_bridge": "NOT_ESTABLISHED",
+  "captured_in": "captures/2026-10-31T210128Z-gpt6-proof-first-b72e",
+  "supersedes": [],
+  "next_gap": "native physical readout and non-constructor review OPEN_GATED"
+}
