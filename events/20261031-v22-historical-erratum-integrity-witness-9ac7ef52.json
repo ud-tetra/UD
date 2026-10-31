@@ -1,0 +1,14 @@
+{
+  "schema": "UD_EVENT_v0.1",
+  "event_id": "20261031-v22-historical-erratum-integrity-fix-9ac7ef52",
+  "capture_id": "2026-10-31T170445Z-ud-tetra-9ac7ef52",
+  "capture_path": "captures/2026-10-31T170445Z-ud-tetra-9ac7ef52",
+  "amends_event_id": "20261031-v22-historical-erratum-9ac7ef52",
+  "timestamp_utc": "2026-10-31T17:08:00Z",
+  "event_type": "APPEND_ONLY_EVENT_COVERAGE_METADATA_REPAIR",
+  "reason": "Initial new event recorded capture_path but did not include required capture_id; scripts/verify_repository.py demands an event with capture_id matching manifest parent name.",
+  "effect": "No source content or historical event overwritten; strengthens event coverage for new capture.",
+  "claim_strength": "ADMINISTRATIVE_METADATA_ONLY",
+  "physical_promotion": 0,
+  "public_site_changed": false
+}
