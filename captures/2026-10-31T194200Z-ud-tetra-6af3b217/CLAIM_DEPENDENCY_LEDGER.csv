@@ -1,0 +1,16 @@
+id,claim_label,scope,proof_or_evidence,status,source_dependencies,missing_gate,physical_promotion
+OBP-01,O09 history does not determine a local phase current,Current recovered v0.85 O09 and no supplied phase-map/Hamiltonian,Typed variational argument and distinct Hamiltonian completions,NO-GO,O09 G05 Q153,Native modal-to-link intertwiner and source-selected Hamiltonian,0
+OBP-02,K4 cycle projector exact,Oriented K4 unit edge metric,B1B1T=4I-11T and B2B2T=4P,EXACT,K4 incidence Q165,No gate for mathematics; physical type identification OPEN,0
+OBP-03,Q162 fully-open gradient has zero cycle projection,Vertex Q162 relaxation identification and all gates equal,P B1T=0,EXACT CONDITIONAL,Q162 Q153 OBP-02,Source-selected nonuniform gate or protected current,0
+OBP-04,Gated flux projection is closest conserved current,Declared Euclidean edge norm,Orthogonal projection variational minimizer,EXACT CONDITIONAL,OBP-02 Q162,Physical phase-source identification and compact action,0
+OBP-05,Continuity leaves cycle-current ambiguity,General incidence continuity with separate protected current,Adding z in ker B1 preserves B1j,NO-GO,Q153 Q155 OBP-02,Constitutive or measured gross-current selector,0
+OBP-06,64 hard gate initial projection sweep,Fixture b=(0 1 2 3) and binary h,All 64 rational matrix checks 62 nonzero and 2 zero,NUMERICAL EXACT_ENUM,Q156 Q162 OBP-04,Gate-selection dynamics and broader carriers,0
+OBP-07,No mask parallels fixture cubic generator,Fixture b=(0 1 2 3) and binary gates,Rank comparison for 64 projections and Jcub,NUMERICAL EXACT_ENUM,OBP-06 prior cubic theorem,Not a universal no-go for other states/gates,0
+OBP-08,All fixed gate projected currents vanish at equilibrium,Fixed nonnegative gate graph no source,64 exact nullspace checks and Laplacian spectral proof,NO-GO SCOPED,Q153 Q162,Variable driven or nondissipative current allowed,0
+OBP-09,Continuous switching-gate L2 dissipation bound,Continuous normalized dot b=B1j with 0<=h<=1 and no source,Exact polynomial identity and positive projection,EXACT CONDITIONAL,Q153 Q162 OBP-02,Physical clock and sourced dynamics,0
+OBP-10,Discrete gate-switch L2 sum bound,Discrete b[n+1]=b[n]+B1j[n] and 0<=h<=1,PSD spectral inequality L^2<=4L and exact sweep,EXACT CONDITIONAL,Q153 Q162 OBP-02,Native event rule and physical time,0
+OBP-11,All-open discrete event homogenizes in one step,Unit gate and one normalized update,B1B1T=4I-11T,EXACT CONDITIONAL,OBP-10,Event clock/coupling selection,0
+OBP-12,All-open continuous cubic shape decays e^(-3s),Unit gate continuous source-free flow and cubic homogeneity,Direct symbolic solution,EXACT CONDITIONAL,Prior cubic theorem OBP-09,Persistence demands source/protected mode,0
+OBP-13,Q162 hard-gate coupling cannot select cubic coefficient,Current hard gate source and no modal-to-link action,Explicit soft-gate countermodel and hard-gate enumeration,NO-GO SCOPED,O09 G05 Q156 Q162,Current native constitutive source/units,0
+OBP-14,Smallest positive fixed binary gate Laplacian eigenvalue,All 63 nonempty binary K4 gates,Exact 64-mask symbolic eigenvalue sweep,NUMERICAL EXACT_ENUM,Q162,Internal rate not seconds,0
+OBP-15,Physical photon and empirical dressing correspondence,No mapping to Lorentzian clock photon or lab readout,Source audit only,OPEN_GATED,O09 Q140 Q153 Q162,Independent full physical bridge and preregistered data,0
