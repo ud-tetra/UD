@@ -1,0 +1,25 @@
+{
+  "record_type": "UD_PRED08_VERIFICATION_RECEIPT_v1.0",
+  "created_at_utc": "2026-11-01T17:07:53.082035+00:00",
+  "source_base_commit": "b56f892b5fe9fbc9059ebd0f83a9113f6f4867a0",
+  "source_pr": 491,
+  "status": "EXACT_CONDITIONAL_SCOPED",
+  "proof_ids": [
+    "UD-PM-PRED08-BUR-001",
+    "UD-PM-PRED08-RES-002",
+    "UD-PM-PRED08-ASYM-003",
+    "UD-PM-PRED08-GAU-004",
+    "UD-PM-PRED08-COH-005"
+  ],
+  "checks": {
+    "sympy_1_14": "PASS",
+    "independent_fraction_sweep": "PASS",
+    "unittests": "PASS 24 of 24",
+    "synthetic_ode": "EXECUTED_ONLY_SYNTHETIC",
+    "github_ci": "PENDING",
+    "non_constructor_review": "DEFERRED",
+    "physical_measurements": "NOT_RUN"
+  },
+  "physical_promotion": 0,
+  "limitations": "No native gain, initial stochastic event, sector state, action coefficient or calibrated physical readout derived"
+}

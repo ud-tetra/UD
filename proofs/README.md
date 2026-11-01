@@ -47,3 +47,13 @@ Each theorem is EXACT_CONDITIONAL under its explicit premises. Numerical/exact f
 - [UD-PM-PRED07-ACT-003 — Gauge-invariant real-period action exists, but tau and unwrapped lift unsourced](milestones/UD-PM-PRED07-ACT-003_v1.0.md): EXACT_CONDITIONAL. Not invariant under large compact U(1) gauge identification of integer lifts.
 
 Proof dependencies: PRED06 PR #490 and PRED05 PR #487; program governance PR #473. Source typed coefficient ledger v0.39 Q153/Q162/Q169/G05. Full proofs and checks are in the unique hash-verified capture `captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1/`. Review DEFERRED; physical promotion 0. Code and CI verify scoped calculations but do not establish source-native physics.
+
+## PRED08 proof-first stock and gauge-action constraints (2026-11-01)
+
+- [UD-PM-PRED08-BUR-001 — passive Q162 current cannot amplify burden contrast](milestones/UD-PM-PRED08-BUR-001_v1.0.md): EXACT_CONDITIONAL / NO-GO for all nonnegative contact masks.
+- [UD-PM-PRED08-RES-002 — finite-stock active conservative candidate and S4-equivariant stochastic seed](milestones/UD-PM-PRED08-RES-002_v1.0.md): EXACT_CONDITIONAL; candidate gamma, source event and reserve are **new** assumptions.
+- [UD-PM-PRED08-ASYM-003 — finite reserve forces eventual burden-contrast decay](milestones/UD-PM-PRED08-ASYM-003_v1.0.md): EXACT_CONDITIONAL / NO-GO with passive dissipation; not a topology-memory no-go.
+- [UD-PM-PRED08-GAU-004 — compact-link winding lift ambiguity and relative reference](milestones/UD-PM-PRED08-GAU-004_v1.0.md): EXACT_CONDITIONAL / NO-GO + conditional enlarged gauge group.
+- [UD-PM-PRED08-COH-005 — exact cochain gauge updates preserve winding](milestones/UD-PM-PRED08-COH-005_v1.0.md): EXACT_CONDITIONAL / NO-GO on a fixed complex.
+
+All five new proof milestones are source-dependent on open PR #491 and earlier PRED06/PRED05 strata. The independent-method symbolic and finite checks are recorded in `captures/2026-11-01T171000Z-gpt6-pred08-proof-burden-gauge-2e91/`. These are **mathematical model results only**; no source-complete gain, integer register, microscopic action amplitude, physical clock or physical promotion is claimed. Non-constructor review deferred.
