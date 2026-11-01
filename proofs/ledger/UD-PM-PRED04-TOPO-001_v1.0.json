@@ -1,0 +1,61 @@
+{
+  "author_date": "2026-10-31",
+  "capture_id": "2026-11-01T004739Z-gpt6-pred04-proof-audit-7c49",
+  "counterexamples": [
+    "seed-only excision beta1(F2)=0",
+    "legal Pachner moves preserve H1",
+    "pure-gauge holonomy=+1"
+  ],
+  "dependencies": [
+    "PR479 L1-L4 / R1-R4 assumptions",
+    "UD proof-first governance PR473"
+  ],
+  "evidence_label": "EXACT_CONDITIONAL",
+  "governance_ref": {
+    "commit": "2a19727f15e038f39721088b960cd46b97fd9bc5",
+    "pr": 473,
+    "status": "UNMERGED"
+  },
+  "next_gate": "native selector and scale calibration",
+  "physical_promotion": 0,
+  "proof_file": "proofs/milestones/UD-PM-PRED04-TOPO-001_v1.0.md",
+  "proof_id": "UD-PM-PRED04-TOPO-001",
+  "proof_kind": "THEOREM",
+  "proof_status": "VERIFIED_SCOPED",
+  "review_status": "DEFERRED",
+  "schema": "UD_PROOF_MILESTONE_v1.0",
+  "source_refs": [
+    {
+      "blob": "abefbc821bd7897e9c469b2ff12bd7cccab56c99",
+      "commit": "b5c8146ae4b956279e6f399553e02cffbc42c7ea",
+      "path": "docs/UD_PRED01_LOCAL_DEFECT_SELECTION_AND_BOUNDED_SOURCE_v0.4.md",
+      "repository": "ud-tetra/UD",
+      "status": "UNMERGED_PR_479"
+    }
+  ],
+  "statement": "conditional integer H1 generation by full K4 column excision",
+  "status_notes": {
+    "code_only_not_proof": true,
+    "mathematical": "conditional on explicit carrier/action/excision hypotheses",
+    "physical": "no independent bridge or measured observable",
+    "publication": "STAGED_FOR_BRANCH_PR_REVIEW_DEFERRED"
+  },
+  "supersedes": [],
+  "verification": [
+    {
+      "method": "independent mathematical proof",
+      "source": "UD-PM-PRED04-TOPO-001_v1.0.md",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "method": "independent source-free finite tests",
+      "source": "INDEPENDENT_AUDIT.json",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "method": "non-constructor review",
+      "status": "DEFERRED"
+    }
+  ],
+  "version": "v1.0"
+}
