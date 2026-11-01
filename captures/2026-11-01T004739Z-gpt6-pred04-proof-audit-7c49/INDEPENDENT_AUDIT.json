@@ -1,0 +1,326 @@
+{
+  "assumptions": {
+    "base_transition_n": "nonnegative integer",
+    "direction": "assumed +z",
+    "edge_updates": "each edge updated once by its h_component, any order",
+    "excision": "assumed",
+    "h": "closed 1-cochain",
+    "integer_lift": "assumed",
+    "positive_stiffness": "lambda>0,mu>=0",
+    "source_seed": "external"
+  },
+  "face_checks": {
+    "exact_action_sequences": 1728,
+    "exact_closed_face_cases": 1008,
+    "sharp_example": {
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "ratio": "2/3",
+      "triple": [
+        "-3",
+        "-3",
+        "6"
+      ]
+    },
+    "sharp_face_ratio": "2/3"
+  },
+  "grids": [
+    {
+      "drops": {
+        "E": 32,
+        "F": 66,
+        "T": 36,
+        "V": 3
+      },
+      "excised": {
+        "E": 298,
+        "F": 382,
+        "T": 156,
+        "V": 72,
+        "betti_f2": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "rank": [
+          71,
+          226,
+          156
+        ]
+      },
+      "full": {
+        "E": 330,
+        "F": 448,
+        "T": 192,
+        "V": 75,
+        "betti_f2": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "rank": [
+          74,
+          256,
+          192
+        ]
+      },
+      "grid_N": 4,
+      "max_incidence": 6,
+      "triangle_edge_incidence_counts": {
+        "2": 28,
+        "3": 90,
+        "4": 124,
+        "5": 12,
+        "6": 44
+      }
+    },
+    {
+      "drops": {
+        "E": 32,
+        "F": 66,
+        "T": 36,
+        "V": 3
+      },
+      "excised": {
+        "E": 666,
+        "F": 918,
+        "T": 396,
+        "V": 144,
+        "betti_f2": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "rank": [
+          143,
+          522,
+          396
+        ]
+      },
+      "full": {
+        "E": 698,
+        "F": 984,
+        "T": 432,
+        "V": 147,
+        "betti_f2": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "rank": [
+          146,
+          552,
+          432
+        ]
+      },
+      "grid_N": 6,
+      "max_incidence": 6,
+      "triangle_edge_incidence_counts": {
+        "2": 36,
+        "3": 154,
+        "4": 312,
+        "5": 12,
+        "6": 152
+      }
+    },
+    {
+      "drops": {
+        "E": 32,
+        "F": 66,
+        "T": 36,
+        "V": 3
+      },
+      "excised": {
+        "E": 1170,
+        "F": 1662,
+        "T": 732,
+        "V": 240,
+        "betti_f2": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "rank": [
+          239,
+          930,
+          732
+        ]
+      },
+      "full": {
+        "E": 1202,
+        "F": 1728,
+        "T": 768,
+        "V": 243,
+        "betti_f2": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "rank": [
+          242,
+          960,
+          768
+        ]
+      },
+      "grid_N": 8,
+      "max_incidence": 6,
+      "triangle_edge_incidence_counts": {
+        "2": 44,
+        "3": 234,
+        "4": 572,
+        "5": 12,
+        "6": 308
+      }
+    }
+  ],
+  "legal_pachner_2to3_witnesses": {
+    "intact": {
+      "after_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "before_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "face": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "new_edge": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    "tunnel": {
+      "after_F2": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "before_F2": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "face": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "new_edge": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ]
+    }
+  },
+  "local_infinite_lattice_edge_types": {
+    "(0, 0, 1)": 6,
+    "(0, 1, 0)": 6,
+    "(0, 1, 1)": 4,
+    "(1, 0, 0)": 6,
+    "(1, 0, 1)": 4,
+    "(1, 1, 0)": 4,
+    "(1, 1, 1)": 6
+  },
+  "partial_source_counterexamples": [
+    {
+      "N": 4,
+      "betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "tetra_remaining": 180
+    },
+    {
+      "N": 6,
+      "betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "tetra_remaining": 420
+    },
+    {
+      "N": 8,
+      "betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "tetra_remaining": 756
+    }
+  ],
+  "physical_promotion": 0,
+  "protocol": "UD_PR479_independent_topology_and_source_audit_v1.0",
+  "source_pr": "UD#479 @ b5c8146ae4b956279e6f399553e02cffbc42c7ea",
+  "structural_claims": {
+    "H1_Z_before_after": "0 -> Z conditional on full column excision",
+    "K4_tetra_full": "12*N*N",
+    "drops_on_center_excision": "(3,32,66,36)",
+    "improved_work_bound": "W_plus <= Delta + (mu/3)*d_F*||h||^2",
+    "n2_unit_gap_mu_equals_lambda": "W_plus <= 9/5 (prior 41/5 bound valid but loose)",
+    "uniform_incidence_bound": "d_F <= 6 for the declared Freudenthal cubic triangulation"
+  },
+  "verification": "EXACT_FINITE_DOMAIN_CHECK_ONLY"
+}
