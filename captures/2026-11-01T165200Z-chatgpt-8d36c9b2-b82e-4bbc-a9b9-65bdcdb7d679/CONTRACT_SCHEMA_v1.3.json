@@ -1,0 +1,32 @@
+{
+  "name": "UD_NATIVE_COFACE_EVENT_RESOURCE_CONTRACT",
+  "version": "1.3",
+  "claim_bin": "CANDIDATE_TRANSACTION_CONTRACT",
+  "evidence_status": "STRUCTURAL_EXACT__BIRTH_SOURCE_OPEN",
+  "physical_promotion": 0,
+  "input_types": {
+    "K_t": "admitted tetrahedral simplicial complex",
+    "b_t": "binary graph-label map with max 2 occurrences per tetrahedron",
+    "X_t": "typed packet burden, phase, framing and closure states",
+    "U_t": "group-valued existing seam transports",
+    "h_t": "hard gating receipts",
+    "R_av_t": "additive available resource in an independently defined unit; OPEN",
+    "H_t": "retained causal/event history and versioned ownership"
+  },
+  "transitions": [
+    {"name": "enumerate", "rule": "frontier face with incidence=1 and unique deficient binary label", "status": "EXACT_CONDITIONAL"},
+    {"name": "prepare", "rule": "source-derived full newborn X, U, metric/normal and signed receipt", "status": "OPEN"},
+    {"name": "fund", "rule": "R_av>=C_form>0, where C_form is independent of M_form viability threshold", "status": "OPEN"},
+    {"name": "authorize", "rule": "prior-state source-selected face, event index, collision arbitration, or explicit HOLD", "status": "OPEN"},
+    {"name": "commit", "rule": "add one fresh vertex, three edges, three triangles and one tetrahedron, with shared-face ownership and typed ledger", "status": "EXACT_IF_ALL_PRECONDITIONS_SUPPLIED"},
+    {"name": "retract", "rule": "separately authorized inverse with signed refund and any leakage receipt", "status": "OPEN"}
+  ],
+  "conditions": {
+    "combinatorial": "delta f=(1,3,3,1), delta Euler=0",
+    "conservation": "delta(R_free+R_bound+R_out-R_in)=0 in one declared additive unit",
+    "source_not_predictions": ["M_form", "s_B:=Delta rho - Bj_B", "J23 after a registered cell exists"],
+    "symmetry_gate": "cannot deterministically choose a singleton facet from a fully symmetric decorated seed without additional asymmetry",
+    "unknown_not_hold": true
+  },
+  "blocked": ["automatic native birth", "unqualified 3D physical space selection", "SI energy from quadratic support", "physical time from event count"]
+}
