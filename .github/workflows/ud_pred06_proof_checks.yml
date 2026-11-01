@@ -1,0 +1,31 @@
+name: UD PRED06 exact conditional proof corroboration
+on:
+  pull_request:
+    paths:
+      - "captures/2026-11-01T011800Z-gpt6-pred06-native-selector-metric-8e24/**"
+      - ".github/workflows/ud_pred06_proof_checks.yml"
+  workflow_dispatch:
+
+jobs:
+  exact-conditional-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Prepare SymPy exact environment
+        run: |
+          python3 -m venv /tmp/ud-pred06-venv
+          /tmp/ud-pred06-venv/bin/pip install -r captures/2026-11-01T011800Z-gpt6-pred06-native-selector-metric-8e24/requirements.txt
+      - name: Reproduce exact finite witnesses
+        run: /tmp/ud-pred06-venv/bin/python captures/2026-11-01T011800Z-gpt6-pred06-native-selector-metric-8e24/independent_proof_checks.py
+      - name: Exercise all scoped checks
+        run: /tmp/ud-pred06-venv/bin/python -m unittest discover -s captures/2026-11-01T011800Z-gpt6-pred06-native-selector-metric-8e24 -p test_proof_checks.py -v
+      - name: Confirm review and physics remain explicitly gated
+        run: |
+          python3 - <<'PY2'
+          import json
+          p='captures/2026-11-01T011800Z-gpt6-pred06-native-selector-metric-8e24/MANIFEST.json'
+          m=json.load(open(p))
+          assert m['physical_promotion']==0
+          assert len(m['files'])==23
+          print('PASS conditional mathematics only; no native physical identification')
+          PY2

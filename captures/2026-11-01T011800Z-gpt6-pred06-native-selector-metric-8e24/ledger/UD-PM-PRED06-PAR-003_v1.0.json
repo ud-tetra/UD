@@ -1,0 +1,111 @@
+{
+  "capture_id": "2026-11-01T011800Z-gpt6-pred06-native-selector-metric-8e24",
+  "captured_in": "captures/2026-11-01T011800Z-gpt6-pred06-native-selector-metric-8e24",
+  "date_utc": "2026-11-01T011800Z",
+  "dependencies": [],
+  "evidence_label": "EXACT_CONDITIONAL",
+  "kind": "NO_GO",
+  "next_gate": "source-derived symmetry breaking/occupancy action/metric and measured bridge",
+  "physical_bridge": {
+    "calibration": null,
+    "null": null,
+    "observable": null,
+    "status": "OPEN_GATED",
+    "uncertainty": null,
+    "unit_map": null
+  },
+  "physical_promotion": 0,
+  "proof_file": "proofs/milestones/UD-PM-PRED06-PAR-003_v1.0.md",
+  "proof_id": "UD-PM-PRED06-PAR-003",
+  "proof_kind": "NO_GO",
+  "proof_sha256": "2804278fc6aac89c56cd14d9836d1dca788c3364d0768203a8c895035e879e84",
+  "proof_status": "VERIFIED_SCOPED",
+  "publication": "STAGED_STACKED_PR_PENDING",
+  "review_status": "DEFERRED",
+  "schema": "UD_PROOF_MILESTONE_v1.0",
+  "source_refs": [
+    {
+      "dated": "2026-08-22",
+      "relevant_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "Q31",
+        "G05",
+        "Q153",
+        "Q156",
+        "Q162",
+        "Q165",
+        "Q167",
+        "Q169"
+      ],
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "source": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md",
+      "status": "source snapshot, not proof of latest ledger"
+    },
+    {
+      "blob_sha": "ce5d4417032ce933d8cf06d4ca54b4be7279c011",
+      "date": "2026-10-15",
+      "path": "docs/UD_Local_Source_Selection_v0.1.md",
+      "repo": "ud-tetra/UD",
+      "status": "development no registry entry"
+    },
+    {
+      "blob_sha": "4a16adf2a310da5f327fe9286e458fe3aba71161",
+      "date": "2026-10-15",
+      "path": "docs/UD_Native_Gate_Trigger_and_Recovery_v0.1.md",
+      "repo": "ud-tetra/UD",
+      "status": "development no registry entry"
+    },
+    {
+      "blob_sha": "2f0bcbbf3af39b65bd507aeb511f7dfea93205f0",
+      "date": "2026-10-15",
+      "path": "docs/UD_Positive_Stock_Balanced_Recovery_and_Predictive_Switching_v0.1.md",
+      "repo": "ud-tetra/UD",
+      "status": "conditional assumed constitutive model"
+    },
+    {
+      "blob_sha": "e52183457fe1d4c0e1c6daea81d3bd064508645c",
+      "path": "proofs/milestones/UD-PM-PRED05-SCALE-002_v1.0.md",
+      "pr": 487,
+      "repo": "ud-tetra/UD",
+      "source_commit": "e3b74a8069d37807b92d184e3cab26df9b5817f9",
+      "status": "unmerged conditional theorem used as explicit dependency"
+    },
+    {
+      "blob_sha": "2f849ac6f0426c150cce64ffa05472df99811b59",
+      "path": "proofs/milestones/UD-PM-PRED05-EVOL-001_v1.0.md",
+      "pr": 487,
+      "repo": "ud-tetra/UD",
+      "source_commit": "e3b74a8069d37807b92d184e3cab26df9b5817f9",
+      "status": "unmerged conditional evolution"
+    }
+  ],
+  "statement": "Every additive homomorphism Z2^3 -> Z is trivial.",
+  "supersedes": [],
+  "verification": [
+    {
+      "method": "full written exact proof",
+      "status": "PROOF_IN_MILESTONE"
+    },
+    {
+      "method": "exact SymPy/algebraic and finite witness audit",
+      "status": "PASS_SCOPED",
+      "tool": "independent_proof_checks.py"
+    },
+    {
+      "method": "unittest 19 checks",
+      "status": "PASS_TEST_ONLY"
+    },
+    {
+      "method": "non-constructor reviewer",
+      "status": "DEFERRED"
+    },
+    {
+      "method": "physical measurement bridge",
+      "status": "NOT_RUN"
+    }
+  ],
+  "version": "v1.0"
+}

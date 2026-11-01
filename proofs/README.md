@@ -27,3 +27,15 @@ All records are scoped to source PR #479 (unmerged), proof-governance PR #473 (u
 - [UD-PM-PRED05-PERSIST-004 — retained memory does not alone protect winding](milestones/UD-PM-PRED05-PERSIST-004_v1.0.md): EXACT_CONDITIONAL / NO_GO.
 
 These are assumption-scoped proof milestones from the new stacked proof-audit branch. Numerical GF2 cases and software tests corroborate, but do not replace the proofs. Non-constructor review is deferred; physical promotion 0. The 41/5 and 9/5 prior work bounds remain valid within their declared hypotheses; the new theorem adds a necessary stiffness running condition without deriving a native amplitude.
+
+
+## PRED06 source selector and action normalization audit (scoped, review deferred)
+
+- [UD-PM-PRED06-SEL-001 — symmetric K4 deterministic selection no-go](milestones/UD-PM-PRED06-SEL-001_v1.0.md).
+- [UD-PM-PRED06-SEL-002 — conditional local burden/flux selection lemma](milestones/UD-PM-PRED06-SEL-002_v1.0.md).
+- [UD-PM-PRED06-PAR-003 — finite parity-to-integer lift no-go](milestones/UD-PM-PRED06-PAR-003_v1.0.md).
+- [UD-PM-PRED06-FIX-004 — fixed incidence cannot change homology](milestones/UD-PM-PRED06-FIX-004_v1.0.md).
+- [UD-PM-PRED06-ACT-005 — flat harmonic sectors are invisible to derivative-only action](milestones/UD-PM-PRED06-ACT-005_v1.0.md).
+- [UD-PM-PRED06-MET-006 — uniformly elliptic metric logarithmic stiffness obstruction](milestones/UD-PM-PRED06-MET-006_v1.0.md).
+
+Each theorem is EXACT_CONDITIONAL under its explicit premises. Numerical/exact finite checks corroborate but do not replace the proof. Source dependencies include open PR #487 and the v0.39 typed coefficient ledger. The native source and metric-to-action bridge remain OPEN_GATED. Non-constructor review DEFERRED; physical promotion 0.
