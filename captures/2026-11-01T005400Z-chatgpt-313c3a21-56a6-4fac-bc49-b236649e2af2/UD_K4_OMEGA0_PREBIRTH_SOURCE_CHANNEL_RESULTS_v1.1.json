@@ -1,0 +1,70 @@
+{
+  "artifact": "UD_K4_OMEGA0_PREBIRTH_SOURCE_CHANNEL_v1.1",
+  "date": "2026-10-31",
+  "claim_scope": "EXACT representation-level uniqueness and source insufficiency; NOT a native Omega0 birth law",
+  "physical_promotion": 0,
+  "verification": "SymPy exact arithmetic",
+  "groups": {
+    "chain_dimensions": 1,
+    "chain_boundary_squared": 2,
+    "chain_kernel_rank": 1,
+    "chain_spectral_identity": 1,
+    "chain_projector": 1,
+    "chain_normalization": 1,
+    "S4_permutation_chain_map": 48,
+    "S4_shell_sign": 24,
+    "S4_projector_equivariance": 24,
+    "S4_isometry": 24,
+    "S4_binary_hard_gate_all_or_none": 16,
+    "unique_signed_intertwiner": 1,
+    "no_linear_even_scalar_intertwiner": 1,
+    "quadratic_decomposition": 81,
+    "linear_sign_covariance": 1944,
+    "quadratic_even_invariance": 1944,
+    "minimal_skew_support_generator": 4,
+    "transfer_normalization": 5,
+    "isometric_transfer_family": 405,
+    "same_prestate_countermodels": 6,
+    "distinct_birth_countermodels": 2,
+    "all_face_masks": 32,
+    "only_full_nonempty_closed": 1,
+    "uniform_burden_no_mixing_flux": 128,
+    "exact_distinction_coboundary_vacuous": 16,
+    "Q173_zero_prebirth_flux": 16,
+    "sharp_support_funding_bound": 648
+  },
+  "checks_total": 5377,
+  "mathematical_findings": {
+    "dim_signed_equivariant_linear_maps": 1,
+    "dim_scalar_even_equivariant_linear_maps": 0,
+    "unique_intertwiner": "ell(c)=gamma*u.T*c, u=(-1,1,-1,1)",
+    "normalized_shell_coordinate": "q=u.T*c/2",
+    "support_generator_spectrum": "0 (multiplicity 3), +i, -i for lambda=1 (comparison normalization)",
+    "only_binary_closed_masks": [
+      "0000",
+      "1111"
+    ],
+    "same_input_compatible_outcomes": [
+      "HOLD",
+      "BIRTH(3/5,4/5)",
+      "BIRTH(5/13,12/13)"
+    ],
+    "closed_system_support_balance": "S2_after+S3_after=S2_before under comparison isometries",
+    "why_no_native_birth": "Q153 has open predictive source/sink; Q173 presupposes admitted C3 and vanishes at c3=0; selection angle and event trigger not supplied"
+  },
+  "controls": {
+    "S4_elements": 24,
+    "rational_face_vectors": 81,
+    "face_masks": 16,
+    "edge_gate_masks": 64,
+    "independent_vertex_bit_masks": 16,
+    "tested_rational_rotations": 5
+  },
+  "next_required_inputs": [
+    "Omega_face predictive occupancy map",
+    "Omega_bulk event selector",
+    "native source/sink and stock transfer law",
+    "oriented time/metric/energy bridge"
+  ],
+  "status": "STRUCTURAL_PASS__NATIVE_BIRTH_SOURCE_BLOCKED"
+}
