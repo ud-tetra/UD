@@ -1,0 +1,9 @@
+case,carrier,input,readout,phase_effect,sign_under_X_to_minus_X,selection_status
+Q165_Q166_EVEN,K4 real graded state,pure edge initial state,normalized quadratic stock/current W,frequency 4 same after sign flip,even,SOURCE_SELECTED_INTERNAL_MATH
+PREPARED_REFERENCE,K4 reference plus K4 state,retained r and Hodge A,relative modal complex u_r,frequency 2 and sign sensitive,odd,CANDIDATE_PREPARATION_SOURCE_OPEN
+Q84_SIGNED_CONTEXT,U1 environment phase records,u(P_alpha) and u(P_beta),cos of relative phase,first harmonic if matched phase source,odd when only alpha branch flips,EXACT_CONDITIONAL_APPARATUS_OPEN
+Q77_MAGNITUDE_CONTEXT,U1 environment phase records,relative phase,absolute cosine,magnitude loses pi sign,even under pi shift,EXACT_CONDITIONAL_BRANCH_OPEN
+Q81_COMPLEX_CONTEXT,U1 environment phase records,two nonzero unit phase records,exp(i Delta Phi_E),signed full first harmonic,odd when one branch flips,EXACT_CONDITIONAL_CONTEXT_SOURCE_OPEN
+Q83_HALF_PHASE,RPi half-phase modulo pi,s=n Phi_E/2 mod pi,exp(is),not well-defined without Z2 lift,ambiguous,OPEN_GATED_BRANCH
+CARDIOID_GAIN,combined K4 and context,prepared phase plus even W,lambda u-u^2,cusp only lambda=2 for lambda>0,odd and even mixed,CANDIDATE_GAIN_NOT_SELECTED
+CUBIC_S4_OBSERVER,K4 oriented edge state,candidate polynomial C3=sum(div x)^3,C3(r) cos^3(2s),first and third observed harmonics,odd,CANDIDATE_NOT_ADMITTED_BY_Q165_Q166

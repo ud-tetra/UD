@@ -1,0 +1,16 @@
+id,label,claim,status,source_and_scope,next_gate
+SR01,K4_HODGE,Ar=-2*2r and u_r=exp(2is) for pure C1,EXACT_SCOPED,Paper I 4.3 plus retained reference r,physical reference preparation
+SR02,Q165_QUADRATIC,W=u_r^2=exp(4is) on same orbit,EXACT_SCOPED,Q165 Q166 Q169 Q170 and previous PR501,observer geometry to apparatus
+SR03,S4_RELATIVE,Simultaneously transformed r and X preserve u_r,EXACT_SCOPED,unit K4 signed S4 and fixed r record,context-label transport
+SR04,Q81_RELATIVE,Relative context phasor is invariant under common phase and odd under one-branch sign change,EXACT_CONDITIONAL,Q81 with normalized nonzero context u(P),derive environment phase forcing
+SR05,Q84_SIGNED,Cos relative phase detects some sign flips while abs cos loses them,EXACT_CONDITIONAL,Q84 versus Q77,physical signed coherence readout
+SR06,Q84_INSUFFICIENT,One signed cosine plus u^2 fails global phase injectivity at +-i,NO-GO_SCOPED,Q84 with matched u phases,derive quadrature or branch tracking
+SR07,Q83_Z2,Half-phase s mod pi does not select exp(is) without branch lift,NO-GO_SCOPED,Q83 phase normalization,provide branch and source
+SR08,Q82_ORIENTATION,Q82 sign conjugates phase but cannot produce missing quadrature,EXACT_CONDITIONAL,Q82 81 84,qualified second context
+SR09,CARDIOID_GAIN,lambda u-u^2 cusp only if lambda=2 for lambda>0,EXACT_CONDITIONAL,declared two-channel mixing not sourced,derive mixing from action
+SR10,CARDIOID_NONIDENTIFIABLE,O09 Q81-Q84 Q165/166 do not select gain lambda or context-Hodge phase map,NO-GO_SCOPED,recovered ledger v0.85 inherited v0.43,intertwiner and source selection
+SR11,EDGE_LINEAR_S4,No nonzero signed S4 invariant linear functional on C1,EXACT_SCOPED,S4 action of K4 oriented edges,context reference or different representation
+SR12,EDGE_ODD_CUBIC,C3=sum_v((B1 x)_v)^3 is signed S4 invariant and odd,EXACT_SCOPED,K4 source B1 and new cubic polynomial,source observation law absent
+SR13,CUBIC_HARMONICS,Generic C3(r) cos^3(2s) produces 2 and 6 internal angular frequencies in observed cubic signal,EXACT_CONDITIONAL,new cubic readout outside Q165 accepted stock,physical detector/uncertainty
+SR14,SYMPOW_MUL,S4 invariant polynomial counts degrees 0-3 are 1 0 2 2,EXACT_SCOPED,independent character and monomial checks,none for count
+SR15,PHYSICAL_PROMOTION,No physical first-harmonic apparatus or spectral gap derived,OPEN_GATED,typed data no held-out physical bridge,target-blind independent calibrated experiment
