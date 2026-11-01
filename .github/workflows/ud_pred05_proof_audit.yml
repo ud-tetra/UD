@@ -1,0 +1,28 @@
+name: UD PRED05 conditional proof corroboration
+on:
+  pull_request:
+    paths:
+      - "captures/2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9/**"
+      - ".github/workflows/ud_pred05_proof_audit.yml"
+  workflow_dispatch:
+
+jobs:
+  exact-finite-corrob:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Exact chain and rational coefficient constraints
+        run: python3 captures/2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9/verify_transfer_and_scaling.py
+      - name: Angular cocycle independent numerical check
+        run: python3 captures/2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9/check_angular_cochain.py
+      - name: Run 15 source-bound corroboration tests
+        run: python3 -m unittest discover -s captures/2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9 -p test_transfer_and_scaling.py -v
+      - name: Check mathematical-claim boundary
+        run: |
+          python3 - <<'PY'
+          import json
+          m=json.load(open('captures/2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9/MANIFEST.json'))
+          assert m['physical_promotion']==0
+          assert len(m['files'])>=4
+          print('PASS - source-bound conditional check, no physical bridge or non-constructor review')
+          PY

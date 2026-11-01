@@ -18,3 +18,12 @@ Only these two statements were independently rechecked for this seed register. A
 - [UD-PM-PRED04-CAUSAL-003 — immediate-excision live-edge propagation NO-GO](milestones/UD-PM-PRED04-CAUSAL-003_v1.0.md). **EXACT_CONDITIONAL / NO_GO** on the stated online update ordering.
 
 All records are scoped to source PR #479 (unmerged), proof-governance PR #473 (unmerged), and explicit assumptions. The independent verification results, counterexamples and hashes are preserved in the versioned capture; non-constructor review deferred, physical promotion 0.
+
+## PRED05 transfer-before-excision and stiffness proofs — 2026-10-31
+
+- [UD-PM-PRED05-EVOL-001 — transfer-before-excision state evolution and restricted winding persistence](milestones/UD-PM-PRED05-EVOL-001_v1.0.md): EXACT_CONDITIONAL; native seed and direction port assumed.
+- [UD-PM-PRED05-SCALE-002 — harmonic-norm logarithmic theorem and running-stiffness obstruction](milestones/UD-PM-PRED05-SCALE-002_v1.0.md): EXACT_CONDITIONAL; unweighted edge metric.
+- [UD-PM-PRED05-IDENT-003 — absolute stiffness nonidentifiable from static geometry](milestones/UD-PM-PRED05-IDENT-003_v1.0.md): EXACT_CONDITIONAL / NO_GO.
+- [UD-PM-PRED05-PERSIST-004 — retained memory does not alone protect winding](milestones/UD-PM-PRED05-PERSIST-004_v1.0.md): EXACT_CONDITIONAL / NO_GO.
+
+These are assumption-scoped proof milestones from the new stacked proof-audit branch. Numerical GF2 cases and software tests corroborate, but do not replace the proofs. Non-constructor review is deferred; physical promotion 0. The 41/5 and 9/5 prior work bounds remain valid within their declared hypotheses; the new theorem adds a necessary stiffness running condition without deriving a native amplitude.

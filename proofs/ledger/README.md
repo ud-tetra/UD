@@ -8,3 +8,5 @@ This is an explicit seed ledger, not a retrospective audit of every historical t
 
 
 PRED-04 verification additions (review deferred): `UD-PM-PRED04-TOPO-001_v1.0.json`, `UD-PM-PRED04-WORK-002_v1.0.json`, `UD-PM-PRED04-CAUSAL-003_v1.0.json`. All are conditional mathematics; no physical promotion.
+
+PRED05 additional conditional proof records: `UD-PM-PRED05-EVOL-001_v1.0.json`, `UD-PM-PRED05-SCALE-002_v1.0.json`, `UD-PM-PRED05-IDENT-003_v1.0.json` and `UD-PM-PRED05-PERSIST-004_v1.0.json`. Proofs have separate source/metric assumptions, review DEFERRED, physical promotion 0. Capture: `captures/2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9/MANIFEST.json`. Unmerged prior PRs #473, #479 and #484 remain dependencies.

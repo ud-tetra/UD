@@ -1,0 +1,84 @@
+{
+  "assumptions": [
+    "external seed",
+    "preferred +z local port",
+    "transfer before pruning",
+    "persistent independent memory",
+    "boundary sink",
+    "restricted post-event generator"
+  ],
+  "capture_id": "2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9",
+  "captured_in": "captures/2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9",
+  "counterexamples": [
+    "excision-before-transfer blocks live edge",
+    "new radial cut kills tunnel despite memory"
+  ],
+  "date_utc": "2026-11-01T010121Z",
+  "dependencies": [
+    "UD-PM-PRED04-TOPO-001",
+    "UD-PM-PRED04-CAUSAL-003"
+  ],
+  "evidence_label": "EXACT_CONDITIONAL",
+  "lane": "D0_DEVELOPMENT",
+  "next_gate": "native K4 burden/parity selector and nontrivial survival under unrestricted physical dynamics",
+  "physical_bridge": {
+    "calibration": null,
+    "empirical_null": null,
+    "status": "OPEN_GATED",
+    "uncertainty": null,
+    "unit_map": null
+  },
+  "physical_promotion": 0,
+  "proof_file": "proofs/milestones/UD-PM-PRED05-EVOL-001_v1.0.md",
+  "proof_id": "UD-PM-PRED05-EVOL-001",
+  "proof_kind": "THEOREM",
+  "proof_sha256": "08f65708cedaaea9d5b1952fba07fe65e1e9616fdb3e4b9e933a76f4593131f9",
+  "proof_status": "VERIFIED_SCOPED",
+  "publication": "STAGED_STACKED_PR_PENDING",
+  "review_status": "DEFERRED",
+  "schema": "UD_PROOF_MILESTONE_v1.0",
+  "source_refs": [
+    {
+      "coefficient_ledger_scope": "dated 2026-08-22 snapshot, not assured current",
+      "coefficient_ledger_sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "governance_head": "2a19727f15e038f39721088b960cd46b97fd9bc5",
+      "governance_pr": 473,
+      "proof_audit_head": "2b8ccab0ac409d3dd3e72db62a0dea220cf96703",
+      "proof_audit_pr": 484,
+      "repository": "ud-tetra/UD",
+      "source_blob": "abefbc821bd7897e9c469b2ff12bd7cccab56c99",
+      "source_coefficient_ledger": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md",
+      "source_commit": "b5c8146ae4b956279e6f399553e02cffbc42c7ea",
+      "source_path": "docs/UD_PRED01_LOCAL_DEFECT_SELECTION_AND_BOUNDED_SOURCE_v0.4.md",
+      "source_pr": 479
+    }
+  ],
+  "statement": "Conserved local transfer-before-excision evolution is well defined, forms a final integral winding tunnel, and preserves it only under restricted post-event geometry updates.",
+  "supersedes": [],
+  "verification": [
+    {
+      "checker": "constructor mathematical proof",
+      "method": "fully specified theorem in milestone document",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "checker": "independent implementation, same author",
+      "method": "independent Python GF2 chain, exact rational and angular cochain checks",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "checker": "software tests, not theorem proof",
+      "method": "Python unittest 15 cases",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "method": "non-constructor review",
+      "status": "DEFERRED"
+    },
+    {
+      "method": "physical experiment",
+      "status": "NOT_RUN"
+    }
+  ],
+  "version": "v1.0"
+}

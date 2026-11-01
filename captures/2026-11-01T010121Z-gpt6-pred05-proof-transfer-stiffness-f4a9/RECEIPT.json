@@ -1,0 +1,38 @@
+{
+  "capture_id": "2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9",
+  "created_utc": "2026-11-01T010121Z",
+  "independent_nonconstructor_review": "DEFERRED",
+  "physical_promotion": 0,
+  "proof_ids": [
+    "UD-PM-PRED05-EVOL-001",
+    "UD-PM-PRED05-IDENT-003",
+    "UD-PM-PRED05-PERSIST-004",
+    "UD-PM-PRED05-SCALE-002"
+  ],
+  "proof_status": "EXACT_CONDITIONAL_VERIFIED_SCOPED",
+  "record_type": "proof_milestone_capture",
+  "reproducibility": "python3 verify_transfer_and_scaling.py && python3 check_angular_cochain.py && python3 -m unittest -v test_transfer_and_scaling.py",
+  "source_refs": {
+    "coefficient_ledger_scope": "dated 2026-08-22 snapshot, not assured current",
+    "coefficient_ledger_sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+    "governance_head": "2a19727f15e038f39721088b960cd46b97fd9bc5",
+    "governance_pr": 473,
+    "proof_audit_head": "2b8ccab0ac409d3dd3e72db62a0dea220cf96703",
+    "proof_audit_pr": 484,
+    "repository": "ud-tetra/UD",
+    "source_blob": "abefbc821bd7897e9c469b2ff12bd7cccab56c99",
+    "source_coefficient_ledger": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md",
+    "source_commit": "b5c8146ae4b956279e6f399553e02cffbc42c7ea",
+    "source_path": "docs/UD_PRED01_LOCAL_DEFECT_SELECTION_AND_BOUNDED_SOURCE_v0.4.md",
+    "source_pr": 479
+  },
+  "verification": {
+    "analytic_harmonic_norm_bounds": "PROOF_IN_MILESTONE",
+    "exact_GF2_stages": "PASS N=4,6,8,10",
+    "local_unit_tests": "PASS 15/15",
+    "memory_radial_cut_counterexample": "PASS N=4,6,8,10",
+    "numerical_angular_closed_cochain": "PASS N=4,6,8,10",
+    "physical": "NOT_RUN",
+    "repository_integrity_CI": "NOT_RUN_AT_LOCAL_CAPTURE"
+  }
+}
