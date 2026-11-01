@@ -1,0 +1,11 @@
+claim_id,claim,classification,assumptions_and_scope,verification,physical_promotion,next_gate
+RR01,"Filled K4 skew Hodge spectrum lambda(lambda^2+4)^7",EXACT,"unit graded simplex metric; A=B^T-B",SymPy_15x15,0,none_for_finite_scope
+RR02,"Selected real mode plane u(s)=exp(2is)",EXACT,"chosen edge plane and phase reference",SymPy_equivariant_plane,0,source_select_mode_and_phase
+RR03,"Nonlinear readout z=2u-u^2 yields cardioid",DERIVED,"added quadratic observation map",SymPy_formula_and_FFT,0,derive_observer_from_packet_measurement
+RR04,"Native speed remains 2 while reported speed vanishes at cardioid cusp",DERIVED,"declared metrics and observer",SymPy_pullback_metric,0,detector_sampling_uncertainty_gate
+RR05,"1 to 5 ordinary cusps from integer locked two-phase image curves",EXACT,"specified image formulas; integer frequencies; derivative cancellation",SymPy_7_curve_test,0,source_select_frequency_locking
+RR06,"One full cycloid revolution has affine translation (2pi,0)",EXACT,"rolling kinematics no-slip stipulated",SymPy_parametric_shift,0,native_contact_translation_contract
+RR07,"Linear K4 readouts yield ellipse line or point",NO-GO,"unmodified fixed skew generator; real/complex affine readout",A_squared_identity,0,prove_selected_nonlinear_readout
+RR08,"K-minus and K-plus generic two active modes have irrational frequency ratios",EXACT,"specified glued unit-metric carriers",SymPy_irrationality,0,do_not_equate_with_Penrose
+RR09,"Weak observer eps=1/1000 yields second-harmonic amplitude 1/1000 with no cusp",NUMERICAL,"explicitly chosen eps and additive observer",FFT_4096_control,0,no_target_backsolve
+RR10,"Circle tracing derives physical UD spectral residuals",OPEN,"native physical observer and calibration absent",not_established,0,pre_registered_independent_bridge_test
