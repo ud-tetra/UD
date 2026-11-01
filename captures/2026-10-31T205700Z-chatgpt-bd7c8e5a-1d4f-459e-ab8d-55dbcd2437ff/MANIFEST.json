@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "capture_id": "2026-10-31T205700Z-chatgpt-bd7c8e5a-1d4f-459e-ab8d-55dbcd2437ff",
+  "created_date": "2026-10-31",
+  "project": "Unified Dynamics",
+  "repo": "ud-tetra/UD",
+  "branch": "contrib/chatgpt/2026-10-31-simplex-fill-ladder-8c61af20",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "status": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "physical_promotion": 0,
+  "source_strata": [
+    "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md (2026-08-22), P01-P09, F01-F05, G05, Q153-Q179",
+    "UD_TETRAHEDRAL_QUADRANTS_3D_ATLAS_AUDIT_v0.8 (2026-10-31)",
+    "UD_TETRAHEDRAL_NATIVE_COORDINATE_ATLAS_AUDIT_v0.7 (2026-10-31)",
+    "UD portal Papers I-III 1.1.1 / IV 0.1"
+  ],
+  "scope": "K4 Laplacian native 3D counting carrier; four S4-equivariant tetrahedral sectors; exact all-or-none face closure; binary double-coboundary source obstruction; curved S3 gauge and weighted metric controls.",
+  "verification": {
+    "primary_exact_assertions": 4119,
+    "independent_fraction_checks": 539,
+    "prior_v0_8_regression": 109,
+    "original_code_run": "PASS",
+    "independent_peer_review": "PENDING",
+    "repository_wide_verifier": "NOT_RUN_CONNECTOR_ONLY",
+    "physical_data": "NOT_TESTED"
+  },
+  "claim_bins": {
+    "EXACT": [
+      "S4 symmetry and 3D graph eigenspace",
+      "four quadratic counting-metric cones cover H",
+      "only 0000 and 1111 face masks close",
+      "F2 double coboundary on b cannot select a face",
+      "gauge covariance of finite S3 controls"
+    ],
+    "NO_GO": [
+      "single S4-invariant quadrant cannot be picked from symmetric K4",
+      "static K4 data cannot fix Omega0 growth law"
+    ],
+    "OPEN": [
+      "native Omega0 transition and source/energy receipts",
+      "physical metric scale and time",
+      "global spatial chart gluing"
+    ]
+  },
+  "prior_captures": [
+    "captures/2026-10-31T210759Z-chatgpt-773b5de9-132b-44b0-8e7c-260eacab3c9d/"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-10-31T205700Z-chatgpt-bd7c8e5a-1d4f-459e-ab8d-55dbcd2437ff/UD_K4_NATIVE_FOUR_QUADRANT_ADMISSION_AUDIT_v0.9.md",
+      "size_bytes": 14274,
+      "sha256": "49acf83807b0fe6b057d48b3e57880e7817f6b53ca698708091eaf9d47600cd5",
+      "expected_git_blob_sha": "0ed0e299a858a7d4189fd70419042f037ebe86ae"
+    },
+    {
+      "path": "captures/2026-10-31T205700Z-chatgpt-bd7c8e5a-1d4f-459e-ab8d-55dbcd2437ff/UD_K4_NATIVE_FOUR_QUADRANT_ADMISSION_README_v0.9.md",
+      "size_bytes": 2174,
+      "sha256": "2f2929eb6a52e353557174f36641ccfd739bf0d88e83536678fbb3400b88e62f",
+      "expected_git_blob_sha": "ac3f3d6426a99e4154e108b3d8961c9df6ba066d"
+    },
+    {
+      "path": "captures/2026-10-31T205700Z-chatgpt-bd7c8e5a-1d4f-459e-ab8d-55dbcd2437ff/UD_K4_NATIVE_FOUR_QUADRANT_ADMISSION_VERIFY_v0.9.py",
+      "size_bytes": 12167,
+      "sha256": "81292e2defa4b96d9d4db01416d419c1b42dd6804fa977bf50cecaf82b157350",
+      "expected_git_blob_sha": "1b20e87b8d89e87c42132593f6bf87389e399268"
+    },
+    {
+      "path": "captures/2026-10-31T205700Z-chatgpt-bd7c8e5a-1d4f-459e-ab8d-55dbcd2437ff/UD_K4_NATIVE_FOUR_QUADRANT_INDEPENDENT_CHECK_v0.9.py",
+      "size_bytes": 1628,
+      "sha256": "7279e0274d3ba7bdd9e02614cbc7364fc72932fa534147c833934dda760f7bef",
+      "expected_git_blob_sha": "bd11aca22d979c2770328514908147821671633e"
+    },
+    {
+      "path": "captures/2026-10-31T205700Z-chatgpt-bd7c8e5a-1d4f-459e-ab8d-55dbcd2437ff/UD_K4_NATIVE_FOUR_QUADRANT_ADMISSION_RESULTS_SUMMARY_v0.9.json",
+      "size_bytes": 3919,
+      "sha256": "e57c2bbe515d79c29fe510ce9a372fc46e76e32c9dc4e8ae70d73cb4e87ce5ad",
+      "expected_git_blob_sha": "fe078f4faf63a11d60ebfd13bfefb0800332296f"
+    },
+    {
+      "path": "captures/2026-10-31T205700Z-chatgpt-bd7c8e5a-1d4f-459e-ab8d-55dbcd2437ff/UD_K4_NATIVE_FOUR_QUADRANT_ADMISSION_VERIFY_RUN_v0.9.txt",
+      "size_bytes": 451,
+      "sha256": "0daa6e28efed992bd5eb09d36a4395adb487d1729a7224d2ef48dab491db2bd8",
+      "expected_git_blob_sha": "b4077fb2ede789bc72c6dfe4d0388e2edc588fb0"
+    },
+    {
+      "path": "captures/2026-10-31T205700Z-chatgpt-bd7c8e5a-1d4f-459e-ab8d-55dbcd2437ff/UD_K4_NATIVE_FOUR_QUADRANT_INDEPENDENT_RUN_v0.9.txt",
+      "size_bytes": 131,
+      "sha256": "ee70fd4d68f5b0878d2c10f09ecc8c077b474bec62d0633a17e764d3b84beb7d",
+      "expected_git_blob_sha": "b87c92faaeaf66a4f32568a898af4116c23c8fbb"
+    }
+  ],
+  "local_bundle": {
+    "name": "UD_K4_NATIVE_FOUR_QUADRANT_ADMISSION_RELEASE_v0.9.zip",
+    "sha256": "aeafbd764535ace4df45749ea2d8a28cf204eb5e6b0f59b364ab03a10ffe6ce1",
+    "note": "Contains complete 4,119-check JSON; repository includes summary plus reproducing scripts."
+  },
+  "no_existing_artifact_overwritten": true,
+  "supersedes": []
+}
