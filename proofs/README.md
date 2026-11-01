@@ -39,3 +39,11 @@ These are assumption-scoped proof milestones from the new stacked proof-audit br
 - [UD-PM-PRED06-MET-006 — uniformly elliptic metric logarithmic stiffness obstruction](milestones/UD-PM-PRED06-MET-006_v1.0.md).
 
 Each theorem is EXACT_CONDITIONAL under its explicit premises. Numerical/exact finite checks corroborate but do not replace the proof. Source dependencies include open PR #487 and the v0.39 typed coefficient ledger. The native source and metric-to-action bridge remain OPEN_GATED. Non-constructor review DEFERRED; physical promotion 0.
+
+## PRED07 — K4 burden instability and sector-action audit (2026-11-01)
+
+- [UD-PM-PRED07-BUR-001 — Conservative K4 nonlinear burden amplifier, threshold gamma*M>4](milestones/UD-PM-PRED07-BUR-001_v1.0.md): EXACT_CONDITIONAL. Gain gamma, asymmetric input and excision trigger remain OPEN_GATED.
+- [UD-PM-PRED07-MET-002 — S4 + unit-edge norms do not fix a general cochain action metric](milestones/UD-PM-PRED07-MET-002_v1.0.md): EXACT / NO-GO under unrestricted symmetric SPD metrics.
+- [UD-PM-PRED07-ACT-003 — Gauge-invariant real-period action exists, but tau and unwrapped lift unsourced](milestones/UD-PM-PRED07-ACT-003_v1.0.md): EXACT_CONDITIONAL. Not invariant under large compact U(1) gauge identification of integer lifts.
+
+Proof dependencies: PRED06 PR #490 and PRED05 PR #487; program governance PR #473. Source typed coefficient ledger v0.39 Q153/Q162/Q169/G05. Full proofs and checks are in the unique hash-verified capture `captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1/`. Review DEFERRED; physical promotion 0. Code and CI verify scoped calculations but do not establish source-native physics.

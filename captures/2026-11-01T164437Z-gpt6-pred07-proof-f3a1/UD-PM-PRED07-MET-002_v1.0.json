@@ -1,0 +1,93 @@
+{
+  "schema": "UD_PROOF_MILESTONE_v1.0",
+  "proof_id": "UD-PM-PRED07-MET-002",
+  "version": "v1.0",
+  "date_utc": "2026-11-01T16:43:43.025863+00:00",
+  "kind": "NO_GO",
+  "proof_status": "VERIFIED_SCOPED",
+  "evidence_label": "EXACT_CONDITIONAL",
+  "review_status": "DEFERRED",
+  "physical_promotion": 0,
+  "statement": "K4 S4 symmetry plus unit edge norms do not uniquely fix general SPD edge-cochain action metric",
+  "assumptions": [
+    "allow non-diagonal SPD cochain metrics",
+    "signed edge S4 representation"
+  ],
+  "dependencies": [
+    "Q169",
+    "G05",
+    "UD-PM-PRED06-MET-006"
+  ],
+  "source_refs": {
+    "date": "2026-11-01",
+    "repo": "ud-tetra/UD",
+    "source_pr": 490,
+    "source_commit": "51c1885a140f732a9518760e1e3fcb2f431e2832",
+    "source_ledger": {
+      "path": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "date": "2026-08-22",
+      "objects": [
+        "Q153",
+        "Q156",
+        "Q162",
+        "Q169",
+        "G05"
+      ]
+    },
+    "source_links": [
+      {
+        "pr": 490,
+        "commit": "51c1885a140f732a9518760e1e3fcb2f431e2832",
+        "status": "UNMERGED"
+      },
+      {
+        "pr": 487,
+        "commit": "e3b74a8069d37807b92d184e3cab26df9b5817f9",
+        "status": "UNMERGED"
+      },
+      {
+        "pr": 473,
+        "commit": "2a19727f15e038f39721088b960cd46b97fd9bc5",
+        "status": "UNMERGED"
+      }
+    ],
+    "new_assumptions": [
+      "nonlinear conservative redistribution gamma b_i(b_i-Q/M)",
+      "positive conserved M and open Q156 contacts",
+      "K4 symmetry and unit-edge metric only, not fixed physical action metric",
+      "integral unwrapped winding period plus separate tau coefficient"
+    ],
+    "physical_promotion": 0,
+    "review": "DEFERRED"
+  },
+  "proof_file": "proofs/milestones/UD-PM-PRED07-MET-002_v1.0.md",
+  "verification": [
+    {
+      "method": "symbolic exact proof",
+      "status": "PASS_SCOPED",
+      "artifact": "pred07_exact_audit.py and EXACT_AUDIT.json"
+    },
+    {
+      "method": "different exact Fraction/independent implementation",
+      "status": "PASS_SCOPED",
+      "artifact": "independent_exact_check.py and INDEPENDENT_CHECK.json"
+    },
+    {
+      "method": "numerical control",
+      "status": "PASS_SYNTHETIC_ONLY",
+      "artifact": "pred07_numerical_controls.py and NUMERICAL_CONTROLS.json"
+    }
+  ],
+  "counterexample_scope": "See proof file: uniform invariant, distinct symmetry-invariant metrics, compact large gauge identification",
+  "physical_bridge": {
+    "status": "NOT_ESTABLISHED",
+    "units": null,
+    "measurement": null,
+    "calibration": null,
+    "null_model": null
+  },
+  "captured_in": "captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1",
+  "supersedes": [],
+  "reopening_condition": "source derives nonlinear gain/initial perturbation, native physical metric, or integer lift/tau as applicable"
+}
