@@ -1,0 +1,85 @@
+{
+  "schema": "UD_MANIFEST_v0.1",
+  "capture_id": "2026-11-01T181100Z-ud-tetra-8c2e0d74",
+  "created_utc": "2026-11-01T18:11:00Z",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "scientific_date": "2026-11-01",
+  "physical_promotion": 0,
+  "status": "EXACT_SCOPED_Q165_Q166_QUADRATIC_READOUT__NO_GO_O09_ABSOLUTE_PHASE__PHYSICAL_PROMOTION_0",
+  "lane": "DEVELOPMENT_NO_REGISTRY_PROMOTION",
+  "independent_nonconstructor_review": "PENDING",
+  "source_versions": [
+    {
+      "name": "UD Paper I mathematical results",
+      "location": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/mathematics/",
+      "section": "4.3"
+    },
+    {
+      "name": "Recovered coefficient ledger",
+      "version": "v0.85",
+      "inherited_scientific_revision": "v0.43",
+      "rows": [
+        "Q165",
+        "Q166",
+        "Q169",
+        "Q170",
+        "Q76",
+        "Q77",
+        "Q78",
+        "Q79",
+        "Q84",
+        "O09"
+      ],
+      "location": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/evidence/ledger-recovery/"
+    },
+    {
+      "name": "Previous rolling phase candidate",
+      "pull_request": "https://github.com/ud-tetra/UD/pull/498"
+    }
+  ],
+  "accepted_result_scope": "K4 unit metric, real full graded carrier, nonzero edge-only initial states, source Q165 stock and Q166 bilinear currents; complex W packaging is a declared diagnostic not selected physical apparatus.",
+  "no_go_scope": "Even quadratic readouts cannot distinguish X and -X, and O09 phase increments with unchanged modal actions do not select absolute phase/cardioid.",
+  "verification": [
+    "local exact 15x15 SymPy proof and arbitrary six-coordinate edge state PASS",
+    "24 signed S4 permutations and six basis edges PASS",
+    "independent NumPy eight random edge preparations x4096 samples PASS, max error 8.882e-16",
+    "independent Q76-79 Fourier/Taylor controls and U1 quadratic invariant PASS",
+    "compact GitHub replay verified locally",
+    "full local 15-member ZIP verified with SHA256 byte manifest",
+    "A4 two-page proof rendered and inspected"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-11-01T181100Z-ud-tetra-8c2e0d74/README.md",
+      "sha256": "71ca9097b8c33e276271a1f39ecc0453a49500f0ba619cc21570a3954a611b3b",
+      "size_bytes": 2467
+    },
+    {
+      "path": "captures/2026-11-01T181100Z-ud-tetra-8c2e0d74/TECHNICAL_NOTE.md",
+      "sha256": "77864e011a006ddece02a943bc08025b915013959e71a66aa06d9e87834962e4",
+      "size_bytes": 12296
+    },
+    {
+      "path": "captures/2026-11-01T181100Z-ud-tetra-8c2e0d74/CLAIM_DEPENDENCY_LEDGER.csv",
+      "sha256": "37e76769f5d281ee0f086a48719d7a7c576f575d22667f74bb80cba3d36cfb29",
+      "size_bytes": 2654
+    },
+    {
+      "path": "captures/2026-11-01T181100Z-ud-tetra-8c2e0d74/GITHUB_MINIMAL_REPLAY.py",
+      "sha256": "b6bc55ea2541f892c50c097f61d2ca0edde573f9a767121c41a96b30dda42bd2",
+      "size_bytes": 1052
+    }
+  ],
+  "full_local_release": {
+    "filename": "UD_NATIVE_QUADRATIC_OBSERVER_GATE_v0.1.zip",
+    "sha256": "87c3e6b3bc366bf1ded0675e4d74605a6d5a890f3794450597ceb1305baea43d",
+    "member_count": 15,
+    "git_mirrored": false,
+    "proof_pdf_sha256": "50999439245ed4b3f9ae93a09a91311fef73f366af5342d54c759ec239b580b6"
+  },
+  "site_updated": false,
+  "main_merged": false,
+  "prior_records_unchanged": true,
+  "supersedes": [],
+  "full_repository_integrity_script": "NOT_RUN"
+}
