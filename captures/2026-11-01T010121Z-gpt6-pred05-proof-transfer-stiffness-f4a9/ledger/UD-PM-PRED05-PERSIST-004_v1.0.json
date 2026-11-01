@@ -1,0 +1,80 @@
+{
+  "assumptions": [
+    "additional radical/radial excision admissible",
+    "memory persisted",
+    "original defect star never restored"
+  ],
+  "capture_id": "2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9",
+  "captured_in": "captures/2026-11-01T010121Z-gpt6-pred05-proof-transfer-stiffness-f4a9",
+  "counterexamples": [
+    "radial notch in annulus connects hole to outer boundary; resulting disk x interval has H1=0"
+  ],
+  "date_utc": "2026-11-01T010121Z",
+  "dependencies": [
+    "UD-PM-PRED05-EVOL-001",
+    "UD-PM-PRED04-TOPO-001"
+  ],
+  "evidence_label": "EXACT_CONDITIONAL",
+  "lane": "D0_DEVELOPMENT",
+  "next_gate": "prove actual native post-event generator preserves topological sector or excludes boundary-opening cuts",
+  "physical_bridge": {
+    "calibration": null,
+    "empirical_null": null,
+    "status": "OPEN_GATED",
+    "uncertainty": null,
+    "unit_map": null
+  },
+  "physical_promotion": 0,
+  "proof_file": "proofs/milestones/UD-PM-PRED05-PERSIST-004_v1.0.md",
+  "proof_id": "UD-PM-PRED05-PERSIST-004",
+  "proof_kind": "NO_GO",
+  "proof_sha256": "5100916cc2410917ff4d193068d88179db1fc40729da075c8d39b718aeab3acf",
+  "proof_status": "VERIFIED_SCOPED",
+  "publication": "STAGED_STACKED_PR_PENDING",
+  "review_status": "DEFERRED",
+  "schema": "UD_PROOF_MILESTONE_v1.0",
+  "source_refs": [
+    {
+      "coefficient_ledger_scope": "dated 2026-08-22 snapshot, not assured current",
+      "coefficient_ledger_sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "governance_head": "2a19727f15e038f39721088b960cd46b97fd9bc5",
+      "governance_pr": 473,
+      "proof_audit_head": "2b8ccab0ac409d3dd3e72db62a0dea220cf96703",
+      "proof_audit_pr": 484,
+      "repository": "ud-tetra/UD",
+      "source_blob": "abefbc821bd7897e9c469b2ff12bd7cccab56c99",
+      "source_coefficient_ledger": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md",
+      "source_commit": "b5c8146ae4b956279e6f399553e02cffbc42c7ea",
+      "source_path": "docs/UD_PRED01_LOCAL_DEFECT_SELECTION_AND_BOUNDED_SOURCE_v0.4.md",
+      "source_pr": 479
+    }
+  ],
+  "statement": "Monotone star-excision memory and no restoration do not guarantee preservation of H1 under arbitrary additional topology-changing removals.",
+  "supersedes": [],
+  "verification": [
+    {
+      "checker": "constructor mathematical proof",
+      "method": "fully specified theorem in milestone document",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "checker": "independent implementation, same author",
+      "method": "independent Python GF2 chain, exact rational and angular cochain checks",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "checker": "software tests, not theorem proof",
+      "method": "Python unittest 15 cases",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "method": "non-constructor review",
+      "status": "DEFERRED"
+    },
+    {
+      "method": "physical experiment",
+      "status": "NOT_RUN"
+    }
+  ],
+  "version": "v1.0"
+}
