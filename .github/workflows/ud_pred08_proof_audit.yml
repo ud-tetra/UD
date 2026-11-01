@@ -1,0 +1,37 @@
+name: UD PRED08 conditional proof corroboration
+on:
+  pull_request:
+    paths:
+      - "captures/2026-11-01T171000Z-gpt6-pred08-proof-burden-gauge-2e91/**"
+      - ".github/workflows/ud_pred08_proof_audit.yml"
+  workflow_dispatch:
+
+jobs:
+  exact-proof-corrob:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install exact-check dependency in isolated environment
+        run: |
+          python3 -m venv /tmp/pred08-env
+          /tmp/pred08-env/bin/python -m pip install -q sympy==1.14.0
+      - name: Execute symbolic algebra and source scope
+        run: /tmp/pred08-env/bin/python captures/2026-11-01T171000Z-gpt6-pred08-proof-burden-gauge-2e91/verify_pred08.py
+      - name: Independent rational finite audit
+        run: /tmp/pred08-env/bin/python captures/2026-11-01T171000Z-gpt6-pred08-proof-burden-gauge-2e91/independent_exact.py
+      - name: Regression checks (24 cases)
+        run: /tmp/pred08-env/bin/python -m unittest discover -s captures/2026-11-01T171000Z-gpt6-pred08-proof-burden-gauge-2e91 -p test_pred08.py -v
+      - name: Preserve physical-claim boundary
+        run: |
+          /tmp/pred08-env/bin/python - <<'PY'
+          import json, pathlib
+          folder=pathlib.Path('captures/2026-11-01T171000Z-gpt6-pred08-proof-burden-gauge-2e91')
+          m=json.loads((folder/'MANIFEST.json').read_text())
+          assert m['physical_promotion']==0
+          assert len(m['proof_ids'])==5
+          assert len(m['files'])>=20
+          for rec in m['files']:
+              p=pathlib.Path(rec['path'])
+              assert p.exists(), p
+          print('PASS scoped exact verification. This does not certify native UD or independent physical evidence.')
+          PY

@@ -1,0 +1,74 @@
+{
+  "record_type": "UD_PROOF_MILESTONE_v1.0",
+  "proof_id": "UD-PM-PRED08-GAU-004",
+  "version": "v1.0",
+  "date": "2026-11-01",
+  "kind": "NO_GO_AND_CONSTRUCTIVE_LEMMA",
+  "proof_status": "VERIFIED_SCOPED",
+  "claim_label": "EXACT_CONDITIONAL",
+  "review_status": "DEFERRED",
+  "physical_promotion": 0,
+  "lane": "D0_DEVELOPMENT",
+  "summary": "compact-link lift ambiguity; relative winding requires typed reference and restricted gauge group",
+  "proof_file": "proofs/milestones/UD-PM-PRED08-GAU-004_v1.0.md",
+  "proof_sha256": "5a19cde730a27a0637fdd9e827930d92ae4f65e46e3231b788c72e8290dbc465",
+  "objects": {
+    "carrier": "K4 burden graph or punctured fixed simplicial carrier",
+    "space": "explicit in proof",
+    "units": "normalized mathematical burden/action, NOT joules",
+    "clock": "uncalibrated model index/time",
+    "operators": "typed Q153/Q162 or new cochain/gauge maps"
+  },
+  "assumptions": [
+    "See proof Section Typed source and hypotheses. Candidate nonlinearity, stochastic jump, reservoir and compact-reference conventions are independently added assumptions, not source-derived"
+  ],
+  "dependencies": [
+    "PRED07-ACT-003",
+    "PRED06-PAR-003",
+    "G05"
+  ],
+  "source_refs": [
+    {
+      "repo": "ud-tetra/UD",
+      "ref": "b56f892b5fe9fbc9059ebd0f83a9113f6f4867a0",
+      "pr": 491,
+      "status": "unmerged"
+    },
+    {
+      "source": "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md",
+      "sha256": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+      "sections": "P01-P04,Q153,Q156,Q162,Q165,Q169,G05"
+    }
+  ],
+  "verification": [
+    {
+      "name": "sympy symbolic algebra",
+      "status": "PASS",
+      "artifact": "EXACT_AUDIT.json"
+    },
+    {
+      "name": "independent finite rational enumeration",
+      "status": "PASS_SCOPED",
+      "artifact": "INDEPENDENT_AUDIT.json"
+    },
+    {
+      "name": "unittest finite corroboration",
+      "status": "PASS_24",
+      "artifact": "TEST_LOG.txt"
+    },
+    {
+      "name": "non-constructor adversarial review",
+      "status": "DEFERRED"
+    }
+  ],
+  "physical_bridge": {
+    "status": "NOT_ESTABLISHED",
+    "units": null,
+    "calibration": null,
+    "measurement": null,
+    "null": null
+  },
+  "captured_in": "captures/2026-11-01T171000Z-gpt6-pred08-proof-burden-gauge-2e91",
+  "supersedes": [],
+  "next_gap": "Native gain/source, stochastic seed, protected topology, unwrapped gauge reference, absolute action unit, and physical test all remain source-open"
+}
