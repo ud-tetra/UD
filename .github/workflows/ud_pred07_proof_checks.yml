@@ -1,0 +1,40 @@
+name: UD PRED07 exact conditional proof corroboration
+on:
+  pull_request:
+    paths:
+      - "captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1/**"
+      - ".github/workflows/ud_pred07_proof_checks.yml"
+  workflow_dispatch:
+
+jobs:
+  exact-and-synthetic-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Check immutable captured source hashes before running calculations
+        run: |
+          python3 - <<'PY2'
+          import json,hashlib,pathlib
+          m=json.load(open('captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1/MANIFEST.json'))
+          assert m['physical_promotion']==0
+          assert len(m['files'])==23
+          for x in m['files']:
+              p=pathlib.Path(x['path'])
+              assert p.is_file()
+              b=p.read_bytes()
+              assert len(b)==x['size_bytes']
+              assert hashlib.sha256(b).hexdigest()==x['sha256']
+          print('PASS: exact captured bytes verified; no physical promotion')
+          PY2
+      - name: Prepare exact symbolic environment
+        run: |
+          python3 -m venv /tmp/ud-pred07-venv
+          /tmp/ud-pred07-venv/bin/pip install -r captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1/requirements.txt
+      - name: Verify symbolic identities
+        run: /tmp/ud-pred07-venv/bin/python captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1/pred07_exact_audit.py
+      - name: Independent exact method
+        run: /tmp/ud-pred07-venv/bin/python captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1/independent_exact_check.py
+      - name: Synthetic ODE controls
+        run: /tmp/ud-pred07-venv/bin/python captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1/pred07_numerical_controls.py
+      - name: Scoped regression tests
+        run: /tmp/ud-pred07-venv/bin/python -m unittest discover -s captures/2026-11-01T164437Z-gpt6-pred07-proof-f3a1 -p test_pred07_proofs.py -v
