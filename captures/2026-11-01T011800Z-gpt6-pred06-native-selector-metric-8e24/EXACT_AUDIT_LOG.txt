@@ -1,0 +1,73 @@
+{
+  "symmetry": {
+    "s4_order": 24,
+    "common_fixed_vertices": [],
+    "common_fixed_unoriented_edges": [],
+    "vertex_stabilizer_order": 6,
+    "neighbor_orbit_after_vertex_seed": [
+      1,
+      2,
+      3
+    ]
+  },
+  "conditional_selector": {
+    "example_burden": [
+      "4",
+      "3",
+      "2",
+      "0"
+    ],
+    "selected_source_vertex": 0,
+    "selected_outgoing_vertex": 3,
+    "selected_native_flux": "1",
+    "s4_equivariant_24_actions": true,
+    "uniform_input": "NO_SELECTOR",
+    "port_tie": "NO_SELECTOR",
+    "all_gates_closed": "NO_SELECTOR"
+  },
+  "parity": {
+    "Theta": "Z2^3",
+    "states": 8,
+    "candidate_generator_images_tested": 125,
+    "additive_integer_homomorphisms_in_range": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "full_proof": "2*f(x)=f(2*x)=f(0)=0 in Z, hence f(x)=0 for all x"
+  },
+  "diffusion": {
+    "Laplacian_eigenvalues": {
+      "4": 3,
+      "0": 1
+    },
+    "homogeneous_stationary": true,
+    "mean_burden_conserved": true,
+    "contrast_energy_derivative": "-35/4",
+    "divergence_only_cannot_generate_cell_excision": true
+  },
+  "cochain": {
+    "toy": "eight-triangle planar annulus",
+    "vertices": 8,
+    "edges": 16,
+    "faces": 8,
+    "ranks_B1_B2": [
+      7,
+      8
+    ],
+    "betti_1": 1,
+    "inner_period": "1",
+    "unweighted_harmonic_norm_sq": "5/8",
+    "incidence_metric_diagonal_multiplicities": {
+      "1": 8,
+      "2": 8
+    },
+    "weighted_harmonic_norm_sq": "3/4",
+    "unit_metric_hodge_zero": true,
+    "weighted_coflatness": true,
+    "sector_curvature_action_gap": "0",
+    "quadratic_scale_pair_invariant": true
+  }
+}
