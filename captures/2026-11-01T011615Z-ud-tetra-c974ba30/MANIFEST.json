@@ -1,0 +1,83 @@
+{
+  "schema": "UD_MANIFEST_v0.1",
+  "capture_id": "2026-11-01T011615Z-ud-tetra-c974ba30",
+  "created_utc": "2026-11-01T01:16:15Z",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "scientific_date": "2026-10-31",
+  "status": "EXACT_SCOPED__SOURCE_IDENTIFIABILITY_NO_GO__CANDIDATE_ZERO_MODE_ACTION__PHYSICAL_PROMOTION_ZERO",
+  "physical_promotion": 0,
+  "review": "CONSTRUCTOR_VERIFIED__NON_CONSTRUCTOR_REVIEW_PENDING",
+  "task_scope": [
+    "O09 harmonic zero-mode source and work normalization",
+    "two-triangulation covariance and event-step stability"
+  ],
+  "source_stratum": [
+    {
+      "artifact": "recovered ledger v0.85",
+      "scientific_revision": "v0.43",
+      "url": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/evidence/ledger-recovery/",
+      "rows": [
+        "O09",
+        "G05",
+        "Q140",
+        "Q153",
+        "Q162"
+      ]
+    },
+    {
+      "artifact": "prior PR #486",
+      "url": "https://github.com/ud-tetra/UD/pull/486"
+    },
+    {
+      "artifact": "prior PR #478",
+      "url": "https://github.com/ud-tetra/UD/pull/478"
+    }
+  ],
+  "verification": [
+    "4 local computational checks PASS",
+    "exact rational period, harmonic and source counterexample verified",
+    "independent modular and floating checks PASS",
+    "3-page A4 PDF rendered and inspected",
+    "16 files in local release verified by SHA256"
+  ],
+  "full_local_release": {
+    "filename": "UD_O09_HARMONIC_ADMISSION_AND_TRIANGULATION_GATE_v0.1.zip",
+    "sha256": "0071f27e61f30e5ae245c4e9ee77e0dc4c708b6145759acfda8b17c3b48dbe76",
+    "member_count": 17,
+    "published_to_github": false
+  },
+  "limitations": [
+    "Local complete PDF scripts and numeric receipts NOT mirrored to this PR",
+    "O09 zero-mode coupling not source derived",
+    "Q162 flux not cohomologically closed; no canonical source",
+    "Stable numerical event step not physical time",
+    "No empirical correspondence test"
+  ],
+  "files": [
+    {
+      "path": "captures/2026-11-01T011615Z-ud-tetra-c974ba30/README.md",
+      "sha256": "de688255c2dd72aef524e97f8d8452dac5176de37428cd96b129c80f242574af",
+      "size_bytes": 1822
+    },
+    {
+      "path": "captures/2026-11-01T011615Z-ud-tetra-c974ba30/TECHNICAL_NOTE.md",
+      "sha256": "a8a96e96626808bb348bdd37d6fdac8b6626a9caffd1070f0e8562ff97f184b6",
+      "size_bytes": 15814
+    },
+    {
+      "path": "captures/2026-11-01T011615Z-ud-tetra-c974ba30/CLAIM_DEPENDENCY_LEDGER.csv",
+      "sha256": "e497e47eb679c4baa2e38e65302f7c41f94cddf7cb37ed4acc2182ce27a00762",
+      "size_bytes": 3332
+    },
+    {
+      "path": "captures/2026-11-01T011615Z-ud-tetra-c974ba30/INDEPENDENT_REVIEW_PROTOCOL.md",
+      "sha256": "8d66ed92f4a902fc46a328a5f22df36ef80d0de027addd252e0f35300e3c14c9",
+      "size_bytes": 3359
+    }
+  ],
+  "supersedes": [],
+  "prior_evidence_preserved": true,
+  "website_updated": false,
+  "merged": false,
+  "provenance_note": "Earlier unsubmitted experimental contributor branch f2e0c91b had a failed manifest entry and is NOT the release branch; this clean capture is append-only from main."
+}
