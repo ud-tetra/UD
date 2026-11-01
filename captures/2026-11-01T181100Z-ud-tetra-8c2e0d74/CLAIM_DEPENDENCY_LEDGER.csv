@@ -1,0 +1,15 @@
+ID,Claim,Status,Source,Assumptions,Verification,NextGate
+NQ-01,"A^2=-4(I-P0) on full 15-dimensional filled tetrahedron",EXACT,"Paper I §4.3; Q169","Unit simplex basis, full graded carrier",SymPy signed incidence,none mathematical
+NQ-02,"For pure nonzero edge x, S1=q cos^2(2s)",EXACT,"Q165/Q170/Q169","x in C1, q>0, skew source flow",SymPy general six-variable edge input,physical observer source
+NQ-03,"S0=q alpha sin^2(2s), S2=q beta sin^2(2s), alpha+beta=1",EXACT,"Q165; incidence B1 and B2","Pure edge initial, unit metric",SymPy norm identity,none mathematical
+NQ-04,"Signed J01,J12 satisfy complete support continuity",EXACT,"Q166/Q169","Unit metric and fixed incidence signs",Exact symbolic flux,none mathematical
+NQ-05,"W=2 S1/q-1+i(J12-J01)/(2q)=exp(4is)",DERIVED,"Q165/Q166/Q169","Declared complex packaging; x in C1 nonzero",Exact and numeric,physical observer selector
+NQ-06,"Full signed S4 covariance of stock and flux",EXACT,"Signed simplex representation; Q165/Q166","Simultaneous vertex relabeling",All 24 permutations,none mathematical
+NQ-07,"Observer quotient W(s+pi/2)=W(s) while X(s+pi/2)=-X(s)",EXACT,"Q165/Q166 and K4 flow","Pure edge state, even observer",Exact and independent FFT,readout inversion criterion
+NQ-08,"Even quadratic channels alone cannot reconstruct full cardioid 2u-u^2",NO-GO,"NQ-07; prior rolling-circle candidate","No odd reference; all channels even in X",Exact sign counterexample,admit odd/reference channel
+NQ-09,"O09 increments cannot determine absolute u or cardioid",NO-GO,"O09 recovered v0.85","Only recorded phase increments; no reference",Constant phase-shift witness,phase-source intertwiners
+NQ-10,"Q76 cos phase, Q77 abs phase, Q78 log phase are nonlinear conditionals",EXACT_CONDITIONAL,"Q76-Q79/Q84","Branch-to-phase and apparatus forcing supplied",SymPy Fourier + Taylor,derive physical forcing
+NQ-11,"Reference-free U1 invariant real quadratic scalar on unit circle is constant",NO-GO,"Unit complex modal phase; invariant theory","All U1 global phases equivalent",Quadratic matrix commuting with rotation,physical phase-reference source
+NQ-12,"Measured 2nd harmonic need not be a new native eigenfrequency",DERIVED,"NQ-02; exact Fourier","Stock as observed mathematical quantity",FFT independent,source-vs-measurement calibrated test
+NQ-13,"Complex W package and cardioid not uniquely demanded by O09",OPEN,"O09/Q165/Q166","No physical instrumentation model",Source nonselection counterexample,non-constructor review
+NQ-14,"Physical oscillator/detector and lab coefficient correction",OPEN,"UD physical bridge gate","Clock and energy units missing",Not attempted,independent calibrated bridge
