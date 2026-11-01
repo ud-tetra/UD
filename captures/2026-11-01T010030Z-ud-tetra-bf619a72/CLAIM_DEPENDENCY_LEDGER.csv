@@ -1,0 +1,21 @@
+id,status,claim,assumptions,dependencies,verification,next_gate
+PC01,EXACT,K4 Betti1=0,filled tetrahedron unique simplex chain,none,SymPy QQ rank,none
+PC02,EXACT,face-glued 2- and 4-tet balls Betti1=0,specified triangulations,none,SymPy QQ rank,none
+PC03,EXACT,vertex-glued 4-tet necklace Betti1=1,single-vertex overlaps,none,SymPy QQ rank,not face-connected
+PC04,EXACT,face-connected 24-tet solid torus Betti1=1,annulus x interval product triangulation,none,QQ rank + modular,physical carrier interpretation
+PC05,EXACT,alternate diagonal torus retains Betti1=1,same topological product,PC04,QQ rank + modular,metric norms differ
+PC06,EXACT,Hodge decomposition C1 gradient + coexact + harmonic,unit oriented-simplex Euclidean metric,none,orthogonality and incidence,other metrics need separate typing
+PC07,EXACT_CONDITIONAL,harmonic edge vector stationary under A=B^T-B,closed linear skew Hodge flow,PC06,A h=0,not physical time
+PC08,EXACT_CONDITIONAL,K4 coexact mode oscillates at internal frequency2,unit Hodge generator,PC01,A^2 z=-4z,not photon
+PC09,EXACT,"solid torus has closed nonexact integer cocycle, period4",explicit sector function,PC04,B2^T c=0 and period4,global Wilson phase not measured EM
+PC10,EXACT,harmonic representative exists with nonzero period,"unit metric, fixed cycle",PC09,rational Laplacian solve,normalization depends on metric
+PC11,EXACT,"flat local face U1, nontrivial global Wilson loop",alpha=theta*c/4,PC09,symbolic face and cycle checks,global readout not admitted
+PC12,EXACT_CONDITIONAL,O09 positive-frequency sum excludes direct harmonic zero-mode term,O09 as displayed in v0.85,PC06,source text plus Hodge zero eigen,O09 source extension OPEN
+PC13,EXACT_CONDITIONAL,source-free Q162 continuous flux has finite projected L2 bound,"0<=h<=1, no source, standard graph continuity",PC06,energy inequality,not pointwise decay for switching
+PC14,NO-GO,unmodified 1/4 discrete Q162 extension unstable on torus,"all gates open, synchronous Euler event",PC04,max degree9 Rayleigh lambda>=9,change step/event rule
+PC15,CANDIDATE,one-shot transient Q162 source can load harmonic mode,"ADDED transfer F=P_H j, one edge fixture",PC10;PC13,exact rational integral,O09 does not supply transfer
+PC16,EXACT_CONDITIONAL,postulated work bank nonnegative,shared internal unit quadratic stock,PC15,symbolic inequality,not physical energy
+PC17,EXACT,24-tet slab triangulates into 96 oriented pentachora,"global orientable spatial tet signs, staircase product",PC04,exact boundary of boundary,no physical clock
+PC18,NO-GO,topology cannot select harmonic occupation or optical scale,"fixed source equations, no added source",PC07;PC11;PC12,two different allowed state preparations,new source-to-mode needed
+PC19,NUMERICAL,positive Hodge Laplacian eigen minima differ under alternate triangulation,native unit metric for each complex,PC04;PC05,NumPy diagnostic eigvalsh,no universal dispersion coefficient
+PC20,OPEN,physical promotion remains zero,"no photon, Lorentzian, calibration, measurement gate",PC12;PC15,provenance audit,independent bridge test
