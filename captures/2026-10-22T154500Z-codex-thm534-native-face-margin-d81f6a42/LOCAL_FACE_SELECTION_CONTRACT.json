@@ -1,0 +1,48 @@
+{
+  "status": "CANDIDATE_CONSTITUTIVE_LAW_ON_NATIVE_REAL_CARRIER",
+  "new_carrier_registers": 0,
+  "native_inputs": [
+    "real face/core amplitudes",
+    "signed B3 incidences",
+    "Q171-Q173 support currents",
+    "Q177-Q179 ownership",
+    "face valence"
+  ],
+  "hard_permission": "separately supplied; frozen h_f multiplies activity; does not derive hard-admissibility transitions",
+  "score": "s_f=[2*x_f*sum_tau d_f_tau*x_tau]_+",
+  "margin": "r_f=[s_f-max(0,s_g for conflicting faces g)]_+",
+  "weight": "w_f=r_f/(k_f*E_f) for E_f>0, else0",
+  "read_stock": "E_f sums native squared amplitudes over endpoint union of face and its conflicting face stars",
+  "event": "parallel disjoint active face-star Cayleys with weights frozen at common pre-event snapshot",
+  "model_step": "0<eps<=1; eps=1 is an event convention, not a physical unit",
+  "locality": {
+    "condition": "tetrahedral pseudomanifold, face valence at most2",
+    "max_real_read_coordinates_per_event": 15,
+    "max_real_write_coordinates_per_event": 3,
+    "Kminus_read_sizes": [
+      9,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ]
+  },
+  "proved": [
+    "original norm conservation",
+    "exact signed midpoint and equal-share owned receipts",
+    "strict aggregate core gain on each active event",
+    "disjoint active stars",
+    "signed carrier covariance",
+    "Lipschitz state update, including score ties and empty read set"
+  ],
+  "not_proved": [
+    "each individual core gains",
+    "uniquely native preference for aggregate instead of mean",
+    "asynchronous order independence with recomputed weights",
+    "universal progress/fairness/reset",
+    "physical energy or canonical preservation"
+  ],
+  "physical_promotion": 0
+}
