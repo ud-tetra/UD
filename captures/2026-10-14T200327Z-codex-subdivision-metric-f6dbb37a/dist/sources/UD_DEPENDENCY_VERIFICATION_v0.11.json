@@ -1,0 +1,605 @@
+{
+  "status": "PASS",
+  "edition": "0.11",
+  "physical_promotion": 0,
+  "nodes": 163,
+  "edges": 250,
+  "source_snapshots_verified": 41,
+  "scoped_target_declarations": 82,
+  "acyclic": true,
+  "edge_kinds_distinguished": true,
+  "forbidden_edges_absent": true,
+  "ordered_polarity_pairs": 15625,
+  "index_equal_pairs": 6545,
+  "equal_idle_nonsaturated_examples": 2449,
+  "saturated_prior_pairs": 8000,
+  "saturated_prior_index_equal_pairs": 4096,
+  "scenario_results": [
+    {
+      "id": "idle-law",
+      "affected": [
+        "P-ADDRESS",
+        "P-CONFLICT"
+      ],
+      "preserved_checks": [
+        "P-CORRECT",
+        "P-EQUAL",
+        "P-INDEX",
+        "P-SAT"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "prior",
+      "affected": [
+        "P-SAT"
+      ],
+      "preserved_checks": [
+        "P-CORRECT",
+        "P-EQUAL",
+        "P-INDEX"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "frame",
+      "affected": [
+        "P-PREDICT",
+        "P-SCORE",
+        "R-PACKET"
+      ],
+      "preserved_checks": [
+        "P-BUDGET",
+        "P-CORRECT",
+        "P-INDEX"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g05",
+      "affected": [],
+      "preserved_checks": [
+        "A-ALG",
+        "A-ACTION",
+        "A-ALIAS"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "metric",
+      "affected": [
+        "A-ACTION",
+        "A-CARRIER",
+        "A-END-NOGO",
+        "A-J",
+        "A-QPB",
+        "A-QPB-TEST",
+        "A-REC",
+        "A-SCALE",
+        "G-LOCAL",
+        "HR-LATENT-MISMATCH",
+        "HR-WRAP",
+        "NA-ALIAS",
+        "NA-CLASSES",
+        "NA-DIM",
+        "NA-ERROR-TYPE",
+        "NA-MIN",
+        "NA-MULT",
+        "NA-NEXT",
+        "NA-NOGO",
+        "NA-SHARP",
+        "NA-SPECTRAL",
+        "NA-TIME",
+        "NA-UNION",
+        "PC-NATIVE",
+        "PC-TET-NOGO"
+      ],
+      "preserved_checks": [
+        "A-GAUGE",
+        "P-CORRECT"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "action-anchor",
+      "affected": [
+        "A-QPB-TEST"
+      ],
+      "preserved_checks": [
+        "A-ACTION",
+        "A-SCALE",
+        "A-GAUGE",
+        "A-CLOCK"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "clock-anchor",
+      "affected": [
+        "A-CLOCK"
+      ],
+      "preserved_checks": [
+        "A-QPB-TEST",
+        "A-GAUGE",
+        "A-SCALE"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "same-history",
+      "affected": [
+        "G-LOCAL"
+      ],
+      "preserved_checks": [
+        "A-ACTION",
+        "A-GAUGE",
+        "G-GLOBAL-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "reduced-carrier",
+      "affected": [
+        "R-DETERMINISTIC",
+        "R-KERNEL"
+      ],
+      "preserved_checks": [
+        "R-FIBER",
+        "R-COUNT",
+        "P-CORRECT"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "rsp-bank",
+      "affected": [
+        "HR-FINITE-NOGO",
+        "HR-NORM-NOGO",
+        "HR-PERIOD-NOGO",
+        "HR-ROBUST-NOGO",
+        "HR-WRAP",
+        "JC-TOKENS",
+        "SP-C-DURATION",
+        "SP-H-LATCH",
+        "SP-STOCK",
+        "SP-STOP",
+        "SP-TERM"
+      ],
+      "preserved_checks": [
+        "P-CORRECT",
+        "R-FIBER"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "rsp-close",
+      "affected": [
+        "HR-FINITE-NOGO",
+        "HR-PERIOD-NOGO",
+        "HR-ROBUST-NOGO",
+        "HR-WRAP",
+        "SP-C-DURATION",
+        "SP-PROJECTION",
+        "SP-TERM"
+      ],
+      "preserved_checks": [
+        "SP-H-LATCH",
+        "SP-STOCK",
+        "P-INDEX"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "rsp-stop",
+      "affected": [
+        "HR-FINITE-NOGO",
+        "HR-PERIOD-NOGO",
+        "HR-ROBUST-NOGO",
+        "HR-WRAP",
+        "SP-C-DURATION",
+        "SP-H-LATCH",
+        "SP-TERM"
+      ],
+      "preserved_checks": [
+        "P-CORRECT",
+        "SP-STOCK"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "two-sided",
+      "affected": [
+        "HR-FINITE-NOGO",
+        "HR-UNIFORM-NOGO"
+      ],
+      "preserved_checks": [
+        "HR-PERIOD-NOGO",
+        "HR-ROBUST-NOGO",
+        "SP-C-DURATION"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "unstable",
+      "affected": [
+        "HR-ROBUST-NOGO"
+      ],
+      "preserved_checks": [
+        "HR-FINITE-NOGO",
+        "HR-PERIOD-NOGO",
+        "SP-STOCK"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "norm-alias",
+      "affected": [
+        "HR-NORM-NOGO"
+      ],
+      "preserved_checks": [
+        "HR-FINITE-NOGO",
+        "HR-ROBUST-NOGO",
+        "SP-STOCK"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "jc-fresh",
+      "affected": [
+        "JC-NATIVE",
+        "JC-TOKENS",
+        "JC-WINDOW"
+      ],
+      "preserved_checks": [
+        "JC-GATE",
+        "JC-U",
+        "HR-FINITE-NOGO",
+        "SP-STOCK"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "jc-bank",
+      "affected": [
+        "JC-CAPACITY",
+        "JC-ERROR",
+        "JC-EXPORT",
+        "JC-NATIVE",
+        "JC-RESET",
+        "JC-TOKENS",
+        "JC-WINDOW",
+        "MF-FRONTIER",
+        "NA-DIM",
+        "PC-RESOURCES",
+        "PC-RETENTION",
+        "SG-NEXT"
+      ],
+      "preserved_checks": [
+        "JC-GATE",
+        "JC-U",
+        "HR-FINITE-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "jc-clock",
+      "affected": [
+        "JC-CAPACITY",
+        "JC-ERROR",
+        "JC-EXPORT",
+        "JC-NATIVE",
+        "JC-RESET",
+        "JC-TOKENS",
+        "JC-U",
+        "JC-WINDOW",
+        "JC-WRAP",
+        "MF-CONTRACT",
+        "MF-FRONTIER",
+        "MF-GLUED-NOGO",
+        "MF-GRAM-NOGO",
+        "MF-NOGO",
+        "MF-RESIDUAL",
+        "NA-ALIAS",
+        "NA-DIM",
+        "NA-ERROR-TYPE",
+        "NA-MIN",
+        "NA-MULT",
+        "NA-NEXT",
+        "NA-NOGO",
+        "NA-SHARP",
+        "NA-SPECTRAL",
+        "NA-TIME",
+        "NA-UNION",
+        "PC-ADMISSION",
+        "PC-DIST",
+        "PC-END",
+        "PC-ERROR",
+        "PC-H",
+        "PC-NATIVE",
+        "PC-ODD",
+        "PC-PAD",
+        "PC-PATH",
+        "PC-RESOURCES",
+        "PC-RETENTION",
+        "PC-TET-NOGO",
+        "PC-WORD",
+        "SG-NEXT"
+      ],
+      "preserved_checks": [
+        "JC-GATE",
+        "JC-COLLISION",
+        "HR-FINITE-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "pc-metric",
+      "affected": [
+        "NA-DIM",
+        "PC-PAD",
+        "PC-PATH",
+        "PC-RESOURCES"
+      ],
+      "preserved_checks": [
+        "PC-END",
+        "PC-ODD",
+        "PC-TET-NOGO",
+        "HR-FINITE-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "pc-operator",
+      "affected": [
+        "MF-CONTRACT",
+        "MF-FRONTIER",
+        "MF-GLUED-NOGO",
+        "MF-GRAM-NOGO",
+        "MF-NOGO",
+        "MF-RESIDUAL",
+        "NA-ALIAS",
+        "NA-DIM",
+        "NA-ERROR-TYPE",
+        "NA-MIN",
+        "NA-MULT",
+        "NA-NEXT",
+        "NA-NOGO",
+        "NA-SHARP",
+        "NA-SPECTRAL",
+        "NA-TIME",
+        "NA-UNION",
+        "PC-ADMISSION",
+        "PC-DIST",
+        "PC-END",
+        "PC-ERROR",
+        "PC-NATIVE",
+        "PC-ODD",
+        "PC-PAD",
+        "PC-PATH",
+        "PC-RESOURCES",
+        "PC-RETENTION",
+        "PC-TET-NOGO"
+      ],
+      "preserved_checks": [
+        "JC-GATE",
+        "JC-WINDOW",
+        "HR-FINITE-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "pc-encode",
+      "affected": [
+        "MF-CONTRACT",
+        "MF-FRONTIER",
+        "MF-GLUED-NOGO",
+        "MF-GRAM-NOGO",
+        "MF-NOGO",
+        "MF-RESIDUAL",
+        "NA-ALIAS",
+        "NA-ERROR-TYPE",
+        "NA-MIN",
+        "NA-MULT",
+        "NA-NEXT",
+        "NA-SHARP",
+        "NA-SPECTRAL",
+        "NA-TIME",
+        "NA-UNION",
+        "PC-ADMISSION",
+        "PC-NATIVE"
+      ],
+      "preserved_checks": [
+        "PC-PATH",
+        "PC-END",
+        "PC-TET-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "na-native",
+      "affected": [
+        "NA-ALIAS",
+        "NA-DIM",
+        "NA-ERROR-TYPE",
+        "NA-MIN",
+        "NA-MULT",
+        "NA-NEXT",
+        "NA-NOGO",
+        "NA-SHARP",
+        "NA-SPECTRAL",
+        "NA-TIME",
+        "NA-UNION"
+      ],
+      "preserved_checks": [
+        "PC-END",
+        "PC-PATH",
+        "HR-FINITE-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "na-free",
+      "affected": [
+        "NA-ERROR-TYPE",
+        "NA-MIN",
+        "NA-NEXT",
+        "NA-SHARP",
+        "NA-TIME",
+        "NA-UNION"
+      ],
+      "preserved_checks": [
+        "NA-SPECTRAL",
+        "NA-NOGO",
+        "NA-ALIAS"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "na-isometry",
+      "affected": [
+        "MF-CONTRACT",
+        "MF-FRONTIER",
+        "MF-GLUED-NOGO",
+        "MF-GRAM-NOGO",
+        "MF-NOGO",
+        "MF-RESIDUAL",
+        "NA-ALIAS",
+        "NA-ERROR-TYPE",
+        "NA-MIN",
+        "NA-MULT",
+        "NA-NEXT",
+        "NA-SHARP",
+        "NA-SPECTRAL",
+        "NA-TIME",
+        "NA-UNION",
+        "PC-ADMISSION",
+        "PC-NATIVE"
+      ],
+      "preserved_checks": [
+        "PC-END",
+        "PC-PATH",
+        "HR-FINITE-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "mf-invariant",
+      "affected": [
+        "MF-DEGREE",
+        "MF-FRONTIER",
+        "MF-NOGO",
+        "MF-RESIDUAL"
+      ],
+      "preserved_checks": [
+        "MF-GRAM-NOGO",
+        "MF-GLUED-NOGO",
+        "PC-END",
+        "NA-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "mf-gram",
+      "affected": [
+        "MF-FRONTIER",
+        "MF-GRAM-ID",
+        "MF-GRAM-NOGO"
+      ],
+      "preserved_checks": [
+        "MF-NOGO",
+        "MF-RESIDUAL",
+        "NA-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "mf-contract",
+      "affected": [
+        "MF-FRONTIER",
+        "MF-GLUED-NOGO",
+        "MF-GRAM-NOGO",
+        "MF-NOGO",
+        "MF-RESIDUAL"
+      ],
+      "preserved_checks": [
+        "MF-S4",
+        "MF-GRAM",
+        "MF-GLUED",
+        "PC-END"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "sg-retraction",
+      "affected": [
+        "SG-COMPLEMENT",
+        "SG-DYNAMICS",
+        "SG-H",
+        "SG-LOCAL",
+        "SG-NEXT",
+        "SG-RETRACT",
+        "SG-SPD"
+      ],
+      "preserved_checks": [
+        "SG-GRAM",
+        "SG-EUCLIDEAN",
+        "SG-NORMALIZATIONS",
+        "MF-GRAM-NOGO"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "sg-pairing",
+      "affected": [
+        "SG-COMPLEMENT",
+        "SG-DYNAMICS",
+        "SG-LOCAL",
+        "SG-NEXT",
+        "SG-SPD"
+      ],
+      "preserved_checks": [
+        "SG-RETRACT",
+        "SG-EUCLIDEAN",
+        "SG-SQRT2",
+        "PC-END"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "sg-source",
+      "affected": [
+        "SG-COMPLEMENT",
+        "SG-DYNAMICS",
+        "SG-EUCLIDEAN",
+        "SG-GRAM",
+        "SG-H",
+        "SG-LOCAL",
+        "SG-NEXT",
+        "SG-NORMALIZATIONS",
+        "SG-RETRACT",
+        "SG-SPD",
+        "SG-SQRT2"
+      ],
+      "preserved_checks": [
+        "MF-NOGO",
+        "NA-NOGO",
+        "JC-WINDOW"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    "source text hashes and locators",
+    "explicit target premises",
+    "DAG acyclicity",
+    "thirty change audits",
+    "full binary response enumeration",
+    "selector conflict and flux witness",
+    "rational action/clock gauge",
+    "intensive native action ratio",
+    "conditional Genesis product",
+    "same-endpoint winding distinction"
+  ],
+  "scope": "Constructor verification; imported spectral identities are source premises; no independent proof review or empirical score.",
+  "graph_sha256": "1ad2552fbe5369e4b00d114f2b04e68b99c9e952bcf2cb4b3c1b4e4fe2912fcf"
+}
