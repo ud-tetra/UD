@@ -1,0 +1,9 @@
+{
+  "constructor_only": true,
+  "implementation_correction": "Initial exact Taylor/Bernstein construction overflowed because Fraction numerators retained NumPy fixed-width integer types. Converted the integer coefficients and pseudoinverse numerators explicitly to Python int.",
+  "bound_changes": "None; the same exact inequalities pass after the type correction.",
+  "protocol_revision": "Maximum write duration changed from 1 to 49/100; response delay remains 1/100. All six benchmark load guards still fire before the revised deadline. This is a declared controller design change, not a source-selected constant.",
+  "final_suite": "53 exact checks and 17 numerical corroborations.",
+  "independent_review": false,
+  "physical_promotion": 0
+}
