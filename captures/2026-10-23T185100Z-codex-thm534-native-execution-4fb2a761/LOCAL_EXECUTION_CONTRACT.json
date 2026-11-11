@@ -1,0 +1,14 @@
+{
+  "status": "CONDITIONAL_COMPUTATIONAL_CONTRACT_NOT_NATIVE_CLOCK",
+  "write_set": "face plus all incident cores",
+  "read_set": "union of write stars in closed face-conflict neighborhood",
+  "declared_conflict_graph": "square of face write-conflict graph G",
+  "safe_concurrent_events": "distance at least3 in G; no write intersects another read",
+  "Kminus": "G squared is K7, so universally footprint-independent batches have size at most1",
+  "geometric_bound": "pseudomanifold face valence<=2 gives max degree(G)<=6, max degree(G squared)<=36; local reads<=15,writes<=3",
+  "protocol_requirement": "consistent local read, exclusion of conflicting writes until commit, exact local receipt",
+  "protocol_registers": "not sourced or implemented as native carrier variables",
+  "hard_permissions": "fixed supplied input; concurrent changes need added read/write accounting",
+  "priority_fairness_clock_reset": "OPEN",
+  "physical_promotion": 0
+}
