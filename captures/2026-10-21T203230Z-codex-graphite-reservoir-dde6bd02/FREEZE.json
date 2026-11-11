@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-10-21T20:29:09.311119+00:00",
+  "input": "graphite-memory/MEMORY.npz",
+  "input_sha256": "2d320dc5672e555e3a7c31d7c044a55bff1df1c10c9739088180f41c280e1a02",
+  "scope": "Control-only extension of36 exposed retained models; not source-selected or fitted physical damping",
+  "equations": "x prescribed=X cos(nu*t); zddot+gamma*zdot+k*z=-a.T*x; f=xddot+A*x+a*z",
+  "visible_X": "cos(arange(1,n)), normalized in prior geometry-fixed Z coordinates, same rule all configurations",
+  "gamma_over_sqrt_k": [
+    0,
+    0.1,
+    1
+  ],
+  "nu_over_sqrt_k": [
+    0.5,
+    0.8,
+    1.2,
+    1.5
+  ],
+  "initial_preparation": "Exact periodic particular solution; excludes lossless hidden resonance",
+  "phasor": "Zhidden=-a.T*X/(k-nu^2+i*gamma*nu), convention exp(i*nu*t)",
+  "analytic_mean_power": "gamma*nu^2*(a.T*X)^2/(2*((k-nu^2)^2+gamma^2*nu^2))",
+  "tests": "Independent adaptive hidden ODE, integrated drive work, integrated gamma*zdot^2 export, full cross-coupled energy balance, one-period state return, off-resonant zero loss for gamma0",
+  "tolerance": 1e-09,
+  "normalization": "Errors divided by max(1,absolute comparison values); positivity asserted only for nonzero gamma and nonzero overlap",
+  "review": "constructor only; protocol frozen after prior model exposure, not target-blind registration",
+  "physical_promotion": 0,
+  "native_bath": "HOLD"
+}

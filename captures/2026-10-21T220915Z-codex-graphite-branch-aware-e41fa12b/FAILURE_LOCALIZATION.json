@@ -1,0 +1,118 @@
+{
+  "status": "POST_RESULT_DIAGNOSTIC_ONLY",
+  "failures": [
+    {
+      "case": "31_dir_10084",
+      "kind": "matrix",
+      "entry": [
+        91,
+        91
+      ],
+      "max_abs_change": 2.4059100297790792e-05,
+      "nearest_crossing_A": 7.581724900228437e-06,
+      "stencils": [
+        {
+          "step_A": 1.25e-05,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 25,
+            "-0.3333333333": 0
+          }
+        },
+        {
+          "step_A": 6.25e-06,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 0,
+            "-0.3333333333": 0
+          }
+        },
+        {
+          "step_A": 3.125e-06,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 0,
+            "-0.3333333333": 0
+          }
+        }
+      ]
+    },
+    {
+      "case": "31_dir_10084",
+      "kind": "direction",
+      "index": 4,
+      "role": "fresh_cosine",
+      "frequency": "sqrt(3)",
+      "max_adjacent_change": 1.097420675222338e-06,
+      "adjacent_max_abs_changes": [
+        1.097420675222338e-06,
+        2.1289343266062133e-07
+      ],
+      "nearest_crossing_A": 1.4279539627023042e-05,
+      "stencils": [
+        {
+          "step_A": 2.5e-05,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 25,
+            "-0.3333333333": 0
+          }
+        },
+        {
+          "step_A": 1.25e-05,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 0,
+            "-0.3333333333": 0
+          }
+        },
+        {
+          "step_A": 6.25e-06,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 0,
+            "-0.3333333333": 0
+          }
+        }
+      ]
+    },
+    {
+      "case": "31_dir_10134",
+      "kind": "matrix",
+      "entry": [
+        84,
+        84
+      ],
+      "max_abs_change": 1.5641497796536896e-05,
+      "nearest_crossing_A": 8.552197738026735e-06,
+      "stencils": [
+        {
+          "step_A": 1.25e-05,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 25,
+            "-0.3333333333": 0
+          }
+        },
+        {
+          "step_A": 6.25e-06,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 0,
+            "-0.3333333333": 0
+          }
+        },
+        {
+          "step_A": 3.125e-06,
+          "endpoint_crossing_counts_by_knot": {
+            "-0.6666666667": 0,
+            "-0.5": 0,
+            "-0.3333333333": 0
+          }
+        }
+      ]
+    }
+  ],
+  "inference": "Failed coarse stencils coincide with gC knot crossings; no force-component isolation or unique angular-term attribution newly performed. Retained fine/audit comparisons pass in all four full matrices. Protocol and outcomes unchanged.",
+  "physical_promotion": 0
+}

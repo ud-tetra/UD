@@ -1,0 +1,18 @@
+from pathlib import Path
+import numpy as np,json,hashlib
+p=Path(__file__).resolve().parent;f=json.loads((p/'FREEZE.json').read_text());rows=[]
+for case in f['inputs']:
+ o=p/case;a=np.load(o/'MATRIX_RAW.npz');z=np.load(o/'DIRECTION_RAW.npz');Hs=a['matrices'];Hc,Hf,Ha=Hs;H=(Hf+Hf.T)/2;m=len(H);raw=a['raw_forces'];steps=a['fine_steps_A'];reconstructed=np.empty_like(Hs)
+ for j,h in enumerate(steps):
+  for k,hk in enumerate([2*h,h,h/2]):reconstructed[k,:,j]=-(raw[j,k,0]-raw[j,k,1])/(2*hk)
+ assert np.array_equal(Hs,reconstructed)
+ ds=-(z['raw_forces'][:,:,0]-z['raw_forces'][:,:,1])/(2*z['steps_A'][None,:,None]);assert np.array_equal(ds,z['derivatives']);diffs=[Hf-Hc,Ha-Hf];pairs=[]
+ for D in diffs:
+  idx=np.unravel_index(np.argmax(abs(D)),D.shape);pairs.append({'max_abs':float(np.max(abs(D))),'relative_F':float(np.linalg.norm(D)/np.linalg.norm(H)),'worst_entry':list(map(int,idx)),'worst_column_relative':float(max(np.linalg.norm(D[:,j])/np.linalg.norm(H[:,j]) for j in range(m)))})
+ dirs=[]
+ for i,w in enumerate(z['vectors']):
+  expected=H@w;err=ds[i,1]-expected;adj=ds[i,1:]-ds[i,:-1];dirs.append({'index':i,'role':'old_regression' if i<3 else 'fresh_cosine','max_abs_error':float(np.max(abs(err))),'relative_error':float(np.linalg.norm(err)/np.linalg.norm(expected)),'adjacent_max_abs':float(np.max(abs(adj))),'adjacent_max_relative':float(max(np.linalg.norm(v)/np.linalg.norm(ds[i,1]) for v in adj))})
+ station=float(max(np.max(abs(a['baseline_force'])),np.max(abs(z['final_baseline_force']))));sym=float(np.linalg.norm(Hf-Hf.T)/np.linalg.norm(H));th=f['thresholds'];checks={'stationarity':station<=th['stationarity'],'step_absolute':all(v['max_abs']<th['absolute'] for v in pairs),'step_relative':all(v['relative_F']<th['relative'] and v['worst_column_relative']<th['relative'] for v in pairs),'antisymmetry':sym<th['antisymmetry_relative'],'directional_agreement':all(v['max_abs_error']<th['absolute'] and v['relative_error']<th['relative'] for v in dirs),'directional_step_stability':all(v['adjacent_max_abs']<th['absolute'] and v['adjacent_max_relative']<th['relative'] for v in dirs)}
+ ev=np.linalg.eigvalsh(H);unc=max(np.linalg.norm(v,2) for v in diffs);threshold=max(1e-7,10*unc);nx=(m-1)//3;den=np.linalg.norm(H[:,2*nx:]);coupling=np.linalg.norm(H[:2*nx,2*nx:])/den
+ r={'case':case,'all_checks_pass':bool(all(checks.values())),'checks':{k:bool(v) for k,v in checks.items()},'status':'NUMERICAL_PASS' if all(checks.values()) else 'HOLD','stationarity_max':station,'antisymmetry_relative':sym,'matrix_step_pairs':pairs,'directions':dirs,'eigenvalue_min':float(ev[0]),'eigenvalue_max':float(ev[-1]),'spectral_step_uncertainty':float(unc),'stability_threshold':float(threshold),'stability':'POSITIVE_RESOLVED' if ev[0]>threshold else 'UNRESOLVED','lateral_vertical_coupling_ratio':float(coupling),'fine_step_counts':{str(h):int(np.sum(steps==h)) for h in np.unique(steps)},'physical_promotion':0};(o/'RESULTS.json').write_text(json.dumps(r,indent=2)+'\n');rows.append(r)
+summary={'status':'NUMERICAL_QUALIFICATION_COMPLETE','pass_count':sum(z['all_checks_pass'] for z in rows),'case_count':len(rows),'cases':rows,'physical_promotion':0,'scope':'Four fixed-cell affine-constrained stationary references; cutoff24,width2, imposed smooth KCz and REBO. No physical bath, friction, native clock, or UD-specific discrimination.','prior_results':'Original/refined two-of-four suite unchanged under its frozen protocol; this is a new separately frozen numerical protocol.'};(p/'RESULTS.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps({'pass_count':summary['pass_count'],'cases':[{k:z[k] for k in ['case','checks','matrix_step_pairs']} for z in rows]},indent=2))

@@ -1,0 +1,25 @@
+#KC potential
+
+units metal
+boundary p p p
+atom_style full
+box tilt large
+read_data struct.inp.data
+
+pair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0
+pair_coeff * * rebo 1 CH.rebo C NULL
+pair_coeff * * rebo 2 CH.rebo NULL C
+pair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C
+
+neighbor	3.0 nsq
+neigh_modify one 4096
+
+thermo_modify format float %18.18g
+fix 2 all lineforce 0.0 0.0 1.0
+
+min_style cg
+min_modify dmax 0.005
+minimize 1.0e-18 1.0e-18 30000 30000  # 15000
+
+write_dump all xyz system.xyz modify element C C
+

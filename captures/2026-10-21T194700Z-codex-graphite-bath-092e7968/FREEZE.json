@@ -1,0 +1,17 @@
+{
+  "task": "Source audit, conditional port-family derivation, bath-identifiability controls and future admission contract",
+  "model_status": "CONSTRUCTOR_DEFINED_CONDITIONAL_EXTENSION; native UD selector and material map not recovered",
+  "inputs": "36 previously exposed width/cutoff qualified retained K/g matrices; no new friction targets",
+  "numerical_purpose": "Demonstrate nonidentifiability by distinct PSD unit-trace damping controls sharing the same K/g, not predict material damping",
+  "response": "Y=(Q^T Ksym Q)^-1 Q^T g in translation quotient, Ksym=(K+K^T)/2",
+  "rank_rule": "singular value > max(1e-12,1e-10*smax)",
+  "controls": "G_iso=I/n; G_dark=(I-UU^T)/(n-r); G_bright=UU^T/r; U spans response columns; all dimensionless unit trace",
+  "checks": "rank=2, PSD to1e-12, trace1 to1e-12, dark response residual relative<=1e-12, dark drag trace relative to isotropic<=1e-10, bright/isotropic drag trace ratio=n/r within1e-10",
+  "acceptance_scope": "Counterexample and linear algebra only; G_dark is deliberately response-adapted and inadmissible as UD prediction",
+  "source_rule": "PF=0 is conditional geometric port class, not a native occurrence/selection law; material J and physical clock/unit map missing",
+  "native_rule_status": "HOLD_SOURCE_GATE",
+  "future_test": "Independently freeze P,F,R and material embedding J before held-out response/friction access; compare same-bath-budget conventional baseline; no per-angle tuning",
+  "physical_promotion": 0,
+  "bath_identification": "HOLD",
+  "main_observed": "82362e78ce0ca13185ba5c5ad5793c00fbf46ece"
+}

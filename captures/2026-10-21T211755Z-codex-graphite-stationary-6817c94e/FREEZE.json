@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-10-21T20:57:36.909826+00:00",
+  "main_observed": "509dd923ce04c6f019c5939954806c6d3c0e6f12",
+  "scope": "Four-case baseline only, cutoff24 Angstrom width2 Angstrom; new preparation under same imposed smooth REBO+fixed-normal KCz, not a new physical reservoir",
+  "inputs": [
+    {
+      "case": "21_dir_0",
+      "folder": "graphite-smooth/21_dir_0/cutoff_24",
+      "sha256": "785a43ca7a750a5714b2b396799a0db7f0fd396e4a668e844fd18f65bd92bab0"
+    },
+    {
+      "case": "21_dir_10024",
+      "folder": "graphite-smooth/21_dir_10024/cutoff_24",
+      "sha256": "1c07d8c19758346d12595723a16615e6777dc584ab527732f4a70fc8fa9ba91a"
+    },
+    {
+      "case": "31_dir_10084",
+      "folder": "graphite-smooth/31_dir_10084/cutoff_24",
+      "sha256": "c0e314bebca9c7b5d3a1901ea649ea60184a0e34b1a6794d8514f5d90c727619"
+    },
+    {
+      "case": "31_dir_10134",
+      "folder": "graphite-smooth/31_dir_10134/cutoff_24",
+      "sha256": "f188963186a14bea0e72fdba9327b81bc615f3bb06e20a3153bde5fb27f0d14c"
+    }
+  ],
+  "constraints": "Fixed supercell and primitive replication. Each layer mean x and y fixed to its source value; overall mean z fixed; relative mean z free. Internal primitive-periodic x/y/z displacements free. No imposed normal load.",
+  "basis": "P atom-group isometry; x/y use block-diagonal per-layer Helmert complements S (d-2 columns each), z uses full Helmert Q (d-1). Orthogonal coordinates ordered x,y,z; total3d-5 dimensions79/151.",
+  "optimizer": {
+    "method": "L-BFGS-B on shifted extensive energy and exact projected force gradient",
+    "gtol": 1e-09,
+    "ftol": 0,
+    "maxiter": 2000,
+    "maxls": 50,
+    "stationarity_polish": "If projected force max>1e-7, at most3 Newton corrections using symmetric coarse force Jacobian h1e-4, atom displacement capped0.05 Angstrom, at most8 halvings requiring force norm decrease. Preserve all stages; no forced acceptance."
+  },
+  "stationarity_max_projected_force_eV_per_A": 1e-07,
+  "constraint_preservation_max_A": 1e-10,
+  "hessian_steps_A": [
+    0.0001,
+    5e-05
+  ],
+  "hessian_checks": {
+    "relative_step_F": 1e-05,
+    "absolute_step_max_eV_per_A2": 1e-06,
+    "relative_asymmetry_F": 1e-06
+  },
+  "stability": "Positive resolved if lambda_min(symH_fine)>10*||H_fine-H_coarse||2 and lambda_min>1e-7 eV/Angstrom^2; negative resolved if lambda_min<negative of same threshold; otherwise unresolved. This is finite-step numerical qualification, not rigorous stability or full Bloch certification.",
+  "coupling": "Offdiagonal xy-z block of sym constrained Hessian; report ||K_xy,z||F/||H[:,z]||F. Resolved if ratio>1e-6 and >10*||deltaH[:,z]||F/||H[:,z]||F.",
+  "verification": "Independent array/basis/constraint/hash checks and fresh directional force differences at h2.5e-5 in three deterministic tangent directions; compare Hessian-vector to normalized1e-5 and absolute1e-6. Constructor only.",
+  "physical_promotion": 0,
+  "native_material_map": "OPEN",
+  "physical_bath": "HOLD",
+  "registration": "Frozen before this relaxation, but original targets/geometries exposed; not target-blind physical preregistration"
+}

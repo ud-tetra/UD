@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-21T21:26:29.940749+00:00",
+  "purpose": "Correct prior source-coordinate versus LAMMPS periodic-image gauge mismatch in geometric axial maps; replay all36 response maps and72 closure tests",
+  "old_map_archive_sha256": "f57ec53fa28226449089ae1526f64d290414d4dacccbe4f451f427202c32ef5b",
+  "correction": "For reference offsets t_i=position_saved_i-position_raw_i modulo integer lattice vectors, replace edge shift s_ij by s_ij-t_j+t_i; require lattice residual<1e-10 and every intralayer bond length<1.7 Angstrom",
+  "affected_cases": [
+    "21_dir_10024",
+    "31_dir_10084",
+    "31_dir_10134"
+  ],
+  "unaffected_case": "21_dir_0",
+  "pending_until_replay": [
+    "axial-vector response norms and cycle fractions in36-case map audit for affected cases",
+    "geometric interpretation of affected axial/cycle closure witnesses and corollaries"
+  ],
+  "unaffected_scope": [
+    "graph incidence and exact P_cycle B_transpose=0 theorem",
+    "LAMMPS K/g force derivatives and source replay",
+    "orthogonal breathing elimination algebra for frozen H/b",
+    "stationary preparations, constrained Hessians and step ladders"
+  ],
+  "replay_criteria": "Original map rank threshold max(1e-12,1e-8*smax), closure relative1e-8 and10 times coarse/fine operator diagnostic; retain all old arrays/captures, append replacement quantitative results",
+  "physical_promotion": 0
+}

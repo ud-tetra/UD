@@ -1,0 +1,115 @@
+LAMMPS (3 Nov 2022)
+#KC potential
+
+units metal
+boundary p p p
+atom_style full
+box tilt large
+read_data struct.inp.data
+Reading data file ...
+  triclinic box = (0 0 0) to (44.351664 38.409667 100) with tilt (22.175832 0 0)
+  1 by 1 by 1 MPI processor grid
+  reading atom labelmap ...
+  reading atoms ...
+  1300 atoms
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     0 = max # of 1-2 neighbors
+     0 = max # of 1-3 neighbors
+     0 = max # of 1-4 neighbors
+     1 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.004 seconds
+
+pair_style hybrid/overlay rebo rebo kolmogorov/crespi/z 16.0
+pair_coeff * * rebo 1 CH.rebo C NULL
+Reading rebo potential file CH.rebo with DATE: 2018-7-3
+pair_coeff * * rebo 2 CH.rebo NULL C
+Reading rebo potential file CH.rebo with DATE: 2018-7-3
+pair_coeff 1 2 kolmogorov/crespi/z  CC.KC   C C
+
+neighbor	3.0 nsq
+neigh_modify one 4096
+
+thermo_modify format float %18.18g
+fix 2 all lineforce 0.0 0.0 1.0
+
+min_style cg
+min_modify dmax 0.005
+minimize 1.0e-18 1.0e-18 30000 30000  # 15000
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 4096, page size: 100000
+  master list distance cutoff = 19
+  ghost atom cutoff = 19
+  5 neighbor lists, perpetual/occasional/extra = 5 0 0
+  (1) pair rebo, perpetual, skip from (4)
+      attributes: full, newton on, ghost, cut 9
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (2) pair rebo, perpetual, skip from (4)
+      attributes: full, newton on, ghost, cut 9
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (3) pair kolmogorov/crespi/z, perpetual, skip from (5)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (4) neighbor class addition, perpetual
+      attributes: full, newton on, ghost, cut 9
+      pair build: full/nsq/ghost
+      stencil: none
+      bin: none
+  (5) neighbor class addition, perpetual
+      attributes: half, newton on
+      pair build: half/nsq/newton
+      stencil: none
+      bin: none
+Per MPI rank memory allocation (min/avg/max) = 17.23 | 17.23 | 17.23 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0                   0 -9639.15516334135646                  0 -9639.15516334135646 -160.614735277582383
+        44                   0 -9639.17245097659361                  0 -9639.17245097659361 -160.850388189382329
+Loop time of 1.28712 on 1 procs for 44 steps with 1300 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -9639.15516334136  -9639.17245097659  -9639.17245097659
+  Force two-norm initial, final = 0.74066188 5.4930677e-08
+  Force max component initial, final = 0.046626942 4.2780603e-09
+  Final line search alpha, max atom move = 1 4.2780603e-09
+  Iterations, force evaluations = 44 87
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1.2805     | 1.2805     | 1.2805     |   0.0 | 99.48
+Bond    | 6.702e-06  | 6.702e-06  | 6.702e-06  |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.0033529  | 0.0033529  | 0.0033529  |   0.0 |  0.26
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0.00027135 | 0.00027135 | 0.00027135 |   0.0 |  0.02
+Other   |            | 0.003019   |            |       |  0.23
+
+Nlocal:           1300 ave        1300 max        1300 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           8980 ave        8980 max        8980 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 0
+Ave neighs/atom = 0
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+
+write_dump all xyz system.xyz modify element C C
+
+Total wall time: 0:00:01

@@ -1,0 +1,9 @@
+# Reproduction
+
+This package preserves four original source matrices, all relaxed positions and projected forces, coarse/fine constrained Hessians, eigenvalues, the displacement bases, optimizer/refinement histories, directional checks and the frozen protocol. Exact potential files, smooth plugin source/license, compiled width2 plugin and source structure files are included at the paths used by the force calculator. The LAMMPS/Python/MPI runtime is not bundled; this execution used LAMMPS20250722.
+
+Array verification: run `python3 graphite-stationary/verify.py` from the extracted root with NumPy. It reconstructs force projection by group gathering, checks affine constraints and displacement recovery, reproduces stiffness classifications, verifies source hashes and records output hashes. summarize.py and make_report.py regenerate the aggregate text from individual records. Existing evidence should be preserved in a separate copy before force-level repetition.
+
+Force-level repetition: calculate.py takes case index0..3, uses a compatible LAMMPS runtime and the retained smooth plugin, minimizes the shifted energy on the declared orthonormal coordinates, applies only the registered stationarity refinement when needed, and evaluates both Hessian steps plus directional controls. run.py was the four-process constructor driver. Compiled plugin provenance is retained but may require rebuilding against matching LAMMPS/MPI headers/libraries on another platform. The smooth source is compiled with UD_SWITCH_WIDTH=2. No alternative potential, hidden load, thermostat or force constraint may be silently substituted.
+
+The preparation fixes each layer's mean lateral position, the fixed periodic box and global mean height. It relaxes only the stated affine primitive-periodic coordinate space. It does not certify a completely free3D equilibrium or stability at every wavevector. No dissipative trajectory is represented by the optimizer iterations.

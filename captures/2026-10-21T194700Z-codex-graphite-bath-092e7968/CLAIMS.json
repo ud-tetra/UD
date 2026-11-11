@@ -1,0 +1,35 @@
+{
+  "claims": [
+    {
+      "id": "GRA-PORT-PULLBACK",
+      "type": "DERIVED_CONDITIONAL",
+      "status": "SCOPED_CANDIDATE_FAMILY",
+      "scope": "Additional normalized passive mechanical port, Gamma0=J^T F D^-1 F^T J, protection iff F^T JY=0; no native material identification"
+    },
+    {
+      "id": "GRA-STATIC-BATH-NONIDENTIFIABILITY",
+      "type": "DERIVED",
+      "status": "SCOPED",
+      "scope": "PSD equal-trace damping family not identified by fixed static K/g; no claim every matrix is microscopically realizable"
+    },
+    {
+      "id": "GRA-BATH-CONTROLS",
+      "type": "NUMERICAL",
+      "status": "PASS_SCOPED_NONIDENTIFIABILITY",
+      "scope": "36 exposed retained arrays, response-adapted dark bath used only as counterexample"
+    },
+    {
+      "id": "GRA-NATIVE-SELECTOR",
+      "type": "CANDIDATE",
+      "status": "HOLD_SOURCE_GATE",
+      "scope": "Material map, native port/drain/occurrence and physical units absent in audited sources"
+    },
+    {
+      "id": "GRA-G05-SCALAR",
+      "type": "SOURCE_STATUS_REPAIR",
+      "status": "RETIRED_MAINLINE_SCALAR",
+      "scope": "Recovered v0.85 supersedes historical v0.39 source-open scalar wording; no new retirement declared here"
+    }
+  ],
+  "physical_promotion": 0
+}

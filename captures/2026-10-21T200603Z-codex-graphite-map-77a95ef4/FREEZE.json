@@ -1,0 +1,16 @@
+{
+ "purpose":"Geometry-derived atom/edge maps; exact gradient obstruction and numerical graph analogue of protected-sector test",
+ "scope":"Four source configurations; atom graph is not identified with600-cell UD carrier",
+ "graph_rule":"For each atom, choose its3 nearest distinct same-layer neighbors under2D supercell periodicity; require reciprocal choices, clear distance gap to4th neighbor, two connected components and degree3. Edges sorted by atom ID, displacement uses nearest periodic image. No force/damping-response information selects edges.",
+ "maps":["J_vertex=P_rep","J_diff=B^T P_rep, the z component of vector bond-difference kinematics","J_axial_vector per edge=n_e n_e^T Delta u_e, a signed vector-valued edge map; all3 Cartesian components projected separately"],
+ "axial_scalar_guard":"n_e dot Delta u_e is orientation-even bond-length rate; not a signed C1 cochain without an additional convention. Do not project it as though it were C1.",
+ "input_data":"36 already exposed qualified matrices; maps use geometry/group replication only, not Y-dependent projectors",
+ "projector":"P_cycle v=v-B^T L^+ Bv, L=BB^T, per-layer component means removed, anchored Laplacian solve",
+ "unit_metric":"Euclidean per-atom and per-edge component metrics, explicitly declared graph analogue only",
+ "tests":"degree3, components2, rankB=N-2, local3/4neighbor ratio<0.8, reciprocity; gradient protected fraction<=1e-10; projector idempotence/self-adjoint bilinear check to1e-10; orientation covariance to1e-12; response reconstruction to1e-12",
+ "diagnostics":"Report axial-vector total/cycle/gradient response fractions; no fitted acceptance threshold and no physical protection conclusion from a nonzero cycle component",
+ "exact_claim":"P_cycle B^T=0; a gradient-preserving material/native cochain map cannot put nonzero vertex/gradient-only response wholly in native cycle/face/cell protected space",
+ "physical_promotion":0,
+ "native_material_map":"OPEN",
+ "main_observed":"c6b66d68a25b655627d6eb6f1bf6f96a13e2121b"
+}

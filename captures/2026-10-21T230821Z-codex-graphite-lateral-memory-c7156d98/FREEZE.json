@@ -1,0 +1,89 @@
+{
+  "created_utc": "2026-10-21T23:01:25.317765+00:00",
+  "main_observed": "f0a2ee841cb0feed3ec5e700bfc0a6521cbda2f4",
+  "status": "FROZEN_BEFORE_MEMORY_TRAJECTORY_AND_QUADRATURE_TESTS",
+  "scope": "Exact conditional block-elimination theorem applied numerically to four qualified finite harmonic models; not nonlinear atomistic dynamics, physical bath or native UD correspondence.",
+  "cases": [
+    "21_dir_0",
+    "21_dir_10024",
+    "31_dir_10084",
+    "31_dir_10134"
+  ],
+  "normalization": "D=H_symmetric/h_star with h_star=lambda_max(H). All derivatives use mathematical dimensionless tau; no UD-native or laboratory clock is identified. Equal common mass is absorbed into tau. Unit-amplitude linear probes have no nonlinear validity claim.",
+  "partition": "Coordinates ordered lateral x,y (52 or100) then vertical z (27 or51). D=[[A,C],[C.T,V]]. S=V-C.T A^-1 C, K(t)=C.T A^-1 cos(sqrt(A)t) C.",
+  "equation": "zddot+S z+integral_0^t K(t-s) zdot(s) ds = -C.T cos(sqrt(A)t)(ell0+A^-1 C z0)-C.T A^-1/2 sin(sqrt(A)t) elldot0.",
+  "initial_preparations": [
+    "vertical_unrelaxed: z0=normalized sin(sqrt(2)*index), other coordinates/velocities zero",
+    "conditional_lateral_equilibrium: same z0, ell0=-A^-1 C z0, all velocities zero",
+    "hidden_displacement: ell0=normalized sin(sqrt(2)*index), all other state components zero",
+    "hidden_velocity: elldot0=normalized cos(sqrt(3)*index), all other state components zero"
+  ],
+  "trajectory_grid": {
+    "tau_end": 80,
+    "samples": 801
+  },
+  "reduced_integrator": {
+    "method": "DOP853",
+    "rtol": 1e-11,
+    "atol": 1e-13,
+    "realization": "r_j=int cos(omega_j(t-s)) (G zdot(s))_j ds, s_j=int sin(omega_j(t-s)) (G zdot(s))_j ds. rdot=G zdot-omega*s, sdot=omega*r; both start zero. No full trajectory supplied to this solve."
+  },
+  "full_reference": "Independent full-D eigendecomposition, exact cosine/sine propagator; full block inverse for transfer checks.",
+  "direct_quadrature": {
+    "times": 17,
+    "tau_interval": [
+      0,
+      80
+    ],
+    "Gauss_Legendre_nodes": [
+      96,
+      192
+    ],
+    "purpose": "Direct history integral along full-reference velocity, independent of memory auxiliary ODE"
+  },
+  "transfer_s": [
+    [
+      0.1,
+      0
+    ],
+    [
+      0.05,
+      0.2
+    ],
+    [
+      0.1,
+      0.7
+    ],
+    [
+      0.03,
+      1.2
+    ]
+  ],
+  "positive_type_test": "Eight times uniformly0..80 and deterministic vector sin((i+1)*(j+1)*sqrt(2)), normalized jointly; compare kernel double sum with spectral sum of squared complex amplitudes. K(t) itself need not be PSD.",
+  "thresholds": {
+    "algebra_relative": 1e-11,
+    "transfer_relative": 1e-10,
+    "positive_type_relative": 1e-10,
+    "trajectory_absolute": 1e-08,
+    "trajectory_relative": 1e-07,
+    "quadrature_residual_absolute": 1e-09,
+    "quadrature_change_absolute": 1e-10,
+    "energy_relative_drift": 1e-08,
+    "initial_acceleration_absolute": 1e-11,
+    "ablation_minimum_visible_error": 1e-06
+  },
+  "ablation": "Independently solve the same reduced equation with all initial-source terms deleted. Require visible vertical error>1e-6 in unrelaxed/hidden-displacement/hidden-velocity preparations; conditional-equilibrium preparation must still match the full trajectory. No refitting.",
+  "physical_promotion": 0,
+  "lane": "Development \u2014 no registry entry",
+  "review": "Constructor only; non-constructor pending",
+  "inputs": {
+    "graphite-safe-full/RESULTS.json": "6cf7e9afeb59ebb3c971223f2b0dec387e6bf3bf5e601a7148cf865ac91d4ff6",
+    "graphite-safe-full/VERIFICATION.json": "e77faa159ca56daada5901b4e40228bfa442a311fcb36c3677968f91f8e0c75b",
+    "project_sources/20-UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39-2-.md": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63",
+    "project_sources/21-UD_GOVERNANCE_CRL2_SUBDIVISION_v1.0.md": "8e9e8159fe2e5c4bdc234712e02db0151fc77f4a92c140372279a1e9717689a4",
+    "graphite-safe-full/21_dir_0/HESSIANS.npz": "c95e8dd4a81f94b42455f1bdb4e2875225d50555ce0ad172f18a879773a3e161",
+    "graphite-safe-full/21_dir_10024/HESSIANS.npz": "f87fb459dfc8b2820a9b2020261bb030bfc0a006b7826a00a6267cfce953d5a9",
+    "graphite-safe-full/31_dir_10084/HESSIANS.npz": "74afc02e0b714d4ec23f03d49d4ab21b86f73dafe292c21b4c33a0e268ea2276",
+    "graphite-safe-full/31_dir_10134/HESSIANS.npz": "91030ed7aec7212e02c357c7e4c915b3678b5534853fafe675d1904b4300c433"
+  }
+}

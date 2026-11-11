@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-10-21T20:23:34.914587+00:00",
+  "main_observed": "8be4e90d68528325f081126d27c61ac61cad951e",
+  "input": "graphite-closure/CLOSURE.npz",
+  "input_sha256": "d1d939956f84d87fb424b31354c2deb4dc026f894cd37965e0caa89af2b9e35a",
+  "scope": "36 unique retained stiffness configurations; common mass absorbed into model time; both prior observable rowspaces equal b-perp",
+  "basis": "Householder orthogonal complement Z of geometry-fixed breathing b; q=Zx+bz",
+  "initial_states": [
+    "visible e1 displacement",
+    "hidden unit displacement",
+    "mixed deterministic displacement and velocity",
+    "hidden conditional equilibrium for visible e1"
+  ],
+  "sample_times_hidden_periods": [
+    0,
+    0.125,
+    0.25,
+    0.5,
+    1,
+    2
+  ],
+  "quadrature_orders": [
+    256,
+    512
+  ],
+  "relative_residual_tolerance": 1e-09,
+  "algebra_tolerance": 1e-10,
+  "energy_tolerance": 1e-10,
+  "normalization": "residual norm divided by max(1, norms of terms or states); quadrature compared at both orders",
+  "tests": [
+    "block reconstruction",
+    "positive hidden stiffness and Schur complement",
+    "displacement memory balance",
+    "velocity memory balance including initial slip",
+    "hidden reconstruction",
+    "full vs block spectral evolution",
+    "energy conservation",
+    "time reversal"
+  ],
+  "verification": "constructor verification, not independent review",
+  "physical_promotion": 0,
+  "physical_bath": "HOLD"
+}

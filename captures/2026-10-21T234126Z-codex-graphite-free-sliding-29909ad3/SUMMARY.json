@@ -1,0 +1,150 @@
+{
+  "cases": [
+    {
+      "case": "21_dir_0",
+      "relaxation": {
+        "case": "21_dir_0",
+        "stationarity_pass": true,
+        "max_force_eV_per_A": 2.830163064954058e-12,
+        "energy_change_eV": -0.04728319295463734,
+        "relative_slide_A": [
+          0.4649317636684609,
+          0.26842847890878435
+        ],
+        "global_translation_error_A": 3.515706244646329e-16,
+        "stages": [
+          {
+            "method": "preconditioned L-BFGS-B",
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "iterations": 14,
+            "max_force": 4.282517659785592e-07
+          },
+          {
+            "method": "force-root polish",
+            "success": true,
+            "message": "The solution converged.",
+            "accepted": true,
+            "max_force": 2.830163064954058e-12
+          }
+        ],
+        "evaluations": 147,
+        "seconds": 57.10606050491333
+      },
+      "status": "HOLD_PREFLIGHT",
+      "full_min_eigenvalue": null,
+      "stability_threshold": null,
+      "port_S_eigenvalues": null
+    },
+    {
+      "case": "21_dir_10024",
+      "relaxation": {
+        "case": "21_dir_10024",
+        "stationarity_pass": true,
+        "max_force_eV_per_A": 2.014559008683815e-12,
+        "energy_change_eV": -0.04031218678483128,
+        "relative_slide_A": [
+          0.3315586602797887,
+          0.20613028371533398
+        ],
+        "global_translation_error_A": 1.3040714892422474e-16,
+        "stages": [
+          {
+            "method": "preconditioned L-BFGS-B",
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "iterations": 10,
+            "max_force": 5.368704652753214e-07
+          },
+          {
+            "method": "force-root polish",
+            "success": true,
+            "message": "The solution converged.",
+            "accepted": true,
+            "max_force": 2.014559008683815e-12
+          }
+        ],
+        "evaluations": 119,
+        "seconds": 47.22802138328552
+      },
+      "status": "HOLD_PREFLIGHT",
+      "full_min_eigenvalue": null,
+      "stability_threshold": null,
+      "port_S_eigenvalues": null
+    },
+    {
+      "case": "31_dir_10084",
+      "relaxation": {
+        "case": "31_dir_10084",
+        "stationarity_pass": true,
+        "max_force_eV_per_A": 1.3399617261447459e-08,
+        "energy_change_eV": -0.008907919087505434,
+        "relative_slide_A": [
+          -0.21979902913677346,
+          -0.12358583499538336
+        ],
+        "global_translation_error_A": 3.2657637278204606e-16,
+        "stages": [
+          {
+            "method": "preconditioned L-BFGS-B",
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "iterations": 14,
+            "max_force": 1.3399617261447459e-08
+          }
+        ],
+        "evaluations": 35,
+        "seconds": 17.674444437026978
+      },
+      "status": "PASS",
+      "full_min_eigenvalue": 0.0007699493169587982,
+      "stability_threshold": 7.285856301335976e-06,
+      "port_S_eigenvalues": [
+        0.0007699926830378929,
+        0.0007699931362758856
+      ],
+      "failed_checks": []
+    },
+    {
+      "case": "31_dir_10134",
+      "relaxation": {
+        "case": "31_dir_10134",
+        "stationarity_pass": true,
+        "max_force_eV_per_A": 1.427726637547391e-12,
+        "energy_change_eV": -0.0003045090998057276,
+        "relative_slide_A": [
+          0.030429079247422157,
+          -0.03727068413301311
+        ],
+        "global_translation_error_A": 1.462078321660206e-16,
+        "stages": [
+          {
+            "method": "preconditioned L-BFGS-B",
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "iterations": 12,
+            "max_force": 2.1489732984129963e-06
+          },
+          {
+            "method": "force-root polish",
+            "success": true,
+            "message": "The solution converged.",
+            "accepted": true,
+            "max_force": 1.427726637547391e-12
+          }
+        ],
+        "evaluations": 356,
+        "seconds": 156.9688014984131
+      },
+      "status": "PASS",
+      "full_min_eigenvalue": 0.0007699495678066568,
+      "stability_threshold": 6.995494275138467e-06,
+      "port_S_eigenvalues": [
+        0.0007699929337674417,
+        0.0007699929951292057
+      ],
+      "failed_checks": []
+    }
+  ],
+  "physical_promotion": 0
+}

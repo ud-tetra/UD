@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-21T21:04:55.931983+00:00",
+  "purpose": "Post-primary diagnostic of failed absolute Hessian qualification; not a replacement gate or target-blind check",
+  "selection": "For each case, select two distinct columns with largest max-absolute original coarse/fine discrepancy; retain the exposed worst row for each column",
+  "steps_A": [
+    0.0001,
+    5e-05,
+    2.5e-05,
+    1.25e-05,
+    6.25e-06,
+    3.125e-06,
+    1.5625e-06
+  ],
+  "observable": "Fresh projected-force central derivative for each selected column; track full-column successive max differences and worst-entry values",
+  "scope": "Two selected columns do not qualify the full Hessian; no frozen tolerance is changed and original failures remain",
+  "physical_promotion": 0
+}

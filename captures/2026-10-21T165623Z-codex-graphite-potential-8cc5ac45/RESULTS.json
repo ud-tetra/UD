@@ -1,0 +1,60 @@
+{
+  "status": "PASS_SCOPED_SOURCE_AND_DATA_AUDIT",
+  "source_files": {
+    "CH_taper.KC": {
+      "sha256": "b4210f8e304d13d5378f6c8e870bae5387c075eb89ccfbb9bc3a388d7b33a46f",
+      "size_bytes": 895
+    },
+    "pair_kolmogorov_crespi_full.cpp": {
+      "sha256": "1ea1acf1effa73462b259c39239ad11aa63537c76aca0cc44ecb595e9ddcf4bf",
+      "size_bytes": 35009
+    },
+    "data.zip": {
+      "sha256": "21f3921cf0b8a900dfc1db2880b71940cf2b24da85e91f9a24f4e45a77e83240",
+      "size_bytes": 379632
+    },
+    "lammps_relax_bond.tar.gz": {
+      "sha256": "c23733ffd415f8fb3b810e5b54c2cdce5e7d5930d6fde4d2ebed962e64dc7142",
+      "size_bytes": 1470572
+    }
+  },
+  "CC_parameters_raw": {
+    "z0": "854021/250000",
+    "C0": "20021583/1000000",
+    "C2": "109055107/10000000",
+    "C4": "21378177/5000000",
+    "C": "2502709/250000000",
+    "delta": "4223561/5000000",
+    "lambda": "3670073/1250000",
+    "A": "35783147/2500000",
+    "S": "1",
+    "normal_neighbor_rcut": "2"
+  },
+  "checks": [
+    "meV to eV factor",
+    "normal derivatives present",
+    "taper derivatives 1-3 vanish at endpoints",
+    "two archive MD5 matches",
+    "grid row and coordinate uniqueness"
+  ],
+  "PES_model_grids": {
+    "data/PES21/pes_21.dat": {
+      "rows": 22801,
+      "min_microeV_per_atom": "0",
+      "max_microeV_per_atom": "4727537111/50000000",
+      "range_microeV_per_atom": "4727537111/50000000"
+    },
+    "data/PES31/pes_31.dat": {
+      "rows": 22801,
+      "min_microeV_per_atom": "0",
+      "max_microeV_per_atom": "2035016251/100000000",
+      "range_microeV_per_atom": "2035016251/100000000"
+    }
+  },
+  "bond_archive": {
+    "input_files": 202,
+    "intralayer_only": "pair_style rebo; commented KC line is not active"
+  },
+  "material_hessian_computed": false,
+  "physical_promotion": 0
+}
