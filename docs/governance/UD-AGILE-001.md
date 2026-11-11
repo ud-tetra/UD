@@ -34,3 +34,10 @@ ID, version, owner/session, repo commit, statement, domain, source citations, ad
 - Do not claim an experiment occurred without instrument/data provenance and independent verification.
 - Prefer exact rational/symbolic calculations; keep measurement decimals and uncertainties in their empirical domain.
 - Use branch/claim/PR workflow and repository validation; governance commits alone do not certify physics.
+
+## Mission-first external ideas rule (amendment 2026-11-11)
+**Primary objective: establish, test and where warranted support Unified Dynamics, not disprove Gibsonian Mathematics or any competing framework.** A competitor critique is ancillary and must be evidence-led, proportionate and relevant to a UD derivation or test. Do not frame the research program as a campaign against an author.
+
+Gibsonian Mathematics may supply conceptual inspiration or suggest mathematical questions. Such ideas may enter UD only as explicitly attributed INSPIRED_BY hypotheses, provided they are compatible with declared UD primitives or their incompatibility is openly investigated. Acceptance requires an independent derivation from UD dynamics, reproducible proof or computation within the stated model, and (for physical claims) a separately falsifiable observable bridge. No external numerical conclusion, fitted coefficient, or physical identification is inherited merely because an idea is interesting. Conceptual alignment is necessary for adoption but not sufficient for physical promotion.
+
+When comparing frameworks, apply symmetrical claim-boundary standards and do not assert unsupported allegations about Gibsonian research. Allocate effort primarily to constructive UD theorems, counterexamples, and predictions. Revisions follow the Agile hypothesis lifecycle; preserve prior provenance and rejected alternatives.
