@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "audit_version": "0.1",
+  "physical_promotion": 0,
+  "source_sha256": {
+    "joint_carrier.py": "29f1685df53432edcf2662b07d6fefe81abcc3a35552ebe664f3bc9f2611da71",
+    "rsp1.py": "8e9db2e432d9defb78dde206ac8c39714f291c0d9ecb8dc63279d0496e9f7ca8",
+    "response_contract.py": "79a7c61580a423604c7c7b2c72d30ee069a54f33fbba386ee3ce8b11eeaa9c3b"
+  },
+  "global_joint_states_checked": 5888,
+  "total_global_permutations_checked": 48,
+  "generic_prepared_windows_checked": 288,
+  "rsp_prepared_windows_checked": 72,
+  "finite_collision_maps_checked": 288,
+  "checks": [
+    "two-sided inverse on every dirty configuration of three small carriers",
+    "prepared trajectory/history/receipt identity",
+    "donor exports unchanged and consumed once within window",
+    "full RSP state compilation C/H and finite banks",
+    "noninjective output retains input distinction",
+    "spectator-correlated SWAP branch identity",
+    "dirty memory/record and used-donor negative controls",
+    "post-window wrap counterexample",
+    "exact dimension and slot accounting"
+  ],
+  "scope": "Standard-library exact integer/tuple checks. Arbitrary-size result uses algebraic proof, not exhaustive enumeration. Correlation check tests basis branches of a coherent state, not a detector experiment. Constructor-team AI verification; independent human review pending."
+}

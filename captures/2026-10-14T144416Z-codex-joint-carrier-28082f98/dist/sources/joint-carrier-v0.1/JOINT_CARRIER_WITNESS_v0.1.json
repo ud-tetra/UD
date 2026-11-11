@@ -1,0 +1,2173 @@
+{
+  "version": "0.1",
+  "branches": {
+    "C": {
+      "branch": "C",
+      "specification": {
+        "states": [
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              1,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          }
+        ],
+        "successor": [
+          1,
+          2,
+          2
+        ],
+        "receipt": [
+          1,
+          2,
+          3
+        ],
+        "record_dimension": 4,
+        "record_dictionary": [
+          {
+            "id": 0,
+            "meaning": "BLANK"
+          },
+          {
+            "id": 1,
+            "pre_state_label": 0,
+            "post_state_label": 1,
+            "transition_kind": "INSPECTION",
+            "response_tag": "BIT_EVENT",
+            "changed": true,
+            "halt_reason": null,
+            "consumed_tokens": 1,
+            "event": {
+              "theta_prior_aligned": [
+                1,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                0,
+                1,
+                1
+              ],
+              "q_output": [
+                1,
+                0,
+                0
+              ],
+              "omega_output": [
+                1,
+                0,
+                0
+              ],
+              "h_output": [
+                0,
+                0,
+                0
+              ],
+              "viable_index": -1,
+              "mu_theta": -1,
+              "closure_capacity_change": 2,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                1,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 1,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 4,
+            "potential_after": 3
+          },
+          {
+            "id": 2,
+            "pre_state_label": 1,
+            "post_state_label": 2,
+            "transition_kind": "INSPECTION",
+            "response_tag": "BIT_EVENT",
+            "changed": true,
+            "halt_reason": null,
+            "consumed_tokens": 0,
+            "event": {
+              "theta_prior_aligned": [
+                0,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                1,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                1,
+                1,
+                1
+              ],
+              "q_output": [
+                0,
+                0,
+                0
+              ],
+              "omega_output": [
+                0,
+                0,
+                0
+              ],
+              "h_output": [
+                0,
+                0,
+                0
+              ],
+              "viable_index": 1,
+              "mu_theta": 1,
+              "closure_capacity_change": -2,
+              "close_mask": [
+                1,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                0,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 1,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 3,
+            "potential_after": 0
+          },
+          {
+            "id": 3,
+            "pre_state_label": 2,
+            "post_state_label": 2,
+            "transition_kind": "HALT",
+            "response_tag": "RESPONSE_NULL",
+            "changed": false,
+            "halt_reason": "EXHAUSTED_QUIESCENT",
+            "consumed_tokens": 0,
+            "event": {
+              "theta_prior_aligned": [
+                1,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                1,
+                1,
+                1
+              ],
+              "q_output": [
+                0,
+                0,
+                0
+              ],
+              "omega_output": [
+                0,
+                0,
+                0
+              ],
+              "h_output": [
+                0,
+                0,
+                0
+              ],
+              "viable_index": 0,
+              "mu_theta": 0,
+              "closure_capacity_change": 0,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                0,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 0,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 0,
+            "potential_after": 0
+          }
+        ],
+        "scope": "Prepared RSP trajectory closure only; source state, integrity, stock, queue and branch are encoded completely. No native selection or source calibration."
+      },
+      "resources": {
+        "state_labels": 3,
+        "record_labels": 4,
+        "ticks_per_episode": 4,
+        "reset_blocks": 1,
+        "episodes": 2,
+        "clock_addresses": 10,
+        "certified_transitions": 9,
+        "compute_gates": 8,
+        "payload_swaps": 1,
+        "history_cells_total": 8,
+        "record_cells_total": 8,
+        "work_cells_total": 2,
+        "payload_dimension": 62208,
+        "joint_dimension": 38698352640,
+        "allocated_binary_capacity_bits": 40,
+        "exported_record_cells_final": 4,
+        "active_record_cells_final": 4,
+        "unused_reset_blocks_final": 0,
+        "master_clock_reset_by_payload_swap": false,
+        "complete_restart_fresh_joint_donor_dimension": 38698352640,
+        "physical_promotion": 0,
+        "capacity_scope": "Allocated register capacity, not entropy, joules or an optimal memory lower bound."
+      },
+      "initial": {
+        "clock": 0,
+        "active": {
+          "w": 0,
+          "h": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "donors": [
+          {
+            "w": 0,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "trace": [
+        {
+          "transition": 1,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 0,
+            "donor": null
+          },
+          "clock_before": 0,
+          "clock_after": 1,
+          "active": {
+            "w": 1,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "expected_work_label": 1,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 1,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 2,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 1
+        },
+        {
+          "transition": 2,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 1,
+            "donor": null
+          },
+          "clock_before": 1,
+          "clock_after": 2,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 3,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 2,
+            "donor": null
+          },
+          "clock_before": 2,
+          "clock_after": 3,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 4,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 3,
+            "donor": null
+          },
+          "clock_before": 3,
+          "clock_after": 4,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 5,
+          "action": {
+            "kind": "RESET_EXPORT",
+            "episode": 0,
+            "slot": null,
+            "donor": 0
+          },
+          "clock_before": 4,
+          "clock_after": 5,
+          "active": {
+            "w": 0,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 0,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 1,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 6,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 1,
+            "slot": 0,
+            "donor": null
+          },
+          "clock_before": 5,
+          "clock_after": 6,
+          "active": {
+            "w": 1,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 1,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 1,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 1
+        },
+        {
+          "transition": 7,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 1,
+            "slot": 1,
+            "donor": null
+          },
+          "clock_before": 6,
+          "clock_after": 7,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 8,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 1,
+            "slot": 2,
+            "donor": null
+          },
+          "clock_before": 7,
+          "clock_after": 8,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 9,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 1,
+            "slot": 3,
+            "donor": null
+          },
+          "clock_before": 8,
+          "clock_after": 9,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        }
+      ],
+      "initial_stock": {
+        "active": 1,
+        "unspent_donors": 1,
+        "outgoing_remaining": 0,
+        "total_work_register_stock": 2,
+        "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+      },
+      "final_stock": {
+        "active": 0,
+        "unspent_donors": 0,
+        "outgoing_remaining": 0,
+        "total_work_register_stock": 0,
+        "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+      },
+      "final": {
+        "clock": 9,
+        "active": {
+          "w": 2,
+          "h": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "records": [
+            1,
+            2,
+            3,
+            3
+          ]
+        },
+        "donors": [
+          {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      "post_window_negative_control": [
+        {
+          "action": {
+            "kind": "WRAP_IDLE",
+            "episode": 1,
+            "slot": null,
+            "donor": null
+          },
+          "clock_after": 0,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "within_declared_window": false
+        },
+        {
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 0,
+            "donor": null
+          },
+          "clock_after": 1,
+          "active": {
+            "w": 2,
+            "h": [
+              2,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              0,
+              2,
+              3,
+              3
+            ]
+          },
+          "within_declared_window": false
+        },
+        {
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 1,
+            "donor": null
+          },
+          "clock_after": 2,
+          "active": {
+            "w": 0,
+            "h": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "records": [
+              0,
+              1,
+              3,
+              3
+            ]
+          },
+          "within_declared_window": false
+        },
+        {
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 2,
+            "donor": null
+          },
+          "clock_after": 3,
+          "active": {
+            "w": 0,
+            "h": [
+              2,
+              2,
+              0,
+              2
+            ],
+            "records": [
+              0,
+              1,
+              0,
+              3
+            ]
+          },
+          "within_declared_window": false
+        },
+        {
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 3,
+            "donor": null
+          },
+          "clock_after": 4,
+          "active": {
+            "w": 0,
+            "h": [
+              2,
+              2,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          "within_declared_window": false
+        }
+      ],
+      "status": "EXACT CONDITIONAL PREPARED WINDOW / CANDIDATE JOINT OPERATOR",
+      "independent_human_review": "PENDING",
+      "physical_promotion": 0
+    },
+    "H": {
+      "branch": "H",
+      "specification": {
+        "states": [
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              1,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "H"
+          },
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "H"
+          },
+          {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "H"
+          }
+        ],
+        "successor": [
+          1,
+          2,
+          2
+        ],
+        "receipt": [
+          1,
+          2,
+          3
+        ],
+        "record_dimension": 4,
+        "record_dictionary": [
+          {
+            "id": 0,
+            "meaning": "BLANK"
+          },
+          {
+            "id": 1,
+            "pre_state_label": 0,
+            "post_state_label": 1,
+            "transition_kind": "INSPECTION",
+            "response_tag": "BIT_EVENT",
+            "changed": true,
+            "halt_reason": null,
+            "consumed_tokens": 1,
+            "event": {
+              "theta_prior_aligned": [
+                1,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                0,
+                1,
+                1
+              ],
+              "q_output": [
+                1,
+                0,
+                0
+              ],
+              "omega_output": [
+                1,
+                0,
+                0
+              ],
+              "h_output": [
+                0,
+                0,
+                0
+              ],
+              "viable_index": -1,
+              "mu_theta": -1,
+              "closure_capacity_change": 2,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                1,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 1,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 4,
+            "potential_after": 3
+          },
+          {
+            "id": 2,
+            "pre_state_label": 1,
+            "post_state_label": 2,
+            "transition_kind": "INSPECTION",
+            "response_tag": "RESPONSE_NULL",
+            "changed": true,
+            "halt_reason": null,
+            "consumed_tokens": 0,
+            "event": {
+              "theta_prior_aligned": [
+                0,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                1,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "theta_output": [
+                0,
+                1,
+                1
+              ],
+              "q_output": [
+                1,
+                0,
+                0
+              ],
+              "omega_output": [
+                0,
+                0,
+                0
+              ],
+              "h_output": [
+                1,
+                0,
+                0
+              ],
+              "viable_index": 1,
+              "mu_theta": 0,
+              "closure_capacity_change": 0,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                0,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 0,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 3,
+            "potential_after": 2
+          },
+          {
+            "id": 3,
+            "pre_state_label": 2,
+            "post_state_label": 2,
+            "transition_kind": "HALT",
+            "response_tag": "RESPONSE_NULL",
+            "changed": false,
+            "halt_reason": "LATCHED_OR_STRANDED",
+            "consumed_tokens": 0,
+            "event": {
+              "theta_prior_aligned": [
+                0,
+                1,
+                1
+              ],
+              "omega_prior_aligned": [
+                0,
+                0,
+                0
+              ],
+              "h_prior_aligned": [
+                1,
+                0,
+                0
+              ],
+              "theta_output": [
+                0,
+                1,
+                1
+              ],
+              "q_output": [
+                1,
+                0,
+                0
+              ],
+              "omega_output": [
+                0,
+                0,
+                0
+              ],
+              "h_output": [
+                1,
+                0,
+                0
+              ],
+              "viable_index": 0,
+              "mu_theta": 0,
+              "closure_capacity_change": 0,
+              "close_mask": [
+                0,
+                0,
+                0
+              ],
+              "reopen_mask": [
+                0,
+                0,
+                0
+              ],
+              "gross_pair_toggles": 0,
+              "physical_promotion": 0,
+              "scope": "Conditional finite readout; supplied receipts are not a native source law."
+            },
+            "potential_before": 2,
+            "potential_after": 2
+          }
+        ],
+        "scope": "Prepared RSP trajectory closure only; source state, integrity, stock, queue and branch are encoded completely. No native selection or source calibration."
+      },
+      "resources": {
+        "state_labels": 3,
+        "record_labels": 4,
+        "ticks_per_episode": 4,
+        "reset_blocks": 1,
+        "episodes": 2,
+        "clock_addresses": 10,
+        "certified_transitions": 9,
+        "compute_gates": 8,
+        "payload_swaps": 1,
+        "history_cells_total": 8,
+        "record_cells_total": 8,
+        "work_cells_total": 2,
+        "payload_dimension": 62208,
+        "joint_dimension": 38698352640,
+        "allocated_binary_capacity_bits": 40,
+        "exported_record_cells_final": 4,
+        "active_record_cells_final": 4,
+        "unused_reset_blocks_final": 0,
+        "master_clock_reset_by_payload_swap": false,
+        "complete_restart_fresh_joint_donor_dimension": 38698352640,
+        "physical_promotion": 0,
+        "capacity_scope": "Allocated register capacity, not entropy, joules or an optimal memory lower bound."
+      },
+      "initial": {
+        "clock": 0,
+        "active": {
+          "w": 0,
+          "h": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "donors": [
+          {
+            "w": 0,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "trace": [
+        {
+          "transition": 1,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 0,
+            "donor": null
+          },
+          "clock_before": 0,
+          "clock_after": 1,
+          "active": {
+            "w": 1,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "expected_work_label": 1,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 1,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 2,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 1
+        },
+        {
+          "transition": 2,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 1,
+            "donor": null
+          },
+          "clock_before": 1,
+          "clock_after": 2,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 3,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 2,
+            "donor": null
+          },
+          "clock_before": 2,
+          "clock_after": 3,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 4,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 3,
+            "donor": null
+          },
+          "clock_before": 3,
+          "clock_after": 4,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 0,
+              "h": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "records": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 5,
+          "action": {
+            "kind": "RESET_EXPORT",
+            "episode": 0,
+            "slot": null,
+            "donor": 0
+          },
+          "clock_before": 4,
+          "clock_after": 5,
+          "active": {
+            "w": 0,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 0,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 1,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 1,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 6,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 1,
+            "slot": 0,
+            "donor": null
+          },
+          "clock_before": 5,
+          "clock_after": 6,
+          "active": {
+            "w": 1,
+            "h": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 1,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 1,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 1,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 1
+        },
+        {
+          "transition": 7,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 1,
+            "slot": 1,
+            "donor": null
+          },
+          "clock_before": 6,
+          "clock_after": 7,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              0,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 8,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 1,
+            "slot": 2,
+            "donor": null
+          },
+          "clock_before": 7,
+          "clock_after": 8,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        },
+        {
+          "transition": 9,
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 1,
+            "slot": 3,
+            "donor": null
+          },
+          "clock_before": 8,
+          "clock_after": 9,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "donors": [
+            {
+              "w": 2,
+              "h": [
+                0,
+                1,
+                2,
+                2
+              ],
+              "records": [
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ],
+          "expected_work_label": 2,
+          "within_declared_window": true,
+          "work_matches": true,
+          "stock_before": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "stock_after": {
+            "active": 0,
+            "unspent_donors": 0,
+            "outgoing_remaining": 0,
+            "total_work_register_stock": 0,
+            "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+          },
+          "consumed_tokens": 0
+        }
+      ],
+      "initial_stock": {
+        "active": 1,
+        "unspent_donors": 1,
+        "outgoing_remaining": 0,
+        "total_work_register_stock": 2,
+        "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+      },
+      "final_stock": {
+        "active": 0,
+        "unspent_donors": 0,
+        "outgoing_remaining": 0,
+        "total_work_register_stock": 0,
+        "scope": "Encoded RSP token ledger on work registers only; history and receipt copies are nonspendable snapshots, not extra resource."
+      },
+      "final": {
+        "clock": 9,
+        "active": {
+          "w": 2,
+          "h": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "records": [
+            1,
+            2,
+            3,
+            3
+          ]
+        },
+        "donors": [
+          {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      "post_window_negative_control": [
+        {
+          "action": {
+            "kind": "WRAP_IDLE",
+            "episode": 1,
+            "slot": null,
+            "donor": null
+          },
+          "clock_after": 0,
+          "active": {
+            "w": 2,
+            "h": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              1,
+              2,
+              3,
+              3
+            ]
+          },
+          "within_declared_window": false
+        },
+        {
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 0,
+            "donor": null
+          },
+          "clock_after": 1,
+          "active": {
+            "w": 2,
+            "h": [
+              2,
+              1,
+              2,
+              2
+            ],
+            "records": [
+              0,
+              2,
+              3,
+              3
+            ]
+          },
+          "within_declared_window": false
+        },
+        {
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 1,
+            "donor": null
+          },
+          "clock_after": 2,
+          "active": {
+            "w": 0,
+            "h": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "records": [
+              0,
+              1,
+              3,
+              3
+            ]
+          },
+          "within_declared_window": false
+        },
+        {
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 2,
+            "donor": null
+          },
+          "clock_after": 3,
+          "active": {
+            "w": 0,
+            "h": [
+              2,
+              2,
+              0,
+              2
+            ],
+            "records": [
+              0,
+              1,
+              0,
+              3
+            ]
+          },
+          "within_declared_window": false
+        },
+        {
+          "action": {
+            "kind": "COMPUTE",
+            "episode": 0,
+            "slot": 3,
+            "donor": null
+          },
+          "clock_after": 4,
+          "active": {
+            "w": 0,
+            "h": [
+              2,
+              2,
+              0,
+              0
+            ],
+            "records": [
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          "within_declared_window": false
+        }
+      ],
+      "status": "EXACT CONDITIONAL PREPARED WINDOW / CANDIDATE JOINT OPERATOR",
+      "independent_human_review": "PENDING",
+      "physical_promotion": 0
+    }
+  }
+}

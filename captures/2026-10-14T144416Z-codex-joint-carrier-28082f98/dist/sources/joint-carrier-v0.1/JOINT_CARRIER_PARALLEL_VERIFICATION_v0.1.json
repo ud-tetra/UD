@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "scope": "Constructor-team AI mathematical verification; no native Hodge Hamiltonian, local gate synthesis, independent physical review, actual quantum-device execution or physical clock identified.",
+  "input_hashes": {
+    "rsp1.py": "8e9db2e432d9defb78dde206ac8c39714f291c0d9ecb8dc63279d0496e9f7ca8",
+    "response_contract.py": "79a7c61580a423604c7c7b2c72d30ee069a54f33fbba386ee3ce8b11eeaa9c3b"
+  },
+  "checker_sha256": "75980271994ced0ca9d847b4564b9f655317d262dc9a07a9cc54498c4665b459",
+  "exhaustive_dirty_domain": {
+    "d": 2,
+    "m": 2,
+    "N": 1,
+    "B": 1,
+    "states_per_rule": 256,
+    "F_rho_rule_pairs": 16,
+    "bijection_and_inverse_checks": 4096,
+    "prepared_windows": 32
+  },
+  "general_prepared_window_checks": 977,
+  "formulas": {
+    "payload_dimension": "P=d^(N+1)*m^N",
+    "joint_dimension": "L*P^(B+1), L=(B+1)(N+1)",
+    "inverse_gate": "w=h_i_prime; h_i=w_prime-F(w) mod d; r_i=r_i_prime-rho(w) mod m",
+    "valid_window": "First L-1 transitions; Lth tick only wraps the master clock. Fresh supply is B donor payloads, not regenerated blank memory."
+  },
+  "adversarial_checks": {
+    "noninjective_F_history_retains_distinction": "PASS",
+    "fixed_W_still_has_clock_transition": "PASS",
+    "dirty_carry_N2_constant_F": "second reused gate gives W0 versus clean continuationW1",
+    "dirty_receipt_N1": "first reused receipt gives0 versus fresh receipt1",
+    "exported_donor_reuse": "For constant F1, reused donor returns W1 rather than prepared W0; both payloads are swapped intact, so no fresh reset occurs.",
+    "trivial_reuse_exception": "F0=0,rho0=0 leaves prepared payloads unchanged, so clock wrap can reuse this special orbit",
+    "correlated_superposition_SWAP": "Exact rational amplitudes3/5,4/5; norm and reference correlation preserved; old active information exported to donor, never erased."
+  },
+  "RSP_integration": {
+    "C": {
+      "source_carrier_labels": 7,
+      "source_committed_updates": 6,
+      "rho_encoding": "mu_theta+3 in alphabet0..6",
+      "episodes": 2,
+      "prepared_donors": 1,
+      "payload_dimension": 96889010407,
+      "joint_dimension": 131424724727068560279086,
+      "master_period_labels": 14,
+      "valid_window_transitions": 13,
+      "rsp_initial_stock": 2,
+      "rsp_final_stock": 0,
+      "scope": "Finite closed trajectory carrier relabeled with s0=0; tokens remain typed RSP registers, not native carrier energy."
+    },
+    "H": {
+      "source_carrier_labels": 3,
+      "source_committed_updates": 2,
+      "rho_encoding": "mu_theta+3 in alphabet0..6",
+      "episodes": 2,
+      "prepared_donors": 1,
+      "payload_dimension": 1323,
+      "joint_dimension": 10501974,
+      "master_period_labels": 6,
+      "valid_window_transitions": 5,
+      "rsp_initial_stock": 2,
+      "rsp_final_stock": 1,
+      "scope": "Finite closed trajectory carrier relabeled with s0=0; tokens remain typed RSP registers, not native carrier energy."
+    }
+  },
+  "weaknesses_and_repairs": [
+    "Dirty reuse failure is possible, not universal or necessarily immediate. State explicit finite-window validity and supply debt.",
+    "Initial labels should identify a fixed source state s0; encode s0=0 once, before defining the source table.",
+    "The global permutation is not an all-time state-only factor of dissipative F. Intertwining is asserted only at prepared compute prefixes.",
+    "Whole-payload SWAP requires export capacity and a gate/clock implementation; it does not reset the joint carrier or produce fresh environmental resources.",
+    "Master-clock identity at the final payload tick leaves payload untouched, but increment/wrap still changes the full clock state.",
+    "For superpositions, logical records retain coherence; they are not independently classical receipts or authenticated measurements without an additional readout model.",
+    "Source-register labels and modular history/receipt arithmetic have no proved equality with Hodge amplitudes, conserved support, energy or physical time."
+  ],
+  "elapsed_seconds": 0.061
+}
