@@ -1,0 +1,46 @@
+{
+  "status": "CANDIDATE_BLOCK_EVENT_NOT_NATIVE_PRIORITY_OR_FULL_INTEGRATOR",
+  "blocks": {
+    "shared": [
+      0,
+      1
+    ],
+    "private_tau0": [
+      2,
+      4,
+      6
+    ],
+    "private_tau1": [
+      3,
+      5,
+      7
+    ]
+  },
+  "real_canonical_footprints": {
+    "shared": 10,
+    "each_private": 14
+  },
+  "decomposition": "fixed topology, not state-stock ties",
+  "field_map": "R=(I+i*eps*L/2)^-1*(I-i*eps*L/2)",
+  "midpoint": "m=(u+uprime)/2",
+  "gate_kick": "pprime_e=p_e-eps/2*m^dagger*(partial_e L)*m",
+  "preserved": [
+    "canonical two-form",
+    "combined field norm",
+    "frozen block field energy"
+  ],
+  "full_H_preserved": false,
+  "standalone_defect": "sum p_e*delta_p_e+delta_p_e^2/2",
+  "network_defect": "also includes other-block field energy changes",
+  "private_pair": "disjoint lifted maps commute; unordered under cell reflection",
+  "shared_private_pair": "generally do not commute",
+  "robustness": "Cayley field operator bound eps*norm(L-M); kick locally Lipschitz on bounded sets",
+  "unsupplied": [
+    "block priority",
+    "step/event units",
+    "full energy-accounted solver",
+    "native carrier/charge",
+    "reset"
+  ],
+  "physical_promotion": 0
+}
