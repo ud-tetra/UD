@@ -1,0 +1,53 @@
+<h1 id="constitutive-receipt-index-event-operator-pre-event-test-protocol-v0.1">Constitutive Receipt-Index Event Operator — Pre-Event Test Protocol v0.1</h1>
+<p><strong>Status:</strong> <code>FROZEN CANDIDATE TEST PROTOCOL</code><br />
+<strong>Target access:</strong> forbidden until prediction artifact is sealed.</p>
+<h2 id="predictor-inputs">Predictor inputs</h2>
+<p>Allowed:</p>
+<ol type="1">
+<li>frame-aligned current state <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mover><mi>θ</mi><mo accent="true">‾</mo></mover><mi>n</mi><mo>−</mo></msubsup><annotation encoding="application/x-tex">\bar\theta_n^-</annotation></semantics></math>;</li>
+<li>source-derived dimensions <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>d</mi><mi>n</mi><mo>−</mo></msubsup><mo>=</mo><mo>dim</mo><msubsup><mi>ℒ</mi><mi>n</mi><mo>−</mo></msubsup><mo>,</mo><mspace width="2.0em"></mspace><msubsup><mi>d</mi><mi>n</mi><mo>+</mo></msubsup><mo>=</mo><mo>dim</mo><msubsup><mi>ℒ</mi><mi>n</mi><mo>+</mo></msubsup><mo>;</mo></mrow><annotation encoding="application/x-tex">
+d_n^-=\dim\mathcal L_n^-,
+\qquad
+d_n^+=\dim\mathcal L_n^+;
+</annotation></semantics></math></li>
+<li>pair-integrity vector <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>n</mi></msub><annotation encoding="application/x-tex">T_n</annotation></semantics></math>;</li>
+<li>pre-event quadratic burden vector <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>W</mi><mi>n</mi><mrow><mi>B</mi><mn>2</mn></mrow></msubsup><annotation encoding="application/x-tex">W_n^{B2}</annotation></semantics></math>;</li>
+<li>exact source receipts used to construct <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>ℒ</mi><mi>n</mi><mo>±</mo></msubsup><annotation encoding="application/x-tex">\mathcal L_n^\pm</annotation></semantics></math>.</li>
+</ol>
+<p>Forbidden:</p>
+<ul>
+<li>observed <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>θ</mi><mi>n</mi><mo>+</mo></msubsup><annotation encoding="application/x-tex">\theta_n^+</annotation></semantics></math>;</li>
+<li>terminal residuals;</li>
+<li>target event polarity;</li>
+<li>target event multiplicity;</li>
+<li>post-event lineage repairs;</li>
+<li>target-aware tie breaking.</li>
+</ul>
+<h2 id="frozen-law">Frozen law</h2>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>=</mo><msubsup><mi>d</mi><mi>n</mi><mo>−</mo></msubsup><mo>−</mo><msubsup><mi>d</mi><mi>n</mi><mo>+</mo></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\mu_{\Theta,n}=d_n^- - d_n^+.
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>k</mi><mi>n</mi><mo>+</mo></msubsup><mo>=</mo><msub><mi>w</mi><mi>H</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mover><mi>θ</mi><mo accent="true">‾</mo></mover><mi>n</mi><mo>−</mo></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><msub><mi>μ</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">
+k_n^+=w_H(\bar\theta_n^-)+\mu_{\Theta,n}.
+</annotation></semantics></math></p>
+<p>If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>k</mi><mi>n</mi><mo>+</mo></msubsup><mo>∉</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">k_n^+\notin\{0,1,2,3\}</annotation></semantics></math>, verdict is <code>SOURCE_INFEASIBLE</code>.</p>
+<p>Otherwise:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Θ</mi><mrow><mrow><mi mathvariant="normal">o</mi><mi>p</mi><mi>t</mi></mrow><mo>,</mo><mi>n</mi></mrow></msub><mo>=</mo><mo>arg</mo><munder><mo>min</mo><mrow><mi>θ</mi><mo>∈</mo><msub><mi>𝒜</mi><msubsup><mi>k</mi><mi>n</mi><mo>+</mo></msubsup></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>T</mi><mi>n</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow></munder><munder><mo>∑</mo><mi>p</mi></munder><msub><mi>θ</mi><mi>p</mi></msub><msubsup><mi>W</mi><mrow><mi>p</mi><mo>,</mo><mi>n</mi></mrow><mrow><mi>B</mi><mn>2</mn></mrow></msubsup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\Theta_{{\mathrm opt},n}
+=
+\arg\min_{\theta\in\mathcal A_{k_n^+}(T_n)}
+\sum_p\theta_pW_{p,n}^{B2}.
+</annotation></semantics></math></p>
+<ul>
+<li>empty set -&gt; <code>SOURCE_INFEASIBLE</code>;</li>
+<li>non-singleton optimum -&gt; <code>HOLD_UNRESOLVED_SYMMETRY</code>;</li>
+<li>singleton -&gt; freeze <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>θ</mi><mi>n</mi><mo>+</mo></msubsup><annotation encoding="application/x-tex">\theta_n^+</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">c_{\Theta,n}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>o</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">o_{\Theta,n}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">a_n</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>μ</mi><mrow><mi>Θ</mi><mo>,</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">\mu_{\Theta,n}</annotation></semantics></math>, and gross toggle count.</li>
+</ul>
+<h2 id="test">Test</h2>
+<p>Only after the prediction file hash is frozen may the actual endpoint receipt be released.</p>
+<p>Exact endpoint equality is the primary finite test.</p>
+<p>Diagnostics may decompose: - Hamming shell; - net multiplicity; - close addresses; - reopen addresses; - gross toggle count.</p>
+<p>Diagnostics cannot rewrite the primary verdict.</p>
+<h2 id="reopen-rule">Reopen rule</h2>
+<p>A failed held-out endpoint prediction does not permit changing: - the index orientation; - burden objective; - integrity rule; - tie rule; - source-space construction.</p>
+<p>Any repair requires a new version and a fresh held-out corpus.</p>

@@ -1,0 +1,181 @@
+<header class="primer-hero">
+  <p class="eyebrow">Visual primer</p>
+  <h1>From a tetrahedron to a testable finite transport system</h1>
+  <p class="primer-deck">This primer introduces the geometry and mathematics used in the paper. Each panel states what is exact, what remains conditional, and where to continue in the formal manuscript.</p>
+  <div class="claim-legend" aria-label="Claim status legend">
+    <span><i class="legend-exact"></i>Exact finite result</span>
+    <span><i class="legend-candidate"></i>Candidate construction</span>
+    <span><i class="legend-test"></i>Experimental test</span>
+  </div>
+</header>
+
+<section class="primer-section" id="primer-carrier">
+  <div class="primer-copy">
+    <p class="module-number">01 · Geometry</p>
+    <h2>The tetrahedral carrier</h2>
+    <p>A filled tetrahedron contains four vertices, six edges, four triangular faces, and one three-dimensional cell. The paper uses this finite object as a relational carrier; it does not identify the tetrahedron with physical space.</p>
+    <div class="exact-strip"><span>Exact count</span><math><mrow><mo>(</mo><mn>4</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo>)</mo></mrow></math></div>
+    <p class="figure-controls-label">Highlight an opposite-edge pair</p>
+    <div class="segmented" role="group" aria-label="Opposite-edge matching">
+      <button class="active" data-matching="A" data-label="M_A = {12, 34}">A</button>
+      <button data-matching="B" data-label="M_B = {13, 24}">B</button>
+      <button data-matching="C" data-label="M_C = {14, 23}">C</button>
+    </div>
+    <output id="matchingReadout">M_A = {12, 34}</output>
+    <a class="continue-link" href="#/manuscript?section=21-tetrahedral-carrier-and-opposite-edge-fiber">Formal treatment: §2.1 <span>→</span></a>
+  </div>
+  <figure class="diagram-card">
+    <svg class="tetra-diagram" viewBox="0 0 520 420" role="img" aria-labelledby="tetraTitle tetraDesc">
+      <title id="tetraTitle">Labeled tetrahedron and opposite-edge matchings</title>
+      <desc id="tetraDesc">Four vertices joined by six edges. Selecting A, B, or C highlights one pair of non-adjacent edges.</desc>
+      <path class="face face-one" d="M260 42 70 345 450 345Z"/><path class="face face-two" d="M260 42 260 242 70 345Z"/><path class="face face-three" d="M260 42 450 345 260 242Z"/>
+      <g class="edges">
+        <line data-edge="A" class="selected" x1="260" y1="42" x2="70" y2="345"/><line data-edge="B" x1="260" y1="42" x2="450" y2="345"/><line data-edge="C" x1="260" y1="42" x2="260" y2="242"/>
+        <line data-edge="C" x1="70" y1="345" x2="450" y2="345"/><line data-edge="B" x1="70" y1="345" x2="260" y2="242"/><line data-edge="A" class="selected" x1="450" y1="345" x2="260" y2="242"/>
+      </g>
+      <g class="vertices"><circle cx="260" cy="42" r="11"/><circle cx="70" cy="345" r="11"/><circle cx="450" cy="345" r="11"/><circle cx="260" cy="242" r="11"/></g>
+      <g class="vertex-labels"><text x="260" y="22">1</text><text x="48" y="370">2</text><text x="472" y="370">3</text><text x="260" y="275">4</text></g>
+      <g class="count-badges"><text x="24" y="35">4 vertices</text><text x="24" y="58">6 edges</text><text x="400" y="35">4 faces</text><text x="400" y="58">1 cell</text></g>
+    </svg>
+    <figcaption><span>EXACT FINITE RESULT</span> The three perfect matchings partition the six edges into opposite pairs.</figcaption>
+  </figure>
+</section>
+
+<section class="primer-section reverse" id="primer-chains">
+  <div class="primer-copy">
+    <p class="module-number">02 · Algebraic topology</p>
+    <h2>Geometry becomes a chain complex</h2>
+    <p>The tetrahedron is reorganized by simplex dimension. Boundary maps carry a volume to faces, faces to edges, and edges to vertices. Applying two consecutive boundary maps gives zero: internal orientations cancel exactly.</p>
+    <div class="exact-strip"><span>Exact identity</span><math><mrow><msub><mi>B</mi><mn>1</mn></msub><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="1em"/><msub><mi>B</mi><mn>2</mn></msub><msub><mi>B</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow></math></div>
+    <a class="continue-link" href="#/manuscript?section=22-filled-tetrahedral-chain-carrier">Formal treatment: §2.2 <span>→</span></a>
+  </div>
+  <figure class="diagram-card">
+    <svg class="chain-diagram" viewBox="0 0 620 390" role="img" aria-labelledby="chainTitle chainDesc">
+      <title id="chainTitle">Exploded tetrahedral chain complex</title>
+      <desc id="chainDesc">Four layers show one volume, four faces, six edges, and four vertices, connected by boundary maps.</desc>
+      <g class="chain-arrow"><path d="M150 190H220M305 190H375M460 190H530"/><text x="185" y="174">B₃</text><text x="340" y="174">B₂</text><text x="495" y="174">B₁</text></g>
+      <g transform="translate(22 100)"><path class="solid" d="M56 5 7 93h98Z"/><path class="inner" d="M56 5v61L7 93m49-27 49 27"/><text x="56" y="122">C₃ · 1 cell</text></g>
+      <g transform="translate(220 72)" class="face-stack"><path d="M43 5 8 66h70Z"/><path d="M43 78 8 139h70Z"/><path d="M110 5 75 66h70Z"/><path d="M110 78 75 139h70Z"/><text x="77" y="174">C₂ · 4 faces</text></g>
+      <g transform="translate(380 92)" class="edge-stack"><line x1="10" y1="10" x2="80" y2="10"/><line x1="10" y1="37" x2="80" y2="37"/><line x1="10" y1="64" x2="80" y2="64"/><line x1="10" y1="91" x2="80" y2="91"/><line x1="10" y1="118" x2="80" y2="118"/><line x1="10" y1="145" x2="80" y2="145"/><text x="45" y="180">C₁ · 6 edges</text></g>
+      <g transform="translate(545 110)" class="vertex-stack"><circle cy="10" r="8"/><circle cy="55" r="8"/><circle cy="100" r="8"/><circle cy="145" r="8"/><text x="0" y="180">C₀ · 4 vertices</text></g>
+      <text class="boundary-note" x="310" y="350">boundary ∘ boundary = 0</text>
+    </svg>
+    <figcaption><span>EXACT FINITE RESULT</span> The chain dimensions are <math><mrow><mo>(</mo><mn>4</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo>)</mo></mrow></math>, ordered here from the filled cell down to vertices.</figcaption>
+  </figure>
+</section>
+
+<section class="primer-section" id="primer-transport">
+  <div class="primer-copy">
+    <p class="module-number">03 · Transport</p>
+    <h2>Incidence carries the flow</h2>
+    <p>A chain state assigns an amplitude to every simplex. The skew Hodge–Dirac generator exchanges amplitude only across incidences—vertex to edge, edge to face, and face to cell—while the total quadratic support remains constant.</p>
+    <div class="exact-strip"><span>Exact conservation</span><math><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>s</mi></mrow></mfrac><mo>(</mo><msup><mi>c</mi><mi>T</mi></msup><mi>c</mi><mo>)</mo><mo>=</mo><mn>0</mn></mrow></math></div>
+    <a class="continue-link" href="#/manuscript?section=31-skew-transport-and-conserved-support">Formal treatment: §§3.1–3.3 <span>→</span></a>
+  </div>
+  <figure class="diagram-card transport-card">
+    <div class="support-meter"><span>Quadratic support</span><strong>constant</strong></div>
+    <svg class="hasse-mini" viewBox="0 0 600 350" role="img" aria-labelledby="hasseTitle hasseDesc">
+      <title id="hasseTitle">Layered Hasse-current transport</title><desc id="hasseDesc">Pulses move along incidence lines between vertices, edges, faces, and the tetrahedral cell.</desc>
+      <g class="incidences"><path d="M90 295 170 215 300 295 430 215 510 295M170 215 300 125 430 215M300 295 300 125M300 125 300 45"/></g>
+      <g class="flow-pulses"><circle r="6"><animateMotion dur="3s" repeatCount="indefinite" path="M90 295 170 215 300 125 300 45"/></circle><circle r="6"><animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite" path="M510 295 430 215 300 125 300 45"/></circle></g>
+      <g class="hasse-nodes"><circle cx="90" cy="295" r="14"/><circle cx="300" cy="295" r="14"/><circle cx="510" cy="295" r="14"/><circle cx="170" cy="215" r="16"/><circle cx="430" cy="215" r="16"/><circle cx="300" cy="125" r="18"/><circle cx="300" cy="45" r="21"/></g>
+      <g class="layer-labels"><text x="15" y="300">C₀</text><text x="105" y="220">C₁</text><text x="235" y="130">C₂</text><text x="235" y="50">C₃</text></g>
+    </svg>
+    <figcaption><span>EXACT FINITE RESULT</span> The animation depicts finite incidence transport, not physical energy flow or physical time.</figcaption>
+  </figure>
+</section>
+
+<section class="primer-section reverse" id="primer-fiber">
+  <div class="primer-copy">
+    <p class="module-number">04 · Binary fiber</p>
+    <h2>Eight addresses, four Hamming shells</h2>
+    <p>One binary coordinate is assigned to each opposite-edge class. The eight three-bit addresses form a cube. Grouping them by the number of active bits produces the exact multiplicities <math><mrow><mo>(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo>)</mo></mrow></math>.</p>
+    <div class="segmented shell-picker" role="group" aria-label="Select Hamming weight"><button class="active" data-shell="0">0</button><button data-shell="1">1</button><button data-shell="2">2</button><button data-shell="3">3</button></div>
+    <output id="shellReadout">Weight 0: 1 address</output>
+    <a class="continue-link" href="#/manuscript?section=41-exact-hamming-branch-structure">Formal treatment: §4.1 <span>→</span></a>
+  </div>
+  <figure class="diagram-card">
+    <svg class="cube-diagram" viewBox="0 0 560 420" role="img" aria-labelledby="cubeTitle cubeDesc">
+      <title id="cubeTitle">Three-bit address cube grouped by Hamming weight</title><desc id="cubeDesc">Eight binary addresses occupy cube vertices and are colored by Hamming weight.</desc>
+      <g class="cube-edges"><path d="M125 105H365V345H125ZM215 45H455V285H215ZM125 105l90-60m150 60 90-60m-330 300 90-60m150 60 90-60"/></g>
+      <g class="cube-nodes">
+        <g data-weight="0"><circle cx="125" cy="345" r="18"/><text x="91" y="377">000</text></g>
+        <g data-weight="1" class="muted"><circle cx="125" cy="105" r="18"/><text x="91" y="92">001</text><circle cx="365" cy="345" r="18"/><text x="379" y="377">010</text><circle cx="215" cy="285" r="18"/><text x="178" y="314">100</text></g>
+        <g data-weight="2" class="muted"><circle cx="365" cy="105" r="18"/><text x="379" y="92">011</text><circle cx="215" cy="45" r="18"/><text x="177" y="35">101</text><circle cx="455" cy="285" r="18"/><text x="468" y="314">110</text></g>
+        <g data-weight="3" class="muted"><circle cx="455" cy="45" r="18"/><text x="469" y="35">111</text></g>
+      </g>
+      <g class="shell-legend"><text x="30" y="35">w<tspan dy="3" font-size="11">H</tspan><tspan dy="-3"> = 0</tspan></text><text x="30" y="60">w<tspan dy="3" font-size="11">H</tspan><tspan dy="-3"> = 1</tspan></text><text x="30" y="85">w<tspan dy="3" font-size="11">H</tspan><tspan dy="-3"> = 2</tspan></text><text x="30" y="110">w<tspan dy="3" font-size="11">H</tspan><tspan dy="-3"> = 3</tspan></text></g>
+    </svg>
+    <figcaption><span>EXACT FINITE RESULT</span> <math><mrow><mi>Θ</mi><mo>≅</mo><msubsup><mi>𝔽</mi><mn>2</mn><mn>3</mn></msubsup></mrow></math> is an address fiber; the diagram does not assign particle identities to its vertices.</figcaption>
+  </figure>
+</section>
+
+<section class="primer-section" id="primer-pachner">
+  <div class="primer-copy">
+    <p class="module-number">05 · Retriangulation</p>
+    <h2>Change the interior, preserve the boundary</h2>
+    <p>A <math><mrow><mn>2</mn><mo>↔</mo><mn>3</mn></mrow></math> Pachner move replaces two tetrahedra sharing an internal face with three tetrahedra sharing an internal edge. The outer triangulated boundary is unchanged while the internal decomposition changes.</p>
+    <div class="segmented wide" role="group" aria-label="Pachner move state"><button class="active" data-pachner="two">2 tetrahedra</button><button data-pachner="three">3 tetrahedra</button></div>
+    <a class="continue-link" href="#/manuscript?section=51-oriented-pachner-pair">Formal treatment: §§5.1–5.3 <span>→</span></a>
+  </div>
+  <figure class="diagram-card pachner-card">
+    <svg data-pachner-state="two" viewBox="0 0 600 390" role="img" aria-label="Two tetrahedra sharing an internal face">
+      <g class="pachner-boundary"><path d="M90 190 300 45 510 190 300 345Z"/><path d="M90 190 300 230 510 190M300 45v185m0 0v115"/></g><path class="internal-face" d="M90 190 510 190 300 230Z"/><text x="300" y="372">shared internal face</text>
+    </svg>
+    <svg data-pachner-state="three" viewBox="0 0 600 390" role="img" aria-label="Three tetrahedra sharing an internal edge" hidden>
+      <g class="pachner-boundary"><path d="M90 190 300 45 510 190 300 345Z"/><path d="M90 190 300 230 510 190M300 45v185m0 0v115"/></g><line class="internal-edge" x1="300" y1="45" x2="300" y2="345"/><path class="relay-spokes" d="M90 190 300 45M510 190 300 345M300 230 300 45"/><text x="300" y="372">shared internal edge</text>
+    </svg>
+    <figcaption><span>EXACT COMBINATORIAL MOVE</span> The current A/B/C relay has additional spectral constraints and no finite nonzero common recurrence.</figcaption>
+  </figure>
+</section>
+
+<section class="primer-section reverse" id="primer-psr">
+  <div class="primer-copy">
+    <p class="module-number">06 · Reconstruction</p>
+    <h2>Why a Projective Support Receipt is needed</h2>
+    <p>Simple support summaries do not identify the chain ray. A sufficient PSR adds the information needed to propagate relative signs across each connected support component.</p>
+    <div class="step-buttons" role="group" aria-label="Projective reconstruction steps">
+      <button class="active" data-psr-step="1"><b>1</b> Supports</button><button data-psr-step="2"><b>2</b> Forest signs</button><button data-psr-step="3"><b>3</b> Root sign</button><button data-psr-step="4"><b>4</b> Chain ray</button>
+    </div>
+    <output id="psrReadout">Supports fix magnitudes, but not relative signs.</output>
+    <a class="continue-link" href="#/manuscript?section=61-ray-nonidentifiability-before-psr">Formal treatment: §§6.1–6.4 <span>→</span></a>
+  </div>
+  <figure class="diagram-card psr-card">
+    <svg viewBox="0 0 620 390" role="img" aria-labelledby="psrTitle psrDesc">
+      <title id="psrTitle">Four-step projective reconstruction</title><desc id="psrDesc">Magnitude supports, forest-relative signs, and a root sign progressively reconstruct a chain ray.</desc>
+      <g class="psr-base"><path d="M90 210H220L325 105 440 210 535 115"/><circle cx="90" cy="210" r="24"/><circle cx="220" cy="210" r="24"/><circle cx="325" cy="105" r="24"/><circle cx="440" cy="210" r="24"/><circle cx="535" cy="115" r="24"/></g>
+      <g data-psr-layer="1" class="visible psr-layer magnitudes"><text x="90" y="216">.4</text><text x="220" y="216">.2</text><text x="325" y="111">.7</text><text x="440" y="216">.3</text><text x="535" y="121">.5</text></g>
+      <g data-psr-layer="2" class="psr-layer signs"><text x="151" y="195">+</text><text x="263" y="146">−</text><text x="379" y="146">+</text><text x="481" y="148">−</text></g>
+      <g data-psr-layer="3" class="psr-layer root"><circle cx="90" cy="210" r="34"/><text x="90" y="266">root +</text></g>
+      <g data-psr-layer="4" class="psr-layer ray"><path d="M72 320H548"/><path d="m548 320-16-9v18Z"/><text x="310" y="350">reconstructed projective chain ray</text></g>
+    </svg>
+    <figcaption><span>EXACT RECONSTRUCTION THEOREM</span> Reconstruction is projective; the global sign remains physically and mathematically distinguished from an absolute vector choice.</figcaption>
+  </figure>
+</section>
+
+<section class="primer-section" id="primer-heldout">
+  <div class="primer-copy">
+    <p class="module-number">07 · Falsification design</p>
+    <h2>Reconstruct on fourteen; test on fourteen</h2>
+    <p>The fully supported filled tetrahedron has twenty-eight Hasse incidences. The protocol fixes an intrinsic split: fourteen incidences reconstruct the state and fourteen remain held out for a genuine prediction test.</p>
+    <div class="exact-strip"><span>Exact split</span><math><mrow><mn>28</mn><mo>=</mo><msub><mn>14</mn><mtext> reconstruction</mtext></msub><mo>+</mo><msub><mn>14</mn><mtext> held-out</mtext></msub></mrow></math></div>
+    <a class="continue-link" href="#/manuscript?section=71-intrinsic-held-out-design">Formal treatment: §7.1 <span>→</span></a>
+  </div>
+  <figure class="diagram-card heldout-card">
+    <svg viewBox="0 0 620 390" role="img" aria-labelledby="heldTitle heldDesc">
+      <title id="heldTitle">Twenty-eight Hasse incidences divided into reconstruction and held-out sets</title><desc id="heldDesc">Four layered rows of simplex nodes joined by fourteen solid reconstruction lines and fourteen dashed held-out lines.</desc>
+      <g class="held-lines reconstruct"><path d="M90 310 75 225M90 310 190 225M220 310 190 225M220 310 305 225M350 310 305 225M350 310 420 225M480 310 420 225M480 310 545 225M75 225 155 140M190 225 155 140M305 225 310 140M420 225 465 140M545 225 465 140M310 140 310 55"/></g>
+      <g class="held-lines test"><path d="M90 310 190 225M220 310 75 225M220 310 305 225M350 310 190 225M350 310 420 225M480 310 305 225M480 310 545 225M75 225 310 140M190 225 310 140M305 225 155 140M305 225 465 140M420 225 310 140M545 225 310 140M465 140 310 55"/></g>
+      <g class="held-nodes"><circle cx="90" cy="310" r="12"/><circle cx="220" cy="310" r="12"/><circle cx="350" cy="310" r="12"/><circle cx="480" cy="310" r="12"/><circle cx="75" cy="225" r="12"/><circle cx="190" cy="225" r="12"/><circle cx="305" cy="225" r="12"/><circle cx="420" cy="225" r="12"/><circle cx="545" cy="225" r="12"/><circle cx="155" cy="140" r="12"/><circle cx="310" cy="140" r="12"/><circle cx="465" cy="140" r="12"/><circle cx="310" cy="55" r="14"/></g>
+      <g class="held-key"><line x1="70" y1="365" x2="115" y2="365"/><text x="125" y="370">14 reconstruction</text><line class="test-sample" x1="350" y1="365" x2="395" y2="365"/><text x="405" y="370">14 held-out</text></g>
+    </svg>
+    <figcaption><span>QUANTITATIVE TEST DESIGN</span> The split is exact; successful experimental realization and an admissible independent corpus remain pending.</figcaption>
+  </figure>
+</section>
+
+<section class="claim-boundary-panel">
+  <p class="eyebrow">Scientific boundary</p>
+  <h2>What the primer does—and does not—claim</h2>
+  <div class="boundary-columns"><div><strong>Established inside the declared finite model</strong><p>Carrier counts, boundary identities, skew transport, support conservation, relay constraints, and projective reconstruction.</p></div><div><strong>Still open or conditional</strong><p>Constitutive event selection, empirical realization, independent-corpus admission, and any identification with physical spacetime, energy, or particles.</p></div></div>
+  <a class="primary-link" href="#/manuscript">Read the formal manuscript <span>→</span></a>
+</section>
