@@ -1,0 +1,242 @@
+{
+  "status": "NUMERICAL_SOURCE_MODEL_INTERVENTION_HESSIAN_HOLD",
+  "physical_promotion": 0,
+  "source_model": "LAMMPS stable_22Jul2025_update4 REBO with archived CH.rebo and rebuilt KCz width-2 plugin",
+  "original_potential_sha256": "70b77656397c0468631af41883d3b781f30432189f749eb0c3d724141055cbd4",
+  "source_archive_sha256": "d19342e8bec227a99a167930c4ca25972e79f7410f47b036959262a7af838b08",
+  "original_plugin_sha256": "d912c9b762c78ebbfb04f0994a9cd3b812c149b36b350b4ebc5b2a4d3db7acdc",
+  "rebuilt_plugin_sha256": "47d9a476289a40042f426d50d0a42f508fde915427171224266cc7e91f1936dc",
+  "intervention": "Replace six gC1 and six gC2 polynomial coefficients in just one segment adjacent to cos(theta)=-0.5 with the opposite segment coefficients, in a copied CH.rebo. Both directions tested; original CH.rebo unchanged. First-layer REBO only. The replacement changes the potential outside sampled path too, so it is a causal diagnostic for the join under this model, not term-level force decomposition or physical attribution.",
+  "cases": {
+    "21_dir_0": {
+      "probe": 34,
+      "component": 8,
+      "reconstruction": {
+        "case": "21_dir_0",
+        "initial_energy_eV": -7474.226105307149,
+        "energy_eV": -7474.275244045326,
+        "max_projected_force_eV_per_A": 1.4665122126402094e-12,
+        "relative_slide_A": [
+          0.46493176366846567,
+          0.26842847890878196
+        ],
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "evaluations": 368,
+        "seconds": 250.6944010257721
+      },
+      "fingerprint_max_abs_eV_per_A": {
+        "total": 4.038178493171894e-12,
+        "rebo1": 4.0389119999872936e-12,
+        "kc": 7.868705687030797e-15
+      },
+      "fingerprint_points": 9,
+      "fingerprint_components_per_point": 81,
+      "angular_geometry": {
+        "case": "21_dir_0",
+        "n_atoms": 1008,
+        "max_bond_A": 1.4208377460843997,
+        "baseline_near_1e12": 432,
+        "crossing_counts": {
+          "8e-05": 252,
+          "4e-05": 252,
+          "2e-05": 252,
+          "1e-05": 216,
+          "5e-06": 216,
+          "2.5e-06": 144,
+          "1.25e-06": 144
+        },
+        "roots_count": 252,
+        "roots_positive": 107,
+        "roots_negative": 145,
+        "root_abs_A_quantiles": [
+          3.963019532473698e-15,
+          1.503827685040243e-13,
+          4.280600248794042e-13,
+          1.116493408281763e-12,
+          3.0023442192399793e-06,
+          1.5029372738878665e-05,
+          1.5029373610208527e-05
+        ],
+        "root_A_clusters": [
+          {
+            "root_A_rounded_1e9": -1.5029e-05,
+            "count": 36
+          },
+          {
+            "root_A_rounded_1e9": -3.002e-06,
+            "count": 36
+          },
+          {
+            "root_A_rounded_1e9": 0.0,
+            "count": 144
+          },
+          {
+            "root_A_rounded_1e9": 2.502e-06,
+            "count": 36
+          }
+        ]
+      },
+      "side_fixed_by_h_eV_per_A2": [
+        {
+          "h_A": 8e-05,
+          "original": -7.291428712941084e-05,
+          "right_continuation": 2.2511593478213854e-08,
+          "left_continuation": 2.1410737627292065e-08
+        },
+        {
+          "h_A": 4e-05,
+          "original": -7.269991956526667e-05,
+          "right_continuation": 3.459780195669282e-08,
+          "left_continuation": 3.218584243569467e-08
+        },
+        {
+          "h_A": 2e-05,
+          "original": -7.26499954812887e-05,
+          "right_continuation": 1.2505352664504699e-07,
+          "left_continuation": 1.2474162325304405e-07
+        },
+        {
+          "h_A": 1e-05,
+          "original": -6.957992966505344e-05,
+          "right_continuation": 9.067920059280254e-08,
+          "left_continuation": 8.319109312537876e-08
+        },
+        {
+          "h_A": 5e-06,
+          "original": -5.1055593433435575e-05,
+          "right_continuation": -5.504971145597892e-09,
+          "left_continuation": -6.228351168147128e-08
+        },
+        {
+          "h_A": 2.5e-06,
+          "original": -1.5695240246582642e-05,
+          "right_continuation": 1.386702558114905e-06,
+          "left_continuation": 1.3333736892384707e-06
+        },
+        {
+          "h_A": 1.25e-06,
+          "original": 1.5296389155317058e-06,
+          "right_continuation": 1.4516970958666775e-06,
+          "left_continuation": 1.3543277610494897e-06
+        }
+      ]
+    },
+    "21_dir_10024": {
+      "probe": 30,
+      "component": 4,
+      "reconstruction": {
+        "case": "21_dir_10024",
+        "initial_energy_eV": -7474.233099961465,
+        "energy_eV": -7474.275244045368,
+        "max_projected_force_eV_per_A": 1.9334174747568806e-12,
+        "relative_slide_A": [
+          0.33155866027979003,
+          0.20613028371534534
+        ],
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "evaluations": 375,
+        "seconds": 191.85168719291687
+      },
+      "fingerprint_max_abs_eV_per_A": {
+        "total": 2.958002893395004e-12,
+        "rebo1": 2.958223943583249e-12,
+        "kc": 7.632783294297951e-15
+      },
+      "fingerprint_points": 9,
+      "fingerprint_components_per_point": 81,
+      "angular_geometry": {
+        "case": "21_dir_10024",
+        "n_atoms": 1008,
+        "max_bond_A": 1.4208377460844015,
+        "baseline_near_1e12": 432,
+        "crossing_counts": {
+          "8e-05": 180,
+          "4e-05": 180,
+          "2e-05": 108,
+          "1e-05": 72,
+          "5e-06": 72,
+          "2.5e-06": 36,
+          "1.25e-06": 0
+        },
+        "roots_count": 180,
+        "roots_positive": 72,
+        "roots_negative": 108,
+        "root_abs_A_quantiles": [
+          2.4767626867632247e-06,
+          2.4767644765400954e-06,
+          2.889006720104586e-06,
+          1.7357360372819846e-05,
+          3.467965883278948e-05,
+          3.467966707130636e-05,
+          3.467968409246099e-05
+        ],
+        "root_A_clusters": [
+          {
+            "root_A_rounded_1e9": -3.468e-05,
+            "count": 36
+          },
+          {
+            "root_A_rounded_1e9": -1.7357e-05,
+            "count": 36
+          },
+          {
+            "root_A_rounded_1e9": -2.889e-06,
+            "count": 36
+          },
+          {
+            "root_A_rounded_1e9": 2.477e-06,
+            "count": 36
+          },
+          {
+            "root_A_rounded_1e9": 3.468e-05,
+            "count": 36
+          }
+        ]
+      },
+      "side_fixed_by_h_eV_per_A2": [
+        {
+          "h_A": 8e-05,
+          "original": -7.810035481625732e-05,
+          "right_continuation": -3.171081175423751e-09,
+          "left_continuation": -2.5630049194091953e-09
+        },
+        {
+          "h_A": 4e-05,
+          "original": -7.789816796854865e-05,
+          "right_continuation": -4.604586223422302e-08,
+          "left_continuation": -4.781892037897251e-08
+        },
+        {
+          "h_A": 2e-05,
+          "original": -7.780658083067493e-05,
+          "right_continuation": -6.365588234302777e-08,
+          "left_continuation": -6.646461425674488e-08
+        },
+        {
+          "h_A": 1e-05,
+          "original": -7.312200084275133e-05,
+          "right_continuation": -1.8872354345944586e-08,
+          "left_continuation": -1.732757315409117e-08
+        },
+        {
+          "h_A": 5e-06,
+          "original": -5.4762823963550034e-05,
+          "right_continuation": -3.1064904337796406e-07,
+          "left_continuation": -3.0861991540120925e-07
+        },
+        {
+          "h_A": 2.5e-06,
+          "original": -1.8127887211782934e-05,
+          "right_continuation": -7.853560903825496e-07,
+          "left_continuation": -7.677891744606313e-07
+        },
+        {
+          "h_A": 1.25e-06,
+          "original": -8.077629711777945e-07,
+          "right_continuation": -1.978147376568984e-06,
+          "left_continuation": -1.98168261356102e-06
+        }
+      ]
+    }
+  }
+}
