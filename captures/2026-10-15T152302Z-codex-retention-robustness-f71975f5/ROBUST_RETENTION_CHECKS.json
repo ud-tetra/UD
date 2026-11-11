@@ -1,0 +1,186 @@
+{
+  "checks": [
+    {
+      "name": "source_boundary_and_common_initial_stock",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "reciprocal_perturbation_is_skew",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "all_vertex_inputs_annihilated_by_protected_projection",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "balanced_local_star_is_exactly_protected",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "unpaired_local_edge_leaks_into_cycles",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "twelve_exact_cycle_word_norms",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "twelve_words_sum_to_zero",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "six_frozen_representatives_have_distinct_labels",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "leading_code_minimum_distance",
+      "status": "PASS",
+      "scope": "EXACT",
+      "minimum_distance_squared": "136907/75600",
+      "off_diagonal_values": [
+        "-10697/151200",
+        "-119/1440",
+        "-205/3024"
+      ]
+    },
+    {
+      "name": "finite_six_word_distance_certificate",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "finite_six_score_gap_certificate",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "storage_integral_budget",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "rational_score_decoder_leakage_budget",
+      "status": "PASS",
+      "scope": "EXACT",
+      "epsilon": "1/4000000",
+      "worst_gap_error": "7885721/480000000000000",
+      "certified_margin_remaining": "499559/480000000000000"
+    },
+    {
+      "name": "nearest_template_decoder_leakage_budget",
+      "status": "PASS",
+      "scope": "EXACT",
+      "epsilon": "1/100000",
+      "amplitude_error_upper": "39/100000",
+      "decision_radius_lower": "607/1000000"
+    },
+    {
+      "name": "normalized_gap_does_not_restore_absolute_stock",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "exact_cycle_krylov_polynomial",
+      "status": "PASS",
+      "scope": "EXACT",
+      "degree": 21,
+      "polynomial_descending": [
+        "1",
+        "-125",
+        "7359",
+        "-271209",
+        "7014756",
+        "-135300024",
+        "2018432616",
+        "-23838790740",
+        "226289745118",
+        "-1742807933948",
+        "10946022395466",
+        "-56147659700964",
+        "234783321399159",
+        "-796099973528295",
+        "2169020228360187",
+        "-4683019201979259",
+        "7851757360298074",
+        "-9926165878547660",
+        "9051929037728640",
+        "-5546676072268800",
+        "2008072155513600",
+        "-316299126528000"
+      ],
+      "hankel_nonzero": true,
+      "protected_cyclic_dimension": 42
+    },
+    {
+      "name": "site_vector_is_not_a_laplacian_eigenvector",
+      "status": "PASS",
+      "scope": "EXACT"
+    },
+    {
+      "name": "finite_code_distance_matches_certificate",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "minimum_distance": 0.0013457086163093988
+    },
+    {
+      "name": "finite_word_taylor_error",
+      "status": "PASS",
+      "scope": "NUMERICAL"
+    },
+    {
+      "name": "numerical_reachable_basis",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "carrier_dimension": 281,
+      "joint_dimension": 401
+    },
+    {
+      "name": "exact_port_limit_has_protected_oscillators",
+      "status": "PASS",
+      "scope": "NUMERICAL"
+    },
+    {
+      "name": "same_edge_misalignment_erases_reachable_code",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "rates": [
+        {
+          "epsilon": 0.1,
+          "largest_real_part": -7.440931657193284e-06
+        },
+        {
+          "epsilon": 0.01,
+          "largest_real_part": -7.403175072973056e-08
+        }
+      ]
+    },
+    {
+      "name": "initial_cut_has_no_unreachable_dark_component",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "retained_stock": 8.347187449138966e-07,
+      "ideal_exported_storage": 0.49999958264062755
+    },
+    {
+      "name": "small_local_leak_respects_retention_budget",
+      "status": "PASS",
+      "scope": "NUMERICAL",
+      "epsilon": 1e-05,
+      "amplitude_error": 1.0239478124951044e-06,
+      "analytic_error_bound": 0.0003538478957593691
+    }
+  ],
+  "exact_count": 17,
+  "numerical_count": 7,
+  "physical_promotion": 0,
+  "status": "DEVELOPMENT_NO_REGISTRY_ENTRY",
+  "scope": "Conditional real-amplitude code and passive local perturbation; not native write/admission, quantum memory, calibrated energy or independent review."
+}
