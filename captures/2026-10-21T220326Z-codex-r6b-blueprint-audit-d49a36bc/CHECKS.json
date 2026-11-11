@@ -1,0 +1,54 @@
+{
+  "status": "PASS_CONSTRUCTOR_BLUEPRINT_DEFECT_CONTROLS",
+  "physical_promotion": 0,
+  "blueprint_status": "NOT_READY_FOR_CERTIFIED_PAYLOAD_AUDIT",
+  "submission_sha256": "c7168a60033bb5d8dd1d0fbe2addbc9883e1c09383096326a81d821281d4a822",
+  "index_snapshot_sha256": "145c42aa3517aeef166bcb8067a6fedf6c63ba379edad23dedd98de41c4c704c",
+  "counterexample": {
+    "matrix": [
+      [
+        "1",
+        "1e-9"
+      ],
+      [
+        "1e-9",
+        "2"
+      ]
+    ],
+    "trial": [
+      "1",
+      "0"
+    ],
+    "valid_second_eigenvalue_lower": "2",
+    "returned_variance": 0.0,
+    "returned_interval": [
+      1.0,
+      1.0
+    ],
+    "direct_residual_norm_display": 1e-09,
+    "exact_residual_squared": "1/1000000000000000000",
+    "exact_ground_strictly_less_than_1": true,
+    "returned_point_interval_excludes_true_ground": true
+  },
+  "actual_schema": {
+    "top_level": [
+      "base_commit",
+      "upstream",
+      "source_files",
+      "physical_promotion",
+      "execution_allowlist_note"
+    ],
+    "upstream_captures": 6,
+    "inventoried_files": 44,
+    "separately_pinned_manifests": 6,
+    "separately_pinned_source_files": 3,
+    "array_container_paths": [
+      "captures/2026-10-21T201221Z-codex-r6b-numerical-replay-2dbd851a/INPUTS.npz",
+      "captures/2026-10-21T201221Z-codex-r6b-numerical-replay-2dbd851a/NUMERICAL_PAYLOAD.npz"
+    ]
+  },
+  "frozen_criterion": "residual at stored solver return over full512 coordinates with original matrix scale; retain separately from Rayleigh variance",
+  "reviewer": "Devin Ramos; user-attested non-constructor, AI-assisted",
+  "independent_payload_execution": "NOT_SUBMITTED in this blueprint",
+  "promotion": "NONE"
+}
