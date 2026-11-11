@@ -1,0 +1,222 @@
+{
+  "core_star": {
+    "cells": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        2,
+        3,
+        5
+      ],
+      [
+        0,
+        1,
+        3,
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        7
+      ]
+    ],
+    "f": [
+      8,
+      18,
+      16,
+      5
+    ],
+    "chain_dimension": 47,
+    "boundary_faces": 12,
+    "characteristic_polynomial": "x*(x**2 + 2)*(x**2 + 3)**2*(x**2 + 4)**3*(x**2 + 5)**3*(x**2 + 6)**2*(x**4 + 9*x**2 + 16)**3*(x**4 + 10*x**2 + 20)**3",
+    "top_gram": [
+      [
+        4,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "top_gram_charpoly": "(x - 6)*(x - 4)**3*(x - 2)",
+    "operator_norm_numeric": 2.689994047855831,
+    "max_laplacian_numeric": 7.236067977499798,
+    "common_scale": "2*sqrt(2)",
+    "admitted_norm_budget": 1,
+    "exact_norm_ceiling_certificate": "8I-L positive definite by rational LDL",
+    "numeric_grid": {
+      "T": 3.141592653589793,
+      "points": 129,
+      "sigma": 0.25,
+      "smallest_sampled_cell_distance": 0.28646065943027166,
+      "largest_sampled_readout_error": 0.28334898456861535,
+      "analytic_grid_cover_error_upper_bound": 0.2952155912259886,
+      "grid_cover_proof": "norm ceiling 1 gives distance Lipschitz constant sqrt(2); nearest grid point at most pi/256 away; floating evaluations not interval-certified"
+    }
+  },
+  "chain": {
+    "cells": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "f": [
+      8,
+      18,
+      16,
+      5
+    ],
+    "chain_dimension": 47,
+    "boundary_faces": 12,
+    "characteristic_polynomial": "x*(x**2 + 2)*(x**2 + 3)*(x**2 + 4)**3*(x**2 + 5)**4*(x**2 + 6)*(x**2 + 7)*(x**4 + 8*x**2 + 13)*(x**6 + 12*x**4 + 43*x**2 + 47)*(x**6 + 14*x**4 + 63*x**2 + 91)*(x**8 + 20*x**6 + 141*x**4 + 404*x**2 + 376)",
+    "top_gram": [
+      [
+        4,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        4,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        4,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        4,
+        -1
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        4
+      ]
+    ],
+    "top_gram_charpoly": "(x - 5)*(x - 4)*(x - 3)*(x**2 - 8*x + 13)",
+    "operator_norm_numeric": 2.6993648862913644,
+    "max_laplacian_numeric": 7.2865707893427905,
+    "common_scale": "2*sqrt(2)",
+    "admitted_norm_budget": 1,
+    "exact_norm_ceiling_certificate": "8I-L positive definite by rational LDL",
+    "numeric_grid": {
+      "T": 3.141592653589793,
+      "points": 129,
+      "sigma": 0.25,
+      "smallest_sampled_cell_distance": 0.2780515308106225,
+      "largest_sampled_readout_error": 0.2890702011240736,
+      "analytic_grid_cover_error_upper_bound": 0.30104649994611926,
+      "grid_cover_proof": "norm ceiling 1 gives distance Lipschitz constant sqrt(2); nearest grid point at most pi/256 away; floating evaluations not interval-certified"
+    }
+  },
+  "two_cell_noise": {
+    "sigma": 0.25,
+    "cell_only_error_at_snapshot_zero": 0.5,
+    "cell_plus_normalized_derivative_error": 0.002338867490523633,
+    "noise_model": "independent isotropic Gaussian on declared observations; equal priors"
+  },
+  "interface": {
+    "input_dimension": 30,
+    "visible_dimension": 23,
+    "residual_dimension": 7,
+    "orthogonal_completion": "PASS",
+    "norm_balance": "PASS",
+    "unit_calibration_factor": "sqrt(2)",
+    "visible_residual_coupling_rank": 7,
+    "visible_generator_defect_rank": 14,
+    "projection_intertwining_defect_rank": 21,
+    "native_dynamic_intertwining": false
+  },
+  "selection": {
+    "identity_and_complement_covariant": "PASS",
+    "same_native_input_distinct_endpoints": "PASS",
+    "native_source_status": "OPEN; no constitutive law inferred",
+    "conditional_fixed_gate_closure_cases": 24576
+  },
+  "correlated_readout": {
+    "mahalanobis_distance_squared": 1.3333333333333335,
+    "correct_error": 0.28185143082538655,
+    "invalid_independent_error": 0.23975006109347669,
+    "scope": "stipulated positive-definite covariance, not measured noise"
+  }
+}
