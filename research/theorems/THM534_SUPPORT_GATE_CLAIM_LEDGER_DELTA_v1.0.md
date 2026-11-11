@@ -1,0 +1,24 @@
+# THM-534 v1.0 Claim and Dependency Ledger Delta — State-Selected Support Gates
+
+**Date:** 2026-10-21 | **Status:** development, exact scoped theorem candidates S35–S41 | **Source baseline:** UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2), Q153/Q155/Q156/Q161/Q162/Q165–Q167/Q169–Q173 | **Parent:** THM534_AUTONOMOUS_GATE_RESERVOIR_v0.9.md | **Physical promotion:** 0.
+
+| ID | Bin | Carrier & conclusion | Assumptions / provenance | Reopening criterion |
+|---|---|---|---|---|
+| S35 | EXACT / NO-GO | Q167 prospective support bilinear has two opposite sign-based S4-equivariant hard selectors | Q167 defines **masked** support flux only; sign preference and zero tie not source-selected | recover native transport-integrity gate from admitted packet readiness/boundary law |
+| S36 | EXACT CONDITIONAL | orthogonal 10D Cayley support update with state-dependent binary gates preserves support norm | fixed filled K4, unit metric, signed B1, any real dimensionless step; gate from provisional prospective q | source evolution parameter and actual packet carrier rule |
+| S37 | EXACT | Q167 visible support plus off-gate latent support equals total norm; mask switches transfer exactly Σ(h'-h)y'² between these accounts | H binary, source orientation signed, no physical energy map | establish actual gate-transition receipt and hidden support ownership in physical packet model |
+| S38 | EXACT CONDITIONAL | 8 exact steps show edge02 open at 0, closed at 3, reopened at 5; 24 S4 relabelings, positive burden stocks and nonzero face circulation | integer initial x/y, stock/r, candidate q>0 gate, declared epsilon=1/4 | independent packet-state admission / recovery proof and held-out generality |
+| S39 | EXACT / NO-GO | an all-off state is absorbing for this prospective-readiness-only support generator | H=0 ⇒ A_H=0; gate depends solely on x/y | admissible reset, neighbor, clock, phase or environmental repair event |
+| S40 | EXACT CONDITIONAL / NO-GO | separate invariants: ||x||²+||y||², Σ(ρ+r), while passive reservoir currents have finite face-circulation budget | Q162 and v0.9 passive r exchange, state-selected H | true physical conserved content/unit bridge, source and reversible transport selection |
+| S41 | EXACT / NO-GO | masked Q167 flux-only gate with g(0,0)=0 cannot reopen an off edge; needs an unmasked prospective or external/neighbor/memory signal | h'=g(h,2h q), g(0,0)=0 | derive the allowed candidate signal source from admitted update |
+
+## Strict governance
+1. **Structural closure χ_geom is fixed here**, because the filled tetrahedron's simplicial boundary is unchanged; no intrinsic geometric fracture/reclosure was derived. The only changing gate is **candidate transport-integrity τ**. Boundary permissions β remain enabled and static. This is NOT completion of the user's full χ/b/τ source-law objective.
+2. The readiness sign selection q>0 and numerical halfstep ε/2=1/8 are separate newly specified modeling rules. No unique selection from Q167, no calibration, and no physical time or energy.
+3. Q167 support norm, Q162 vertex-burden stock and the new v0.9 reservoir are different typed conserved objects. Algebraic latent support is not the physical face reservoir Q172; do not transfer their numerical values into one ledger.
+4. For the complete filled carrier, symmetry prevents deterministic nonuniform masks from a perfectly S4-symmetric initial state (prior S24). S38's initial amplitudes are explicitly asymmetric.
+5. Fixed-mask Cayley support conservation and the support mask switch receipt are exact; neither proves a phase holonomy/THM-534 six-channel Markov readout. Source P remains SOURCE-BLOCKED.
+6. Constructor verification is exact algebra across 64 fixed masks and eight witness steps; independent pure-Fraction alternate implementation is **same constructor**, not an independent reviewer. Historical THM-534 target matrix already exposed.
+7. **AUTO_LOCK (scoped):** exact algebraic/conditional S35–S41 under supplied assumptions. **AUTO_FREEZE:** claims that native χ/b fracture/recovery is derived; that passive reservoir yields persistent F_face; that gate switch creates physical energy; that a closed edge reopens using masked flux alone. Physical promotion 0.
+
+**Highest-value next evidence:** formalize a native packet rule for geometric face closure and boundary event transitions, then an externally reviewable source-to-gate theorem for genuine χ/b/τ rather than using sign of a prospective support bilinear as an assumed selector. If a full off state can recover, identify what additional carrier transfers the relevant support and include its conserved stock/flux receipts.
