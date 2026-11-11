@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "models": {
+    "two_face": {
+      "state_dimension": 30,
+      "visible_dimension": 23,
+      "tau": "1/2",
+      "minimum_gram_eigenvalue_exact": "1 - sqrt(3)/2",
+      "minimum_gram_eigenvalue_numeric": 0.13397459621556118,
+      "absolute_noise_gain_exact": "1 + sqrt(3)",
+      "absolute_noise_gain_numeric": 2.732050807568879,
+      "condition_number_numeric": 3.8637033051562777,
+      "certified_gram_lower_bound": "13/100",
+      "ldl_positive_pivots": 30,
+      "characteristic_polynomial": "(x - 2)**14*(x - 1)*(4*x - 7)*(4*x**2 - 8*x + 1)**7/65536",
+      "sharp_noise_witness": "PASS",
+      "centered_difference_and_retained_fisher_checks": "PASS"
+    },
+    "five_star": {
+      "state_dimension": 75,
+      "visible_dimension": 47,
+      "tau": "1/2",
+      "minimum_gram_eigenvalue_exact": "1 - sqrt(15)/4",
+      "minimum_gram_eigenvalue_numeric": 0.031754163448145835,
+      "absolute_noise_gain_exact": "sqrt(2)*(sqrt(3) + sqrt(5))",
+      "absolute_noise_gain_numeric": 5.6117674029515525,
+      "condition_number_numeric": 7.936237570137331,
+      "certified_gram_lower_bound": "31/1000",
+      "ldl_positive_pivots": 75,
+      "characteristic_polynomial": "(x - 2)**14*(x - 1)*(16*x - 31)*(16*x - 27)**3*(4*x**2 - 8*x + 1)**4*(8*x**2 - 16*x + 1)**6*(8*x**2 - 16*x + 5)**2*(12*x**2 - 24*x + 1)**6*(12*x**2 - 24*x + 5)**6*(16*x**2 - 32*x + 1)*(16*x**2 - 32*x + 5)**3/164473023104465444668166369181696",
+      "sharp_noise_witness": "PASS",
+      "centered_difference_and_retained_fisher_checks": "PASS"
+    },
+    "five_chain": {
+      "state_dimension": 75,
+      "visible_dimension": 47,
+      "tau": "1/2",
+      "minimum_gram_eigenvalue_exact": "smallest root of 64x^4-256x^3+280x^2-48x+1",
+      "minimum_gram_eigenvalue_numeric": 0.024164845584184667,
+      "absolute_noise_gain_exact": null,
+      "absolute_noise_gain_numeric": 6.4329175902867854,
+      "condition_number_numeric": 9.097519301812026,
+      "certified_gram_lower_bound": "241/10000",
+      "ldl_positive_pivots": 75,
+      "characteristic_polynomial": "(x - 2)**14*(x - 1)*(8*x - 11)*(16*x - 31)*(24*x - 43)*(48*x - 91)*(8*x**2 - 16*x + 5)*(16*x**2 - 32*x + 1)*(24*x**2 - 48*x + 5)*(48*x**2 - 96*x + 5)*(64*x**4 - 256*x**3 + 280*x**2 - 48*x + 1)**2*(64*x**4 - 256*x**3 + 296*x**2 - 80*x + 5)**2*(6144*x**8 - 49152*x**7 + 153600*x**6 - 233472*x**5 + 173856*x**4 - 56448*x**3 + 7472*x**2 - 352*x + 5)**2*(18432*x**8 - 147456*x**7 + 460800*x**6 - 700416*x**5 + 522080*x**4 - 171392*x**3 + 24656*x**2 - 1440*x + 25)**2/4678343768304794870561176723390464",
+      "sharp_noise_witness": "PASS",
+      "centered_difference_and_retained_fisher_checks": "PASS"
+    }
+  },
+  "coordinate_covariance_invariance": "PASS",
+  "GLS_covariance_identity": "PASS",
+  "fixed_norm_ill_conditioning_family": [
+    {
+      "cell_exchange_weight": 1.0,
+      "min_singular_value_numeric": 0.36602540378443854,
+      "certified_upper_bound": 0.5
+    },
+    {
+      "cell_exchange_weight": 0.1,
+      "min_singular_value_numeric": 0.049813086934164134,
+      "certified_upper_bound": 0.05
+    },
+    {
+      "cell_exchange_weight": 0.01,
+      "min_singular_value_numeric": 0.004999812505859475,
+      "certified_upper_bound": 0.005
+    }
+  ],
+  "generator_mismatch": "PASS",
+  "quantization_jitter_and_difference_remainder": "PASS",
+  "gaussian_95_percent_radius_for_two_cell_whitened_model": 18.075561117262815,
+  "scope": "exact spectra/LDL/Sturm certificates and separate floating fixtures; no empirical noise or physical cost",
+  "physical_promotion": 0
+}
