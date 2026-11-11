@@ -1,0 +1,972 @@
+{
+  "nodes": [
+    {
+      "id": "P1",
+      "label": "𝒟 Distinction",
+      "maturity": "Defined",
+      "depends": [],
+      "line": 770
+    },
+    {
+      "id": "P2",
+      "label": "ℛ Relation",
+      "maturity": "Defined",
+      "depends": [
+        "P1"
+      ],
+      "line": 771
+    },
+    {
+      "id": "O1",
+      "label": "𝒞₃ Triadic Closure",
+      "maturity": "Formalized",
+      "depends": [
+        "P1",
+        "P2"
+      ],
+      "line": 772
+    },
+    {
+      "id": "O2",
+      "label": "𝒜 Admissibility",
+      "maturity": "Formalized",
+      "depends": [
+        "O1"
+      ],
+      "line": 773
+    },
+    {
+      "id": "O3",
+      "label": "𝒯 Transport",
+      "maturity": "Formalized",
+      "depends": [
+        "O2"
+      ],
+      "line": 774
+    },
+    {
+      "id": "O4",
+      "label": "𝒮 Stability Functional",
+      "maturity": "Formalized",
+      "depends": [
+        "O3"
+      ],
+      "line": 775
+    },
+    {
+      "id": "O5",
+      "label": "E Evolution Operator",
+      "maturity": "Internally Derived",
+      "depends": [
+        "O2",
+        "O3",
+        "O4"
+      ],
+      "line": 776
+    },
+    {
+      "id": "T03",
+      "label": "UD-T03 Triadic Minimal Stability",
+      "maturity": "Formalized",
+      "depends": [
+        "P1",
+        "P2",
+        "O1",
+        "O3"
+      ],
+      "line": 777
+    },
+    {
+      "id": "T04",
+      "label": "UD-T04 Closure Persistence Advantage",
+      "maturity": "Sketch Built",
+      "depends": [
+        "T03",
+        "O3",
+        "O4"
+      ],
+      "line": 778
+    },
+    {
+      "id": "T05",
+      "label": "UD-T05 Admissibility Filtering",
+      "maturity": "Internally Derived",
+      "depends": [
+        "O2",
+        "O5"
+      ],
+      "line": 779
+    },
+    {
+      "id": "T06",
+      "label": "UD-T06 Stability Descent",
+      "maturity": "Internally Derived",
+      "depends": [
+        "O4",
+        "O5"
+      ],
+      "line": 780
+    },
+    {
+      "id": "T07",
+      "label": "UD-T07 Boundary Emergence",
+      "maturity": "Sketch Built",
+      "depends": [
+        "T03",
+        "O4"
+      ],
+      "line": 781
+    },
+    {
+      "id": "T11",
+      "label": "UD-T11 Compression Emergence",
+      "maturity": "Sketch Built",
+      "depends": [
+        "T04",
+        "T06"
+      ],
+      "line": 782
+    },
+    {
+      "id": "T12",
+      "label": "UD-T12 Law Compression",
+      "maturity": "Formalized",
+      "depends": [
+        "T11"
+      ],
+      "line": 783
+    },
+    {
+      "id": "T13",
+      "label": "UD-T13 Scale Projection",
+      "maturity": "Formalized",
+      "depends": [
+        "T12"
+      ],
+      "line": 784
+    },
+    {
+      "id": "T14",
+      "label": "UD-T14 Emergent Distance",
+      "maturity": "Internally Derived",
+      "depends": [
+        "O3"
+      ],
+      "line": 785
+    },
+    {
+      "id": "T15",
+      "label": "UD-T15 Metric Emergence",
+      "maturity": "Formalized",
+      "depends": [
+        "T14"
+      ],
+      "line": 786
+    },
+    {
+      "id": "T16",
+      "label": "UD-T16 Curvature from Closure Defect",
+      "maturity": "Formalized",
+      "depends": [
+        "T15",
+        "T07"
+      ],
+      "line": 787
+    },
+    {
+      "id": "T17",
+      "label": "UD-T17 Diffusion Recovery",
+      "maturity": "Externally Comparable",
+      "depends": [
+        "O3",
+        "O5"
+      ],
+      "line": 788
+    },
+    {
+      "id": "T18",
+      "label": "UD-T18 Wave Recovery",
+      "maturity": "Internally Derived",
+      "depends": [
+        "T17",
+        "O3"
+      ],
+      "line": 789
+    },
+    {
+      "id": "T19",
+      "label": "UD-T19 Force Gradient",
+      "maturity": "Sketch Built",
+      "depends": [
+        "T06",
+        "O4"
+      ],
+      "line": 790
+    },
+    {
+      "id": "T20",
+      "label": "UD-T20 Newtonian Limit",
+      "maturity": "Formalized",
+      "depends": [
+        "T19",
+        "T14"
+      ],
+      "line": 791
+    },
+    {
+      "id": "T21",
+      "label": "UD-T21 Continuity Equation",
+      "maturity": "Externally Comparable",
+      "depends": [
+        "O3",
+        "O5"
+      ],
+      "line": 792
+    },
+    {
+      "id": "T22",
+      "label": "UD-T22 Maxwell Correspondence",
+      "maturity": "Formalized",
+      "depends": [
+        "T18",
+        "T21"
+      ],
+      "line": 793
+    },
+    {
+      "id": "T23",
+      "label": "UD-T23 Einstein Correspondence",
+      "maturity": "Named",
+      "depends": [
+        "T15",
+        "T16"
+      ],
+      "line": 794
+    },
+    {
+      "id": "T24",
+      "label": "UD-T24 Discrete Admissibility Spectrum",
+      "maturity": "Formalized",
+      "depends": [
+        "O2",
+        "O4"
+      ],
+      "line": 795
+    },
+    {
+      "id": "T26",
+      "label": "UD-T26 Noncommuting Update",
+      "maturity": "Internally Derived",
+      "depends": [
+        "O2",
+        "O3"
+      ],
+      "line": 796
+    },
+    {
+      "id": "T27",
+      "label": "UD-T27 Schrödinger Correspondence",
+      "maturity": "Formalized",
+      "depends": [
+        "T24",
+        "T26"
+      ],
+      "line": 797
+    },
+    {
+      "id": "T29",
+      "label": "UD-T29 Entropy Counting",
+      "maturity": "Externally Comparable",
+      "depends": [
+        "T04",
+        "T13"
+      ],
+      "line": 798
+    },
+    {
+      "id": "T30",
+      "label": "UD-T30 Second-Law Tendency",
+      "maturity": "Sketch Built",
+      "depends": [
+        "T29"
+      ],
+      "line": 799
+    },
+    {
+      "id": "T31",
+      "label": "UD-T31 Bonding",
+      "maturity": "Sketch Built",
+      "depends": [
+        "T03",
+        "T04",
+        "O3"
+      ],
+      "line": 800
+    },
+    {
+      "id": "T32",
+      "label": "UD-T32 Reaction Transition",
+      "maturity": "Internally Derived",
+      "depends": [
+        "T31",
+        "T07"
+      ],
+      "line": 801
+    },
+    {
+      "id": "T33",
+      "label": "UD-T33 Elastic Response",
+      "maturity": "Internally Derived",
+      "depends": [
+        "T06",
+        "O4"
+      ],
+      "line": 802
+    },
+    {
+      "id": "T34",
+      "label": "UD-T34 Fracture Threshold",
+      "maturity": "Sketch Built",
+      "depends": [
+        "T33",
+        "T07"
+      ],
+      "line": 803
+    },
+    {
+      "id": "T35",
+      "label": "UD-T35 Homeostasis",
+      "maturity": "Formalized",
+      "depends": [
+        "T06",
+        "T07"
+      ],
+      "line": 804
+    },
+    {
+      "id": "T40",
+      "label": "UD-T40 Conscious Recursive Closure",
+      "maturity": "Named",
+      "depends": [
+        "T35"
+      ],
+      "line": 805
+    },
+    {
+      "id": "D1",
+      "label": "Diffusion Equation",
+      "maturity": "Continuum Recovered",
+      "depends": [
+        "T17"
+      ],
+      "line": 806
+    },
+    {
+      "id": "D2",
+      "label": "Wave Equation",
+      "maturity": "Continuum Recovered",
+      "depends": [
+        "T18"
+      ],
+      "line": 807
+    },
+    {
+      "id": "D3",
+      "label": "Continuity Equation",
+      "maturity": "Continuum Recovered",
+      "depends": [
+        "T21"
+      ],
+      "line": 808
+    },
+    {
+      "id": "D4",
+      "label": "Newtonian Mechanics",
+      "maturity": "Mapped by Correspondence",
+      "depends": [
+        "T19",
+        "T20"
+      ],
+      "line": 809
+    },
+    {
+      "id": "D5",
+      "label": "Thermodynamics",
+      "maturity": "Mapped by Correspondence",
+      "depends": [
+        "T29",
+        "T30"
+      ],
+      "line": 810
+    },
+    {
+      "id": "D6",
+      "label": "Maxwell Equations",
+      "maturity": "Mapped by Correspondence",
+      "depends": [
+        "T22"
+      ],
+      "line": 811
+    },
+    {
+      "id": "D7",
+      "label": "Schrödinger Equation",
+      "maturity": "Mapped by Correspondence",
+      "depends": [
+        "T27"
+      ],
+      "line": 812
+    },
+    {
+      "id": "D8",
+      "label": "Einstein Field Equation",
+      "maturity": "Open Conjecture",
+      "depends": [
+        "T23"
+      ],
+      "line": 813
+    },
+    {
+      "id": "D9",
+      "label": "Elasticity / Fracture",
+      "maturity": "Continuum Recovered",
+      "depends": [
+        "T33",
+        "T34"
+      ],
+      "line": 814
+    },
+    {
+      "id": "D10",
+      "label": "Chemical Dynamics",
+      "maturity": "Mapped by Correspondence",
+      "depends": [
+        "T31",
+        "T32"
+      ],
+      "line": 815
+    },
+    {
+      "id": "V1",
+      "label": "Foundations Dashboard",
+      "maturity": "Live UI",
+      "depends": [
+        "T03",
+        "T04",
+        "T06",
+        "T07"
+      ],
+      "line": 816
+    },
+    {
+      "id": "V2",
+      "label": "Physics Dashboard",
+      "maturity": "Live UI",
+      "depends": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D6",
+        "D8"
+      ],
+      "line": 817
+    },
+    {
+      "id": "V3",
+      "label": "Thermodynamics Dashboard",
+      "maturity": "Live UI",
+      "depends": [
+        "D5"
+      ],
+      "line": 818
+    },
+    {
+      "id": "V4",
+      "label": "Materials Dashboard",
+      "maturity": "Live UI",
+      "depends": [
+        "D9"
+      ],
+      "line": 819
+    },
+    {
+      "id": "V5",
+      "label": "Chemistry Dashboard",
+      "maturity": "Live UI",
+      "depends": [
+        "D10"
+      ],
+      "line": 820
+    },
+    {
+      "id": "V6",
+      "label": "Quantum Dashboard",
+      "maturity": "Live UI",
+      "depends": [
+        "T24",
+        "T26",
+        "D7"
+      ],
+      "line": 821
+    },
+    {
+      "id": "V7",
+      "label": "Biology / Cognition Dashboard",
+      "maturity": "Live UI",
+      "depends": [
+        "T35",
+        "T40"
+      ],
+      "line": 822
+    },
+    {
+      "id": "V8",
+      "label": "Governance Dashboard",
+      "maturity": "Live UI",
+      "depends": [
+        "T03",
+        "T04",
+        "T06",
+        "T17",
+        "T21",
+        "T29",
+        "T22",
+        "T23",
+        "T27",
+        "T40"
+      ],
+      "line": 823
+    }
+  ],
+  "edges": [
+    {
+      "from": "P1",
+      "to": "P2"
+    },
+    {
+      "from": "P1",
+      "to": "O1"
+    },
+    {
+      "from": "P2",
+      "to": "O1"
+    },
+    {
+      "from": "O1",
+      "to": "O2"
+    },
+    {
+      "from": "O2",
+      "to": "O3"
+    },
+    {
+      "from": "O3",
+      "to": "O4"
+    },
+    {
+      "from": "O2",
+      "to": "O5"
+    },
+    {
+      "from": "O3",
+      "to": "O5"
+    },
+    {
+      "from": "O4",
+      "to": "O5"
+    },
+    {
+      "from": "P1",
+      "to": "T03"
+    },
+    {
+      "from": "P2",
+      "to": "T03"
+    },
+    {
+      "from": "O1",
+      "to": "T03"
+    },
+    {
+      "from": "O3",
+      "to": "T03"
+    },
+    {
+      "from": "T03",
+      "to": "T04"
+    },
+    {
+      "from": "O3",
+      "to": "T04"
+    },
+    {
+      "from": "O4",
+      "to": "T04"
+    },
+    {
+      "from": "O2",
+      "to": "T05"
+    },
+    {
+      "from": "O5",
+      "to": "T05"
+    },
+    {
+      "from": "O4",
+      "to": "T06"
+    },
+    {
+      "from": "O5",
+      "to": "T06"
+    },
+    {
+      "from": "T03",
+      "to": "T07"
+    },
+    {
+      "from": "O4",
+      "to": "T07"
+    },
+    {
+      "from": "T04",
+      "to": "T11"
+    },
+    {
+      "from": "T06",
+      "to": "T11"
+    },
+    {
+      "from": "T11",
+      "to": "T12"
+    },
+    {
+      "from": "T12",
+      "to": "T13"
+    },
+    {
+      "from": "O3",
+      "to": "T14"
+    },
+    {
+      "from": "T14",
+      "to": "T15"
+    },
+    {
+      "from": "T15",
+      "to": "T16"
+    },
+    {
+      "from": "T07",
+      "to": "T16"
+    },
+    {
+      "from": "O3",
+      "to": "T17"
+    },
+    {
+      "from": "O5",
+      "to": "T17"
+    },
+    {
+      "from": "T17",
+      "to": "T18"
+    },
+    {
+      "from": "O3",
+      "to": "T18"
+    },
+    {
+      "from": "T06",
+      "to": "T19"
+    },
+    {
+      "from": "O4",
+      "to": "T19"
+    },
+    {
+      "from": "T19",
+      "to": "T20"
+    },
+    {
+      "from": "T14",
+      "to": "T20"
+    },
+    {
+      "from": "O3",
+      "to": "T21"
+    },
+    {
+      "from": "O5",
+      "to": "T21"
+    },
+    {
+      "from": "T18",
+      "to": "T22"
+    },
+    {
+      "from": "T21",
+      "to": "T22"
+    },
+    {
+      "from": "T15",
+      "to": "T23"
+    },
+    {
+      "from": "T16",
+      "to": "T23"
+    },
+    {
+      "from": "O2",
+      "to": "T24"
+    },
+    {
+      "from": "O4",
+      "to": "T24"
+    },
+    {
+      "from": "O2",
+      "to": "T26"
+    },
+    {
+      "from": "O3",
+      "to": "T26"
+    },
+    {
+      "from": "T24",
+      "to": "T27"
+    },
+    {
+      "from": "T26",
+      "to": "T27"
+    },
+    {
+      "from": "T04",
+      "to": "T29"
+    },
+    {
+      "from": "T13",
+      "to": "T29"
+    },
+    {
+      "from": "T29",
+      "to": "T30"
+    },
+    {
+      "from": "T03",
+      "to": "T31"
+    },
+    {
+      "from": "T04",
+      "to": "T31"
+    },
+    {
+      "from": "O3",
+      "to": "T31"
+    },
+    {
+      "from": "T31",
+      "to": "T32"
+    },
+    {
+      "from": "T07",
+      "to": "T32"
+    },
+    {
+      "from": "T06",
+      "to": "T33"
+    },
+    {
+      "from": "O4",
+      "to": "T33"
+    },
+    {
+      "from": "T33",
+      "to": "T34"
+    },
+    {
+      "from": "T07",
+      "to": "T34"
+    },
+    {
+      "from": "T06",
+      "to": "T35"
+    },
+    {
+      "from": "T07",
+      "to": "T35"
+    },
+    {
+      "from": "T35",
+      "to": "T40"
+    },
+    {
+      "from": "T17",
+      "to": "D1"
+    },
+    {
+      "from": "T18",
+      "to": "D2"
+    },
+    {
+      "from": "T21",
+      "to": "D3"
+    },
+    {
+      "from": "T19",
+      "to": "D4"
+    },
+    {
+      "from": "T20",
+      "to": "D4"
+    },
+    {
+      "from": "T29",
+      "to": "D5"
+    },
+    {
+      "from": "T30",
+      "to": "D5"
+    },
+    {
+      "from": "T22",
+      "to": "D6"
+    },
+    {
+      "from": "T27",
+      "to": "D7"
+    },
+    {
+      "from": "T23",
+      "to": "D8"
+    },
+    {
+      "from": "T33",
+      "to": "D9"
+    },
+    {
+      "from": "T34",
+      "to": "D9"
+    },
+    {
+      "from": "T31",
+      "to": "D10"
+    },
+    {
+      "from": "T32",
+      "to": "D10"
+    },
+    {
+      "from": "T03",
+      "to": "V1"
+    },
+    {
+      "from": "T04",
+      "to": "V1"
+    },
+    {
+      "from": "T06",
+      "to": "V1"
+    },
+    {
+      "from": "T07",
+      "to": "V1"
+    },
+    {
+      "from": "D1",
+      "to": "V2"
+    },
+    {
+      "from": "D2",
+      "to": "V2"
+    },
+    {
+      "from": "D3",
+      "to": "V2"
+    },
+    {
+      "from": "D4",
+      "to": "V2"
+    },
+    {
+      "from": "D6",
+      "to": "V2"
+    },
+    {
+      "from": "D8",
+      "to": "V2"
+    },
+    {
+      "from": "D5",
+      "to": "V3"
+    },
+    {
+      "from": "D9",
+      "to": "V4"
+    },
+    {
+      "from": "D10",
+      "to": "V5"
+    },
+    {
+      "from": "T24",
+      "to": "V6"
+    },
+    {
+      "from": "T26",
+      "to": "V6"
+    },
+    {
+      "from": "D7",
+      "to": "V6"
+    },
+    {
+      "from": "T35",
+      "to": "V7"
+    },
+    {
+      "from": "T40",
+      "to": "V7"
+    },
+    {
+      "from": "T03",
+      "to": "V8"
+    },
+    {
+      "from": "T04",
+      "to": "V8"
+    },
+    {
+      "from": "T06",
+      "to": "V8"
+    },
+    {
+      "from": "T17",
+      "to": "V8"
+    },
+    {
+      "from": "T21",
+      "to": "V8"
+    },
+    {
+      "from": "T29",
+      "to": "V8"
+    },
+    {
+      "from": "T22",
+      "to": "V8"
+    },
+    {
+      "from": "T23",
+      "to": "V8"
+    },
+    {
+      "from": "T27",
+      "to": "V8"
+    },
+    {
+      "from": "T40",
+      "to": "V8"
+    }
+  ]
+}

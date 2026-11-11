@@ -1,0 +1,27 @@
+{
+  "status": "PROPOSED_REQUIREMENTS_NOT_PREREGISTERED",
+  "scope": "Candidate future independent native action anchor; no apparatus or dataset admitted",
+  "required_inputs": [
+    "Exact source carrier and normalized-state domain",
+    "Independently justified apparatus-to-native map and its applicability domain",
+    "Positive monomial exponents W and known coefficients k, with calibration provenance",
+    "Frozen row-span certificate c satisfying transpose(c)*W=(1,2,-1), or a HOLD ambiguity witness",
+    "Independent measured anchor records with clocks, units, raw provenance and coefficient uncertainty",
+    "Joint log-anchor error bounds with evidenced coverage and declared correlations",
+    "Target dependence audit across the entire calibration and mapping chain",
+    "Frozen estimator, QPB1 comparison rule and non-constructor review receipt"
+  ],
+  "derived_requirements": {
+    "identifiability": "rank(W)=rank(stack(W,(1,2,-1)))",
+    "estimator": "log(Ahat0)=transpose(c)*log(y/k)",
+    "deterministic_error": "abs(log(Ahat0/A0)) <= sum(abs(c_j)*epsilon_j)",
+    "comparison_target": "eta_A=2/1 ONLY UNDER QPB1 postulated bridge; candidate status retained",
+    "circularity_exclusion": "Do not infer A0 by setting A0=2*hbar and then score that constructed value as an independent anchor"
+  },
+  "admitted_device": null,
+  "admitted_dataset": null,
+  "measurement_certificate": null,
+  "review_receipt": null,
+  "empirical_score": null,
+  "physical_promotion": 0
+}

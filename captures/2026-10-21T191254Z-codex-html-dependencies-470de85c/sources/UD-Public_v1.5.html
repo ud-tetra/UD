@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Unified Dynamics — Everything is Connected</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}]})"></script>
+
+<style>
+:root {
+  --bg: #0a0e1a;
+  --bg2: #0f1525;
+  --panel: #131928;
+  --panel2: #1a2235;
+  --line: rgba(255,255,255,0.08);
+  --line2: rgba(255,255,255,0.04);
+  --text: #e8edf8;
+  --muted: #8a9ab8;
+  --muted2: #5a6a88;
+  --gold: #f0c060;
+  --gold2: #e8a830;
+  --cyan: #40d0e0;
+  --cyan2: #20b8c8;
+  --violet: #a060f0;
+  --violet2: #8040d8;
+  --green: #40d088;
+  --green2: #28b870;
+  --rose: #f06080;
+  --accent: #5080ff;
+  --accent2: #3060e0;
+  --max: 1200px;
+  --r: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── BACKGROUND GEOMETRY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(80,128,255,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 85% 80%, rgba(160,96,240,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(64,208,136,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10,14,26,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  padding: 0 24px;
+}
+.nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  gap: 20px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.nav-logo svg { flex-shrink: 0; }
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .85rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: all .2s;
+}
+.nav-links a:hover { color: var(--text); background: var(--panel2); }
+
+/* ── SHELL ── */
+.shell {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 90px 24px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HERO ── */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  position: relative;
+}
+.hero-tetra {
+  margin: 0 auto 32px;
+  display: block;
+}
+.hero-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -.04em;
+  margin-bottom: 24px;
+}
+.h1-line1 { color: var(--text); display: block; }
+.h1-line2 {
+  display: block;
+  background: linear-gradient(135deg, var(--gold), var(--cyan), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.65;
+}
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .95rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .2s;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--violet));
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(80,128,255,0.35);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(80,128,255,0.5); }
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.btn-outline:hover { background: var(--panel2); border-color: var(--accent); }
+
+/* ── SECTION STYLES ── */
+section { margin-bottom: 60px; }
+.section-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.tag-gold { color: var(--gold); }
+.tag-cyan { color: var(--cyan); }
+.tag-violet { color: var(--violet); }
+.tag-green { color: var(--green); }
+.tag-rose { color: var(--rose); }
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+p { color: var(--muted); line-height: 1.7; }
+p + p { margin-top: 12px; }
+
+/* ── CARDS ── */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 24px;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.card:hover {
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+}
+
+/* ── GRIDS ── */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px,100%),1fr)); gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr)); gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px,100%),1fr)); gap: 14px; }
+
+/* ── DIVIDER ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 50px 0;
+}
+
+/* ── EQUATION BOX ── */
+.eq-box {
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 12px 0;
+  position: relative;
+}
+.eq-formula {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+.eq-plain {
+  font-family: 'Space Mono', monospace;
+  font-size: .78rem;
+  color: var(--cyan);
+  background: rgba(64,208,224,0.08);
+  border: 1px solid rgba(64,208,224,0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  line-height: 1.5;
+}
+.eq-plain::before {
+  content: '▶ In plain English: ';
+  color: var(--cyan2);
+  font-weight: 700;
+}
+
+/* ── METAPHOR BOX ── */
+.metaphor {
+  background: linear-gradient(135deg, rgba(80,128,255,0.08), rgba(160,96,240,0.08));
+  border: 1px solid rgba(80,128,255,0.2);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 16px 0;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.metaphor-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+.metaphor-text { color: var(--muted); font-size: .95rem; line-height: 1.65; }
+.metaphor-text strong { color: var(--text); }
+
+/* ── TETRAHEDRON SVG ── */
+.tetra-wrap { display: flex; justify-content: center; margin: 20px 0; }
+
+/* ── BIG STAT ── */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 12px; }
+.stat-box {
+  text-align: center;
+  padding: 20px 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -.04em;
+  margin-bottom: 4px;
+}
+.stat-label { font-size: .8rem; color: var(--muted); }
+
+/* ── PROGRESS BAR ── */
+.prog-list { display: grid; gap: 10px; }
+.prog-item { }
+.prog-head { display: flex; justify-content: space-between; font-size: .88rem; margin-bottom: 6px; }
+.prog-head span:first-child { font-weight: 600; }
+.prog-track {
+  height: 8px;
+  background: var(--panel2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.prog-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1.2s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── TIMELINE ── */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--violet), transparent);
+  border-radius: 999px;
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+.tl-dot {
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg);
+}
+.tl-dot.done { background: var(--green); border-color: var(--green); }
+.tl-dot.active { background: var(--gold); border-color: var(--gold); animation: pulse 1.8s infinite; }
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(240,192,96,.4); }
+  50% { box-shadow: 0 0 0 8px rgba(240,192,96,0); }
+}
+.tl-title { font-weight: 700; font-size: .95rem; margin-bottom: 4px; }
+.tl-body { font-size: .85rem; color: var(--muted); }
+
+/* ── ACCORDION ── */
+.accord-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.accord-item.open { border-color: var(--accent); }
+.accord-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  background: var(--panel);
+}
+.accord-head:hover { background: var(--panel2); }
+.accord-q { font-weight: 700; font-size: .95rem; }
+.accord-arrow {
+  font-size: .8rem;
+  color: var(--muted);
+  transition: transform .25s;
+}
+.accord-item.open .accord-arrow { transform: rotate(90deg); color: var(--accent); }
+.accord-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+.accord-inner { padding: 16px 20px; border-top: 1px solid var(--line2); color: var(--muted); font-size: .9rem; line-height: 1.7; }
+
+/* ── HIGHLIGHT BAND ── */
+.band {
+  background: linear-gradient(135deg, rgba(80,128,255,0.06), rgba(160,96,240,0.06));
+  border: 1px solid rgba(80,128,255,0.15);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* ── PREDICTION TABLE ── */
+.pred-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.pred-table th {
+  text-align: left;
+  padding: 10px 14px;
+  color: var(--muted2);
+  font-family: 'Space Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+}
+.pred-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line2);
+  color: var(--muted);
+  vertical-align: top;
+}
+.pred-table tr:hover td { background: var(--panel2); }
+.pred-name { color: var(--text); font-weight: 600; }
+.match-good { color: var(--green); font-weight: 700; }
+.match-ok { color: var(--gold); font-weight: 700; }
+
+/* ── PILLAR CARD ── */
+.pillar-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 22px;
+  border-top: 3px solid;
+}
+.pillar-num {
+  font-family: 'Space Mono', monospace;
+  font-size: .75rem;
+  margin-bottom: 10px;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 40px 24px 60px;
+  color: var(--muted2);
+  font-size: .85rem;
+  border-top: 1px solid var(--line);
+  position: relative;
+  z-index: 1;
+}
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--text); }
+
+/* ── SCROLL FADE-IN ── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── TETRAHEDRON ANIMATION ── */
+@keyframes rotateSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes edgeDash { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+@keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+
+.hero-anim { animation: fadeUp .8s ease forwards; }
+.hero-anim:nth-child(2) { animation-delay: .1s; }
+.hero-anim:nth-child(3) { animation-delay: .2s; }
+.hero-anim:nth-child(4) { animation-delay: .3s; }
+
+/* ── SCIENCE ICONS ── */
+.sci-orbit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 24px 0;
+}
+.sci-chip {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: .85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── LIVE EDIT INDICATOR ── */
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(64,208,136,0.1);
+  border: 1px solid rgba(64,208,136,0.3);
+  color: var(--green);
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: .08em;
+}
+.live-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green);
+  animation: pulse 1.5s infinite;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  .shell { padding: 80px 16px 60px; }
+  .band { padding: 24px; }
+  .nav-links { display: none; }
+  .pred-table { font-size: .8rem; }
+  .pred-table th, .pred-table td { padding: 8px 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <polygon points="14,2 26,22 2,22" fill="none" stroke="#5080ff" stroke-width="2"/>
+        <polygon points="14,2 26,22 14,14" fill="rgba(80,128,255,0.15)" stroke="#a060f0" stroke-width="1.5"/>
+        <polygon points="14,2 2,22 14,14" fill="rgba(160,96,240,0.15)" stroke="#40d0e0" stroke-width="1.5"/>
+        <polygon points="2,22 26,22 14,14" fill="rgba(64,208,224,0.15)" stroke="#f0c060" stroke-width="1.5"/>
+        <circle cx="14" cy="14" r="2" fill="#fff" opacity=".7"/>
+      </svg>
+      Unified Dynamics
+    </a>
+    <ul class="nav-links">
+      <li><a href="#what">What is it?</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#sciences">All sciences</a></li>
+      <li><a href="#predictions">Predictions</a></li>
+      <li><a href="#state">Current state</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="live-badge"><div class="live-dot"></div> v1.3 LIVE</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="shell">
+<section class="hero" id="top">
+
+  <!-- Animated tetrahedron -->
+  <svg class="hero-tetra hero-anim" width="160" height="140" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#5080ff"/>
+        <stop offset="100%" stop-color="#a060f0"/>
+      </linearGradient>
+      <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#40d0e0"/>
+        <stop offset="100%" stop-color="#5080ff"/>
+      </linearGradient>
+      <linearGradient id="g3" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0%" stop-color="#f0c060"/>
+        <stop offset="100%" stop-color="#40d088"/>
+      </linearGradient>
+    </defs>
+    <!-- Faces -->
+    <polygon points="80,8 148,118 12,118" fill="rgba(80,128,255,0.06)" stroke="url(#g1)" stroke-width="2" filter="url(#glow)"/>
+    <line x1="80" y1="8" x2="80" y2="118" stroke="url(#g2)" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <line x1="12" y1="118" x2="114" y2="52" stroke="url(#g3)" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <line x1="148" y1="118" x2="46" y2="52" stroke="url(#g1)" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <!-- Vertices -->
+    <circle cx="80" cy="8" r="5" fill="#a060f0" filter="url(#glow)"/>
+    <circle cx="148" cy="118" r="5" fill="#40d0e0" filter="url(#glow)"/>
+    <circle cx="12" cy="118" r="5" fill="#f0c060" filter="url(#glow)"/>
+    <circle cx="80" cy="74" r="4" fill="#40d088" filter="url(#glow)"/>
+    <!-- Inner triangle -->
+    <polygon points="80,8 148,118 12,118" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <!-- Labels -->
+    <text x="80" y="135" text-anchor="middle" fill="#8a9ab8" font-family="'Space Mono'" font-size="9" letter-spacing="2">TETRAHEDRON</text>
+  </svg>
+
+  <p class="hero-eyebrow hero-anim">A new theory of everything</p>
+  <h1 class="hero-anim">
+    <span class="h1-line1">Everything in the universe</span>
+    <span class="h1-line2">follows one set of rules.</span>
+  </h1>
+  <p class="hero-sub hero-anim">
+    Unified Dynamics is a scientific theory that shows how physics, chemistry, biology, and mathematics all emerge from a single, simple idea. No jargon required — just curiosity.
+  </p>
+  <div class="hero-cta hero-anim">
+    <a href="#what" class="btn btn-primary">Start exploring ↓</a>
+    <a href="#predictions" class="btn btn-outline">See the predictions</a>
+  </div>
+
+  <div class="sci-orbit" style="margin-top:40px">
+    <div class="sci-chip">⚛️ Physics</div>
+    <div class="sci-chip">🧬 Biology</div>
+    <div class="sci-chip">🧪 Chemistry</div>
+    <div class="sci-chip">🔢 Mathematics</div>
+    <div class="sci-chip">🌌 Cosmology</div>
+    <div class="sci-chip">⚡ Quantum</div>
+    <div class="sci-chip">🌡️ Thermodynamics</div>
+    <div class="sci-chip">🧲 Electromagnetism</div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════ SECTION 1: WHAT IS IT ═══════ -->
+<section id="what" class="reveal">
+  <div class="section-tag tag-gold">The Big Idea</div>
+  <h2>What is Unified Dynamics?</h2>
+  <p style="max-width:700px; font-size:1.05rem; margin-bottom:28px;">
+    For centuries, scientists have had separate "rule books" for each part of nature — one book for gravity, another for atoms, another for electricity. Unified Dynamics proposes there is only <em>one</em> underlying rule book, and everything else is a consequence.
+  </p>
+
+  <div class="grid-2">
+    <div>
+      <div class="metaphor">
+        <div class="metaphor-icon">🏗️</div>
+        <div class="metaphor-text">
+          <strong>Think of it like LEGO.</strong> There's one type of brick. With it, you can build a house, a spaceship, a dragon, a city. You don't need different types of bricks for different things — the variety comes from how you connect them. Unified Dynamics says the universe works the same way: one fundamental "brick" (a distinction, a difference), one rule for connecting them, and all of nature emerges from that.
+        </div>
+      </div>
+
+      <div class="metaphor" style="margin-top:12px">
+        <div class="metaphor-icon">🎵</div>
+        <div class="metaphor-text">
+          <strong>Or think of music.</strong> Every song — a lullaby, a symphony, heavy metal — is made from the same 12 notes and the same physics of sound waves. The richness comes from how you arrange them. UD says all the richness of the universe comes from arranging one kind of fundamental relationship.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="section-tag tag-cyan" style="margin-bottom:14px">The one-sentence version</div>
+        <blockquote style="font-size:1.15rem; font-weight:700; color:var(--text); line-height:1.5; border-left:3px solid var(--cyan); padding-left:16px; margin-bottom:16px;">
+          "You can't have something without something else to compare it to — and that simple fact, followed to its logical conclusion, generates all of physics."
+        </blockquote>
+        <p style="font-size:.9rem;">That's it. Everything flows from the logic of <em>distinction</em>: the idea that A can only exist if it's different from not-A.</p>
+      </div>
+
+      <div class="card" style="margin-top:12px; border-top:3px solid var(--gold)">
+        <h3>Why does this matter?</h3>
+        <p style="font-size:.9rem;">If UD is right, scientists no longer need to guess at new "ingredients" for each phenomenon. Instead of 19 unexplained numbers in the Standard Model of physics, UD derives them from <strong style="color:var(--gold)">zero free parameters</strong> — just logic and geometry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════ SECTION 2: HOW IT WORKS ═══════ -->
+<section id="how" class="reveal">
+  <div class="section-tag tag-cyan">Step by Step</div>
+  <h2>How does it actually work?</h2>
+  <p style="max-width:680px; margin-bottom:32px;">
+    UD builds the universe from scratch, one logical step at a time. Here's the journey from absolute nothing to atoms, gravity, and life:
+  </p>
+
+  <!-- Step 1 -->
+  <div class="card" style="margin-bottom:16px; border-left:4px solid var(--gold);">
+    <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="width:44px; height:44px; border-radius:12px; background:rgba(240,192,96,0.15); display:grid; place-items:center; font-weight:900; color:var(--gold); font-size:1.3rem; flex-shrink:0;">1</div>
+      <div style="flex:1; min-width:200px;">
+        <h3>Start with the simplest possible thing</h3>
+        <p>The most basic thing that can exist is a <strong style="color:var(--text);">distinction</strong> — a difference between "something" and "not something." This isn't borrowed from physics; it's pure logic.</p>
+        <div class="metaphor" style="margin-top:12px">
+          <div class="metaphor-icon">💡</div>
+          <div class="metaphor-text"><strong>Everyday example:</strong> "Dark" only exists because "light" exists. "Hot" only makes sense because "cold" exists. You can't have one without the other. That's a distinction.</div>
+        </div>
+        <div class="eq-box">
+          <div class="eq-formula">\( A \neq \bar{A} \)</div>
+          <div class="eq-plain">A is different from not-A. Something exists by being distinct from its opposite.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="card" style="margin-bottom:16px; border-left:4px solid var(--cyan);">
+    <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="width:44px; height:44px; border-radius:12px; background:rgba(64,208,224,0.15); display:grid; place-items:center; font-weight:900; color:var(--cyan); font-size:1.3rem; flex-shrink:0;">2</div>
+      <div style="flex:1; min-width:200px;">
+        <h3>Distinctions force relationships</h3>
+        <p>Once you have two different things, they <em>must</em> relate to each other. A distinction cannot float in isolation — it only exists <em>through</em> contrast. This forces the universe to be fundamentally <strong style="color:var(--text);">relational</strong>, not made of isolated particles.</p>
+        <div class="metaphor" style="margin-top:12px">
+          <div class="metaphor-icon">🤝</div>
+          <div class="metaphor-text"><strong>Everyday example:</strong> "Taller than" only makes sense between two people. Relationships aren't added to things — they're built in from the start.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="card" style="margin-bottom:16px; border-left:4px solid var(--violet);">
+    <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="width:44px; height:44px; border-radius:12px; background:rgba(160,96,240,0.15); display:grid; place-items:center; font-weight:900; color:var(--violet); font-size:1.3rem; flex-shrink:0;">3</div>
+      <div style="flex:1; min-width:200px;">
+        <h3>The simplest structure that fits: the tetrahedron</h3>
+        <p>When you work out the math rigorously — what's the <em>minimal</em> structure that can hold distinctions AND their relationships AND remain self-consistent? — the answer is a <strong style="color:var(--text);">tetrahedron</strong>: four points, six edges, four triangular faces.</p>
+        <div class="tetra-wrap">
+          <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
+            <defs>
+              <linearGradient id="tf1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#a060f0" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#5080ff" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+            <!-- Back face -->
+            <polygon points="100,12 176,130 24,130" fill="rgba(80,128,255,0.05)" stroke="rgba(80,128,255,0.3)" stroke-width="1.5"/>
+            <!-- Internal edges (dashed) -->
+            <line x1="100" y1="12" x2="100" y2="96" stroke="#a060f0" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+            <line x1="24" y1="130" x2="140" y2="72" stroke="#40d0e0" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+            <line x1="176" y1="130" x2="60" y2="72" stroke="#f0c060" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+            <!-- Front face left -->
+            <polygon points="100,12 24,130 100,96" fill="rgba(160,96,240,0.12)" stroke="#a060f0" stroke-width="2"/>
+            <!-- Front face right -->
+            <polygon points="100,12 176,130 100,96" fill="rgba(64,208,224,0.12)" stroke="#40d0e0" stroke-width="2"/>
+            <!-- Bottom face -->
+            <polygon points="24,130 176,130 100,96" fill="rgba(240,192,96,0.12)" stroke="#f0c060" stroke-width="2"/>
+            <!-- Vertices -->
+            <circle cx="100" cy="12" r="6" fill="#a060f0"/>
+            <circle cx="176" cy="130" r="6" fill="#40d0e0"/>
+            <circle cx="24" cy="130" r="6" fill="#f0c060"/>
+            <circle cx="100" cy="96" r="6" fill="#40d088"/>
+            <!-- Labels -->
+            <text x="100" y="6" text-anchor="middle" fill="#a060f0" font-family="Space Mono" font-size="9">TOP</text>
+            <text x="185" y="134" fill="#40d0e0" font-family="Space Mono" font-size="9">R</text>
+            <text x="12" y="134" fill="#f0c060" font-family="Space Mono" font-size="9">L</text>
+            <text x="104" y="106" fill="#40d088" font-family="Space Mono" font-size="9">C</text>
+          </svg>
+        </div>
+        <div class="metaphor">
+          <div class="metaphor-icon">🏔️</div>
+          <div class="metaphor-text"><strong>Why a tetrahedron specifically?</strong> It's the simplest 3D shape where every point connects to every other point. Think of it as the "most democratic" shape — no vertex is privileged, every relationship is represented. It's the minimal self-consistent unit of reality.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="card" style="margin-bottom:16px; border-left:4px solid var(--green);">
+    <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="width:44px; height:44px; border-radius:12px; background:rgba(64,208,136,0.15); display:grid; place-items:center; font-weight:900; color:var(--green); font-size:1.3rem; flex-shrink:0;">4</div>
+      <div style="flex:1; min-width:200px;">
+        <h3>Stack tetrahedra infinitely → get space, time, and matter</h3>
+        <p>Tile infinite tetrahedra together using a mathematical pattern called an <strong style="color:var(--text);">IFS (Iterated Function System)</strong> — think of how a snowflake grows by repeating the same pattern at every scale — and space, time, particles, and forces all emerge naturally.</p>
+        <div class="metaphor">
+          <div class="metaphor-icon">❄️</div>
+          <div class="metaphor-text"><strong>Snowflake analogy:</strong> A snowflake looks completely different at different zoom levels — yet it's all made from the same hexagonal rule, repeated. UD's "quasicrystal" spacetime is similar: zoom in and zoom out, the same tetrahedral pattern repeats. Particles are places where this pattern has a "defect" — a knot or glitch in the tiling.</div>
+        </div>
+        <div class="eq-box">
+          <div class="eq-formula">\( \Delta/N = 0.0361 \)</div>
+          <div class="eq-plain">One number — the "overlap deficit" of how tetrahedra tile — controls 10 major constants of physics. It's like tuning one dial and getting the entire universe.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The 4 operating concepts -->
+  <div style="margin-top:32px; margin-bottom:8px">
+    <div class="section-tag tag-violet">The Four Pillars</div>
+    <h3 style="font-size:1.4rem; margin-bottom:16px;">How the universe "runs" moment to moment</h3>
+  </div>
+  <div class="grid-4">
+    <div class="pillar-card" style="border-top-color:var(--gold)">
+      <div class="pillar-num" style="color:var(--gold)">01 — ADMISSIBILITY</div>
+      <h3>The Rule Book</h3>
+      <p style="font-size:.88rem;">Most imaginable arrangements are simply <em>forbidden</em> — they can't exist. Admissibility is the filter that rules out impossibilities before anything even starts.</p>
+      <div class="metaphor" style="margin-top:12px; padding:12px 14px;">
+        <div class="metaphor-icon" style="font-size:1rem;">🎲</div>
+        <div class="metaphor-text" style="font-size:.82rem;"><strong>Analogy:</strong> A Scrabble tile can't be placed if it doesn't make a word. The rule exists before the game starts.</div>
+      </div>
+    </div>
+    <div class="pillar-card" style="border-top-color:var(--cyan)">
+      <div class="pillar-num" style="color:var(--cyan)">02 — CLOSURE</div>
+      <h3>Stability = Loops</h3>
+      <p style="font-size:.88rem;">A closed loop of relationships is self-consistent and stable. Open chains collapse. A particle, an atom, a cell — all are "closed motifs" at their level.</p>
+      <div class="metaphor" style="margin-top:12px; padding:12px 14px;">
+        <div class="metaphor-icon" style="font-size:1rem;">⭕</div>
+        <div class="metaphor-text" style="font-size:.82rem;"><strong>Analogy:</strong> A chain with open ends falls apart; a closed ring holds together. He-4 (helium) is the simplest closed tetrahedral unit — one tetrahedron, perfectly stable.</div>
+      </div>
+    </div>
+    <div class="pillar-card" style="border-top-color:var(--violet)">
+      <div class="pillar-num" style="color:var(--violet)">03 — TRANSPORT</div>
+      <h3>How Things Spread</h3>
+      <p style="font-size:.88rem;">Information, force, and energy move through the relational network. Gravity, light, and all forces are different "flavors" of how influence travels between closed structures.</p>
+      <div class="metaphor" style="margin-top:12px; padding:12px 14px;">
+        <div class="metaphor-icon" style="font-size:1rem;">🌊</div>
+        <div class="metaphor-text" style="font-size:.82rem;"><strong>Analogy:</strong> Ripples on a pond don't move water across — they carry a pattern. Forces in UD are patterns rippling through the relational fabric.</div>
+      </div>
+    </div>
+    <div class="pillar-card" style="border-top-color:var(--green)">
+      <div class="pillar-num" style="color:var(--green)">04 — RECONSTRUCTION</div>
+      <h3>Healing & Time</h3>
+      <p style="font-size:.88rem;">Structures recover coherence after disturbance — actively, not passively. This is the source of the arrow of time, homeostasis, and why the universe doesn't stay broken.</p>
+      <div class="metaphor" style="margin-top:12px; padding:12px 14px;">
+        <div class="metaphor-icon" style="font-size:1rem;">🔄</div>
+        <div class="metaphor-text" style="font-size:.82rem;"><strong>Analogy:</strong> A cut on your skin heals because cells actively rebuild. The universe does the same at every scale.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════ SECTION 3: ALL SCIENCES ═══════ -->
+<section id="sciences" class="reveal">
+  <div class="section-tag tag-rose">All Sciences, One Source</div>
+  <h2>How does UD connect all the sciences?</h2>
+  <p style="max-width:680px; margin-bottom:32px;">
+    Every science you know is a "zoom level" of the same structure. UD doesn't replace any of them — it explains <em>why</em> they each work and how they relate.
+  </p>
+
+  <!-- Hierarchy diagram -->
+  <div class="band" style="margin-bottom:32px;">
+    <div class="section-tag tag-cyan" style="margin-bottom:16px;">The Emergence Stack</div>
+    <p style="color:var(--muted); margin-bottom:24px; font-size:.95rem;">Each level emerges from the one below. Nothing is added by hand — it all falls out of the tetrahedral structure.</p>
+    <svg width="100%" height="220" viewBox="0 0 600 220" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="6" refX="4" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="rgba(255,255,255,0.3)"/>
+        </marker>
+      </defs>
+      <!-- Boxes -->
+      <rect x="220" y="8" width="160" height="32" rx="8" fill="rgba(160,96,240,0.2)" stroke="#a060f0" stroke-width="1.5"/>
+      <text x="300" y="28" text-anchor="middle" fill="#a060f0" font-family="Outfit" font-size="13" font-weight="700">Distinction / Logic</text>
+      <line x1="300" y1="40" x2="300" y2="58" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <rect x="190" y="60" width="220" height="32" rx="8" fill="rgba(80,128,255,0.2)" stroke="#5080ff" stroke-width="1.5"/>
+      <text x="300" y="80" text-anchor="middle" fill="#8aaeff" font-family="Outfit" font-size="13" font-weight="700">Tetrahedral Quasicrystal</text>
+      <line x1="300" y1="92" x2="300" y2="110" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <rect x="160" y="112" width="280" height="32" rx="8" fill="rgba(64,208,224,0.15)" stroke="#40d0e0" stroke-width="1.5"/>
+      <text x="300" y="132" text-anchor="middle" fill="#40d0e0" font-family="Outfit" font-size="13" font-weight="700">Space, Time, Gravity, Fields</text>
+      <line x1="300" y1="144" x2="300" y2="162" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <rect x="100" y="164" width="160" height="32" rx="8" fill="rgba(64,208,136,0.15)" stroke="#40d088" stroke-width="1.5"/>
+      <text x="180" y="184" text-anchor="middle" fill="#40d088" font-family="Outfit" font-size="12" font-weight="700">Atoms &amp; Chemistry</text>
+
+      <rect x="340" y="164" width="160" height="32" rx="8" fill="rgba(240,192,96,0.15)" stroke="#f0c060" stroke-width="1.5"/>
+      <text x="420" y="184" text-anchor="middle" fill="#f0c060" font-family="Outfit" font-size="12" font-weight="700">Particles &amp; Quantum</text>
+    </svg>
+  </div>
+
+  <div class="grid-3">
+    <!-- Physics -->
+    <div class="card" style="border-top:3px solid var(--accent)">
+      <div class="card-icon" style="background:rgba(80,128,255,0.15)">⚛️</div>
+      <h3>Physics & Quantum Mechanics</h3>
+      <p style="font-size:.9rem;">All the famous equations — Einstein's general relativity, quantum mechanics, Maxwell's electromagnetism — are derived as consequences, not inputs. They fall out of the tetrahedral structure like shadows of a 3D object.</p>
+      <div class="eq-box" style="margin-top:14px">
+        <div class="eq-formula">\( R_{\mu\nu} - \tfrac{1}{2}g_{\mu\nu}R = 8\pi G T_{\mu\nu} \)</div>
+        <div class="eq-plain">Einstein's equation: how mass bends space. UD derives this from how "closed structures" (particles) distort the density of the tetrahedral network around them.</div>
+      </div>
+    </div>
+
+    <!-- Chemistry -->
+    <div class="card" style="border-top:3px solid var(--green)">
+      <div class="card-icon" style="background:rgba(64,208,136,0.15)">🧪</div>
+      <h3>Chemistry & Atoms</h3>
+      <p style="font-size:.9rem;">Helium-4 (He-4) is literally the IFS unit cell — 4 nucleons = 4 corners of one tetrahedron. The stability of the periodic table, nuclear binding energies, and electron shell capacities (2, 8, 18…) all emerge from the same geometry.</p>
+      <div class="metaphor" style="margin-top:14px; padding:12px 14px;">
+        <div class="metaphor-icon" style="font-size:1rem;">🫧</div>
+        <div class="metaphor-text" style="font-size:.83rem;"><strong>He-4 is the Lego unit brick</strong> of the universe — literally a closed tetrahedron. Everything heavier is built by combining them.</div>
+      </div>
+    </div>
+
+    <!-- Biology -->
+    <div class="card" style="border-top:3px solid var(--gold)">
+      <div class="card-icon" style="background:rgba(240,192,96,0.15)">🧬</div>
+      <h3>Biology & Life</h3>
+      <p style="font-size:.9rem;">Life is what happens when "reconstruction" (Pillar 4) gets especially good at itself. Homeostasis — the body keeping itself at 98.6°F, healing wounds, maintaining balance — is the biological expression of UD's reconstruction principle.</p>
+      <div class="metaphor" style="margin-top:14px; padding:12px 14px;">
+        <div class="metaphor-icon" style="font-size:1rem;">💚</div>
+        <div class="metaphor-text" style="font-size:.83rem;"><strong>Life isn't special magic</strong> — it's the universe's reconstruction principle running on a very sophisticated closed motif called a cell.</div>
+      </div>
+    </div>
+
+    <!-- Thermodynamics -->
+    <div class="card" style="border-top:3px solid var(--rose)">
+      <div class="card-icon" style="background:rgba(240,96,128,0.15)">🌡️</div>
+      <h3>Thermodynamics & Heat</h3>
+      <p style="font-size:.9rem;">Heat, entropy, and temperature emerge from the statistical behavior of many tiny closed motifs jostling around. The famous "second law" — that disorder always increases — is a consequence of the geometry of the relational network, not a separate law added by hand.</p>
+      <div class="eq-box" style="margin-top:14px">
+        <div class="eq-formula">\( S = k_B \ln \Omega \)</div>
+        <div class="eq-plain">Entropy = how many ways can things be arranged? UD counts these arrangements geometrically, using the tetrahedral lattice.</div>
+      </div>
+    </div>
+
+    <!-- Cosmology -->
+    <div class="card" style="border-top:3px solid var(--cyan)">
+      <div class="card-icon" style="background:rgba(64,208,224,0.15)">🌌</div>
+      <h3>Cosmology & the Big Bang</h3>
+      <p style="font-size:.9rem;">The cosmological constant (dark energy), the spectral index of the CMB (the afterglow of the Big Bang), and the Brans-Dicke coupling for gravity all emerge from one geometric number: Δ/N = 0.0361.</p>
+      <div class="metaphor" style="margin-top:14px; padding:12px 14px;">
+        <div class="metaphor-icon" style="font-size:1rem;">🎛️</div>
+        <div class="metaphor-text" style="font-size:.83rem;"><strong>One dial, all the knobs.</strong> Adjusting Δ/N adjusts everything simultaneously. The universe doesn't have 19 independent settings — just one geometric ratio.</div>
+      </div>
+    </div>
+
+    <!-- Mathematics -->
+    <div class="card" style="border-top:3px solid var(--violet)">
+      <div class="card-icon" style="background:rgba(160,96,240,0.15)">🔢</div>
+      <h3>Mathematics Itself</h3>
+      <p style="font-size:.9rem;">UD touches one of the greatest unsolved problems in math: the Yang-Mills mass gap (a $1 million Millennium Prize Problem). It provides an almost-complete proof using a technique called Banach fixed-point convergence — 11 of 12 steps are rigorous.</p>
+      <div class="metaphor" style="margin-top:14px; padding:12px 14px;">
+        <div class="metaphor-icon" style="font-size:1rem;">🏆</div>
+        <div class="metaphor-text" style="font-size:.83rem;"><strong>Not claiming the prize yet</strong> — but UD has made the problem much more concrete. The one remaining question is precise and tractable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════ SECTION 4: PREDICTIONS ═══════ -->
+<section id="predictions" class="reveal">
+  <div class="section-tag tag-green">The Score Card</div>
+  <h2>What does UD predict — and does it match?</h2>
+  <p style="max-width:680px; margin-bottom:12px;">
+    A theory is only as good as its predictions. UD makes specific, <em>quantitative</em> predictions — real numbers that can be checked against experiment. Here's how it scores:
+  </p>
+  <p style="margin-bottom:28px; font-size:.9rem;">
+    All predictions come from <strong style="color:var(--gold)">zero free parameters</strong> — no adjustable knobs. The number Δ/N = 0.0361 is fixed by geometry, and everything else follows.
+  </p>
+
+  <div class="stat-grid" style="margin-bottom:32px;">
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--green)">32+</div>
+      <div class="stat-label">Derived results</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--gold)">3</div>
+      <div class="stat-label">Identified open items</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--green)">0</div>
+      <div class="stat-label">Internal contradictions</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--gold)">10+</div>
+      <div class="stat-label">Quantitative predictions</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--cyan)">0</div>
+      <div class="stat-label">Free parameters</div>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto; border-radius:14px; border:1px solid var(--line);">
+    <table class="pred-table">
+      <thead>
+        <tr>
+          <th>What's being predicted</th>
+          <th>UD's number</th>
+          <th>Nature's number</th>
+          <th>How close?</th>
+          <th>Plain English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="pred-name">Spectral index n<sub>s</sub></td>
+          <td style="font-family:'Space Mono',monospace">0.9640</td>
+          <td style="font-family:'Space Mono',monospace">0.9649</td>
+          <td class="match-good">0.09% ✓</td>
+          <td>The "lumpiness" pattern of the early universe's glow</td>
+        </tr>
+        <tr>
+          <td class="pred-name">Fine structure constant α</td>
+          <td style="font-family:'Space Mono',monospace">1/137.3</td>
+          <td style="font-family:'Space Mono',monospace">1/137.036</td>
+          <td class="match-ok">0.2% candidate</td>
+          <td>How strongly light interacts with electrons</td>
+        </tr>
+        <tr>
+          <td class="pred-name">Koide ratio (lepton masses)</td>
+          <td style="font-family:'Space Mono',monospace">2/3</td>
+          <td style="font-family:'Space Mono',monospace">0.6667</td>
+          <td class="match-good">0.001% ✓</td>
+          <td>A mysterious ratio between the masses of electron, muon, tau</td>
+        </tr>
+        <tr>
+          <td class="pred-name">Muon mass (m<sub>μ</sub>)</td>
+          <td style="font-family:'Space Mono',monospace">112 MeV</td>
+          <td style="font-family:'Space Mono',monospace">105.7 MeV</td>
+          <td class="match-good">6% ✓</td>
+          <td>Mass of the muon (heavy cousin of the electron)</td>
+        </tr>
+        <tr>
+          <td class="pred-name">Tau mass (m<sub>τ</sub>)</td>
+          <td style="font-family:'Space Mono',monospace">1792 MeV</td>
+          <td style="font-family:'Space Mono',monospace">1777 MeV</td>
+          <td class="match-good">1% ✓</td>
+          <td>Mass of the tau particle</td>
+        </tr>
+        <tr>
+          <td class="pred-name">Yang-Mills mass gap</td>
+          <td style="font-family:'Space Mono',monospace">≥ 676 MeV</td>
+          <td style="font-family:'Space Mono',monospace">~1500–1700 MeV</td>
+          <td class="match-good">lower bound consistent ✓</td>
+          <td>Why particles that carry forces have mass (a $1M math prize question)</td>
+        </tr>
+        <tr>
+          <td class="pred-name">Tensor-to-scalar ratio r<sub>T</sub></td>
+          <td style="font-family:'Space Mono',monospace">~0.036</td>
+          <td style="font-family:'Space Mono',monospace">&lt; 0.064</td>
+          <td class="match-good">within bounds ✓</td>
+          <td>Strength of gravitational waves from the Big Bang</td>
+        </tr>
+        <tr>
+          <td class="pred-name">Beta function correction</td>
+          <td style="font-family:'Space Mono',monospace">2.6%</td>
+          <td style="font-family:'Space Mono',monospace">~2.6% (measured)</td>
+          <td class="match-good">confirmed at 17.5σ ✓</td>
+          <td>How the strength of the strong nuclear force changes with energy</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:16px; padding:14px 18px; background:rgba(240,96,128,0.08); border:1px solid rgba(240,96,128,0.2); border-radius:12px;">
+    <strong style="color:var(--rose);">What would prove UD wrong?</strong>
+    <p style="font-size:.88rem; margin-top:6px;">UD is falsifiable — specific findings would disprove it cleanly: if the CMB spectral index is found to be outside 0.960–0.968, if monopoles are discovered, if the fine structure constant is measured far from 1/137.3, or if gravitational waves from inflation exceed r = 0.048. The framework also makes a clear structural prediction: the T₂ representation of the tetrahedral symmetry group is a color triplet, not a generation triplet — the two are structurally distinct. If future work showed they were the same object, it would require a major revision.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════ SECTION 5: CURRENT STATE ═══════ -->
+<section id="state" class="reveal">
+  <div class="section-tag tag-violet">Where Things Stand</div>
+  <h2>Current state of the theory</h2>
+  <p style="max-width:680px; margin-bottom:32px;">
+    Unified Dynamics is a serious, rigorous scientific theory in the final stages of preparation for formal peer review. Here's an honest picture of where it stands today:
+  </p>
+
+  <div class="grid-2" style="margin-bottom:32px;">
+    <div>
+      <div class="section-tag tag-green" style="margin-bottom:12px;">What's complete</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot done"></div>
+          <div class="tl-title">All 5 field equations derived ✓</div>
+          <div class="tl-body">Einstein, Yang-Mills, Dirac, Klein-Gordon, Higgs — all derived from the tetrahedral structure with zero free parameters.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done"></div>
+          <div class="tl-title">Core structural program complete ✓</div>
+          <div class="tl-body">All major layer closures confirmed (L0–L12). Five field equations derived. Formal closure spine complete. Three identified open items remain: generation-count derivation, gauge coefficient normalization (full 4D), and empirical bridge validation — all bounded and in active work.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done"></div>
+          <div class="tl-title">Simulation Phase 1 passed (8/11 tests) ✓</div>
+          <div class="tl-body">IFS geometry confirmed. The non-perturbative 2.6% correction measured at 17.5σ — extremely high confidence.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done"></div>
+          <div class="tl-title">5 Wightman axioms satisfied ✓</div>
+          <div class="tl-body">These are the gold-standard mathematical requirements for a quantum field theory. All 5 verified.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done"></div>
+          <div class="tl-title">Atomic closure derived ✓</div>
+          <div class="tl-body">He-4 as IFS unit cell. Nuclear binding energies within 7–11% without fitting. Electron shell capacities (2n²) from geometry.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-tag tag-gold" style="margin-bottom:12px;">Still in progress</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot active"></div>
+          <div class="tl-title">Formal peer review — in preparation</div>
+          <div class="tl-body">The theory is being prepared for submission to scientific journals. The goal is rigorous external review by independent experts.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot active"></div>
+          <div class="tl-title">Generation count derivation — active research</div>
+          <div class="tl-body">Three matter generations are consistent with the framework and anchored by observation. An independent IFS-internal derivation forcing exactly three generations is an identified open problem. The framework correctly identifies color structure (not generation structure) from tetrahedral geometry. Generation count is honestly labeled as observation-anchored, not yet internally derived.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot active"></div>
+          <div class="tl-title">Gauge coefficient normalization — in progress</div>
+          <div class="tl-body">The sign structure of all three gauge sectors (SU(3), SU(2), U(1)) is derived with correct signs. The full coefficient normalization (magnetic and electric sectors, 4D matching) has a clear route in progress. Magnetic-sector geometric factor derived under fixed convention.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot active"></div>
+          <div class="tl-title">High-statistics simulation runs</div>
+          <div class="tl-body">Phases 2–5 of simulation are active. The decisive next test: 3D tetrahedral IFS lattice gauge simulation at 5σ confidence for the beta-function correction.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-title">Clay Millennium Problem interface</div>
+          <div class="tl-body">11 of 12 proof steps are rigorous. The final step — whether the RG map is a Banach contraction near a specific point — is precisely identified and tractable.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-title">Consciousness conjecture (T40)</div>
+          <div class="tl-body">Explicitly conjectural. UD raises the possibility that consciousness is connected to recursive closed motifs — but this is marked as speculative and does not affect any other result.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Maturity bars -->
+  <div class="card">
+    <div class="section-tag tag-cyan" style="margin-bottom:16px;">Theory maturity by domain</div>
+    <div class="prog-list" id="progList"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════ SECTION 6: FAQ ═══════ -->
+<section id="faq" class="reveal">
+  <div class="section-tag tag-gold">Common Questions</div>
+  <h2>Your questions, answered</h2>
+  <p style="margin-bottom:28px; max-width:600px;">
+    Unified Dynamics is ambitious. Here are honest answers to the most common questions — including the skeptical ones.
+  </p>
+
+  <div id="faqList">
+    <div class="accord-item">
+      <div class="accord-head">
+        <span class="accord-q">Isn't "a theory of everything" usually crackpot science?</span>
+        <span class="accord-arrow">›</span>
+      </div>
+      <div class="accord-body">
+        <div class="accord-inner">Fair skepticism! The key difference is that UD makes specific, falsifiable, <em>quantitative</em> predictions that match experiment — and it does so with zero free parameters. Crackpot theories typically have no equations, or have equations that can match anything. UD's predictions are pre-committed: if the universe disagrees with any one of them, the whole theory fails. That's what makes it scientific.
+        </div>
+      </div>
+    </div>
+
+    <div class="accord-item">
+      <div class="accord-head">
+        <span class="accord-q">Has it been peer reviewed yet?</span>
+        <span class="accord-arrow">›</span>
+      </div>
+      <div class="accord-body">
+        <div class="accord-inner">Not yet — but this is the explicit goal. The theory is currently in the final stages of preparation for submission. This website is part of making the work transparent and accessible. An honest theory presents itself openly so anyone can examine and critique it before formal review.
+        </div>
+      </div>
+    </div>
+
+    <div class="accord-item">
+      <div class="accord-head">
+        <span class="accord-q">What's a "tetrahedron" and why does it matter so much?</span>
+        <span class="accord-arrow">›</span>
+      </div>
+      <div class="accord-body">
+        <div class="accord-inner">A tetrahedron is the simplest solid shape — four triangular faces, four vertices, six edges. Think of a pyramid with a triangular base. It's the only shape where every vertex connects to every other vertex in 3D space, making it uniquely "democratic." UD shows that when you rigorously ask "what's the minimal consistent relational structure?" — the tetrahedron is the mathematical answer. From there, tiling space with tetrahedra (a quasicrystal) produces all of physics as an emergent consequence.
+        </div>
+      </div>
+    </div>
+
+    <div class="accord-item">
+      <div class="accord-head">
+        <span class="accord-q">Does UD replace Einstein or quantum mechanics?</span>
+        <span class="accord-arrow">›</span>
+      </div>
+      <div class="accord-body">
+        <div class="accord-inner">No — it <em>derives</em> them. Einstein's equations and quantum mechanics are both outputs of UD, not things it competes with. It's like saying calculus "replaces" arithmetic — it doesn't; it builds on it and extends it. UD shows <em>why</em> Einstein and quantum mechanics are both right, and gives a single framework that unifies them (which Einstein and later physicists never managed to do).
+        </div>
+      </div>
+    </div>
+
+    <div class="accord-item">
+      <div class="accord-head">
+        <span class="accord-q">What's the Clay Millennium Prize connection?</span>
+        <span class="accord-arrow">›</span>
+      </div>
+      <div class="accord-body">
+        <div class="accord-inner">The Clay Mathematics Institute offers $1 million for solving 7 great math problems. One — the Yang-Mills mass gap — asks: why do the particles that carry the strong nuclear force have mass? UD provides an almost-complete answer: 11 of 12 proof steps are rigorous. The one remaining step has been precisely identified. UD does <em>not</em> claim the prize is solved — but it has made a concrete contribution to the approach.
+        </div>
+      </div>
+    </div>
+
+    <div class="accord-item">
+      <div class="accord-head">
+        <span class="accord-q">What about consciousness? Does UD explain the mind?</span>
+        <span class="accord-arrow">›</span>
+      </div>
+      <div class="accord-body">
+        <div class="accord-inner">UD includes one explicitly conjectural idea (labeled T40) suggesting consciousness might be connected to sufficiently recursive, self-referential closed motifs. This is marked as speculative and does not affect any other result in the theory. It's an interesting hypothesis — not a claim. The rest of UD stands entirely independently of it.
+        </div>
+      </div>
+    </div>
+
+    <div class="accord-item">
+      <div class="accord-head">
+        <span class="accord-q">Is this the same as string theory or loop quantum gravity?</span>
+        <span class="accord-arrow">›</span>
+      </div>
+      <div class="accord-body">
+        <div class="accord-inner">No, though it lives in the same neighborhood. String theory adds extra dimensions and strings as fundamental objects. Loop quantum gravity quantizes spacetime directly. UD doesn't add anything — it starts from pure logical necessity (distinction → relation → tetrahedral structure) and derives spacetime and particles as emergent consequences. One notable difference: UD predicts minimal area = ℓ_P² (Planck length squared) with no free parameter; loop quantum gravity requires an unexplained "Immirzi parameter" to get this (~5.17 ℓ_P²).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════ CLOSING BAND ═══════ -->
+<div class="band reveal">
+  <div style="margin-bottom:16px;">
+    <svg width="60" height="52" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="30,2 58,50 2,50" fill="none" stroke="url(#g1)" stroke-width="2"/>
+      <polygon points="30,2 58,50 30,34" fill="rgba(80,128,255,0.15)" stroke="#a060f0" stroke-width="1.5"/>
+      <polygon points="30,2 2,50 30,34" fill="rgba(160,96,240,0.15)" stroke="#40d0e0" stroke-width="1.5"/>
+      <polygon points="2,50 58,50 30,34" fill="rgba(64,208,224,0.1)" stroke="#f0c060" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <h2 style="font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:16px;">One pattern. All of nature.</h2>
+  <p style="max-width:520px; margin:0 auto 28px; color:var(--muted);">
+    Unified Dynamics is a work in progress — rigorous, honest, and open. It doesn't claim to be finished. It claims to be on the right track, with the receipts to show it.
+  </p>
+  <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a href="#top" class="btn btn-primary">Start from the top ↑</a>
+    <a href="#predictions" class="btn btn-outline">Review the predictions</a>
+  </div>
+</div>
+
+</div><!-- /shell -->
+
+<!-- FOOTER -->
+<footer>
+  <div style="margin-bottom:16px;">
+    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" style="opacity:.4">
+      <polygon points="16,2 30,26 2,26" fill="none" stroke="#fff" stroke-width="1.5"/>
+      <line x1="16" y1="2" x2="16" y2="18" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="2" y1="26" x2="22" y2="14" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="30" y1="26" x2="10" y2="14" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+    </svg>
+  </div>
+  <p>Unified Dynamics v1.3 — A theory in preparation for scientific review.</p>
+  <p style="margin-top:6px; font-size:.8rem;">This page is the public-accessible companion to the technical dashboard. All results described are internally consistent and under active development toward peer review.</p>
+</footer>
+
+<script>
+// ── PROGRESS BARS DATA ──
+const domains = [
+  { label: "Field equations (Yang-Mills, Einstein, Dirac, Higgs)", pct: 100, color: '#40d088' },
+  { label: "Quantum foundations & Wightman axioms", pct: 100, color: '#40d088' },
+  { label: "IFS geometry & tetrahedral structure", pct: 100, color: '#40d088' },
+  { label: "Yang-Mills mass gap (Clay problem)", pct: 92, color: '#40d0e0' },
+  { label: "Atomic & nuclear closure (He-4, binding energies)", pct: 95, color: '#40d088' },
+  { label: "Cosmological predictions (CMB, dark energy)", pct: 90, color: '#40d0e0' },
+  { label: "Simulation confirmation (Phase 1)", pct: 78, color: '#f0c060' },
+  { label: "Formal peer review", pct: 15, color: '#5080ff' },
+];
+
+const progList = document.getElementById('progList');
+domains.forEach(d => {
+  const item = document.createElement('div');
+  item.className = 'prog-item';
+  item.innerHTML = `
+    <div class="prog-head">
+      <span>${d.label}</span>
+      <span style="color:${d.color}; font-family:'Space Mono',monospace; font-size:.75rem;">${d.pct}%</span>
+    </div>
+    <div class="prog-track">
+      <div class="prog-fill" style="width:0%; background:${d.color};" data-target="${d.pct}"></div>
+    </div>
+  `;
+  progList.appendChild(item);
+});
+
+// Animate progress bars on scroll
+const progObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('.prog-fill').forEach(bar => {
+        bar.style.width = bar.dataset.target + '%';
+      });
+      progObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+if (progList) progObserver.observe(progList);
+
+// ── REVEAL ON SCROLL ──
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => revealObserver.observe(el));
+
+// ── FAQ ACCORDION ──
+document.querySelectorAll('.accord-head').forEach(head => {
+  head.addEventListener('click', () => {
+    const item = head.parentElement;
+    const body = item.querySelector('.accord-body');
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.accord-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.accord-body').style.maxHeight = '0';
+    });
+
+    // Open clicked if was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  });
+});
+
+// ── SMOOTH ACTIVE NAV ──
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
