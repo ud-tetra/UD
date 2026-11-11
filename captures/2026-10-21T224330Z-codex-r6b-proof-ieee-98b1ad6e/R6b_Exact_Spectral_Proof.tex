@@ -1,0 +1,556 @@
+\documentclass[journal,a4paper,10pt]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{booktabs,array,xurl,balance}
+\usepackage[hidelinks]{hyperref}
+\interdisplaylinepenalty=2500
+\hypersetup{pdftitle={Exact Spectral Reductions and Certified Error Bounds for the Clean R6b Operator},pdfauthor={Benjamin W. Mayes},pdfsubject={Mathematical proof for independent review}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\eps}{\varepsilon}
+\title{Exact Spectral Reductions and Certified Error Bounds for the Clean R6b Hierarchical Two-Channel Operator}
+\author{Benjamin W. Mayes\thanks{Prepared with AI assistance. Mathematical review manuscript, October 21, 2026. This document is submitted for independent review; it does not assert prior peer-review acceptance or IEEE publication.}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We analyze a finite real symmetric operator on two channels over base-four addresses. Its coefficients are fixed rational numbers. We prove the complete component decomposition and uncoupled channel spectrum, establish exactly one negative eigenvalue per coupled component, and derive invariant two- and six-coordinate representations for the level-four model. The six-coordinate representation is self-adjoint in an induced weighted metric. Exact rational intervals certify its ground eigenvalue, channel weights, and a strictly positive departure from uniformity of order $10^{-19}$. We distinguish component-conditioned concentration from concentration caused by support on disconnected components. For a specified binary64 matrix we give a module-wise eigenvalue enclosure using exact Rayleigh quotients, residual variances, and a proved second-eigenvalue bound. This separates source-to-matrix assembly error from eigensolver error. All results concern the explicitly defined dimensionless finite operator; no identification with a particle species or physical action scale is assumed.
+\end{abstract}
+\begin{IEEEkeywords}
+Hierarchical graph Laplacian, invariant subspace, weighted metric, exact arithmetic, eigenvalue enclosure, residual bound.
+\end{IEEEkeywords}
+
+\section{Problem and Main Result}
+\IEEEPARstart{A}{ small} residual or a numerically uniform profile need not establish the corresponding exact statement. Disconnected components, repeated eigenvalues, coordinate metrics, and floating-point assembly each require separate treatment. The purpose here is to provide a proof of the clean R6b finite model in a form that can be checked without accepting conclusions from earlier simulation reports.
+
+The historical model specification is available in the source archive~\cite{source}. We take its rational interpretation as the mathematical definition below. In particular, the constants are assumptions of this model, not values derived here from an underlying physical theory. The proofs do not require execution of historical code. Exact certificates and verification procedures are supplied as supplementary material~\cite{supplement}.
+
+\begin{theorem}[Overview]\label{thm:overview}
+For the operator defined in Section~\ref{sec:model}:
+\begin{enumerate}
+\item At level $L\geq3$, the Theta channel has $4^{L-3}$ components of 64 sites. The coupled operator has the same component labels, with 128 coordinates per component.
+\item The Theta Laplacian on each component has eigenvalues
+\begin{equation}\label{eq:spectrum-summary}
+0^{[1]},\quad (64b)^{[3]},\quad
+(16a+48b)^{[12]},\quad (12a+48b)^{[48]}.
+\end{equation}
+\item At $L=4$, every coupled component has exactly one negative eigenvalue and no zero eigenvalues. Its second eigenvalue is at least $v_{\min}/2$.
+\item The three components with nonzero first digit have the same simple negative eigenvalue, represented by a two-coordinate matrix. Their separately normalized channel intensities are uniform within each component.
+\item The component with first digit zero has its simple negative eigenvalue in an invariant six-coordinate subspace. Its Theta intensity is strictly nonuniform. Its eigenvalue and concentration obey the exact enclosures in Section~\ref{sec:certificate}.
+\end{enumerate}
+\end{theorem}
+The component and uncoupled spectrum statements in items 1--2 extend to all declared levels. The depth-specific reductions and numerical enclosures in items 3--5 are for $L=4$.
+
+\section{Exact Model and Coordinate Metric}\label{sec:model}
+Let $X_L=\{0,1,2,3\}^L$, with lexicographic address order and $N=4^L$. We work on $\R^{X_L}\oplus\R^{X_L}$, written $(x,y)$ for the rho and Theta channels. The site inner product is Euclidean. Define
+\begin{equation}\label{eq:parameters}
+\eta=\frac{185}{192},\qquad \delta=1-\eta=\frac7{192},
+\qquad a=\eta^4,\quad b=\eta^6.
+\end{equation}
+For an address $d=(d_1,\ldots,d_L)$, define its depth and parity by
+\begin{align}
+h(d)&=\min\bigl(\{j:d_j\ne0\}\cup\{L\}\bigr),\label{eq:depth}\\
+s(d)&=(-1)^{d_1+\cdots+d_L}.\label{eq:parity}
+\end{align}
+Thus the all-zero address has depth $L$. Aligned groups of $m\in\{4,16,64\}$ consecutive sites mean groups agreeing in the first $L-\log_4m$ digits.
+
+For weights $w_{ij}=w_{ji}\geq0$ on distinct sites, our Laplacian convention is
+\begin{equation}\label{eq:lap}
+(L_w z)_i=\sum_{j\ne i}w_{ij}(z_i-z_j).
+\end{equation}
+Let $L_{\rm sib}$ have unit weight on each pair in the same aligned four-site group and zero otherwise. The Theta weights are
+\begin{equation}\label{eq:weights}
+w^\Theta_{ij}=\begin{cases}
+a,&\text{same 16-site group, different four-site groups},\\
+b,&\text{same 64-site group, different 16-site groups},\\
+0,&\text{otherwise}.
+\end{cases}
+\end{equation}
+There are no Theta edges inside a four-site group and none between different 64-site groups. Write $T=L_{w^\Theta}$, and set
+\begin{align}
+v_h&=\delta(1-\eta^h),\label{eq:v}\\
+c_h&=\eta^2\delta(1-\eta^h)(\eta^h-\eta^{2h}),\label{eq:c}\\
+V&=\diag(v_{h(d)}),\quad C=\diag(c_{h(d)}),\quad
+D=\diag(s(d)).\nonumber
+\end{align}
+The exact rational operator is
+\begin{equation}\label{eq:H}
+H=\begin{pmatrix}\eta^2L_{\rm sib}+V&DC\\DC&T\end{pmatrix}.
+\end{equation}
+It is symmetric because $C,D$ commute and every diagonal entry is real. Throughout, eigenvalues are ordered increasingly, including multiplicity.
+
+An injective coordinate embedding $B$ induces Gram matrix $B^TB$. If $HB=BK$, symmetry of $H$ implies
+\begin{equation}\label{eq:metric}
+(B^TB)K=K^T(B^TB).
+\end{equation}
+Consequently a reduced matrix need not be symmetric in its unnormalized coordinates. Its eigenvalues and norms must use the induced metric. This observation is essential for Section~\ref{sec:six}.
+
+\section{Components and Uncoupled Spectrum}
+\begin{proposition}[Component labels]\label{prop:components}
+The Theta graph has $N/64$ connected components, labeled by the first $L-3$ digits. Each contains 64 sites. The sparsity graph of $H$ has the same labels and 128 coordinates per component.
+\end{proposition}
+\begin{proof}
+All allowed edges preserve the prefix. Inside one 64-site group, sites in different 16-site groups are directly joined with positive weight $b$. Sites in the same 16-site group can be joined through a site in another group. Hence each group is connected. Rho edges also preserve this prefix. Since $v_h,c_h>0$ for $h\geq1$, every rho coordinate is joined to its Theta coordinate by a nonzero coupling. Thus both channels form one coupled component for each prefix. There are $4^{L-3}$ prefixes.
+\end{proof}
+
+On a 64-site component, let $E_m$ replace each coordinate by its average in the corresponding aligned $m$-site group. These are commuting orthogonal projections and
+\begin{equation}
+\ran E_{64}\subset\ran E_{16}\subset\ran E_4.
+\end{equation}
+\begin{theorem}[Theta spectral decomposition]\label{thm:theta}
+On each 64-site component,
+\begin{align}\label{eq:Tdecomp}
+T={}&g_0(I-E_4)+g_1(E_4-E_{16})\nonumber\\
+&+\gamma(E_{16}-E_{64}),\\
+g_0={}&12a+48b,\quad g_1=16a+48b,\quad\gamma=64b.\nonumber
+\end{align}
+The spectrum is~\eqref{eq:spectrum-summary}. For the parameters~\eqref{eq:parameters}, the smallest positive eigenvalue is $g_0$.
+\end{theorem}
+\begin{proof}
+For a vector with zero sum in each four-site group, all neighboring group sums vanish; each site has 12 neighbors of weight $a$ and 48 of weight $b$, so $T$ acts by $g_0$. On vectors constant within four-site groups and of zero sum in each 16-site group, the same sum gives $16a+48b$. On vectors constant within 16-site groups with zero total sum, it gives $64b$. Globally constant vectors are killed by the Laplacian. The four orthogonal projectors have ranks $48,12,3,1$, respectively, and sum to $I$. Finally, $a>b$ and $3a<4b$, checked by substituting $\eta=185/192$, give $g_0<\gamma<g_1$.
+\end{proof}
+For reference, exact nonzero eigenvalues are
+\begin{align}
+\gamma&=\frac{40089475140625}{782757789696},\\
+g_1&=\frac{54483031620625}{1043677052928},\\
+g_0&=\frac{50884642500625}{1043677052928}.
+\end{align}
+Their approximate values are $51.21568341$, $52.20296017$, and $48.75516076$. These are Theta eigenvalues, not coupled complementary gaps.
+
+\section{A Coupled Gap and Negative-Eigenvalue Count}\label{sec:count}
+Here and below in the depth-specific results, $L=4$. Restrict $H$ to one component. Put $u=\one/8$ in its Theta coordinates, and define
+\begin{equation}
+v_* =\min_i v_{h(i)},\qquad c^*=\max_i c_{h(i)},\qquad
+\alpha=\frac{v_*}{2}.
+\end{equation}
+Direct rational bounds, simultaneously valid for $h=1,2,3,4$, are
+\begin{equation}\label{eq:coarse}
+\frac1{1000}<v_h<\frac1{100},\qquad
+0<c_h<\frac1{1000},\qquad g_0>48.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:margin}
+g_0-\frac{2(c^*)^2}{v_*}>\frac{v_*}{2}>0.
+\end{equation}
+These inequalities require only integer powers of $185/192$; the supplementary verifier checks them as fractions.
+
+\begin{theorem}[One negative mode per component]\label{thm:negative}
+Each level-four component has precisely one negative eigenvalue, no zero eigenvalues, and $\lambda_2(H)\geq\alpha$.
+\end{theorem}
+\begin{proof}
+On the codimension-one subspace $y\perp u$, Theorem~\ref{thm:theta} gives
+\begin{align}
+\ip{(x,y)}{H(x,y)}
+&\geq v_*\norm{x}^2-2c^*\norm{x}\norm{y}+g_0\norm{y}^2\nonumber\\
+&\geq\frac{v_*}{2}\norm{x}^2+
+\left(g_0-\frac{2(c^*)^2}{v_*}\right)\norm{y}^2\nonumber\\
+&\geq\alpha(\norm{x}^2+\norm{y}^2).\label{eq:codim}
+\end{align}
+The middle inequality is $2ab\leq t a^2+b^2/t$ with $t=v_*/2$. The max--min characterization of the second eigenvalue therefore gives $\lambda_2(H)\geq\alpha$.
+
+The rho block $A_\rho=\eta^2L_{\rm sib}+V$ is positive definite. Choose $y=u$ and $x=-A_\rho^{-1}DCu$. Since $Tu=0$, substitution into the quadratic form gives
+\begin{equation}
+\ip{(x,u)}{H(x,u)}=-\ip{DCu}{A_\rho^{-1}DCu}<0.
+\end{equation}
+Here $DCu\ne0$. Thus $\lambda_1(H)<0$, whereas every other eigenvalue is positive by~\eqref{eq:codim}. This proves the claim.
+\end{proof}
+
+\begin{proposition}[A small complementary Rayleigh quotient]\label{prop:smallgap}
+In a constant-depth component the complement of the two-coordinate sector constructed below contains a unit vector of energy $v_1=\delta^2=49/36864$.
+\end{proposition}
+\begin{proof}
+Set $q=(u,0)$. The vector $p=Du$ sums to zero in each four-site group, so $u\perp p$ and $q$ is perpendicular to both $(p,0)$ and $(0,u)$. Since $L_{\rm sib}u=0$, $\ip q{Hq}=v_1$.
+\end{proof}
+Thus the Theta gap $g_0\approx48.76$ cannot be used as a lower bound for the coupled complementary spectrum. The proved lower bound in a constant-depth module is $v_1/2=49/73728$, while the displayed trial gives a complementary minimum at most $v_1$.
+
+\section{Exact Two-Coordinate Reduction}
+In a component with $d_1\in\{1,2,3\}$, every site has $h=1$. Define
+\begin{equation}\label{eq:r1}
+v=\delta^2,\quad c=\eta^3\delta^3,\quad r=4\eta^2+v.
+\end{equation}
+The reduction follows from the alternating sibling parity.
+\begin{theorem}[Constant-depth branch]\label{thm:two}
+With $u=\one/8$ and $p=Du$, the orthonormal embedding $Q$ with columns $(p,0)$ and $(0,u)$ satisfies
+\begin{equation}
+HQ=QK_2,\qquad K_2=\begin{pmatrix}r&c\\c&0\end{pmatrix}.
+\end{equation}
+Its negative eigenvalue is the unique negative eigenvalue of the full component and equals
+\begin{align}\label{eq:lminus}
+\lambda_-&=\frac{r-\sqrt{r^2+4c^2}}2\nonumber\\
+&=-\frac{2c^2}{r+\sqrt{r^2+4c^2}}.
+\end{align}
+Both nonzero channel profiles are conditionally uniform within the component.
+\end{theorem}
+\begin{proof}
+Each sibling group contains two signs of each parity. Thus $L_{\rm sib}p=4p$, $Dp=u$, $Du=p$, and $Tu=0$. Applying $H$ to the two columns gives the claimed intertwining identity. The characteristic polynomial is $t^2-rt-c^2$, whose roots have opposite signs. Theorem~\ref{thm:negative} identifies the negative root with the component ground eigenvalue. A normalized eigenvector is
+\begin{equation}\label{eq:zminus}
+z_- =\frac{((\lambda_-/c)p,u)}{\sqrt{1+(\lambda_-/c)^2}}.
+\end{equation}
+Since $|p_i|^2=|u_i|^2=1/64$, each separately normalized channel has constant intensity.
+\end{proof}
+The channel weights are
+\begin{equation}
+W_\rho=\frac{(\lambda_-/c)^2}{1+(\lambda_-/c)^2},\qquad
+W_\Theta=\frac1{1+(\lambda_-/c)^2}.
+\end{equation}
+The forward enclosure
+\begin{equation}\label{eq:lambda-forward}
+-\frac{c^2}{r}<\lambda_-<
+-\frac{c^2}{r+c^2/r}<0
+\end{equation}
+follows by writing $t=-\lambda_->0$, so $t=c^2/(r+t)$ and $0<t<c^2/r$. Numerically,
+\begin{equation}
+\lambda_-\approx-5.05879939585315287089\times10^{-10}.
+\end{equation}
+The three components differ only in a constant rho parity sign, which an orthogonal diagonal sign change removes. Their negative eigenvalues therefore agree exactly.
+
+\section{The Varying-Depth Component}\label{sec:six}
+For first digit zero, the 64 addresses are $(0,d_2,d_3,d_4)$. Their 16 sibling groups have depths $h=4,3,2$ with respective multiplicities
+\begin{equation}\label{eq:n}
+(n_4,n_3,n_2)=(1,3,12).
+\end{equation}
+The all-zero sibling prefix contributes depth four even when the last digit is zero, by~\eqref{eq:depth}. Put $r_h=4\eta^2+v_h$.
+
+\subsection{A 32-Coordinate Intermediate Representation}
+For sibling group $g$, write $t_g=\one_g/2$ and $p_g=Dt_g$. The 32 columns $(p_g,0)$ and $(0,t_g)$ are orthonormal. Their span is invariant. Indeed the rho and cross actions preserve each of these paired shapes, and the Theta action preserves group-constant vectors. In these coordinates,
+\begin{equation}\label{eq:K32}
+K_{32}=\begin{pmatrix}R_{16}&C_{16}\\C_{16}&L_{16}\end{pmatrix},
+\end{equation}
+where $R_{16}=\diag(r_{h_g})$, $C_{16}=\diag(c_{h_g})$, and
+\begin{align}
+(L_{16})_{gg}&=12a+48b,\nonumber\\
+(L_{16})_{gj}&=\begin{cases}
+-4a,&g\ne j,\ \lfloor g/4\rfloor=\lfloor j/4\rfloor,\\
+-4b,&\text{otherwise},
+\end{cases}\quad(g\ne j).
+\end{align}
+Using four- and sixteen-group averaging projectors,
+\begin{equation}\label{eq:L16}
+L_{16}=64b(E_4-E_{16})+(16a+48b)(I-E_4).
+\end{equation}
+Its kernel is the constant vector $u_{16}=\one/4$, and its positive gap is $\gamma=64b$.
+
+\subsection{Six Coordinates and Their Inherited Metric}
+Retain one amplitude for each depth in each channel. In the order $(x_4,x_3,x_2,y_4,y_3,y_2)$, let
+\begin{equation}\label{eq:K6}
+\begin{gathered}
+K_6=\begin{pmatrix}R&C_3\\C_3&A\end{pmatrix},\\
+R=\diag(r_4,r_3,r_2),\quad C_3=\diag(c_4,c_3,c_2),
+\end{gathered}
+\end{equation}
+with
+\begin{equation}\label{eq:A}
+A=\begin{pmatrix}
+12a+48b&-12a&-48b\\
+-4a&4a+48b&-48b\\
+-4b&-12b&16b
+\end{pmatrix}.
+\end{equation}
+Define the site embedding $B$ by $x_i=s(i)x_{h(i)}$ and $y_i=y_{h(i)}$. Directly,
+\begin{equation}\label{eq:Bmetric}
+HB=BK_6,\qquad B^TB=4G,
+\quad G=\diag(1,3,12,1,3,12).
+\end{equation}
+For example a depth-four Theta site sees 12 depth-three sites with weight $a$ and 48 depth-two sites with weight $b$, giving the first row of~\eqref{eq:A}. A depth-three site sees four depth-four sites at weight $a$, while the other depth-three sites have the same amplitude and contribute zero net difference. A depth-two site sees four depth-four and twelve depth-three sites at weight $b$. These counts give the other two rows and prove invariance. Equation~\eqref{eq:metric} yields $GK_6=K_6^TG$; equivalently $G^{1/2}K_6G^{-1/2}$ is real symmetric.
+
+\begin{theorem}[The six-coordinate ground state]\label{thm:six}
+The unique negative eigenvalue of the varying-depth component is an eigenvalue of $K_6$, and its full eigenvector lies in $\ran B$.
+\end{theorem}
+\begin{proof}
+The vector with $y_h=1$ and $x_h=-c_h/r_h$ is in $\ran B$. Its quadratic form, using~\eqref{eq:Bmetric}, is
+\begin{equation}
+-4\sum_{h\in\{4,3,2\}} n_h\frac{c_h^2}{r_h}<0,
+\end{equation}
+because $A\one=0$. The invariant restriction consequently has a negative eigenvalue. The full matrix has exactly one negative eigenvalue by Theorem~\ref{thm:negative}; its simplicity identifies this eigenvector with the full ground vector.
+\end{proof}
+
+\subsection{A Scalar Root and a Positive Profile}
+For $\lambda<0$, eliminate rho and define
+\begin{align}
+x_h&=-\frac{c_h}{r_h-\lambda}y_h,\label{eq:eliminate}\\
+S(\lambda)&=A-\lambda I-
+\diag\left(\frac{c_h^2}{r_h-\lambda}\right).\label{eq:schur}
+\end{align}
+The negative eigenvalue is the unique negative root of $\det S(\lambda)=0$. There are no poles on this half-line, and block elimination gives
+\begin{equation}
+\det(K_6-\lambda I)=\prod_h(r_h-\lambda)\det S(\lambda).
+\end{equation}
+Uniqueness and simplicity follow from Theorem~\ref{thm:six} and weighted self-adjointness.
+
+For a useful initial interval, define
+\begin{equation}\label{eq:Mm}
+M=\max_h\frac{c_h^2}{r_h},\qquad
+m=\min_h\frac{c_h^2}{r_h+M},\qquad h\in\{2,3,4\}.
+\end{equation}
+\begin{lemma}[Root bracket]\label{lem:bracket}
+The varying-depth ground eigenvalue satisfies $-M\leq\lambda\leq-m<0$.
+\end{lemma}
+\begin{proof}
+In the orthonormal group coordinates~\eqref{eq:K32}, let
+$V(\lambda)=\diag(c_{h_g}^2/(r_{h_g}-\lambda))$.
+Because $H-\lambda I$ is positive semidefinite and $R_{16}-\lambda I$ is positive definite, its Schur complement is positive semidefinite. Thus $\lambda$ is the lowest eigenvalue of $L_{16}-V(\lambda)$. For $\lambda<0$, $V(\lambda)\leq MI$; hence $\lambda\geq-M$. This implies $mI\leq V(\lambda)$. Testing on $u_{16}$ gives $\lambda\leq-m$.
+\end{proof}
+The off-diagonal entries of $L_{16}-V(\lambda)$ are strictly negative. Its real lowest eigenvector can be chosen strictly positive: replacing coordinates by absolute values cannot increase its Rayleigh quotient, and a zero coordinate in a nonnegative eigenvector contradicts the eigen-equation. This establishes a positive Theta profile without imposing it as an extra assumption.
+
+\section{Concentration and Exact Nonuniformity}\label{sec:concentration}
+For a channel vector $z$, first record $W=\sum_i|z_i|^2$. Only when $W>0$ define $q_i=|z_i|^2/W$. If $w_j=\sum_{i\in j}q_i$ is the weight in component $j$, set
+\begin{align}
+F_j&=64\sum_{i\in j}\frac{q_i^2}{w_j^2}\quad(w_j>0),\label{eq:Fc}\\
+I_{\rm comp}&=\sum_jw_j^2,\qquad F_{\rm global}=N\sum_iq_i^2.\nonumber
+\end{align}
+An empty channel or component has no conditional concentration value. No small denominator is inserted.
+
+\begin{proposition}[Separation of support and profile]\label{prop:concentration}
+Writing $J=N/64$, one has
+\begin{align}
+F_{\rm global}&=J\sum_{j:w_j>0}w_j^2F_j,\label{eq:globalF}\\
+\overline F_{\rm within}&=
+\frac{\sum_jw_j^2F_j}{\sum_jw_j^2}
+=\frac{F_{\rm global}}{J I_{\rm comp}}.\label{eq:Fbar}
+\end{align}
+For all occupied components, $1\leq F_j\leq64$.
+\end{proposition}
+\begin{proof}
+Substituting~\eqref{eq:Fc} and summing over components gives~\eqref{eq:globalF}. The denominator in~\eqref{eq:Fbar} is positive since $\sum_jw_j=1$. On each component the conditional probabilities sum to one; Cauchy--Schwarz and $p_i^2\leq p_i$ give $1/64\leq\sum_ip_i^2\leq1$.
+\end{proof}
+For a normalized superposition of the three constant-depth negative modes, write $w_j=|\alpha_j|^2$ with $\sum_{j=1}^3w_j=1$. In either channel,
+\begin{equation}
+\overline F_{\rm within}=1,\qquad
+F_{\rm global}=4\sum_{j=1}^3w_j^2\in[4/3,4].
+\end{equation}
+An orthonormal change of basis in this repeated eigenspace changes individual $w_j$ but not the spectral projector. Hence the global concentration of one returned eigenvector is not a basis-invariant test of local concentration. The normalized projector density is uniform on the 192 sites supporting this branch, yielding $F_{\rm global}=4/3$ for that density.
+
+\begin{lemma}[Weighted pairwise variance]\label{lem:variance}
+For positive weights $n_i$, real numbers $z_i$, $n=\sum_i n_i$, and $\bar z=\sum_i n_i z_i/n$,
+\begin{equation}\label{eq:pairwise}
+\sum_{i<j}n_i n_j(z_i-z_j)^2
+=n\sum_i n_i(z_i-\bar z)^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Expanding either side gives $n\sum_i n_i z_i^2-(\sum_i n_i z_i)^2$.
+\end{proof}
+For the six-coordinate eigenvector put
+\begin{equation}
+\begin{gathered}
+T_2=\sum_h n_h y_h^2,\quad R_2=\sum_h n_h x_h^2,\\
+W_\rho=\frac{R_2}{R_2+T_2},\quad W_\Theta=1-W_\rho.
+\end{gathered}
+\end{equation}
+The site multiplicities are $4n_h$. Their common factor cancels in the weights and gives
+\begin{align}\label{eq:Fexcess}
+F_\Theta&=16\frac{\sum_h n_h y_h^4}{T_2^2},\nonumber\\
+F_\Theta-1&=\frac{\sum_{i<j}n_i n_j(y_i^2-y_j^2)^2}{T_2^2}.
+\end{align}
+The second formula follows from Lemma~\ref{lem:variance} with $z_h=y_h^2$ and $n=16$. It avoids cancellation when the profile is nearly uniform.
+
+\begin{theorem}[Strict and quantitatively small nonuniformity]\label{thm:nonuniform}
+For the varying-depth ground state, $F_\Theta>1$. With $M,m$ from~\eqref{eq:Mm}, let
+\begin{equation}
+\eps=\frac{M-m}{2(\gamma-M)}.
+\end{equation}
+Then
+\begin{equation}\label{eq:nonuniformbound}
+0<F_\Theta-1\leq4\eps^2(1+2\eps)^2<10^{-17}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+All following inequalities are rational substitutions of~\eqref{eq:parameters},~\eqref{eq:v}, and~\eqref{eq:c}:
+\begin{align}
+\gamma&>M>0,\nonumber\\
+\frac{c_4^2}{r_4+M}&>\frac{c_3^2}{r_3},\qquad
+\frac{c_3^2}{r_3+M}>\frac{c_2^2}{r_2}.\label{eq:strictpotential}
+\end{align}
+For $-M\leq\lambda\leq0$, these imply that the three entries of $V(\lambda)$ satisfy $d_4>d_3>d_2$. A uniform positive eigenvector of $L_{16}-V(\lambda)$ would require all $d_h$ equal, since $L_{16}u_{16}=0$. The positive ground profile is therefore nonuniform and~\eqref{eq:Fexcess} makes the first inequality strict.
+
+Normalize its group vector to $\norm y=1$ and write $y=\alpha_0u_{16}+e$, $e\perp u_{16}$, $\alpha_0>0$. Let $d_0$ be the midpoint of the largest and smallest entries of $V(\lambda)$. Projection of the eigen-equation gives
+\begin{equation}
+[L_{16}-(\lambda+d_0)I]e=P_{u_{16}^\perp}(V-d_0I)y.
+\end{equation}
+On $u_{16}^\perp$, the left operator has lower bound $\gamma-M$, while the right side has norm at most $(M-m)/2$. Hence $\norm e\leq\eps$.
+
+For $q_g=y_g^2$ and $(u_{16})_g=1/4$,
+\begin{equation}
+q-\one/16=(\alpha_0/2)e+
+P_{u_{16}^\perp}(e_g^2)_g.
+\end{equation}
+Its norm is at most $\norm e/2+\norm e^2$, because $\alpha_0\leq1$ and $\norm{(e_g^2)_g}\leq\norm e^2$. Since $F_\Theta-1=16\norm{q-\one/16}^2$,~\eqref{eq:nonuniformbound} follows. Exact fraction evaluation gives $\eps<7.436\times10^{-10}$ and the last bound. A more informative approximate upper bound is $2.21122\times10^{-18}$.
+\end{proof}
+
+\section{Certified Root, Profile, and Channel Weights}\label{sec:certificate}
+The determinant in~\eqref{eq:schur} permits a rational certificate. Its sign at $-M$ is positive and its sign at zero is negative. These facts, and the sharper endpoint signs listed below, are checked by the explicit $3\times3$ formula
+\begin{align}\label{eq:det}
+\det S={}&S_{11}(S_{22}S_{33}-S_{23}S_{32})\nonumber\\
+&-S_{12}(S_{21}S_{33}-S_{23}S_{31})\nonumber\\
+&+S_{13}(S_{21}S_{32}-S_{22}S_{31}).
+\end{align}
+All entries at rational arguments are rational. Bisecting $[-M,0]$ 160 times and retaining the positive left and negative right signs produces width $M2^{-160}<10^{-55}$. Uniqueness of the negative root justifies this sign-based isolation.
+
+Let $\ell,u$ be the retained endpoints. Evaluate~\eqref{eq:schur} by outward rational interval arithmetic for $\lambda\in[\ell,u]$. Set $y_4=1$ and define
+\begin{align}
+\Delta_S&=S_{22}S_{33}-S_{23}S_{32},\nonumber\\
+y_3&=\frac{-S_{21}S_{33}+S_{23}S_{31}}{\Delta_S},\label{eq:ysolve}\\
+y_2&=\frac{-S_{22}S_{31}+S_{32}S_{21}}{\Delta_S}.\nonumber
+\end{align}
+The interval for $\Delta_S$ is strictly positive. Thus these divisions are legitimate, and at the root the remaining row follows from~\eqref{eq:det}. Substitution into~\eqref{eq:eliminate} and~\eqref{eq:Fexcess} gives certified weights and concentration.
+
+\begin{theorem}[Explicit rational enclosures]\label{thm:enclosures}
+Every terminating decimal in the following strict bounds denotes an exact rational number:
+\begin{equation}\label{eq:rootprint}
+\begin{gathered}
+-1.6145247540177632\times10^{-8}<\lambda,\\
+\lambda<-1.6145247540177631\times10^{-8}.
+\end{gathered}
+\end{equation}
+\begin{equation}\label{eq:wrprint}
+\begin{gathered}
+4.3430663967222016\times10^{-9}<W_\rho,\\
+W_\rho<4.3430663967222018\times10^{-9}.
+\end{gathered}
+\end{equation}
+\begin{equation}\label{eq:wtprint}
+\begin{gathered}
+0.99999999565693360<W_\Theta,\\
+W_\Theta<0.99999999565693361.
+\end{gathered}
+\end{equation}
+The concentration excess obeys
+\begin{equation}\label{eq:excessprint}
+\begin{gathered}
+5.7515757103508979\times10^{-19}<F_\Theta-1,\\
+F_\Theta-1<5.7515757103508980\times10^{-19}.
+\end{gathered}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Apply the rational isolation and interval substitutions just specified. The supplementary verifier includes exact endpoints, the determinant signs, and all comparisons with~\eqref{eq:rootprint}--\eqref{eq:excessprint}. Interval addition and multiplication take the smallest and largest endpoint combinations; division uses reciprocals only when the denominator interval excludes zero. Thus each operation encloses its exact value. Finally, rounding a lower endpoint downward and an upper endpoint upward to integer multiples of $10^{-65}$ preserves inclusion. All displayed strict bounds are checked against those outward endpoints. No floating-point eigenvalue is an input to the calculation.
+\end{proof}
+For readability, the amplitude ratios begin
+\begin{equation}
+\begin{gathered}
+y_4=1,\quad y_3\approx0.9999999989912707,\\
+y_2\approx0.9999999985275668.
+\end{gathered}
+\end{equation}
+This approximation is not used as a certificate.
+
+\begin{corollary}[Full level-four negative spectrum]
+The 512-coordinate operator has four negative eigenvalues: the simple varying-depth eigenvalue~\eqref{eq:rootprint}, followed by the constant-depth value~\eqref{eq:lminus} with multiplicity three. All remaining eigenvalues are at least $49/73728$.
+\end{corollary}
+\begin{proof}
+Combine the four-component direct sum, Theorem~\ref{thm:negative}, and the two reductions. The root intervals make the two distinct values ordered as stated. The smallest $v_h$ at level four is $v_1=49/36864$, as $v_h$ increases with $h$.
+\end{proof}
+The bound on the remaining spectrum is not the gap above the global ground eigenvalue: three negative eigenvalues intervene before the positive spectrum.
+
+\section{Stored-Matrix and Solver Error Bounds}\label{sec:error}
+The rational source $H$ and a stored binary64 matrix $\widehat H$ are different matrices. Treating every finite binary64 entry as its exact dyadic rational value makes their difference $E=\widehat H-H$ exact. The supplementary stored-matrix audit identifies the payload by SHA-256~\cite{audit}. The following theorem states the enclosure used there and proves its hypotheses are module-specific.
+
+\begin{theorem}[Module-wise Rayleigh--Temple enclosure]\label{thm:temple}
+Let $H_j$ be one source component and $\widehat H_j$ its real symmetric stored component. Suppose
+\begin{equation}
+e_j=\max_i\sum_k|(\widehat H_j-H_j)_{ik}|,
+\qquad \beta_j=v_{*,j}/2-e_j>0.
+\end{equation}
+For nonzero trial vector $z$, define exact quantities
+\begin{align}
+\mu&=\frac{z^T\widehat H_jz}{z^Tz},\label{eq:mu}\\
+\sigma^2&=\frac{\norm{\widehat H_jz-\mu z}_2^2}{z^Tz}.\label{eq:var}
+\end{align}
+If $\mu<\beta_j$, then the lowest stored eigenvalue satisfies
+\begin{equation}\label{eq:Temple}
+\mu-\frac{\sigma^2}{\beta_j-\mu}
+\leq\lambda_1(\widehat H_j)\leq\mu.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For symmetric $E$, $\norm E_2\leq\sqrt{\norm E_1\norm E_\infty}=\norm E_\infty=e_j$. The min--max principle gives $|\lambda_k(\widehat H_j)-\lambda_k(H_j)|\leq e_j$; hence Theorem~\ref{thm:negative} implies $\lambda_2(\widehat H_j)\geq\beta_j$.
+
+Normalize $z$ and expand it in an orthonormal eigenbasis of $\widehat H_j$, with eigenvalues $\theta_1\leq\theta_2\leq\cdots$. Every spectral value satisfies
+$(\theta_k-\theta_1)(\theta_k-\beta_j)\geq0$: it vanishes at $k=1$ and both factors are nonnegative for $k\geq2$. Taking its spectral average yields
+\begin{equation}
+\sigma^2+(\mu-\theta_1)(\mu-\beta_j)\geq0.
+\end{equation}
+Since $\mu<\beta_j$, rearrangement proves the lower bound. The Rayleigh variational principle gives $\theta_1\leq\mu$.
+\end{proof}
+This proof requires a lower bound on the second eigenvalue of the same matrix to which the trial belongs. Applying a component bound to a mixed trial in the full direct sum is not justified.
+
+The fixed payload satisfies $e_j<5.818\times10^{-14}$ in every module. Rational source-profile midpoints provide trial vectors; their exact stored-matrix residual variances satisfy $\sigma^2<3.030\times10^{-28}$. Equation~\eqref{eq:Temple} then gives interval widths below $2.33\times10^{-25}$ in the varying-depth module and $4.56\times10^{-25}$ in each constant-depth module. The input entries, row-sum bounds, trial construction, and exact interval endpoints are included with the numerical audit~\cite{audit}. These are data-specific results, whereas Theorem~\ref{thm:temple} is a general statement.
+
+The resulting stored ground eigenvalues begin
+\begin{align}
+\lambda_1(\widehat H_0)&\approx-1.6145203575346149\times10^{-8},\\
+\lambda_1(\widehat H_j)&\approx-5.058359747535502\times10^{-10},
+\nonumber
+\end{align}
+Here $j=1,2,3$.
+The corresponding source-to-stored shifts are about $+4.39648315\times10^{-14}$ and $+4.39648318\times10^{-14}$, respectively. The three stored constant-depth blocks are exactly related by a diagonal sign gauge; their ground eigenvalues agree as well.
+
+For a solver return $(\widetilde\lambda,\widetilde z)$, distinguish
+\begin{equation}
+\widetilde\lambda-\lambda_1(H_j)=
+\underbrace{\widetilde\lambda-\lambda_1(\widehat H_j)}_{\text{solver reporting error}}
++\underbrace{\lambda_1(\widehat H_j)-\lambda_1(H_j)}_{\text{assembly shift}}.
+\end{equation}
+Subtracting the certified stored interval from a reported value bounds the first term directly. Subtracting the source interval from the stored interval bounds the second. A tiny stored residual does not eliminate assembly shift.
+
+\subsection{Residual Scaling and Shift--Invert Selection}
+The fixed numerical protocol evaluates
+\begin{equation}\label{eq:residual}
+\frac{\norm{\widehat H\widetilde z-\widetilde\lambda\widetilde z}_2}
+{\max(1,\norm{\widehat H}_\infty+|\widetilde\lambda|)}
+\leq5\times10^{-12}
+\end{equation}
+on the originally stored vectors. This is an acceptance criterion, not a relative eigenvalue accuracy theorem. For a unit vector the usual spectral inclusion bound follows by eigenbasis expansion:
+\begin{equation}
+\min_k|\widetilde\lambda-\lambda_k(\widehat H)|
+\leq\norm{\widehat H\widetilde z-\widetilde\lambda\widetilde z}_2.
+\end{equation}
+For a nonunit vector the right side must be divided by $\norm{\widetilde z}_2$. The exact stored infinity norm in this payload is
+\begin{equation}
+\norm{\widehat H}_\infty=
+\frac{28105596915389682213}{288230376151711744}
+\approx97.51087755.
+\end{equation}
+The Theta spectral value $52.20296017$ is not this norm.
+
+If $\sigma$ is outside the spectrum, shift--invert maps an eigenpair to
+\begin{equation}
+(\widehat H-\sigma I)^{-1}z_k=
+\frac1{\lambda_k-\sigma}z_k.
+\end{equation}
+Thus selecting largest transformed magnitude favors eigenvalues nearest $\sigma$, not necessarily the negative branch. Probes near $0.00133$ and $10^{-8}$ target different neighborhoods. In the fixed replay, the former returned no negative mode and the latter returned all four. This observation concerns that run, not a general convergence guarantee.
+
+\subsection{Two Necessary Numerical Distinctions}
+First, the center in~\eqref{eq:Temple} is the Rayleigh quotient $\mu$, not an arbitrary reported value. For $A=\diag(0,1)$, $z=(1,0)^T$, and report $\widetilde\lambda=0.01$, the reporting error is $0.01$ but a naive residual-squared expression with gap one gives only $0.0001$. It therefore fails to enclose that error.
+
+Second,~\eqref{eq:var} should be evaluated directly or in certified arithmetic. Although algebraically
+\begin{equation}
+\sigma^2=\frac{\norm{\widehat H_jz}^2}{\norm z^2}-\mu^2,
+\end{equation}
+the subtraction can lose all significant digits in floating point. For $A=\left(\begin{smallmatrix}1&10^{-9}\\10^{-9}&2\end{smallmatrix}\right)$ and $z=(1,0)^T$, the exact variance is $10^{-18}$, whereas ordinary binary64 subtraction may return zero. The exact source and stored-byte certificates avoid this cancellation.
+
+\balance
+\section{Reproducibility and Mathematical Scope}
+The supplementary proof verifier uses integer and rational arithmetic for embeddings, weighted self-adjointness, determinant signs, root isolation, and interval inequalities. Decimal expansions are for display only. The supplementary stored-matrix verifier reproduces the module certificates and solver-return audit for the fixed payload~\cite{supplement,audit}. Its input hash is checked before calculations begin.
+
+The mathematical hypotheses are the address grammar, edge weights, depth law, coupling law, and Euclidean site metric in Section~\ref{sec:model}. No theorem here derives these hypotheses from an experiment. Negative matrix eigenvalues are spectral facts; a physical energy or dynamical-instability interpretation would require a specified evolution law and observable map. Likewise, the finite channel weights are not by themselves particle probabilities. No action-unit normalization, quark or lepton identification, or experimental correspondence follows from these results.
+
+\section{Conclusion}
+The clean R6b operator admits exact component and low-mode reductions. The level-four negative spectrum consists of a simple varying-depth mode and a triple constant-depth branch. The varying-depth Theta profile is provably nonuniform despite its concentration being indistinguishable from one at ordinary display precision. The weighted reduction and module-wise error analysis provide separate exact controls on source mathematics, stored matrix eigenvalues, and solver reports. These are the concrete mathematical statements presented for independent review.
+
+\begin{thebibliography}{3}
+\bibitem{source} B. W. Mayes, ``R6b hierarchical two-channel model,'' Unified Dynamics source archive, \texttt{docs/hmulti\_r6b.py}, Git revision \nolinkurl{c6b66d68a25b655627d6eb6f1bf6f96a13e2121b}, 2026. [Online]. Available: \url{https://github.com/ud-tetra/UD}
+\bibitem{supplement} B. W. Mayes, ``R6b exact spectral proof: supplementary verification material,'' source \LaTeX, rational verifier, and certificate accompanying this manuscript, Oct. 21, 2026. [Online]. Available: \href{https://github.com/ud-tetra/UD/tree/contrib/codex/2026-10-21-r6b-proof-ieee-98b1ad6e/captures/2026-10-21T224330Z-codex-r6b-proof-ieee-98b1ad6e}{Supplementary source archive}
+\bibitem{audit} B. W. Mayes, ``R6b stored-matrix exact error-budget audit,'' Git revision \nolinkurl{98d084191b2c6471b1e73aae2985abefc8bc80ff}, 2026. Payload SHA-256: \nolinkurl{fa6f6c4fa3dc9d1c13d0a9d0418cef93d1fd6d03cdfa0370055796164767fd3f}. [Online]. Available: \url{https://github.com/ud-tetra/UD/pull/358}
+\end{thebibliography}
+\end{document}
