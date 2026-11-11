@@ -1,0 +1,136 @@
+{
+  "status": "SUBMITTED_FOR_REVIEW_ONLY",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "claims": [
+    {
+      "id": "C01",
+      "description": "Graph decomposition",
+      "evidence_prs": [
+        350
+      ],
+      "dependencies": [
+        "source address and graph rules"
+      ],
+      "claim_type": "EXACT_CONDITIONAL",
+      "constructor": "Codex",
+      "reviewers": [],
+      "review_status": "OPEN",
+      "promotion": "NONE"
+    },
+    {
+      "id": "C02",
+      "description": "Theta spectrum",
+      "evidence_prs": [
+        350
+      ],
+      "dependencies": [
+        "C01",
+        "identity site metric"
+      ],
+      "claim_type": "EXACT_CONDITIONAL",
+      "constructor": "Codex",
+      "reviewers": [],
+      "review_status": "OPEN",
+      "promotion": "NONE"
+    },
+    {
+      "id": "C03",
+      "description": "Conditional diagnostic",
+      "evidence_prs": [
+        350
+      ],
+      "dependencies": [
+        "nonzero channel normalization",
+        "component partition"
+      ],
+      "claim_type": "EXACT_CONDITIONAL",
+      "constructor": "Codex",
+      "reviewers": [],
+      "review_status": "OPEN",
+      "promotion": "NONE"
+    },
+    {
+      "id": "C04",
+      "description": "Depth1 exact coupled branch",
+      "evidence_prs": [
+        354
+      ],
+      "dependencies": [
+        "source coefficients",
+        "identity site metric"
+      ],
+      "claim_type": "EXACT_CONDITIONAL",
+      "constructor": "Codex",
+      "reviewers": [],
+      "review_status": "OPEN",
+      "promotion": "NONE"
+    },
+    {
+      "id": "C05",
+      "description": "Varying-depth reduction and strict profile bound",
+      "evidence_prs": [
+        355
+      ],
+      "dependencies": [
+        "source coefficients",
+        "identity site metric"
+      ],
+      "claim_type": "EXACT_CONDITIONAL",
+      "constructor": "Codex",
+      "reviewers": [],
+      "review_status": "OPEN",
+      "promotion": "NONE"
+    },
+    {
+      "id": "C06",
+      "description": "Six-coordinate ground sector and weights",
+      "evidence_prs": [
+        356
+      ],
+      "dependencies": [
+        "source coefficients",
+        "induced metric",
+        "source gap proof"
+      ],
+      "claim_type": "EXACT_CONDITIONAL",
+      "constructor": "Codex",
+      "reviewers": [],
+      "review_status": "OPEN",
+      "promotion": "NONE"
+    },
+    {
+      "id": "C07",
+      "description": "Frozen numerical replay provenance",
+      "evidence_prs": [
+        352
+      ],
+      "dependencies": [
+        "serialized bytes",
+        "original settings and receipt"
+      ],
+      "claim_type": "NUMERICAL_PROVENANCE",
+      "constructor": "Codex",
+      "reviewers": [],
+      "review_status": "OPEN",
+      "promotion": "NONE"
+    },
+    {
+      "id": "C08",
+      "description": "Assembly and solver error budget",
+      "evidence_prs": [
+        358
+      ],
+      "dependencies": [
+        "source low-mode anchors",
+        "C07",
+        "min-max and residual-variance proof"
+      ],
+      "claim_type": "EXACT_CONDITIONAL",
+      "constructor": "Codex",
+      "reviewers": [],
+      "review_status": "OPEN",
+      "promotion": "NONE"
+    }
+  ]
+}
