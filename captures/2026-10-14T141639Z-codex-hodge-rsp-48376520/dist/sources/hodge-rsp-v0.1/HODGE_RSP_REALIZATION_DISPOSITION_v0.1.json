@@ -1,0 +1,99 @@
+{
+  "version": "0.1",
+  "date": "2026-10-14",
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "previous_object": "SP-HD-BRIDGE in dependency register0.5",
+  "previous_overall_status": "OPEN",
+  "current_overall_status": "OPEN, WITH STRICT REALIZATION CLASSES EXCLUDED",
+  "reason": "Reversible source / finite settling target factor obstruction. RSP conditional recurrence and prior source statements remain unchanged.",
+  "realization_classes": [
+    {
+      "id": "total-finite",
+      "title": "Total, two-sided, finite decoded carrier",
+      "status": "EXACT CONDITIONAL NO-GO FOR NONFIXED OUTPUTS",
+      "assumptions": [
+        "surjective native U on the declared domain",
+        "state-only exact intertwining for every state",
+        "finite decoded image",
+        "RSP strict potential on every nonfixed transition"
+      ],
+      "result": "The decoded image can contain only RSP fixed states. No continuity assumption is needed.",
+      "section": "\u00a72"
+    },
+    {
+      "id": "uniform",
+      "title": "Total factor with a uniform settling bound",
+      "status": "EXACT CONDITIONAL NO-GO FOR NONFIXED OUTPUTS",
+      "assumptions": [
+        "surjective native U",
+        "exact intertwining",
+        "one common finite settling bound across the decoded image"
+      ],
+      "result": "Only fixed decoded states are possible, even if the image is infinite. Unbounded preparations do not automatically share a bound.",
+      "section": "\u00a73"
+    },
+    {
+      "id": "finite-order",
+      "title": "Full finite-order Hodge sample",
+      "status": "EXACT CONDITIONAL NO-GO FOR NONFIXED OUTPUTS",
+      "assumptions": [
+        "U^m=id on the source domain",
+        "exact state-only intertwining",
+        "RSP strict potential"
+      ],
+      "result": "Every decoded state is periodic and therefore fixed. A rational sample of the unit-metric single cell supplies this case.",
+      "section": "\u00a74"
+    },
+    {
+      "id": "robust-orbit",
+      "title": "Recurrent orbit with stable complete-state decoding",
+      "status": "EXACT CONDITIONAL NO-GO FOR NONFIXED OUTPUTS",
+      "assumptions": [
+        "arbitrarily late native returns near the initial state",
+        "return-stable complete-state decoder",
+        "exact intertwining",
+        "strict target potential"
+      ],
+      "result": "A transient decoded state cannot return to its initial potential. Glued irrational frequencies preserve approximate recurrence.",
+      "section": "\u00a75"
+    },
+    {
+      "id": "window",
+      "title": "Prepared finite window",
+      "status": "EXACT TRACE ENCODING / REALIZATION OPEN",
+      "assumptions": [
+        "distinct native samples during a declared finite window",
+        "decoder chosen from a prepared RSP trajectory",
+        "no global absorbing-factor claim"
+      ],
+      "result": "A finite lookup can encode the trajectory. The quarter-turn example agrees on three edges and fails at wrap; native source selection, clock/capture and reset resources remain open.",
+      "section": "\u00a77"
+    },
+    {
+      "id": "forward",
+      "title": "One-sided, discontinuous decoder",
+      "status": "FORMAL EXCEPTION / ROBUST NATIVE BRIDGE OPEN",
+      "assumptions": [
+        "forward-only irrational native orbit, not a surjective source restriction",
+        "decoder permitted to change at arbitrarily close returns",
+        "prepared initial label and candidate trace"
+      ],
+      "result": "A trace-label factor is mathematically possible on the forward orbit. It fails the stable-decoder requirement and does not establish a robust native measurement law.",
+      "section": "\u00a75"
+    },
+    {
+      "id": "norm",
+      "title": "Tokens identified with conserved total norm",
+      "status": "EXACT CONDITIONAL NO-GO FOR TOKEN CONSUMPTION",
+      "assumptions": [
+        "RSP stock equals a function of conserved c^T c",
+        "exact realization across a consuming step"
+      ],
+      "result": "That stock identification cannot decrease. Local readouts can vary under norm conservation, so this does not exclude every stock decoder.",
+      "section": "\u00a76"
+    }
+  ],
+  "independent_human_review": "PENDING",
+  "empirical_score": "NONE"
+}

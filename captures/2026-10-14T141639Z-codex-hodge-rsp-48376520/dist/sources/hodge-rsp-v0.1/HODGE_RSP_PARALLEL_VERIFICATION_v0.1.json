@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "physical_promotion": 0,
+  "scope": "Constructor-team AI mathematical verification. No native law recovered, no physical correspondence, no independent external review or registry promotion.",
+  "input_hashes": {
+    "rsp1.py": "8e9db2e432d9defb78dde206ac8c39714f291c0d9ecb8dc63279d0496e9f7ca8",
+    "response_contract.py": "79a7c61580a423604c7c7b2c72d30ee069a54f33fbba386ee3ce8b11eeaa9c3b"
+  },
+  "checker_sha256": "65dc6aaa51aad61d3af1c0d326b6d436adc48dfc2619726d72457e5d2301d1c6",
+  "formal_claims": {
+    "surjective_factor": "For finite strict-descent F and surjective U on invariant D, exact state-only phi U=F phi gives Y=phi(D)=F(Y)=F^N(Y) subset FixF. No decoder regularity required.",
+    "finite_order": "If U^m=id, intertwining implies F^m phi(x)=phi(x); strict descent excludes nonfixed periodic factors.",
+    "recurrent_robust": "If U^{n_j}x returns to x with arbitrarily large n_j and phi(U^{n_j}x)=phi(x), eventual settling forces phi(x) fixed. Local constancy on a relative neighborhood suffices.",
+    "continuity_limit": "Recurrence alone is insufficient on one-sided forward domains. Exact-zero positivity can differ at all sufficiently close nonzero return phases. This does not evade the surjective-domain obstruction.",
+    "window_limit": "A finite window of distinct frequency-2 phase states can carry a prepared lookup of any finite candidate trajectory. Wrap or recurrent robust extension remains obstructed; no norm-token identification follows."
+  },
+  "unbounded_preparation_counterexample": {
+    "native_map": "U(n)=n+1 on Z",
+    "source_map": "F(k)=max(k-1,0) on nonnegative integers",
+    "decoder": "phi(n)=max(-n,0)",
+    "exact_intertwining": "For every integer n; checked n=-100..100 and immediate piecewise identity",
+    "nonfixed_image_witness": "phi(-1)=1",
+    "limit": "The surjective theorem needs finite fixed preparation or uniform finite settling. Strict integer descent alone across unbounded resources does not suffice."
+  },
+  "generic_finite_factor_checks": {
+    "strict_descent_maps": 145,
+    "maps_by_carrier_size": {
+      "1": 1,
+      "2": 3,
+      "3": 16,
+      "4": 125
+    },
+    "surjective_permutation_decoder_tests": 855891,
+    "exact_factors_all_fixed": 17507
+  },
+  "actual_rsp_prepared_graph": {
+    "states": 144,
+    "fixed_states": 8,
+    "maximum_settling_updates": 7,
+    "cycles": "fixed points only",
+    "integrity": [
+      1,
+      0,
+      0
+    ],
+    "bank": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "stocks": "0 or1 on the sole intact seat",
+    "cursor": "0..2",
+    "branches": [
+      "C",
+      "H"
+    ]
+  },
+  "exact_k4_frequency_plane": {
+    "chain_dimensions": [
+      4,
+      6,
+      4,
+      1
+    ],
+    "vector_v": [
+      "1",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "vector_u": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "-1/2",
+      "-1/2",
+      "1/2",
+      "1/2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "verified": [
+      "A^T=-A",
+      "Av=2u",
+      "Au=-2v",
+      "four distinct exact quarter-turn states",
+      "constant squared norm2"
+    ],
+    "scope": "An actual invariant frequency-2 subspace of the declared unit-metric filled tetrahedron, with the displayed sign convention."
+  },
+  "quarter_turn_windows": {
+    "C": {
+      "sample_delta_internal": "pi/4",
+      "native_period_steps": 4,
+      "intertwining_each_step": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "first_mismatch": "wrap from -u back to v",
+      "native_squared_norm": [
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "decoded_stock": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "initial_source_state": "State(T=(1, 0, 0), L=(0, 0, 0), q=(0, 0, 0), r=(1, 0, 0), bank=(), cursor=0, branch='C')",
+      "fixed_source_state": "State(T=(1, 0, 0), L=(0, 0, 0), q=(0, 0, 0), r=(0, 0, 0), bank=(), cursor=0, branch='C')"
+    },
+    "H": {
+      "sample_delta_internal": "pi/4",
+      "native_period_steps": 4,
+      "intertwining_each_step": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "first_mismatch": "wrap from -u back to v",
+      "native_squared_norm": [
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "decoded_stock": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "initial_source_state": "State(T=(1, 0, 0), L=(0, 0, 0), q=(0, 0, 0), r=(1, 0, 0), bank=(), cursor=0, branch='H')",
+      "fixed_source_state": "State(T=(1, 0, 0), L=(0, 0, 0), q=(1, 0, 0), r=(0, 0, 0), bank=(), cursor=0, branch='H')"
+    }
+  },
+  "raw_positivity_return_example": {
+    "rotation": [
+      "3/5",
+      "4/5"
+    ],
+    "zero_initial_value": true,
+    "strict_positive_nonzero_samples_checked": 120,
+    "closest_return_within_120_samples": {
+      "index": 61,
+      "squared_distance_decimal": 0.0002670070932014133,
+      "initial_decoder": 0,
+      "return_decoder": 1
+    },
+    "scope": "Exact rational finite samples illustrate failure of local constancy. Recurrence and infinite-order statements require the stated mathematical argument, not finite sampling."
+  },
+  "elapsed_seconds": 0.488
+}

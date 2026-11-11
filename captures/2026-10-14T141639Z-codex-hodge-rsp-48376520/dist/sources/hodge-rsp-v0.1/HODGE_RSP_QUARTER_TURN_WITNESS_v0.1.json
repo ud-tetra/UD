@@ -1,0 +1,1207 @@
+{
+  "sample_delta": "pi/4 in native parameter",
+  "native_period_steps": 4,
+  "native_norm2": "2",
+  "native_states": [
+    {
+      "label": "v",
+      "coordinates": [
+        "1",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "R_HD": [
+        "0",
+        "0",
+        "0"
+      ],
+      "L_HD": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "u",
+      "coordinates": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "-1/2",
+        "-1/2",
+        "1/2",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "R_HD": [
+        "0",
+        "0",
+        "0"
+      ],
+      "L_HD": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "\u2212v",
+      "coordinates": [
+        "-1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "R_HD": [
+        "0",
+        "0",
+        "0"
+      ],
+      "L_HD": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "\u2212u",
+      "coordinates": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1/2",
+        "1/2",
+        "-1/2",
+        "-1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "R_HD": [
+        "0",
+        "0",
+        "0"
+      ],
+      "L_HD": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "branches": {
+    "C": [
+      {
+        "native_state": "v",
+        "native_successor": "u",
+        "decoded_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            1,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "rsp_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            1,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "decoded_native_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            1,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "intertwines": true,
+        "decoded_available_stock": 1,
+        "rsp_response": {
+          "theta_prior_aligned": [
+            1,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            0,
+            1,
+            1
+          ],
+          "q_output": [
+            1,
+            0,
+            0
+          ],
+          "omega_output": [
+            1,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": -1,
+          "mu_theta": -1,
+          "closure_capacity_change": 2,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            1,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 1,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        }
+      },
+      {
+        "native_state": "u",
+        "native_successor": "\u2212v",
+        "decoded_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            1,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "rsp_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "decoded_native_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "intertwines": true,
+        "decoded_available_stock": 0,
+        "rsp_response": {
+          "theta_prior_aligned": [
+            0,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            1,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            1,
+            1,
+            1
+          ],
+          "q_output": [
+            0,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": 1,
+          "mu_theta": 1,
+          "closure_capacity_change": -2,
+          "close_mask": [
+            1,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 1,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        }
+      },
+      {
+        "native_state": "\u2212v",
+        "native_successor": "\u2212u",
+        "decoded_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "rsp_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "decoded_native_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "intertwines": true,
+        "decoded_available_stock": 0,
+        "rsp_response": {
+          "theta_prior_aligned": [
+            1,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            1,
+            1,
+            1
+          ],
+          "q_output": [
+            0,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        }
+      },
+      {
+        "native_state": "\u2212u",
+        "native_successor": "v",
+        "decoded_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "rsp_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "decoded_native_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            1,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "intertwines": false,
+        "decoded_available_stock": 0,
+        "rsp_response": {
+          "theta_prior_aligned": [
+            1,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            1,
+            1,
+            1
+          ],
+          "q_output": [
+            0,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        }
+      }
+    ],
+    "H": [
+      {
+        "native_state": "v",
+        "native_successor": "u",
+        "decoded_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            1,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "rsp_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            1,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "decoded_native_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            1,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "intertwines": true,
+        "decoded_available_stock": 1,
+        "rsp_response": {
+          "theta_prior_aligned": [
+            1,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            0,
+            1,
+            1
+          ],
+          "q_output": [
+            1,
+            0,
+            0
+          ],
+          "omega_output": [
+            1,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": -1,
+          "mu_theta": -1,
+          "closure_capacity_change": 2,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            1,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 1,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        }
+      },
+      {
+        "native_state": "u",
+        "native_successor": "\u2212v",
+        "decoded_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            1,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "rsp_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "decoded_native_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "intertwines": true,
+        "decoded_available_stock": 0,
+        "rsp_response": {
+          "theta_prior_aligned": [
+            0,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            1,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            0,
+            1,
+            1
+          ],
+          "q_output": [
+            1,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            1,
+            0,
+            0
+          ],
+          "viable_index": 1,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        }
+      },
+      {
+        "native_state": "\u2212v",
+        "native_successor": "\u2212u",
+        "decoded_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "rsp_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "decoded_native_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "intertwines": true,
+        "decoded_available_stock": 0,
+        "rsp_response": {
+          "theta_prior_aligned": [
+            0,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            1,
+            0,
+            0
+          ],
+          "theta_output": [
+            0,
+            1,
+            1
+          ],
+          "q_output": [
+            1,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            1,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        }
+      },
+      {
+        "native_state": "\u2212u",
+        "native_successor": "v",
+        "decoded_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "rsp_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "decoded_native_successor": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            1,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "intertwines": false,
+        "decoded_available_stock": 0,
+        "rsp_response": {
+          "theta_prior_aligned": [
+            0,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            1,
+            0,
+            0
+          ],
+          "theta_output": [
+            0,
+            1,
+            1
+          ],
+          "q_output": [
+            1,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            1,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        }
+      }
+    ]
+  },
+  "physical_promotion": 0,
+  "scope": "Prepared finite-window lookup chosen from an RSP trace. It fails the exact global factor contract at wrap."
+}

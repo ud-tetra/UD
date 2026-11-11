@@ -1,0 +1,16 @@
+'use strict';
+if(document.body.dataset.page==='realization'){
+ (async()=>{
+  const [audit,witness]=await Promise.all([fetchJSON('/sources/hodge-rsp-v0.1/HODGE_RSP_REALIZATION_DISPOSITION_v0.1.json'),fetchJSON('/sources/hodge-rsp-v0.1/HODGE_RSP_QUARTER_TURN_WITNESS_v0.1.json')]);
+  const contracts=$('#hr-contract'),branch=$('#hr-branch'),step=$('#hr-step');
+  audit.realization_classes.forEach(c=>{const o=el('option','',c.title);o.value=c.id;contracts.append(o)});
+  function contract(){const c=audit.realization_classes.find(c=>c.id===contracts.value),box=el('article','source-detail');box.append(el('h2','',c.title),el('span','tag',c.status),el('p','',c.result));const ul=el('ul');c.assumptions.forEach(t=>ul.append(el('li','',t)));box.append(ul,link('Proof '+c.section,'/sources/hodge-rsp-v0.1/UD_HODGE_RSP_REALIZATION_OBSTRUCTION_v0.1.md'));$('#hr-contract-detail').replaceChildren(box)}
+  function stateCard(title,s){const card=el('article','source-detail');card.append(el('h3','',title));[['Pair response q',s.q.join('')],['Cached latent L',s.L.join('')],['Active stock r',s.r.join(', ')],['Bank cursor',s.cursor+' / '+s.bank.length]].forEach(([k,v])=>{const row=el('div','rsp-field');row.append(el('span','muted',k),el('strong','mono',v));card.append(row)});const d=el('details');d.append(el('summary','','Complete state'),el('pre','source-meta',JSON.stringify(s,null,2)));card.append(d);return card}
+  function edge(){const i=Number(step.value),row=witness.branches[branch.value][i];document.querySelectorAll('[data-hr-point]').forEach(g=>g.classList.toggle('selected',Number(g.dataset.hrPoint)===i));const verdict=$('#hr-edge-verdict');verdict.className='hr-verdict '+(row.intertwines?'hr-match':'hr-mismatch');verdict.textContent=(row.intertwines?'MATCH · ':'MISMATCH · ')+row.native_state+' → '+row.native_successor+' / complete-state successor';
+   const box=el('div');const p=el('p','',row.intertwines?'This prepared lookup agrees with the desired RSP successor on this edge.':'At wrap, the native state returns to v and the lookup restores its initial RSP preparation. The desired RSP state remains fixed.');box.append(p);
+   if(!row.intertwines&&JSON.stringify(row.rsp_successor.q)===JSON.stringify(row.decoded_native_successor.q))box.append(el('p','muted','The pair bits coincide here. The hidden stock differs, so Theta-only agreement would miss the failure.'));
+   const cards=el('div','rsp-comparison');cards.append(stateCard('Desired F(phi(current))',row.rsp_successor),stateCard('Actual phi(U(current))',row.decoded_native_successor));box.append(cards);const d=el('details');d.append(el('summary','','Exact native coordinates'));const native=witness.native_states[i];d.append(el('pre','source-meta',JSON.stringify({state:native.label,coordinates:native.coordinates,norm_squared:witness.native_norm2,original_R_HD:native.R_HD,original_L_HD:native.L_HD,sample_delta:witness.sample_delta},null,2)));box.append(d);$('#hr-edge-detail').replaceChildren(box);
+  }
+  contracts.addEventListener('change',contract);branch.addEventListener('change',edge);step.addEventListener('change',edge);step.value='3';contract();edge();
+ })().catch(e=>{$('#hr-edge-verdict').textContent=e.message+' Read the downloadable proof and exact witness below.'});
+}
