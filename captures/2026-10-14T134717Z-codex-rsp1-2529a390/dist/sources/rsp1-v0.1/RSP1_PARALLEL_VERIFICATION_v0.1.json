@@ -1,0 +1,2291 @@
+{
+  "status": "PASS",
+  "scope": "Constructor-team AI verification; reviewer helped design the model. No independent external review, native-source derivation, empirical execution or registry promotion.",
+  "physical_promotion": 0,
+  "implementation": {
+    "path": "/workspace/sites/unified-dynamics-public/rsp1.py",
+    "sha256": "8e9db2e432d9defb78dde206ac8c39714f291c0d9ecb8dc63279d0496e9f7ca8"
+  },
+  "response_contract_sha256": "79a7c61580a423604c7c7b2c72d30ee069a54f33fbba386ee3ce8b11eeaa9c3b",
+  "checker_sha256": "58b396a3793a9f85da68eb0f80938f42c870463dd7a4958e130e098af69ef2e2",
+  "exhaustive_initial_states": 41664,
+  "targeted_adversarial_states": 6,
+  "relabel_covariance_comparisons": 250020,
+  "domain": "All admitted binary T,L,q; r entries0..1 supported on T; bank lengths0..2 with binary packets supported on T; exhaustive cursor0 plus targeted nonzero cursor.",
+  "checks": [
+    "C exact duration independently counted from pulse schedules and refill stages",
+    "H duration upper bound",
+    "full-state fixed-point stopping",
+    "resource conservation on refills and nonincrease on inspections",
+    "token/toggle balance",
+    "idle-corrected index",
+    "no-bit source/cache changes committed",
+    "zero-budget gross bit swaps committed",
+    "zero refill cursor advances",
+    "H stock/queue stranding",
+    "pair relabel covariance of state, event masks and scalar receipts"
+  ],
+  "observed": {
+    "max_committed_updates": {
+      "C": 9,
+      "H": 5
+    },
+    "halt_reasons": {
+      "C": {
+        "EXHAUSTED_QUIESCENT": 20836
+      },
+      "H": {
+        "EXHAUSTED_QUIESCENT": 81,
+        "LATCHED_OR_STRANDED": 20753
+      }
+    },
+    "committed_response_nulls": 56846,
+    "zero_refill_updates": 6119,
+    "zero_budget_nonzero_toggle_updates": 5893
+  },
+  "adversarial_traces": {
+    "H_viability_extinction": {
+      "program": "RSP-1 v0.1",
+      "branch": "H",
+      "trace": [
+        {
+          "transition_kind": "INSPECTION",
+          "response_tag": "RESPONSE_NULL",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 0,
+          "event": {
+            "theta_prior_aligned": [
+              0,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              1,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              0,
+              1,
+              1
+            ],
+            "q_output": [
+              1,
+              0,
+              0
+            ],
+            "omega_output": [
+              0,
+              0,
+              0
+            ],
+            "h_output": [
+              1,
+              0,
+              0
+            ],
+            "viable_index": 1,
+            "mu_theta": 0,
+            "closure_capacity_change": 0,
+            "close_mask": [
+              0,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 0,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 3,
+          "potential_after": 2,
+          "attempt": 0,
+          "pre_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "H"
+          },
+          "post_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "H"
+          },
+          "available_stock_before": 0,
+          "available_stock_after": 0
+        }
+      ],
+      "terminal": {
+        "transition_kind": "HALT",
+        "response_tag": "RESPONSE_NULL",
+        "changed": false,
+        "halt_reason": "LATCHED_OR_STRANDED",
+        "consumed_tokens": 0,
+        "event": {
+          "theta_prior_aligned": [
+            0,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            1,
+            0,
+            0
+          ],
+          "theta_output": [
+            0,
+            1,
+            1
+          ],
+          "q_output": [
+            1,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            1,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        },
+        "potential_before": 2,
+        "potential_after": 2,
+        "attempt": 1,
+        "pre_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "post_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "available_stock_before": 0,
+        "available_stock_after": 0
+      },
+      "committed_updates": 1,
+      "opening_toggles": 0,
+      "closure_toggles": 0,
+      "initial_stock": 0,
+      "remaining_stock": 0,
+      "physical_promotion": 0,
+      "scope": "Finite prepared-register candidate. HALT is a model control status, not a physical no-event verdict."
+    },
+    "C_balanced_swap": {
+      "program": "RSP-1 v0.1",
+      "branch": "C",
+      "trace": [
+        {
+          "transition_kind": "INSPECTION",
+          "response_tag": "BIT_EVENT",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 1,
+          "event": {
+            "theta_prior_aligned": [
+              0,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              1,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              1,
+              0,
+              1
+            ],
+            "q_output": [
+              0,
+              1,
+              0
+            ],
+            "omega_output": [
+              0,
+              1,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": 0,
+            "mu_theta": 0,
+            "closure_capacity_change": 0,
+            "close_mask": [
+              1,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              1,
+              0
+            ],
+            "gross_pair_toggles": 2,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 7,
+          "potential_after": 3,
+          "attempt": 0,
+          "pre_state": {
+            "T": [
+              1,
+              1,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              1,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              1,
+              0
+            ],
+            "L": [
+              0,
+              1,
+              0
+            ],
+            "q": [
+              0,
+              1,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          "available_stock_before": 1,
+          "available_stock_after": 0
+        },
+        {
+          "transition_kind": "INSPECTION",
+          "response_tag": "BIT_EVENT",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 0,
+          "event": {
+            "theta_prior_aligned": [
+              1,
+              0,
+              1
+            ],
+            "omega_prior_aligned": [
+              0,
+              1,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              1,
+              1,
+              1
+            ],
+            "q_output": [
+              0,
+              0,
+              0
+            ],
+            "omega_output": [
+              0,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": 1,
+            "mu_theta": 1,
+            "closure_capacity_change": -2,
+            "close_mask": [
+              0,
+              1,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 1,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 3,
+          "potential_after": 0,
+          "attempt": 1,
+          "pre_state": {
+            "T": [
+              1,
+              1,
+              0
+            ],
+            "L": [
+              0,
+              1,
+              0
+            ],
+            "q": [
+              0,
+              1,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              1,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          "available_stock_before": 0,
+          "available_stock_after": 0
+        }
+      ],
+      "terminal": {
+        "transition_kind": "HALT",
+        "response_tag": "RESPONSE_NULL",
+        "changed": false,
+        "halt_reason": "EXHAUSTED_QUIESCENT",
+        "consumed_tokens": 0,
+        "event": {
+          "theta_prior_aligned": [
+            1,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            1,
+            1,
+            1
+          ],
+          "q_output": [
+            0,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        },
+        "potential_before": 0,
+        "potential_after": 0,
+        "attempt": 2,
+        "pre_state": {
+          "T": [
+            1,
+            1,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "post_state": {
+          "T": [
+            1,
+            1,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "available_stock_before": 0,
+        "available_stock_after": 0
+      },
+      "committed_updates": 2,
+      "opening_toggles": 1,
+      "closure_toggles": 2,
+      "initial_stock": 1,
+      "remaining_stock": 0,
+      "physical_promotion": 0,
+      "scope": "Finite prepared-register candidate. HALT is a model control status, not a physical no-event verdict."
+    },
+    "broken_seat_cache_cleanup": {
+      "program": "RSP-1 v0.1",
+      "branch": "C",
+      "trace": [
+        {
+          "transition_kind": "INSPECTION",
+          "response_tag": "RESPONSE_NULL",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 0,
+          "event": {
+            "theta_prior_aligned": [
+              1,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              1,
+              1,
+              1
+            ],
+            "q_output": [
+              0,
+              0,
+              0
+            ],
+            "omega_output": [
+              0,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": 0,
+            "mu_theta": 0,
+            "closure_capacity_change": 0,
+            "close_mask": [
+              0,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 0,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 1,
+          "potential_after": 0,
+          "attempt": 0,
+          "pre_state": {
+            "T": [
+              0,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              0,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [],
+            "cursor": 0,
+            "branch": "C"
+          },
+          "available_stock_before": 0,
+          "available_stock_after": 0
+        }
+      ],
+      "terminal": {
+        "transition_kind": "HALT",
+        "response_tag": "RESPONSE_NULL",
+        "changed": false,
+        "halt_reason": "EXHAUSTED_QUIESCENT",
+        "consumed_tokens": 0,
+        "event": {
+          "theta_prior_aligned": [
+            1,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            1,
+            1,
+            1
+          ],
+          "q_output": [
+            0,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        },
+        "potential_before": 0,
+        "potential_after": 0,
+        "attempt": 1,
+        "pre_state": {
+          "T": [
+            0,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "post_state": {
+          "T": [
+            0,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [],
+          "cursor": 0,
+          "branch": "C"
+        },
+        "available_stock_before": 0,
+        "available_stock_after": 0
+      },
+      "committed_updates": 1,
+      "opening_toggles": 0,
+      "closure_toggles": 0,
+      "initial_stock": 0,
+      "remaining_stock": 0,
+      "physical_promotion": 0,
+      "scope": "Finite prepared-register candidate. HALT is a model control status, not a physical no-event verdict."
+    },
+    "zero_refill_pointer_progress": {
+      "program": "RSP-1 v0.1",
+      "branch": "C",
+      "trace": [
+        {
+          "transition_kind": "RENEWAL_ONLY",
+          "response_tag": "RESPONSE_NULL",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 0,
+          "event": {
+            "theta_prior_aligned": [
+              1,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              1,
+              1,
+              1
+            ],
+            "q_output": [
+              0,
+              0,
+              0
+            ],
+            "omega_output": [
+              0,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": 0,
+            "mu_theta": 0,
+            "closure_capacity_change": 0,
+            "close_mask": [
+              0,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 0,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 6,
+          "potential_after": 5,
+          "attempt": 0,
+          "pre_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 0,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 1,
+            "branch": "C"
+          },
+          "available_stock_before": 1,
+          "available_stock_after": 1
+        },
+        {
+          "transition_kind": "RENEWAL_ONLY",
+          "response_tag": "RESPONSE_NULL",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 0,
+          "event": {
+            "theta_prior_aligned": [
+              1,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              1,
+              1,
+              1
+            ],
+            "q_output": [
+              0,
+              0,
+              0
+            ],
+            "omega_output": [
+              0,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": 0,
+            "mu_theta": 0,
+            "closure_capacity_change": 0,
+            "close_mask": [
+              0,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 0,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 5,
+          "potential_after": 4,
+          "attempt": 1,
+          "pre_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 1,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              1,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "available_stock_before": 1,
+          "available_stock_after": 1
+        },
+        {
+          "transition_kind": "INSPECTION",
+          "response_tag": "BIT_EVENT",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 1,
+          "event": {
+            "theta_prior_aligned": [
+              1,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              0,
+              1,
+              1
+            ],
+            "q_output": [
+              1,
+              0,
+              0
+            ],
+            "omega_output": [
+              1,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": -1,
+            "mu_theta": -1,
+            "closure_capacity_change": 2,
+            "close_mask": [
+              0,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              1,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 1,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 4,
+          "potential_after": 3,
+          "attempt": 2,
+          "pre_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              1,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "available_stock_before": 1,
+          "available_stock_after": 0
+        },
+        {
+          "transition_kind": "INSPECTION",
+          "response_tag": "BIT_EVENT",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 0,
+          "event": {
+            "theta_prior_aligned": [
+              0,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              1,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              1,
+              1,
+              1
+            ],
+            "q_output": [
+              0,
+              0,
+              0
+            ],
+            "omega_output": [
+              0,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": 1,
+            "mu_theta": 1,
+            "closure_capacity_change": -2,
+            "close_mask": [
+              1,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 1,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 3,
+          "potential_after": 0,
+          "attempt": 3,
+          "pre_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "available_stock_before": 0,
+          "available_stock_after": 0
+        }
+      ],
+      "terminal": {
+        "transition_kind": "HALT",
+        "response_tag": "RESPONSE_NULL",
+        "changed": false,
+        "halt_reason": "EXHAUSTED_QUIESCENT",
+        "consumed_tokens": 0,
+        "event": {
+          "theta_prior_aligned": [
+            1,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            1,
+            1,
+            1
+          ],
+          "q_output": [
+            0,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        },
+        "potential_before": 0,
+        "potential_after": 0,
+        "attempt": 4,
+        "pre_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "cursor": 2,
+          "branch": "C"
+        },
+        "post_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "cursor": 2,
+          "branch": "C"
+        },
+        "available_stock_before": 0,
+        "available_stock_after": 0
+      },
+      "committed_updates": 4,
+      "opening_toggles": 1,
+      "closure_toggles": 1,
+      "initial_stock": 1,
+      "remaining_stock": 0,
+      "physical_promotion": 0,
+      "scope": "Finite prepared-register candidate. HALT is a model control status, not a physical no-event verdict."
+    },
+    "H_unspent_bank_stranding": {
+      "program": "RSP-1 v0.1",
+      "branch": "H",
+      "trace": [],
+      "terminal": {
+        "transition_kind": "HALT",
+        "response_tag": "RESPONSE_NULL",
+        "changed": false,
+        "halt_reason": "LATCHED_OR_STRANDED",
+        "consumed_tokens": 0,
+        "event": {
+          "theta_prior_aligned": [
+            0,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            1,
+            0,
+            0
+          ],
+          "theta_output": [
+            0,
+            1,
+            1
+          ],
+          "q_output": [
+            1,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            1,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        },
+        "potential_before": 7,
+        "potential_after": 7,
+        "attempt": 0,
+        "pre_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "post_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            1,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "cursor": 0,
+          "branch": "H"
+        },
+        "available_stock_before": 1,
+        "available_stock_after": 1
+      },
+      "committed_updates": 0,
+      "opening_toggles": 0,
+      "closure_toggles": 0,
+      "initial_stock": 1,
+      "remaining_stock": 1,
+      "physical_promotion": 0,
+      "scope": "Finite prepared-register candidate. HALT is a model control status, not a physical no-event verdict."
+    },
+    "nonzero_cursor_ignores_spent_prefix": {
+      "program": "RSP-1 v0.1",
+      "branch": "C",
+      "trace": [
+        {
+          "transition_kind": "RENEWAL_ONLY",
+          "response_tag": "RESPONSE_NULL",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 0,
+          "event": {
+            "theta_prior_aligned": [
+              1,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              1,
+              1,
+              1
+            ],
+            "q_output": [
+              0,
+              0,
+              0
+            ],
+            "omega_output": [
+              0,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": 0,
+            "mu_theta": 0,
+            "closure_capacity_change": 0,
+            "close_mask": [
+              0,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 0,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 5,
+          "potential_after": 4,
+          "attempt": 0,
+          "pre_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 1,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              1,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "available_stock_before": 1,
+          "available_stock_after": 1
+        },
+        {
+          "transition_kind": "INSPECTION",
+          "response_tag": "BIT_EVENT",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 1,
+          "event": {
+            "theta_prior_aligned": [
+              1,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              0,
+              1,
+              1
+            ],
+            "q_output": [
+              1,
+              0,
+              0
+            ],
+            "omega_output": [
+              1,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": -1,
+            "mu_theta": -1,
+            "closure_capacity_change": 2,
+            "close_mask": [
+              0,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              1,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 1,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 4,
+          "potential_after": 3,
+          "attempt": 1,
+          "pre_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              1,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "available_stock_before": 1,
+          "available_stock_after": 0
+        },
+        {
+          "transition_kind": "INSPECTION",
+          "response_tag": "BIT_EVENT",
+          "changed": true,
+          "halt_reason": null,
+          "consumed_tokens": 0,
+          "event": {
+            "theta_prior_aligned": [
+              0,
+              1,
+              1
+            ],
+            "omega_prior_aligned": [
+              1,
+              0,
+              0
+            ],
+            "h_prior_aligned": [
+              0,
+              0,
+              0
+            ],
+            "theta_output": [
+              1,
+              1,
+              1
+            ],
+            "q_output": [
+              0,
+              0,
+              0
+            ],
+            "omega_output": [
+              0,
+              0,
+              0
+            ],
+            "h_output": [
+              0,
+              0,
+              0
+            ],
+            "viable_index": 1,
+            "mu_theta": 1,
+            "closure_capacity_change": -2,
+            "close_mask": [
+              1,
+              0,
+              0
+            ],
+            "reopen_mask": [
+              0,
+              0,
+              0
+            ],
+            "gross_pair_toggles": 1,
+            "physical_promotion": 0,
+            "scope": "Conditional finite readout; supplied receipts are not a native source law."
+          },
+          "potential_before": 3,
+          "potential_after": 0,
+          "attempt": 2,
+          "pre_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              1,
+              0,
+              0
+            ],
+            "q": [
+              1,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "post_state": {
+            "T": [
+              1,
+              0,
+              0
+            ],
+            "L": [
+              0,
+              0,
+              0
+            ],
+            "q": [
+              0,
+              0,
+              0
+            ],
+            "r": [
+              0,
+              0,
+              0
+            ],
+            "bank": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "cursor": 2,
+            "branch": "C"
+          },
+          "available_stock_before": 0,
+          "available_stock_after": 0
+        }
+      ],
+      "terminal": {
+        "transition_kind": "HALT",
+        "response_tag": "RESPONSE_NULL",
+        "changed": false,
+        "halt_reason": "EXHAUSTED_QUIESCENT",
+        "consumed_tokens": 0,
+        "event": {
+          "theta_prior_aligned": [
+            1,
+            1,
+            1
+          ],
+          "omega_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "h_prior_aligned": [
+            0,
+            0,
+            0
+          ],
+          "theta_output": [
+            1,
+            1,
+            1
+          ],
+          "q_output": [
+            0,
+            0,
+            0
+          ],
+          "omega_output": [
+            0,
+            0,
+            0
+          ],
+          "h_output": [
+            0,
+            0,
+            0
+          ],
+          "viable_index": 0,
+          "mu_theta": 0,
+          "closure_capacity_change": 0,
+          "close_mask": [
+            0,
+            0,
+            0
+          ],
+          "reopen_mask": [
+            0,
+            0,
+            0
+          ],
+          "gross_pair_toggles": 0,
+          "physical_promotion": 0,
+          "scope": "Conditional finite readout; supplied receipts are not a native source law."
+        },
+        "potential_before": 0,
+        "potential_after": 0,
+        "attempt": 3,
+        "pre_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "cursor": 2,
+          "branch": "C"
+        },
+        "post_state": {
+          "T": [
+            1,
+            0,
+            0
+          ],
+          "L": [
+            0,
+            0,
+            0
+          ],
+          "q": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            0
+          ],
+          "bank": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "cursor": 2,
+          "branch": "C"
+        },
+        "available_stock_before": 0,
+        "available_stock_after": 0
+      },
+      "committed_updates": 3,
+      "opening_toggles": 1,
+      "closure_toggles": 1,
+      "initial_stock": 1,
+      "remaining_stock": 0,
+      "physical_promotion": 0,
+      "scope": "Finite prepared-register candidate. HALT is a model control status, not a physical no-event verdict."
+    }
+  },
+  "elapsed_seconds": 28.74
+}
