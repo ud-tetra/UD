@@ -1,0 +1,129 @@
+{
+  "type": "NUMERICAL_CORROBORATION_AND_EXACT_IEEE_ASSEMBLY_AUDIT",
+  "prior_commit": "524f180d3f903267925d48599add52acb9301d6b",
+  "prior_capture": "2026-10-21T201221Z-codex-r6b-numerical-replay-2dbd851a",
+  "prior_results_sha256": "55a96515fe67fbdb13f94f561e928d7d961c812b2a4fdb67a595e803ef8d80e6",
+  "prior_payload_sha256": "fa6f6c4fa3dc9d1c13d0a9d0418cef93d1fd6d03cdfa0370055796164767fd3f",
+  "exact_source_lambda_minus": "-5.058799395853152870891767189933031577617736295768828582867034439220625812230573842233049649505929240E-10",
+  "prior_dense_cluster": {
+    "id": 1,
+    "indices": [
+      1,
+      3
+    ],
+    "rank": 3,
+    "lambda_min": -5.058584601780162e-10,
+    "lambda_max": -5.058070410625891e-10,
+    "gap_left": 1.5639355856740652e-08,
+    "gap_right": 0.0013292105366709218,
+    "relative_projector_error_global_vs_blockwise": 8.80709178592875e-12,
+    "theta_weight_mean": 0.9999999998638264,
+    "rho_weight_mean": 1.3617301394867861e-10,
+    "projector_pass": true,
+    "theta_projector_density": {
+      "W": 1.0,
+      "defined": true,
+      "global_F": 1.3333333333333335,
+      "component_IPR": 0.3333333333333333,
+      "effective_components": 3.0,
+      "conditioned_F": 1.0000000000000002,
+      "component_weights": [
+        4.015894052115992e-32,
+        0.3333333333333337,
+        0.33333333333333254,
+        0.33333333333333376
+      ],
+      "F_per_component": [
+        2.9945399288673027,
+        1.0,
+        1.0000000000000002,
+        0.9999999999999998
+      ],
+      "low_weight_numerical_flag": false
+    },
+    "global_theta_mode_ranges": {
+      "W": [
+        0.9999999998638242,
+        0.9999999998638276
+      ],
+      "global_F": [
+        4.0,
+        4.000000000000001
+      ],
+      "conditioned_F": [
+        1.0,
+        1.0000000000000002
+      ],
+      "effective_components": [
+        1.0,
+        1.0
+      ]
+    },
+    "blockwise_theta_mode_ranges": {
+      "W": [
+        0.9999999998638271,
+        0.9999999998638271
+      ],
+      "global_F": [
+        4.0,
+        4.0
+      ],
+      "conditioned_F": [
+        1.0,
+        1.0
+      ],
+      "effective_components": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "prior_sparse_eigenvalues": [
+    "-5.058405574487839E-10",
+    "-5.058405574487707E-10",
+    "-5.058405574487641E-10"
+  ],
+  "sparse_absolute_errors_from_exact_source": [
+    "3.93821365313870891767189933031577617736295768828582867034439220625812230573842233049649505929240E-14",
+    "3.93821365445870891767189933031577617736295768828582867034439220625812230573842233049649505929240E-14",
+    "3.93821365511870891767189933031577617736295768828582867034439220625812230573842233049649505929240E-14"
+  ],
+  "prior_dense_extreme_absolute_errors_from_exact_source": [
+    "2.14794072990870891767189933031577617736295768828582867034439220625812230573842233049649505929240E-14",
+    "7.28985227261870891767189933031577617736295768828582867034439220625812230573842233049649505929240E-14"
+  ],
+  "stored_float_compressions": [
+    {
+      "root": 1,
+      "theta_uniform_Rayleigh_shift_exact_IEEE": "99/2251799813685248",
+      "theta_uniform_Rayleigh_shift_decimal": "4.3964831775156199000775814056396484375E-14",
+      "projected_negative_eigenvalue_decimal": "-5.058359747535499542621716106349115553857384831252744168511665734396130320399497081963502128710824239E-10",
+      "difference_from_exact_source": "4.39648317653328270051083583916023760351464516084414355368704824495491831076760269547520795105001E-14",
+      "embedding_leakage_Frobenius_squared_exact": "3/9903520314283042199192993792",
+      "embedding_leakage_Frobenius_decimal": "1.740467143053463486664102841463298000211031166384621917894074675282184029937095478530195743690456023E-14",
+      "scope": "Rayleigh compression of stored IEEE matrix; nonzero leakage means it is not an exact invariant sector of those bytes"
+    },
+    {
+      "root": 2,
+      "theta_uniform_Rayleigh_shift_exact_IEEE": "99/2251799813685248",
+      "theta_uniform_Rayleigh_shift_decimal": "4.3964831775156199000775814056396484375E-14",
+      "projected_negative_eigenvalue_decimal": "-5.058359747535499542621716106349115553857384831252744168511665734396130320399497081963502128710824239E-10",
+      "difference_from_exact_source": "4.39648317653328270051083583916023760351464516084414355368704824495491831076760269547520795105001E-14",
+      "embedding_leakage_Frobenius_squared_exact": "3/9903520314283042199192993792",
+      "embedding_leakage_Frobenius_decimal": "1.740467143053463486664102841463298000211031166384621917894074675282184029937095478530195743690456023E-14",
+      "scope": "Rayleigh compression of stored IEEE matrix; nonzero leakage means it is not an exact invariant sector of those bytes"
+    },
+    {
+      "root": 3,
+      "theta_uniform_Rayleigh_shift_exact_IEEE": "99/2251799813685248",
+      "theta_uniform_Rayleigh_shift_decimal": "4.3964831775156199000775814056396484375E-14",
+      "projected_negative_eigenvalue_decimal": "-5.058359747535499542621716106349115553857384831252744168511665734396130320399497081963502128710824239E-10",
+      "difference_from_exact_source": "4.39648317653328270051083583916023760351464516084414355368704824495491831076760269547520795105001E-14",
+      "embedding_leakage_Frobenius_squared_exact": "3/9903520314283042199192993792",
+      "embedding_leakage_Frobenius_decimal": "1.740467143053463486664102841463298000211031166384621917894074675282184029937095478530195743690456023E-14",
+      "scope": "Rayleigh compression of stored IEEE matrix; nonzero leakage means it is not an exact invariant sector of those bytes"
+    }
+  ],
+  "interpretation": "Residuals validate a solve of the stored floating matrix; they do not eliminate rational-source assembly error. These differences stay within the prior absolute residual scale but matter for relative digits of a tiny eigenvalue. No tolerance or source coefficient was fitted.",
+  "physical_promotion": 0
+}
