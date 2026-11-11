@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "edition": "0.3",
+  "physical_promotion": 0,
+  "nodes": 53,
+  "edges": 53,
+  "source_snapshots_verified": 12,
+  "scoped_target_declarations": 20,
+  "acyclic": true,
+  "edge_kinds_distinguished": true,
+  "forbidden_edges_absent": true,
+  "ordered_polarity_pairs": 15625,
+  "index_equal_pairs": 6545,
+  "equal_idle_nonsaturated_examples": 2449,
+  "saturated_prior_pairs": 8000,
+  "saturated_prior_index_equal_pairs": 4096,
+  "scenario_results": [
+    {
+      "id": "idle-law",
+      "affected": [
+        "P-ADDRESS",
+        "P-CONFLICT"
+      ],
+      "preserved_checks": [
+        "P-CORRECT",
+        "P-EQUAL",
+        "P-INDEX",
+        "P-SAT"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "prior",
+      "affected": [
+        "P-SAT"
+      ],
+      "preserved_checks": [
+        "P-CORRECT",
+        "P-EQUAL",
+        "P-INDEX"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "frame",
+      "affected": [
+        "P-PREDICT",
+        "P-SCORE"
+      ],
+      "preserved_checks": [
+        "P-BUDGET",
+        "P-CORRECT",
+        "P-INDEX"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g05",
+      "affected": [],
+      "preserved_checks": [
+        "A-ALG",
+        "A-ACTION",
+        "A-ALIAS"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "metric",
+      "affected": [
+        "A-ACTION",
+        "A-CARRIER",
+        "A-END-NOGO",
+        "A-J",
+        "A-QPB",
+        "A-QPB-TEST",
+        "A-REC",
+        "A-SCALE",
+        "G-LOCAL"
+      ],
+      "preserved_checks": [
+        "A-GAUGE",
+        "P-CORRECT"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "action-anchor",
+      "affected": [
+        "A-QPB-TEST"
+      ],
+      "preserved_checks": [
+        "A-ACTION",
+        "A-SCALE",
+        "A-GAUGE",
+        "A-CLOCK"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "clock-anchor",
+      "affected": [
+        "A-CLOCK"
+      ],
+      "preserved_checks": [
+        "A-QPB-TEST",
+        "A-GAUGE",
+        "A-SCALE"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "same-history",
+      "affected": [
+        "G-LOCAL"
+      ],
+      "preserved_checks": [
+        "A-ACTION",
+        "A-GAUGE",
+        "G-GLOBAL-NOGO"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    "source text hashes and locators",
+    "explicit target premises",
+    "DAG acyclicity",
+    "eight change audits",
+    "full binary response enumeration",
+    "selector conflict and flux witness",
+    "rational action/clock gauge",
+    "intensive native action ratio",
+    "conditional Genesis product",
+    "same-endpoint winding distinction"
+  ],
+  "scope": "Constructor verification; imported spectral identities are source premises; no independent proof review or empirical score.",
+  "graph_sha256": "8a12a218fa2e861c55c09e8f0c0f4c4a2b1b8f33c0f375faaa6affe4771245cb"
+}
