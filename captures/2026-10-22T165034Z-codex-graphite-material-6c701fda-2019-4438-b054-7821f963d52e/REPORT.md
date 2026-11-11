@@ -1,0 +1,9 @@
+# Graphite material coupling and damping derivation
+
+22 October 2026. Development — no registry entry; physical promotion 0.
+
+The archived constrained-port Hessian has a resolved mixed internal-to-slip block. With 1008 atoms and the archived normalized relative-layer port, the exact coordinate conversion yields Frobenius coupling norms 2.542163386 and 2.532235370 eV/Å² for two (2,1) preparations. These are not single-mode Fourier drives, load coefficients, or new force evaluations. The separately released full (2,1) Hessians remain HOLD.
+
+Eliminating finitely many positive-frequency harmonic modes gives an exact reversible cosine memory. Its Abel-regulated zero-frequency Markov coefficient is zero; nonzero physical damping requires a separately defined continuum/anharmonic/boundary sink or a converged projected-force correlation. The nearest-neighbor carbon honeycomb graph is bipartite and lacks three-edge faces; identifying UD triangular transport with it needs an explicit coarse-graining and physical units. The material energy/time/length map and native drain are open.
+
+`MATERIAL_COUPLING_AND_DAMPING.md` contains the derivation, units, limitations, and a forward test. `RESULTS.json` records the numerical coordinate conversions and archived hashes. A separate scalar oscillator check evaluated the direct convolution solution and the integrated memory form at a declared nonresonant time; their force reactions differed by `1.11e-16` in common arbitrary units, checking the sign and coefficient in Eq. (2). The Abel regulator reduced the positive-frequency DC contribution by approximately tenfold when ε changed from 0.1 to 0.01. These are constructor arithmetic and algebra checks only. No new atomistic run, independent review, or friction data. The attached CRL-2 document is a proposal; `Gap2_FINAL_Finite_Genesis.png` was unavailable and unused. This capture extends draft PR #402 without changing its bytes.

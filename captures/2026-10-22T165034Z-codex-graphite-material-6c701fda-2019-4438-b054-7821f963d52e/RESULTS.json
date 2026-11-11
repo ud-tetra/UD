@@ -1,0 +1,25 @@
+{
+  "status": "NUMERICAL_CONVERSION_AND_EXACT_CONDITIONAL_DAMPING_NO_GO",
+  "N_atoms": 1008,
+  "relative_displacement_A": "delta = 2 r / sqrt(N)",
+  "conversion": "G_delta = sqrt(N)/2 C",
+  "results": [
+    {
+      "case": "21_dir_0",
+      "C_frobenius_eV_per_A2": 0.1601412407521188,
+      "Gdelta_frobenius_eV_per_A2": 2.5421633860525716
+    },
+    {
+      "case": "21_dir_10024",
+      "C_frobenius_eV_per_A2": 0.15951583452907894,
+      "Gdelta_frobenius_eV_per_A2": 2.5322353700452376
+    }
+  ],
+  "input_provenance": {
+    "port_results_sha256": "9ef5e2a7efc6d5a5e5143813b465cc4959d08ff32a64f871a65b4f699e5affad",
+    "input_candidate_sha256": "039c16de70222344c1bdf314d32b0bac1c019613182782fcec47d4005a6e3022",
+    "source": "draft PR #334, constrained sliding-port results; candidate atom count from PR #394"
+  },
+  "finite_bath_dc_result": "For finite positive omega_j, Abel-regulated sum_j W_j epsilon/(epsilon^2+omega_j^2) -> 0",
+  "physical_promotion": 0
+}
