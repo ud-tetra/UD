@@ -1,0 +1,5 @@
+# UD 600-cell reduced dynamics v0.1
+
+Read UD_600Cell_Reduced_Dynamics_v0.1.md. Exact sparse symbolic matrices are in TEN_SYMBOLIC_GENERATORS.json; their boundary blocks and orbit polynomials are also supplied. EXACT_SPECTRA.json gives all characteristic coefficients and factorizations. INTERACTION_AND_SELECTION_CHECKS.json contains exact mixing arrays, source-selector examples and gate-nilpotence warnings.
+
+Replay, in order: `python build_reduced.py`, `python exact_spectra.py`, `python export_generators.py`, `python verify_reduced_spectra.py`, `python test_interactions.py`. Required: Python, NumPy, SciPy, SymPy, python-flint. Run from any working directory; baseline data are local to the package. Numerical discovery is not proof; exact verification scopes are separately labelled. The 110 exact spectral checks, 24 numerical corroborations, ten symbolic skew checks and ten interaction cases do not constitute independent review. A native fibration-selecting source remains open. Physical promotion 0; development, no registry entry.
