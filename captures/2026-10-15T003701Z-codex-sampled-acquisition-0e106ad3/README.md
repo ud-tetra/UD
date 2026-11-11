@@ -1,0 +1,3 @@
+# UD sampled acquisition v0.14
+
+Read the narrative manuscript and UD_Sampled_Acquisition_v0.1.md. Run `python verify_sampled_acquisition.py` with SymPy to regenerate SAMPLED_CHECKS.json and SAMPLED_TRACE_CERTIFICATE.json. Eighteen check families cover the exact fixture and finite envelope; the written inequalities prove the general conditional guarantees. No floating-point guard decisions or imported code are used. Source dependencies and the v0.13 evidence release are pinned in SOURCE_REGISTER.json. This is a passive classical observation contract, not a physical instrument or complete energy/area law. Development; no registry entry; physical promotion 0.
