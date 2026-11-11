@@ -1,0 +1,29 @@
+{
+  "level": 4,
+  "N": 256,
+  "metric": "identity",
+  "model": "source-clean R6b; no added disorder or connectivity",
+  "probes": [
+    0.00133,
+    1e-08
+  ],
+  "k": 10,
+  "ncv": 64,
+  "maxiter": 12800,
+  "eigsh_tol": 1e-12,
+  "rng_seed": 20261021,
+  "dense_driver": "evd",
+  "cluster_atol": 1e-10,
+  "cluster_rtol": 1e-12,
+  "residual_tol": 5e-12,
+  "orthogonality_tol": 1e-10,
+  "theta_eigenvalue_tol": 1e-10,
+  "theta_projector_tol": 1e-10,
+  "coupled_projector_tol": 0.0001,
+  "cluster_policy": "span from first cluster eigenvalue, not rounded values or chained gaps; numerical grouping not an exact degeneracy theorem",
+  "incomplete_policy": "report rank deficiency; do not compare partial returned projector as complete; retain all vectors/failures",
+  "numeric_interpretation": "Residual and projector checks certify this finite computation only; not physical thresholds",
+  "prior_contract_sha256": "75942451ae44fc907450f72500ac27db4b81e8e0cd27e5d8a5023cd6622a6e10",
+  "registration": "development freeze; historically exposed; not independent preregistration",
+  "physical_promotion": 0
+}
