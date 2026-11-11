@@ -1,0 +1,96 @@
+{
+  "source_commit": "611ca3b7f8525ba802373b04f9e3d632d515f7e3",
+  "correction": "PR383 hinge kernel sign reversed to match Qplus-Qminus of negative-force stiffness; original source and archived arrays unchanged",
+  "source_and_input_sha256": {
+    "pair_airebo.cpp": "cbe2b802e554212d2a2244d30ecd26f4d48c1fcebe5a9cb20610b643c12b0a58",
+    "CH.rebo": "70b77656397c0468631af41883d3b781f30432189f749eb0c3d724141055cbd4",
+    "LADDER.json": "35e90cb6f5951de3a5c324c0aa4d4c17cfa8c162e814d09d129b0a3cde6c639d",
+    "21_dir_0": "2543d68fb4d2ca6ecb70eee5ff1754a566350496a9074cdaf9ec8b3674e44684",
+    "21_dir_10024": "bd670bbe7dccb52d75f485482b99c009d7e1a64ce83e4792ed52c7bba35c430c"
+  },
+  "angular_join_cos": -0.5,
+  "right_minus_left_derivatives_order_0_to_5": {
+    "gC1": [
+      "0E-15",
+      "0E-14",
+      "0E-13",
+      "24.334074000000",
+      "-449.90640000000",
+      "4116.3163200000"
+    ],
+    "gC2": [
+      "0E-15",
+      "0E-14",
+      "0E-13",
+      "24.334074000000",
+      "-449.90640000000",
+      "4116.3163200000"
+    ]
+  },
+  "gC1_gC2_identical_first_three_segments": true,
+  "model": "DESCRIPTIVE single quadratic force hinge plus cubic-in-h smooth remainder; no atom-resolved identification or physical fit",
+  "cases": {
+    "21_dir_0": {
+      "probe": 34,
+      "component": 8,
+      "h_A": [
+        8e-05,
+        4e-05,
+        2e-05,
+        1e-05,
+        5e-06,
+        2.5e-06,
+        1.25e-06
+      ],
+      "observed_side_eV_per_A2": [
+        -7.291428712941084e-05,
+        -7.269991956526667e-05,
+        -7.26499954812887e-05,
+        -6.957992966505344e-05,
+        -5.1055593433435575e-05,
+        -1.5695240246582642e-05,
+        1.5296389155317058e-06
+      ],
+      "coarse_to_fine_absolute_ratio": 47.66764652039836,
+      "single_hinge_descriptive_fit": {
+        "absolute_t_A": 2.63e-06,
+        "B_eV_per_A3": -15.506119119896075,
+        "cubic_remainder_coefficient_eV_per_A5": 13933340.98268287,
+        "max_abs_residual_eV_per_A2": 4.119817736444116e-06,
+        "rms_residual_eV_per_A2": 2.4345125010558827e-06
+      },
+      "raw_replay_max_difference_eV_per_A2": 0.0
+    },
+    "21_dir_10024": {
+      "probe": 30,
+      "component": 4,
+      "h_A": [
+        8e-05,
+        4e-05,
+        2e-05,
+        1e-05,
+        5e-06,
+        2.5e-06,
+        1.25e-06
+      ],
+      "observed_side_eV_per_A2": [
+        -7.810035481625732e-05,
+        -7.789816796854865e-05,
+        -7.780658083067493e-05,
+        -7.312200084275133e-05,
+        -5.4762823963550034e-05,
+        -1.8127887211782934e-05,
+        -8.077629711777945e-07
+      ],
+      "coarse_to_fine_absolute_ratio": 96.68721840811749,
+      "single_hinge_descriptive_fit": {
+        "absolute_t_A": 2.58e-06,
+        "B_eV_per_A3": -16.78485491387977,
+        "cubic_remainder_coefficient_eV_per_A5": 13419281.355042046,
+        "max_abs_residual_eV_per_A2": 3.663097821019902e-06,
+        "rms_residual_eV_per_A2": 2.0809046331204295e-06
+      },
+      "raw_replay_max_difference_eV_per_A2": 0.0
+    }
+  }
+}
