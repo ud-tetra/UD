@@ -1,0 +1,25 @@
+{
+  "status": "PASS_CONSTRUCTOR_BLUEPRINT_CONTROLS",
+  "direct_residual_fix": "confirmed on previous cancellation control",
+  "full_matrix_gap_counterexample": {
+    "diagonal": [
+      -2e-08,
+      -5e-10,
+      1.0
+    ],
+    "vector": [
+      1.0,
+      0.0001,
+      0.0
+    ],
+    "passed_module_beta": 0.000664605,
+    "actual_ground": -2e-08,
+    "returned_lower": -1.9999999805005724e-08,
+    "returned_valid": true,
+    "frozen_style_numerical_acceptance_passed": true,
+    "claimed_ground_lower_bound_false": true
+  },
+  "reason": "A_full has another negative eigenvalue; supplied positive beta is not a lower bound for its second eigenvalue",
+  "reviewer_execution": "NOT_PERFORMED",
+  "physical_promotion": 0
+}
