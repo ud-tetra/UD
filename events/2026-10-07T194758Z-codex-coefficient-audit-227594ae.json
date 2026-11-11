@@ -1,0 +1,40 @@
+{
+  "event_id": "2026-10-07T194758Z-codex-coefficient-audit-227594ae",
+  "capture_id": "2026-10-07T194758Z-codex-coefficient-audit-227594ae",
+  "type": "coefficient_provenance_audit",
+  "constructor": "Codex",
+  "reviewers": [],
+  "lane": "development \u2014 no registry entry",
+  "physical_promotion": 0,
+  "summary": "Source-bound 7/768 arithmetic audit and cross-ledger comparison; record branch-protection visibility discrepancy; publish through PR",
+  "base_commit": "a315a9c90b80055f58fc425096565854f09d24d9",
+  "administrative_changes": [],
+  "supersedes": [],
+  "missing_sources": [
+    "Gap2_FINAL_Finite_Genesis.png"
+  ],
+  "verification": {
+    "status": "PASS",
+    "source_rows_compared": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09",
+      "C01",
+      "C03"
+    ],
+    "K4_automorphisms_enumerated": 24,
+    "declared_Theta_bitstrings_enumerated": 8,
+    "r_Delta": "7/192",
+    "default_conditional_ratio": "7/768",
+    "dense_conditional_control": "7/2304",
+    "verification_scope": "arithmetic, K4 permutations, declared bitstring count, cross-ledger field consistency; no reference-state predicate or selector replay",
+    "independent_review": "pending",
+    "physical_promotion": 0
+  }
+}
