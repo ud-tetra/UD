@@ -1,0 +1,147 @@
+{
+  "assumptions": {
+    "admitted_bit_states": 6,
+    "face_stock_ownership": "seven distinguishable slots, total stock exactly 2",
+    "face_stock_slots": 7,
+    "joint_states": 672,
+    "phase_event_clock": "dimensionless, uncalibrated",
+    "phase_inverse_noise": "ln(4) (assumed, exact demonstration only)",
+    "phase_potential": "V_d=1-cos(pi*d/2)",
+    "phase_states": 4,
+    "seam_gate": "p=(1,1/2,0,1/2), conditional two-channel/affine-readout choice",
+    "total_stock": 2
+  },
+  "comparisons": {
+    "flat_conductance_kappa0": {
+      "budget": "PASS",
+      "detailed_balance": "PASS",
+      "directed_edges": 6972,
+      "dirichlet": "144/35",
+      "moments": [
+        "1",
+        "-12/5",
+        "162/25",
+        "-504/25",
+        "29529/400"
+      ],
+      "phase_pi": [
+        "16/25",
+        "4/25",
+        "1/25",
+        "4/25"
+      ],
+      "phase_undirected_traffic": "4/5",
+      "positive_stock": "PASS",
+      "quadratic_entropy_derivative": "-9/35",
+      "quadratic_entropy_initial": "3/56",
+      "states": 672
+    },
+    "phase_blind_gate_null": {
+      "moments": [
+        "1",
+        "-3",
+        "9",
+        "-27",
+        "81"
+      ],
+      "two_phase_generators_identical_readout": "PASS"
+    },
+    "phase_uniform_kappa0": {
+      "budget": "PASS",
+      "detailed_balance": "PASS",
+      "directed_edges": 6972,
+      "dirichlet": "18/7",
+      "moments": [
+        "1",
+        "-3/2",
+        "27/8",
+        "-153/16",
+        "981/32"
+      ],
+      "phase_pi": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "phase_undirected_traffic": "1/2",
+      "positive_stock": "PASS",
+      "quadratic_entropy_derivative": "-9/56",
+      "quadratic_entropy_initial": "3/56",
+      "states": 672
+    },
+    "sqrt_gibbs_kappa0": {
+      "budget": "PASS",
+      "detailed_balance": "PASS",
+      "directed_edges": 6972,
+      "dirichlet": "144/35",
+      "moments": [
+        "1",
+        "-12/5",
+        "162/25",
+        "-504/25",
+        "72"
+      ],
+      "phase_pi": [
+        "16/25",
+        "4/25",
+        "1/25",
+        "4/25"
+      ],
+      "phase_undirected_traffic": "4/5",
+      "positive_stock": "PASS",
+      "quadratic_entropy_derivative": "-9/35",
+      "quadratic_entropy_initial": "3/56",
+      "states": 672
+    },
+    "sqrt_gibbs_kappa1": {
+      "budget": "PASS",
+      "detailed_balance": "PASS",
+      "directed_edges": 6972,
+      "dirichlet": "1296/245",
+      "moments": [
+        "1",
+        "-108/35",
+        "2106/175",
+        "-13428/175",
+        "159408/175"
+      ],
+      "phase_pi": [
+        "16/25",
+        "4/25",
+        "1/25",
+        "4/25"
+      ],
+      "phase_undirected_traffic": "4/5",
+      "positive_stock": "PASS",
+      "quadratic_entropy_derivative": "-81/245",
+      "quadratic_entropy_initial": "3/56",
+      "states": 672
+    }
+  },
+  "date": "2026-11-15",
+  "evidence": "EXACT_CONDITIONAL / NO-GO_SCOPED / OPEN",
+  "governance": {
+    "native_UD_G05": "unchanged",
+    "native_UD_G06": "unchanged",
+    "physical_bridge": "0"
+  },
+  "next": "source-select positive conductance/mobility and phase noise, then test 4th derivative/boundary null in a frozen model",
+  "physical_promotion": 0,
+  "proofs": {
+    "action_mobility_nongo": "Action selects J conditional on c, but input constraints do not select c; two explicit equal-traffic witnesses",
+    "counterexample_fourth_correlation": "729/400",
+    "entropy": "d F/ds = - sum_edges c_st [mu_s/pi_s - mu_t/pi_t]^2 <=0",
+    "onsager": "A_c(J;r)=sum_edges (J^2/2c-J(r_s-r_t)); J_min=c*(r_s-r_t)",
+    "phase_blind_null": "R(s)=exp(-3s) identical in both kinetic models",
+    "reversible_conductance_class": "Q_st=c_st/pi_s, symmetric c>=0; DB iff reversibility"
+  },
+  "source_selection": "UNPROVED",
+  "verification": {
+    "full_repo_integrity_tests": "NOT_RUN",
+    "independent_nonconstructor_review": "NOT_RUN",
+    "replay_independent.py": "PASS, independent four-phase linear operator",
+    "verify.py": "PASS, exhaustive rational 672-state"
+  },
+  "version": "v0.4"
+}
