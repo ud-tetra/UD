@@ -1,0 +1,209 @@
+{
+  "admitted_bits": 6,
+  "admitted_minimal_undirected_edges": 6,
+  "admitted_one_bit_edges": 0,
+  "bridge": "No physical k, temporal calibration, source constitutive law, or data; preserved G05/G06 and other NO-GOs",
+  "cases": [
+    {
+      "R_prime_0": "-3/2",
+      "R_second_0": "27/8",
+      "bit_edges": 1344,
+      "budget_conservation": "PASS",
+      "detailed_balance": "PASS",
+      "directed_transitions": 6972,
+      "donor_interaction": "0",
+      "faces": 7,
+      "geometry": "full",
+      "interface_edges": 9,
+      "joint_states": 672,
+      "label": "harmonic",
+      "phase_edges": 1344,
+      "positivity": "PASS",
+      "rate_phase": [
+        "1",
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "stock_edges": 4284,
+      "total_stock": 2,
+      "variance": "12/7",
+      "within_edges": 6
+    },
+    {
+      "R_prime_0": "-9/8",
+      "R_second_0": "81/32",
+      "bit_edges": 1344,
+      "budget_conservation": "PASS",
+      "detailed_balance": "PASS",
+      "directed_transitions": 6972,
+      "donor_interaction": "0",
+      "faces": 7,
+      "geometry": "full",
+      "interface_edges": 9,
+      "joint_states": 672,
+      "label": "squared_harmonic",
+      "phase_edges": 1344,
+      "positivity": "PASS",
+      "rate_phase": [
+        "1",
+        "1/4",
+        "0",
+        "1/4"
+      ],
+      "stock_edges": 4284,
+      "total_stock": 2,
+      "variance": "12/7",
+      "within_edges": 6
+    },
+    {
+      "R_prime_0": "-3/4",
+      "R_second_0": "9/4",
+      "bit_edges": 1344,
+      "budget_conservation": "PASS",
+      "detailed_balance": "PASS",
+      "directed_transitions": 5460,
+      "donor_interaction": "0",
+      "faces": 7,
+      "geometry": "full",
+      "interface_edges": 9,
+      "joint_states": 672,
+      "label": "strict_match",
+      "phase_edges": 1344,
+      "positivity": "PASS",
+      "rate_phase": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "stock_edges": 2772,
+      "total_stock": 2,
+      "variance": "12/7",
+      "within_edges": 6
+    },
+    {
+      "R_prime_0": "-27/14",
+      "R_second_0": "351/56",
+      "bit_edges": 1344,
+      "budget_conservation": "PASS",
+      "detailed_balance": "PASS",
+      "directed_transitions": 6972,
+      "donor_interaction": "1",
+      "faces": 7,
+      "geometry": "full",
+      "interface_edges": 9,
+      "joint_states": 672,
+      "label": "harmonic-interacting-stock",
+      "phase_edges": 1344,
+      "positivity": "PASS",
+      "rate_phase": [
+        "1",
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "stock_edges": 4284,
+      "total_stock": 2,
+      "variance": "12/7",
+      "within_edges": 6
+    },
+    {
+      "R_prime_0": "-1",
+      "R_second_0": "3/2",
+      "bit_edges": 1344,
+      "budget_conservation": "PASS",
+      "detailed_balance": "PASS",
+      "directed_transitions": 5460,
+      "donor_interaction": "0",
+      "faces": 7,
+      "geometry": "reflect_shared",
+      "interface_edges": 3,
+      "joint_states": 672,
+      "label": "harmonic-reflect_shared",
+      "phase_edges": 1344,
+      "positivity": "PASS",
+      "rate_phase": [
+        "1",
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "stock_edges": 2772,
+      "total_stock": 2,
+      "variance": "12/7",
+      "within_edges": 6
+    },
+    {
+      "R_prime_0": "-1",
+      "R_second_0": "3/2",
+      "bit_edges": 1008,
+      "budget_conservation": "PASS",
+      "detailed_balance": "PASS",
+      "directed_transitions": 4392,
+      "donor_interaction": "0",
+      "faces": 6,
+      "geometry": "omit_shared",
+      "interface_edges": 3,
+      "joint_states": 504,
+      "label": "harmonic-omit_shared",
+      "phase_edges": 1008,
+      "positivity": "PASS",
+      "rate_phase": [
+        "1",
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "stock_edges": 2376,
+      "total_stock": 2,
+      "variance": "2",
+      "within_edges": 6
+    }
+  ],
+  "comparison": {
+    "q_half_minus_q_quarter_initial_slope": "-3/8",
+    "second_derivative_harmonic": "27/8",
+    "second_derivative_stock_kappa1": "351/56",
+    "stock_kappa1_not_global_clock_relabeling": true
+  },
+  "geometry_spectra": {
+    "full": {
+      "0": 1,
+      "3*p": 1,
+      "3*p + 3": 2,
+      "7*p": 1,
+      "p + 3": 2
+    },
+    "omit_shared": {
+      "0": 1,
+      "2*p": 1,
+      "2*p + 3": 2,
+      "3": 2
+    },
+    "reflect_shared": {
+      "0": 2,
+      "2*p": 1,
+      "2*p + 3": 2,
+      "3": 2
+    }
+  },
+  "phase_nonuniqueness_theorem": {
+    "all_solutions": "(1,q,0,q), 0<=q<=1",
+    "conditional_first_harmonic": "if affine in cos(phi), q=1/2 uniquely (added constitutive axiom)",
+    "premises": "gauge invariant, phase reversal even, 0<=p<=1, p(0)=1, p(2)=0 on Z4",
+    "selection": "undetermined continuum of q"
+  },
+  "physical_promotion": 0,
+  "reversible_donor_family": {
+    "M2_F7_kappa1": "9/7",
+    "equilibrium": "same multinomial stock law for both kappa values",
+    "initial_slope_ratio_formula": "1+2*kappa*(M-1)/F",
+    "kappa": "arbitrary nonnegative; kappa=0 and kappa=1 tested",
+    "rate": "x_i*w_ij(d)*[1+kappa*(x_i+x_j-1)]"
+  },
+  "source_derived": "March trion gate, defined relative seam phase, positive stock necessary pre-event conditions; no constitutive rate selected",
+  "status": "EXACT_CONDITIONAL / NO-GO_SCOPED / OPEN",
+  "timestamp": "2026-11-15",
+  "version": "v0.3"
+}
