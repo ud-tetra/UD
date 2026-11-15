@@ -60,6 +60,7 @@ results={
 expected={'harmonic':(Q(-3,2),Q(27,8)),'squared':(Q(-9,8),Q(81,32)),
           'strict':(Q(-3,4),Q(9,4)),'occupancy_interaction':(Q(-27,14),Q(351,56))}
 assert results==expected,(results,expected)
+# Same first-harmonic quadrature limits but continuum of source laws.
 assert phase_rule(Q(1,2))!=phase_rule(Q(1,4))
 assert results['occupancy_interaction'][0] / results['harmonic'][0]==Q(9,7)
 assert results['occupancy_interaction'][1]!=results['harmonic'][1]*Q(9,7)**2
