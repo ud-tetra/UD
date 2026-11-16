@@ -1,0 +1,35 @@
+{
+  "release": "UD_EDGE_PREPARATION_SELECTION_GATE_v0.6",
+  "status": "EXACT_CONDITIONAL, NO-GO_SCOPED, OPEN_GATED",
+  "physical_promotion": 0,
+  "date_utc": "2026-11-16",
+  "base_commit": "634d1ef6dd173bb73adb8d106fb995a19cc08858",
+  "source_report_sha256": "d2430add3a5f9f86db059d3401f240979b200ba7df8d97f7115092c5561ce422",
+  "source_report_sha1_blob": "e57ca393a90d6a130a625cc1409803050a72028e",
+  "replay_from_original_independent_source": "independently transcribed minimal executable; source full replay SHA256 209cba9fd683439c94b9f602a7e443a881bf3f0b4d768f1ebac7330f2f87e8fd",
+  "local_package_zip_sha256": "12e8239a49bfdbad5dfd2ce628b135e5147e0451d46ee60252021c625a0d91e5",
+  "verified_local": [
+    "source selection exact Fraction verifier PASS",
+    "independent orbit replay PASS",
+    "prior 672-state v0.5.1 exact verifier PASS",
+    "prior v0.5.1 portable replay PASS"
+  ],
+  "github_integrity": "NOT_RUN; connector-only; review/CI required",
+  "source_context": [
+    "March packet_modulation_layer.md §§1-3",
+    "March seam_phase_transport.md §§1,4",
+    "March triangular_transport_symbol_alphabet.md §§2-4",
+    "UD draft PR #517 / UD-Physics draft PR #391"
+  ],
+  "claim_boundary": "Phase stationary probability pi is not packet burden rho. Unit local preparation f and pi-to-rho map assumed; external 8/5 clock benchmark not derived.",
+  "files_in_this_capture": [
+    "REPORT.md",
+    "replay_orbit_exact.py",
+    "SUMMARY.json",
+    "MANIFEST.json"
+  ],
+  "files_not_uploaded": [
+    "Full local v0.6 verify.py, individual six-ring output JSON and baseline 672-state executable copies are present only in user-visible ZIP."
+  ],
+  "nonconstructor_review": "PENDING"
+}
