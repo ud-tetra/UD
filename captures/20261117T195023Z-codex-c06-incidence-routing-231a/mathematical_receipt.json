@@ -1,0 +1,136 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-incidence-routing-v021",
+  "session_id": "20261117-codex-c06-incidence-routing-231a",
+  "candidate_id": "c06-incidence-routing",
+  "question": "Test incidence-only opposite-edge readout and whether it entails simultaneous cut.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "face_aggregation",
+      "symbol": "H^T H",
+      "object_type": "unsigned incidence Gram",
+      "definition": "sum of face aggregates incident to an edge",
+      "domain": "ordinary edge data",
+      "codomain": "ordinary edge data",
+      "coefficient_domain": "real; exact integer controls",
+      "units": "edge amplitude",
+      "basis_orientation": "unsigned incidence",
+      "metric_measure": "ordinary coordinates",
+      "origin": "tetrahedral incidence",
+      "exact_expression": "H^T H=I+J-O",
+      "source_refs": [
+        "C06-v020"
+      ],
+      "normalization": "mean-zero source and copied record"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v020",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/3318b92dcb9677ed986cd35b2639aaf7606d3276/captures/20261117T194221Z-codex-c06-flag-readout-4e70/UD_C06_FLAG_READOUT_COMMIT_v0.20.md",
+      "version_or_commit": "v0.20",
+      "section_or_object_id": "Local flag observations and simultaneous receipts",
+      "source_status": "integrated conditional readout and arbiter"
+    },
+    {
+      "source_id": "C06-v011",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/3318b92dcb9677ed986cd35b2639aaf7606d3276/captures/20261117T043209Z-codex-c06-action-d84a/UD_C06_BOUNDARY_ACTION_COEFFICIENT_v0.11.md",
+      "version_or_commit": "v0.11",
+      "section_or_object_id": "Defined action and direct-port dynamics",
+      "source_status": "integrated flag metric and sector rates"
+    }
+  ],
+  "assumptions": [
+    "Unsigned tetrahedral face-edge incidence and mean-zero ordinary edge data.",
+    "Closed primal Whitney copies in the declared metric.",
+    "Candidate synchronous cell-level transition shares a Ready state."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Exact incidence identity and countermodels",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Test algebraic access and actuator independence"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "3^5*2*6",
+    "reduced_expression": "2916 controls",
+    "factor_origins": [
+      "five free edge coordinates",
+      "two total sums",
+      "six output edges"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless oscillator phase",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "first directed balance under the candidate",
+    "initial_phase": "empty record",
+    "coupling": "fixed odd rate before cut",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "mean-zero source and Whitney flags",
+    "generator_or_update": "reciprocal copied port; optional shared hold",
+    "initial_boundary_conditions": "empty record",
+    "conservation_and_sources": "skew flow and identity reset",
+    "projection_and_kernel": "H^T H equals 2P- on mean-zero inputs",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first global odd balance"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "synchronous aggregation candidate"
+    ],
+    "search_domain_and_budget": "2916 checks",
+    "selection_criterion": "exact algebraic readout with separately tested actuation",
+    "baseline": "v0.20 pair readout"
+  },
+  "calculation_steps": [
+    "Compute incidence Gram",
+    "Distinguish primal and dual flags",
+    "Check actuator independence"
+  ],
+  "result": {
+    "exact_expression": "sum of two incident face sums = z_e-z_O(e) for mean-zero z",
+    "approximation": null,
+    "units": "edge amplitude",
+    "precision_and_error": "exact identities and rational witnesses",
+    "scope": "The sum of two incident face sums recovers the opposite-edge difference on the mean-zero copied range. The incidence and conservation identities allow both cut and record-only extensions, so synchronous actuation remains open.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-incidence-routing-231a/incidence-routing-replay/inputs/001-replay_c06_incidence.py",
+      "source_revision": "dd2f272dda92fb43a0dabc3ad5454bf15358224b",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Single-face ambiguity",
+    "Dual flags may differ",
+    "Recording alone permits continued exchange"
+  ],
+  "limitations": [
+    "Native synchronous actuation and Stage 2 open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-incidence-routing-231a/incidence-routing-replay/manifest.json"
+  ],
+  "next_discriminant": "Test a specified native transition law for simultaneous aggregation, recording and port selection."
+}
