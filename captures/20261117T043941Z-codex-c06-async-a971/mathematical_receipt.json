@@ -1,0 +1,143 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-asynchronous-latch-v012",
+  "session_id": "20261117-codex-c06-async-a971",
+  "candidate_id": "c06-asynchronous-latch",
+  "question": "Test sector-resolved half-stock stops and holding before matching transfer.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "Bsector",
+      "symbol": "B_k",
+      "object_type": "sector stock balance",
+      "definition": "record minus residual stock, normalized by positive initial sector stock",
+      "domain": "individual closed sector state with positive initial stock",
+      "codomain": "[-1,1]",
+      "coefficient_domain": "real with exact Fraction controls",
+      "units": "dimensionless",
+      "basis_orientation": "ordinary edge parity sectors",
+      "metric_measure": "Euclidean source, v0.11 action record",
+      "origin": "declared sector observation",
+      "exact_expression": "B_k=-cos(2 omega_k t)",
+      "source_refs": [
+        "C06-v08",
+        "C06-v011"
+      ],
+      "normalization": "initial stock"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v011",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/539",
+      "version_or_commit": "v0.11",
+      "section_or_object_id": "constant Whitney boundary action rates",
+      "source_status": "integrated exact scoped result"
+    },
+    {
+      "source_id": "C06-v08",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/536",
+      "version_or_commit": "v0.8",
+      "section_or_object_id": "signed stock crossing and error bracket",
+      "source_status": "integrated exact conditional result"
+    },
+    {
+      "source_id": "C06-v06",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/532",
+      "version_or_commit": "v0.6",
+      "section_or_object_id": "two-stage norm-preserving records",
+      "source_status": "integrated exact conditional result"
+    }
+  ],
+  "assumptions": [
+    "Positive constant sector rates, orthogonal source and record decompositions, zero initial records.",
+    "Persistent sector completion bits; disable both directions after the first transversal half-stock event. Zero initial sector stock is complete by convention.",
+    "Exact isolation during wait. Complete matching swap assumed for exact terminal result."
+  ],
+  "technique_plan": [
+    {
+      "technique": "closed skew blocks and rational stock replay",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "test event order, retention, and terminal response"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "one half direct plus one half full even swap",
+    "reduced_expression": "final edge gains (1,1/2)",
+    "factor_origins": [
+      "half-stock crossing",
+      "full matching transfer"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless exchange phases",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "first upward sector crossing disables its block",
+    "initial_phase": "source only",
+    "coupling": "v0.11 rates",
+    "period_claim": "local first half phase pi/4; joint handoff is readiness only",
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "E and T2 source and record blocks plus matching record and two completion bits",
+    "generator_or_update": "skew exchange on active sectors, zero on held sectors",
+    "initial_boundary_conditions": "zero initial records, closed cell",
+    "conservation_and_sources": "metric stock preserved within blocks and across identity switches",
+    "projection_and_kernel": "matching swap accesses only retained even sector",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "half-stock and equal shear response"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "sector-specific latches and readiness guard declared"
+    ],
+    "search_domain_and_budget": "exact ideal switch and conditional error budget; no empirical fit",
+    "selection_criterion": "exact half-stock retention followed by equal terminal shear gains",
+    "baseline": "v0.11 continuous common-time no-go"
+  },
+  "calculation_steps": [
+    "Solve each skew oscillator",
+    "Prove hold under zeroed block and conservative switch",
+    "Compose full matching swap",
+    "Bound detector error and incomplete swap"
+  ],
+  "result": {
+    "exact_expression": "t_k=pi/(4 omega_k); direct gains (1/2,1/2); final gains (1,1/2)",
+    "approximation": null,
+    "units": "dimensionless internal model",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "Independent upward crossings with two-direction isolation retain half stocks until joint readiness; a full subsequent matching swap yields equal shear weights 1/2.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact Fraction replay",
+      "command_or_proof_path": "python3 replay_c06_asynchronous.py",
+      "source_revision": "7841ac98060adb9fb60ba711fff4dc6cf0ea871b",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Recording completion without isolation leaves the fast oscillator running"
+  ],
+  "limitations": [
+    "No sourced sector latch, hold, or Stage 2 trigger",
+    "No measured clock or deficit allocation"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-async-a971/asynchronous-latch-replay/manifest.json"
+  ],
+  "next_discriminant": "Test whether admitted local receipts can supply persistent sector-resolved completion, hold isolation and joint handoff."
+}
