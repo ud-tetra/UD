@@ -1,0 +1,141 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-direct-port-spectrum-v09",
+  "session_id": "20261117-codex-c06-port-b6df",
+  "candidate_id": "c06-direct-port-spectrum",
+  "question": "Compute direct-port phase spectra on the unordered E plus T2 shear current and compare signed incidence.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "flag-copy",
+      "symbol": "F",
+      "object_type": "linear port",
+      "definition": "Copy a current coordinate to its two incident face flags",
+      "domain": "mean-zero ordinary R^6, E plus T2",
+      "codomain": "R^12 flags",
+      "coefficient_domain": "real; exact Fraction replay",
+      "units": "dimensionless",
+      "basis_orientation": "unordered edges, incident face triples",
+      "metric_measure": "Euclidean edge, symmetric blocks on flags",
+      "origin": "declared incidence lift",
+      "exact_expression": "F*F=2u I+v A_adj",
+      "source_refs": [
+        "PIII"
+      ],
+      "normalization": "flag copy with coefficient one"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "PI-P4.5",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/repo-03-UD_PAPER_I_REVIEW_DRAFT_v1.1.1.md",
+      "version_or_commit": "v1.1.1",
+      "section_or_object_id": "§4.3 T4.4 and P4.5",
+      "source_status": "signed chain identities"
+    },
+    {
+      "source_id": "PIII",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/repo-00-UD_PAPER_III_REVIEW_DRAFT_v1.1.1.md",
+      "version_or_commit": "v1.1.1",
+      "section_or_object_id": "§9",
+      "source_status": "unsigned edge relations"
+    },
+    {
+      "source_id": "C06-v08",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/536",
+      "version_or_commit": "v0.8",
+      "section_or_object_id": "signed stock-balance crossing",
+      "source_status": "integrated conditional result"
+    }
+  ],
+  "assumptions": [
+    "Single regular cell, unit Euclidean current metric and source-only preparation.",
+    "Flag record metric block diagonal by face, identical symmetric diagonal/off-diagonal coefficients in every face.",
+    "Signed and unsigned carriers typed independently."
+  ],
+  "technique_plan": [
+    {
+      "technique": "exact Gram spectra and signed incidence comparison",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "test whether equivariant locality forces degenerate nonzero rates"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "four faces × three flags = six edges × two flags",
+    "reduced_expression": "12 flags",
+    "factor_origins": [
+      "regular tetrahedron incidence"
+    ],
+    "factorization": "12=3*2^2",
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "internal dimensionless time",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "closed skew exchange with declared adjoint",
+    "initial_phase": "source-only",
+    "coupling": "flag-copy map",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "unordered mean-zero edge currents plus auxiliary flag coordinates",
+    "generator_or_update": "x prime=-F*y and y prime=Fx",
+    "initial_boundary_conditions": "source only, closed single cell",
+    "conservation_and_sources": "total metric stock conserved",
+    "projection_and_kernel": "unsigned coherent face sum kills E; signed joint module has no E",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "common first half-transfer crossing"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "u=1,v=1/2 exact counterexample"
+    ],
+    "search_domain_and_budget": "declared face-local invariant metric family and incidence checks",
+    "selection_criterion": "equal positive sector rates",
+    "baseline": "v0.8"
+  },
+  "calculation_steps": [
+    "Count flag diagonal and cross incidences",
+    "Diagonalize ordinary adjacency on opposite-pair modes",
+    "Check signed cut and cycle Grams separately"
+  ],
+  "result": {
+    "exact_expression": "squared rates (2(u-v),2u); unit flag rates sqrt(2) and sqrt(2)",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact theorem and rational replay",
+    "scope": "Independent Euclidean flags give (2,2) squared rates. Equivariant face cross terms split them. Coherent face sums give (0,2). The signed joint incidence port has squared rate 4 but its module has no E.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact Python Fraction replay",
+      "command_or_proof_path": "python3 replay_c06_direct_ports.py",
+      "source_revision": "7e7a0eef252a48ca5af50ce8bd1f492f74bcd45b",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Positive S4-equivariant cross metric splits rates",
+    "Coherent readout annihilates E"
+  ],
+  "limitations": [
+    "No native selection of independent flag ports or metric",
+    "Stage-two depletion and deficit allocation open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-port-b6df/direct-port-spectrum-replay/manifest.json"
+  ],
+  "next_discriminant": "Derive a native flag metric and observed port separation before using the common-phase latch; otherwise test sector-resolved receipts."
+}
