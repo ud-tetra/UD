@@ -1,0 +1,23 @@
+# C06 signed circulation and port actuation v0.30
+
+**EXACT / CONDITIONAL** for the signed face readout and reciprocal switch below. **CANDIDATE** for the declared switch. **OPEN** for a source law authorizing it. **Physical Promotion = 0.**
+
+## Signed face circulation as a balance detector
+
+Use polarized edge amplitudes in the six-coordinate Euclidean edge permutation module, ordered as (01,02,03,12,13,23). Fix the opposite-pair even and odd decomposition from C06 v0.05. Test a specific readout (C:\mathbb R^6\to\mathbb R^4) that takes these amplitudes as cochain coefficients in the declared increasing edge orientations and applies the oriented triangular coboundary. This identification of coefficients is a test convention. It leaves the polarized edge action distinct from the ordinary signed chain action. Use increasing vertex order for each triangular row.
+
+On the odd subspace \(T_2\), a vector has coordinates \((a,b,c,-c,-b,-a)\). The four circulations are \((a-b-c,a-b-c,-a+b-c,-a+b-c)\). The restriction has rank two and kernel spanned by \((1,1,0,0,-1,-1)\). Put a nonzero vector in this kernel into the initial carrier and leave the record empty. Under a shared odd exchange rate the two states stay proportional to that vector, so every circulation on both sides is zero throughout. The true odd balance still has its first upward crossing at \(\pi/(4\omega_-)\). The raw squared circulation difference therefore misses a valid balance event. This concerns signed circulation. The unsigned sum-of-local-squares identity from the face detector branch uses a different observable.
+
+On the even trace-free space \(E\), the three opposite-pair values sum to zero. Each triangle sees one value from each pair. Its circulation can annihilate all of \(E\) only if the three signs on that row agree. Orient all four faces coherently outward. Every shared edge has opposite signs in its two face rows, and this property survives any fixed diagonal reversal of edge signs. If all rows killed \(E\), each pair of faces would therefore need opposite constant row signs. The face adjacency graph contains triangles, so this is impossible. Face sign changes do not change the kernels. Thus no re-signing by edge orientations makes this raw circulation readout purely odd. The replay confirms even leakage for all 64 sign choices and odd ranks of two for 48 choices and three for 16. The rank-two witness is specific to the displayed convention. The result does not classify more general readout maps.
+
+## Directed guard and reciprocal hold
+
+In parity-resolved coordinates \(u,v\) on the odd carrier and record with their declared positive metrics, \(B(u,v)=\|v\|^2-\|u\|^2\). The guard is \(B=0\) and \(dB(F_{\rm in})>0\) at the first event for positive odd stock. The differential \(dB=(-2u^\flat,2v^\flat)\) is nonzero at every balanced state with positive odd stock. This corrects the proposed \(dB=0\) trigger. At zero odd stock there is no directed balance event.
+
+Declare a persistent state change at the guard with identity reset of the amplitudes. On the shear carrier, replace \(G\) by \(K=G(I-P_-)\) and evolve using \(\dot x=-K^\dagger y,\ \dot y=Kx\). The forward and reverse terms cancel in the time derivative of total metric stock. The state is continuous at the switch, so the switch changes the finite velocity and introduces no impulse in the amplitude equations. The odd carrier is constant by metric orthogonality of \(P_-\). The odd record is constant for all states exactly when \(P_-^{\rm rec}G(I-P_-)=0\), with \(P_-^{\rm rec}\) the metric-orthogonal projection onto the original odd record range. The change removes three coupling directions when \(G\) has rank three on \(T_2\) and the even and odd record ranges are orthogonal. This argument conserves the declared stock, while energetic accounting for any physical actuator remains open.
+
+The same directed balance state admits continued reciprocal exchange and the declared hybrid hold. Static incidence fixes neither the transition nor its persistence. A bounded smooth potential by itself cannot supply the nonzero impulse of the v0.29 ideal impact model, which assumed a contact impulse. The constructed hybrid hold requires no such impulse. A native state update that changes the odd coupling at the directed guard, its persistence, and the subsequent matching handoff remain open. The deficit-allocation axiom remains separate.
+
+## Verification
+
+Run `python3 replay_c06_signed_circulation.py`. The integer replay checks the displayed blind witness, all edge sign choices, and reciprocal post-switch stock and odd-state derivatives on a finite grid. The algebraic proofs above supply the claims for arbitrary admissible amplitudes.
