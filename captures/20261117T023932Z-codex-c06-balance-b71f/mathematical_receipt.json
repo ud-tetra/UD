@@ -1,0 +1,138 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-signed-stock-balance-v08",
+  "session_id": "20261117-codex-c06-balance-b71f",
+  "candidate_id": "c06-stock-balance-crossing",
+  "question": "Test signed cut balance as a robust half-transfer guard and discriminate aggregate from sector-resolved transfer.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "stock-balance",
+      "symbol": "B",
+      "object_type": "normalized signed stock difference",
+      "definition": "(direct squared stock minus source squared stock) divided by initial total stock",
+      "domain": "real finite-dimensional two-port state with nonzero stock",
+      "codomain": "[-1,1]",
+      "coefficient_domain": "real; exact rational controls",
+      "units": "dimensionless",
+      "basis_orientation": "positive transfer source to direct",
+      "metric_measure": "Euclidean on both ports",
+      "origin": "candidate observable using sourced incidence balance",
+      "exact_expression": "B=2f-1; B prime=2J/C",
+      "source_refs": [
+        "PI-T5.1"
+      ],
+      "normalization": "C=initial total squared norm"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "PI-T5.1",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/repo-03-UD_PAPER_I_REVIEW_DRAFT_v1.1.1.md",
+      "version_or_commit": "v1.1.1",
+      "section_or_object_id": "§5.1 Proposition T5.1",
+      "source_status": "sourced mathematical cut balance"
+    },
+    {
+      "source_id": "C06-v07",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/534",
+      "version_or_commit": "v0.7",
+      "section_or_object_id": "two-stage fraction identity",
+      "source_status": "integrated conditional result"
+    }
+  ],
+  "assumptions": [
+    "Real Euclidean source and direct ports with closed skew exchange and nonzero source-only initial stock.",
+    "Shared continuous positive rate for the half-transfer theorem. Separate sector rates for the counterexample.",
+    "Additive normalized balance error with amplitude and derivative bounds over a declared bracket."
+  ],
+  "technique_plan": [
+    {
+      "technique": "cut balance and transversality",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "bounded error margins and sector identifiability"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "equal-stock average of sector fractions 1/4 and 3/4",
+    "reduced_expression": "aggregate 1/2",
+    "factor_origins": [
+      "phases at t=pi/6",
+      "equal initial sector stocks"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "internal dimensionless evolution",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "integrate declared phase rate",
+    "initial_phase": "0",
+    "coupling": "shared positive rate or split-rate falsifier",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "two Euclidean real ports, optional sector decomposition",
+    "generator_or_update": "x prime=-omega y, y prime=omega x",
+    "initial_boundary_conditions": "source-only, closed exchange",
+    "conservation_and_sources": "C conserved; signed J crosses cut",
+    "projection_and_kernel": "aggregate stock can conceal opposite sector deviations",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "half split",
+      "positive shear equality"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "rational bracket controls and split-rate witness"
+    ],
+    "search_domain_and_budget": "closed shared-phase model, bounded observation error, split-rate counterexample",
+    "selection_criterion": "transversal half-stock trigger with sector scope",
+    "baseline": "v0.7"
+  },
+  "calculation_steps": [
+    "Solve exact shared phase",
+    "Compare stock balance and flux",
+    "Derive lower crossing slope and fraction error",
+    "Test split-rate aggregate guard"
+  ],
+  "result": {
+    "exact_expression": "B=-cos(2 theta); |f-1/2|<=epsilon/2; aggregate zero admits (1/4,3/4)",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "analytic bounds and exact Fraction controls",
+    "scope": "Common positive phase gives an exact transversal half split. Observation error epsilon bounds fraction error by epsilon/2 in a certified bracket. Unsynchronized sector rates give a transversal aggregate zero at fractions 1/4 and 3/4.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact Python Fraction replay",
+      "command_or_proof_path": "python3 replay_c06_balance.py",
+      "source_revision": "29be140f397732490b264543376e8bd6383775ed",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Flux is positive at half transfer; endpoint zeros do not select half",
+    "Aggregate balance does not imply sector balance"
+  ],
+  "limitations": [
+    "Same ports and latch must be sourced",
+    "No general perturbed-generator claim beyond common rate and additive observation model",
+    "Second-stage depletion and deficit allocation open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-balance-b71f/stock-balance-replay/manifest.json"
+  ],
+  "next_discriminant": "Derive or test shared phase or sector-resolved cut latches in a native interaction, then source depletion separately."
+}
