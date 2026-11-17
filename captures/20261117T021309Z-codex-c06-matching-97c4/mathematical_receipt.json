@@ -1,0 +1,144 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-local-matching-exchange-v06",
+  "session_id": "20261117-codex-c06-matching-97c4",
+  "candidate_id": "c06-local-matching-exchange",
+  "question": "Test whether a local norm-preserving interaction yields positive equal shear weights beyond leading order.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "matching-sum",
+      "symbol": "U",
+      "object_type": "normalized linear readout",
+      "definition": "One normalized opposite-pair sum per matching",
+      "domain": "R^6",
+      "codomain": "R^3",
+      "coefficient_domain": "real with exact rational Gram replay",
+      "units": "dimensionless",
+      "basis_orientation": "unordered opposite-edge pairs",
+      "metric_measure": "Euclidean",
+      "origin": "declared from pair addresses",
+      "exact_expression": "U*U=P; UU*=I",
+      "source_refs": [
+        "C06-v05"
+      ],
+      "normalization": "1/sqrt(2) on both edges"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v05",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/527",
+      "version_or_commit": "v0.5",
+      "section_or_object_id": "Opposite pair metrics",
+      "source_status": "captured exact scoped evidence"
+    },
+    {
+      "source_id": "PIII",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/repo-00-UD_PAPER_III_REVIEW_DRAFT_v1.1.1.md",
+      "version_or_commit": "v1.1.1",
+      "section_or_object_id": "§9",
+      "source_status": "research draft"
+    },
+    {
+      "source_id": "narrative",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/220bb0c1f2fa431f551ca39ddb079036fe652646/docs/UD_Theory_Narrative_Manuscript_v0.15.pdf",
+      "version_or_commit": "v0.15",
+      "section_or_object_id": "§9.4",
+      "source_status": "archived narrative"
+    }
+  ],
+  "assumptions": [
+    "Regular tetrahedral current and Frobenius input; Euclidean orthogonal registers and dimensionless time.",
+    "Matching blocks add an auxiliary record on each opposite pair.",
+    "Two-stage update declares a balanced split followed by full transfer of the retained pair-even mode."
+  ],
+  "technique_plan": [
+    {
+      "technique": "operator spectra and rational Gram replay",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "distinguish transient and exact staged isotropy"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "six edges in three opposite pairs",
+    "reduced_expression": "3 pairs; two edges per pair",
+    "factor_origins": [
+      "tetrahedron edge matching"
+    ],
+    "factorization": "6=2*3",
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless continuous exchange or ordered two-stage update",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "equal-rate branch and prescribed balanced stage",
+    "initial_phase": "record registers zero",
+    "coupling": "aI and bU",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "R^6 x R^6 x R^3",
+    "generator_or_update": "skew source/direct/matching exchange",
+    "initial_boundary_conditions": "source-only input; closed matching blocks",
+    "conservation_and_sources": "total Euclidean support conserved",
+    "projection_and_kernel": "record-only projection omits residual odd source in staged branch",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "2:1 squared gain",
+      "C06 structural normalization"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "tested equal rates and selected half split"
+    ],
+    "search_domain_and_budget": "constant exchange and balanced split/full transfer",
+    "selection_criterion": "equal Q-space Gram eigenvalues",
+    "baseline": "v0.5"
+  },
+  "calculation_steps": [
+    "Skew-block reduction by opposite-pair parity",
+    "Compare quadratic and quartic gain coefficients",
+    "Check three Gram terms sum to I after two stages",
+    "Write Section 9 addendum using 3 mu_minus - 2 mu_plus = c+6b"
+  ],
+  "result": {
+    "exact_expression": "unit-rate Q-space contrast -t^4/3 + O(t^6); staged record metric (I+P)/2",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact coefficients and exact finite Gram check",
+    "scope": "Equal-rate continuous exchange gives the target at leading order but fails at quartic order; a fixed balanced exchange followed by a full matching swap realizes the ratio conditionally.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact Fraction replay",
+      "command_or_proof_path": "python3 replay_c06_matching.py",
+      "source_revision": "e08205962cd021e149028574d3b5d65822e6ce91",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Constant coupling fails equality on any positive open time interval",
+    "Including the retained source gives edge-space gain 1:1"
+  ],
+  "limitations": [
+    "Auxiliary matching channel and staged schedule assumed",
+    "No source selection or deficit allocation",
+    "No physical bridge or independent review"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-matching-97c4/matching-exchange-replay/manifest.json"
+  ],
+  "next_discriminant": "Derive or rule out a native trigger for the balanced split and complete matching transfer, using conserved local receipts."
+}
