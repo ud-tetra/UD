@@ -1,0 +1,144 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-flag-readout-commit-v020",
+  "session_id": "20261117-codex-c06-flag-readout-4e70",
+  "candidate_id": "c06-flag-readout-commit",
+  "question": "Test paired flag locality and single terminal commit for simultaneous odd balance receipts.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "aligned_odd_record",
+      "symbol": "b_i",
+      "object_type": "aligned flag coordinate",
+      "definition": "metric adjoint odd coordinate divided by odd rate",
+      "domain": "Whitney flag record",
+      "codomain": "real",
+      "coefficient_domain": "real; rational coefficients in replay",
+      "units": "aligned amplitude",
+      "basis_orientation": "opposite edge pair",
+      "metric_measure": "v0.11 unit-cell Whitney action",
+      "origin": "isometric port alignment",
+      "exact_expression": "b_i=<G psi_i,y>_Y/omega",
+      "source_refs": [
+        "C06-v011",
+        "C06-v016"
+      ],
+      "normalization": "omega^2=106/9"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v019",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/8fe27f5e3bbdefee7b0cee83e7e597648f1486ee/captures/20261117T190933Z-codex-c06-winding-edge-5ab2/UD_C06_WINDING_EDGE_RECEIPTS_v0.19.md",
+      "version_or_commit": "v0.19",
+      "section_or_object_id": "Distributed balance guard",
+      "source_status": "integrated conditional pair guards"
+    },
+    {
+      "source_id": "C06-v011",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/8fe27f5e3bbdefee7b0cee83e7e597648f1486ee/captures/20261117T043209Z-codex-c06-action-d84a/UD_C06_BOUNDARY_ACTION_COEFFICIENT_v0.11.md",
+      "version_or_commit": "v0.11",
+      "section_or_object_id": "Defined action and direct-port dynamics",
+      "source_status": "integrated flag metric and sector rates"
+    },
+    {
+      "source_id": "C06-v016",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/8fe27f5e3bbdefee7b0cee83e7e597648f1486ee/captures/20261117T182604Z-codex-c06-quadratic-phase-62bd/UD_C06_QUADRATIC_PHASE_RECEIPT_v0.16.md",
+      "version_or_commit": "v0.16",
+      "section_or_object_id": "Sections 1–3",
+      "source_status": "aligned metric and selective hold"
+    }
+  ],
+  "assumptions": [
+    "Regular unit-cell Whitney flag metric and mean-zero source.",
+    "Empty initial flag record and closed copied-port dynamics.",
+    "Common-phase preparation and shared atomic Ready/Hold arbitration."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Exact adjoint rows and finite transition replay",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Test readout locality and one-time commit"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "3*3^5 copied-record cases",
+    "reduced_expression": "729 records and 2916 flag choices",
+    "factor_origins": [
+      "three pairs",
+      "five free edge coordinates",
+      "four flag choices"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless oscillator phase",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "coalesce simultaneous qualifying receipts",
+    "initial_phase": "empty record",
+    "coupling": "common odd rate",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "mean-zero source, flag record, Ready/Hold state",
+    "generator_or_update": "select GP+ once",
+    "initial_boundary_conditions": "y=0",
+    "conservation_and_sources": "skew flow and identity reset",
+    "projection_and_kernel": "two flags suffice on im G; metric adjoint is dense off range",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first global odd balance"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "shared atomic arbiter"
+    ],
+    "search_domain_and_budget": "729 record controls and 40 lists",
+    "selection_criterion": "correct on-range readout and at most one commit",
+    "baseline": "v0.19 pair guards"
+  },
+  "calculation_steps": [
+    "Compute Whitney adjoint row",
+    "Restrict to im G",
+    "Test off-range perturbation",
+    "Replay receipts"
+  ],
+  "result": {
+    "exact_expression": "b_i=omega*(y_e-y_eprime)/sqrt(2) on copied range",
+    "approximation": null,
+    "units": "aligned amplitude",
+    "precision_and_error": "exact identities and rational replay",
+    "scope": "Two opposite-edge flag samples recover the aligned odd coordinate on the invariant copied range. Off-range flag perturbations defeat pair-only readout. Shared Ready/Hold arbitration yields a single conditional commit.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-flag-readout-4e70/flag-readout-replay/inputs/001-replay_c06_flag_readout.py",
+      "source_revision": "052e591a3259b39fc89aada2405d3a77314871dc",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Off-pair perturbation changes exact readout",
+    "Local Ready bits can commit independently"
+  ],
+  "limitations": [
+    "Native opposite-pair access, atomic arbitration and Stage 2 open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-flag-readout-4e70/flag-readout-replay/manifest.json"
+  ],
+  "next_discriminant": "Test native access across opposite edges, off-range sensitivity, and same-event arbiter implementation."
+}
