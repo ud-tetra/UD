@@ -1,0 +1,151 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-receipt-latch-audit-v015",
+  "session_id": "20261117-codex-c06-receipt-latch-3ce2",
+  "candidate_id": "c06-receipt-latch-audit",
+  "question": "Test whether the audited event receipts entail first odd half-stock arrival and persistent reciprocal shutoff.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "Bodd",
+      "symbol": "B=v^2-u^2",
+      "object_type": "odd-sector stock difference",
+      "definition": "recorded minus residual odd squared stock on a shared unit mode",
+      "domain": "R^2 aligned odd amplitudes",
+      "codomain": "R",
+      "coefficient_domain": "real; rational witness controls",
+      "units": "dimensionless stock",
+      "basis_orientation": "ordinary opposite-pair odd sector",
+      "metric_measure": "Euclidean aligned record",
+      "origin": "v0.14 parity detector",
+      "exact_expression": "B=v^2-u^2; b=B/N",
+      "source_refs": [
+        "C06-v014"
+      ],
+      "normalization": "N=u^2+v^2 positive and conserved"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "Paper-I",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b7d1a31922d162899d0a06b047d60e79a88e65fe/captures/2026-10-07T191951Z-codex-ud-bootstrap-5170f8b8/browse/dist/papers/UD_PAPER_I_REVIEW_DRAFT_v1.1.1.md",
+      "version_or_commit": "v1.1.1",
+      "section_or_object_id": "§6; §§7.1–7.3 D7.1/T7.2/T7.3/P7.4; concluding winding and event-time scope",
+      "source_status": "conditional receipt map and exact boundary identity"
+    },
+    {
+      "source_id": "C06-v007",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b7d1a31922d162899d0a06b047d60e79a88e65fe/captures/20261117T022828Z-codex-c06-receipt-223f/UD_C06_PARITY_RECEIPT_SOURCE_TEST_v0.7.md",
+      "version_or_commit": "v0.7",
+      "section_or_object_id": "Scoped receipt insufficiency",
+      "source_status": "scoped closure/real exchange independence premise"
+    },
+    {
+      "source_id": "C06-v014",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b7d1a31922d162899d0a06b047d60e79a88e65fe/captures/20261117T050604Z-codex-c06-pair-actuation-8f47/UD_C06_PAIR_BALANCE_ACTUATION_v0.14.md",
+      "version_or_commit": "v0.14",
+      "section_or_object_id": "Sections 1, 3 and 4",
+      "source_status": "integrated conditional result"
+    },
+    {
+      "source_id": "Pachner-Darboux",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b7d1a31922d162899d0a06b047d60e79a88e65fe/captures/2026-10-18T201837Z-codex-W-source-coverage-d8374ec5/sources/UD_PACHNER_EVENT_DARBOUX_MAP_AND_GENERATOR_PUSHFORWARD_v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "§§7–9",
+      "source_status": "separate signed carrier, conditional pushforward"
+    }
+  ],
+  "assumptions": [
+    "Ordinary edge odd mode with Euclidean aligned direct record, positive conserved N, and independent even exchange.",
+    "v0.7 product lift keeps the real odd phase law out of the certified receipt fields; event address and time are supplied.",
+    "The continuous comparator is a declared reciprocal feedback law on the normalized odd balance."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Fixed-receipt countermodels, rational stock replay and separable ODE",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "test timing and post-event kernel identifiability"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "24*8*8",
+    "reduced_expression": "1536 frame/offset/input cases; stock fractions 1/50,1/2,49/50",
+    "factor_origins": [
+      "S4 frames",
+      "three-bit offsets",
+      "three-bit starts"
+    ],
+    "factorization": "1536 = 2^9 * 3",
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless internal time; independently supplied finite event index",
+    "modulus": null,
+    "residue_convention": "zero completed cycles in the first quadrant",
+    "update_rule": "supplied receipt time held fixed in countermodels",
+    "initial_phase": "zero",
+    "coupling": "rate/phase law free in tested lift",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "ordinary odd source/record pair with independent even block",
+    "generator_or_update": "reciprocal q(B/N); compare continue and stop at receipt",
+    "initial_boundary_conditions": "positive source-only stock, zero record, closed exchange",
+    "conservation_and_sources": "norm stock preserved by each skew flow and identity state at event",
+    "projection_and_kernel": "zero shared coefficient cuts both odd directions",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "finite half-stock hold"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "declared continuous non-Lipschitz feedback comparator"
+    ],
+    "search_domain_and_budget": "1536 affine receipt controls; three exact stock witnesses and exact analytic feedback",
+    "selection_criterion": "match receipts while changing odd balance or post-event action",
+    "baseline": "v0.7 product lift and v0.14 locally Lipschitz no-go"
+  },
+  "calculation_steps": [
+    "Read typed receipt interfaces",
+    "Construct fixed-time stock witnesses",
+    "Compare switched and continued flow",
+    "Solve the continuous comparator"
+  ],
+  "result": {
+    "exact_expression": "B=-48,0,+48 at N=50; comparator first hold at t=2/omega",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact proof and Fraction controls",
+    "scope": "Identical receipts admit balances -48, 0 and 48 at the same event time under the audited product lift. Post-event hold is separately underdetermined. A continuous non-Lipschitz comparator holds at finite time.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact rational constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-receipt-latch-3ce2/receipt-latch-replay/inputs/001-replay_c06_receipt_latch.py",
+      "source_revision": "fa5ef0673bf45a4d2f04d5560235a6852d95df53",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Same receipt and time do not determine odd phase in audited lift",
+    "Continuous but non-Lipschitz feedback can arrive at invariant stock balance in finite time"
+  ],
+  "limitations": [
+    "No sourced phase-locking or post-event operator update",
+    "No perturbation-resistant completion, Stage 2 selector, or physical correspondence"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-receipt-latch-3ce2/receipt-latch-replay/manifest.json"
+  ],
+  "next_discriminant": "Seek a sourced subcycle phase guard and a stock-preserving post-event change of the odd port kernel."
+}
