@@ -1,0 +1,137 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-unilateral-contact-v029",
+  "session_id": "20261117-codex-c06-unilateral-contact-36bc",
+  "candidate_id": "c06-unilateral-contact",
+  "question": "Determine whether a rigid apex stop arrests the odd exchange and preserves stored stock.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "contact_gap",
+      "symbol": "g",
+      "object_type": "unilateral gap",
+      "definition": "Common hinge angle minus the closure angle",
+      "domain": "symmetric hinge and oscillator configuration",
+      "codomain": "real",
+      "coefficient_domain": "real; rational replay",
+      "units": "radians",
+      "basis_orientation": "upward net fold",
+      "metric_measure": "regular hinged net",
+      "origin": "declared scalar stop on v0.28 action",
+      "exact_expression": "g=q+k sin^2(theta)-phi_*",
+      "source_refs": [
+        "C06-v028"
+      ],
+      "normalization": "closure at zero gap"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v028",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/995f4f5163418521a0e4806a5a94a1d5284d6f17/captures/20261117T205125Z-codex-c06-variational-fold-2ad6/UD_C06_VARIATIONAL_FOLD_v0.28.md",
+      "version_or_commit": "v0.28",
+      "section_or_object_id": "Joint derivative-coupled action",
+      "source_status": "integrated conditional incoming dynamics"
+    },
+    {
+      "source_id": "C06-v025",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/995f4f5163418521a0e4806a5a94a1d5284d6f17/captures/20261117T201801Z-codex-c06-boundary-impedance-b712/UD_C06_BOUNDARY_IMPEDANCE_v0.25.md",
+      "version_or_commit": "v0.25",
+      "section_or_object_id": "Hard constraint on the drive",
+      "source_status": "integrated conditional hold"
+    }
+  ],
+  "assumptions": [
+    "Single aligned odd pair and symmetric common hinge coordinate.",
+    "Preset half-stock fold gain and positive residual oscillator action.",
+    "Declared canonical impulse and perfectly plastic unilateral stop."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Action-angle impulse and rational energy check",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Test post-impact slope and stock preservation"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "2*2*2*3",
+    "reduced_expression": "24 controls",
+    "factor_origins": [
+      "two inertias",
+      "two gains",
+      "two frequencies",
+      "three positive residual stocks"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "common-rate oscillator",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "canonical plastic impulse at half stock under declared gain",
+    "initial_phase": "empty record",
+    "coupling": "offset action with scalar unilateral gap",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "oscillator action-angle and symmetric hinge offset",
+    "generator_or_update": "momentum reset",
+    "initial_boundary_conditions": "positive action and rested flat hinges",
+    "conservation_and_sources": "plastic stock and energy loss computed",
+    "projection_and_kernel": "normal hinge velocity zero; phase rate unchanged",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "half-stock freeze and stock preservation"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "grant closure gain and plastic stop"
+    ],
+    "search_domain_and_budget": "24 exact rational controls",
+    "selection_criterion": "test whether the stop implies the odd hold",
+    "baseline": "v0.28 incoming action"
+  },
+  "calculation_steps": [
+    "Reduce to action-angle",
+    "Impose plastic normal velocity",
+    "Compare stock and energy",
+    "Scope rank and continuity"
+  ],
+  "result": {
+    "exact_expression": "J=I k omega; action jump=-I k^2 omega; f_dot^+=omega",
+    "approximation": null,
+    "units": "dimensionless model",
+    "precision_and_error": "exact derivation and rational replay",
+    "scope": "In the declared scalar plastic stop on the v0.28 symmetric branch, hinge velocity vanishes while odd phase rate stays positive and stock changes. Native cut authority remains open.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-unilateral-contact-36bc/unilateral-contact-replay/inputs/001-replay_c06_unilateral_contact.py",
+      "source_revision": "6b4e5ef787b2ead0c0539a89e464f203331641cd",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Stopped hinge with continued odd exchange",
+    "Nonzero impulse violates identity amplitude reset"
+  ],
+  "limitations": [
+    "Native event and Stage 2 open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-unilateral-contact-36bc/unilateral-contact-replay/manifest.json"
+  ],
+  "next_discriminant": "Test a source-admitted multi-channel event law with appropriate stock and energy accounting."
+}
