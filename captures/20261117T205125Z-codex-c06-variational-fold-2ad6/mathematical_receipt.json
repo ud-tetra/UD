@@ -1,0 +1,136 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-variational-fold-v028",
+  "session_id": "20261117-codex-c06-variational-fold-2ad6",
+  "candidate_id": "c06-variational-fold",
+  "question": "Determine whether shared joint action stationarity and flat preparation select half-stock fold closure.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "relative_angle",
+      "symbol": "q_i",
+      "object_type": "hinge offset",
+      "definition": "Physical hinge angle minus declared gain times the normalized fraction",
+      "domain": "nonzero joint stock and hinge coordinates",
+      "codomain": "real",
+      "coefficient_domain": "real and rational controls",
+      "units": "radians",
+      "basis_orientation": "upward hinge angle",
+      "metric_measure": "regular hinged net",
+      "origin": "declared action family",
+      "exact_expression": "q_i=phi_i-kf",
+      "source_refs": [
+        "C06-v027"
+      ],
+      "normalization": "flat initial net"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v027",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/8c1855fd5d7ffe57158e5638d49d2bc5c2376ccd/captures/20261117T204308Z-codex-c06-projective-phase-5f19/UD_C06_PROJECTIVE_PHASE_v0.27.md",
+      "version_or_commit": "v0.27",
+      "section_or_object_id": "Real-ray observable and actuation scope",
+      "source_status": "integrated conditional normalized fraction"
+    },
+    {
+      "source_id": "C06-v025",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/8c1855fd5d7ffe57158e5638d49d2bc5c2376ccd/captures/20261117T201801Z-codex-c06-boundary-impedance-b712/UD_C06_BOUNDARY_IMPEDANCE_v0.25.md",
+      "version_or_commit": "v0.25",
+      "section_or_object_id": "Hard constraint on the drive",
+      "source_status": "integrated conditional hold"
+    }
+  ],
+  "assumptions": [
+    "Common-rate aligned oscillator and empty records.",
+    "Symmetric hinges with positive inertia and stiffness.",
+    "Declared smooth derivative-coupled action family and potential-only control."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Point transformation and acceleration control",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Test uniqueness of gain under stationarity"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "3*7*2*2",
+    "reduced_expression": "84 controls",
+    "factor_origins": [
+      "three gains",
+      "seven fractions",
+      "two inertias and two stiffnesses"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless common-rate rotation",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "continuous variational branch",
+    "initial_phase": "empty record",
+    "coupling": "declared derivative interaction",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "aligned odd registers and hinge variables",
+    "generator_or_update": "joint action L_k",
+    "initial_boundary_conditions": "flat rested hinges and empty record",
+    "conservation_and_sources": "autonomous action",
+    "projection_and_kernel": "offset-zero invariant branch gives phi=kf",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "half-stock fold closure"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "parameterized countermodel, no unique gain"
+    ],
+    "search_domain_and_budget": "analytic family and 84 controls",
+    "selection_criterion": "compare identical incoming data across allowed actions",
+    "baseline": "v0.27 normalized fraction"
+  },
+  "calculation_steps": [
+    "Use invertible hinge offset",
+    "Derive tracking branch",
+    "Test potential-only acceleration",
+    "Scope same-event cut"
+  ],
+  "result": {
+    "exact_expression": "closure at f=phi_*/k; potential-only initial acceleration zero",
+    "approximation": null,
+    "units": "dimensionless fraction",
+    "precision_and_error": "exact derivation and rational replay",
+    "scope": "An exact tracking branch of a symmetric joint action exists at any declared gain. Potential-only tracking fails from rest at finite stiffness. A native gain and cut law remain open.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-variational-fold-2ad6/variational-fold-replay/inputs/001-replay_c06_variational_fold.py",
+      "source_revision": "8b648f3ee56dfe8175fd8317c8410800b2477089",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Quarter, half and three-quarter stationary closure",
+    "Finite-stiffness potential does not track from rest"
+  ],
+  "limitations": [
+    "Native constitutive principle, cut authority and Stage 2 open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-variational-fold-2ad6/variational-fold-replay/manifest.json"
+  ],
+  "next_discriminant": "Test a specific native constitutive action with independent data and separate switch law."
+}
