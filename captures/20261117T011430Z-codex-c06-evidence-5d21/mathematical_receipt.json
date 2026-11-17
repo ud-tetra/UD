@@ -1,0 +1,189 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-shear-response-v01-v05",
+  "session_id": "20261117-codex-c06-evidence-5d21",
+  "candidate_id": "c06-evidence-capture",
+  "question": "Preserve and replay the five C06 response notes, with the exact results, scoped obstructions, hypotheses and evidence recorded separately.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "SHEAR",
+      "symbol": "W",
+      "object_type": "real response space",
+      "definition": "Symmetric trace-free matrices, E+T2",
+      "domain": "R^3",
+      "codomain": "R^3",
+      "coefficient_domain": "real; exact rational checks",
+      "units": "dimensionless",
+      "basis_orientation": "regular tetrahedral coordinate axes",
+      "metric_measure": "Frobenius",
+      "origin": "imported",
+      "source_refs": [
+        "PIII"
+      ],
+      "assumption_ids": [],
+      "dependency_ids": [],
+      "normalization": "orthonormal sector basis"
+    },
+    {
+      "object_id": "PAIR",
+      "symbol": "U",
+      "object_type": "matching-sum map",
+      "definition": "One normalized sum per opposite edge pair",
+      "domain": "R^6 edge currents",
+      "codomain": "R^3 matching register",
+      "coefficient_domain": "real",
+      "units": "dimensionless",
+      "basis_orientation": "unordered pairs",
+      "metric_measure": "Euclidean",
+      "origin": "assumed readout",
+      "exact_expression": "U*U=Pi_even",
+      "source_refs": [
+        "PIII"
+      ],
+      "assumption_ids": [
+        "R2"
+      ],
+      "dependency_ids": [
+        "SHEAR"
+      ],
+      "normalization": "1/sqrt(2) per edge in each matching row"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "PI",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/repo-03-UD_PAPER_I_REVIEW_DRAFT_v1.1.1.md",
+      "version_or_commit": "v1.1.1",
+      "section_or_object_id": "§§4.1–4.3, 5.1, Appendix A",
+      "source_status": "research draft"
+    },
+    {
+      "source_id": "PIII",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/repo-00-UD_PAPER_III_REVIEW_DRAFT_v1.1.1.md",
+      "version_or_commit": "v1.1.1",
+      "section_or_object_id": "§2, Theorem 1, Proposition 3, §9 and No-go 14",
+      "source_status": "research draft"
+    },
+    {
+      "source_id": "C06",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/ledger-recovery-v0.1/library_LEDGER_v0.85.json",
+      "version_or_commit": "v0.85 filename; internal scientific revision v0.43",
+      "section_or_object_id": "C01, C05, C06",
+      "source_status": "structural ratio exact; physical source open"
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "R1",
+      "scope": "regular Euclidean geometry; closed unit-metric signed flow"
+    },
+    {
+      "id": "R2",
+      "scope": "separate equal-gain matching register in the conditional construction"
+    }
+  ],
+  "technique_plan": [
+    {
+      "technique": "signed chains",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "verify representation and support-flow response"
+    },
+    {
+      "technique": "rational Gram replay",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "verify sector weights without rounding"
+    },
+    {
+      "technique": "projection",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "discriminate flag and matching metrics"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "6 edges × 2 faces per edge; 3 opposite-edge matchings",
+    "reduced_expression": "12 flags; 3 pairs",
+    "factor_origins": [
+      "tetrahedral incidence",
+      "opposite-edge pairing"
+    ],
+    "factorization": "12=2^2*3",
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless continuous s",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "signed skew Hodge flow",
+    "initial_phase": "mean-zero vertex preparation in signed-current branch",
+    "coupling": "Paper I Definition D4.2",
+    "period_claim": "sin(4s) readout envelope",
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "ordinary signed chains or declared quadratic edge-current image",
+    "generator_or_update": "B^T-B for signed chain, Paper III relation operators for comparison",
+    "initial_boundary_conditions": "one filled K4; closed with mean-zero vertex initial state in v0.4",
+    "conservation_and_sources": "chain support conserved; matching receipt augmentation is a readout assumption",
+    "projection_and_kernel": "linear preparation loses E; polarized current restores E; matching-sum map annihilates T2",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "equal response on E and T2",
+      "C06 structural 7/960"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "v0.1 4/5 orbit mixture selected by equalization",
+      "v0.5 extra normalized sum explicitly stipulated"
+    ],
+    "search_domain_and_budget": "Recorded five notes; no comparison against measurement data",
+    "selection_criterion": "equal positive Gram eigenvalues",
+    "baseline": "signed Hodge and Paper III relation response"
+  },
+  "calculation_steps": [
+    "Orbit Gram spectra, symmetry-only obstruction and conditional 4/5 edge mixture.",
+    "12 flags plus three axis receipts, coherent comparator and m=g+h gain condition.",
+    "Ordinary signed-chain representation obstruction, full edge response and -32/9 Taylor coefficient contrast.",
+    "Polarized signed current recovers E; four readouts favor T2; normalized pair-gain requirement.",
+    "Relation-energy bound 3:2, Euclidean flag gain 1:1, conditional matching-sum gain 2:1."
+  ],
+  "result": {
+    "exact_expression": "mu_plus/mu_minus = 2 for I+Pi_even; <=3/2 for stated relation energies; 1 for Euclidean flags",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact rational replay checks",
+    "scope": "The ordinary linear signed-chain preparation erases E. The polarized current restores it. The relation energies and Euclidean flags fail the 2:1 pair-gain test. A declared joint matching-sum readout meets it conditionally.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "rerun five immutable embedded Python proofs",
+      "command_or_proof_path": "python3 replay_c06_capture.py <proof-directory>",
+      "source_revision": "7bde374619601854c9645c9a584d49d2aa99cf4b",
+      "actual_result": "PASS_EXACT (see replay-results.json)",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "edge-only anisotropy",
+    "linear signed-chain E kernel",
+    "coherent-face readout",
+    "positive nonnegative relation-energy family"
+  ],
+  "limitations": [
+    "No native selection of the matching-sum readout",
+    "No allocation law for 7/192",
+    "No independent review or empirical bridge"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-evidence-5d21/c06-proof-replay-v05/manifest.json"
+  ],
+  "next_discriminant": "Test a local norm-preserving interaction for equal-gain direct and matching receipts. Establish the deficit allocation separately."
+}
