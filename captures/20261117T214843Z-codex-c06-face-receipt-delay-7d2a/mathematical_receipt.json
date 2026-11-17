@@ -1,0 +1,151 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-face-receipt-delay-v032",
+  "session_id": "20261117-codex-c06-face-receipt-delay-7d2a",
+  "candidate_id": "c06-face-receipt-delay",
+  "question": "Test partial and delayed installation of the face-to-cell diagonal correction at the directed balance event.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "odd_residual",
+      "symbol": "R_M",
+      "object_type": "compressed diagonal projector",
+      "definition": "Residual odd coupling with missing set M in face coordinates",
+      "domain": "sum-zero face coordinate subspace",
+      "codomain": "sum-zero face coordinate subspace",
+      "coefficient_domain": "rational operator over real amplitudes",
+      "units": "normalized to the positive internal odd rate",
+      "basis_orientation": "ordinary unsigned faces",
+      "metric_measure": "Euclidean sum-zero face coordinates",
+      "origin": "partial diagonal assembly of the v0.23 incidence projector",
+      "exact_expression": "R_M=P_U D_M restricted to U",
+      "source_refs": [
+        "C06-v023",
+        "C06-v021",
+        "C06-v020"
+      ],
+      "normalization": "face isometry H/sqrt(2) on T2"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v031",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b84f598dcba0103d67f203e8d4d38a8375916929/captures/20261117T212705Z-codex-c06-incidence-support-2ca7/UD_C06_INCIDENCE_SUPPORT_v0.31.md",
+      "version_or_commit": "v0.31",
+      "section_or_object_id": "Smallest support for a selective flag cut",
+      "source_status": "integrated minimum flag support"
+    },
+    {
+      "source_id": "C06-v023",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b84f598dcba0103d67f203e8d4d38a8375916929/captures/20261117T200440Z-codex-c06-face-projector-7bc4/UD_C06_FACE_PROJECTOR_CUT_v0.23.md",
+      "version_or_commit": "v0.23",
+      "section_or_object_id": "Exact projector and three-face alternative",
+      "source_status": "integrated unsigned incidence projector"
+    },
+    {
+      "source_id": "C06-v021",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b84f598dcba0103d67f203e8d4d38a8375916929/captures/20261117T195023Z-codex-c06-incidence-routing-231a/UD_C06_INCIDENCE_ROUTING_v0.21.md",
+      "version_or_commit": "v0.21",
+      "section_or_object_id": "Shared actuation remains a transition law",
+      "source_status": "integrated routing and delay comparison"
+    },
+    {
+      "source_id": "C06-v020",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b84f598dcba0103d67f203e8d4d38a8375916929/captures/20261117T194221Z-codex-c06-flag-readout-4e70/UD_C06_FLAG_READOUT_COMMIT_v0.20.md",
+      "version_or_commit": "v0.20",
+      "section_or_object_id": "Local flag observations",
+      "source_status": "integrated flag-copy port and metric"
+    }
+  ],
+  "assumptions": [
+    "Mean-zero Euclidean ordinary edges and the prescribed flag metric.",
+    "Common-rate incoming aligned odd exchange with empty record and positive odd stock.",
+    "Diagonal face installation and reciprocal adjoint with identity amplitude reset."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Exact compression spectrum and one-mode reciprocal flow",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Determine residual odd rate and resulting hold drift for each missing-term count"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "2^4",
+    "reduced_expression": "16 face masks",
+    "factor_origins": [
+      "four binary face installations"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "first directed odd balance",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "conditional full selection with identity state reset",
+    "initial_phase": "empty aligned odd record",
+    "coupling": "reciprocal metric adjoint",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "mean-zero edge carrier and fixed flag record",
+    "generator_or_update": "reciprocal partial assembly or declared atomic selection",
+    "initial_boundary_conditions": "positive odd stock and aligned first upward balance",
+    "conservation_and_sources": "metric-adjoint reciprocity and identity reset",
+    "projection_and_kernel": "compression of missing face indicator into the odd sector",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first-crossing selective hold"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical calibration"
+    ],
+    "search_domain_and_budget": "all 16 masks",
+    "selection_criterion": "zero residual coupling and unchanged even restriction",
+    "baseline": "v0.23 four-face projector"
+  },
+  "calculation_steps": [
+    "Separate receipt from term installation",
+    "Diagonalize compressed face mask",
+    "Derive fixed-subset delay witness",
+    "Test a declared preinstalled selector"
+  ],
+  "result": {
+    "exact_expression": "one missing term leaves eigenvalue 3/4; f_hold=1/2+sin(2 omega_- lambda delta)/2",
+    "approximation": null,
+    "units": "dimensionless stock fraction",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "Any missing diagonal face correction leaves residual odd coupling. One missing term leaves rate 3/4 of the active odd rate on one mode. Atomic selection of the full live operator is a conditional candidate.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-face-receipt-delay-7d2a/face-receipt-delay-replay/inputs/001-replay_c06_face_receipt_delay.py",
+      "source_revision": "43b427f07bf2d4ca9867e7f2dbf8a787e7e6b4f4",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "One missing term leaves an odd mode at three-quarters active rate",
+    "Delayed selector misses first-event hold for sufficiently small positive delay"
+  ],
+  "limitations": [
+    "Diagonal term installation is one declared architecture",
+    "Native same-event authorization, persistence, Stage 2 and deficit allocation remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-face-receipt-delay-7d2a/face-receipt-delay-replay/manifest.json"
+  ],
+  "next_discriminant": "Evaluate a source-defined cell transition for a preinstalled live map and same-event persistent selection."
+}
