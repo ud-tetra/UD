@@ -1,0 +1,134 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-bulk-hodge-v024",
+  "session_id": "20261117-codex-c06-bulk-hodge-6ed2",
+  "candidate_id": "c06-bulk-hodge-trigger",
+  "question": "Test whether bulk incidence or a fixed boundary Hodge star supplies the required odd-port cut and trigger.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "face_complement",
+      "symbol": "I-Q",
+      "object_type": "face projector",
+      "definition": "Orthogonal complement of the one-cell common-face boundary direction",
+      "domain": "four cooriented face coordinates",
+      "codomain": "mean-zero faces",
+      "coefficient_domain": "real; rational checks",
+      "units": "dimensionless",
+      "basis_orientation": "outward oriented faces for signed bulk boundary",
+      "metric_measure": "equal Euclidean face weights",
+      "origin": "signed boundary direction and v0.23 unsigned face Gram",
+      "exact_expression": "P_-=H^T(I-Q)H/2",
+      "source_refs": [
+        "C06-v023"
+      ],
+      "normalization": "Q=J4/4"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v023",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/804e4a147aea2838c372290b7eedd34dcae7cdfd/captures/20261117T200440Z-codex-c06-face-projector-7bc4/UD_C06_FACE_PROJECTOR_CUT_v0.23.md",
+      "version_or_commit": "v0.23",
+      "section_or_object_id": "Exact projector and three-face alternative",
+      "source_status": "integrated conditional projector"
+    },
+    {
+      "source_id": "Hodge-405",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/pull/405",
+      "version_or_commit": "PR 405",
+      "section_or_object_id": "Whitney Hodge energy and cycle correction",
+      "source_status": "earlier static Whitney energy audit"
+    }
+  ],
+  "assumptions": [
+    "Mean-zero edge carrier, regular unit cell, equal face weights and fixed incidence.",
+    "Single scalar linear bulk mediation for the rank bound.",
+    "The uniform boundary Hodge comparison identifies primal faces and dual vertices by relabeling."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Exact incidence rank and pullback replay",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Distinguish scalar bulk mediation from the full boundary complement"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "3^5",
+    "reduced_expression": "243 mean-zero inputs",
+    "factor_origins": [
+      "five free ordinary-edge coordinates"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless odd phase",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "candidate commit may apply projector separately",
+    "initial_phase": "empty record",
+    "coupling": "common odd rate on incoming branch",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "carrier and copied flags",
+    "generator_or_update": "candidate G(I-P_-)",
+    "initial_boundary_conditions": "closed Whitney port",
+    "conservation_and_sources": "stock conservation in both candidate branches",
+    "projection_and_kernel": "bulk common-mode pullback vanishes on mean-zero edges",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "selective odd cut and same-event authority"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "regular equal-weight boundary comparison"
+    ],
+    "search_domain_and_budget": "243 pullbacks and 16 Gram entries",
+    "selection_criterion": "supply rank-three correction and trigger",
+    "baseline": "v0.23 face projector"
+  },
+  "calculation_steps": [
+    "Check signed boundary composition",
+    "Compute common-face pullback",
+    "Identify face complement",
+    "Test trigger independence"
+  ],
+  "result": {
+    "exact_expression": "rank(bulk-mediated correction)<=1; H^T Q H=0; H^T(I-Q)H/2=P_-",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact identities and rational replay",
+    "scope": "A single scalar bulk channel has rank at most one, and its common-face pullback vanishes on mean-zero edges. The face complement realizes the projector. A fixed metric and incidence leave the switch underdetermined.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-bulk-hodge-6ed2/bulk-hodge-replay/inputs/001-replay_c06_bulk_hodge.py",
+      "source_revision": "395215d0d0e7c0e9ab016d8e6398da60a91b1545",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Common-face channel is blind",
+    "Fixed metric allows a record-only evolution"
+  ],
+  "limitations": [
+    "Native same-event actuation and Stage 2 open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-bulk-hodge-6ed2/bulk-hodge-replay/manifest.json"
+  ],
+  "next_discriminant": "Test an explicit state-dependent cell law with three independent face channels and one event authority."
+}
