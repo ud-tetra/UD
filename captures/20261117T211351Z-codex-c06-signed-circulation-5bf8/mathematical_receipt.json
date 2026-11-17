@@ -1,0 +1,136 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-signed-circulation-v030",
+  "session_id": "20261117-codex-c06-signed-circulation-5bf8",
+  "candidate_id": "c06-signed-circulation",
+  "question": "Determine whether signed triangular circulation can universally detect odd balance and authorize a stock-preserving port cut.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "signed_circulation",
+      "symbol": "C",
+      "object_type": "oriented incidence readout",
+      "definition": "Signed sum of polarized edge coefficients around each face in the declared test orientation",
+      "domain": "six polarized edge coordinates",
+      "codomain": "four face coordinates",
+      "coefficient_domain": "integer matrix over real amplitudes",
+      "units": "internal stock-amplitude coordinates",
+      "basis_orientation": "increasing vertex order",
+      "metric_measure": "Euclidean coordinates for the replay",
+      "origin": "oriented triangular coboundary",
+      "exact_expression": "C(x)_ijk=x_ij+x_jk-x_ik",
+      "source_refs": [
+        "C06-v022",
+        "C06-v029"
+      ],
+      "normalization": "unit signed incidence entries"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v029",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/168ca1bf3a1fc4d86caec74bee1f90eb22703765/captures/20261117T210230Z-codex-c06-unilateral-contact-36bc/UD_C06_UNILATERAL_CONTACT_v0.29.md",
+      "version_or_commit": "v0.29",
+      "section_or_object_id": "Apply the plastic stop to the v0.28 action",
+      "source_status": "integrated conditional scalar stop"
+    },
+    {
+      "source_id": "C06-v022",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/168ca1bf3a1fc4d86caec74bee1f90eb22703765/captures/20261117T195651Z-codex-c06-face-balance-8d31/UD_C06_FACE_BALANCE_COVER_v0.22.md",
+      "version_or_commit": "v0.22",
+      "section_or_object_id": "Face-local balance readout",
+      "source_status": "integrated conditional face-local stock detector"
+    }
+  ],
+  "assumptions": [
+    "Euclidean polarized edge coordinates embedded as signed coefficients in a fixed test convention.",
+    "Positive metric stock and metric-orthogonal carrier projector.",
+    "Common odd phase for the blind-trajectory witness."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Exact matrix restriction and reciprocal derivative",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Identify blind directions and verify conservation at the declared switch"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "2^6 and 3^10",
+    "reduced_expression": "64 sign choices and 59049 stock controls",
+    "factor_origins": [
+      "six edge signs",
+      "ten carrier and record coordinates with three values each"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "common-rate odd oscillator for blind witness",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "first directed balance",
+    "initial_phase": "empty record",
+    "coupling": "reciprocal metric adjoint",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "metric carrier and record spaces",
+    "generator_or_update": "reciprocal G switched to G(I-P_-)",
+    "initial_boundary_conditions": "positive odd stock and initially empty record for blind control",
+    "conservation_and_sources": "stock conserved with metric adjoint and identity reset",
+    "projection_and_kernel": "odd carrier freeze with separate record range condition",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first directed odd half-stock hold"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "increasing orientation and all fixed diagonal edge reversals"
+    ],
+    "search_domain_and_budget": "64 exact sign choices and 59049 integer states",
+    "selection_criterion": "blind direction or even leakage",
+    "baseline": "parity-resolved quadratic balance"
+  },
+  "calculation_steps": [
+    "Restrict signed circulation to odd and even sectors",
+    "Check orientation choices",
+    "Differentiate balance and total stock",
+    "Compare continued exchange to declared hybrid switch"
+  ],
+  "result": {
+    "exact_expression": "rank(C on T2)=2 in stated orientation; G_hold=G(I-P_-); total stock derivative=0",
+    "approximation": null,
+    "units": "dimensionless model",
+    "precision_and_error": "exact proof and integer replay",
+    "scope": "Increasing-orientation signed face circulation has an odd blind direction. All diagonal edge sign choices leak even stock. A declared reciprocal hold preserves stock with identity reset, while native switch authorization remains open.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-signed-circulation-5bf8/signed-circulation-replay/inputs/001-replay_c06_signed_circulation.py",
+      "source_revision": "0a8bc5f70b0b48242dbe5717dedcb0de8e7a5b00",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Odd circulation blind direction",
+    "Even contamination in every edge sign convention"
+  ],
+  "limitations": [
+    "Native same-event actuation and Stage 2 remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-signed-circulation-5bf8/signed-circulation-replay/manifest.json"
+  ],
+  "next_discriminant": "Test whether a sourced typed incidence update simultaneously authorizes and persists the sector cut on directed parity-resolved balance."
+}
