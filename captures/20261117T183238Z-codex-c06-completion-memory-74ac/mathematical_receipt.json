@@ -1,0 +1,153 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-completion-memory-v017",
+  "session_id": "20261117-codex-c06-completion-memory-74ac",
+  "candidate_id": "c06-native-completion-memory",
+  "question": "Test whether terminal recorder state can retain and actuate the first directed C06 balance.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "N_a",
+      "symbol": "R+h",
+      "object_type": "admitted event count",
+      "definition": "abstract completed count plus the one pending event bit",
+      "domain": "bounded logical Fire/Ack recorder",
+      "codomain": "integers 0 through 2^w",
+      "coefficient_domain": "integers; rational stock controls",
+      "units": "events",
+      "basis_orientation": "abstract recorder state",
+      "metric_measure": "none on recorder",
+      "origin": "SA-TIME-018 bounded logical counter",
+      "exact_expression": "N_a=R+h; latch=1[N_a=2^w]",
+      "source_refs": [
+        "SATIME018",
+        "Q194-210"
+      ],
+      "normalization": "reserved final Fire at R=2^w-1"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v016",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/ca15517d1499c17b330192540c6e842e92d4b7d0/captures/20261117T182604Z-codex-c06-quadratic-phase-62bd/UD_C06_QUADRATIC_PHASE_RECEIPT_v0.16.md",
+      "version_or_commit": "v0.16",
+      "section_or_object_id": "Sections 1–3",
+      "source_status": "integrated conditional metric, guard and hold"
+    },
+    {
+      "source_id": "SATIME018",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/957d443e25008632ab9d9328c162343b6a651ee7/Docs/UD%20capacity%20mechanisms%20and%20native%20crossing%20bridge%20audit.md",
+      "version_or_commit": "2026-10-02 audit of SA-TIME-018",
+      "section_or_object_id": "Finite recorder mechanism; Bridge requirements",
+      "source_status": "conditional bounded logical recorder; amplitude backreaction open"
+    },
+    {
+      "source_id": "Q194-210",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/blob/9086d7aeb094b44a761536df7a884f832d4cb58f/experiments/history-sequential-receipts/README.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "Source recovery and typed state; Exact conditional limits",
+      "source_status": "versioned audit of bounded recorder and ledger v0.85"
+    },
+    {
+      "source_id": "Q156",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/ca15517d1499c17b330192540c6e842e92d4b7d0/docs/UD_Native_Gate_Trigger_and_Recovery_v0.1.md",
+      "version_or_commit": "v0.1; ledger Q156",
+      "section_or_object_id": "Sections 1 and 2.1",
+      "source_status": "Boolean gate conditional on factor histories"
+    }
+  ],
+  "assumptions": [
+    "SA-TIME-018 bounded abstract Fire/Ack contract with width w at least one and no wrap.",
+    "Start Ready at R=2^w-1 and h=0, with positive odd stock and empty amplitude records.",
+    "Reserve final Fire exclusively for the first upward C06 balance and commit the port change on that event.",
+    "Declared v0.16 parity-orthogonal record port and metric adjoint. No reset before handoff."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Finite recorder transitions and exact Fraction stock controls",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "test persistence and false actuation"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "sum(2^w,w=1..8)",
+    "reduced_expression": "510 cases; false-arm fraction 1/50",
+    "factor_origins": [
+      "acknowledged word states at each width",
+      "v0.15 stock witness"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless active exchange plus logical events",
+    "modulus": null,
+    "residue_convention": "no-wrap count",
+    "update_rule": "terminal Fire retains h=1 and blocks successors",
+    "initial_phase": "empty amplitude record",
+    "coupling": "declared first directed crossing and synchronous port cut",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "aligned source and records plus (R,h)",
+    "generator_or_update": "post-Fire G(I-P) and identity amplitude reset",
+    "initial_boundary_conditions": "closed port; known reserved Ready state",
+    "conservation_and_sources": "metric stock conserved by skew flow and reset",
+    "projection_and_kernel": "orthogonal parity ranges freeze both odd amplitudes",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first exact odd half-stock hold"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "reserved terminal slot and synchronous event actuation"
+    ],
+    "search_domain_and_budget": "510 Fire/Ack cases at widths 1 through 8 and exact rational stock controls",
+    "selection_criterion": "persistent hold after designated Fire; exclude unrelated false arm",
+    "baseline": "C06 v0.16 prescribed Hold plus SA-TIME-018 bounded counter"
+  },
+  "calculation_steps": [
+    "Audit typed sources",
+    "Prove terminal persistence",
+    "Construct false-arm count alias",
+    "Check selective stock and actuator timing"
+  ],
+  "result": {
+    "exact_expression": "(2^w-1,0)->(2^w-1,1); same count can freeze 1/50 or 1/2",
+    "approximation": null,
+    "units": "dimensionless stock and logical count",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "Under the bounded counter contract, the last reserved Fire supplies persistent completion. An unrestricted recorder accepts an unrelated Fire into the same terminal state and can falsely hold 1/50. The amplitude-to-Fire authorization and selective actuator are declared hypotheses.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-completion-memory-74ac/completion-memory-replay/inputs/001-replay_c06_completion_memory.py",
+      "source_revision": "9086d7aeb094b44a761536df7a884f832d4cb58f",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Unreserved final Fire falsely arms the actuator",
+    "Pending-only output clears at ordinary Ack",
+    "Finite delay can corrupt exact half-transfer"
+  ],
+  "limitations": [
+    "Source law connecting balance to authorized Fire and selective hold is open",
+    "Stage 2 and physical correspondence open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-completion-memory-74ac/completion-memory-replay/manifest.json"
+  ],
+  "next_discriminant": "Find a source-admitted rule excluding unrelated Fire and atomically coupling the directed guard to the recorder and port before Stage 2."
+}
