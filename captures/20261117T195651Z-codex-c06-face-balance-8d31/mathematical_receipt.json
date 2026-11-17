@@ -1,0 +1,135 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-face-balance-v022",
+  "session_id": "20261117-codex-c06-face-balance-8d31",
+  "candidate_id": "c06-face-balance-cover",
+  "question": "Test whether face-local readout can detect odd balance and determine minimal universal coverage.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "face_balance",
+      "symbol": "B_f",
+      "object_type": "face stock difference",
+      "definition": "squared aligned face record minus squared face carrier",
+      "domain": "mean-zero carrier and copied records",
+      "codomain": "real",
+      "coefficient_domain": "real; integer controls",
+      "units": "dimensionless stock",
+      "basis_orientation": "unsigned cooriented faces",
+      "metric_measure": "v0.11 alignment and Euclidean stock",
+      "origin": "tetrahedral incidence",
+      "exact_expression": "sum B_f=2B",
+      "source_refs": [
+        "C06-v021",
+        "C06-v011"
+      ],
+      "normalization": "aligned face record scaled by odd rate"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v021",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/e7091f5892c9f03b68d037bbdc0577643c33aa64/captures/20261117T195023Z-codex-c06-incidence-routing-231a/UD_C06_INCIDENCE_ROUTING_v0.21.md",
+      "version_or_commit": "v0.21",
+      "section_or_object_id": "Incidence supplies the opposite-edge difference",
+      "source_status": "integrated incidence identity"
+    },
+    {
+      "source_id": "C06-v011",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/e7091f5892c9f03b68d037bbdc0577643c33aa64/captures/20261117T043209Z-codex-c06-action-d84a/UD_C06_BOUNDARY_ACTION_COEFFICIENT_v0.11.md",
+      "version_or_commit": "v0.11",
+      "section_or_object_id": "Defined action and direct-port dynamics",
+      "source_status": "integrated flag metric and sector rates"
+    }
+  ],
+  "assumptions": [
+    "Mean-zero carrier and copied primal flags in the closed Whitney model.",
+    "Common-phase preparation for individual face guards.",
+    "Shared atomic transition is assumed for candidate actuation."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Face Gram and exact coverage controls",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Determine universal common-phase coverage"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "3^5*3",
+    "reduced_expression": "729 balance controls",
+    "factor_origins": [
+      "five free edge coordinates",
+      "three phase witnesses"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless odd phase",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "first directed populated face balance under common phase",
+    "initial_phase": "empty record",
+    "coupling": "common odd rate",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "mean-zero carrier and copied flag records",
+    "generator_or_update": "declared Whitney exchange",
+    "initial_boundary_conditions": "empty records",
+    "conservation_and_sources": "closed carrier and record stock",
+    "projection_and_kernel": "two faces have a blind odd direction; any three span",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first upward odd balance"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "shared arbiter assumed for actuation"
+    ],
+    "search_domain_and_budget": "729 exact cases plus blind pairs",
+    "selection_criterion": "universal detection over nonzero odd preparations",
+    "baseline": "v0.21 two-face incidence reduction"
+  },
+  "calculation_steps": [
+    "Compute face Gram",
+    "Derive stock sum",
+    "Prove three-face coverage and sharp bound"
+  ],
+  "result": {
+    "exact_expression": "sum B_f=2B; any three faces see nonzero odd preparation; max face stock >= N/6",
+    "approximation": null,
+    "units": "stock",
+    "precision_and_error": "exact identities and integer replay",
+    "scope": "Each face sum annihilates mean-zero even data. Three faces suffice for universal detection under common phase. Any two have a blind odd preparation. Full summed face balance recovers twice the odd stock balance.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-face-balance-8d31/face-balance-replay/inputs/001-replay_c06_face_balance.py",
+      "source_revision": "20e20239c1c86bb89890122a960903d1f181ad68",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Any two fixed faces can miss nonzero odd stock",
+    "Common phase required for individual guard"
+  ],
+  "limitations": [
+    "Native face access, shared actuation and Stage 2 open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-face-balance-8d31/face-balance-replay/manifest.json"
+  ],
+  "next_discriminant": "Test physical access to face sums, shared commit and an off-range error bound."
+}
