@@ -1,0 +1,135 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-projective-phase-v027",
+  "session_id": "20261117-codex-c06-projective-phase-5f19",
+  "candidate_id": "c06-projective-phase",
+  "question": "Determine whether projective odd dynamics derives normalized flux, the fold law and same-event cut.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "real_ray_fraction",
+      "symbol": "f",
+      "object_type": "quadratic stock fraction",
+      "definition": "squared record norm divided by conserved joint odd norm",
+      "domain": "joint nonzero carrier-record real rays",
+      "codomain": "[0,1]",
+      "coefficient_domain": "real; rational replay",
+      "units": "dimensionless",
+      "basis_orientation": "aligned odd registers",
+      "metric_measure": "common Euclidean alignment",
+      "origin": "real scaling quotient",
+      "exact_expression": "f=||v||^2/N; df/dt=Rdot/N",
+      "source_refs": [
+        "C06-v018",
+        "C06-v026"
+      ],
+      "normalization": "actual conserved total N"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v026",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/eced710986d12fa999a786e06d2443b937ab81ff/captures/20261117T203643Z-codex-c06-fold-current-4fb2/UD_C06_FOLD_CURRENT_TRIGGER_v0.26.md",
+      "version_or_commit": "v0.26",
+      "section_or_object_id": "Candidate normalized law",
+      "source_status": "integrated conditional flux and fold audit"
+    },
+    {
+      "source_id": "C06-v018",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/eced710986d12fa999a786e06d2443b937ab81ff/captures/20261117T183830Z-codex-c06-directed-authorization-91e4/UD_C06_DIRECTED_EVENT_AUTHORIZATION_v0.18.md",
+      "version_or_commit": "v0.18",
+      "section_or_object_id": "Balance and directed flux",
+      "source_status": "integrated signed flux convention"
+    }
+  ],
+  "assumptions": [
+    "Aligned carrier and record with common positive odd rate and conserved nonzero stock.",
+    "Real rays rescale both registers together.",
+    "The complex quotient uses the aligned oscillator complex structure."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Scale quotient and exact phase rotation",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Test observability, directed crossing and phase loss"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "3^6-1",
+    "reduced_expression": "728 controls",
+    "factor_origins": [
+      "six signed coordinates with zero excluded"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless common-rate rotation",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "D+iC rotates at twice the odd rate",
+    "initial_phase": "arbitrary; empty record benchmark",
+    "coupling": "declared reciprocal aligned oscillator",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "joint odd carrier and record",
+    "generator_or_update": "fixed incoming oscillator",
+    "initial_boundary_conditions": "nonzero joint stock",
+    "conservation_and_sources": "joint N fixed",
+    "projection_and_kernel": "complex rays erase transfer in this complex structure",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "half-stock closure and full odd cut"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no unique hinge map identified"
+    ],
+    "search_domain_and_budget": "728 exact controls",
+    "selection_criterion": "retain directed crossing and test whether it entails actuation",
+    "baseline": "v0.26 normalization"
+  },
+  "calculation_steps": [
+    "Descend to real rays",
+    "Derive exact phase visibility",
+    "Test complex quotient",
+    "Separate actuation"
+  ],
+  "result": {
+    "exact_expression": "f=(1-D)/2; upward half-stock slope=omega*rho; complex-ray f undefined as a quotient observable",
+    "approximation": null,
+    "units": "dimensionless stock and incoming rate",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "The joint real-ray fraction has derivative Rdot/N. The oscillator complex-ray quotient erases the transfer. Real-ray dynamics retains the crossing when phase visibility is positive and leaves fold and cut authority open.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-projective-phase-5f19/projective-phase-replay/inputs/001-replay_c06_projective_phase.py",
+      "source_revision": "677e94a8e18264f143598c754ad6104c8b7e5ad5",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Equal orthogonal registers never give a directed crossing",
+    "Complex rays identify f=0 and f=1"
+  ],
+  "limitations": [
+    "Native hinge law, reciprocal mechanical coupling, cut and Stage 2 open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-projective-phase-5f19/projective-phase-replay/manifest.json"
+  ],
+  "next_discriminant": "Test a reciprocal coupling that selects a hinge map and hard drive constraint from the retained real-ray balance."
+}
