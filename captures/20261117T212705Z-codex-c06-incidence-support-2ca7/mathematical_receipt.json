@@ -1,0 +1,144 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-incidence-support-v031",
+  "session_id": "20261117-codex-c06-incidence-support-2ca7",
+  "candidate_id": "c06-incidence-support",
+  "question": "Test whether a source-defined single-simplex incidence update can cut all odd directions and preserve even exchange.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "post_event_row",
+      "symbol": "r",
+      "object_type": "linear post-event readout row",
+      "definition": "One fixed-coordinate row in a selected post-event coupling",
+      "domain": "mean-zero ordinary edge space",
+      "codomain": "one record coefficient",
+      "coefficient_domain": "real; exact rational replay",
+      "units": "internal amplitude",
+      "basis_orientation": "ordinary edge carrier; signed boundary considered separately",
+      "metric_measure": "Euclidean carrier with declared flag record metric",
+      "origin": "post-event support restriction",
+      "exact_expression": "r(e)=r(opposite(e)) for each edge iff r kills T2",
+      "source_refs": [
+        "C06-v030",
+        "C06-v023",
+        "C06-v020"
+      ],
+      "normalization": "opposite-edge average uses unit total weight"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v030",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/8a9a3767dad2cdccf84e774c6f083e38fc397892/captures/20261117T211351Z-codex-c06-signed-circulation-5bf8/UD_C06_SIGNED_CIRCULATION_ACTUATION_v0.30.md",
+      "version_or_commit": "v0.30",
+      "section_or_object_id": "Signed face circulation as a balance detector and Directed guard and reciprocal hold",
+      "source_status": "integrated signed detector scope and conditional hold"
+    },
+    {
+      "source_id": "C06-v023",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/8a9a3767dad2cdccf84e774c6f083e38fc397892/captures/20261117T200440Z-codex-c06-face-projector-7bc4/UD_C06_FACE_PROJECTOR_CUT_v0.23.md",
+      "version_or_commit": "v0.23",
+      "section_or_object_id": "Exact projector and three-face alternative",
+      "source_status": "integrated unsigned incidence projector"
+    },
+    {
+      "source_id": "C06-v020",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/8a9a3767dad2cdccf84e774c6f083e38fc397892/captures/20261117T194221Z-codex-c06-flag-readout-4e70/UD_C06_FLAG_READOUT_COMMIT_v0.20.md",
+      "version_or_commit": "v0.20",
+      "section_or_object_id": "Local flag observations",
+      "source_status": "integrated flag-copy port and metric"
+    }
+  ],
+  "assumptions": [
+    "Fixed ordinary edge carrier coordinates and face-flag output coordinates.",
+    "Post-event linear map in amplitudes, with arbitrary state-dependent selection.",
+    "Declared metric-orthogonal record ranges for the conditional persistent hold."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Row support and exact rank",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Characterize all supports admitting odd annihilation and preserve the even restriction"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "2^6",
+    "reduced_expression": "64 support masks",
+    "factor_origins": [
+      "six binary support choices"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "first directed odd balance",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "declared persistent mode switch with identity reset",
+    "initial_phase": "empty aligned odd record",
+    "coupling": "reciprocal metric adjoint",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "mean-zero edge carrier and fixed Whitney flag record",
+    "generator_or_update": "reciprocal G switched to the opposite-edge average flag map",
+    "initial_boundary_conditions": "positive odd stock and first upward balance",
+    "conservation_and_sources": "metric-adjoint reciprocity and identity reset",
+    "projection_and_kernel": "remove odd coupling and preserve even coupling",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "rank-three selective hold"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "none within the declared fixed support test"
+    ],
+    "search_domain_and_budget": "all 64 support masks",
+    "selection_criterion": "annihilate all odd directions and preserve even exchange",
+    "baseline": "v0.20 Whitney flag copy and v0.23 projector"
+  },
+  "calculation_steps": [
+    "Correct gradient provenance",
+    "Classify row support using opposite-pair basis",
+    "Determine unique sparsest exact flag row",
+    "Apply the reciprocal hold with an identity reset"
+  ],
+  "result": {
+    "exact_expression": "r(T2)=0 iff r(e)=r(opposite(e)); K(x)_(f,e)=(x_e+x_opposite(e))/2",
+    "approximation": null,
+    "units": "dimensionless model",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "Any single-face or vertex-star output support forces a zero map if the odd sector is killed. The unique sparsest exact flag row averages opposite edges. Native mode authority remains open.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-incidence-support-2ca7/incidence-support-replay/inputs/001-replay_c06_incidence_support.py",
+      "source_revision": "124558297d14d646b774bb78cadd2b1724aa0588",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Single-face support kills even exchange whenever it kills all odd directions",
+    "Unchanged signed endpoint support has the same obstruction"
+  ],
+  "limitations": [
+    "Routed multi-simplex outputs are outside the no-go",
+    "Native authority, persistence and Stage 2 remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-incidence-support-2ca7/incidence-support-replay/manifest.json"
+  ],
+  "next_discriminant": "Test a sourced two-stage face-to-cell routing rule for atomic first-event activation and retained mode state."
+}
