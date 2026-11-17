@@ -1,0 +1,140 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-boundary-action-coefficient-v011",
+  "session_id": "20261117-codex-c06-action-d84a",
+  "candidate_id": "c06-boundary-action-coefficient",
+  "question": "Test whether the unweighted boundary action supplies the Whitney shear-port equalizer.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "Qface",
+      "symbol": "Q_f",
+      "object_type": "area-averaged Whitney exterior-derivative Gram",
+      "definition": "Square face circulation divided by squared face area",
+      "domain": "real face flags",
+      "codomain": "real dual flag space",
+      "coefficient_domain": "real with exact rational controls",
+      "units": "inverse fourth power of side length before weighting",
+      "basis_orientation": "oriented b and coorientation to ordinary flags",
+      "metric_measure": "tangential Euclidean area average",
+      "origin": "Stokes and unit edge circulation",
+      "exact_expression": "Q_f=16/(3 ell^4) bb^T",
+      "source_refs": [
+        "gyration"
+      ],
+      "normalization": "unit edge circulation"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "Whitney",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/pull/404",
+      "version_or_commit": "v0.4",
+      "section_or_object_id": "regular tangential trace flag mass",
+      "source_status": "signed flag theorem"
+    },
+    {
+      "source_id": "gyration",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/pull/405",
+      "version_or_commit": "v0.5/v0.6",
+      "section_or_object_id": "Whitney curl Gram and centered rotational energy",
+      "source_status": "exact geometry; constitutive factor open"
+    },
+    {
+      "source_id": "C06-v010",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/538",
+      "version_or_commit": "v0.10",
+      "section_or_object_id": "Whitney direct port",
+      "source_status": "integrated conditional result"
+    }
+  ],
+  "assumptions": [
+    "Regular Euclidean cell, unit edge-circulation Whitney one-forms and common face averaging.",
+    "Cooriented flag identification and closed skew port from v0.10.",
+    "Coefficient-one comparison uses the declared nondimensional unit side length."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Stokes, barycentric moments and rational Gram replay",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "compare literal and equalizing action weights"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "(16/3)/(1/9)",
+    "reduced_expression": "48",
+    "factor_origins": [
+      "unit face inverse area squared",
+      "Whitney resident cross-term magnitude"
+    ],
+    "factorization": "48=2^4*3",
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless continuous exchange",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "constant skew exchange using action metric",
+    "initial_phase": "source only",
+    "coupling": "Whitney flag-copy port",
+    "period_claim": "sqrt(6/53) excludes an exact common half phase",
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "ordinary E+T2 edge current and auxiliary flag coordinates",
+    "generator_or_update": "x prime=-F*y, y prime=Fx",
+    "initial_boundary_conditions": "one closed cell, no initial flag stock",
+    "conservation_and_sources": "metric stock preserved",
+    "projection_and_kernel": "coorientation mapping declared in v0.10",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "equal positive phase rates"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "literal unit weight tested, c=ell^2/48 comparison"
+    ],
+    "search_domain_and_budget": "unit, unaugmented and equalizing weights; no empirical fit",
+    "selection_criterion": "same exact half-stock phase",
+    "baseline": "v0.10"
+  },
+  "calculation_steps": [
+    "Compute derivative energy by Stokes and replay wedge product",
+    "Apply the weighted flag Gram to E and T2",
+    "Compare unit-weight frequency ratio against the half-stock criterion"
+  ],
+  "result": {
+    "exact_expression": "c_equal=ell^2/48; at c=ell=1, squared rates (4/3,106/9)",
+    "approximation": null,
+    "units": "dimensionless unit-cell dynamical convention",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "The literal unit-cell curl energy supplies 16/3, 48 times the required 1/9. Squared rates are (4/3,106/9) and exact common half transfer is impossible for this port.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact Fraction replay",
+      "command_or_proof_path": "python3 replay_c06_boundary_action.py",
+      "source_revision": "4939346324a9cb589dd92db486aed4da3001964e",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Literal unit term overshoots the cancellation by a factor of 48"
+  ],
+  "limitations": [
+    "No native relative coefficient, physical length, second-stage latch or deficit allocation"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-action-d84a/boundary-action-replay/manifest.json"
+  ],
+  "next_discriminant": "Test whether native transport fixes a relative length-squared weight independently of spectral equalization, or use sector-resolved latches."
+}
