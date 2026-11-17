@@ -1,0 +1,163 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-parity-receipt-source-test-v07",
+  "session_id": "20261117-codex-c06-receipt-223f",
+  "candidate_id": "c06-parity-receipt-source-test",
+  "question": "Test whether binary parity and hard-gate receipts identify the C06 staged transfer fractions.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "theta",
+      "symbol": "theta",
+      "object_type": "matching bit register",
+      "definition": "Three matching closure bits in the selected direct flip context",
+      "domain": "F_2^3",
+      "codomain": "F_2^3",
+      "coefficient_domain": "binary",
+      "units": "dimensionless",
+      "basis_orientation": "three unordered opposite pairs",
+      "metric_measure": "N/A",
+      "origin": "source conditional",
+      "exact_expression": "theta_plus=P_g theta_minus XOR xi",
+      "source_refs": [
+        "theta"
+      ],
+      "normalization": "ordinary bits"
+    },
+    {
+      "object_id": "transfer",
+      "symbol": "(f,eta)",
+      "object_type": "squared-stock fraction pair",
+      "definition": "Direct share of source stock and matching share of retained pair-even source stock",
+      "domain": "[0,1]^2",
+      "codomain": "record gains",
+      "coefficient_domain": "real; rational witnesses",
+      "units": "dimensionless",
+      "basis_orientation": "edge parity decomposition",
+      "metric_measure": "Euclidean records, Frobenius shear input",
+      "origin": "declared",
+      "exact_expression": "M=fI+(1-f)eta P",
+      "source_refs": [
+        "C06-v06"
+      ],
+      "normalization": "relative stock in each port"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v06",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/532",
+      "version_or_commit": "v0.6",
+      "section_or_object_id": "Exact continuous response and finite-step candidate",
+      "source_status": "integrated scoped evidence"
+    },
+    {
+      "source_id": "theta",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/repo-18-REPORT.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "New exact typed consequence",
+      "source_status": "supplied direct flip, conditional"
+    },
+    {
+      "source_id": "hard-gate",
+      "url_or_repo_path": "https://unified-dynamics-public.ben-w-mayes.chatgpt.site/sources/repo-20-REPORT.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "Sourced negative certificate; ledger Q156",
+      "source_status": "conditional structural eligibility"
+    }
+  ],
+  "assumptions": [
+    "Closed Euclidean source/direct/matching registers with fixed real orthogonal stages.",
+    "Fixed supplied binary event and integrity histories; their interface imposes no stage-amplitude linkage.",
+    "Countermodels are algebraic completions of that interface. Quantitative receipt guards are an agile hypothesis."
+  ],
+  "technique_plan": [
+    {
+      "technique": "finite parity enumeration and rational norm budgets",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "separate identical binary histories from different conservative gain responses"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "8 initial states × 6 pair permutations × 8 supplied flips × 64 integrity masks",
+    "reduced_expression": "24576",
+    "factor_origins": [
+      "three matching bits",
+      "S3 matching action",
+      "six edge bits"
+    ],
+    "factorization": "3*2^13",
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "ordered stages; ideal dimensionless oscillator for candidate guard",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "direct rotation then retained-even rotation",
+    "initial_phase": "source-only",
+    "coupling": "declared",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "real Euclidean source and record registers plus independent finite typed receipts",
+    "generator_or_update": "two orthogonal rotations",
+    "initial_boundary_conditions": "source-only, closed ports",
+    "conservation_and_sources": "total squared norm conserved in each sector; binary gates fixed by supplied event inputs",
+    "projection_and_kernel": "readout excludes retained source",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "2:1 squared gain",
+      "v0.6 half/full endpoint"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "selected half/full guards as candidate"
+    ],
+    "search_domain_and_budget": "exact receipt enumeration and four rational witnesses; no empirical fit",
+    "selection_criterion": "equal positive shear Gram weights",
+    "baseline": "v0.6 declared staged exchange"
+  },
+  "calculation_steps": [
+    "Compare record and residual contributions",
+    "Solve positive equality",
+    "Hold binary receipt inputs fixed and vary norm-preserving completions",
+    "Distinguish signed amplitude and squared-stock trigger at depletion"
+  ],
+  "result": {
+    "exact_expression": "eta=f/(1-f), 0<f<=1/2; same binary receipts allow ratios 2,4,3/2",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact fractions and finite enumeration",
+    "scope": "Same binary receipts and conserved norm admit unequal gain ratios. Positive equality requires eta=f/(1-f); full transfer imposes f=1/2 only under the selected two-stage model.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact Python Fraction replay",
+      "command_or_proof_path": "python3 replay_c06_receipts.py",
+      "source_revision": "96cba1d9a660f02ecf882960a50a77ac509f5263",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Half/full not necessary for isotropy when partial transfer is admitted",
+    "Unsigned exact-zero guard is tangential in the ideal oscillator"
+  ],
+  "limitations": [
+    "Insufficiency scoped to declared interface; no physical Pachner event validated",
+    "No native quantitative trigger or deficit allocation"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-receipt-223f/parity-receipt-replay/manifest.json"
+  ],
+  "next_discriminant": "Derive an independently sourced quantitative pre-event transfer receipt, then test locality, observability and robustness at the balance and depletion guards."
+}
