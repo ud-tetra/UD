@@ -1,0 +1,142 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-whitney-unsigned-port-v010",
+  "session_id": "20261117-codex-c06-whitney-port-e47b",
+  "candidate_id": "c06-whitney-unsigned-port",
+  "question": "Test whether regular Whitney boundary transport supplies a common shear-port phase.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "Wface",
+      "symbol": "M_f",
+      "object_type": "area-normalized Whitney flag block",
+      "definition": "Whitney edge fields weighted by their local face boundary signs",
+      "domain": "real unordered edge-face flags",
+      "codomain": "real dual flag space",
+      "coefficient_domain": "real with exact Fraction controls",
+      "units": "dimensionless unit-side convention",
+      "basis_orientation": "cyclic relative face orientation",
+      "metric_measure": "Euclidean tangential area average",
+      "origin": "conditional coorientation pullback",
+      "exact_expression": "(6I-11^T)/9",
+      "source_refs": [
+        "Whitney"
+      ],
+      "normalization": "unit edge length"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "Whitney",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/pull/404",
+      "version_or_commit": "v0.4",
+      "section_or_object_id": "regular tangential trace flag mass",
+      "source_status": "signed flag theorem"
+    },
+    {
+      "source_id": "variation",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/pull/405",
+      "version_or_commit": "v0.5 and regular simplex addendum",
+      "section_or_object_id": "centered rotational weight",
+      "source_status": "geometrical weight, additional constitutive term open"
+    },
+    {
+      "source_id": "C06-v09",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/537",
+      "version_or_commit": "v0.9",
+      "section_or_object_id": "direct-port flag metric",
+      "source_status": "integrated conditional result"
+    }
+  ],
+  "assumptions": [
+    "Unit regular cell and area-averaged tangential Whitney energy.",
+    "Face boundary signs identify the unordered input with the face field, independently of global edge orientation.",
+    "Closed skew source/flag port with zero initial auxiliary stock.",
+    "Rotational completion is a declared additional interaction with target-aware weight."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Whitney moment integration and exact spectra",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "check sign, rates, and rational obstruction to simultaneous half transfer"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "two flags per edge, one face per pair of adjacent edges",
+    "reduced_expression": "2 I + A_adj",
+    "factor_origins": [
+      "tetrahedral face incidence"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "internal dimensionless time",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "constant skew exchange",
+    "initial_phase": "source-only input",
+    "coupling": "cooriented Whitney metric in flag adjoint",
+    "period_claim": "sqrt(6/5) excludes shared half phase",
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "unordered mean-zero shear edges plus auxiliary flags",
+    "generator_or_update": "x prime=-F*y and y prime=Fx",
+    "initial_boundary_conditions": "one closed cell; zero flags at start",
+    "conservation_and_sources": "total squared metric stock conserved",
+    "projection_and_kernel": "ordinary E plus T2; no identification of signed cut/cycle modes",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "common half transfer"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "lambda=1 restores degeneracy"
+    ],
+    "search_domain_and_budget": "specified Whitney mass and nonnegative rotational copies",
+    "selection_criterion": "equal positive squared rates",
+    "baseline": "lambda=0"
+  },
+  "calculation_steps": [
+    "Recover exact cooriented mass from Whitney moments",
+    "Count same-face edge pairs",
+    "Compute Gram rates",
+    "Check irrational ratio against exact half phases"
+  ],
+  "result": {
+    "exact_expression": "(4/3,10/9) squared rates; v=(lambda-1)/9",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "rational proof and exact replay",
+    "scope": "The cooriented Whitney flag block has u=5/9 and v=-1/9. Squared rates (4/3,10/9) exclude exact simultaneous half transfer at any positive time. One additional copy of resident rotation restores equal rates conditionally.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact Python Fraction replay",
+      "command_or_proof_path": "python3 replay_c06_whitney_unsigned.py",
+      "source_revision": "c971738a180d9fcf355bba6b1baddb7683c493e4",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Unaugmented Whitney energy does not give an exact common half-stock time"
+  ],
+  "limitations": [
+    "Additional rotational term and port mapping not selected natively",
+    "No second-stage depletion, deficit allocation or physical calibration"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-whitney-port-e47b/whitney-unsigned-port-replay/manifest.json"
+  ],
+  "next_discriminant": "Test whether a native action adds an independent rotational channel with the required weight or selects sector-resolved latches."
+}
