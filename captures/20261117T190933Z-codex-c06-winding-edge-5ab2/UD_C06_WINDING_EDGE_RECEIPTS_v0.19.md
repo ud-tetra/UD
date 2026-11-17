@@ -1,0 +1,19 @@
+# C06 winding and edge receipts v0.19
+
+**EXACT / CONDITIONAL** for the winding and edge-observation obstructions and the synchronized-mode guard. **CANDIDATE (agile)** for an opposite-pair receipt and atomic coupling. **Physical Promotion = 0.**
+
+## Winding and saturation
+
+Use the aligned odd oscillator from C06 v0.16 and the incoming directed balance from v0.18. For nonzero source preparation \(u_0\) with empty record, \(u=u_0\cos\theta\), \(v=u_0\sin\theta\), \(\theta=\omega_-t\). The first upward half-stock is at \(\theta=\pi/4\).
+
+In the aligned two-dimensional oscillator plane the arc from phase 0 to \(\pi/4\) is open. Integer winding of a closed loop is invariant under changing the starting phase. In particular a receipt counting completed oriented turns gives zero at the before, balance and after witnesses, which all lie in the first quadrant. An increment upon crossing a chosen ray can be defined, but a ray at \(\pi/4\) explicitly encodes the equal-norm condition as a phase reference. The admissible frame, parity and winding interfaces audited in v0.15 supply no coupling that selects such a ray and commits terminal Fire with a port cut. This calculation concerns integer winding or a completed-turn count. It allows a separate geometric theorem that identifies a native coframe seam with balance if such a theorem is supplied.
+
+The Q156 source audit §2.1 shows that the declared hard edge gate stays open while its receipts and transport predicates continue to pass. The v0.13 obstruction also prohibits isolating the odd sector by edgewise gating of the fixed flag port. Consider separately an edge saturation proposal using a single aligned opposite-pair projection. The odd subspace has three orthogonal opposite-pair directions \(\psi_i=(e_i-e_i')/\sqrt2\). An observed coordinate \(j\) can vanish identically on nonzero preparations supported on another direction. Along such an orbit its whole scalar observation history is identically zero, although global odd stock is nonzero and passes through balance. Therefore any rule confined to that coordinate history, with no independent phase source, fails universal detection: before and after the root it has the same observed stock, including when compared across different rates under the v0.15 interface. A fixed positive threshold in the local record stock also fails for arbitrary scale, since the local half stock is \(|a_j|^2/2\) for initial pair amplitude \(a_j\).
+
+## A distributed balance guard under the declared preparation
+
+In the same aligned coordinates put \(a_i=\langle\psi_i,u_0\rangle\), \(B_i=|v_i|^2-|u_i|^2\) and \(N_i=|u_i|^2+|v_i|^2\). Then \(B_i=-N_i\cos(2\theta)\) and \(B=\sum_i B_i\). On the common-phase orbit with positive total odd stock, at least one \(N_i>0\). Every populated pair reaches its first upward zero at the same global half-transfer. Thus the first occurrence of any \(N_i>0,\ B_i=0,\ \dot B_i>0\) is exactly the desired event. This result assumes access to local coordinates of the **aligned** odd record. The v0.16 isometry is a map of spaces. It does not supply a native edge-local physical readout.
+
+Outside the common-phase preparation the OR rule can fire early. At \(u=(5,7,0)\), \(v=(5,1,0)\), the first coordinate is balanced and rising but global \(B=-48\). This exhibits why the shared-phase hypothesis is required.
+
+A candidate arbiter may coalesce concurrent qualifying pair receipts into one v0.18 Ready-to-Hold transition. Exclusivity, the physical readout, synchronous Fire and port actuation remain explicit assumptions. The audited winding and edge saturation mechanisms supply no such transition. Stage 2 remains open. Exact replay uses rational coordinates to check all normalized integer preparations in a bounded cube, the winding counterexamples and the out-of-phase failure. Run python3 replay_c06_winding_edge.py.
