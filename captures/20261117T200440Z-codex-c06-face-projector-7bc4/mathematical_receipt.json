@@ -1,0 +1,133 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-face-projector-v023",
+  "session_id": "20261117-codex-c06-face-projector-7bc4",
+  "candidate_id": "c06-face-projector-cut",
+  "question": "Test whether saturation or flag deletion implements the selective odd cut and derive the required face operator.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "face_projector",
+      "symbol": "P_-",
+      "object_type": "odd projector",
+      "definition": "Orthogonal projection onto the pair-odd carrier",
+      "domain": "mean-zero ordinary edge carrier",
+      "codomain": "pair-odd carrier",
+      "coefficient_domain": "real; rational checks",
+      "units": "dimensionless",
+      "basis_orientation": "unsigned cooriented faces",
+      "metric_measure": "Euclidean carrier",
+      "origin": "v0.22 face Gram",
+      "exact_expression": "P_-=H^T H/2",
+      "source_refs": [
+        "C06-v022"
+      ],
+      "normalization": "four face row identity"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v022",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/d6d12887fe962e3bcdeac390d46d2ef6b966ebb8/captures/20261117T195651Z-codex-c06-face-balance-8d31/UD_C06_FACE_BALANCE_COVER_v0.22.md",
+      "version_or_commit": "v0.22",
+      "section_or_object_id": "Face Gram and scalar coverage",
+      "source_status": "integrated conditional detector"
+    },
+    {
+      "source_id": "Q156",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/d6d12887fe962e3bcdeac390d46d2ef6b966ebb8/docs/UD_Native_Gate_Trigger_and_Recovery_v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "Section 2.1",
+      "source_status": "retained-sector null theorem"
+    }
+  ],
+  "assumptions": [
+    "Mean-zero edge carrier, fixed primal Whitney flag copy and orthogonal metric sectors.",
+    "Collapse means pointwise suppression or reweighting in original flag coordinates.",
+    "A shared synchronous transition is a candidate."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Exact projector and exhaustive masks",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Discriminate fixed output collapse from the target operator"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "2^12",
+    "reduced_expression": "4096 flag masks",
+    "factor_origins": [
+      "twelve Boolean flags"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless odd phase",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "candidate detected balance selects full projector",
+    "initial_phase": "empty record",
+    "coupling": "common odd rate",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "carrier and copied flag records",
+    "generator_or_update": "G(I-P_-)",
+    "initial_boundary_conditions": "closed Whitney model",
+    "conservation_and_sources": "identity reset and reciprocal adjoint",
+    "projection_and_kernel": "all nonzero diagonal flag masks retain an odd response",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "selective odd cut"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "shared commit assumed"
+    ],
+    "search_domain_and_budget": "4096 masks and four three-face controls",
+    "selection_criterion": "kill all odd gain and keep even gain",
+    "baseline": "v0.22 face detector"
+  },
+  "calculation_steps": [
+    "Correct face ranks",
+    "Prove fixed-mask obstruction",
+    "Derive projector and three-face inverse"
+  ],
+  "result": {
+    "exact_expression": "P_-=H^T H/2=L^T(I+J)L/2",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact identities and rational replay",
+    "scope": "Pointwise flag masks cannot leave even exchange active while killing the odd sector. The incidence projector realizes the target algebraically. Three faces need cross terms. Native actuation remains open.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-face-projector-7bc4/face-projector-replay/inputs/001-replay_c06_face_projector.py",
+      "source_revision": "3218c677525bd8cd853af2ecf973f36a90196d04",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Flag deletion cannot cut only odd",
+    "One face correction has rank one"
+  ],
+  "limitations": [
+    "Native same-event law, genuine topology change and Stage 2 open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-face-projector-7bc4/face-projector-replay/manifest.json"
+  ],
+  "next_discriminant": "Test a native same-event update that applies the complete incidence projector."
+}
