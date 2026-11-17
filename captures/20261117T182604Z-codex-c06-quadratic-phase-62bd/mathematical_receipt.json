@@ -1,0 +1,146 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-quadratic-phase-receipt-v016",
+  "session_id": "20261117-codex-c06-quadratic-phase-62bd",
+  "candidate_id": "c06-quadratic-phase-receipt",
+  "question": "Test the quadratic ratio and a stock-preserving selective update against the fixed-receipt witnesses.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "Bodd",
+      "symbol": "B=Q_y-Q_x",
+      "object_type": "odd-sector stock difference",
+      "definition": "recorded minus residual odd squared stock",
+      "domain": "X plus Whitney flag record Y",
+      "codomain": "R",
+      "coefficient_domain": "real; rational stock and matrix controls",
+      "units": "dimensionless stock",
+      "basis_orientation": "ordinary opposite-pair odd sector",
+      "metric_measure": "Euclidean X and v0.11 action metric Y",
+      "origin": "v0.12 parity detector and flag-sector alignment",
+      "exact_expression": "B=||Ry||_Y^2-||Px||^2",
+      "source_refs": [
+        "C06-v011",
+        "C06-v012"
+      ],
+      "normalization": "positive conserved Q_x+Q_y"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v011",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/f7f9815d21bdd80a009d641a12ec0be16849fd6a/captures/20261117T043209Z-codex-c06-action-d84a/UD_C06_BOUNDARY_ACTION_COEFFICIENT_v0.11.md",
+      "version_or_commit": "v0.11",
+      "section_or_object_id": "Whitney curl Gram and unweighted exchange spectrum",
+      "source_status": "integrated exact conditional metric and rates"
+    },
+    {
+      "source_id": "C06-v012",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/f7f9815d21bdd80a009d641a12ec0be16849fd6a/captures/20261117T043941Z-codex-c06-async-a971/UD_C06_ASYNCHRONOUS_LATCH_v0.12.md",
+      "version_or_commit": "v0.12",
+      "section_or_object_id": "Declared switched interaction and exact retention",
+      "source_status": "integrated conditional sector isometries"
+    },
+    {
+      "source_id": "C06-v015",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/f7f9815d21bdd80a009d641a12ec0be16849fd6a/captures/20261117T181703Z-codex-c06-receipt-latch-3ce2/UD_C06_RECEIPT_LATCH_AUDIT_v0.15.md",
+      "version_or_commit": "v0.15",
+      "section_or_object_id": "Sections 2–3",
+      "source_status": "integrated conditional witnesses and reciprocal comparator"
+    }
+  ],
+  "assumptions": [
+    "Ordinary edge X, declared metric on Whitney flag records Y, and G*G with positive scalar blocks on E and T2.",
+    "Initially empty records, nonzero odd preparation, dimensionless time, and closed reciprocal exchange.",
+    "The candidate supplies a first directed crossing guard, persistent Hold state and identity amplitude reset."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Metric-aligned stock ratios, orthogonal projectors and exact rational controls",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "test balance and selective record isolation"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "(50-v^2)/v^2 at v=1,5,7",
+    "reduced_expression": "49,1,1/49; misweighted control gives f=9/115",
+    "factor_origins": [
+      "v0.15 witness stock 50",
+      "common norm",
+      "unweighted squared gain 106/9"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless oscillator phase",
+    "modulus": null,
+    "residue_convention": "ascending balances separated by phase pi",
+    "update_rule": "first directed B=0 in Ready triggers Hold",
+    "initial_phase": "zero from empty record",
+    "coupling": "constant positive odd rate while active",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "ordinary edge source X and flag record Y",
+    "generator_or_update": "Ghold=G(I-P) after identity reset",
+    "initial_boundary_conditions": "source-only, nonzero odd stock, closed exchange",
+    "conservation_and_sources": "skew reciprocal flow and identity reset preserve squared stock",
+    "projection_and_kernel": "odd x and odd y frozen iff the required source and output projection equations hold",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first exact odd half-stock hold"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "declared guard and persistent Hold state"
+    ],
+    "search_domain_and_budget": "three stock witnesses; rational direction, scaling and port controls",
+    "selection_criterion": "first directed half-stock and independent even flow after switch",
+    "baseline": "v0.12 aligned oscillator and v0.15 fixed-receipt controls"
+  },
+  "calculation_steps": [
+    "Define projected stocks with declared metrics",
+    "Separate balance from first arrival",
+    "Prove selective stock-conserving operator reset",
+    "Replay mixed Gram counterexample"
+  ],
+  "result": {
+    "exact_expression": "Qx/Qy=49,1,1/49; PGhold*=RGhold=0 on the parity-separated port",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "Metric-aligned odd-stock ratios distinguish all three witnesses. The test needs first-event selection, and an orthogonal parity block condition lets a declared switch hold the odd record while the even block runs.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact rational constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261117-codex-c06-quadratic-phase-62bd/quadratic-phase-replay/inputs/001-replay_c06_quadratic_phase.py",
+      "source_revision": "a043cd214610a4b12b0fd46bf0296a090545eb55",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Repeated ascending balances without event memory",
+    "Unmatched quadratic scale gives 9/115 instead of half",
+    "Mixed Gram can drive the odd record after odd source feedback is cut"
+  ],
+  "limitations": [
+    "Native triggering and hold storage open",
+    "Stage 2 and physical correspondence open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-quadratic-phase-62bd/quadratic-phase-replay/manifest.json"
+  ],
+  "next_discriminant": "Test whether a source-admitted state stores completion and couples directed balance to the selective operator change before Stage 2."
+}
