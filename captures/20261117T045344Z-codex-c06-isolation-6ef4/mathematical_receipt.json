@@ -1,0 +1,147 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-hard-edge-isolation-v013",
+  "session_id": "20261117-codex-c06-isolation-6ef4",
+  "candidate_id": "c06-hard-edge-isolation",
+  "question": "Test whether hard-edge eligibility or a Pachner pushforward supplies the sector-selective stop of C06 v0.12.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "Gmask",
+      "symbol": "G=FH|_X",
+      "object_type": "masked direct exchange port",
+      "definition": "copy six pre-masked ordinary edge amplitudes to their incident flags",
+      "domain": "X = mean-zero ordinary edge module",
+      "codomain": "R^12 flags with fixed positive metric",
+      "coefficient_domain": "real; rational for replay",
+      "units": "dimensionless",
+      "basis_orientation": "unordered edges",
+      "metric_measure": "Euclidean edge source; v0.11 unit-cell action record for replay",
+      "origin": "added diagonal-mask test on the v0.12 port",
+      "source_refs": [
+        "C06-v012",
+        "Q156"
+      ],
+      "exact_expression": "G=F diag(h_e)|_X with F^T F=2I",
+      "normalization": "unit copy per flag"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v012",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/540",
+      "version_or_commit": "v0.12 / b938e4d3d9efd7f09759f2e98b9c54c1a859e47b",
+      "section_or_object_id": "Declared switched interaction; Exact retention and handoff",
+      "source_status": "integrated exact conditional result"
+    },
+    {
+      "source_id": "Q156",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/b938e4d3d9efd7f09759f2e98b9c54c1a859e47b/docs/UD_Native_Gate_Trigger_and_Recovery_v0.1.md",
+      "version_or_commit": "v0.1; ledger v0.39 Q156",
+      "section_or_object_id": "Sections 1–2.1; Boolean product and admission scope",
+      "source_status": "source audit and scoped internal predicate"
+    },
+    {
+      "source_id": "Pachner-v01",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/tree/b938e4d3d9efd7f09759f2e98b9c54c1a859e47b/captures/2026-10-18T201837Z-codex-W-source-coverage-d8374ec5/sources",
+      "version_or_commit": "Pachner selector and Darboux pushforward v0.1",
+      "section_or_object_id": "Selector §§1–2 and Darboux map §§7–9",
+      "source_status": "separate signed carrier and conditional generator pushforward"
+    }
+  ],
+  "assumptions": [
+    "Ordinary unordered edge module, Euclidean source, fixed positive record metric and injective flag-copy map.",
+    "Boolean edge gate acts as a diagonal pre-mask in the tested model. The full record adjoint provides reciprocal exchange.",
+    "Pachner comparator assumes a pure isometric pushforward; topology-changing branches require separate data.",
+    "Candidate parity coupler uses a supplied persistent completion state and the v0.11 orthogonality of record sectors."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Projector traces, kernel equivalence and rational flag matrices",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Test both coupling directions for every diagonal mask"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "2^6 edge masks, m open coordinates",
+    "reduced_expression": "m/3 and m/2 for squared Euclidean projector-mask norms",
+    "factor_origins": [
+      "constant diagonals from trace/rank 2 and 3 over 6 coordinates",
+      "each edge has two flags"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "dimensionless exchange",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "mask can switch at prescribed crossing; no mask yields selective hold",
+    "initial_phase": "source only",
+    "coupling": "skew (G,G*)",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "X plus twelve flag records",
+    "generator_or_update": "Gx and -G*y with continuous state at switch",
+    "initial_boundary_conditions": "zero flag records, arbitrary X preparation, closed cell",
+    "conservation_and_sources": "fixed-metric total stock preserved",
+    "projection_and_kernel": "both E and T2 couple whenever diagonal pre-mask is nonzero",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "hold completed sector with other alive"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "declared mask interface",
+      "controlled opposite-pair comparator"
+    ],
+    "search_domain_and_budget": "64 masks; exact all real diagonal weight proof",
+    "selection_criterion": "completed sector and its record held with live sector exchange retained",
+    "baseline": "v0.12 asynchronous latch with supplied control"
+  },
+  "calculation_steps": [
+    "Define parity projectors and flag map",
+    "Prove kernel condition by copy injectivity",
+    "Take masked projector traces",
+    "Compare rank-preserving pushforward and parity-resolved port"
+  ],
+  "result": {
+    "exact_expression": "||HP_E||_F^2=m/3, ||HP_T2||_F^2=m/2; any nonzero mask leaves both sectors coupled",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact analytic proof and Fraction replay",
+    "scope": "On the fixed injective flag port, every nonzero diagonal edge mask couples both shear sectors. A pure isometric pushforward preserves rank. Opposite-pair coupling isolates the odd sector under a declared completion bit.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact Fraction replay",
+      "command_or_proof_path": "python3 replay_c06_hard_edge_isolation.py",
+      "source_revision": "e2013f8f29dbf0732bd5f304f6b6ca9c168570b3",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "All edges closed freezes both sectors",
+    "Isometric pushforward preserves injectivity",
+    "Particular vectors with vanished active coordinates do not give sector isolation"
+  ],
+  "limitations": [
+    "No native rule for paired coupling, completion or topology-changing stock handoff",
+    "No empirical mapping or deficit allocation"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261117-codex-c06-isolation-6ef4/hard-edge-isolation-replay/manifest.json"
+  ],
+  "next_discriminant": "Audit a source-defined opposite-pair interaction or genuine retessellation for a stock-preserving handoff and sector-dependent operator kernel."
+}
