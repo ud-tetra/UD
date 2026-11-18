@@ -1,0 +1,39 @@
+# C06 pre-cut root veto finality v0.48
+
+**EXACT / CONDITIONAL** for the observation sufficient to resolve a terminal cut at the first directed root. **NO-GO** for a complete-looking bundle assembled from mutable samples or a prefix admitting two required outcomes. **CANDIDATE** for a locally sealed pre-cut state. **Physical Promotion = 0.**
+
+## Source admission audit
+
+C06 v0.47, “One reservation with a complete veto snapshot” and “Asynchronous finality obstruction,” defines a frozen contact roster, same-root veto priority as a candidate, and one reciprocal cut. The v0.47 PR remained under maintainer review during this audit, so the proof cites its exact head. UD native crossing-to-receipt audit v0.1 §§1, 4–5 uses the conditional SA-TIME-009 model: an atomic complete acquisition over declared observed edge support, a revision-bound immutable grouped bundle, and durable recording before release. Its crossing replay gives differing causal publication records at the same crossing time and supports eventual union, conditional on complete observation. The source does not derive acquisition from the support generator or identify the C06 veto dependencies with the acquired edge support.
+
+The K4 pre-event model, “One simultaneous pre-event step” and “Adversarial results,” evaluates a simultaneous bit event against one declared pre-state and puts failure precedence before its updates. Its clock and fuel are explicit axioms of that comparator, and its source admission is open. The Native Gate Trigger and Recovery audit v0.1 §§2–2.1 and 7 supplies separate closure and integrity tests for declared contexts. It leaves the evolution and ordering of its local state open. The contact receipts and access requirements audit, “Concrete contract,” leaves common-checkpoint access, acquisition integrity and shared permission open. In these audited sources there is no operation-level rule that closes every dependency of the two C06 predicates per contact on the root pre-state, seals that state before the reciprocal cut, and grants the cut authority. These are separate missing premises. This is a scoped source finding.
+
+## Exact decision criterion
+
+Let \(W\) be the set of admitted worlds for one armed preparation and its first directed root. A world specifies the operation instance, pre-cut state, contact roster and all predicate histories relevant to that decision. Restrict to worlds where the operation, authority, first root and abort-first priority are fixed. Let \(O:W\to Y\) be all information admitted at the actuator before it must decide. Let \(V:W\to 2^{R\times\{\mathrm{ClosureFail},\mathrm{IntegrityFail}\}}\) give the final set of typed failures at that root.
+
+Define the required outcome \(D(w)=\mathrm{Held}\) when \(V(w)=\varnothing\) and \(D(w)=\mathrm{Abort}\) otherwise. A deterministic, sound and immediately live root decision using \(O\) exists **if and only if**
+\[
+O(w)=O(w')\implies D(w)=D(w').
+\]
+Necessity follows from the indistinguishability of equal observations. For sufficiency define \(d(y)=D(w)\) for any \(w\) with \(O(w)=y\), which is well defined on observed values. For a terminal receipt that must also carry each typed veto, replace \(D\) by \((D,V)\). Since \(D\) itself is a function of \(V\), exact preservation of the veto set is equivalent to \(V\) being constant on those same observation classes. This theorem concerns information. Executability still requires granted authority, the first-root witness, the agreed priority, and a same-event reciprocal transition.
+
+A verified final failure already forces the coarse Abort outcome. It does not generally determine all typed causes. If the eight Boolean factors range independently and the observation only reveals finalized bits, any missing bit can hide a veto on an otherwise all-pass observation. Every missing bit also prevents guaranteed reconstruction of the complete typed set. With source-proved logical dependence or a sound sufficient certificate an actuator can meet the criterion with fewer raw receipts. Thus a complete typed veto set can be supplied by a verified sufficient statistic. Joining all downstream receipt messages is one proposed implementation, not the mathematical necessity. “Incomplete speculative all pass” in the v0.47 intake is an indistinguishable common observation, which can equally be a prefix containing an explicit unknown.
+
+## Candidate local seal and native test
+
+Declare an operation-linked revision \(r\) for the immutable root pre-state. Bind the operation key, directed root proof, frozen roster and full dependency closure of each predicate. Produce the root-local seal before any completion or abort dispatch. Under the candidate contract each root predicate or equivalent certificate refers to that same state and is final against all updates that can still count at this root. Under the declared abort-first choice, any final veto at that state takes precedence even at full archived stock. Commit the token, reciprocal cut and identity amplitude reset together, then publish the decision record later. Delayed downstream publication is immaterial only once this local atomic contract holds.
+
+Two samples can fabricate agreement: let the sampled predicates at an earlier state be \((1,0)\) and at the root be \((0,1)\). Each state vetoes. Reading the first coordinate earlier and the second at the root produces an apparent \((1,1)\). A complete address roster and a label applied after acquisition do not rule out this mixed read. Revision fidelity without finality also fails if a relevant write can still become applicable at the same root after sealing. A source must entail exclusion or prior completion of such writes, not merely label the bundle as sealed. Duplicate, stale, wrong-operation and future-version records supply no root authority.
+
+A waiting fallback preserves the first-root amplitudes only under an independently authorized guarded pause that sets additional loader phase to zero. If the aligned loader continues while waiting with additional angle \(\Delta\theta\), the residual donor fraction is \(\sin^2\Delta\theta\). For nonzero angles in \((0,\pi)\) it is positive; at integer multiples of \(\pi\) it vanishes and odd multiples reverse the archive sign. The pause is not immediate completion, can remain stalled if evidence never becomes final, and does not grant a cut. This delimits the v0.47 intake statement about waiting and drift.
+
+## Intake clarifications
+
+The seven obstructed edge-mask classes include the empty eligibility set. Their obstruction applies to an individual winner, so it does not establish a common operation or a remedy for every class. At \(L=\pi/(2g_{\min})\) a tie is possible, as witnessed by the constant floor. A faster admissible arrival can precede expiry at the same lease setting. At a varying active rate, the late-cut phase is \(\Delta\theta=\int_{t_*}^{t_*+\delta_v}g(t)\,dt\). The constant rate is the special case \(\Omega\delta_v\).
+
+## Replay and next discriminant
+
+The finite replay enumerates the observable equivalence classes of all independent four-contact predicate assignments and compares coarse outcomes with complete typed records. It checks common-state sealing, conflicting revision histories, explicit priority and authorized reciprocal dispatch, and distinguishes a guarded pause from continued loader evolution. The fixture provenance and exact output are adjacent.
+
+The next discriminant is whether the admitted local support generator and event order can prove a bounded predicate dependency closure and exclude every still-effective write before the first-root seal, while leaving publication downstream. A constructive version would first prove that its local acquisition actually covers each closure and integrity operand. Endpoint labels alone do not supply this result.
