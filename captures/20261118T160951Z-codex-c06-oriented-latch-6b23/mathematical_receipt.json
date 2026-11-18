@@ -1,0 +1,143 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-oriented-latch-v039",
+  "session_id": "20261118-codex-c06-oriented-latch-6b23",
+  "candidate_id": "c06-oriented-latch",
+  "question": "Check whether oriented incidence supplies the loader signs and whether a zero-donor guard distinguishes first completion.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "donor_correlation",
+      "symbol": "c",
+      "object_type": "normalized signed quadratic observable",
+      "definition": "Donor-archive correlation on the aligned loader orbit",
+      "domain": "positive-stock donor and archive coordinates",
+      "codomain": "real",
+      "coefficient_domain": "real with exact rational controls",
+      "units": "dimensionless",
+      "basis_orientation": "paired odd coordinates",
+      "metric_measure": "Euclidean sum metric",
+      "origin": "declared C06 loader rotation",
+      "exact_expression": "c=<s,d>/N; cdot=g(2r-1)",
+      "source_refs": [
+        "C06-v038"
+      ],
+      "normalization": "total conserved stock N"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v038",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/cda5dd1d6d5cf1ef41bca217df38251ea575c348/captures/20261118T160207Z-codex-c06-antisymmetric-loading-3f5c/UD_C06_ANTISYMMETRIC_LOADING_v0.38.md",
+      "version_or_commit": "v0.38",
+      "section_or_object_id": "Exact candidate transfer with the shared block live",
+      "source_status": "integrated declared gradient loader"
+    },
+    {
+      "source_id": "C06-v024",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/cda5dd1d6d5cf1ef41bca217df38251ea575c348/captures/20261117T201224Z-codex-c06-bulk-hodge-6ed2/UD_C06_BULK_HODGE_TRIGGER_v0.24.md",
+      "version_or_commit": "v0.24",
+      "section_or_object_id": "Bulk signed boundary",
+      "source_status": "integrated oriented top-incidence scope"
+    },
+    {
+      "source_id": "C06-v033",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/cda5dd1d6d5cf1ef41bca217df38251ea575c348/captures/20261118T002315Z-codex-c06-cell-transition-audit-6d4b/UD_C06_CELL_TRANSITION_AUDIT_v0.33.md",
+      "version_or_commit": "v0.33",
+      "section_or_object_id": "Source audit",
+      "source_status": "integrated Q171 and event authority audit"
+    }
+  ],
+  "assumptions": [
+    "Coherent orientation of two tetrahedra along a common face.",
+    "Aligned incoming donor and empty antisymmetric archive with positive loader rate.",
+    "One-shot model latch is declared."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Signed simplicial boundary and Gram invariant",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Test seam sign and first complete transfer guard"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "12+24+55+1",
+    "reduced_expression": "12 glue, 24 trace and 56 phase or counterexample controls",
+    "factor_origins": [
+      "coherent face permutations and orientations",
+      "tetrahedral relabelings",
+      "rational half-angle points and unaligned witness"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "declared loader angle",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "first downward correlation zero under aligned preparation",
+    "initial_phase": "positive donor and empty archive",
+    "coupling": "paired loader and transpose",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "odd donor and aligned archive beside shared vertex channel",
+    "generator_or_update": "conditional capture-side loader cut",
+    "initial_boundary_conditions": "aligned positive stock",
+    "conservation_and_sources": "skew flow, identity reset and invariant Gram determinant",
+    "projection_and_kernel": "typed scalar incidence versus rank-three lifted archive",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "opposite sign and first complete stock transfer"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical fit"
+    ],
+    "search_domain_and_budget": "fixed coherent face and bounded exact phase controls",
+    "selection_criterion": "source-typed sign and zero-donor guarantee",
+    "baseline": "C06 v0.38 archive loader"
+  },
+  "calculation_steps": [
+    "Type signed incidence",
+    "Test full odd sign inversion",
+    "Derive directed correlation",
+    "Stress unaligned guard"
+  ],
+  "result": {
+    "exact_expression": "B3 signs oppose on shared face; r(1-r)-c^2 is invariant; first aligned downward root has r=0",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and replay",
+    "scope": "Shared-face incidence supplies a scalar sign pair only. Directed correlation detects the first zero donor under aligned preparation; a graded lift and native latch remain open.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-oriented-latch-6b23/oriented-latch-replay/inputs/001-replay_c06_oriented_latch.py",
+      "source_revision": "4c7bbf0c068ea72c43865bc286d80b81ffd7dfca",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Scalar face cannot transfer a rank-three archive",
+    "Unaligned downward correlation zero with donor residue 1/5"
+  ],
+  "limitations": [
+    "Native seam lift, alignment certificate and causal latch remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-oriented-latch-6b23/oriented-latch-replay/manifest.json"
+  ],
+  "next_discriminant": "Test whether a local seam can carry the full odd module with source-bound alignment and a receipt-controlled cut."
+}
