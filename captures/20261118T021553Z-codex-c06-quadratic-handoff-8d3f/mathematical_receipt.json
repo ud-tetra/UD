@@ -1,0 +1,144 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-quadratic-handoff-v034",
+  "session_id": "20261118-codex-c06-quadratic-handoff-8d3f",
+  "candidate_id": "c06-quadratic-handoff",
+  "question": "Test whether a quadratic capture adapter and distinct handoff can rearm without releasing completed odd stock.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "quadratic_handoff",
+      "symbol": "U_h",
+      "object_type": "orthogonal map on four odd registers",
+      "definition": "Separate typed swap of a held pair into an archive and a donor into fresh active carrier",
+      "domain": "four copies of the aligned odd Hilbert space",
+      "codomain": "four copies of the same Hilbert space",
+      "coefficient_domain": "real with exact rational representation for replay",
+      "units": "internal amplitude",
+      "basis_orientation": "aligned odd coordinates",
+      "metric_measure": "direct sum Hilbert metric",
+      "origin": "declared candidate handoff independent of publication",
+      "exact_expression": "(u,v,h,s) -> (s,(u-v)/sqrt(2),(u+v)/sqrt(2),h)",
+      "source_refs": [
+        "C06-v033",
+        "C06-v020"
+      ],
+      "normalization": "orthonormal sum-difference coordinates"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v033",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/1598d62a354ac1530f87febb065ae6e7529b6624/captures/20261118T002315Z-codex-c06-cell-transition-audit-6d4b/UD_C06_CELL_TRANSITION_AUDIT_v0.33.md",
+      "version_or_commit": "v0.33",
+      "section_or_object_id": "Retention and actuation",
+      "source_status": "integrated conditional capture and rearm witness"
+    },
+    {
+      "source_id": "C06-v020",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/1598d62a354ac1530f87febb065ae6e7529b6624/captures/20261117T194221Z-codex-c06-flag-readout-4e70/UD_C06_FLAG_READOUT_COMMIT_v0.20.md",
+      "version_or_commit": "v0.20",
+      "section_or_object_id": "Local flag observations",
+      "source_status": "integrated metric and flag port"
+    },
+    {
+      "source_id": "crossing-adapter",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/1598d62a354ac1530f87febb065ae6e7529b6624/Docs/UD%20native%20crossing-to-receipt%20audit%20v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "1 Exact capture and duplicate suppression",
+      "source_status": "conditional outgoing-side rearm and publication"
+    }
+  ],
+  "assumptions": [
+    "Common-rate aligned odd flow and metric orthogonality of record ranges.",
+    "Exact capture-side switch with identity amplitude reset.",
+    "Fresh epoch candidate supplies an isolated empty archive and independent nonzero donor."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Quadratic guard and isometric archive readback",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Test same-stock restart and preserve old and fresh stock separately"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "3^6+26^2+2^5",
+    "reduced_expression": "729 map controls, 676 positive held and donor pairs, 32 handoff controls",
+    "factor_origins": [
+      "six integer input entries",
+      "two nonzero three-coordinate vectors",
+      "five binary conditions"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "first directed odd balance in each separately armed epoch",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "capture once, then distinct authenticated transfer",
+    "initial_phase": "empty aligned record in each fresh epoch",
+    "coupling": "reciprocal metric adjoint",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "aligned carrier and record, isolated archive, donor and epoch mode",
+    "generator_or_update": "reciprocal exchange, selective hold and orthogonal stock transfer",
+    "initial_boundary_conditions": "old held pair aligned, archive empty, fresh donor positive",
+    "conservation_and_sources": "metric-adjoint flows and orthogonal reset preserve full stock",
+    "projection_and_kernel": "odd stock removed from active port into isolated archive",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first-crossing selective hold and conditional rearm"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical calibration"
+    ],
+    "search_domain_and_budget": "integer grid and 32 handoff eligibility masks",
+    "selection_criterion": "old stock preserved and separate empty-record epoch initialized",
+    "baseline": "v0.33 conditional capture and outgoing-side rearm"
+  },
+  "calculation_steps": [
+    "Check incoming quadratic guard",
+    "Compare same-stock restart with maintained hold",
+    "Derive orthogonal transfer and resource bound",
+    "Check separate mode authorization"
+  ],
+  "result": {
+    "exact_expression": "U_h(a,a,0,s)=(s,0,sqrt(2)*a,0); minimum aligned archive dimension=3",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "Identity-reset restart immediately resumes exchange on the completed stock. A declared orthogonal archive and donor transfer preserves old stock and initializes an independent fresh epoch.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-quadratic-handoff-8d3f/quadratic-handoff-replay/inputs/001-replay_c06_quadratic_handoff.py",
+      "source_revision": "875718dfee19788f6620f6cdbba3b119d9aa6b69",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Same-stock restart drifts immediately off half stock",
+    "No separate positive fresh stock if all old stock retained and donor empty"
+  ],
+  "limitations": [
+    "Native capture, archive/donor realization and Stage 2 authority remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-quadratic-handoff-8d3f/quadratic-handoff-replay/manifest.json"
+  ],
+  "next_discriminant": "Search source-defined Stage 2 for a typed stock receiver and transfer law, and determine whether reuse needs a fresh donor or consumes the old stock."
+}
