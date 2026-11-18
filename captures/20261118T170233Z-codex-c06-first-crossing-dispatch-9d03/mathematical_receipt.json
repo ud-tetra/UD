@@ -1,0 +1,166 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-first-crossing-dispatch-v044",
+  "session_id": "20261118-codex-c06-first-crossing-dispatch-9d03",
+  "candidate_id": "c06-first-crossing-dispatch",
+  "question": "Audit whether an admitted preparation and order guarantee the cut at the first exact crossing.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "armed_flow_boundary",
+      "symbol": "c>=0",
+      "object_type": "declared flow domain",
+      "definition": "Nonnegative normalized donor-archive correlation during the armed first lobe",
+      "domain": "aligned two-register odd loader",
+      "codomain": "admissible continuous model states",
+      "coefficient_domain": "real amplitudes and finite discrete modes",
+      "units": "internal only",
+      "basis_orientation": "shared signed frame",
+      "metric_measure": "normalized Gram correlation",
+      "origin": "declared urgency domain on the v0.39 orbit",
+      "exact_expression": "c=sin(2*theta)/2; first boundary outward derivative=-g",
+      "source_refs": [
+        "C06-v043",
+        "crossing-adapter"
+      ],
+      "normalization": "divide by conserved total stock"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v043",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/06089a78117904eb19f2a64e58a82a8676be6bab/captures/20261118T165257Z-codex-c06-receipt-consumption-8b61/UD_C06_RECEIPT_CONSUMPTION_v0.43.md",
+      "version_or_commit": "v0.43",
+      "section_or_object_id": "Declared single-consumption candidate",
+      "source_status": "integrated candidate safety boundary"
+    },
+    {
+      "source_id": "crossing-adapter",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/06089a78117904eb19f2a64e58a82a8676be6bab/Docs/UD%20native%20crossing-to-receipt%20audit%20v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "7 Liveness versus bounded delay",
+      "source_status": "conditional publication and starvation comparator"
+    },
+    {
+      "source_id": "capacity-audit",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/06089a78117904eb19f2a64e58a82a8676be6bab/Docs/UD%20capacity%20mechanisms%20and%20native%20crossing%20bridge%20audit.md",
+      "version_or_commit": "06089a78117904eb19f2a64e58a82a8676be6bab",
+      "section_or_object_id": "Integer context is another explicit candidate; What the recorder changes about the deadlock result",
+      "source_status": "SA-TIME-018 scope and oriented-return selection"
+    },
+    {
+      "source_id": "completion-deadlock",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/06089a78117904eb19f2a64e58a82a8676be6bab/Docs/UD%20crossing%20completion%20and%20finite%20capacity%20deadlock%20audit.md",
+      "version_or_commit": "06089a78117904eb19f2a64e58a82a8676be6bab",
+      "section_or_object_id": "Conditional deadlock",
+      "source_status": "exact provisional freeze counterexample"
+    },
+    {
+      "source_id": "pre-event",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/06089a78117904eb19f2a64e58a82a8676be6bab/captures/2026-10-12T001121Z-codex-k4-pre-event-40c08e54/MODEL.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "One simultaneous pre-event step; Adversarial results",
+      "source_status": "declared finite collision priority"
+    },
+    {
+      "source_id": "readiness",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/06089a78117904eb19f2a64e58a82a8676be6bab/Docs/UD%20amplitude%2C%20readiness%20and%20binary-interface%20audit%20v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "A binary flip does not select the amplitude operator",
+      "source_status": "exact interface underdetermination"
+    }
+  ],
+  "assumptions": [
+    "Aligned odd source, positive incoming rate and finite reachability.",
+    "Declared active correlation domain and no alternatives at the boundary.",
+    "Authoritative root resolution and a ready atomic cut before any continuation."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Phase-integral reachability and boundary continuation test",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Distinguish reachability, readiness and first-event authority"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "7+2^3+4^3",
+    "reduced_expression": "7 phase, 8 dispatch and 64 margin cases",
+    "factor_origins": [
+      "seven exact phase points",
+      "three Boolean conditions",
+      "three four-value check grids"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "internal loader angle",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "declared urgent capture-and-cut at first downward boundary",
+    "initial_phase": "positive donor and empty archive",
+    "coupling": "reciprocal metric adjoint",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "aligned donor/archive and armed, held modes",
+    "generator_or_update": "skew loader then declared atomic cut of both directions",
+    "initial_boundary_conditions": "prepared nonrevocable capability and exact resolved state",
+    "conservation_and_sources": "closed skew stock and identity reset",
+    "projection_and_kernel": "c>=0 excludes overrun on first lobe",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first crossing and full retained archive"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical fit"
+    ],
+    "search_domain_and_budget": "seven phases plus Boolean and rational fixtures",
+    "selection_criterion": "first cut instead of drift or stall",
+    "baseline": "C06 v0.43 occurrence and single consumption"
+  },
+  "calculation_steps": [
+    "Audit source preparation and ordering",
+    "Prove finite phase arrival condition",
+    "Specify urgent boundary and authority",
+    "Test strict preparation margin"
+  ],
+  "result": {
+    "exact_expression": "finite hit iff int(g)>=pi/2 at some finite T; prepared urgent guard cuts without overrun",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and constructor replay",
+    "scope": "The audited discrete priority and publication rules leave first-root actuation open. A declared prepared cut at an urgent phase boundary is exact if the phase reaches the boundary in finite time and progress is granted.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-first-crossing-dispatch-9d03/first-crossing-dispatch-replay/inputs/001-replay_c06_first_crossing_dispatch.py",
+      "source_revision": "098d3d44f7c23c5982071f4c7ba9400d2b2cb99a",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Positive rate can approach the phase asymptotically",
+    "Urgency without a ready cut can stall",
+    "Later repeated root can preserve stock while reversing the archive amplitude"
+  ],
+  "limitations": [
+    "Native urgency, pre-reservation, and first-root dispatch remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-first-crossing-dispatch-9d03/first-crossing-dispatch-replay/manifest.json"
+  ],
+  "next_discriminant": "Test a source-defined reservation of the resolved guard and a nonblocking actuation rule that preempts further loader flow."
+}
