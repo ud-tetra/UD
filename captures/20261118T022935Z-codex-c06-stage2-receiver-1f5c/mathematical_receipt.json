@@ -1,0 +1,145 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-stage2-receiver-v035",
+  "session_id": "20261118-codex-c06-stage2-receiver-1f5c",
+  "candidate_id": "c06-stage2-receiver",
+  "question": "Audit whether the declared Stage 2 matching receiver can preserve or consume the completed odd stock.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "matching_receiver",
+      "symbol": "U",
+      "object_type": "normalized opposite-pair sum",
+      "definition": "Matching amplitudes from ordinary edge coordinates",
+      "domain": "mean-zero edge space E plus T2",
+      "codomain": "three ordinary matching coordinates",
+      "coefficient_domain": "real with rational squared-stock controls",
+      "units": "internal amplitude",
+      "basis_orientation": "ordinary opposite pairs",
+      "metric_measure": "Euclidean aligned stock",
+      "origin": "C06 v0.6 declared two-stage model",
+      "exact_expression": "U(x)_pair=(x_e+x_opposite)/sqrt(2)",
+      "source_refs": [
+        "C06-v006",
+        "C06-v012",
+        "C06-v034"
+      ],
+      "normalization": "isometry on E only"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v034",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/2faacd27f23053b2f43d615bc74357c479a2eac9/captures/20261118T021553Z-codex-c06-quadratic-handoff-8d3f/UD_C06_QUADRATIC_HANDOFF_v0.34.md",
+      "version_or_commit": "v0.34",
+      "section_or_object_id": "Stock-preserving separate handoff",
+      "source_status": "integrated conditional archive and donor candidate"
+    },
+    {
+      "source_id": "C06-v006",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/2faacd27f23053b2f43d615bc74357c479a2eac9/captures/20261117T021309Z-codex-c06-matching-97c4/UD_C06_LOCAL_MATCHING_EXCHANGE_v0.6.md",
+      "version_or_commit": "v0.6",
+      "section_or_object_id": "State and interaction; Exact finite-step candidate",
+      "source_status": "integrated conditional matching receiver"
+    },
+    {
+      "source_id": "C06-v012",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/2faacd27f23053b2f43d615bc74357c479a2eac9/captures/20261117T043941Z-codex-c06-async-a971/UD_C06_ASYNCHRONOUS_LATCH_v0.12.md",
+      "version_or_commit": "v0.12",
+      "section_or_object_id": "Exact retention and handoff",
+      "source_status": "integrated conditional Stage 2 enable and stock split"
+    }
+  ],
+  "assumptions": [
+    "The declared two-stage model with orthogonal aligned record ranges.",
+    "Ordinary permutation action on the three perfect matchings.",
+    "Lossless odd archive means injective readback of the full aligned held family."
+  ],
+  "technique_plan": [
+    {
+      "technique": "V4 orbit and exact stock comparison",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Determine Stage 2 transfer and test lossless odd receiver compatibility"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "4+3^3+3^5",
+    "reduced_expression": "4 subgroup actions, 27 orbit cases, 243 stock cases",
+    "factor_origins": [
+      "four Klein subgroup elements",
+      "three odd coordinates",
+      "two even and three odd coordinates"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "declared joint sector readiness",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "complete even matching swap",
+    "initial_phase": "both sectors held at half stock",
+    "coupling": "normalized matching port",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "edge carrier, direct record and matching record",
+    "generator_or_update": "prescribed even swap",
+    "initial_boundary_conditions": "matching register empty",
+    "conservation_and_sources": "norm-preserving swap draws from retained even stock",
+    "projection_and_kernel": "U kills the odd sector",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "Stage 2 endpoint and faithful odd archive"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical calibration"
+    ],
+    "search_domain_and_budget": "four subgroup actions and bounded integer cases",
+    "selection_criterion": "preserve stock and distinguish odd preparations",
+    "baseline": "conditional two-stage model and v0.34 aligned archive"
+  },
+  "calculation_steps": [
+    "Recover source endpoint",
+    "Type the receiver action",
+    "Prove linear and nonlinear obstruction",
+    "Replay stock split"
+  ],
+  "result": {
+    "exact_expression": "U|T2=0; any equivariant F:T2->M is constant on V4 orbits",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "Stage 2 moves retained even stock only. The matching action is trivial on V4 and cannot receive a lossless equivariant odd archive.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-stage2-receiver-1f5c/stage2-receiver-replay/inputs/001-replay_c06_stage2_receiver.py",
+      "source_revision": "1668b8f69d95e211b8ac5b3939b2694beb2ab88b",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Pure odd input leaves the matching register empty",
+    "Ordinary matching action cannot distinguish V4-related odd states"
+  ],
+  "limitations": [
+    "Native actuation, odd archive or reuse, and deficit allocation remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-stage2-receiver-1f5c/stage2-receiver-replay/manifest.json"
+  ],
+  "next_discriminant": "Audit source-defined oriented receivers for a T2 channel, fresh stock or a separate reuse law, and keep their observable typed."
+}
