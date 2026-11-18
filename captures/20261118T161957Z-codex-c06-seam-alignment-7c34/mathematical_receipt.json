@@ -1,0 +1,145 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-seam-alignment-v040",
+  "session_id": "20261118-codex-c06-seam-alignment-7c34",
+  "candidate_id": "c06-seam-alignment",
+  "question": "Test the three-coordinate seam and whether its observations certify alignment before the cut.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "face_restriction",
+      "symbol": "T_f",
+      "object_type": "normalized restriction isometry",
+      "definition": "Three ordinary face-edge values of a certified odd vector",
+      "domain": "odd T2 edge subspace",
+      "codomain": "three real face coordinates",
+      "coefficient_domain": "real with integer Gram controls",
+      "units": "model amplitude",
+      "basis_orientation": "shared face edge order",
+      "metric_measure": "Euclidean stock",
+      "origin": "signed opposite-pair values on the odd sector",
+      "exact_expression": "T_f=sqrt(2)*R_f|W",
+      "source_refs": [
+        "C06-v023",
+        "C06-v036"
+      ],
+      "normalization": "one edge from each opposite pair"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v039",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/51cb2ef802c2ce13a3d3fc250321809ceb68ed69/captures/20261118T160951Z-codex-c06-oriented-latch-6b23/UD_C06_ORIENTED_LATCH_v0.39.md",
+      "version_or_commit": "v0.39",
+      "section_or_object_id": "Directed zero-donor completion test",
+      "source_status": "integrated guard and scalar signs"
+    },
+    {
+      "source_id": "C06-v023",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/51cb2ef802c2ce13a3d3fc250321809ceb68ed69/captures/20261117T200440Z-codex-c06-face-projector-7bc4/UD_C06_FACE_PROJECTOR_CUT_v0.23.md",
+      "version_or_commit": "v0.23",
+      "section_or_object_id": "Detector correction",
+      "source_status": "integrated rank-three restriction under odd preparation"
+    },
+    {
+      "source_id": "C06-v036",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/51cb2ef802c2ce13a3d3fc250321809ceb68ed69/captures/20261118T023517Z-codex-c06-oriented-receiver-2a79/UD_C06_ORIENTED_RECEIVER_v0.36.md",
+      "version_or_commit": "v0.36",
+      "section_or_object_id": "The signed gradient is a faithful receiver",
+      "source_status": "integrated receiver isometry"
+    }
+  ],
+  "assumptions": [
+    "Regular tetrahedron with ordinary mean-zero edge coordinates.",
+    "Common face frame and certified odd stock for the isometric register.",
+    "Fixed aligned two-register loader for the completion test."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Restriction inverse, Gram minors and indistinguishability",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Separate seam rank from raw-observation certification"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "4*729+4*27*9*3",
+    "reduced_expression": "2916 Gram checks plus 2916 recovery checks",
+    "factor_origins": [
+      "four faces",
+      "729 odd preparation pairs",
+      "27 odd and 9 even cases",
+      "three supplements"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "declared loader angle",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "first downward zero after verified alignment",
+    "initial_phase": "declared forward first lobe",
+    "coupling": "candidate isometric coefficient lift",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "prepared odd donor and archive in common frame",
+    "generator_or_update": "declared v0.39 common scalar rotation",
+    "initial_boundary_conditions": "certified odd components",
+    "conservation_and_sources": "face Gram coordinates preserve full stock under normalization",
+    "projection_and_kernel": "mixed raw traces have a two-dimensional ambiguity",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "rank-three seam and truthful completion guard"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical calibration"
+    ],
+    "search_domain_and_budget": "four faces and exact bounded integer samples",
+    "selection_criterion": "full reconstruction and no false completion",
+    "baseline": "C06 v0.39 directed guard"
+  },
+  "calculation_steps": [
+    "Normalize the rank-three face restriction",
+    "Compute Gram minors",
+    "Construct mixed-sector witness",
+    "Prove minimal raw supplement"
+  ],
+  "result": {
+    "exact_expression": "||T_f w||^2=||w||^2; mixed false completion residue=2/5; two extra raw samples suffice",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and replay",
+    "scope": "One face is an isometric register for prepared odd coordinates after normalization. Raw mixed-sector readings can falsely certify completion with odd donor residue 2/5.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-seam-alignment-7c34/seam-alignment-replay/inputs/001-replay_c06_seam_alignment.py",
+      "source_revision": "8d077e3fd9f88409c50714803cc6b7fd02193532",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Signed gradients tangential to one face have a blind direction",
+    "Even cancellation hides odd donor stock on raw face readings"
+  ],
+  "limitations": [
+    "Native purity, vector-valued seam transport and capture authority remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-seam-alignment-7c34/seam-alignment-replay/manifest.json"
+  ],
+  "next_discriminant": "Test whether admitted gates can supply a parity-resolved seam input or simultaneous opposite-edge receipt, with the latch wired to validated stock."
+}
