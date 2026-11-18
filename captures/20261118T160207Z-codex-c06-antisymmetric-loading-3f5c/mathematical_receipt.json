@@ -1,0 +1,150 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-antisymmetric-loading-v038",
+  "session_id": "20261118-codex-c06-antisymmetric-loading-3f5c",
+  "candidate_id": "c06-antisymmetric-loading",
+  "question": "Test whether an admitted stock-transfer event can load the antisymmetric archive with the shared vertex block live.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "antisymmetric_loader",
+      "symbol": "J",
+      "object_type": "isometric control port",
+      "definition": "Oppositely signed injection into the shared vertex kernel",
+      "domain": "ordinary odd source W",
+      "codomain": "pair of signed gradient copies",
+      "coefficient_domain": "real with exact rational rotation controls",
+      "units": "internal amplitude",
+      "basis_orientation": "increasing signed edges with relative copy sign",
+      "metric_measure": "Euclidean sum metric",
+      "origin": "declared extension of the shared vertex comparator",
+      "exact_expression": "J=(L,-L)/sqrt(2)",
+      "source_refs": [
+        "C06-v037",
+        "C06-v036"
+      ],
+      "normalization": "J^T J=I"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v037",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/d31835339d6c132a89e1dcfe172e4b1858142e94/captures/20261118T154616Z-codex-c06-gradient-isolation-4c22/UD_C06_GRADIENT_ISOLATION_v0.37.md",
+      "version_or_commit": "v0.37",
+      "section_or_object_id": "Candidate comparator with a shared live vertex block",
+      "source_status": "open proof PR #565, green CI"
+    },
+    {
+      "source_id": "C06-v036",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/38ca1a1f2268723c263ba07daeda1b90b905b854/captures/20261118T023517Z-codex-c06-oriented-receiver-2a79/UD_C06_ORIENTED_RECEIVER_v0.36.md",
+      "version_or_commit": "v0.36",
+      "section_or_object_id": "Stock transfer and readback",
+      "source_status": "integrated gradient isometry"
+    },
+    {
+      "source_id": "C06-v034",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/38ca1a1f2268723c263ba07daeda1b90b905b854/captures/20261118T021553Z-codex-c06-quadratic-handoff-8d3f/UD_C06_QUADRATIC_HANDOFF_v0.34.md",
+      "version_or_commit": "v0.34",
+      "section_or_object_id": "Stock-preserving separate handoff",
+      "source_status": "integrated conditional concentration"
+    },
+    {
+      "source_id": "C06-v035",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/38ca1a1f2268723c263ba07daeda1b90b905b854/captures/20261118T022935Z-codex-c06-stage2-receiver-1f5c/UD_C06_STAGE2_RECEIVER_AUDIT_v0.35.md",
+      "version_or_commit": "v0.35",
+      "section_or_object_id": "Source and accounting",
+      "source_status": "integrated even matching transfer"
+    }
+  ],
+  "assumptions": [
+    "Two signed-gradient copies sharing identical vertex incidence.",
+    "Aligned held odd stock and initially empty antisymmetric receiver.",
+    "Separate even matching block and fixed full-stock metric."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Copy symmetry and commuting skew operators",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Distinguish admitted common flow from the candidate oriented transfer"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "27^2+27*5",
+    "reduced_expression": "729 shared-channel and 135 rotation cases",
+    "factor_origins": [
+      "two ternary vertex contrast grids",
+      "five rational rotation points"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "declared internal rotation angle",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "first quarter turn then remove the loader",
+    "initial_phase": "zero antisymmetric archive",
+    "coupling": "paired loader and transpose",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "held donor, two gradient copies, shared vertices and separate even block",
+    "generator_or_update": "shared incidence plus declared antisymmetric loader",
+    "initial_boundary_conditions": "positive donor stock and empty antisymmetric receiver",
+    "conservation_and_sources": "skew flow preserves full stock and leaves shared dynamics unchanged",
+    "projection_and_kernel": "J maps into the shared kernel",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "full-load stationary archive and original half-stock readback"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "declared quarter turn; no empirical fitting"
+    ],
+    "search_domain_and_budget": "729 shared and 135 rotation controls",
+    "selection_criterion": "stock preservation with unchanged vertex dynamics",
+    "baseline": "C06 v0.37 two-copy fixed shared generator"
+  },
+  "calculation_steps": [
+    "Audit common control",
+    "Derive signed injection",
+    "Solve commuting transfer",
+    "Check stock readback"
+  ],
+  "result": {
+    "exact_expression": "archive endpoint=(La,-La); readback=||a||^2; donor residue=N cos(theta)^2",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and replay",
+    "scope": "Common vertex controls and copy-symmetric linear events cannot load the antisymmetric archive. A declared oppositely signed reciprocal transfer loads it with exact stock and half-stock readback.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-antisymmetric-loading-3f5c/antisymmetric-loading-replay/inputs/001-replay_c06_antisymmetric_loading.py",
+      "source_revision": "9ad1a400ee9166868bd4f1407c8944eb21ae03e7",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Copy-symmetric events cannot load the empty antisymmetric archive",
+    "Continued loader coupling can return the archived stock"
+  ],
+  "limitations": [
+    "Native opposite-sign reciprocal coupling, copy identity and endpoint selection remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-antisymmetric-loading-3f5c/antisymmetric-loading-replay/manifest.json"
+  ],
+  "next_discriminant": "Search for a source-defined oriented second copy and independent reciprocal connection with deterministic endpoint selection."
+}
