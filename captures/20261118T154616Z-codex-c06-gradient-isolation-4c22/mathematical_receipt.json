@@ -1,0 +1,150 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-gradient-isolation-v037",
+  "session_id": "20261118-codex-c06-gradient-isolation-4c22",
+  "candidate_id": "c06-gradient-isolation",
+  "question": "Test whether vertex-edge control isolates the gradient archive while allowing even matching exchange.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "masked_gradient",
+      "symbol": "BDB^T",
+      "object_type": "weighted vertex Laplacian",
+      "definition": "Vertex divergence of the gated signed gradient",
+      "domain": "vertex potentials",
+      "codomain": "mean-zero vertex amplitudes",
+      "coefficient_domain": "real with exact integer mask controls",
+      "units": "internal incidence units",
+      "basis_orientation": "increasing signed edges",
+      "metric_measure": "fixed Euclidean support metric",
+      "origin": "signed endpoint incidence and a diagonal reciprocal control",
+      "exact_expression": "off-diagonal entry ij = -d_ij",
+      "source_refs": [
+        "C06-v036",
+        "native-gate"
+      ],
+      "normalization": "unit signed incidence"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v036",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/38ca1a1f2268723c263ba07daeda1b90b905b854/captures/20261118T023517Z-codex-c06-oriented-receiver-2a79/UD_C06_ORIENTED_RECEIVER_v0.36.md",
+      "version_or_commit": "v0.36",
+      "section_or_object_id": "Stock transfer and readback",
+      "source_status": "integrated gradient receiver and half-stock readout"
+    },
+    {
+      "source_id": "C06-v035",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/38ca1a1f2268723c263ba07daeda1b90b905b854/captures/20261118T022935Z-codex-c06-stage2-receiver-1f5c/UD_C06_STAGE2_RECEIVER_AUDIT_v0.35.md",
+      "version_or_commit": "v0.35",
+      "section_or_object_id": "Source and accounting",
+      "source_status": "integrated conditional even matching transfer"
+    },
+    {
+      "source_id": "C06-v033",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/38ca1a1f2268723c263ba07daeda1b90b905b854/captures/20261118T002315Z-codex-c06-cell-transition-audit-6d4b/UD_C06_CELL_TRANSITION_AUDIT_v0.33.md",
+      "version_or_commit": "v0.33",
+      "section_or_object_id": "Source audit",
+      "source_status": "integrated Q156 transition scope"
+    },
+    {
+      "source_id": "native-gate",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/38ca1a1f2268723c263ba07daeda1b90b905b854/docs/UD_Native_Gate_Trigger_and_Recovery_v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "2 and 2.1",
+      "source_status": "native gate product and open factor histories"
+    }
+  ],
+  "assumptions": [
+    "Regular K4 and full Euclidean support stock.",
+    "Reciprocal vertex-edge generator with paired controls.",
+    "Stage 2 even matching block typed separately."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Off-diagonal recovery and Laplacian quadratic form",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Find the universal and pointwise cuts and contrast the two-copy kernel"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "64*(81+1)",
+    "reduced_expression": "5248 pointwise potential checks",
+    "factor_origins": [
+      "six binary edge switches",
+      "four ternary potentials plus a distinct-potential witness"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "model parameter in skew exchange",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "candidate fixed reciprocal block control",
+    "initial_phase": "zero vertex amplitude",
+    "coupling": "paired incidence and transpose",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "vertex-edge archive and separate stage-two matching block",
+    "generator_or_update": "reciprocal masked incidence",
+    "initial_boundary_conditions": "signed-gradient payload",
+    "conservation_and_sources": "fixed-metric skew generator conserves total stock",
+    "projection_and_kernel": "single-block all-off condition and two-copy cancellation comparator",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "stationary full-stock gradient archive"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical calibration"
+    ],
+    "search_domain_and_budget": "64 binary masks across 82 vertex potentials",
+    "selection_criterion": "no archive leakage",
+    "baseline": "v0.36 live signed-gradient receiver"
+  },
+  "calculation_steps": [
+    "Correct rank and grade assignments",
+    "Compute weighted Laplacian",
+    "Derive necessary cuts",
+    "Check two-copy comparator"
+  ],
+  "result": {
+    "exact_expression": "B D B^T|V0=0 iff D=0; K=[B B] has stationary antisymmetric gradient pairs",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and constructor replay",
+    "scope": "For one archive block every universally isolating diagonal control closes all six edges. Generic distinct vertex potentials force the same decision for state-chosen nonnegative masks. An added two-copy stationary sector is only a comparator.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-gradient-isolation-4c22/gradient-isolation-replay/inputs/001-replay_c06_gradient_isolation.py",
+      "source_revision": "9ad1a400ee9166868bd4f1407c8944eb21ae03e7",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Distinct vertex potentials leak for every nonzero nonnegative mask",
+    "Fixed two-copy exchange cannot load an empty stationary component"
+  ],
+  "limitations": [
+    "Native transfer, actuation and persistent isolation remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-gradient-isolation-4c22/gradient-isolation-replay/manifest.json"
+  ],
+  "next_discriminant": "Find an admitted stock-moving event and persistent gate mode, or prove that the declared two-copy receiver has a sourced loading law."
+}
