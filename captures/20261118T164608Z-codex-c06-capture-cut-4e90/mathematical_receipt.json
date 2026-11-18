@@ -1,0 +1,164 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-capture-cut-v042",
+  "session_id": "20261118-codex-c06-capture-cut-4e90",
+  "candidate_id": "c06-capture-cut",
+  "question": "Test whether an admitted event certifies common-state readout and commits the cut at the first resolved completion.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "capture_cut",
+      "symbol": "(p,q)",
+      "object_type": "common-state pair of vertex-sum observations",
+      "definition": "Two three-value unsigned vertex sums bound to one pre-event state",
+      "domain": "ordinary mean-zero donor and archive registers",
+      "codomain": "two real triples",
+      "coefficient_domain": "real with rational controls",
+      "units": "model amplitude",
+      "basis_orientation": "shared face vertex order",
+      "metric_measure": "vertex-sum Gram metric from incidence",
+      "origin": "integrated v0.41 parity readout",
+      "exact_expression": "G(p,q)=(p dot q + sum(p)*sum(q))/2",
+      "source_refs": [
+        "C06-v041",
+        "C06-v039"
+      ],
+      "normalization": "Euclidean odd stock"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v041",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/78ffb030330158f161dc56bdc4a59b9a60b8ec4c/captures/20261118T163930Z-codex-c06-seam-parity-receipt-5f20/UD_C06_SEAM_PARITY_RECEIPT_v0.41.md",
+      "version_or_commit": "v0.41",
+      "section_or_object_id": "Common capture and timing bound",
+      "source_status": "integrated readout and capture ambiguity"
+    },
+    {
+      "source_id": "C06-v039",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/78ffb030330158f161dc56bdc4a59b9a60b8ec4c/captures/20261118T160951Z-codex-c06-oriented-latch-6b23/UD_C06_ORIENTED_LATCH_v0.39.md",
+      "version_or_commit": "v0.39",
+      "section_or_object_id": "Directed zero-donor completion test",
+      "source_status": "integrated conditional completion guard"
+    },
+    {
+      "source_id": "ledger-v085",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/78ffb030330158f161dc56bdc4a59b9a60b8ec4c/captures/2026-10-21T151000Z-codex-exit03-recovery-98dc7b12/library_LEDGER_v0.85.json",
+      "version_or_commit": "v0.85",
+      "section_or_object_id": "Q194–Q210, especially Q198, Q200 and Q210",
+      "source_status": "recovered typed discrete event ledger"
+    },
+    {
+      "source_id": "native-gate",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/78ffb030330158f161dc56bdc4a59b9a60b8ec4c/docs/UD_Native_Gate_Trigger_and_Recovery_v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "2–2.2",
+      "source_status": "native Boolean gate history scope"
+    },
+    {
+      "source_id": "crossing-adapter",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/78ffb030330158f161dc56bdc4a59b9a60b8ec4c/Docs/UD%20native%20crossing-to-receipt%20audit%20v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "1, 4–7",
+      "source_status": "conditional ordinal and publication protocol"
+    },
+    {
+      "source_id": "contact-receipts",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/78ffb030330158f161dc56bdc4a59b9a60b8ec4c/Docs/UD%20contact%20receipts%20and%20access%20requirements.md",
+      "version_or_commit": "78ffb030330158f161dc56bdc4a59b9a60b8ec4c",
+      "section_or_object_id": "Concrete contract",
+      "source_status": "conditional history readout and access premises"
+    }
+  ],
+  "assumptions": [
+    "Three common-state unsigned vertex sums per register in one frame.",
+    "Aligned initially empty archive and common scalar skew loader.",
+    "Identity-reset cut unless otherwise declared."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Common-state Gram test and capture-to-cut rotation",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Compare timely, stale and unaligned completion controls"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "27^2+3*5",
+    "reduced_expression": "729 Gram and 15 delayed-cut cases",
+    "factor_origins": [
+      "two three-entry grids",
+      "three root preparations and five rational rotations"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "declared incoming loader angle",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "conditional state-token check and persistent disarm",
+    "initial_phase": "positive donor and empty archive",
+    "coupling": "reciprocal metric adjoint",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "common-state ordinary donor/archive with odd Gram readout",
+    "generator_or_update": "declared identity reset and reciprocal loader cut",
+    "initial_boundary_conditions": "aligned first-lobe source",
+    "conservation_and_sources": "closed skew stock and identity reset",
+    "projection_and_kernel": "even contamination killed by unsigned vertex incidence",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "first zero donor and full archive hold"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical fit"
+    ],
+    "search_domain_and_budget": "729 Gram controls and rational phase replay",
+    "selection_criterion": "no stale commit and exact hold readout",
+    "baseline": "C06 v0.41 common-capture recovery"
+  },
+  "calculation_steps": [
+    "Audit candidate events",
+    "Derive simultaneous Gram guard",
+    "Bind cut to resolved state",
+    "Quantify lateness"
+  ],
+  "result": {
+    "exact_expression": "late donor fraction=sin(phi)^2; odd readout=N*cos(phi)^2/2",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "The audited event sources provide neither a common amplitude capture nor cut authority. With both granted conditionally, the exact guard holds full archive stock. A delayed identity cut leaves sin squared accumulated angle as donor residue.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-capture-cut-4e90/capture-cut-replay/inputs/001-replay_c06_capture_cut.py",
+      "source_revision": "409d989eabdaf7d440faa76469cf0054e76e3a34",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Same epoch label can span different amplitudes",
+    "An exact time-tagged root does not by itself prevent continued transfer"
+  ],
+  "limitations": [
+    "Native common-state binding and cut authority remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-capture-cut-4e90/capture-cut-replay/manifest.json"
+  ],
+  "next_discriminant": "Audit a source-defined state-bound capture token and reciprocal cut authority, or derive a separate reset with exact phase transport."
+}
