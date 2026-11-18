@@ -1,0 +1,143 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "c06-oriented-receiver-v036",
+  "session_id": "20261118-codex-c06-oriented-receiver-2a79",
+  "candidate_id": "c06-oriented-receiver",
+  "question": "Test which oriented edge subspace can hold odd stock with a faithful action and normalized readback.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "signed_gradient_receiver",
+      "symbol": "L",
+      "object_type": "equivariant isometry",
+      "definition": "Normalized unsigned endpoint incidence followed by the signed gradient",
+      "domain": "three-dimensional ordinary odd edge sector",
+      "codomain": "three-dimensional signed gradient range",
+      "coefficient_domain": "real with rational numerator controls",
+      "units": "internal amplitude",
+      "basis_orientation": "ordinary input and increasing signed output",
+      "metric_measure": "Euclidean simplex coordinates",
+      "origin": "tetrahedral incidences",
+      "exact_expression": "L=B1^T A/(2 sqrt(2))",
+      "source_refs": [
+        "C06-v035",
+        "C06-v031"
+      ],
+      "normalization": "incidence Gram identities"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C06-v035",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/24078f905af50852d3ef2cfea84702c5809a1551/captures/20261118T022935Z-codex-c06-stage2-receiver-1f5c/UD_C06_STAGE2_RECEIVER_AUDIT_v0.35.md",
+      "version_or_commit": "v0.35",
+      "section_or_object_id": "Receiver obstruction",
+      "source_status": "integrated matching receiver obstruction"
+    },
+    {
+      "source_id": "C06-v034",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/24078f905af50852d3ef2cfea84702c5809a1551/captures/20261118T021553Z-codex-c06-quadratic-handoff-8d3f/UD_C06_QUADRATIC_HANDOFF_v0.34.md",
+      "version_or_commit": "v0.34",
+      "section_or_object_id": "Stock-preserving separate handoff",
+      "source_status": "integrated conditional archive and donor"
+    },
+    {
+      "source_id": "C06-v031",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/24078f905af50852d3ef2cfea84702c5809a1551/captures/20261117T212705Z-codex-c06-incidence-support-2ca7/UD_C06_INCIDENCE_SUPPORT_v0.31.md",
+      "version_or_commit": "v0.31",
+      "section_or_object_id": "Scope correction to the v0.30 intake summary",
+      "source_status": "integrated signed endpoint convention"
+    }
+  ],
+  "assumptions": [
+    "Euclidean simplicial metrics on a regular tetrahedron.",
+    "Ordinary and signed edge actions on their typed modules.",
+    "Full S4 equivariance and an aligned pair for stock readback."
+  ],
+  "technique_plan": [
+    {
+      "technique": "Incidence isometry and transposition fixed spaces",
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "Type the receiver and verify stage-two readback"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "24*27",
+    "reduced_expression": "648 intertwining cases",
+    "factor_origins": [
+      "all tetrahedral permutations",
+      "27 integer odd preparations"
+    ],
+    "factorization": null,
+    "divisibility_gcd_lcm": null
+  },
+  "clock_receipt": {
+    "clock_type": "declared handoff after odd hold",
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": "candidate stock transfer and isolated readback",
+    "initial_phase": "aligned held pair",
+    "coupling": "incidence isometry alone",
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "aligned held odd registers and gradient receiver",
+    "generator_or_update": "candidate orthogonal transfer",
+    "initial_boundary_conditions": "isolated empty receiver needed",
+    "conservation_and_sources": "isometric archive with two-to-one normalization of full versus half stock",
+    "projection_and_kernel": "cycles excluded under full equivariance and lossless norm preservation",
+    "physical_mapping": null
+  },
+  "target_exposure": {
+    "status": "KNOWN_CRITERION",
+    "known_targets": [
+      "equivariant odd archive"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "no empirical calibration"
+    ],
+    "search_domain_and_budget": "all 24 permutations on 27 odd vectors",
+    "selection_criterion": "preserve full stock and reconstruct half stock",
+    "baseline": "v0.35 ordinary matching receiver"
+  },
+  "calculation_steps": [
+    "Construct endpoint incidence map",
+    "Compare gradient and cycles",
+    "Derive half-readout",
+    "Test active coupling"
+  ],
+  "result": {
+    "exact_expression": "L^T L=I on T2; h=L(sqrt(2)*a); old direct odd contribution=||h||^2/2",
+    "approximation": null,
+    "units": "internal only",
+    "precision_and_error": "exact proof and rational replay",
+    "scope": "The signed gradient is an equivariant isometric receiver. The signed cycles cannot carry a lossless norm-preserving full-S4 archive. The correct archive readout is half its norm squared.",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "Exact constructor replay",
+      "command_or_proof_path": "python3 artifacts/20261118-codex-c06-oriented-receiver-2a79/oriented-receiver-replay/inputs/001-replay_c06_oriented_receiver.py",
+      "source_revision": "535d8a8dde6b7b51a17cc9c211d58ad444828e58",
+      "actual_result": "PASS_EXACT",
+      "review_relationship": "constructor"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "Cycle transposition fixed line cannot hold the unit circle",
+    "Live vertex coupling does not leave the bare gradient archive stationary"
+  ],
+  "limitations": [
+    "Native transfer, isolated receiver, and deficit allocation remain open"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261118-codex-c06-oriented-receiver-2a79/oriented-receiver-replay/manifest.json"
+  ],
+  "next_discriminant": "Audit the vertex-edge block controls for a source-defined transfer and persistent isolation of the signed gradient receiver."
+}
