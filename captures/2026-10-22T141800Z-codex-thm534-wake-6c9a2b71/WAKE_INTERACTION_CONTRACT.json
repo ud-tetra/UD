@@ -1,0 +1,20 @@
+{
+  "status": "CANDIDATE_NOT_NATIVE_CLOSURE",
+  "interaction": "W=-1/2 sum_e g_e(q_e)*(x_f^2+x_tau^2)",
+  "forced_dual_source": "sum_e g_e(q_e)*P_e*x",
+  "gate_force": "-chi_prime_e*ell_e + g_prime_e*S_e/2",
+  "retained": "original x skew flow, norm and ownership receipts",
+  "changed": "auxiliary y norm and its control-volume receipt",
+  "linear_control": {
+    "g": "alpha*q",
+    "alpha": "supplied positive coefficient",
+    "isolated_initial_state": "q=p=0, y=0, S>0",
+    "on_time": "2/sqrt(alpha*S)",
+    "funding": "unbounded negative interaction potential",
+    "finite_capacity": false
+  },
+  "network_completion": "OPEN",
+  "exclusive_selector": false,
+  "prior_credit_contract": "Requires added positive auxiliary-source credit; prior boundary-only y contract insufficient",
+  "physical_promotion": 0
+}
