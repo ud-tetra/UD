@@ -1,0 +1,17 @@
+id,type,statement,assumptions,source,verification,remaining_gate,physical_promotion
+H01,EXACT,"Two solid tori: f=(16,56,64,24), beta=(1,1,0,0)","annulus-prism triangulations, rational signed incidence",exact_models.py,"SymPy ranks and independent GF(2,101,1009)","No physical carrier",0
+H02,EXACT,"Both flat cocycles have period 4 around gamma0 and B2^T c=0",selected generator gamma0; integer edge rule,exact_models.py,exact_models.py and independent_numeric.py,"No source-selected gauge field",0
+H03,EXACT,"W_gamma=e^{i theta} same topological phase for normalized alpha=theta h/4",same loop orientation and phase preparation,derived from H02,SymPy period check,"Local transport/readout map open",0
+H04,EXACT,"Unit harmonic norms differ by ratio 358250301381/358493424791",unit Euclidean edge metric on each triangulation,exact_models.py,independent_numeric.py,"Select compatible physical metric",0
+H05,NO-GO,"Current O09 positive-frequency sum does not determine harmonic zero-mode dynamics",recovered v0.85 O09 omega>0,source ledger v0.85,source/formula audit,"Construct/review zero-mode source extension",0
+H06,CANDIDATE,"Topological cotangent action on (theta,p) is a consistent extension",chosen I>0 and J_n/chi and lifted angle history,action_extension.py,SymPy variational check,"Native action normalization and source",0
+H07,EXACT_CONDITIONAL,"Canonical Hamiltonian donor/source work identity",chosen H=p^2/(2I)-J cos(theta-chi),action_extension.py,SymPy dH/ds and donor check,"Funding and physical action units",0
+H08,NO-GO,"One-edge P_H j_B pump not triangulation-covariant",same labeled edge j and same unit coupling g on both,earlier PR486 + exact_models.py,exact rational phase difference,"Source-derived metric transfer",0
+H09,EXACT,"gamma0 gamma8 gamma4 are homologous",both annulus product complexes,loop_source_gate.py,exact B2 boundary witnesses,"None mathematical",0
+H10,NO-GO,"Bare Q162 flux j_e01=-1/4 is not closed; loop periods -1/4 0 0",one-edge Q162 hard-gate fixture,loop_source_gate.py,exact B2 transpose and periods,"Closed source or cohomology functor",0
+H11,CANDIDATE,"Named-loop theta'=g integral_gamma0 j_B has same theta across both triangulations",fixed chosen representative gamma0 and g,action_extension.py,exact integration and donor balance,"Representative independence and g source",0
+H12,EXACT_CONDITIONAL,"E_theta plus donor work bank can be nonnegative for g^2<=2",chosen quadratic topological energy and one-edge impulse,action_extension.py,exact nonnegative factorization,"Source/metric/energy units",0
+H13,NO-GO,"Old event step I-L0/4 unstable on two torus graphs",degree max9 and unmodified step,exact_models.py,Rayleigh bound and eig crosscheck,"Source-selected step or integration",0
+H14,EXACT_CONDITIONAL,"M=I-L0/(2dmax) nonnegative doubly stochastic and PSD",simple graph maximum degree,graph Laplacian spectral bound,exact_models.py plus independent_numeric.py,"Physical clock and selection",0
+H15,NO-GO,"Stable update doesn't ensure equal coarse sector readouts",common vertex0 and chosen modulo4 sector aggregation,exact_models.py,exact exact 4-bin readouts,"Cross-triangulation observable map",0
+H16,OPEN,"Source-native O09 to harmonic/phase local intertwiner and work donor",need source law and typed units,ledger v0.85 + this audit,not established,"Derive and blind-test",0
