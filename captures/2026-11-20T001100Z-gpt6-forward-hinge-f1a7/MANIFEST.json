@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "capture_id": "2026-11-20T001100Z-gpt6-forward-hinge-f1a7",
+  "created_date": "2026-11-19",
+  "base_commit": "cef84ca5c996ec21b67247c74ee85c2c6c5dd995",
+  "physical_promotion": 0,
+  "review": "PENDING_NONCONSTRUCTOR",
+  "lane": "DEVELOPMENT_ONLY",
+  "status": "EXACT_CONDITIONAL_AND_SCOPED_NO_GO",
+  "files": [
+    {
+      "name": "REPORT.md",
+      "size_bytes": 12228,
+      "sha256": "ff6983d271211c86b017ae4a6a103546a59c085e7bf50e91b35487d78a9b85e6",
+      "git_blob_sha": "0fa6e9d13b6ecb7103c8b385d73421cfde90c71e",
+      "origin": "generated source-bound audit, verified exact-byte transfer"
+    },
+    {
+      "name": "replay_stdlib.py",
+      "size_bytes": 2351,
+      "sha256": "62976bab47b7e5e39b7bdfa0653b26f50f2b71c9554987222bd3402b43048ce3",
+      "git_blob_sha": "8ee55194cbe13a409b178dc08447e9436cdb919f",
+      "origin": "local independent standard-library replay, verified exact-byte transfer"
+    }
+  ],
+  "local_package": "UD_FORWARD_SELECTION_SOURCE_AUDIT_v0.1.zip (user-facing conversation artifact; archive itself not committed)",
+  "unmirrored_local_files": [
+    "verify.py (SymPy)",
+    "results.json",
+    "replay.log",
+    "MANIFEST.json"
+  ],
+  "source_dependencies": [
+    {
+      "repo": "UD",
+      "sha": "cef84ca5c996ec21b67247c74ee85c2c6c5dd995"
+    },
+    {
+      "repo": "UD-Physics",
+      "sha": "03722496f5b00e8f3f01b2400e4015eb65fdebc4"
+    },
+    {
+      "source": "personal Library POC-1 v2.5, §4.5",
+      "status": "readable to this session; external reviewer access not guaranteed"
+    },
+    {
+      "source": "personal Library edge-strain audit v0.1",
+      "status": "readable to this session; external reviewer access not guaranteed"
+    }
+  ],
+  "tests": [
+    {
+      "command": "python verify.py",
+      "outcome": "PASS",
+      "environment": "local container",
+      "scope": "symbolic finite matrix + enum"
+    },
+    {
+      "command": "python replay_stdlib.py",
+      "outcome": "PASS",
+      "environment": "local container",
+      "scope": "constructor-context separate implementation"
+    },
+    {
+      "command": "python3 scripts/verify_repository.py --base cef84ca5c996ec21b67247c74ee85c2c6c5dd995",
+      "outcome": "NOT_RUN",
+      "reason": "GitHub connector-only repository write; full fresh checkout unavailable"
+    }
+  ],
+  "supersedes": [],
+  "notes": "G05 is retired universal scalar; Q176 scope untouched. No-Go 7.4 exact numbered source unverified; POC1-constr distinct from experimental issue 147."
+}
