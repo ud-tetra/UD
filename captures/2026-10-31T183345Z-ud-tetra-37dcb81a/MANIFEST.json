@@ -1,0 +1,60 @@
+{
+  "schema": "UD_MANIFEST_v0.1",
+  "capture_id": "2026-10-31T183345Z-ud-tetra-37dcb81a",
+  "timestamp_utc": "2026-10-31T18:33:45Z",
+  "base_commit": "a78193d420f3bac957be081aed0525fbc1457825",
+  "physical_promotion": 0,
+  "status": "EXACT_SCOPED_CUBIC_SELECTION__SOURCE_GATED_O09_CURRENT__NO_PHYSICAL_PROMOTION",
+  "lane": "DEVELOPMENT_NO_REGISTRY_PROMOTION",
+  "source_versions": [
+    "UD v0.85 recovered 2026-10-21, O09/G05/Q140 (inherited scientific revision v0.43)",
+    "UD v0.39 2026-08-22 Q140/G05/Q153-Q154",
+    "prior conditional Wilson branch 2026-10-31 PR #471"
+  ],
+  "review": "CONSTRUCTOR_TEAM_3_EXACT_IMPLEMENTATIONS_PASS__NON_CONSTRUCTOR_PENDING",
+  "source_sha256": {
+    "UD_v0_39": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+  },
+  "scope": "S4 polynomial source rank 0,0,0,1; cubic face Vandermonde current; O09 local source nonidentifiability; optional source coupling with donor/sink receipt",
+  "verification": [
+    "K4 generated-incidence and 24 permutation exact covariance PASS locally",
+    "independent permutation-monomial symmetric power character check PASS locally",
+    "independent O09 first variation and compact coupling equilibrium/work check PASS locally",
+    "local 11-item SHA256 manifest PASS; full PDF visually inspected"
+  ],
+  "limitations": [
+    "O09 has no native phase-to-link intertwiner, Hamiltonian or selected coupling",
+    "b is candidate scalar vertex stock not identified native burden",
+    "g/kappa and mobilities undetermined; candidate coupling is NOT current canon",
+    "no physical clock, two polarization photon or measurements",
+    "full PDF/LaTeX/scripts release remains local download; GitHub capture only 3 text files"
+  ],
+  "full_local_release": {
+    "filename": "UD_O09_CUBIC_CURRENT_GATE_v0.1.zip",
+    "sha256": "7def5fd8a7e9fee1addf09f8ee9bf74a3af946f98df85823485cbefc808c4ce7",
+    "git_mirrored": false
+  },
+  "local_pdf_sha256": "590c1063a48dd1e3f4e709b8321bd37bd52d8a86cd08358d27f7e0d9b1ba018f",
+  "full_repository_integrity_script": "PENDING_TO_RUN_ON_PR_WITH_CI",
+  "files": [
+    {
+      "path": "captures/2026-10-31T183345Z-ud-tetra-37dcb81a/README.md",
+      "size_bytes": 2483,
+      "sha256": "85d4dea051556eaeee90a582baa999abdd25e8af06080ab4c35f577b707c2791"
+    },
+    {
+      "path": "captures/2026-10-31T183345Z-ud-tetra-37dcb81a/TECHNICAL_NOTE.md",
+      "size_bytes": 14905,
+      "sha256": "bc9b7d6ab7dcd14c0c4f72d847943189f98f3d5681eeb4d5366a37aaaadebe79"
+    },
+    {
+      "path": "captures/2026-10-31T183345Z-ud-tetra-37dcb81a/CLAIM_DEPENDENCY_LEDGER.csv",
+      "size_bytes": 2734,
+      "sha256": "133f11b4f6e03b942a73388e3baf28a26865700b771c7fa5fd7fd8841463c657"
+    }
+  ],
+  "supersedes": [],
+  "original_evidence_preserved": true,
+  "website_updated": false,
+  "main_merged": false
+}
