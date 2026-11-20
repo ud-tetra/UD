@@ -1,0 +1,59 @@
+{
+  "artifact": "UD_GAP2_SIGN_SCALE_INDEPENDENT_CHECK_v0.2",
+  "claim_bin": "EXACT_CONDITIONAL_NO_GO + NUMERICAL_SOURCE_REPLAY",
+  "physical_promotion": 0,
+  "assumptions": {
+    "Omega": "Omega_inf - Delta*rho**n",
+    "domain": "0<rho<1, 0<r<1, Delta>0, Omega_inf>Delta, n>=0",
+    "Phi": "constant positive in base case",
+    "source_spectrum": "P(k) proportional to 1/[Omega(n(k))*Phi]",
+    "scale_map": "ln(k/k0) = s*n*ln(1/r), s in {-1,+1}",
+    "target_bearing_numbers_are_illustrations": "all historical comparison values are already target exposed"
+  },
+  "source_sha256": {
+    "Gap2_REVISED_Omega_Convergence.md": "02288adb7ce60c3e8e32e2e692fdcc588ebab85def28655803fa2d0078806665",
+    "Gap2_FINAL_STATUS.md": "436c87fbe121d3a9a845d356d786ab299e83a6dd84285698acc92c8f3a1a514a",
+    "v07_Diagnostic_Analysis.md": "14e6c15a76348d4eb46a2d68280cb4e9bd30363913fc7bf5b206652c9b28e153",
+    "coherence_equation.md": "645d1e120ab297147383d9d61786444eb2f11cad7df99529d288d91fc2fb6959",
+    "DistinctionTheory_MasterTheory_v1.md": "4684802f74e03c9ecb92addd3d4a52546190f33430da7c42b78af84a79ede434",
+    "UD_COEFFICIENT_PROVENANCE_LEDGER_v0.39(2).md": "1281aa8454013fbbdbcf8ada07af0aefe81014003f25a27f3929ad43afffae63"
+  },
+  "checks": {
+    "symbolic_exact_model": "-Delta*rho**n + Omega_inf",
+    "spectral_tilt_minus_one": "-Delta*q*rho**n*log(rho)/(Delta*rho**n - Omega_inf)",
+    "spectral_running_exact": "Delta*Omega_inf*q**2*rho**n*log(rho)**2/(Delta*rho**n - Omega_inf)**2",
+    "spectral_running_positive_form": "Delta*Omega_inf*q**2*rho**n*log(rho)**2/(Delta*rho**n - Omega_inf)**2",
+    "orientation_reversal_same_running": true,
+    "Phi_variation_symbolic_identity": "q**2*(-Delta**2*rho**(2*n)*Phi(n)*Derivative(Phi(n), (n, 2)) + Delta**2*rho**(2*n)*Derivative(Phi(n), n)**2 + Delta*Omega_inf*rho**n*Phi(n)**2*log(rho)**2 + 2*Delta*Omega_inf*rho**n*Phi(n)*Derivative(Phi(n), (n, 2)) - 2*Delta*Omega_inf*rho**n*Derivative(Phi(n), n)**2 - Omega_inf**2*Phi(n)*Derivative(Phi(n), (n, 2)) + Omega_inf**2*Derivative(Phi(n), n)**2)/((Delta**2*rho**(2*n) - 2*Delta*Omega_inf*rho**n + Omega_inf**2)*Phi(n)**2)",
+    "general_logk_map_symbolic_identity": "Delta*rho**n_of_logk(t)*(Delta*rho**n_of_logk(t)*log(rho)*Derivative(n_of_logk(t), t)**2 - (Delta*rho**n_of_logk(t) - Omega_inf)*(log(rho)*Derivative(n_of_logk(t), t)**2 + Derivative(n_of_logk(t), (t, 2))))*log(rho)/(Delta*rho**n_of_logk(t) - Omega_inf)**2",
+    "historical_pivot_ns_used_as_input": "0.9649",
+    "historical_early_approx_A_computed": "0.100958773653120584",
+    "historical_early_approx_n_inferred": "9.8202263555671016",
+    "historical_early_exact_n_inferred": "11.1254557790290741",
+    "historical_early_approx_running_positive": "0.00817194601833749633",
+    "historical_early_exact_running_positive": "0.00940395601833749633",
+    "historical_early_exact_running_crosscheck": "0.00940395601833749633",
+    "historical_early_finite_diff_positive": "0.00940395601835483541",
+    "historical_early_reverse_orientation_ns": "1.0351",
+    "historical_early_reverse_orientation_running_positive": "0.00940395601835483541",
+    "later_distinct_fit_approx_n_inferred": "3.23734291325139265",
+    "later_distinct_fit_approx_running_positive": "0.00876636521432969049",
+    "coherence_independent_constant_eta_ns": "0.964811540764016601",
+    "coherence_independent_constant_eta_running": 0,
+    "early_Omega_monotonicity_claim_refuted_by_level_0_to_1": true,
+    "source_gaps_unclosed": [
+      "derivation_of_mode_creation_index",
+      "fixed_lattice_to_3D_curvature_power",
+      "physical_pivot_scale_map",
+      "sourced_Phi_evolution",
+      "raw_replay",
+      "target_blind_registration"
+    ]
+  },
+  "verdicts": {
+    "sign_repair": "alpha_s POSITIVE for both orientations in stated ansatz",
+    "joint_red_tilt_negative_running": "NO-GO under fixed Phi + exponential Omega + affine log-k map",
+    "physical_claim": "OPEN; nothing promoted",
+    "historical_sources": "unchanged"
+  }
+}

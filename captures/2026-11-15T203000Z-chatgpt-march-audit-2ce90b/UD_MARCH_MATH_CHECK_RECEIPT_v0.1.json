@@ -1,0 +1,40 @@
+{
+  "artifact": "UD_MARCH_MATH_INDEPENDENT_CHECK_v0.1",
+  "status": "EXACT_SYMBOLIC_CHECKS_PASS",
+  "physical_promotion": 0,
+  "checks": [
+    {
+      "id": "GAP2_RUNNING_SIGN",
+      "expression": "A*rho**n*log(rho)/log(r)",
+      "assumptions": "A>0, 0<rho<1, 0<r<1, dn/dlnk=+1/ln(1/r)",
+      "conclusion": "running strictly positive"
+    },
+    {
+      "id": "GAP4_LOCAL_PHASE_COHERENCE",
+      "baseline": "3",
+      "transformed": "-1",
+      "assumptions": "three real unit amplitudes, fixed edge links, phase at middle vertex changed by pi",
+      "conclusion": "independent local phases not invariant"
+    },
+    {
+      "id": "GAP3_ACTION_COST",
+      "linear_to_quadratic_ratio": "2/epsilon",
+      "assumptions": "v=epsilon>0",
+      "conclusion": "ratio diverges as epsilon->0; no pointwise asymptotic equivalence"
+    },
+    {
+      "id": "GAP1_DERIVATIVE_OBSTRUCTION",
+      "f": "r0**n*sin(x/r0**(2*n))",
+      "df_dx": "cos(x/r0**(2*n))/r0**n",
+      "d2f_dx2": "-sin(x/r0**(2*n))/r0**(3*n)",
+      "assumptions": "0<r0<1, n positive integer",
+      "conclusion": "sup-norm decays but derivative amplitudes grow"
+    },
+    {
+      "id": "GAP5_DIFFERENCE",
+      "difference_exact": "31/200",
+      "decimal": "0.155",
+      "conclusion": "IFS exceeds Poisson, inconsistent with historical negative/lower wording"
+    }
+  ]
+}
