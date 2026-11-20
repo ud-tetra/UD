@@ -1,0 +1,64 @@
+{
+  "classification": "EXACT_CONDITIONAL; NO_PHYSICAL_PROMOTION",
+  "complement_dual": {
+    "D0B1=-B2tD1": true,
+    "D1B2=B1tD2": true,
+    "D1_squared": "+I6",
+    "D2D0": "-I4",
+    "dimensions": [
+      "C0->C2",
+      "C1->C1",
+      "C2->C0"
+    ],
+    "trivial_vertex_selfmap_centralizer": true,
+    "twisted_S4_cases": 72
+  },
+  "euclidean": {
+    "J_unit(edge_midpoint)_norm2": "3",
+    "J_unit(face_center)": "polar_vertex",
+    "boundary_vertices_fixed_by_J_unit": 4,
+    "cross_vertex_dot": "-1/3",
+    "edge_midpoint_norm2": "1/3",
+    "opposite_face_center": "-v_i/3",
+    "polar_vertex": "-3v_i",
+    "vertex_norm2": "1"
+  },
+  "event_generator": "OPEN",
+  "metric_and_radial_map": "ASSUMED_EUCLIDEAN",
+  "null_control": {
+    "conventional_tetra_dual_reproduces_all": true,
+    "injective_readout_forces_latent_identity": true,
+    "nontrivial_latent_flip_readout_blind": true,
+    "sphere_inversion_restricted_S2": "identity"
+  },
+  "physical_promotion": 0,
+  "source_selection": "OPEN",
+  "sphere_boundary": {
+    "B1B2_zero": true,
+    "B1_rank": 3,
+    "B2B3_zero": true,
+    "B2_rank": 3,
+    "betti_Q": [
+      1,
+      0,
+      1
+    ],
+    "euler": 2,
+    "f_vector": [
+      4,
+      6,
+      4
+    ]
+  },
+  "typed_primal_dual": {
+    "antipodal_degree": -1,
+    "commutator": "P_dual A = antipodal P_primal",
+    "dual_to_primal": "B(y)=-3y",
+    "not_geometric_sphere_inversion": true,
+    "primal_to_dual": "A(x)=-x/3",
+    "probe_count": 16,
+    "sphere_readout": "P=radial",
+    "two_way_inverse": true
+  }
+}
+PASS: topology, twisted duality, 24 S4 permutations, null, primal-dual antipodal, 16 probes
