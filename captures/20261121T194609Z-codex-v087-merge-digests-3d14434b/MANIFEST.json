@@ -1,0 +1,73 @@
+{
+  "capture_id": "20261121T194609Z-codex-v087-merge-digests-3d14434b",
+  "physical_promotion": 0,
+  "source_revision": "a61e2b2b7bfff2b10be51079d517b1e8e4d347f3",
+  "status": "PROPOSED_PREVIEW_REVIEW_OPEN",
+  "updates_note": "captures/20261121T193950Z-codex-v087-preview-d0c6a99d/UD_RELEASE_CANDIDATE_v0.87-preview.md",
+  "note_version_status": "Deployment statuses superseded by this addendum",
+  "verification_scope": "Git tree fingerprints and byte-verified additive capture payloads on main",
+  "digest_commands": {
+    "sha256_git_root_tree_payload": "git cat-file tree <git_tree> | sha256sum",
+    "sha256_recursive_git_tree_inventory": "git ls-tree -r -t -z --full-tree <git_tree> | sha256sum"
+  },
+  "merge_tree_digests": [
+    {
+      "pr": 584,
+      "pr_head": "6addbc4c92947cca7cb88c749e477c7c64ff334b",
+      "merge_commit": "fdcafc3841a733fd89716dcaa6c9ba482874ab96",
+      "parents": [
+        "8a7724ba7f5bf57c78698bdcf138ac0cee9ed386",
+        "6addbc4c92947cca7cb88c749e477c7c64ff334b"
+      ],
+      "git_tree": "88247ebe0dff1c5519e30fc5c571d8b3999e8f0c",
+      "sha256_git_root_tree_payload": "a29e4ba47da6ba711ae7f0cbc4bf034f1ffecedbc2c3de85f0ddb16b74b7c1c7",
+      "sha256_recursive_git_tree_inventory": "78a84936806e2c3c0242fe027e89307958ca5645ddd549bbfdb7232415b74506",
+      "verified_capture_payload_count": 3,
+      "github_review_states": [
+        "COMMENTED"
+      ],
+      "independent_scope_approval": "UNVERIFIED"
+    },
+    {
+      "pr": 585,
+      "pr_head": "8343f85f714aa222fc2f63414c29a81349abbb97",
+      "merge_commit": "57b926540e6284a34fbd550adf5f2c8c2f2b6a8b",
+      "parents": [
+        "fdcafc3841a733fd89716dcaa6c9ba482874ab96",
+        "8343f85f714aa222fc2f63414c29a81349abbb97"
+      ],
+      "git_tree": "613db86a609b69cdcb3ec3274f4e17d896a04b11",
+      "sha256_git_root_tree_payload": "0a7df7b883733afd3bd88185f47b3caa8a5be398afd60d4fe7c54b8ec39e2951",
+      "sha256_recursive_git_tree_inventory": "bdcc1e8f3a498b119028fd88fd49d5a91ff1030dcc049ce8b32e3502077c384f",
+      "verified_capture_payload_count": 3,
+      "github_review_states": [
+        "COMMENTED"
+      ],
+      "independent_scope_approval": "UNVERIFIED"
+    },
+    {
+      "pr": 586,
+      "pr_head": "22ebe538835a8e3efcc82a8def21fc35b82907c3",
+      "merge_commit": "a61e2b2b7bfff2b10be51079d517b1e8e4d347f3",
+      "parents": [
+        "57b926540e6284a34fbd550adf5f2c8c2f2b6a8b",
+        "22ebe538835a8e3efcc82a8def21fc35b82907c3"
+      ],
+      "git_tree": "a7dea504bc784ba9fe1f203f52d03ed0f0eec526",
+      "sha256_git_root_tree_payload": "f0082b85e807c039e2e332ddb6e8c95ee7aa6ee9d17afb574ed8df9a40bf19b8",
+      "sha256_recursive_git_tree_inventory": "9b4319915e767c2b5e3033fe6c4c67da14623618a7a910d3cbcf7ce6591ccfe4",
+      "verified_capture_payload_count": 3,
+      "github_review_states": [
+        "COMMENTED"
+      ],
+      "independent_scope_approval": "UNVERIFIED"
+    }
+  ],
+  "files": [
+    {
+      "path": "captures/20261121T194609Z-codex-v087-merge-digests-3d14434b/UD_V087_POST_MERGE_DIGEST_ADDENDUM.md",
+      "size_bytes": 1608,
+      "sha256": "e50a1e2529bd4e7daa7f5d52017315db92a077dc7e49f98ff3d51ce274592dec"
+    }
+  ]
+}
