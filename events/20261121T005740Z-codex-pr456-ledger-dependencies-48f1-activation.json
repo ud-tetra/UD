@@ -1,0 +1,86 @@
+{
+  "receipt_type": "post_merge_integration_receipt",
+  "schema_version": "1.0.0",
+  "event_id": "20261121T005740Z-codex-pr456-ledger-dependencies-48f1-activation",
+  "capture_id": "20261121T005740Z-codex-pr456-ledger-dependencies-48f1",
+  "receipt_status": "VERIFIED_UPSTREAM_MERGE",
+  "activated_at_utc": null,
+  "physical_promotion": 0,
+  "governance_posture": {
+    "promotion_firewall": "LOCKED_ZERO",
+    "c06_ratio_freeze": "ACTIVE",
+    "open_constitutive_sources": [
+      "NATIVE_SHEAR_TO_COCHAIN_MAP",
+      "C06_EQUAL_SHEAR_SEAT_ALLOCATION",
+      "PAIRED_WITNESS_EMISSION_TRANSPORT_WORK",
+      "PB5_SWAP_AUTONOMOUS_TRIGGER"
+    ]
+  },
+  "baseline_ledger": {
+    "repository": "ud-tetra/UD",
+    "revision": "cef84ca5c996ec21b67247c74ee85c2c6c5dd995",
+    "ledger_path": "captures/2026-10-21T151000Z-codex-exit03-recovery-98dc7b12/library_LEDGER_v0.85.json",
+    "ledger_blob": "93e2ca31eba625989087275a71c4857848e321c6",
+    "ledger_sha256": "8845ca23e178e043ef0c7bac01be3afba9cabbefd866c366921387a8ca843aec",
+    "audited_object_count": 723
+  },
+  "addendum_artifact": {
+    "path": "captures/20261121T005740Z-codex-pr456-ledger-dependencies-48f1/UD_LEDGER_v0.85_PR456_DEPENDENCY_ADDENDUM.md",
+    "sha256": "91a39b5f91d6ebf05890aa86afc9d5ae59215ba02da30b467f6599fb6ab446da",
+    "size_bytes": 2478,
+    "prior_status": "STAGED_PENDING_REVIEW_CONFIRMATION_AND_MERGE",
+    "target_status": "ACTIVE_SCOPED_DEPENDENCY",
+    "activated_status": "ACTIVE_SCOPED_DEPENDENCY_ON_UD_MAIN"
+  },
+  "upstream_pull_request": {
+    "repository": "ud-tetra/UD-Physics",
+    "pr_number": 456,
+    "required_review_head_sha": "93d60b42553435979f24d7118441559c6a5950d4",
+    "reviewed_head_sha": "93d60b42553435979f24d7118441559c6a5950d4",
+    "merge_commit_sha": "0c9c35871d93922f081054dcc4a7a00040c9d7e3",
+    "merged_at_utc": "2026-11-21T01:17:07Z",
+    "verified_fixture": {
+      "b_complex_cells": [
+        "0134",
+        "0234",
+        "1234"
+      ],
+      "b_complex_sinks": [
+        "34",
+        "034",
+        "134",
+        "0134"
+      ],
+      "b_complex_lossless_damped": [
+        17,
+        10
+      ],
+      "pb5_lossless_damped": [
+        21,
+        22
+      ]
+    },
+    "merge_method": "merge_commit",
+    "merge_commit_payload_sha256": "8a365a51dd77b630da9191664fe5cc42f499ef83fa79de859966d1574323eee9",
+    "verified_main_tip_at_intake": "0c9c35871d93922f081054dcc4a7a00040c9d7e3",
+    "reviewed_and_merged_tree": "1df88fa4efa23f74f21faa30fcb4d422ce26f5d5"
+  },
+  "reviewer_sign_off": {
+    "reviewer": "Devin Ramos",
+    "github_handle": null,
+    "ai_counterpart_assisted": true,
+    "required_disposition": "APPROVED_WITH_SCOPE_LOCKS",
+    "review_disposition": "APPROVED_WITH_SCOPE_LOCKS",
+    "github_review_id": 6001693510,
+    "github_review_url": "https://github.com/ud-tetra/UD-Physics/pull/456#pullrequestreview-6001693510",
+    "submitted_at_utc": "2026-11-21T01:16:20Z",
+    "github_review_node_id": "PRR_kwDOVTttBM8AAAABZbqTRg",
+    "submitted_by_github_handle": "ud-tetra",
+    "github_review_state": "COMMENTED",
+    "attribution": "Delegated review recorded on behalf of Devin Ramos with maintainer authorization."
+  },
+  "created_at": "2026-11-21T01:19:52.742210Z",
+  "event_type": "post_merge_integration_receipt",
+  "source_revision": "cef84ca5c996ec21b67247c74ee85c2c6c5dd995",
+  "activation_effective_when": "This receipt and its verified addendum are present on ud-tetra/UD main."
+}
