@@ -1,0 +1,99 @@
+{
+  "artifact": "UD_SPHERICAL_INFORMATION_INVERSION_v0.1",
+  "created_at_utc": "2026-11-20T03:07:17+00:00",
+  "files": [
+    {
+      "path": "BOOT_REPORT.md",
+      "sha256": "797d3a5dcd93cd8b4cdec8625013900bdaed85519cdfbf8d0fd92c6779eab9fe",
+      "size_bytes": 1515
+    },
+    {
+      "path": "MATHEMATICAL_RECEIPT.json",
+      "sha256": "baa3aa767ad41a79d6aa1858a1a49874b4319b2e0269774670ff3333daae1242",
+      "size_bytes": 9662
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "430e9fe3c06f9aac22f1e961b02bf1b8fc1d8c2822bf03e10acae5954e194a8b",
+      "size_bytes": 14987
+    },
+    {
+      "path": "SOURCE_ANCHORS.json",
+      "sha256": "f0d69bfc3a4b9f5c5ccc1a51428f3edb2a21d31d99b872a5b1d083eb3b797ecb",
+      "size_bytes": 1152
+    },
+    {
+      "path": "replay.log",
+      "sha256": "8000c20eb90c2231cf209d7e5796e46ecf848caa36143ece68092ddfa717ebbb",
+      "size_bytes": 466
+    },
+    {
+      "path": "replay_results.json",
+      "sha256": "8000c20eb90c2231cf209d7e5796e46ecf848caa36143ece68092ddfa717ebbb",
+      "size_bytes": 466
+    },
+    {
+      "path": "replay_stdlib.py",
+      "sha256": "ed66d1c655be0ae06aadb413c9ff33bbe70a7c9af85dd95cadcc69ca8ac510f3",
+      "size_bytes": 4206
+    },
+    {
+      "path": "replay_stdlib_SOURCE.md",
+      "sha256": "52c7645850216ca4da1d90ce9a6a4b21c28a237fba0051da98d5e0e14896e331",
+      "size_bytes": 4281
+    },
+    {
+      "path": "results.json",
+      "sha256": "945f369ed6a8c6c5cf2c4fd76f6b4486738f939bf6233853eddab137f4392926",
+      "size_bytes": 1540
+    },
+    {
+      "path": "verify.log",
+      "sha256": "ec9828d02fb2fa11c1518da15758bcf6f99ce22bbf8f0c2f9544db6ea93ca064",
+      "size_bytes": 1632
+    },
+    {
+      "path": "verify.py",
+      "sha256": "f3ac9f8b6d94259ecd98abf4687c7f59b83266fedfe3cb3455b7a7fbe084918c",
+      "size_bytes": 5785
+    },
+    {
+      "path": "verify_SOURCE.md",
+      "sha256": "077fbf0c05378867160aae3d0bd8ed47c3c39c065b7e18222c5fcebe5e034b88",
+      "size_bytes": 5853
+    }
+  ],
+  "physical_promotion": 0,
+  "schema_version": 1,
+  "sources": {
+    "GEOMETRY_S4": {
+      "commit": "03722496f5b00e8f3f01b2400e4015eb65fdebc4",
+      "git_blob_sha1": "05e9b1051c8bd33efbe086c47c3fe2b58231463c",
+      "path": "experiments/geometry-s4-selection/README.md",
+      "repo": "ud-tetra/UD-Physics",
+      "section": "Exact scoped obstruction / Boundary-density consequence"
+    },
+    "K5_FOUR_CELL": {
+      "commit": "03722496f5b00e8f3f01b2400e4015eb65fdebc4",
+      "git_blob_sha1": "7cd78ca5fc5aad6108705216c162ce94d8118cb8",
+      "path": "experiments/k5-four-cell/README.md",
+      "repo": "ud-tetra/UD-Physics",
+      "section": "Three graph descriptions, different objects / Missing-facet identity"
+    },
+    "UD_SCOPE_001": {
+      "commit": "cef84ca5c996ec21b67247c74ee85c2c6c5dd995",
+      "git_blob_sha1": "a35c6326607f435f1619e9e77cf05bafdbbc4686",
+      "path": "docs/governance/UD-SCOPE-001-observable-domain-falsifiability.md",
+      "repo": "ud-tetra/UD",
+      "section": "Locked scope rules"
+    }
+  },
+  "status": "EXACT_CONDITIONAL / NO_GO_SCOPED / OPEN",
+  "verification": {
+    "UD_Physics_validate_tests": "NOT_RUN_connector_only",
+    "full_UD_repo_verifier": "NOT_RUN_connector_only",
+    "nonconstructor_review": "NOT_DONE",
+    "python3 replay_stdlib.py": "PASS",
+    "python3 verify.py": "PASS"
+  }
+}
