@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "release_tag": "v0.86-preview",
+  "status": "PROPOSED_PREVIEW",
+  "physical_promotion": 0,
+  "capture_id": "20261121T012828Z-codex-v086-preview-manifest-96ac",
+  "tag_plan": {
+    "repository": "ud-tetra/UD",
+    "kind": "annotated",
+    "target": "Merge commit of the manifest PR on main, once accepted and verified.",
+    "release_mode": "prerelease",
+    "tag_created": false,
+    "new_numbered_ledger_snapshot_claimed": false
+  },
+  "baseline": {
+    "path": "captures/2026-10-21T151000Z-codex-exit03-recovery-98dc7b12/library_LEDGER_v0.85.json",
+    "sha256": "8845ca23e178e043ef0c7bac01be3afba9cabbefd866c366921387a8ca843aec",
+    "size_bytes": 444587,
+    "repository": "ud-tetra/UD",
+    "revision": "cef84ca5c996ec21b67247c74ee85c2c6c5dd995",
+    "git_blob": "93e2ca31eba625989087275a71c4857848e321c6",
+    "typed_objects": 723
+  },
+  "integrations": [
+    {
+      "repository": "ud-tetra/UD-Physics",
+      "pr": 456,
+      "merge_method": "merge_commit",
+      "merge_sha": "0c9c35871d93922f081054dcc4a7a00040c9d7e3",
+      "reviewed_head_sha": "93d60b42553435979f24d7118441559c6a5950d4",
+      "verified_tree": "1df88fa4efa23f74f21faa30fcb4d422ce26f5d5",
+      "review_url": "https://github.com/ud-tetra/UD-Physics/pull/456#pullrequestreview-6001693510"
+    },
+    {
+      "repository": "ud-tetra/UD",
+      "pr": 580,
+      "merge_method": "squash",
+      "merge_sha": "1698d197d38eb40ce71ee737da55cd7e770e1560",
+      "activation_receipt": {
+        "path": "events/20261121T005740Z-codex-pr456-ledger-dependencies-48f1-activation.json",
+        "sha256": "f50088f96c16b2b7f1f52d6a932fb7c0e5182b3d917ac161eda7367663d6e6d5",
+        "size_bytes": 3432
+      },
+      "dependency_addendum": {
+        "path": "captures/20261121T005740Z-codex-pr456-ledger-dependencies-48f1/UD_LEDGER_v0.85_PR456_DEPENDENCY_ADDENDUM.md",
+        "sha256": "91a39b5f91d6ebf05890aa86afc9d5ae59215ba02da30b467f6599fb6ab446da",
+        "size_bytes": 2478
+      }
+    }
+  ],
+  "scoped_claims": {
+    "B-COMPLEX-REPAIR-01": {
+      "status": "CLOSED_VERIFIED",
+      "carrier_dimension": 27,
+      "cells": [
+        "0134",
+        "0234",
+        "1234"
+      ],
+      "sinks": [
+        "34",
+        "034",
+        "134",
+        "0134"
+      ],
+      "lossless": 17,
+      "damped": 10,
+      "metric": "unit coefficient"
+    },
+    "PB5_radial_sink": {
+      "carrier_dimension": 43,
+      "lossless": 21,
+      "damped": 22,
+      "scope": "Separate model; fully equivariant linear signed-edge rank at most two under D5 with pole exchange."
+    },
+    "same_clock_relay": "PB5 has no sqrt(5) branch for the rotating sector of the stated historical relay.",
+    "C05": {
+      "bin": "EXACT_INTERNAL",
+      "source_STF_dimension": 5
+    },
+    "C06": {
+      "bin": "DERIVED_STRUCTURAL",
+      "ratio": "7/960",
+      "physical_freeze": true
+    }
+  },
+  "open_constitutive_sources": [
+    "NATIVE_SHEAR_TO_COCHAIN_MAP",
+    "C06_EQUAL_SHEAR_SEAT_ALLOCATION",
+    "PAIRED_WITNESS_EMISSION_TRANSPORT_WORK",
+    "PB5_SWAP_AUTONOMOUS_TRIGGER"
+  ],
+  "publication_gates": [
+    "Verify manifest PR on UD main and verify immutable payload digests.",
+    "Check that refs/tags/v0.86-preview is free before creating it.",
+    "Retain Physical Promotion = 0 and keep any physical threshold or release-exit decision scoped separately."
+  ]
+}
