@@ -1,0 +1,236 @@
+{
+  "receipt_schema_version": 1,
+  "calculation_id": "WHITNEY-S4-D1-001",
+  "session_id": "20261119-gpt6-whitney-c4e7",
+  "candidate_id": "whitney-s4-duality-c4e7",
+  "question": "Classify signed Whitney matching-coframes under S4 and compare D1 with the metric Hodge star.",
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "objects": [
+    {
+      "object_id": "C1",
+      "symbol": "C^1(Delta3;R)",
+      "object_type": "oriented edge cochain",
+      "definition": "R^6 on edges (01,02,03,12,13,23)",
+      "domain": "Delta3",
+      "codomain": null,
+      "coefficient_domain": "R with Q checks",
+      "units": "dimensionless",
+      "basis_orientation": "increasing vertex order",
+      "metric_measure": "unit-coefficient pairing only for D1 identification",
+      "origin": "imported source geometry",
+      "exact_expression": "dim=6",
+      "measured_value": null,
+      "uncertainty": null,
+      "source_refs": [
+        "sphere-v0.1-PR578"
+      ],
+      "assumption_ids": [
+        "A1"
+      ],
+      "dependency_ids": [],
+      "normalization": "none"
+    },
+    {
+      "object_id": "D1",
+      "symbol": "D1",
+      "object_type": "signed opposite-edge complement",
+      "definition": "D1[e]=epsilon(e,e^c)[e^c]",
+      "domain": "C1(boundary Delta3;R)",
+      "codomain": "C1(boundary Delta3;R)",
+      "coefficient_domain": "Z",
+      "units": "dimensionless",
+      "basis_orientation": "increasing simplex orientation",
+      "metric_measure": "none",
+      "origin": "imported and independently verified",
+      "exact_expression": "D1^2=I; D1T1(g)=sgn(g)T1(g)D1",
+      "measured_value": null,
+      "uncertainty": null,
+      "source_refs": [
+        "sphere-v0.1-PR578"
+      ],
+      "assumption_ids": [],
+      "dependency_ids": [
+        "C1"
+      ],
+      "normalization": "none"
+    },
+    {
+      "object_id": "E",
+      "symbol": "E_c(lambda)",
+      "object_type": "candidate three-coframe",
+      "definition": "rows sum_{e in M_a} c_e (lambda_i d lambda_j-lambda_j d lambda_i)",
+      "domain": "C1 x interior Delta3",
+      "codomain": "Mat_3x3(R)",
+      "coefficient_domain": "R",
+      "units": "dimensionless under affine chart",
+      "basis_orientation": "M=(01,23),(02,13),(03,12)",
+      "metric_measure": "assumed affine Euclidean chart",
+      "origin": "candidate construction; exactly verified",
+      "exact_expression": "det=abd sum lambda_i^2 under D1c=±c",
+      "measured_value": null,
+      "uncertainty": null,
+      "source_refs": [
+        "sphere-v0.1-PR578",
+        "JOP-v2.5"
+      ],
+      "assumption_ids": [
+        "A1",
+        "A2"
+      ],
+      "dependency_ids": [
+        "C1",
+        "D1"
+      ],
+      "normalization": "reference simplex"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "sphere-v0.1-PR578",
+      "url_or_repo_path": "ud-tetra/UD PR #578 captures/2026-11-20T031100Z-chatgpt-sphere-inversion-6b72/REPORT.md",
+      "version_or_commit": "fc86bd07e6da88ece4125fda6cba95f975c8c636",
+      "section_or_object_id": "§§2–6, D1",
+      "source_status": "draft exact mathematical development"
+    },
+    {
+      "source_id": "JOP-v2.5",
+      "url_or_repo_path": "TETRAHEDRAL_PACKET_COMPLEXES_JOP_LEAN_MANUSCRIPT_v2.5_POC1_LAB_IMPLEMENTATION_READY.md",
+      "version_or_commit": "v2.5",
+      "section_or_object_id": "§4.5",
+      "source_status": "historical manuscript; POC-1 candidate"
+    },
+    {
+      "source_id": "edge-strain-v0.1",
+      "url_or_repo_path": "EDGE_STRAIN_TO_SUPPORT_AMPLITUDE_CONSTITUTIVE_SOURCE_AUDIT_v0.1.md",
+      "version_or_commit": "v0.1",
+      "section_or_object_id": "§§2–4,8–9",
+      "source_status": "reverse law not found"
+    }
+  ],
+  "assumptions": [
+    "A1: user-specified affine reference tetrahedron with dimensionless barycentric coordinates",
+    "A2: binary test alphabet {+1,-1}^6 is not a sourced UD event law; no gauge identification"
+  ],
+  "technique_plan": [
+    {
+      "technique": "exact S4 orbit-stabilizer",
+      "applicability": "applied",
+      "purpose_or_na_reason": "classify 64 sign preparations and invariant ranks"
+    },
+    {
+      "technique": "rational polynomial determinant",
+      "applicability": "applied",
+      "purpose_or_na_reason": "derive globally nondegenerate coframe sufficient condition"
+    },
+    {
+      "technique": "simplicial complement, Whitney coboundary and Hodge typing",
+      "applicability": "applied",
+      "purpose_or_na_reason": "identify what the duality does and does not imply"
+    },
+    {
+      "technique": "physical clock/modular arithmetic",
+      "applicability": "N/A",
+      "purpose_or_na_reason": "no time or cyclic update in this static construction"
+    }
+  ],
+  "integer_fraction_receipt": {
+    "raw_count_expression": "2^6=64; 24+24+8+8=64",
+    "reduced_expression": "rank3=16, rank2=48",
+    "factor_origins": [
+      "6 edges of tetrahedron",
+      "S4 order 24",
+      "three pair matchings"
+    ],
+    "factorization": {
+      "64": "2^6",
+      "24": "2^3*3",
+      "8": "2^3",
+      "16": "2^4",
+      "48": "2^4*3"
+    },
+    "divisibility_gcd_lcm": "orbit sizes divide |S4|=24; subgroup stabilizers 1 or 3"
+  },
+  "clock_receipt": {
+    "clock_type": null,
+    "modulus": null,
+    "residue_convention": null,
+    "update_rule": null,
+    "initial_phase": null,
+    "coupling": null,
+    "period_claim": null,
+    "physical_unit_map": null
+  },
+  "dynamics_readout": {
+    "state_space": "C1(Delta3;R), optional prepared test signs",
+    "generator_or_update": "none; kinematics only",
+    "initial_boundary_conditions": "reference tetrahedron affine chart, chosen sign preparations",
+    "conservation_and_sources": "c0=uniform, latent L=4 each edge for |c1|=1; no source-selected sign law",
+    "projection_and_kernel": "E_c Whitney coframe; D1 signed complement",
+    "physical_mapping": "OPEN, physical promotion 0"
+  },
+  "target_exposure": {
+    "status": "EXPLORATORY_TARGET_KNOWN",
+    "known_targets": [
+      "tetrahedral geometric dual",
+      "coframe nondegeneracy",
+      "Whitney/Hodge correspondence"
+    ],
+    "fitted_parameters_or_formula_choices": [
+      "test signs ±1 are supplied preparation, not fitted to empirical result"
+    ],
+    "search_domain_and_budget": "exhaustive 64 signs, complete 24 S4 permutations",
+    "selection_criterion": "exact rank and group orbit size, no physical target",
+    "baseline": "ordinary affine Whitney finite element and simplicial dual"
+  },
+  "calculation_steps": [
+    "construct all 6 Whitney 1-forms and signed edge action",
+    "enumerate 64 sign vectors and all 24 S4 relabelings",
+    "derive D1 eigen conditions and exact polynomial determinant",
+    "show 1/4 lower bound, non-eigen perturbation control",
+    "test source magnitude-only indistinguishability and Hodge type/square obstruction"
+  ],
+  "result": {
+    "exact_expression": "D1 c=±c implies det E=abc sum lambda_i^2; 16/64 sign cochains rank3 at barycenter, 48 rank2",
+    "approximation": null,
+    "units": "dimensionless",
+    "precision_and_error": "exact integer/fraction symbolic calculations, zero rounding error",
+    "scope": "declared affine tetrahedron and chosen matching/sign cochains",
+    "physical_interpretation": "NONE"
+  },
+  "verification": [
+    {
+      "method": "SymPy generated incidence/Whitney/S4 exact symbolic",
+      "command_or_proof_path": "python verify.py",
+      "source_revision": "cef84ca5c996ec21b67247c74ee85c2c6c5dd995",
+      "actual_result": "PASS",
+      "review_relationship": "constructor"
+    },
+    {
+      "method": "independent pure Fraction implementation",
+      "command_or_proof_path": "python replay_stdlib.py",
+      "source_revision": "cef84ca5c996ec21b67247c74ee85c2c6c5dd995",
+      "actual_result": "PASS",
+      "review_relationship": "same constructor; separate implementation"
+    }
+  ],
+  "counterexamples_and_failures": [
+    "all-positive edge sign vector has barycenter rank2 despite same positive support receipts as rank3 vector",
+    "c13=-9/10 perturbation supplies globally nondegenerate non-D1-eigen coframe",
+    "D1^2=+I cannot be identical to smooth real *2 on tangent 1-forms with *2^2=-I",
+    "reverse strain-to-support and source-selected seam sign coupling are absent"
+  ],
+  "limitations": [
+    "No native source-selected sign or metric",
+    "No physical time, length units, measured sphere or independent empirical prediction",
+    "full repository validation NOT_RUN and non-constructor review PENDING"
+  ],
+  "changed_dependencies": [],
+  "artifact_manifest_refs": [
+    "artifacts/20261119-gpt6-whitney-c4e7/exact-coframe-001/manifest.json"
+  ],
+  "next_discriminant": "derive an authenticated pre-event source selecting signed edge eigensector/orbit without input-dependent fitting; test signed Hasse currents and seam holonomy"
+}
