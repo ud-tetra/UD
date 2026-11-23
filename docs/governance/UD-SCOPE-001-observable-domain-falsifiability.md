@@ -41,3 +41,7 @@ For affinely independent vertices in Euclidean space, an n-simplex has n+1 verti
 ## Change control
 
 This is a locked **scope and methodology** baseline, not an immutable scientific axiom. Changes require a versioned amendment with rationale, affected claims, and review evidence. Preserve prior versions and do not silently change physical-claim status.
+
+## Proposed amendment — 2026-11-23
+
+[UD-PROM-001](UD-PROM-001.md) clarifies rules 6–10: unpromoted hypotheses and conditional physical derivations are permitted; missing certification alone is not a reason to halt research. Target-informed work retains its provenance. Promotion requires a correspondence-specific receipt, not a universal apparatus gate. The original scope rules and physical promotion value remain unchanged; this clarification is subject to accepted review.
