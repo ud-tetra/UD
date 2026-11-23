@@ -1,0 +1,279 @@
+{
+  "artifact_manifest_refs": [],
+  "assumptions": [
+    {
+      "description": "same intrinsic source state for both Euclidean controls",
+      "id": "A1"
+    },
+    {
+      "description": "Q supplied externally; not part of UD state",
+      "id": "A2"
+    },
+    {
+      "description": "PR611 geometric transfer and unit simplex metric fixed",
+      "id": "A3"
+    },
+    {
+      "description": "H_lambda is comparison metric, not native source",
+      "id": "A4"
+    }
+  ],
+  "calculation_id": "UD-MATH-FULL3D-PREEVENT-B42E-v0.1",
+  "calculation_steps": [
+    "independent exact 56-triple plane filtering",
+    "zero edge-line coplanarity at Qstar",
+    "transfer Gram nonnegative square decomposition",
+    "positive metric pullback family proof"
+  ],
+  "candidate_id": "native-junction-pre-event-20261123-b42e",
+  "changed_dependencies": [],
+  "clock_receipt": {
+    "clock_type": null,
+    "coupling": null,
+    "initial_phase": null,
+    "modulus": null,
+    "period_claim": null,
+    "physical_unit_map": null,
+    "residue_convention": null,
+    "update_rule": null
+  },
+  "counterexamples_and_failures": [
+    "Qstar has 12 overlap vertices but no geometric edge contact, while canonical has 6",
+    "only vertex-only old states have G=0 at inherited unit metric",
+    "multiple positive metric H_lambda choices satisfy T isometry but do not supply native post generator"
+  ],
+  "dynamics_readout": {
+    "conservation_and_sources": "G=||Tc||²−||c||²; reserve source OPEN",
+    "generator_or_update": "Q169 fixed-complex A only; no junction birth law",
+    "initial_boundary_conditions": "two identical native states, externally supplied Q I and Qstar",
+    "physical_mapping": null,
+    "projection_and_kernel": "Q-blind native tuple cannot determine distinct overlap shape; zero-reserve G kernel dim8",
+    "state_space": "old chain R30; external rotation in SO3 not native"
+  },
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "integer_fraction_receipt": {
+    "divisibility_gcd_lcm": null,
+    "factor_origins": [
+      "8 supporting planes",
+      "6 edge coordinates per tetra"
+    ],
+    "factorization": "G top eigen (3,19)",
+    "raw_count_expression": "C(8,3)=56 plane triples; 36 edge pairs",
+    "reduced_expression": "Q=I overlap (V,E,F)=(6,12,8); Qstar (12,18,8)"
+  },
+  "limitations": [
+    "non-constructor review pending",
+    "Q geometry supplied",
+    "source event not derived",
+    "metric H source missing"
+  ],
+  "next_discriminant": "derive source-pinned pre-event r_AB and legal coface update plus support budget before physical readout",
+  "objects": [
+    {
+      "assumption_ids": [
+        "A1"
+      ],
+      "basis_orientation": "increasing simplices",
+      "codomain": null,
+      "coefficient_domain": "R + F2^3",
+      "definition": "fixed-complex incidence; c in R30, parity Theta, gates/receipts",
+      "dependency_ids": [],
+      "domain": "C_old × Theta × receipt space",
+      "exact_expression": null,
+      "measured_value": null,
+      "metric_measure": "I30",
+      "normalization": "unit coefficient",
+      "object_id": "X_native",
+      "object_type": "pre-event intrinsic typed state",
+      "origin": "source-bound",
+      "source_refs": [
+        "ledger"
+      ],
+      "symbol": "x",
+      "uncertainty": null,
+      "units": "dimensionless"
+    },
+    {
+      "assumption_ids": [
+        "A2"
+      ],
+      "basis_orientation": "standard oriented xyz",
+      "codomain": "R3",
+      "coefficient_domain": "Q",
+      "definition": "matrix with integer entries/87 as in REPORT §2",
+      "dependency_ids": [],
+      "domain": "R3",
+      "exact_expression": "[[-61,-22,58],[62,-19,58],[-2,82,29]]/87",
+      "measured_value": null,
+      "metric_measure": "Euclidean dot product supplied",
+      "normalization": "Q^TQ=I,det=1",
+      "object_id": "Qstar",
+      "object_type": "external Euclidean proper rotation control",
+      "origin": "comparison input",
+      "source_refs": [
+        "prior-full3d"
+      ],
+      "symbol": "Q_*",
+      "uncertainty": null,
+      "units": "dimensionless"
+    },
+    {
+      "assumption_ids": [
+        "A3"
+      ],
+      "basis_orientation": "graded increasing simplices",
+      "codomain": "R117",
+      "coefficient_domain": "Q",
+      "definition": "C_old(30) to C_union(117) of PR611",
+      "dependency_ids": [],
+      "domain": "R30",
+      "exact_expression": "T^TT=diag(I8,2I12,4I8,[[12,-8],[-8,12]])",
+      "measured_value": null,
+      "metric_measure": "unit coefficient metrics",
+      "normalization": "not source-selected event",
+      "object_id": "T",
+      "object_type": "prescribed graded chain transfer",
+      "origin": "imported conditional source",
+      "source_refs": [
+        "prior-full3d"
+      ],
+      "symbol": "T",
+      "uncertainty": null,
+      "units": "dimensionless"
+    }
+  ],
+  "question": "Can the source-native pre-event state choose the 3D junction shape and preserve native stock without a fitted metric/reserve?",
+  "receipt_schema_version": 1,
+  "result": {
+    "approximation": null,
+    "exact_expression": "V,E,F: (6,12,8) versus (12,18,8); G=||c1||²+3||c2||²+3(a²+b²)+8(a−b)²; T^TH_lambda T=I",
+    "physical_interpretation": "NONE",
+    "precision_and_error": "exact Q rational; no float",
+    "scope": "two supplied Euclidean controls plus general factorization/no-go",
+    "units": "dimensionless"
+  },
+  "session_id": "20261123-gpt6-native-junction-b42e",
+  "sources": [
+    {
+      "id": "scope",
+      "path": "docs/governance/UD-SCOPE-001-observable-domain-falsifiability.md",
+      "repo": "ud-tetra/UD",
+      "revision": "2e47d8718742cdd56ed81c41941b1cc3d42ad74b",
+      "scope": "governance",
+      "section": "Locked scope rules"
+    },
+    {
+      "blob": "93e2ca31eba625989087275a71c4857848e321c6",
+      "embedded_revision": "v0.43",
+      "id": "ledger",
+      "path": "captures/2026-10-21T151000Z-codex-exit03-recovery-98dc7b12/library_LEDGER_v0.85.json",
+      "repo": "ud-tetra/UD",
+      "revision": "2e47d8718742cdd56ed81c41941b1cc3d42ad74b",
+      "rows": [
+        "Q165",
+        "Q166",
+        "Q169",
+        "Q170",
+        "Q172",
+        "Q173",
+        "Q177",
+        "Q178",
+        "Q179",
+        "Q194",
+        "Q198",
+        "Q200",
+        "Q210"
+      ],
+      "scope": "fixed-complex Hasse and constitutive gap"
+    },
+    {
+      "id": "prior-full3d",
+      "repo": "ud-tetra/UD",
+      "revision": "ed7e860a0912d9480a19707be42771f155d0dee0",
+      "scope": "prescribed octahedral fan chain transfer, Gram and commutator",
+      "section": "report §§2–5",
+      "url": "https://github.com/ud-tetra/UD/pull/611"
+    },
+    {
+      "id": "prior-physics",
+      "repo": "ud-tetra/UD-Physics",
+      "revision": "2825f2e7e5c2f4a9d166b48dec73a3bb90bfda11",
+      "scope": "discovery 3D junction math",
+      "url": "https://github.com/ud-tetra/UD-Physics/pull/459"
+    },
+    {
+      "blob": "4a7ee4e2994d8903f9ae4e52e145f198684a5b3a",
+      "id": "Pachner-interface",
+      "path": "experiments/pachner-interface-defect/README.md",
+      "repo": "ud-tetra/UD-Physics",
+      "revision": "6401ef38d4190f26492a06160aff763ed89cdb59",
+      "scope": "conditional event receipt, no trigger"
+    },
+    {
+      "date": "2020-04-03",
+      "id": "External-lec",
+      "scope": "conceptual only, not physical evidence",
+      "title": "Dan Echegoyen Structure of Existence Video 3.1 narrated",
+      "url": "https://youtu.be/UDGeXvDRwgU"
+    }
+  ],
+  "target_exposure": {
+    "baseline": "ordinary Euclidean convexity plus Q169 fixed carrier",
+    "fitted_parameters_or_formula_choices": [],
+    "known_targets": [
+      "conditional Q=I octahedral fan and Qstar zero-edge-contact geometry from PR611"
+    ],
+    "search_domain_and_budget": "two exact rotations only, not a survey",
+    "selection_criterion": "contrast polyhedral f-vectors and stock identities",
+    "status": "hypothesis-led-external-control"
+  },
+  "technique_plan": [
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "show different geometric readouts from same intrinsic tuple",
+      "technique": "convex polyhedral halfspace intersections"
+    },
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "source reserve kernel and normalized metric family",
+      "technique": "exact rational/positive quadratic forms"
+    },
+    {
+      "applicability": "scoped",
+      "purpose_or_na_reason": "relative continuous Q cannot be inferred from finite S4 count",
+      "technique": "S4 symmetry"
+    },
+    {
+      "applicability": "N/A",
+      "purpose_or_na_reason": "no finite clock in requested comparison",
+      "technique": "modular arithmetic"
+    }
+  ],
+  "verification": [
+    {
+      "actual_result": "PASS",
+      "command_or_proof_path": "verify.py",
+      "method": "SymPy exact",
+      "review_relationship": "constructor",
+      "source_revision": "2e47d8718742cdd56ed81c41941b1cc3d42ad74b"
+    },
+    {
+      "actual_result": "PASS",
+      "command_or_proof_path": "replay_stdlib.py",
+      "method": "Independent algorithm stdlib Fraction",
+      "review_relationship": "same constructor",
+      "source_revision": "2e47d8718742cdd56ed81c41941b1cc3d42ad74b"
+    },
+    {
+      "actual_result": "NOT_RUN",
+      "command_or_proof_path": null,
+      "method": "Full-repo CI",
+      "review_relationship": "not independent",
+      "source_revision": "2e47d8718742cdd56ed81c41941b1cc3d42ad74b"
+    }
+  ]
+}
