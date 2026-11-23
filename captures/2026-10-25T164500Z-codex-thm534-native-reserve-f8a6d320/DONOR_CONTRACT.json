@@ -1,0 +1,31 @@
+{
+  "status": "EXACT_CONDITIONAL_NATIVE_SUPPORT_TRANSFER; GATE_SOURCE_OPEN",
+  "carrier": "One filled tetrahedron, original 15 real coordinates and unit metric",
+  "donor_control_volume": "Six existing edge coordinates; donor stock R=norm(e)^2",
+  "interface": "Four existing face coordinates",
+  "recipient": "Existing core coordinate",
+  "added_real_coordinates": 0,
+  "retained_contacts": "All native vertex-edge and edge-face incidences; whole-face core mask only",
+  "permissions": "Supplied binary four-face mask, not predictive native readiness; algebraic controls do not establish geometric realizability",
+  "conversion_stencil": "u_h=B2 diag(h) B3",
+  "contrast_strength": "norm(u_h)^2=k(4-k)",
+  "preparation": "v=f=c=0, e in ker(B1); matched e=u_h for nonuniform masks",
+  "exact_core_output": "8 (u_h^T e) t^2 / [16+(16+4k)t^2+k^2 t^4]",
+  "model_step": "Supplied dimensionless convention, not physical time/action",
+  "balances": [
+    "Delta R=-J12",
+    "Delta F=J12-J23",
+    "Delta C=J23",
+    "R+F+C conserved"
+  ],
+  "uniform_masks": "Both all-off and all-on block edge-to-core conversion for initially empty faces/core",
+  "open": [
+    "Native hard-mask choice and restoration",
+    "Consumed event-cost identification",
+    "Output/extraction and replenishment contacts",
+    "Outgoing record reset and renewal",
+    "Shared-face bulk extension",
+    "Physical action/clock and particle correspondence"
+  ],
+  "physical_promotion": 0
+}
