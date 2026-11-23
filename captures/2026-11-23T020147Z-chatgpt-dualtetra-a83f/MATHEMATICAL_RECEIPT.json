@@ -1,0 +1,275 @@
+{
+  "artifact_manifest_refs": [
+    "MANIFEST.json"
+  ],
+  "assumptions": [
+    "two concentric congruent rigid regular tetrahedra",
+    "independent orientation Q\u2208SO3",
+    "closed segments and exact point contact",
+    "handedness/reference Euclidean chart supplied",
+    "no inter-tetra shared simplex until gluing explicitly declared",
+    "illustrative kappa edge coupling is NOT sourced"
+  ],
+  "calculation_id": "UD-DUALTET-CONTACT-001",
+  "calculation_steps": [
+    "derive exact segment coplanarity and parametric intersection certificate",
+    "verify Qstar is proper and all 36 coplanarity polynomials nonzero",
+    "classify six canonical transverse, zero generic and 30 special degenerate contacts",
+    "compute signed radial contact equality with D1",
+    "compute symbolic charpoly for externally coupled 30-generator and three orthogonal controls",
+    "check unchanged incidence implies zero cross-Hasse current"
+  ],
+  "candidate_id": "dual-tetra-contact-20261122-a83f",
+  "changed_dependencies": [],
+  "clock_receipt": {
+    "clock_type": null,
+    "coupling": "kappa externally assumed in comparison only",
+    "initial_phase": null,
+    "modulus": null,
+    "period_claim": null,
+    "physical_unit_map": null,
+    "residue_convention": null,
+    "update_rule": null
+  },
+  "counterexamples_and_failures": [
+    "Qstar exact proper rotation produces zero contacts; lecture universal claim false",
+    "quarter-turn Q90 produces 6 overlapping+24 endpoint pairs, not proper interior crossings",
+    "unsigned O, signed D1 and identity K share conditional spectra: modal non-identifiability",
+    "no current source-defined cross-incidence junction/coupling kappa",
+    "generic SO3 contact measure zero under exact rigid contact"
+  ],
+  "dynamics_readout": {
+    "conservation_and_sources": "native disjoint no cross; assumed skew comparison conserves sum quadratic support",
+    "generator_or_update": "native diag(A0,A0); assumed coupling block offdiagonal kappa K for comparator",
+    "initial_boundary_conditions": "dimensionless fixed prepared Q and optional chain amplitudes",
+    "physical_mapping": "OPEN",
+    "projection_and_kernel": "C(Q) exact contact geometry, no native map from contact to channel",
+    "state_space": "C_*(\u03943;R)\u2295C_*(\u03943;R), two separate 15-chain tetrahedra"
+  },
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "integer_fraction_receipt": {
+    "divisibility_gcd_lcm": "N/A",
+    "factor_origins": [
+      "K4 six labelled edges",
+      "opposite-edge perfect matching three",
+      "tetrahedral proper rotation group 12"
+    ],
+    "factorization": "chi=z\u00b2(z\u00b2+4)\u00b2(z\u2074+(8+kappa\u00b2)z\u00b2+16)^6",
+    "raw_count_expression": "6x6=36 candidate edge pairs, 6 actual transverse at Q=I; 0 generic; 30 quarter-turn including 6 overlap+24 endpoint",
+    "reduced_expression": "C(I)=O, Cs(I)=D1, Qstar numerator/87"
+  },
+  "limitations": [
+    "contact class count not globally enumerated over all SO3 strata",
+    "no native pre-event interpacket orientation selector",
+    "no native contact law, seam-to-junction map or units",
+    "independent non-constructor review pending"
+  ],
+  "next_discriminant": "recover a source-authenticated pair-addressed junction and sign-sensitive seam/Hasse rule with stable near-contact range or topological gluing; otherwise retain no-go",
+  "objects": [
+    {
+      "basis_orientation": "vertex order 0<1<2<3",
+      "codomain": "Q^3",
+      "coefficient_domain": "Q",
+      "definition": "four points (\u00b11,\u00b11,\u00b11), even sign product",
+      "domain": "labelled vertices",
+      "exact_expression": "V={(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)}",
+      "metric_measure": "assumed dot product",
+      "normalization": "unscaled regular simplex, edge length 2sqrt2",
+      "object_id": "V_A",
+      "object_type": "Euclidean realization of one filled tetrahedral carrier",
+      "origin": "assumed",
+      "symbol": "V",
+      "units": "dimensionless reference chart"
+    },
+    {
+      "basis_orientation": "right-handed Euclidean",
+      "codomain": "SO(3)",
+      "coefficient_domain": "R",
+      "definition": "proper orthogonal rotation",
+      "domain": "SO(3)",
+      "exact_expression": "Qstar=M/87, det=1, QTQ=I",
+      "metric_measure": "assumed Euclidean",
+      "normalization": "none",
+      "object_id": "Q",
+      "object_type": "relative orientation",
+      "origin": "assumed",
+      "symbol": "Q",
+      "units": "dimensionless"
+    },
+    {
+      "basis_orientation": "lex edge basis",
+      "codomain": "R^6_A",
+      "coefficient_domain": "{0,1}",
+      "definition": "C_ef=1 iff two declared closed Euclidean edge segments intersect",
+      "domain": "R^6_B",
+      "exact_expression": "C(I)=opposite-edge swap O, Cs(I)=D1",
+      "metric_measure": "supplied Euclidean geometry",
+      "normalization": "signed radial triple product for Cs",
+      "object_id": "C",
+      "object_type": "geometric segment-intersection map",
+      "origin": "derived",
+      "symbol": "C(Q)",
+      "units": "dimensionless"
+    },
+    {
+      "basis_orientation": "increasing vertex order",
+      "codomain": "same",
+      "coefficient_domain": "Z",
+      "definition": "15x15 incidence skew operator on one filled tetrahedron",
+      "domain": "\u2295_{k=0}^3 C_k(\u03943;R)",
+      "exact_expression": "A0^T=-A0, charpoly=z(z\u00b2+4)^7",
+      "metric_measure": "unit chain inner product",
+      "normalization": "unit chain metric",
+      "object_id": "A_0",
+      "object_type": "skew Hodge\u2013Dirac generator",
+      "origin": "source-derived",
+      "symbol": "A_0",
+      "units": "native generator per dimensionless parameter"
+    },
+    {
+      "basis_orientation": "two distinct tetra chain carriers",
+      "codomain": "R^30",
+      "coefficient_domain": "R[kappa]",
+      "definition": "[[A0,kappa K],[-kappa KT,A0]], K supported on edge cells",
+      "domain": "R^30",
+      "exact_expression": "chi=z\u00b2(z\u00b2+4)\u00b2(z\u2074+(8+kappa\u00b2)z\u00b2+16)^6",
+      "metric_measure": "unit inner product",
+      "normalization": "kappa NOT source-derived",
+      "object_id": "A_kappa",
+      "object_type": "candidate externally coupled block generator",
+      "origin": "assumed",
+      "symbol": "A_kappa",
+      "units": "dimensionless comparison"
+    }
+  ],
+  "question": "Do two dual tetrahedra retain six contacts at arbitrary relative SO3 orientation; do Hasse/seam sources determine a native contact current?",
+  "receipt_schema_version": 1,
+  "result": {
+    "approximation": null,
+    "exact_expression": "C_s(I)=D1; chi(A_kappa)=z\u00b2(z\u00b2+4)\u00b2(z\u2074+(8+kappa\u00b2)z\u00b2+16)^6",
+    "physical_interpretation": "NONE",
+    "precision_and_error": "exact rational and symbolic; no floating approximations",
+    "scope": "concentric rigid Euclidean reference tetrahedra, explicit coupling if declared",
+    "units": "dimensionless"
+  },
+  "session_id": "20261122-gpt6-dualcontact-a83f",
+  "sources": [
+    {
+      "section_or_object_id": "Tetrahedral dynamics 18:16",
+      "source_id": "ECH2020",
+      "source_status": "FALSIFIED_EXACT_CONDITIONAL",
+      "url_or_repo_path": "https://youtu.be/UDGeXvDRwgU",
+      "version_or_commit": "2020-04-03"
+    },
+    {
+      "section_or_object_id": "as listed",
+      "source_id": "UD_SCOPE",
+      "source_status": "governance lock physical promotion 0",
+      "url_or_repo_path": "docs/governance/UD-SCOPE-001-observable-domain-falsifiability.md",
+      "version_or_commit": "6a1fa6aa14624190bae4ed86a8a5db081ecb27e2"
+    },
+    {
+      "section_or_object_id": "report \u00a73",
+      "source_id": "UD_PR578",
+      "source_status": "EXACT conditional signed combinatorial duality; draft PR",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/578",
+      "version_or_commit": "fc86bd07e6da88ece4125fda6cba95f975c8c636"
+    },
+    {
+      "section_or_object_id": "report \u00a7\u00a73-6",
+      "source_id": "UD_PR579",
+      "source_status": "EXACT conditional and OPEN native sign selector; draft PR",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/579",
+      "version_or_commit": "d94688914eb34291a090a1cca63134bcd6aa02fb"
+    },
+    {
+      "section_or_object_id": "\u00a7\u00a72.2,3.1-3.3,4.5",
+      "source_id": "UD_JOP_V2_5",
+      "source_status": "frozen mathematics + candidate POC-1; no cross-packet Euclidean contact law",
+      "url_or_repo_path": "TETRAHEDRAL_PACKET_COMPLEXES_JOP_LEAN_MANUSCRIPT_v2.5_POC1_LAB_IMPLEMENTATION_READY.md",
+      "version_or_commit": "user supplied"
+    },
+    {
+      "section_or_object_id": "\u00a7\u00a72-4,8-9",
+      "source_id": "EDGE_STRAIN_AUDIT",
+      "source_status": "reverse strain-to-support amplitude law not found",
+      "url_or_repo_path": "EDGE_STRAIN_TO_SUPPORT_AMPLITUDE_CONSTITUTIVE_SOURCE_AUDIT_v0.1.md",
+      "version_or_commit": "user supplied"
+    },
+    {
+      "section_or_object_id": "as listed",
+      "source_id": "PHYS_PR13",
+      "source_status": "filled tetrahedral complex / boundary topology type control; merged",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/pull/13",
+      "version_or_commit": "user supplied"
+    },
+    {
+      "section_or_object_id": "as listed",
+      "source_id": "PHYS_PR241",
+      "source_status": "geometry projection S4 symmetry-selection control; merged",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/pull/241",
+      "version_or_commit": "user supplied"
+    }
+  ],
+  "target_exposure": {
+    "baseline": "ordinary Euclidean dual tetra and uncoupled block Hodge",
+    "fitted_parameters_or_formula_choices": [
+      "Q=I six contact preset",
+      "kappa=1 illustrative unit test; symbolic kappa carried throughout"
+    ],
+    "known_targets": [
+      "lecture proposed six contacts for every Q",
+      "existing signed D1 from UD PR #578"
+    ],
+    "search_domain_and_budget": "all 36 edge pairs, Q=I/Qstar/Q90 and 12 A4 controls",
+    "selection_criterion": "exact contact consistency and native-source independence, not empirical fit",
+    "status": "HYPOTHESIS_EXPOSED"
+  },
+  "technique_plan": [
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "exact contact and symmetric duality",
+      "technique": "integer/fraction incidence and group"
+    },
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "generic orientation no-contact theorem",
+      "technique": "real-analytic rotation zero loci"
+    },
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "conditional coupling and isospectral ordinary control",
+      "technique": "exact skew generator and spectra"
+    },
+    {
+      "applicability": "N/A",
+      "purpose_or_na_reason": "no event clock",
+      "technique": "modular clocks"
+    },
+    {
+      "applicability": "N/A",
+      "purpose_or_na_reason": "dimensionless toy model only",
+      "technique": "SI bridge"
+    }
+  ],
+  "verification": [
+    {
+      "actual_result": "PASS",
+      "command_or_proof_path": "python3 verify.py",
+      "method": "independent exact SymPy algebra and segment checks",
+      "review_relationship": "constructor",
+      "source_revision": "local v0.1"
+    },
+    {
+      "actual_result": "PASS",
+      "command_or_proof_path": "python3 replay_stdlib.py",
+      "method": "separate pure stdlib Fraction segment and 30x30 characteristic replay",
+      "review_relationship": "same-constructor separate algorithm",
+      "source_revision": "local v0.1"
+    }
+  ]
+}
