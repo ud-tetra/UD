@@ -1,0 +1,284 @@
+{
+  "artifact_manifest_refs": [
+    "UD capture MANIFEST.json",
+    "Physics artifacts/.../manifest.json"
+  ],
+  "assumptions": [
+    {
+      "claim": "Two original filled K4 chain bases and unit coefficient metric are declared; no spatial relative position is native.",
+      "id": "A1"
+    },
+    {
+      "claim": "Concentric Euclidean regular tetrahedra with externally specified coordinate realization and central octahedral overlap.",
+      "id": "A2"
+    },
+    {
+      "claim": "The change to the common fan topology and its subdivision map are prescribed for a mathematical control, NOT native events.",
+      "id": "A3"
+    }
+  ],
+  "calculation_id": "F3DJ_FULL3D_CHAIN_CONSTITUTIVE_AUDIT_001",
+  "calculation_steps": [
+    "Construct both tetrahedra and their exact octahedral overlap",
+    "Generate 3D common-refinement fan and six-point barycentric quotient",
+    "Compute exact B1,B2,B3, ranks, homology, vertex-link manifold diagnostics",
+    "Compute signed geometric chain subdivisions and verify all degrees commute with boundaries",
+    "Compute T^TT and norm gain, test positive diagonal metric obstruction",
+    "Compute Q169-type generator commutator and B-cap Taylor expansion",
+    "Check whether source Q165-Q179 and Q194/Q198/Q200/Q210 supply event trigger and reserve"
+  ],
+  "candidate_id": "full3d-junction-20261123-f6d2",
+  "changed_dependencies": [],
+  "clock_receipt": {
+    "clock_type": null,
+    "coupling": null,
+    "initial_phase": null,
+    "modulus": null,
+    "period_claim": null,
+    "physical_unit_map": null,
+    "residue_convention": null,
+    "update_rule": null
+  },
+  "counterexamples_and_failures": [
+    "point-glued barycentric union is nonmanifold and has five 1-cycles",
+    "edge-contact count 0 under relative rotation while common centered insphere persists",
+    "unit transfer inflates chain support; diagonal target top metric cannot restore source top orthogonality",
+    "source fixed-complex amplitude/conditional parity inputs do not select a junction event"
+  ],
+  "dynamics_readout": {
+    "conservation_and_sources": "new Q169 flow conserves new norm; event stock budget G(c)>=0 is not source funded",
+    "generator_or_update": "T graded chain map, then skew Anew on fixed Knew",
+    "initial_boundary_conditions": "source A top-amplitude one; B top/caps zero; supplied Euclidean geometry",
+    "physical_mapping": null,
+    "projection_and_kernel": "T injective; generator commutator rank28; no full dynamical intertwinement",
+    "state_space": "old 30-chain -> new 117-chain, prescribed transition"
+  },
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "integer_fraction_receipt": {
+    "divisibility_gcd_lcm": "not used as parameter matching",
+    "factor_origins": [
+      "8 octahedral orthant faces",
+      "four source apex caps for each packet",
+      "six midpoint pair identifications"
+    ],
+    "factorization": "top Gram eigen=4,20; stock gain eigen=3,19",
+    "raw_count_expression": "fan: 8 central tetra+8 caps; point-glued: 2 barycentric subdivisions with 6 vertex pair identifications",
+    "reduced_expression": "fan f=(15,42,44,16) beta=(1,0,0,0); point f=(24,100,120,48) beta=(1,5,0,0)"
+  },
+  "limitations": [
+    "geometric coordinate realization supplied, not derived",
+    "new 3D fan topology prescribed; no source event time, operator, reserve, source-tagged memory or physical readout",
+    "mod-prime check alone not rational proof; primary SymPy rank exact",
+    "full repository CI not executed",
+    "non-constructor mathematical review pending"
+  ],
+  "next_discriminant": "authenticated pre-event full 3D overlap source and coface/metric/reserve map that selects the event without Euclidean contact insertion; test on zero-edge-contact yet positive-overlap control",
+  "objects": [
+    {
+      "assumption_ids": [
+        "A1"
+      ],
+      "basis_orientation": "increasing source vertex order A0..A3,B0..B3",
+      "codomain": null,
+      "coefficient_domain": "Q",
+      "definition": "two labelled 3-simplices with no incidence gluing",
+      "dependency_ids": [],
+      "domain": "abstract simplicial complexes",
+      "exact_expression": "f=(8,12,8,2)",
+      "measured_value": null,
+      "metric_measure": "unit simplex coefficient inner product",
+      "normalization": "unit amplitude basis",
+      "object_id": "Kold",
+      "object_type": "oriented disjoint union of two filled tetrahedra",
+      "origin": "assumed exact carrier",
+      "source_refs": [
+        "UD_LEDGER_V085"
+      ],
+      "symbol": "K_A \u2294 K_B",
+      "uncertainty": null,
+      "units": "dimensionless"
+    },
+    {
+      "assumption_ids": [
+        "A2"
+      ],
+      "basis_orientation": "ascending target vertex order",
+      "codomain": "finite oriented simplicial 3-complex",
+      "coefficient_domain": "Q",
+      "definition": "octahedron center fan 8 + 8 outer 3-simplex caps, a 3-ball",
+      "dependency_ids": [
+        "Kold"
+      ],
+      "domain": "supplied concentric regular tetrahedra in Q^3",
+      "exact_expression": "f=(15,42,44,16), beta=(1,0,0,0)",
+      "measured_value": null,
+      "metric_measure": "supplied unit Euclidean embedding and orthonormal coefficient metric",
+      "normalization": "unit simplex amplitude",
+      "object_id": "Knew",
+      "object_type": "Euclidean 3D common-refinement simplicial complex",
+      "origin": "assumed control model",
+      "source_refs": [
+        "UD_PR609",
+        "UD_PR610"
+      ],
+      "symbol": "K_union",
+      "uncertainty": null,
+      "units": "dimensionless"
+    },
+    {
+      "assumption_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "basis_orientation": "increasing orientations",
+      "codomain": "C_k(Knew;Q)",
+      "coefficient_domain": "Q",
+      "definition": "signed oriented subdivision of old k-simplex into target k-simplices",
+      "dependency_ids": [
+        "Kold",
+        "Knew"
+      ],
+      "domain": "C_k(Kold;Q)",
+      "exact_expression": "Bnew_k T_k=T_(k-1) Bold_k; Gram blocks I,2I,4I,[[12,-8],[-8,12]]",
+      "measured_value": null,
+      "metric_measure": "old/new unit coefficient metrics",
+      "normalization": "unscaled integer chain map",
+      "object_id": "T",
+      "object_type": "graded chain transfer",
+      "origin": "constructed conditional",
+      "source_refs": [
+        "UD_LEDGER_V085"
+      ],
+      "symbol": "T_k",
+      "uncertainty": null,
+      "units": "dimensionless amplitudes"
+    }
+  ],
+  "question": "Can source-native UD law construct a full 3D interpacket junction, preserve cofaces, conserve stock with a sourced transfer, and differ from ordinary Euclidean overlap?",
+  "receipt_schema_version": 1,
+  "result": {
+    "approximation": null,
+    "exact_expression": "Kfan=(15,42,44,16), beta=(1,0,0,0); Kpoint beta=(1,5,0,0); Gram3=[[12,-8],[-8,12]]; G(c)=||c1||\u00b2+3||c2||\u00b2+3(a\u00b2+b\u00b2)+8(a-b)\u00b2; commutator rank28 norm_F\u00b2144",
+    "physical_interpretation": "NONE",
+    "precision_and_error": "integer/rational exact; none approximated",
+    "scope": "supplied Euclidean model and prescribed simplicial chain transfer, not native event",
+    "units": "dimensionless squared chain amplitude"
+  },
+  "session_id": "20261123-gpt6-full3d-f6d2",
+  "sources": [
+    {
+      "section_or_object_id": "source",
+      "source_id": "UD_SCOPE",
+      "source_status": "governance only",
+      "url_or_repo_path": "docs/governance/UD-SCOPE-001-observable-domain-falsifiability.md",
+      "version_or_commit": "6a1fa6aa14624190bae4ed86a8a5db081ecb27e2"
+    },
+    {
+      "section_or_object_id": "Q165,Q166,Q167,Q168,Q169,Q170,Q171,Q172,Q173,Q177,Q178,Q179,Q194,Q198,Q200,Q210",
+      "source_id": "UD_LEDGER_V085",
+      "source_status": "source-defined fixed-carrier rules and source gaps",
+      "url_or_repo_path": "captures/2026-10-21T151000Z-codex-exit03-recovery-98dc7b12/library_LEDGER_v0.85.json",
+      "version_or_commit": "6a1fa6aa14624190bae4ed86a8a5db081ecb27e2"
+    },
+    {
+      "section_or_object_id": "source",
+      "source_id": "UD_PR609",
+      "source_status": "conditional Euclidean contact geometry",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/609",
+      "version_or_commit": "d8c1ff2c66c6c81ad8b49c7c2967f6b65afaeb30"
+    },
+    {
+      "section_or_object_id": "source",
+      "source_id": "UD_PR610",
+      "source_status": "graph-only junction and strict edge transfer no-go",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/610",
+      "version_or_commit": "e7b8f792267d595b9f541315c2e117269e2254fd"
+    },
+    {
+      "section_or_object_id": "2-3",
+      "source_id": "UD_INTERFACE_GATE",
+      "source_status": "different barycentric strict intertwinement obstruction",
+      "url_or_repo_path": "captures/2026-10-13T033829Z-codex-interface-gate-ceaa5a94/UD_INTERFACE_GENERATOR_GATE_v0.1.md",
+      "version_or_commit": "not-specified"
+    },
+    {
+      "section_or_object_id": "source",
+      "source_id": "PHYS_PACHNER",
+      "source_status": "prescribed event + stock receipt but no trigger",
+      "url_or_repo_path": "experiments/pachner-interface-defect/README.md",
+      "version_or_commit": "not-specified"
+    },
+    {
+      "section_or_object_id": "source",
+      "source_id": "ECH2020",
+      "source_status": "external concept, universal contact claim falsified in PR609",
+      "url_or_repo_path": "https://youtu.be/UDGeXvDRwgU?t=1096",
+      "version_or_commit": "2020-04-03"
+    }
+  ],
+  "target_exposure": {
+    "baseline": "ordinary Euclidean polyhedral overlap and barycentric quotient",
+    "fitted_parameters_or_formula_choices": [],
+    "known_targets": [
+      "six crossings versus zero crossings from prior exact geometry"
+    ],
+    "search_domain_and_budget": "one explicit symmetric octa fan plus adversarial point-glued model",
+    "selection_criterion": "simplicial 3D manifold, coface consistency, exact contract and source-law audit",
+    "status": "CONCEPTUAL_HYPOTHESIS_EXPOSED"
+  },
+  "technique_plan": [
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "distinguish point-glued complex from 3D manifold ball",
+      "technique": "simplicial homology"
+    },
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "check nilpotency, subdivision chain maps, ranks",
+      "technique": "exact integer/rational incidence"
+    },
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "typed support source/metric and generator intertwinement obstructions",
+      "technique": "operator and Gram spectra"
+    },
+    {
+      "applicability": "applied",
+      "purpose_or_na_reason": "independent ranks modulo three primes, not physical clock",
+      "technique": "modular arithmetic"
+    },
+    {
+      "applicability": "N/A",
+      "purpose_or_na_reason": "no physical observable, unit map or measured target",
+      "technique": "SI calibration"
+    }
+  ],
+  "verification": [
+    {
+      "actual_result": "PASS",
+      "command_or_proof_path": "python3 verify.py",
+      "method": "exact symbolic generated matrices",
+      "review_relationship": "constructor",
+      "source_revision": "source pins SOURCE_REGISTER.json"
+    },
+    {
+      "actual_result": "PASS",
+      "command_or_proof_path": "python3 replay_stdlib.py",
+      "method": "independent stdlib integer chain and mod 101/103/107 ranks",
+      "review_relationship": "same-constructor independent algorithm",
+      "source_revision": "same source pins"
+    },
+    {
+      "actual_result": "NOT_RUN",
+      "command_or_proof_path": null,
+      "method": "independent non-constructor review",
+      "review_relationship": "nonconstructor",
+      "source_revision": null
+    }
+  ]
+}
