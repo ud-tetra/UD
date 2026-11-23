@@ -1,0 +1,311 @@
+{
+  "artifact_manifest_refs": [
+    "UD_MANIFEST.json",
+    "artifacts/20261122-gpt6-junction-b7c4/junction-001/manifest.json"
+  ],
+  "assumptions": [
+    {
+      "id": "A1",
+      "statement": "A user-proposed six-midpoint gluing performed on two graph 1-skeleta only; no source event authorization."
+    },
+    {
+      "id": "A2",
+      "statement": "Unit cochain metric on each newly produced graph; parameter s dimensionless."
+    },
+    {
+      "id": "A3",
+      "statement": "Strict local path map with old vertex amplitude readout fixed and no alternate path/cycle routing."
+    }
+  ],
+  "calculation_id": "UD-JUNCTION-B7C4-EXACT-001",
+  "calculation_steps": [
+    "Build disjoint edge graphs and six-junction graph in independent implementations",
+    "Compute exact B rank, first Betti and Laplacian characteristic polynomial",
+    "Prove local cross-edge Taylor coefficient and total support conservation",
+    "Audit strict path-local chain transfer, norm obstruction",
+    "Conjugate by edge orientation sign diagonal and compare graph spectra"
+  ],
+  "candidate_id": "interpacket-junction-source-20261122-b7c4",
+  "changed_dependencies": [],
+  "clock_receipt": {
+    "clock_type": "formal continuous flow parameter s",
+    "coupling": "unit incidence stipulated, no sourced physical coupling",
+    "initial_phase": null,
+    "modulus": null,
+    "period_claim": null,
+    "physical_unit_map": null,
+    "residue_convention": null,
+    "update_rule": "dot c=A_G c only AFTER externally declared junction"
+  },
+  "counterexamples_and_failures": [
+    "disjoint drawings intersect but fixed-complex Hasse generator has zero cross-blocks",
+    "strict path-local boundary-preserving map doubles unweighted edge stock",
+    "isometric 1/√2 split changes fixed-vertex boundary readout",
+    "edge orientation sign patterns are graph-spectrally invisible"
+  ],
+  "dynamics_readout": {
+    "conservation_and_sources": "d||c||²/ds=0 within fixed declared graph, event stock transfer not determined",
+    "generator_or_update": "A_G=[[0,-B],[B^T,0]]",
+    "initial_boundary_conditions": "unit A halfedge; all B edges zero; shared vertex not pre-authenticated",
+    "physical_mapping": "NONE",
+    "projection_and_kernel": "vertex L=B B^T and graph cycle space ker B, strict transfer T1",
+    "state_space": "C0⊕C1 on each declared graph"
+  },
+  "evidence_labels": [
+    "EXACT",
+    "CONDITIONAL",
+    "OPEN"
+  ],
+  "integer_fraction_receipt": {
+    "divisibility_gcd_lcm": "not needed",
+    "factor_origins": [
+      "6 opposite-edge contact pairs canonical Q=I, PR609",
+      "two halfedges per old edge, 12 original edges"
+    ],
+    "factorization": "χLsep=λ²(λ-5)²(λ-4)^6(λ-2)^4(λ-1)^6; χLJ=λ(λ-7)(λ-4)^2(λ-3)^4(λ²-7λ+8)^3",
+    "raw_count_expression": "Vsep=2(4+6)=20; Vjunction=8+6=14; E=2*2*6=24",
+    "reduced_expression": "b1_sep=24-20+2=6; b1_junction=24-14+1=11"
+  },
+  "limitations": [
+    "No source-defined initial contact junction, full 3D retriangulation, energy, physical time, gauge dressing or SI metric.",
+    "Original K4 filled H1=0; the graph b1=11 is not physical winding."
+  ],
+  "next_discriminant": "Source-authenticated pre-event topological junction constructor with full coface chain, signed gauge/current/readout, receipt and falsifiable decision against 6/0 contact controls.",
+  "objects": [
+    {
+      "assumption_ids": [],
+      "basis_orientation": "ascending simplex index",
+      "codomain": null,
+      "coefficient_domain": "Z for incidence; Q/R for amplitudes",
+      "definition": "two labelled filled K4 tetrahedra",
+      "dependency_ids": [],
+      "domain": "finite simplicial complexes",
+      "exact_expression": "dim C(K_A)+dim C(K_B)=30",
+      "measured_value": null,
+      "metric_measure": "unit simplex Euclidean chain inner product",
+      "normalization": "unit",
+      "object_id": "K_pair",
+      "object_type": "two abstractly disjoint filled simplicial 3-complexes",
+      "origin": "source-bound",
+      "source_refs": [
+        "LEDGER",
+        "PR609"
+      ],
+      "symbol": "K_A ⊔ K_B",
+      "uncertainty": null,
+      "units": "none"
+    },
+    {
+      "assumption_ids": [
+        "A1"
+      ],
+      "basis_orientation": "each old directed i<j edge replaced by i->midpoint->j",
+      "codomain": "finite 1-complex",
+      "coefficient_domain": "Z",
+      "definition": "two subdivided K4 edge graphs with six identified cross-graph midpoints",
+      "dependency_ids": [],
+      "domain": "graphs with labelled vertices and half edges",
+      "exact_expression": "(V,E,b0,b1)=(14,24,1,11)",
+      "measured_value": null,
+      "metric_measure": "unit vertex/edge coefficient pairing",
+      "normalization": "unweighted",
+      "object_id": "J",
+      "object_type": "conditionally glued graph only",
+      "origin": "assumed",
+      "source_refs": [
+        "PR609"
+      ],
+      "symbol": "G_J",
+      "uncertainty": null,
+      "units": "none"
+    },
+    {
+      "assumption_ids": [
+        "A1",
+        "A2"
+      ],
+      "basis_orientation": "ordered graph vertices, oriented half edges",
+      "codomain": "same",
+      "coefficient_domain": "Q matrix; R flow",
+      "definition": "[[0,-B1],[B1^T,0]] on C0⊕C1",
+      "dependency_ids": [
+        "J"
+      ],
+      "domain": "C0(G;R)⊕C1(G;R)",
+      "exact_expression": "A_G^T=-A_G",
+      "measured_value": null,
+      "metric_measure": "unit Euclidean",
+      "normalization": "unit",
+      "object_id": "A_graph",
+      "object_type": "skew graph Hodge generator",
+      "origin": "conditional extension of source Q169",
+      "source_refs": [
+        "LEDGER",
+        "HASSE"
+      ],
+      "symbol": "A_G",
+      "uncertainty": null,
+      "units": "dimensionless"
+    },
+    {
+      "assumption_ids": [
+        "A3"
+      ],
+      "basis_orientation": "i->J_e->j",
+      "codomain": "Q^24",
+      "coefficient_domain": "Z",
+      "definition": "each old edge mapped to sum of two oriented child edges",
+      "dependency_ids": [
+        "J"
+      ],
+      "domain": "Q^12",
+      "exact_expression": "Bnew T1=T0 Bold; T1^T T1=2I",
+      "measured_value": null,
+      "metric_measure": "unit edge",
+      "normalization": "unit",
+      "object_id": "T1",
+      "object_type": "strict local edge subdivision chain map",
+      "origin": "constructed",
+      "source_refs": [
+        "INTERFACE"
+      ],
+      "symbol": "T1",
+      "uncertainty": null,
+      "units": "dimensionless"
+    }
+  ],
+  "question": "Whether source-governed geometric crossings make interpacket junctions, and what exact incidence/stock obligations arise if six are manually identified.",
+  "receipt_schema_version": 1,
+  "result": {
+    "approximation": null,
+    "exact_expression": "(V,E,b0,b1): (20,24,2,6)→(14,24,1,11); (B^TB)cross=1; T1^TT1=2I12",
+    "physical_interpretation": "NONE",
+    "precision_and_error": "exact rational arithmetic",
+    "scope": "CONDITIONAL constructed graph; no UD event selection or 3D complex refinement",
+    "units": "dimensionless graph-only"
+  },
+  "session_id": "20261122-gpt6-junction-b7c4",
+  "sources": [
+    {
+      "section_or_object_id": "Q157-Q160,Q162,Q165-Q179,Q194,Q198,Q200,Q210",
+      "source_id": "LEDGER",
+      "source_status": "source-stratum, scoped",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/6a1fa6aa14624190bae4ed86a8a5db081ecb27e2/captures/2026-10-21T151000Z-codex-exit03-recovery-98dc7b12/library_LEDGER_v0.85.json",
+      "version_or_commit": "6a1fa6aa14624190bae4ed86a8a5db081ecb27e2"
+    },
+    {
+      "section_or_object_id": "1-3",
+      "source_id": "HASSE",
+      "source_status": "source-stratum, scoped",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/6a1fa6aa14624190bae4ed86a8a5db081ecb27e2/captures/2026-10-07T191951Z-codex-ud-bootstrap-5170f8b8/browse/dist/source/hasse-current-curl-v0.1/source/HASSE_CURRENT_CURL_AUDIT.md",
+      "version_or_commit": "6a1fa6aa14624190bae4ed86a8a5db081ecb27e2"
+    },
+    {
+      "section_or_object_id": "1-3",
+      "source_id": "INTERFACE",
+      "source_status": "source-stratum, scoped",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/blob/6a1fa6aa14624190bae4ed86a8a5db081ecb27e2/captures/2026-10-13T033829Z-codex-interface-gate-ceaa5a94/UD_INTERFACE_GENERATOR_GATE_v0.1.md",
+      "version_or_commit": "6a1fa6aa14624190bae4ed86a8a5db081ecb27e2"
+    },
+    {
+      "section_or_object_id": "State,map,receipts; dynamical obstruction",
+      "source_id": "PACHNER",
+      "source_status": "source-stratum, scoped",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/blob/0c9c35871d93922f081054dcc4a7a00040c9d7e3/experiments/pachner-interface-defect/README.md",
+      "version_or_commit": "0c9c35871d93922f081054dcc4a7a00040c9d7e3"
+    },
+    {
+      "section_or_object_id": "v0.9",
+      "source_id": "Q198-LIFT",
+      "source_status": "source-stratum, scoped",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/blob/0c9c35871d93922f081054dcc4a7a00040c9d7e3/experiments/local-hasse-quarter-event/README.md",
+      "version_or_commit": "0c9c35871d93922f081054dcc4a7a00040c9d7e3"
+    },
+    {
+      "section_or_object_id": "source identifier",
+      "source_id": "PR609",
+      "source_status": "draft source of conditional 6 contacts",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD/pull/609",
+      "version_or_commit": "d8c1ff2c66c6c81ad8b49c7c2967f6b65afaeb30"
+    },
+    {
+      "section_or_object_id": "source identifier",
+      "source_id": "PR457",
+      "source_status": "draft Discovery independent algorithm",
+      "url_or_repo_path": "https://github.com/ud-tetra/UD-Physics/pull/457",
+      "version_or_commit": "cba67ee51cefa40e13d6d1995c6add229ab4c773"
+    },
+    {
+      "section_or_object_id": "source identifier",
+      "source_id": "ECH2020",
+      "source_status": "source-stratum, scoped",
+      "url_or_repo_path": "https://youtu.be/UDGeXvDRwgU?t=1096",
+      "version_or_commit": "0c9c35871d93922f081054dcc4a7a00040c9d7e3"
+    }
+  ],
+  "target_exposure": {
+    "baseline": "disjoint subdivided graph with same 24 halfedges",
+    "fitted_parameters_or_formula_choices": [
+      "identity identification of six contact midpoints is chosen, not deduced",
+      "unit incidence metric stipulated"
+    ],
+    "known_targets": [
+      "six canonical edge contacts from Echegoyen lecture and UD PR609"
+    ],
+    "search_domain_and_budget": "two explicitly declared graph controls; no parameter scan",
+    "selection_criterion": "source-independent exact incidence and null controls",
+    "status": "EXPLORATORY; canonical six-contact geometry known before constructing new graph"
+  },
+  "technique_plan": [
+    {
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "test rank and Hasse transport",
+      "technique": "oriented simplicial/graph incidence"
+    },
+    {
+      "applicability": "APPLIED",
+      "purpose_or_na_reason": "distinguish graph topology while avoiding fitted time/units",
+      "technique": "rational spectral characteristic polynomials"
+    },
+    {
+      "applicability": "N/A",
+      "purpose_or_na_reason": "no supplied periodic or phase update",
+      "technique": "group clock modular arithmetic"
+    },
+    {
+      "applicability": "N/A",
+      "purpose_or_na_reason": "source and SI metric absent",
+      "technique": "physical bridge"
+    }
+  ],
+  "verification": [
+    {
+      "actual_result": "PASS",
+      "command_or_proof_path": "verify.py",
+      "method": "symbolic incidence and SymPy exact charpolys",
+      "review_relationship": "constructor",
+      "source_revision": "6a1fa6aa14624190bae4ed86a8a5db081ecb27e2"
+    },
+    {
+      "actual_result": "PASS",
+      "command_or_proof_path": "replay_stdlib.py",
+      "method": "independent standard-library Fraction/Faddeev–LeVerrier",
+      "review_relationship": "constructor, separate implementation",
+      "source_revision": "6a1fa6aa14624190bae4ed86a8a5db081ecb27e2"
+    },
+    {
+      "actual_result": "NOT_RUN",
+      "command_or_proof_path": null,
+      "method": "nonconstructor scientific review",
+      "review_relationship": "nonconstructor",
+      "source_revision": null
+    },
+    {
+      "actual_result": "NOT_RUN",
+      "command_or_proof_path": "scripts/verify_repository.py; scripts/validate.py and unittest",
+      "method": "full repo CI",
+      "review_relationship": "CI",
+      "source_revision": null
+    }
+  ]
+}
