@@ -1,5 +1,19 @@
 # Unified Dynamics (UD)
 
+**A computational framework for modeling, simulating and predicting physical systems.**
+
+*We model the universe digitally. We do not assume the universe is digital.*
+
+UD develops finite geometric and relational models for scientific computing, visualization/rendering and controlled predictions. Its tetrahedral simplicial carriers are **computational representations**, not a statement that nature is literally made of tetrahedra or that a theory of everything has been established.
+
+**Primary evidence criteria:** mathematical correctness, explicit states/operators/metrics and boundary conditions, conservation and approximation error, numerical stability, mesh/time-step sensitivity, computational efficiency, reproducibility and held-out performance versus conventional baselines. Physical interpretations are separately labeled candidate bridges; ontology is optional. **Physical Promotion = 0.**
+
+See [UD-MISSION-002 v0.2 (authorized implementation)](docs/governance/UD-MISSION-002-v0.2-computational-modeling-first.md), alongside the existing [UD-SCOPE-001](docs/governance/UD-SCOPE-001-observable-domain-falsifiability.md). All historical evidence and scoped obstructions remain preserved.
+
+---
+
+## Research archive and contributor navigation
+
 Collaborative research record and append-only artifact mirror.
 
 Start with [the artifact index](INDEX.md), [contribution workflow](CONTRIBUTING.md), and [capture instructions](AGENTS.md).
